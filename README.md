@@ -1,0 +1,1 @@
+# Dynamsoft Barcode Reader Documentation
