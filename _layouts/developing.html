@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+{%- include head.html -%}
+
+<body>
+    <div class="headWrapper">
+        {%- include page_header.html -%}
+    </div>
+    <div class="subHeadWrapper">
+        <div class="subHeader container">
+            <div class="row">
+                <ul class="subHeaderMenuUl col-xs-12 clearfix">
+                    <li class="title"><a class="f18 fontOswald" href="https://www.dynamsoft.com/Products/Dynamic-Barcode-Reader.aspx">Dynamsoft Barcode Reader</a> <span class="fc9">|</span> Developer's Center</li>
+                    <li class="on">Documentation</li>
+                    <li><a class="whitelink hide-xs" href="/">Code Gallery</a></li>
+                    <li><a class="whitelink hide-xs" href="/">Resources</a></li>
+                    <li class="fr" style="margin-right: 0; padding: 0;"><a class="btn d-btn bgOrange hide-sm hide-xs" href="https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx">Download 30-Day Free Trial</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="sideBar col-xs-12 col-md-3 hide-sm hide-xs">
+                <ul class="mainPage" id="fullTreeMenuListContainer" name="listLevel1">
+                    {%- comment -%}
+                    <li>
+                        <a href="{{ site.introduction }}" class="otherLinkColour">Introduction</a>
+                        <ul>
+                            {%- if page.url contains '/introduction/' -%}
+                            <li><a href="{{ site.introduction }}overview.html" class="otherLinkColour">Overview</a></li>
+                            <li><a href="{{ site.introduction }}architecture.html" class="otherLinkColour">Architecture</a></li>
+                            {%- include sidelist-introduction/introduction-licensing.html -%}
+                            {%- include sidelist-introduction/introduction-how-to-guides.html -%}
+                            {%- include sidelist-introduction/introduction-comparison-tools.html -%}
+                            <li><a href="{{ site.faqs }}" class="otherLinkColour">FAQs</a></li>
+                            <li class="unavailableLink">Security Features</li>
+                            {%- endif -%}
+                        </ul>
+                    </li>
+                    {%- endcomment -%}
+                    <li><a href="{{ site.programming }}" class="otherLinkColour">Programming</a>
+                        <ul>
+                            {%- if page.url contains '/programming/' -%}
+                            {%- include sidelist-programming/programming-c.html -%}
+                            {%- include sidelist-programming/programming-cpp.html -%}
+                            {%- include sidelist-programming/programming-dotnet.html -%}
+                            {%- include sidelist-programming/programming-java.html -%}
+                            {%- include sidelist-programming/programming-python.html -%}
+                            {%- include sidelist-programming/programming-javascript.html -%}
+                            {%- include sidelist-programming/programming-android.html -%}
+                            {%- include sidelist-programming/programming-oc.html -%}                         
+                            {%- endif -%}
+                        </ul>
+                    </li>
+                    <li><a href="{{ site.parameters }}" class="otherLinkColour">Parameters</a>
+                        <ul>
+                            {%- if page.url contains '/parameters/' -%}
+                            <li><a href="{{ site.parameters }}structure-and-interfaces-of-parameters.html" class="otherLinkColour">Structure and Interfaces of Parameters</a></li>
+                            {%- include sidelist-parameters/parameters-references.html -%}
+                            {%- include sidelist-parameters/parameters-enumerations.html -%}
+                            {%- include sidelist-parameters/parameters-scenario-settings.html -%}
+                            {%- comment -%}
+                            <li class="unavailableLink">Example Image Settings</li>
+                            {%- endcomment -%}
+                            {%- endif -%}
+                        </ul>
+                    </li>
+                    {%- comment -%}
+                    <li class="unavailableLink">Enhancements
+                        {%- if page.url contains '/enhancements/' -%}
+                        <ul>
+                            <li class="unavailableLink">DPM Codes</li>
+                            <li class="unavailableLink">Intermediate Result</li>
+                            <li class="unavailableLink">Panorama</li>
+                            <li class="unavailableLink">PDF Vector</li>
+                        </ul>
+                        {%- endif -%}
+                    </li>
+                    {%- endcomment -%}
+                </ul>
+            </div>
+            <div class="docContainer col-xs-12 col-md-9">
+                <div class = "head clearfix">
+                    {%- include main-page-head.html -%}
+                </div>
+                <div class="main row">
+                    <div class="content markdown-body headCounter col-xs-12">
+                        <h1 id="in-the-process-of-development">in the process of development…</h2>
+                        <p>Back to <a href="/">Homepage</a></p>       
+                        {{ content }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footerWrapper">
+        {%- include page_footer.html -%}
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"
+        integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+    
+    {%- if page.needAutoGenerateSidebar -%}
+    <script>
+        FullTreeMenuList(true);
+    </script>
+    {%- else -%}
+    <script>
+        FullTreeMenuList(false);
+    </script>
+    {%- endif -%}
+
+    <script type="text/javascript">
+        $(window).scroll(function () {
+            var sd = $(window).scrollTop();
+            var ph = document.body.scrollHeight;
+            var menuHeight = $('#fullTreeMenuListContainer').outerHeight(true);
+            var rightMenuHeight = $('.rightSideMenu').outerHeight(true);
+            if (breakpoint() == 'lg') {
+                if (sd > 140 && sd < (ph - 680 - 150 - menuHeight)) {
+                    $("#fullTreeMenuListContainer").css({ "position": "fixed", "top": "100px" });
+                } else {
+                    $("#fullTreeMenuListContainer").css({ "position": "static", "top": "unset" });
+                }
+                if (sd > 180 && sd < (ph - 680 - 150 - rightMenuHeight)) {
+                    $(".rightSideMenu").css({ "position": "fixed", "top": "100px" });
+                } else {
+                    $(".rightSideMenu").css({ "position": "static", "top": "unset" });
+                }
+            }
+            if (breakpoint() == 'md') {
+                if (sd > 140 && sd < (ph - 660 - 150 - menuHeight)) {
+                    $("#fullTreeMenuListContainer").css({ "position": "fixed", "top": "100px" });
+                } else {
+                    $("#fullTreeMenuListContainer").css({ "position": "static", "top": "unset" });
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+repositoryUrl: https://github.com/Dynamsoft/barcode-reader-docs/blob/master
+
+docFullPath: https://www.dynamsoft.com/barcode-reader
+docHomePage: /barcode-reader
+
+introduction: /barcode-reader/introduction/
+programming: /barcode-reader/programming/
+parameters: /barcode-reader/parameters/
+enhancements: /barcode-reader/enhancements/
+
+licensing: /barcode-reader/introduction/licensing/
+comparison_tools: /barcode-reader/introduction/comparison-tools/
+
+c_cplusplus: /barcode-reader/programming/c-cplusplus/
+structs: /barcode-reader/programming/c-cplusplus/struct/
+
+c: /barcode-reader/programming/c/
+c_api: /barcode-reader/programming/c/api-reference/
+c_methods: /barcode-reader/programming/c/api-reference/methods/
+
+cpp: /barcode-reader/programming/cplusplus/
+cpp_api: /barcode-reader/programming/cplusplus/api-reference/
+cpp_methods: /barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/
+
+
+js: /barcode-reader/programming/javascript/
+js_api: /barcode-reader/programming/javascript/api-reference/
+
+dotnet: /barcode-reader/programming/dotnet/
+dotnet_api: /barcode-reader/programming/dotnet/api-reference/
+
+oc: /barcode-reader/programming/objectivec-swift/
+oc_api: /barcode-reader/programming/objectivec-swift/api-reference/
+
+java: /barcode-reader/programming/java/
+java_api: /barcode-reader/programming/java/api-reference/
+
+android: /barcode-reader/programming/android/
+android_api: /barcode-reader/programming/android/api-reference/
+  
+python: /barcode-reader/programming/python/
+python_api: /barcode-reader/programming/python/api-reference/
+
+parameters_reference: /barcode-reader/parameters/reference/
+scenario_settings: /barcode-reader/parameters/scenario-settings/
+enumerations: /barcode-reader/parameters/enum/
+
+faqs: /barcode-reader/introduction/faqs.html
+how_to: /barcode-reader/introduction/how-to-guide/
+
+assets: /barcode-reader/assets/
+dynamsoft_logo: /barcode-reader/assets/img-icon/dynamsoft-logo.png
+dbr_logo: /barcode-reader/assets/img-icon/dbr-logo.png
+edit_icon: /barcode-reader/assets/img-icon/edit-icon.png
+smile_icon: /barcode-reader/assets/img-icon/icon-smile.png
+sad_icon: /barcode-reader/assets/img-icon/icon-sad.png
+dbr_icon: /barcode-reader/assets/img-icon/icon-dbr.svg
+dwt_icon: /barcode-reader/assets/img-icon/icon-dwt.svg
+dnt_icon: /barcode-reader/assets/img-icon/icon-dnt.svg
+
+baseurl: "/barcode-reader"
+plugins:
+  - jemoji

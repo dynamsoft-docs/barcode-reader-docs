@@ -1,0 +1,34 @@
+{%- assign curPageFileName = page.url | split: '/' | last | replace: '.html', '' -%}
+{%- assign curPathName = page.url | split: curPageFileName | first -%}
+{%- capture curPageFileNameWithoutVer -%}	
+{%- if curPageFileName contains '-v' -%}	
+{{ curPageFileName | split: '-v' | first }}
+{%- else -%}
+{{ curPageFileName }}
+{%- endif -%}
+{%- endcapture -%}
+{%- for my_page in site.pages -%}
+	{%- assign tmpPageFileName = my_page.url | split: '/' | last | replace: '.html', '' -%}		
+	{%- assign tmpPathName = my_page.url | split: tmpPageFileName | first -%}		
+	{%- if curPathName == tmpPathName and tmpPageFileName != curPageFileName -%}		
+		{%- capture tmpPageFileNameWithoutVer -%}		
+		{%- if tmpPageFileName contains '-v' -%}		
+		{{ tmpPageFileName | split: '-v' | first }}			
+		{%- else -%}		
+		{{ tmpPageFileName }}			
+		{%- endif -%}
+		{%- endcapture -%}
+
+		{%- assign a1 = tmpPageFileNameWithoutVer | strip -%}
+		{%- assign a2 = curPageFileNameWithoutVer | strip -%}
+
+		{%- if a1 == a2 -%}	
+			{%- if tmpPageFileName contains '-v' -%}			
+				{%- capture liName -%} version {{ tmpPageFileName |  split: '-v' | last }} {%- endcapture -%}			
+				<li><a href = "{{ site.docHomePage }}{{ my_page.url }}" class="otherLinkColour">{{ liName }}</a></li>				
+			{%- else -%}
+				<li><a href = "{{ site.docHomePage }}{{ my_page.url }}" class="otherLinkColour">latest version</a></li>	
+			{%- endif -%}
+		{%- endif -%}
+	{%- endif -%}	
+{%- endfor -%}
