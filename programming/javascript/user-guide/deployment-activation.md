@@ -1,3 +1,11 @@
+---
+layout: default-layout
+title: Dynamsoft Barcode Reader for JavaScript - Deployment
+description: This page shows how to deploy Dynamsoft Barcode Reader JavaScript SDK on your own server.
+keywords: user guide, deployment, javascript, js
+needAutoGenerateSidebar: true
+---
+
 ## Deployment: Self-hosted, Offline, or Intranet 
 
 The following steps guide you through how to deploy the library on your own server.
@@ -34,11 +42,11 @@ Different servers are configured differently. Here are some popular ones:
 
 ## License Activation
 
-A full license is required for deployment. If you have not purchased a license yet, please visit our [online store](https://www.dynamsoft.com/Secure/Barcode-Reader-BuyIt.aspx).
+A full license is required for deployment. If you have not purchased a license yet, please visit our [online store](https://www.dynamsoft.com/store/dynamsoft-barcode-reader/).
 
 ### Step One : Create a Dynamsoft account
 
-If you don't have an Dynamsoft account yet, sign up [here](https://www.dynamsoft.com/CustomerPortal/Account/Registration.aspx). Be sure to use the same email that was registered for the purchase.
+If you don't have an Dynamsoft account yet, sign up [here](https://www.dynamsoft.com/api-common/Regist/Regist). Be sure to use the same email that was registered for the purchase.
 
 ### Step Two : Log into Dynamsoft Customer Portal
 
@@ -58,8 +66,8 @@ A few examples of the domain:
 ### Step Four : Use the License
 
 ```html
-<!-- Please visit https://www.dynamsoft.com/CustomerPortal/Portal/TrialLicense.aspx to get a trial license. -->
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@7.4.0-v1/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
+<!-- Please visit https://www.dynamsoft.com/customer/license/trialLicense to get a trial license. -->
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@7.6.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
 ```
 
 In the above sample code, simply replace `PRODUCT-KEYS` with your activated key.

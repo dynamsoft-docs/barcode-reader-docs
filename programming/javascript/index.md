@@ -13,7 +13,7 @@ The JavaScript documentation mainly consists of two parts. One is the [User Guid
 
 ## Getting Started
 
-- [User Guide for JavaScript](user-guide.md)
+- [User Guide for JavaScript](user-guide/index.md)
 
 ## API Reference
 

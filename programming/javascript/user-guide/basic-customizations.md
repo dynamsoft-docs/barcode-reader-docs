@@ -1,3 +1,11 @@
+---
+layout: default-layout
+title: Dynamsoft Barcode Reader for JavaScript - Basic Customizations
+description: This page shows how to customize basic features of Dynamsoft Barcode Reader JavaScript SDK.
+keywords: user guide, basic customizations, initialize, javascript, js
+needAutoGenerateSidebar: true
+---
+
 # Basic Customizations
 
 ## Initializing
@@ -59,9 +67,9 @@ await scanner.updateRuntimeSettings(runtimeSettings);
 
 // set up the scanner behavior
 let scanSettings = await scanner.getScanSettings();
-  // disregard duplicated results found in a specified time period
+// disregard duplicated results found in a specified time period
 scanSettings.duplicateForgetTime = 20000;
-  // set a scan interval so the library may release the CPU from time to time
+// set a scan interval so the library may release the CPU from time to time
 scanSettings.intervalTime = 300;
 await scanner.updateScanSettings(scanSettings);
 ```
@@ -111,7 +119,7 @@ The following is an example of the 3rd option above.
     <div id="div-video-container">
         <video class="dbrScanner-video" playsinline="true"></video>
     </div>
-    <!-- Please visit https://www.dynamsoft.com/CustomerPortal/Portal/TrialLicense.aspx to get a trial license. -->
+    <!-- Please visit https://www.dynamsoft.com/customer/license/trialLicense to get a trial license. -->
     <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@7.6.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
     <script>
         let scanner = null;

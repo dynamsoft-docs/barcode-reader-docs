@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Baarcode Reader for JavaScript - User Guide
+title: Dynamsoft Barcode Reader for JavaScript - User Guide
 description: This is the user guide of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: user guide, javascript, js
 needAutoGenerateSidebar: true
@@ -33,8 +33,8 @@ Create an HTML file with the following content. Deploy this to your web server a
 <!DOCTYPE html>
 <html>
 <body>
-    <!-- Please visit https://www.dynamsoft.com/CustomerPortal/Portal/TrialLicense.aspx to get a trial license. -->
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@7.4.0-v1/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
+    <!-- Please visit https://www.dynamsoft.com/customer/license/trialLicense to get a trial license. -->
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@7.6.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
     <script>
         // initializes and uses the library
         let scanner = null;

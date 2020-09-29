@@ -1,3 +1,11 @@
+---
+layout: default-layout
+title: Dynamsoft Barcode Reader for JavaScript - Features & Requirements
+description: This page shows features and requirements of Dynamsoft Barcode Reader JavaScript SDK.
+keywords: user guide, features, requirements, javascript, js
+needAutoGenerateSidebar: true
+---
+
 # Features & Requirements
 
 ## Features
@@ -26,9 +34,9 @@ The following table shows available features between the two editions:
   | `wasm` size<sup>1</sup>\(gzip\) | 810KB | 1.1 MB |
   | 1D | &#10003; | &#10003; |
   | QR | &#10003; | &#10003; |
-  | Mirco QR | - | &#10003; |
+  | Micro QR | - | &#10003; |
   | PDF417 | &#10003; | &#10003; |
-  | Mirco PDF417 | - | &#10003; |
+  | Micro PDF417 | - | &#10003; |
   | DataMatrix | &#10003; | &#10003; |
   | Aztec | - | &#10003; |
   | MaxiCode | - | &#10003; |
