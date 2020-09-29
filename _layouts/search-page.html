@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+{%- include head.html -%}
+<style>
+    .markdown-body .editLinkColour { color: #323234; vertical-align: middle; height: 24px; line-height: 24px; display: inline-block; }
+    .markdown-body .editLinkColour:hover { color: #616167; }
+</style>
+<style type="text/css">
+  #searchResult h1 { margin-bottom: 15px; }
+  #searchResult b { color: #444; font-family: OpenSans-Semibold; }
+  #searchResult .gsc-control-cse { padding: 0; }
+  #searchResult table.gsc-input { margin-bottom: 0; }
+  #searchResult input.gsc-input { width: 100%; height: 40px; line-height: 40px; font-size: 16px; font-size: 1.6rem; border-color: #ccc; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; background: none !important; outline: none!important; box-shadow: none; outline: none!important;}
+  #searchResult input.gsc-search-button { display: inline-block; width: 85px; height: 40px; line-height: 34px; background: #ff9f1f; color: #fff; font-family: OpenSans-Semibold; font-size: 14px; text-align: center; cursor: pointer; border: solid 2px #ff9f1f; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; transition: all .2s ease-in-out; outline: none; }
+  #searchResult input.gsc-search-button:hover { background: #ff9f1f; opacity: 1; }
+  #searchResult input.gsc-search-button:active { background: #f99d31; opacity: 1; }
+  #searchResult td.gsc-input { padding-right: 0; }
+  #searchResult td.gsc-search-button { position: relative; left: -4px; }
+  #searchResult td.gsc-clear-button { display: none; }
+  #searchResult .gsc-wrapper { padding-top: 15px; }
+  #searchResult .gsc-adBlock {    display: none!important;}
+  #searchResult .gsc-tabsArea { margin: 0; padding: 20px 0 8px; height: auto; }
+  #searchResult .gsc-result-info { padding: 0; margin: 6px 0; }
+  #searchResult .gsc-result { margin-bottom: 10px; padding: 0; }
+  #searchResult .gs-per-result-labels { display: none; }
+  #searchResult .gs-result .gs-snippet { margin: 10px 0 6px; font-size: 14px; font-size: 1.4rem; line-height: 24px; font-family: OpenSans-Regular; }
+  #searchResult .gsc-tabHeader { padding: 0 13px; margin: 0 10px 10px 0; height: 30px; line-height: 28px; font-size: 14px; font-size: 1.4rem; background: #eee; color: #606060; border: solid 1px #eee; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; font-family: OpenSans-Semibold; }
+  #searchResult .gsc-tabHeader.gsc-tabhActive { background: #999; border-color: #999; color: #fff; }
+  #searchResult .gs-image-box { display: none; }
+  #searchResult .gs-result .gs-title, #searchResult .gs-result .gs-title * { color: #50a8e1; text-decoration: none; font-family: OpenSans-Regular; }
+  #searchResult .gs-result .gs-title:hover { color: #61c2ec; }
+  #searchResult .gs-result .gs-visibleUrl { font-size: 14px; font-size: 1.4rem; line-height: 24px; color: #999; font-family: OpenSans-Regular; }
+  #searchResult .gsc-cursor-page { margin-right: 15px; font-size: 16px; font-size: 1.6rem; color: #50a8e1; }
+  #searchResult .gsc-cursor-page:hover { color: #61c2ec; }
+  #searchResult .gsc-cursor-current-page { color: #000; }
+  #searchResult .gsc-above-wrapper-area { border-bottom: none; }
+  #searchResult .gsc-cursor-box { margin-top: 25px; }
+  #searchResult .gsc-thumbnail-inside, #searchResult .gsc-url-top {padding: 0;}
+  #searchResult .gsc-result .gs-title {height:2.8rem;}
+  #searchResult table tr, #searchResult table td { border: 0; }
+  #searchResult td.gsc-input { padding: 0; }
+  #searchResult .gsc-search-button-v2 {
+    height: 40px;
+    line-height: 40px;
+    border-color: rgb(254, 142, 20);
+    background-color: rgb(254, 142, 20);
+  }
+  #searchResult .gsc-search-button-v2:hover {
+    border-color: rgba(254, 142, 20, .7);
+    background-color: rgba(254, 142, 20, .7);
+  }
+  #searchResult .gsc-search-button-v2:focus, #searchResult .gsc-search-button-v2:active { border: 1px solid rgb(254, 142, 20);}
+  #searchResult .gsc-search-button-v2 svg {
+    width: 16px;
+    height: 16px;
+  }
+  #searchResult .gsc-modal-background-image-visible {
+    display: none!important;
+    height: auto;
+  }
+  #searchResult .gsc-results-wrapper-overlay {
+    position: relative!important;
+    width: 100%;
+    left: 0;
+    box-shadow: none;
+    height: auto;
+    padding: 30px 0px;
+    z-index: 1;
+  }
+  .gsc-overflow-hidden { overflow: auto!important; }
+  #searchResult .gsc-results-close-btn-visible { display: none; }
+  #searchResult .gcsc-find-more-on-google-branding { display: none; }
+  @media screen and (max-width: 767px) {
+    #searchResult input.gsc-search-button { border-bottom-left-radius: 0; -webkit-border-bottom-left-radius: 0; -moz-border-bottom-left-radius: 0; border-top-left-radius: 0; -webkit-border-bottom-left-radius: 0; -moz-border-top-left-radius: 0; }
+  }
+  @media (min-width: 768px) {
+    #searchResult .gs-result .gs-title, #searchResult .gs-result .gs-title * { font-size: 18px; font-size: 1.8rem; line-height: 30px; }
+    #searchResult input.gsc-input { height: 42px; line-height: 42px; }
+    #searchResult input.gsc-search-button { width: 105px; height: 42px; line-height: 36px; }
+    #searchResult table.gsc-search-box { position: relative; }
+    #searchResult td.gsc-input { padding-right: 20px; }
+    #searchResult td.gsc-search-button { left: 0; }
+    #searchResult td.gsc-clear-button { display: block; position: absolute; top: 0; right: 150px; }
+    #searchResult div.gsc-clear-button { display: block; margin: 9px 0 0 0; padding: 0; width: 25px; height: 25px; background: url(assets/img-icon/icon-close-12x13.png) no-repeat center center; }
+    #searchResult .gsc-webResult.gsc-result { margin-bottom: 20px; }
+    #searchResult .gsc-results .gsc-cursor-box { margin-top: 25px; margin-bottom: 20px; }
+    #searchResult .gcsc-branding { margin-bottom: 10px; }
+    #searchResult.gs-result .gs-title { font-size: 18px; font-size: 1.8rem; }
+  }
+  @media (min-width: 992px) {
+    #searchResult td.gsc-clear-button {display:none;}
+    .docContainer { min-height: calc(100vh - 285px); }
+  }
+  @media (min-width: 1200px) {
+    #searchResult { width: 960px; }
+    #searchResult .gsc-results .gsc-cursor-box { margin-bottom: 25px; }
+    #searchResult td.gsc-clear-button {display:none;}
+  }
+  @media (max-width: 991px) {
+    #searchContent { min-height: calc(100vh - 325px); }
+  }
+  @media (max-width: 767px) {
+    #searchContent { min-height: calc(100vh - 365px); }
+  }
+</style>
+<body>
+    <div class="headWrapper">
+        {%- include page_header.html -%}
+    </div>
+    <div class="subHeadWrapper">
+        <div class="subHeader container">
+            <div class="row">
+                <ul class="subHeaderMenuUl col-xs-12 clearfix">
+                    <li class="title"><a class="f18 fontOswald" href="https://www.dynamsoft.com/Products/Dynamic-Barcode-Reader.aspx">Dynamsoft Barcode Reader</a> <span class="fc9">|</span> Developer's Center</li>
+                    <li class="on"><a class="orangelink" href="{{ site.docHomePage }}">Documentation</a></li>
+                    <li><a class="whitelink hide-xs" href="https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx">Code Gallery</a></li>
+                    <li><a class="whitelink hide-xs" href="https://www.dynamsoft.com/Products/Barcode-Reader-Resources.aspx">Resources</a></li>
+                    <li class="fr" style="margin-right: 0; padding: 0;"><a class="btn d-btn bgOrange hide-sm hide-xs" href="https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx">Download 30-Day Free Trial</a></li>
+                </ul>
+            </div>
+            <div class="row mobileSubHeaderMenu">
+                <ul class="col-xs-12 show-xs">
+                    <li><a class="orangelink" href = "{{ site.docHomePage }}">Documentation</a></li>
+                    <li><a class="whitelink" href="https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx">Code Gallery</a></li>
+                    <li><a class="whitelink" href="https://www.dynamsoft.com/Products/Barcode-Reader-Resources.aspx">Resources</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="sideBarIcon"><i class="fa fa-list" style="margin-right: 5px;"></i> Table of contents</div>
+    <div class="container" id="searchContent">
+      <div class="row">
+          <div class="sideBar col-xs-12 col-md-3 hide-xs hide-sm">
+            <div id="sideBarCnt">
+                <div class="docSearchPart" style="margin-top: 30px;">
+                    <input id="txtSearch" class="search" type="text">
+                </div>
+                <ul class="mainPage" id="fullTreeMenuListContainer" name="listLevel1">
+                    <li>
+                        <a href="{{ site.introduction }}" class="otherLinkColour">Introduction</a>
+                        <ul>
+                            {%- if page.url contains '/introduction/' -%}
+                            <li><a href="{{ site.introduction }}overview.html" class="otherLinkColour">Overview</a></li>
+                            <li><a href="{{ site.introduction }}architecture.html" class="otherLinkColour">Architecture</a></li>
+                            {%- include sidelist-introduction/introduction-licensing.html -%}
+                            {%- include sidelist-introduction/introduction-how-to-guides.html -%}
+                            {%- include sidelist-introduction/introduction-comparison-tools.html -%}
+                            <li><a href="{{ site.faqs }}" class="otherLinkColour">FAQs</a></li>
+                            <li class="unavailableLink">Security Features</li>
+                            {%- endif -%}
+                        </ul>
+                    </li>
+                    <li><a href="{{ site.programming }}" class="otherLinkColour">Programming</a>
+                        <ul>
+                            {%- if page.url contains '/programming/' -%}
+                            {%- include sidelist-programming/programming-c.html -%}
+                            {%- include sidelist-programming/programming-cpp.html -%}
+                            {%- include sidelist-programming/programming-javascript.html -%}
+                            {%- include sidelist-programming/programming-dotnet.html -%}
+                            {%- include sidelist-programming/programming-oc.html -%}
+                            {%- include sidelist-programming/programming-java.html -%}
+                            {%- include sidelist-programming/programming-android.html -%}
+                            {%- include sidelist-programming/programming-python.html -%}
+                            {%- endif -%}
+                        </ul>
+                    </li>
+                    <li><a href="{{ site.parameters }}" class="otherLinkColour">Parameters</a>
+                        <ul>
+                            {%- if page.url contains '/parameters/' -%}
+                            <li><a href="{{ site.parameters }}structure-and-interfaces-of-parameters.html" class="otherLinkColour">Structure and Interfaces of Parameters</a></li>
+                            {%- include sidelist-parameters/parameters-references.html -%}
+                            {%- include sidelist-parameters/parameters-enumerations.html -%}
+                            {%- include sidelist-parameters/parameters-scenario-settings.html -%}
+                            <li class="unavailableLink">Example Image Settings</li>
+                            {%- endif -%}
+                        </ul>
+                    </li>
+                    <li class="unavailableLink">Enhancements
+                        {%- if page.url contains '/enhancements/' -%}
+                        <ul>
+                            <li class="unavailableLink">DPM Codes</li>
+                            <li class="unavailableLink">Intermediate Result</li>
+                            <li class="unavailableLink">Panorama</li>
+                            <li class="unavailableLink">PDF Vector</li>
+                        </ul>
+                        {%- endif -%}
+                    </li>
+                </ul>
+            </div>
+          </div>
+          <div class="docContainer col-xs-12 col-md-9">
+              <div class="main row">
+                  <div id="searchResult" class="container pt40 pb60 sm-pt50">
+                      <div class="row">
+                          <div class="col-xs-12">
+                              <h1>Search</h1>                        
+                              <script async src="https://cse.google.com/cse.js?cx=32039cdf85bc7ae2b"></script>
+                              <div class="gcse-search"></div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="content markdown-body headCounter col-xs-12" style="min-height: unset;">
+                      {{ content }}
+                      
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div id="footerWrapper">
+        {%- include page_footer.html -%}
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"
+        integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+
+    {%- if page.needAutoGenerateSidebar -%}
+    {%- unless page.needGenerateH3Content -%}
+    <script>
+        FullTreeMenuList(true, false);
+    </script>
+    {%- else -%}
+    <script>
+        FullTreeMenuList(true);
+    </script>
+    {%- endunless -%}
+    {%- else -%}
+    <script>
+        FullTreeMenuList(false);
+    </script>
+    {%- endif -%}
+
+    <script type="text/javascript">
+      $('#sideBarCnt').css({'width': $('.sideBar').width() + 'px'})
+      $('.container .head').css({'width': $('.docContainer').width() + 'px'})
+
+      $(window).resize(function() {
+          $('#sideBarCnt').css({'width': $('.sideBar').width() + 'px'})
+          $('.container .head').css({'width': $('.docContainer').width() + 'px'})
+          realFunc()
+      })
+      
+      window.addEventListener('scroll', realFunc);
+
+      function realFunc(){
+          var sd = $(window).scrollTop();
+          var dcheight = $('.docContainer').height() + 65 - sd
+          if (breakpoint() == 'lg') {
+              if (sd > 65 && dcheight>0) {
+                  if (!$('.subHeadWrapper').hasClass('shw-fixed')) {
+                      $('.subHeadWrapper').addClass('shw-fixed')
+                      $('.docContainer').addClass('dc-fixed')
+                      $('#sideBarCnt').addClass('ftm-fixed')
+                      $('.rightSideMenu').addClass('rsm-fixed')
+                      $('#docHead').addClass('ch-fixed')
+                  }
+                  if (dcheight > document.body.clientHeight) {
+                      $('#sideBarCnt.ftm-fixed').css({'height': 'calc(100vh - 170px)'})
+                      $('.rightSideMenu.rsm-fixed').css({'height': 'calc(100vh - 170px)'})
+                  } else {
+                      $('#sideBarCnt.ftm-fixed').css({'height': (dcheight - 40) + 'px'})
+                      $('.rightSideMenu.rsm-fixed').css({'height': (dcheight - 40) + 'px'})
+                  }
+                  $('.markdown-body').css({'margin-top': (100 + $('.container .head').height()) + 'px'})
+              } else {
+                  $('.subHeadWrapper').removeClass('shw-fixed')
+                  $('.docContainer').removeClass('dc-fixed')
+                  $('#sideBarCnt').removeClass('ftm-fixed')
+                  $('.rightSideMenu').removeClass('rsm-fixed')
+                  $('.container .head').removeClass('ch-fixed')
+                  $('.markdown-body').css({'margin-top': '40px'})
+              }
+          }
+          if (breakpoint() == 'md') {
+              if (sd > 65 && dcheight > 0) {
+                  if (!$('.subHeadWrapper').hasClass('shw-fixed')) {
+                      $('.subHeadWrapper').addClass('shw-fixed')
+                      $('.docContainer').addClass('dc-fixed')
+                      $('#sideBarCnt').addClass('ftm-fixed')
+                      $('#docHead').addClass('ch-fixed')
+                  }
+                  $('.markdown-body').css({'margin-top': (100 + $('.container .head').height()) + 'px'})
+              } else {
+                  $('.subHeadWrapper').removeClass('shw-fixed')
+                  $('.docContainer').removeClass('dc-fixed')
+                  $('#sideBarCnt').removeClass('ftm-fixed')
+                  $('#docHead').removeClass('ch-fixed')
+                  $('.markdown-body').css({'margin-top': '40px'})
+              }
+          }
+      }
+
+      $('.sideBarIcon').click(function() {
+          $(".sideBar").toggleClass('hide-sm');
+          $(".sideBar").toggleClass('hide-xs');
+          setTimeout(function() {
+              console.log('sidebar' + $('.sideBar').width())
+              $('#sideBarCnt').css({'width': $('.sideBar').width() + 'px'})
+          }, 100)
+      })
+
+      let timeInt = setInterval(function() {
+          var container = $('#sideBarCnt'), scrollTo = $('#sideBarCnt .activeLink');
+          console.log(scrollTo)
+          if (scrollTo.length>0) {
+              container.scrollTop(
+                  scrollTo.offset().top - container.offset().top + container.scrollTop()
+              );
+              clearInterval(timeInt)
+          }
+      }, 500)
+  
+      function onSearchFinish(e) {
+          var evt = window.event || e;
+          if (evt.keyCode == 13) {
+
+          }
+      }
+
+      $('#txtSearch').keydown(function(e) { 
+          if (e.keyCode == 13) {
+              window.location.href = '/search?q=' + $('#txtSearch').val()
+          }
+      })
+
+  </script>
+
+    {%- include livehelp.html -%}
+</body>
+
+</html>

@@ -35,7 +35,7 @@ ul.square { list-style-type:square; padding-left: 30px; line-height: 28px; }
 ul.disc { list-style-type: disc; padding-left: 30px; line-height: 28px; margin-left: 0; margin-top: 149px; }
 ul.circle > li p:hover, ul.circle li.on p, ul.square > li.on p, ul.square > li p:hover, ul.disc > li.on p, ul.disc > li p:hover { color: #3196fc; }
 
-.mainPage { padding-left: 0px; line-height: 28px; margin: 0; margin-top:40px; overflow: auto; }
+.mainPage { padding-left: 0px; line-height: 28px; margin: 0; margin-top:10px; overflow: auto; }
 
 .headCounter h2:before { content: counter(h2counter) ".	"; }
 .headCounter h2 { counter-reset: h3counter; counter-increment: h2counter; }
@@ -50,6 +50,8 @@ ul.circle > li p:hover, ul.circle li.on p, ul.square > li.on p, ul.square > li p
 .subHeadWrapper .subHeaderMenuUl li { padding: 0 10px; cursor: pointer; display: inline-block; color: #323234; vertical-align: top; }
 .subHeadWrapper .subHeaderMenuUl li.on { color: #FE8E14; vertical-align: top; }
 .subHeadWrapper .subHeaderMenuUl li a, .subHeadWrapper .subHeaderMenuUl li a.whitelink { color: #323234; }
+.subHeadWrapper .subHeaderMenuUl li a.orangelink { color: #FE8E14; }
+.subHeadWrapper .subHeaderMenuUl li a.whitelink:hover { color: #FE8E14; }
 .subHeadWrapper .subHeaderMenuUl li a.bgOrange { color: #FFFFFF; }
 .subHeadWrapper .subHeaderMenuUl li.title { margin-right: 20px; padding: 0; }
 .subHeadWrapper .mobileSubHeaderMenu { line-height: 40px; }
@@ -88,7 +90,7 @@ ul.circle > li p:hover, ul.circle li.on p, ul.square > li.on p, ul.square > li p
 
 #menuLsitContainer ul { display: none; }
 
-#fullTreeMenuListContainer.ftm-fixed { position: fixed; top: 60px; max-height: unset; }
+#sideBarCnt.ftm-fixed, #fullTreeMenuListContainer.ftm-fixed { position: fixed; top: 60px; max-height: unset; }
 #fullTreeMenuListContainer ul { display: none; margin-left: 15px; margin-bottom: 10px; }
 #fullTreeMenuListContainer li { list-style: none; padding-left: 15px; line-height: 20px; margin-bottom: 8px; position: relative; }
 #fullTreeMenuListContainer li:before { content: ''; width: 6px; height: 6px; border-radius: 50%; display: inline-block; background: #999; position: absolute; left: 2px; top: 8px; }
@@ -103,6 +105,9 @@ ul.circle > li p:hover, ul.circle li.on p, ul.square > li.on p, ul.square > li p
 .recordLink.sadLink { margin-left: 15px; }
 .icon-smile { display: inline-block; width: 24px; height: 24px; margin-right: 5px; vertical-align: top;}
 .icon-sad { display: inline-block; width: 24px; height: 24px; margin-right: 5px; vertical-align: top;}
+#sideBarCnt .docSearchPart { position: relative; margin-top: 30px; }
+#sideBarCnt .docSearchPart::before { content: ''; width: 16px; height: 16px; position: absolute; background: url(https://www.dynamsoft.com/assets/img-icon/icon-search-9-16x16.png) no-repeat center center; display: block; top: 7px; left: 5px; z-index: 11; }
+#sideBarCnt .docSearchPart .search { position: relative; height: 30px; width: 100%; max-width: 250px; padding: 5px 5px 5px 27px; }
 
 .btn { font-family: OpenSans-Regular; }
 
@@ -166,11 +171,12 @@ div::-webkit-scrollbar-corner, ul::-webkit-scrollbar-corner{
 	.sideBar .mainPage { margin-top: 0; width: auto!important;max-width: calc(100% - 20px); overflow-x: auto; }
 	#fullTreeMenuListContainer > li { max-width: 320px; min-width: 200px; }
 	#TryFreeDownload { margin-top: 100px }
+	#sideBarCnt .docSearchPart { position: relative; margin-top: 0px; margin-bottom: 10px; }
 }
 
 @media (max-width: 767px) {
 	.sideBarIcon { display: inline-block; height: 40px; line-height: 38px; background: #EEEEEE; color: #444; text-align: right; padding-right: 15px; padding-left: 15px; width: auto; cursor: pointer; vertical-align: top; }
-	.sideBar { position: absolute; width: auto; left: 0; z-index: 12; background: #eeeeee; padding: 20px 15px; padding-left: 15px; max-width: 100%;}
+	.sideBar { position: absolute; width: 100%; left: 0; z-index: 12; background: #eeeeee; padding: 20px 15px; padding-left: 15px; max-width: 100%;}
 	.subHeaderMenuUl li { display: none!important; }
 	.subHeaderMenuUl li.title { display: inline-block!important; }
 	.container .head { padding-top: 20px; }
@@ -180,6 +186,7 @@ div::-webkit-scrollbar-corner, ul::-webkit-scrollbar-corner{
 	.subHeadWrapper { height: auto; }
 	.subHeadWrapper .mobileSubHeaderMenu ul { font-size: 14px; }
 	#TryFreeDownload .discription { max-width: 400px; text-align: left; }
+	#sideBarCnt .docSearchPart { position: relative; margin-top: 0px; margin-bottom: 10px; }
 }
 
 @media (max-width: 400px) {
