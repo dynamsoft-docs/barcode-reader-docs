@@ -3,6 +3,7 @@ layout: default-layout
 title: Dynamsoft Barcode Reader for JavaScript - User Guide
 description: This is the user guide of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: user guide, javascript, js
+breadcrumbText: User Guide
 needAutoGenerateSidebar: true
 ---
 
