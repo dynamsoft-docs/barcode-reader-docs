@@ -319,11 +319,11 @@
           }
       }
 
-      $('#txtSearch').keydown(function(e) { 
-          if (e.keyCode == 13) {
-              window.location.href = '/search?q=' + $('#txtSearch').val()
-          }
-      })
+    $('#txtSearch').keydown(function(e) { 
+        if (e.keyCode == 13) {
+            window.location.href = '/barcode-reader/search?q=' + $('#txtSearch').val()
+        }
+    })
 
   </script>
 
