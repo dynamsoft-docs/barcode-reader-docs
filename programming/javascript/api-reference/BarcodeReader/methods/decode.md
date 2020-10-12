@@ -32,7 +32,7 @@ decode(source) returns Promise
 
 ### Return Value
 
-<code>Promise<<a href="../../global-interfaces.md#TextResult">TextResult[]</a>></code>
+<code>Promise<<a href="../../global-interfaces.md#textresult">TextResult[]</a>></code>
  
 ### Sample
 
@@ -52,7 +52,7 @@ decodeBase64String(base64) returns Promise
 
 ### Return Value
 
-<code>Promise<<a href="../../global-interfaces.md#TextResult">TextResult[]</a>></code>
+<code>Promise<<a href="../../global-interfaces.md#textresult">TextResult[]</a>></code>
 
 ### Sample
 
@@ -97,7 +97,7 @@ decodeUrl(url) returns Promise
 
 ### Return Value
 
-<code>Promise<<a href="../../global-interfaces.md#TextResult">TextResult[]</a>></code>
+<code>Promise<<a href="../../global-interfaces.md#textresult">TextResult[]</a>></code>
 
 ### Sample
 
