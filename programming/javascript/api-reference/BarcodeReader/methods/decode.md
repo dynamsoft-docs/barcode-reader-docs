@@ -54,6 +54,7 @@ decodeBase64String(base64) returns Promise
 
 <code>Promise<<a href="../../global-interfaces.md#textresult">TextResult[]</a>></code>
 
+
 ### Sample
 
 [Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
