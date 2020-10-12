@@ -150,7 +150,7 @@ breadcrumbText: Reference
  | [`FormatSpecification.MirrorMode`](format-specification/format-control.md#mirrormode) | Sets whether to decode mirrored barcodes. | 
  | [`FormatSpecification.ModuleSizeRangeArray`](format-specification/format-control.md#modulesizerangearray) | Sets the range of module size (in pixels) for barcodes search. (Hint). |
  | [`FormatSpecification.RequireStartStopChars`](format-specification/format-control.md#requirestartstopchars) |	Sets whether the start and stop characters are required when searching for Code 39 barcodes. |
- | [`FormatSpecification.StandardFormat`](format-specification/format-control.md#Standardformat) | Set the standard barcode format. | 
+ | [`FormatSpecification.StandardFormat`](format-specification/format-control.md#standardformat) | Set the standard barcode format. | 
  | [`FormatSpecification.TailModuleRatio`](format-specification/format-control.md#tailmoduleratio) |	Set the module count and module size ratio of the barcode tail part. | 
 
 

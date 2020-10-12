@@ -85,7 +85,7 @@ getRuntimeSettings() returns Promise
 
 ### Return Value
 
-<code>Promise<<a href="../../global-interfaces.md#RuntimeSettings">RuntimeSettings</a>></code>
+<code>Promise<<a href="../../global-interfaces.md#runtimesettings">RuntimeSettings</a>></code>
 
 
 ### Sample
@@ -118,7 +118,7 @@ updateRuntimeSettings(settings) returns Promise
 
 ### Parameters
 
-`settings` [*RuntimeSettings*](/global-interfaces.md#runtimesettings) | *string* 
+`settings` [*RuntimeSettings*](../../global-interfaces.md#runtimesettings) | *string* 
 
 ### Return Value
 
