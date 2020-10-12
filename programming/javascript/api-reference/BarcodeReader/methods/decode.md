@@ -97,7 +97,7 @@ decodeUrl(url) returns Promise
 
 ### Return Value
 
-<code>Promise<<a href="../../global-interfaces.md#TextResult">TextResult[]</a>></code>
+<code>Promise<<a href="../../global-interfaces.md#textresult">TextResult[]</a>></code>
 
 ### Sample
 
