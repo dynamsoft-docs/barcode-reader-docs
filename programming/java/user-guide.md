@@ -91,11 +91,11 @@ You can add Dynamsoft Barcode Reader as the dependency to pom.xml like this:
 
 ## Decoding Methods
 The SDK provides multiple decoding methods that support reading barcodes from different sources, including static images, video stream, files in memory, base64 string, bitmap, etc. Here is a list of all decoding methods:
-- [DecodeFile](api-reference/BarcodeReader/decode.md#DecodeFile): Reads barcodes from a specified file (BMP, JPEG, PNG, GIF, TIFF or PDF).
-- [DecodeBase64String](api-reference/BarcodeReader/decode.md#DecodeBase64String): Reads barcodes from a base64 encoded string of a file.  
-- [DecodeBitmap](api-reference/BarcodeReader/decode.md#DecodeBitmap): Reads barcodes from a bitmap. When handling multi-page images, it will only decode the current page.
-- [DecodeBuffer](api-reference/BarcodeReader/decode.md#DecodeBuffer): Reads barcodes from raw buffer.
-- [DecodeFileInMemory](api-reference/BarcodeReader/decode.md#DecodeFileInMemory): Decodes barcodes from an image file in memory.
+- [DecodeFile](api-reference/BarcodeReader/decode.md#decodefile): Reads barcodes from a specified file (BMP, JPEG, PNG, GIF, TIFF or PDF).
+- [DecodeBase64String](api-reference/BarcodeReader/decode.md#decodebase64string): Reads barcodes from a base64 encoded string of a file.  
+- [DecodeBitmap](api-reference/BarcodeReader/decode.md#decodebitmap): Reads barcodes from a bitmap. When handling multi-page images, it will only decode the current page.
+- [DecodeBuffer](api-reference/BarcodeReader/decode.md#decodebuffer): Reads barcodes from raw buffer.
+- [DecodeFileInMemory](api-reference/BarcodeReader/decode.md#decodefileinmemory): Decodes barcodes from an image file in memory.
 
 You can find more samples in more programming languages at [Code Gallery](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx) or [Github Repositories](https://github.com/dynamsoft-dbr?q=java&type=&language=).
 
@@ -176,7 +176,7 @@ reader.destroy();
 
 
 ### Use A Template to Change Settings
-Besides the option of using the PublicRuntimeSettings class, the SDK also provides [`initRuntimeSettingsWithString`](api-reference/BarcodeReader/parameter-and-runtime-settings-advanced.md#InitRuntimeSettingsWithString) and [`initRuntimeSettingsWithFile`](api-reference/BarcodeReader/parameter-and-runtime-settings-advanced.md#InitRuntimeSettingsWithFile) APIs that enable you to use a template to control all the runtime settings. With a template, instead of writing many codes to modify the settings, you can manage all the runtime settings in a JSON file/string. 
+Besides the option of using the PublicRuntimeSettings class, the SDK also provides [`initRuntimeSettingsWithString`](api-reference/BarcodeReader/parameter-and-runtime-settings-advanced.md#initruntimesettingswithstring) and [`initRuntimeSettingsWithFile`](api-reference/BarcodeReader/parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile) APIs that enable you to use a template to control all the runtime settings. With a template, instead of writing many codes to modify the settings, you can manage all the runtime settings in a JSON file/string. 
 
 ```java
 BarcodeReader dbr = new BarcodeReader();

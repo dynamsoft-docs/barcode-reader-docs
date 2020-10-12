@@ -37,7 +37,7 @@ DBR_API int DBR_DecodeFile (void* barcodeReader, const char* pFileName, const ch
 
 #### Return value
 Returns error code (returns 0 if the function operates successfully).    
-*You can call [`DBR_GetErrorString`](status-retrieval.md#DBR_GetErrorString) to get detailed error message.*
+*You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
 #### Code Snippet
 ```c
@@ -68,7 +68,7 @@ DBR_API int DBR_DecodeFileInMemory (void* barcodeReader, const unsigned char* pF
 
 #### Return value
 Returns error code (returns 0 if the function operates successfully).    
-*You can call [`DBR_GetErrorString`](status-retrieval.md#DBR_GetErrorString) to get detailed error message.*
+*You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
 #### Code Snippet
 ```c
@@ -105,7 +105,7 @@ DBR_API int DBR_DecodeBuffer (void* barcodeReader, const unsigned char* pBufferB
 
 #### Return value
 Returns error code (returns 0 if the function operates successfully).    
-*You can call [`DBR_GetErrorString`](status-retrieval.md#DBR_GetErrorString) to get detailed error message.*
+*You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
 #### Code Snippet
 ```c
@@ -140,7 +140,7 @@ DBR_API int DBR_DecodeBase64String (void* barcodeReader, const char* pBase64Stri
 
 #### Return value
 Returns error code (returns 0 if the function operates successfully).    
-*You can call [`DBR_GetErrorString`](status-retrieval.md#DBR_GetErrorString) to get detailed error message.*
+*You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
 #### Code Snippet
 ```c
@@ -175,7 +175,7 @@ DBR_API int DBR_DecodeDIB (void* barcodeReader, const HANDLE hDIB, const char* p
 
 #### Return value
 Returns error code (returns 0 if the function operates successfully).    
-*You can call [`DBR_GetErrorString`](status-retrieval.md#DBR_GetErrorString) to get detailed error message.*
+*You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
 #### Code Snippet
 ```c
