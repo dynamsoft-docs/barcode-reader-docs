@@ -19,21 +19,25 @@ needAutoGenerateSidebar: true
 
 
 
-# DBR_GetErrorString
+## DBR_GetErrorString
+
 Get error message by error code.
 
 ```c
 DBR_API const char* DBR_GetErrorString (int errorCode)	
 ```   
    
-#### Parameters
+### Parameters
+
 `[in]	errorCode` The error code.
  
 
-#### Return value
+### Return value
+
 The error message.
 
-#### Code Snippet
+### Code Snippet
+
 ```c
 void* barcodeReader = DBR_CreateInstance();
 DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
@@ -44,21 +48,19 @@ DBR_DestroyInstance(barcodeReader);
 
 &nbsp;
 
+## DBR_GetVersion
 
-
-
-
-# DBR_GetVersion
 Get version information of SDK.
 
 ```c
 DBR_API const char* DBR_GetVersion ()
 ```   
 
-#### Return value
+### Return value
 The version information string.
 
-#### Code Snippet
+### Code Snippet
+
 ```c
 const char* versionInfo = DBR_GetVersion();
 ```

@@ -19,7 +19,7 @@ needGenerateH3Content: false
 
 ---
 
-# createInstance
+## createInstance
 
 Create a `BarcodeScanner` object. Overrides `BarcodeReader.createInstance`.
 
