@@ -85,7 +85,7 @@ getRuntimeSettings() returns Promise
 
 ### Return Value
 
-<code>Promise<<a href="../../global-interfaces.md#runtimesettings">RuntimeSettings</a>></code>
+Promise<[RuntimeSettings](../../global-interfaces.md#runtimesettings)>
 
 
 ### Sample
