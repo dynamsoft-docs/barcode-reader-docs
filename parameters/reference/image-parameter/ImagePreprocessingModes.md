@@ -122,10 +122,12 @@ Sets the morph operation for the morphology process.
 | *string* | "Erode"<br>"Dilate"<br>"Open"<br>"Close" | "Close" | "IPM_MORPHOLOGY" |         
 
 - **Remark**    
-   - "Erode": 
-   - "Dilate": 
-   - "Open": 
-   - "Close": 
+   - "Erode": Perform erosion process.
+   - "Dilate": Perform dilation process.
+   - "Open": Perform erosion first, then perform dilation.
+   - "Close": Perform dilation first, then perform erosion.
+   
+   For more information, please check out [Image Processing in OpenCV - Morphological Transformations](https://docs.opencv.org/master/d9/d61/tutorial_py_morphological_ops.html) for reference.
 
 
 ##### MorphShape  
