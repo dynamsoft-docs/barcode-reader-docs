@@ -154,7 +154,8 @@ DBR_DestroyInstance(barcodeReader);
 
 
 
-# DBR_StopFrameDecoding
+## DBR_StopFrameDecoding
+
 Stops the frame decoding thread created by [`DBR_StartFrameDecoding`](#dbr_startframedecoding) or [`DBR_StartFrameDecodingEx`](#dbr_startframedecodingex).
 
 ```c
@@ -186,7 +187,8 @@ DBR_DestroyInstance(barcodeReader);
 
 
 
-# DBR_InitFrameDecodingParameters
+## DBR_InitFrameDecodingParameters
+
 Initialize frame decoding parameters with default values.
 
 ```c
