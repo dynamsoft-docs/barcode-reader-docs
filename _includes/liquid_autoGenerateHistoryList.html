@@ -1,34 +1,59 @@
-{%- assign curPageFileName = page.url | split: '/' | last | replace: '.html', '' -%}
-{%- assign curPathName = page.url | split: curPageFileName | first -%}
-{%- capture curPageFileNameWithoutVer -%}	
-{%- if curPageFileName contains '-v' -%}	
-{{ curPageFileName | split: '-v' | first }}
-{%- else -%}
-{{ curPageFileName }}
-{%- endif -%}
+{%- capture curPageVersion -%}
+	{%- if page.url contains '-v' -%}
+		{{ page.url |  split: '-v' | last | split: '/' | first | replace: '.html', '' | rstrip }}
+	{%- else -%}
+		latest version
+	{%- endif -%}
 {%- endcapture -%}
+
+{%- if curPageVersion == "latest version" -%}
+	<li class="otherLinkColour" style="font-weight: bold;">latest version</li>		
+{%- else -%}
+	<li class="otherLinkColour" style="font-weight: bold;">{{ "version " | append: curPageVersion }}</li>
+{%- endif -%}
+
+
+
+{%- assign needRemoveStr = "-v" | append: curPageVersion -%}
+{%- assign curUsedToMatchUrl = page.url | remove: needRemoveStr -%}
+
+{%- assign historyRecode = "" -%}
+
 {%- for my_page in site.pages -%}
-	{%- assign tmpPageFileName = my_page.url | split: '/' | last | replace: '.html', '' -%}		
-	{%- assign tmpPathName = my_page.url | split: tmpPageFileName | first -%}		
-	{%- if curPathName == tmpPathName and tmpPageFileName != curPageFileName -%}		
-		{%- capture tmpPageFileNameWithoutVer -%}		
-		{%- if tmpPageFileName contains '-v' -%}		
-		{{ tmpPageFileName | split: '-v' | first }}			
-		{%- else -%}		
-		{{ tmpPageFileName }}			
+	{%- capture tmpPageVersion -%}
+		{%- if my_page.url contains '-v' -%}
+			{{ my_page.url |  split: '-v' | last | split: '/' | first | replace: '.html', '' | rstrip }}
+		{%- else -%}
+			latest version
 		{%- endif -%}
-		{%- endcapture -%}
+	{%- endcapture -%}
 
-		{%- assign a1 = tmpPageFileNameWithoutVer | strip -%}
-		{%- assign a2 = curPageFileNameWithoutVer | strip -%}
+	{%- if tmpPageVersion == curPageVersion -%}
+		{%- continue -%}
+	{%- endif -%}
 
-		{%- if a1 == a2 -%}	
-			{%- if tmpPageFileName contains '-v' -%}			
-				{%- capture liName -%} version {{ tmpPageFileName |  split: '-v' | last }} {%- endcapture -%}			
-				<li><a href = "{{ site.docHomePage }}{{ my_page.url }}" class="otherLinkColour">{{ liName }}</a></li>				
-			{%- else -%}
-				<li><a href = "{{ site.docHomePage }}{{ my_page.url }}" class="otherLinkColour">latest version</a></li>	
-			{%- endif -%}
+	{%- assign newVer = true -%}
+	{%- assign historyVer = historyRecode | split: '/' -%}
+	{%- for ver in historyVer -%}
+		{%- if ver == tmpPageVersion -%}
+			{%- assign newVer = false -%}
+			{%- break -%}
 		{%- endif -%}
-	{%- endif -%}	
+	{%- endfor -%}
+
+	{%- unless newVer -%}
+		{%- continue -%}
+	{%- endunless -%}
+
+	{%- assign needRemoveStr = "-v" | append: tmpPageVersion -%}
+	{%- assign tmpUsedToMatchUrl = my_page.url | remove: needRemoveStr -%}
+
+	{%- if tmpUsedToMatchUrl == curUsedToMatchUrl -%}
+		{%- assign historyRecode = historyRecode | append: '/' | append: tmpPageVersion -%}
+		{%- if tmpPageVersion == "latest version" -%}
+			<li><a href = "{{ site.docHomePage }}{{ my_page.url }}" class="otherLinkColour">latest version</a></li>		
+		{%- else -%}
+			<li><a href = "{{ site.docHomePage }}{{ my_page.url }}" class="otherLinkColour">{{ "version " | append: tmpPageVersion }}</a></li>	
+		{%- endif -%}
+	{%- endif -%}
 {%- endfor -%}

@@ -222,7 +222,7 @@ This parameter specifies the character set of the standard barcode type referenc
 
 ## AustralianPostEncodingTable
 
-The AustralianPost Code has a section of customer information area, which can be decoded using two standard defined decoding tables (N table, C table). This parameter can be set to specify either N table or C table for decoding. Please refer to the AustralianPostcode standard [documentation](https://auspost.com.au/content/dam/auspost_corp/mediai/documents/customer-barcode-technical-specifications-aug2012.pdf) for specific definitions of these two code tables.
+The AustralianPost Code has a section of customer information area, which can be decoded using two standard defined decoding tables (N table, C table). This parameter can be set to specify either N table or C table for decoding. Please refer to the AustralianPostcode standard documentation for specific definitions of these two code tables.
 
 This parameter can be set to "C" or "N" and the default value is "C".
 
