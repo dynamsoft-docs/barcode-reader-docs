@@ -131,65 +131,7 @@
     <div class="sideBarIcon"><i class="fa fa-list" style="margin-right: 5px;"></i> Table of contents</div>
     <div class="container" id="searchContent">
       <div class="row">
-          <div class="sideBar col-xs-12 col-md-3 hide-xs hide-sm">
-            <div id="sideBarCnt">
-                <div class="docSearchPart" style="margin-top: 30px;">
-                    <input id="txtSearch" class="search" type="text">
-                </div>
-                <ul class="mainPage" id="fullTreeMenuListContainer" name="listLevel1">
-                    <li>
-                        <a href="{{ site.introduction }}" class="otherLinkColour">Introduction</a>
-                        <ul>
-                            {%- if page.url contains '/introduction/' -%}
-                            <li><a href="{{ site.introduction }}overview.html" class="otherLinkColour">Overview</a></li>
-                            <li><a href="{{ site.introduction }}architecture.html" class="otherLinkColour">Architecture</a></li>
-                            {%- include sidelist-introduction/introduction-licensing.html -%}
-                            {%- include sidelist-introduction/introduction-how-to-guides.html -%}
-                            {%- include sidelist-introduction/introduction-comparison-tools.html -%}
-                            <li><a href="{{ site.faqs }}" class="otherLinkColour">FAQs</a></li>
-                            <li class="unavailableLink">Security Features</li>
-                            {%- endif -%}
-                        </ul>
-                    </li>
-                    <li><a href="{{ site.programming }}" class="otherLinkColour">Programming</a>
-                        <ul>
-                            {%- if page.url contains '/programming/' -%}
-                            {%- include sidelist-programming/programming-c.html -%}
-                            {%- include sidelist-programming/programming-cpp.html -%}
-                            {%- include sidelist-programming/programming-javascript.html -%}
-                            {%- include sidelist-programming/programming-dotnet.html -%}
-                            {%- include sidelist-programming/programming-oc.html -%}
-                            {%- include sidelist-programming/programming-java.html -%}
-                            {%- include sidelist-programming/programming-android.html -%}
-                            {%- include sidelist-programming/programming-python.html -%}
-                            {%- endif -%}
-                        </ul>
-                    </li>
-                    <li><a href="{{ site.parameters }}" class="otherLinkColour">Parameters</a>
-                        <ul>
-                            {%- if page.url contains '/parameters/' -%}
-                            <li><a href="{{ site.parameters }}structure-and-interfaces-of-parameters.html" class="otherLinkColour">Structure and Interfaces of Parameters</a></li>
-                            {%- include sidelist-parameters/parameters-references.html -%}
-                            {%- include sidelist-parameters/parameters-enumerations.html -%}
-                            {%- include sidelist-parameters/parameters-scenario-settings.html -%}
-                            <li class="unavailableLink">Example Image Settings</li>
-                            {%- endif -%}
-                        </ul>
-                    </li>
-                    <li class="unavailableLink">Enhancements
-                        {%- if page.url contains '/enhancements/' -%}
-                        <ul>
-                            <li class="unavailableLink">DPM Codes</li>
-                            <li class="unavailableLink">Intermediate Result</li>
-                            <li class="unavailableLink">Panorama</li>
-                            <li class="unavailableLink">PDF Vector</li>
-                        </ul>
-                        {%- endif -%}
-                    </li>
-                </ul>
-            </div>
-          </div>
-          <div class="docContainer col-xs-12 col-md-9">
+          <div class="docContainer col-xs-12" style="border-left: 0;">
               <div class="main row">
                   <div id="searchResult" class="container pt40 pb60 sm-pt50">
                       <div class="row">
