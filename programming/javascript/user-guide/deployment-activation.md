@@ -6,6 +6,8 @@ keywords: user guide, deployment, javascript, js
 needAutoGenerateSidebar: true
 ---
 
+# Deployment Activation
+
 ## Deployment: Self-hosted, Offline, or Intranet 
 
 The following steps guide you through how to deploy the library on your own server.
