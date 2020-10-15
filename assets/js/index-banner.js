@@ -106,6 +106,7 @@ function HighlightCurrentListForFullTree(searchListId, firstTime, searchUrl = do
         var listAry = navWrap.getElementsByTagName("li");    
 
         //history version doc url
+        searchUrl = searchUrl.replace(/\/index-v[0-9]+.*.html/g,"/");
         searchUrl = searchUrl.replace(/-v[0-9]+.*\//g,"/");
         searchUrl = searchUrl.replace(/-v[0-9]+.*.html/g,".html");
 
