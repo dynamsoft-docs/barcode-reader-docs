@@ -50,7 +50,6 @@ class IntermediateResult
 | [`ccm_index`](#ccm_index) | *int* |
 | [`scale_down_ratio`](#scale_down_ratio) | *int* |
 | [`frame_id`](#frame_id) | *int* |
-| [`rpm_colour_argument_index`]($rpm_colour_argument_index) | *int* |
 
 
 
@@ -256,9 +255,3 @@ The ID of the operated frame.
 IntermediateResult.frame_id
 ```
 
-### rpm_colour_argument_index
-The index of ForeAndBackgroundColour argument used for RegionPredetectionMode.
-
-```python
-IntermediateResult.rpm_colour_argument_index
-```

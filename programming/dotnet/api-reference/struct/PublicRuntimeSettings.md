@@ -21,7 +21,7 @@ public struct PublicRuntimeSettings
   
 | Attribute | Type |
 |---------- | ---- |
-| [`TerminatePhase`](#terminatephase) | [`TerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase) |
+| [`TerminatePhase`](#terminatephase) | [`EnumTerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase) |
 | [`Timeout`](#timeout) | *int* |
 | [`MaxAlgorithmThreadCount`](#maxalgorithmthreadcount) | *int* |
 | [`ExpectedBarcodesCount`](#expectedbarcodescount) | *int* |
@@ -29,20 +29,20 @@ public struct PublicRuntimeSettings
 | [`BarcodeFormatIds_2`](#barcodeformatids_2) | *int* |
 | [`PDFRasterDPI`](#pdfrasterdpi) | *int* |
 | [`ScaleDownThreshold`](#scaledownthreshold) | *int* |
-| [`BinarizationModes`](#binarizationmodes) | [`BinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)[ ] |
-| [`LocalizationModes`](#localizationmodes) | [`LocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode)[ ] |
+| [`BinarizationModes`](#binarizationmodes) | [`EnumBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)[ ] |
+| [`LocalizationModes`](#localizationmodes) | [`EnumLocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode)[ ] |
 | [`FurtherModes`](#furthermodes) | [`FurtherModes`](FurtherModes.md) |
 | [`DeblurLevel`](#deblurlevel) | *int* |
 | [`IntermediateResultTypes`](#intermediateresulttypes) | *int* |
-| [`IntermediateResultSavingMode`](#intermediateresultsavingmode) | [`IntermediateResultSavingMode`]({{ site.enumerations }}result-enums.html#intermediateresultsavingmode) |
+| [`IntermediateResultSavingMode`](#intermediateresultsavingmode) | [`EnumIntermediateResultSavingMode`]({{ site.enumerations }}result-enums.html#intermediateresultsavingmode) |
 | [`ResultCoordinateType`](#resultcoordinatetype) | [`EnumResultCoordinateType`]({{ site.enumerations }}result-enums.html#resultcoordinatetype) |
-| [`TextResultOrderModes`](#textresultordermodes) | [`TextResultOrderMode`]({{ site.enumerations }}result-enums.html#textresultordermode)[ ] |
+| [`TextResultOrderModes`](#textresultordermodes) | [`EnumTextResultOrderMode`]({{ site.enumerations }}result-enums.html#textresultordermode)[ ] |
 | [`ReturnBarcodeZoneClarity`](#returnbarcodezoneclarity) | *int* |
 | [`Region`](#region) | [`RegionDefinition`](RegionDefinition.md) |
 | [`MinBarcodeTextLength`](#minbarcodetextlength) | *int* |
 | [`MinResultConfidence`](#minresultconfidence) | *int* |
-| [`ScaleUpModes`](#scaleupmodes) | [`ScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode)[ ] |
-| [`PDFReadingMode`](#pdfreadingmode) | [`PDFReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#pdfreadingmode) | 
+| [`ScaleUpModes`](#scaleupmodes) | [`EnumScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode)[ ] |
+| [`PDFReadingMode`](#pdfreadingmode) | [`EnumPDFReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#pdfreadingmode) | 
 
 
 ### TerminatePhase
@@ -60,10 +60,6 @@ EnumTerminatePhase Dynamsoft.Barcode.PublicRuntimeSettings.TerminatePhase
     
 - **Remark**   
     When the recognition result is not desired, you can set this parameter can be set to skip certain processing stages.
-    
-- **See also**  
-    [`TerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase)
-      
 
 ### Timeout
 Sets the maximum amount of time (in milliseconds) that should be spent searching for a barcode per page. It does not include the time taken to load/decode an image (TIFF, PNG, etc.) from disk into memory.
@@ -80,7 +76,6 @@ int Dynamsoft.Barcode.PublicRuntimeSettings.Timeout
     
 - **Remark**   
     If you want to stop reading barcodes after a certain period of time, you can use this parameter to set a timeout.
-    
 
 ### MaxAlgorithmThreadCount
 Sets the number of threads the image processing algorithm will use to decode barcodes.
@@ -131,7 +126,7 @@ int Dynamsoft.Barcode.PublicRuntimeSettings.BarcodeFormatIds
     If the barcode type(s) are certain, specifying the barcode type(s) to be read will speed up the recognition process. The barcode format our library will search for is composed of [BarcodeFormat group 1]({{ site.enumerations }}format-enums.html#barcodeformat) and [BarcodeFormat group 2]({{ site.enumerations }}format-enums.html#barcodeformat_2), so you need to specify the barcode format in group 1 and group 2 individually.
     
 - **See also**  
-    [`BarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`BarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
+    [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
       
 ### BarcodeFormatIds_2
 Sets the formats of the barcode in BarcodeFormat group 2 to be read. Barcode formats in BarcodeFormat group 2 can be combined.
@@ -150,7 +145,7 @@ int Dynamsoft.Barcode.PublicRuntimeSettings.BarcodeFormatIds_2
     If the barcode type(s) are certain, specifying the barcode type(s) to be read will speed up the recognition process. The barcode format our library will search for is composed of [BarcodeFormat group 1]({{ site.enumerations }}format-enums.html#barcodeformat) and [BarcodeFormat group 2]({{ site.enumerations }}format-enums.html#barcodeformat_2), so you need to specify the barcode format in group 1 and group 2 individually.
     
 - **See also**  
-    [`BarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`BarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
+    [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
 
 ### PDFRasterDPI
 Sets the output image resolution.
@@ -195,14 +190,10 @@ EnumBinarizationMode[] Dynamsoft.Barcode.PublicRuntimeSettings.BinarizationModes
     Each array item can be any one of the [`BinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) Enumeration items.
       
 - **Default value**   
-    `[BM_LOCAL_BLOCK,BM_SKIP,BM_SKIP,BM_SKIP,BM_SKIP,BM_SKIP,BM_SKIP,BM_SKIP]`
+    `[EnumBinarizationMode.BM_LOCAL_BLOCK, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP, EnumBinarizationMode.BM_SKIP]`
     
 - **Remark**   
     The array index represents the priority of the item. The smaller index is, the higher priority is.
-    
-- **See also**   
-    [`BinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)
-
 
 ### LocalizationModes
 Sets the mode and priority for localization algorithms.
@@ -215,14 +206,10 @@ EnumLocalizationMode[] Dynamsoft.Barcode.PublicRuntimeSettings.LocalizationModes
     Each array item can be any one of the [`LocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode) Enumeration items.
       
 - **Default value**   
-    `[LM_CONNECTED_BLOCKS, LM_SCAN_DIRECTLY, LM_STATISTICS, LM_LINES, LM_SKIP, LM_SKIP, LM_SKIP, LM_SKIP]`
+    `[EnumLocalizationMode.LM_CONNECTED_BLOCKS, EnumLocalizationMode.LM_SCAN_DIRECTLY, EnumLocalizationMode.LM_STATISTICS, EnumLocalizationMode.LM_LINES, EnumLocalizationMode.LM_SKIP, EnumLocalizationMode.LM_SKIP, EnumLocalizationMode.LM_SKIP, EnumLocalizationMode.LM_SKIP]`
     
 - **Remark**   
     The array index represents the priority of the item. The smaller index is, the higher priority is.
-    
-- **See also**   
-    [`LocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode)  
-
 
 ### FurtherModes
 Sets further modes.
@@ -230,6 +217,9 @@ Sets further modes.
 ```C#
 FurtherModes Dynamsoft.Barcode.PublicRuntimeSettings.FurtherModes
 ```
+
+- **See also**  
+    [`FurtherModes`](FurtherModes.md)
 
 ### DeblurLevel
 Sets the degree of blurriness of the barcode.
@@ -259,9 +249,6 @@ int Dynamsoft.Barcode.PublicRuntimeSettings.IntermediateResultTypes
       
 - **Default value**   
     0
-    
-- **See also**   
-    [`IntermediateResultType`]({{ site.enumerations }}result-enums.html#intermediateresulttype)
 
 ### IntermediateResultSavingMode
 Sets the mode for saving intermediate result.
@@ -274,10 +261,7 @@ EnumIntermediateResultSavingMode Dynamsoft.Barcode.PublicRuntimeSettings.Interme
     A value of [`IntermediateResultSavingMode`]({{ site.enumerations }}result-enums.html#intermediateresultsavingmode) Enumeration items
       
 - **Default value**   
-    IRSM_MEMORY
-    
-- **See also**   
-    [`IntermediateResultSavingMode`]({{ site.enumerations }}result-enums.html#intermediateresultsavingmode)
+    `EnumIntermediateResultSavingMode.IRSM_MEMORY`
 
 ### ResultCoordinateType
 Specifies the format for the coordinates returned.
@@ -290,11 +274,7 @@ EnumResultCoordinateType Dynamsoft.Barcode.PublicRuntimeSettings.ResultCoordinat
     Any one of the [`ResultCoordinateType`]({{ site.enumerations }}result-enums.html#resultcoordinatetype) Enumeration items
       
 - **Default value**   
-    IRSM_MEMORY
-    
-- **See also**   
-    [`ResultCoordinateType`]({{ site.enumerations }}result-enums.html#resultcoordinatetype)
-
+    EnumResultCoordinateType.RCT_PIXEL
 
 ### TextResultOrderModes
 Sets the mode and priority for the order of the text results returned.
@@ -307,13 +287,10 @@ EnumTextResultOrderMode[] Dynamsoft.Barcode.PublicRuntimeSettings.TextResultOrde
     Each array item can be any one of the [`TextResultOrderMode`]({{ site.enumerations }}result-enums.html#textresultordermode) Enumeration items.
       
 - **Default value**   
-    `[TROM_CONFIDENCE, TROM_POSITION, TROM_FORMAT, TROM_SKIP, TROM_SKIP, TROM_SKIP, TROM_SKIP, TROM_SKIP]`
+    `[EnumTextResultOrderMode.TROM_CONFIDENCE, EnumTextResultOrderMode.TROM_POSITION, EnumTextResultOrderMode.TROM_FORMAT, EnumTextResultOrderMode.TROM_SKIP, EnumTextResultOrderMode.TROM_SKIP, EnumTextResultOrderMode.TROM_SKIP, EnumTextResultOrderMode.TROM_SKIP, EnumTextResultOrderMode.TROM_SKIP]`
     
 - **Remark**   
     The array index represents the priority of the item. The smaller the index, the higher the priority.   
- 
-- **See also**    
-    [`TextResultOrderMode`]({{ site.enumerations }}result-enums.html#textresultordermode)
 
 ### ReturnBarcodeZoneClarity
 Sets whether or not to return the clarity of the barcode zone.
@@ -381,14 +358,10 @@ EnumScaleUpMode[] Dynamsoft.Barcode.PublicRuntimeSettings.ScaleUpModes
     Each array item can be any one of the [`ScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode) Enumeration items.
       
 - **Default value**   
-    `[SUM_AUTO, SUM_SKIP, SUM_SKIP, SUM_SKIP, SUM_SKIP, SUM_SKIP, SUM_SKIP, SUM_SKIP]`
+    `[EnumScaleUpMode.SUM_AUTO, EnumScaleUpMode.SUM_SKIP, EnumScaleUpMode.SUM_SKIP, EnumScaleUpMode.SUM_SKIP, EnumScaleUpMode.SUM_SKIP, EnumScaleUpMode.SUM_SKIP, EnumScaleUpMode.SUM_SKIP, EnumScaleUpMode.SUM_SKIP]`
     
 - **Remark**   
-    The array index represents the priority of the item. The smaller the index, the higher the priority.   
- 
-- **See also**    
-    [`ScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode)
-
+    The array index represents the priority of the item. The smaller the index, the higher the priority.
 
 ### PDFReadingMode
 Sets the way to detect barcodes from a PDF file when using the DecodeFile method.
@@ -401,7 +374,4 @@ EnumPDFReadingMode Dynamsoft.Barcode.PublicRuntimeSettings.PDFReadingMode
     Any one of the [`PDFReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#pdfreadingmode) Enumeration items. 
       
 - **Default value**   
-    `PDFRM_AUTO`  
- 
-- **See also**    
-    [`PDFReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#pdfreadingmode) 
+    `EnumPDFReadingMode.PDFRM_AUTO`  

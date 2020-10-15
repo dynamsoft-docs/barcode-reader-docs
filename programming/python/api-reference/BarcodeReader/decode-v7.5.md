@@ -14,7 +14,6 @@ needAutoGenerateSidebar: true
   | [`decode_file`](#decode_file) | Decodes barcodes from a specified image file. |
   | [`decode_buffer`](#decode_buffer) | Decodes barcodes from the memory buffer containing image pixels in defined format.  |
   | [`decode_file_stream`](#decode_file_stream) | Decodes barcodes from an image file in memory. |
-  | [`decode_buffer_manually`](#decode_buffer_manually) | Decodes barcodes from the memory buffer containing image pixels in defined format. |
 
   ---
 
@@ -69,13 +68,13 @@ Decodes barcodes from the memory buffer containing image pixels in defined forma
 
 ```python
 BarcodeReader.decode_buffer(image, image_pixel_format=EnumImagePixelFormat.IPF_RGB_888, template_name="")
-```   
-   
-### Parameters
-`[in] image` <*class numpy.ndarray*> : The image which is processed by opencv.  
-`[in] image_pixel_format` <*class EnumImagePixelFormat*> : The image pixel format used in the image byte array.  
-`[in] template_name` <*optional*><*str*> : The template name.
+```
 
+### Parameters
+
+- `[in]	image` <*class numpy.ndarray*> : The image which is processed by opencv.  
+- `[in] image_pixel_format` <*class EnumImagePixelFormat*> : The image pixel format used in the image byte array.  
+- `[in] template_name` <*optional*><*str*> : The template name.
 
 ### Return value
 
@@ -159,27 +158,3 @@ try:
 except BarcodeReaderError as bre:
     print(bre)
 ```
-
-
-## decode_buffer_manually
-
-Decodes barcodes from the memory buffer containing image pixels in defined format.   
-
-```python
-BarcodeReader.decode_buffer_manually(self, buffer, width, height, stride, image_pixel_format, template_name="")
-```   
-   
-### Parameters
-`[in] buffer` <*bytes or bytearray*> : The array of bytes which contain the image data.
-`[in] width` <*int*> : The width of the image in pixels.
-`[in] height` <*int*> : The height of the image in pixels.
-`[in] stride` <*int*> : The stride (or scan width) of the image.
-`[in] image_pixel_format` <*class EnumImagePixelFormat*> : The image pixel format used in the image byte array. Default value = EnumImagePixelFormat.IPF_RGB_888.
-`[in] template_name` <*optional*><*str*> : The template name.
-
-
-### Return value
-text_results <*list[class TextResult]*> : All text results.
-
-### Exception
-[`BarcodeReaderError`](../class/BarcodeReaderError.md) : If error happens, this function will throw a BarcodeReaderError exception that can report the detailed error message.  

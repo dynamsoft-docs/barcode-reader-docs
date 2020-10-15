@@ -43,3 +43,5 @@ IntermediateResult[] intermediateResults = reader.GetIntermediateResults();
 reader.Dispose();
 ```
 
+#### See Also
+[`IntermediateResult`](../class/IntermediateResult.md)

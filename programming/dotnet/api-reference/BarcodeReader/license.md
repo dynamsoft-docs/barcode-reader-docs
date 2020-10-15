@@ -26,8 +26,8 @@ int Dynamsoft.Barcode.BarcodeReader.InitLicenseFromServer(string licenseServer, 
 ```   
    
 #### Parameters
-`[in]	licenseServer` The name/IP of the license server.  
-`[in]	licenseKey` The license key of Barcode Reader.
+`[in]	licenseServer` <*string*> : The name/IP of the license server.  
+`[in]	licenseKey` <*string*> : The license key of Barcode Reader.
 
 #### Return value
 Returns error code.
@@ -44,8 +44,8 @@ int Dynamsoft.Barcode.BarcodeReader.InitLicenseFromLicenseContent(string license
 ```
 
 #### Parameters
-`[in]	licenseKey`	The license key of Barcode Reader.   
-`[in]	pLicenseContent`	An encrypted string representing the license content (runtime number, expiry date, barcode type, etc.) obtained from the method OutputLicenseToString(). 
+`[in]	licenseKey`	<*string*> : The license key of Barcode Reader.   
+`[in]	pLicenseContent` <*string*> : An encrypted string representing the license content (runtime number, expiry date, barcode type, etc.) obtained from the method [`OutputLicenseToString()`](#outputlicensetostring). 
 
 
 #### Return value

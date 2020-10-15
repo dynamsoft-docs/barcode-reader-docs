@@ -25,7 +25,7 @@ public class QRCodeDetails
 | [`ModuleSize`](#modulesize) | *int* |
 | [`Rows`](#rows) | *int* |
 | [`Columns`](#columns) | *int* |
-| [`ErrorCorrectionLevel`](#errorcorrectionlevel) | [`QRCodeErrorCorrectionLevel`]({{ site.enumerations }}other-enums.html#qrcodeerrorcorrectionlevel) |
+| [`ErrorCorrectionLevel`](#errorcorrectionlevel) | [`EnumQRCodeErrorCorrectionLevel`]({{ site.enumerations }}other-enums.html#qrcodeerrorcorrectionlevel) |
 | [`Version`](#version) | *int* |
 | [`Model`](#model) | *int* |
 

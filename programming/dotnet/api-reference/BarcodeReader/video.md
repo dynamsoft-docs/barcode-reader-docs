@@ -53,13 +53,14 @@ EnumErrorCode Dynamsoft.Barcode.BarcodeReader.StartFrameDecoding(int maxQueueLen
 ```   
    
 #### Parameters
-`[in] maxQueueLength` The max count of frames waiting for decoding.  
-`[in] maxResultQueueLength` The max count of frames whose results (text result/localization result) will be kept for further reference.  
-`[in] width` The width of the frame image in pixels.   
-`[in] height` The height of the frame image in pixels.  
-`[in] stride` The stride of the frame image (also called scan width).  
-`[in] imagePixelFormat` The image pixel format used in the image byte array.  
-`[in] templateName` The template name.  
+`[in] maxQueueLength` <*int*> : The max count of frames waiting for decoding.  
+`[in] maxResultQueueLength` <*int*> : The max count of frames whose results (text result/localization result) will be kept for further reference.  
+`[in] width` <*int*> : The width of the frame image in pixels.   
+`[in] height` <*int*> : The height of the frame image in pixels.  
+`[in] stride` <*int*> : The stride of the frame image (also called scan width).  
+`[in] imagPixelFormat` <*EnumImagePixelFormat*> : The image pixel format used in the image byte array.  
+`[in] templateName` <*string*> : The template name.  
+
 
 #### Return value
 Returns error code.
@@ -86,8 +87,8 @@ EnumErrorCode Dynamsoft.Barcode.BarcodeReader.StartFrameDecodingEx(ref FrameDeco
 ```   
    
 #### Parameters
-`[in] parameters` The frame decoding parameters.   
-`[in] templateName` The template name.
+`[in] parameters` <*[FrameDecodingParameters](../class/FrameDecodingParameters.md)*> : The frame decoding parameters.   
+`[in] templateName` <*string*> : The template name.
 
 #### Return value
 Returns error code. 
@@ -127,7 +128,7 @@ int Dynamsoft.Barcode.BarcodeReader.AppendFrame(IntPtr pBufferBytes)
 ```   
    
 #### Parameters
-`[in] pBufferBytes` The array of bytes which contain the image data.
+`[in] pBufferBytes` <*IntPtr*> : The array of bytes which contain the image data.
 
 #### Return value
 Returns the ID of the appended frame.
@@ -190,8 +191,8 @@ EnumErrorCode Dynamsoft.Barcode.BarcodeReader.SetErrorCallback(CB_Error callback
 ```
 
 #### Parameters
-`[in] callbackFunction` Call back function.  
-`[in] pUser` Customized arguments passed to your function. 
+`[in] callbackFunction` <*[CB_Error](../function-pointer.md#cb_error)*> : Call back function.  
+`[in] pUser` <*IntPtr*> : Customized arguments passed to your function. 
 
 #### Return value
 Returns error code. 
@@ -218,8 +219,8 @@ EnumErrorCode Dynamsoft.Barcode.BarcodeReader.SetIntermediateResultCallback(CB_I
 ```
 
 #### Parameters
-`[in] callbackFunction` Call back function.  
-`[in] pUser` Customized arguments passed to your function. 
+`[in] callbackFunction` <*[CB_IntermediateResult](../function-pointer.md#cb_intermediateresult)*> : Call back function.  
+`[in] pUser` <*IntPtr*> : Customized arguments passed to your function. 
 
 #### Return value
 Returns error code. 
@@ -250,8 +251,8 @@ EnumErrorCode Dynamsoft.Barcode.BarcodeReader.SetTextResultCallback(CB_TextResul
 ```
 
 #### Parameters
-`[in] callbackFunction` Call back function.  
-`[in] pUser` Customized arguments passed to your function. 
+`[in] callbackFunction` <*[CB_TextResult](../function-pointer.md#cb_textresult)*> : Call back function.  
+`[in] pUser` <*IntPtr*> : Customized arguments passed to your function. 
 
 #### Return value
 Returns error code. 
