@@ -20,10 +20,10 @@ public class ExtendedResult
   
 | Attribute | Type |
 |---------- | ---- |
-| [`ResultType`](#resulttype) | [`ResultType`]({{ site.enumerations }}result-enums.html#resulttype) |
-| [`BarcodeFormat`](#barcodeformat) | [`BarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) |
+| [`ResultType`](#resulttype) | [`EnumResultType`]({{ site.enumerations }}result-enums.html#resulttype) |
+| [`BarcodeFormat`](#barcodeformat) | [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) |
 | [`BarcodeFormatString`](#barcodeformatstring) | *string* |
-| [`BarcodeFormat_2`](#barcodeformat_2) | [`BarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) |
+| [`BarcodeFormat_2`](#barcodeformat_2) | [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) |
 | [`BarcodeFormatString_2`](#barcodeformatstring_2) | *string* | 
 | [`Confidence`](#confidence) | *int* | 
 | [`Bytes`](#bytes) | *byte[ ]* | 

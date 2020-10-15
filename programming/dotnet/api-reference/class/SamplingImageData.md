@@ -44,5 +44,5 @@ int Dynamsoft.Barcode.SamplingImageData.Width
 The height of the sampling image.
 
 ```C#
-int Dynamsoft.Barcode.SamplingImageData.Width
+int Dynamsoft.Barcode.SamplingImageData.Height
 ```

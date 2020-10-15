@@ -30,9 +30,9 @@ EnumErrorCode Dynamsoft.Barcode.BarcodeReader.InitRuntimeSettingsWithFile(string
 ```
 
 #### Parameters
-`[in]	jsonFileName` The path of the settings file.  
-`[in]	conflictMode` The parameter setting mode, which decides to inherit parameters from previous template setting or overwrite previous settings and replace by new template.   
-`[in,out]	errorMessage` Output parameter storing detailed error message. 
+`[in]	jsonFileName` <*string*> : The path of the settings file.  
+`[in]	conflictMode` <*EnumConflictMode*> : The parameter setting mode, which decides to inherit parameters from previous template setting or overwrite previous settings and replace by new template.   
+`[in,out]	errorMessage` <*string*> : Output parameter storing detailed error message. 
 
 #### Return value
 Returns error code.
@@ -56,13 +56,13 @@ reader.Dispose();
 Initialize runtime settings with the settings in given JSON string. 
 
 ```C#
-EnumErrorCode Dynamsoft.Barcode.BarcodeReader.InitRuntimeSettingsWithString (string jsonContent, EnumConflictMode conflictMode, out string errorMessage)
+EnumErrorCode Dynamsoft.Barcode.BarcodeReader.InitRuntimeSettingsWithString(string jsonContent, EnumConflictMode conflictMode, out string errorMessage)
 ```   
    
 #### Parameters
-`[in]	jsonContent` A JSON string that represents the content of the settings.  
-`[in]	conflictMode` The parameter setting mode, which decides to inherit parameters from previous template setting or overwrite previous settings and replace by new template.   
-`[in,out]	errorMessage` Output parameter storing detailed error message. 
+`[in]	jsonContent` <*string*> : A JSON string that represents the content of the settings.  
+`[in]	conflictMode` <*EnumConflictMode*> : The parameter setting mode, which decides to inherit parameters from previous template setting or overwrite previous settings and replace by new template.   
+`[in,out]	errorMessage` <*string*> : Output parameter storing detailed error message. 
 
 #### Return value
 Returns error code.
@@ -90,9 +90,9 @@ EnumErrorCode Dynamsoft.Barcode.BarcodeReader.AppendTplFileToRuntimeSettings(str
 ```   
    
 #### Parameters
-`[in]	jsonFileName` The path of the settings file.  
-`[in]	conflictMode` The parameter setting mode, which decides to inherit parameters from previous template setting or overwrite previous settings and replace by new template.   
-`[in,out]	errorMessage` Output parameter storing detailed error message. 
+`[in]	jsonFileName` <*string*> : The path of the settings file.  
+`[in]	conflictMode` <*EnumConflictMode*> : The parameter setting mode, which decides to inherit parameters from previous template setting or overwrite previous settings and replace by new template.   
+`[in,out]	errorMessage` <*string*> : Output parameter storing detailed error message. 
 
 #### Return value
 Returns error code.
@@ -115,13 +115,13 @@ reader.Dispose();
 Append a new template string to the current runtime settings.
 
 ```C#
-EnumErrorCode Dynamsoft.Barcode.BarcodeReader.AppendTplStringToRuntimeSettings  ( string  jsonContent, EnumConflictMode  conflictMode, out string errorMessage) 
+EnumErrorCode Dynamsoft.Barcode.BarcodeReader.AppendTplStringToRuntimeSettings(string  jsonContent, EnumConflictMode  conflictMode, out string errorMessage) 
 ```   
 
 #### Parameters
-`[in]	jsonContent` A JSON string that represents the content of the settings.  
-`[in]	conflictMode` The parameter setting mode, which decides to inherit parameters from previous template setting or overwrite previous settings and replace by new template.   
-`[in,out]	errorMessage` Output parameter storing detailed error message.
+`[in]	jsonContent` <*string*> : A JSON string that represents the content of the settings.  
+`[in]	conflictMode` <*EnumConflictMode*> : The parameter setting mode, which decides to inherit parameters from previous template setting or overwrite previous settings and replace by new template.   
+`[in,out]	errorMessage` <*string*> : Output parameter storing detailed error message.
 
 #### Return value
 Returns error code.
@@ -173,8 +173,8 @@ void Dynamsoft.Barcode.BarcodeReader.OutputSettingsToFile(string outputFilePath,
 ```   
    
 #### Parameters
-`[in]	outputFilePath` The output file path which stores current settings.  
-`[in]	settingsName` A unique name for declaring current runtime settings. 
+`[in]	outputFilePath` <*string*> : The output file path which stores current settings.  
+`[in]	settingsName` <*string*> : A unique name for declaring current runtime settings. 
 
 #### Exceptions
 [`BarcodeReaderException`](../class/BarcodeReaderException.md) The exception thrown by Dynamsoft Barcode Reader. 
@@ -202,7 +202,7 @@ string Dynamsoft.Barcode.BarcodeReader.OutputSettingsToString(string settingsNam
 ```   
    
 #### Parameters
-`[in]	settingsName` A unique name for declaring current runtime settings.  
+`[in]	settingsName` <*string*> : A unique name for declaring current runtime settings.  
 
 #### Return value
 The output string which stores the contents of current settings. 

@@ -36,7 +36,7 @@ Dynamsoft.Barcode.BarcodeReader.BarcodeReader(string productKey)
 ```
 
 #### Parameters
-`[in] productKey` Product key. 
+`[in] productKey` <*string*> : Product key. 
 
 ### BarcodeReader(string modulePath, string productKey)
 
@@ -47,8 +47,8 @@ Dynamsoft.Barcode.BarcodeReader.BarcodeReader(string modulePath, string productK
 ```
 
 #### Parameters
-`[in] modulePath` The path where you store these DLLs.  
-`[in] productKey` Product key. 
+`[in] modulePath` <*string*> : The path where you store these DLLs.  
+`[in] productKey` <*string*> : Product key. 
 
 &nbsp;
 
