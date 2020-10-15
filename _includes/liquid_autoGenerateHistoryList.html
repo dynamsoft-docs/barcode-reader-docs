@@ -16,6 +16,11 @@
 
 {%- assign needRemoveStr = "-v" | append: curPageVersion -%}
 {%- assign curUsedToMatchUrl = page.url | remove: needRemoveStr -%}
+
+{%- if curUsedToMatchUrl contains 'index.html' -%}
+	{%- assign curUsedToMatchUrl = curUsedToMatchUrl | remove: 'index.html' -%}
+{%- endif -%}
+
 {%- assign historyRecode = "" -%}
 
 <ul class="otherVersions">
@@ -48,6 +53,10 @@
 
 	{%- assign needRemoveStr = "-v" | append: tmpPageVersion -%}
 	{%- assign tmpUsedToMatchUrl = my_page.url | remove: needRemoveStr -%}
+
+	{%- if tmpUsedToMatchUrl contains 'index.html' -%}
+		{%- assign tmpUsedToMatchUrl = tmpUsedToMatchUrl | remove: 'index.html' -%}
+	{%- endif -%}
 
 	{%- if tmpUsedToMatchUrl == curUsedToMatchUrl -%}
 		{%- assign historyRecode = historyRecode | append: '/' | append: tmpPageVersion -%}

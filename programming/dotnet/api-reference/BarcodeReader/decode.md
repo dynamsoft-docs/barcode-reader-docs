@@ -31,8 +31,8 @@ TextResult[] Dynamsoft.Barcode.BarcodeReader.DecodeFile(string fileName, string 
 ```
 
 #### Parameters
-`[in] fileName`	A string defining the file name.   
-`[in] templateName` The template name.
+`[in] fileName` <*string*> : A string defining the file name.   
+`[in] templateName` <*string*> : The template name.
 
 #### Return value
 All barcode text results decoded successfully. 
@@ -49,6 +49,9 @@ TextResult[] result = reader.DecodeFile(@"C:\Program Files (x86)\Dynamsoft\{Vers
 reader.Dispose();
 ```
 
+#### See Also
+[`TextResult`](../class/TextResult.md)
+
 &nbsp;
 
 
@@ -57,12 +60,12 @@ reader.Dispose();
 Decode barcodes from an image file in memory.   
 
 ```C#
-TextResult[] Dynamsoft.Barcode.BarcodeReader.DecodeFileInMemory(byte[]  fileStream, string  templateName)  
+TextResult[] Dynamsoft.Barcode.BarcodeReader.DecodeFileInMemory(byte[] fileStream, string templateName)  
 ```   
    
 #### Parameters
-`[in]	fileStream` The image file bytes in memory.  
-`[in] templateName` The template name. 
+`[in]	fileStream` <*byte[]*> : The image file bytes in memory.  
+`[in] templateName` <*string*> : The template name. 
 
 #### Return value
 All barcode text results decoded successfully. 
@@ -79,6 +82,9 @@ TextResult[] result = reader.DecodeFileInMemory(fileStream, "");
 reader.Dispose();
 ```
 
+#### See Also
+[`TextResult`](../class/TextResult.md)
+
 &nbsp;
 
 
@@ -91,12 +97,12 @@ TextResult[] Dynamsoft.Barcode.BarcodeReader.DecodeBuffer(byte[] buffer, int wid
 ```
    
 #### Parameters
-`[in]	buffer` The array of bytes which contain the image data.  
-`[in]	width` The width of the image in pixels.
-`[in]	height` The height of the image in pixels.
-`[in]	stride` The stride of the image (also called scan width).  
-`[in]	imagePixelFormat` The image pixel format used in the image byte array.  
-`[in] templateName` The template name.
+`[in]	buffer` <*byte[]*> : The array of bytes which contain the image data.  
+`[in]	width` <*int*> : The width of the image in pixels.
+`[in]	height` <*int*> : The height of the image in pixels.
+`[in]	stride` <*int*> : The stride of the image (also called scan width).  
+`[in]	imagePixelFormat` <*[EnumImagePixelFormat]({{ site.enumerations }}other-enums.html#imagepixelformat)*> : The image pixel format used in the image byte array. 
+`[in] templateName` <*string*> : The template name.
 
 #### Return value
 All barcode text results decoded successfully. 
@@ -121,6 +127,9 @@ TextResult[] result = reader.DecodeBuffer(buffer, width, height, stride, imagePi
 reader.Dispose();
 ```
 
+#### See Also 
+[`TextResult`](../class/TextResult.md)
+
 
 &nbsp;
 
@@ -134,8 +143,8 @@ TextResult[] Dynamsoft.Barcode.BarcodeReader.DecodeBase64String(string base64, s
 ```   
 
 #### Parameters
-`[in]	base64`	A base64 encoded string that represents an image.   
-`[in] templateName` The template name.
+`[in]	base64` <*string*> : A base64 encoded string that represents an image.   
+`[in] templateName` <*string*> : The template name.
 
 #### Return value
 All barcode text results decoded successfully. 
@@ -153,6 +162,8 @@ TextResult[] result = reader.DecodeBase64String(base64String, "");
 reader.Dispose();
 ```
 
+#### See Also 
+[`TextResult`](../class/TextResult.md)
 
 &nbsp;
 
@@ -166,8 +177,8 @@ TextResult[] Dynamsoft.Barcode.BarcodeReader.DecodeBitmap(Bitmap bitMap, string 
 ```   
    
 #### Parameters
-`[in]	bitMap` The image to be decoded.  
-`[in] templateName` The template name.
+`[in]	bitMap` <*Bitmap*> : The image to be decoded.  
+`[in] templateName` <*string*> : The template name.
 
 #### Return value
 All barcode text results decoded successfully. 
@@ -183,3 +194,6 @@ Bitmap bBMP = new Bitmap(@"C:\Program Files (x86)\Dynamsoft\{Version number}\Ima
 TextResult[] result = reader.DecodeBitmap(bBMP, "");
 reader.Dispose();
 ```
+
+#### See Also 
+[`TextResult`](../class/TextResult.md)

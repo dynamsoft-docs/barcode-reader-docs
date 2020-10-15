@@ -21,10 +21,10 @@ public class LocalizationResult
   
 | Attribute | Type |
 |---------- | ---- |
-| [`TerminatePhase`](#terminatephase) | [`TerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase) |
-| [`BarcodeFormat`](#barcodeformat) | [`BarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) |
+| [`TerminatePhase`](#terminatephase) | [`EnumTerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase) |
+| [`BarcodeFormat`](#barcodeformat) | [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) |
 | [`BarcodeFormatString`](#barcodeformatstring) | *string* |
-| [`BarcodeFormat_2 `](#barcodeformat_2 ) | [`BarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) |
+| [`BarcodeFormat_2 `](#barcodeformat_2 ) | [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) |
 | [`BarcodeFormatString_2`](#barcodeformatstring_2) | *string* |
 | [`ResultPoints`](#resultpoints) | *Point[ ]* |
 | [`Angle`](#angle) | *int* |
@@ -32,7 +32,7 @@ public class LocalizationResult
 | [`PageNumber`](#pagenumber) | *int* |
 | [`RegionName`](#regionname) | *string* |
 | [`DocumentName`](#documentname)| *string* |
-| [`ResultCoordinateType`](#resultcoordinatetype) | [`ResultCoordinateType`]({{ site.parameters_reference }}image-parameter/result-control.html#resultcoordinatetype) |
+| [`ResultCoordinateType`](#resultcoordinatetype) | [`EnumResultCoordinateType`]({{ site.parameters_reference }}image-parameter/result-control.html#resultcoordinatetype) |
 | [`AccompanyingTextBytes`](#accompanyingtextbytes) | *byte[ ]* |
 | [`Confidence`](#confidence) | *int* |
 

@@ -21,9 +21,9 @@ public class TextResult
   
 | Attribute | Type |
 |---------- | ---- |
-| [`BarcodeFormat`](#barcodeformat) | [`BarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) |
+| [`BarcodeFormat`](#barcodeformat) | [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) |
 | [`BarcodeFormatString`](#barcodeformatstring) | *string* |
-| [`BarcodeFormat_2`](#barcodeformat_2) | [`BarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) |
+| [`BarcodeFormat_2`](#barcodeformat_2) | [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) |
 | [`BarcodeFormatString_2`](#barcodeformatstring_2) | *string* |
 | [`BarcodeText`](#barcodetext) | *string* |
 | [`BarcodeBytes`](#barcodebytes) | *byte[ ]* |
@@ -92,5 +92,5 @@ object Dynamsoft.Barcode.TextResult.DetailedResult
 The extended result array.
 
 ```C#
-ExtendedResult [] Dynamsoft.Barcode.TextResult.Results
+ExtendedResult[] Dynamsoft.Barcode.TextResult.Results
 ```
