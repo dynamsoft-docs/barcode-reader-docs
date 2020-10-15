@@ -1,5 +1,4 @@
 repositoryUrl: https://github.com/Dynamsoft/barcode-reader-docs/blob/master
-
 docFullPath: https://www.dynamsoft.com/barcode-reader
 docHomePage: /barcode-reader
 
@@ -49,8 +48,6 @@ faqs: /barcode-reader/introduction/faqs.html
 how_to: /barcode-reader/introduction/how-to-guide/
 
 assets: /barcode-reader/assets/
-dynamsoft_logo: /barcode-reader/assets/img-icon/dynamsoft-logo.png
-dbr_logo: /barcode-reader/assets/img-icon/dbr-logo.png
 edit_icon: /barcode-reader/assets/img-icon/edit-icon.png
 smile_icon: /barcode-reader/assets/img-icon/icon-smile.png
 sad_icon: /barcode-reader/assets/img-icon/icon-sad.png
