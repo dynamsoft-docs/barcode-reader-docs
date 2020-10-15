@@ -6,23 +6,17 @@ keywords: user guide, getting started, javascript, js
 needAutoGenerateSidebar: true
 ---
 
-# Dynamsoft JavaScript Barcode SDK for Web 
-
-![Dynamsoft JavaScript Barcode SDK](assets/getting-started/dbr-js-sdk.png)  
-
-[Dynamsoft BarcodeReader SDK for Web](https://www.dynamsoft.com/Products/barcode-recognition-javascript.aspx) is a JavaScript SDK for barcode scanning based on **WebAssembly**. It supports real-time barcode localization and decoding of various barcode types. The library is capable of scanning barcodes directly from live video streams and static images. It also supports reading multiple barcodes at once.  
-
-## Getting Started - Hello World  
+# Getting Started - Hello World  
 
 Let's start by using the library to build a simple web application that will decode barcodes from a live video stream.  
 
-### Basic Requirements
+## Basic Requirements
 
 - Internet connection  
 - Supported Browser  
 - Camera access  
 
-### Step One: Write the code in one minute  
+## Step One: Write the code in one minute  
 
 Create an HTML file with the following content. Deploy this to your web server and run the application over **HTTPS**.
 
@@ -57,7 +51,7 @@ Create an HTML file with the following content. Deploy this to your web server a
 `onUnduplicatedRead`: This event is triggered when a new barcode (not a duplicate) is found. `txt` holds the barcode text value while `result` is an object that holds details of the found barcode. In this example, an alert will be displayed for each unique barcode found. 
   
 
-### Step Two: Enable camera access
+## Step Two: Enable camera access
 
 Open the HTML page in your browser and you should see a pop-up asking for permission to access the camera. Once camera access is granted, the video stream will start in the default UI of the **BarcodeScanner** object.  
 
@@ -65,7 +59,7 @@ Open the HTML page in your browser and you should see a pop-up asking for permis
 
 In this step, you might run into the following issues:
 
-#### getUserMedia non-HTTPS access issue
+### getUserMedia non-HTTPS access issue
 
 If you open the HTML file as `file:///` or `http://`, the following error may appear in the browser console:
 
@@ -86,21 +80,14 @@ To make sure your web application can access the camera, please configure your w
 - Tomcat: [Setting Up SSL on Tomcat in 5 minutes](https://dzone.com/articles/setting-ssl-tomcat-5-minutes)
 - Node.js: [npm tls](https://nodejs.org/docs/v0.4.1/api/tls.html)
 
-#### Self-signed certificate issue
+### Self-signed certificate issue
 
 For testing purposes, a self-signed certificate can be used when configuring HTTPS. When accessing the site, the browser might say "the site is not secure". In this case, go to the certificate settings and set to trust this certificate.
 
 In a production environment, you will need a valid HTTPS certificate.
 
-### Step Three: Time to scan
+## Step Three: Time to scan
 
 Place a barcode in front of the camera. You should see an alert pop up with the decoded barcode result and a coloured region on the video to highlight the barcode location. 
-
-## Demos and Examples
-
-- [Online demo](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
-- [Vue example](https://github.com/Dynamsoft/javascript-barcode/tree/master/example/web/vue)    
-- [React example](https://github.com/Dynamsoft/javascript-barcode/tree/master/example/web/react)     
-- [Angular example](https://github.com/Dynamsoft/javascript-barcode/tree/master/example/web/angular)   
 
 
