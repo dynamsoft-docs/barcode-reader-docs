@@ -137,6 +137,28 @@ div::-webkit-scrollbar-corner, ul::-webkit-scrollbar-corner{
   background: #179a16;
 }
 
+.history { position: relative; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; padding: 10px; }
+.history .otherVersions {
+	position: absolute;
+	display: none;
+	bottom: 47px;
+	background: #ffffff;
+	right: 0;
+	box-shadow: 0px 0px 5px 2px #ddd;
+	padding: 10px 15px;
+	text-transform: capitalize;
+}
+.history .currentVersion {
+	margin-bottom: 0;
+	text-transform: capitalize;
+	font-size: 18px;
+	display: inline-block;
+}
+.history .changeBtn {
+	color: #FE8E14;
+	float: right;
+}
+
 
 @media (min-width: 768px) {
 	.h1, h1 {font-size:36px;font-size:3.6rem;line-height:48px}
@@ -207,7 +229,7 @@ div::-webkit-scrollbar-corner, ul::-webkit-scrollbar-corner{
 	.docContainer { border-left: 1px solid #ddd;padding-left: 40px;min-height: calc(100vh - 300px); }
 	.subHeadWrapper .subHeaderMenuUl li { margin-right: 0px; }
 	.subHeadWrapper .subHeaderMenuUl li.title { margin-right: 20px; padding: 0; }
-	.sideBar .mainPage { width: 242px; height: auto; max-height: calc(100vh - 205px); }
+	.sideBar .mainPage { width: auto; height: auto; max-height: calc(100vh - 240px); }
 	.sideBarIcon { display: none; overflow: auto; }
 }
 

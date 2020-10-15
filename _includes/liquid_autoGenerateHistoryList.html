@@ -7,9 +7,9 @@
 {%- endcapture -%}
 
 {%- if curPageVersion == "latest version" -%}
-	<li class="otherLinkColour" style="font-weight: bold;">latest version</li>		
+	<p class="currentVersion fontOswald">latest version</p>		
 {%- else -%}
-	<li class="otherLinkColour" style="font-weight: bold;">{{ "version " | append: curPageVersion }}</li>
+	<p class="currentVersion fontOswald">{{ "version " | append: curPageVersion }}</p>
 {%- endif -%}
 
 
@@ -22,6 +22,8 @@
 {%- endif -%}
 
 {%- assign historyRecode = "" -%}
+
+<ul class="otherVersions">
 
 {%- for my_page in site.pages -%}
 	{%- capture tmpPageVersion -%}
@@ -65,3 +67,8 @@
 		{%- endif -%}
 	{%- endif -%}
 {%- endfor -%}
+</ul>
+
+{%- if historyRecode != '' -%}
+	<a class="changeBtn fontOswald" href="javascript:;">Change +</a>
+{%- endif -%}
