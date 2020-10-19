@@ -8,7 +8,7 @@
     {%- endif -%}
     {%- for my_page in site.pages -%}
         {%- if breadcrumbUrl == my_page.url | strip -%}
-            {%- assign listUrl = site.docHomePage | strip | append: breadcrumbUrl -%}
+            {%- assign listUrl = site.firstLevelUrl | strip | append: breadcrumbUrl -%}
             <li><a class="bluelink" href = "{{ listUrl }}">{{ my_page.breadcrumbText }}</a></li>
             {%- break -%}
         {%- endif -%}
@@ -37,7 +37,7 @@
 {%- else -%}
     {%- if page.breadcrumbText -%}
         {%- assign pageUrlWihtoutSpace = page.url | strip -%}
-        {%- assign listUrl =  site.docHomePage | strip | append: pageUrlWihtoutSpace -%}
+        {%- assign listUrl =  site.firstLevelUrl | strip | append: pageUrlWihtoutSpace -%}
         <li><a class="bluelink" href = "{{ listUrl }}">{{ page.breadcrumbText }}</a></li>
     {%- endif -%}
 {%- endif -%}
