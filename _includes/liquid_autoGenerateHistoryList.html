@@ -61,9 +61,9 @@
 	{%- if tmpUsedToMatchUrl == curUsedToMatchUrl -%}
 		{%- assign historyRecode = historyRecode | append: '/' | append: tmpPageVersion -%}
 		{%- if tmpPageVersion == "latest version" -%}
-			<li><a href = "{{ site.docHomePage }}{{ my_page.url }}" class="otherLinkColour">latest version</a></li>		
+			<li><a href = "{{ site.firstLevelUrl }}{{ my_page.url }}" class="otherLinkColour">latest version</a></li>		
 		{%- else -%}
-			<li><a href = "{{ site.docHomePage }}{{ my_page.url }}" class="otherLinkColour">{{ "version " | append: tmpPageVersion }}</a></li>	
+			<li><a href = "{{ site.firstLevelUrl }}{{ my_page.url }}" class="otherLinkColour">{{ "version " | append: tmpPageVersion }}</a></li>	
 		{%- endif -%}
 	{%- endif -%}
 {%- endfor -%}

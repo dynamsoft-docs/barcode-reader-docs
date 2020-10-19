@@ -1,6 +1,7 @@
 repositoryUrl: https://github.com/Dynamsoft/barcode-reader-docs/blob/master
 docFullPath: https://www.dynamsoft.com/barcode-reader
-docHomePage: /barcode-reader
+firstLevelUrl: /barcode-reader
+docHomePage: /barcode-reader/programming/
 
 introduction: /barcode-reader/introduction/
 programming: /barcode-reader/programming/
