@@ -99,14 +99,11 @@
                     {%- include main-page-head.html -%}
                 </div>
                 <div class="main row">
-                    <div class="content markdown-body headCounter col-xs-12 col-md-12 col-lg-9 col-xl-10">
+                    <div class="content markdown-body headCounter col-xs-12 col-md-12 col-lg-9 col-xl-10" style="margin-bottom: 20px;">
                         {{ content }}
                         
                     </div>
                     <div class="rightSideMenu col-xs-12 col-md-12 col-lg-3 col-xl-2  hide-md hide-sm hide-xs">	
-                        <!-- <ul>
-                            {%- include liquid_autoGenerateHistoryList.html -%}
-                        </ul> -->
                         <div id="feedbackFooter" style="color: #306877;">
                             <p class="fontOswald">Is this page helpful? </p>
                             <a href="javascript:void(0)" style="color: #306877;" class="recordLink smileLink" onclick="UsefulRecord(true)"><img class="icon-smile" src="{{ site.smile_icon }}" alt="Yes" />Yes</a>
@@ -119,6 +116,13 @@
                         {%- endif -%}
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="history list">
+        <div class="container">
+            <div class="col-xs-12">
+                {%- include liquid_autoGenerateHistoryList.html -%}
             </div>
         </div>
     </div>
@@ -149,6 +153,10 @@
         $('#sideBarCnt').css({'width': $('.sideBar').width() + 'px'})
         $('.container .head').css({'width': $('.docContainer').width() + 'px'})
 
+        if ($('.docContainer').height() + 125 > document.body.clientHeight) {
+            $('.history').addClass('history-fixed')
+        }
+
         $(window).resize(function() {
             $('#sideBarCnt').css({'width': $('.sideBar').width() + 'px'})
             $('.container .head').css({'width': $('.docContainer').width() + 'px'})
@@ -160,6 +168,13 @@
         function realFunc(){
             var sd = $(window).scrollTop();
             var dcheight = $('.docContainer').height() + 65 - sd
+            if (sd > 0 && dcheight < document.body.clientHeight) {
+                $('.history').removeClass('history-fixed')
+            } else {
+                if (!$('.history').hasClass('history-fixed')) {
+                    $('.history').addClass('history-fixed')
+                }
+            }
             if (breakpoint() == 'lg') {
                 if (sd > 65 && dcheight>0) {
                     if (!$('.subHeadWrapper').hasClass('shw-fixed')) {
@@ -203,6 +218,7 @@
                     $('.markdown-body').css({'margin-top': '40px'})
                 }
             }
+
         }
 
         $('.sideBarIcon').click(function() {
@@ -236,6 +252,14 @@
             if (e.keyCode == 13) {
                 window.location.href = '/barcode-reader/search.html?q=' + $('#txtSearch').val()
             }
+        })
+
+        $(document).click(function(){
+            $('.otherVersions').hide()
+        })
+        $('.changeBtn').on('click', function(e) {
+            $('.otherVersions').toggle()
+            stopPropagation(e);
         })
 
     </script>
