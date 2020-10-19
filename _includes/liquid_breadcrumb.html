@@ -15,8 +15,10 @@
     {%- endfor -%}
 {%- endfor -%}
 {%- if page.url contains '.html' -%}
-
-    <li id="breadcrumbLastNode"></li>
+    {%- unless page.url contains 'index-v' -%}
+        <li id="breadcrumbLastNode"></li>
+    {%- endunless -%}
+    
     {%- comment -%}
     {%- assign file_name =  level_ary | last |  split: '.' | first |  strip -%}
     {%- if file_name contains '-' -%}
@@ -31,7 +33,7 @@
             <li>{{ file_name }}</li>
     {%- endif -%}
     {%- endcomment -%}
-    
+
 {%- else -%}
     {%- if page.breadcrumbText -%}
         {%- assign pageUrlWihtoutSpace = page.url | strip -%}
