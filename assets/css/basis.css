@@ -66,7 +66,7 @@ ul.circle > li p:hover, ul.circle li.on p, ul.square > li.on p, ul.square > li p
 .rightSideMenu ul li > ul { margin-top: 5px; }
 
 
-.markdown-body { margin-top: 40px; box-sizing: border-box; min-height: calc(100vh - 165px); }
+.markdown-body { margin-top: 40px; box-sizing: border-box; min-height: auto; }
 .markdown-body table th, .markdown-body table td { border-left: 1px solid #306877; border-right: 1px solid #306877; border-top: 1px solid #c7d0db; border-bottom: 1px solid #c7d0db; font-size: 14px;height: 30px; padding: 5px 10px; color: #606060; }
 .markdown-body table tr:last-child td { border-bottom: 1px solid #306877; }
 .markdown-body table th { border-top: 1px solid #306877; }
@@ -140,16 +140,22 @@ div::-webkit-scrollbar-corner, ul::-webkit-scrollbar-corner{
 	position: relative;
 	border-top: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
-	padding: 10px 137px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	text-align: right;
 	background: #FFFFFF; 
+}
+.history.history-fixed {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
 }
 .history .otherVersions {
 	position: absolute;
 	display: none;
 	bottom: 47px;
 	background: #ffffff;
-	right: 137px;
+	right: 0;
 	box-shadow: 0px 0px 5px 2px #ddd;
 	padding: 10px 15px;
 	text-transform: capitalize;
@@ -184,11 +190,11 @@ div::-webkit-scrollbar-corner, ul::-webkit-scrollbar-corner{
 }
 
 @media (max-width: 1679px) {
-	.rightSideMenu {
+	/* .rightSideMenu {
     right: 50px;
 		float: right;
 		position: fixed;
-	}
+	} */
 }
 
 @media (max-width: 991px) {
@@ -215,8 +221,6 @@ div::-webkit-scrollbar-corner, ul::-webkit-scrollbar-corner{
 	.subHeadWrapper .mobileSubHeaderMenu ul { font-size: 14px; }
 	#TryFreeDownload .discription { max-width: 400px; text-align: left; }
 	#sideBarCnt .docSearchPart { position: relative; margin-top: 0px; margin-bottom: 10px; }
-	.history { padding: 10px 10px; }
-	.history .otherVersions { right: 10px; }
 }
 
 @media (max-width: 400px) {
@@ -234,10 +238,10 @@ div::-webkit-scrollbar-corner, ul::-webkit-scrollbar-corner{
 	.markdown-body h2 { font-size: 30px; }
 	.markdown-body h3 { font-size: 24px; }
 	.markdown-body { padding-right: 40px; }
-	.docContainer { border-left: 1px solid #ddd;padding-left: 40px;min-height: calc(100vh - 300px); }
+	.docContainer { border-left: 1px solid #ddd;padding-left: 40px;min-height: calc(100vh - 235px); }
 	.subHeadWrapper .subHeaderMenuUl li { margin-right: 0px; }
 	.subHeadWrapper .subHeaderMenuUl li.title { margin-right: 20px; padding: 0; }
-	.sideBar .mainPage { width: auto; height: auto; max-height: calc(100vh - 240px); }
+	.sideBar .mainPage { width: auto; height: auto; max-height: auto; }
 	.sideBarIcon { display: none; overflow: auto; }
 }
 
