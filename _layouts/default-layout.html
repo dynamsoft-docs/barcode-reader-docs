@@ -92,9 +92,6 @@
                         </li>
                         {%- endcomment -%}
                     </ul>
-                    <div class="history list">
-                        {%- include liquid_autoGenerateHistoryList.html -%}
-                    </div>
                 </div>
             </div>
             <div class="docContainer col-xs-12 col-md-9">
@@ -122,6 +119,9 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="history list">
+        {%- include liquid_autoGenerateHistoryList.html -%}
     </div>
     <div id="footerWrapper">
         {%- include page_footer.html -%}
