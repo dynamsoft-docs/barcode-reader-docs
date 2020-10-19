@@ -38,7 +38,7 @@ breadcrumbText: API Reference
   | [`decode_file`](BarcodeReader/decode.md#decode_file) | Decodes barcodes from a specified image file. |
   | [`decode_buffer`](BarcodeReader/decode.md#decode_buffer) | Decodes barcodes from the memory buffer containing image pixels in defined format.  |
   | [`decode_file_stream`](BarcodeReader/decode.md#decode_file_stream) | Decodes barcodes from an image file in memory. |
-  | [`decode_buffer_manually`](#decode_buffer_manually) | Decodes barcodes from the memory buffer containing image pixels in defined format. |
+  | [`decode_buffer_manually`](BarcodeReader/decode.md#decode_buffer_manually) | Decodes barcodes from the memory buffer containing image pixels in defined format. |
    
    
 &nbsp; 
