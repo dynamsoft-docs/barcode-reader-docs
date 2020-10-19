@@ -234,10 +234,11 @@ div::-webkit-scrollbar-corner, ul::-webkit-scrollbar-corner{
 	.markdown-body h2 { font-size: 30px; }
 	.markdown-body h3 { font-size: 24px; }
 	.markdown-body { padding-right: 40px; }
-	.docContainer { border-left: 1px solid #ddd;padding-left: 40px;min-height: calc(100vh - 300px); }
+	.docContainer { border-left: 1px solid #ddd;padding-left: 40px;min-height: calc(100vh - 235px); }
 	.subHeadWrapper .subHeaderMenuUl li { margin-right: 0px; }
 	.subHeadWrapper .subHeaderMenuUl li.title { margin-right: 20px; padding: 0; }
-	.sideBar .mainPage { width: auto; height: auto; max-height: calc(100vh - 240px); }
+	/* .sideBar .mainPage { width: auto; height: auto; max-height: calc(100vh - 240px); } */
+	.sideBar .mainPage { width: auto; height: auto; max-height: auto; } 
 	.sideBarIcon { display: none; overflow: auto; }
 }
 
