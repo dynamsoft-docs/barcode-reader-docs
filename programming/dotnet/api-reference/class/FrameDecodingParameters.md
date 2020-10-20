@@ -25,13 +25,13 @@ public class FrameDecodingParameters
 | [`Width`](#width) | *int* |
 | [`Height`](#height) | *int* |
 | [`Stride`](#stride) | *int* |
-| [`ImagePixelFormat`](#imagepixelformat) | [`ImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) |
+| [`ImagePixelFormat`](#imagepixelformat) | [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) |
 | [`Region`](#region) | *[`RegionDefinition`](../struct/RegionDefinition.md)* |
 | [`Threshold`](#threshold) | *float* |
 | [`FPS`](#fps) | *int* |
 | [`AutoFilter`](#autofilter) | *int* |
-| [`ClarityCalculationMethod`](#claritycalculationmethod) | [`ClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod) |
-| [`ClarityFilterMode`](#clarityfiltermode) | [`ClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode) |
+| [`ClarityCalculationMethod`](#claritycalculationmethod) | [`EnumClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod) |
+| [`ClarityFilterMode`](#clarityfiltermode) | [`EnumClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode) |
 
 
 ### MaxQueueLength
@@ -103,17 +103,14 @@ int Dynamsoft.Barcode.FrameDecodingParameters.Stride
 The image pixel format used in the image byte array.
 
 ```C#
-ImagePixelFormat tagFrameDecodingParameters::imagePixelFormat
+EnumImagePixelFormat Dynamsoft.Barcode.FrameDecodingParameters.ImagePixelFormat
 ```
 
 - **Value range**   
-    A value of [`ImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) Enumeration items.
+    Any one value of [`ImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) Enumeration items.
       
 - **Default value**   
-    `IPF_GRAYSCALED`
-    
-- **See also**  
-    [`ImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat)
+    `EnumImagePixelFormat.IPF_GRAYSCALED`
       
 ### Region
 The region definition of the frame to calculate the internal indicator.  
@@ -189,11 +186,7 @@ EnumClarityCalculationMethod Dynamsoft.Barcode.FrameDecodingParameters.ClarityCa
     Any one of the [`ClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod) Enumeration items.   
       
 - **Default value**   
-    ECCM_CONTRAST   
-    
-- **See also**  
-    [`ClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod)    
-    
+    EnumClarityCalculationMethod.ECCM_CONTRAST       
 
 ### ClarityFilterMode
 Sets the mode used for filtering frames by calculated clarity.
@@ -206,8 +199,4 @@ EnumClarityFilterMode Dynamsoft.Barcode.FrameDecodingParameters.ClarityFilterMod
     Any one of the [`ClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode) Enumeration items.   
       
 - **Default value**   
-    CFM_GENERAL   
-    
-- **See also**  
-    [`ClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode)    
-
+    EnumClarityFilterMode.CFM_GENERAL   

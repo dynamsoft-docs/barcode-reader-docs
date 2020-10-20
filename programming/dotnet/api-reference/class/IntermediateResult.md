@@ -24,31 +24,31 @@ public class IntermediateResult
 | Attribute | Type |
 |---------- | ---- |
 | [`Results`](#results) | *object[ ]* |
-| [`DataType`](#datatype) | [`IMResultDataType`]({{ site.enumerations }}result-enums.html#imresultdatatype) |
-| [`ResultType`](#resulttype) | [`IntermediateResultType`]({{ site.enumerations }}result-enums.html#intermediateresulttype) |
-| [`BarcodeComplementMode`](#barcodecomplementmode) | [`BarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode) |
+| [`DataType`](#datatype) | [`EnumIMResultDataType`]({{ site.enumerations }}result-enums.html#imresultdatatype) |
+| [`ResultType`](#resulttype) | [`EnumIntermediateResultType`]({{ site.enumerations }}result-enums.html#intermediateresulttype) |
+| [`BarcodeComplementMode`](#barcodecomplementmode) | [`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode) |
 | [`BCMIndex`](#bcmindex) | *int* |
-| [`DeformationResistingMode`](#deformationresistingmode) | [`DeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode) |
+| [`DeformationResistingMode`](#deformationresistingmode) | [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode) |
 | [`DRMIndex`](#drmindex) | *int* |
-| [`DPMCodeReadingMode`](#dpmcodereadingmode) | [`DPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode) |
+| [`DPMCodeReadingMode`](#dpmcodereadingmode) | [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode) |
 | [`DPMCRMIndex`](#dpmcrmindex) | *int* |
 | [`RotationMatrix`](#rotationmatrix) | *double[ ]* |
-| [`TextFilterMode`](#textfiltermode) | [`TextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode) |
+| [`TextFilterMode`](#textfiltermode) | [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode) |
 | [`TFMIndex`](#tfmindex) | *int* |
-| [`LocalizationMode`](#localizationmode) | [`LocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode) |
+| [`LocalizationMode`](#localizationmode) | [`EnumLocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode) |
 | [`LMIndex`](#lmindex) | *int* |
-| [`BinarizationMode`](#binarizationmode) | [`BinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) |
+| [`BinarizationMode`](#binarizationmode) | [`EnumBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) |
 | [`BMIndex`](#bmindex) | *int* |
-| [`ImagePreprocessingMode`](#imagepreprocessingmode) | [`ImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode) |
+| [`ImagePreprocessingMode`](#imagepreprocessingmode) | [`EnumImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode) |
 | [`IPMIndex`](#ipmindex) | *int* |
 | [`ROIId`](#roiid) | *int* |
-| [`RegionPredetectionMode`](#regionpredetectionmode) | [`RegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode) |
+| [`RegionPredetectionMode`](#regionpredetectionmode) | [`EnumRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode) |
 | [`RPMIndex`](#rpmindex) | *int* |
-| [`GrayscaleTransformationMode`](#grayscaletransformationmode) | [`GrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode) |
+| [`GrayscaleTransformationMode`](#grayscaletransformationmode) | [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode) |
 | [`GTMIndex`](#gtmindex) | *int* |
-| [`ColourConversionMode`](#colourconversionmode) | [`ColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode) |
+| [`ColourConversionMode`](#colourconversionmode) | [`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode) |
 | [`CICMIndex`](#cicmindex) | *int* |
-| [`ColourClusteringMode`](#colourclusteringmode) | [`ColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode) |
+| [`ColourClusteringMode`](#colourclusteringmode) | [`EnumColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode) |
 | [`CCMIndex`](#ccmindex) | *int* |
 | [`ScaleDownRatio`](#scaledownratio) | *int* |
 | [`FrameId`](#frameid) | *int* |

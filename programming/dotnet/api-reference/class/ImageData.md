@@ -24,7 +24,7 @@ public class ImageData
 | [`Width`](#width) | *int* |
 | [`Height`](#height) | *int* |
 | [`Stride`](#stride) | *int* |
-| [`Format`](#format) | [`ImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) |
+| [`Format`](#format) | [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) |
 
 
 ### Bytes
