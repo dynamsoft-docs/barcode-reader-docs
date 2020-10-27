@@ -95,9 +95,9 @@
 		{%- assign historyVer = history | split: 'md5HashVal:' | first | split: 'versionText:' | last -%}
 		{%- assign historyUrl = history | split: 'md5HashVal:' | first | split: 'versionText:' | first | split: 'FullUrl:' | last -%}
 		{%- if historyVer == "latest version" -%}
-				<li><a href = "{{ site.docHomePage }}{{ historyUrl }}" class="otherLinkColour">latest version</a></li>		
+				<li><a href = "{{ site.firstLevelUrl }}{{ historyUrl }}" class="otherLinkColour">latest version</a></li>		
 			{%- else -%}
-				<li><a href = "{{ site.docHomePage }}{{ historyUrl }}" class="otherLinkColour">{{ "version" | append: historyVer }}</a></li>
+				<li><a href = "{{ site.firstLevelUrl }}{{ historyUrl }}" class="otherLinkColour">{{ "version" | append: historyVer }}</a></li>
 		{%- endif -%}
 	{%- endif -%}
 {%- endfor -%}
