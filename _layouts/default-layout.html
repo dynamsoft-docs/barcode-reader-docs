@@ -54,7 +54,7 @@
                         {%- endcomment -%}
                         <li><a href="{{ site.programming }}" class="otherLinkColour">Programming</a>
                             <ul>
-                                {%- if page.url contains '/programming/' page.url contains '/programming-v' -%}
+                                {%- if page.url contains '/programming/' or page.url contains '/programming-v' -%}
                                 {%- include sidelist-programming/programming-c.html -%}
                                 {%- include sidelist-programming/programming-cpp.html -%}
                                 {%- include sidelist-programming/programming-dotnet.html -%}
@@ -68,7 +68,7 @@
                         </li>
                         <li><a href="{{ site.parameters }}" class="otherLinkColour">Parameters</a>
                             <ul>
-                                {%- if page.url contains '/parameters/' page.url contains '/parameters-v' -%}
+                                {%- if page.url contains '/parameters/' or page.url contains '/parameters-v' -%}
                                 <li><a href="{{ site.parameters }}structure-and-interfaces-of-parameters.html" class="otherLinkColour">Structure and Interfaces of Parameters</a></li>
                                 {%- include sidelist-parameters/parameters-references.html -%}
                                 {%- include sidelist-parameters/parameters-enumerations.html -%}
@@ -81,7 +81,7 @@
                         </li>
                         {%- comment -%}
                         <li class="unavailableLink">Enhancements
-                            {%- if page.url contains '/enhancements/' page.url contains '/enhancements-v' -%}
+                            {%- if page.url contains '/enhancements/' or page.url contains '/enhancements-v' -%}
                             <ul>
                                 <li class="unavailableLink">DPM Codes</li>
                                 <li class="unavailableLink">Intermediate Result</li>
