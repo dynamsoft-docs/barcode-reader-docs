@@ -53,6 +53,7 @@ breadcrumbText: Reference
  | [`ImageParameter.ColourClusteringModes`](image-parameter/ColourClusteringModes.md#colourclusteringmodes) | Sets the mode and priority for colour categorization. Not supported yet. |
  | [`ImageParameter.ColourConversionModes`](image-parameter/ColourConversionModes.md#colourconversionmodes) | Sets the mode and priority for converting a colour image to a grayscale image. |
  | [`ImageParameter.DeblurLevel`](image-parameter/image-process-control.md#deblurlevel) | Sets the degree of blurriness of the barcode. |
+ | [`ImageParameter.DeblurModes`](image-parameter/DeblurModes.md#deblurmodes) | Sets the mode and priority for deblurring. |
  | [`ImageParameter.DeformationResistingModes`](image-parameter/DeformationResistingModes.md#deformationresistingmodes) | Sets the mode and priority for deformation resisting. |
  | [`ImageParameter.DPMCodeReadingModes`](image-parameter/DPMCodeReadingModes.md#dpmcodereadingmodes) | Sets the mode and priority for DPM code reading. Not support yet. |
  | [`ImageParameter.GrayscaleTransformationModes`](image-parameter/GrayscaleTransformationModes.md#grayscaletransformationmodes) | Sets the mode and priority for the grayscale image conversion. |
