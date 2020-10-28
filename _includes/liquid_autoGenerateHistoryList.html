@@ -97,7 +97,7 @@
 		{%- if historyVer == "latest version" -%}
 				<li><a href = "{{ site.firstLevelUrl }}{{ historyUrl }}" class="otherLinkColour">latest version</a></li>		
 			{%- else -%}
-				<li><a href = "{{ site.firstLevelUrl }}{{ historyUrl }}" class="otherLinkColour">{{ "version" | append: historyVer }}</a></li>
+				<li><a href = "{{ site.firstLevelUrl }}{{ historyUrl }}" class="otherLinkColour">{{ "version " | append: historyVer }}</a></li>
 		{%- endif -%}
 	{%- endif -%}
 {%- endfor -%}
