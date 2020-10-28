@@ -47,6 +47,7 @@ Describes the intermediate result data type.
 | IMRDT_LOCALIZATIONRESULT | EnumIMResultDataTypeLocalizationResult | 0x08 | Specifies the `LocalizationResult`. |
 | IMRDT_REGIONOFINTEREST  | EnumIMResultDataTypeRegionOfInterest | 0x10 | Specifies the `RegionOfInterest`. |
 | IMRDT_QUADRILATERAL | EnumIMResultDataTypeQuadrilateral | 0x20 | Specifies the `Quadrilateral`. |  
+| IMRDT_REFERENCE | EnumIMResultDataTypeReference | 0x40 | Specifies the internal data format for using cross Dynamsoft products. |  
 
 **See also**
 - C / C++: [`ImageData`]({{ site.structs }}ImageData.html), [`Contour`]({{ site.structs }}Contour.html), [`LineSegment`]({{ site.structs }}LineSegment.html), [`LocalizationResult`]({{ site.structs }}LocalizationResult.html), [`RegionOfInterest`]({{ site.structs }}RegionOfInterest.html), [`Quadrilateral`]({{ site.structs }}Quadrilateral.html).   
@@ -77,9 +78,10 @@ Describes the intermediate result saving mode.
    
 | Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
 | -------------------------- | ------------------- | ----- | ----------- |
-| IRSM_MEMORY | EnumIntermediateResultSavingModeMemory | 0x01 | Saves intermediate results in memory. |
+| IRSM_MEMORY | EnumIntermediateResultSavingModeMemory | 0x01 | Saves intermediate results in memory with public data format. |
 | IRSM_FILESYSTEM | EnumIntermediateResultSavingModeFileSystem | 0x02 | Saves intermediate results in file system. Check arguments of [`IntermediateResultSavingMode`]({{ site.parameters_reference }}image-parameter/IntermediateResultSavingMode.html#mode-arguments) for available argument settings. |
-| IRSM_BOTH | EnumIntermediateResultSavingModeBoth | 0x04 | Saves intermediate results in both memory and file system. Check arguments of [`IntermediateResultSavingMode`]({{ site.parameters_reference }}image-parameter/IntermediateResultSavingMode.html#mode-arguments) for available argument settings. |
+| IRSM_BOTH | EnumIntermediateResultSavingModeBoth | 0x04 | Saves intermediate results using IRSM_MEMORY and IRSM_FILESYSTEM. Check arguments of [`IntermediateResultSavingMode`]({{ site.parameters_reference }}image-parameter/IntermediateResultSavingMode.html#mode-arguments) for available argument settings. |
+| IRSM_REFERENCE_MEMORY | EnumIntermediateResultSavingModeReferenceMemory | 0x08 | Saves intermediate results in memory with internal data format. |
 
 
 

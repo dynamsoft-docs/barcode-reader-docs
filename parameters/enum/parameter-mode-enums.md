@@ -2,7 +2,7 @@
 layout: default-layout
 title: Dynamsoft Barcode Reader Enumerations - Parameter Mode Enumerations
 description: This article shows Parameter Mode Enumerations of Dynamsoft Barcode Reader.
-keywords: AccompanyingTextRecognitionMode, BarcodeColourMode, BarcodeComplementMode, BinarizationMode, ColourClusteringMode, ColourConversionMode, ConflictMode, DeformationResistingMode, DPMCodeReadingMode, GrayscaleTransformationMode, ImagePreprocessingMode, LocalizationMode, PDFReadingMode, RegionPredetectionMode, ScaleUpMode, TerminatePhase, TextAssistedCorrectionMode, TextFilterMode, TextureDetectionMode, parameter mode enumeration, enumeration
+keywords: AccompanyingTextRecognitionMode, BarcodeColourMode, BarcodeComplementMode, BinarizationMode, ColourClusteringMode, ColourConversionMode, ConflictMode, DeblurMode, DeformationResistingMode, DPMCodeReadingMode, GrayscaleTransformationMode, ImagePreprocessingMode, LocalizationMode, PDFReadingMode, RegionPredetectionMode, ScaleUpMode, TerminatePhase, TextAssistedCorrectionMode, TextFilterMode, TextureDetectionMode, parameter mode enumeration, enumeration
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 ---
@@ -18,6 +18,7 @@ needGenerateH3Content: false
   | [`ColourClusteringMode`](#colourclusteringmode) | Describes the colour clustering mode. |
   | [`ColourConversionMode`](#colourconversionmode) | Describes the colour conversion mode. |
   | [`ConflictMode`](#conflictmode) | Describes the conflict mode. |
+  | [`DeblurMode`](#deblurmode) | Describes the deblur mode. |
   | [`DeformationResistingMode`](#deformationresistingmode) | Describes the deformation resisting mode. |
   | [`DPMCodeReadingMode`](#dpmcodereadingmode) | Describes the DPM code reading mode. |
   | [`GrayscaleTransformationMode`](#grayscaletransformationmode) | Describes the grayscale transformation mode. |
@@ -239,6 +240,41 @@ Describes the conflict mode.
 | -------------------------- | ------------------- | ----- | ----------- |
 | CM_IGNORE | EnumConflictModeIgnore | 0x01 | Ignores new settings and inherits the previous settings. |
 | CM_OVERWRITE | EnumConflictModeOverwrite | 0x02 | Overwrites the old settings with new settings. |
+
+
+
+&nbsp;
+
+
+
+## DeblurMode
+Describes the deblur mode.
+
+
+### Declarations
+   
+| Language | Declaration |
+| -------- | ----------- |
+| C / C++ | `enum DeblurMode` |
+| .Net | `enum Dynamsoft.Barcode.EnumDeblurMode` |
+| JavaScript | `Dynamsoft.EnumDeblurMode` |
+| Python | `class EnumDeblurMode(IntEnum)` |
+| Java / Android | `class EnumDeblurMode` |
+| ObjC / Swift | `enum EnumDeblurMode` |
+
+
+### Members
+   
+| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
+| -------------------------- | ------------------- | ----- | ----------- |
+| DM_SKIP | EnumDeblurModeSkip | 0x00 | TODO |
+| DM_DIRECT_BINARIZATION | EnumDeblurModeDirectBinarization | 0x01 | TODO |
+| DM_THRESHOLD_BINARIZATION | EnumDeblurModeThresholdBinarization | 0x02 | TODO|
+| DM_GRAY_EQUALIZATION | EnumDeblurModeGrayEqualization | 0x04 | TODO |
+| DM_SMOOTHING | EnumDeblurModeSmoothing | 0x08 | TODO |
+| DM_MORPHING | EnumDeblurModeMorphing | 0x10 | TODO |
+| DM_DEEP_ANALYSIS | EnumDeblurModeDeepAnalysis | 0x20 | TODO |
+| DM_SHARPENING | EnumDeblurModeSharpening | 0x40 | TODO |
 
 
 
