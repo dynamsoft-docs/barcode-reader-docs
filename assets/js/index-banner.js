@@ -106,9 +106,9 @@ function HighlightCurrentListForFullTree(searchListId, firstTime, searchUrl = do
         var listAry = navWrap.getElementsByTagName("li");    
 
         //history version doc url
-        searchUrl = searchUrl.replace(/\/index-v[0-9]+.*.html/g,"/");
-        searchUrl = searchUrl.replace(/-v[0-9]+.*\//g,"/");
-        searchUrl = searchUrl.replace(/-v[0-9]+.*.html/g,".html");
+        searchUrl = searchUrl.replace(/\/index-v[0-9]+[^\/]*.html/g,"/");
+        searchUrl = searchUrl.replace(/-v[0-9]+[^\/]*\//g,"/");
+        searchUrl = searchUrl.replace(/-v[0-9]+[^\/]*.html/g,".html");
 
         //index url with content anchor
         if (searchUrl.indexOf("/#") != -1) {
@@ -281,7 +281,7 @@ function UrlReplace()
 {
     var curRelativeUrl = (document.URL.split(document.domain)).pop();
     
-    var tmpExp = new RegExp(/-v[0-9]+.*\//g)
+    var tmpExp = new RegExp(/-v[0-9]+[^\/]*\//g)
     var searchAry = tmpExp.exec(curRelativeUrl);
     if (searchAry != null)
     {
@@ -295,8 +295,8 @@ function UrlReplace()
             var hrefVal = allHref[i].href;
             if (hrefVal.search(needReplaceStr) < 0)
             {
-                hrefVal = hrefVal.replace(/-v[0-9]+.*\//g,"/");
-                hrefVal = hrefVal.replace(/-v[0-9]+.*.html/g,".html");
+                hrefVal = hrefVal.replace(/-v[0-9]+[^\/]*\//g,"/");
+                hrefVal = hrefVal.replace(/-v[0-9]+[^\/]*.html/g,".html");
                 if (hrefVal.search(needFindStr) > 0)
                 {
                     allHref[i].href = hrefVal.replace(needFindStr, needReplaceStr);
