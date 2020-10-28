@@ -229,6 +229,16 @@ function UrlSearch(docUrl, listUrl) {
             if (regExp.exec(docUrl) != null) {
                 return true;
             }
+            else if (docUrl.indexOf("#") == -1 && listUrl.indexOf("#") != -1){
+                listUrl = listUrl.substring(0, listUrl.indexOf("#"));
+                regExp = new RegExp(listUrl + '$');
+                if (regExp.exec(docUrl) != null) {
+                        return true;
+                }
+                else {
+                    return false;
+                }
+            }
             else {
                 return false;
             }
