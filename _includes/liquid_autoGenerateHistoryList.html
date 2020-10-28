@@ -58,9 +58,9 @@
 		{%- assign historyMd5 = history | split: 'md5HashVal:' | last -%}
 		{%- assign historyVer = history | split: 'md5HashVal:' | first | split: 'versionText:' | last -%}
 		{%- assign tmpSize = historyMd5 | size -%}
-		{%- if tmpSize > 0 and my_page.md5HashVal and my_page.md5HashVal == tmpSize -%}
+		{%- if tmpSize > 0 and my_page.md5HashVal and my_page.md5HashVal == historyMd5 -%}
 			{%- if historyVer != "latest version" and historyVer != tmpPageVersion and tmpPageVersion > historyVer -%}
-				{%- assign replaceText = "FullUrl:" | append: my_page.url | append: "versionText:" | append: tmpPageVersion | append: "md5HashVal" | append: my_page.md5HashVal -%}
+				{%- assign replaceText = "FullUrl:" | append: my_page.url | append: "versionText:" | append: tmpPageVersion | append: "md5HashVal:" | append: my_page.md5HashVal -%}
 				{%- assign historyRecode = historyRecode | replace: history, replaceText -%}
 			{%- endif -%}
 			{%- assign newVer = false -%}
