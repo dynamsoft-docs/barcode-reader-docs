@@ -59,6 +59,9 @@ If the image is large and the barcode on the image is very small, it is recommen
 - [AspectRatioRange](#aspectratiorange )
 - [HeightRange](#heightrange)
 - [WidthRange](#widthrange)
+- [SpatialIndexBlockSize](#spatialindexblocksize)
+- [LibraryFileName](#libraryfilename)
+- [LibraryParameters](#libraryparameters)
  
 ##### MinImageDimension 
 Sets the minimum image dimension (in pixels) to pre-detect barcode regions.
@@ -154,6 +157,41 @@ Sets the width range of the bounding rectangle of the predetected region.
 - **Remark**     
   - The width range need to be defined as [`MinWidth`, `MaxWidth`]. There will be no limitation without manual setting.
   - Value range of `MinWidth`, `MaxWidth`: [1,0x7fffffff]
+
+
+##### SpatialIndexBlockSize 
+Sets the spatial index block size used for region predetection algorithm.
+
+| Value Type | Value Range | Default Value | Vaild Modes | 
+| ---------- | ----------- | ------------- | ----------- |
+| *int* | [1, 32] | 5 | "RPM_GENERAL_GRAY_CONTRAST"<br>"RPM_GENERAL_HSV_CONTRAST"<br>"RPM_GENERAL_RGB_CONTRAST" |         
+
+- **Remark**     
+  值表示2的次方数.  
+
+
+##### LibraryFileName 
+Sets the file name of the library to load dynamically.
+
+| Value Type | Value Range | Default Value | Vaild Modes | 
+| ---------- | ----------- | ------------- | ----------- |
+| *string* | A string value representing file name. | "" | All `RegionPredetectionMode` items except RPM_SKIP and RPM_AUTO |         
+
+
+- **Remark**     
+  - The library must be in the same place with Dynamsoft Barcode Reader Library.
+
+
+##### LibraryParameters 
+Sets the parameters passed to the library to load dynamically.
+
+| Value Type | Value Range | Default Value | Vaild Modes | 
+| ---------- | ----------- | ------------- | ----------- |
+| *string* | A string value representing parameters. | "" | All `RegionPredetectionMode` items except RPM_SKIP and RPM_AUTO |         
+
+
+- **Remark**     
+  - Library如果需要多个参数，必须一次性传输，Library内部处理分割和使用
 
 
 ### Setting Methods

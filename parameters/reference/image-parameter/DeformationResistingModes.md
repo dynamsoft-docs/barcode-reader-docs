@@ -51,6 +51,8 @@ needAutoGenerateSidebar: false
     
 #### Mode Arguments
 - [Level](#level)
+- [LibraryFileName](#libraryfilename)
+- [LibraryParameters](#libraryparameters)
 
 ##### Level 
 Sets the effort level used for deformation resisting. **Not supported yet.**
@@ -62,6 +64,30 @@ Sets the effort level used for deformation resisting. **Not supported yet.**
 
 - **Remark**     
   A larger value means the library will take more effort to resist deformation.
+
+
+##### LibraryFileName 
+Sets the file name of the library to load dynamically.
+
+| Value Type | Value Range | Default Value | Vaild Modes | 
+| ---------- | ----------- | ------------- | ----------- |
+| *string* | A string value representing file name. | "" | All `DeformationResistingMode` items except DRM_SKIP and DRM_AUTO |         
+
+
+- **Remark**     
+  - The library must be in the same place with Dynamsoft Barcode Reader Library.
+
+
+##### LibraryParameters 
+Sets the parameters passed to the library to load dynamically.
+
+| Value Type | Value Range | Default Value | Vaild Modes | 
+| ---------- | ----------- | ------------- | ----------- |
+| *string* | A string value representing parameters. | "" | All `DeformationResistingMode` items except DRM_SKIP and DRM_AUTO |         
+
+
+- **Remark**     
+  - Library如果需要多个参数，必须一次性传输，Library内部处理分割和使用
 
 
 ### Setting Methods

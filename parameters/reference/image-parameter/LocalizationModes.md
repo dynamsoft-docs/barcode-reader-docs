@@ -53,6 +53,8 @@ needAutoGenerateSidebar: false
 #### Mode Arguments
 - [ScanStride](#scanstride)
 - [ScanDirection](#scandirection)
+- [LibraryFileName](#libraryfilename)
+- [LibraryParameters](#libraryparameters)
  
 ##### ScanStride 
 Sets the stride in pixels between scans when searching for barcodes.
@@ -78,6 +80,30 @@ Sets the scan direction when searching barcode.
   1: Vertical direction.   
   2: Horizontal direction. 
   
+
+##### LibraryFileName 
+Sets the file name of the library to load dynamically.
+
+| Value Type | Value Range | Default Value | Vaild Modes | 
+| ---------- | ----------- | ------------- | ----------- |
+| *string* | A string value representing file name. | "" | All `LocalizationMode` items except LM_SKIP and LM_AUTO |         
+
+
+- **Remark**     
+  - The library must be in the same place with Dynamsoft Barcode Reader Library.
+
+
+##### LibraryParameters 
+Sets the parameters passed to the library to load dynamically.
+
+| Value Type | Value Range | Default Value | Vaild Modes | 
+| ---------- | ----------- | ------------- | ----------- |
+| *string* | A string value representing parameters. | "" | All `LocalizationMode` items except LM_SKIP and LM_AUTO |         
+
+
+- **Remark**     
+  - Library如果需要多个参数，必须一次性传输，Library内部处理分割和使用
+
 
 ### Setting Methods
 

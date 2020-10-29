@@ -52,6 +52,8 @@ needAutoGenerateSidebar: false
     
 #### Mode Arguments
 - [LightReflection](#lightreflection)
+- [LibraryFileName](#libraryfilename)
+- [LibraryParameters](#libraryparameters)
  
 ##### LightReflection 
 Sets the minimum image dimension (in pixels) to filter the text.
@@ -64,6 +66,30 @@ Sets the minimum image dimension (in pixels) to filter the text.
 - **Remark**     
   0: no light reflection.   
   1: has light reflection.
+
+
+##### LibraryFileName 
+Sets the file name of the library to load dynamically.
+
+| Value Type | Value Range | Default Value | Vaild Modes | 
+| ---------- | ----------- | ------------- | ----------- |
+| *string* | A string value representing file name. | "" | All `BarcodeColourMode` items except BICM_SKIP |         
+
+
+- **Remark**     
+  - The library must be in the same place with Dynamsoft Barcode Reader Library.
+
+
+##### LibraryParameters 
+Sets the parameters passed to the library to load dynamically.
+
+| Value Type | Value Range | Default Value | Vaild Modes | 
+| ---------- | ----------- | ------------- | ----------- |
+| *string* | A string value representing parameters. | "" | All `BarcodeColourMode` items except BICM_SKIP |         
+
+
+- **Remark**     
+  - Library如果需要多个参数，必须一次性传输，Library内部处理分割和使用
 
 
 ### Setting Methods

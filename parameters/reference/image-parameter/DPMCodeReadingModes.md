@@ -50,6 +50,33 @@ needAutoGenerateSidebar: false
 - **See also**:   
     [`DPMCodeReadingMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode)
     
+#### Mode Arguments
+- [LibraryFileName](#libraryfilename)
+- [LibraryParameters](#libraryparameters)
+
+##### LibraryFileName 
+Sets the file name of the library to load dynamically.
+
+| Value Type | Value Range | Default Value | Vaild Modes | 
+| ---------- | ----------- | ------------- | ----------- |
+| *string* | A string value representing file name. | "" | All `DPMCodeReadingMode` items except DPMCRM_SKIP and DPMCRM_AUTO |         
+
+
+- **Remark**     
+  - The library must be in the same place with Dynamsoft Barcode Reader Library.
+
+
+##### LibraryParameters 
+Sets the parameters passed to the library to load dynamically.
+
+| Value Type | Value Range | Default Value | Vaild Modes | 
+| ---------- | ----------- | ------------- | ----------- |
+| *string* | A string value representing parameters. | "" | All `DPMCodeReadingMode` items except DPMCRM_SKIP and DPMCRM_AUTO |         
+
+
+- **Remark**     
+  - Library如果需要多个参数，必须一次性传输，Library内部处理分割和使用
+
 
 ### Setting Methods
 

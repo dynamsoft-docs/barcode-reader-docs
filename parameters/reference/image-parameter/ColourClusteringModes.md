@@ -51,6 +51,8 @@ needAutoGenerateSidebar: false
     
 #### Mode Arguments
 - [Sensitivity](#sensitivity)
+- [LibraryFileName](#libraryfilename)
+- [LibraryParameters](#libraryparameters)
  
 ##### Sensitivity 
 Sets the sensitivity used for colour categorization.
@@ -62,6 +64,30 @@ Sets the sensitivity used for colour categorization.
 - **Remark**     
   A higher level means less colours will be clustered as the same colour.   
   
+
+##### LibraryFileName 
+Sets the file name of the library to load dynamically.
+
+| Value Type | Value Range | Default Value | Vaild Modes | 
+| ---------- | ----------- | ------------- | ----------- |
+| *string* | A string value representing file name. | "" | All `ColourClusteringMode` items except CCM_SKIP and CCM_AUTO |         
+
+
+- **Remark**     
+  - The library must be in the same place with Dynamsoft Barcode Reader Library.
+
+
+##### LibraryParameters 
+Sets the parameters passed to the library to load dynamically.
+
+| Value Type | Value Range | Default Value | Vaild Modes | 
+| ---------- | ----------- | ------------- | ----------- |
+| *string* | A string value representing parameters. | "" | All `ColourClusteringMode` items except CCM_SKIP and CCM_AUTO |         
+
+
+- **Remark**     
+  - Library如果需要多个参数，必须一次性传输，Library内部处理分割和使用
+
 
 ### Setting Methods
 

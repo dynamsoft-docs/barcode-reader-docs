@@ -58,6 +58,8 @@ needAutoGenerateSidebar: false
 - [LeftTextPercentageSize](#lefttextpercentagesize)
 - [RightTextPercentageSize](#righttextpercentagesize)
 - [TopTextPercentageSize](#toptextpercentagesize)
+- [LibraryFileName](#libraryfilename)
+- [LibraryParameters](#libraryparameters)
  
 ##### BottomTextPercentageSize 
 Sets the percentage of the bottom accompanying text zone comparing to the barcode zone.
@@ -105,6 +107,30 @@ Sets the percentage of the top accompanying text zone comparing to the barcode z
 
 - **Remark**     
   255: The accompanying text zone will be detected automatically by the SDK.
+
+
+##### LibraryFileName 
+Sets the file name of the library to load dynamically.
+
+| Value Type | Value Range | Default Value | Vaild Modes | 
+| ---------- | ----------- | ------------- | ----------- |
+| *string* | A string value representing file name. | "" | All `TextAssistedCorrectionMode` items except TACM_SKIP and TACM_AUTO |         
+
+
+- **Remark**     
+  - The library must be in the same place with Dynamsoft Barcode Reader Library.
+
+
+##### LibraryParameters 
+Sets the parameters passed to the library to load dynamically.
+
+| Value Type | Value Range | Default Value | Vaild Modes | 
+| ---------- | ----------- | ------------- | ----------- |
+| *string* | A string value representing parameters. | "" | All `TextAssistedCorrectionMode` items except TACM_SKIP and TACM_AUTO |         
+
+
+- **Remark**     
+  - Library如果需要多个参数，必须一次性传输，Library内部处理分割和使用
 
 
 ### Setting Methods

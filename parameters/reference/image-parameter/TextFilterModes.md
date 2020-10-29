@@ -52,6 +52,8 @@ needAutoGenerateSidebar: false
 #### Mode Arguments
 - [MinImageDimension](#minimagedimension)
 - [Sensitivity](#sensitivity)
+- [LibraryFileName](#libraryfilename)
+- [LibraryParameters](#libraryparameters)
  
 ##### MinImageDimension 
 Sets the minimum image dimension (in pixels) to filter the text.
@@ -74,6 +76,30 @@ Sets the sensitivity used for text filtering.
 - **Remark**     
   0: automatically set by the library.   
   A larger value means the library will take more effort to filter text.
+
+
+##### LibraryFileName 
+Sets the file name of the library to load dynamically.
+
+| Value Type | Value Range | Default Value | Vaild Modes | 
+| ---------- | ----------- | ------------- | ----------- |
+| *string* | A string value representing file name. | "" | All `TextFilterMode` items except TFM_SKIP and TFM_AUTO |         
+
+
+- **Remark**     
+  - The library must be in the same place with Dynamsoft Barcode Reader Library.
+
+
+##### LibraryParameters 
+Sets the parameters passed to the library to load dynamically.
+
+| Value Type | Value Range | Default Value | Vaild Modes | 
+| ---------- | ----------- | ------------- | ----------- |
+| *string* | A string value representing parameters. | "" | All `TextFilterMode` items except TFM_SKIP and TFM_AUTO |         
+
+
+- **Remark**     
+  - Library如果需要多个参数，必须一次性传输，Library内部处理分割和使用
 
 
 ### Setting Methods
