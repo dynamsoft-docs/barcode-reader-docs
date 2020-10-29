@@ -106,9 +106,9 @@ function HighlightCurrentListForFullTree(searchListId, firstTime, searchUrl = do
         var listAry = navWrap.getElementsByTagName("li");    
 
         //history version doc url
-        searchUrl = searchUrl.replace(/\/index-v[0-9]+.*.html/g,"/");
-        searchUrl = searchUrl.replace(/-v[0-9]+.*\//g,"/");
-        searchUrl = searchUrl.replace(/-v[0-9]+.*.html/g,".html");
+        searchUrl = searchUrl.replace(/\/index-v[0-9]+[^\/]*.html/g,"/");
+        searchUrl = searchUrl.replace(/-v[0-9]+[^\/]*\//g,"/");
+        searchUrl = searchUrl.replace(/-v[0-9]+[^\/]*.html/g,".html");
 
         //index url with content anchor
         if (searchUrl.indexOf("/#") != -1) {
@@ -229,6 +229,16 @@ function UrlSearch(docUrl, listUrl) {
             if (regExp.exec(docUrl) != null) {
                 return true;
             }
+            else if (docUrl.indexOf("#") == -1 && listUrl.indexOf("#") != -1){
+                listUrl = listUrl.substring(0, listUrl.indexOf("#"));
+                regExp = new RegExp(listUrl + '$');
+                if (regExp.exec(docUrl) != null) {
+                        return true;
+                }
+                else {
+                    return false;
+                }
+            }
             else {
                 return false;
             }
@@ -246,6 +256,16 @@ function UrlSearch(docUrl, listUrl) {
         var regExp = new RegExp(listUrl + '$');
         if (regExp.exec(docUrl) != null) {
             return true;
+        }
+        else if (docUrl.indexOf("#") == -1 && listUrl.indexOf("#") != -1){
+            listUrl = listUrl.substring(0, listUrl.indexOf("#"));
+            regExp = new RegExp(listUrl + '$');
+            if (regExp.exec(docUrl) != null) {
+                    return true;
+            }
+            else {
+                return false;
+            }
         }
         else {
             return false;
@@ -274,5 +294,34 @@ function UsefulRecord(isUseful) {
 
     if(feedbackTag!=null) {
         feedbackTag.innerHTML = "Thanks!";
+    }
+}
+
+function UrlReplace()
+{
+    var curRelativeUrl = (document.URL.split(document.domain)).pop();
+    
+    var tmpExp = new RegExp(/-v[0-9]+[^\/]*\//g)
+    var searchAry = tmpExp.exec(curRelativeUrl);
+    if (searchAry != null)
+    {
+        var needFindStr = curRelativeUrl.split(searchAry[0])[0] + "/";
+        var needReplaceStr = curRelativeUrl.split(searchAry[0])[0] + searchAry[0];
+
+        var allHref = $(".content").find("a");
+    
+        for (var i = 0; i < allHref.length; i++)
+        {
+            var hrefVal = allHref[i].href;
+            if (hrefVal.search(needReplaceStr) < 0)
+            {
+                hrefVal = hrefVal.replace(/-v[0-9]+[^\/]*\//g,"/");
+                hrefVal = hrefVal.replace(/-v[0-9]+[^\/]*.html/g,".html");
+                if (hrefVal.search(needFindStr) > 0)
+                {
+                    allHref[i].href = hrefVal.replace(needFindStr, needReplaceStr);
+                }
+            }
+        }
     }
 }
