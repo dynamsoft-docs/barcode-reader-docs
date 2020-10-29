@@ -88,26 +88,3 @@ Safari<sup>3</sup> | v11+
      
 **NOTE**: Apart from the browsers, the operating systems running on the target devices may impose some limitations of their own that could restrict the use of the library. Browser compatibility ultimately depends on whether the browser on that particular operating system supports the features listed above.  
 
-## Installation
-
-yarn
-
-```
-$ yarn add dynamsoft-javascript-barcode
-```
-
-npm
-
-```
-$ npm install dynamsoft-javascript-barcode --save
-```
-
-cdn
-
-```
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@7.6.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
-<!-- or -->
-<script src="https://unpkg.com/dynamsoft-javascript-barcode@7.6.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
-```
-
-Also see [Dynamsoft JavaScript Barcode SDK for Node](https://github.com/dynamsoft-dbr/node-javascript-barcode).  
