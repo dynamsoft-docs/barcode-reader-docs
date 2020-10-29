@@ -218,6 +218,15 @@
                         $('#sideBarCnt').addClass('ftm-fixed')
                         $('#docHead').addClass('ch-fixed')
                     }
+                    if (dcheight > document.body.clientHeight) {
+                        $('#sideBarCnt.ftm-fixed').css({'height': 'calc(100vh - 120px)'})
+                        $('#sideBarCnt.ftm-fixed #fullTreeMenuListContainer').css({'height': 'calc(100vh - 180px)'})
+                        $('.rightSideMenu.rsm-fixed').css({'height': 'calc(100vh - 110px)'})
+                    } else {
+                        $('#sideBarCnt.ftm-fixed').css({'height': (dcheight - 40) + 'px'})
+                        $('#sideBarCnt.ftm-fixed #fullTreeMenuListContainer').css({'height': (dcheight - 90) + 'px'})
+                        $('.rightSideMenu.rsm-fixed').css({'height': (dcheight - 40) + 'px'})
+                    }
                     $('.markdown-body').css({'margin-top': (100 + $('.container .head').height()) + 'px'})
                 } else {
                     $('.subHeadWrapper').removeClass('shw-fixed')
