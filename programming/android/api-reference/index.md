@@ -33,6 +33,7 @@ breadcrumbText: API Reference
   | [`decodeBuffer`](BarcodeReader/decode.md#decodebuffer) | Decode barcodes from raw buffer. |
   | [`decodeBase64String`](BarcodeReader/decode.md#decodebase64string) | Decode barcodes from a base64 encoded string. |
   | [`decodeBufferedImage`](BarcodeReader/decode.md#decodeBufferedImage) | Decodes barcode from a buffered image (bitmap). |
+  | [`decodeIntermediateResults`](BarcodeReader/decode.md#decodeBufferedImage) | Decodes barcode from a buffered image (bitmap). |
 
 ### Parameter and Runtime Settings
 
@@ -128,6 +129,7 @@ breadcrumbText: API Reference
 - [`BarcodeReaderException`](class/BarcodeReaderException.md)	
 - [`Contour`](class/Contour.md)	 
 - [`DataMatrixDetails`](class/DataMatrixDetails.md)	 
+- [`DMLTSConnectionParameters`](class/DMLTSConnectionParameters.md)	 
 - [`ExtendedResult`](class/ExtendedResult.md)	
 - [`FrameDecodingParameters`](class/FrameDecodingParameters.md)
 - [`FurtherModes`](class/FurtherModes.md)
@@ -158,7 +160,11 @@ breadcrumbText: API Reference
 - [`EnumColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode)	
 - [`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode)	
 - [`EnumConflictMode`]({{ site.enumerations }}parameter-mode-enums.html#conflictmode)	
+- [`EnumDeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode)	
 - [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode)	
+- [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)	
+- [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)	
+- [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)	
 - [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode)	
 - [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)	
 - [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat)	

@@ -81,6 +81,7 @@ breadcrumbText: API Reference
   | [`init_license_from_server`](BarcodeReader/license.md#init_license_from_server) | Initializes license and connect to the specified server for online verification. |
   | [`init_license_from_license_content`](BarcodeReader/license.md#init_license_from_license_content) | Initializes license from the license content on client machine for offline verification. |
   | [`output_license_to_string`](BarcodeReader/license.md#output_license_to_string) | Outputs the license content as an encrypted string from the license server to be used for offline license verification.|
+  | [`init_license_from_lts`](BarcodeReader/license.md#init_license_from_lts) | Initializes license and connect to the specified server for online verification. |
    
    
 &nbsp; 
@@ -165,7 +166,12 @@ breadcrumbText: API Reference
 - [`ColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode)	
 - [`ColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode)	
 - [`ConflictMode`]({{ site.enumerations }}parameter-mode-enums.html#conflictmode)	
-- [`DeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode)	
+- [`DeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode)
+- [`DeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode)
+- [`DMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)
+- [`DMDeploymentType`]({{ site.enumerations }}other-enums.html#dm_deploymenttype)
+- [`DMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
+- [`DMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
 - [`DPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode)	
 - [`GrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)	
 - [`ImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat)	
