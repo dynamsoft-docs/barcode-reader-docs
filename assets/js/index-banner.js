@@ -112,13 +112,13 @@ function HighlightCurrentListForFullTree(searchListId, firstTime, searchUrl = do
         searchUrl = searchUrl.replace(/-v[0-9]+[^\/]*.html/g,".html");
 
         var docHead = document.head || document.getElementsByTagName('head')[0];
-        
-        if (searchUrl != ori){
-            ori = searchUrl;
-            if (ori.indexOf("#") != -1) {
-                ori = ori.substring(0, ori.indexOf("#") + 1 );
+
+        if (searchUrl != oriUrl){
+            oriUrl = searchUrl;
+            if (oriUrl.indexOf("#") != -1) {
+                oriUrl = oriUrl.substring(0, oriUrl.indexOf("#") + 1 );
             }
-            docHead.prepend("<link href=\""+ ori +"\"rel=\"canonical\">");
+            docHead.prepend("<link href=\""+ oriUrl +"\"rel=\"canonical\">");
         }
 
         //index url with content anchor
