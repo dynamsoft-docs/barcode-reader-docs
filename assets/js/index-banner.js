@@ -118,8 +118,8 @@ function HighlightCurrentListForFullTree(searchListId, firstTime, searchUrl = do
             if (oriUrl.indexOf("#") != -1) {
                 oriUrl = oriUrl.substring(0, oriUrl.indexOf("#") + 1 );
             }
-            var tmpstring = "link href=\" " + oriUrl + "rel=\"canonical\">";
-            docHead.prepend(tmpstring);
+            var tmpstring = "<link href=\"" + oriUrl + "\" rel=\"canonical\">";
+            docHead.append(tmpstring);
         }
 
         //index url with content anchor
