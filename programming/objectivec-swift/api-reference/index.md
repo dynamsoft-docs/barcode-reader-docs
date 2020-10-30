@@ -53,6 +53,8 @@ NSString* license
   | [`decodeImage`](methods/decode.md#decodeimage) | Decode barcodes from an image file in memory. |
   | [`decodeBuffer`](methods/decode.md#decodebuffer) | Decode barcodes from raw buffer. |
   | [`decodeBase64`](methods/decode.md#decodebase64) | Decode barcodes from a base64 encoded string. |
+  | [`createIntermediateResult`](methods/decode.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
+  | [`decodeIntermediateResults`](methods/decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
 
 &nbsp; 

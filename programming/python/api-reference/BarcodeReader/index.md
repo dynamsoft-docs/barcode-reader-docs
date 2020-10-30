@@ -24,6 +24,7 @@ breadcrumbText: BarcodeReader Methods
   | [`decode_buffer`](decode.md#decode_buffer) | Decodes barcodes from the memory buffer containing image pixels in defined format.  |
   | [`decode_file_stream`](decode.md#decode_file_stream) | Decodes barcodes from an image file in memory. |
   | [`decode_buffer_manually`](decode.md#decode_buffer_manually) | Decodes barcodes from the memory buffer containing image pixels in defined format. |
+  | [`decode_intermediate_results`](decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
 ## Parameter and Runtime Settings
 

@@ -16,6 +16,8 @@ needAutoGenerateSidebar: true
   | [`DecodeBuffer`](#decodebuffer) | Decode barcodes from raw buffer. |
   | [`DecodeBase64String`](#decodebase64string) | Decode barcodes from a base64 encoded string. |
   | [`DecodeDIB`](#decodedib) | Decode barcode from a handle of device-independent bitmap (DIB). |
+  | [`InitIntermediateResult`](#initintermediateresult) | Inits an intermediateResult struct with default values. |
+  | [`DecodeIntermediateResults`](#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
   ---
 
@@ -202,5 +204,62 @@ int errorCode = reader->DecodeDIB(pDIB "");
 delete reader;
 ```
 
+
+&nbsp;
+
+
+
+## InitIntermediateResult
+Decodes barcode from intermediate results.
+
+```cpp
+int CBarcodeReader::InitIntermediateResult(IntermediateResult* pIntermediateResult, IntermediateResultType intermediateResultType)	
+```   
+   
+#### Parameters
+`[in, out]	pIntermediateResult` The intermediate result struct.  
+`[in]	intermediateResultType` The type of the intermediate result to init.
+
+#### Return value
+Returns error code (returns 0 if the function operates successfully).    
+*You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
+
+#### Code Snippet
+```c
+void* barcodeReader = DBR_CreateInstance();
+DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
+int errorCode = DBR_InitIntermediateResult(barcodeReader, pIntermediateResult, IRT_BINARIZED_IMAGE);
+DBR_DestroyInstance(barcodeReader);
+```
+
+
+&nbsp;
+
+
+
+## DecodeIntermediateResults
+Decodes barcode from intermediate results.
+
+```cpp
+int CBarcodeReader::DecodeIntermediateResults(const IntermediateResultArray *pIntermediateResultArray, const char* pTemplateName)	
+```   
+   
+#### Parameters
+`[in]	pIntermediateResultArray` The intermediate result array for decoding.  
+`[in]	pTemplateName` The template name.
+
+#### Return value
+Returns error code (returns 0 if the function operates successfully).    
+*You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
+
+#### Code Snippet
+```c
+void* barcodeReader = DBR_CreateInstance();
+DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
+int errorCode = DBR_DecodeIntermediateResults(barcodeReader, pIntermediateResultArray, "");
+DBR_DestroyInstance(barcodeReader);
+```
+
+&nbsp;
 
 

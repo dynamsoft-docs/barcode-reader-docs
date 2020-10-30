@@ -16,6 +16,8 @@ needAutoGenerateSidebar: true
   | [`DecodeBuffer`](#decodebuffer) | Decode barcodes from raw buffer. |
   | [`DecodeBase64String`](#decodebase64string) | Decode barcodes from a base64 encoded string. |
   | [`DecodeBitmap`](#decodebitmap) | Decodes barcode from a bitmap. |
+  | [`InitIntermediateResult`](#initintermediateresult) | Inits an intermediateResult struct with default values. |
+  | [`DecodeIntermediateResults`](#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
   ---
 
@@ -197,3 +199,40 @@ reader.Dispose();
 
 #### See Also 
 [`TextResult`](../class/TextResult.md)
+
+
+&nbsp;
+
+
+## DecodeIntermediateResults
+
+Decodes barcode from intermediate results.
+
+```C#
+TextResult[] Dynamsoft.Barcode.BarcodeReader.DecodeIntermediateResults(IntermediateResult[] intermediateResultArray, string templateName) 	
+```
+
+#### Parameters
+`intermediateResultArray` : The intermediate result array for decoding.   
+`templateName` : The template name.
+
+#### Return value
+All barcode text results decoded successfully. 
+
+#### Exceptions
+[`BarcodeReaderException`](../class/BarcodeReaderException.md) The exception thrown by Dynamsoft Barcode Reader.  
+
+
+#### Code Snippet
+```C#
+BarcodeReader reader = new BarcodeReader();
+reader.ProductKeys = "t0260NwAAAHV***************";
+TextResult[] result = reader.DecodeFile(@"C:\Program Files (x86)\Dynamsoft\{Version number}\Images\AllSupportedBarcodeTypes.tif", "");
+reader.Dispose();
+```
+
+#### See Also
+[`TextResult`](../class/TextResult.md)
+
+&nbsp;
+

@@ -27,6 +27,7 @@ breadcrumbText: Methods
   | [`decodeImage`](decode.md#decodeimage) | Decode barcodes from an image file in memory. |
   | [`decodeBuffer`](decode.md#decodebuffer) | Decode barcodes from raw buffer. |
   | [`decodeBase64`](decode.md#decodebase64) | Decode barcodes from a base64 encoded string. |
+  | [`decodeIntermediateResults`](decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
 
 &nbsp; 

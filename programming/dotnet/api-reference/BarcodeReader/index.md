@@ -28,7 +28,8 @@ breadcrumbText: BarcodeReader Methods
   | [`DecodeBuffer`](decode.md#decodebuffer) | Decodes barcodes from the memory buffer containing image pixels in defined format. |
   | [`DecodeBase64String`](decode.md#decodebase64string) | Decodes barcodes from a base64 encoded string. |
   | [`DecodeBitmap`](decode.md#decodebitmap) | Decodes barcode from a bitmap. |
-   
+  | [`DecodeIntermediateResults`](decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
+  
    
 &nbsp; 
    

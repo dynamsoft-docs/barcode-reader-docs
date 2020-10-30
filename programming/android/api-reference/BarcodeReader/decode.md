@@ -16,10 +16,12 @@ needAutoGenerateSidebar: true
   | [`decodeBuffer`](#decodebuffer) | Decode barcodes from raw buffer. |
   | [`decodeBase64String`](#decodebase64string) | Decode barcodes from a base64 encoded string. |
   | [`decodeBufferedImage `](#decodeBufferedImage) | Decodes barcode from a buffered imag (bitmap). |
+  | [`initIntermediateResult`](#initintermediateresult) | Inits an intermediateResult struct with default values. |
+  | [`decodeIntermediateResults`](#decodeintermediateresults) | Decodes barcode from intermediate results. |
   
   ---
 
-## DecodeFile
+## decodeFile
 
 Decode barcodes from a specified image file.
 
@@ -48,7 +50,7 @@ TextResult[] result = reader.decodeFile("your file path", "");
 reader.destroy();
 ```
 
-## DecodeFileInMemory
+## decodeFileInMemory
 
 Decode barcodes from an image file in memory.
 
@@ -105,7 +107,7 @@ TextResult[] result = reader.decodeFileInMemory(fis, "");
 reader.destroy();
 ```
 
-## DecodeBuffer
+## decodeBuffer
 
 Decode barcodes from the memory buffer containing image pixels in defined format.
 
@@ -144,7 +146,7 @@ TextResult[] result = reader.decodeBuffer(bufferBytes, iWidth,  iHeight, iStride
 reader.destroy();
 ```
 
-## DecodeBase64String
+## decodeBase64String
 
 Decode barcode from an image file encoded as a base64 string.
 
@@ -173,7 +175,7 @@ TextResult[] result = reader.decodeBase64String("file in base64 string", "");
 reader.destroy();
 ```
 
-## DecodeBufferedImage
+## decodeBufferedImage
 
 Decodes barcode from a buffered image (bitmap).
 
@@ -202,3 +204,62 @@ BufferedImage input = ImageIO.read("your file path");
 TextResult[] result = reader.decodeBufferedImage(bitmap, "");
 reader.destroy();
 ```
+
+## initIntermediateResult
+
+Inits an intermediateResult struct with default values.
+
+```java
+IntermediateResult initIntermediateResults(long instance, int resultType) throws BarcodeReaderException	
+```   
+
+### Parameters
+
+- `instance`: An array of intermediate result.
+- `resultType`: The template name.
+
+### Return value
+
+All barcode text results decoded successfully.
+
+### Exceptions
+
+[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+
+### Code Snippet
+
+```java
+BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+TextResult[] result = reader.decodeIntermediateResults(IntermediateResult, "");
+reader.destroy();
+```
+
+## decodeIntermediateResults
+
+Decodes barcode from intermediate results.
+
+```java
+TextResult[] com.dynamsoft.barcode.BarcodeReader.decodeIntermediateResults(IntermediateResult[] results, String templateName) throws BarcodeReaderException	
+```   
+
+### Parameters
+
+- `results`: An array of intermediate result.
+- `templateName`: The template name.
+
+### Return value
+
+All barcode text results decoded successfully.
+
+### Exceptions
+
+[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+
+### Code Snippet
+
+```java
+BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+TextResult[] result = reader.decodeIntermediateResults(IntermediateResult, "");
+reader.destroy();
+```
+

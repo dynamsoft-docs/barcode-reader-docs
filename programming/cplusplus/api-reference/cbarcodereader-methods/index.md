@@ -29,6 +29,7 @@ breadcrumbText: CBarcodeReader Methods
   | [`DecodeBuffer`](decode.md#decodebuffer) | Decode barcodes from raw buffer. |
   | [`DecodeBase64String`](decode.md#decodebase64string) | Decode barcodes from a base64 encoded string. |
   | [`DecodeDIB`](decode.md#decodedib) | Decode barcode from a handle of device-independent bitmap (DIB). |
+  | [`DecodeIntermediateResults`](decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
    
    
 &nbsp; 

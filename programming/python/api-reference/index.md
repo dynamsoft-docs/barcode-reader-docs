@@ -39,6 +39,8 @@ breadcrumbText: API Reference
   | [`decode_buffer`](BarcodeReader/decode.md#decode_buffer) | Decodes barcodes from the memory buffer containing image pixels in defined format.  |
   | [`decode_file_stream`](BarcodeReader/decode.md#decode_file_stream) | Decodes barcodes from an image file in memory. |
   | [`decode_buffer_manually`](BarcodeReader/decode.md#decode_buffer_manually) | Decodes barcodes from the memory buffer containing image pixels in defined format. |
+  | [`init_intermediate_result`](BarcodeReader/decode.md#initintermediateresult) | Inits an intermediateResult struct with default values. |
+  | [`decode_intermediate_results`](BarcodeReader/decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
    
    
 &nbsp; 
