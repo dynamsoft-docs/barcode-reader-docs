@@ -29,6 +29,7 @@ breadcrumbText: Methods
   | [`DBR_DecodeBuffer`](decode.md#dbr_decodebuffer) | Decode barcodes from raw buffer. |
   | [`DBR_DecodeBase64String`](decode.md#dbr_decodebase64string) | Decode barcodes from a base64 encoded string. |
   | [`DBR_DecodeDIB`](decode.md#dbr_decodedib) | Decode barcode from a handle of device-independent bitmap (DIB). | 
+  | [`DBR_InitIntermediateResult`](decode.md#dbr_initintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`DBR_DecodeIntermediateResults`](decode.md#dbr_decodeintermediateresults) | Decodes barcode from intermediate results. |
 
 
@@ -76,6 +77,8 @@ breadcrumbText: Methods
   | [`DBR_OutputLicenseToString`](license.md#dbr_outputlicensetostring) | Output the license content to a string from the license server. |
   | [`DBR_OutputLicenseToStringPtr`](license.md#dbr_outputlicensetostringptr) | Output the license content to a string from the license server. |
   | [`DBR_FreeLicenseString`](license.md#dbr_freelicensestring) | Free memory allocated for the license string. |
+  | [`DBR_InitLTSConnectionParameters`](license.md#dbr_initltsconnectionparameters) | Initializes a DM_LTSConnectionParameters struct with default values. |
+  | [`DBR_InitLicenseFromLTS`](license.md#dbr_initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
 
 &nbsp; 
 

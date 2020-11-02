@@ -83,7 +83,8 @@ breadcrumbText: API Reference
   | [`init_license_from_server`](BarcodeReader/license.md#init_license_from_server) | Initializes license and connect to the specified server for online verification. |
   | [`init_license_from_license_content`](BarcodeReader/license.md#init_license_from_license_content) | Initializes license from the license content on client machine for offline verification. |
   | [`output_license_to_string`](BarcodeReader/license.md#output_license_to_string) | Outputs the license content as an encrypted string from the license server to be used for offline license verification.|
-  | [`init_license_from_lts`](BarcodeReader/license.md#init_license_from_lts) | Initializes license and connect to the specified server for online verification. |
+  | [`init_lts_connection_parameters`](BarcodeReader/license.md#init_lts_connection_parameters) | Initializes a DMLTSConnectionParameters struct with default values. |
+  | [`init_license_from_lts`](BarcodeReader/license.md#init_license_from_lts) | Initializes the barcode reader license and connects to the specified server for online verification. |
    
    
 &nbsp; 

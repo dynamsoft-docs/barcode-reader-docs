@@ -16,6 +16,7 @@ needAutoGenerateSidebar: true
   | [`decodeBuffer`](#decodebuffer) | Decode barcodes from raw buffer. |
   | [`decodeBase64String`](#decodebase64string) | Decode barcodes from a base64 encoded string. |
   | [`decodeBufferedImage `](#decodeBufferedImage) | Decodes barcode from a buffered imag (bitmap). |
+  | [`initIntermediateResult`](#initintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](#decodeintermediateresults) | Decodes barcode from intermediate results. |
   ---
 
@@ -208,6 +209,33 @@ reader.destroy();
 &nbsp;
 
 
+## initIntermediateResult
+
+Inits an intermediateResult struct with default values.
+
+```java
+IntermediateResult com.dynamsoft.barcode.BarcodeReader.initIntermediateResult(int resultType)	throws BarcodeReaderException	
+```   
+
+#### Parameters
+`resultType`	The type of the intermediate result to init.   
+   
+#### Return value
+An intermediateResult struct with default values.
+
+#### Exceptions
+[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+
+#### Code Snippet
+```java
+BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+TextResult[] result = reader.decodeFile("your file path", "");
+reader.destroy();
+```
+
+&nbsp;
+
+
 ## decodeIntermediateResults
 
 Decodes barcode from intermediate results.
@@ -234,4 +262,5 @@ reader.destroy();
 ```
 
 &nbsp;
+
 

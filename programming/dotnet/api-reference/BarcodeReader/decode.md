@@ -204,6 +204,36 @@ reader.Dispose();
 &nbsp;
 
 
+## InitIntermediateResult
+
+Inits an intermediateResult struct with default values.
+
+```C#
+IntermediateResult Dynamsoft.Barcode.BarcodeReader.InitIntermediateResult(EnumIntermediateResultType intermediateResultType) 	
+```
+
+#### Parameters
+`intermediateResultType` : The type of the intermediate result to init.   
+
+#### Return value
+An intermediateResult struct with default values. 
+
+
+#### Code Snippet
+```C#
+BarcodeReader reader = new BarcodeReader();
+reader.ProductKeys = "t0260NwAAAHV***************";
+TextResult[] result = reader.DecodeFile(@"C:\Program Files (x86)\Dynamsoft\{Version number}\Images\AllSupportedBarcodeTypes.tif", "");
+reader.Dispose();
+```
+
+#### See Also
+[`IntermediateResult`](../class/IntermediateResult.md)
+
+
+&nbsp;
+
+
 ## DecodeIntermediateResults
 
 Decodes barcode from intermediate results.
@@ -235,4 +265,5 @@ reader.Dispose();
 [`TextResult`](../class/TextResult.md)
 
 &nbsp;
+
 

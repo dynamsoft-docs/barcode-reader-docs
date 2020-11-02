@@ -27,6 +27,7 @@ breadcrumbText: Methods
   | [`decodeImage`](decode.md#decodeimage) | Decode barcodes from an image file in memory. |
   | [`decodeBuffer`](decode.md#decodebuffer) | Decode barcodes from raw buffer. |
   | [`decodeBase64`](decode.md#decodebase64) | Decode barcodes from a base64 encoded string. |
+  | [`createIntermediateResult`](decode.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
 
@@ -68,6 +69,8 @@ breadcrumbText: Methods
   | [`initWithLicense`](license.md#initwithlicense) | Read product key and activate the SDK. |
   | [`initWithLicenseFromServer`](license.md#initwithlicensefromserver) | Initialize license and connect to the specified server for online verification. |
   | [`outputLicenseToString`](license.md#outputlicensetostring) | Output the license content to a string from the license server. |
+  | [`getLTSConnectionParameters`](license.md#getltsconnectionparameters) | Initializes a DMLTSConnectionParameters struct with default values. |
+  | [`initLicenseFromLTS`](license.md#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
 
 &nbsp; 
 

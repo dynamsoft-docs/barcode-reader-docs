@@ -210,17 +210,16 @@ reader.destroy();
 Inits an intermediateResult struct with default values.
 
 ```java
-IntermediateResult initIntermediateResults(long instance, int resultType) throws BarcodeReaderException	
+IntermediateResult com.dynamsoft.barcode.BarcodeReader.initIntermediateResults(int resultType) throws BarcodeReaderException	
 ```   
 
 ### Parameters
 
-- `instance`: An array of intermediate result.
-- `resultType`: The template name.
+- `resultType`: The type of the intermediate result to init.
 
 ### Return value
 
-All barcode text results decoded successfully.
+An intermediateResult struct with default values.
 
 ### Exceptions
 

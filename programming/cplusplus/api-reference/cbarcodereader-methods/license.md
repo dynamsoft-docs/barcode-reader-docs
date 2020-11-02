@@ -17,6 +17,8 @@ needAutoGenerateSidebar: true
   | [`OutputLicenseToString`](#outputlicensetostring) | Output the license content to a string from the license server. |
   | [`OutputLicenseToStringPtr`](#outputlicensetostringptr) | Output the license content to a string from the license server. |
   | [`FreeLicenseString`](#freelicensestring) | Free memory allocated for the license string. |
+  | [`InitLTSConnectionParameters`](#initltsconnectionparameters) | Initializes a DM_LTSConnectionParameters struct with default values. |
+  | [`InitLicenseFromLTS`](#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
 
   ---
 
@@ -164,5 +166,40 @@ void CBarcodeReader::FreeLicenseString (char** content)
 
 
 
+&nbsp;
 
+
+## InitLTSConnectionParameters
+Initializes a DM_LTSConnectionParameters struct with default values.
+
+```cpp
+static int CBarcodeReader::InitLTSConnectionParameters(DM_LTSConnectionParameters *pLTSConnectionParameters)
+```   
+   
+#### Parameters
+`[in, out] pLTSConnectionParameters` The struct of DM_LTSConnectionParameters.   
+
+#### Return value
+Returns error code (returns 0 if the function operates successfully).    
+*You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
+
+&nbsp;
+
+## InitLicenseFromLTS
+Initializes a DM_LTSConnectionParameters struct with default values.
+
+```cpp
+static int CBarcodeReader::InitLicenseFromLTS(DM_LTSConnectionParameters *pLTSConnectionParameters, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)
+```   
+   
+#### Parameters
+`[in, out] pLTSConnectionParameters` The struct DMLTSConnectionParameters with customized settings.   
+`[in, out] errorMsgBuffer`<sub>Optional</sub> The buffer is allocated by the caller and the recommended length is 256. The error message will be copied to the buffer.  
+`[in]	errorMsgBufferLen`<sub>Optional</sub> The length of the allocated buffer.  
+
+#### Return value
+Returns error code (returns 0 if the function operates successfully).    
+*You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
+
+&nbsp;
 

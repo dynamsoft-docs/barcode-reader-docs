@@ -14,6 +14,8 @@ needAutoGenerateSidebar: true
   | [`InitLicenseFromServer`](#initlicensefromserver) | Initializes license and connect to the specified server for online verification. |
   | [`InitLicenseFromLicenseContent`](#initlicensefromlicensecontent) | Initializes barcode reader license and connects to the specified server for online verification. |
   | [`OutputLicenseToString`](#outputlicensetostring) | Outputs the license content as an encrypted string from the license server to be used for offline license verification.|
+  | [`InitLTSConnectionParameters`](#initltsconnectionparameters) | Initializes a DMLTSConnectionParameters struct with default values. |
+  | [`InitLicenseFromLTS`](#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
   
   ---
 
@@ -65,3 +67,36 @@ string Dynamsoft.Barcode.BarcodeReader.OutputLicenseToString()
 
 #### Return value
 The output string which stores the contents of license. 
+
+
+
+&nbsp;
+
+
+## InitLTSConnectionParameters
+Initializes a DMLTSConnectionParameters struct with default values.
+
+```C#
+DMLTSConnectionParameters Dynamsoft.Barcode.BarcodeReader.InitLTSConnectionParameters()
+```   
+
+&nbsp;
+
+
+## InitLicenseFromLTS
+Initializes the barcode reader license and connects to the specified server for online verification.
+
+```C#
+EnumErrorCode Dynamsoft.Barcode.BarcodeReader.InitLicenseFromLTS(DMLTSConnectionParameters ltsConnectionParameters, out string errorMsg)
+```   
+   
+#### Parameters
+`[in]	ltsConnectionParameters` <*string*> : The struct DMLTSConnectionParameters with customized settings.  
+`[in, out]	errorMsg` <*string*> : The detailed error message.
+
+#### Return value
+Returns error code.
+
+
+&nbsp;
+

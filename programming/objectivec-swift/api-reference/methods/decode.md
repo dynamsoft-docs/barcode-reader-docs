@@ -15,6 +15,7 @@ needAutoGenerateSidebar: true
   | [`decodeImage`](#decodeImage) | Decode barcodes from an image file in memory. |
   | [`decodeBuffer`](#decodeBuffer) | Decode barcodes from raw buffer. |
   | [`decodeBase64`](#decodeBase64) | Decode barcodes from a base64 encoded string. |
+  | [`createIntermediateResult`](decode.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](#decodeintermediateresults) | Decodes barcode from intermediate results. |
   
 ---
@@ -193,7 +194,50 @@ let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV**********
 let error: NSError? = NSError() 
 let result = barcodeReader.decodeBase64(base64: file in base64 string, withTemplate: "", error: &error)
 ```
+
+
 &nbsp;
+
+## createIntermediateResult
+
+Inits an intermediateResult struct with default values.
+
+```objc
+- (iIntermediateResult* _Nullable)createIntermediateResult:(EnumIntermediateResultType)type error:(NSError* _Nullable * _Nullable)error;	
+```   
+   
+### Parameters
+
+`[in] type` The type of the intermediate result to init.
+`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+
+### Return value
+
+An intermediateResult struct with default values.
+
+### Code Snippet
+
+Objective-C:
+
+```objc
+DynamsoftBarcodeReader *barcodeReader;
+barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicense:@"t0260NwAAAHV***************"];
+iTextResult *result;
+NSError __autoreleasing * _Nullable error;
+result = [barcodeReader decodeFileWithName:@"your file path" templateName:@"" error:&error];
+```
+
+Swift:
+
+```Swift
+let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
+let error: NSError? = NSError()
+let result = barcodeReader.decodeFileWithName(name:"your file path",templateName:"",error:&error)
+```
+
+
+&nbsp;
+
 
 ## decodeIntermediateResults
 

@@ -29,6 +29,7 @@ breadcrumbText: CBarcodeReader Methods
   | [`DecodeBuffer`](decode.md#decodebuffer) | Decode barcodes from raw buffer. |
   | [`DecodeBase64String`](decode.md#decodebase64string) | Decode barcodes from a base64 encoded string. |
   | [`DecodeDIB`](decode.md#decodedib) | Decode barcode from a handle of device-independent bitmap (DIB). |
+  | [`InitIntermediateResult`](decode.md#initintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`DecodeIntermediateResults`](decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
    
    
@@ -77,6 +78,8 @@ breadcrumbText: CBarcodeReader Methods
   | [`OutputLicenseToString`](license.md#outputlicensetostring) | Output the license content to a string from the license server. |
   | [`OutputLicenseToStringPtr`](license.md#outputlicensetostringptr) | Output the license content to a string from the license server. |
   | [`FreeLicenseString`](license.md#freelicensestring) | Free memory allocated for the license string. |
+  | [`InitLTSConnectionParameters`](license.md#initltsconnectionparameters) | Initializes a DM_LTSConnectionParameters struct with default values. |
+  | [`InitLicenseFromLTS`](license.md#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
    
    
 &nbsp; 
