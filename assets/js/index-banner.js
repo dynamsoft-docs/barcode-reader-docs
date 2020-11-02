@@ -105,10 +105,25 @@ function HighlightCurrentListForFullTree(searchListId, firstTime, searchUrl = do
     if (navWrap != null) {
         var listAry = navWrap.getElementsByTagName("li");    
 
+        
+        var oriUrl = searchUrl;
         //history version doc url
         searchUrl = searchUrl.replace(/\/index-v[0-9]+[^\/]*.html/g,"/");
         searchUrl = searchUrl.replace(/-v[0-9]+[^\/]*\//g,"/");
         searchUrl = searchUrl.replace(/-v[0-9]+[^\/]*.html/g,".html");
+
+        var dochead = document.head || document.getElementsByTagName('head')[0];
+
+        if (searchUrl != oriUrl){
+            oriUrl = searchUrl;
+            if (oriUrl.indexOf("#") != -1) {
+                oriUrl = oriUrl.substring(0, oriUrl.indexOf("#") + 1 );
+            }
+            var linkTag = document.createElement('link');
+            linkTag.href = oriUrl;
+            linkTag.rel = 'canonical';
+            dochead.appendChild(linkTag);
+        }
 
         //index url with content anchor
         if (searchUrl.indexOf("/#") != -1) {
