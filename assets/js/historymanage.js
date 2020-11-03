@@ -203,7 +203,7 @@ function changeVersion (liTag)
 {
 	var innertext = (liTag.innerText).toLowerCase();
 	var ver = null;
-	if (innertext == "Latest Version"){
+	if (innertext == "latest version"){
 		ver = "latest"
 	}
 	else{

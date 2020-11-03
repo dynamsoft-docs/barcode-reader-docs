@@ -38,7 +38,7 @@
 
 
 <ul class="fullVersionInfo">
-    <li>Latest Version</li>
+    <li onclick="changeVersion(this)">Latest Version</li>
 {%- assign historyAry = historyRecode | split: '/' -%}
 {%- for history in historyAry -%}
     <li onclick="changeVersion(this)">{{ "version " | append: history }}</li>
