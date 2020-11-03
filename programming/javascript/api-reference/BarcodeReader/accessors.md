@@ -22,29 +22,13 @@ needGenerateH3Content: false
 
 Get or set the Barcode Reader SDK engine path. The path should lead to a folder containing the distributed JS and WASM files.
 
-### get
-
 ```javascript
-engineResourcePath() returns string
+engineResourcePath = value
 ```
 
-#### Return Value
-
-`string`
-
-### set
-
-```javascript
-engineResourcePath(value) returns void
-```
-
-#### Parameters
+#### Property Value
 
 `value` *string*  
-
-#### Return Value
-
-`void`
 
 #### Sample
 
@@ -61,26 +45,12 @@ Get or set the Barcode Reader SDK product key. Please visit our [user portal](ht
 ### get
 
 ```javascript
-productKeys() returns string
+productKeys = keys
 ```
 
-#### Return Value
-
-`string`
-
-### set
-
-```javascript
-productKeys(keys) returns void
-```
-
-#### Parameters
+#### Property Value
 
 `keys` *string*  
-
-#### Return Value
-
-`void`
 
 #### Sample
 
@@ -93,7 +63,7 @@ productKeys(keys) returns void
 Get the currently used version of Barcode Reader SDK.
 
 ```javascript
-version() returns string
+version returns string
 ```
 
 #### Return Value
