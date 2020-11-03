@@ -213,12 +213,12 @@ delete reader;
 Decodes barcode from intermediate results.
 
 ```cpp
-int CBarcodeReader::InitIntermediateResult(IntermediateResult* pIntermediateResult, IntermediateResultType intermediateResultType)	
+int CBarcodeReader::InitIntermediateResult(IntermediateResultType intermediateResultType, IntermediateResult* pIntermediateResult)	
 ```   
    
 #### Parameters
-`[in, out]	pIntermediateResult` The intermediate result struct.  
 `[in]	intermediateResultType` The type of the intermediate result to init.
+`[in, out]	pIntermediateResult` The intermediate result struct.  
 
 #### Return value
 Returns error code (returns 0 if the function operates successfully).    
@@ -226,10 +226,8 @@ Returns error code (returns 0 if the function operates successfully).
 
 #### Code Snippet
 ```c
-void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
-int errorCode = DBR_InitIntermediateResult(barcodeReader, pIntermediateResult, IRT_BINARIZED_IMAGE);
-DBR_DestroyInstance(barcodeReader);
+IntermediateResult imResult;
+CBarcodeReader::InitIntermediateResult(IRT_ORIGINAL_IMAGE, &imResult);
 ```
 
 
@@ -254,10 +252,19 @@ Returns error code (returns 0 if the function operates successfully).
 
 #### Code Snippet
 ```c
-void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
-int errorCode = DBR_DecodeIntermediateResults(barcodeReader, pIntermediateResultArray, "");
-DBR_DestroyInstance(barcodeReader);
+CBarcodeReader * reader = new CBarcodeReader();
+char fileName[] = "Your barcode file";
+
+PublicRuntimeSettings settings;
+reader->GetRuntimeSettings(&settings);
+settings.intermediateResultTypes = IRT_ORIGINAL_IMAGE;
+reader->UpdateRuntimeSettings(&settings);
+reader->DecodeFile(fileName, "");
+IntermediateResultArray * imResults = NULL;
+reader->GetIntermediateResults(&imResults);
+reader->DecodeIntermediateResults(imResults, "");
+TextArray * results = NULL;
+reader->GetAllTextResults(&results);
 ```
 
 &nbsp;

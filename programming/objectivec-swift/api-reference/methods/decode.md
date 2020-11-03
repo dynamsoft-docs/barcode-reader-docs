@@ -220,19 +220,20 @@ An intermediateResult struct with default values.
 Objective-C:
 
 ```objc
+NSError __autoreleasing * _Nullable error;
+iIntermediateResult *irResult;
 DynamsoftBarcodeReader *barcodeReader;
 barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicense:@"t0260NwAAAHV***************"];
-iTextResult *result;
-NSError __autoreleasing * _Nullable error;
-result = [barcodeReader decodeFileWithName:@"your file path" templateName:@"" error:&error];
+irResult = [barcodeReader createIntermediateResult:EnumIntermediateResultTypeOriginalImage error:&error];
 ```
 
 Swift:
 
 ```Swift
-let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
-let error: NSError? = NSError()
-let result = barcodeReader.decodeFileWithName(name:"your file path",templateName:"",error:&error)
+var error:NSError? = NSError()
+var irResult:iIntermediateResult!
+barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
+irResult = try! barcodeReader?.createIntermediateResult(EnumIntermediateResultType(rawValue: EnumIntermediateResultType.originalImage.rawValue)!)
 ```
 
 
@@ -264,17 +265,30 @@ Objective-C:
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
 barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicense:@"t0260NwAAAHV***************"];
-iTextResult *result;
+NSArray<iTextResult *>* result;
 NSError __autoreleasing * _Nullable error;
+[barcodeReader getRuntimeSettings:&error];
+settings.intermediateResultTypes = EnumIntermediateResultTypeColourConvertedGrayScaleImage|EnumIntermediateResultTypeOriginalImaEnumIntermediateResultTypeColourClusteredImage;
+[barcodeReader updateRuntimeSettings:settings error:&error];
 result = [barcodeReader decodeFileWithName:@"your file path" templateName:@"" error:&error];
+NSArray<iIntermediateResult*>* array = [barcodeReader getIntermediateResult:&error];
+result = [barcodeReader decodeIntermediateResults:array withTemplate:@"" error:&error];
 ```
 
 Swift:
 
 ```Swift
-let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
-let error: NSError? = NSError()
-let result = barcodeReader.decodeFileWithName(name:"your file path",templateName:"",error:&error)
+barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
+var result:[iTextResult]?
+var error:NSError? = NSError()
+var settings:iPublicRuntimeSettings! = try! barcodeReader?.getRuntimeSettings()
+settings.intermediateResultTypes = EnumIntermediateResultType.originalImage.rawValue
+barcodeReader?.update(settings, error: &error)
+result = try! barcodeReader?.decodeFile(withName: "your file path", templateName: "")
+var array:[iIntermediateResult]? = try! barcodeReader?.getIntermediateResult()
+result = try! barcodeReader?.decode(array, withTemplate: "")
 ```
+
+
 &nbsp;
 

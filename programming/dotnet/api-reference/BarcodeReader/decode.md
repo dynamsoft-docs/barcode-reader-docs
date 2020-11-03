@@ -222,9 +222,7 @@ An intermediateResult struct with default values.
 #### Code Snippet
 ```C#
 BarcodeReader reader = new BarcodeReader();
-reader.ProductKeys = "t0260NwAAAHV***************";
-TextResult[] result = reader.DecodeFile(@"C:\Program Files (x86)\Dynamsoft\{Version number}\Images\AllSupportedBarcodeTypes.tif", "");
-reader.Dispose();
+IntermediateResult imResult = reader.InitIntermediateResult(EnumIntermediateResultType.IRT_ORIGINAL_IMAGE);
 ```
 
 #### See Also
@@ -256,9 +254,12 @@ All barcode text results decoded successfully.
 #### Code Snippet
 ```C#
 BarcodeReader reader = new BarcodeReader();
-reader.ProductKeys = "t0260NwAAAHV***************";
-TextResult[] result = reader.DecodeFile(@"C:\Program Files (x86)\Dynamsoft\{Version number}\Images\AllSupportedBarcodeTypes.tif", "");
-reader.Dispose();
+PublicRuntimeSettings settings = reader.GetRuntimeSettings();
+settings.IntermediateResultType = (int)EnumIntermediateResultType.IRT_ORIGINAL_IMAGE;
+reader.UpdateRuntimeSettings(settings);
+reader.DecodeFile("Your file path", "");
+IntermediateResult[] IMR = reader.GetIntermediateResults();
+TextResult[] result = reader.DecodeIntermediateResults();
 ```
 
 #### See Also

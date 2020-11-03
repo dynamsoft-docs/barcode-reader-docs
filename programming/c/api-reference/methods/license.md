@@ -179,6 +179,15 @@ DBR_API int DBR_InitLTSConnectionParameters (DM_LTSConnectionParameters *pLTSCon
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
+#### Code Snippet
+```c
+char errorBuf[512];
+DMLTSConnectionParameters paramters;
+DBR_InitLTSConnectionParameters(&paramters);
+paramters.handshakeCode = "Your handshake code";
+DBR_InitLicenseFromLTS(&paramters, errorBuf, 512);
+```
+
 &nbsp;
 
 ## DBR_InitLicenseFromLTS
@@ -196,6 +205,15 @@ DBR_API int DBR_InitLicenseFromLTS(DM_LTSConnectionParameters *pLTSConnectionPar
 #### Return value
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
+
+#### Code Snippet
+```c
+char errorBuf[512];
+DMLTSConnectionParameters paramters;
+DBR_InitLTSConnectionParameters(&paramters);
+paramters.handshakeCode = "Your handshake code";
+DBR_InitLicenseFromLTS(&paramters, errorBuf, 512);
+```
 
 &nbsp;
 

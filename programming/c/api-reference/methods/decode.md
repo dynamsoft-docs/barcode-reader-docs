@@ -197,13 +197,12 @@ DBR_DestroyInstance(barcodeReader);
 Decodes barcode from intermediate results.
 
 ```c
-DBR_API int DBR_InitIntermediateResult (void* barcodeReader, IntermediateResult* pIntermediateResult, IntermediateResultType intermediateResultType)	
+DBR_API int DBR_InitIntermediateResult (IntermediateResultType intermediateResultType, IntermediateResult* pIntermediateResult)	
 ```   
    
 #### Parameters
-`[in] barcodeReader` Handle of the barcode reader instance.  
-`[in, out]	pIntermediateResult` The intermediate result struct.  
 `[in]	intermediateResultType` The type of the intermediate result to init.
+`[in, out]	pIntermediateResult` The intermediate result struct.  
 
 #### Return value
 Returns error code (returns 0 if the function operates successfully).    
@@ -211,10 +210,8 @@ Returns error code (returns 0 if the function operates successfully).
 
 #### Code Snippet
 ```c
-void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
-int errorCode = DBR_InitIntermediateResult(barcodeReader, pIntermediateResult, IRT_BINARIZED_IMAGE);
-DBR_DestroyInstance(barcodeReader);
+IntermediateResult imResult;
+DBR_InitIntermediateResult(IRT_ORIGINAL_IMAGE, &imResult);
 ```
 
 
@@ -240,9 +237,20 @@ Returns error code (returns 0 if the function operates successfully).
 
 #### Code Snippet
 ```c
-void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
-int errorCode = DBR_DecodeIntermediateResults(barcodeReader, pIntermediateResultArray, "");
+void * handle = DBR_CreateInstance();
+char errorBuf[512];
+char fileName[] = "Your barcode file";
+PublicRuntimeSettings settings;
+DBR_GetRuntimeSettings(handle, &settings);
+settings.intermediateResultTypes = IRT_ORIGINAL_IMAGE;
+DBR_UpdateRuntimeSettings(handle, &settings, errorBuf, 512);
+DBR_DecodeFile(handle, fileName, "");
+IntermediateResultArray * imResults = NULL;
+DBR_GetIntermediateResults(handle, &imResults);
+DBR_DecodeIntermediateResults(handle, imResults, "");
+TextArray * results = NULL;
+DBR_GetAllTextResults(handle, &results);
+DBR_FreeTextResults(&results);
 DBR_DestroyInstance(barcodeReader);
 ```
 

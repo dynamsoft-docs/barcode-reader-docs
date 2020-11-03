@@ -15,7 +15,6 @@ needAutoGenerateSidebar: true
   | [`initLicenseFromServer`](#initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
   | [`initLicenseFromLicenseContent`](#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
   | [`outputLicenseToString`](#outputlicensetostring) | Output the license content to a string from the license server. |
-  | [`initLTSConnectionParameters`](#initltsconnectionparameters) | Initializes a DMLTSConnectionParameters struct with default values. |
   | [`initLicenseFromLTS`](#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
 
   ---
@@ -126,26 +125,6 @@ String licenseInfo = reader.outputLicenseToString();
 reader.destroy();
 ```
 
-## initLTSConnectionParameters
-
-Initializes a DMLTSConnectionParameters struct with default values.
-
-```java
-DMLTSConnectionParameters com.dynamsoft.barcode.BarcodeReader.initLTSConnectionParameters()
-```
-   
-### Code Snippet
-
-```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
-reader.initLicenseFromServer("", "C087****",  new DBRServerLicenseVerificationListener() {
-    @Override
-    public void licenseVerificationCallback(boolean isSuccess, Exception error) {
-    }
-});
-reader.destroy();
-```
-
 ## initLicenseFromLTS
 
 Initializes the barcode reader license and connects to the specified server for online verification.
@@ -163,12 +142,17 @@ void com.dynamsoft.barcode.BarcodeReader.initLicenseFromLTS(DMLTSConnectionParam
 ### Code Snippet
 
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
-reader.initLicenseFromServer("", "C087****",  new DBRServerLicenseVerificationListener() {
-    @Override
-    public void licenseVerificationCallback(boolean isSuccess, Exception error) {
-    }
-});
-reader.destroy();
-```
+BarcodeReader reader = new BarcodeReader();
+DMLTSConnectionParameters info = new DMLTSConnectionParameters();
+info.handShakeCode = "*****-hs-****";
+info.sessionPassword = "******";
+reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
+   @Override
+   public void LTSLicenseVerificationCallback(boolean b, Exception e) {
+      if (!b && e != null) {
+         e.printStackTrace();
+      }
+   }
+}
+   ```
 

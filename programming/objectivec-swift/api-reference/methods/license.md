@@ -13,7 +13,6 @@ needAutoGenerateSidebar: true
   | [`initWithLicense`](#initwithlicense) | Initializes DynamsoftBarcodeReader with a license. |
   | [`initWithLicenseFromServer`](#initwithlicensefromserver) | Initialize license and connect to the specified server for online verification. |
   | [`outputLicenseToString`](#outputlicensetostring) | Outputs the license content as an encrypted string from the license server to be used for offline license verification. |
-  | [`getLTSConnectionParameters`](#getltsconnectionparameters) | Initializes a DMLTSConnectionParameters struct with default values. |
   | [`initLicenseFromLTS`](#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
   
   
@@ -134,54 +133,6 @@ let licenseString = barcodeReader.outputLicense(error: &error)
 ```
 
 
-## getLTSConnectionParameters
-
-Initializes a DMLTSConnectionParameters struct with default values.
-
-```objc
-- (iDMLTSConnectionParameters* _Nonnull)getLTSConnectionParameters:(NSError* _Nullable * _Nullable)error;
-```   
-
-### Parameters
-
-`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
-
-### Return value
-
-An iDMLTSConnectionParameters struct with default values.
-
-### Code Snippet
-
-Objective-C:
-
-```objc
-DynamsoftBarcodeReader *barcodeReader;
-barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicenseFromServer:@"" licenseKey:@"C087****" verificationDelegate:self];
-
-- (void)licenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
-{
-    NSNumber* boolNumber = [NSNumber numberWithBool:isSuccess];
-    dispatch_async(dispatch_get_main_queue(), ^{
-    [self->verificationReceiver performSelector:self->verificationCallback withObject:boolNumber withObject:error];
-    });
-}
-```
-Swift:
-
-```Swift
-let barcodeReader = DynamsoftBarcodeReader.init(licenseSeServer: "", licenseKey: "t0260NwAAAHV***************", connectionDelegate: self)
-
-func licenseVerificationCallback(_ isSuccess: Bool, error: Error?)
-{
-    let boolNumber = NSNumber(value: isSuccess)
-    DispatchQueue.main.async{
-        self.verificationReceiver?.perform(self.verificationCallback!, with: boolNumber, with: error)
-    }
-}
-```
-
-
-
 ## initLicenseFromLTS
 
 Initializes the barcode reader license and connects to the specified server for online verification.
@@ -205,27 +156,25 @@ Objective-C:
 
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
-barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicenseFromServer:@"" licenseKey:@"C087****" verificationDelegate:self];
-
-- (void)licenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
+iDMLTSConnectionParameters* lts = [[iDMLTSConnectionParameters alloc] init];
+lts.handshakeCode = @"*****-hs-****";
+lts.sessionPassword = @"******";
+barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromLTS:lts verificationDelegate:self];
+- (void)LTSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
 {
-    NSNumber* boolNumber = [NSNumber numberWithBool:isSuccess];
-    dispatch_async(dispatch_get_main_queue(), ^{
-    [self->verificationReceiver performSelector:self->verificationCallback withObject:boolNumber withObject:error];
-    });
+        //TODO add your code for license verification
 }
 ```
 Swift:
 
 ```Swift
-let barcodeReader = DynamsoftBarcodeReader.init(licenseSeServer: "", licenseKey: "t0260NwAAAHV***************", connectionDelegate: self)
-
-func licenseVerificationCallback(_ isSuccess: Bool, error: Error?)
+let lts = iDMLTSConnectionParameters()
+lts.handshakeCode = "*****-hs-****";
+lts.sessionPassword = "******";
+barcodeReader = DynamsoftBarcodeReader(licenseFromLTS: lts, verificationDelegate: self)
+func ltsLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
 {
-    let boolNumber = NSNumber(value: isSuccess)
-    DispatchQueue.main.async{
-        self.verificationReceiver?.perform(self.verificationCallback!, with: boolNumber, with: error)
-    }
+     //TODO add your code for license verification
 }
 ```
 

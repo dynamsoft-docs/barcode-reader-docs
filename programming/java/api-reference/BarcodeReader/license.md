@@ -151,13 +151,11 @@ DMLTSConnectionParameters com.dynamsoft.barcode.BarcodeReader.initLTSConnectionP
 ### Code Snippet
 
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
-reader.initLicenseFromServer("", "C087****",  new DBRServerLicenseVerificationListener() {
-    @Override
-    public void licenseVerificationCallback(boolean isSuccess, Exception error) {
-    }
-});
-reader.destroy();
+BarcodeReader reader = new BarcodeReader();
+DMLTSConnectionParameters info = reader.initLTSConnectionParameters();
+info.handShakeCode = "*****-hs-****";
+info.sessionPassword = "******";
+reader.initLicenseFromLTS(info);
 ```
 
 &nbsp;
@@ -179,13 +177,11 @@ void com.dynamsoft.barcode.BarcodeReader.initLicenseFromLTS(DMLTSConnectionParam
 ### Code Snippet
 
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
-reader.initLicenseFromServer("", "C087****",  new DBRServerLicenseVerificationListener() {
-    @Override
-    public void licenseVerificationCallback(boolean isSuccess, Exception error) {
-    }
-});
-reader.destroy();
+BarcodeReader reader = new BarcodeReader();
+DMLTSConnectionParameters info = reader.initLTSConnectionParameters();
+info.handShakeCode = "*****-hs-****";
+info.sessionPassword = "******";
+reader.initLicenseFromLTS(info);
 ```
 
 &nbsp;

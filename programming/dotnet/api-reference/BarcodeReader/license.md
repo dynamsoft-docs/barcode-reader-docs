@@ -54,6 +54,18 @@ int Dynamsoft.Barcode.BarcodeReader.InitLicenseFromLicenseContent(string license
 Returns error code.
 
 
+#### Code Snippet
+```C#
+BarcodeReader reader = new BarcodeReader();
+PublicRuntimeSettings settings = reader.GetRuntimeSettings();
+settings.IntermediateResultType = (int)EnumIntermediateResultType.IRT_ORIGINAL_IMAGE;
+reader.UpdateRuntimeSettings(settings);
+reader.DecodeFile("Your file path", "");
+IntermediateResult[] IMR = reader.GetIntermediateResults();
+TextResult[] result = reader.DecodeIntermediateResults();
+```
+
+
 &nbsp;
 
 
@@ -80,6 +92,16 @@ Initializes a DMLTSConnectionParameters struct with default values.
 DMLTSConnectionParameters Dynamsoft.Barcode.BarcodeReader.InitLTSConnectionParameters()
 ```   
 
+#### Code Snippet
+```C#
+BarcodeReader reader = new BarcodeReader();
+DMLTSConnectionParameters ltsInfo = reader.InitLTSConnectionParameters();
+ltsInfo.HandShake = "*****-hs-****";
+ltsInfo.SessionPassword = "******";
+string errorMsg;
+readr.InitLicenseFromLts(ltsInfo, out errorMsg);
+```
+
 &nbsp;
 
 
@@ -97,6 +119,15 @@ EnumErrorCode Dynamsoft.Barcode.BarcodeReader.InitLicenseFromLTS(DMLTSConnection
 #### Return value
 Returns error code.
 
+#### Code Snippet
+```C#
+BarcodeReader reader = new BarcodeReader();
+DMLTSConnectionParameters ltsInfo = reader.InitLTSConnectionParameters();
+ltsInfo.HandShake = "*****-hs-****";
+ltsInfo.SessionPassword = "******";
+string errorMsg;
+readr.InitLicenseFromLts(ltsInfo, out errorMsg);
+```
 
 &nbsp;
 
