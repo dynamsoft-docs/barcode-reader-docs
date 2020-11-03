@@ -19,6 +19,17 @@ function UrlReplace()
             ver = "latest"
         }
     }
+    else{
+        var curVerTag = $(".currentVersion ");
+        if (curVerTag != null) {
+            if (ver == "latest"){
+                curVerTag[0].innerText = "latest version";
+            }
+            else{
+                curVerTag[0].innerText = "version "+ver;
+            }
+        }
+    }
 
     var allHerf1 = $(".docContainer,.sideBar").find("a");
     for (var i = 0; i < allHerf1.length; i++)
