@@ -4,7 +4,6 @@ title: Dynamsoft Barcode Reader Enumerations - Error Code
 description: This article shows Error Code of Dynamsoft Barcode Reader.
 keywords: error code, enumeration
 needAutoGenerateSidebar: false
-otherDescription: true
 ---
 
 # Dynamsoft Barcode Reader - Error Code  
