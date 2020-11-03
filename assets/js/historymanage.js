@@ -158,7 +158,7 @@ function GetVersionDiff(inputVer, compareVer)
 function addParam (aTag, verText)
 {
 	var hrefVal = aTag.href;
-	var exp = new RegExp(/((\?ver)|(\&\&ver))+([^=]+)=/gi);
+	var exp = new RegExp(/[?&]ver=[^&^#]+/gi);
 	if (exp.exec(hrefVal) != null){
 		window.location.href = hrefVal;
 		return;
