@@ -117,7 +117,10 @@ function HighlightCurrentListForFullTree(searchListId, firstTime, searchUrl = do
         if (searchUrl != oriUrl){
             oriUrl = searchUrl;
             if (oriUrl.indexOf("#") != -1) {
-                oriUrl = oriUrl.substring(0, oriUrl.indexOf("#") + 1 );
+                oriUrl = oriUrl.substring(0, oriUrl.indexOf("#"));
+            }
+            if (oriUrl.indexOf("?") != -1) {
+                oriUrl = oriUrl.substring(0, oriUrl.indexOf("?"));
             }
             var linkTag = document.createElement('link');
             linkTag.href = oriUrl;
@@ -225,21 +228,26 @@ function HighlightCurrentListForFullTree(searchListId, firstTime, searchUrl = do
 }
 
 function UrlSearch(docUrl, listUrl) {
-    var docUrlWithParam = (getUrlVars(docUrl)["src"] != undefined);
-    var listUrlWithParam = (getUrlVars(listUrl)["src"] != undefined);
+    var docUrlWithParam = getUrlVars(docUrl)["src"];
+    var listUrlWithParam = getUrlVars(listUrl)["src"];
 
     var tmpExp = new RegExp('programming/c-cplusplus/$')
     if (tmpExp.exec(docUrl) != null){
         docUrl = docUrl.substring(0, docUrl.indexOf("c-cplusplus/"));
     }
     
-    if (docUrlWithParam && listUrlWithParam) {
-        if (getUrlVars(docUrl)["src"] != getUrlVars(listUrl)["src"]) {
+    if (docUrl.indexOf("?") != -1) {
+          docUrl = docUrl.substring(0, docUrl.indexOf("?"));
+    }
+    if (listUrl.indexOf("?") != -1) {
+          listUrl = listUrl.substring(0, listUrl.indexOf("?"));
+    }  
+     
+    if (docUrlWithParam != undefined && listUrlWithParam != undefined) {
+        if (docUrlWithParam != listUrlWithParam) {
             return false;
         }
         else {
-            docUrl = docUrl.substring(0, docUrl.indexOf("?"));
-            listUrl = listUrl.substring(0, listUrl.indexOf("?"));
             var regExp = new RegExp(listUrl + '$');
             if (regExp.exec(docUrl) != null) {
                 return true;
@@ -260,14 +268,6 @@ function UrlSearch(docUrl, listUrl) {
         }
     }
     else {
-        if (docUrlWithParam) {
-            docUrl = docUrl.substring(0, docUrl.indexOf("?"));
-        }
-
-        if (listUrlWithParam) {
-            listUrl = listUrl.substring(0, listUrl.indexOf("?"));
-        }
-
         var regExp = new RegExp(listUrl + '$');
         if (regExp.exec(docUrl) != null) {
             return true;
@@ -290,7 +290,7 @@ function UrlSearch(docUrl, listUrl) {
 
 function getUrlVars(inputUrl) {
     var vars = {};
-    var parts = inputUrl.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+    var parts = inputUrl.replace(/[?&]+([^=&]+)=([^&^#]*)/gi, function(m,key,value) {
         vars[key] = value;
     });
     return vars;
@@ -309,34 +309,5 @@ function UsefulRecord(isUseful) {
 
     if(feedbackTag!=null) {
         feedbackTag.innerHTML = "Thanks!";
-    }
-}
-
-function UrlReplace()
-{
-    var curRelativeUrl = (document.URL.split(document.domain)).pop();
-    
-    var tmpExp = new RegExp(/-v[0-9]+[^\/]*\//g)
-    var searchAry = tmpExp.exec(curRelativeUrl);
-    if (searchAry != null)
-    {
-        var needFindStr = curRelativeUrl.split(searchAry[0])[0] + "/";
-        var needReplaceStr = curRelativeUrl.split(searchAry[0])[0] + searchAry[0];
-
-        var allHref = $(".content").find("a");
-    
-        for (var i = 0; i < allHref.length; i++)
-        {
-            var hrefVal = allHref[i].href;
-            if (hrefVal.search(needReplaceStr) < 0)
-            {
-                hrefVal = hrefVal.replace(/-v[0-9]+[^\/]*\//g,"/");
-                hrefVal = hrefVal.replace(/-v[0-9]+[^\/]*.html/g,".html");
-                if (hrefVal.search(needFindStr) > 0)
-                {
-                    allHref[i].href = hrefVal.replace(needFindStr, needReplaceStr);
-                }
-            }
-        }
     }
 }
