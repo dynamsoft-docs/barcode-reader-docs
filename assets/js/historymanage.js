@@ -114,7 +114,12 @@ function RedirToGivenVersionPage(inputVer)
                 return;
             }
             else{
-                window.location.replace(aTag[0].href + "?ver=" +inputVer+"&&matchVer=true");
+                if (getUrlVars(document.URL)["src"] != undefined){
+                    window.location.replace(aTag[0].href + "?src="+ getUrlVars(document.URL)["src"] + "&&ver=" +inputVer+"&&matchVer=true");
+                }
+                else{
+                    window.location.replace(aTag[0].href + "?ver=" +inputVer+"&&matchVer=true");
+                }
                 return;
             }
         }
