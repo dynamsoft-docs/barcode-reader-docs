@@ -133,6 +133,9 @@
         integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
     <script>anchors.add();</script>
 
+    <script>
+        UrlReplace();
+    </script>
     {%- if page.needAutoGenerateSidebar -%}
     {%- unless page.needGenerateH3Content -%}
     <script>
@@ -148,9 +151,6 @@
         FullTreeMenuList(false);
     </script>
     {%- endif -%}
-    <script>
-        UrlReplace();
-    </script>
 
     <script type="text/javascript">
         $('#sideBarCnt').css({'width': $('.sideBar').width() + 'px'})
