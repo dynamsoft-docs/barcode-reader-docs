@@ -96,7 +96,7 @@ function RedirToGivenVersionPage(inputVer)
             }
             else {
                 var tmpDiff = GetVersionDiff(inputVer, tmpVer);
-                if (tmpDiff >= 0 && tmpDiff < verDiff){
+                if (tmpDiff >= 0 && (tmpDiff < verDiff || verDiff < 0)){
                     bestVerIndex = i;
                     verDiff = tmpDiff;
                 }
