@@ -20,7 +20,7 @@
             {% endif %}
         {% endcapture %}
         <a href="{{ site.repositoryUrl }}{{ sourceCodeUrl | strip }}" class="editLinkColour">Edit<img src="{{ site.edit_icon }}" width="20px" height="15px" style="vertical-align: middle; margin-left: 5px; margin-top: -3px;" /></a>
-        <span>
+        <span class="fullVersionHistory">
             {%- include liquid_autoGenerateAllVersion.html -%}
         </span>
     </div>
