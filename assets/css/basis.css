@@ -174,12 +174,13 @@ div::-webkit-scrollbar-corner, ul::-webkit-scrollbar-corner{
 .fullVersionHistory .fullVersionInfo {
 	position: absolute;
 	display: none;
-	bottom: 47px;
+	top: 28px;
 	background: #ffffff;
 	right: 0;
 	box-shadow: 0px 0px 5px 2px #ddd;
 	padding: 10px 15px;
 	text-transform: capitalize;
+	width: 155px;
 }
 
 .fullVersionHistory .fvChange {
