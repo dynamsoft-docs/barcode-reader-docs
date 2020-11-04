@@ -170,6 +170,22 @@ div::-webkit-scrollbar-corner, ul::-webkit-scrollbar-corner{
 .history .changeBtn {
 	color: #FE8E14;
 }
+.fullVersionHistory { position: relative; }
+.fullVersionHistory .fullVersionInfo {
+	position: absolute;
+	display: none;
+	bottom: 47px;
+	background: #ffffff;
+	right: 0;
+	box-shadow: 0px 0px 5px 2px #ddd;
+	padding: 10px 15px;
+	text-transform: capitalize;
+}
+
+.fullVersionHistory .fvChange {
+	color: #FE8E14;
+}
+
 
 
 @media (min-width: 768px) {
