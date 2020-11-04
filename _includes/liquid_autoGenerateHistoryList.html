@@ -6,13 +6,6 @@
 	{%- endif -%}
 {%- endcapture -%}
 
-{%- if curPageVersion == "latest version" -%}
-	<p class="currentVersion fontOswald">latest version</p>		
-{%- else -%}
-	<p class="currentVersion fontOswald">{{ "version " | append: curPageVersion }}</p>
-{%- endif -%}
-
-
 
 {%- assign needRemoveStr = "-v" | append: curPageVersion -%}
 {%- assign curUsedToMatchUrl = page.url | remove: needRemoveStr -%}
@@ -23,7 +16,6 @@
 
 {%- assign historyRecode = "" -%}
 
-<ul class="otherVersions">
 
 {%- for my_page in site.pages -%}
 	{%- capture tmpPageVersion -%}
@@ -34,14 +26,47 @@
 		{%- endif -%}
 	{%- endcapture -%}
 
-	{%- if tmpPageVersion == curPageVersion -%}
+	{%- if my_page.md5HashVal and page.md5HashVal and my_page.md5HashVal == page.md5HashVal -%}
+		{%- if curPageVersion != "latest version" and curPageVersion != tmpPageVersion and  tmpPageVersion > curPageVersion -%}
+			{%- assign curPageVersion = tmpPageVersion -%}
+		{%- endif -%}
+		{%- continue -%}
+	{%- else -%}
+		{%- if curPageVersion == tmpPageVersion -%}
+			{%- if curPageVersion != "latest version" and curPageVersion != tmpPageVersion and  tmpPageVersion > curPageVersion -%}
+			{%- assign curPageVersion = tmpPageVersion -%}
+			{%- endif -%}
+			{%- continue -%}
+		{%- endif -%}
+	{%- endif -%}
+
+
+	{%- assign needRemoveStr = "-v" | append: tmpPageVersion -%}
+	{%- assign tmpUsedToMatchUrl = my_page.url | remove: needRemoveStr -%}
+
+	{%- if tmpUsedToMatchUrl contains 'index.html' -%}
+		{%- assign tmpUsedToMatchUrl = tmpUsedToMatchUrl | remove: 'index.html' -%}
+	{%- endif -%}
+
+	{%- if tmpUsedToMatchUrl != curUsedToMatchUrl -%}
 		{%- continue -%}
 	{%- endif -%}
 
 	{%- assign newVer = true -%}
-	{%- assign historyVer = historyRecode | split: '/' -%}
-	{%- for ver in historyVer -%}
-		{%- if ver == tmpPageVersion -%}
+	{%- assign historyAry = historyRecode | split: '\nextUrlRecode\' -%}
+	{%- for history in historyAry -%}
+		{%- assign historyMd5 = history | split: 'md5HashVal:' | last -%}
+		{%- assign historyVer = history | split: 'md5HashVal:' | first | split: 'versionText:' | last -%}
+		{%- assign tmpSize = historyMd5 | size -%}
+		{%- if tmpSize > 0 and my_page.md5HashVal and my_page.md5HashVal == historyMd5 -%}
+			{%- if historyVer != "latest version" and historyVer != tmpPageVersion and tmpPageVersion > historyVer -%}
+				{%- assign replaceText = "FullUrl:" | append: my_page.url | append: "versionText:" | append: tmpPageVersion | append: "md5HashVal:" | append: my_page.md5HashVal -%}
+				{%- assign historyRecode = historyRecode | replace: history, replaceText -%}
+			{%- endif -%}
+			{%- assign newVer = false -%}
+			{%- break -%}
+		{%- endif -%}
+		{%- if historyVer == tmpPageVersion -%}
 			{%- assign newVer = false -%}
 			{%- break -%}
 		{%- endif -%}
@@ -51,19 +76,28 @@
 		{%- continue -%}
 	{%- endunless -%}
 
-	{%- assign needRemoveStr = "-v" | append: tmpPageVersion -%}
-	{%- assign tmpUsedToMatchUrl = my_page.url | remove: needRemoveStr -%}
+	{%- assign appendText = "FullUrl:" | append: my_page.url | append: "versionText:" | append: tmpPageVersion | append: "md5HashVal:" | append: my_page.md5HashVal -%}
+	{%- assign historyRecode = historyRecode | append: '\nextUrlRecode\' | append: appendText -%}
+{%- endfor -%}
 
-	{%- if tmpUsedToMatchUrl contains 'index.html' -%}
-		{%- assign tmpUsedToMatchUrl = tmpUsedToMatchUrl | remove: 'index.html' -%}
-	{%- endif -%}
 
-	{%- if tmpUsedToMatchUrl == curUsedToMatchUrl -%}
-		{%- assign historyRecode = historyRecode | append: '/' | append: tmpPageVersion -%}
-		{%- if tmpPageVersion == "latest version" -%}
-			<li><a href = "{{ site.docHomePage }}{{ my_page.url }}" class="otherLinkColour">latest version</a></li>		
-		{%- else -%}
-			<li><a href = "{{ site.docHomePage }}{{ my_page.url }}" class="otherLinkColour">{{ "version " | append: tmpPageVersion }}</a></li>	
+{%- if curPageVersion == "latest version" -%}
+	<p class="currentVersion fontOswald">latest version</p>		
+{%- else -%}
+	<p class="currentVersion fontOswald">{{ "version " | append: curPageVersion }}</p>
+{%- endif -%}
+
+<ul class="otherVersions">
+{%- assign historyAry = historyRecode | split: '\nextUrlRecode\' -%}
+{%- for history in historyAry -%}
+	{%- assign tmpSize = history | size -%}
+	{%- if tmpSize > 30 -%}
+		{%- assign historyVer = history | split: 'md5HashVal:' | first | split: 'versionText:' | last -%}
+		{%- assign historyUrl = history | split: 'md5HashVal:' | first | split: 'versionText:' | first | split: 'FullUrl:' | last -%}
+		{%- if historyVer == "latest version" -%}
+				<li><a href = "{{ site.firstLevelUrl }}{{ historyUrl }}" class="otherLinkColour">latest version</a></li>		
+			{%- else -%}
+				<li><a href = "{{ site.firstLevelUrl }}{{ historyUrl }}" class="otherLinkColour">{{ "version " | append: historyVer }}</a></li>
 		{%- endif -%}
 	{%- endif -%}
 {%- endfor -%}
@@ -72,3 +106,4 @@
 {%- if historyRecode != '' -%}
 	<a class="changeBtn fontOswald" href="javascript:;">Change +</a>
 {%- endif -%}
+

@@ -8,15 +8,17 @@
     {%- endif -%}
     {%- for my_page in site.pages -%}
         {%- if breadcrumbUrl == my_page.url | strip -%}
-            {%- assign listUrl = site.docHomePage | strip | append: breadcrumbUrl -%}
+            {%- assign listUrl = site.firstLevelUrl | strip | append: breadcrumbUrl -%}
             <li><a class="bluelink" href = "{{ listUrl }}">{{ my_page.breadcrumbText }}</a></li>
             {%- break -%}
         {%- endif -%}
     {%- endfor -%}
 {%- endfor -%}
 {%- if page.url contains '.html' -%}
-
-    <li id="breadcrumbLastNode"></li>
+    {%- unless page.url contains 'index-v' -%}
+        <li id="breadcrumbLastNode"></li>
+    {%- endunless -%}
+    
     {%- comment -%}
     {%- assign file_name =  level_ary | last |  split: '.' | first |  strip -%}
     {%- if file_name contains '-' -%}
@@ -31,11 +33,11 @@
             <li>{{ file_name }}</li>
     {%- endif -%}
     {%- endcomment -%}
-    
+
 {%- else -%}
     {%- if page.breadcrumbText -%}
         {%- assign pageUrlWihtoutSpace = page.url | strip -%}
-        {%- assign listUrl =  site.docHomePage | strip | append: pageUrlWihtoutSpace -%}
+        {%- assign listUrl =  site.firstLevelUrl | strip | append: pageUrlWihtoutSpace -%}
         <li><a class="bluelink" href = "{{ listUrl }}">{{ page.breadcrumbText }}</a></li>
     {%- endif -%}
 {%- endif -%}

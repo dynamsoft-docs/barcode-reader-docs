@@ -105,10 +105,28 @@ function HighlightCurrentListForFullTree(searchListId, firstTime, searchUrl = do
     if (navWrap != null) {
         var listAry = navWrap.getElementsByTagName("li");    
 
+        
+        var oriUrl = searchUrl;
         //history version doc url
-        searchUrl = searchUrl.replace(/\/index-v[0-9]+.*.html/g,"/");
-        searchUrl = searchUrl.replace(/-v[0-9]+.*\//g,"/");
-        searchUrl = searchUrl.replace(/-v[0-9]+.*.html/g,".html");
+        searchUrl = searchUrl.replace(/\/index-v[0-9]+[^\/]*.html/g,"/");
+        searchUrl = searchUrl.replace(/-v[0-9]+[^\/]*\//g,"/");
+        searchUrl = searchUrl.replace(/-v[0-9]+[^\/]*.html/g,".html");
+
+        var dochead = document.head || document.getElementsByTagName('head')[0];
+
+        if (searchUrl != oriUrl){
+            oriUrl = searchUrl;
+            if (oriUrl.indexOf("#") != -1) {
+                oriUrl = oriUrl.substring(0, oriUrl.indexOf("#"));
+            }
+            if (oriUrl.indexOf("?") != -1) {
+                oriUrl = oriUrl.substring(0, oriUrl.indexOf("?"));
+            }
+            var linkTag = document.createElement('link');
+            linkTag.href = oriUrl;
+            linkTag.rel = 'canonical';
+            dochead.appendChild(linkTag);
+        }
 
         //index url with content anchor
         if (searchUrl.indexOf("/#") != -1) {
@@ -210,24 +228,39 @@ function HighlightCurrentListForFullTree(searchListId, firstTime, searchUrl = do
 }
 
 function UrlSearch(docUrl, listUrl) {
-    var docUrlWithParam = (getUrlVars(docUrl)["src"] != undefined);
-    var listUrlWithParam = (getUrlVars(listUrl)["src"] != undefined);
+    var docUrlWithParam = getUrlVars(docUrl)["src"];
+    var listUrlWithParam = getUrlVars(listUrl)["src"];
 
     var tmpExp = new RegExp('programming/c-cplusplus/$')
     if (tmpExp.exec(docUrl) != null){
         docUrl = docUrl.substring(0, docUrl.indexOf("c-cplusplus/"));
     }
     
-    if (docUrlWithParam && listUrlWithParam) {
-        if (getUrlVars(docUrl)["src"] != getUrlVars(listUrl)["src"]) {
+    if (docUrl.indexOf("?") != -1) {
+          docUrl = docUrl.substring(0, docUrl.indexOf("?"));
+    }
+    if (listUrl.indexOf("?") != -1) {
+          listUrl = listUrl.substring(0, listUrl.indexOf("?"));
+    }  
+     
+    if (docUrlWithParam != undefined && listUrlWithParam != undefined) {
+        if (docUrlWithParam != listUrlWithParam) {
             return false;
         }
         else {
-            docUrl = docUrl.substring(0, docUrl.indexOf("?"));
-            listUrl = listUrl.substring(0, listUrl.indexOf("?"));
             var regExp = new RegExp(listUrl + '$');
             if (regExp.exec(docUrl) != null) {
                 return true;
+            }
+            else if (docUrl.indexOf("#") == -1 && listUrl.indexOf("#") != -1){
+                listUrl = listUrl.substring(0, listUrl.indexOf("#"));
+                regExp = new RegExp(listUrl + '$');
+                if (regExp.exec(docUrl) != null) {
+                        return true;
+                }
+                else {
+                    return false;
+                }
             }
             else {
                 return false;
@@ -235,17 +268,19 @@ function UrlSearch(docUrl, listUrl) {
         }
     }
     else {
-        if (docUrlWithParam) {
-            docUrl = docUrl.substring(0, docUrl.indexOf("?"));
-        }
-
-        if (listUrlWithParam) {
-            listUrl = listUrl.substring(0, listUrl.indexOf("?"));
-        }
-
         var regExp = new RegExp(listUrl + '$');
         if (regExp.exec(docUrl) != null) {
             return true;
+        }
+        else if (docUrl.indexOf("#") == -1 && listUrl.indexOf("#") != -1){
+            listUrl = listUrl.substring(0, listUrl.indexOf("#"));
+            regExp = new RegExp(listUrl + '$');
+            if (regExp.exec(docUrl) != null) {
+                    return true;
+            }
+            else {
+                return false;
+            }
         }
         else {
             return false;
@@ -255,7 +290,7 @@ function UrlSearch(docUrl, listUrl) {
 
 function getUrlVars(inputUrl) {
     var vars = {};
-    var parts = inputUrl.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+    var parts = inputUrl.replace(/[?&]+([^=&]+)=([^&^#]*)/gi, function(m,key,value) {
         vars[key] = value;
     });
     return vars;
