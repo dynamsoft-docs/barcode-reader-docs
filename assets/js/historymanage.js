@@ -44,7 +44,8 @@ function UrlReplace()
 
 	if (replaceDocUrl != document.URL){
 		replaceDocUrl = (replaceDocUrl.split(document.domain))[1];
-		replaceDocUrl = replaceDocUrl.substring(replaceDocUrl.indexOf('/'));
+        replaceDocUrl = replaceDocUrl.substring(replaceDocUrl.indexOf('/'));
+        replaceDocUrl = replaceDocUrl.replace(" &&matchVer=true","") 
 		history.replaceState({}, '', replaceDocUrl);
 	}
 }
