@@ -38,13 +38,13 @@ function UrlReplace()
     }
 
     var replaceDocUrl = document.URL;
-	replaceDocUrl = replaceDocUrl.replace(/\/index-v[0-9]+[^\/]*.html/g,"/");
+    replaceDocUrl = replaceDocUrl.replace(/\/index-v[0-9]+[^\/]*.html/g,"/");
     replaceDocUrl = replaceDocUrl.replace(/-v[0-9]+[^\/]*\//g,"/");
     replaceDocUrl = replaceDocUrl.replace(/-v[0-9]+[^\/]*.html/g,".html");
 
 	if (replaceDocUrl != document.URL){
 		replaceDocUrl = (replaceDocUrl.split(document.domain))[1];
-		replaceDocUrl = replaceDocUrl.substring(test.indexOf('/'));
+		replaceDocUrl = replaceDocUrl.substring(replaceDocUrl.indexOf('/'));
 		history.replaceState({}, '', replaceDocUrl);
 	}
 }
