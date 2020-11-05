@@ -59,11 +59,11 @@ needAutoGenerateSidebar: false
 Sets the minimum image dimension (in pixels) to filter the text.
 
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [0, 1] | 1 | "BICM_DARK_ON_LIGHT"<br>"BICM_LIGHT_ON_DARK"<br>"BICM_DARK_ON_DARK"<br>"BICM_LIGHT_ON_LIGHT"<br>"BICM_DARK_LIGHT_MIXED"<br>"BICM_DARK_ON_LIGHT_DARK_SURROUNDING" |         
 
-- **Remark**     
+- **Remarks**     
   0: no light reflection.   
   1: has light reflection.
 
@@ -71,25 +71,25 @@ Sets the minimum image dimension (in pixels) to filter the text.
 ##### LibraryFileName 
 Sets the file name of the library to load dynamically.
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
-| *string* | A string value representing file name. | "" | All `BarcodeColourMode` items except BICM_SKIP |         
+| *string* | A string value representing the file name. | "" | All `BarcodeColourMode` items except BICM_SKIP |         
 
 
-- **Remark**     
+- **Remarks**     
   - The library must be in the same place with Dynamsoft Barcode Reader Library.
 
 
 ##### LibraryParameters 
 Sets the parameters passed to the library to load dynamically.
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing parameters. | "" | All `BarcodeColourMode` items except BICM_SKIP |         
 
 
-- **Remark**     
-  - Library如果需要多个参数，必须一次性传输，Library内部处理分割和使用
+- **Remarks**     
+  - If more than one parameter/mode is required by the library, you need to pass all needed parameters/modes at once and our library will handle the rest internally.
 
 
 ### Setting Methods
@@ -126,7 +126,7 @@ Sets the parameters passed to the library to load dynamically.
 | ------ | ------------------ | ---------- |
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html)->[`furtherModes`]({{ site.structs }}PublicRuntimeSettings.html#furthermodes) | [`barcodeColourModes`]({{ site.structs }}FurtherModes.html#barcodecolourmodes) | [`BarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode)[8] |
 
-**Remark**   
+**Remarks**   
 [`GetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) and [`SetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) need to be called for getting or setting the value of [arguments](#mode-arguments).
 
 

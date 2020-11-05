@@ -63,11 +63,11 @@ If you have a blurry image, you can set this property to a larger value. The hig
 Sets the effort level used for deformation resisting. **Not supported yet.**
 
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [1, 9] | 5 | "DRM_GENERAL" |         
 
-- **Remark**     
+- **Remarks**     
   A larger value means the library will take more effort to resist deformation.
 
 
@@ -159,7 +159,7 @@ If [RegionBottom](#regionbottom), [RegionLeft](#regionleft), [RegionRight](#regi
 Specifies the y-coordinate of the bottom-right corner of the region in percentage. This value is relative to the top-left corner of the barcode.
 
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [-255, 255] | 0 | "ATRM_GENERAL" |         
 
@@ -168,7 +168,7 @@ Specifies the y-coordinate of the bottom-right corner of the region in percentag
 Specifies the x-coordinate of the top-left corner of the region in percentage. This value is relative to the top-left corner of the barcode.
 
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [-255, 255] | 0 | "ATRM_GENERAL" |  
 
@@ -176,7 +176,7 @@ Specifies the x-coordinate of the top-left corner of the region in percentage. T
 Specifies the x-coordinate of the bottom-right corner of the region in percentage. This value is relative to the top-left corner of the barcode.
 
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [-255, 255] | 0 | "ATRM_GENERAL" |  
 
@@ -184,7 +184,7 @@ Specifies the x-coordinate of the bottom-right corner of the region in percentag
 Specifies the y-coordinate of the top-left corner of the region in percentage. This value is relative to the top-left corner of the barcode.
 
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [-255, 255] | 0 | "ATRM_GENERAL" |  
 

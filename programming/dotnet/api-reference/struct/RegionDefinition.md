@@ -10,7 +10,7 @@ needAutoGenerateSidebar: false
 # RegionDefinition
 Stores the region information.  
 
-```C#
+```csharp
 public struct RegionDefinition
 ```  
   
@@ -31,7 +31,7 @@ public struct RegionDefinition
 ### RegionTop
 The top-most coordinate or percentage of the region.
 
-```C#
+```csharp
 int Dynamsoft.Barcode.RegionDefinition.RegionTop
 ```
 
@@ -45,7 +45,7 @@ int Dynamsoft.Barcode.RegionDefinition.RegionTop
 ### RegionLeft
 The left-most coordinate or percentage of the region.
 
-```C#
+```csharp
 int Dynamsoft.Barcode.RegionDefinition.RegionLeft
 ```
 
@@ -59,7 +59,7 @@ int Dynamsoft.Barcode.RegionDefinition.RegionLeft
 ### RegionRight
 The right-most coordinate or percentage of the region.
 
-```C#
+```csharp
 int Dynamsoft.Barcode.RegionDefinition.RegionRight
 ```
 
@@ -73,7 +73,7 @@ int Dynamsoft.Barcode.RegionDefinition.RegionRight
 ### RegionBottom
 The bottom-most coordinate or percentage of the region.
 
-```C#
+```csharp
 int Dynamsoft.Barcode.RegionDefinition.RegionBottom
 ```
 
@@ -87,7 +87,7 @@ int Dynamsoft.Barcode.RegionDefinition.RegionBottom
 ### RegionMeasuredByPercentage
 Sets whether or not to use percentage to measure the region size.
 
-```C#
+```csharp
 int Dynamsoft.Barcode.RegionDefinition.RegionMeasuredByPercentage
 ```
 
@@ -97,5 +97,5 @@ int Dynamsoft.Barcode.RegionDefinition.RegionMeasuredByPercentage
 - **Default value**   
     0
     
-- **Remark**   
+- **Remarks**   
     When it's set to 1, the values of Top, Left, Right, Bottom indicate percentage (from 0 to 100); Otherwise, they indicate coordinates. 0: not by percentage 1: by percentage.

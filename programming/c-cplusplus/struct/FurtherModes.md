@@ -49,7 +49,7 @@ ColourClusteringMode tagFurtherModes::colourClusteringModes[8]
 - **Default value**  
    `[CCM_SKIP,CCM_SKIP,CCM_SKIP,CCM_SKIP,CCM_SKIP,CCM_SKIP,CCM_SKIP,CCM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is. 
    
 - **See also**  
@@ -66,7 +66,7 @@ ColourConversionMode tagFurtherModes::colourConversionModes[8]
 - **Default value**  
    `[CICM_GENERAL,CICM_SKIP,CICM_SKIP,CICM_SKIP,CICM_SKIP,CICM_SKIP,CICM_SKIP,CICM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
    
 - **See also**  
@@ -83,7 +83,7 @@ GrayscaleTransformationMode tagFurtherModes::grayscaleTransformationModes[8]
 - **Default value**  
    `[GTM_ORIGINAL,GTM_SKIP,GTM_SKIP,GTM_SKIP,GTM_SKIP,GTM_SKIP,GTM_SKIP,GTM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
    
 - **See also**  
@@ -100,7 +100,7 @@ RegionPredetectionMode tagFurtherModes::regionPredetectionModes[8]
 - **Default value**  
    `[RPM_GENERAL,RPM_SKIP,RPM_SKIP,RPM_SKIP,RPM_SKIP,RPM_SKIP,RPM_SKIP,RPM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is. If the image is large and the barcode on the image is very small, it is recommended to enable region predetection to speed up the localization process and recognition accuracy.
    
 - **See also**  
@@ -117,7 +117,7 @@ ImagePreprocessingMode tagFurtherModes::imagePreprocessingModes[8]
 - **Default value**  
    `[IPM_GENERAL,IPM_SKIP,IPM_SKIP,IPM_SKIP,IPM_SKIP,IPM_SKIP,IPM_SKIP,IPM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.
    
 - **See also**  
@@ -134,7 +134,7 @@ TextureDetectionMode tagFurtherModes::textureDetectionModes[8]
 - **Default value**  
    `[TDM_GENERAL_WIDTH_CONCENTRATION,TDM_SKIP,TDM_SKIP,TDM_SKIP,TDM_SKIP,TDM_SKIP,TDM_SKIP,TDM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.
    
 - **See also**  
@@ -151,7 +151,7 @@ TextFilterMode tagFurtherModes::textFilterModes[8]
 - **Default value**  
    `[TFM_GENERAL_CONTOUR,TFM_SKIP,TFM_SKIP,TFM_SKIP,TFM_SKIP,TFM_SKIP,TFM_SKIP,TFM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is. If the image contains a lot of text, you can enable text filter to speed up the localization process.
    
 - **See also**  
@@ -182,7 +182,7 @@ DPMCodeReadingMode tagFurtherModes::dpmCodeReadingModes[8]
 - **Default value**  
    `[DPMCRM_SKIP,DPMCRM_SKIP,DPMCRM_SKIP,DPMCRM_SKIP,DPMCRM_SKIP,DPMCRM_SKIP,DPMCRM_SKIP,DPMCRM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
    
 - **See also**  
@@ -199,7 +199,7 @@ DeformationResistingMode tagFurtherModes::deformationResistingModes[8]
 - **Default value**  
    `[DRM_SKIP,DRM_SKIP,DRM_SKIP,DRM_SKIP,DRM_SKIP,DRM_SKIP,DRM_SKIP,DRM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
    
 - **See also**  
@@ -216,7 +216,7 @@ BarcodeComplementMode tagFurtherModes::barcodeComplementModes[8]
 - **Default value**  
    `[BCM_SKIP,BCM_SKIP,BCM_SKIP,BCM_SKIP,BCM_SKIP,BCM_SKIP,BCM_SKIP,BCM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
    
 - **See also**  
@@ -233,7 +233,7 @@ BarcodeColourMode tagFurtherModes::barcodeColourModes[8]
 - **Default value**  
    `[BICM_DARK_ON_LIGHT,BICM_SKIP,BICM_SKIP,BICM_SKIP,BICM_SKIP,BICM_SKIP,BICM_SKIP,BICM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
    
 - **See also**  
@@ -250,7 +250,7 @@ AccompanyingTextRecognitionMode tagFurtherModes::accompanyingTextRecognitionMode
 - **Default value**  
    `[ATRM_SKIP,ATRM_SKIP,ATRM_SKIP,ATRM_SKIP,ATRM_SKIP,ATRM_SKIP,ATRM_SKIP,ATRM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
    
 - **See also**  

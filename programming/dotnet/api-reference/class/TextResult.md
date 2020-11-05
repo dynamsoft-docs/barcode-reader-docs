@@ -10,7 +10,7 @@ needAutoGenerateSidebar: false
 # TextResult
 Stores the text result.
 
-```C#
+```csharp
 public class TextResult
 ```  
   
@@ -35,62 +35,62 @@ public class TextResult
 ### BarcodeFormat
 Barcode type in BarcodeFormat group 1.
 
-```C#
+```csharp
 EnumBarcodeFormat Dynamsoft.Barcode.TextResult.BarcodeFormat
 ```
 
 ### BarcodeFormatString
 Barcode type in BarcodeFormat group 1 as string.
 
-```C#
+```csharp
 string Dynamsoft.Barcode.TextResult.BarcodeFormatString
 ```
 
 ### BarcodeFormat_2
 Barcode type in BarcodeFormat group 2.
 
-```C#
+```csharp
 EnumBarcodeFormat_2 Dynamsoft.Barcode.TextResult.BarcodeFormat_2
 ```
 
 ### BarcodeFormatString_2
 Barcode type in BarcodeFormat group 2 as string.
 
-```C#
+```csharp
 string Dynamsoft.Barcode.TextResult.BarcodeFormatString_2
 ```
 
 ### BarcodeText
 The barcode text, ends by '\0'.
 
-```C#
+```csharp
 string Dynamsoft.Barcode.TextResult.BarcodeText
 ```
 
 ### BarcodeBytes
 The barcode content in a byte array.
 
-```C#
+```csharp
 byte[] Dynamsoft.Barcode.TextResult.BarcodeBytes
 ```
 
 ### LocalizationResult
 The corresponding localization result.
 
-```C#
+```csharp
 LocalizationResult Dynamsoft.Barcode.TextResult.LocalizationResult
 ```
 
 ### DetailedResult
 One of the following: [`QRCodeDetails`](QRCodeDetails.md), [`PDF417Details`](PDF417Details.md), [`DataMatrixDetails`](DataMatrixDetails.md), [`AztecDetails`](AztecDetails.md), [`OneDCodeDetails`](OneDCodeDetails.md).
 
-```C#
+```csharp
 object Dynamsoft.Barcode.TextResult.DetailedResult
 ```
 
 ### Results
 The extended result array.
 
-```C#
+```csharp
 ExtendedResult[] Dynamsoft.Barcode.TextResult.Results
 ```

@@ -10,7 +10,7 @@ needAutoGenerateSidebar: false
 # LocalizationResult
 Stores the localization result.
 
-```C#
+```csharp
 public class LocalizationResult
 ```  
   
@@ -40,97 +40,97 @@ public class LocalizationResult
 ### TerminatePhase
 The terminate phase of localization result.
 
-```C#
+```csharp
 EnumTerminatePhase Dynamsoft.Barcode.LocalizationResult.TerminatePhase
 ```
 
 ### BarcodeFormat
 Barcode type in BarcodeFormat group 1.
 
-```C#
+```csharp
 EnumBarcodeFormat Dynamsoft.Barcode.LocalizationResult.BarcodeFormat
 ```
 
 ### BarcodeFormatString
 Barcode type in BarcodeFormat group 1 as string.
 
-```C#
+```csharp
 string Dynamsoft.Barcode.LocalizationResult.BarcodeFormatString
 ```
 
 ### BarcodeFormat_2
 Barcode type in BarcodeFormat group 2.
 
-```C#
+```csharp
 EnumBarcodeFormat_2 Dynamsoft.Barcode.LocalizationResult.BarcodeFormat_2
 ```
 
 ### BarcodeFormatString_2
 Barcode type in BarcodeFormat group 2 as string.
 
-```C#
+```csharp
 string Dynamsoft.Barcode.LocalizationResult.BarcodeFormatString_2
 ```
 
 ### ResultPoints
 The array which stores the coordinates of four result points. 
 
-```C#
+```csharp
 Point[] Dynamsoft.Barcode.LocalizationResult.ResultPoints
 ```
 
 ### Angle
 The angle of a barcode. Values range is from 0 to 360.
 
-```C#
+```csharp
 int Dynamsoft.Barcode.LocalizationResult.Angle
 ```
 
 ### ModuleSize
 The barcode module size (the minimum bar width in pixel).
 
-```C#
+```csharp
 int Dynamsoft.Barcode.LocalizationResult.ModuleSize
 ```
 
 ### PageNumber
 The page number the barcode located in. The index is 0-based.
 
-```C#
+```csharp
 int Dynamsoft.Barcode.LocalizationResult.PageNumber
 ```
 
 ### RegionName
 The region name the barcode located in.
 
-```C#
+```csharp
 string Dynamsoft.Barcode.LocalizationResult.RegionName
 ```
 
 ### DocumentName
 The document name.
 
-```C#
+```csharp
 string Dynamsoft.Barcode.LocalizationResult.DocumentName
 ```
 
 ### ResultCoordinateType
 The coordinate type.
 
-```C#
+```csharp
 EnumResultCoordinateType Dynamsoft.Barcode.LocalizationResult.ResultCoordinateType
 ```
 
 ### AccompanyingTextBytes
 The accompanying text content in a byte array.
 
-```C#
+```csharp
 byte[] Dynamsoft.Barcode.LocalizationResult.AccompanyingTextBytes
 ```
 
 ### Confidence
 The confidence of the localization result.
 
-```C#
+```csharp
 int Dynamsoft.Barcode.LocalizationResult.Confidence
 ```

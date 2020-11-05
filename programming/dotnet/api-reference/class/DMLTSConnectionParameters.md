@@ -11,7 +11,7 @@ needAutoGenerateSidebar: false
 
 Defines a struct to configure the parameters to connect to license tracking server.  
 
-```C#
+```csharp
 public class DMLTSConnectionParameters
 ```  
 
@@ -36,7 +36,7 @@ public class DMLTSConnectionParameters
 
 The URL of the license tracking server.
 
-```C#
+```csharp
 string Dynamsoft.Barcode.DMLTSConnectionParameters.MainServerURL
 ```
 
@@ -50,7 +50,7 @@ string Dynamsoft.Barcode.DMLTSConnectionParameters.MainServerURL
 
 The URL of the standby license tracking server.
 
-```C#
+```csharp
 string Dynamsoft.Barcode.DMLTSConnectionParameters.StandbyServerURL
 ```
 
@@ -64,7 +64,7 @@ string Dynamsoft.Barcode.DMLTSConnectionParameters.StandbyServerURL
 
 The handshake code.
 
-```C#
+```csharp
 string Dynamsoft.Barcode.DMLTSConnectionParameters.HandshakeCode
 ```
 
@@ -78,7 +78,7 @@ string Dynamsoft.Barcode.DMLTSConnectionParameters.HandshakeCode
 
 The session password of the handshake code set in license tracking server.
 
-```C#
+```csharp
 string Dynamsoft.Barcode.DMLTSConnectionParameters.SessionPassword
 ```
 
@@ -93,7 +93,7 @@ string Dynamsoft.Barcode.DMLTSConnectionParameters.SessionPassword
 
 Sets the deployment type.
 
-```C#
+```csharp
 EnumDMDeploymentType Dynamsoft.Barcode.DMLTSConnectionParameters.DeploymentType
 ```
 
@@ -110,7 +110,7 @@ EnumDMDeploymentType Dynamsoft.Barcode.DMLTSConnectionParameters.DeploymentType
 
 Sets the charge way.
 
-```C#
+```csharp
 EnumDMChargeWay Dynamsoft.Barcode.DMLTSConnectionParameters.ChargeWay
 ```
 
@@ -128,7 +128,7 @@ EnumDMChargeWay Dynamsoft.Barcode.DMLTSConnectionParameters.ChargeWay
 
 Sets the method to generate UUID.
 
-```C#
+```csharp
 EnumDMUUIDGenerationMethod Dynamsoft.Barcode.DMLTSConnectionParameters.UUIDGenerationMethod
 ```
 
@@ -145,7 +145,7 @@ EnumDMUUIDGenerationMethod Dynamsoft.Barcode.DMLTSConnectionParameters.UUIDGener
 
 Sets the max days to buffer the license info.
 
-```C#
+```csharp
 int Dynamsoft.Barcode.DMLTSConnectionParameters.MaxBufferDays
 ```
 
@@ -160,7 +160,7 @@ int Dynamsoft.Barcode.DMLTSConnectionParameters.MaxBufferDays
 
 Sets the license modules to use.
 
-```C#
+```csharp
 EnumDMLicenseModule[] Dynamsoft.Barcode.DMLTSConnectionParameters.LimitedLicenseModules
 ```
 

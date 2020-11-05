@@ -44,7 +44,7 @@ needGenerateH3Content: false
 ## AllModuleDeviation
 Set the module size deviation from the standard barcode module size.   
 
-**Remark**   
+**Remarks**   
 The unit is barcode module. For example, if the standard barcode module is 2px and AllModuleDeviation is 1, then the non-standard barcode module size is 4px.
     
 ### As Json Parameter
@@ -172,7 +172,7 @@ Specifies the regular express pattern of barcode byte characters.
 ## BarcodeFormatIds
 Sets which barcode format the current FormatSpecification configuration is applied to. 
 
-**Remark**   
+**Remarks**   
 If you already know the barcode type(s) before performing barcode reading, specifying the barcode type(s) to be read will speed up the recognition process.
 
 ### As Json Parameter
@@ -197,7 +197,7 @@ If you already know the barcode type(s) before performing barcode reading, speci
 Sets which barcode format in BarcodeFormat group 2 the current FormatSpecification configuration is applied to.   
 
 
-**Remark**   
+**Remarks**   
 If the barcode type(s) are certain, specifying the barcode type(s) to be read will speed up the recognition process.    
 The barcode format our library will search for is composed of BarcodeFormat group 1 and BarcodeFormat group 2, so you need to specify the barcode format in group 1 and group 2 individually.
 
@@ -278,7 +278,7 @@ Sets the range of barcode text length for barcodes search.
 | ------ | ------------------- | ---------- | ------------ | ------------- |
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html | [`minBarcodeTextLength`]({{ site.structs }}PublicRuntimeSettings.html#minbarcodetextlength)) | [0,0x7fffffff] | 0 |
 
-**Remark**   
+**Remarks**   
 0: means no limitation on the barcode text length.
 
 **See Also**    
@@ -342,7 +342,7 @@ Sets the range of bar count of the barcode zone for barcodes search.
 
 
 ### As Json Parameter
-`BarcodeZoneBarCountRangeArray` as a JSON parameter is a JSON Object array. Each JSON Object has two keys `MinValue` and `MaxValue` for setting the range of bar count of the barcode zone for barcodes search. Default values will be used if there is no manual setting. 
+`BarcodeZoneBarCountRangeArray` as a JSON parameter is a JSON Object array. Each JSON Object has two keys `MinValue` and `MaxValue` for setting the range of bar count of the barcode zone for barcodes search. Default values will be used if no manual settings are specified. 
 
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
@@ -368,7 +368,7 @@ Sets the range of bar count of the barcode zone for barcodes search.
 
 
 ## BarcodeZoneMinDistanceToImageBorders
-Set the minimum distance (in pixels) between barcode zone and image borders.
+Sets the minimum distance (in pixels) between the barcode zone and image borders.
 
     
 ### As Json Parameter
@@ -378,7 +378,7 @@ Set the minimum distance (in pixels) between barcode zone and image borders.
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
 | FormatSpecification | BarcodeZoneMinDistanceToImageBorders | *int* | [0, 0x7fffffff] | 0 |
 
-**Remark**   
+**Remarks**   
 - Default value for MinValue: 1
 - Default value for MaxValue: 128
 
@@ -394,7 +394,7 @@ Set the minimum distance (in pixels) between barcode zone and image borders.
 
 
 ## Code128Subset
-Set the code 128 subset.
+Sets the subset of Code 128.
 
     
 ### As Json Parameter
@@ -428,7 +428,7 @@ Specifies whether to find barcodes with uneven barcode modules.
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
 | FormatSpecification | FindUnevenModuleBarcode | *int* | [0, 1] | 1 |
 
-**Remark**   
+**Remarks**   
 - 0: do not find barcodes with uneven barcode modules.
 - 1: find barcodes with uneven barcode modules.
 
@@ -446,7 +446,7 @@ Specifies whether to find barcodes with uneven barcode modules.
 
 
 ## HeadModuleRatio
-Set the module count and module size ratio of the barcode head part.
+Sets the module count and module size ratio of the barcode head part.
 
     
 ### As Json Parameter
@@ -471,7 +471,7 @@ Set the module count and module size ratio of the barcode head part.
 ## MinQuietZoneWidth
 The minimum width of the barcode quiet zone.
 
-**Remark**   
+**Remarks**   
 The unit is barcode module. For example, if barcode module is 2px and MinQuietZoneWidth is 4, then the width of quiet zone is 8px.
    
     
@@ -494,7 +494,7 @@ The unit is barcode module. For example, if barcode module is 2px and MinQuietZo
 
 
 ## MinRatioOfBarcodeZoneWidthToHeight
-Set the minimum ratio (width/height) of the barcode zone.
+Sets the minimum ratio (width/height) of the barcode zone.
 
     
 ### As Json Parameter
@@ -504,7 +504,7 @@ Set the minimum ratio (width/height) of the barcode zone.
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
 | FormatSpecification | MinRatioOfBarcodeZoneWidthToHeight | *int* | [0, 10000] | 0 |
 
-**Remark**   
+**Remarks**   
 - 0: means no limitation.
 
 **Json Parameter Example**   
@@ -531,9 +531,9 @@ Sets whether to decode mirrored barcodes.
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
 | FormatSpecification | MirrorMode | *string* | "MM_NORMAL"<br>"MM_MIRROR"<br>"MM_BOTH" | `null` |
 
-**Remark**   
+**Remarks**   
 - "MM_NORMAL": Doesn't decode mirror barcodes.
-- "MM_MIRROR": Decodes only mirror barcodes.
+- "MM_MIRROR": Decodes mirror barcodes only.
 - "MM_BOTH": Decodes both normal and mirror barcodes.
 
 **Json Parameter Example**   
@@ -585,7 +585,7 @@ Sets whether the start and stop characters are required when searching for Code 
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
 | FormatSpecification | RequireStartStopChars | *int* | [0, 1] | 1 |
 
-**Remark**   
+**Remarks**   
 - 0: start and stop characters are not required.
 - 1: start and stop characters are required.
 

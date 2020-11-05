@@ -20,7 +20,7 @@ needGenerateH3Content: false
 ## Name
 The name of the RegionDefinition object. 
 
-**Remark**    
+**Remarks**    
 It must be a unique name.
 
 ### As Json Parameter
@@ -42,7 +42,7 @@ It must be a unique name.
 ## FormatSpecificationNameArray
 The names of the referenced FormatSpecification object(s).
 
-**Remark**   
+**Remarks**   
 An array item is a name of any available `FormatSpecifications`.   
 
 ### As Json Parameter

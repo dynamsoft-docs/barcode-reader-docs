@@ -65,11 +65,11 @@ needAutoGenerateSidebar: false
 Sets the percentage of the bottom accompanying text zone comparing to the barcode zone.
 
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [0, 255] | 0 | "TACM_VERIFYING"<br>"TACM_VERIFYING_PATCHING" |         
 
-- **Remark**     
+- **Remarks**     
   255: The accompanying text zone will be detected automatically by the SDK.
 
 
@@ -77,11 +77,11 @@ Sets the percentage of the bottom accompanying text zone comparing to the barcod
 Sets the percentage of the left accompanying text zone comparing to the barcode zone.
 
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [0, 255] | 0 | "TACM_VERIFYING"<br>"TACM_VERIFYING_PATCHING" |         
 
-- **Remark**     
+- **Remarks**     
   255: The accompanying text zone will be detected automatically by the SDK.
 
 
@@ -89,11 +89,11 @@ Sets the percentage of the left accompanying text zone comparing to the barcode 
 Sets the percentage of the right accompanying text zone comparing to the barcode zone.
 
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [0, 255] | 0 | "TACM_VERIFYING"<br>"TACM_VERIFYING_PATCHING" |         
 
-- **Remark**     
+- **Remarks**     
   255: The accompanying text zone will be detected automatically by the SDK.
 
 
@@ -101,36 +101,36 @@ Sets the percentage of the right accompanying text zone comparing to the barcode
 Sets the percentage of the top accompanying text zone comparing to the barcode zone.
 
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [0, 255] | 0 | "TACM_VERIFYING"<br>"TACM_VERIFYING_PATCHING" |         
 
-- **Remark**     
+- **Remarks**     
   255: The accompanying text zone will be detected automatically by the SDK.
 
 
 ##### LibraryFileName 
 Sets the file name of the library to load dynamically.
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing file name. | "" | All `TextAssistedCorrectionMode` items except TACM_SKIP and TACM_AUTO |         
 
 
-- **Remark**     
+- **Remarks**     
   - The library must be in the same place with Dynamsoft Barcode Reader Library.
 
 
 ##### LibraryParameters 
 Sets the parameters passed to the library to load dynamically.
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing parameters. | "" | All `TextAssistedCorrectionMode` items except TACM_SKIP and TACM_AUTO |         
 
 
-- **Remark**     
-  - Library如果需要多个参数，必须一次性传输，Library内部处理分割和使用
+- **Remarks**     
+  - If more than one parameter/mode is required by the library, you need to pass all needed parameters/modes at once and our library will handle the rest internally.
 
 
 ### Setting Methods
@@ -169,7 +169,7 @@ Sets the parameters passed to the library to load dynamically.
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html)->[`furtherModes`]({{ site.structs }}PublicRuntimeSettings.html#furthermodes) | [`textAssistedCorrectionMode`]({{ site.structs }}FurtherModes.html#textassistedcorrectionmode) | [`textAssistedCorrectionMode`]({{ site.enumerations }}parameter-mode-enums.html#textassistedcorrectionmode) |
 
 
-**Remark**   
+**Remarks**   
 [`GetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) and [`SetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) need to be called for getting or setting the value of [arguments](#mode-arguments).
 
 

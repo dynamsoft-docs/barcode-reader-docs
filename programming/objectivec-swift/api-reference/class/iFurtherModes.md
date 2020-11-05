@@ -52,7 +52,7 @@ NSArray* colourClusteringModes[8]
 - **Default value**  
    `[EnumColourClusteringModeSkip, EnumColourClusteringModeSkip, EnumColourClusteringModeSkip, EnumColourClusteringModeSkip, EnumColourClusteringModeSkip, EnumColourClusteringModeSkip, EnumColourClusteringModeSkip, EnumColourClusteringModeSkip]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is. 
    
 - **See also**  
@@ -71,7 +71,7 @@ NSArray* colourConversionModes[8]
 - **Default value**  
    ` [EnumColourConversionModeGeneral, EnumColourConversionModeSkip, EnumColourConversionModeSkip, EnumColourConversionModeSkip, EnumColourConversionModeSkip, EnumColourConversionModeSkip, EnumColourConversionModeSkip, EnumColourConversionModeSkip]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
    
 - **See also**  
@@ -90,7 +90,7 @@ NSArray* grayscaleTransformationModes[8]
 - **Default value**  
    `[EnumGrayscaleTransformationModeOriginal, EnumGrayscaleTransformationModeSkip, EnumGrayscaleTransformationModeSkip, EnumGrayscaleTransformationModeSkip, EnumGrayscaleTransformationModeSkip, EnumGrayscaleTransformationModeSkip, EnumGrayscaleTransformationModeSkip, EnumGrayscaleTransformationModeSkip]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
    
 - **See also**  
@@ -110,7 +110,7 @@ NSArray* regionPredetectionModes[8]
 - **Default value**  
    `[EnumRegionPredetectionModeGeneral, EnumRegionPredetectionModeSkip, EnumRegionPredetectionModeSkip, EnumRegionPredetectionModeSkip, EnumRegionPredetectionModeSkip, EnumRegionPredetectionModeSkip, EnumRegionPredetectionModeSkip, EnumRegionPredetectionModeSkip]` 
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is. If the image is large and the barcode on the image is very small, it is recommended to enable region predetection to speed up the localization process and recognition accuracy.
    
 - **See also**  
@@ -130,7 +130,7 @@ NSArray* imagePreprocessingModes[8]
 - **Default value**  
    ` [EnumImagePreprocessingModeGeneral, EnumImagePreprocessingModeSkip, EnumImagePreprocessingModeSkip, EnumImagePreprocessingModeSkip, EnumImagePreprocessingModeSkip, EnumImagePreprocessingModeSkip, EnumImagePreprocessingModeSkip, EnumImagePreprocessingModeSkip]` 
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.
    
 - **See also**  
@@ -150,7 +150,7 @@ NSArray* textureDetectionModes[8]
 - **Default value**  
    ` [EnumTextureDetectionModeGeneralWidthConcentration, EnumTextureDetectionModeSkip, EnumTextureDetectionModeSkip, EnumTextureDetectionModeSkip, EnumTextureDetectionModeSkip, EnumTextureDetectionModeSkip, EnumTextureDetectionModeSkip, EnumTextureDetectionModeSkip]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.
    
 - **See also**  
@@ -169,7 +169,7 @@ NSArray* textFilterModes[8]
 - **Default value**  
    ` [EnumTextFilterModeGeneralContour, EnumTextFilterModeSkip, EnumTextFilterModeSkip, EnumTextFilterModeSkip, EnumTextFilterModeSkip, EnumTextFilterModeSkip, EnumTextFilterModeSkip, EnumTextFilterModeSkip]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is. If the image contains a lot of text, you can enable text filter to speed up the localization process.
    
 - **See also**  
@@ -206,7 +206,7 @@ NSArray* dpmCodeReadingModes[8]
 - **Default value**  
    ` [EnumDPMCodeReadingModeSkip, EnumDPMCodeReadingModeSkip, EnumDPMCodeReadingModeSkip, EnumDPMCodeReadingModeSkip, EnumDPMCodeReadingModeSkip, EnumDPMCodeReadingModeSkip, EnumDPMCodeReadingModeSkip, EnumDPMCodeReadingModeSkip]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
    
 - **See also**  
@@ -225,7 +225,7 @@ NSArray* deformationResistingModes[8]
 - **Default value**  
    `[EnumDeformationResistingModeSkip, EnumDeformationResistingModeSkip, EnumDeformationResistingModeSkip, EnumDeformationResistingModeSkip, EnumDeformationResistingModeSkip, EnumDeformationResistingModeSkip, EnumDeformationResistingModeSkip, EnumDeformationResistingModeSkip]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
    
 - **See also**  
@@ -245,7 +245,7 @@ NSArray* barcodeComplementModes[8]
 - **Default value**  
    `[EnumBarcodeComplementModeSkip, EnumBarcodeComplementModeSkip, EnumBarcodeComplementModeSkip, EnumBarcodeComplementModeSkip, EnumBarcodeComplementModeSkip, EnumBarcodeComplementModeSkip, EnumBarcodeComplementModeSkip, EnumBarcodeComplementModeSkip]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
    
 - **See also**  
@@ -264,7 +264,7 @@ NSArray* barcodeColourModes[8]
      
 - **Default value**  
    `[EnumBarcodeColourModeDarkOnLight, EnumBarcodeColourModeSkip, EnumBarcodeColourModeSkip, EnumBarcodeColourModeSkip, EnumBarcodeColourModeSkip, EnumBarcodeColourModeSkip, EnumBarcodeColourModeSkip, EnumBarcodeColourModeSkip]`       
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
    
 - **See also**  
@@ -284,7 +284,7 @@ NSArray* accompanyingTextRecognitionModes[8]
 - **Default value**  
    ` [EnumAccompanyingTextRecognitionModeSkip, EnumAccompanyingTextRecognitionModeSkip, EnumAccompanyingTextRecognitionModeSkip, EnumAccompanyingTextRecognitionModeSkip, EnumAccompanyingTextRecognitionModeSkip,  EnumAccompanyingTextRecognitionModeSkip, EnumAccompanyingTextRecognitionModeSkip, EnumAccompanyingTextRecognitionModeSkip]`  
         
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
    
 - **See also**  

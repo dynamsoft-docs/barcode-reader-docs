@@ -2,7 +2,7 @@
 layout: default-layout
 title: Dynamsoft Barcode Reader Enumerations - Other Enumerations
 description: This article shows other Enumerations of Dynamsoft Barcode Reader.
-keywords: DM_ , ImagePixelFormat, QRCodeErrorCorrectionLevel, other enumeration, enumeration
+keywords: DM_ChargeWay, DM_DeploymentType, DM_LicenseModule, DM_UUIDGenerationMethod, ImagePixelFormat, QRCodeErrorCorrectionLevel, other enumeration, enumeration
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 ---
@@ -12,10 +12,10 @@ needGenerateH3Content: false
 
   | Enumeration | Description |
   |-------------|-------------|
-  | [`DM_ChargeWay`](#dm_chargeway) | Describes charge way. |
-  | [`DM_DeploymentType`](#dm_deploymenttype) | Describes deployment type. |
+  | [`DM_ChargeWay`](#dm_chargeway) | Describes the charge way. |
+  | [`DM_DeploymentType`](#dm_deploymenttype) | Describes the deployment type. |
   | [`DM_LicenseModule`](#dm_licensemodule) | Describes Dynamsoft license modules. |
-  | [`DM_UUIDGenerationMethod`](#dm_uuidgenerationmethod) | Describes UUID generation method. |
+  | [`DM_UUIDGenerationMethod`](#dm_uuidgenerationmethod) | Describes the UUID generation method. |
   | [`ImagePixelFormat`](#imagepixelformat) | Describes the image pixel format. |
   | [`QRCodeErrorCorrectionLevel`](#qrcodeerrorcorrectionlevel) | Describes the QR Code error correction level.   |
   
@@ -42,14 +42,14 @@ Describes charge way.
    
 | Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
 | -------------------------- | ------------------- | ----- | ----------- |
-| DM_CW_AUTO | EnumDMChargeWayAuto | 0 | Determines charge way automatically by license server. |
-| DM_CW_DEVICE_COUNT | EnumDMChargeWayDeviceCount | 1 | Charges by device count. |
-| DM_CW_SCAN_COUNT | EnumDMChargeWayScanCount | 2 | Charges by scanned count.|
-| DM_CW_CONCURRENT_DEVICE_COUNT | EnumDMChargeWayConcurrentDeviceCount | 3 | Charges by concurrent device count. |
-| DM_CW_APP_DOMIAN_COUNT | EnumDMChargeWayAppDomainCount | 6 | Charges by app domain count. |
-| DM_CW_ACTIVE_DEVICE_COUNT | EnumDMChargeWayActiveDeviceCount | 8 | Charges by active device count. |
-| DM_CW_INSTANCE_COUNT | EnumDMChargeWayInstanceCount | 9 | Charges by instance count. |
-| DM_CW_CONCURRENT_INSTANCE_COUNT | EnumDMChargeWayConcurrentInstanceCount | 10 | Charges by concurrent instance count. |
+| DM_CW_AUTO | EnumDMChargeWayAuto | 0 | The charge way automatically determined by the license server. |
+| DM_CW_DEVICE_COUNT | EnumDMChargeWayDeviceCount | 1 | Charges by the count of devices. |
+| DM_CW_SCAN_COUNT | EnumDMChargeWayScanCount | 2 | Charges by the count of barcode scans.|
+| DM_CW_CONCURRENT_DEVICE_COUNT | EnumDMChargeWayConcurrentDeviceCount | 3 | Charges by the count of concurrent devices. |
+| DM_CW_APP_DOMAIN_COUNT | EnumDMChargeWayAppDomainCount | 6 | Charges by the count of app domains. |
+| DM_CW_ACTIVE_DEVICE_COUNT | EnumDMChargeWayActiveDeviceCount | 8 | Charges by the count of active devices. |
+| DM_CW_INSTANCE_COUNT | EnumDMChargeWayInstanceCount | 9 | Charges by the count of instances. |
+| DM_CW_CONCURRENT_INSTANCE_COUNT | EnumDMChargeWayConcurrentInstanceCount | 10 | Charges by the count of concurrent instances. |
 
 
 
@@ -57,7 +57,7 @@ Describes charge way.
 &nbsp;
 
 ## DM_DeploymentType
-Describes deployment type.
+Describes the deployment type.
 
 
 ### Declarations
@@ -79,7 +79,7 @@ Describes deployment type.
 | -------------------------- | ------------------- | ----- | ----------- |
 | DM_DT_SERVER | N/A | 1 | Server deployment type |
 | DM_DT_DESKTOP | N/A | 2 | Desktop |
-| DM_DT_EMBEDED_DEVICE | N/A | 6 | Embeded device deployment type |
+| DM_DT_EMBEDDED_DEVICE | N/A | 6 | Embedded device deployment type |
 | DM_DT_OEM | N/A | 7 | OEM deployment type |
 
 
@@ -117,7 +117,7 @@ Describes Dynamsoft license modules.
 | DM_LM_GS1_COMPOSITE | EnumDMLicenseModuleGS1COMPOSITE | 9 | GS1 Composite Code barcodes license module |
 | DM_LM_POSTALCODE | EnumDMLicenseModulePOSTALCODE | 10 | Postal code barcodes license module |
 | DM_LM_DOTCODE | EnumDMLicenseModuleDOTCODE | 11 | DotCode barcodes license module|
-| DM_LM_DDM_LM_INTERMEDIATE_RESULTATAMATRIX | EnumDMLicenseModuleINTERMEDIATERESULT | 12 | Intermediate results license module |
+| DM_LM_DDM_LM_INTERMEDIATE_RESULTATAMATRIX | EnumDMLicenseModuleINTERMEDIATERESULT | 12 | Intermediate result license module |
 | DM_LM_DPM | EnumDMLicenseModuleDPM | 13 |Data Matrix DPM (Direct Part Marking) license module |
 | DM_LM_NONSTANDARD_BARCODE | EnumDMLicenseModuleNONSTANDARDBARCODE | 16 | Nonstandard barcodes license module|
 

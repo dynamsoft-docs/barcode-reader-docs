@@ -12,7 +12,7 @@ Stores the intermediate result.
 
 ## Typedefs
 
-```C#
+```csharp
 public class IntermediateResult
 ```  
   
@@ -58,202 +58,202 @@ public class IntermediateResult
 ### Results
 One of the following types: Array of [`Contour`](Contour.md), Array of [`ImageData`](ImageData.md), Array of [`LineSegment`](LineSegment.md), Array of [`LocalizationResult`](LocalizationResult.md), Array of [`RegionOfInterest`](RegionOfInterest.md).
 
-```C#
+```csharp
 object[] Dynamsoft.Barcode.IntermediateResult.Results
 ```
 
 ### DataType
 The data type of the intermediate result
 
-```C#
+```csharp
 EnumIMResultDataType Dynamsoft.Barcode.IntermediateResult.DataType
 ```
 
 ### ResultType
 Intermediate result type.
 
-```C#
+```csharp
 EnumIntermediateResultType Dynamsoft.Barcode.IntermediateResult.ResultType
 ```
 
 ### BarcodeComplementMode
 The [`BarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode) used when generating the current intermediate result. 
 
-```C#
+```csharp
 EnumBarcodeComplementMode Dynamsoft.Barcode.IntermediateResult.BarcodeComplementMode
 ```
 
 ### BCMIndex
 The array index of current used [`BarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode) in the [`BarcodeComplementModes`](../struct/FurtherModes.md#barcodecomplementmodes) setting.
 
-```C#
+```csharp
 int Dynamsoft.Barcode.IntermediateResult.BCMIndex
 ```
 
 ### DeformationResistingMode
 The [`DeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode) used when generating the current intermediate result.
 
-```C#
+```csharp
 EnumDeformationResistingMode Dynamsoft.Barcode.IntermediateResult.DeformationResistingMode
 ```
 
 ### DRMIndex
 The array index of current used [`DeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode) in the [`DeformationResistingModes`](../struct/FurtherModes.md#deformationresistingmodes) setting.
 
-```C#
+```csharp
 int Dynamsoft.Barcode.IntermediateResult.DRMIndex
 ```
 
 ### DPMCodeReadingMode
 The [`DPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode) used when generating the current intermediate result.
 
-```C#
+```csharp
 EnumDPMCodeReadingMode Dynamsoft.Barcode.IntermediateResult.DPMCodeReadingMode
 ```
 
 ### DPMCRMIndex
 The array index of current used [`DPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode) in the [`DPMCodeReadingModes`](../struct/FurtherModes.md#dpmcodereadingmodes) setting.
 
-```C#
+```csharp
 int Dynamsoft.Barcode.IntermediateResult.DPMCRMIndex
 ```
 
 ### RotationMatrix
 The rotation matrix.
 
-```C#
+```csharp
 double[] Dynamsoft.Barcode.IntermediateResult.RotationMatrix
 ```
 
 ### TextFilterMode
 The [`TextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode) used when generating the current intermediate result.
 
-```C#
+```csharp
 EnumTextFilterMode Dynamsoft.Barcode.IntermediateResult.TextFilterMode
 ```
 
 ### TFMIndex
 The array index of current used [`TextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode) in the [`TextFilterModes`](../struct/FurtherModes.md#textfiltermodes) setting.
-```C#
+```csharp
 int Dynamsoft.Barcode.IntermediateResult.TFMIndex
 ```
 
 ### LocalizationMode
 The [`LocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode) used when generating the current intermediate result.
 
-```C#
+```csharp
 EnumLocalizationMode Dynamsoft.Barcode.IntermediateResult.LocalizationMode
 ```
 
 ### LMIndex
 The array index of current used [`LocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode) in the [`LocalizationModes`](../struct/PublicRuntimeSettings.md#localizationmodes) setting.
 
-```C#
+```csharp
 int Dynamsoft.Barcode.IntermediateResult.LMIndex
 ```
 
 ### BinarizationMode
 The [`BinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) used when generating the current intermediate result.
 
-```C#
+```csharp
 EnumBinarizationMode Dynamsoft.Barcode.IntermediateResult.BinarizationMode
 ```
 
 ### BMIndex
 The array index of current used [`BinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) in the [`BinarizationModes`](../struct/PublicRuntimeSettings.md#binarizationmodes) setting.
 
-```C#
+```csharp
 int Dynamsoft.Barcode.IntermediateResult.BMIndex
 ```
 
 ### ImagePreprocessingMode
 The [`ImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode) used when generating the current intermediate result.
 
-```C#
+```csharp
 EnumImagePreprocessingMode Dynamsoft.Barcode.IntermediateResult.ImagePreprocessingMode
 ```
 
 ### IPMIndex
 The array index of current used [`ImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode) in [`ImagePreprocessingModes`](../struct/FurtherModes.md#imagepreprocessingmodes) setting.
 
-```C#
+```csharp
 int Dynamsoft.Barcode.IntermediateResult.IPMIndex
 ```
 
 ### ROIId
 The ID of the ROI (Region Of Interest) generated by the SDK. -1 means the original image.
 
-```C#
+```csharp
 int Dynamsoft.Barcode.IntermediateResult.ROIId
 ```
 
 ### RegionPredetectionMode
 The [`RegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode) used when generating the current intermediate result.
 
-```C#
+```csharp
 EnumRegionPredetectionMode Dynamsoft.Barcode.IntermediateResult.RegionPredetectionMode
 ```
 
 ### RPMIndex
 The array index of current used [`RegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode) in the [`RegionPredetectionModes`](../struct/FurtherModes.md#regionpredetectionmodes) setting.
 
-```C#
+```csharp
 int Dynamsoft.Barcode.IntermediateResult.RPMIndex
 ```
 
 ### GrayscaleTransformationMode
 The [`GrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode) used when generating the current intermediate result.
 
-```C#
+```csharp
 EnumGrayscaleTransformationMode Dynamsoft.Barcode.IntermediateResult.GrayscaleTransformationMode
 ```
 
 ### GTMIndex
 The array index of current used [`GrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode) in the [`GrayscaleTransformationModes`](../struct/FurtherModes.md#grayscaletransformationmodes) setting.
 
-```C#
+```csharp
 int Dynamsoft.Barcode.IntermediateResult.GTMIndex
 ```
 
 ### ColourConversionMode
 The [`ColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode) used when generating the current intermediate result.
 
-```C#
+```csharp
 EnumColourConversionMode Dynamsoft.Barcode.IntermediateResult.ColourConversionMode
 ```
 
 ### CICMIndex
 The array index of current used [`ColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode) in the [`ColourConversionModes`](../struct/FurtherModes.md#colourconversionmodes) setting.
 
-```C#
+```csharp
 int Dynamsoft.Barcode.IntermediateResult.CICMIndex
 ```
 
 ### ColourClusteringMode
 The [`ColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode) used when generating the current intermediate result.
 
-```C#
+```csharp
 EnumColourClusteringMode Dynamsoft.Barcode.IntermediateResult.ColourClusteringMode
 ```
 
 ### CCMIndex
 The array index of current used [`ColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode) in the [`ColourClusteringModes`](../struct/FurtherModes.md#colourclusteringmodes) setting.
 
-```C#
+```csharp
 int Dynamsoft.Barcode.IntermediateResult.CCMIndex
 ```
 
 ### ScaleDownRatio
 The scale down ratio.
 
-```C#
+```csharp
 int Dynamsoft.Barcode.IntermediateResult.ScaleDownRatio
 ```
 
 ### FrameId
 The ID of the operated frame.
 
-```C#
+```csharp
 int Dynamsoft.Barcode.IntermediateResult.FrameId
 ```
 

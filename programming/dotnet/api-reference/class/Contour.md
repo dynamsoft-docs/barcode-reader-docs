@@ -10,7 +10,7 @@ needAutoGenerateSidebar: false
 # Contour
 Stores the contour information.
 
-```C#
+```csharp
 public class Contour
 ```  
 
@@ -26,6 +26,6 @@ public class Contour
 ### Points
 The points array.
 
-```C#
+```csharp
 Point[] Dynamsoft.Barcode.Contour.Points
 ```  

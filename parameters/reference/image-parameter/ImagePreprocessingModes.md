@@ -64,55 +64,55 @@ needAutoGenerateSidebar: false
 ##### Sensitivity 
 Sets the sensitivity used for gray equalization.
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [1, 9] | 5 | "IPM_GRAY_EQUALIZE" |         
 
-- **Remark**     
+- **Remarks**     
   If you have an image with a low level of contrast, you can set the property to a larger value. A larger value means a higher possibility that gray equalization will be activated. This may cause adverse effect on images with a high level of contrast.  
 
 
 ##### SmoothBlockSizeX 
 Sets the horizontal block size for the smoothing process.
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [3, 1000] | 3 | "IPM_GRAY_SMOOTH"<br>"IPM_SHARPEN_SMOOTH" |         
 
-- **Remark**     
+- **Remarks**     
   Block size refers to the size of a pixel neighborhood used to calculate the threshold for the pixel. An appropriate value can help increase the accuracy of barcode localization.
 
 
 ##### SmoothBlockSizeY 
 Sets the vertical block size for the smoothing process.
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [3, 1000] | 3 | "IPM_GRAY_SMOOTH"<br>"IPM_SHARPEN_SMOOTH" |         
 
-- **Remark**     
+- **Remarks**     
   Block size refers to the size of a pixel neighborhood used to calculate the threshold for the pixel. An appropriate value can help increase the accuracy of barcode localization.  
   
 
 ##### SharpenBlockSizeX 
 Sets the horizontal block size for the sharpening process.
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [3, 1000] | 3 | "IPM_SHARPEN_SMOOTH" |         
 
-- **Remark**     
+- **Remarks**     
   Block size refers to the size of a pixel neighborhood used to calculate the threshold for the pixel. An appropriate value can help increase the accuracy of barcode localization.
 
 
 ##### SharpenBlockSizeY 
 Sets the vertical block size for the sharpening process.
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [3, 1000] | 3 | "IPM_SHARPEN_SMOOTH" |         
 
-- **Remark**     
+- **Remarks**     
   Block size refers to the size of a pixel neighborhood used to calculate the threshold for the pixel. An appropriate value can help increase the accuracy of barcode localization.
   
 
@@ -120,11 +120,11 @@ Sets the vertical block size for the sharpening process.
 ##### MorphOperation 
 Sets the morph operation for the morphology process. 
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | "Erode"<br>"Dilate"<br>"Open"<br>"Close" | "Close" | "IPM_MORPHOLOGY" |         
 
-- **Remark**    
+- **Remarks**    
    - "Erode": Perform erosion process.
    - "Dilate": Perform dilation process.
    - "Open": Perform erosion first, then perform dilation.
@@ -136,11 +136,11 @@ Sets the morph operation for the morphology process.
 ##### MorphShape  
  Sets the morph shape for the morphology process.  
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | "Rectangle"<br>"Cross"<br>"Ellipse" | "Rectangle" | "IPM_MORPHOLOGY" |         
 
-- **Remark**    
+- **Remarks**    
    - "Rectangle": 
    - "Cross": 
    - "Ellipse": 
@@ -150,7 +150,7 @@ Sets the morph operation for the morphology process.
 ##### MorphOperationKernelSizeX  
 Sets the horizontal kernel size for the morphology process. 
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [0, 1000]  | 0 | "IPM_MORPHOLOGY" |         
 
@@ -159,7 +159,7 @@ Sets the horizontal kernel size for the morphology process.
 ##### MorphOperationKernelSizeY  
  Sets the vertical kernel size for the morphology process.  
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [0, 1000]  | 0 | "IPM_MORPHOLOGY" |       
 
@@ -167,25 +167,25 @@ Sets the horizontal kernel size for the morphology process.
 ##### LibraryFileName 
 Sets the file name of the library to load dynamically.
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing file name. | "" | All `ImagePreprocessingMode` items except IPM_SKIP and IPM_AUTO |         
 
 
-- **Remark**     
+- **Remarks**     
   - The library must be in the same place with Dynamsoft Barcode Reader Library.
 
 
 ##### LibraryParameters 
 Sets the parameters passed to the library to load dynamically.
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing parameters. | "" | All `ImagePreprocessingMode` items except IPM_SKIP and IPM_AUTO |         
 
 
-- **Remark**     
-  - Library如果需要多个参数，必须一次性传输，Library内部处理分割和使用
+- **Remarks**     
+  - If more than one parameter/mode is required by the library, you need to pass all needed parameters/modes at once and our library will handle the rest internally.
 
 
 ### Setting Methods
@@ -231,7 +231,7 @@ Default values will be used if there is no manual setting.
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html)->[`furtherModes`]({{ site.structs }}PublicRuntimeSettings.html#furthermodes) | [`imagePreprocessingModes`]({{ site.structs }}FurtherModes.html#imagepreprocessingmodes) | [`ImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode)[8] |
 
 
-**Remark**   
+**Remarks**   
 [`GetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) and [`SetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) need to be called for getting or setting the value of [arguments](#mode-arguments).
 
 

@@ -59,21 +59,21 @@ needAutoGenerateSidebar: false
 Sets the minimum image dimension (in pixels) to filter the text.
 
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [65536, 0x7fffffff] | 65536 | "TFM_GENERAL_CONTOUR" |         
 
-- **Remark**     
+- **Remarks**     
   If the image dimension is larger than the given value, the library will enable the text filtering feature. Otherwise, it will skip this step when doing barcode recognition. The feature can speed up the recognition process.
 
 ##### Sensitivity 
 Sets the sensitivity used for text filtering.
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [0, 9] | 0 | "TFM_GENERAL_CONTOUR" |         
 
-- **Remark**     
+- **Remarks**     
   0: automatically set by the library.   
   A larger value means the library will take more effort to filter text.
 
@@ -81,25 +81,25 @@ Sets the sensitivity used for text filtering.
 ##### LibraryFileName 
 Sets the file name of the library to load dynamically.
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing file name. | "" | All `TextFilterMode` items except TFM_SKIP and TFM_AUTO |         
 
 
-- **Remark**     
+- **Remarks**     
   - The library must be in the same place with Dynamsoft Barcode Reader Library.
 
 
 ##### LibraryParameters 
 Sets the parameters passed to the library to load dynamically.
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing parameters. | "" | All `TextFilterMode` items except TFM_SKIP and TFM_AUTO |         
 
 
-- **Remark**     
-  - Library如果需要多个参数，必须一次性传输，Library内部处理分割和使用
+- **Remarks**     
+  - If more than one parameter/mode is required by the library, you need to pass all needed parameters/modes at once and our library will handle the rest internally.
 
 
 ### Setting Methods
@@ -138,7 +138,7 @@ Sets the parameters passed to the library to load dynamically.
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html)->[`furtherModes`]({{ site.structs }}PublicRuntimeSettings.html#furthermodes) | [`textFilterModes`]({{ site.structs }}FurtherModes.html#textfiltermodes) | [`TextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode)[8] |
 
 
-**Remark**   
+**Remarks**   
 [`GetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) and [`SetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) need to be called for getting or setting the value of [arguments](#mode-arguments).
 
 

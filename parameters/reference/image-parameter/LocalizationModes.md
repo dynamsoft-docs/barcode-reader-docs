@@ -59,11 +59,11 @@ needAutoGenerateSidebar: false
 ##### ScanStride 
 Sets the stride in pixels between scans when searching for barcodes.
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [0, 0x7fffffff] | 0 | "LM_SCAN_DIRECTLY" |         
 
-- **Remark**     
+- **Remarks**     
   0: automatically set by the library.   
   When the set value is greater than half the width or height of the current image, the actual processing is 0.  
 
@@ -71,11 +71,11 @@ Sets the stride in pixels between scans when searching for barcodes.
 ##### ScanDirection 
 Sets the scan direction when searching barcode.
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [0, 2] | 0 | "LM_SCAN_DIRECTLY" |             
 
-- **Remark**     
+- **Remarks**     
   0: Both vertical and horizontal direction.   
   1: Vertical direction.   
   2: Horizontal direction. 
@@ -84,25 +84,25 @@ Sets the scan direction when searching barcode.
 ##### LibraryFileName 
 Sets the file name of the library to load dynamically.
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing file name. | "" | All `LocalizationMode` items except LM_SKIP and LM_AUTO |         
 
 
-- **Remark**     
+- **Remarks**     
   - The library must be in the same place with Dynamsoft Barcode Reader Library.
 
 
 ##### LibraryParameters 
 Sets the parameters passed to the library to load dynamically.
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing parameters. | "" | All `LocalizationMode` items except LM_SKIP and LM_AUTO |         
 
 
-- **Remark**     
-  - Library如果需要多个参数，必须一次性传输，Library内部处理分割和使用
+- **Remarks**     
+  - If more than one parameter/mode is required by the library, you need to pass all needed parameters/modes at once and our library will handle the rest internally.
 
 
 ### Setting Methods
@@ -142,7 +142,7 @@ Sets the parameters passed to the library to load dynamically.
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) | [`localizationModes`]({{ site.structs }}PublicRuntimeSettings.html#localizationmodes) | [`LocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode)[8] |
 
 
-**Remark**   
+**Remarks**   
 [`GetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) and [`SetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) need to be called for getting or setting the value of [arguments](#mode-arguments).
 
 

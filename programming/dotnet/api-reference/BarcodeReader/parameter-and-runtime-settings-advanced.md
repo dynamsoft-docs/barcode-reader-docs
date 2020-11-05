@@ -25,7 +25,7 @@ needAutoGenerateSidebar: true
 
 Initialize runtime settings with the settings in a given JSON file.
 
-```C#
+```csharp
 EnumErrorCode Dynamsoft.Barcode.BarcodeReader.InitRuntimeSettingsWithFile(string jsonFileName, EnumConflictMode conflictMode, out string errorMessage)
 ```
 
@@ -39,7 +39,7 @@ Returns error code.
 
 #### Code Snippet
 
-```C#
+```csharp
 BarcodeReader reader = new BarcodeReader();
 reader.ProductKeys = "t0260NwAAAHV***************";
 string errorMessage;
@@ -55,7 +55,7 @@ reader.Dispose();
 
 Initialize runtime settings with the settings in given JSON string. 
 
-```C#
+```csharp
 EnumErrorCode Dynamsoft.Barcode.BarcodeReader.InitRuntimeSettingsWithString(string jsonContent, EnumConflictMode conflictMode, out string errorMessage)
 ```   
    
@@ -69,7 +69,7 @@ Returns error code.
 
 #### Code Snippet
 
-```C#
+```csharp
 BarcodeReader reader = new BarcodeReader();
 reader.ProductKeys = "t0260NwAAAHV***************";
 string errorMessage;
@@ -85,7 +85,7 @@ reader.Dispose();
 
 Append a new template file to the current runtime settings.
 
-```C#
+```csharp
 EnumErrorCode Dynamsoft.Barcode.BarcodeReader.AppendTplFileToRuntimeSettings(string jsonFileName, EnumConflictMode conflictMode, out string errorMessage)
 ```   
    
@@ -98,7 +98,7 @@ EnumErrorCode Dynamsoft.Barcode.BarcodeReader.AppendTplFileToRuntimeSettings(str
 Returns error code.
 
 #### Code Snippet
-```C#
+```csharp
 BarcodeReader reader = new BarcodeReader();
 reader.ProductKeys = "t0260NwAAAHV***************";
 string errorMessage;
@@ -114,7 +114,7 @@ reader.Dispose();
 
 Append a new template string to the current runtime settings.
 
-```C#
+```csharp
 EnumErrorCode Dynamsoft.Barcode.BarcodeReader.AppendTplStringToRuntimeSettings(string  jsonContent, EnumConflictMode  conflictMode, out string errorMessage) 
 ```   
 
@@ -127,7 +127,7 @@ EnumErrorCode Dynamsoft.Barcode.BarcodeReader.AppendTplStringToRuntimeSettings(s
 Returns error code.
 
 #### Code Snippet
-```C#
+```csharp
 BarcodeReader reader = new BarcodeReader();
 reader.ProductKeys = "t0260NwAAAHV***************";
 string errorMessage;
@@ -142,7 +142,7 @@ reader.Dispose();
 ## GetAllParameterTemplateNames
 Gets the parameter templates name array. 
 
-```C#
+```csharp
 string[] Dynamsoft.Barcode.BarcodeReader.GetAllParameterTemplateNames()
 ```  
    
@@ -151,7 +151,7 @@ string[] Dynamsoft.Barcode.BarcodeReader.GetAllParameterTemplateNames()
 The template name array. 
 
 #### Code Snippet
-```C#
+```csharp
 BarcodeReader reader = new BarcodeReader();
 reader.ProductKeys = "t0260NwAAAHV***************";
 string errorMessage;
@@ -168,7 +168,7 @@ reader.Dispose();
 ## OutputSettingsToFile
 Output runtime settings to a settings file (JSON file).
 
-```C#
+```csharp
 void Dynamsoft.Barcode.BarcodeReader.OutputSettingsToFile(string outputFilePath, string settingsName)
 ```   
    
@@ -180,7 +180,7 @@ void Dynamsoft.Barcode.BarcodeReader.OutputSettingsToFile(string outputFilePath,
 [`BarcodeReaderException`](../class/BarcodeReaderException.md) The exception thrown by Dynamsoft Barcode Reader. 
 
 #### Code Snippet
-```C#
+```csharp
 BarcodeReader reader = new BarcodeReader();
 reader.ProductKeys = "t0260NwAAAHV***************";
 string errorMessage;
@@ -197,7 +197,7 @@ reader.Dispose();
 ## OutputSettingsToString
 Output runtime settings to a string.
 
-```C#
+```csharp
 string Dynamsoft.Barcode.BarcodeReader.OutputSettingsToString(string settingsName)
 ```   
    
@@ -211,7 +211,7 @@ The output string which stores the contents of current settings.
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)The exception thrown by Dynamsoft Barcode Reader. 
 
 #### Code Snippet
-```C#
+```csharp
 BarcodeReader reader = new BarcodeReader();
 reader.ProductKeys = "t0260NwAAAHV***************";
 string errorMessage;

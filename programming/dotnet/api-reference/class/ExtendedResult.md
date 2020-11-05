@@ -10,7 +10,7 @@ needAutoGenerateSidebar: false
 # ExtendedResult
 Stores the extended result. 
 
-```C#
+```csharp
 public class ExtendedResult
 ```  
 
@@ -36,83 +36,83 @@ public class ExtendedResult
 ### ResultType
 Extended result type. 
 
-```C#
+```csharp
 EnumResultType Dynamsoft.Barcode.ExtendedResult.ResultType
 ```
 
 ### BarcodeFormat
 Barcode type in BarcodeFormat group 1. 
 
-```C#
+```csharp
 EnumBarcodeFormat Dynamsoft.Barcode.ExtendedResult.BarcodeFormat
 ```
 
 ### BarcodeFormatString
 Barcode type in BarcodeFormat group 1 as string.
 
-```C#
+```csharp
 string Dynamsoft.Barcode.ExtendedResult.BarcodeFormatString
 ```
 
 ### BarcodeFormat_2
 Barcode type in BarcodeFormat group 2.
 
-```C#
+```csharp
 EnumBarcodeFormat_2 Dynamsoft.Barcode.ExtendedResult.BarcodeFormat_2
 ```
  
 ### BarcodeFormatString_2
 Barcode type in BarcodeFormat group 2 as string.
 
-```C#
+```csharp
 string Dynamsoft.Barcode.ExtendedResult.BarcodeFormatString_2
 ```
 
 ### Confidence
 The confidence of the result.
 
-```C#
+```csharp
 int Dynamsoft.Barcode.ExtendedResult.Confidence
 ```
 
 ### Bytes
 The content in a byte array.
 
-```C#
+```csharp
 byte[] Dynamsoft.Barcode.ExtendedResult.Bytes
 ```
 
 ### AccompanyingTextBytes
 The accompanying text content in a byte array.
 
-```C#
+```csharp
 byte[] Dynamsoft.Barcode.ExtendedResult.AccompanyingTextBytes
 ```
 
 ### Deformation
 The deformation value.
 
-```C#
+```csharp
 int Dynamsoft.Barcode.ExtendedResult.Deformation
 ```
 
 ### DetailedResult
 One of the following: [`QRCodeDetails`](QRCodeDetails.md), [`PDF417Details`](PDF417Details.md), [`DataMatrixDetails`](DataMatrixDetails.md), [`AztecDetails`](AztecDetails.md), [`OneDCodeDetails`](OneDCodeDetails.md).
 
-```C#
+```csharp
 object Dynamsoft.Barcode.ExtendedResult.DetailedResult
 ```
 
 ### SamplingImage
 The sampling image info.
 
-```C#
+```csharp
 SamplingImageData Dynamsoft.Barcode.ExtendedResult.SamplingImage
 ```
  
 ### Clarity
 The clarity of the barcode zone in percentage.
 
-```C#
+```csharp
 int Dynamsoft.Barcode.ExtendedResult.Clarity
 ```

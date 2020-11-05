@@ -62,7 +62,7 @@ EnumTerminatePhase terminatePhase
 - **Default value**   
     `EnumTerminatePhaseRecognized`
     
-- **Remark**   
+- **Remarks**   
     When the recognition result is not desired, you can set this parameter can be set to skip certain processing stages.
     
 - **See also**  
@@ -83,7 +83,7 @@ NSInteger timeout
 - **Default value**   
     10000
     
-- **Remark**   
+- **Remarks**   
     If you want to stop reading barcodes after a certain period of time, you can use this parameter to set a timeout.
     
 ### maxAlgorithmThreadCount
@@ -100,7 +100,7 @@ NSInteger timeout
 - **Default value**   
     4
     
-- **Remark**   
+- **Remarks**   
     To keep a balance between speed and quality, the library concurrently runs four different threads for barcode decoding by default.
 
 ### expectedBarcodesCount
@@ -116,7 +116,7 @@ NSInteger expectedBarcodesCount
 - **Default value**   
     0
     
-- **Remark**   
+- **Remarks**   
     0: means Unknown and it will find at least one barcode. 1: try to find one barcode. If one barcode is found, the library will stop the localization process and perform barcode decoding. n: try to find n barcodes. If the library only finds m (m<n) barcode, it will try different algorithms till n barcodes are found or all algorithms are tried.
 
 ### barcodeFormatIds
@@ -133,7 +133,7 @@ NSInteger barcodeFormatIds
 - **Default value**   
     `EnumBarcodeFormatALL`
     
-- **Remark**   
+- **Remarks**   
     If the barcode type(s) are certain, specifying the barcode type(s) to be read will speed up the recognition process. The barcode format our library will search for is composed of [BarcodeFormat group 1]({{ site.enumerations }}format-enums.html#barcodeformat) and [BarcodeFormat group 2]({{ site.enumerations }}format-enums.html#barcodeformat_2), so you need to specify the barcode format in group 1 and group 2 individually.
     
 - **See also**  
@@ -153,7 +153,7 @@ NSInteger barcodeFormatIds_2
 - **Default value**   
     `EnumBarcodeFormat2NULL`
     
-- **Remark**   
+- **Remarks**   
     If the barcode type(s) are certain, specifying the barcode type(s) to be read will speed up the recognition process. The barcode format our library will search for is composed of [BarcodeFormat group 1]({{ site.enumerations }}format-enums.html#barcodeformat) and [BarcodeFormat group 2]({{ site.enumerations }}format-enums.html#barcodeformat_2), so you need to specify the barcode format in group 1 and group 2 individually.
     
 - **See also**  
@@ -173,7 +173,7 @@ NSInteger pdfRasterDPI
 - **Default value**   
     300
     
-- **Remark**   
+- **Remarks**   
     When decoding barcodes from a PDF file using the DecodeFile method, the library will convert the PDF file to image(s) first, then perform barcode recognition.
 
 ### scaleDownThreshold
@@ -189,7 +189,7 @@ NSInteger scaleDownThreshold
 - **Default value**   
     2300
     
-- **Remark**   
+- **Remarks**   
     If the shorter edge size is larger than the given threshold value, the library will calculate the required height and width of the barcode image and shrink the image to that size before localization. Otherwise, the library will perform barcode localization on the original image.
 
 ### binarizationModes
@@ -206,7 +206,7 @@ NSArray* binarizationModes[8]
 - **Default value**   
     ` [EnumBinarizationModeLocalBlock, EnumBinarizationModeSkip, EnumBinarizationModeSkip, EnumBinarizationModeSkip, EnumBinarizationModeSkip, EnumBinarizationModeSkip, EnumBinarizationModeSkip, EnumBinarizationModeSkip]`
     
-- **Remark**   
+- **Remarks**   
     The array index represents the priority of the item. The smaller index is, the higher priority is.
     
 - **See also**   
@@ -227,7 +227,7 @@ NSArray* localizationModes[8]
 - **Default value**   
     ` [EnumLocalizationModeConnectedBlocks, EnumLocalizationModeScanDirectly, EnumLocalizationModeStatistics, EnumLocalizationModeLines, EnumLocalizationModeSkip, EnumLocalizationModeSkip, EnumLocalizationModeSkip, EnumLocalizationModeSkip]`
     
-- **Remark**   
+- **Remarks**   
     The array index represents the priority of the item. The smaller index is, the higher priority is.
     
 - **See also**   
@@ -255,7 +255,7 @@ NSInteger deblurLevel
 - **Default value**   
     9
     
-- **Remark**   
+- **Remarks**   
     If you have a blurry image, you can set this property to a larger value. The higher the value set, the more effort the library will spend to decode images, but it may also slow down the recognition process.
 
 ### intermediateResultTypes
@@ -324,7 +324,7 @@ NSArray* textResultOrderModes[8]
 - **Default value**   
     ` [EnumTextResultOrderModeConfidence, EnumTextResultOrderModePosition, EnumTextResultOrderModeFormat, EnumTextResultOrderModeSkip, EnumTextResultOrderModeSkip, EnumTextResultOrderModeSkip, EnumTextResultOrderModeSkip, EnumTextResultOrderModeSkip]`
    
-- **Remark**   
+- **Remarks**   
     The array index represents the priority of the item. The smaller the index, the higher the priority.   
  
 - **See also**    
@@ -344,7 +344,7 @@ NSInteger returnBarcodeZoneClarity
 - **Default value**   
     0
     
-- **Remark**   
+- **Remarks**   
     0: Do not return the clarity of the barcode zone; 1: Return the clarity of the barcode zone.  
 
 ### region
@@ -369,7 +369,7 @@ NSInteger minBarcodeTextLength
 - **Default value**   
     0
     
-- **Remark**   
+- **Remarks**   
     0: means no limitation on the barcode text length. 
 
 ### minResultConfidence
@@ -386,7 +386,7 @@ NSInteger minResultConfidence
 - **Default value**   
     0
     
-- **Remark**   
+- **Remarks**   
     0: means no limitation on the result confidence.
 
 ### scaleUpModes
@@ -403,7 +403,7 @@ NSArray* scaleUpModes[8]
 - **Default value**   
     `[EnumScaleUpModeAuto, EnumScaleUpModeSkip, EnumScaleUpModeSkip, EnumScaleUpModeSkip, EnumScaleUpModeSkip, EnumScaleUpModeSkip, EnumScaleUpModeSkip, EnumScaleUpModeSkip]`
     
-- **Remark**   
+- **Remarks**   
     The array index represents the priority of the item. The smaller the index, the higher the priority.   
  
 - **See also**    

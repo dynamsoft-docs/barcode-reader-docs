@@ -11,10 +11,10 @@ needAutoGenerateSidebar: true
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`initLicense`](#initlicense) | Read product key and activate the SDK. |
-  | [`initLicenseFromServer`](#initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
-  | [`initLicenseFromLicenseContent`](#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
-  | [`outputLicenseToString`](#outputlicensetostring) | Output the license content to a string from the license server. |
+  | [`initLicense`](#initlicense) | Reads product key and activate the SDK. |
+  | [`initLicenseFromServer`](#initlicensefromserver) | Initializes license and connect to the specified server for online verification. |
+  | [`initLicenseFromLicenseContent`](#initlicensefromlicensecontent) | Initializes license from the license content on client machine for offline verification. |
+  | [`outputLicenseToString`](#outputlicensetostring) | Outputs the license content to a string from the license server. |
   | [`initLTSConnectionParameters`](#initltsconnectionparameters) | Initializes a DMLTSConnectionParameters struct with default values. |
   | [`initLicenseFromLTS`](#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
 

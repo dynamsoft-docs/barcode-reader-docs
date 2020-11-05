@@ -61,7 +61,7 @@ If [RegionBottom](#regionbottom), [RegionLeft](#regionleft), [RegionRight](#regi
 Specifies the y-coordinate of the bottom-right corner of the region in percentage. This value is relative to the top-left corner of the barcode.
 
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [-255, 255] | 0 | "ATRM_GENERAL" |         
 
@@ -70,7 +70,7 @@ Specifies the y-coordinate of the bottom-right corner of the region in percentag
 Specifies the x-coordinate of the top-left corner of the region in percentage. This value is relative to the top-left corner of the barcode.
 
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [-255, 255] | 0 | "ATRM_GENERAL" |  
 
@@ -78,7 +78,7 @@ Specifies the x-coordinate of the top-left corner of the region in percentage. T
 Specifies the x-coordinate of the bottom-right corner of the region in percentage. This value is relative to the top-left corner of the barcode.
 
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [-255, 255] | 0 | "ATRM_GENERAL" |  
 
@@ -86,7 +86,7 @@ Specifies the x-coordinate of the bottom-right corner of the region in percentag
 Specifies the y-coordinate of the top-left corner of the region in percentage. This value is relative to the top-left corner of the barcode.
 
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [-255, 255] | 0 | "ATRM_GENERAL" |  
 
@@ -127,7 +127,7 @@ Specifies the y-coordinate of the top-left corner of the region in percentage. T
 | ------ | ------------------ | ---------- |
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html)->[`furtherModes`]({{ site.structs }}PublicRuntimeSettings.html#furthermodes) | [`accompanyingTextRecognitionModes`]({{ site.structs }}FurtherModes.html#accompanyingtextrecognitionmodes) | [`AccompanyingTextRecognitionMode`]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode)[8] |
 
-**Remark**   
+**Remarks**   
 [`GetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) and [`SetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) need to be called for getting or setting the value of [arguments](#mode-arguments).
 
 

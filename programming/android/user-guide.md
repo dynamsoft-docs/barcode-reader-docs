@@ -13,7 +13,7 @@ needGenerateH3Content: true
 ## System Requirements
 
 - Operating systems:
-   - Supported OS: Android 5 or higher
+   - Supported OS: Android 5 or higher (Android 7 or higher recommended)
    - Supported ABI: armeabi-v7a/arm64-v8a
 
 ## Installation

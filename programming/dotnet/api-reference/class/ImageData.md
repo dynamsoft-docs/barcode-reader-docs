@@ -10,7 +10,7 @@ needAutoGenerateSidebar: false
 # ImageData
 Stores the image data.  
 
-```C#
+```csharp
 public class ImageData
 ```
 
@@ -30,35 +30,35 @@ public class ImageData
 ### Bytes
 The image data content in a byte array. 
 
-```C#
+```csharp
 byte[] Dynamsoft.Barcode.ImageData.Bytes
 ```
 
 ### Width
 The width of the image in pixels.  
 
-```C#
+```csharp
 int Dynamsoft.Barcode.ImageData.Width
 ```
 
 ### Height
 The height of the image in pixels.  
 
-```C#
+```csharp
 int Dynamsoft.Barcode.ImageData.Height
 ```
 
 ### Stride
 The stride (or scan width) of the image. 
 
-```C#
+```csharp
 int Dynamsoft.Barcode.ImageData.Stride
 ```
 
 ### Format
 The image pixel format used in the image byte array. 
 
-```C#
+```csharp
 EnumImagePixelFormat Dynamsoft.Barcode.ImageData.Format
 ```
   

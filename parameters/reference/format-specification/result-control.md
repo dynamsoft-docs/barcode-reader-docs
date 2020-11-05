@@ -20,7 +20,7 @@ needGenerateH3Content: false
 ## MinResultConfidence
 The minimum confidence of the result.   
 
-**Remark**   
+**Remarks**   
 0: means no limitation on the confidence. 
 
 ### As Json Parameter
@@ -57,7 +57,7 @@ Sets whether or not to return partial barcode value(s).
 **Not support yet.**    
 &nbsp;
 
-**Remark**   
+**Remarks**   
 0: do not return partial barcode value(s).   
 1: return partial barcode value(s).
 

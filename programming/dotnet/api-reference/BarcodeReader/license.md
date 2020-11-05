@@ -21,9 +21,9 @@ needAutoGenerateSidebar: true
 
 
 ## InitLicenseFromServer
-Initialize the license and connect to the specified server for online verification.
+Initializes the license and connect to the specified server for online verification.
 
-```C#
+```csharp
 int Dynamsoft.Barcode.BarcodeReader.InitLicenseFromServer(string licenseServer, string licenseKey)
 ```   
    
@@ -41,7 +41,7 @@ Returns error code.
 ## InitLicenseFromLicenseContent
 Initializes barcode reader license and connects to the specified server for online verification.
 
-```C#
+```csharp
 int Dynamsoft.Barcode.BarcodeReader.InitLicenseFromLicenseContent(string licenseKey, string strLicenseContent)
 ```
 
@@ -55,7 +55,7 @@ Returns error code.
 
 
 #### Code Snippet
-```C#
+```csharp
 BarcodeReader reader = new BarcodeReader();
 PublicRuntimeSettings settings = reader.GetRuntimeSettings();
 settings.IntermediateResultType = (int)EnumIntermediateResultType.IRT_ORIGINAL_IMAGE;
@@ -72,7 +72,7 @@ TextResult[] result = reader.DecodeIntermediateResults();
 ## OutputLicenseToString
 Outputs the license content as an encrypted string from the license server to be used for offline license verification. 
 
-```C#
+```csharp
 string Dynamsoft.Barcode.BarcodeReader.OutputLicenseToString()
 ```
    
@@ -88,12 +88,12 @@ The output string which stores the contents of license.
 ## InitLTSConnectionParameters
 Initializes a DMLTSConnectionParameters struct with default values.
 
-```C#
+```csharp
 DMLTSConnectionParameters Dynamsoft.Barcode.BarcodeReader.InitLTSConnectionParameters()
 ```   
 
 #### Code Snippet
-```C#
+```csharp
 BarcodeReader reader = new BarcodeReader();
 DMLTSConnectionParameters ltsInfo = reader.InitLTSConnectionParameters();
 ltsInfo.HandShake = "*****-hs-****";
@@ -108,7 +108,7 @@ readr.InitLicenseFromLts(ltsInfo, out errorMsg);
 ## InitLicenseFromLTS
 Initializes the barcode reader license and connects to the specified server for online verification.
 
-```C#
+```csharp
 EnumErrorCode Dynamsoft.Barcode.BarcodeReader.InitLicenseFromLTS(DMLTSConnectionParameters ltsConnectionParameters, out string errorMsg)
 ```   
    
@@ -120,7 +120,7 @@ EnumErrorCode Dynamsoft.Barcode.BarcodeReader.InitLicenseFromLTS(DMLTSConnection
 Returns error code.
 
 #### Code Snippet
-```C#
+```csharp
 BarcodeReader reader = new BarcodeReader();
 DMLTSConnectionParameters ltsInfo = reader.InitLTSConnectionParameters();
 ltsInfo.HandShake = "*****-hs-****";

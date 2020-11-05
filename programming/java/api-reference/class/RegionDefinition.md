@@ -81,5 +81,5 @@ int com.dynamsoft.barcode.RegionDefinition.regionMeasuredByPercentage
 - **Default value**   
     0
     
-- **Remark**   
+- **Remarks**   
     When it's set to 1, the values of Top, Left, Right, Bottom indicate percentage (from 0 to 100); Otherwise, they indicate coordinates. 0: not by percentage 1: by percentage.

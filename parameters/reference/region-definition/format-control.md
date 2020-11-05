@@ -21,7 +21,7 @@ needGenerateH3Content: false
 ## BarcodeFormatIds
 Sets which types of barcode(s) in BarcodeFormat group 1 to be read in this region.  
 
-**Remark**   
+**Remarks**   
 If you already know the barcode type(s) before performing barcode reading, specifying the barcode type(s) to be read will speed up the recognition process.
 
 ### As Json Parameter
@@ -41,7 +41,7 @@ If you already know the barcode type(s) before performing barcode reading, speci
 ## BarcodeFormatIds_2 
 Sets which types of barcode(s) in BarcodeFormat group 2 to be read in this region.  
 
-**Remark**   
+**Remarks**   
 If the barcode type(s) are certain, specifying the barcode type(s) to be read will speed up the recognition process.    
 The barcode format our library will search for is composed of BarcodeFormat group 1 and BarcodeFormat group 2, so you need to specify the barcode format in group 1 and group 2 individually.
 
