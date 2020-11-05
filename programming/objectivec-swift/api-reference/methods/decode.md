@@ -268,7 +268,8 @@ barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicense:@"t0260NwAAAHV**
 NSArray<iTextResult *>* result;
 NSError __autoreleasing * _Nullable error;
 [barcodeReader getRuntimeSettings:&error];
-settings.intermediateResultTypes = EnumIntermediateResultTypeColourConvertedGrayScaleImage|EnumIntermediateResultTypeOriginalImaEnumIntermediateResultTypeColourClusteredImage;
+settings.intermediateResultTypes = EnumIntermediateResultTypeOriginalImage | EnumIntermediateResultTypeTypedBarcodeZone;
+settings.intermediateResultSavingMode = EnumIntermediateResultSavingModeMemory;
 [barcodeReader updateRuntimeSettings:settings error:&error];
 result = [barcodeReader decodeFileWithName:@"your file path" templateName:@"" error:&error];
 NSArray<iIntermediateResult*>* array = [barcodeReader getIntermediateResult:&error];
@@ -282,7 +283,8 @@ barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV**************
 var result:[iTextResult]?
 var error:NSError? = NSError()
 var settings:iPublicRuntimeSettings! = try! barcodeReader?.getRuntimeSettings()
-settings.intermediateResultTypes = EnumIntermediateResultType.originalImage.rawValue
+settings.intermediateResultTypes = EnumIntermediateResultType.originalImage.rawValue | EnumIntermediateResultType.typedBarcodeZone.rawValue
+settings.intermediateResultSavingMode = .memory
 barcodeReader?.update(settings, error: &error)
 result = try! barcodeReader?.decodeFile(withName: "your file path", templateName: "")
 var array:[iIntermediateResult]? = try! barcodeReader?.getIntermediateResult()

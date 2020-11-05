@@ -57,6 +57,7 @@ The parameters of `ImageParameter` are:
 - ImageParameter.ColourClusteringModes
 - ImageParameter.ColourConversionModes
 - ImageParameter.DeblurLevel
+- ImageParameter.DeblurModes
 - ImageParameter.DeformationResistingModes
 - ImageParameter.Description
 - ImageParameter.DPMCodeReadingModes
@@ -197,6 +198,7 @@ Template used by DBR
     - BinarizationModes
     - ColourClusteringModes
     - ColourConversionModes
+   	- DeblurModes
    	- DeformationResistingModes
     - DPMCodeReadingModes
     - GrayscaleTransformationModes
