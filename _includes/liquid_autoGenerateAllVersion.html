@@ -41,7 +41,7 @@
     <li onclick="changeVersion(this)">Latest Version</li>
 {%- assign historyAry = historyRecode | split: '/' -%}
 {%- for history in historyAry -%}
-    <li onclick="changeVersion(this)">{{ "version " | append: history }}</li>
+    <li onclick="changeVersion(this)"><a class="siteVersionChange" href="{{ site.firstLevelUrl }}{{ page.url }}">{{ "version " | append: history }}</a></li>
 {%- endfor -%}
 </ul>
 
