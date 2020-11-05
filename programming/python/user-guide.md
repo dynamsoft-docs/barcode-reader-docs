@@ -34,7 +34,7 @@ pip install dbr
     from dbr import *
    ```
 
-   Before this, please make sure dbr python package has been installed successful. You can start terminal or command prompt to run command "`pip show dbr`" to show dbr python package information.
+   Please make sure the dbr python package has been successfully installed. You can learn the dbr package information by running command "`pip show dbr`" on terminal or command prompt.
 
 3. Update the main code in `BarcodeReadDemo_python.py`.
 
@@ -68,43 +68,42 @@ pip install dbr
 
 ## Decoding Methods
 
-The SDK provides multiple decoding methods that support reading barcodes from different sources, including static images,
-video stream, files in memory, base64 string, etc. Here is a list of all decoding methods:
+The SDK provides multiple decoding methods that support reading barcodes from different sources, including static image,
+video stream, file in memory, base64 string, etc. Here is a list of all decoding methods:
 
 - [decode_file](api-reference/BarcodeReader/decode.md#decode_file): Reads barcodes from a specified file (BMP, JPEG, PNG, GIF, TIFF or PDF).   
 - [decode_buffer](api-reference/BarcodeReader/decode.md#decode_buffer): Decodes barcodes from the memory buffer containing image pixels in defined format.   
 - [decode_file_stream](api-reference/BarcodeReader/decode.md#decode_file_stream): Decodes barcodes from an image file in memory. 
 
-You can find more samples in more programming languages at [Code Gallery](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx).
+More samples available on [Code Gallery](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx).
 
 ## Barcode Reading Settings
 
-Calling the [decoding methods](#decoding-methods) directly will use the default scanning modes and it will satisfy most of the needs. The SDK also allows you to adjust the scanning settings to optimize the scanning performance for different usage scenarios.   
+By default, the SDK uses the default scanning settings when calling the [decoding methods](#decoding-methods) directly, it could meet the general requirement. The SDK also allows users to customize the scanning settings to optimize the scanning performance for specific usage scenarios.   
    
-There are two ways to change the barcode reading settings - using the PublicRuntimeSettings Class or template. For new
-developers, We recommend you to start with the PublicRuntimeSettings Class; For those who are experienced with the SDK,
-you may use a template which is more flexible and easier to update.
+Users can adjust the scanning settings by calling member function in PublicRuntimeSettings struct or loading runtime setting template. For beginner to the SDK, We recommend you to start with the PublicRuntimeSettings struct; For those who are experienced with the SDK,
+loading template is more flexible and easier to update.
 
 - [Use `PublicRuntimeSettings` Struct to Change Settings](#use-publicruntimesettings-struct-to-change-settings)   
 - [Use A Template to Change Settings](#use-a-template-to-change-settings)   
 
 ### Use [`PublicRuntimeSettings`](api-reference/class/PublicRuntimeSettings.md) Class to Change Settings
 
-Here are some common scanning settings you might find helpful:
+Here are some common scanning settings you may find useful:
 
 - [Specify Barcode Type to Read](#specify-barcode-type-to-read)   
 - [Specify Maximum Barcode Count](#specify-maximum-barcode-count)   
 - [Specify a Scan Region](#specify-a-scan-region)  
 
-For more scanning settings guide, check out the [How To](#how-to-guide) section.
+For detailed scanning settings guide, please check the [How To](#how-to-guide) section.
 
 #### Specify Barcode Type to Read
 
-By default, the SDK will read all the supported barcode formats except Postal Codes and Dotcode from the image. (See [Product Overview]({{ site.introduction }}overview.html) for the full supported barcode list.)   
+By default, the SDK will read all supported barcode formats except Postal Codes and Dotcode. (Check [Product Overview]({{ site.introduction }}overview.html) for the all supported barcode formats list.)   
 
-If your full license only covers some barcode formats, you can use `BarcodeFormatIds` and `BarcodeFormatIds_2` to specify the barcode format(s). Check out [`BarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) and [`BarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2).   
+If your full license only covers some barcode formats, you can use `BarcodeFormatIds` and `BarcodeFormatIds_2` to specify the barcode format(s). Check [`BarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) and [`BarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2).   
 
-For example, to enable only 1D barcode reading, you can use the following code:
+For example, to enable reading only 1D barcode format, you can refer to the following code:
 
 ```python
 license_key = "<your license key here>"
@@ -136,7 +135,7 @@ except BarcodeReaderError as bre:
 
 #### Specify maximum barcode count
 
-By default, the SDK will read as many barcodes as it can. To increase the recognition efficiency, you can use `expectedBarcodesCount` to specify the maximum number of barcodes to recognize according to your scenario. 
+By default, the SDK will read as many barcodes as possible. You can use `expectedBarcodesCount` to specify the maximum number of expected recognized barcodes. 
 
 ```python
    license_key = "<your license key here>"
@@ -168,10 +167,10 @@ By default, the SDK will read as many barcodes as it can. To increase the recogn
 
 ### Specify a scan region
 
-By default, the barcode reader will search the whole image for barcodes. This can lead to poor performance especially when
-dealing with high-resolution images. You can speed up the recognition process by restricting the scanning region.
+By default, the whole image will be searched. This is time-consuming especially when
+dealing with high-resolution images. Users can speed up the recognition process by restricting the scanning region.
 
-To specify a region, you will need to define an area. The following code shows how to create a template string and define the region.
+To specify a region, users need to define an area. The following code shows how to create a template string and define the region.
 
 ```python
    license_key = "<your license key here>"
@@ -207,7 +206,7 @@ To specify a region, you will need to define an area. The following code shows h
 
 ### Use A Template to Change Settings
 
-Besides the option of using the PublicRuntimeSettings struct, the SDK also provides [`init_runtime_settings_with_string`](api-reference/BarcodeReader/parameter-and-runtime-settings-advanced.md#init_runtime_settings_with_string) and [`init_runtime_settings_with_file`](api-reference/BarcodeReader/parameter-and-runtime-settings-advanced.md#init_runtime_settings_with_file) APIs that enable you to use a template to control all the runtime settings. With a template, instead of writing many codes to modify the settings, you can manage all the runtime settings in a JSON file/string.
+Besides the option of using the PublicRuntimeSettings struct, the SDK also provides [`init_runtime_settings_with_string`](api-reference/BarcodeReader/parameter-and-runtime-settings-advanced.md#init_runtime_settings_with_string) and [`init_runtime_settings_with_file`](api-reference/BarcodeReader/parameter-and-runtime-settings-advanced.md#init_runtime_settings_with_file) APIs that enable users to load a template runtime settings. Instead of writing many lines of codes to config the settings, users can edit the runtime settings in a JSON file/string.
 
 ```python
    license_key = "<your license key here>"
@@ -240,7 +239,7 @@ Besides the option of using the PublicRuntimeSettings struct, the SDK also provi
       print(bre)
 ```
 
-Below is a template for your reference. To learn more about the APIs, you can check out [`PublicRuntimeSettings`](api-reference/class/PublicRuntimeSettings.md) class. 
+Below is a template for your reference. To learn more about the APIs, you can check [`PublicRuntimeSettings`](api-reference/class/PublicRuntimeSettings.md). 
 
 ```json
 {
