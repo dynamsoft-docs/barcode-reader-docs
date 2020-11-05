@@ -31,22 +31,11 @@ function UrlReplace()
         }
     }
 
-    var allHerf1 = $(".docContainer,.sideBar").find("a:not(.siteVersionChange)");
+    var allHerf1 = $(".docContainer,.sideBar").find("a");
     for (var i = 0; i < allHerf1.length; i++)
     {
         allHerf1[i].onclick = function(){addParam(this, ver); return false;};
     }
-
-    var replaceDocUrl = document.URL;
-	replaceDocUrl = replaceDocUrl.replace(/\/index-v[0-9]+[^\/]*.html/g,"/");
-    replaceDocUrl = replaceDocUrl.replace(/-v[0-9]+[^\/]*\//g,"/");
-    replaceDocUrl = replaceDocUrl.replace(/-v[0-9]+[^\/]*.html/g,".html");
-
-	if (replaceDocUrl != document.URL){
-		replaceDocUrl = (replaceDocUrl.split(document.domain))[1];
-		replaceDocUrl = replaceDocUrl.substring(test.indexOf('/'));
-		history.replaceState({}, '', replaceDocUrl);
-	}
 }
 
 function RedirToGivenVersionPage(inputVer)
@@ -228,19 +217,12 @@ function changeVersion (liTag)
 	}
 	else{
 		ver = innertext.replace('version ','');
-    }
-    
-    var curUrl = document.URL;
-
-    var aTag = liTag.getElementsByTagName("a");
-    if (aTag != null){
-        curUrl = aTag[0].href;
-    }
-	
-	var srcVal = getUrlVars(document.URL)["src"];
+	}
+	var curUrl = document.URL;
+	var srcVal = getUrlVars(curUrl)["src"];
 	var anchorVar = undefined;
-	if ((document.URL).indexOf("#") != -1){
-		anchorVar = ((document.URL).split("#")).pop();
+	if (curUrl.indexOf("#") != -1){
+		anchorVar = (curUrl.split("#")).pop();
 	}
 
 	if (curUrl.indexOf("?") != -1){
