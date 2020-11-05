@@ -13,6 +13,7 @@ breadcrumbText: Class
 - [`iContour`](iContour.md)	
 - [`iDBRPoint`](iDBRPoint.md)	
 - [`iDataMatrixDetails`](iDataMatrixDetails.md)		
+- [`iDMLTSConnectionParameters`](iDMLTSConnectionParameters.md)	
 - [`iExtendedResult`](iExtendedResult.md)		
 - [`iFrameDecodingParameters`](iFrameDecodingParameters.md)	
 - [`iFurtherModes`](iFurtherModes.md)		

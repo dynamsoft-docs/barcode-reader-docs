@@ -37,6 +37,7 @@ Defines a struct to configure the barcode reading runtime settings. These settin
 | [`minResultConfidence`](#minresultconfidence) | *int* |
 | [`scaleUpModes`](#scaleupmodes) | *int\[\]* |
 | [`pdfReadingMode`](#pdfreadingmode) | *int* | 
+| [`deblurModes`](#deblurmodes) | *int\[\]* |
 
 
 ### terminatePhase
@@ -415,4 +416,25 @@ int com.dynamsoft.barcode.PublicRuntimeSettings.pdfReadingMode
  
 - **See also**    
     [`EnumPDFReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#pdfreadingmode) 
+
+
+### deblurModes
+
+Sets the mode and priority for deblurring.
+
+```java
+int[] com.dynamsoft.barcode.PublicRuntimeSettings.deblurModes
+```
+
+- **Value range**   
+    Each array item can be any one of the [`EnumDeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode) Enumeration items.
+      
+- **Default value**   
+    `[DM_SKIP,DM_SKIP,DM_SKIP,DM_SKIP,DM_SKIP,DM_SKIP,DM_SKIP,DM_SKIP]`
+    
+- **Remarks**   
+    The array index represents the priority of the item. The smaller index is, the higher priority is.
+    
+- **See also**   
+    [`EnumDeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode)
 

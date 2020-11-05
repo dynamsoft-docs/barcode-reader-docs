@@ -46,6 +46,7 @@ Defines a struct to configure the barcode reading runtime settings. These settin
 | [`minResultConfidence`](#minresultconfidence) | *NSInteger* |
 | [`scaleUpModes`](#scaleupmodes) | *NSArray\** |
 | [`pdfReadingMode`](#pdfreadingmode) | [`EnumPDFReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#pdfreadingmode) | 
+| [`deblurModes`](#deblurmodes) | *NSArray\** |
 
 
 ### terminatePhase
@@ -425,3 +426,26 @@ EnumPDFReadingMode pdfReadingMode
  
 - **See also**    
     [`EnumPDFReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#pdfreadingmode) 
+
+
+### deblurModes
+
+Sets the mode and priority for deblurring.
+
+```objc
+NSArray* deblurModes[10]
+```
+
+- **Value range**   
+    Each array item can be any one of the [`EnumDeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode) Enumeration items.
+      
+- **Default value**   
+    ` [EnumDeblurModeSkip, EnumDeblurModeSkip, EnumDeblurModeSkip, EnumDeblurModeSkip, EnumDeblurModeSkip, EnumDeblurModeSkip, EnumDeblurModeSkip, EnumDeblurModeSkip]`
+    
+- **Remarks**   
+    The array index represents the priority of the item. The smaller index is, the higher priority is.
+    
+- **See also**   
+    [`EnumDeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode)
+
+

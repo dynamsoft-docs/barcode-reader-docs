@@ -13,6 +13,7 @@ breadcrumbText: Class
 - [`BarcodeReaderError`](BarcodeReaderError.md)	
 - [`Contour`](Contour.md)	 
 - [`DataMatrixDetailedResult`](DataMatrixDetailedResult.md)	 
+- [`DMLTSConnectionParameters`](DMLTSConnectionParameters.md)	
 - [`ExtendedResult`](ExtendedResult.md)	
 - [`FrameDecodingParameters`](FrameDecodingParameters.md)	
 - [`ImageData`](ImageData.md)	 

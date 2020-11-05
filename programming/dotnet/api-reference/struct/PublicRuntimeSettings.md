@@ -43,6 +43,7 @@ public struct PublicRuntimeSettings
 | [`MinResultConfidence`](#minresultconfidence) | *int* |
 | [`ScaleUpModes`](#scaleupmodes) | [`EnumScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode)[ ] |
 | [`PDFReadingMode`](#pdfreadingmode) | [`EnumPDFReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#pdfreadingmode) | 
+| [`DeblurModes`](#deblurmodes) | [`EnumDeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode)[ ] |
 
 
 ### TerminatePhase
@@ -375,3 +376,21 @@ EnumPDFReadingMode Dynamsoft.Barcode.PublicRuntimeSettings.PDFReadingMode
       
 - **Default value**   
     `EnumPDFReadingMode.PDFRM_AUTO`  
+
+
+### DeblurModes
+Sets the mode and priority for deblurring.
+
+```csharp
+EnumDeblurMode[] Dynamsoft.Barcode.PublicRuntimeSettings.DeblurModes
+```
+
+- **Value range**   
+    Each array item can be any one of the [`EnumDeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode) Enumeration items.
+      
+- **Default value**   
+    `[EnumDeblurMode.DM_SKIP, EnumDeblurMode.DM_SKIP, EnumDeblurMode.DM_SKIP, EnumDeblurMode.DM_SKIP, EnumDeblurMode.DM_SKIP, EnumDeblurMode.DM_SKIP, EnumDeblurMode.DM_SKIP, EnumDeblurMode.DM_SKIP]`
+    
+- **Remarks**   
+    The array index represents the priority of the item. The smaller index is, the higher priority is.
+

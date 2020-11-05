@@ -30,6 +30,7 @@ class PublicRuntimeSetting
 | [`colour_clustering_modes`](#colour_clustering_modes) | list[ [`EnumColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode) ] |
 | [`colour_conversion_modes`](#colour_conversion_modes) | list[ [`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode) ] |
 | [`deblur_level`](#deblurlevel) | *int* |
+| [`deblur_modes`](#deblur_modes) | list[ [`EnumDeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode) ] |
 | [`deformation_resisting_modes`](#deformation_resisting_modes) | list[ [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode) ] |
 | [`dpm_code_reading_modes`](#dpm_code_reading_modes) | list[ [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode) ] |
 | [`expected_barcodes_count`](#expected_barcodes_count) | *int* |
@@ -205,6 +206,24 @@ PublicRuntimeSettings.deblur_level
     
 - **Remarks**   
     If you have a blurry image, you can set this property to a larger value. The higher the value set, the more effort the library will spend to decode images, but it may also slow down the recognition process.
+
+
+### deblur_modes
+Sets the mode and priority for deblurring.
+
+```python
+PublicRuntimeSetting.deblur_modes
+```
+
+- **Value range**   
+    Each list item can be any one of the [`EnumDeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode) Enumeration items.
+      
+- **Default value**   
+    [EnumDeblurMode.DM_SKIP, EnumDeblurMode.DM_SKIP, EnumDeblurMode.DM_SKIP, EnumDeblurMode.DM_SKIP, EnumDeblurMode.DM_SKIP, EnumDeblurMode.DM_SKIP, EnumDeblurMode.DM_SKIP, EnumDeblurMode.DM_SKIP]
+    
+- **Remarks**   
+    The list index represents the priority of the item. The smaller index is, the higher priority is.
+
 
 ### deformation_resisting_modes
 Sets the mode and priority for deformation resisting.

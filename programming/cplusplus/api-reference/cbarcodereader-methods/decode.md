@@ -217,7 +217,7 @@ int CBarcodeReader::InitIntermediateResult(IntermediateResultType intermediateRe
 ```   
    
 #### Parameters
-`[in]	intermediateResultType` The type of the intermediate result to init.
+`[in]	intermediateResultType` The type of the intermediate result to init.  
 `[in, out]	pIntermediateResult` The intermediate result struct.  
 
 #### Return value

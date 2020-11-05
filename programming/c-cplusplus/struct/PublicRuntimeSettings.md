@@ -45,7 +45,8 @@ typedef struct tagPublicRuntimeSettings  PublicRuntimeSettings
 | [`minResultConfidence`](#minresultconfidence) | *int* |
 | [`scaleUpModes`](#scaleupmodes) | [`ScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#scaleupmodes)\[8\] |
 | [`pdfReadingMode`](#pdfreadingmode) | [`PDFReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#pdfreadingmode) | 
-| [`reserved`](#reserved) | *char\[84\]* |
+| [`deblurModes`](#deblurmodes) | [`DeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#DeblurMode)\[10\] | 
+| [`reserved`](#reserved) | *char\[40\]* |
 
 
 ### terminatePhase
@@ -366,6 +367,24 @@ PDFReadingMode tagPublicRuntimeSettings::pdfReadingMode
  
 - **See also**    
     [`PDFReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#pdfreadingmode) 
+
+
+### deblurModes
+Sets the mode and priority for deblurring.
+```cpp
+DeblurMode tagPublicRuntimeSettings::deblurModes[10]
+```
+- **Value range**   
+    Each array item can be any one of the [`DeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode) Enumeration items.
+      
+- **Default value**   
+    `[DM_SKIP,DM_SKIP,DM_SKIP,DM_SKIP,DM_SKIP,DM_SKIP,DM_SKIP,DM_SKIP]`
+    
+- **Remarks**   
+    The array index represents the priority of the item. The smaller index is, the higher priority is.
+    
+- **See also**   
+    [`DeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode)
 
 
 ### reserved
