@@ -267,14 +267,14 @@ Describes the deblur mode.
    
 | Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
 | -------------------------- | ------------------- | ----- | ----------- |
-| DM_SKIP | EnumDeblurModeSkip | 0x00 | TODO |
-| DM_DIRECT_BINARIZATION | EnumDeblurModeDirectBinarization | 0x01 | TODO |
-| DM_THRESHOLD_BINARIZATION | EnumDeblurModeThresholdBinarization | 0x02 | TODO|
-| DM_GRAY_EQUALIZATION | EnumDeblurModeGrayEqualization | 0x04 | TODO |
-| DM_SMOOTHING | EnumDeblurModeSmoothing | 0x08 | TODO |
-| DM_MORPHING | EnumDeblurModeMorphing | 0x10 | TODO |
-| DM_DEEP_ANALYSIS | EnumDeblurModeDeepAnalysis | 0x20 | TODO |
-| DM_SHARPENING | EnumDeblurModeSharpening | 0x40 | TODO |
+| DM_SKIP | EnumDeblurModeSkip | 0x00 | Skips the deblur process. |
+| DM_DIRECT_BINARIZATION | EnumDeblurModeDirectBinarization | 0x01 | Performs deblur process using the direct binarization algorithm. |
+| DM_THRESHOLD_BINARIZATION | EnumDeblurModeThresholdBinarization | 0x02 | Performs deblur process using the threshold binarization algorithm. |
+| DM_GRAY_EQUALIZATION | EnumDeblurModeGrayEqualization | 0x04 | Performs deblur process using the gray equalization algorithm.|
+| DM_SMOOTHING | EnumDeblurModeSmoothing | 0x08 | Performs deblur process using the smoothing algorithm.|
+| DM_MORPHING | EnumDeblurModeMorphing | 0x10 | Performs deblur process using the morphing algorithm.|
+| DM_DEEP_ANALYSIS | EnumDeblurModeDeepAnalysis | 0x20 | Performs deblur process using the deep analysis algorithm. |
+| DM_SHARPENING | EnumDeblurModeSharpening | 0x40 | Performs deblur process using the sharpening algorithm. |
 
 
 
