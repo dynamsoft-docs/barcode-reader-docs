@@ -73,8 +73,6 @@ Sets the parameters passed to the library to load dynamically.
 | *string* | A string value representing parameters. | "" | All `BarcodeComplementMode` items except BCM_SKIP and BCM_AUTO |         
 
 
-- **Remarks**     
-  - If more than one parameter/mode is required by the library, you need to pass all needed parameters/modes at once and our library will handle the rest internally.
 
 
 ### Setting Methods

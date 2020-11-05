@@ -184,10 +184,6 @@ Sets the parameters passed to the library to load dynamically.
 | *string* | A string value representing parameters. | "" | All `ImagePreprocessingMode` items except IPM_SKIP and IPM_AUTO |         
 
 
-- **Remarks**     
-  - If more than one parameter/mode is required by the library, you need to pass all needed parameters/modes at once and our library will handle the rest internally.
-
-
 ### Setting Methods
 
 #### As JSON Parameter

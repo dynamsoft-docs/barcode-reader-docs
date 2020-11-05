@@ -85,8 +85,7 @@ Sets the parameters passed to the library to load dynamically.
 | *string* | A string value representing parameters. | "" | All `ColourClusteringMode` items except CCM_SKIP and CCM_AUTO |         
 
 
-- **Remarks**     
-  - If more than one parameter/mode is required by the library, you need to pass all needed parameters/modes at once and our library will handle the rest internally.
+
 
 
 ### Setting Methods

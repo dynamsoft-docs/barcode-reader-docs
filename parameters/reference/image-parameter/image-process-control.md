@@ -165,10 +165,6 @@ Sets the parameters passed to the library to load dynamically.
 | *string* | A string value representing parameters. | "" | "RPM_GENERAL"<br>"RPM_GENERAL_GRAY_CONTRAST"<br>"RPM_GENERAL_HSV_CONTRAST"<br>"RPM_GENERAL_RGB_CONTRAST" |         
 
 
-- **Remarks**     
-  - If more than one parameter/mode is required by the library, you need to pass all needed parameters/modes at once and our library will handle the rest internally.
-
-
 ### As Json Parameter
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
