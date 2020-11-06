@@ -194,7 +194,7 @@ DBR_DestroyInstance(barcodeReader);
 
 
 ## DBR_InitIntermediateResult
-Decodes barcode from intermediate results.
+Inits an intermediateResult struct with default values.
 
 ```c
 DBR_API int DBR_InitIntermediateResult (IntermediateResultType intermediateResultType, IntermediateResult* pIntermediateResult)	

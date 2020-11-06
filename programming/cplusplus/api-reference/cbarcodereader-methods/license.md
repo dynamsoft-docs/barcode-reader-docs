@@ -194,14 +194,14 @@ CBarcodeReader::InitLicenseFromLTS(&paramters);
 &nbsp;
 
 ## InitLicenseFromLTS
-Initializes a DM_LTSConnectionParameters struct with default values.
+Initializes the barcode reader license and connects to the specified server for online verification.
 
 ```cpp
 static int CBarcodeReader::InitLicenseFromLTS(DM_LTSConnectionParameters *pLTSConnectionParameters, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)
 ```   
    
 #### Parameters
-`[in, out] pLTSConnectionParameters` The struct DMLTSConnectionParameters with customized settings.   
+`[in] pLTSConnectionParameters` The struct DMLTSConnectionParameters with customized settings.   
 `[in, out] errorMsgBuffer`<sub>Optional</sub> The buffer is allocated by the caller and the recommended length is 256. The error message will be copied to the buffer.  
 `[in]	errorMsgBufferLen`<sub>Optional</sub> The length of the allocated buffer.  
 

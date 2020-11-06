@@ -210,7 +210,7 @@ delete reader;
 
 
 ## InitIntermediateResult
-Decodes barcode from intermediate results.
+Inits an intermediateResult struct with default values.
 
 ```cpp
 int CBarcodeReader::InitIntermediateResult(IntermediateResultType intermediateResultType, IntermediateResult* pIntermediateResult)	
@@ -239,12 +239,12 @@ CBarcodeReader::InitIntermediateResult(IRT_ORIGINAL_IMAGE, &imResult);
 Decodes barcode from intermediate results.
 
 ```cpp
-int CBarcodeReader::DecodeIntermediateResults(const IntermediateResultArray *pIntermediateResultArray, const char* pTemplateName)	
+int CBarcodeReader::DecodeIntermediateResults(const IntermediateResultArray *pIntermediateResultArray, const char* pTemplateName = "")	
 ```   
    
 #### Parameters
 `[in]	pIntermediateResultArray` The intermediate result array for decoding.  
-`[in]	pTemplateName` The template name.
+`[in]	pTemplateName`<sub>Optional</sub> The template name.
 
 #### Return value
 Returns error code (returns 0 if the function operates successfully).    
