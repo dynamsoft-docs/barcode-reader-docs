@@ -171,6 +171,22 @@ div::-webkit-scrollbar-corner, ul::-webkit-scrollbar-corner{
 	color: #FE8E14;
 }
 
+.dbrThanksDownloading {
+	display: none; 
+	background: #F5F5F5; 
+	color: #323234; 
+	padding: 30px 20px; 
+	text-align: center; 
+	margin-bottom: 20px;
+}
+
+.dbrThanksDownloading .thanksDownloadTitle {
+	color: #323234; 
+	font-size: 24px; 
+	line-height: 36px; 
+	margin-bottom: 5px;
+}
+
 
 @media (min-width: 768px) {
 	.h1, h1 {font-size:36px;font-size:3.6rem;line-height:48px}
@@ -187,6 +203,17 @@ div::-webkit-scrollbar-corner, ul::-webkit-scrollbar-corner{
 	.subHeaderMenuUl .btn { padding: 0 10px; }
 	#fullTreeMenuListContainer ul { font-size: 14px; }
 	.container .docContainer .head  .editLinkColour  { padding: 0; }
+}
+
+@media (max-width: 1400px) { 
+	.dbrThanksDownloading {  padding: 30px 10px;}
+	.dbrThanksDownloading p { font-size: 14px; }
+	.dbrThanksDownloading .thanksDownloadTitle {
+		color: #323234; 
+		font-size: 20px; 
+		line-height: 30px; 
+		margin-bottom: 5px;
+	}
 }
 
 @media (max-width: 1679px) {
