@@ -167,7 +167,7 @@ By default, the SDK will read as many barcodes as possible. You can use `expecte
 
 ### Specify a scan region
 
-By default, the whole image will be searched. This is time-consuming especially when
+By default, the whole image will be searched. This is time-consuming, especially when
 dealing with high-resolution images. Users can speed up the recognition process by restricting the scanning region.
 
 To specify a region, users need to define an area. The following code shows how to create a template string and define the region.
