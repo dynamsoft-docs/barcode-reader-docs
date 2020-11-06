@@ -116,7 +116,7 @@ ul.circle > li p:hover, ul.circle li.on p, ul.square > li.on p, ul.square > li p
 
 #TryFreeDownload .discription { max-width: 800px; text-align: center; margin: 20px auto 0; }
 
-#compatibleInfo { background: #f5f5f5; padding: 10px;margin-bottom: 10px; }
+#compatibleInfo { background: #ebebeb; padding: 10px;margin-bottom: 10px; }
 #compatibleInfo p { margin-bottom: 0; font-family: Oswald-Light; }
 #compatibleInfo p.compatibleCurVersion  { font-family: Oswald; }
 
