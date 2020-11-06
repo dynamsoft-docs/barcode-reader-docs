@@ -34,84 +34,84 @@ Stores the localization result.
 ### terminatePhase
 The terminate phase of localization result.
 ```java
-int com.dynamsoft.barcode.LocalizationResult.terminatePhase
+int com.dynamsoft.dbr.LocalizationResult.terminatePhase
 ```
 
 ### barcodeFormat
 Barcode type in BarcodeFormat group 1.
 ```java
-int com.dynamsoft.barcode.LocalizationResult.barcodeFormat
+int com.dynamsoft.dbr.LocalizationResult.barcodeFormat
 ```
 
 ### barcodeFormatString
 Barcode type in BarcodeFormat group 1 as string.
 ```java
-String com.dynamsoft.barcode.LocalizationResult.barcodeFormatString
+String com.dynamsoft.dbr.LocalizationResult.barcodeFormatString
 ```
 
 ### barcodeFormat_2
 Barcode type in BarcodeFormat group 2.
 ```java
-int com.dynamsoft.barcode.LocalizationResult.barcodeFormat_2
+int com.dynamsoft.dbr.LocalizationResult.barcodeFormat_2
 ```
 
 ### barcodeFormatString_2
 Barcode type in BarcodeFormat group 2 as string.
 ```java
-String com.dynamsoft.barcode.LocalizationResult.barcodeFormatString_2
+String com.dynamsoft.dbr.LocalizationResult.barcodeFormatString_2
 ```
 
 ### resultPoints
 The vertices coordinates information of the barcode region.
 ```java
-Point[] com.dynamsoft.barcode.LocalizationResult.resultPoints
+Point[] com.dynamsoft.dbr.LocalizationResult.resultPoints
 ```
 
 ### angle
 The angle of a barcode. Values range is from 0 to 360.
 ```java
-int com.dynamsoft.barcode.LocalizationResult.angle
+int com.dynamsoft.dbr.LocalizationResult.angle
 ```
 
 ### moduleSize
 The barcode module size (the minimum bar width in pixel).
 ```java
-int com.dynamsoft.barcode.LocalizationResult.moduleSize
+int com.dynamsoft.dbr.LocalizationResult.moduleSize
 ```
 
 ### pageNumber
 The page number the barcode located in. The index is 0-based.
 ```java
-int com.dynamsoft.barcode.LocalizationResult.pageNumber
+int com.dynamsoft.dbr.LocalizationResult.pageNumber
 ```
 
 ### regionName
 The region name the barcode located in.
 ```java
-String com.dynamsoft.barcode.LocalizationResult.regionName
+String com.dynamsoft.dbr.LocalizationResult.regionName
 ```
 
 ### documentName
 The document name.
 ```java
-String com.dynamsoft.barcode.LocalizationResult.documentName
+String com.dynamsoft.dbr.LocalizationResult.documentName
 ```
 
 ### resultCoordinateType
 The coordinate type.
 ```java
-int com.dynamsoft.barcode.LocalizationResult.resultCoordinateType
+int com.dynamsoft.dbr.LocalizationResult.resultCoordinateType
 ```
 
 ### accompanyingTextBytes
 The accompanying text content in a byte array.
 ```java
-byte[] com.dynamsoft.barcode.LocalizationResult.accompanyingTextBytes
+byte[] com.dynamsoft.dbr.LocalizationResult.accompanyingTextBytes
 ```
 
 ### confidence
 The confidence of the localization result.
 ```java
-int com.dynamsoft.barcode.LocalizationResult.confidence
+int com.dynamsoft.dbr.LocalizationResult.confidence
 ```
 

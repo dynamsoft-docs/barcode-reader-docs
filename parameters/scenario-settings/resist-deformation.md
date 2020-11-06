@@ -44,7 +44,7 @@ reader->UpdateRuntimeSettings(runtimeSettings, sError, 512); // Update the runti
 reader->DecodeFile("Insert your image file path", ""); // Start decoding
 TextResultArray* paryResult = NULL;  
 reader->GetAllTextResults(&paryResult); // Get results
-CBarcodeReader::FreeTextResults(&paryResult);  
+dynamsoft::dbr::CBarcodeReader::FreeTextResults(&paryResult);  
 delete runtimeSettings;  
 delete reader;  
 ```

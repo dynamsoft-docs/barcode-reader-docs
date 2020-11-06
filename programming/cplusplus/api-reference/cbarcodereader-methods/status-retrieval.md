@@ -25,7 +25,7 @@ needAutoGenerateSidebar: true
 Get error message by error code.
 
 ```cpp
-static const char* CBarcodeReader::GetErrorString (const int iErrorCode)
+static const char* dynamsoft::dbr::CBarcodeReader::GetErrorString (const int iErrorCode)
 ```
 
 #### Parameters
@@ -39,7 +39,7 @@ The error message.
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
 int errorCode = reader->DecodeFile("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\AllSupportedBarcodeTypes.tif", "");
-const char* errorString = CBarcodeReader::GetErrorString(errorCode);
+const char* errorString = dynamsoft::dbr::CBarcodeReader::GetErrorString(errorCode);
 delete reader;
 ```
 
@@ -54,7 +54,7 @@ delete reader;
 Get version information of SDK.
 
 ```cpp
-static const char* CBarcodeReader::GetVersion ()
+static const char* dynamsoft::dbr::CBarcodeReader::GetVersion ()
 ```
 
 #### Return value
@@ -62,5 +62,5 @@ The version information string.
 
 #### Code Snippet
 ```cpp
-const char* versionInfo = CBarcodeReader::GetVersion();
+const char* versionInfo = dynamsoft::dbr::CBarcodeReader::GetVersion();
 ```

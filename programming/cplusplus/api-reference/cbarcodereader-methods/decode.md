@@ -29,7 +29,7 @@ needAutoGenerateSidebar: true
 Decode barcodes from a specified image file.
 
 ```cpp
-int CBarcodeReader::DecodeFile (const char* pFileName, const char* pTemplateName = "")	
+int dynamsoft::dbr::CBarcodeReader::DecodeFile (const char* pFileName, const char* pTemplateName = "")	
 ```   
    
 #### Parameters
@@ -62,7 +62,7 @@ delete reader;
 Decode barcodes from an image file in memory.   
 
 ```cpp
-int CBarcodeReader::DecodeFileInMemory (const unsigned char* pFileBytes, int fileSize, const char* pTemplateName = "")	
+int dynamsoft::dbr::CBarcodeReader::DecodeFileInMemory (const unsigned char* pFileBytes, int fileSize, const char* pTemplateName = "")	
 ```   
    
 #### Parameters
@@ -99,7 +99,7 @@ delete reader;
 Decode barcodes from the memory buffer containing image pixels in defined format.
 
 ```cpp
-int CBarcodeReader::DecodeBuffer (const unsigned char* pBufferBytes, const int iWidth, const int iHeight, const int iStride, const ImagePixelFormat format, const char* pszTemplateName = "")		
+int dynamsoft::dbr::CBarcodeReader::DecodeBuffer (const unsigned char* pBufferBytes, const int iWidth, const int iHeight, const int iStride, const ImagePixelFormat format, const char* pszTemplateName = "")		
 ```   
    
 #### Parameters
@@ -142,7 +142,7 @@ delete reader;
 Decode barcode from an image file encoded as a base64 string.
 
 ```cpp
-int CBarcodeReader::DecodeBase64String (const char* pBase64String, const char* pTemplateName = "")	
+int dynamsoft::dbr::CBarcodeReader::DecodeBase64String (const char* pBase64String, const char* pTemplateName = "")	
 ```   
    
 #### Parameters
@@ -180,7 +180,7 @@ delete reader;
 Decode barcode from a handle of device-independent bitmap (DIB).
 
 ```cpp
-int CBarcodeReader::DecodeDIB (const HANDLE hDIB, const char* pszTemplateName = "")	
+int dynamsoft::dbr::CBarcodeReader::DecodeDIB (const HANDLE hDIB, const char* pszTemplateName = "")	
 ```   
    
 #### Parameters
@@ -213,7 +213,7 @@ delete reader;
 Inits an intermediateResult struct with default values.
 
 ```cpp
-int CBarcodeReader::InitIntermediateResult(IntermediateResultType intermediateResultType, IntermediateResult* pIntermediateResult)	
+int dynamsoft::dbr::CBarcodeReader::InitIntermediateResult(IntermediateResultType intermediateResultType, IntermediateResult* pIntermediateResult)	
 ```   
    
 #### Parameters
@@ -227,7 +227,7 @@ Returns error code (returns 0 if the function operates successfully).
 #### Code Snippet
 ```c
 IntermediateResult imResult;
-CBarcodeReader::InitIntermediateResult(IRT_ORIGINAL_IMAGE, &imResult);
+dynamsoft::dbr::CBarcodeReader::InitIntermediateResult(IRT_ORIGINAL_IMAGE, &imResult);
 ```
 
 
@@ -239,7 +239,7 @@ CBarcodeReader::InitIntermediateResult(IRT_ORIGINAL_IMAGE, &imResult);
 Decodes barcode from intermediate results.
 
 ```cpp
-int CBarcodeReader::DecodeIntermediateResults(const IntermediateResultArray *pIntermediateResultArray, const char* pTemplateName = "")	
+int dynamsoft::dbr::CBarcodeReader::DecodeIntermediateResults(const IntermediateResultArray *pIntermediateResultArray, const char* pTemplateName = "")	
 ```   
    
 #### Parameters

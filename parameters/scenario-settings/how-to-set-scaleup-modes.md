@@ -71,7 +71,7 @@ for (int i = 0; i < iCount; i++)
     printf("Text: %s", paryResult->results[i]->barcodeText); // Print results
 }
 
-CBarcodeReader::FreeTextResults(&paryResult);
+dynamsoft::dbr::CBarcodeReader::FreeTextResults(&paryResult);
 delete runtimeSettings;
 delete reader;
 ```
@@ -110,7 +110,7 @@ for (int i = 0; i < iCount; i++)
     printf("Text: %s", paryResult->results[i]->barcodeText); // Print results
 }
 
-CBarcodeReader::FreeTextResults(&paryResult);
+dynamsoft::dbr::CBarcodeReader::FreeTextResults(&paryResult);
 delete reader;
 ```
 

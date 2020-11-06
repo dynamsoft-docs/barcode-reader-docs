@@ -30,19 +30,19 @@ public class SamplingImageData
 The sampling image data in a byte array.
 
 ```csharp
-byte[] Dynamsoft.Barcode.SamplingImageData.Bytes
+byte[] Dynamsoft.DBR.SamplingImageData.Bytes
 ```
 
 ### Width
 The width of the sampling image.
 
 ```csharp
-int Dynamsoft.Barcode.SamplingImageData.Width
+int Dynamsoft.DBR.SamplingImageData.Width
 ```
 
 ### Height
 The height of the sampling image.
 
 ```csharp
-int Dynamsoft.Barcode.SamplingImageData.Height
+int Dynamsoft.DBR.SamplingImageData.Height
 ```

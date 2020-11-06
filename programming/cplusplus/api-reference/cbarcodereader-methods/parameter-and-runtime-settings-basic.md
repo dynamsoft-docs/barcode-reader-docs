@@ -28,7 +28,7 @@ Set argument value for the specified mode parameter.
 
 
 ```cpp
-int CBarcodeReader::SetModeArgument (const char* pModesName, const int index, const char* pArgumentName, const char* pArgumentValue, char errorMsgBuffer[] = NULL,  onst int errorMsgBufferLen = 0)	
+int dynamsoft::dbr::CBarcodeReader::SetModeArgument (const char* pModesName, const int index, const char* pArgumentName, const char* pArgumentValue, char errorMsgBuffer[] = NULL,  onst int errorMsgBufferLen = 0)	
 ```   
 #### Parameters
 `[in]	pModesName` The mode parameter name to set argument.  
@@ -84,7 +84,7 @@ delete reader;
 Get argument value for the specified mode parameter.
 
 ```cpp
-int CBarcodeReader::GetModeArgument (const char* pModesName, const int index, const char* pArgumentName, char valueBuffer[], const int valueBufferLen, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)	
+int dynamsoft::dbr::CBarcodeReader::GetModeArgument (const char* pModesName, const int index, const char* pArgumentName, char valueBuffer[], const int valueBufferLen, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)	
 ```   
    
 #### Parameters  
@@ -144,7 +144,7 @@ delete reader;
 Get current settings and save them into a [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) struct.
 
 ```cpp
-int CBarcodeReader::GetRuntimeSettings (PublicRuntimeSettings* psettings)	
+int dynamsoft::dbr::CBarcodeReader::GetRuntimeSettings (PublicRuntimeSettings* psettings)	
 ```   
 
 #### Parameters
@@ -175,7 +175,7 @@ delete reader;
 Update runtime settings with a given [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) struct.
 
 ```cpp
-int CBarcodeReader::UpdateRuntimeSettings (PublicRuntimeSettings* pSettings, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)
+int dynamsoft::dbr::CBarcodeReader::UpdateRuntimeSettings (PublicRuntimeSettings* pSettings, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)
 ```   
    
 #### Parameters
@@ -211,7 +211,7 @@ delete reader;
 Reset all parameters to default values.
 
 ```cpp
-int CBarcodeReader::ResetRuntimeSettings ()
+int dynamsoft::dbr::CBarcodeReader::ResetRuntimeSettings ()
 ```   
 
 #### Return value

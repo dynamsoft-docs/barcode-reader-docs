@@ -43,7 +43,7 @@ Defines a struct to configure the barcode reading runtime settings. These settin
 ### terminatePhase
 Sets the phase to stop the barcode reading algorithm.
 ```java
-int com.dynamsoft.barcode.PublicRuntimeSettings.terminatePhase
+int com.dynamsoft.dbr.PublicRuntimeSettings.terminatePhase
 ```
 - **Value range**   
     Any one of the [`EnumTerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase) Enumeration items
@@ -61,7 +61,7 @@ int com.dynamsoft.barcode.PublicRuntimeSettings.terminatePhase
 ### timeout
 Sets the maximum amount of time (in milliseconds) that should be spent searching for a barcode per page. It does not include the time taken to load/decode an image (TIFF, PNG, etc.) from disk into memory.
 ```java
-int com.dynamsoft.barcode.PublicRuntimeSettings.timeout
+int com.dynamsoft.dbr.PublicRuntimeSettings.timeout
 ```
 - **Value range**   
     [0, 0x7fffffff]
@@ -76,7 +76,7 @@ int com.dynamsoft.barcode.PublicRuntimeSettings.timeout
 ### maxAlgorithmThreadCount
 Sets the number of threads the image processing algorithm will use to decode barcodes.
 ```java
-int com.dynamsoft.barcode.PublicRuntimeSettings.timeout
+int com.dynamsoft.dbr.PublicRuntimeSettings.timeout
 ```
 - **Value range**   
     [1, 4]
@@ -90,7 +90,7 @@ int com.dynamsoft.barcode.PublicRuntimeSettings.timeout
 ### expectedBarcodesCount
 Sets the number of barcodes expected to be detected for each image.
 ```java
-int com.dynamsoft.barcode.PublicRuntimeSettings.expectedBarcodesCount
+int com.dynamsoft.dbr.PublicRuntimeSettings.expectedBarcodesCount
 ```
 - **Value range**   
     [0, 0x7fffffff]
@@ -104,7 +104,7 @@ int com.dynamsoft.barcode.PublicRuntimeSettings.expectedBarcodesCount
 ### barcodeFormatIds
 Sets the formats of the barcode in BarcodeFormat group 1 to be read. Barcode formats in BarcodeFormat group 1 can be combined.
 ```java
-int com.dynamsoft.barcode.PublicRuntimeSettings.barcodeFormatIds
+int com.dynamsoft.dbr.PublicRuntimeSettings.barcodeFormatIds
 ```
 - **Value range**   
     A combined value of [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) Enumeration items
@@ -121,7 +121,7 @@ int com.dynamsoft.barcode.PublicRuntimeSettings.barcodeFormatIds
 ### barcodeFormatIds_2
 Sets the formats of the barcode in BarcodeFormat group 2 to be read. Barcode formats in BarcodeFormat group 2 can be combined.
 ```java
-int com.dynamsoft.barcode.PublicRuntimeSettings.barcodeFormatIds_2
+int com.dynamsoft.dbr.PublicRuntimeSettings.barcodeFormatIds_2
 ```
 - **Value range**   
     A combined value of [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) Enumeration items
@@ -138,7 +138,7 @@ int com.dynamsoft.barcode.PublicRuntimeSettings.barcodeFormatIds_2
 ### pdfRasterDPI
 Sets the output image resolution.
 ```java
-int com.dynamsoft.barcode.PublicRuntimeSettings.pdfRasterDPI
+int com.dynamsoft.dbr.PublicRuntimeSettings.pdfRasterDPI
 ```
 - **Value range**   
     [100, 600]
@@ -152,7 +152,7 @@ int com.dynamsoft.barcode.PublicRuntimeSettings.pdfRasterDPI
 ### scaleDownThreshold
 Sets the threshold for the image shrinking.
 ```java
-int com.dynamsoft.barcode.PublicRuntimeSettings.scaleDownThreshold
+int com.dynamsoft.dbr.PublicRuntimeSettings.scaleDownThreshold
 ```
 - **Value range**   
     [512, 0x7fffffff]
@@ -166,7 +166,7 @@ int com.dynamsoft.barcode.PublicRuntimeSettings.scaleDownThreshold
 ### binarizationModes
 Sets the mode and priority for binarization.
 ```java
-int[] com.dynamsoft.barcode.PublicRuntimeSettings.binarizationModes
+int[] com.dynamsoft.dbr.PublicRuntimeSettings.binarizationModes
 ```
 - **Value range**   
     Each array item can be any one of the [`EnumBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) Enumeration items.
@@ -184,7 +184,7 @@ int[] com.dynamsoft.barcode.PublicRuntimeSettings.binarizationModes
 ### localizationModes
 Sets the mode and priority for localization algorithms.
 ```java
-int[] com.dynamsoft.barcode.PublicRuntimeSettings.localizationModes
+int[] com.dynamsoft.dbr.PublicRuntimeSettings.localizationModes
 ```
 - **Value range**   
     Each array item can be any one of the [`EnumLocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode) Enumeration items.
@@ -202,13 +202,13 @@ int[] com.dynamsoft.barcode.PublicRuntimeSettings.localizationModes
 ### furtherModes
 Sets further modes.
 ```java
-FurtherModes com.dynamsoft.barcode.PublicRuntimeSettings.furtherModes
+FurtherModes com.dynamsoft.dbr.PublicRuntimeSettings.furtherModes
 ```
 
 ### deblurLevel
 Sets the degree of blurriness of the barcode.
 ```java
-int com.dynamsoft.barcode.PublicRuntimeSettings.deblurLevel
+int com.dynamsoft.dbr.PublicRuntimeSettings.deblurLevel
 ```
 - **Value range**   
     [0, 9]
@@ -222,7 +222,7 @@ int com.dynamsoft.barcode.PublicRuntimeSettings.deblurLevel
 ### intermediateResultTypes
 Sets which types of intermediate result to be kept for further reference. Intermediate result types can be combined.
 ```java
-int com.dynamsoft.barcode.PublicRuntimeSettings.intermediateResultTypes
+int com.dynamsoft.dbr.PublicRuntimeSettings.intermediateResultTypes
 ```
 - **Value range**   
     A combined value of [`EnumIntermediateResultType`]({{ site.enumerations }}result-enums.html#intermediateresulttype) Enumeration items
@@ -236,7 +236,7 @@ int com.dynamsoft.barcode.PublicRuntimeSettings.intermediateResultTypes
 ### intermediateResultSavingMode
 Sets the mode for saving intermediate result.
 ```java
-int com.dynamsoft.barcode.PublicRuntimeSettings.intermediateResultSavingMode
+int com.dynamsoft.dbr.PublicRuntimeSettings.intermediateResultSavingMode
 ```
 - **Value range**   
     A value of [`EnumIntermediateResultSavingMode`]({{ site.enumerations }}result-enums.html#intermediateresultsavingmode) Enumeration items
@@ -250,7 +250,7 @@ int com.dynamsoft.barcode.PublicRuntimeSettings.intermediateResultSavingMode
 ### resultCoordinateType
 Specifies the format for the coordinates returned.
 ```java
-int com.dynamsoft.barcode.PublicRuntimeSettings.resultCoordinateType
+int com.dynamsoft.dbr.PublicRuntimeSettings.resultCoordinateType
 ```
 - **Value range**   
     Any one of the [`EnumResultCoordinateType`]({{ site.enumerations }}result-enums.html#resultcoordinatetype) Enumeration items
@@ -265,7 +265,7 @@ int com.dynamsoft.barcode.PublicRuntimeSettings.resultCoordinateType
 ### textResultOrderModes
 Sets the mode and priority for the order of the text results returned.
 ```java
-int[] com.dynamsoft.barcode.PublicRuntimeSettings.textResultOrderModes
+int[] com.dynamsoft.dbr.PublicRuntimeSettings.textResultOrderModes
 ```
 - **Value range**   
     Each array item can be any one of the [`EnumTextResultOrderMode`]({{ site.enumerations }}result-enums.html#textresultordermode) Enumeration items.
@@ -282,7 +282,7 @@ int[] com.dynamsoft.barcode.PublicRuntimeSettings.textResultOrderModes
 ### returnBarcodeZoneClarity
 Sets whether or not to return the clarity of the barcode zone.
 ```java
-int com.dynamsoft.barcode.PublicRuntimeSettings.returnBarcodeZoneClarity
+int com.dynamsoft.dbr.PublicRuntimeSettings.returnBarcodeZoneClarity
 ```
 - **Value range**   
     [0,1]
@@ -296,13 +296,13 @@ int com.dynamsoft.barcode.PublicRuntimeSettings.returnBarcodeZoneClarity
 ### region
 Sets the region definition including regionTop, regionLeft, regionRight, regionBottom, and regionMeasuredByPercentage.
 ```java
-RegionDefinition com.dynamsoft.barcode.PublicRuntimeSettings.region
+RegionDefinition com.dynamsoft.dbr.PublicRuntimeSettings.region
 ```
 
 ### minBarcodeTextLength
 Sets the range of barcode text length for barcodes search.
 ```java
-int com.dynamsoft.barcode.PublicRuntimeSettings.minBarcodeTextLength
+int com.dynamsoft.dbr.PublicRuntimeSettings.minBarcodeTextLength
 ```
 - **Value range**   
     [0, 0x7fffffff]
@@ -316,7 +316,7 @@ int com.dynamsoft.barcode.PublicRuntimeSettings.minBarcodeTextLength
 ### minResultConfidence
 The minimum confidence of the result.
 ```java
-int com.dynamsoft.barcode.PublicRuntimeSettings.minResultConfidence
+int com.dynamsoft.dbr.PublicRuntimeSettings.minResultConfidence
 ```
 - **Value range**   
     [0, 100]
@@ -330,7 +330,7 @@ int com.dynamsoft.barcode.PublicRuntimeSettings.minResultConfidence
 ### scaleUpModes
 Sets the mode and priority to control the sampling methods of scale-up for linear barcode with small module sizes.
 ```java
-int[] com.dynamsoft.barcode.PublicRuntimeSettings.scaleUpModes[]
+int[] com.dynamsoft.dbr.PublicRuntimeSettings.scaleUpModes[]
 ```
 - **Value range**   
     Each array item can be any one of the [`EnumScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode) Enumeration items.
@@ -348,7 +348,7 @@ int[] com.dynamsoft.barcode.PublicRuntimeSettings.scaleUpModes[]
 ### pdfReadingMode
 Sets the way to detect barcodes from a PDF file when using the DecodeFile method.
 ```java
-int com.dynamsoft.barcode.PublicRuntimeSettings.pdfReadingMode
+int com.dynamsoft.dbr.PublicRuntimeSettings.pdfReadingMode
 ```
 - **Value range**   
     Any one of the [`EnumPDFReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#pdfreadingmode) Enumeration items. 
@@ -363,7 +363,7 @@ int com.dynamsoft.barcode.PublicRuntimeSettings.pdfReadingMode
 ### deblurModes
 Sets the mode and priority for deblurring.
 ```java
-int[] com.dynamsoft.barcode.PublicRuntimeSettings.deblurModes
+int[] com.dynamsoft.dbr.PublicRuntimeSettings.deblurModes
 ```
 - **Value range**   
     Each array item can be any one of the [`EnumDeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode) Enumeration items.

@@ -24,7 +24,7 @@ Stores an x- and y-coordinate pair in two-dimensional space.
 The X coordinate of the point.
 
 ```java
-int com.dynamsoft.barcode.Point.x
+int com.dynamsoft.dbr.Point.x
 ```
 
 ### y
@@ -32,5 +32,5 @@ int com.dynamsoft.barcode.Point.x
 The Y coordinate of the point.
 
 ```java
-int com.dynamsoft.barcode.Point.y
+int com.dynamsoft.dbr.Point.y
 ```

@@ -97,7 +97,7 @@ Code snippet in C++:
     TextResultArray* result = NULL;
     reader->GetAllTextResults(&result);                   // Get results
     int icount = result->resultsCount;
-    CBarcodeReader::FreeTextResults(&result);
+    dynamsoft::dbr::CBarcodeReader::FreeTextResults(&result);
     delete runtimeSettings;
     delete reader;
 ```

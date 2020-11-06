@@ -28,7 +28,7 @@ Sets the optional argument for a specified mode in Modes parameters.
 
 
 ```java
-void com.dynamsoft.barcode.BarcodeReader.setModeArgument(String modesName, int index, String argumentName, String argumentValue)	throws BarcodeReaderException
+void com.dynamsoft.dbr.BarcodeReader.setModeArgument(String modesName, int index, String argumentName, String argumentValue)	throws BarcodeReaderException
 ```   
 #### Parameters
 `modesName` The mode parameter name to set argument.  
@@ -78,7 +78,7 @@ reader.destroy();
 Gets the optional argument for a specified mode in Modes parameters.
 
 ```java
-String com.dynamsoft.barcode.BarcodeReader.getModeArgument(String modesName, int index, String argumentName) throws BarcodeReaderException
+String com.dynamsoft.dbr.BarcodeReader.getModeArgument(String modesName, int index, String argumentName) throws BarcodeReaderException
 ```   
    
 #### Parameters  
@@ -131,7 +131,7 @@ reader.destroy();
 Get current settings and save them into a [`PublicRuntimeSettings`](../class/PublicRuntimeSettings.md) struct.
 
 ```java
-PublicRuntimeSettings com.dynamsoft.barcode.BarcodeReader.getRuntimeSettings() throws BarcodeReaderException	
+PublicRuntimeSettings com.dynamsoft.dbr.BarcodeReader.getRuntimeSettings() throws BarcodeReaderException	
 ```   
  
 #### Return value
@@ -158,7 +158,7 @@ reader.destroy();
 Update runtime settings with a given [`PublicRuntimeSettings`](../class/PublicRuntimeSettings.md) struct.
 
 ```java
-void com.dynamsoft.barcode.BarcodeReader.updateRuntimeSettings(PublicRuntimeSettings settings) throws BarcodeReaderException
+void com.dynamsoft.dbr.BarcodeReader.updateRuntimeSettings(PublicRuntimeSettings settings) throws BarcodeReaderException
 ```   
    
 #### Parameters
@@ -187,7 +187,7 @@ reader.destroy();
 Reset all parameters to default values.
 
 ```java
-void com.dynamsoft.barcode.BarcodeReader.resetRuntimeSettings()	throws BarcodeReaderException
+void com.dynamsoft.dbr.BarcodeReader.resetRuntimeSettings()	throws BarcodeReaderException
 
 #### Exceptions
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)

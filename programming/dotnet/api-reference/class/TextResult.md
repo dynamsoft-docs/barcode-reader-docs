@@ -36,61 +36,61 @@ public class TextResult
 Barcode type in BarcodeFormat group 1.
 
 ```csharp
-EnumBarcodeFormat Dynamsoft.Barcode.TextResult.BarcodeFormat
+EnumBarcodeFormat Dynamsoft.DBR.TextResult.BarcodeFormat
 ```
 
 ### BarcodeFormatString
 Barcode type in BarcodeFormat group 1 as string.
 
 ```csharp
-string Dynamsoft.Barcode.TextResult.BarcodeFormatString
+string Dynamsoft.DBR.TextResult.BarcodeFormatString
 ```
 
 ### BarcodeFormat_2
 Barcode type in BarcodeFormat group 2.
 
 ```csharp
-EnumBarcodeFormat_2 Dynamsoft.Barcode.TextResult.BarcodeFormat_2
+EnumBarcodeFormat_2 Dynamsoft.DBR.TextResult.BarcodeFormat_2
 ```
 
 ### BarcodeFormatString_2
 Barcode type in BarcodeFormat group 2 as string.
 
 ```csharp
-string Dynamsoft.Barcode.TextResult.BarcodeFormatString_2
+string Dynamsoft.DBR.TextResult.BarcodeFormatString_2
 ```
 
 ### BarcodeText
 The barcode text, ends by '\0'.
 
 ```csharp
-string Dynamsoft.Barcode.TextResult.BarcodeText
+string Dynamsoft.DBR.TextResult.BarcodeText
 ```
 
 ### BarcodeBytes
 The barcode content in a byte array.
 
 ```csharp
-byte[] Dynamsoft.Barcode.TextResult.BarcodeBytes
+byte[] Dynamsoft.DBR.TextResult.BarcodeBytes
 ```
 
 ### LocalizationResult
 The corresponding localization result.
 
 ```csharp
-LocalizationResult Dynamsoft.Barcode.TextResult.LocalizationResult
+LocalizationResult Dynamsoft.DBR.TextResult.LocalizationResult
 ```
 
 ### DetailedResult
 One of the following: [`QRCodeDetails`](QRCodeDetails.md), [`PDF417Details`](PDF417Details.md), [`DataMatrixDetails`](DataMatrixDetails.md), [`AztecDetails`](AztecDetails.md), [`OneDCodeDetails`](OneDCodeDetails.md).
 
 ```csharp
-object Dynamsoft.Barcode.TextResult.DetailedResult
+object Dynamsoft.DBR.TextResult.DetailedResult
 ```
 
 ### Results
 The extended result array.
 
 ```csharp
-ExtendedResult[] Dynamsoft.Barcode.TextResult.Results
+ExtendedResult[] Dynamsoft.DBR.TextResult.Results
 ```

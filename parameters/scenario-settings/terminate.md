@@ -24,7 +24,7 @@ runtimeSettings->timeout = 1000; //set timeout
 reader->UpdateRuntimeSettings(runtimeSettings, sError, 512); //Update runtimesettings     
 reader->DecodeFile("input your file path", ""); //Decoding  
 reader->GetAllTextResults(&paryResult); //Get results     
-CBarcodeReader::FreeTextResults(&paryResult);   
+dynamsoft::dbr::CBarcodeReader::FreeTextResults(&paryResult);   
 delete runtimeSettings;   
 delete reader; 
 ```
@@ -63,7 +63,7 @@ runtimeSettings->terminatePhase = TP_BARCODE_RECOGNIZED; //Specify terminate pha
 reader->UpdateRuntimeSettings(runtimeSettings, sError, 512); //Update runtimesettings  
 reader->DecodeFile("input your file path", ""); //Decoding
 reader->GetAllTextResults(&paryResult); //Get results  
-CBarcodeReader::FreeTextResults(&paryResult);   
+dynamsoft::dbr::CBarcodeReader::FreeTextResults(&paryResult);   
 delete runtimeSettings;   
 delete reader;
  

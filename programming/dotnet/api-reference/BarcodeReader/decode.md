@@ -29,7 +29,7 @@ needAutoGenerateSidebar: true
 Decode barcodes from a specified image file.
 
 ```csharp
-TextResult[] Dynamsoft.Barcode.BarcodeReader.DecodeFile(string fileName, string templateName) 	
+TextResult[] Dynamsoft.DBR.BarcodeReader.DecodeFile(string fileName, string templateName) 	
 ```
 
 #### Parameters
@@ -62,7 +62,7 @@ reader.Dispose();
 Decode barcodes from an image file in memory.   
 
 ```csharp
-TextResult[] Dynamsoft.Barcode.BarcodeReader.DecodeFileInMemory(byte[] fileStream, string templateName)  
+TextResult[] Dynamsoft.DBR.BarcodeReader.DecodeFileInMemory(byte[] fileStream, string templateName)  
 ```   
    
 #### Parameters
@@ -95,7 +95,7 @@ reader.Dispose();
 Decode barcodes from the memory buffer containing image pixels in defined format.
 
 ```csharp
-TextResult[] Dynamsoft.Barcode.BarcodeReader.DecodeBuffer(byte[] buffer, int width, int height, int stride, EnumImagePixelFormat imagePixelFormat, string templateName)	
+TextResult[] Dynamsoft.DBR.BarcodeReader.DecodeBuffer(byte[] buffer, int width, int height, int stride, EnumImagePixelFormat imagePixelFormat, string templateName)	
 ```
    
 #### Parameters
@@ -141,7 +141,7 @@ reader.Dispose();
 Decode barcode from an image file encoded as a base64 string.
 
 ```csharp
-TextResult[] Dynamsoft.Barcode.BarcodeReader.DecodeBase64String(string base64, string templateName)	
+TextResult[] Dynamsoft.DBR.BarcodeReader.DecodeBase64String(string base64, string templateName)	
 ```   
 
 #### Parameters
@@ -175,7 +175,7 @@ reader.Dispose();
 Decodes barcode from a bitmap.
 
 ```csharp
-TextResult[] Dynamsoft.Barcode.BarcodeReader.DecodeBitmap(Bitmap bitMap, string templateName)
+TextResult[] Dynamsoft.DBR.BarcodeReader.DecodeBitmap(Bitmap bitMap, string templateName)
 ```   
    
 #### Parameters
@@ -209,7 +209,7 @@ reader.Dispose();
 Inits an intermediateResult struct with default values.
 
 ```csharp
-IntermediateResult Dynamsoft.Barcode.BarcodeReader.InitIntermediateResult(EnumIntermediateResultType intermediateResultType) 	
+IntermediateResult Dynamsoft.DBR.BarcodeReader.InitIntermediateResult(EnumIntermediateResultType intermediateResultType) 	
 ```
 
 #### Parameters
@@ -237,7 +237,7 @@ IntermediateResult imResult = reader.InitIntermediateResult(EnumIntermediateResu
 Decodes barcode from intermediate results.
 
 ```csharp
-TextResult[] Dynamsoft.Barcode.BarcodeReader.DecodeIntermediateResults(IntermediateResult[] intermediateResultArray, string templateName) 	
+TextResult[] Dynamsoft.DBR.BarcodeReader.DecodeIntermediateResults(IntermediateResult[] intermediateResultArray, string templateName) 	
 ```
 
 #### Parameters

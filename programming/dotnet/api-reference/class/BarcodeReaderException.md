@@ -29,20 +29,20 @@ public class BarcodeReaderException : Exception
 Gets or sets the error code. 
 
 ```csharp
-EnumErrorCode Dynamsoft.Barcode.BarcodeReaderException.Code
+EnumErrorCode Dynamsoft.DBR.BarcodeReaderException.Code
 ```  
 
 ### Message
 Gets the message that describes the current exception. 
 
 ```csharp
-override string Dynamsoft.Barcode.BarcodeReaderException.Message
+override string Dynamsoft.DBR.BarcodeReaderException.Message
 ```  
 
 ### Code
 Gets the string representation of the frames on the call stack at the time the current exception was thrown. 
 
 ```csharp
-override string Dynamsoft.Barcode.BarcodeReaderException.StackTrace
+override string Dynamsoft.DBR.BarcodeReaderException.StackTrace
 ```  
 

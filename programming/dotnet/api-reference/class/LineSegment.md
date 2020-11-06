@@ -28,14 +28,14 @@ public class LineSegment
 The start point of the line segment.   
 
 ```csharp
-Point Dynamsoft.Barcode.LineSegment.StartPoint
+Point Dynamsoft.DBR.LineSegment.StartPoint
 ```
 
 ### EndPoint
 The end point of the line segment.
 
 ```csharp
-Point Dynamsoft.Barcode.LineSegment.EndPoint
+Point Dynamsoft.DBR.LineSegment.EndPoint
 ```
 
 ### LinesConfidenceCoefficients
@@ -46,5 +46,5 @@ The confidence coefficients for lines. There are 4 coefficients in this set:
 4. linesConfidenceCoefficients\[3\] is max negative amplitude.
 
 ```csharp
-byte[] Dynamsoft.Barcode.LineSegment.LinesConfidenceCoefficients
+byte[] Dynamsoft.DBR.LineSegment.LinesConfidenceCoefficients
 ```

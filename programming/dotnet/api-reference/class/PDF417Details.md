@@ -31,26 +31,26 @@ public class PDF417Details
 The barcode module size (the minimum bar width in pixel).
 
 ```csharp
-int Dynamsoft.Barcode.PDF417Details.ModuleSize
+int Dynamsoft.DBR.PDF417Details.ModuleSize
 ```
 
 ### Rows
 The row count of the barcode.
 
 ```csharp
-int Dynamsoft.Barcode.PDF417Details.Rows
+int Dynamsoft.DBR.PDF417Details.Rows
 ```
 
 ### Columns
 The column count of the barcode.
 
 ```csharp
-int Dynamsoft.Barcode.PDF417Details.Columns
+int Dynamsoft.DBR.PDF417Details.Columns
 ```
 
 ### ErrorCorrectionLevel
 The error correction level of the barcode.
 
 ```csharp
-int Dynamsoft.Barcode.PDF417Details.ErrorCorrectionLevel
+int Dynamsoft.DBR.PDF417Details.ErrorCorrectionLevel
 ```

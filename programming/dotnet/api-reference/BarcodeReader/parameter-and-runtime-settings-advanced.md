@@ -26,7 +26,7 @@ needAutoGenerateSidebar: true
 Initialize runtime settings with the settings in a given JSON file.
 
 ```csharp
-EnumErrorCode Dynamsoft.Barcode.BarcodeReader.InitRuntimeSettingsWithFile(string jsonFileName, EnumConflictMode conflictMode, out string errorMessage)
+EnumErrorCode Dynamsoft.DBR.BarcodeReader.InitRuntimeSettingsWithFile(string jsonFileName, EnumConflictMode conflictMode, out string errorMessage)
 ```
 
 #### Parameters
@@ -56,7 +56,7 @@ reader.Dispose();
 Initialize runtime settings with the settings in given JSON string. 
 
 ```csharp
-EnumErrorCode Dynamsoft.Barcode.BarcodeReader.InitRuntimeSettingsWithString(string jsonContent, EnumConflictMode conflictMode, out string errorMessage)
+EnumErrorCode Dynamsoft.DBR.BarcodeReader.InitRuntimeSettingsWithString(string jsonContent, EnumConflictMode conflictMode, out string errorMessage)
 ```   
    
 #### Parameters
@@ -86,7 +86,7 @@ reader.Dispose();
 Append a new template file to the current runtime settings.
 
 ```csharp
-EnumErrorCode Dynamsoft.Barcode.BarcodeReader.AppendTplFileToRuntimeSettings(string jsonFileName, EnumConflictMode conflictMode, out string errorMessage)
+EnumErrorCode Dynamsoft.DBR.BarcodeReader.AppendTplFileToRuntimeSettings(string jsonFileName, EnumConflictMode conflictMode, out string errorMessage)
 ```   
    
 #### Parameters
@@ -115,7 +115,7 @@ reader.Dispose();
 Append a new template string to the current runtime settings.
 
 ```csharp
-EnumErrorCode Dynamsoft.Barcode.BarcodeReader.AppendTplStringToRuntimeSettings(string  jsonContent, EnumConflictMode  conflictMode, out string errorMessage) 
+EnumErrorCode Dynamsoft.DBR.BarcodeReader.AppendTplStringToRuntimeSettings(string  jsonContent, EnumConflictMode  conflictMode, out string errorMessage) 
 ```   
 
 #### Parameters
@@ -143,7 +143,7 @@ reader.Dispose();
 Gets the parameter templates name array. 
 
 ```csharp
-string[] Dynamsoft.Barcode.BarcodeReader.GetAllParameterTemplateNames()
+string[] Dynamsoft.DBR.BarcodeReader.GetAllParameterTemplateNames()
 ```  
    
 
@@ -169,7 +169,7 @@ reader.Dispose();
 Output runtime settings to a settings file (JSON file).
 
 ```csharp
-void Dynamsoft.Barcode.BarcodeReader.OutputSettingsToFile(string outputFilePath, string settingsName)
+void Dynamsoft.DBR.BarcodeReader.OutputSettingsToFile(string outputFilePath, string settingsName)
 ```   
    
 #### Parameters
@@ -198,7 +198,7 @@ reader.Dispose();
 Output runtime settings to a string.
 
 ```csharp
-string Dynamsoft.Barcode.BarcodeReader.OutputSettingsToString(string settingsName)
+string Dynamsoft.DBR.BarcodeReader.OutputSettingsToString(string settingsName)
 ```   
    
 #### Parameters

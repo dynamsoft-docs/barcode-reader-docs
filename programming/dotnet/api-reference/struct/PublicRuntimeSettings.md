@@ -50,7 +50,7 @@ public struct PublicRuntimeSettings
 Sets the phase to stop the barcode reading algorithm.
 
 ```csharp
-EnumTerminatePhase Dynamsoft.Barcode.PublicRuntimeSettings.TerminatePhase
+EnumTerminatePhase Dynamsoft.DBR.PublicRuntimeSettings.TerminatePhase
 ```
 
 - **Value range**   
@@ -66,7 +66,7 @@ EnumTerminatePhase Dynamsoft.Barcode.PublicRuntimeSettings.TerminatePhase
 Sets the maximum amount of time (in milliseconds) that should be spent searching for a barcode per page. It does not include the time taken to load/decode an image (TIFF, PNG, etc.) from disk into memory.
 
 ```csharp
-int Dynamsoft.Barcode.PublicRuntimeSettings.Timeout
+int Dynamsoft.DBR.PublicRuntimeSettings.Timeout
 ```
 
 - **Value range**   
@@ -82,7 +82,7 @@ int Dynamsoft.Barcode.PublicRuntimeSettings.Timeout
 Sets the number of threads the image processing algorithm will use to decode barcodes.
 
 ```csharp
-int Dynamsoft.Barcode.PublicRuntimeSettings.MaxAlgorithmThreadCount
+int Dynamsoft.DBR.PublicRuntimeSettings.MaxAlgorithmThreadCount
 ```
 
 - **Value range**   
@@ -98,7 +98,7 @@ int Dynamsoft.Barcode.PublicRuntimeSettings.MaxAlgorithmThreadCount
 Sets the number of barcodes expected to be detected for each image.
 
 ```csharp
-int Dynamsoft.Barcode.PublicRuntimeSettings.ExpectedBarcodesCount
+int Dynamsoft.DBR.PublicRuntimeSettings.ExpectedBarcodesCount
 ```
 
 - **Value range**   
@@ -114,7 +114,7 @@ int Dynamsoft.Barcode.PublicRuntimeSettings.ExpectedBarcodesCount
 Sets the formats of the barcode in BarcodeFormat group 1 to be read. Barcode formats in BarcodeFormat group 1 can be combined.
 
 ```csharp
-int Dynamsoft.Barcode.PublicRuntimeSettings.BarcodeFormatIds
+int Dynamsoft.DBR.PublicRuntimeSettings.BarcodeFormatIds
 ```
 
 - **Value range**   
@@ -133,7 +133,7 @@ int Dynamsoft.Barcode.PublicRuntimeSettings.BarcodeFormatIds
 Sets the formats of the barcode in BarcodeFormat group 2 to be read. Barcode formats in BarcodeFormat group 2 can be combined.
 
 ```csharp
-int Dynamsoft.Barcode.PublicRuntimeSettings.BarcodeFormatIds_2
+int Dynamsoft.DBR.PublicRuntimeSettings.BarcodeFormatIds_2
 ```
 
 - **Value range**   
@@ -152,7 +152,7 @@ int Dynamsoft.Barcode.PublicRuntimeSettings.BarcodeFormatIds_2
 Sets the output image resolution.
 
 ```csharp
-EnumPDFReadingMode Dynamsoft.Barcode.PublicRuntimeSettings.PDFReadingMode
+EnumPDFReadingMode Dynamsoft.DBR.PublicRuntimeSettings.PDFReadingMode
 ```
 
 - **Value range**   
@@ -168,7 +168,7 @@ EnumPDFReadingMode Dynamsoft.Barcode.PublicRuntimeSettings.PDFReadingMode
 Sets the threshold for the image shrinking.
 
 ```csharp
-int Dynamsoft.Barcode.PublicRuntimeSettings.ScaleDownThreshold
+int Dynamsoft.DBR.PublicRuntimeSettings.ScaleDownThreshold
 ```
 
 - **Value range**   
@@ -184,7 +184,7 @@ int Dynamsoft.Barcode.PublicRuntimeSettings.ScaleDownThreshold
 Sets the mode and priority for binarization.
 
 ```csharp
-EnumBinarizationMode[] Dynamsoft.Barcode.PublicRuntimeSettings.BinarizationModes
+EnumBinarizationMode[] Dynamsoft.DBR.PublicRuntimeSettings.BinarizationModes
 ```
 
 - **Value range**   
@@ -200,7 +200,7 @@ EnumBinarizationMode[] Dynamsoft.Barcode.PublicRuntimeSettings.BinarizationModes
 Sets the mode and priority for localization algorithms.
 
 ```csharp
-EnumLocalizationMode[] Dynamsoft.Barcode.PublicRuntimeSettings.LocalizationModes
+EnumLocalizationMode[] Dynamsoft.DBR.PublicRuntimeSettings.LocalizationModes
 ```
 
 - **Value range**   
@@ -216,7 +216,7 @@ EnumLocalizationMode[] Dynamsoft.Barcode.PublicRuntimeSettings.LocalizationModes
 Sets further modes.
 
 ```csharp
-FurtherModes Dynamsoft.Barcode.PublicRuntimeSettings.FurtherModes
+FurtherModes Dynamsoft.DBR.PublicRuntimeSettings.FurtherModes
 ```
 
 - **See also**  
@@ -226,7 +226,7 @@ FurtherModes Dynamsoft.Barcode.PublicRuntimeSettings.FurtherModes
 Sets the degree of blurriness of the barcode.
 
 ```csharp
-int Dynamsoft.Barcode.PublicRuntimeSettings.DeblurLevel
+int Dynamsoft.DBR.PublicRuntimeSettings.DeblurLevel
 ```
 
 - **Value range**   
@@ -242,7 +242,7 @@ int Dynamsoft.Barcode.PublicRuntimeSettings.DeblurLevel
 Sets which types of intermediate result to be kept for further reference. Intermediate result types can be combined.
 
 ```csharp
-int Dynamsoft.Barcode.PublicRuntimeSettings.IntermediateResultTypes
+int Dynamsoft.DBR.PublicRuntimeSettings.IntermediateResultTypes
 ```
 
 - **Value range**   
@@ -255,7 +255,7 @@ int Dynamsoft.Barcode.PublicRuntimeSettings.IntermediateResultTypes
 Sets the mode for saving intermediate result.
 
 ```csharp
-EnumIntermediateResultSavingMode Dynamsoft.Barcode.PublicRuntimeSettings.IntermediateResultSavingMode
+EnumIntermediateResultSavingMode Dynamsoft.DBR.PublicRuntimeSettings.IntermediateResultSavingMode
 ```
 
 - **Value range**   
@@ -268,7 +268,7 @@ EnumIntermediateResultSavingMode Dynamsoft.Barcode.PublicRuntimeSettings.Interme
 Specifies the format for the coordinates returned.
 
 ```csharp
-EnumResultCoordinateType Dynamsoft.Barcode.PublicRuntimeSettings.ResultCoordinateType
+EnumResultCoordinateType Dynamsoft.DBR.PublicRuntimeSettings.ResultCoordinateType
 ```
 
 - **Value range**   
@@ -281,7 +281,7 @@ EnumResultCoordinateType Dynamsoft.Barcode.PublicRuntimeSettings.ResultCoordinat
 Sets the mode and priority for the order of the text results returned.
 
 ```csharp
-EnumTextResultOrderMode[] Dynamsoft.Barcode.PublicRuntimeSettings.TextResultOrderModes
+EnumTextResultOrderMode[] Dynamsoft.DBR.PublicRuntimeSettings.TextResultOrderModes
 ```
 
 - **Value range**   
@@ -297,7 +297,7 @@ EnumTextResultOrderMode[] Dynamsoft.Barcode.PublicRuntimeSettings.TextResultOrde
 Sets whether or not to return the clarity of the barcode zone.
 
 ```csharp
-int Dynamsoft.Barcode.PublicRuntimeSettings.ReturnBarcodeZoneClarity
+int Dynamsoft.DBR.PublicRuntimeSettings.ReturnBarcodeZoneClarity
 ```
 
 - **Value range**   
@@ -313,14 +313,14 @@ int Dynamsoft.Barcode.PublicRuntimeSettings.ReturnBarcodeZoneClarity
 Sets the region definition including regionTop, regionLeft, regionRight, regionBottom, and regionMeasuredByPercentage.
 
 ```csharp
-RegionDefinition Dynamsoft.Barcode.PublicRuntimeSettings.Region
+RegionDefinition Dynamsoft.DBR.PublicRuntimeSettings.Region
 ```
 
 ### MinBarcodeTextLength
 Sets the range of barcode text length for barcodes search.
 
 ```csharp
-int Dynamsoft.Barcode.PublicRuntimeSettings.MinBarcodeTextLength
+int Dynamsoft.DBR.PublicRuntimeSettings.MinBarcodeTextLength
 ```
 
 - **Value range**   
@@ -336,7 +336,7 @@ int Dynamsoft.Barcode.PublicRuntimeSettings.MinBarcodeTextLength
 The minimum confidence of the result.
 
 ```csharp
-int Dynamsoft.Barcode.PublicRuntimeSettings.MinResultConfidence
+int Dynamsoft.DBR.PublicRuntimeSettings.MinResultConfidence
 ```
 
 - **Value range**   
@@ -352,7 +352,7 @@ int Dynamsoft.Barcode.PublicRuntimeSettings.MinResultConfidence
 Sets the mode and priority to control the sampling methods of scale-up for linear barcode with small module sizes.
 
 ```csharp
-EnumScaleUpMode[] Dynamsoft.Barcode.PublicRuntimeSettings.ScaleUpModes
+EnumScaleUpMode[] Dynamsoft.DBR.PublicRuntimeSettings.ScaleUpModes
 ```
 
 - **Value range**   
@@ -368,7 +368,7 @@ EnumScaleUpMode[] Dynamsoft.Barcode.PublicRuntimeSettings.ScaleUpModes
 Sets the way to detect barcodes from a PDF file when using the DecodeFile method.
 
 ```csharp
-EnumPDFReadingMode Dynamsoft.Barcode.PublicRuntimeSettings.PDFReadingMode
+EnumPDFReadingMode Dynamsoft.DBR.PublicRuntimeSettings.PDFReadingMode
 ```
 
 - **Value range**   
@@ -382,7 +382,7 @@ EnumPDFReadingMode Dynamsoft.Barcode.PublicRuntimeSettings.PDFReadingMode
 Sets the mode and priority for deblurring.
 
 ```csharp
-EnumDeblurMode[] Dynamsoft.Barcode.PublicRuntimeSettings.DeblurModes
+EnumDeblurMode[] Dynamsoft.DBR.PublicRuntimeSettings.DeblurModes
 ```
 
 - **Value range**   

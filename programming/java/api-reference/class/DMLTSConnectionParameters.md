@@ -33,7 +33,7 @@ Defines a struct to configure the parameters to connect to license tracking serv
 The URL of the license tracking server.
 
 ```java
-String com.dynamsoft.barcode.DMLTSConnectionParameters.mainServerURL
+String com.dynamsoft.dbr.DMLTSConnectionParameters.mainServerURL
 ```
 
 - **Value range**   
@@ -47,7 +47,7 @@ String com.dynamsoft.barcode.DMLTSConnectionParameters.mainServerURL
 The URL of the standby license tracking server.
 
 ```java
-String com.dynamsoft.barcode.DMLTSConnectionParameters.standbyServerURL
+String com.dynamsoft.dbr.DMLTSConnectionParameters.standbyServerURL
 ```
 
 - **Value range**   
@@ -61,7 +61,7 @@ String com.dynamsoft.barcode.DMLTSConnectionParameters.standbyServerURL
 The handshake code.
 
 ```java
-String com.dynamsoft.barcode.DMLTSConnectionParameters.handshakeCode
+String com.dynamsoft.dbr.DMLTSConnectionParameters.handshakeCode
 ```
 
 - **Value range**   
@@ -75,7 +75,7 @@ String com.dynamsoft.barcode.DMLTSConnectionParameters.handshakeCode
 The session password of the handshake code set in license tracking server.
 
 ```java
-String com.dynamsoft.barcode.DMLTSConnectionParameters.sessionPassword
+String com.dynamsoft.dbr.DMLTSConnectionParameters.sessionPassword
 ```
 
 - **Value range**   
@@ -90,7 +90,7 @@ String com.dynamsoft.barcode.DMLTSConnectionParameters.sessionPassword
 Sets the deployment type.
 
 ```java
-int com.dynamsoft.barcode.DMLTSConnectionParameters.deploymentType
+int com.dynamsoft.dbr.DMLTSConnectionParameters.deploymentType
 ```
 
 - **Value range**   
@@ -107,7 +107,7 @@ int com.dynamsoft.barcode.DMLTSConnectionParameters.deploymentType
 Sets the charge way.
 
 ```java
-int com.dynamsoft.barcode.DMLTSConnectionParameters.chargeWay
+int com.dynamsoft.dbr.DMLTSConnectionParameters.chargeWay
 ```
 
 - **Value range**   
@@ -125,7 +125,7 @@ int com.dynamsoft.barcode.DMLTSConnectionParameters.chargeWay
 Sets the method to generate UUID.
 
 ```java
-int com.dynamsoft.barcode.DMLTSConnectionParameters.uuidGenerationMethod
+int com.dynamsoft.dbr.DMLTSConnectionParameters.uuidGenerationMethod
 ```
 
 - **Value range**   
@@ -142,7 +142,7 @@ int com.dynamsoft.barcode.DMLTSConnectionParameters.uuidGenerationMethod
 Sets the max days to buffer the license info.
 
 ```java
-int com.dynamsoft.barcode.DMLTSConnectionParameters.maxBufferDays
+int com.dynamsoft.dbr.DMLTSConnectionParameters.maxBufferDays
 ```
 
 - **Value range**   
@@ -157,7 +157,7 @@ int com.dynamsoft.barcode.DMLTSConnectionParameters.maxBufferDays
 Sets the license modules to use.
 
 ```java
-int[] com.dynamsoft.barcode.DMLTSConnectionParameters.limitedLicenseModules
+int[] com.dynamsoft.dbr.DMLTSConnectionParameters.limitedLicenseModules
 ```
 
 - **Value range**   

@@ -37,7 +37,7 @@ public class DMLTSConnectionParameters
 The URL of the license tracking server.
 
 ```csharp
-string Dynamsoft.Barcode.DMLTSConnectionParameters.MainServerURL
+string Dynamsoft.DBR.DMLTSConnectionParameters.MainServerURL
 ```
 
 - **Value range**   
@@ -51,7 +51,7 @@ string Dynamsoft.Barcode.DMLTSConnectionParameters.MainServerURL
 The URL of the standby license tracking server.
 
 ```csharp
-string Dynamsoft.Barcode.DMLTSConnectionParameters.StandbyServerURL
+string Dynamsoft.DBR.DMLTSConnectionParameters.StandbyServerURL
 ```
 
 - **Value range**   
@@ -65,7 +65,7 @@ string Dynamsoft.Barcode.DMLTSConnectionParameters.StandbyServerURL
 The handshake code.
 
 ```csharp
-string Dynamsoft.Barcode.DMLTSConnectionParameters.HandshakeCode
+string Dynamsoft.DBR.DMLTSConnectionParameters.HandshakeCode
 ```
 
 - **Value range**   
@@ -79,7 +79,7 @@ string Dynamsoft.Barcode.DMLTSConnectionParameters.HandshakeCode
 The session password of the handshake code set in license tracking server.
 
 ```csharp
-string Dynamsoft.Barcode.DMLTSConnectionParameters.SessionPassword
+string Dynamsoft.DBR.DMLTSConnectionParameters.SessionPassword
 ```
 
 - **Value range**   
@@ -94,7 +94,7 @@ string Dynamsoft.Barcode.DMLTSConnectionParameters.SessionPassword
 Sets the deployment type.
 
 ```csharp
-EnumDMDeploymentType Dynamsoft.Barcode.DMLTSConnectionParameters.DeploymentType
+EnumDMDeploymentType Dynamsoft.DBR.DMLTSConnectionParameters.DeploymentType
 ```
 
 - **Value range**   
@@ -111,7 +111,7 @@ EnumDMDeploymentType Dynamsoft.Barcode.DMLTSConnectionParameters.DeploymentType
 Sets the charge way.
 
 ```csharp
-EnumDMChargeWay Dynamsoft.Barcode.DMLTSConnectionParameters.ChargeWay
+EnumDMChargeWay Dynamsoft.DBR.DMLTSConnectionParameters.ChargeWay
 ```
 
 - **Value range**   
@@ -129,7 +129,7 @@ EnumDMChargeWay Dynamsoft.Barcode.DMLTSConnectionParameters.ChargeWay
 Sets the method to generate UUID.
 
 ```csharp
-EnumDMUUIDGenerationMethod Dynamsoft.Barcode.DMLTSConnectionParameters.UUIDGenerationMethod
+EnumDMUUIDGenerationMethod Dynamsoft.DBR.DMLTSConnectionParameters.UUIDGenerationMethod
 ```
 
 - **Value range**   
@@ -146,7 +146,7 @@ EnumDMUUIDGenerationMethod Dynamsoft.Barcode.DMLTSConnectionParameters.UUIDGener
 Sets the max days to buffer the license info.
 
 ```csharp
-int Dynamsoft.Barcode.DMLTSConnectionParameters.MaxBufferDays
+int Dynamsoft.DBR.DMLTSConnectionParameters.MaxBufferDays
 ```
 
 - **Value range**   
@@ -161,7 +161,7 @@ int Dynamsoft.Barcode.DMLTSConnectionParameters.MaxBufferDays
 Sets the license modules to use.
 
 ```csharp
-EnumDMLicenseModule[] Dynamsoft.Barcode.DMLTSConnectionParameters.LimitedLicenseModules
+EnumDMLicenseModule[] Dynamsoft.DBR.DMLTSConnectionParameters.LimitedLicenseModules
 ```
 
 - **Value range**   

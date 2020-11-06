@@ -91,3 +91,10 @@ breadcrumbText: BarcodeReader Methods
   |----------------------|-------------|
   | `version`  | dbr-python version |
   | `dbr_version`  | Dynamsoft Barcode Reader version |
+
+
+## Result
+  
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`get_intermediate_results`](result.md#get_intermediate_results) | Get intermediate results.  |

@@ -25,7 +25,7 @@ Stores the region information.
 ### regionTop
 The top-most coordinate or percentage of the region.
 ```java
-int com.dynamsoft.barcode.RegionDefinition.regionTop
+int com.dynamsoft.dbr.RegionDefinition.regionTop
 ```
 - **Value range**   
     regionMeasuredByPercentage = 0: [0, 0x7fffffff]  
@@ -37,7 +37,7 @@ int com.dynamsoft.barcode.RegionDefinition.regionTop
 ### regionLeft
 The left-most coordinate or percentage of the region.
 ```java
-int com.dynamsoft.barcode.RegionDefinition.regionLeft
+int com.dynamsoft.dbr.RegionDefinition.regionLeft
 ```
 - **Value range**   
     regionMeasuredByPercentage = 0: [0, 0x7fffffff]  
@@ -49,7 +49,7 @@ int com.dynamsoft.barcode.RegionDefinition.regionLeft
 ### regionRight
 The right-most coordinate or percentage of the region.
 ```java
-int com.dynamsoft.barcode.RegionDefinition.regionRight
+int com.dynamsoft.dbr.RegionDefinition.regionRight
 ```
 - **Value range**   
     regionMeasuredByPercentage = 0: [0, 0x7fffffff]  
@@ -61,7 +61,7 @@ int com.dynamsoft.barcode.RegionDefinition.regionRight
 ### regionBottom
 The bottom-most coordinate or percentage of the region.
 ```java
-int com.dynamsoft.barcode.RegionDefinition.regionBottom
+int com.dynamsoft.dbr.RegionDefinition.regionBottom
 ```
 - **Value range**   
     regionMeasuredByPercentage = 0: [0, 0x7fffffff]  
@@ -73,7 +73,7 @@ int com.dynamsoft.barcode.RegionDefinition.regionBottom
 ### regionMeasuredByPercentage
 Sets whether or not to use percentage to measure the region size.
 ```java
-int com.dynamsoft.barcode.RegionDefinition.regionMeasuredByPercentage
+int com.dynamsoft.dbr.RegionDefinition.regionMeasuredByPercentage
 ```
 - **Value range**   
     [0, 1]

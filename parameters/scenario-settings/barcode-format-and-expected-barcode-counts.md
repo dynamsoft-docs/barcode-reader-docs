@@ -36,7 +36,7 @@ reader->UpdateRuntimeSettings(runtimeSettings, sError, 512); //update runtime se
 reader->DecodeFile("file path", ""); //decode  
 TextResultArray* paryResult = NULL;   
 reader->GetAllTextResults(&paryResult); //get decode result 
-CBarcodeReader::FreeTextResults(&paryResult);   
+dynamsoft::dbr::CBarcodeReader::FreeTextResults(&paryResult);   
 delete runtimeSettings;   
 delete reader;  
 ```

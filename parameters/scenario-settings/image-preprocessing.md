@@ -74,7 +74,7 @@ reader->SetModeArgument("ImagePreprocessingModes", 3, "MorphOperationKernelSizeY
 reader->DecodeFile("file-path", "");
 TextResultArray* paryResult = NULL;    
 reader->GetAllTextResults(&paryResult);
-CBarcodeReader::FreeTextResults(&paryResult);    
+dynamsoft::dbr::CBarcodeReader::FreeTextResults(&paryResult);    
 delete runtimeSettings;    
 delete reader; 
 ```

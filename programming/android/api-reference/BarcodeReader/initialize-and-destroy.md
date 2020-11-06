@@ -20,13 +20,13 @@ needAutoGenerateSidebar: true
 Initialization of `BarcodeReader` object without a license.
 
 ```java
-com.dynamsoft.barcode.BarcodeReader.BarcodeReader() throws BarcodeReaderException
+com.dynamsoft.dbr.BarcodeReader.BarcodeReader() throws BarcodeReaderException
 ```
 
 Initialization of `BarcodeReader` with a license.
 
 ```java
-com.dynamsoft.barcode.BarcodeReader.BarcodeReader(String license)	throws Exception
+com.dynamsoft.dbr.BarcodeReader.BarcodeReader(String license)	throws Exception
 ```
 
 ### Exceptions
@@ -51,7 +51,7 @@ BarcodeReader reader = new BarcodeReade("t0260NwAAAHV***************");
 ## Destroy
 
 ```java
-void com.dynamsoft.barcode.BarcodeReader.destroy()	
+void com.dynamsoft.dbr.BarcodeReader.destroy()	
 ```
 
 ### Code Snippet

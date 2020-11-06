@@ -39,7 +39,7 @@ public struct FurtherModes
 Sets the mode and priority for colour categorization. Not supported yet.  
 
 ```csharp
-EnumColourClusteringMode[] Dynamsoft.Barcode.FurtherModes.ColourClusteringModes
+EnumColourClusteringMode[] Dynamsoft.DBR.FurtherModes.ColourClusteringModes
 ```
 
 - **Value range**  
@@ -55,7 +55,7 @@ EnumColourClusteringMode[] Dynamsoft.Barcode.FurtherModes.ColourClusteringModes
 Sets the mode and priority for converting a colour image to a grayscale image.
 
 ```csharp
-EnumColourConversionMode[] Dynamsoft.Barcode.FurtherModes.ColourConversionModes
+EnumColourConversionMode[] Dynamsoft.DBR.FurtherModes.ColourConversionModes
 ```
 
 - **Value range**  
@@ -71,7 +71,7 @@ EnumColourConversionMode[] Dynamsoft.Barcode.FurtherModes.ColourConversionModes
 Sets the mode and priority for the grayscale image conversion.
 
 ```csharp
-EnumGrayscaleTransformationMode[] Dynamsoft.Barcode.FurtherModes.GrayscaleTransformationModes
+EnumGrayscaleTransformationMode[] Dynamsoft.DBR.FurtherModes.GrayscaleTransformationModes
 ```
 
 - **Value range**  
@@ -87,7 +87,7 @@ EnumGrayscaleTransformationMode[] Dynamsoft.Barcode.FurtherModes.GrayscaleTransf
 Sets the region pre-detection mode for barcodes search.
 
 ```csharp
-EnumRegionPredetectionMode[] Dynamsoft.Barcode.FurtherModes.RegionPredetectionModes
+EnumRegionPredetectionMode[] Dynamsoft.DBR.FurtherModes.RegionPredetectionModes
 ```
 
 - **Value range**  
@@ -103,7 +103,7 @@ EnumRegionPredetectionMode[] Dynamsoft.Barcode.FurtherModes.RegionPredetectionMo
 Sets the mode and priority for image preprocessing algorithms.
 
 ```csharp
-EnumImagePreprocessingMode[] Dynamsoft.Barcode.FurtherModes.ImagePreprocessingModes
+EnumImagePreprocessingMode[] Dynamsoft.DBR.FurtherModes.ImagePreprocessingModes
 ```
 
 - **Value range**  
@@ -119,7 +119,7 @@ EnumImagePreprocessingMode[] Dynamsoft.Barcode.FurtherModes.ImagePreprocessingMo
 Sets the mode and priority for texture detection. 
 
 ```csharp
-EnumTextureDetectionMode[] Dynamsoft.Barcode.FurtherModes.TextureDetectionModes
+EnumTextureDetectionMode[] Dynamsoft.DBR.FurtherModes.TextureDetectionModes
 ```
 
 - **Value range**  
@@ -135,7 +135,7 @@ EnumTextureDetectionMode[] Dynamsoft.Barcode.FurtherModes.TextureDetectionModes
 Sets the mode and priority for text filter.
 
 ```csharp
-EnumTextFilterMode[] Dynamsoft.Barcode.FurtherModes.TextFilterModes
+EnumTextFilterMode[] Dynamsoft.DBR.FurtherModes.TextFilterModes
 ```
 
 - **Value range**  
@@ -151,7 +151,7 @@ EnumTextFilterMode[] Dynamsoft.Barcode.FurtherModes.TextFilterModes
 Sets the mode of text assisted correction for barcode decoding. ***Not supported yet***.
 
 ```csharp
-EnumTextAssistedCorrectionMode Dynamsoft.Barcode.FurtherModes.TextAssistedCorrectionMode
+EnumTextAssistedCorrectionMode Dynamsoft.DBR.FurtherModes.TextAssistedCorrectionMode
 ```
 
 - **Value range**  
@@ -164,7 +164,7 @@ EnumTextAssistedCorrectionMode Dynamsoft.Barcode.FurtherModes.TextAssistedCorrec
 Sets the mode and priority for DPM code reading.
 
 ```csharp
-EnumDPMCodeReadingMode[] Dynamsoft.Barcode.FurtherModes.DPMCodeReadingModes
+EnumDPMCodeReadingMode[] Dynamsoft.DBR.FurtherModes.DPMCodeReadingModes
 ```
 
 - **Value range**  
@@ -180,7 +180,7 @@ EnumDPMCodeReadingMode[] Dynamsoft.Barcode.FurtherModes.DPMCodeReadingModes
 Sets the mode and priority for deformation resisting.
 
 ```csharp
-EnumDeformationResistingMode[] Dynamsoft.Barcode.FurtherModes.DeformationResistingModes
+EnumDeformationResistingMode[] Dynamsoft.DBR.FurtherModes.DeformationResistingModes
 ```
 
 - **Value range**  
@@ -196,7 +196,7 @@ EnumDeformationResistingMode[] Dynamsoft.Barcode.FurtherModes.DeformationResisti
 Sets the mode and priority to complement the missing parts in the barcode.
 
 ```csharp
-EnumColourConversionMode[] Dynamsoft.Barcode.FurtherModes.ColourConversionModes
+EnumColourConversionMode[] Dynamsoft.DBR.FurtherModes.ColourConversionModes
 ```
 
 - **Value range**  
@@ -212,7 +212,7 @@ EnumColourConversionMode[] Dynamsoft.Barcode.FurtherModes.ColourConversionModes
 Sets the mode and priority for the barcode colour mode used to process the barcode zone.
 
 ```csharp
-EnumBarcodeColourMode[] Dynamsoft.Barcode.FurtherModes.BarcodeColourModes
+EnumBarcodeColourMode[] Dynamsoft.DBR.FurtherModes.BarcodeColourModes
 ```
 
 - **Value range**  
@@ -228,7 +228,7 @@ EnumBarcodeColourMode[] Dynamsoft.Barcode.FurtherModes.BarcodeColourModes
 Sets the mode and priority to recognize accompanying text.
 
 ```csharp
-EnumAccompanyingTextRecognitionMode[] Dynamsoft.Barcode.FurtherModes.AccompanyingTextRecognitionModes
+EnumAccompanyingTextRecognitionMode[] Dynamsoft.DBR.FurtherModes.AccompanyingTextRecognitionModes
 ```
 
 - **Value range**  

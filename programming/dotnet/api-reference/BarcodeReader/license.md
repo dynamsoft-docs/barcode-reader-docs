@@ -24,7 +24,7 @@ needAutoGenerateSidebar: true
 Initializes the license and connect to the specified server for online verification.
 
 ```csharp
-int Dynamsoft.Barcode.BarcodeReader.InitLicenseFromServer(string licenseServer, string licenseKey)
+int Dynamsoft.DBR.BarcodeReader.InitLicenseFromServer(string licenseServer, string licenseKey)
 ```   
    
 #### Parameters
@@ -42,7 +42,7 @@ Returns error code.
 Initializes barcode reader license and connects to the specified server for online verification.
 
 ```csharp
-int Dynamsoft.Barcode.BarcodeReader.InitLicenseFromLicenseContent(string licenseKey, string strLicenseContent)
+int Dynamsoft.DBR.BarcodeReader.InitLicenseFromLicenseContent(string licenseKey, string strLicenseContent)
 ```
 
 #### Parameters
@@ -73,7 +73,7 @@ TextResult[] result = reader.DecodeIntermediateResults();
 Outputs the license content as an encrypted string from the license server to be used for offline license verification. 
 
 ```csharp
-string Dynamsoft.Barcode.BarcodeReader.OutputLicenseToString()
+string Dynamsoft.DBR.BarcodeReader.OutputLicenseToString()
 ```
    
 
@@ -89,7 +89,7 @@ The output string which stores the contents of license.
 Initializes a DMLTSConnectionParameters struct with default values.
 
 ```csharp
-DMLTSConnectionParameters Dynamsoft.Barcode.BarcodeReader.InitLTSConnectionParameters()
+DMLTSConnectionParameters Dynamsoft.DBR.BarcodeReader.InitLTSConnectionParameters()
 ```   
 
 #### Code Snippet
@@ -109,7 +109,7 @@ readr.InitLicenseFromLts(ltsInfo, out errorMsg);
 Initializes the barcode reader license and connects to the specified server for online verification.
 
 ```csharp
-EnumErrorCode Dynamsoft.Barcode.BarcodeReader.InitLicenseFromLTS(DMLTSConnectionParameters ltsConnectionParameters, out string errorMsg)
+EnumErrorCode Dynamsoft.DBR.BarcodeReader.InitLicenseFromLTS(DMLTSConnectionParameters ltsConnectionParameters, out string errorMsg)
 ```   
    
 #### Parameters

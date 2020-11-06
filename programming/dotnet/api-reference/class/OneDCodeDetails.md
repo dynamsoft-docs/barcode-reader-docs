@@ -30,26 +30,26 @@ public class OneDCodeDetails
 The barcode module size (the minimum bar width in pixel).
 
 ```csharp
-int Dynamsoft.Barcode.OneDCodeDetails.ModuleSize
+int Dynamsoft.DBR.OneDCodeDetails.ModuleSize
 ```
 
 ### StartCharsBytes
 The start chars in a byte array.
 
 ```csharp
-byte[] Dynamsoft.Barcode.OneDCodeDetails.StartCharsBytes
+byte[] Dynamsoft.DBR.OneDCodeDetails.StartCharsBytes
 ```
 
 ### StopCharsBytes
 The stop chars in a byte array.
 
 ```csharp
-byte[] Dynamsoft.Barcode.OneDCodeDetails.StopCharsBytes
+byte[] Dynamsoft.DBR.OneDCodeDetails.StopCharsBytes
 ```
 
 ### CheckDigitBytes
 The check digit chars in a byte array.
 
 ```csharp
-byte[] Dynamsoft.Barcode.OneDCodeDetails.CheckDigitBytes
+byte[] Dynamsoft.DBR.OneDCodeDetails.CheckDigitBytes
 ```

@@ -23,7 +23,7 @@ needAutoGenerateSidebar: false
 Represents the method that will handle the error code returned by the SDK. 
 
 ```csharp
-delegate void Dynamsoft.Barcode.CB_Error(int frameId, int errorCode, IntPtr pUser)
+delegate void Dynamsoft.DBR.CB_Error(int frameId, int errorCode, IntPtr pUser)
 ```   
    
 #### Parameters
@@ -39,7 +39,7 @@ delegate void Dynamsoft.Barcode.CB_Error(int frameId, int errorCode, IntPtr pUse
 Represents the method that will handle the intermediate result array returned by the SDK. 
 
 ```csharp
-delegate void Dynamsoft.Barcode.CB_IntermediateResult(int frameId, IntermediateResult[] intermediateResults, IntPtr pUser)
+delegate void Dynamsoft.DBR.CB_IntermediateResult(int frameId, IntermediateResult[] intermediateResults, IntPtr pUser)
 ```   
    
 #### Parameters
@@ -55,7 +55,7 @@ delegate void Dynamsoft.Barcode.CB_IntermediateResult(int frameId, IntermediateR
 Represents the method that will handle the text result array returned by the SDK. 
 
 ```csharp
-delegate void Dynamsoft.Barcode.CB_TextResult(int frameId, TextResult[]  textResults, IntPtr pUser) 
+delegate void Dynamsoft.DBR.CB_TextResult(int frameId, TextResult[]  textResults, IntPtr pUser) 
 ```   
    
 #### Parameters

@@ -27,5 +27,5 @@ public class Contour
 The points array.
 
 ```csharp
-Point[] Dynamsoft.Barcode.Contour.Points
+Point[] Dynamsoft.DBR.Contour.Points
 ```  

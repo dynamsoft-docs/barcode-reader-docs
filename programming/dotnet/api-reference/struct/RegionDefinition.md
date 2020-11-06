@@ -32,7 +32,7 @@ public struct RegionDefinition
 The top-most coordinate or percentage of the region.
 
 ```csharp
-int Dynamsoft.Barcode.RegionDefinition.RegionTop
+int Dynamsoft.DBR.RegionDefinition.RegionTop
 ```
 
 - **Value range**   
@@ -46,7 +46,7 @@ int Dynamsoft.Barcode.RegionDefinition.RegionTop
 The left-most coordinate or percentage of the region.
 
 ```csharp
-int Dynamsoft.Barcode.RegionDefinition.RegionLeft
+int Dynamsoft.DBR.RegionDefinition.RegionLeft
 ```
 
 - **Value range**   
@@ -60,7 +60,7 @@ int Dynamsoft.Barcode.RegionDefinition.RegionLeft
 The right-most coordinate or percentage of the region.
 
 ```csharp
-int Dynamsoft.Barcode.RegionDefinition.RegionRight
+int Dynamsoft.DBR.RegionDefinition.RegionRight
 ```
 
 - **Value range**   
@@ -74,7 +74,7 @@ int Dynamsoft.Barcode.RegionDefinition.RegionRight
 The bottom-most coordinate or percentage of the region.
 
 ```csharp
-int Dynamsoft.Barcode.RegionDefinition.RegionBottom
+int Dynamsoft.DBR.RegionDefinition.RegionBottom
 ```
 
 - **Value range**   
@@ -88,7 +88,7 @@ int Dynamsoft.Barcode.RegionDefinition.RegionBottom
 Sets whether or not to use percentage to measure the region size.
 
 ```csharp
-int Dynamsoft.Barcode.RegionDefinition.RegionMeasuredByPercentage
+int Dynamsoft.DBR.RegionDefinition.RegionMeasuredByPercentage
 ```
 
 - **Value range**   

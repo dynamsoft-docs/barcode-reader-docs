@@ -100,8 +100,8 @@ You can add Dynamsoft Barcode Reader like below:
 3. Add the following code to initiate and use the Dynamsoft Barcode Reader SDK.
 
     ```java
-   import com.dynamsoft.barcode.BarcodeReader;
-   import com.dynamsoft.barcode.TextResult;
+   import com.dynamsoft.dbr.BarcodeReader;
+   import com.dynamsoft.dbr.TextResult;
    import android.util.Log;
    public class MainActivity extends AppCompatActivity {
       @Override

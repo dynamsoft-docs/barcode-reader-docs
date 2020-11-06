@@ -28,7 +28,7 @@ public class Quadrilateral
 Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. 
 
 ```csharp
-Point[] Dynamsoft.Barcode.Quadrilateral.Points
+Point[] Dynamsoft.DBR.Quadrilateral.Points
 ```
 
 

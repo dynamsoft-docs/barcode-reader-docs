@@ -86,7 +86,7 @@ After installation, you can find samples for supported platforms in the **Sample
        }
 
        // Finally release BarcodeResultArray
-       CBarcodeReader::FreeTextResults(&paryResult);
+       dynamsoft::dbr::CBarcodeReader::FreeTextResults(&paryResult);
        system("pause");
        return 0;
    }
@@ -163,7 +163,7 @@ reader->UpdateRuntimeSettings(runtimeSettings, sError, 512);
 reader->DecodeFile("<Put your file path here>", "");
 // If succeeds
 reader->GetAllTextResults(&paryResult);
-CBarcodeReader::FreeTextResults(&paryResult);
+dynamsoft::dbr::CBarcodeReader::FreeTextResults(&paryResult);
 delete runtimeSettings;
 delete reader;
 ```
@@ -187,7 +187,7 @@ reader->UpdateRuntimeSettings(runtimeSettings, sError, 512);
 reader->DecodeFile("<Put your file path here>", "");
 // If succeeds
 reader->GetAllTextResults(&paryResult);
-CBarcodeReader::FreeTextResults(&paryResult);
+dynamsoft::dbr::CBarcodeReader::FreeTextResults(&paryResult);
 delete runtimeSettings;
 delete reader;
 ```
@@ -218,7 +218,7 @@ reader->UpdateRuntimeSettings(runtimeSettings, sError, 512);
 reader->DecodeFile("<Put your file path here>", "");
 // If succeeds
 reader->GetAllTextResults(&paryResult);
-CBarcodeReader::FreeTextResults(&paryResult);
+dynamsoft::dbr::CBarcodeReader::FreeTextResults(&paryResult);
 delete runtimeSettings;
 delete reader;
 
@@ -244,7 +244,7 @@ reader->OutputSettingsToFile("<Put your file path here>","currentruntime");
 reader->DecodeFile("Put your file path here", "");
 // If succeeds
 reader->GetAllTextResults(&paryResult);
-CBarcodeReader::FreeTextResults(&paryResult);
+dynamsoft::dbr::CBarcodeReader::FreeTextResults(&paryResult);
 delete reader;
 ```  
 

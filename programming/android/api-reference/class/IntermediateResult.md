@@ -51,7 +51,7 @@ Stores the intermediate result.
 One of the following types: Array of [`Contour`](Contour.md), Array of [`ImageData`](ImageData.md), Array of [`LineSegment`](LineSegment.md), Array of [`LocalizationResult`](LocalizationResult.md), Array of [`RegionOfInterest`](RegionOfInterest.md).
 
 ```java
-Object[] com.dynamsoft.barcode.IntermediateResult.results
+Object[] com.dynamsoft.dbr.IntermediateResult.results
 ```
 
 ### dataType
@@ -59,7 +59,7 @@ Object[] com.dynamsoft.barcode.IntermediateResult.results
 The data type of the intermediate result.
 
 ```java
-int com.dynamsoft.barcode.IntermediateResult.dataType
+int com.dynamsoft.dbr.IntermediateResult.dataType
 ```
 
 ### resultType
@@ -67,7 +67,7 @@ int com.dynamsoft.barcode.IntermediateResult.dataType
 Intermediate result type.
 
 ```java
-int com.dynamsoft.barcode.IntermediateResult.resultType
+int com.dynamsoft.dbr.IntermediateResult.resultType
 ```
 
 ### barcodeComplementMode
@@ -75,7 +75,7 @@ int com.dynamsoft.barcode.IntermediateResult.resultType
 The [`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode) used when generating the current intermediate result.
 
 ```java
-iny com.dynamsoft.barcode.IntermediateResult.barcodeComplementMode
+iny com.dynamsoft.dbr.IntermediateResult.barcodeComplementMode
 ```
 
 ### bcmIndex
@@ -83,7 +83,7 @@ iny com.dynamsoft.barcode.IntermediateResult.barcodeComplementMode
 The array index of current used [`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode) in the [`barcodeComplementModes`](FurtherModes.md#barcodecomplementmodes) setting.
 
 ```java
-int com.dynamsoft.barcode.IntermediateResult.bcmIndex
+int com.dynamsoft.dbr.IntermediateResult.bcmIndex
 ```
 
 ### deformationResistingMode
@@ -91,7 +91,7 @@ int com.dynamsoft.barcode.IntermediateResult.bcmIndex
 The [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode) used when generating the current intermediate result.
 
 ```java
-int com.dynamsoft.barcode.IntermediateResult.deformationResistingMode
+int com.dynamsoft.dbr.IntermediateResult.deformationResistingMode
 ```
 
 ### drmIndex
@@ -99,7 +99,7 @@ int com.dynamsoft.barcode.IntermediateResult.deformationResistingMode
 The array index of current used [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode) in the [`deformationResistingModes`](FurtherModes.md#deformationresistingmodes) setting.
 
 ```java
-int com.dynamsoft.barcode.IntermediateResult.drmIndex
+int com.dynamsoft.dbr.IntermediateResult.drmIndex
 ```
 
 ### dpmCodeReadingMode
@@ -107,7 +107,7 @@ int com.dynamsoft.barcode.IntermediateResult.drmIndex
 The [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode) used when generating the current intermediate result.
 
 ```java
-int com.dynamsoft.barcode.IntermediateResult.dpmCodeReadingMode
+int com.dynamsoft.dbr.IntermediateResult.dpmCodeReadingMode
 ```
 
 ### dpmcrmIndex
@@ -115,7 +115,7 @@ int com.dynamsoft.barcode.IntermediateResult.dpmCodeReadingMode
 The array index of current used [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode) in the [`dpmCodeReadingModes`](FurtherModes.md#dpmcodereadingmodes) setting.
 
 ```java
-int com.dynamsoft.barcode.IntermediateResult.dpmcrmIndex
+int com.dynamsoft.dbr.IntermediateResult.dpmcrmIndex
 ```
 
 ### rotationMatrix
@@ -123,7 +123,7 @@ int com.dynamsoft.barcode.IntermediateResult.dpmcrmIndex
 The rotation matrix.
 
 ```java
-double[] com.dynamsoft.barcode.IntermediateResult.rotationMatrix
+double[] com.dynamsoft.dbr.IntermediateResult.rotationMatrix
 ```
 
 ### textFilterMode
@@ -131,7 +131,7 @@ double[] com.dynamsoft.barcode.IntermediateResult.rotationMatrix
 The [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode) used when generating the current intermediate result.
 
 ```java
-int com.dynamsoft.barcode.IntermediateResult.textFilterMode
+int com.dynamsoft.dbr.IntermediateResult.textFilterMode
 ```
 
 ### tfmIndex
@@ -139,7 +139,7 @@ int com.dynamsoft.barcode.IntermediateResult.textFilterMode
 The array index of current used [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode) in the [`textFilterModes`](FurtherModes.md#textfiltermodes) setting.
 
 ```java
-int com.dynamsoft.barcode.IntermediateResult.tfmIndex
+int com.dynamsoft.dbr.IntermediateResult.tfmIndex
 ```
 
 ### localizationMode
@@ -147,7 +147,7 @@ int com.dynamsoft.barcode.IntermediateResult.tfmIndex
 The [`EnumLocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode) used when generating the current intermediate result.
 
 ```java
-int com.dynamsoft.barcode.IntermediateResult.localizationMode
+int com.dynamsoft.dbr.IntermediateResult.localizationMode
 ```
 
 ### lmIndex
@@ -155,7 +155,7 @@ int com.dynamsoft.barcode.IntermediateResult.localizationMode
 The array index of current used [`EnumLocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode) in the [`localizationModes`](PublicRuntimeSettings.md#localizationmodes) setting.
 
 ```java
-int com.dynamsoft.barcode.IntermediateResult.lmIndex
+int com.dynamsoft.dbr.IntermediateResult.lmIndex
 ```
 
 ### binarizationMode
@@ -163,7 +163,7 @@ int com.dynamsoft.barcode.IntermediateResult.lmIndex
 The [`EnumBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) used when generating the current intermediate result.
 
 ```java
-int com.dynamsoft.barcode.IntermediateResult.binarizationMode
+int com.dynamsoft.dbr.IntermediateResult.binarizationMode
 ```
 
 ### bmIndex
@@ -171,7 +171,7 @@ int com.dynamsoft.barcode.IntermediateResult.binarizationMode
 The array index of current used [`EnumBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) in the [`binarizationModes`](PublicRuntimeSettings.md#binarizationmodes) setting.
 
 ```java
-int com.dynamsoft.barcode.IntermediateResult.bmIndex
+int com.dynamsoft.dbr.IntermediateResult.bmIndex
 ```
 
 ### imagePreprocessingMode
@@ -179,7 +179,7 @@ int com.dynamsoft.barcode.IntermediateResult.bmIndex
 The [`EnumImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode) used when generating the current intermediate result.
 
 ```java
-int com.dynamsoft.barcode.IntermediateResult.imagePreprocessingMode
+int com.dynamsoft.dbr.IntermediateResult.imagePreprocessingMode
 ```
 
 ### ipmIndex
@@ -187,7 +187,7 @@ int com.dynamsoft.barcode.IntermediateResult.imagePreprocessingMode
 The array index of current used [`EnumImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode) in [`imagePreprocessingModes`](FurtherModes.md#imagepreprocessingmodes) setting.
 
 ```java
-int com.dynamsoft.barcode.IntermediateResult.ipmIndex
+int com.dynamsoft.dbr.IntermediateResult.ipmIndex
 ```
 
 ### roiId
@@ -195,7 +195,7 @@ int com.dynamsoft.barcode.IntermediateResult.ipmIndex
 The ID of the ROI (Region Of Interest) generated by the SDK. -1 means the original image.
 
 ```java
-int com.dynamsoft.barcode.IntermediateResult.roiId
+int com.dynamsoft.dbr.IntermediateResult.roiId
 ```
 
 ### regionPredetectionMode
@@ -203,7 +203,7 @@ int com.dynamsoft.barcode.IntermediateResult.roiId
 The [`EnumRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode) used when generating the current intermediate result.
 
 ```java
-int com.dynamsoft.barcode.IntermediateResult.regionPredetectionMode
+int com.dynamsoft.dbr.IntermediateResult.regionPredetectionMode
 ```
 
 ### rpmIndex
@@ -211,7 +211,7 @@ int com.dynamsoft.barcode.IntermediateResult.regionPredetectionMode
 The array index of current used [`EnumRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode) in the [`regionPredetectionModes`](FurtherModes.md#regionpredetectionmodes) setting.
 
 ```java
-int com.dynamsoft.barcode.IntermediateResult.rpmIndex
+int com.dynamsoft.dbr.IntermediateResult.rpmIndex
 ```
 
 ### grayscaleTransformationMode
@@ -219,7 +219,7 @@ int com.dynamsoft.barcode.IntermediateResult.rpmIndex
 The [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode) used when generating the current intermediate result.
 
 ```java
-int com.dynamsoft.barcode.IntermediateResult.grayscaleTransformationMode
+int com.dynamsoft.dbr.IntermediateResult.grayscaleTransformationMode
 ```
 
 ### gtmIndex
@@ -227,7 +227,7 @@ int com.dynamsoft.barcode.IntermediateResult.grayscaleTransformationMode
 The array index of current used [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode) in the [`grayscaleTransformationModes`](FurtherModes.md#grayscaletransformationmodes) setting.
 
 ```java
-int com.dynamsoft.barcode.IntermediateResult.gtmIndex
+int com.dynamsoft.dbr.IntermediateResult.gtmIndex
 ```
 
 ### colourConversionMode
@@ -235,7 +235,7 @@ int com.dynamsoft.barcode.IntermediateResult.gtmIndex
 The [`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode) used when generating the current intermediate result.
 
 ```java
-int com.dynamsoft.barcode.IntermediateResult.colourConversionMode
+int com.dynamsoft.dbr.IntermediateResult.colourConversionMode
 ```
 
 ### cicmIndex
@@ -243,7 +243,7 @@ int com.dynamsoft.barcode.IntermediateResult.colourConversionMode
 The array index of current used [`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode) in the [`colourConversionModes`](FurtherModes.md#colourconversionmodes) setting.
 
 ```java
-int com.dynamsoft.barcode.IntermediateResult.cicmIndex
+int com.dynamsoft.dbr.IntermediateResult.cicmIndex
 ```
 
 ### colourClusteringMode
@@ -251,7 +251,7 @@ int com.dynamsoft.barcode.IntermediateResult.cicmIndex
 The [`EnumColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode) used when generating the current intermediate result.
 
 ```java
-int com.dynamsoft.barcode.IntermediateResult.colourClusteringMode
+int com.dynamsoft.dbr.IntermediateResult.colourClusteringMode
 ```
 
 ### ccmIndex
@@ -259,7 +259,7 @@ int com.dynamsoft.barcode.IntermediateResult.colourClusteringMode
 The array index of current used [`EnumColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode) in the [`colourClusteringModes`](FurtherModes.md#colourclusteringmodes) setting.
 
 ```java
-int com.dynamsoft.barcode.IntermediateResult.ccmIndex
+int com.dynamsoft.dbr.IntermediateResult.ccmIndex
 ```
 
 ### scaleDownRatio
@@ -267,7 +267,7 @@ int com.dynamsoft.barcode.IntermediateResult.ccmIndex
 The scale down ratio.
 
 ```java
-int com.dynamsoft.barcode.IntermediateResult.scaleDownRatio
+int com.dynamsoft.dbr.IntermediateResult.scaleDownRatio
 ```
 
 ### frameId
@@ -275,6 +275,6 @@ int com.dynamsoft.barcode.IntermediateResult.scaleDownRatio
 The ID of the operated frame.
 
 ```java
-int com.dynamsoft.barcode.IntermediateResult.frameId
+int com.dynamsoft.dbr.IntermediateResult.frameId
 ```
 

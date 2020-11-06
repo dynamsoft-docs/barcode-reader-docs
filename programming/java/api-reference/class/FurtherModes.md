@@ -32,7 +32,7 @@ Stores the FurtherModes.
 ### colourClusteringModes
 Sets the mode and priority for colour categorization. Not supported yet.  
 ```java
-int[] com.dynamsoft.barcode.FurtherModes.colourClusteringModes
+int[] com.dynamsoft.dbr.FurtherModes.colourClusteringModes
 ```
 - **Value range**  
    Each array item can be any one of the [`EnumColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#enumcolourclusteringmode) Enumeration items.  
@@ -49,7 +49,7 @@ int[] com.dynamsoft.barcode.FurtherModes.colourClusteringModes
 ### colourConversionModes
 Sets the mode and priority for converting a colour image to a grayscale image.
 ```java
-int[] com.dynamsoft.barcode.FurtherModes.colourConversionModes
+int[] com.dynamsoft.dbr.FurtherModes.colourConversionModes
 ```
 - **Value range**  
    Each array item can be any one of the [`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#enumcolourconversionmode) Enumeration items. 
@@ -66,7 +66,7 @@ int[] com.dynamsoft.barcode.FurtherModes.colourConversionModes
 ### grayscaleTransformationModes
 Sets the mode and priority for the grayscale image conversion.
 ```java
-int[] com.dynamsoft.barcode.FurtherModes.grayscaleTransformationModes
+int[] com.dynamsoft.dbr.FurtherModes.grayscaleTransformationModes
 ```
 - **Value range**  
    Each array item can be any one of the [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#enumgrayscaletransformationmode) Enumeration items. 
@@ -83,7 +83,7 @@ int[] com.dynamsoft.barcode.FurtherModes.grayscaleTransformationModes
 ### regionPredetectionModes
 Sets the region pre-detection mode for barcodes search.
 ```java
-int[] com.dynamsoft.barcode.FurtherModes.regionPredetectionModes
+int[] com.dynamsoft.dbr.FurtherModes.regionPredetectionModes
 ```
 - **Value range**  
    Each array item can be any one of the [`EnumRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#enumregionpredetectionmode) Enumeration items.  
@@ -100,7 +100,7 @@ int[] com.dynamsoft.barcode.FurtherModes.regionPredetectionModes
 ### imagePreprocessingModes
 Sets the mode and priority for image preprocessing algorithms.
 ```java
-int[] com.dynamsoft.barcode.FurtherModes.imagePreprocessingModes
+int[] com.dynamsoft.dbr.FurtherModes.imagePreprocessingModes
 ```
 - **Value range**  
    Each array item can be any one of the [`EnumImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#enumimagepreprocessingmode) Enumeration items.  
@@ -117,7 +117,7 @@ int[] com.dynamsoft.barcode.FurtherModes.imagePreprocessingModes
 ### textureDetectionModes
 Sets the mode and priority for texture detection. 
 ```java
-int[] com.dynamsoft.barcode.FurtherModes.textureDetectionModes
+int[] com.dynamsoft.dbr.FurtherModes.textureDetectionModes
 ```
 - **Value range**  
    Each array item can be any one of the [`EnumTextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#enumtexturedetectionmode) Enumeration items.  
@@ -134,7 +134,7 @@ int[] com.dynamsoft.barcode.FurtherModes.textureDetectionModes
 ### textFilterModes
 Sets the mode and priority for text filter.
 ```java
-int[] com.dynamsoft.barcode.FurtherModes.textFilterModes
+int[] com.dynamsoft.dbr.FurtherModes.textFilterModes
 ```
 - **Value range**  
    Each array item can be any one of the [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#enumtextfiltermode) Enumeration items.  
@@ -151,7 +151,7 @@ int[] com.dynamsoft.barcode.FurtherModes.textFilterModes
 ### textAssistedCorrectionMode
 Sets the mode of text assisted correction for barcode decoding. ***Not supported yet***.
 ```java
-int com.dynamsoft.barcode.FurtherModes.textAssistedCorrectionMode
+int com.dynamsoft.dbr.FurtherModes.textAssistedCorrectionMode
 ```
 - **Value range**  
    Any one of the [`EnumTextAssistedCorrectionMode`]({{ site.enumerations }}parameter-mode-enums.html#enumtextassistedcorrectionmode) Enumeration items.  
@@ -165,7 +165,7 @@ int com.dynamsoft.barcode.FurtherModes.textAssistedCorrectionMode
 ### dpmCodeReadingModes
 Sets the mode and priority for DPM code reading.
 ```java
-int[] com.dynamsoft.barcode.FurtherModes.dpmCodeReadingModes
+int[] com.dynamsoft.dbr.FurtherModes.dpmCodeReadingModes
 ```
 - **Value range**  
    Each array item can be any one of the [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#enumdpmcodereadingmode) Enumeration items.  
@@ -182,7 +182,7 @@ int[] com.dynamsoft.barcode.FurtherModes.dpmCodeReadingModes
 ### deformationResistingModes
 Sets the mode and priority for deformation resisting.
 ```java
-int[] com.dynamsoft.barcode.FurtherModes.deformationResistingModes
+int[] com.dynamsoft.dbr.FurtherModes.deformationResistingModes
 ```
 - **Value range**  
    Each array item can be any one of the [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#enumdeformationresistingmode) Enumeration items.  
@@ -199,7 +199,7 @@ int[] com.dynamsoft.barcode.FurtherModes.deformationResistingModes
 ### barcodeComplementModes
 Sets the mode and priority to complement the missing parts in the barcode.
 ```java
-int[] com.dynamsoft.barcode.FurtherModes.barcodeComplementModes
+int[] com.dynamsoft.dbr.FurtherModes.barcodeComplementModes
 ```
 - **Value range**  
    Each array item can be any one of the [`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#enumbarcodecomplementmode) Enumeration items.  
@@ -216,7 +216,7 @@ int[] com.dynamsoft.barcode.FurtherModes.barcodeComplementModes
 ### barcodeColourModes
 Sets the mode and priority for the barcode colour mode used to process the barcode zone.
 ```java
-int[] com.dynamsoft.barcode.FurtherModes.barcodeColourModes
+int[] com.dynamsoft.dbr.FurtherModes.barcodeColourModes
 ```
 - **Value range**  
    Each array item can be any one of the [`EnumBarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#enumbarcodecolourmode) Enumeration items.  
@@ -233,7 +233,7 @@ int[] com.dynamsoft.barcode.FurtherModes.barcodeColourModes
 ### accompanyingTextRecognitionModes
 Sets the mode and priority to recognize accompanying text.
 ```java
-int[] com.dynamsoft.barcode.FurtherModes.accompanyingTextRecognitionModes
+int[] com.dynamsoft.dbr.FurtherModes.accompanyingTextRecognitionModes
 ```
 - **Value range**  
    Each array item can be any one of the [`EnumAccompanyingTextRecognitionMode`]({{ site.enumerations }}parameter-mode-enums.html#enumaccompanyingtextrecognitionmode) Enumeration items.  

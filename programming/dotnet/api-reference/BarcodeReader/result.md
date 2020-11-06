@@ -23,7 +23,7 @@ needAutoGenerateSidebar: true
 Returns intermediate results containing the original image, the colour clustered image, the binarized Image, contours, Lines, TextBlocks, etc.
 
 ```csharp
-IntermediateResult[] Dynamsoft.Barcode.BarcodeReader.GetIntermediateResults() 
+IntermediateResult[] Dynamsoft.DBR.BarcodeReader.GetIntermediateResults() 
 ```   
 
 #### Return value

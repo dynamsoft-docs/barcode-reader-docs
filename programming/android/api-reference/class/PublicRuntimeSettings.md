@@ -45,7 +45,7 @@ Defines a struct to configure the barcode reading runtime settings. These settin
 Sets the phase to stop the barcode reading algorithm.
 
 ```java
-int com.dynamsoft.barcode.PublicRuntimeSettings.terminatePhase
+int com.dynamsoft.dbr.PublicRuntimeSettings.terminatePhase
 ```
 
 - **Value range**   
@@ -65,7 +65,7 @@ int com.dynamsoft.barcode.PublicRuntimeSettings.terminatePhase
 Sets the maximum amount of time (in milliseconds) that should be spent searching for a barcode per page. It does not include the time taken to load/decode an image (TIFF, PNG, etc.) from disk into memory.
 
 ```java
-int com.dynamsoft.barcode.PublicRuntimeSettings.timeout
+int com.dynamsoft.dbr.PublicRuntimeSettings.timeout
 ```
 
 - **Value range**   
@@ -82,7 +82,7 @@ int com.dynamsoft.barcode.PublicRuntimeSettings.timeout
 Sets the number of threads the image processing algorithm will use to decode barcodes.
 
 ```java
-int com.dynamsoft.barcode.PublicRuntimeSettings.timeout
+int com.dynamsoft.dbr.PublicRuntimeSettings.timeout
 ```
 
 - **Value range**   
@@ -99,7 +99,7 @@ int com.dynamsoft.barcode.PublicRuntimeSettings.timeout
 Sets the number of barcodes expected to be detected for each image.
 
 ```java
-int com.dynamsoft.barcode.PublicRuntimeSettings.expectedBarcodesCount
+int com.dynamsoft.dbr.PublicRuntimeSettings.expectedBarcodesCount
 ```
 
 - **Value range**   
@@ -116,7 +116,7 @@ int com.dynamsoft.barcode.PublicRuntimeSettings.expectedBarcodesCount
 Sets the formats of the barcode in BarcodeFormat group 1 to be read. Barcode formats in BarcodeFormat group 1 can be combined.
 
 ```java
-int com.dynamsoft.barcode.PublicRuntimeSettings.barcodeFormatIds
+int com.dynamsoft.dbr.PublicRuntimeSettings.barcodeFormatIds
 ```
 
 - **Value range**   
@@ -136,7 +136,7 @@ int com.dynamsoft.barcode.PublicRuntimeSettings.barcodeFormatIds
 Sets the formats of the barcode in BarcodeFormat group 2 to be read. Barcode formats in BarcodeFormat group 2 can be combined.
 
 ```java
-int com.dynamsoft.barcode.PublicRuntimeSettings.barcodeFormatIds_2
+int com.dynamsoft.dbr.PublicRuntimeSettings.barcodeFormatIds_2
 ```
 
 - **Value range**   
@@ -156,7 +156,7 @@ int com.dynamsoft.barcode.PublicRuntimeSettings.barcodeFormatIds_2
 Sets the output image resolution.
 
 ```java
-int com.dynamsoft.barcode.PublicRuntimeSettings.pdfRasterDPI
+int com.dynamsoft.dbr.PublicRuntimeSettings.pdfRasterDPI
 ```
 
 - **Value range**   
@@ -173,7 +173,7 @@ int com.dynamsoft.barcode.PublicRuntimeSettings.pdfRasterDPI
 Sets the threshold for the image shrinking.
 
 ```java
-int com.dynamsoft.barcode.PublicRuntimeSettings.scaleDownThreshold
+int com.dynamsoft.dbr.PublicRuntimeSettings.scaleDownThreshold
 ```
 
 - **Value range**   
@@ -190,7 +190,7 @@ int com.dynamsoft.barcode.PublicRuntimeSettings.scaleDownThreshold
 Sets the mode and priority for binarization.
 
 ```java
-int[] com.dynamsoft.barcode.PublicRuntimeSettings.binarizationModes
+int[] com.dynamsoft.dbr.PublicRuntimeSettings.binarizationModes
 ```
 
 - **Value range**   
@@ -210,7 +210,7 @@ int[] com.dynamsoft.barcode.PublicRuntimeSettings.binarizationModes
 Sets the mode and priority for localization algorithms.
 
 ```java
-int[] com.dynamsoft.barcode.PublicRuntimeSettings.localizationModes
+int[] com.dynamsoft.dbr.PublicRuntimeSettings.localizationModes
 ```
 
 - **Value range**   
@@ -230,7 +230,7 @@ int[] com.dynamsoft.barcode.PublicRuntimeSettings.localizationModes
 Sets further modes.
 
 ```java
-FurtherModes com.dynamsoft.barcode.PublicRuntimeSettings.furtherModes
+FurtherModes com.dynamsoft.dbr.PublicRuntimeSettings.furtherModes
 ```
 
 ### deblurLevel
@@ -238,7 +238,7 @@ FurtherModes com.dynamsoft.barcode.PublicRuntimeSettings.furtherModes
 Sets the degree of blurriness of the barcode.
 
 ```java
-int com.dynamsoft.barcode.PublicRuntimeSettings.deblurLevel
+int com.dynamsoft.dbr.PublicRuntimeSettings.deblurLevel
 ```
 
 - **Value range**   
@@ -255,7 +255,7 @@ int com.dynamsoft.barcode.PublicRuntimeSettings.deblurLevel
 Sets which types of intermediate result to be kept for further reference. Intermediate result types can be combined.
 
 ```java
-int com.dynamsoft.barcode.PublicRuntimeSettings.intermediateResultTypes
+int com.dynamsoft.dbr.PublicRuntimeSettings.intermediateResultTypes
 ```
 
 - **Value range**   
@@ -272,7 +272,7 @@ int com.dynamsoft.barcode.PublicRuntimeSettings.intermediateResultTypes
 Sets the mode for saving intermediate result.
 
 ```java
-int com.dynamsoft.barcode.PublicRuntimeSettings.intermediateResultSavingMode
+int com.dynamsoft.dbr.PublicRuntimeSettings.intermediateResultSavingMode
 ```
 
 - **Value range**   
@@ -289,7 +289,7 @@ int com.dynamsoft.barcode.PublicRuntimeSettings.intermediateResultSavingMode
 Specifies the format for the coordinates returned.
 
 ```java
-int com.dynamsoft.barcode.PublicRuntimeSettings.resultCoordinateType
+int com.dynamsoft.dbr.PublicRuntimeSettings.resultCoordinateType
 ```
 
 - **Value range**   
@@ -306,7 +306,7 @@ int com.dynamsoft.barcode.PublicRuntimeSettings.resultCoordinateType
 Sets the mode and priority for the order of the text results returned.
 
 ```java
-int[] com.dynamsoft.barcode.PublicRuntimeSettings.textResultOrderModes
+int[] com.dynamsoft.dbr.PublicRuntimeSettings.textResultOrderModes
 ```
 
 - **Value range**   
@@ -326,7 +326,7 @@ int[] com.dynamsoft.barcode.PublicRuntimeSettings.textResultOrderModes
 Sets whether or not to return the clarity of the barcode zone.
 
 ```java
-int com.dynamsoft.barcode.PublicRuntimeSettings.returnBarcodeZoneClarity
+int com.dynamsoft.dbr.PublicRuntimeSettings.returnBarcodeZoneClarity
 ```
 
 - **Value range**   
@@ -343,7 +343,7 @@ int com.dynamsoft.barcode.PublicRuntimeSettings.returnBarcodeZoneClarity
 Sets the region definition including regionTop, regionLeft, regionRight, regionBottom, and regionMeasuredByPercentage.
 
 ```java
-RegionDefinition com.dynamsoft.barcode.PublicRuntimeSettings.region
+RegionDefinition com.dynamsoft.dbr.PublicRuntimeSettings.region
 ```
 
 ### minBarcodeTextLength
@@ -351,7 +351,7 @@ RegionDefinition com.dynamsoft.barcode.PublicRuntimeSettings.region
 Sets the range of barcode text length for barcodes search.
 
 ```java
-int com.dynamsoft.barcode.PublicRuntimeSettings.minBarcodeTextLength
+int com.dynamsoft.dbr.PublicRuntimeSettings.minBarcodeTextLength
 ```
 
 - **Value range**   
@@ -368,7 +368,7 @@ int com.dynamsoft.barcode.PublicRuntimeSettings.minBarcodeTextLength
 The minimum confidence of the result.
 
 ```java
-int com.dynamsoft.barcode.PublicRuntimeSettings.minResultConfidence
+int com.dynamsoft.dbr.PublicRuntimeSettings.minResultConfidence
 ```
 
 - **Value range**   
@@ -385,7 +385,7 @@ int com.dynamsoft.barcode.PublicRuntimeSettings.minResultConfidence
 Sets the mode and priority to control the sampling methods of scale-up for linear barcode with small module sizes.
 
 ```java
-int[] com.dynamsoft.barcode.PublicRuntimeSettings.scaleUpModes[]
+int[] com.dynamsoft.dbr.PublicRuntimeSettings.scaleUpModes[]
 ```
 
 - **Value range**   
@@ -405,7 +405,7 @@ int[] com.dynamsoft.barcode.PublicRuntimeSettings.scaleUpModes[]
 Sets the way to detect barcodes from a PDF file when using the DecodeFile method.
 
 ```java
-int com.dynamsoft.barcode.PublicRuntimeSettings.pdfReadingMode
+int com.dynamsoft.dbr.PublicRuntimeSettings.pdfReadingMode
 ```
 
 - **Value range**   
@@ -423,7 +423,7 @@ int com.dynamsoft.barcode.PublicRuntimeSettings.pdfReadingMode
 Sets the mode and priority for deblurring.
 
 ```java
-int[] com.dynamsoft.barcode.PublicRuntimeSettings.deblurModes
+int[] com.dynamsoft.dbr.PublicRuntimeSettings.deblurModes
 ```
 
 - **Value range**   

@@ -31,7 +31,7 @@ Describes charge way.
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum DM_ChargeWay` |
-| .Net | `enum Dynamsoft.Barcode.EnumDMChargeWay` |
+| .Net | `enum Dynamsoft.DBR.EnumDMChargeWay` |
 | JavaScript | `Dynamsoft.EnumDMChargeWay` |
 | Python | `class EnumDMChargeWay(IntEnum)` |
 | Java / Android | `class EnumDMChargeWay` |
@@ -65,7 +65,7 @@ Describes the deployment type.
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum DM_DeploymentType` |
-| .Net | `enum Dynamsoft.Barcode.EnumDMDeploymentType` |
+| .Net | `enum Dynamsoft.DBR.EnumDMDeploymentType` |
 | JavaScript | `N/A` |
 | Python | `class EnumDMDeploymentType(IntEnum)` |
 | Java | `class EnumDMDeploymentType` |
@@ -95,7 +95,7 @@ Describes Dynamsoft license modules.
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum DM_LicenseModule` |
-| .Net | `enum Dynamsoft.Barcode.EnumDMLicenseModule` |
+| .Net | `enum Dynamsoft.DBR.EnumDMLicenseModule` |
 | JavaScript | `Dynamsoft.EnumDMLicenseModule` |
 | Python | `class EnumDMLicenseModule(IntEnum)` |
 | Java / Android | `class EnumDMLicenseModule` |
@@ -118,7 +118,7 @@ Describes Dynamsoft license modules.
 | DM_LM_POSTALCODE | EnumDMLicenseModulePOSTALCODE | 10 | Postal code barcodes license module |
 | DM_LM_DOTCODE | EnumDMLicenseModuleDOTCODE | 11 | DotCode barcodes license module|
 | DM_LM_DDM_LM_INTERMEDIATE_RESULTATAMATRIX | EnumDMLicenseModuleINTERMEDIATERESULT | 12 | Intermediate result license module |
-| DM_LM_DPM | EnumDMLicenseModuleDPM | 13 |Data Matrix DPM (Direct Part Marking) license module |
+| DM_LM_DPM | EnumDMLicenseModuleDPM | 13 |DATAMATRIX DPM (Direct Part Marking) license module |
 | DM_LM_NONSTANDARD_BARCODE | EnumDMLicenseModuleNONSTANDARDBARCODE | 16 | Nonstandard barcodes license module|
 
 
@@ -133,7 +133,7 @@ Describes UUID generation method.
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum DM_UUIDGenerationMethod` |
-| .Net | `enum Dynamsoft.Barcode.EnumDMUUIDGenerationMethod` |
+| .Net | `enum Dynamsoft.DBR.EnumDMUUIDGenerationMethod` |
 | JavaScript | `Dynamsoft.EnumDMUUIDGenerationMethod` |
 | Python | `class EnumDMUUIDGenerationMethod(IntEnum)` |
 | Java / Android | `class EnumDMUUIDGenerationMethod` |
@@ -162,7 +162,7 @@ Describes the image pixel format.
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum ImagePixelFormat` |
-| .Net | `enum Dynamsoft.Barcode.EnumImagePixelFormat` |
+| .Net | `enum Dynamsoft.DBR.EnumImagePixelFormat` |
 | JavaScript | `Dynamsoft.EnumImagePixelFormat` |
 | Python | `class EnumImagePixelFormat(IntEnum)` |
 | Java / Android | `class EnumImagePixelFormat` |
@@ -202,7 +202,7 @@ Describes the QR Code error correction level.
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum QRCodeErrorCorrectionLevel` |
-| .Net | `enum Dynamsoft.Barcode.EnumQRCodeErrorCorrectionLevel` |
+| .Net | `enum Dynamsoft.DBR.EnumQRCodeErrorCorrectionLevel` |
 | Python | `class EnumQRCodeErrorCorrectionLevel(IntEnum)` |
 | JavaScript | `Dynamsoft.EnumQRCodeErrorCorrectionLevel` |
 | Java / Android | `class EnumQRCodeErrorCorrectionLevel` |

@@ -111,7 +111,7 @@ LocalizationResult.region_name
 The document name.
 
 ```python
-string Dynamsoft.Barcode.LocalizationResult.document_name
+LocalizationResult.document_name
 ```
 
 ### result_coordinate_type

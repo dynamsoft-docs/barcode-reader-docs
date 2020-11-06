@@ -33,7 +33,7 @@ reader->UpdateRuntimeSettings(runtimeSettings, sError, 512);    //update runtime
 reader->DecodeFile("type your image path", "");                   //decode
 TextResultArray* paryResult = NULL;   
 reader->GetAllTextResults(&paryResult);                         //get the decode result   
-CBarcodeReader::FreeTextResults(&paryResult);   
+dynamsoft::dbr::CBarcodeReader::FreeTextResults(&paryResult);   
 delete runtimeSettings;   
 delete reader;  
 ```
@@ -96,7 +96,7 @@ sError,512); ///Load a template configuration
 reader->DecodeFile("type your file path", "ImageParameter1"); //Use the configuration with the Name "IP1"    
 TextResultArray* paryResult = NULL;         
 reader->GetAllTextResults(&paryResult); //get decode result     
-CBarcodeReader::FreeTextResults(&paryResult);         
+dynamsoft::dbr::CBarcodeReader::FreeTextResults(&paryResult);         
 delete runtimeSettings;         
 delete reader;
 ```

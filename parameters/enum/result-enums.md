@@ -30,7 +30,7 @@ Describes the intermediate result data type.
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum IMResultDataType` |
-| .Net | `enum Dynamsoft.Barcode.EnumIMResultDataType` |
+| .Net | `enum Dynamsoft.DBR.EnumIMResultDataType` |
 | JavaScript | `Dynamsoft.EnumIMResultDataType` |
 | Python | `class EnumIMResultDataType(IntEnum)` |
 | Java / Android | `class EnumIMResultDataType` |
@@ -68,7 +68,7 @@ Describes the intermediate result saving mode.
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum IntermediateResultSavingMode` |
-| .Net | `enum Dynamsoft.Barcode.EnumIntermediateResultSavingMode` |
+| .Net | `enum Dynamsoft.DBR.EnumIntermediateResultSavingMode` |
 | JavaScript | `Dynamsoft.EnumIntermediateResultSavingMode` |
 | Python | `class EnumIntermediateResultSavingMode(IntEnum)` |
 | Java / Android | `class EnumIntermediateResultSavingMode` |
@@ -98,7 +98,7 @@ Describes the intermediate result type.
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum IntermediateResultType` |
-| .Net | `enum Dynamsoft.Barcode.EnumIntermediateResultType` |
+| .Net | `enum Dynamsoft.DBR.EnumIntermediateResultType` |
 | JavaScript | `Dynamsoft.EnumIntermediateResultType` |
 | Python | `class EnumIntermediateResultType(IntEnum)` |
 | Java / Android | `class EnumIntermediateResultType` |
@@ -139,7 +139,7 @@ Describes the result coordinate type.
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum ResultCoordinateType` |
-| .Net | `enum Dynamsoft.Barcode.EnumResultCoordinateType` |
+| .Net | `enum Dynamsoft.DBR.EnumResultCoordinateType` |
 | JavaScript | `Dynamsoft.EnumResultCoordinateType` |
 | Python | `class EnumResultCoordinateType(IntEnum)` |
 | Java / Android | `class EnumResultCoordinateType` |
@@ -168,7 +168,7 @@ Describes the extended result type.
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum ResultType` |
-| .Net | `enum Dynamsoft.Barcode.EnumResultType` |
+| .Net | `enum Dynamsoft.DBR.EnumResultType` |
 | JavaScript | `Dynamsoft.EnumResultType` |
 | Python | `class EnumResultType(IntEnum)` |
 | Java / Android | `class EnumResultType` |
@@ -199,7 +199,7 @@ Describes the text result order mode.
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum TextResultOrderMode` |
-| .Net | `enum Dynamsoft.Barcode.EnumTextResultOrderMode` |
+| .Net | `enum Dynamsoft.DBR.EnumTextResultOrderMode` |
 | JavaScript | `Dynamsoft.EnumTextResultOrderMode` |
 | Python | `class EnumTextResultOrderMode(IntEnum)` |
 | Java / Android | `class EnumTextResultOrderMode` |

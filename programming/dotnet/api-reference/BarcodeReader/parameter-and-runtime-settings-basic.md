@@ -27,7 +27,7 @@ Sets the optional argument for a specified mode in Modes parameters.
 
 
 ```csharp
-EnumErrorCode Dynamsoft.Barcode.BarcodeReader.SetModeArgument(string modesName, int index, string argumentName, string argumentValue, out string errorMessage)
+EnumErrorCode Dynamsoft.DBR.BarcodeReader.SetModeArgument(string modesName, int index, string argumentName, string argumentValue, out string errorMessage)
 ```   
 #### Parameters
 `[in]	modesName` <*string*> : The mode parameter name to set argument.  
@@ -77,7 +77,7 @@ reader.Dispose();
 Get argument value for the specified mode parameter.
 
 ```csharp
-EnumErrorCode Dynamsoft.Barcode.BarcodeReader.GetModeArgument(string modesName, int index, string argumentName, out string argumentValue, out string errorMessage)
+EnumErrorCode Dynamsoft.DBR.BarcodeReader.GetModeArgument(string modesName, int index, string argumentName, out string argumentValue, out string errorMessage)
 ```   
    
 #### Parameters  
@@ -131,7 +131,7 @@ reader.Dispose();
 Gets current settings and save it into a struct. 
 
 ```csharp
-PublicRuntimeSettings Dynamsoft.Barcode.BarcodeReader.GetRuntimeSettings()
+PublicRuntimeSettings Dynamsoft.DBR.BarcodeReader.GetRuntimeSettings()
 ```
 
 
@@ -162,7 +162,7 @@ reader.Dispose();
 Update runtime settings with a given struct. 
 
 ```csharp
-void Dynamsoft.Barcode.BarcodeReader.UpdateRuntimeSettings(PublicRuntimeSettings settings)
+void Dynamsoft.DBR.BarcodeReader.UpdateRuntimeSettings(PublicRuntimeSettings settings)
 ```   
    
 #### Parameters
@@ -194,7 +194,7 @@ reader.Dispose();
 Reset all parameters to default values.
 
 ```csharp
-void Dynamsoft.Barcode.BarcodeReader.ResetRuntimeSettings() 
+void Dynamsoft.DBR.BarcodeReader.ResetRuntimeSettings() 
 ```   
 
 #### Code Snippet

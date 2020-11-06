@@ -29,59 +29,59 @@ Stores the text result.
 ### barcodeFormat
 Barcode type in BarcodeFormat group 1.
 ```java
-int com.dynamsoft.barcode.barcodeFormat
+int com.dynamsoft.dbr.barcodeFormat
 ```
 
 ### barcodeFormatString
 Barcode type in BarcodeFormat group 1 as string.
 ```java
-String com.dynamsoft.barcode.barcodeFormatString
+String com.dynamsoft.dbr.barcodeFormatString
 ```
 
 ### barcodeFormat_2
 Barcode type in BarcodeFormat group 2.
 ```java
-int com.dynamsoft.barcode.barcodeFormat_2
+int com.dynamsoft.dbr.barcodeFormat_2
 ```
 
 ### barcodeFormatString_2
 Barcode type in BarcodeFormat group 2 as string.
 ```java
-String com.dynamsoft.barcode.barcodeFormatString_2
+String com.dynamsoft.dbr.barcodeFormatString_2
 ```
 
 ### barcodeText
 The barcode text, ends by '\0'.
 ```java
-String com.dynamsoft.barcode.barcodeText
+String com.dynamsoft.dbr.barcodeText
 ```
 
 ### barcodeBytes
 The barcode content in a byte array.
 ```java
-byte[] com.dynamsoft.barcode.barcodeBytes
+byte[] com.dynamsoft.dbr.barcodeBytes
 ```
 
 ### barcodeBytesLength
 The length of the byte array.
 ```java
-int com.dynamsoft.barcode.barcodeBytesLength
+int com.dynamsoft.dbr.barcodeBytesLength
 ```
 
 ### localizationResult
 The corresponding localization result.
 ```java
-LocalizationResult com.dynamsoft.barcode.localizationResult
+LocalizationResult com.dynamsoft.dbr.localizationResult
 ```
 
 ### detailedResult
 One of the following: [`QRCodeDetails`](QRCodeDetails.md), [`PDF417Details`](PDF417Details.md), [`DataMatrixDetails`](DataMatrixDetails.md), [`AztecDetails`](AztecDetails.md), [`OneDCodeDetails`](OneDCodeDetails.md).
 ```java
-Object com.dynamsoft.barcode.detailedResult
+Object com.dynamsoft.dbr.detailedResult
 ```
 
 ### results
 The extended result array.
 ```java
-ExtendedResult[] com.dynamsoft.barcode.results
+ExtendedResult[] com.dynamsoft.dbr.results
 ```

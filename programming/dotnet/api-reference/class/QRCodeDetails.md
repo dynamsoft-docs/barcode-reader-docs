@@ -34,40 +34,40 @@ public class QRCodeDetails
 The barcode module size (the minimum bar width in pixel).  
 
 ```csharp
-int Dynamsoft.Barcode.QRCodeDetails.ModuleSize
+int Dynamsoft.DBR.QRCodeDetails.ModuleSize
 ```
 
 ### Rows
 The row count of the barcode.  
 
 ```csharp
-int Dynamsoft.Barcode.QRCodeDetails.Rows
+int Dynamsoft.DBR.QRCodeDetails.Rows
 ```
 
 ### Columns
 The column count of the barcode. 
 
 ```csharp
-int Dynamsoft.Barcode.QRCodeDetails.Columns
+int Dynamsoft.DBR.QRCodeDetails.Columns
 ```
 
 ### ErrorCorrectionLevel
 The error correction level of the barcode.  
 
 ```csharp
-EnumQRCodeErrorCorrectionLevel Dynamsoft.Barcode.QRCodeDetails.ErrorCorrectionLevel
+EnumQRCodeErrorCorrectionLevel Dynamsoft.DBR.QRCodeDetails.ErrorCorrectionLevel
 ```
 
 ### Version
 The version of the QR Code.
 
 ```csharp
-int Dynamsoft.Barcode.QRCodeDetails.Version
+int Dynamsoft.DBR.QRCodeDetails.Version
 ```
 
 ### Model
 Number of the models.
 
 ```csharp
-int Dynamsoft.Barcode.QRCodeDetails.Model
+int Dynamsoft.DBR.QRCodeDetails.Model
 ```
