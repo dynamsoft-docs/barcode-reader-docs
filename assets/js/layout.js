@@ -36,9 +36,28 @@ if (ei && ei != '' && ei != '0' && ei != '1') {
                                 $('.editionName').html('Linux');
                             }
                             var VersionInfos = editionInfos[j].VersionInfos
+                            VersionInfos.sort(function (a, b) {
+                              if (a.VersionMajor > b.VersionMajor) {
+                                  return -1
+                              } else if (a.VersionMajor == b.VersionMajor) {
+                                  if (a.VersionMinor > b.VersionMinor) {
+                                      return -1
+                                  } else if (a.VersionMinor == b.VersionMinor) {
+                                      if (a.VersionBuild > b.VersionBuild) {
+                                          return -1
+                                      } else {
+                                          return 1
+                                      }
+                                  } else {
+                                      return 1
+                                  }
+                              } else {
+                                  return 1
+                              }
+                            })
                             var vlength = VersionInfos.length
                             if (vlength > 0) {
-                                var vlink = VersionInfos[vlength-1].TrialResourceUrl
+                                var vlink = VersionInfos[0].TrialResourceUrl
                                 window.location.href= vlink;
                                 $('.downloadlink').attr('href', vlink);
                                 $('.dbrThanksDownloading').show();
