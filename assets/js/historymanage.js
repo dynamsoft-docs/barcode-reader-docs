@@ -24,7 +24,7 @@ function UrlReplace()
     if (ver == undefined){
         ver = curVerFromUrl;
         if(compatiableDiv != null){
-            compatiableDiv.style.display = none;
+            compatiableDiv.style.display = "none";
         }
     }
     else if (ver != curVerFromUrl){
@@ -39,7 +39,7 @@ function UrlReplace()
             }
         }
         if(compatiableDiv != null){
-            compatiableDiv.style.display = block;
+            compatiableDiv.style.display = "block";
         }
         if (compatibleTag != null){
             if (ver == "latest"){
@@ -52,7 +52,7 @@ function UrlReplace()
     }
     else{
         if(compatiableDiv != null){
-            compatiableDiv.style.display = none;
+            compatiableDiv.style.display = "none";
         }
     }
     
