@@ -108,7 +108,7 @@ To deploy your application, make sure the DLLs are in the same folder as the EXE
 
 ## Decoding Methods
 The SDK provides multiple decoding methods that support reading barcodes from different sources, including static images,
-video stream, files in memory, base64 string, bitmap, etc. Here is a list of all decoding methods:
+video streams, files in memory, base64 string, bitmap, etc. Here is a list of all decoding methods:
 - [DecodeFile]({{ site.cpp_methods }}decode.html#decodefile): Reads barcodes from a specified file (BMP, JPEG, PNG, GIF, TIFF or PDF).   
 - [DecodeBase64String]({{ site.cpp_methods }}decode.html#decodebase64string): Reads barcodes from a base64 encoded string of a file.   
 - [DecodeDIB]({{ site.cpp_methods }}decode.html#decodedib): Reads barcodes from a bitmap. When handling multi-page images, it will only decode the
@@ -127,7 +127,7 @@ Calling the [decoding methods](#decoding-methods) directly will use the default 
    
 There are two ways to change the barcode reading settings - using the PublicRuntimeSettings Struct or template. For new
 developers, We recommend you to start with the PublicRuntimeSettings struct; For those who are experienced with the SDK,
-you may use a template which is more flexible and easier to update.   
+you may use a template that is more flexible and easier to update.   
 
 - [Use `PublicRuntimeSettings` Struct to Change Settings](#use-publicruntimesettings-struct-to-change-settings)   
 - [Use A Template to Change Settings](#use-a-template-to-change-settings)   
