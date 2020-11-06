@@ -34,7 +34,7 @@ pip install dbr
     from dbr import *
    ```
 
-   Please make sure the dbr python package has been successfully installed. You can learn the dbr package information by running command "`pip show dbr`" on terminal or command prompt.
+   Please make sure the dbr python package has been successfully installed. You can learn the dbr package information by running the command "`pip show dbr`" on the terminal or command prompt.
 
 3. Update the main code in `BarcodeReadDemo_python.py`.
 
@@ -81,7 +81,7 @@ More samples available on [Code Gallery](https://www.dynamsoft.com/Downloads/Dyn
 
 By default, the SDK uses the default scanning settings when calling the [decoding methods](#decoding-methods) directly, it could meet the general requirement. The SDK also allows users to customize the scanning settings to optimize the scanning performance for specific usage scenarios.   
    
-Users can adjust the scanning settings by calling member function in PublicRuntimeSettings struct or loading runtime setting template. For beginner to the SDK, We recommend you to start with the PublicRuntimeSettings struct; For those who are experienced with the SDK,
+Users can adjust the scanning settings by calling the member function in the PublicRuntimeSettings class or loading the runtime setting template. For beginner to the SDK, We recommend you to start with the PublicRuntimeSettings struct; For those who are experienced with the SDK,
 loading template is more flexible and easier to update.
 
 - [Use `PublicRuntimeSettings` Struct to Change Settings](#use-publicruntimesettings-struct-to-change-settings)   
