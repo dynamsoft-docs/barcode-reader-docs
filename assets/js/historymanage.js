@@ -3,24 +3,33 @@ function UrlReplace()
     var docUrl = document.URL;    
     var ver = getUrlVars(docUrl)["ver"];
     var matchVer = getUrlVars(docUrl)["matchVer"];
-    if (matchVer != "true" && ver != undefined) {
+    if (matchVer == undefined && ver != undefined) {
         RedirToGivenVersionPage(ver);
     }
 
-    if (ver == undefined){
-        var tmpExp = new RegExp(/-v[0-9]+[^\/]*[\/(.html)]/g);
-        var searchAry = tmpExp.exec(docUrl);
-        if (searchAry != null){
-            ver = searchAry[0].replace('-v','');
-            ver = ver.replace('.html','');
-            ver = ver.replace('/', '');
-        }
-        else{
-            ver = "latest"
-        }
+    
+    var curVerFromUrl = "";
+    var tmpExp = new RegExp(/-v[0-9]+[^\/]*[\/(.html)]/g);
+    var searchAry = tmpExp.exec(docUrl);
+    if (searchAry != null){
+        curVerFromUrl = searchAry[0].replace('-v','');
+        curVerFromUrl = curVerFromUrl.replace('.html','');
+        curVerFromUrl = curVerFromUrl.replace('/', '');
     }
     else{
+        curVerFromUrl = "latest"
+    }
+
+    var compatiableDiv = document.getElementById( "compatibleInfo");
+    if (ver == undefined){
+        ver = curVerFromUrl;
+        if(compatiableDiv != null){
+            compatiableDiv.style.display = none;
+        }
+    }
+    else if (ver != curVerFromUrl){
         var curVerTag = $(".currentVersion ");
+        var compatibleTag = $(".compatibleCurVersion")
         if (curVerTag != null) {
             if (ver == "latest"){
                 curVerTag[0].innerText = "latest version";
@@ -29,7 +38,24 @@ function UrlReplace()
                 curVerTag[0].innerText = "version "+ver;
             }
         }
+        if(compatiableDiv != null){
+            compatiableDiv.style.display = block;
+        }
+        if (compatibleTag != null){
+            if (ver == "latest"){
+                compatibleTag[0].innerText = "Latest Version";
+            }
+            else{
+                compatibleTag[0].innerText = "Version "+ver;
+            }
+        }
     }
+    else{
+        if(compatiableDiv != null){
+            compatiableDiv.style.display = none;
+        }
+    }
+    
 
     var allHerf1 = $(".docContainer,.sideBar").find("a");
     for (var i = 0; i < allHerf1.length; i++)
@@ -44,6 +70,7 @@ function RedirToGivenVersionPage(inputVer)
     var bestVerIndex = -1;
     var verDiff = -1;
     var curVer = null;
+    var bestVersion = null;
     if (curVerTag != null) {
         var verText = (curVerTag[0].innerText).toLowerCase();
         if (verText == "latest version"){
@@ -58,6 +85,7 @@ function RedirToGivenVersionPage(inputVer)
         else {
             bestVerIndex = -1;
             verDiff = GetVersionDiff(inputVer, curVer);
+            bestVersion = curVer;
         }
     }
     
@@ -99,6 +127,7 @@ function RedirToGivenVersionPage(inputVer)
                 if (tmpDiff >= 0 && (tmpDiff < verDiff || verDiff < 0)){
                     bestVerIndex = i;
                     verDiff = tmpDiff;
+                    bestVersion = tmpVer;
                 }
             }
         }
