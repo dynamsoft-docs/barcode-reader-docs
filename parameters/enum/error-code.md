@@ -4,7 +4,6 @@ title: Dynamsoft Barcode Reader Enumerations - Error Code
 description: This article shows Error Code of Dynamsoft Barcode Reader.
 keywords: error code, enumeration
 needAutoGenerateSidebar: false
-otherDescription: true
 ---
 
 # Dynamsoft Barcode Reader - Error Code  
@@ -34,7 +33,7 @@ otherDescription: true
   | `DBRERR_PDF417_LICENSE_INVALID` | `EnumErrorCode_PDF417_License_Invalid` | -10019 | The PDF417 license is invalid. |
   | `DBRERR_DATAMATRIX_LICENSE_INVALID` | `EnumErrorCode_Datamatrix_License_Invalid` | -10020 | The DATAMATRIX license is invalid. |
   | `DBRERR_PDF_READ_FAILED` | `EnumErrorCode_PDF_Read_Failed` | -10021 | Failed to read the PDF file. |
-  | `DBRERR_PDF_DLL_MISSING` | `EnumErrorCode_PDF_DLL_Missing` | 10022 | The PDF DLL is missing. |
+  | `DBRERR_PDF_DLL_MISSING` | `EnumErrorCode_PDF_DLL_Missing` | -10022 | The PDF DLL is missing. |
   | `DBRERR_PAGE_NUMBER_INVALID` | `EnumErrorCode_Page_Number_Invalid` | -10023 | The page number is invalid. |
   | `DBRERR_CUSTOM_SIZE_INVALID` | `EnumErrorCode_Custom_Size_Invalid` | -10024 | The custom size is invalid. |
   | `DBRERR_CUSTOM_MODULESIZE_INVALID` | `EnumErrorCode_Custom_Modulesize_Invalid` | -10025 | The custom module size is invalid. |

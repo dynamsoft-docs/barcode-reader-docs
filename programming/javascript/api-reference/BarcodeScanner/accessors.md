@@ -26,36 +26,15 @@ needGenerateH3Content: false
 
 ## defaultUIElementURL
 
-Get or set the default scanner UI. The default scanner UI is defined in the file `dist/dbr.scanner.html`. Follow [these steps](../../user-guide.md#customizing-the-ui) to customize the UI. 
-
-### get
+Get or set the default scanner UI. The default scanner UI is defined in the file `dist/dbr.scanner.html`. Follow [these steps](../../user-guide/basic-customizations.md#customizing-the-ui) to customize the UI. 
 
 ```javascript
-defaultUIElementURL() returns string
+defaultUIElementURL = 'url'
 ```
 
-#### Return Value
+### Property Value
 
-`string`
-
-
-### set
-
-```javascript
-defaultUIElementURL(value) returns void
-```
-
-### Parameters
-
-`value` *string*  
-
-### Return Value
-
-`void`
-
-### Sample
-
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+`url` *string*  
 
 ### :+1: Tips and Tricks 
 
@@ -65,29 +44,13 @@ defaultUIElementURL(value) returns void
 
 Get or set the camera mode. If `true`, single video frames will be used instead of a continuous video stream. It's especially useful for cameras that lack webcam access (lack of WebRTC support, e.g. Chrome on iOS).
 
-### get
-
 ```javascript
-singleFrameMode() returns Boolean
-```
+singleFrameMode = bool;
+``` 
 
-### Return Value
+### Property Value
 
-`Boolean`
-
-### set
-
-```javascript
-singleFrameMode(value) returns void
-```
-
-### Parameters
-
-`value` *Boolean*  
-
-### Return Value
-
-`void`
+`bool` *boolean* 
 
 ### Sample
 
@@ -107,29 +70,13 @@ scanner.show();
 
 Get or set the sound played when a barcode is read successfully. 
 
-### get
-
 ```javascript
-soundOnSuccessfulRead() returns HTMLAudioElement
+soundOnSuccessfulRead = audio
 ```
 
-### Return Value
+### Property Value
 
-`HTMLAudioElement`
-
-### set
-
-```javascript
-soundOnSuccessfulRead(value) returns void
-```
-
-### Parameters
-
-`value` *HTMLAudioElement*  
-
-### Return Value
-
-`void`
+`audio` *HTMLAudioElement*  
 
 ### Sample
 
