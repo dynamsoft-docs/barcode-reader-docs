@@ -45,6 +45,9 @@ function UrlReplace()
             compatiableDiv.style.display = "block";
             compatibleTag[0].innerText = "Version "+ver;
         }
+        else if (compatiableDiv != null){
+            compatiableDiv.style.display = "none";
+        }
     }
     else if (compatiableDiv != null){
         compatiableDiv.style.display = "none";
