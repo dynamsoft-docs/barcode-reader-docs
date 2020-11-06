@@ -39,21 +39,15 @@ function UrlReplace()
             }
         }
         if(compatiableDiv != null){
-            compatiableDiv.style.display = "block";
+            
         }
-        if (compatibleTag != null){
-            if (ver == "latest"){
-                compatibleTag[0].innerText = "Latest Version";
-            }
-            else{
-                compatibleTag[0].innerText = "Version "+ver;
-            }
+        if (compatiableDiv != null && compatibleTag != null && curVerFromUrl != "latest"){
+            compatiableDiv.style.display = "block";
+            compatibleTag[0].innerText = "Version "+ver;
         }
     }
-    else{
-        if(compatiableDiv != null){
-            compatiableDiv.style.display = "none";
-        }
+    else if (compatiableDiv != null){
+        compatiableDiv.style.display = "none";
     }
     
 
