@@ -9,7 +9,7 @@ function UrlReplace()
 
     
     var curVerFromUrl = "";
-    var tmpExp = new RegExp(/-v[0-9]+[^\/]*[\/(.html)]/g);
+    var tmpExp = new RegExp(/-v[0-9]+[^\/^?^#]*((\/)|(.html))/g);
     var searchAry = tmpExp.exec(docUrl);
     if (searchAry != null){
         curVerFromUrl = searchAry[0].replace('-v','');
