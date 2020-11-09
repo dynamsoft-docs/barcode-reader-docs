@@ -14,7 +14,7 @@ needGenerateH3Content: true
 - Operating systems:
     - Windows x64
     - Linux (x64, ARM32, ARM64)
-    - Mac OS
+    - Mac OS (10.15+)
 
 - Supported Python Versions: Python 2.7 (for versions before DBR 7.4), Python 3.5, Python 3.6, Python 3.7, Python 3.8
 
