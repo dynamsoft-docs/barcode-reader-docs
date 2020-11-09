@@ -87,7 +87,7 @@
 	<p class="currentVersion fontOswald">{{ "version " | append: curPageVersion }}</p>
 {%- endif -%}
 
-<ul class="otherVersions">
+<ul class="otherVersions" style="display: none!important;">
 {%- assign historyAry = historyRecode | split: '\nextUrlRecode\' -%}
 {%- for history in historyAry -%}
 	{%- assign tmpSize = history | size -%}
@@ -104,6 +104,10 @@
 </ul>
 
 {%- if historyRecode != '' -%}
-	<a class="changeBtn fontOswald" href="javascript:;">Change +</a>
+	<a class="changeBtn fontOswald" href="javascript:;" style="display: none!important;">Change +</a>
 {%- endif -%}
+
+<span class="fullVersionHistory">
+	{%- include liquid_autoGenerateAllVersion.html -%}
+</span>
 

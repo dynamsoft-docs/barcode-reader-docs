@@ -107,7 +107,11 @@
                         {{ content }}
                         
                     </div>
-                    <div class="rightSideMenu col-xs-12 col-md-12 col-lg-3 col-xl-2  hide-md hide-sm hide-xs">	
+                    <div class="rightSideMenu col-xs-12 col-md-12 col-lg-3 col-xl-2  hide-md hide-sm hide-xs">
+                        <div id="compatibleInfo">
+                            <p>This page is compatible for:</p>
+                            <p class="compatibleCurVersion">Version 7.5</p>
+                        </div>
                         <div id="feedbackFooter" style="color: #306877;">
                             <p class="fontOswald">Is this page helpful? </p>
                             <a href="javascript:void(0)" style="color: #306877;" class="recordLink smileLink" onclick="UsefulRecord(true)"><img class="icon-smile" src="{{ site.smile_icon }}" alt="Yes" />Yes</a>
@@ -137,6 +141,9 @@
         integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
     <script>anchors.add();</script>
 
+    <script>
+        UrlReplace();
+    </script>
     {%- if page.needAutoGenerateSidebar -%}
     {%- unless page.needGenerateH3Content -%}
     <script>
@@ -152,9 +159,11 @@
         FullTreeMenuList(false);
     </script>
     {%- endif -%}
+
     <script>
         UrlReplace();
     </script>
+
 
     <!-- dbr docs -->
     <script type="text/javascript">
@@ -280,9 +289,15 @@
 
         $(document).click(function(){
             $('.otherVersions').hide()
+            $('.fullVersionInfo').hide()
         })
         $('.changeBtn').on('click', function(e) {
             $('.otherVersions').toggle()
+            stopPropagation(e);
+        })
+
+        $('.fvChange').on('click', function(e) {
+            $('.fullVersionInfo').toggle()
             stopPropagation(e);
         })
 
