@@ -44,7 +44,10 @@ string Dynamsoft.DBR.DMLTSConnectionParameters.MainServerURL
     Any string value   
       
 - **Default value**   
-    null (null means it will connect to Dynamsoft's main License Tracking Server for online verification.)
+    null
+    
+- **Default value**  
+    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.
 
 ### StandbyServerURL
 
@@ -58,7 +61,10 @@ string Dynamsoft.DBR.DMLTSConnectionParameters.StandbyServerURL
     Any string value   
       
 - **Default value**   
-    null (null means it will connect to Dynamsoft's standby License Tracking Server for online verification.)
+    null
+    
+- **Default value**  
+    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.
 
 ### HandshakeCode
 
