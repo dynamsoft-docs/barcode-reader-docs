@@ -44,6 +44,10 @@ DMLTSConnectionParameters.main_server_url
 - **Default value**   
     ""
 
+- **Remarks**   
+    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
+
+
 ### standby_server_url
 The URL of the standby license tracking server.
 ```python
@@ -54,6 +58,10 @@ DMLTSConnectionParameters.standby_server_url
       
 - **Default value**   
     ""
+
+- **Remarks**   
+    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
+
 
 ### handshake_code
 The handshake code.

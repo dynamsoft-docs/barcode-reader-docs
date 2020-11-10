@@ -144,8 +144,8 @@ Describes UUID generation method.
    
 | Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
 | -------------------------- | ------------------- | ----- | ----------- |
-| DM_UUIDGM_RANDOM | EnumDMUUIDGenerationMethodRandom | 0 | Generates UUID with random values. |
-| DM_UUIDGM_HARDWARE | EnumDMUUIDGenerationMethodHardware | 1 | Generates UUID based on hardware info. |
+| DM_UUIDGM_RANDOM | EnumDMUUIDGenerationMethodRandom | 1 | Generates UUID with random values. |
+| DM_UUIDGM_HARDWARE | EnumDMUUIDGenerationMethodHardware | 2 | Generates UUID based on hardware info. |
 
 
 

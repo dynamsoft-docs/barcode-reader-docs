@@ -16,6 +16,8 @@ needAutoGenerateSidebar: false
   | [`TextResultCallback`](#textresultcallback) | Represents the method that will handle the text result array returned by the SDK. | 
   | [`DBRServerLicenseVerificationListener`](#dbrserverlicenseverificationlistener) | Represents the method that will
    handle callback when license server returns. | 
+  | [`DBRLTSLicenseVerificationListener`](#dbrltslicenseverificationlistener) | Represents the method that will
+   handle callback when license tracking server returns. | 
   
 ---
 
@@ -75,6 +77,20 @@ Represents the method that will handle the error code returned by the SDK.
 
 ```java
 void com.dynamsoft.dbr.DBRServerLicenseVerificationListener.licenseVerificationCallback (boolean isSuccess, Exception error)
+```
+   
+### Parameters
+
+- `isSuccess`: Whether the license verification was successful. 
+- `error`: The error message from license server. 
+
+
+## DBRLTSLicenseVerificationListener
+
+Represents the method that will handle callback when license tracking server returns.
+
+```java
+void com.dynamsoft.dbr.DBRLTSLicenseVerificationListener.licenseVerificationCallback (boolean isSuccess, Exception error)
 ```
    
 ### Parameters

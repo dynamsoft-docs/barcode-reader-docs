@@ -31,7 +31,7 @@ typedef struct tagDM_LTSConnectionParameters  DM_LTSConnectionParameters
 | [`UUIDGenerationMethod`](#uuidgenerationmethod) | [`DM_UUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod) |
 | [`maxBufferDays`](#maxbufferdays) | *int* |
 | [`limitedLicenseModulesCount`](#limitedlicensemodulescount) | *int* |
-| [`limitedLicenseModules`](#limitedlicensemodules) | [`DM_LicenseModule\*`]({{ site.enumerations }}other-enums.html#dm_licensemodule) |
+| [`limitedLicenseModules`](#limitedlicensemodules) | [`DM_LicenseModule*`]({{ site.enumerations }}other-enums.html#dm_licensemodule) |
 | [`reserved`](#reserved) | *char\[64\]* |
 
 
@@ -46,6 +46,10 @@ const char*  tagDM_LTSConnectionParameters::mainServerURL
 - **Default value**   
     ""
 
+- **Remarks**   
+    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
+
+
 ### standbyServerURL
 The URL of the standby license tracking server.
 ```cpp
@@ -56,6 +60,10 @@ const char*  tagDM_LTSConnectionParameters::standbyServerURL
       
 - **Default value**   
     ""
+
+- **Remarks**   
+    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
+
 
 ### handshakeCode
 The handshake code.

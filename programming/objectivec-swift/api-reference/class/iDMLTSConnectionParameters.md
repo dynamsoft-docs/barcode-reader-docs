@@ -41,6 +41,10 @@ NSString* mainServerURL
 - **Default value**   
     nil
 
+- **Remarks**   
+    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to nil (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
+
+
 ### standbyServerURL
 
 The URL of the standby license tracking server.
@@ -54,6 +58,10 @@ NSString* standbyServerURL
       
 - **Default value**   
     nil
+
+- **Remarks**   
+    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to nil (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
+
 
 ### handshakeCode
 

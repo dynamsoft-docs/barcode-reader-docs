@@ -180,7 +180,7 @@ reader.destroy();
 Decodes barcode from a buffered image (bitmap).
 
 ```java
-TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeBufferedImage(BufferedImage image, String templateName)	throws IOException, BarcodeReaderException
+TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeBufferedImage(Bitmap image, String templateName)	throws IOException, BarcodeReaderException
 ```
    
 ### Parameters
@@ -200,7 +200,7 @@ All barcode text results decoded successfully.
 
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
-BufferedImage input = ImageIO.read("your file path");
+Bitmap bitmap = BitmapFactory.decodeFile("your file path");
 TextResult[] result = reader.decodeBufferedImage(bitmap, "");
 reader.destroy();
 ```
@@ -228,7 +228,7 @@ An intermediateResult struct with default values.
 ### Code Snippet
 
 ```java
-BarcodeReader reader = new BarcodeReader();
+BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
 IntermediateResult imResult = reader.initIntermediateResult(EnumIntermediateResultType.IRT_ORIGINAL_IMAGE);
 ```
 
@@ -256,7 +256,7 @@ All barcode text results decoded successfully.
 ### Code Snippet
 
 ```java
-BarcodeReader reader = new BarcodeReader();
+BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 settings.intermediateResultTypes = EnumIntermediateResultType.IRT_ORIGINAL_IMAGE;
 reader.updateRuntimeSettings(settings);

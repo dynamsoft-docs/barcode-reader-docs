@@ -228,7 +228,7 @@ An intermediateResult struct with default values.
 
 #### Code Snippet
 ```java
-BarcodeReader reader = new BarcodeReader();
+BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
 IntermediateResult imResult = reader.initIntermediateResult(EnumIntermediateResultType.IRT_ORIGINAL_IMAGE);
 ```
 
@@ -255,7 +255,7 @@ All barcode text results decoded successfully.
 
 #### Code Snippet
 ```java
-BarcodeReader reader = new BarcodeReader();
+BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
 PublicRuntimeSettings settings = reader.getRuntimeSettings(); settings.intermediateResultTypes = EnumIntermediateResultType.IRT_ORIGINAL_IMAGE;
 reader.updateRuntimeSettings(settings);
 reader.decodeFile("your file path", "");
