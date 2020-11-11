@@ -254,12 +254,13 @@ All barcode text results decoded successfully.
 #### Code Snippet
 ```csharp
 BarcodeReader reader = new BarcodeReader();
+reader.ProductKeys = "t0260NwAAAHV***************";
 PublicRuntimeSettings settings = reader.GetRuntimeSettings();
 settings.IntermediateResultType = (int)EnumIntermediateResultType.IRT_ORIGINAL_IMAGE;
 reader.UpdateRuntimeSettings(settings);
 reader.DecodeFile("Your file path", "");
-IntermediateResult[] IMR = reader.GetIntermediateResults();
-TextResult[] result = reader.DecodeIntermediateResults();
+IntermediateResult[] IMRs = reader.GetIntermediateResults();
+TextResult[] result = reader.DecodeIntermediateResults(IMRs, "");
 ```
 
 #### See Also
