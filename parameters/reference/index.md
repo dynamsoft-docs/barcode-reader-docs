@@ -144,10 +144,13 @@ breadcrumbText: Reference
  | [`FormatSpecification.BarcodeTextLengthRangeArray`](format-specification/format-control.md#barcodetextlengthrangearray) |	Sets the range of barcode text length for barcodes search. | 
  | [`FormatSpecification.BarcodeTextRegExPattern`](format-specification/format-control.md#barcodetextregexpattern) | Specifies the regular express pattern of barcode characters. | 
  | [`FormatSpecification.BarcodeWidthRangeArray`](format-specification/format-control.md#barcodewidthrangearray) | Sets the range of barcode widths (in pixels) for barcodes search.(Hint). | 
+ | [`FormatSpecification.BarcodeZoneBarCountRangeArray`](format-specification/format-control.md#barcodezonebarcountrangearray) |	Sets the range of bar count of the barcode zone for barcodes search. | 
+ | [`FormatSpecification.BarcodeZoneMinDistanceToImageBorders`](format-specification/format-control.md#barcodezonemindistancetoimageborders) |	Sets the minimum distance (in pixels) between barcode zone and image borders. | 
  | [`FormatSpecification.Code128Subset`](format-specification/format-control.md#code128subset) | Set the code 128 subset. | 
  | [`FormatSpecification.FindUnevenModuleBarcode`](format-specification/format-control.md#findunevenmodulebarcode) | Specifies whether to find barcodes with uneven barcode modules. Not support yet. | 
  | [`FormatSpecification.HeadModuleRatio`](format-specification/format-control.md#headmoduleratio) | Set the module count and module size ratio of the barcode head part. | 
  | [`FormatSpecification.MinQuietZoneWidth`](format-specification/format-control.md#minquietzonewidth) | The minimum width of the barcode quiet zone. | 
+ | [`FormatSpecification.MinRatioOfBarcodeZoneWidthToHeight`](format-control.md#minratioofbarcodezonewidthtoheight) |	Sets the minimum ratio (width/height) of the barcode zone. | 
  | [`FormatSpecification.MirrorMode`](format-specification/format-control.md#mirrormode) | Sets whether to decode mirrored barcodes. | 
  | [`FormatSpecification.ModuleSizeRangeArray`](format-specification/format-control.md#modulesizerangearray) | Sets the range of module size (in pixels) for barcodes search. (Hint). |
  | [`FormatSpecification.RequireStartStopChars`](format-specification/format-control.md#requirestartstopchars) |	Sets whether the start and stop characters are required when searching for Code 39 barcodes. |

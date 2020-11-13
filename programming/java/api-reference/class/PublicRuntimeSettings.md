@@ -369,7 +369,7 @@ int[] com.dynamsoft.dbr.PublicRuntimeSettings.deblurModes
     Each array item can be any one of the [`EnumDeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode) Enumeration items.
       
 - **Default value**   
-    `[DM_SKIP,DM_SKIP,DM_SKIP,DM_SKIP,DM_SKIP,DM_SKIP,DM_SKIP,DM_SKIP]`
+    `[DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP]`
     
 - **Remarks**   
     The array index represents the priority of the item. The smaller index is, the higher priority is.

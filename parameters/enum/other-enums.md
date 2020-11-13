@@ -32,7 +32,7 @@ Describes charge way.
 | -------- | ----------- |
 | C / C++ | `enum DM_ChargeWay` |
 | .Net | `enum Dynamsoft.DBR.EnumDMChargeWay` |
-| JavaScript | `Dynamsoft.EnumDMChargeWay` |
+| JavaScript | `N/A` |
 | Python | `class EnumDMChargeWay(IntEnum)` |
 | Java / Android | `class EnumDMChargeWay` |
 | ObjC / Swift | `enum EnumDMChargeWay` |
@@ -96,7 +96,7 @@ Describes Dynamsoft license modules.
 | -------- | ----------- |
 | C / C++ | `enum DM_LicenseModule` |
 | .Net | `enum Dynamsoft.DBR.EnumDMLicenseModule` |
-| JavaScript | `Dynamsoft.EnumDMLicenseModule` |
+| JavaScript | `N/A` |
 | Python | `class EnumDMLicenseModule(IntEnum)` |
 | Java / Android | `class EnumDMLicenseModule` |
 | ObjC / Swift | `enum EnumDMLicenseModule` |
@@ -134,7 +134,7 @@ Describes UUID generation method.
 | -------- | ----------- |
 | C / C++ | `enum DM_UUIDGenerationMethod` |
 | .Net | `enum Dynamsoft.DBR.EnumDMUUIDGenerationMethod` |
-| JavaScript | `Dynamsoft.EnumDMUUIDGenerationMethod` |
+| JavaScript | `N/A` |
 | Python | `class EnumDMUUIDGenerationMethod(IntEnum)` |
 | Java / Android | `class EnumDMUUIDGenerationMethod` |
 | ObjC / Swift | `enum EnumDMUUIDGenerationMethod` |

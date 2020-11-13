@@ -2,7 +2,7 @@
 layout: default-layout
 title: Dynamsoft Barcode Reader JavaScript API Reference - BarcodeReader Accessors
 description: This page shows BarcodeReader Accessors of Dynamsoft Barcode Reader JavaScript SDK.
-keywords: engineResourcePath, productKeys, version, accessors, BarcodeReader, api reference, javascript, js
+keywords: engineResourcePath, productKeys, version, licenseServer, sessionPwd, accessors, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 ---
@@ -12,9 +12,11 @@ needGenerateH3Content: false
 
 | Accessors            | Description |
 |----------------------|-------------|
-| [`engineResourcePath`](#engineresourcepath) | Get or set the engine (WASM) location. | 
-| [`productKeys`](#productkeys) | Get or set the Dynamsoft Barcode Reader SDK product keys. | 
-| [`version`](#version) | Get current version. | 
+| [`engineResourcePath`](#engineresourcepath) | Gets or sets the engine (WASM) location. | 
+| [`productKeys`](#productkeys) | Gets or sets the Dynamsoft Barcode Reader SDK product keys. | 
+| [`version`](#version) | Gets current version. | 
+| [`licenseServer`](#licenseserver) | Gets or sets the URL of the license tracking server. | 
+| [`sessionPwd`](#sessionpwd) | Gets or sets the session password of the handshake code set in license tracking server. | 
 
 ---
 
@@ -49,7 +51,7 @@ engineResourcePath(value) returns void
 #### Sample
 
 ```javascript
-Dynamsoft.BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@7.4.0-v1/dist/";
+Dynamsoft.BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@@8.0.0/dist/";
 
 await Dynamsoft.BarcodeReader.loadWasm();
 ```
@@ -85,7 +87,7 @@ productKeys(keys) returns void
 #### Sample
 
 ```javascript
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@7.4.0-v1/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@@8.0.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
 ```
 
 ## version
@@ -99,3 +101,76 @@ version() returns string
 #### Return Value
 
 `string`
+
+## licenseServer
+
+Gets or sets the URL of the license tracking server. When set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.
+
+### get
+
+```javascript
+licenseServer() returns string
+```
+
+#### Return Value
+
+`string`
+
+### set
+
+```javascript
+licenseServer(value) returns void
+```
+
+#### Parameters
+
+`value` *string*  
+
+#### Return Value
+
+`void`
+
+#### Sample
+
+```javascript
+Dynamsoft.BarcodeReader.licenseServer = "";
+
+await Dynamsoft.BarcodeReader.loadWasm();
+```
+
+## sessionPwd
+
+Gets or sets the session password of the handshake code set in license tracking server..
+
+### get
+
+```javascript
+sessionPwd() returns string
+```
+
+#### Return Value
+
+`string`
+
+### set
+
+```javascript
+sessionPwd(value) returns void
+```
+
+#### Parameters
+
+`value` *string*  
+
+#### Return Value
+
+`void`
+
+#### Sample
+
+```javascript
+Dynamsoft.BarcodeReader.sessionPwd = "";
+
+await Dynamsoft.BarcodeReader.loadWasm();
+```
+
