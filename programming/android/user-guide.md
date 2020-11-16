@@ -13,7 +13,7 @@ needGenerateH3Content: true
 ## System Requirements
 
 - Operating systems:
-   - Supported OS: Android 5 or higher
+   - Supported OS: Android 5 or higher (Android 7 or higher recommended)
    - Supported ABI: armeabi-v7a/arm64-v8a
 
 ## Installation
@@ -100,8 +100,8 @@ You can add Dynamsoft Barcode Reader like below:
 3. Add the following code to initiate and use the Dynamsoft Barcode Reader SDK.
 
     ```java
-   import com.dynamsoft.barcode.BarcodeReader;
-   import com.dynamsoft.barcode.TextResult;
+   import com.dynamsoft.dbr.BarcodeReader;
+   import com.dynamsoft.dbr.TextResult;
    import android.util.Log;
    public class MainActivity extends AppCompatActivity {
       @Override

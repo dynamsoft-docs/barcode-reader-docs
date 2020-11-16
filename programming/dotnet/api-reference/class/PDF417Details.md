@@ -10,7 +10,7 @@ needAutoGenerateSidebar: false
 # PDF417Details
 Stores the PDF417 details.
 
-```C#
+```csharp
 public class PDF417Details
 ```  
   
@@ -30,27 +30,27 @@ public class PDF417Details
 ### ModuleSize
 The barcode module size (the minimum bar width in pixel).
 
-```C#
-int Dynamsoft.Barcode.PDF417Details.ModuleSize
+```csharp
+int Dynamsoft.DBR.PDF417Details.ModuleSize
 ```
 
 ### Rows
 The row count of the barcode.
 
-```C#
-int Dynamsoft.Barcode.PDF417Details.Rows
+```csharp
+int Dynamsoft.DBR.PDF417Details.Rows
 ```
 
 ### Columns
 The column count of the barcode.
 
-```C#
-int Dynamsoft.Barcode.PDF417Details.Columns
+```csharp
+int Dynamsoft.DBR.PDF417Details.Columns
 ```
 
 ### ErrorCorrectionLevel
 The error correction level of the barcode.
 
-```C#
-int Dynamsoft.Barcode.PDF417Details.ErrorCorrectionLevel
+```csharp
+int Dynamsoft.DBR.PDF417Details.ErrorCorrectionLevel
 ```

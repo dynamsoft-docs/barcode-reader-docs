@@ -13,6 +13,7 @@ needAutoGenerateSidebar: true
   | [`initWithLicense`](#initwithlicense) | Initializes DynamsoftBarcodeReader with a license. |
   | [`initWithLicenseFromServer`](#initwithlicensefromserver) | Initialize license and connect to the specified server for online verification. |
   | [`outputLicenseToString`](#outputlicensetostring) | Outputs the license content as an encrypted string from the license server to be used for offline license verification. |
+  | [`initLicenseFromLTS`](#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
   
   
   ---
@@ -130,3 +131,50 @@ let error: NSError? = NSError()
 let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
 let licenseString = barcodeReader.outputLicense(error: &error)
 ```
+
+
+## initLicenseFromLTS
+
+Initializes the barcode reader license and connects to the specified server for online verification.
+
+```objc
+- (instancetype _Nonnull)initLicenseFromLTS:(iDMLTSConnectionParameters* _Nullable)ltsConnectionParameters verificationDelegate:(id _Nullable)connectionDelegate;
+```   
+
+### Parameters
+
+`[in] ltsConnectionParameters` The struct DMLTSConnectionParameters with customized settings.  
+`[in,out] connectionDelegate` The delegate to handle callback when license server returns.
+
+### Return value
+
+The instance of DynamsoftBarcodeReader.
+
+### Code Snippet
+
+Objective-C:
+
+```objc
+DynamsoftBarcodeReader *barcodeReader;
+iDMLTSConnectionParameters* lts = [[iDMLTSConnectionParameters alloc] init];
+lts.handshakeCode = @"*****-hs-****";
+lts.sessionPassword = @"******";
+barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromLTS:lts verificationDelegate:self];
+- (void)LTSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
+{
+        //TODO add your code for license verification
+}
+```
+Swift:
+
+```Swift
+let lts = iDMLTSConnectionParameters()
+lts.handshakeCode = "*****-hs-****";
+lts.sessionPassword = "******";
+barcodeReader = DynamsoftBarcodeReader(licenseFromLTS: lts, verificationDelegate: self)
+func ltsLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
+{
+     //TODO add your code for license verification
+}
+```
+

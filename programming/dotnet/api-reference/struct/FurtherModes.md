@@ -10,7 +10,7 @@ needAutoGenerateSidebar: false
 # FurtherModes
 Stores the FurtherModes. 
 
-```C#
+```csharp
 public struct FurtherModes
 ```  
   
@@ -38,8 +38,8 @@ public struct FurtherModes
 ### ColourClusteringModes
 Sets the mode and priority for colour categorization. Not supported yet.  
 
-```C#
-EnumColourClusteringMode[] Dynamsoft.Barcode.FurtherModes.ColourClusteringModes
+```csharp
+EnumColourClusteringMode[] Dynamsoft.DBR.FurtherModes.ColourClusteringModes
 ```
 
 - **Value range**  
@@ -48,14 +48,14 @@ EnumColourClusteringMode[] Dynamsoft.Barcode.FurtherModes.ColourClusteringModes
 - **Default value**  
    `[EnumColourClusteringMode.CCM_SKIP, EnumColourClusteringMode.CCM_SKIP, EnumColourClusteringMode.CCM_SKIP, EnumColourClusteringMode.CCM_SKIP, EnumColourClusteringMode.CCM_SKIP, EnumColourClusteringMode.CCM_SKIP, EnumColourClusteringMode.CCM_SKIP, EnumColourClusteringMode.CCM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is. 
 
 ### ColourConversionModes
 Sets the mode and priority for converting a colour image to a grayscale image.
 
-```C#
-EnumColourConversionMode[] Dynamsoft.Barcode.FurtherModes.ColourConversionModes
+```csharp
+EnumColourConversionMode[] Dynamsoft.DBR.FurtherModes.ColourConversionModes
 ```
 
 - **Value range**  
@@ -64,14 +64,14 @@ EnumColourConversionMode[] Dynamsoft.Barcode.FurtherModes.ColourConversionModes
 - **Default value**  
    `[EnumColourConversionMode.CICM_GENERAL, EnumColourConversionMode.CICM_SKIP, EnumColourConversionMode.CICM_SKIP, EnumColourConversionMode.CICM_SKIP, EnumColourConversionMode.CICM_SKIP, EnumColourConversionMode.CICM_SKIP, EnumColourConversionMode.CICM_SKIP, EnumColourConversionMode.CICM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
 
 ### GrayscaleTransformationModes
 Sets the mode and priority for the grayscale image conversion.
 
-```C#
-EnumGrayscaleTransformationMode[] Dynamsoft.Barcode.FurtherModes.GrayscaleTransformationModes
+```csharp
+EnumGrayscaleTransformationMode[] Dynamsoft.DBR.FurtherModes.GrayscaleTransformationModes
 ```
 
 - **Value range**  
@@ -80,14 +80,14 @@ EnumGrayscaleTransformationMode[] Dynamsoft.Barcode.FurtherModes.GrayscaleTransf
 - **Default value**  
    `[EnumGrayscaleTransformationMode.GTM_ORIGINAL, EnumGrayscaleTransformationMode.GTM_SKIP, EnumGrayscaleTransformationMode.GTM_SKIP, EnumGrayscaleTransformationMode.GTM_SKIP, EnumGrayscaleTransformationMode.GTM_SKIP, EnumGrayscaleTransformationMode.GTM_SKIP, EnumGrayscaleTransformationMode.GTM_SKIP, EnumGrayscaleTransformationMode.GTM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
 
 ### RegionPredetectionModes
 Sets the region pre-detection mode for barcodes search.
 
-```C#
-EnumRegionPredetectionMode[] Dynamsoft.Barcode.FurtherModes.RegionPredetectionModes
+```csharp
+EnumRegionPredetectionMode[] Dynamsoft.DBR.FurtherModes.RegionPredetectionModes
 ```
 
 - **Value range**  
@@ -96,14 +96,14 @@ EnumRegionPredetectionMode[] Dynamsoft.Barcode.FurtherModes.RegionPredetectionMo
 - **Default value**  
    `[EnumRegionPredetectionMode.RPM_GENERAL, EnumRegionPredetectionMode.RPM_SKIP, EnumRegionPredetectionMode.RPM_SKIP, EnumRegionPredetectionMode.RPM_SKIP, EnumRegionPredetectionMode.RPM_SKIP, EnumRegionPredetectionMode.RPM_SKIP, EnumRegionPredetectionMode.RPM_SKIP, EnumRegionPredetectionMode.RPM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is. If the image is large and the barcode on the image is very small, it is recommended to enable region predetection to speed up the localization process and recognition accuracy.
 
 ### ImagePreprocessingModes
 Sets the mode and priority for image preprocessing algorithms.
 
-```C#
-EnumImagePreprocessingMode[] Dynamsoft.Barcode.FurtherModes.ImagePreprocessingModes
+```csharp
+EnumImagePreprocessingMode[] Dynamsoft.DBR.FurtherModes.ImagePreprocessingModes
 ```
 
 - **Value range**  
@@ -112,14 +112,14 @@ EnumImagePreprocessingMode[] Dynamsoft.Barcode.FurtherModes.ImagePreprocessingMo
 - **Default value**  
    `[EnumImagePreprocessingMode.IPM_GENERAL, EnumImagePreprocessingMode.IPM_SKIP, EnumImagePreprocessingMode.IPM_SKIP, EnumImagePreprocessingMode.IPM_SKIP, EnumImagePreprocessingMode.IPM_SKIP, EnumImagePreprocessingMode.IPM_SKIP, EnumImagePreprocessingMode.IPM_SKIP, EnumImagePreprocessingMode.IPM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.
 
 ### TextureDetectionModes
 Sets the mode and priority for texture detection. 
 
-```C#
-EnumTextureDetectionMode[] Dynamsoft.Barcode.FurtherModes.TextureDetectionModes
+```csharp
+EnumTextureDetectionMode[] Dynamsoft.DBR.FurtherModes.TextureDetectionModes
 ```
 
 - **Value range**  
@@ -128,14 +128,14 @@ EnumTextureDetectionMode[] Dynamsoft.Barcode.FurtherModes.TextureDetectionModes
 - **Default value**  
    `[EnumTextureDetectionMode.TDM_GENERAL_WIDTH_CONCENTRATION, EnumTextureDetectionMode.TDM_SKIP, EnumTextureDetectionMode.TDM_SKIP, EnumTextureDetectionMode.TDM_SKIP, EnumTextureDetectionMode.TDM_SKIP, EnumTextureDetectionMode.TDM_SKIP, EnumTextureDetectionMode.TDM_SKIP, EnumTextureDetectionMode.TDM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.
 
 ### TextFilterModes
 Sets the mode and priority for text filter.
 
-```C#
-EnumTextFilterMode[] Dynamsoft.Barcode.FurtherModes.TextFilterModes
+```csharp
+EnumTextFilterMode[] Dynamsoft.DBR.FurtherModes.TextFilterModes
 ```
 
 - **Value range**  
@@ -144,14 +144,14 @@ EnumTextFilterMode[] Dynamsoft.Barcode.FurtherModes.TextFilterModes
 - **Default value**  
    `[EnumTextFilterMode.TFM_GENERAL_CONTOUR, EnumTextFilterMode.TFM_SKIP, EnumTextFilterMode.TFM_SKIP, EnumTextFilterMode.TFM_SKIP, EnumTextFilterMode.TFM_SKIP, EnumTextFilterMode.TFM_SKIP, EnumTextFilterMode.TFM_SKIP, EnumTextFilterMode.TFM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is. If the image contains a lot of text, you can enable text filter to speed up the localization process.
 
 ### TextAssistedCorrectionMode
 Sets the mode of text assisted correction for barcode decoding. ***Not supported yet***.
 
-```C#
-EnumTextAssistedCorrectionMode Dynamsoft.Barcode.FurtherModes.TextAssistedCorrectionMode
+```csharp
+EnumTextAssistedCorrectionMode Dynamsoft.DBR.FurtherModes.TextAssistedCorrectionMode
 ```
 
 - **Value range**  
@@ -163,8 +163,8 @@ EnumTextAssistedCorrectionMode Dynamsoft.Barcode.FurtherModes.TextAssistedCorrec
 ### DPMCodeReadingModes
 Sets the mode and priority for DPM code reading.
 
-```C#
-EnumDPMCodeReadingMode[] Dynamsoft.Barcode.FurtherModes.DPMCodeReadingModes
+```csharp
+EnumDPMCodeReadingMode[] Dynamsoft.DBR.FurtherModes.DPMCodeReadingModes
 ```
 
 - **Value range**  
@@ -173,14 +173,14 @@ EnumDPMCodeReadingMode[] Dynamsoft.Barcode.FurtherModes.DPMCodeReadingModes
 - **Default value**  
    `[EnumDPMCodeReadingMode.DPMCRM_SKIP, EnumDPMCodeReadingMode.DPMCRM_SKIP, EnumDPMCodeReadingMode.DPMCRM_SKIP, EnumDPMCodeReadingMode.DPMCRM_SKIP, EnumDPMCodeReadingMode.DPMCRM_SKIP, EnumDPMCodeReadingMode.DPMCRM_SKIP, EnumDPMCodeReadingMode.DPMCRM_SKIP, EnumDPMCodeReadingMode.DPMCRM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
 
 ### DeformationResistingModes
 Sets the mode and priority for deformation resisting.
 
-```C#
-EnumDeformationResistingMode[] Dynamsoft.Barcode.FurtherModes.DeformationResistingModes
+```csharp
+EnumDeformationResistingMode[] Dynamsoft.DBR.FurtherModes.DeformationResistingModes
 ```
 
 - **Value range**  
@@ -189,14 +189,14 @@ EnumDeformationResistingMode[] Dynamsoft.Barcode.FurtherModes.DeformationResisti
 - **Default value**  
    `[EnumDeformationResistingMode.DRM_SKIP, EnumDeformationResistingMode.DRM_SKIP, EnumDeformationResistingMode.DRM_SKIP, EnumDeformationResistingMode.DRM_SKIP, EnumDeformationResistingMode.DRM_SKIP, EnumDeformationResistingMode.DRM_SKIP, EnumDeformationResistingMode.DRM_SKIP, EnumDeformationResistingMode.DRM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
 
 ### BarcodeComplementModes
 Sets the mode and priority to complement the missing parts in the barcode.
 
-```C#
-EnumColourConversionMode[] Dynamsoft.Barcode.FurtherModes.ColourConversionModes
+```csharp
+EnumColourConversionMode[] Dynamsoft.DBR.FurtherModes.ColourConversionModes
 ```
 
 - **Value range**  
@@ -205,14 +205,14 @@ EnumColourConversionMode[] Dynamsoft.Barcode.FurtherModes.ColourConversionModes
 - **Default value**  
    `[EnumColourConversionMode.BCM_SKIP, EnumColourConversionMode.BCM_SKIP, EnumColourConversionMode.BCM_SKIP, EnumColourConversionMode.BCM_SKIP, EnumColourConversionMode.BCM_SKIP, EnumColourConversionMode.BCM_SKIP, EnumColourConversionMode.BCM_SKIP, EnumColourConversionMode.BCM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
 
 ### BarcodeColourModes
 Sets the mode and priority for the barcode colour mode used to process the barcode zone.
 
-```C#
-EnumBarcodeColourMode[] Dynamsoft.Barcode.FurtherModes.BarcodeColourModes
+```csharp
+EnumBarcodeColourMode[] Dynamsoft.DBR.FurtherModes.BarcodeColourModes
 ```
 
 - **Value range**  
@@ -221,14 +221,14 @@ EnumBarcodeColourMode[] Dynamsoft.Barcode.FurtherModes.BarcodeColourModes
 - **Default value**  
    `[EnumBarcodeColourMode.BICM_DARK_ON_LIGHT, EnumBarcodeColourMode.BICM_SKIP, EnumBarcodeColourMode.BICM_SKIP, EnumBarcodeColourMode.BICM_SKIP, EnumBarcodeColourMode.BICM_SKIP, EnumBarcodeColourMode.BICM_SKIP, EnumBarcodeColourMode.BICM_SKIP, EnumBarcodeColourMode.BICM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
 
 ### AccompanyingTextRecognitionModes
-Sets the mode and priority to recognize accompanying text.
+[`Deprecated`]Sets the mode and priority to recognize accompanying text.
 
-```C#
-EnumAccompanyingTextRecognitionMode[] Dynamsoft.Barcode.FurtherModes.AccompanyingTextRecognitionModes
+```csharp
+EnumAccompanyingTextRecognitionMode[] Dynamsoft.DBR.FurtherModes.AccompanyingTextRecognitionModes
 ```
 
 - **Value range**  
@@ -237,5 +237,5 @@ EnumAccompanyingTextRecognitionMode[] Dynamsoft.Barcode.FurtherModes.Accompanyin
 - **Default value**  
    `[EnumAccompanyingTextRecognitionMode.ATRM_SKIP, EnumAccompanyingTextRecognitionMode.ATRM_SKIP, EnumAccompanyingTextRecognitionMode.ATRM_SKIP, EnumAccompanyingTextRecognitionMode.ATRM_SKIP, EnumAccompanyingTextRecognitionMode.ATRM_SKIP, EnumAccompanyingTextRecognitionMode.ATRM_SKIP, EnumAccompanyingTextRecognitionMode.ATRM_SKIP, EnumAccompanyingTextRecognitionMode.ATRM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  

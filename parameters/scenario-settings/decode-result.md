@@ -71,7 +71,7 @@ for(int j = 0; j < iCount; j++)
     LocalizationResult* pLocRes = pBarcode->localizationResult;  
     printf("confidence:%d\n",pLocRes->confidence);
 }  
-CBarcodeReader::FreeTextResults(&pResult);     
+dynamsoft::dbr::CBarcodeReader::FreeTextResults(&pResult);     
 delete reader;  
 ```
 
@@ -121,7 +121,7 @@ for(int j = 0; j < iCount; j++)
     ExtendResult* pExResult = pBarcode->result[0];  
     printf("clarity:%d\n", pExResult->clarity);
 }  
-CBarcodeReader::FreeTextResults(&pResult);
+dynamsoft::dbr::CBarcodeReader::FreeTextResults(&pResult);
 delete runtimeSettings;
 delete reader;
 ```

@@ -10,7 +10,7 @@ needAutoGenerateSidebar: false
 # DataMatrixDetails
 Stores the DataMatrix details.
 
-```C#
+```csharp
 public class DataMatrixDetails
 ```  
 
@@ -31,42 +31,42 @@ public class DataMatrixDetails
 ### ModuleSize
 The barcode module size (the minimum bar width in pixel).
 
-```C#
-int Dynamsoft.Barcode.DataMatrixDetails.ModuleSize
+```csharp
+int Dynamsoft.DBR.DataMatrixDetails.ModuleSize
 ```
 
 ### Rows
 The row count of the barcode.
 
-```C#
-int Dynamsoft.Barcode.DataMatrixDetails.Rows
+```csharp
+int Dynamsoft.DBR.DataMatrixDetails.Rows
 ```
 
 ### Columns
 The column count of the barcode.
 
-```C#
-int Dynamsoft.Barcode.DataMatrixDetails.Columns
+```csharp
+int Dynamsoft.DBR.DataMatrixDetails.Columns
 ```
 
 ### DataRegionRows 
 The data region row count of the barcode.
 
-```C#
-int Dynamsoft.Barcode.DataMatrixDetails.DataRegionRows
+```csharp
+int Dynamsoft.DBR.DataMatrixDetails.DataRegionRows
 ```
 
 ### DataRegionColumns
 The data region column count of the barcode.
 
-```C#
-int Dynamsoft.Barcode.DataMatrixDetails.DataRegionColumns
+```csharp
+int Dynamsoft.DBR.DataMatrixDetails.DataRegionColumns
 ```
 
 ### DataRegionNumber
 The data region count.
 
-```C#
-int Dynamsoft.Barcode.DataMatrixDetails.DataRegionNumber
+```csharp
+int Dynamsoft.DBR.DataMatrixDetails.DataRegionNumber
 ```
 

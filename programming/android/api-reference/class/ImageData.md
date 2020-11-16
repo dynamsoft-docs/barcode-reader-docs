@@ -27,7 +27,7 @@ Stores the image data.
 The image data content in a byte array. 
 
 ```java
-byte[] com.dynamsoft.barcode.ImageData.bytes
+byte[] com.dynamsoft.dbr.ImageData.bytes
 ```
 
 ### width
@@ -35,7 +35,7 @@ byte[] com.dynamsoft.barcode.ImageData.bytes
 The width of the image in pixels.  
 
 ```java
-int com.dynamsoft.barcode.ImageData.width
+int com.dynamsoft.dbr.ImageData.width
 ```
 
 ### height
@@ -43,7 +43,7 @@ int com.dynamsoft.barcode.ImageData.width
 The height of the image in pixels. 
 
 ```java
-int com.dynamsoft.barcode.ImageData.height
+int com.dynamsoft.dbr.ImageData.height
 ```
 
 ### stride
@@ -51,7 +51,7 @@ int com.dynamsoft.barcode.ImageData.height
 The stride (or scan width) of the image. 
 
 ```java
-int com.dynamsoft.barcode.ImageData.stride
+int com.dynamsoft.dbr.ImageData.stride
 ```
 
 ### format
@@ -59,5 +59,5 @@ int com.dynamsoft.barcode.ImageData.stride
 The image pixel format used in the image byte array. 
 
 ```java
-int com.dynamsoft.barcode.ImageData.format
+int com.dynamsoft.dbr.ImageData.format
 ```

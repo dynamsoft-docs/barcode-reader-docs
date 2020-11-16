@@ -30,6 +30,8 @@ breadcrumbText: BarcodeReader Methods
   | [`decodeBuffer`](decode.md#decodebuffer) | Decode barcodes from raw buffer. |
   | [`decodeBase64String`](decode.md#decodebase64string) | Decode barcodes from a base64 encoded string. |
   | [`decodeBufferedImage`](decode.md#decodeBufferedImage) | Decodes barcode from a buffered imag (bitmap). |
+  | [`initIntermediateResult`](decode.md#initintermediateresult) | Inits an intermediateResult struct with default values. |
+  | [`decodeIntermediateResults`](decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
    
    
 &nbsp; 
@@ -72,6 +74,8 @@ breadcrumbText: BarcodeReader Methods
   | [`initLicenseFromServer`](license.md#initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
   | [`initLicenseFromLicenseContent`](license.md#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
   | [`outputLicenseToString`](license.md#outputlicensetostring) | Output the license content to a string from the license server. |
+  | [`initLTSConnectionParameters`](license.md#initltsconnectionparameters) | Initializes a DMLTSConnectionParameters struct with default values. |
+  | [`initLicenseFromLTS`](license.md#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
    
    
 &nbsp; 

@@ -9,7 +9,7 @@ needAutoGenerateSidebar: false
 # OneDCodeDetails
 Stores the OneD code details.
 
-```C#
+```csharp
 public class OneDCodeDetails
 ```  
   
@@ -29,27 +29,27 @@ public class OneDCodeDetails
 ### ModuleSize
 The barcode module size (the minimum bar width in pixel).
 
-```C#
-int Dynamsoft.Barcode.OneDCodeDetails.ModuleSize
+```csharp
+int Dynamsoft.DBR.OneDCodeDetails.ModuleSize
 ```
 
 ### StartCharsBytes
 The start chars in a byte array.
 
-```C#
-byte[] Dynamsoft.Barcode.OneDCodeDetails.StartCharsBytes
+```csharp
+byte[] Dynamsoft.DBR.OneDCodeDetails.StartCharsBytes
 ```
 
 ### StopCharsBytes
 The stop chars in a byte array.
 
-```C#
-byte[] Dynamsoft.Barcode.OneDCodeDetails.StopCharsBytes
+```csharp
+byte[] Dynamsoft.DBR.OneDCodeDetails.StopCharsBytes
 ```
 
 ### CheckDigitBytes
 The check digit chars in a byte array.
 
-```C#
-byte[] Dynamsoft.Barcode.OneDCodeDetails.CheckDigitBytes
+```csharp
+byte[] Dynamsoft.DBR.OneDCodeDetails.CheckDigitBytes
 ```

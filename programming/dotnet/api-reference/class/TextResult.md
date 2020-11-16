@@ -10,7 +10,7 @@ needAutoGenerateSidebar: false
 # TextResult
 Stores the text result.
 
-```C#
+```csharp
 public class TextResult
 ```  
   
@@ -35,62 +35,62 @@ public class TextResult
 ### BarcodeFormat
 Barcode type in BarcodeFormat group 1.
 
-```C#
-EnumBarcodeFormat Dynamsoft.Barcode.TextResult.BarcodeFormat
+```csharp
+EnumBarcodeFormat Dynamsoft.DBR.TextResult.BarcodeFormat
 ```
 
 ### BarcodeFormatString
 Barcode type in BarcodeFormat group 1 as string.
 
-```C#
-string Dynamsoft.Barcode.TextResult.BarcodeFormatString
+```csharp
+string Dynamsoft.DBR.TextResult.BarcodeFormatString
 ```
 
 ### BarcodeFormat_2
 Barcode type in BarcodeFormat group 2.
 
-```C#
-EnumBarcodeFormat_2 Dynamsoft.Barcode.TextResult.BarcodeFormat_2
+```csharp
+EnumBarcodeFormat_2 Dynamsoft.DBR.TextResult.BarcodeFormat_2
 ```
 
 ### BarcodeFormatString_2
 Barcode type in BarcodeFormat group 2 as string.
 
-```C#
-string Dynamsoft.Barcode.TextResult.BarcodeFormatString_2
+```csharp
+string Dynamsoft.DBR.TextResult.BarcodeFormatString_2
 ```
 
 ### BarcodeText
 The barcode text, ends by '\0'.
 
-```C#
-string Dynamsoft.Barcode.TextResult.BarcodeText
+```csharp
+string Dynamsoft.DBR.TextResult.BarcodeText
 ```
 
 ### BarcodeBytes
 The barcode content in a byte array.
 
-```C#
-byte[] Dynamsoft.Barcode.TextResult.BarcodeBytes
+```csharp
+byte[] Dynamsoft.DBR.TextResult.BarcodeBytes
 ```
 
 ### LocalizationResult
 The corresponding localization result.
 
-```C#
-LocalizationResult Dynamsoft.Barcode.TextResult.LocalizationResult
+```csharp
+LocalizationResult Dynamsoft.DBR.TextResult.LocalizationResult
 ```
 
 ### DetailedResult
 One of the following: [`QRCodeDetails`](QRCodeDetails.md), [`PDF417Details`](PDF417Details.md), [`DataMatrixDetails`](DataMatrixDetails.md), [`AztecDetails`](AztecDetails.md), [`OneDCodeDetails`](OneDCodeDetails.md).
 
-```C#
-object Dynamsoft.Barcode.TextResult.DetailedResult
+```csharp
+object Dynamsoft.DBR.TextResult.DetailedResult
 ```
 
 ### Results
 The extended result array.
 
-```C#
-ExtendedResult[] Dynamsoft.Barcode.TextResult.Results
+```csharp
+ExtendedResult[] Dynamsoft.DBR.TextResult.Results
 ```

@@ -37,22 +37,22 @@ needAutoGenerateSidebar: false
 ##### FolderPath 
 Sets the path of the output folder which stores intermediate results.   
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing the folder path with max length 480. | "" | "IRSM_FILESYSTEM"<br>"IRSM_BOTH" |         
 
-- **Remark**     
+- **Remarks**     
     "": The library path.    
     Please make sure the path exists and your application has the appropriate permissions for saving the results.   
 
 ##### RecordsetSizeOfLatestImages
 Sets the maximum count of recordset to store the latest images' intermediate results.
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [0,0x7fffffff]  |  0 | "IRSM_MEMORY"<br>"IRSM_FILESYSTEM"<br>"IRSM_BOTH" | 
 
-- **Remark**     
+- **Remarks**     
     0: no limitation on the count of recordset.   
     When the count exceeds, the old recordset will be replaced by the new one.
 
@@ -86,7 +86,7 @@ Sets the maximum count of recordset to store the latest images' intermediate res
 | ------ | ------------------ | ---------- |
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) | [`intermediateResultSavingMode`]({{ site.structs }}PublicRuntimeSettings.html#intermediateresultsavingmode) | [`IntermediateResultSavingMode`]({{ site.enumerations }}result-enums.html#intermediateresultsavingmode) |
 
-**Remark**   
+**Remarks**   
 [`GetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) and [`SetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) need to be called for getting or setting the value of [arguments](#mode-arguments).
 
 **See Also**    

@@ -61,7 +61,7 @@ You can add Dynamsoft Barcode Reader as the dependency to pom.xml like this:
     The JAR file can be found at [INSTALLATION FOLDER]\Dynamsoft Barcode Reader\lib\ .
 3. Import the header.
     ```java
-    import com.dynamsoft.barcode.*;
+    import com.dynamsoft.dbr.*;
     ```
 4. Replace the code of HelloDBR with the following.
     ```java

@@ -9,7 +9,7 @@ needAutoGenerateSidebar: false
 # LineSegment
 Stores line segment data.
 
-```C#
+```csharp
 public class LineSegment
 ```  
   
@@ -27,15 +27,15 @@ public class LineSegment
 ### StartPoint
 The start point of the line segment.   
 
-```C#
-Point Dynamsoft.Barcode.LineSegment.StartPoint
+```csharp
+Point Dynamsoft.DBR.LineSegment.StartPoint
 ```
 
 ### EndPoint
 The end point of the line segment.
 
-```C#
-Point Dynamsoft.Barcode.LineSegment.EndPoint
+```csharp
+Point Dynamsoft.DBR.LineSegment.EndPoint
 ```
 
 ### LinesConfidenceCoefficients
@@ -45,6 +45,6 @@ The confidence coefficients for lines. There are 4 coefficients in this set:
 3. linesConfidenceCoefficients\[2\] is average negative amplitude;   
 4. linesConfidenceCoefficients\[3\] is max negative amplitude.
 
-```C#
-byte[] Dynamsoft.Barcode.LineSegment.LinesConfidenceCoefficients
+```csharp
+byte[] Dynamsoft.DBR.LineSegment.LinesConfidenceCoefficients
 ```

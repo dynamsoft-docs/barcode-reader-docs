@@ -27,35 +27,35 @@ Stores the DataMatrix details.
 ### moduleSize
 The barcode module size (the minimum bar width in pixel).
 ```java
-int com.dynamsoft.barcode.DataMatrixDetails.moduleSize
+int com.dynamsoft.dbr.DataMatrixDetails.moduleSize
 ```
 
 ### rows
 The row count of the barcode.
 ```java
-int com.dynamsoft.barcode.DataMatrixDetails.rows
+int com.dynamsoft.dbr.DataMatrixDetails.rows
 ```
 
 ### columns
 The column count of the barcode.
 ```java
-int com.dynamsoft.barcode.DataMatrixDetails.columns
+int com.dynamsoft.dbr.DataMatrixDetails.columns
 ```
 
 ### dataRegionRows 
 The data region row count of the barcode.
 ```java
-int com.dynamsoft.barcode.DataMatrixDetails.dataRegionRows
+int com.dynamsoft.dbr.DataMatrixDetails.dataRegionRows
 ```
 
 ### dataRegionColumns
 The data region column count of the barcode.
 ```java
-int com.dynamsoft.barcode.DataMatrixDetails.dataRegionColumns
+int com.dynamsoft.dbr.DataMatrixDetails.dataRegionColumns
 ```
 
 ### dataRegionNumber
 The data region count.
 ```java
-int com.dynamsoft.barcode.DataMatrixDetails.dataRegionNumber
+int com.dynamsoft.dbr.DataMatrixDetails.dataRegionNumber
 ```

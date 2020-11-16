@@ -32,7 +32,7 @@ Stores the FurtherModes.
 ### colourClusteringModes
 Sets the mode and priority for colour categorization. Not supported yet.  
 ```java
-int[] com.dynamsoft.barcode.FurtherModes.colourClusteringModes
+int[] com.dynamsoft.dbr.FurtherModes.colourClusteringModes
 ```
 - **Value range**  
    Each array item can be any one of the [`EnumColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#enumcolourclusteringmode) Enumeration items.  
@@ -40,7 +40,7 @@ int[] com.dynamsoft.barcode.FurtherModes.colourClusteringModes
 - **Default value**  
    `[CCM_SKIP,CCM_SKIP,CCM_SKIP,CCM_SKIP,CCM_SKIP,CCM_SKIP,CCM_SKIP,CCM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is. 
    
 - **See also**  
@@ -49,7 +49,7 @@ int[] com.dynamsoft.barcode.FurtherModes.colourClusteringModes
 ### colourConversionModes
 Sets the mode and priority for converting a colour image to a grayscale image.
 ```java
-int[] com.dynamsoft.barcode.FurtherModes.colourConversionModes
+int[] com.dynamsoft.dbr.FurtherModes.colourConversionModes
 ```
 - **Value range**  
    Each array item can be any one of the [`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#enumcolourconversionmode) Enumeration items. 
@@ -57,7 +57,7 @@ int[] com.dynamsoft.barcode.FurtherModes.colourConversionModes
 - **Default value**  
    `[CICM_GENERAL,CICM_SKIP,CICM_SKIP,CICM_SKIP,CICM_SKIP,CICM_SKIP,CICM_SKIP,CICM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
    
 - **See also**  
@@ -66,7 +66,7 @@ int[] com.dynamsoft.barcode.FurtherModes.colourConversionModes
 ### grayscaleTransformationModes
 Sets the mode and priority for the grayscale image conversion.
 ```java
-int[] com.dynamsoft.barcode.FurtherModes.grayscaleTransformationModes
+int[] com.dynamsoft.dbr.FurtherModes.grayscaleTransformationModes
 ```
 - **Value range**  
    Each array item can be any one of the [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#enumgrayscaletransformationmode) Enumeration items. 
@@ -74,7 +74,7 @@ int[] com.dynamsoft.barcode.FurtherModes.grayscaleTransformationModes
 - **Default value**  
    `[GTM_ORIGINAL,GTM_SKIP,GTM_SKIP,GTM_SKIP,GTM_SKIP,GTM_SKIP,GTM_SKIP,GTM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
    
 - **See also**  
@@ -83,7 +83,7 @@ int[] com.dynamsoft.barcode.FurtherModes.grayscaleTransformationModes
 ### regionPredetectionModes
 Sets the region pre-detection mode for barcodes search.
 ```java
-int[] com.dynamsoft.barcode.FurtherModes.regionPredetectionModes
+int[] com.dynamsoft.dbr.FurtherModes.regionPredetectionModes
 ```
 - **Value range**  
    Each array item can be any one of the [`EnumRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#enumregionpredetectionmode) Enumeration items.  
@@ -91,7 +91,7 @@ int[] com.dynamsoft.barcode.FurtherModes.regionPredetectionModes
 - **Default value**  
    `[RPM_GENERAL,RPM_SKIP,RPM_SKIP,RPM_SKIP,RPM_SKIP,RPM_SKIP,RPM_SKIP,RPM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is. If the image is large and the barcode on the image is very small, it is recommended to enable region predetection to speed up the localization process and recognition accuracy.
    
 - **See also**  
@@ -100,7 +100,7 @@ int[] com.dynamsoft.barcode.FurtherModes.regionPredetectionModes
 ### imagePreprocessingModes
 Sets the mode and priority for image preprocessing algorithms.
 ```java
-int[] com.dynamsoft.barcode.FurtherModes.imagePreprocessingModes
+int[] com.dynamsoft.dbr.FurtherModes.imagePreprocessingModes
 ```
 - **Value range**  
    Each array item can be any one of the [`EnumImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#enumimagepreprocessingmode) Enumeration items.  
@@ -108,7 +108,7 @@ int[] com.dynamsoft.barcode.FurtherModes.imagePreprocessingModes
 - **Default value**  
    `[IPM_GENERAL,IPM_SKIP,IPM_SKIP,IPM_SKIP,IPM_SKIP,IPM_SKIP,IPM_SKIP,IPM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.
    
 - **See also**  
@@ -117,7 +117,7 @@ int[] com.dynamsoft.barcode.FurtherModes.imagePreprocessingModes
 ### textureDetectionModes
 Sets the mode and priority for texture detection. 
 ```java
-int[] com.dynamsoft.barcode.FurtherModes.textureDetectionModes
+int[] com.dynamsoft.dbr.FurtherModes.textureDetectionModes
 ```
 - **Value range**  
    Each array item can be any one of the [`EnumTextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#enumtexturedetectionmode) Enumeration items.  
@@ -125,7 +125,7 @@ int[] com.dynamsoft.barcode.FurtherModes.textureDetectionModes
 - **Default value**  
    `[TDM_GENERAL_WIDTH_CONCENTRATION,TDM_SKIP,TDM_SKIP,TDM_SKIP,TDM_SKIP,TDM_SKIP,TDM_SKIP,TDM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.
    
 - **See also**  
@@ -134,7 +134,7 @@ int[] com.dynamsoft.barcode.FurtherModes.textureDetectionModes
 ### textFilterModes
 Sets the mode and priority for text filter.
 ```java
-int[] com.dynamsoft.barcode.FurtherModes.textFilterModes
+int[] com.dynamsoft.dbr.FurtherModes.textFilterModes
 ```
 - **Value range**  
    Each array item can be any one of the [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#enumtextfiltermode) Enumeration items.  
@@ -142,7 +142,7 @@ int[] com.dynamsoft.barcode.FurtherModes.textFilterModes
 - **Default value**  
    `[TFM_GENERAL_CONTOUR,TFM_SKIP,TFM_SKIP,TFM_SKIP,TFM_SKIP,TFM_SKIP,TFM_SKIP,TFM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is. If the image contains a lot of text, you can enable text filter to speed up the localization process.
    
 - **See also**  
@@ -151,7 +151,7 @@ int[] com.dynamsoft.barcode.FurtherModes.textFilterModes
 ### textAssistedCorrectionMode
 Sets the mode of text assisted correction for barcode decoding. ***Not supported yet***.
 ```java
-int com.dynamsoft.barcode.FurtherModes.textAssistedCorrectionMode
+int com.dynamsoft.dbr.FurtherModes.textAssistedCorrectionMode
 ```
 - **Value range**  
    Any one of the [`EnumTextAssistedCorrectionMode`]({{ site.enumerations }}parameter-mode-enums.html#enumtextassistedcorrectionmode) Enumeration items.  
@@ -165,7 +165,7 @@ int com.dynamsoft.barcode.FurtherModes.textAssistedCorrectionMode
 ### dpmCodeReadingModes
 Sets the mode and priority for DPM code reading.
 ```java
-int[] com.dynamsoft.barcode.FurtherModes.dpmCodeReadingModes
+int[] com.dynamsoft.dbr.FurtherModes.dpmCodeReadingModes
 ```
 - **Value range**  
    Each array item can be any one of the [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#enumdpmcodereadingmode) Enumeration items.  
@@ -173,7 +173,7 @@ int[] com.dynamsoft.barcode.FurtherModes.dpmCodeReadingModes
 - **Default value**  
    `[DPMCRM_SKIP,DPMCRM_SKIP,DPMCRM_SKIP,DPMCRM_SKIP,DPMCRM_SKIP,DPMCRM_SKIP,DPMCRM_SKIP,DPMCRM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
    
 - **See also**  
@@ -182,7 +182,7 @@ int[] com.dynamsoft.barcode.FurtherModes.dpmCodeReadingModes
 ### deformationResistingModes
 Sets the mode and priority for deformation resisting.
 ```java
-int[] com.dynamsoft.barcode.FurtherModes.deformationResistingModes
+int[] com.dynamsoft.dbr.FurtherModes.deformationResistingModes
 ```
 - **Value range**  
    Each array item can be any one of the [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#enumdeformationresistingmode) Enumeration items.  
@@ -190,7 +190,7 @@ int[] com.dynamsoft.barcode.FurtherModes.deformationResistingModes
 - **Default value**  
    `[DRM_SKIP,DRM_SKIP,DRM_SKIP,DRM_SKIP,DRM_SKIP,DRM_SKIP,DRM_SKIP,DRM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
    
 - **See also**  
@@ -199,7 +199,7 @@ int[] com.dynamsoft.barcode.FurtherModes.deformationResistingModes
 ### barcodeComplementModes
 Sets the mode and priority to complement the missing parts in the barcode.
 ```java
-int[] com.dynamsoft.barcode.FurtherModes.barcodeComplementModes
+int[] com.dynamsoft.dbr.FurtherModes.barcodeComplementModes
 ```
 - **Value range**  
    Each array item can be any one of the [`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#enumbarcodecomplementmode) Enumeration items.  
@@ -207,7 +207,7 @@ int[] com.dynamsoft.barcode.FurtherModes.barcodeComplementModes
 - **Default value**  
    `[BCM_SKIP,BCM_SKIP,BCM_SKIP,BCM_SKIP,BCM_SKIP,BCM_SKIP,BCM_SKIP,BCM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
    
 - **See also**  
@@ -216,7 +216,7 @@ int[] com.dynamsoft.barcode.FurtherModes.barcodeComplementModes
 ### barcodeColourModes
 Sets the mode and priority for the barcode colour mode used to process the barcode zone.
 ```java
-int[] com.dynamsoft.barcode.FurtherModes.barcodeColourModes
+int[] com.dynamsoft.dbr.FurtherModes.barcodeColourModes
 ```
 - **Value range**  
    Each array item can be any one of the [`EnumBarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#enumbarcodecolourmode) Enumeration items.  
@@ -224,7 +224,7 @@ int[] com.dynamsoft.barcode.FurtherModes.barcodeColourModes
 - **Default value**  
    `[BICM_DARK_ON_LIGHT,BICM_SKIP,BICM_SKIP,BICM_SKIP,BICM_SKIP,BICM_SKIP,BICM_SKIP,BICM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
    
 - **See also**  
@@ -233,7 +233,7 @@ int[] com.dynamsoft.barcode.FurtherModes.barcodeColourModes
 ### accompanyingTextRecognitionModes
 Sets the mode and priority to recognize accompanying text.
 ```java
-int[] com.dynamsoft.barcode.FurtherModes.accompanyingTextRecognitionModes
+int[] com.dynamsoft.dbr.FurtherModes.accompanyingTextRecognitionModes
 ```
 - **Value range**  
    Each array item can be any one of the [`EnumAccompanyingTextRecognitionMode`]({{ site.enumerations }}parameter-mode-enums.html#enumaccompanyingtextrecognitionmode) Enumeration items.  
@@ -241,7 +241,7 @@ int[] com.dynamsoft.barcode.FurtherModes.accompanyingTextRecognitionModes
 - **Default value**  
    `[ATRM_SKIP,ATRM_SKIP,ATRM_SKIP,ATRM_SKIP,ATRM_SKIP,ATRM_SKIP,ATRM_SKIP,ATRM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
    
 - **See also**  

@@ -35,13 +35,13 @@ After installation, you can find samples for supported platforms in the **Sample
 ## Getting Started: HelloWorld
 1. Start Visual Studio and create a new Console Application in C#. Let's name it `BarcodeReadDemo_DotNet`. Don't forget to choose a supported .NET Framework edition.
 2. Add Dynamsoft.Barcode namespace in `Program.cs`.
-   ```C#
+   ```csharp
     using Dynamsoft.Barcode;
    ```
    Please add Dynamsoft Barcode Reader lib in project references. The lib file named "Dynamsoft.BarcodeReader.dll" can be found in `[INSTALLATION FOLDER]\Components\DotNet]\2.0` or `[INSTALLATION FOLDER]\Components\DotNet]\4.0`. The folder which you should choose depends on your .NET Framework edition.
 
 3. Update the main function in `Program.cs`.
-    ```C#
+    ```csharp
     class Program
     {
         statica void Main(string[] args)
@@ -125,7 +125,7 @@ If your full license only covers some barcode formats, you can use `BarcodeForma
 
 For example, to enable only 1D barcode reading, you can use the following code:   
 
-```C#
+```csharp
 //Initialize license prior to any decoding
 //Replace "<Put your license key here>" with your own license
 BarcodeReader reader = new BarcodeReader("<your license key here>");
@@ -149,7 +149,7 @@ reader.Dispose();
 #### Specify maximum barcode count
 By default, the SDK will read as many barcodes as it can. To increase the recognition efficiency, you can use `expectedBarcodesCount` to specify the maximum number of barcodes to recognize according to your scenario. 
 
-```C#
+```csharp
 //Initialize license prior to any decoding
 //Replace "<Put your license key here>" with your own license
 BarcodeReader reader = new BarcodeReader("<your license key here>");
@@ -176,7 +176,7 @@ dealing with high-resolution images. You can speed up the recognition process by
 
 To specify a region, you will need to define an area. The following code shows how to create a template string and define the region.
 
-```C#
+```csharp
 //Initialize license prior to any decoding
 //Replace "<Put your license key here>" with your own license
 BarcodeReader reader = new BarcodeReader("<your license key here>");
@@ -204,7 +204,7 @@ reader.Dispose();
 ### Use A Template to Change Settings
 Besides the option of using the PublicRuntimeSettings struct, the SDK also provides [`InitRuntimeSettingsWithString`](api-reference/BarcodeReader/parameter-and-runtime-settings-advanced.md#initruntimesettingswithstring) and [`InitRuntimeSettingsWithFile`](api-reference/BarcodeReader/parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile) APIs that enable you to use a template to control all the runtime settings. With a template, instead of writing many codes to modify the settings, you can manage all the runtime settings in a JSON file/string.
 
-```C#
+```csharp
 string errorMsg = "";
 //Initialize license prior to any decoding
 //Replace "<Put your license key here>" with your own license

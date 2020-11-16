@@ -11,7 +11,7 @@ needAutoGenerateSidebar: false
 Stores the QRCode details.  
 
 
-```C#
+```csharp
 public class QRCodeDetails
 ```  
   
@@ -33,41 +33,41 @@ public class QRCodeDetails
 ### ModuleSize
 The barcode module size (the minimum bar width in pixel).  
 
-```C#
-int Dynamsoft.Barcode.QRCodeDetails.ModuleSize
+```csharp
+int Dynamsoft.DBR.QRCodeDetails.ModuleSize
 ```
 
 ### Rows
 The row count of the barcode.  
 
-```C#
-int Dynamsoft.Barcode.QRCodeDetails.Rows
+```csharp
+int Dynamsoft.DBR.QRCodeDetails.Rows
 ```
 
 ### Columns
 The column count of the barcode. 
 
-```C#
-int Dynamsoft.Barcode.QRCodeDetails.Columns
+```csharp
+int Dynamsoft.DBR.QRCodeDetails.Columns
 ```
 
 ### ErrorCorrectionLevel
 The error correction level of the barcode.  
 
-```C#
-EnumQRCodeErrorCorrectionLevel Dynamsoft.Barcode.QRCodeDetails.ErrorCorrectionLevel
+```csharp
+EnumQRCodeErrorCorrectionLevel Dynamsoft.DBR.QRCodeDetails.ErrorCorrectionLevel
 ```
 
 ### Version
 The version of the QR Code.
 
-```C#
-int Dynamsoft.Barcode.QRCodeDetails.Version
+```csharp
+int Dynamsoft.DBR.QRCodeDetails.Version
 ```
 
 ### Model
 Number of the models.
 
-```C#
-int Dynamsoft.Barcode.QRCodeDetails.Model
+```csharp
+int Dynamsoft.DBR.QRCodeDetails.Model
 ```

@@ -19,15 +19,15 @@ needAutoGenerateSidebar: true
 
 Get version information of SDK.
 
-```C#
-string Dynamsoft.Barcode.BarcodeReader.GetVersion()
+```csharp
+string Dynamsoft.DBR.BarcodeReader.GetVersion()
 ```
 
 #### Return value
 The version info string. 
 
 #### Code Snippet
-```C#
+```csharp
 BarcodeReader reader = new BarcodeReader();
 string version = reader.GetVersion();
 ```

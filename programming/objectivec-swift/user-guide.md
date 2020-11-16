@@ -17,7 +17,7 @@ needGenerateH3Content: true
    - iOS 9.0 and above. 
 - Environment: Xcode 7.1 - 11.5 and above.  
 
-- Recommended: macOS 10.15.4 and Xcode 11.5.
+- Recommended: macOS 10.15.4+, Xcode 11.5+, iOS 11+
 
 &nbsp; 
 

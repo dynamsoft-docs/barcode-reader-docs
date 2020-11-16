@@ -10,7 +10,7 @@ needAutoGenerateSidebar: false
 # BarcodeReaderException
 The exception class of Dynamsoft.BarcodeReader.
 
-```C#
+```csharp
 public class BarcodeReaderException : Exception
 ```  
 
@@ -28,21 +28,21 @@ public class BarcodeReaderException : Exception
 ### Code
 Gets or sets the error code. 
 
-```C#
-EnumErrorCode Dynamsoft.Barcode.BarcodeReaderException.Code
+```csharp
+EnumErrorCode Dynamsoft.DBR.BarcodeReaderException.Code
 ```  
 
 ### Message
 Gets the message that describes the current exception. 
 
-```C#
-override string Dynamsoft.Barcode.BarcodeReaderException.Message
+```csharp
+override string Dynamsoft.DBR.BarcodeReaderException.Message
 ```  
 
 ### Code
 Gets the string representation of the frames on the call stack at the time the current exception was thrown. 
 
-```C#
-override string Dynamsoft.Barcode.BarcodeReaderException.StackTrace
+```csharp
+override string Dynamsoft.DBR.BarcodeReaderException.StackTrace
 ```  
 

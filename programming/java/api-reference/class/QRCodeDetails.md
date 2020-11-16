@@ -26,36 +26,36 @@ Stores the QRCode details.
 ### moduleSize
 The barcode module size (the minimum bar width in pixel).  
 ```java
-int com.dynamsoft.barcode.QRCodeDetails.moduleSize
+int com.dynamsoft.dbr.QRCodeDetails.moduleSize
 ```
 
 ### rows
 The row count of the barcode.  
 ```java
-int com.dynamsoft.barcode.QRCodeDetails.rows
+int com.dynamsoft.dbr.QRCodeDetails.rows
 ```
 
 ### columns
 The column count of the barcode. 
 ```java
-int com.dynamsoft.barcode.QRCodeDetails.columns
+int com.dynamsoft.dbr.QRCodeDetails.columns
 ```
 
 ### errorCorrectionLevel
 The error correction level of the barcode.  
 ```java
-int com.dynamsoft.barcode.QRCodeDetails.errorCorrectionLevel
+int com.dynamsoft.dbr.QRCodeDetails.errorCorrectionLevel
 ```
 
 ### version
 The version of the QR Code.
 ```java
-int com.dynamsoft.barcode.QRCodeDetails.version
+int com.dynamsoft.dbr.QRCodeDetails.version
 ```
 
 ### model
 Number of the models.
 ```java
-int com.dynamsoft.barcode.QRCodeDetails.model
+int com.dynamsoft.dbr.QRCodeDetails.model
 ```
 

@@ -106,7 +106,7 @@ reader->UpdateRuntimeSettings(runtimeSettings, sError, 512);                // U
 reader->DecodeFile("Insert the file path here", "");    
 TextResultArray* paryResult = NULL;       
 reader->GetAllTextResults(&paryResult);    
-CBarcodeReader::FreeTextResults(&paryResult);       
+dynamsoft::dbr::CBarcodeReader::FreeTextResults(&paryResult);       
 delete runtimeSettings;       
 delete reader; 
 ```

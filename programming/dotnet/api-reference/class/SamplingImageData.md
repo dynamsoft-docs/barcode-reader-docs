@@ -10,7 +10,7 @@ needAutoGenerateSidebar: false
 # SamplingImageData
 Stores the sampling image data.
 
-```C#
+```csharp
 public class SamplingImageData
 ```  
   
@@ -29,20 +29,20 @@ public class SamplingImageData
 ### Bytes
 The sampling image data in a byte array.
 
-```C#
-byte[] Dynamsoft.Barcode.SamplingImageData.Bytes
+```csharp
+byte[] Dynamsoft.DBR.SamplingImageData.Bytes
 ```
 
 ### Width
 The width of the sampling image.
 
-```C#
-int Dynamsoft.Barcode.SamplingImageData.Width
+```csharp
+int Dynamsoft.DBR.SamplingImageData.Width
 ```
 
 ### Height
 The height of the sampling image.
 
-```C#
-int Dynamsoft.Barcode.SamplingImageData.Height
+```csharp
+int Dynamsoft.DBR.SamplingImageData.Height
 ```

@@ -36,7 +36,7 @@ for(int j = 0; j < iCount; j++)  //Loop through all returned results
     LocalizationResult* pLocRes = pBarcode->localizationResult;  
     printf("pageNumber:%d\n", pLocRes->PageNumber); //get the page number in which the barcode is located
 }  
-CBarcodeReader::FreeTextResults(&pResult);        
+dynamsoft::dbr::CBarcodeReader::FreeTextResults(&pResult);        
 delete reader; 
 ```
 

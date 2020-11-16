@@ -30,7 +30,7 @@ needAutoGenerateSidebar: true
 Initialize runtime settings with the settings in a given JSON file.
 
 ```java
-void com.dynamsoft.barcode.BarcodeReader.initRuntimeSettingsWithFile(String filePath, int enumConflictMode) throws BarcodeReaderException
+void com.dynamsoft.dbr.BarcodeReader.initRuntimeSettingsWithFile(String filePath, int enumConflictMode) throws BarcodeReaderException
 ```   
 
 #### Parameters
@@ -59,7 +59,7 @@ Initialize runtime settings with the settings in a given JSON string.
 
 
 ```java
-void com.dynamsoft.barcode.BarcodeReader.initRuntimeSettingsWithString(String content, int enumConflictMode)throws BarcodeReaderException
+void com.dynamsoft.dbr.BarcodeReader.initRuntimeSettingsWithString(String content, int enumConflictMode)throws BarcodeReaderException
 ```   
    
 #### Parameters
@@ -87,7 +87,7 @@ reader.destroy();
 Append a new template file to the current runtime settings.
 
 ```java
-void com.dynamsoft.barcode.BarcodeReader.appendTplFileToRuntimeSettings(String filePath, int enumConflictMode) throws BarcodeReaderException
+void com.dynamsoft.dbr.BarcodeReader.appendTplFileToRuntimeSettings(String filePath, int enumConflictMode) throws BarcodeReaderException
 ```   
    
 #### Parameters
@@ -115,7 +115,7 @@ reader.destroy();
 Append a new template string to the current runtime settings.
 
 ```java
-void com.dynamsoft.barcode.BarcodeReader.appendTplStringToRuntimeSettings(String content, int enumConflictMode)	throws BarcodeReaderException	
+void com.dynamsoft.dbr.BarcodeReader.appendTplStringToRuntimeSettings(String content, int enumConflictMode)	throws BarcodeReaderException	
 ```   
 
    
@@ -144,7 +144,7 @@ reader.destroy();
 Gets the parameter templates name array.
 
 ```java
-String [] com.dynamsoft.barcode.BarcodeReader.getAllParameterTemplateNames()		
+String [] com.dynamsoft.dbr.BarcodeReader.getAllParameterTemplateNames()		
 ```   
 
 #### Return value
@@ -170,7 +170,7 @@ reader.destroy();
 Output runtime settings to a settings file (JSON file).
 
 ```java
-void com.dynamsoft.barcode.BarcodeReader.outputSettingsToFile(String filePath, String settingsName) throws BarcodeReaderException
+void com.dynamsoft.dbr.BarcodeReader.outputSettingsToFile(String filePath, String settingsName) throws BarcodeReaderException
 ```   
    
 #### Parameters
@@ -198,7 +198,7 @@ reader.destroy();
 Output runtime settings to a string.
 
 ```java
-String com.dynamsoft.barcode.BarcodeReader.outputSettingsToString(String settingsName) throws BarcodeReaderException
+String com.dynamsoft.dbr.BarcodeReader.outputSettingsToString(String settingsName) throws BarcodeReaderException
 ```   
    
 #### Parameters 

@@ -15,6 +15,8 @@ needAutoGenerateSidebar: true
   | [`decodeImage`](#decodeImage) | Decode barcodes from an image file in memory. |
   | [`decodeBuffer`](#decodeBuffer) | Decode barcodes from raw buffer. |
   | [`decodeBase64`](#decodeBase64) | Decode barcodes from a base64 encoded string. |
+  | [`createIntermediateResult`](decode.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
+  | [`decodeIntermediateResults`](#decodeintermediateresults) | Decodes barcode from intermediate results. |
   
 ---
 
@@ -151,6 +153,11 @@ let stride = 0
 let format:Int
 let result = barcodeReader.decodeBuffer(buffer: bufferBytes!, width: width, height: height, stride: stride, format: format, templateName: "", error: &error)
 ```
+
+&nbsp;
+
+
+
 ## decodeBase64
 
 Decode barcodes from an image file encoded as a base64 string.
@@ -187,4 +194,103 @@ let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV**********
 let error: NSError? = NSError() 
 let result = barcodeReader.decodeBase64(base64: file in base64 string, withTemplate: "", error: &error)
 ```
+
+
 &nbsp;
+
+## createIntermediateResult
+
+Inits an intermediateResult struct with default values.
+
+```objc
+- (iIntermediateResult* _Nullable)createIntermediateResult:(EnumIntermediateResultType)type error:(NSError* _Nullable * _Nullable)error;	
+```   
+   
+### Parameters
+
+`[in] type` The type of the intermediate result to init.
+`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+
+### Return value
+
+An intermediateResult struct with default values.
+
+### Code Snippet
+
+Objective-C:
+
+```objc
+NSError __autoreleasing * _Nullable error;
+iIntermediateResult *irResult;
+DynamsoftBarcodeReader *barcodeReader;
+barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicense:@"t0260NwAAAHV***************"];
+irResult = [barcodeReader createIntermediateResult:EnumIntermediateResultTypeOriginalImage error:&error];
+```
+
+Swift:
+
+```Swift
+var error:NSError? = NSError()
+var irResult:iIntermediateResult!
+barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
+irResult = try! barcodeReader?.createIntermediateResult(EnumIntermediateResultType(rawValue: EnumIntermediateResultType.originalImage.rawValue)!)
+```
+
+
+&nbsp;
+
+
+## decodeIntermediateResults
+
+Decodes barcode from intermediate results.
+
+```objc
+- (NSArray<iTextResult*>* _Nullable)decodeIntermediateResults:(NSArray<iIntermediateResult*>* _Nullable)array templateName:(NSString* _Nonnull)templateName error:(NSError* _Nullable * _Nullable)error;	
+```   
+   
+### Parameters
+
+`[in] array` The intermediate result array for decoding.
+`[in] templateName` The template name.
+`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+
+### Return value
+
+All barcode text results decoded successfully.
+
+### Code Snippet
+
+Objective-C:
+
+```objc
+DynamsoftBarcodeReader *barcodeReader;
+barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicense:@"t0260NwAAAHV***************"];
+NSArray<iTextResult *>* result;
+NSError __autoreleasing * _Nullable error;
+[barcodeReader getRuntimeSettings:&error];
+settings.intermediateResultTypes = EnumIntermediateResultTypeOriginalImage | EnumIntermediateResultTypeTypedBarcodeZone;
+settings.intermediateResultSavingMode = EnumIntermediateResultSavingModeMemory;
+[barcodeReader updateRuntimeSettings:settings error:&error];
+result = [barcodeReader decodeFileWithName:@"your file path" templateName:@"" error:&error];
+NSArray<iIntermediateResult*>* array = [barcodeReader getIntermediateResult:&error];
+result = [barcodeReader decodeIntermediateResults:array withTemplate:@"" error:&error];
+```
+
+Swift:
+
+```Swift
+barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
+var result:[iTextResult]?
+var error:NSError? = NSError()
+var settings:iPublicRuntimeSettings! = try! barcodeReader?.getRuntimeSettings()
+settings.intermediateResultTypes = EnumIntermediateResultType.originalImage.rawValue | EnumIntermediateResultType.typedBarcodeZone.rawValue
+settings.intermediateResultSavingMode = .memory
+barcodeReader?.update(settings, error: &error)
+result = try! barcodeReader?.decodeFile(withName: "your file path", templateName: "")
+var array:[iIntermediateResult]? = try! barcodeReader?.getIntermediateResult()
+result = try! barcodeReader?.decode(array, withTemplate: "")
+```
+
+
+&nbsp;
+

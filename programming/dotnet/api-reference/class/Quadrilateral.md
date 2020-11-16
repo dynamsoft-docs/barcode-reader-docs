@@ -10,7 +10,7 @@ needAutoGenerateSidebar: false
 # Quadrilateral
 Stores the quadrilateral.  
 
-```C#
+```csharp
 public class Quadrilateral 
 ```  
   
@@ -27,8 +27,8 @@ public class Quadrilateral
 ### Points
 Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. 
 
-```C#
-Point[] Dynamsoft.Barcode.Quadrilateral.Points
+```csharp
+Point[] Dynamsoft.DBR.Quadrilateral.Points
 ```
 
 

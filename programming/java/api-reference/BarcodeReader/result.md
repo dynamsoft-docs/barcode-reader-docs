@@ -23,7 +23,7 @@ needAutoGenerateSidebar: true
 Get intermediate results containing the original image, the colour clustered image, the binarized Image, contours, Lines, TextBlocks, etc.
 
 ```java
-IntermediateResult[] com.dynamsoft.barcode.BarcodeReader.getIntermediateResults() throws BarcodeReaderException 
+IntermediateResult[] com.dynamsoft.dbr.BarcodeReader.getIntermediateResults() throws BarcodeReaderException 
 ```   
 
 #### Return value

@@ -40,6 +40,8 @@ breadcrumbText: API Reference
   | [`DBR_DecodeBuffer`](methods/decode.md#dbr_decodebuffer) | Decode barcodes from raw buffer. |
   | [`DBR_DecodeBase64String`](methods/decode.md#dbr_decodebase64string) | Decode barcodes from a base64 encoded string. |
   | [`DBR_DecodeDIB`](methods/decode.md#dbr_decodedib) | Decode barcode from a handle of device-independent bitmap (DIB). | 
+  | [`DBR_InitIntermediateResult`](methods/decode.md#dbr_initintermediateresult) | Inits an intermediateResult struct with default values. |
+  | [`DBR_DecodeIntermediateResults`](methods/decode.md#dbr_decodeintermediateresults) | Decodes barcode from intermediate results. |
 
 
 &nbsp; 
@@ -86,6 +88,8 @@ breadcrumbText: API Reference
   | [`DBR_OutputLicenseToString`](methods/license.md#dbr_outputlicensetostring) | Output the license content to a string from the license server. |
   | [`DBR_OutputLicenseToStringPtr`](methods/license.md#dbr_outputlicensetostringptr) | Output the license content to a string from the license server. |
   | [`DBR_FreeLicenseString`](methods/license.md#dbr_freelicensestring) | Free memory allocated for the license string. |
+  | [`DBR_InitLTSConnectionParameters`](methods/license.md#dbr_initltsconnectionparameters) | Initializes a DM_LTSConnectionParameters struct with default values. |
+  | [`DBR_InitLicenseFromLTS`](methods/license.md#dbr_initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
 
 &nbsp; 
 
@@ -167,6 +171,7 @@ breadcrumbText: API Reference
 - [`Contour`]({{ site.structs }}Contour.html)	
 - [`DBRPoint`]({{ site.structs }}DBRPoint.html)	
 - [`DataMatrixDetails`]({{ site.structs }}DataMatrixDetails.html)		
+- [`DM_LTSConnectionParameters`]({{ site.structs }}DMLTSConnectionParameters.html)		
 - [`ExtendedResult`]({{ site.structs }}ExtendedResult.html)		
 - [`FrameDecodingParameters`]({{ site.structs }}FrameDecodingParameters.html)	
 - [`FurtherModes`]({{ site.structs }}FurtherModes.html)		
@@ -202,7 +207,12 @@ breadcrumbText: API Reference
 - [`ColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode)	
 - [`ColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode)	
 - [`ConflictMode`]({{ site.enumerations }}parameter-mode-enums.html#conflictmode)	
+- [`DeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode)	
 - [`DeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode)	
+- [`DM_ChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)	
+- [`DM_DeploymentType`]({{ site.enumerations }}other-enums.html#dm_deploymenttype)	
+- [`DM_LicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)	
+- [`DM_UUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)	
 - [`DPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode)	
 - [`GrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)	
 - [`ImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat)	

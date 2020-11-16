@@ -2,7 +2,7 @@
 layout: default-layout
 title: Dynamsoft Barcode Reader Parameter Reference for FormatSpecification Object - Image Process Control Parameters
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for FormatSpecification Object - Image Process Control Parameters.
-keywords: DeblurLevel, DeformationResistingModes, BarcodeComplementModes, AccompanyingTextRecognitionModes, FormatSpecification, image process control parameters, parameter reference, parameter
+keywords: DeblurLevel, DeformationResistingModes, BarcodeComplementModes, FormatSpecification, image process control parameters, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 ---
@@ -14,7 +14,6 @@ needGenerateH3Content: false
  | [`FormatSpecification.DeblurLevel`](#deblurlevel) | Sets the degree of blurriness of the barcode for the current specified barcode format. | 
  | [`FormatSpecification.DeformationResistingModes`](#deformationresistingmodes)  | Sets the mode and priority for deformation resisting for the current specified barcode format. Not support yet. |
  | [`FormatSpecification.BarcodeComplementModes`](#barcodecomplementmodes) | Sets the mode and priority to complement the missing parts in the barcode for current specified barcode format. Not support yet. |
- | [`FormatSpecification.AccompanyingTextRecognitionModes`](#accompanyingtextrecognitionmodes) | Sets the mode and priority to recognize accompanying text for the current specified barcode format. | 
 
 ---
 
@@ -63,11 +62,11 @@ If you have a blurry image, you can set this property to a larger value. The hig
 Sets the effort level used for deformation resisting. **Not supported yet.**
 
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [1, 9] | 5 | "DRM_GENERAL" |         
 
-- **Remark**     
+- **Remarks**     
   A larger value means the library will take more effort to resist deformation.
 
 
@@ -134,81 +133,3 @@ Sets the effort level used for deformation resisting. **Not supported yet.**
 
 &nbsp;
 
-
-## AccompanyingTextRecognitionModes   
-
-### Mode Properties
-`AccompanyingTextRecognitionModes` is a parameter for setting the mode to recognize accompanying text. It consisits of one or more `AccompanyingTextRecognitionMode` items and each item has its own arguments. The array index represents the priority of the item. The smaller index is, the higher priority is.
-
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| *string array* or *[`AccompanyingTextRecognitionMode`]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode) array* | "ATRM_SKIP"<br>"ATRM_GENERAL" | ["ATRM_SKIP", "ATRM_SKIP", "ATRM_SKIP", "ATRM_SKIP", "ATRM_SKIP", "ATRM_SKIP", "ATRM_SKIP", "ATRM_SKIP"] |
-
-- **See also**:   
-    [`AccompanyingTextRecognitionMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode)
-    
-#### Mode Arguments
-- [RegionBottom](#regionbottom)
-- [RegionLeft](#regionleft)
-- [RegionRight](#regionright)
-- [RegionTop](#regiontop)
-
-If [RegionBottom](#regionbottom), [RegionLeft](#regionleft), [RegionRight](#regionright) and [RegionTop](#regiontop) are all equal to 0, the accompanying text zone will be detected automatically by the SDK. 
- 
-##### RegionBottom 
-Specifies the y-coordinate of the bottom-right corner of the region in percentage. This value is relative to the top-left corner of the barcode.
-
-
-| Value Type | Value Range | Default Value | Vaild Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [-255, 255] | 0 | "ATRM_GENERAL" |         
-
-
-##### RegionLeft 
-Specifies the x-coordinate of the top-left corner of the region in percentage. This value is relative to the top-left corner of the barcode.
-
-
-| Value Type | Value Range | Default Value | Vaild Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [-255, 255] | 0 | "ATRM_GENERAL" |  
-
-##### RegionRight 
-Specifies the x-coordinate of the bottom-right corner of the region in percentage. This value is relative to the top-left corner of the barcode.
-
-
-| Value Type | Value Range | Default Value | Vaild Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [-255, 255] | 0 | "ATRM_GENERAL" |  
-
-##### RegionTop 
-Specifies the y-coordinate of the top-left corner of the region in percentage. This value is relative to the top-left corner of the barcode.
-
-
-| Value Type | Value Range | Default Value | Vaild Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [-255, 255] | 0 | "ATRM_GENERAL" |  
-
-### Setting Methods
-
-#### As JSON Parameter
-`AccompanyingTextRecognitionModes` as a JSON parameter is a JSON Object array. Each JSON Object has several keys for setting the mode and the value of arguments. The array index decides the priority the mode to recognize accompanying text. Default values will be used if there is no manual setting.   
-
-
-| Json Object |	Json Parameter Name | Value Type |
-| ----------- | ------------------- | ---------- |
-| FormatSpecification | AccompanyingTextRecognitionModes | *JSON Object Array* | 
-
-**Json Parameter Example**   
-```
-{
-    "AccompanyingTextRecognitionModes": [
-        {
-            "Mode": "ATRM_GENERAL",
-            "RegionBottom": 50, 
-            "RegionLeft": 50,
-            "RegionRight": 50, 
-            "RegionTop": 50
-        }
-]
-}
-```

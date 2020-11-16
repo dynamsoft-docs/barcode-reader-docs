@@ -32,7 +32,9 @@ breadcrumbText: API Reference
   | [`decodeFileInMemory`](BarcodeReader/decode.md#decodefileinmemory) | Decode barcodes from an image file in memory. |
   | [`decodeBuffer`](BarcodeReader/decode.md#decodebuffer) | Decode barcodes from raw buffer. |
   | [`decodeBase64String`](BarcodeReader/decode.md#decodebase64string) | Decode barcodes from a base64 encoded string. |
-  | [`decodeBufferedImage`](BarcodeReader/decode.md#decodeBufferedImage) | Decodes barcode from a buffered image (bitmap). |
+  | [`decodeBufferedImage`](BarcodeReader/decode.md#decodebufferedimage) | Decodes barcode from a buffered image (bitmap). |
+  | [`initIntermediateResult`](BarcodeReader/decode.md#initintermediateresult) | Inits an intermediateResult struct with default values. |
+  | [`decodeIntermediateResults`](BarcodeReader/decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
 ### Parameter and Runtime Settings
 
@@ -67,7 +69,8 @@ breadcrumbText: API Reference
   | [`initLicenseFromServer`](BarcodeReader/license.md#initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
   | [`initLicenseFromLicenseContent`](BarcodeReader/license.md#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
   | [`outputLicenseToString`](BarcodeReader/license.md#outputlicensetostring) | Output the license content to a string from the license server. |
- 
+  | [`initLicenseFromLTS`](BarcodeReader/license.md#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
+
 ### Result
 
   | Method               | Description |
@@ -128,6 +131,7 @@ breadcrumbText: API Reference
 - [`BarcodeReaderException`](class/BarcodeReaderException.md)	
 - [`Contour`](class/Contour.md)	 
 - [`DataMatrixDetails`](class/DataMatrixDetails.md)	 
+- [`DMLTSConnectionParameters`](class/DMLTSConnectionParameters.md)	 
 - [`ExtendedResult`](class/ExtendedResult.md)	
 - [`FrameDecodingParameters`](class/FrameDecodingParameters.md)
 - [`FurtherModes`](class/FurtherModes.md)
@@ -158,7 +162,11 @@ breadcrumbText: API Reference
 - [`EnumColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode)	
 - [`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode)	
 - [`EnumConflictMode`]({{ site.enumerations }}parameter-mode-enums.html#conflictmode)	
+- [`EnumDeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode)	
 - [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode)	
+- [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)	
+- [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)	
+- [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)	
 - [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode)	
 - [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)	
 - [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat)	

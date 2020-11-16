@@ -33,7 +33,7 @@ needAutoGenerateSidebar: true
 Initialize runtime settings with the settings in a given JSON file.
 
 ```cpp
-int CBarcodeReader::InitRuntimeSettingsWithFile (const char* pFilePath, const ConflictMode conflictMode, char errorMsgBuffer[] = NULL, int errorMsgBufferLen = 0)	
+int dynamsoft::dbr::CBarcodeReader::InitRuntimeSettingsWithFile (const char* pFilePath, const ConflictMode conflictMode, char errorMsgBuffer[] = NULL, int errorMsgBufferLen = 0)	
 ```   
 
 #### Parameters
@@ -67,7 +67,7 @@ Initialize runtime settings with the settings in a given JSON string.
 
 
 ```cpp
-int CBarcodeReader::InitRuntimeSettingsWithString (const char* content, const ConflictMode conflictMode, char errorMsgBuffer[] = NULL, int errorMsgBufferLen = 0)	
+int dynamsoft::dbr::CBarcodeReader::InitRuntimeSettingsWithString (const char* content, const ConflictMode conflictMode, char errorMsgBuffer[] = NULL, int errorMsgBufferLen = 0)	
 ```   
    
 #### Parameters
@@ -100,7 +100,7 @@ delete reader;
 Append a new template file to the current runtime settings.
 
 ```cpp
-int CBarcodeReader::AppendTplFileToRuntimeSettings (const char* pFilePath, const ConflictMode conflictMode, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)
+int dynamsoft::dbr::CBarcodeReader::AppendTplFileToRuntimeSettings (const char* pFilePath, const ConflictMode conflictMode, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)
 ```   
    
 #### Parameters
@@ -133,7 +133,7 @@ delete reader;
 Append a new template string to the current runtime settings.
 
 ```cpp
-int CBarcodeReader::AppendTplStringToRuntimeSettings (const char* content, const ConflictMode conflictMode, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)	
+int dynamsoft::dbr::CBarcodeReader::AppendTplStringToRuntimeSettings (const char* content, const ConflictMode conflictMode, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)	
 ```   
 
    
@@ -166,7 +166,7 @@ delete reader;
 Gets the count of the parameter templates.
 
 ```cpp
-int CBarcodeReader::GetParameterTemplateCount ()	
+int dynamsoft::dbr::CBarcodeReader::GetParameterTemplateCount ()	
 ```   
 
 #### Return value
@@ -196,7 +196,7 @@ delete reader;
 Gets the parameter template name by index.
 
 ```cpp
-int CBarcodeReader::GetParameterTemplateName (const int index, char nameBuffer[], int nameBufferLen)	
+int dynamsoft::dbr::CBarcodeReader::GetParameterTemplateName (const int index, char nameBuffer[], int nameBufferLen)	
 ```  
    
 #### Parameters
@@ -234,7 +234,7 @@ delete reader;
 Output runtime settings to a settings file (JSON file).
 
 ```cpp
-int CBarcodeReader::OutputSettingsToFile (const char* pFilePath, const char* pSettingsName)	
+int dynamsoft::dbr::CBarcodeReader::OutputSettingsToFile (const char* pFilePath, const char* pSettingsName)	
 ```   
    
 #### Parameters
@@ -268,7 +268,7 @@ delete reader;
 Output runtime settings to a string.
 
 ```cpp
-int CBarcodeReader::OutputSettingsToString (char content[], const int contentLen, const char* pSettingsName)
+int dynamsoft::dbr::CBarcodeReader::OutputSettingsToString (char content[], const int contentLen, const char* pSettingsName)
 ```   
    
 #### Parameters
@@ -303,7 +303,7 @@ delete reader;
 Output runtime settings to a string.
 
 ```cpp
-int CBarcodeReader::OutputSettingsToStringPtr (char** content, const char* pSettingsName)	
+int dynamsoft::dbr::CBarcodeReader::OutputSettingsToStringPtr (char** content, const char* pSettingsName)	
 ```   
    
 #### Parameters
@@ -338,7 +338,7 @@ delete reader;
 Free memory allocated for runtime settings string.
 
 ```cpp
-void CBarcodeReader::FreeSettingsString (char** content	)	
+void dynamsoft::dbr::CBarcodeReader::FreeSettingsString (char** content	)	
 ```   
    
 #### Parameters

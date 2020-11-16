@@ -17,6 +17,8 @@ needAutoGenerateSidebar: true
   | [`OutputLicenseToString`](#outputlicensetostring) | Output the license content to a string from the license server. |
   | [`OutputLicenseToStringPtr`](#outputlicensetostringptr) | Output the license content to a string from the license server. |
   | [`FreeLicenseString`](#freelicensestring) | Free memory allocated for the license string. |
+  | [`InitLTSConnectionParameters`](#initltsconnectionparameters) | Initializes a DM_LTSConnectionParameters struct with default values. |
+  | [`InitLicenseFromLTS`](#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
 
   ---
 
@@ -28,7 +30,7 @@ needAutoGenerateSidebar: true
 Read product key and activate the SDK.
 
 ```cpp
-int CBarcodeReader::InitLicense (const char* pLicense)	
+int dynamsoft::dbr::CBarcodeReader::InitLicense (const char* pLicense)	
 ```   
    
 #### Parameters
@@ -57,7 +59,7 @@ delete reader;
 Initialize the license and connect to the specified server for online verification.
 
 ```cpp
-int CBarcodeReader::InitLicenseFromServer (const char* pLicenseServer, const char* pLicenseKey)
+int dynamsoft::dbr::CBarcodeReader::InitLicenseFromServer (const char* pLicenseServer, const char* pLicenseKey)
 ```   
    
 #### Parameters
@@ -79,7 +81,7 @@ Returns error code (returns 0 if the function operates successfully).
 Initialize barcode reader license from the license content on the client machine for offline verification.
 
 ```cpp
-int CBarcodeReader::InitLicenseFromLicenseContent (const char* pLicenseKey, const char* pLicenseContent)	
+int dynamsoft::dbr::CBarcodeReader::InitLicenseFromLicenseContent (const char* pLicenseKey, const char* pLicenseContent)	
 ```   
 
 #### Parameters
@@ -102,7 +104,7 @@ Returns error code (returns 0 if the function operates successfully).
 Output the license content as an encrypted string from the license server to be used for offline license verification.
 
 ```cpp
-int CBarcodeReader::OutputLicenseToString (char content[], const int contentLen)
+int dynamsoft::dbr::CBarcodeReader::OutputLicenseToString (char content[], const int contentLen)
 ```   
    
 #### Parameters
@@ -127,7 +129,7 @@ Returns error code (returns 0 if the function operates successfully).
 Output the license content as an encrypted string from the license server to be used for offline license verification.
 
 ```cpp
-int CBarcodeReader::OutputLicenseToStringPtr (char** content)
+int dynamsoft::dbr::CBarcodeReader::OutputLicenseToStringPtr (char** content)
 ```   
 
 #### Parameters
@@ -150,7 +152,7 @@ Returns error code (returns 0 if the function operates successfully).
 Free memory allocated for the license string.
 
 ```cpp
-void CBarcodeReader::FreeLicenseString (char** content)
+void dynamsoft::dbr::CBarcodeReader::FreeLicenseString (char** content)
 ```   
 
 ---
@@ -164,5 +166,57 @@ void CBarcodeReader::FreeLicenseString (char** content)
 
 
 
+&nbsp;
 
+
+## InitLTSConnectionParameters
+Initializes a DM_LTSConnectionParameters struct with default values.
+
+```cpp
+static int dynamsoft::dbr::CBarcodeReader::InitLTSConnectionParameters(DM_LTSConnectionParameters *pLTSConnectionParameters)
+```   
+   
+#### Parameters
+`[in, out] pLTSConnectionParameters` The struct of [`DM_LTSConnectionParameters`]({{ site.structs }}DMLTSConnectionParameters.html).   
+
+#### Return value
+Returns error code (returns 0 if the function operates successfully).    
+*You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
+
+#### Code Snippet
+```cpp
+DMLTSConnectionParameters paramters;
+dynamsoft::dbr::CBarcodeReader::InitLTSConnectionParameters(&paramters);
+paramters.handshakeCode = "Your handshake code";
+dynamsoft::dbr::CBarcodeReader::InitLicenseFromLTS(&paramters);
+```
+
+&nbsp;
+
+## InitLicenseFromLTS
+Initializes the barcode reader license and connects to the specified server for online verification.
+
+```cpp
+static int dynamsoft::dbr::CBarcodeReader::InitLicenseFromLTS(DM_LTSConnectionParameters *pLTSConnectionParameters, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)
+```   
+   
+#### Parameters
+`[in] pLTSConnectionParameters` The struct [`DM_LTSConnectionParameters`]({{ site.structs }}DMLTSConnectionParameters.html) with customized settings.   
+`[in, out] errorMsgBuffer`<sub>Optional</sub> The buffer is allocated by the caller and the recommended length is 256. The error message will be copied to the buffer.  
+`[in]	errorMsgBufferLen`<sub>Optional</sub> The length of the allocated buffer.  
+
+#### Return value
+Returns error code (returns 0 if the function operates successfully).    
+*You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
+
+
+#### Code Snippet
+```cpp
+DMLTSConnectionParameters paramters;
+dynamsoft::dbr::CBarcodeReader::InitLTSConnectionParameters(&paramters);
+paramters.handshakeCode = "Your handshake code";
+dynamsoft::dbr::CBarcodeReader::InitLicenseFromLTS(&paramters);
+```
+
+&nbsp;
 

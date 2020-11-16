@@ -20,6 +20,6 @@ Stores the contour information.
 ### points
 The points array.
 ```java
-Point[] com.dynamsoft.barcode.Contour.points
+Point[] com.dynamsoft.dbr.Contour.points
 
 ```  

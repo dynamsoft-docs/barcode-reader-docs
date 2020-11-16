@@ -21,6 +21,6 @@ Exception for signalling barcode reader errors.
 ### getErrorCode
 Gets the error code.
 ```java
-int com.dynamsoft.barcode.BarcodeReaderException.getErrorCode()	
+int com.dynamsoft.dbr.BarcodeReaderException.getErrorCode()	
 ```  
    

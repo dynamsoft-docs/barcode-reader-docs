@@ -37,12 +37,12 @@ SamplingImageData.bytes
 The width of the sampling image.
 
 ```python
-int Dynamsoft.Barcode.SamplingImageData.width
+int SamplingImageData.width
 ```
 
 ### height
 The height of the sampling image.
 
 ```python
-Barcode.SamplingImageData.height
+SamplingImageData.height
 ```

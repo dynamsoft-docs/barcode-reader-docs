@@ -24,7 +24,7 @@ needAutoGenerateSidebar: true
 Default constructor of a `CBarcodeReader` object.
 
 ```cpp
-CBarcodeReader::CBarcodeReader()
+dynamsoft::dbr::CBarcodeReader::CBarcodeReader()
 ```
 
 &nbsp;
@@ -37,6 +37,6 @@ CBarcodeReader::CBarcodeReader()
 Destructor of a `CBarcodeReader` object.
 
 ```cpp
-CBarcodeReader::~CBarcodeReader()
+dynamsoft::dbr::CBarcodeReader::~CBarcodeReader()
 ```
 

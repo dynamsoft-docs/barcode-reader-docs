@@ -23,6 +23,8 @@ needGenerateH3Content: false
 | [`engineResourcePath`](../BarcodeReader/accessors.md#engineresourcepath) | Get or set the engine (WASM) location. | 
 | [`productKeys`](../BarcodeReader/accessors.md#productkeys) | Get or set the Dynamsoft Barcode Reader SDK product keys. | 
 | [`version`](../BarcodeReader/accessors.md#version) | Get current version. |
+| [`licenseServer`](../BarcodeReader/accessors.md#licenseserver) | Gets or sets the URL of the license tracking server. | 
+| [`sessionPwd`](../BarcodeReader/accessors.md#sessionpwd) | Gets or sets the session password of the handshake code set in license tracking server. | 
 
 ## defaultUIElementURL
 
