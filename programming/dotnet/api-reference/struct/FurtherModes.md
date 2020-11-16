@@ -225,7 +225,7 @@ EnumBarcodeColourMode[] Dynamsoft.DBR.FurtherModes.BarcodeColourModes
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
 
 ### AccompanyingTextRecognitionModes
-Sets the mode and priority to recognize accompanying text.
+[`Deprecated`]Sets the mode and priority to recognize accompanying text.
 
 ```csharp
 EnumAccompanyingTextRecognitionMode[] Dynamsoft.DBR.FurtherModes.AccompanyingTextRecognitionModes

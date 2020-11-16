@@ -46,7 +46,6 @@ breadcrumbText: Reference
 
  | Parameter Name | Description |
  | -------------- | ----------- | 
- | [`ImageParameter.AccompanyingTextRecognitionModes`](image-parameter/AccompanyingTextRecognitionModes.md#accompanyingtextrecognitionmodes) | Sets the mode and priority to recognize accompanying text. |
  | [`ImageParameter.BarcodeColourModes`](image-parameter/BarcodeColourModes.md#barcodecolourmodes) | Sets the mode and priority for the barcode colour mode used to process the barcode zone. |
  | [`ImageParameter.BarcodeComplementModes`](image-parameter/BarcodeComplementModes.md#barcodecomplementmodes) | Sets the mode and priority to complement the missing parts in the barcode. |
  | [`ImageParameter.BinarizationModes`](image-parameter/BinarizationModes.md#binarizationmodes) | 	Sets the mode and priority for binarization. |
@@ -167,7 +166,6 @@ breadcrumbText: Reference
  | [`FormatSpecification.DeblurLevel`](format-specification/image-process-control.md#deblurlevel) | Sets the degree of blurriness of the barcode for the current specified barcode format. | 
  | [`FormatSpecification.DeformationResistingModes`](format-specification/image-process-control.md#deformationresistingmodes)  | Sets the mode and priority for deformation resisting for the current specified barcode format. Not support yet. |
  | [`FormatSpecification.BarcodeComplementModes`](format-specification/image-process-control.md#barcodecomplementmodes) | Sets the mode and priority to complement the missing parts in the barcode for current specified barcode format. Not support yet. |
- | [`FormatSpecification.AccompanyingTextRecognitionModes`](format-specification/image-process-control.md#accompanyingtextrecognitionmodes) | Sets the mode and priority to recognize accompanying text for the current specified barcode format. | 
 
 
 

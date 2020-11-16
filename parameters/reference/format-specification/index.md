@@ -56,7 +56,6 @@ breadcrumbText: FormatSpecification
  | [`FormatSpecification.DeblurLevel`](image-process-control.md#deblurlevel) | Sets the degree of blurriness of the barcode for the current specified barcode format. | 
  | [`FormatSpecification.DeformationResistingModes`](image-process-control.md#deformationresistingmodes)  | Sets the mode and priority for deformation resisting for the current specified barcode format. Not support yet. |
  | [`FormatSpecification.BarcodeComplementModes`](image-process-control.md#barcodecomplementmodes) | Sets the mode and priority to complement the missing parts in the barcode for current specified barcode format. Not support yet. |
- | [`FormatSpecification.AccompanyingTextRecognitionModes`](image-process-control.md#accompanyingtextrecognitionmodes) | Sets the mode and priority to recognize accompanying text for the current specified barcode format. | 
 
 
 

@@ -48,7 +48,6 @@ Dynamsoft Barcode Reader uses a template to set parameters. A template contains 
 
 ## Parameter list
 The parameters of `ImageParameter` are:
-- ImageParameter.AccompanyingTextRecognitionModes
 - ImageParameter.BarcodeColourModes
 - ImageParameter.BarcodeComplementModes
 - ImageParameter.BarcodeFormatIds
@@ -99,7 +98,6 @@ The parameters of `RegionDefinition` are:
 - RegionDefinition.Top
 
 The parameters of `FormatSpecification` are:
-- FormatSpecification.AccompanyingTextRecognitionModes
 - FormatSpecification.AllModuleDeviation
 - FormatSpecification.AustralianPostEncodingTable 
 - FormatSpecification.BarcodeAngleRangeArray

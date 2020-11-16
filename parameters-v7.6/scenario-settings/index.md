@@ -77,6 +77,8 @@ For more information, please refer to this article: [How to deal with deformed b
 For more information, please refer to this article: [How to decode incomplete barcodes](how-to-set-barcode-complememt-modes.md).
 - Sample Decoding 
 Sample decoding process mainly involves [Deblur Level](deblur-level.md) and [DPM Decoding](dpm-decoding.md).
+- Accompanying Text  
+For more information, please refer to this article: [How to recognize accompanying text](recognise-accompanying-text.md).
 
 ### Return Results
 

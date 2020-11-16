@@ -2,7 +2,7 @@
 layout: default-layout
 title: Dynamsoft Barcode Reader Enumerations - Parameter Mode Enumerations
 description: This article shows Parameter Mode Enumerations of Dynamsoft Barcode Reader.
-keywords: AccompanyingTextRecognitionMode, BarcodeColourMode, BarcodeComplementMode, BinarizationMode, ColourClusteringMode, ColourConversionMode, ConflictMode, DeblurMode, DeformationResistingMode, DPMCodeReadingMode, GrayscaleTransformationMode, ImagePreprocessingMode, LocalizationMode, PDFReadingMode, RegionPredetectionMode, ScaleUpMode, TerminatePhase, TextAssistedCorrectionMode, TextFilterMode, TextureDetectionMode, parameter mode enumeration, enumeration
+keywords: BarcodeColourMode, BarcodeComplementMode, BinarizationMode, ColourClusteringMode, ColourConversionMode, ConflictMode, DeblurMode, DeformationResistingMode, DPMCodeReadingMode, GrayscaleTransformationMode, ImagePreprocessingMode, LocalizationMode, PDFReadingMode, RegionPredetectionMode, ScaleUpMode, TerminatePhase, TextAssistedCorrectionMode, TextFilterMode, TextureDetectionMode, parameter mode enumeration, enumeration
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 ---
@@ -11,7 +11,6 @@ needGenerateH3Content: false
 
   | Enumeration | Description |
   |-------------|-------------|
-  | [`AccompanyingTextRecognitionMode`](#accompanyingtextrecognitionmode) | Describes the accompanying text recognition mode. |
   | [`BarcodeColourMode`](#barcodecolourmode) | Describes the barcode colour mode. |
   | [`BarcodeComplementMode`](#barcodecomplementmode) | Describes the barcode complement mode. |
   | [`BinarizationMode`](#binarizationmode) | Describes the binarization mode. |
@@ -34,35 +33,6 @@ needGenerateH3Content: false
 
   
 ---
-
-
-## AccompanyingTextRecognitionMode
-Describes the accompanying text recognition mode.   
-
-
-### Declarations
-   
-| Language | Declaration |
-| -------- | ----------- |
-| C / C++ | `enum AccompanyingTextRecognitionMode` |
-| .Net | `enum Dynamsoft.DBR.EnumAccompanyingTextRecognitionMode` |
-| JavaScript | `Dynamsoft.EnumAccompanyingTextRecognitionMode` |
-| Python | `class EnumAccompanyingTextRecognitionMode(IntEnum)` |
-| Java / Android | `class EnumAccompanyingTextRecognitionMode` |
-| ObjC / Swift | `enum EnumAccompanyingTextRecognitionMode` |
-
-
-### Members
-   
-| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
-| -------------------------- | ------------------- | ----- | ----------- |
-| ATRM_SKIP | EnumAccompanyingTextRecognitionModeSkip | 0x00 | Skips the accompanying text recognition. |
-| ATRM_GENERAL | EnumAccompanyingTextRecognitionModeGeneral | 0x01 | Recognizes accompanying texts using the general algorithm. Check arguments of [`AccompanyingTextRecognitionModes`]({{ site.parameters_reference }}image-parameter/AccompanyingTextRecognitionModes.html#mode-arguments) for available argument settings. |
-
-
-
-&nbsp;
-
 
 
 ## BarcodeColourMode
