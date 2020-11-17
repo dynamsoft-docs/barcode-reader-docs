@@ -9,5 +9,8 @@ breadcrumbText: Comparison Tools
 
 Comparison Tools:
 - [Batch Test]({{ site.introduction }}comparison-tools/batch-test.html)
+
+{%- comment -%}
 - [Interactive Test]({{ site.introduction }}comparison-tools/interactive-test.html)
 - [Test Set Images]({{ site.introduction }}comparison-tools/test-set-images.html)
+{%- endcomment -%}

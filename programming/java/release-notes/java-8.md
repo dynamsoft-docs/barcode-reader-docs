@@ -14,24 +14,7 @@ noTitleIndex: true
 
 ### New
 
-- Implemented the mechanism of loading libraries dynamically at runtime when the following modes are used (except *_AUTO and *_SKIP). Use LibraryFileName and LibraryParameters to configure.
- * BarcodeColourMode
- * BarcodeComplementMode
- * BinarizationMode
- * ColourClusteringMode
- * ColourConversionMode
- * DeblurMode
- * DeformationResistingMode
- * DPMCodeReadingMode
- * GrayscaleTransformationMode
- * ImagePreprocessingMode
- * LocalizationMode
- * PDFReadingMode
- * RegionPredetectionMode
- * ScaleUpMode
- * TextAssistedCorrectionMode
- * TextFilterMode
- * TextureDetectionMode 
+- Implemented the mechanism of loading libraries dynamically at runtime when [Parameter Mode Enumerations]({{ site.enumerations }}parameter-mode-enums.html) are used (except *_AUTO and *_SKIP). Use LibraryFileName and LibraryParameters to configure.
 - (For IntermediateResult Advanced Module) Added support for decoding IntermediateResult. Users with a binarized image could use this function to skip some image preprocessing steps.
 - Implemented a new licensing tracking mechanism, License 2.0, which makes it easier for users to track license usage. 
 - Added a new format control parameter, BarcodeZoneMinDistanceToImageBorders, to set the minimum distance (in pixels) between the barcode zone and image borders.
