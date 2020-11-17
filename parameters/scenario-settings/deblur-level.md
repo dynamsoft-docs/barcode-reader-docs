@@ -23,7 +23,7 @@ reader->UpdateRunTimeSettings(settings);   //Update RuntimeSettings
 ret = reader->DecodeFile("Input file path","");   //Decoding 
 TextResultArray *pResults = NULL;                  
 Reader->GetAllTextResults(&pResults);       //Get result    
-CBarcodeReader::FreeTextResults(&pResults);  
+dynamsoft::dbr::CBarcodeReader::FreeTextResults(&pResults);  
 delete reader;  
 delete settings;  
 ```

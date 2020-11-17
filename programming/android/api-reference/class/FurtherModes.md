@@ -34,7 +34,7 @@ Stores the FurtherModes.
 Sets the mode and priority for colour categorization. Not supported yet.  
 
 ```java
-int[] com.dynamsoft.barcode.FurtherModes.colourClusteringModes
+int[] com.dynamsoft.dbr.FurtherModes.colourClusteringModes
 ```
 
 - **Value range**  
@@ -43,7 +43,7 @@ int[] com.dynamsoft.barcode.FurtherModes.colourClusteringModes
 - **Default value**  
    `[CCM_SKIP,CCM_SKIP,CCM_SKIP,CCM_SKIP,CCM_SKIP,CCM_SKIP,CCM_SKIP,CCM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is. 
    
 - **See also**  
@@ -54,7 +54,7 @@ int[] com.dynamsoft.barcode.FurtherModes.colourClusteringModes
 Sets the mode and priority for converting a colour image to a grayscale image.
 
 ```java
-int[] com.dynamsoft.barcode.FurtherModes.colourConversionModes
+int[] com.dynamsoft.dbr.FurtherModes.colourConversionModes
 ```
 
 - **Value range**  
@@ -63,7 +63,7 @@ int[] com.dynamsoft.barcode.FurtherModes.colourConversionModes
 - **Default value**  
    `[CICM_GENERAL,CICM_SKIP,CICM_SKIP,CICM_SKIP,CICM_SKIP,CICM_SKIP,CICM_SKIP,CICM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
    
 - **See also**  
@@ -74,7 +74,7 @@ int[] com.dynamsoft.barcode.FurtherModes.colourConversionModes
 Sets the mode and priority for the grayscale image conversion.
 
 ```java
-int[] com.dynamsoft.barcode.FurtherModes.grayscaleTransformationModes
+int[] com.dynamsoft.dbr.FurtherModes.grayscaleTransformationModes
 ```
 
 - **Value range**  
@@ -83,7 +83,7 @@ int[] com.dynamsoft.barcode.FurtherModes.grayscaleTransformationModes
 - **Default value**  
    `[GTM_ORIGINAL,GTM_SKIP,GTM_SKIP,GTM_SKIP,GTM_SKIP,GTM_SKIP,GTM_SKIP,GTM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
    
 - **See also**  
@@ -94,7 +94,7 @@ int[] com.dynamsoft.barcode.FurtherModes.grayscaleTransformationModes
 Sets the region pre-detection mode for barcodes search.
 
 ```java
-int[] com.dynamsoft.barcode.FurtherModes.regionPredetectionModes
+int[] com.dynamsoft.dbr.FurtherModes.regionPredetectionModes
 ```
 
 - **Value range**  
@@ -103,7 +103,7 @@ int[] com.dynamsoft.barcode.FurtherModes.regionPredetectionModes
 - **Default value**  
    `[RPM_GENERAL,RPM_SKIP,RPM_SKIP,RPM_SKIP,RPM_SKIP,RPM_SKIP,RPM_SKIP,RPM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is. If the image is large and the barcode on the image is very small, it is recommended to enable region predetection to speed up the localization process and recognition accuracy.
    
 - **See also**  
@@ -114,7 +114,7 @@ int[] com.dynamsoft.barcode.FurtherModes.regionPredetectionModes
 Sets the mode and priority for image preprocessing algorithms.
 
 ```java
-int[] com.dynamsoft.barcode.FurtherModes.imagePreprocessingModes
+int[] com.dynamsoft.dbr.FurtherModes.imagePreprocessingModes
 ```
 
 - **Value range**  
@@ -123,7 +123,7 @@ int[] com.dynamsoft.barcode.FurtherModes.imagePreprocessingModes
 - **Default value**  
    `[IPM_GENERAL,IPM_SKIP,IPM_SKIP,IPM_SKIP,IPM_SKIP,IPM_SKIP,IPM_SKIP,IPM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.
    
 - **See also**  
@@ -134,7 +134,7 @@ int[] com.dynamsoft.barcode.FurtherModes.imagePreprocessingModes
 Sets the mode and priority for texture detection.
 
 ```java
-int[] com.dynamsoft.barcode.FurtherModes.textureDetectionModes
+int[] com.dynamsoft.dbr.FurtherModes.textureDetectionModes
 ```
 
 - **Value range**  
@@ -143,7 +143,7 @@ int[] com.dynamsoft.barcode.FurtherModes.textureDetectionModes
 - **Default value**  
    `[TDM_GENERAL_WIDTH_CONCENTRATION,TDM_SKIP,TDM_SKIP,TDM_SKIP,TDM_SKIP,TDM_SKIP,TDM_SKIP,TDM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.
    
 - **See also**  
@@ -154,7 +154,7 @@ int[] com.dynamsoft.barcode.FurtherModes.textureDetectionModes
 Sets the mode and priority for text filter.
 
 ```java
-int[] com.dynamsoft.barcode.FurtherModes.textFilterModes
+int[] com.dynamsoft.dbr.FurtherModes.textFilterModes
 ```
 
 - **Value range**  
@@ -163,7 +163,7 @@ int[] com.dynamsoft.barcode.FurtherModes.textFilterModes
 - **Default value**  
    `[TFM_GENERAL_CONTOUR,TFM_SKIP,TFM_SKIP,TFM_SKIP,TFM_SKIP,TFM_SKIP,TFM_SKIP,TFM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is. If the image contains a lot of text, you can enable text filter to speed up the localization process.
    
 - **See also**  
@@ -174,7 +174,7 @@ int[] com.dynamsoft.barcode.FurtherModes.textFilterModes
 Sets the mode of text assisted correction for barcode decoding. ***Not supported yet***.
 
 ```java
-int com.dynamsoft.barcode.FurtherModes.textAssistedCorrectionMode
+int com.dynamsoft.dbr.FurtherModes.textAssistedCorrectionMode
 ```
 
 - **Value range**  
@@ -191,7 +191,7 @@ int com.dynamsoft.barcode.FurtherModes.textAssistedCorrectionMode
 Sets the mode and priority for DPM code reading.
 
 ```java
-int[] com.dynamsoft.barcode.FurtherModes.dpmCodeReadingModes
+int[] com.dynamsoft.dbr.FurtherModes.dpmCodeReadingModes
 ```
 
 - **Value range**  
@@ -200,7 +200,7 @@ int[] com.dynamsoft.barcode.FurtherModes.dpmCodeReadingModes
 - **Default value**  
    `[DPMCRM_SKIP,DPMCRM_SKIP,DPMCRM_SKIP,DPMCRM_SKIP,DPMCRM_SKIP,DPMCRM_SKIP,DPMCRM_SKIP,DPMCRM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
    
 - **See also**  
@@ -211,7 +211,7 @@ int[] com.dynamsoft.barcode.FurtherModes.dpmCodeReadingModes
 Sets the mode and priority for deformation resisting.
 
 ```java
-int[] com.dynamsoft.barcode.FurtherModes.deformationResistingModes
+int[] com.dynamsoft.dbr.FurtherModes.deformationResistingModes
 ```
 
 - **Value range**  
@@ -220,7 +220,7 @@ int[] com.dynamsoft.barcode.FurtherModes.deformationResistingModes
 - **Default value**  
    `[DRM_SKIP,DRM_SKIP,DRM_SKIP,DRM_SKIP,DRM_SKIP,DRM_SKIP,DRM_SKIP,DRM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
    
 - **See also**  
@@ -231,7 +231,7 @@ int[] com.dynamsoft.barcode.FurtherModes.deformationResistingModes
 Sets the mode and priority to complement the missing parts in the barcode.
 
 ```java
-int[] com.dynamsoft.barcode.FurtherModes.barcodeComplementModes
+int[] com.dynamsoft.dbr.FurtherModes.barcodeComplementModes
 ```
 
 - **Value range**  
@@ -240,7 +240,7 @@ int[] com.dynamsoft.barcode.FurtherModes.barcodeComplementModes
 - **Default value**  
    `[BCM_SKIP,BCM_SKIP,BCM_SKIP,BCM_SKIP,BCM_SKIP,BCM_SKIP,BCM_SKIP,BCM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
    
 - **See also**  
@@ -251,7 +251,7 @@ int[] com.dynamsoft.barcode.FurtherModes.barcodeComplementModes
 Sets the mode and priority for the barcode colour mode used to process the barcode zone.
 
 ```java
-int[] com.dynamsoft.barcode.FurtherModes.barcodeColourModes
+int[] com.dynamsoft.dbr.FurtherModes.barcodeColourModes
 ```
 
 - **Value range**  
@@ -260,7 +260,7 @@ int[] com.dynamsoft.barcode.FurtherModes.barcodeColourModes
 - **Default value**  
    `[BICM_DARK_ON_LIGHT,BICM_SKIP,BICM_SKIP,BICM_SKIP,BICM_SKIP,BICM_SKIP,BICM_SKIP,BICM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
    
 - **See also**  
@@ -271,7 +271,7 @@ int[] com.dynamsoft.barcode.FurtherModes.barcodeColourModes
 Sets the mode and priority to recognize accompanying text.
 
 ```java
-int[] com.dynamsoft.barcode.FurtherModes.accompanyingTextRecognitionModes
+int[] com.dynamsoft.dbr.FurtherModes.accompanyingTextRecognitionModes
 ```
 
 - **Value range**  
@@ -280,7 +280,7 @@ int[] com.dynamsoft.barcode.FurtherModes.accompanyingTextRecognitionModes
 - **Default value**  
    `[ATRM_SKIP,ATRM_SKIP,ATRM_SKIP,ATRM_SKIP,ATRM_SKIP,ATRM_SKIP,ATRM_SKIP,ATRM_SKIP]`  
      
-- **Remark**  
+- **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
    
 - **See also**  

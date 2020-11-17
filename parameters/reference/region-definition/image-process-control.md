@@ -157,7 +157,7 @@ The bottom-most coordinate or percentage of the region.
 ## MeasuredByPercentage
 Sets whether or not to use percentages to measure the Region size
 
-**Remark**   
+**Remarks**   
 When it’s set to 1, the values of [Top](#top), [Left](#left), [Right](#right), [Bottom](#bottom) indicates the percentage (from 0 to 100). Otherwise, they refer to the coordinates.   
 - 0: not by percentage
 - 1: by percentage

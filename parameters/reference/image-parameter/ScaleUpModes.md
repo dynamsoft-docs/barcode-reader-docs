@@ -11,13 +11,13 @@ needAutoGenerateSidebar: false
 
  | Parameter Name | Description |
  | -------------- | ----------- | 
- | [`ImageParameter.AccompanyingTextRecognitionModes`](AccompanyingTextRecognitionModes.md#accompanyingtextrecognitionmodes) | Sets the mode and priority to recognize accompanying text. |
  | [`ImageParameter.BarcodeColourModes`](BarcodeColourModes.md#barcodecolourmodes) | Sets the mode and priority for the barcode colour mode used to process the barcode zone. |
  | [`ImageParameter.BarcodeComplementModes`](BarcodeComplementModes.md#barcodecomplementmodes) | Sets the mode and priority to complement the missing parts in the barcode. |
  | [`ImageParameter.BinarizationModes`](BinarizationModes.md#binarizationmodes) | 	Sets the mode and priority for binarization. |
  | [`ImageParameter.ColourClusteringModes`](ColourClusteringModes.md#colourclusteringmodes) | Sets the mode and priority for colour categorization. Not supported yet. |
  | [`ImageParameter.ColourConversionModes`](ColourConversionModes.md#colourconversionmodes) | Sets the mode and priority for converting a colour image to a grayscale image. |
  | [`ImageParameter.DeblurLevel`](image-process-control.md#deblurlevel) | Sets the degree of blurriness of the barcode. |
+ | [`ImageParameter.DeblurModes`](DeblurModes.md#deblurmodes) | Sets the mode and priority for deblurring. |
  | [`ImageParameter.DeformationResistingModes`](DeformationResistingModes.md#deformationresistingmodes) | Sets the mode and priority for deformation resisting. |
  | [`ImageParameter.DPMCodeReadingModes`](DPMCodeReadingModes.md#dpmcodereadingmodes) | Sets the mode and priority for DPM code reading. Not support yet. |
  | [`ImageParameter.GrayscaleTransformationModes`](GrayscaleTransformationModes.md#grayscaletransformationmodes) | Sets the mode and priority for the grayscale image conversion. |
@@ -53,6 +53,8 @@ needAutoGenerateSidebar: false
 - [AcuteAngleWithXThreshold](#acuteanglewithxthreshold)
 - [ModuleSizeThreshold](#modulesizethreshold)
 - [TargetModuleSize](#targetmodulesize)
+- [LibraryFileName](#libraryfilename)
+- [LibraryParameters](#libraryparameters)
 
 If the module size of the barcode is smaller than the [ModuleSizeThreshold](#modulesizethreshold) and the acute angle with X of the barcode is larger than the [AcuteAngleWithXThreshold](#acuteanglewithxthreshold), the barcode will be enlarged to N times (N=1,2,3…) till N * modulesize >= [TargetModuleSize](#targetmodulesize).
  
@@ -60,11 +62,11 @@ If the module size of the barcode is smaller than the [ModuleSizeThreshold](#mod
 Sets the acute angle threshold for scale-up.
 
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [-1, 90] | -1 | "SUM_LINEAR_INTERPOLATION"<br>"SUM_NEAREST_NEIGHBOUR_INTERPOLATION" |         
 
-- **Remark**     
+- **Remarks**     
   -1 : means automatically set by the library.
 
 
@@ -72,11 +74,11 @@ Sets the acute angle threshold for scale-up.
 Sets the module size threshold for scale-up.
 
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [0, 0x7fffffff] | 0 | "SUM_LINEAR_INTERPOLATION"<br>"SUM_NEAREST_NEIGHBOUR_INTERPOLATION" |         
 
-- **Remark**     
+- **Remarks**     
   0 : means automatically set by the library.
 
 
@@ -84,12 +86,33 @@ Sets the module size threshold for scale-up.
 Sets the target module size for scale-up.
 
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [0, 0x7fffffff] | 0 | "SUM_LINEAR_INTERPOLATION"<br>"SUM_NEAREST_NEIGHBOUR_INTERPOLATION" |         
 
-- **Remark**     
+- **Remarks**     
   0 : means automatically set by the library.
+
+##### LibraryFileName 
+Sets the file name of the library to load dynamically.
+
+| Value Type | Value Range | Default Value | Valid Modes | 
+| ---------- | ----------- | ------------- | ----------- |
+| *string* | A string value representing file name. | "" | All `ScaleUpMode` items except SUM_SKIP and SUM_AUTO |         
+
+
+- **Remarks**     
+  - The library must be in the same place with Dynamsoft Barcode Reader Library.
+
+
+##### LibraryParameters 
+Sets the parameters passed to the library to load dynamically.
+
+| Value Type | Value Range | Default Value | Valid Modes | 
+| ---------- | ----------- | ------------- | ----------- |
+| *string* | A string value representing parameters. | "" | All `ScaleUpMode` items except SUM_SKIP and SUM_AUTO |         
+
+
 
 ### Setting Methods
 
@@ -128,7 +151,7 @@ Sets the target module size for scale-up.
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) | [`scaleUpModes`]({{ site.structs }}PublicRuntimeSettings.html#scaleupmodes) | [`ScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode)[8] |
 
 
-**Remark**   
+**Remarks**   
 [`GetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) and [`SetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) need to be called for getting or setting the value of [arguments](#mode-arguments).
 
 

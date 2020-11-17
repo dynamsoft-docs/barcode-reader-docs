@@ -25,7 +25,7 @@ needAutoGenerateSidebar: false
 Represents the method that will handle the error code returned by the SDK.
 
 ```java
-void com.dynamsoft.barcode.ErrorCallback.errorCallback(int frameId, int errorCode, Object userData)	
+void com.dynamsoft.dbr.ErrorCallback.errorCallback(int frameId, int errorCode, Object userData)	
 ```   
    
 #### Parameters
@@ -43,7 +43,7 @@ void com.dynamsoft.barcode.ErrorCallback.errorCallback(int frameId, int errorCod
 Represents the method that will handle the intermediate result array returned by the SDK.
 
 ```java
-void com.dynamsoft.barcode.IntermediateResultCallback.intermediateResultCallback(int frameId, IntermediateResult[] results, Object userData)	
+void com.dynamsoft.dbr.IntermediateResultCallback.intermediateResultCallback(int frameId, IntermediateResult[] results, Object userData)	
 ```   
    
 #### Parameters

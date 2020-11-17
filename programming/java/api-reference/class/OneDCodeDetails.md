@@ -23,24 +23,24 @@ Stores the OneD code details.
 ### moduleSize
 The barcode module size (the minimum bar width in pixel).
 ```java
-int com.dynamsoft.barcode.LocalizationResult.moduleSize
+int com.dynamsoft.dbr.LocalizationResult.moduleSize
 ```
 
 ### startCharsBytes
 The start chars in a byte array.
 ```java
-byte[] com.dynamsoft.barcode.LocalizationResult.startCharsBytes
+byte[] com.dynamsoft.dbr.LocalizationResult.startCharsBytes
 ```
 
 ### stopCharsBytes
 The stop chars in a byte array.
 ```java
-byte[] com.dynamsoft.barcode.LocalizationResult.stopCharsBytes
+byte[] com.dynamsoft.dbr.LocalizationResult.stopCharsBytes
 ```
 
 ### checkDigitBytes
 The check digit chars in a byte array.
 ```java
-byte[] com.dynamsoft.barcode.LocalizationResult.checkDigitBytes
+byte[] com.dynamsoft.dbr.LocalizationResult.checkDigitBytes
 ```
 

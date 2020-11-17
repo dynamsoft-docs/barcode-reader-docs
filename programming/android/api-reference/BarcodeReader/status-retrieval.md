@@ -19,7 +19,7 @@ needAutoGenerateSidebar: true
 Get version information of SDK.
 
 ```java
-String com.dynamsoft.barcode.BarcodeReader.getVersion()	
+String com.dynamsoft.dbr.BarcodeReader.getVersion()	
 ```
 
 ### Return value

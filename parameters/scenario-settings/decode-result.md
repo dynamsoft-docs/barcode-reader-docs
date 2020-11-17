@@ -48,7 +48,7 @@ You can set the angle, width, height, and text length requirements that the deco
 
 You can use [`BarcodeTextRegExPattern`]({{ site.parameters_reference }}format-specification/format-control.html#barcodetextregexpattern) to specify the regular expression requirements that must be met when `DBR` returns the result text. The default value is empty which means there is no limitation.
 
-For example, if we set [`BarcodeTextRegExPattern`]({{ site.parameters_reference }}format-specification/format-control.html#barcodetextregexpattern) as "[0-9]\d{4,11}", then the result text should be 4 to 11 digits. If the result is 123456 which matches the expression, it will be returned. If it is 123 which has only 3 digits or a123456 which has a letter in it, they don’t match the expression and will not be returned.
+For example, if we set [`BarcodeTextRegExPattern`]({{ site.parameters_reference }}format-specification/format-control.html#barcodetextregexpattern) as "[0-9]\d{4,11}", then the result text should be 4 to 11 digits. If the result is 123456 which matches the expression, it will be returned. If it is 123 which has only 3 digits or a123456 which has a letter in it, they don 't match the expression and will not be returned.
 
 For more info, check out About Regular [Expression](https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2010/28hw3sce(v=vs.100))
 
@@ -71,7 +71,7 @@ for(int j = 0; j < iCount; j++)
     LocalizationResult* pLocRes = pBarcode->localizationResult;  
     printf("confidence:%d\n",pLocRes->confidence);
 }  
-CBarcodeReader::FreeTextResults(&pResult);     
+dynamsoft::dbr::CBarcodeReader::FreeTextResults(&pResult);     
 delete reader;  
 ```
 
@@ -121,7 +121,7 @@ for(int j = 0; j < iCount; j++)
     ExtendResult* pExResult = pBarcode->result[0];  
     printf("clarity:%d\n", pExResult->clarity);
 }  
-CBarcodeReader::FreeTextResults(&pResult);
+dynamsoft::dbr::CBarcodeReader::FreeTextResults(&pResult);
 delete runtimeSettings;
 delete reader;
 ```

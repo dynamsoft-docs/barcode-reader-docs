@@ -23,13 +23,13 @@ Stores line segment data.
 ### startPoint
 The start point of the line segment.   
 ```java
-Point com.dynamsoft.barcode.LineSegment.startPoint
+Point com.dynamsoft.dbr.LineSegment.startPoint
 ```
 
 ### endPoint
 The end point of the line segment.
 ```java
-Point com.dynamsoft.barcode.LineSegment.endPoint
+Point com.dynamsoft.dbr.LineSegment.endPoint
 ```
 
 ### linesConfidenceCoefficients
@@ -39,5 +39,5 @@ The confidence coefficients for lines. There are 4 coefficients in this set:
 3. linesConfidenceCoefficients\[2\] is average negative amplitude;   
 4. linesConfidenceCoefficients\[3\] is max negative amplitude.
 ```java
-byte[] com.dynamsoft.barcode.LineSegment.linesConfidenceCoefficients
+byte[] com.dynamsoft.dbr.LineSegment.linesConfidenceCoefficients
 ```

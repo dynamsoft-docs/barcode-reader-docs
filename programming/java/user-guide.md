@@ -58,10 +58,10 @@ You can add Dynamsoft Barcode Reader as the dependency to pom.xml like this:
 1. Open Eclipse and create a new Java project HelloDBR.
 2. Add the required JAR file to your project.
     Click File > Properties > Java Build Path > Libraries > Add external JARs, add dynamsoft-barcodereader-{version number}.jar and click Apply.
-    The JAR file can be found at [INSTALLATION FOLDER]\Dynamsoft Barcode Reader\lib\ .
+    The JAR file can be found at `DBR-Java-{version number}\DynamsoftBarcodeReader\lib`.
 3. Import the header.
     ```java
-    import com.dynamsoft.barcode.*;
+    import com.dynamsoft.dbr.*;
     ```
 4. Replace the code of HelloDBR with the following.
     ```java
@@ -202,7 +202,6 @@ Below is a template for your reference. To learn more about the APIs, you can ch
             "ThreshValueCoefficient" : 10
          }
       ],
-      "DeblurLevel" : 9,
       "Description" : "",
       "ExpectedBarcodesCount" : 0,
       "GrayscaleTransformationModes" : [
@@ -262,8 +261,51 @@ Below is a template for your reference. To learn more about the APIs, you can ch
 }
 ```
 
+# How to Distribute
 
-&nbsp; 
+Distribute the `dynamsoft-barcodereader-{version number}.jar` file with the applications using the Dynamsoft Barcode Reader SDK. The .JAR file can be found under `DBR-Java-{version number}\DynamsoftBarcodeReader\lib`.
+
+You can also distribute with Maven, like this:
+
+```xml
+   <dependencies>
+      <dependency>
+         <groupId>com.dynamsoft</groupId>
+         <artifactId>dbr</artifactId>
+         <version>7.6.0</version>
+      </dependency>
+   </dependencies>
+   <repositories>
+      <repository>
+         <id>dbr</id>
+         <url>https://download2.dynamsoft.com/maven/dbr/jar</url>
+      </repository>
+   </repositories>
+```
+
+# How to Upgrade
+
+## From version 7.x
+
+You need to replace the old assembly files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
+
+Your previous SDK license for version 7.x is not compatible with the version 8.x. Please [contact us](https://www.dynamsoft.com/Company/Contact.aspx) to upgrade your license.
+
+After you upgraded your license to version 8.x:
+
+- If you were using `ProductKeys`, please replace the old license with the newly generated one.
+
+- If you were using `InitLicenseFromServer` to connect to Dynamsoft server for license verification, then no need to change the license key. But please make sure the device has Internet connection.
+
+- If you were using `InitLicenseFromServer` + `DBR_InitLicenseFromLicenseContent` to connect to Dynamsoft server once and use the SDK offline, please follow [these steps](../../license-activation/set-full-license-7.md#connect-once) to re-register the device.
+
+- If you were using `DBR_InitLicenseFromLicenseContent` to use the SDK offline, please follow [these steps](../../license-activation/set-full-license-7.md#offline) to re-register the device.
+
+## From version 6.x
+
+We made some structural updates in the new version. To upgrade from 6.x to 8.x, we recommend you to review our sample code and re-write the barcode scanning module.
+
+
 
 
 

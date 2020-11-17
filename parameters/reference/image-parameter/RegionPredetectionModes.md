@@ -10,13 +10,13 @@ needAutoGenerateSidebar: false
 
  | Parameter Name | Description |
  | -------------- | ----------- | 
- | [`ImageParameter.AccompanyingTextRecognitionModes`](AccompanyingTextRecognitionModes.md#accompanyingtextrecognitionmodes) | Sets the mode and priority to recognize accompanying text. |
  | [`ImageParameter.BarcodeColourModes`](BarcodeColourModes.md#barcodecolourmodes) | Sets the mode and priority for the barcode colour mode used to process the barcode zone. |
  | [`ImageParameter.BarcodeComplementModes`](BarcodeComplementModes.md#barcodecomplementmodes) | Sets the mode and priority to complement the missing parts in the barcode. |
  | [`ImageParameter.BinarizationModes`](BinarizationModes.md#binarizationmodes) | 	Sets the mode and priority for binarization. |
  | [`ImageParameter.ColourClusteringModes`](ColourClusteringModes.md#colourclusteringmodes) | Sets the mode and priority for colour categorization. Not supported yet. |
  | [`ImageParameter.ColourConversionModes`](ColourConversionModes.md#colourconversionmodes) | Sets the mode and priority for converting a colour image to a grayscale image. |
  | [`ImageParameter.DeblurLevel`](image-process-control.md#deblurlevel) | Sets the degree of blurriness of the barcode. |
+ | [`ImageParameter.DeblurModes`](DeblurModes.md#deblurmodes) | Sets the mode and priority for deblurring. |
  | [`ImageParameter.DeformationResistingModes`](DeformationResistingModes.md#deformationresistingmodes) | Sets the mode and priority for deformation resisting. |
  | [`ImageParameter.DPMCodeReadingModes`](DPMCodeReadingModes.md#dpmcodereadingmodes) | Sets the mode and priority for DPM code reading. Not support yet. |
  | [`ImageParameter.GrayscaleTransformationModes`](GrayscaleTransformationModes.md#grayscaletransformationmodes) | Sets the mode and priority for the grayscale image conversion. |
@@ -37,7 +37,7 @@ needAutoGenerateSidebar: false
 
 ## RegionPredetectionModes
 
-**Remark**   
+**Remarks**   
 If the image is large and the barcode on the image is very small, it is recommended to enable region predetection to speed up the localization process and recognition accuracy.   
 
 ### Mode Properties
@@ -58,38 +58,41 @@ If the image is large and the barcode on the image is very small, it is recommen
 - [AspectRatioRange](#aspectratiorange )
 - [HeightRange](#heightrange)
 - [WidthRange](#widthrange)
+- [SpatialIndexBlockSize](#spatialindexblocksize)
+- [LibraryFileName](#libraryfilename)
+- [LibraryParameters](#libraryparameters)
  
 ##### MinImageDimension 
 Sets the minimum image dimension (in pixels) to pre-detect barcode regions.
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [16384, 0x7fffffff] | 262144 | "RPM_GENERAL_GRAY_CONTRAST"<br>"RPM_GENERAL_HSV_CONTRAST"<br>"RPM_GENERAL_RGB_CONTRAST" |         
 
-- **Remark**     
+- **Remarks**     
   If the image dimension is larger than the given value, the library will enable the feature of pre-detecting barcode regions. Otherwise, it will skip this step when searching for barcodes.  
 
 
 ##### Sensitivity 
 Sets the sensitivity used for region predetection algorithm.
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [1, 9] | 1 | "RPM_GENERAL_GRAY_CONTRAST"<br>"RPM_GENERAL_HSV_CONTRAST"<br>"RPM_GENERAL_RGB_CONTRAST" |         
 
-- **Remark**     
+- **Remarks**     
   A larger value means the library will take more effort to detect regions.  
 
 
 ##### RelativeBarcodeRegions 
  Sets the barcode regions relative to the predetected region.  
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing one or more regions. | "" | "RPM_GENERAL_HSV_CONTRAST" |         
 
 
-- **Remark**     
+- **Remarks**     
   - Each region need to be defined as [`Left`, `Top`, `Right`, `Bottom`, `Index`]. If you want to define multiple regions, you can use a "";"" to separate them. If there is no region defined, the library will consider the predetected regions as barcode regions.    
   - `Left`, `Top`, `Right`, `Bottom` are four percentage values relative to top-left corner of the predetected region. 
   - `Index` means the index of a specific colour set in [`ForeAndBackgroundColours`](#foreandbackgroundcolours) which the current region is applied to. If the value of `index` is set to -1, the current region will be applied to all colour sets in [`ForeAndBackgroundColours`](#foreandbackgroundcolours).
@@ -100,12 +103,12 @@ Sets the sensitivity used for region predetection algorithm.
 ##### ForeAndBackgroundColours 
 Specifies a set (or multiple sets) of the foreground and background colours used for region predetection algorithm.
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing one or more colour sets. | "" | "RPM_GENERAL_HSV_CONTRAST" |         
 
 
-- **Remark**     
+- **Remarks**     
   - Each set of the foreground and background colours need to be defined as [`ForegroundColour`, `BackgroundColour`, `Tolerance`]. If you want to define multiple sets, you can use a "";"" to separate them. This argument is **mandatory**. If there is no manual setting, no region can be detected.
   - `ForegroundColour`and `BackgroundColour` are the Hue values in the HSV colour space for defining the foreground and background colours of the regions you want to predetect. The value -1 means black, gray, white.
   - `Tolerance` is the allowable deviation of the Hue value defined by `ForegroundColour`. 
@@ -117,12 +120,12 @@ Specifies a set (or multiple sets) of the foreground and background colours used
 ##### AspectRatioRange 
 Sets the aspect ratio range of the bounding rectangle of the predetected region.
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing aspect ratio range. | "" | "RPM_GENERAL_HSV_CONTRAST" |         
 
 
-- **Remark**     
+- **Remarks**     
   -  The aspect ratio range need to be defined as [`MinAspectRatio`, `MaxAspectRatio`]. There will be no limitation without manual setting.
   - Aspect ratio equals to *height/width\*100*. `MinAspectRatio` and `MaxAspectRatio` are used for limiting the aspect ratio range of the predetected region.
   - Value range of `MinAspectRatio`, `MaxAspectRatio`: [1,10000]
@@ -132,12 +135,12 @@ Sets the aspect ratio range of the bounding rectangle of the predetected region.
 ##### HeightRange 
 Sets the height range of the bounding rectangle of the predetected region.
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing height range. | "" | "RPM_GENERAL_HSV_CONTRAST" |         
 
 
-- **Remark**     
+- **Remarks**     
   - The height range need to be defined as [`MinHeight`, `MaxHeight`]. There will be no limitation without manual setting.
   - Value range of `MinHeight`, `MaxHeight`: [1,0x7fffffff]
 
@@ -145,14 +148,46 @@ Sets the height range of the bounding rectangle of the predetected region.
 ##### WidthRange 
 Sets the width range of the bounding rectangle of the predetected region.
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing width range. | "" | "RPM_GENERAL_HSV_CONTRAST" |         
 
 
-- **Remark**     
+- **Remarks**     
   - The width range need to be defined as [`MinWidth`, `MaxWidth`]. There will be no limitation without manual setting.
   - Value range of `MinWidth`, `MaxWidth`: [1,0x7fffffff]
+
+
+##### SpatialIndexBlockSize 
+Sets the spatial index block size used for region predetection algorithm.
+
+| Value Type | Value Range | Default Value | Valid Modes | 
+| ---------- | ----------- | ------------- | ----------- |
+| *int* | [1, 32] | 5 | "RPM_GENERAL_GRAY_CONTRAST"<br>"RPM_GENERAL_HSV_CONTRAST"<br>"RPM_GENERAL_RGB_CONTRAST" |         
+
+- **Remarks**     
+  The block size used for region predetection would be 2 to the power of N. The allowed values of SpatialIndexBlockSize is the power number (N=1,2,3...).
+
+
+##### LibraryFileName 
+Sets the file name of the library to load dynamically.
+
+| Value Type | Value Range | Default Value | Valid Modes | 
+| ---------- | ----------- | ------------- | ----------- |
+| *string* | A string value representing file name. | "" | All `RegionPredetectionMode` items except RPM_SKIP and RPM_AUTO |         
+
+
+- **Remarks**     
+  - The library must be in the same place with Dynamsoft Barcode Reader Library.
+
+
+##### LibraryParameters 
+Sets the parameters passed to the library to load dynamically.
+
+| Value Type | Value Range | Default Value | Valid Modes | 
+| ---------- | ----------- | ------------- | ----------- |
+| *string* | A string value representing parameters. | "" | All `RegionPredetectionMode` items except RPM_SKIP and RPM_AUTO |         
+
 
 
 ### Setting Methods
@@ -191,7 +226,7 @@ Sets the width range of the bounding rectangle of the predetected region.
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html)->[`furtherModes`]({{ site.structs }}PublicRuntimeSettings.html#furthermodes) | [`regionPredetectionModes`]({{ site.structs }}FurtherModes.html#regionpredetectionmodes) | [`RegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode)[8] |
 
 
-**Remark**   
+**Remarks**   
 [`GetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) and [`SetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) need to be called for getting or setting the value of [arguments](#mode-arguments).
 
 

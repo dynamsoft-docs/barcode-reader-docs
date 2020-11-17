@@ -27,6 +27,7 @@ breadcrumbText: Enumerations
   | [`ColourClusteringMode`](parameter-mode-enums.md#colourclusteringmode) | Describes the colour clustering mode. |
   | [`ColourConversionMode`](parameter-mode-enums.md#colourconversionmode) | Describes the colour conversion mode. |
   | [`ConflictMode`](parameter-mode-enums.md#conflictmode) | Describes the conflict mode. |
+  | [`DeblurMode`](parameter-mode-enums.md#deblurmode) | Describes the deblur mode. |
   | [`DeformationResistingMode`](parameter-mode-enums.md#deformationresistingmode) | Describes the deformation resisting mode. |
   | [`DPMCodeReadingMode`](parameter-mode-enums.md#dpmcodereadingmode) | Describes the DPM code reading mode. |
   | [`GrayscaleTransformationMode`](parameter-mode-enums.md#grayscaletransformationmode) | Describes the grayscale transformation mode. |
@@ -62,6 +63,10 @@ breadcrumbText: Enumerations
 
   | Enumeration | Description |
   |-------------|-------------|
+  | [`DM_ChargeWay`](other-enums.md#dm_chargeway) | Describes the charge way. |
+  | [`DM_DeploymentType`](other-enums.md#dm_deploymenttype) | Describes the deployment type. |
+  | [`DM_LicenseModule`](other-enums.md#dm_licensemodule) | Describes Dynamsoft license modules. |
+  | [`DM_UUIDGenerationMethod`](other-enums.md#dm_uuidgenerationmethod) | Describes the UUID generation method. |
   | [`ImagePixelFormat`](other-enums.md#imagepixelformat) | Describes the image pixel format. |
   | [`QRCodeErrorCorrectionLevel`](other-enums.md#qrcodeerrorcorrectionlevel) | Describes the QR Code error correction level. |
 

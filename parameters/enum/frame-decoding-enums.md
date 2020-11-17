@@ -25,7 +25,7 @@ Describes the clarity calculation method.
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum ClarityCalculationMethod` |
-| .Net | `enum Dynamsoft.Barcode.EnumClarityCalculationMethod` |
+| .Net | `enum Dynamsoft.DBR.EnumClarityCalculationMethod` |
 | JavaScript | `Dynamsoft.EnumClarityCalculationMethod` |
 | Python | `class EnumClarityCalculationMethod(IntEnum)` |
 | Java / Android | `class EnumClarityCalculationMethod` |
@@ -51,7 +51,7 @@ Describes the clarity filter mode
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum ClarityFilterMode` |
-| .Net | `enum Dynamsoft.Barcode.EnumClarityFilterMode` |
+| .Net | `enum Dynamsoft.DBR.EnumClarityFilterMode` |
 | JavaScript | `Dynamsoft.EnumClarityFilterMode` |
 | Python | `class EnumClarityFilterMode(IntEnum)` |
 | Java / Android | `class EnumClarityFilterMode` |

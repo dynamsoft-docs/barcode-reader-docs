@@ -23,16 +23,16 @@ needAutoGenerateSidebar: true
 
 Default constructor of a `BarcodeReader` object.
 
-```C#
-Dynamsoft.Barcode.BarcodeReader.BarcodeReader()
+```csharp
+Dynamsoft.DBR.BarcodeReader.BarcodeReader()
 ```
 
 ### BarcodeReader(string productKey)
 
 Constructor with a given product key.
 
-```C#
-Dynamsoft.Barcode.BarcodeReader.BarcodeReader(string productKey)
+```csharp
+Dynamsoft.DBR.BarcodeReader.BarcodeReader(string productKey)
 ```
 
 #### Parameters
@@ -42,8 +42,8 @@ Dynamsoft.Barcode.BarcodeReader.BarcodeReader(string productKey)
 
 Constructor with a given product key and a given path to load DLLs.
 
-```C#
-Dynamsoft.Barcode.BarcodeReader.BarcodeReader(string modulePath, string productKey)
+```csharp
+Dynamsoft.DBR.BarcodeReader.BarcodeReader(string modulePath, string productKey)
 ```
 
 #### Parameters
@@ -59,6 +59,6 @@ Dynamsoft.Barcode.BarcodeReader.BarcodeReader(string modulePath, string productK
 
 Destroys an instance of Dynamsoft Barcode Reader.
 
-```C#
-void Dynamsoft.Barcode.BarcodeReader.Dispose() 
+```csharp
+void Dynamsoft.DBR.BarcodeReader.Dispose() 
 ```

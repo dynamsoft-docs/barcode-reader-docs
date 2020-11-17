@@ -10,7 +10,7 @@ needAutoGenerateSidebar: false
 # AztecDetails
 Stores the Aztec details.
 
-```C#
+```csharp
 public class AztecDetails
 ```  
 
@@ -30,28 +30,28 @@ public class AztecDetails
 ### ModuleSize
 The barcode module size (the minimum bar width in pixel).
 
-```C#
-int Dynamsoft.Barcode.AztecDetails.ModuleSize
+```csharp
+int Dynamsoft.DBR.AztecDetails.ModuleSize
 ```  
    
 ### Rows
 The row count of the barcode.
 
-```C#
-int Dynamsoft.Barcode.AztecDetails.Rows
+```csharp
+int Dynamsoft.DBR.AztecDetails.Rows
 ```  
 
 ### Columns
 The column count of the barcode.
 
-```C#
-int Dynamsoft.Barcode.AztecDetails.Columns
+```csharp
+int Dynamsoft.DBR.AztecDetails.Columns
 ```  
 
 ### LayerNumber
 A negative number (-1, -2, -3, -4) specifies a compact Aztec code.  
 A positive number (1, 2, .. 32) specifies a normal (full-rang) Aztec code.  
 
-```C#
-int Dynamsoft.Barcode.AztecDetails.LayerNumber
+```csharp
+int Dynamsoft.DBR.AztecDetails.LayerNumber
 ```  

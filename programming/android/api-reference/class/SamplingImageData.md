@@ -25,7 +25,7 @@ Stores the sampling image data.
 The sampling image data in a byte array.
 
 ```java
-byte[] com.dynamsoft.barcode.SamplingImageData.bytes
+byte[] com.dynamsoft.dbr.SamplingImageData.bytes
 ```
 
 ### width
@@ -33,7 +33,7 @@ byte[] com.dynamsoft.barcode.SamplingImageData.bytes
 The width of the sampling image.
 
 ```java
-int com.dynamsoft.barcode.SamplingImageData.width
+int com.dynamsoft.dbr.SamplingImageData.width
 ```
 
 ### height
@@ -41,5 +41,5 @@ int com.dynamsoft.barcode.SamplingImageData.width
 The height of the sampling image.
 
 ```java
-int com.dynamsoft.barcode.SamplingImageData.height
+int com.dynamsoft.dbr.SamplingImageData.height
 ```

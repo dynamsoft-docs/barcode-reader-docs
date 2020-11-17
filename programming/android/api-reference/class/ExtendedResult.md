@@ -33,7 +33,7 @@ Stores the extended result.
 Extended result type. 
 
 ```java
-int com.dynamsoft.barcode.ExtendedResult.resultType
+int com.dynamsoft.dbr.ExtendedResult.resultType
 ```
 
 ### barcodeFormat
@@ -41,7 +41,7 @@ int com.dynamsoft.barcode.ExtendedResult.resultType
 Barcode type in BarcodeFormat group 1. 
 
 ```java
-int com.dynamsoft.barcode.ExtendedResult.barcodeFormat
+int com.dynamsoft.dbr.ExtendedResult.barcodeFormat
 ```
 
 ### barcodeFormatString
@@ -49,7 +49,7 @@ int com.dynamsoft.barcode.ExtendedResult.barcodeFormat
 Barcode type in BarcodeFormat group 1 as string.
 
 ```java
-String com.dynamsoft.barcode.ExtendedResult.barcodeFormatString
+String com.dynamsoft.dbr.ExtendedResult.barcodeFormatString
 ```
 
 ### barcodeFormat_2
@@ -57,7 +57,7 @@ String com.dynamsoft.barcode.ExtendedResult.barcodeFormatString
 Barcode type in BarcodeFormat group 2.
 
 ```java
-int com.dynamsoft.barcode.ExtendedResult.barcodeFormat_2
+int com.dynamsoft.dbr.ExtendedResult.barcodeFormat_2
 ```
  
 ### barcodeFormatString_2
@@ -65,7 +65,7 @@ int com.dynamsoft.barcode.ExtendedResult.barcodeFormat_2
 Barcode type in BarcodeFormat group 2 as string.
 
 ```java
-String com.dynamsoft.barcode.ExtendedResult.barcodeFormatString_2
+String com.dynamsoft.dbr.ExtendedResult.barcodeFormatString_2
 ```
 
 ### confidence
@@ -73,7 +73,7 @@ String com.dynamsoft.barcode.ExtendedResult.barcodeFormatString_2
 The confidence of the result.
 
 ```java
-int com.dynamsoft.barcode.ExtendedResult.confidence
+int com.dynamsoft.dbr.ExtendedResult.confidence
 ```
 
 ### bytes
@@ -81,7 +81,7 @@ int com.dynamsoft.barcode.ExtendedResult.confidence
 The content in a byte array.
 
 ```java
-byte[] com.dynamsoft.barcode.ExtendedResult.bytes
+byte[] com.dynamsoft.dbr.ExtendedResult.bytes
 ```
 
 ### accompanyingTextBytes
@@ -89,7 +89,7 @@ byte[] com.dynamsoft.barcode.ExtendedResult.bytes
 The accompanying text content in a byte array.
 
 ```java
-byte[] com.dynamsoft.barcode.ExtendedResult.accompanyingTextBytes
+byte[] com.dynamsoft.dbr.ExtendedResult.accompanyingTextBytes
 ```
 
 ### deformation
@@ -97,7 +97,7 @@ byte[] com.dynamsoft.barcode.ExtendedResult.accompanyingTextBytes
 The deformation value.
 
 ```java
-int com.dynamsoft.barcode.ExtendedResult.deformation
+int com.dynamsoft.dbr.ExtendedResult.deformation
 ```
 
 ### detailedResult
@@ -105,7 +105,7 @@ int com.dynamsoft.barcode.ExtendedResult.deformation
 One of the following: [`QRCodeDetails`](QRCodeDetails.md), [`PDF417Details`](PDF417Details.md), [`DataMatrixDetails`](DataMatrixDetails.md), [`AztecDetails`](AztecDetails.md), [`OneDCodeDetails`](OneDCodeDetails.md).
 
 ```java
-Object com.dynamsoft.barcode.ExtendedResult.detailedResult
+Object com.dynamsoft.dbr.ExtendedResult.detailedResult
 ```
 
 ### samplingImage
@@ -113,7 +113,7 @@ Object com.dynamsoft.barcode.ExtendedResult.detailedResult
 The sampling image info.
 
 ```java
-SamplingImageData com.dynamsoft.barcode.ExtendedResult.samplingImage
+SamplingImageData com.dynamsoft.dbr.ExtendedResult.samplingImage
 ```
  
 ### clarity
@@ -121,5 +121,5 @@ SamplingImageData com.dynamsoft.barcode.ExtendedResult.samplingImage
 The clarity of the barcode zone in percentage.
 
 ```java
-int com.dynamsoft.barcode.ExtendedResult.clarity
+int com.dynamsoft.dbr.ExtendedResult.clarity
 ```

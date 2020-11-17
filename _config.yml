@@ -3,6 +3,9 @@ docFullPath: https://www.dynamsoft.com/barcode-reader
 firstLevelUrl: /barcode-reader
 docHomePage: /barcode-reader/programming/
 
+productUrl: https://www.dynamsoft.com/Products/Dynamic-Barcode-Reader.aspx
+productName: Dynamsoft Barcode Reader
+
 introduction: /barcode-reader/introduction/
 programming: /barcode-reader/programming/
 parameters: /barcode-reader/parameters/

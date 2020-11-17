@@ -35,13 +35,13 @@ After installation, you can find samples for supported platforms in the **Sample
 ## Getting Started: HelloWorld
 1. Start Visual Studio and create a new Console Application in C#. Let's name it `BarcodeReadDemo_DotNet`. Don't forget to choose a supported .NET Framework edition.
 2. Add Dynamsoft.Barcode namespace in `Program.cs`.
-   ```C#
+   ```csharp
     using Dynamsoft.Barcode;
    ```
-   Please add Dynamsoft Barcode Reader lib in project references. The lib file named "Dynamsoft.BarcodeReader.dll" can be found in `[INSTALLATION FOLDER]\Components\DotNet]\2.0` or `[INSTALLATION FOLDER]\Components\DotNet]\4.0`. The folder which you should choose depends on your .NET Framework edition.
+   Please add Dynamsoft Barcode Reader lib in project references. The lib file named "Dynamsoft.BarcodeReader.dll" can be found in `DBR-DotNet-{version number}\DynamsoftBarcodeReader\Lib\{Platform}\2.0` or `DBR-DotNet-{version number}\DynamsoftBarcodeReader\Lib\{Platform}\4.0`. The folder which you should choose depends on your .NET Framework edition.
 
 3. Update the main function in `Program.cs`.
-    ```C#
+    ```csharp
     class Program
     {
         statica void Main(string[] args)
@@ -125,7 +125,7 @@ If your full license only covers some barcode formats, you can use `BarcodeForma
 
 For example, to enable only 1D barcode reading, you can use the following code:   
 
-```C#
+```csharp
 //Initialize license prior to any decoding
 //Replace "<Put your license key here>" with your own license
 BarcodeReader reader = new BarcodeReader("<your license key here>");
@@ -149,7 +149,7 @@ reader.Dispose();
 #### Specify maximum barcode count
 By default, the SDK will read as many barcodes as it can. To increase the recognition efficiency, you can use `expectedBarcodesCount` to specify the maximum number of barcodes to recognize according to your scenario. 
 
-```C#
+```csharp
 //Initialize license prior to any decoding
 //Replace "<Put your license key here>" with your own license
 BarcodeReader reader = new BarcodeReader("<your license key here>");
@@ -176,7 +176,7 @@ dealing with high-resolution images. You can speed up the recognition process by
 
 To specify a region, you will need to define an area. The following code shows how to create a template string and define the region.
 
-```C#
+```csharp
 //Initialize license prior to any decoding
 //Replace "<Put your license key here>" with your own license
 BarcodeReader reader = new BarcodeReader("<your license key here>");
@@ -204,7 +204,7 @@ reader.Dispose();
 ### Use A Template to Change Settings
 Besides the option of using the PublicRuntimeSettings struct, the SDK also provides [`InitRuntimeSettingsWithString`](api-reference/BarcodeReader/parameter-and-runtime-settings-advanced.md#initruntimesettingswithstring) and [`InitRuntimeSettingsWithFile`](api-reference/BarcodeReader/parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile) APIs that enable you to use a template to control all the runtime settings. With a template, instead of writing many codes to modify the settings, you can manage all the runtime settings in a JSON file/string.
 
-```C#
+```csharp
 string errorMsg = "";
 //Initialize license prior to any decoding
 //Replace "<Put your license key here>" with your own license
@@ -298,6 +298,33 @@ Below is a template for your reference. To learn more about the APIs, you can ch
 }
 ```
 
+# How to Distribute
 
-&nbsp;
+Distribute the following required library files with the applications using the Dynamsoft Barcode Reader SDK. The distribution files can be found under:
+
+for .NET Framework 2.0 - 3.5: `Dynamsoft.BarcodeReader.dll`, `DynamsoftCommon.dll`, `x86` and `x64` folders. These files are under `DBR-DotNet-{version number}\DynamsoftBarcodeReader\Lib\{Platform}\2.0`.
+
+for .NET Framework 4.0 and above: `Dynamsoft.BarcodeReader.dll`, `DynamsoftCommon.dll`, `x86` and `x64` folders. These files are under `DBR-DotNet-{version number}\DynamsoftBarcodeReader\Lib\{Platform}\4.0`.
+
+# How to Upgrade
+
+## From version 7.x
+
+You need to replace the old assembly files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
+
+Your previous SDK license for version 7.x is not compatible with the version 8.x. Please [contact us](https://www.dynamsoft.com/Company/Contact.aspx) to upgrade your license.
+
+After you upgraded your license to version 8.x:
+
+- If you were using `ProductKeys`, please replace the old license with the newly generated one.
+
+- If you were using `InitLicenseFromServer` to connect to Dynamsoft server for license verification, then no need to change the license key. But please make sure the device has Internet connection.
+
+- If you were using `InitLicenseFromServer` + `DBR_InitLicenseFromLicenseContent` to connect to Dynamsoft server once and use the SDK offline, please follow [these steps](../../license-activation/set-full-license-7.md#connect-once) to re-register the device.
+
+- If you were using `DBR_InitLicenseFromLicenseContent` to use the SDK offline, please follow [these steps](../../license-activation/set-full-license-7.md#offline) to re-register the device.
+
+## From version 6.x
+
+We made some structural updates in the new version. To upgrade from 6.x to 8.x, we recommend you to review our sample code and re-write the barcode scanning module.
 

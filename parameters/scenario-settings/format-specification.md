@@ -303,9 +303,6 @@ The usage of the other parameters in `FormatSpecification` will be covered in mo
 
 Please refer to [Barcode Results][12]
 
-- AccompanyingTextRecognitionModes    
-Please refer to [RecogniseAccompanyingText][14]
-
 [1]:assets/format-specification/normal-qr.png
 
 [2]:assets/format-specification/mirror-qr.png
@@ -329,7 +326,5 @@ Please refer to [RecogniseAccompanyingText][14]
 [11]:assets/format-specification/barcode-with-narrow-quietzone.png
 
 [12]:decode-result.html
-
-[14]:recognise-accompanying-text.html
 
 

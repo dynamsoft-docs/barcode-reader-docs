@@ -131,8 +131,8 @@ The following code snippet illustrate how to save intermediate results in memory
         }
     }
 
-    CBarcodeReader::FreeTextResults(&result);
-    CBarcodeReader::FreeIntermediateResults(&iResults);
+    dynamsoft::dbr::CBarcodeReader::FreeTextResults(&result);
+    dynamsoft::dbr::CBarcodeReader::FreeIntermediateResults(&iResults);
     delete runtimeSettings;
     delete reader;
 }

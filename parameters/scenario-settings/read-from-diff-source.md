@@ -90,7 +90,7 @@ int main()
    }
    TextResultArray* pResults = NULL;
    reader->GetAllTextResults(&pResults);
-   CBarcodeReader::FreeTextResults(&pResults);
+   dynamsoft::dbr::CBarcodeReader::FreeTextResults(&pResults);
    delete(reader);
    return 0;
 }
@@ -171,13 +171,13 @@ void textResultcallback(int frameId, TextResultArray *pResults, void * pUser)
    {
       printf("Barcode %d, Value %s\n", iIndex + 1, pResults->results[iIndex]->barcodeText);
    }
-   CBarcodeReader::FreeTextResults(&pResults);
+   dynamsoft::dbr::CBarcodeReader::FreeTextResults(&pResults);
 }
 
 //Callback function when decoding error 
 void errorcb(int frameId, int errorCode, void * pUser)
 {
-   printf("frame = %d errorcode = %d, %s\n", frameId, errorCode, CBarcodeReader::GetErrorString(errorCode));
+   printf("frame = %d errorcode = %d, %s\n", frameId, errorCode, dynamsoft::dbr::CBarcodeReader::GetErrorString(errorCode));
 }
 
 int main()
@@ -196,7 +196,7 @@ int main()
    iRet = reader.InitLicense("enter your license");
    if (iRet != 0)
    {
-      printf("%s\n", CBarcodeReader::GetErrorString(iRet));
+      printf("%s\n", dynamsoft::dbr::CBarcodeReader::GetErrorString(iRet));
       return -1;
    }
    reader.InitRuntimeSettingsWithString("enter your template path", CM_OVERWRITE);	
@@ -215,7 +215,7 @@ int main()
    iRet = reader.StartFrameDecodingEx(parameters, "");
    if (iRet != 0)
    {
-      printf("%s\n", CBarcodeReader::GetErrorString(iRet));
+      printf("%s\n", dynamsoft::dbr::CBarcodeReader::GetErrorString(iRet));
       return -1;
    }
    for(;;)

@@ -22,4 +22,8 @@ The Android documentation mainly consists of two parts. One is the [User Guide](
 - [Interface](api-reference/#interface)
 - [Class](api-reference/#classes)
 
+## Release Notes
+- [version 8.0](release-notes/android-8.md)
+- [version 7.6 and below](release-notes/android-7.md)
+
 ## Samples and Demos

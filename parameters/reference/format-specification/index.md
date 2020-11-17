@@ -33,10 +33,13 @@ breadcrumbText: FormatSpecification
  | [`FormatSpecification.BarcodeTextLengthRangeArray`](format-control.md#barcodetextlengthrangearray) |	Sets the range of barcode text length for barcodes search. | 
  | [`FormatSpecification.BarcodeTextRegExPattern`](format-control.md#barcodetextregexpattern) | Specifies the regular express pattern of barcode characters. | 
  | [`FormatSpecification.BarcodeWidthRangeArray`](format-control.md#barcodewidthrangearray) | Sets the range of barcode widths (in pixels) for barcodes search.(Hint). | 
+ | [`FormatSpecification.BarcodeZoneBarCountRangeArray`](format-control.md#barcodezonebarcountrangearray) |	Sets the range of bar count of the barcode zone for barcodes search. | 
+ | [`FormatSpecification.BarcodeZoneMinDistanceToImageBorders`](format-control.md#barcodezonemindistancetoimageborders) |	Sets the minimum distance (in pixels) between barcode zone and image borders. | 
  | [`FormatSpecification.Code128Subset`](format-control.md#code128subset) | Set the code 128 subset. | 
  | [`FormatSpecification.FindUnevenModuleBarcode`](format-control.md#findunevenmodulebarcode) | Specifies whether to find barcodes with uneven barcode modules. Not support yet. | 
  | [`FormatSpecification.HeadModuleRatio`](format-control.md#headmoduleratio) | Set the module count and module size ratio of the barcode head part. | 
  | [`FormatSpecification.MinQuietZoneWidth`](format-control.md#minquietzonewidth) | The minimum width of the barcode quiet zone. | 
+ | [`FormatSpecification.MinRatioOfBarcodeZoneWidthToHeight`](format-control.md#minratioofbarcodezonewidthtoheight) |	Sets the minimum ratio (width/height) of the barcode zone. | 
  | [`FormatSpecification.MirrorMode`](format-control.md#mirrormode) | Sets whether to decode mirrored barcodes. | 
  | [`FormatSpecification.ModuleSizeRangeArray`](format-control.md#modulesizerangearray) | Sets the range of module size (in pixels) for barcodes search. (Hint). |
  | [`FormatSpecification.RequireStartStopChars`](format-control.md#requirestartstopchars) |	Sets whether the start and stop characters are required when searching for Code 39 barcodes. |
@@ -53,7 +56,6 @@ breadcrumbText: FormatSpecification
  | [`FormatSpecification.DeblurLevel`](image-process-control.md#deblurlevel) | Sets the degree of blurriness of the barcode for the current specified barcode format. | 
  | [`FormatSpecification.DeformationResistingModes`](image-process-control.md#deformationresistingmodes)  | Sets the mode and priority for deformation resisting for the current specified barcode format. Not support yet. |
  | [`FormatSpecification.BarcodeComplementModes`](image-process-control.md#barcodecomplementmodes) | Sets the mode and priority to complement the missing parts in the barcode for current specified barcode format. Not support yet. |
- | [`FormatSpecification.AccompanyingTextRecognitionModes`](image-process-control.md#accompanyingtextrecognitionmodes) | Sets the mode and priority to recognize accompanying text for the current specified barcode format. | 
 
 
 

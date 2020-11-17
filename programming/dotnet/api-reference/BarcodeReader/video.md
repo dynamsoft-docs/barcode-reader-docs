@@ -48,8 +48,8 @@ needAutoGenerateSidebar: true
 Starts a new thread to decode barcodes from the inner frame queue. 
 
 
-```C#
-EnumErrorCode Dynamsoft.Barcode.BarcodeReader.StartFrameDecoding(int maxQueueLength, int maxResultQueueLength, int width, int height, int stride, EnumImagePixelFormat imagePixelFormat, string templateName)
+```csharp
+EnumErrorCode Dynamsoft.DBR.BarcodeReader.StartFrameDecoding(int maxQueueLength, int maxResultQueueLength, int width, int height, int stride, EnumImagePixelFormat imagePixelFormat, string templateName)
 ```   
    
 #### Parameters
@@ -67,7 +67,7 @@ Returns error code.
 
 #### Code Snippet
 
-```C#
+```csharp
 BarcodeReader reader = new BarcodeReader();
 reader.ProductKeys = "t0260NwAAAHV***************";
 EnumErrorCode error = reader.StartFrameDecoding(2, 10, 1024, 720, 720, EnumImagePixelFormat.IPF_BINARY, "");
@@ -82,8 +82,8 @@ reader.Dispose();
 
 Starts a new thread to decode barcodes from the inner frame queue.
 
-```C#
-EnumErrorCode Dynamsoft.Barcode.BarcodeReader.StartFrameDecodingEx(ref FrameDecodingParameters parameters, string templateName) 
+```csharp
+EnumErrorCode Dynamsoft.DBR.BarcodeReader.StartFrameDecodingEx(ref FrameDecodingParameters parameters, string templateName) 
 ```   
    
 #### Parameters
@@ -94,7 +94,7 @@ EnumErrorCode Dynamsoft.Barcode.BarcodeReader.StartFrameDecodingEx(ref FrameDeco
 Returns error code. 
 
 #### Code Snippet
-```C#
+```csharp
 BarcodeReader reader = new BarcodeReader();
 reader.ProductKeys = "t0260NwAAAHV***************";
 FrameDecodingParameters parameters = reader.InitFrameDecodingParameters();
@@ -123,8 +123,8 @@ reader.Dispose();
 
 Append a frame image buffer to the inner frame queue.  
 
-```C#
-int Dynamsoft.Barcode.BarcodeReader.AppendFrame(IntPtr pBufferBytes)
+```csharp
+int Dynamsoft.DBR.BarcodeReader.AppendFrame(IntPtr pBufferBytes)
 ```   
    
 #### Parameters
@@ -134,7 +134,7 @@ int Dynamsoft.Barcode.BarcodeReader.AppendFrame(IntPtr pBufferBytes)
 Returns the ID of the appended frame.
 
 #### Code Snippet
-```C#
+```csharp
 BarcodeReader reader = new BarcodeReader();
 reader.ProductKeys = "t0260NwAAAHV***************";
 int ret = reader.AppendFrame(pBufferBytes);
@@ -149,15 +149,15 @@ reader.Dispose();
 
 Stop the frame decoding thread created by [`StartFrameDecoding`](#startframedecoding) or [`StartFrameDecodingEx`](#startframedecodingex).
 
-```C#
-EnumErrorCode Dynamsoft.Barcode.BarcodeReader.StopFrameDecoding()
+```csharp
+EnumErrorCode Dynamsoft.DBR.BarcodeReader.StopFrameDecoding()
 ``` 
 
 #### Return value
 Returns error code.
 
 #### Code Snippet
-```C#
+```csharp
 BarcodeReader reader = new BarcodeReader();
 reader.ProductKeys = "t0260NwAAAHV***************";
 EnumErrorCode err = reader.StopFrameDecoding();
@@ -171,8 +171,8 @@ reader.Dispose();
 
 Initialize frame decoding parameters with default values.
 
-```C#
-FrameDecodingParameters Dynamsoft.Barcode.BarcodeReader.InitFrameDecodingParameters()
+```csharp
+FrameDecodingParameters Dynamsoft.DBR.BarcodeReader.InitFrameDecodingParameters()
 ```   
    
 #### Return value
@@ -186,8 +186,8 @@ Returns the frame decoding parameters.
 
 Sets call back function to process errors generated during frame decoding. 
 
-```C#
-EnumErrorCode Dynamsoft.Barcode.BarcodeReader.SetErrorCallback(CB_Error callbackFunction, IntPtr pUser)
+```csharp
+EnumErrorCode Dynamsoft.DBR.BarcodeReader.SetErrorCallback(CB_Error callbackFunction, IntPtr pUser)
 ```
 
 #### Parameters
@@ -201,7 +201,7 @@ Returns error code.
 [`BarcodeReaderException`](../class/BarcodeReaderException.md) The exception thrown by Dynamsoft Barcode Reader.
 
 #### Code Snippet
-```C#
+```csharp
 BarcodeReader reader = new BarcodeReader();
 reader.ProductKeys = "t0260NwAAAHV***************";
 reader.SetErrorCallback(ErrorFunction, NULL);
@@ -214,8 +214,8 @@ reader.Dispose();
 
 Sets call back function to process intermediate results generated during frame decoding.  
 
-```C#
-EnumErrorCode Dynamsoft.Barcode.BarcodeReader.SetIntermediateResultCallback(CB_IntermediateResult callbackFunction, IntPtr pUser)
+```csharp
+EnumErrorCode Dynamsoft.DBR.BarcodeReader.SetIntermediateResultCallback(CB_IntermediateResult callbackFunction, IntPtr pUser)
 ```
 
 #### Parameters
@@ -229,7 +229,7 @@ Returns error code.
 [`BarcodeReaderException`](../class/BarcodeReaderException.md) The exception thrown by Dynamsoft Barcode Reader.
 
 #### Code Snippet
-```C#
+```csharp
 BarcodeReader reader = new BarcodeReader();
 reader.ProductKeys = "t0260NwAAAHV***************";
 PublicRuntimeSettings settings = new PublicRuntimeSettings();
@@ -246,8 +246,8 @@ reader.Dispose();
 
 Sets call back function to process errors generated during frame decoding. 
 
-```C#
-EnumErrorCode Dynamsoft.Barcode.BarcodeReader.SetTextResultCallback(CB_TextResult callbackFunction, IntPtr pUser)
+```csharp
+EnumErrorCode Dynamsoft.DBR.BarcodeReader.SetTextResultCallback(CB_TextResult callbackFunction, IntPtr pUser)
 ```
 
 #### Parameters
@@ -261,7 +261,7 @@ Returns error code.
 [`BarcodeReaderException`](../class/BarcodeReaderException.md) The exception thrown by Dynamsoft Barcode Reader.
 
 #### Code Snippet
-```C#
+```csharp
 BarcodeReader reader = new BarcodeReader();
 reader.ProductKeys = "t0260NwAAAHV***************";
 reader.SetTextResultCallback(TextResultFunction, NULL);
@@ -274,8 +274,8 @@ reader.Dispose();
 
 Get current length of the inner frame queue. 
 
-```C#
-int Dynamsoft.Barcode.BarcodeReader.GetLengthOfFrameQueue()	
+```csharp
+int Dynamsoft.DBR.BarcodeReader.GetLengthOfFrameQueue()	
 ```
 
 #### Return value

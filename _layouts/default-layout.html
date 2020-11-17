@@ -100,10 +100,18 @@
                 </div>
                 <div class="main row">
                     <div class="content markdown-body headCounter col-xs-12 col-md-12 col-lg-9 col-xl-10" style="margin-bottom: 20px;">
+                        <div class="dbrThanksDownloading">
+                            <p class="thanksDownloadTitle">Thanks for downloading Dynamsoft Barcode Reader <span class="editionName"></span> Package!</p>
+                            <p style="margin-bottom: 0;">Your download will start shortly. If your download does not begin, <a class="bluelink downloadlink" href="">click here to retry</a>.</p>
+                        </div>
                         {{ content }}
                         
                     </div>
-                    <div class="rightSideMenu col-xs-12 col-md-12 col-lg-3 col-xl-2  hide-md hide-sm hide-xs">	
+                    <div class="rightSideMenu col-xs-12 col-md-12 col-lg-3 col-xl-2  hide-md hide-sm hide-xs">
+                        <div id="compatibleInfo">
+                            <p>This page is compatible for:</p>
+                            <p class="compatibleCurVersion">Version 7.5</p>
+                        </div>
                         <div id="feedbackFooter" style="color: #306877;">
                             <p class="fontOswald">Is this page helpful? </p>
                             <a href="javascript:void(0)" style="color: #306877;" class="recordLink smileLink" onclick="UsefulRecord(true)"><img class="icon-smile" src="{{ site.smile_icon }}" alt="Yes" />Yes</a>
@@ -133,6 +141,9 @@
         integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
     <script>anchors.add();</script>
 
+    <script>
+        UrlReplace();
+    </script>
     {%- if page.needAutoGenerateSidebar -%}
     {%- unless page.needGenerateH3Content -%}
     <script>
@@ -148,139 +159,66 @@
         FullTreeMenuList(false);
     </script>
     {%- endif -%}
+
     <script>
         UrlReplace();
     </script>
 
+    <!-- dbr docs -->
     <script type="text/javascript">
-        $('#sideBarCnt').css({'width': $('.sideBar').width() + 'px'})
-        $('.container .head').css({'width': $('.docContainer').width() + 'px'})
-        $('#fullTreeMenuListContainer').css({'height': 'calc(100vh - 245px)'})
-
-        if ($('.docContainer').height() + 125 > document.body.clientHeight) {
-            $('.history').addClass('history-fixed')
-        }
-
-        $(window).resize(function() {
-            $('#sideBarCnt').css({'width': $('.sideBar').width() + 'px'})
-            $('.container .head').css({'width': $('.docContainer').width() + 'px'})
-            realFunc()
-        })
-        
-        window.addEventListener('scroll', realFunc);
-
-        function realFunc(){
-            var sd = $(window).scrollTop();
-            var dcheight = $('.docContainer').height() + 65 - sd
-            if (sd > 0 && dcheight < document.body.clientHeight) {
-                $('.history').removeClass('history-fixed')
-            } else {
-                if (!$('.history').hasClass('history-fixed')) {
-                    $('.history').addClass('history-fixed')
-                }
-                if ($('.docContainer').height() + 125 < document.body.clientHeight) {
-                    $('.history').removeClass('history-fixed')
-                }
-            }
-            if (breakpoint() == 'lg') {
-                if (sd > 65 && dcheight>0) {
-                    if (!$('.subHeadWrapper').hasClass('shw-fixed')) {
-                        $('.subHeadWrapper').addClass('shw-fixed')
-                        $('.docContainer').addClass('dc-fixed')
-                        $('#sideBarCnt').addClass('ftm-fixed')
-                        $('.rightSideMenu').addClass('rsm-fixed')
-                        $('#docHead').addClass('ch-fixed')
-                    }
-                    if (dcheight > document.body.clientHeight) {
-                        $('#sideBarCnt.ftm-fixed').css({'height': 'calc(100vh - 120px)'})
-                        $('#sideBarCnt.ftm-fixed #fullTreeMenuListContainer').css({'height': 'calc(100vh - 180px)'})
-                        $('.rightSideMenu.rsm-fixed').css({'height': 'calc(100vh - 110px)'})
-                    } else {
-                        $('#sideBarCnt.ftm-fixed').css({'height': (dcheight - 40) + 'px'})
-                        $('#sideBarCnt.ftm-fixed #fullTreeMenuListContainer').css({'height': (dcheight - 90) + 'px'})
-                        $('.rightSideMenu.rsm-fixed').css({'height': (dcheight - 40) + 'px'})
-                    }
-                    $('.markdown-body').css({'margin-top': (100 + $('.container .head').height()) + 'px'})
-                } else {
-                    $('.subHeadWrapper').removeClass('shw-fixed')
-                    $('.docContainer').removeClass('dc-fixed')
-                    $('#sideBarCnt').removeClass('ftm-fixed')
-                    $('.rightSideMenu').removeClass('rsm-fixed')
-                    $('.container .head').removeClass('ch-fixed')
-                    $('.markdown-body').css({'margin-top': '40px'})
-                }
-            }
-            if (breakpoint() == 'md') {
-                if (sd > 65 && dcheight > 0) {
-                    if (!$('.subHeadWrapper').hasClass('shw-fixed')) {
-                        $('.subHeadWrapper').addClass('shw-fixed')
-                        $('.docContainer').addClass('dc-fixed')
-                        $('#sideBarCnt').addClass('ftm-fixed')
-                        $('#docHead').addClass('ch-fixed')
-                    }
-                    if (dcheight > document.body.clientHeight) {
-                        $('#sideBarCnt.ftm-fixed').css({'height': 'calc(100vh - 120px)'})
-                        $('#sideBarCnt.ftm-fixed #fullTreeMenuListContainer').css({'height': 'calc(100vh - 180px)'})
-                        $('.rightSideMenu.rsm-fixed').css({'height': 'calc(100vh - 110px)'})
-                    } else {
-                        $('#sideBarCnt.ftm-fixed').css({'height': (dcheight - 40) + 'px'})
-                        $('#sideBarCnt.ftm-fixed #fullTreeMenuListContainer').css({'height': (dcheight - 90) + 'px'})
-                        $('.rightSideMenu.rsm-fixed').css({'height': (dcheight - 40) + 'px'})
-                    }
-                    $('.markdown-body').css({'margin-top': (100 + $('.container .head').height()) + 'px'})
-                } else {
-                    $('.subHeadWrapper').removeClass('shw-fixed')
-                    $('.docContainer').removeClass('dc-fixed')
-                    $('#sideBarCnt').removeClass('ftm-fixed')
-                    $('#docHead').removeClass('ch-fixed')
-                    $('.markdown-body').css({'margin-top': '40px'})
-                    $('#fullTreeMenuListContainer').css({'height': 'calc(100vh - 245px)'})
-                }
-            }
-
-        }
-
-        $('.sideBarIcon').click(function() {
-            $(".sideBar").toggleClass('hide-sm');
-            $(".sideBar").toggleClass('hide-xs');
-            setTimeout(function() {
-                console.log('sidebar' + $('.sideBar').width())
-                $('#sideBarCnt').css({'width': $('.sideBar').width() + 'px'})
-            }, 100)
-        })
-
-        let timeInt = setInterval(function() {
-            var container = $('#sideBarCnt'), scrollTo = $('#sideBarCnt .activeLink');
-            console.log(scrollTo)
-            if (scrollTo.length>0) {
-                container.scrollTop(
-                    scrollTo.offset().top - container.offset().top + container.scrollTop()
-                );
-                clearInterval(timeInt)
-            }
-        }, 500)
-    
-        function onSearchFinish(e) {
-            var evt = window.event || e;
-            if (evt.keyCode == 13) {
-
-            }
-        }
-
         $('#txtSearch').keydown(function(e) { 
             if (e.keyCode == 13) {
                 window.location.href = '/barcode-reader/search.html?q=' + $('#txtSearch').val()
             }
         })
+    </script>
 
-        $(document).click(function(){
-            $('.otherVersions').hide()
-        })
-        $('.changeBtn').on('click', function(e) {
-            $('.otherVersions').toggle()
-            stopPropagation(e);
-        })
+    <!-- for dbr downloads -->
+    <script type="text/javascript">
+        var download = getUrlParam('download')
+        if(download == 'true') {
+            var curHref = window.location.href.toLowerCase()
+            if (curHref.indexOf('/c/') > -1 || curHref.indexOf('/cplusplus/') > -1) {
+                $('.editionName').html('C/C++');
+                $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dbr/DBR-C_CPP-8.0.zip');
+                $('.dbrThanksDownloading').show();
+                Download('https://download.dynamsoft.com/dbr/DBR-C_CPP-8.0.zip')
+            } else if (curHref.indexOf('/dotnet/') > -1) {
+                $('.editionName').html('.NET');
+                $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dbr/DBR-DotNet-8.0.zip');
+                $('.dbrThanksDownloading').show();
+                Download('https://download.dynamsoft.com/dbr/DBR-DotNet-8.0.zip')
+            } else if (curHref.indexOf('/java/') > -1) {
+                $('.editionName').html('Java');
+                $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dbr/DBR-Java-8.0.zip');
+                $('.dbrThanksDownloading').show();
+                Download('https://download.dynamsoft.com/dbr/DBR-Java-8.0.zip')
+            } else if (curHref.indexOf('/javascript/') > -1) {
+                $('.editionName').html('Javascript');
+                $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dbr/DBR-JS-7.6.0.zip');
+                $('.dbrThanksDownloading').show();
+                Download('https://download.dynamsoft.com/dbr/DBR-JS-7.6.0.zip')
+            } else if (curHref.indexOf('/android/') > -1) {
+                $('.editionName').html('Android');
+                $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dbr/dbr-android-8.0.zip');
+                $('.dbrThanksDownloading').show();
+                Download('https://download.dynamsoft.com/dbr/dbr-android-8.0.zip')
+            } else if (curHref.indexOf('/objectivec-swift/') > -1) {
+                $('.editionName').html('iOS');
+                $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dbr/dbr-iOS-8.0.zip');
+                $('.dbrThanksDownloading').show();
+                Download('https://download.dynamsoft.com/dbr/dbr-iOS-8.0.zip')
+            }
+        }
 
+        function Download(url) {
+            const elt = document.createElement('a');
+            elt.setAttribute('href', url);
+            elt.style.display = 'none';
+            document.body.appendChild(elt);
+            elt.click();
+            document.body.removeChild(elt);
+        }
     </script>
 
     {%- include livehelp.html -%}

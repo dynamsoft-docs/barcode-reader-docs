@@ -21,4 +21,8 @@ The Python documentation mainly consists of two parts. One is the [User Guide](#
 - [BarcodeReader](api-reference/#barcodereader-methods)
 - [Class](api-reference/#classes)
 
+## Release Notes
+
+- [version 7.4 - 7.6](release-notes/python-7.md)
+
 ## Samples and Demos

@@ -7,7 +7,7 @@ needAutoGenerateSidebar: false
 ---
 
 # How to set DBR parameters 
-DBR provides flexible parameter configuration to meet user’s decoding requirements under different scenarios and different needs. Users can modify the configuration through RuntimeSetting and the Json template. 
+DBR provides flexible parameter configuration to meet user 's decoding requirements under different scenarios and different needs. Users can modify the configuration through RuntimeSetting and the Json template. 
 - RuntimeSetting   
 RuntimeSetting is an object that manages various parameters during runtime. If you need to dynamically change the DBR configuration when the program is running, modifying RuntimeSetting will be a good choice. RuntimeSetting only provides some common parameters for setting, the complete parameter setting can be achieved through the Json template. 
 - Json template 
@@ -33,7 +33,7 @@ reader->UpdateRuntimeSettings(runtimeSettings, sError, 512);    //update runtime
 reader->DecodeFile("type your image path", "");                   //decode
 TextResultArray* paryResult = NULL;   
 reader->GetAllTextResults(&paryResult);                         //get the decode result   
-CBarcodeReader::FreeTextResults(&paryResult);   
+dynamsoft::dbr::CBarcodeReader::FreeTextResults(&paryResult);   
 delete runtimeSettings;   
 delete reader;  
 ```
@@ -96,7 +96,7 @@ sError,512); ///Load a template configuration
 reader->DecodeFile("type your file path", "ImageParameter1"); //Use the configuration with the Name "IP1"    
 TextResultArray* paryResult = NULL;         
 reader->GetAllTextResults(&paryResult); //get decode result     
-CBarcodeReader::FreeTextResults(&paryResult);         
+dynamsoft::dbr::CBarcodeReader::FreeTextResults(&paryResult);         
 delete runtimeSettings;         
 delete reader;
 ```

@@ -10,7 +10,7 @@ needAutoGenerateSidebar: false
 # FrameDecodingParameters
 Defines a struct to configure the frame decoding Parameters.  
 
-```C#
+```csharp
 public class FrameDecodingParameters
 ```
 
@@ -37,8 +37,8 @@ public class FrameDecodingParameters
 ### MaxQueueLength
 The maximum number of frames waiting for decoding.
 
-```C#
-int Dynamsoft.Barcode.FrameDecodingParameters.MaxQueueLength
+```csharp
+int Dynamsoft.DBR.FrameDecodingParameters.MaxQueueLength
 ```
 
 - **Value range**   
@@ -50,8 +50,8 @@ int Dynamsoft.Barcode.FrameDecodingParameters.MaxQueueLength
 ### MaxResultQueueLength
 The maximum number of frames waiting results (text result/localization result) will be kept for further reference.  
 
-```C#
-int Dynamsoft.Barcode.FrameDecodingParameters.MaxResultQueueLength
+```csharp
+int Dynamsoft.DBR.FrameDecodingParameters.MaxResultQueueLength
 ```
 
 - **Value range**   
@@ -63,8 +63,8 @@ int Dynamsoft.Barcode.FrameDecodingParameters.MaxResultQueueLength
 ### Width
 The width of the frame image in pixels. 
 
-```C#
-int Dynamsoft.Barcode.FrameDecodingParameters.Width
+```csharp
+int Dynamsoft.DBR.FrameDecodingParameters.Width
 ```
 
 - **Value range**   
@@ -76,8 +76,8 @@ int Dynamsoft.Barcode.FrameDecodingParameters.Width
 ### Height
 The height of the frame image in pixels.
 
-```C#
-int Dynamsoft.Barcode.FrameDecodingParameters.Height
+```csharp
+int Dynamsoft.DBR.FrameDecodingParameters.Height
 ```
 
 - **Value range**   
@@ -89,8 +89,8 @@ int Dynamsoft.Barcode.FrameDecodingParameters.Height
 ### Stride
 The stride (or scan width) of the frame image.
 
-```C#
-int Dynamsoft.Barcode.FrameDecodingParameters.Stride
+```csharp
+int Dynamsoft.DBR.FrameDecodingParameters.Stride
 ```
 
 - **Value range**   
@@ -102,8 +102,8 @@ int Dynamsoft.Barcode.FrameDecodingParameters.Stride
 ### ImagePixelFormat
 The image pixel format used in the image byte array.
 
-```C#
-EnumImagePixelFormat Dynamsoft.Barcode.FrameDecodingParameters.ImagePixelFormat
+```csharp
+EnumImagePixelFormat Dynamsoft.DBR.FrameDecodingParameters.ImagePixelFormat
 ```
 
 - **Value range**   
@@ -115,8 +115,8 @@ EnumImagePixelFormat Dynamsoft.Barcode.FrameDecodingParameters.ImagePixelFormat
 ### Region
 The region definition of the frame to calculate the internal indicator.  
 
-```C#
-RegionDefinition Dynamsoft.Barcode.FrameDecodingParameters.Region
+```csharp
+RegionDefinition Dynamsoft.DBR.FrameDecodingParameters.Region
 ```
 
 - **Default value**  
@@ -128,8 +128,8 @@ RegionDefinition Dynamsoft.Barcode.FrameDecodingParameters.Region
 ### Threshold
 The threshold used for filtering frames.
 
-```C#
-float Dynamsoft.Barcode.FrameDecodingParameters.Threshold
+```csharp
+float Dynamsoft.DBR.FrameDecodingParameters.Threshold
 ```
 
 - **Value range**   
@@ -138,14 +138,14 @@ float Dynamsoft.Barcode.FrameDecodingParameters.Threshold
 - **Default value**   
     0.1
     
-- **Remark**  
+- **Remarks**  
     The SDK will calculate an inner indicator for each frame from [`AppendFrame`](../BarcodeReader/video.md#appendframe), if the change rate of the indicators between the current frame and the history frames is larger than the given threshold, the current frame will not be added to the inner frame queue waiting for decoding.
 
 ### FPS
 The frequency of calling [`AppendFrame`](../BarcodeReader/video.md#appendframe) per second.
 
-```C#
-int Dynamsoft.Barcode.FrameDecodingParameters.FPS
+```csharp
+int Dynamsoft.DBR.FrameDecodingParameters.FPS
 ```
 
 - **Value range**   
@@ -154,14 +154,14 @@ int Dynamsoft.Barcode.FrameDecodingParameters.FPS
 - **Default value**   
     0  
     
-- **Remark**  
+- **Remarks**  
     0 means the frequency will be calculated automatically by the SDK.
 
 ### AutoFilter
 Sets whether to filter frames automatically.
 
-```C#
-int Dynamsoft.Barcode.FrameDecodingParameters.AutoFilter
+```csharp
+int Dynamsoft.DBR.FrameDecodingParameters.AutoFilter
 ```
 
 - **Value range**   
@@ -170,7 +170,7 @@ int Dynamsoft.Barcode.FrameDecodingParameters.AutoFilter
 - **Default value**   
     1  
     
-- **Remark**  
+- **Remarks**  
     0: Diable filtering frames automatically.  
     1: Enable filtering frames automatically. 
     
@@ -178,8 +178,8 @@ int Dynamsoft.Barcode.FrameDecodingParameters.AutoFilter
 ### ClarityCalculationMethod
 Sets the method used for calculating the clarity of the frames.
 
-```C#
-EnumClarityCalculationMethod Dynamsoft.Barcode.FrameDecodingParameters.ClarityCalculationMethod
+```csharp
+EnumClarityCalculationMethod Dynamsoft.DBR.FrameDecodingParameters.ClarityCalculationMethod
 ```
 
 - **Value range**   
@@ -191,8 +191,8 @@ EnumClarityCalculationMethod Dynamsoft.Barcode.FrameDecodingParameters.ClarityCa
 ### ClarityFilterMode
 Sets the mode used for filtering frames by calculated clarity.
 
-```C#
-EnumClarityFilterMode Dynamsoft.Barcode.FrameDecodingParameters.ClarityFilterMode
+```csharp
+EnumClarityFilterMode Dynamsoft.DBR.FrameDecodingParameters.ClarityFilterMode
 ```
 
 - **Value range**   

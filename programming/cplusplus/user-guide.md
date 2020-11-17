@@ -21,7 +21,8 @@ needGenerateH3Content: true
 
 
 ## Installation
-To install Dynamsoft Barcode Reader Windows Edition on your development machine, you can download the SDK from the [Dynamsoft website](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx) and run the setup program. The trial installer includes a free trial license valid for 30 days.   
+
+You can download Dynamsoft Barcode Reader SDK from the [Dynamsoft website](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx) and run the setup program. The trial installer includes a free trial license valid for 30 days.   
    
 After installation, you can find samples for supported platforms in the **Samples** folder under the installation folder.  
 
@@ -34,6 +35,7 @@ After installation, you can find samples for supported platforms in the **Sample
 2. Add Dynamsoft Barcode Reader headers and libs in `BarcodeReadDemo_CPP.cpp`.   
    ```cpp
     #include <stdio.h>
+    #include "<relative path>/DynamsoftCommon.h"
     #include "<relative path>/DynamsoftBarcodeReader.h"
     
     #ifdef _WIN64
@@ -43,7 +45,7 @@ After installation, you can find samples for supported platforms in the **Sample
     #endif
    ```
    
-   Please replace `<relative path>` in the code with the relative path to the `BarcodeReadDemo_CPP.cpp` file. Typically, The `DynamsoftBarcodeReader.h` file can be found in `[INSTALLATION FOLDER]\Components\C_C++\Include\`, and the LIB files can be found in `[INSTALLATION FOLDER]\Components\C_C++\Lib\`.   
+   Please replace `<relative path>` in the code with the relative path to the `BarcodeReadDemo_CPP.cpp` file. Typically, The `DynamsoftBarcodeReader.h` file can be found in `DBR-C_CPP-{version number}\DynamsoftBarcodeReader\Include\`, and the LIB files can be found in `DBR-C_CPP-{version number}\DynamsoftBarcodeReader\Lib\{Platform}\`.   
  
 3. Update the main function in `BarcodeReadDemo_CPP.cpp`.   
    ```cpp
@@ -86,7 +88,7 @@ After installation, you can find samples for supported platforms in the **Sample
        }
 
        // Finally release BarcodeResultArray
-       CBarcodeReader::FreeTextResults(&paryResult);
+       dynamsoft::dbr::CBarcodeReader::FreeTextResults(&paryResult);
        system("pause");
        return 0;
    }
@@ -94,9 +96,8 @@ After installation, you can find samples for supported platforms in the **Sample
    Please update `<your image file full path>` and `<your license key here>` in the code accordingly.   
    
 4. Run the project.   
-   Build the application and copy the related DLL files to the same folder as the EXE file. The DLLs can be found in `[INSTALLATION FOLDER]\Components\C_C++\Redist\`.
-   - For x86 mode, required DLLs are: x86\DynamsoftBarcodeReaderx86.dll,x86\vcomp110.dll,x86\DynamicPdf.dll (for decoding barcodes from PDF files), x86\DynamsoftLicClientx86.dll.   
-   - For x64 mode, required DLLs are: x64\DynamsoftBarcodeReaderx64.dll, x64\vcomp110.dll, x64\DynamicPdfx64.dll (for decoding barcodes from PDF files), x64\DynamsoftLicClientx64.dll.
+
+   Build the application and copy the related DLL files to the same folder as the EXE file. The DLLs can be found in `DBR-C_CPP-{version number}\DynamsoftBarcodeReader\Lib\{Platform}\`.
    
    To test, you can open the Command Prompt and execute the EXE file with a barcode image.
    
@@ -163,7 +164,7 @@ reader->UpdateRuntimeSettings(runtimeSettings, sError, 512);
 reader->DecodeFile("<Put your file path here>", "");
 // If succeeds
 reader->GetAllTextResults(&paryResult);
-CBarcodeReader::FreeTextResults(&paryResult);
+dynamsoft::dbr::CBarcodeReader::FreeTextResults(&paryResult);
 delete runtimeSettings;
 delete reader;
 ```
@@ -187,7 +188,7 @@ reader->UpdateRuntimeSettings(runtimeSettings, sError, 512);
 reader->DecodeFile("<Put your file path here>", "");
 // If succeeds
 reader->GetAllTextResults(&paryResult);
-CBarcodeReader::FreeTextResults(&paryResult);
+dynamsoft::dbr::CBarcodeReader::FreeTextResults(&paryResult);
 delete runtimeSettings;
 delete reader;
 ```
@@ -218,7 +219,7 @@ reader->UpdateRuntimeSettings(runtimeSettings, sError, 512);
 reader->DecodeFile("<Put your file path here>", "");
 // If succeeds
 reader->GetAllTextResults(&paryResult);
-CBarcodeReader::FreeTextResults(&paryResult);
+dynamsoft::dbr::CBarcodeReader::FreeTextResults(&paryResult);
 delete runtimeSettings;
 delete reader;
 
@@ -244,7 +245,7 @@ reader->OutputSettingsToFile("<Put your file path here>","currentruntime");
 reader->DecodeFile("Put your file path here", "");
 // If succeeds
 reader->GetAllTextResults(&paryResult);
-CBarcodeReader::FreeTextResults(&paryResult);
+dynamsoft::dbr::CBarcodeReader::FreeTextResults(&paryResult);
 delete reader;
 ```  
 
@@ -263,7 +264,6 @@ Below is a template for your reference. To learn more about the APIs, you can ch
             "ThreshValueCoefficient" : 10
          }
       ],
-      "DeblurLevel" : 9,
       "Description" : "",
       "ExpectedBarcodesCount" : 0,
       "GrayscaleTransformationModes" : [
@@ -323,7 +323,33 @@ Below is a template for your reference. To learn more about the APIs, you can ch
 }
 ```
 
+# How to Distribute
 
-&nbsp; 
+Distribute the required library files with the applications using the Dynamsoft Barcode Reader SDK. The distribution files can be found under:
+
+`DBR-C_CPP-{version number}\DynamsoftBarcodeReader\Lib\{Platform}\`
+
+# How to Upgrade
+
+## From version 7.x
+
+You need to replace the old assembly files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
+
+Your previous SDK license for version 7.x is not compatible with the version 8.x. Please [contact us](https://www.dynamsoft.com/Company/Contact.aspx) to upgrade your license.
+
+After you upgraded your license to version 8.x:
+
+- If you were using `InitLicense`, please replace the old license with the newly generated one.
+
+- If you were using `InitLicenseFromServer` to connect to Dynamsoft server for license verification, then no need to change the license key. But please make sure the device has Internet connection.
+
+- If you were using `InitLicenseFromServer` + `InitLicenseFromLicenseContent` to connect to Dynamsoft server once and use the SDK offline, please follow [these steps](../../license-activation/set-full-license-7.md#connect-once) to re-register the device.
+
+- If you were using `InitLicenseFromLicenseContent` to use the SDK offline, please follow [these steps](../../license-activation/set-full-license-7.md#offline) to re-register the device.
+
+## From version 6.x
+
+We made some structural updates in the new version. To upgrade from 6.x to 8.x, we recommend you to review our sample code and re-write the barcode scanning module.
+
 
 

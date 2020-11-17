@@ -28,7 +28,7 @@ The sample picture is as above. When we do not use the texture detection functio
 
 ![binary-before-texture-detect][2]
 
-Now, we enable texture detection by configuring `TDM_GENERAL_WIDTH_CONCENTRATION`. After that, the binarized intermediate result image observed again are shown in the figure below where it’s evident that textures have been well handled. 
+Now, we enable texture detection by configuring `TDM_GENERAL_WIDTH_CONCENTRATION`. After that, the binarized intermediate result image observed again are shown in the figure below where it 's evident that textures have been well handled. 
 
 ![binary-after-texture-detect][3]
 

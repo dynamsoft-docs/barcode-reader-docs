@@ -16,6 +16,8 @@ needAutoGenerateSidebar: true
   | [`DecodeBuffer`](#decodebuffer) | Decode barcodes from raw buffer. |
   | [`DecodeBase64String`](#decodebase64string) | Decode barcodes from a base64 encoded string. |
   | [`DecodeBitmap`](#decodebitmap) | Decodes barcode from a bitmap. |
+  | [`InitIntermediateResult`](#initintermediateresult) | Inits an intermediateResult struct with default values. |
+  | [`DecodeIntermediateResults`](#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
   ---
 
@@ -26,8 +28,8 @@ needAutoGenerateSidebar: true
 
 Decode barcodes from a specified image file.
 
-```C#
-TextResult[] Dynamsoft.Barcode.BarcodeReader.DecodeFile(string fileName, string templateName) 	
+```csharp
+TextResult[] Dynamsoft.DBR.BarcodeReader.DecodeFile(string fileName, string templateName) 	
 ```
 
 #### Parameters
@@ -42,7 +44,7 @@ All barcode text results decoded successfully.
 
 
 #### Code Snippet
-```C#
+```csharp
 BarcodeReader reader = new BarcodeReader();
 reader.ProductKeys = "t0260NwAAAHV***************";
 TextResult[] result = reader.DecodeFile(@"C:\Program Files (x86)\Dynamsoft\{Version number}\Images\AllSupportedBarcodeTypes.tif", "");
@@ -59,8 +61,8 @@ reader.Dispose();
 
 Decode barcodes from an image file in memory.   
 
-```C#
-TextResult[] Dynamsoft.Barcode.BarcodeReader.DecodeFileInMemory(byte[] fileStream, string templateName)  
+```csharp
+TextResult[] Dynamsoft.DBR.BarcodeReader.DecodeFileInMemory(byte[] fileStream, string templateName)  
 ```   
    
 #### Parameters
@@ -74,7 +76,7 @@ All barcode text results decoded successfully.
 [`BarcodeReaderException`](../class/BarcodeReaderException.md) The exception thrown by Dynamsoft Barcode Reader.  
 
 #### Code Snippet
-```C#
+```csharp
 BarcodeReader reader = new BarcodeReader();
 reader.ProductKeys = "t0260NwAAAHV***************";
 byte[] fileStream = GetFileStream(@"C:\Program Files (x86)\Dynamsoft\{Version number}\Images\AllSupportedBarcodeTypes.tif");
@@ -92,8 +94,8 @@ reader.Dispose();
 
 Decode barcodes from the memory buffer containing image pixels in defined format.
 
-```C#
-TextResult[] Dynamsoft.Barcode.BarcodeReader.DecodeBuffer(byte[] buffer, int width, int height, int stride, EnumImagePixelFormat imagePixelFormat, string templateName)	
+```csharp
+TextResult[] Dynamsoft.DBR.BarcodeReader.DecodeBuffer(byte[] buffer, int width, int height, int stride, EnumImagePixelFormat imagePixelFormat, string templateName)	
 ```
    
 #### Parameters
@@ -111,7 +113,7 @@ All barcode text results decoded successfully.
 [`BarcodeReaderException`](../class/BarcodeReaderException.md) The exception thrown by Dynamsoft Barcode Reader.  
 
 #### Code Snippet
-```C#
+```csharp
 BarcodeReader reader = new BarcodeReader();
 reader.ProductKeys = "t0260NwAAAHV***************";
 Bitmap bBMP = new Bitmap(@"C:\Program Files (x86)\Dynamsoft\{Version number}\Images\AllSupportedBarcodeTypes.tif");
@@ -138,8 +140,8 @@ reader.Dispose();
 
 Decode barcode from an image file encoded as a base64 string.
 
-```C#
-TextResult[] Dynamsoft.Barcode.BarcodeReader.DecodeBase64String(string base64, string templateName)	
+```csharp
+TextResult[] Dynamsoft.DBR.BarcodeReader.DecodeBase64String(string base64, string templateName)	
 ```   
 
 #### Parameters
@@ -153,7 +155,7 @@ All barcode text results decoded successfully.
 [`BarcodeReaderException`](../class/BarcodeReaderException.md) The exception thrown by Dynamsoft Barcode Reader. 
 
 #### Code Snippet
-```C#
+```csharp
 BarcodeReader reader = new BarcodeReader();
 reader.ProductKeys = "t0260NwAAAHV***************";
 byte[] byteFileStream = GetFileStream(@"C:\Program Files (x86)\Dynamsoft\{Version number}\Images\AllSupportedBarcodeTypes.tif");
@@ -172,8 +174,8 @@ reader.Dispose();
 
 Decodes barcode from a bitmap.
 
-```C#
-TextResult[] Dynamsoft.Barcode.BarcodeReader.DecodeBitmap(Bitmap bitMap, string templateName)
+```csharp
+TextResult[] Dynamsoft.DBR.BarcodeReader.DecodeBitmap(Bitmap bitMap, string templateName)
 ```   
    
 #### Parameters
@@ -187,7 +189,7 @@ All barcode text results decoded successfully.
 [`BarcodeReaderException`](../class/BarcodeReaderException.md) The exception thrown by Dynamsoft Barcode Reader. 
 
 #### Code Snippet
-```C#
+```csharp
 BarcodeReader reader = new BarcodeReader();
 reader.ProductKeys = "t0260NwAAAHV***************";
 Bitmap bBMP = new Bitmap(@"C:\Program Files (x86)\Dynamsoft\{Version number}\Images\AllSupportedBarcodeTypes.tif");
@@ -197,3 +199,73 @@ reader.Dispose();
 
 #### See Also 
 [`TextResult`](../class/TextResult.md)
+
+
+&nbsp;
+
+
+## InitIntermediateResult
+
+Inits an intermediateResult struct with default values.
+
+```csharp
+IntermediateResult Dynamsoft.DBR.BarcodeReader.InitIntermediateResult(EnumIntermediateResultType intermediateResultType) 	
+```
+
+#### Parameters
+`intermediateResultType` : The type of the intermediate result to init.   
+
+#### Return value
+An intermediateResult struct with default values. 
+
+
+#### Code Snippet
+```csharp
+BarcodeReader reader = new BarcodeReader();
+IntermediateResult imResult = reader.InitIntermediateResult(EnumIntermediateResultType.IRT_ORIGINAL_IMAGE);
+```
+
+#### See Also
+[`IntermediateResult`](../class/IntermediateResult.md)
+
+
+&nbsp;
+
+
+## DecodeIntermediateResults
+
+Decodes barcode from intermediate results.
+
+```csharp
+TextResult[] Dynamsoft.DBR.BarcodeReader.DecodeIntermediateResults(IntermediateResult[] intermediateResultArray, string templateName) 	
+```
+
+#### Parameters
+`intermediateResultArray` : The intermediate result array for decoding.   
+`templateName` : The template name.
+
+#### Return value
+All barcode text results decoded successfully. 
+
+#### Exceptions
+[`BarcodeReaderException`](../class/BarcodeReaderException.md) The exception thrown by Dynamsoft Barcode Reader.  
+
+
+#### Code Snippet
+```csharp
+BarcodeReader reader = new BarcodeReader();
+reader.ProductKeys = "t0260NwAAAHV***************";
+PublicRuntimeSettings settings = reader.GetRuntimeSettings();
+settings.IntermediateResultType = (int)EnumIntermediateResultType.IRT_ORIGINAL_IMAGE;
+reader.UpdateRuntimeSettings(settings);
+reader.DecodeFile("Your file path", "");
+IntermediateResult[] IMRs = reader.GetIntermediateResults();
+TextResult[] result = reader.DecodeIntermediateResults(IMRs, "");
+```
+
+#### See Also
+[`TextResult`](../class/TextResult.md)
+
+&nbsp;
+
+

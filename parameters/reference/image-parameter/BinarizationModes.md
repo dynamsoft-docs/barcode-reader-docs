@@ -10,13 +10,13 @@ needAutoGenerateSidebar: false
 
  | Parameter Name | Description |
  | -------------- | ----------- | 
- | [`ImageParameter.AccompanyingTextRecognitionModes`](AccompanyingTextRecognitionModes.md#accompanyingtextrecognitionmodes) | Sets the mode and priority to recognize accompanying text. |
  | [`ImageParameter.BarcodeColourModes`](BarcodeColourModes.md#barcodecolourmodes) | Sets the mode and priority for the barcode colour mode used to process the barcode zone. |
  | [`ImageParameter.BarcodeComplementModes`](BarcodeComplementModes.md#barcodecomplementmodes) | Sets the mode and priority to complement the missing parts in the barcode. |
  | [`ImageParameter.BinarizationModes`](#binarizationmodes) | 	Sets the mode and priority for binarization. |
  | [`ImageParameter.ColourClusteringModes`](ColourClusteringModes.md#colourclusteringmodes) | Sets the mode and priority for colour categorization. Not supported yet. |
  | [`ImageParameter.ColourConversionModes`](ColourConversionModes.md#colourconversionmodes) | Sets the mode and priority for converting a colour image to a grayscale image. |
  | [`ImageParameter.DeblurLevel`](image-process-control.md#deblurlevel) | Sets the degree of blurriness of the barcode. |
+ | [`ImageParameter.DeblurModes`](DeblurModes.md#deblurmodes) | Sets the mode and priority for deblurring. |
  | [`ImageParameter.DeformationResistingModes`](DeformationResistingModes.md#deformationresistingmodes) | Sets the mode and priority for deformation resisting. |
  | [`ImageParameter.DPMCodeReadingModes`](DPMCodeReadingModes.md#dpmcodereadingmodes) | Sets the mode and priority for DPM code reading. Not support yet. |
  | [`ImageParameter.GrayscaleTransformationModes`](GrayscaleTransformationModes.md#grayscaletransformationmodes) | Sets the mode and priority for the grayscale image conversion. |
@@ -53,15 +53,17 @@ needAutoGenerateSidebar: false
 - [EnableFillBinaryVacancy](#enablefillbinaryvacancy)
 - [ImagePreprocessingModesIndex](#imagepreprocessingmodesindex)
 - [ThreshValueCoefficient](#threshvaluecoefficient)
+- [LibraryFileName](#libraryfilename)
+- [LibraryParameters](#libraryparameters)
  
 ##### BlockSizeX 
 Sets the horizontal block size for the binarization process.
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [0, 1000] | 0 | "BM_LOCAL_BLOCK" |         
 
-- **Remark**    
+- **Remarks**    
   Block size refers to the size of a pixel neighborhood used to calculate a threshold value for the pixel. An appropriate value for binarizationBlockSize can help generate a high quality binary image and increase the accuracy of barcode localization.   
 
   - 0: the block size used for binarization will be set to a value which is calculated automatically.   
@@ -75,11 +77,11 @@ Sets the horizontal block size for the binarization process.
 ##### BlockSizeY 
 Sets the vertical block size for the binarization process.
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [0, 1000] | 0 | "BM_LOCAL_BLOCK" |         
 
-- **Remark**     
+- **Remarks**     
   Block size refers to the size of a pixel neighborhood used to calculate a threshold value for the pixel. An appropriate value for binarizationBlockSize can help generate a high quality binary image and increase the accuracy of barcode localization.   
 
   - 0: the block size used for binarization will be set to a value which is calculated automatically.   
@@ -91,11 +93,11 @@ Sets the vertical block size for the binarization process.
 ##### EnableFillBinaryVacancy 
 Sets whether to enable binary vacancy filling.
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [0, 1] | 1 | "BM_LOCAL_BLOCK" |         
 
-- **Remark**     
+- **Remarks**     
   0: disable.   
   1: enable.
 
@@ -105,21 +107,41 @@ Sets whether to enable binary vacancy filling.
 ##### ImagePreprocessingModesIndex 
 The index of a specific image preprocessing mode in the [ImagePreprocessingModes](ImagePreprocessingModes.md#imagepreprocessingmodes) parameter which the current binarization mode is applied to.
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [-1, 0x7fffffff] | -1 | "BM_LOCAL_BLOCK" |         
 
-- **Remark**     
+- **Remarks**     
   -1: The current binarization mode is applied to all modes in parameter [ImagePreprocessingModes](ImagePreprocessingModes.md#imagepreprocessingmodes).
 
 
 ##### ThreshValueCoefficient 
 Constant subtracted from the mean or weighted mean. Normally, it is positive but may be zero or negative as well.
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Modes | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [-255, 255] | 10 | "BM_LOCAL_BLOCK" |         
 
+
+
+##### LibraryFileName 
+Sets the file name of the library to load dynamically.
+
+| Value Type | Value Range | Default Value | Valid Modes | 
+| ---------- | ----------- | ------------- | ----------- |
+| *string* | A string value representing file name. | "" | All `BinarizationMode` items except BM_SKIP and BM_AUTO |         
+
+
+- **Remarks**     
+  - The library must be in the same place with Dynamsoft Barcode Reader Library.
+
+
+##### LibraryParameters 
+Sets the parameters passed to the library to load dynamically.
+
+| Value Type | Value Range | Default Value | Valid Modes | 
+| ---------- | ----------- | ------------- | ----------- |
+| *string* | A string value representing parameters. | "" | All `BinarizationMode` items except BM_SKIP and BM_AUTO |         
 
 
 ### Setting Methods
@@ -157,7 +179,7 @@ Constant subtracted from the mean or weighted mean. Normally, it is positive but
 | ------ | ------------------ | ---------- |
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) | [`binarizationModes`]({{ site.structs }}PublicRuntimeSettings.html#binarizationmodes) | [`BinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)[8] |
 
-**Remark**   
+**Remarks**   
 [`GetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) and [`SetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) need to be called for getting or setting the value of [arguments](#mode-arguments).
 
 
