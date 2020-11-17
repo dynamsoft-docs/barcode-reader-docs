@@ -13,8 +13,10 @@ needGenerateH3Content: true
 ## System Requirements
 
 - Operating systems:
-   - Windows: 7, 8, 10, 2003, 2008, 2008 R2, 2012.
-   - Linux x64: Ubuntu 14.04.4+ LTS, Debian 8+, etc;  
+   - Windows (Windows Edition): 7, 8, 10, 2003, 2008, 2008 R2, 2012;
+   - Linux x64 (Linux Edition): Ubuntu 14.04.4+ LTS, Debian 8+, etc;  
+   - Linux arm 32bit (Raspberry Pi Edition);
+   - Linux arm 64bit (contact us to get the SDK);
 
 
 &nbsp; 
