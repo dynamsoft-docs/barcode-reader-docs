@@ -212,12 +212,8 @@
         }
 
         function Download(url) {
-            const elt = document.createElement('a');
-            elt.setAttribute('href', url);
-            elt.style.display = 'none';
-            document.body.appendChild(elt);
-            elt.click();
-            document.body.removeChild(elt);
+            var tempwindow = window.open('_blank');
+            tempwindow.location = url;
         }
     </script>
 
