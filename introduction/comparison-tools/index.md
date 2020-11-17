@@ -3,12 +3,13 @@ layout: developing
 title: Dynamsoft Barcode Reader Comparison Tools - Main Page
 description: This page shows Dynamsoft Barcode Reader Comparison Tools.
 keywords: comparison tools
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 breadcrumbText: Comparison Tools
 ---
 
-Comparison Tools:
-- [Batch Test]({{ site.introduction }}comparison-tools/batch-test.html)
+# How to test the barcode reading performance
+
+- [Performance Tool]({{ site.introduction }}comparison-tools/batch-test.html)
 
 {%- comment -%}
 - [Interactive Test]({{ site.introduction }}comparison-tools/interactive-test.html)
