@@ -4,10 +4,10 @@ title: Dynamsoft Barcode Reader Licensing - Main Page
 description: This is the main page of Dynamsoft Barcode Reader Licensing.
 keywords: license, usage tracking, licensing
 needAutoGenerateSidebar: false
-breadcrumbText: License & Usage Tracking
+breadcrumbText: License Activation
 ---
 
-# Dynamsoft Barcode Reader - License & Usage Tracking
+# Dynamsoft Barcode Reader - License Activation
 
 This section covers the following topics:
 
