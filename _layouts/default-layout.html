@@ -212,15 +212,8 @@
         }
 
         function Download(url) {
-            var tempwindow = window.open('_blank'); // 先打开页面
-            tempwindow.location = url; // 后更改页面地址
-            // const elt = document.createElement('a');
-            // elt.setAttribute('href', url);
-            // elt.setAttribute('target', '_blank');
-            // elt.style.display = 'none';
-            // document.body.appendChild(elt);
-            // elt.click();
-            // document.body.removeChild(elt);
+            var tempwindow = window.open('_blank');
+            tempwindow.location = url;
         }
     </script>
 
