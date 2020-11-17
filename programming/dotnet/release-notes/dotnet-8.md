@@ -45,10 +45,6 @@ noTitleIndex: true
 - Improved the localization speed for the ScanDirectly mode.
 - Improved the localization accuracy for DataMatrix codes with a narrow quiet zone.
 
-### Fixed
-
-- Fixed a crash issue that could happen when conflicts occur on Linux.
-
 ### Feature Deprecated
 
 - DeblurLevel is now deprecated. It still works in this version but could be removed in the near future. We recommend using DeblurModes instead.
