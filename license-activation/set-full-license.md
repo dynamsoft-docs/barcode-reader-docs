@@ -21,23 +21,23 @@ You can set the license by following the steps below:
 
 ## Activate the license {#activate}
 
- Once you purchase a full license from our [online store](https://www.dynamsoft.com/store/dynamsoft-barcode-reader/), you can find your license information at **[Customer Portal](https://www.dynamsoft.com/customer/license/fullLicense)**. 
+ Once you purchase a full license from our [online store](https://www.dynamsoft.com/store/dynamsoft-barcode-reader/), you can find your license information at [Customer Portal](https://www.dynamsoft.com/customer/license/fullLicense). 
 
- To activate the license, click **Please first activate the license** or the **Activate** button.
+ To activate the license, click "Please first activate the license" or the "Activate" button.
 
  ![FullLicenseList][1]
 
- On the next page, set an Alias for your license or leave the default Alias and click the **Activate** button.
+ On the next page, set an Alias for your license or leave the default Alias and click the "Activate" button.
 
  > Read more on What is an [Alias](https://www.dynamsoft.com/license-tracking/docs/about/terms.html#alias)
  
  ![SetAlias][2]
  
- On the following popup window, click the **OK** button.
+ On the following popup window, click the "OK" button.
  
  ![ActivationContinue][3]
  
- Then you can see the message "Activate Success! You can start configuring your license now". Click **start configuring your license** to continue.
+ Then you can see the message "Activate Success! You can start configuring your license now". Click "start configuring your license" to continue.
  
  ![ConfigLicense][4]
 
