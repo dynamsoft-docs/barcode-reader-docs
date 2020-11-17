@@ -378,7 +378,7 @@ DeblurMode tagPublicRuntimeSettings::deblurModes[10]
     Each array item can be any one of the [`DeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode) Enumeration items.
       
 - **Default value**   
-    `[DM_SKIP,DM_SKIP,DM_SKIP,DM_SKIP,DM_SKIP,DM_SKIP,DM_SKIP,DM_SKIP]`
+    `[DM_SKIP,DM_SKIP,DM_SKIP,DM_SKIP,DM_SKIP,DM_SKIP,DM_SKIP,DM_SKIP,DM_SKIP,DM_SKIP]`
     
 - **Remarks**   
     The array index represents the priority of the item. The smaller index is, the higher priority is.

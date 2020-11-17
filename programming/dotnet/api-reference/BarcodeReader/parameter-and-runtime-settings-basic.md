@@ -41,7 +41,6 @@ Returns error code.
 
 #### Remark
 Check follow link for available modes and arguments:
-- [`EnumAccompanyingTextRecognitionModes`]({{ site.parameters_reference }}image-parameter/AccompanyingTextRecognitionModes.html#accompanyingtextrecognitionmodes)
 - [`EnumBarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#barcodecolourmodes)
 - [`EnumBinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#binarizationmodes)
 - [`EnumColourClusteringModes`]({{ site.parameters_reference }}image-parameter/ColourClusteringModes.html#colourclusteringmodes)
@@ -92,7 +91,6 @@ Returns error code.
 
 #### Remark
 Check follow link for available modes and arguments:
-- [`EnumAccompanyingTextRecognitionModes`]({{ site.parameters_reference }}image-parameter/AccompanyingTextRecognitionModes.html#accompanyingtextrecognitionmodes)
 - [`EnumBarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#barcodecolourmodes)
 - [`EnumBinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#binarizationmodes)
 - [`EnumColourClusteringModes`]({{ site.parameters_reference }}image-parameter/ColourClusteringModes.html#colourclusteringmodes)

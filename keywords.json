@@ -33,10 +33,6 @@
       "replace": "[`BarcodeFormatIds_2`]({{ site.parameters_reference }}image-parameter/format-control.html#barcodeformatids_2)"
     },
     {
-      "ori": "AccompanyingTextRecognitionModes",
-      "replace": "[`AccompanyingTextRecognitionModes`]({{ site.parameters_reference }}image-parameter/AccompanyingTextRecognitionModes.html#accompanyingtextrecognitionmodes)"
-    },
-    {
       "ori": "BarcodeColourModes",
       "replace": "[`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#barcodecolourmodes)"
     },

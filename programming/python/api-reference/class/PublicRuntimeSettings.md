@@ -219,7 +219,7 @@ PublicRuntimeSetting.deblur_modes
     Each list item can be any one of the [`EnumDeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode) Enumeration items.
       
 - **Default value**   
-    [EnumDeblurMode.DM_SKIP, EnumDeblurMode.DM_SKIP, EnumDeblurMode.DM_SKIP, EnumDeblurMode.DM_SKIP, EnumDeblurMode.DM_SKIP, EnumDeblurMode.DM_SKIP, EnumDeblurMode.DM_SKIP, EnumDeblurMode.DM_SKIP]
+    [EnumDeblurMode.DM_SKIP, EnumDeblurMode.DM_SKIP, EnumDeblurMode.DM_SKIP, EnumDeblurMode.DM_SKIP, EnumDeblurMode.DM_SKIP, EnumDeblurMode.DM_SKIP, EnumDeblurMode.DM_SKIP, EnumDeblurMode.DM_SKIP, EnumDeblurMode.DM_SKIP, EnumDeblurMode.DM_SKIP]
     
 - **Remarks**   
     The list index represents the priority of the item. The smaller index is, the higher priority is.

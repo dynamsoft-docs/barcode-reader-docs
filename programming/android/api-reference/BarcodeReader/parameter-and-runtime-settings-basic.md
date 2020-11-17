@@ -42,7 +42,6 @@ void com.dynamsoft.dbr.BarcodeReader.setModeArgument(String modesName, int index
 
 Check the available modes and arguments below:
 
-- [`AccompanyingTextRecognitionModes`]({{ site.parameters_reference }}image-parameter/AccompanyingTextRecognitionModes.html#accompanyingtextrecognitionmodes)
 - [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#barcodecolourmodes)
 - [`BinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#binarizationmodes)
 - [`ColourClusteringModes`]({{ site.parameters_reference }}image-parameter/ColourClusteringModes.html#colourclusteringmodes)
@@ -94,7 +93,6 @@ the optional argument for a specified mode in Modes parameters.
 
 Check the available modes and arguments below:
 
-- [`AccompanyingTextRecognitionModes`]({{ site.parameters_reference }}image-parameter/AccompanyingTextRecognitionModes.html#accompanyingtextrecognitionmodes)
 - [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#barcodecolourmodes)
 - [`BinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#binarizationmodes)
 - [`ColourClusteringModes`]({{ site.parameters_reference }}image-parameter/ColourClusteringModes.html#colourclusteringmodes)

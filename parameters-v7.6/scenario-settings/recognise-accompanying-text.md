@@ -106,7 +106,7 @@ for(int resultId = 0; resultId < pResults->resultsCount; ++resultId)
         cout << "accompanyText: " << accompany << endl;
     }
 }
-dynamsoft::dbr::CBarcodeReader::FreeTextResults(&pResults);
+CBarcodeReader::FreeTextResults(&pResults);
 delete reader;
 ```
 

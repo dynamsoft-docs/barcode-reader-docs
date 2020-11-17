@@ -46,7 +46,6 @@ breadcrumbText: Reference
 
  | Parameter Name | Description |
  | -------------- | ----------- | 
- | [`ImageParameter.AccompanyingTextRecognitionModes`](image-parameter/AccompanyingTextRecognitionModes.md#accompanyingtextrecognitionmodes) | Sets the mode and priority to recognize accompanying text. |
  | [`ImageParameter.BarcodeColourModes`](image-parameter/BarcodeColourModes.md#barcodecolourmodes) | Sets the mode and priority for the barcode colour mode used to process the barcode zone. |
  | [`ImageParameter.BarcodeComplementModes`](image-parameter/BarcodeComplementModes.md#barcodecomplementmodes) | Sets the mode and priority to complement the missing parts in the barcode. |
  | [`ImageParameter.BinarizationModes`](image-parameter/BinarizationModes.md#binarizationmodes) | 	Sets the mode and priority for binarization. |
@@ -144,10 +143,13 @@ breadcrumbText: Reference
  | [`FormatSpecification.BarcodeTextLengthRangeArray`](format-specification/format-control.md#barcodetextlengthrangearray) |	Sets the range of barcode text length for barcodes search. | 
  | [`FormatSpecification.BarcodeTextRegExPattern`](format-specification/format-control.md#barcodetextregexpattern) | Specifies the regular express pattern of barcode characters. | 
  | [`FormatSpecification.BarcodeWidthRangeArray`](format-specification/format-control.md#barcodewidthrangearray) | Sets the range of barcode widths (in pixels) for barcodes search.(Hint). | 
+ | [`FormatSpecification.BarcodeZoneBarCountRangeArray`](format-specification/format-control.md#barcodezonebarcountrangearray) |	Sets the range of bar count of the barcode zone for barcodes search. | 
+ | [`FormatSpecification.BarcodeZoneMinDistanceToImageBorders`](format-specification/format-control.md#barcodezonemindistancetoimageborders) |	Sets the minimum distance (in pixels) between barcode zone and image borders. | 
  | [`FormatSpecification.Code128Subset`](format-specification/format-control.md#code128subset) | Set the code 128 subset. | 
  | [`FormatSpecification.FindUnevenModuleBarcode`](format-specification/format-control.md#findunevenmodulebarcode) | Specifies whether to find barcodes with uneven barcode modules. Not support yet. | 
  | [`FormatSpecification.HeadModuleRatio`](format-specification/format-control.md#headmoduleratio) | Set the module count and module size ratio of the barcode head part. | 
  | [`FormatSpecification.MinQuietZoneWidth`](format-specification/format-control.md#minquietzonewidth) | The minimum width of the barcode quiet zone. | 
+ | [`FormatSpecification.MinRatioOfBarcodeZoneWidthToHeight`](format-control.md#minratioofbarcodezonewidthtoheight) |	Sets the minimum ratio (width/height) of the barcode zone. | 
  | [`FormatSpecification.MirrorMode`](format-specification/format-control.md#mirrormode) | Sets whether to decode mirrored barcodes. | 
  | [`FormatSpecification.ModuleSizeRangeArray`](format-specification/format-control.md#modulesizerangearray) | Sets the range of module size (in pixels) for barcodes search. (Hint). |
  | [`FormatSpecification.RequireStartStopChars`](format-specification/format-control.md#requirestartstopchars) |	Sets whether the start and stop characters are required when searching for Code 39 barcodes. |
@@ -164,7 +166,6 @@ breadcrumbText: Reference
  | [`FormatSpecification.DeblurLevel`](format-specification/image-process-control.md#deblurlevel) | Sets the degree of blurriness of the barcode for the current specified barcode format. | 
  | [`FormatSpecification.DeformationResistingModes`](format-specification/image-process-control.md#deformationresistingmodes)  | Sets the mode and priority for deformation resisting for the current specified barcode format. Not support yet. |
  | [`FormatSpecification.BarcodeComplementModes`](format-specification/image-process-control.md#barcodecomplementmodes) | Sets the mode and priority to complement the missing parts in the barcode for current specified barcode format. Not support yet. |
- | [`FormatSpecification.AccompanyingTextRecognitionModes`](format-specification/image-process-control.md#accompanyingtextrecognitionmodes) | Sets the mode and priority to recognize accompanying text for the current specified barcode format. | 
 
 
 

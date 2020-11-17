@@ -1352,12 +1352,6 @@
    <priority>0.6400</priority>
 </url>
 <url>
-   <loc>https://www.dynamsoft.com/barcode-reader/parameters/reference/image-parameter/AccompanyingTextRecognitionModes.html</loc>
-   <lastmod>2020-09-24T07:18:02+00:00</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.6400</priority>
-</url>
-<url>
    <loc>https://www.dynamsoft.com/barcode-reader/parameters/reference/image-parameter/BarcodeColourModes.html</loc>
    <lastmod>2020-09-24T07:18:04+00:00</lastmod>
    <changefreq>monthly</changefreq>
@@ -1660,12 +1654,6 @@
 <url>
    <loc>https://www.dynamsoft.com/barcode-reader/parameters/scenario-settings/dpm-decoding.html</loc>
    <lastmod>2020-09-24T06:51:03+00:00</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.6400</priority>
-</url>
-<url>
-   <loc>https://www.dynamsoft.com/barcode-reader/parameters/scenario-settings/recognise-accompanying-text.html</loc>
-   <lastmod>2020-09-24T06:51:52+00:00</lastmod>
    <changefreq>monthly</changefreq>
    <priority>0.6400</priority>
 </url>
