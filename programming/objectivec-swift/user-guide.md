@@ -4,7 +4,8 @@ title: Dynamsoft Barcode Reader for Objective-C & Swift - User Guide
 description: This is the user guide of Dynamsoft Barcode Reader for iOS SDK.
 keywords: user guide, objective-c, oc, swift
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
+needGenerateH3Content: false
+noTitleIndex: true
 ---
 
 

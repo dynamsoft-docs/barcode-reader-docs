@@ -4,7 +4,8 @@ title: Dynamsoft Barcode Reader for Java - User Guide
 description: This is the user guide of Dynamsoft Barcode Reader for Java SDK.
 keywords: user guide, java
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
+needGenerateH3Content: false
+noTitleIndex: true
 ---
 
 

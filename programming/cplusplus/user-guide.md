@@ -4,7 +4,8 @@ title: Dynamsoft Barcode Reader for C++ - User Guide
 description: This is the user guide of Dynamsoft Barcode Reader for C++ Language.
 keywords: user guide, c++
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
+needGenerateH3Content: false
+noTitleIndex: true
 ---
 
 
