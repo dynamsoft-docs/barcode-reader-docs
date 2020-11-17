@@ -21,7 +21,7 @@ The C++ documentation mainly consists of two parts. One is the [User Guide](#get
 - [Struct](api-reference/#structs)
 
 ## Release Notes
-- [version 8.0](release-notes/v8-cpp.md)
-- [version 7.6 and below](release-notes/v7-cpp.md)
+- [version 8.0](release-notes/cpp-8.md)
+- [version 7.6 and below](release-notes/cpp-7.md)
 
 ## Samples and Demos

@@ -4,7 +4,8 @@ title: Dynamsoft Barcode Reader for .NET SDK - Release Notes v7.6 and below
 description: This is the release notes page of Dynamsoft Barcode Reader for .NET SDK v7.6 and below.
 keywords: release notes, .net
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
+needGenerateH3Content: false
+noTitleIndex: true
 ---
 
 # Release Notes for C Language - 7.6 and below

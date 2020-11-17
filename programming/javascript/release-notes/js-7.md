@@ -4,7 +4,8 @@ title: Dynamsoft Barcode Reader for JavaScript SDK - Release Notes v7.x
 description: This is the release notes page of Dynamsoft Barcode Reader for JavaScript SDK v7.x.
 keywords: release notes, javascript
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
+needGenerateH3Content: false
+noTitleIndex: true
 ---
 
 # Release Notes for JavaScript SDK - 7.x
