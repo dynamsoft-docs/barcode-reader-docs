@@ -20,7 +20,7 @@ As of v7.4, DBR currently supports the following barcode formats:
 |--------------------------|---------------------|-------------------------| --------------------- | ------------------ |
 | Code 39/Code 39 Extended | QR Code             | Omnidirectional         | USPS Intelligent Mail | GS1 Composite Code |     
 | Code 93                  | Micro QR Code       | Truncated               | Postnet               | Patch Code         |    
-| Code 128                 | Data Matrix         | Stacked                 | Planet                | Dotcode            |
+| Code 128                 | Data Matrix         | Stacked                 | Planet                | DotCode            |
 | Codabar                  | PDF417              | Stacked Omnidirectional | Australian Post       | | 
 | Interleaved 2 of 5       | Micro PDF417        | Limited                 | UK Royal Mail         | |
 | EAN-8                    | Aztec Code          | Expanded                |                       | |

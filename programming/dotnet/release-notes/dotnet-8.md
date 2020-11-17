@@ -32,7 +32,7 @@ noTitleIndex: true
  - TextAssistedCorrectionMode
  - TextFilterMode
  - TextureDetectionMode 
-- [IntermediateResult Advanced Module] Added support for decoding IntermediateResult. Users with a binarized image could use this function to skip some image preprocessing steps.
+- (For IntermediateResult Advanced Module) Added support for decoding IntermediateResult. Users with a binarized image could use this function to skip some image preprocessing steps.
 - Implemented a new licensing tracking mechanism, License 2.0, which makes it easier for users to track license usage. 
 - Added a new format control parameter, BarcodeZoneMinDistanceToImageBorders, to set the minimum distance (in pixels) between the barcode zone and image borders.
 - Added a new format control parameter, MinRatioOfBarcodeZoneWidthToHeight, to set the minimum ratio (width/height) of the barcode zone.
