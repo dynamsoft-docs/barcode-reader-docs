@@ -13,8 +13,6 @@ Different methods are used for setting trial and full license keys. In our demo 
 
 For the purchased version, you need to use `initLicenseFromLTS()` to the set the Handshake Codes for your licenses.
 
- `initLicenseFromServer()` or `initLicenseFromLicenseContent()` to complete the license registration.
-
 You can set the license by following the steps below:
 
 1. [Activate the license](#activate)
