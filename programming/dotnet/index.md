@@ -22,7 +22,7 @@ The .Net documentation mainly consists of two parts. One is the [User Guide](#ge
 - [Struct](api-reference/#structs)
 
 ## Release Notes
-- [version 8.0](release-notes/v8-dotnet.md)
-- [version 7.6 and below](release-notes/v7-dotnet.md)
+- [version 8.0](release-notes/dotnet-8.md)
+- [version 7.6 and below](release-notes/dotnet-7.md)
 
 ## Samples and Demos

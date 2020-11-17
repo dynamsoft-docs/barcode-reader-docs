@@ -21,4 +21,8 @@ The JavaScript documentation mainly consists of two parts. One is the [User Guid
 - [BarcodeScanner](api-reference/#barcodescanner)
 - [Global Interfaces](api-reference/#global-interfaces)
 
+## Release Notes
+
+- [version 7.6 and below](release-notes/js-7.md)
+
 ## Samples and Demos

@@ -4,8 +4,11 @@ title: Dynamsoft Barcode Reader for C++ - Release Notes v8.0
 description: This is the release notes page of Dynamsoft Barcode Reader for C++ v8.0.
 keywords: release notes, cpp
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
+needGenerateH3Content: false
+noTitleIndex: true
 ---
+
+# Release Notes for C++ SDK - 8.0
 
 ## 8.0 (11/17/2020)
 

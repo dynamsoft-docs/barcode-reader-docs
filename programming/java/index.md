@@ -23,7 +23,7 @@ The Java documentation mainly consists of two parts. One is the [User Guide](#ge
 - [Class](api-reference/#classes)
 
 ## Release Notes
-- [version 8.0](release-notes/v8-java.md)
-- [version 7.6 and below](release-notes/v7-java.md)
+- [version 8.0](release-notes/java-8.md)
+- [version 7.6 and below](release-notes/java-7.md)
 
 ## Samples and Demos

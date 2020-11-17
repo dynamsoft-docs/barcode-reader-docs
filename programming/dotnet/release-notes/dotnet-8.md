@@ -4,8 +4,11 @@ title: Dynamsoft Barcode Reader for .NET SDK - Release Notes v8.0
 description: This is the release notes page of Dynamsoft Barcode Reader for .NET SDK v8.0.
 keywords: release notes, .net
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
+needGenerateH3Content: false
+noTitleIndex: true
 ---
+
+# Release Notes for .NET SDK - 8.0
 
 ## 8.0 (11/17/2020)
 
