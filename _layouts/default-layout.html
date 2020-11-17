@@ -214,7 +214,6 @@
         function Download(url) {
             const elt = document.createElement('a');
             elt.setAttribute('href', url);
-            elt.setAttribute('target', '_blank');
             elt.style.display = 'none';
             document.body.appendChild(elt);
             elt.click();
