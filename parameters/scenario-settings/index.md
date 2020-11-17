@@ -80,7 +80,7 @@ Sample decoding process mainly involves [Deblur Level](deblur-level.md) and [DPM
 
 ### Return Results
 
-DBR’s returned results include the decoding results and intermediate results. For more information, please refer to this article: [How to filter and sort decoding results](decode-result.md) and [How to obtain and use intermediate results](intermediate-result.md).
+DBR 's returned results include the decoding results and intermediate results. For more information, please refer to this article: [How to filter and sort decoding results](decode-result.md) and [How to obtain and use intermediate results](intermediate-result.md).
 
 ## Control Terminate Phase
 

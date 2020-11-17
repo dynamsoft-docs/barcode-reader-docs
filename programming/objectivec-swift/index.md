@@ -20,4 +20,8 @@ The Objective-C and Swift documentation mainly consists of two parts. One is the
 - [ObjectiveC/Swift](api-reference/)
 - [Class](api-reference/#classes)
 
+## Release Notes
+- [version 8.0](release-notes/v8-oc.md)
+- [version 7.6 and below](release-notes/v7-oc.md)
+
 ## Samples and Demos

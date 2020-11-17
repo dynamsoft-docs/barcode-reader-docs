@@ -38,7 +38,7 @@ After installation, you can find samples for supported platforms in the **Sample
    ```csharp
     using Dynamsoft.Barcode;
    ```
-   Please add Dynamsoft Barcode Reader lib in project references. The lib file named "Dynamsoft.BarcodeReader.dll" can be found in `[INSTALLATION FOLDER]\Components\DotNet]\2.0` or `[INSTALLATION FOLDER]\Components\DotNet]\4.0`. The folder which you should choose depends on your .NET Framework edition.
+   Please add Dynamsoft Barcode Reader lib in project references. The lib file named "Dynamsoft.BarcodeReader.dll" can be found in `DBR-DotNet-{version number}\DynamsoftBarcodeReader\Lib\{Platform}\2.0` or `DBR-DotNet-{version number}\DynamsoftBarcodeReader\Lib\{Platform}\4.0`. The folder which you should choose depends on your .NET Framework edition.
 
 3. Update the main function in `Program.cs`.
     ```csharp
@@ -298,6 +298,33 @@ Below is a template for your reference. To learn more about the APIs, you can ch
 }
 ```
 
+# How to Distribute
 
-&nbsp;
+Distribute the following required library files with the applications using the Dynamsoft Barcode Reader SDK. The distribution files can be found under:
+
+for .NET Framework 2.0 - 3.5: `Dynamsoft.BarcodeReader.dll`, `DynamsoftCommon.dll`, `x86` and `x64` folders. These files are under `DBR-DotNet-{version number}\DynamsoftBarcodeReader\Lib\{Platform}\2.0`.
+
+for .NET Framework 4.0 and above: `Dynamsoft.BarcodeReader.dll`, `DynamsoftCommon.dll`, `x86` and `x64` folders. These files are under `DBR-DotNet-{version number}\DynamsoftBarcodeReader\Lib\{Platform}\4.0`.
+
+# How to Upgrade
+
+## From version 7.x
+
+You need to replace the old assembly files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
+
+Your previous SDK license for version 7.x is not compatible with the version 8.x. Please [contact us](https://www.dynamsoft.com/Company/Contact.aspx) to upgrade your license.
+
+After you upgraded your license to version 8.x:
+
+- If you were using `ProductKeys`, please replace the old license with the newly generated one.
+
+- If you were using `InitLicenseFromServer` to connect to Dynamsoft server for license verification, then no need to change the license key. But please make sure the device has Internet connection.
+
+- If you were using `InitLicenseFromServer` + `DBR_InitLicenseFromLicenseContent` to connect to Dynamsoft server once and use the SDK offline, please follow [these steps](../../license-activation/set-full-license-7.md#connect-once) to re-register the device.
+
+- If you were using `DBR_InitLicenseFromLicenseContent` to use the SDK offline, please follow [these steps](../../license-activation/set-full-license-7.md#offline) to re-register the device.
+
+## From version 6.x
+
+We made some structural updates in the new version. To upgrade from 6.x to 8.x, we recommend you to review our sample code and re-write the barcode scanning module.
 

@@ -256,7 +256,6 @@ Below is a template for your reference. To learn more about the APIs, you can ch
             "ThreshValueCoefficient" : 10
          }
       ],
-      "DeblurLevel" : 9,
       "Description" : "",
       "ExpectedBarcodesCount" : 0,
       "GrayscaleTransformationModes" : [
@@ -315,8 +314,3 @@ Below is a template for your reference. To learn more about the APIs, you can ch
    "Version" : "3.0"
 }
 ```
-
-## Contact Us
-
-[Contact us](https://www.dynamsoft.com/Company/Contact.aspx) if you need any help.
-
