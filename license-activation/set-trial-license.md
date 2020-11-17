@@ -11,13 +11,13 @@ needGenerateH3Content: false
 
 To use a trial license, you can follow the steps below:
 
-1. Get a trial license key.
+## Get a trial license key.
 
  You can log in the customer portal and [request for a trial extension online](https://www.dynamsoft.com/customer/license/trialLicense).
 
  **Note**: If the trial license expires or it is missing, you can still get barcode reading results but partial of the result will be masked with "*".
 
-2. Update the license key in source code. 
+## Update the license key in source code. 
 
  You can use `initLicense()` or `ProductKeys` to set the license.
  
@@ -70,4 +70,4 @@ To use a trial license, you can follow the steps below:
  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@{version-number}/dist/dbr.js" data-productKeys="t0068NQAAAI8+mMcYRNwmijAzExhq******"></script>
  ```
 
-3. Save and rebuild your application.
+ Then please save and rebuild your application.
