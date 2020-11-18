@@ -35,17 +35,18 @@ After installation, you can find samples for supported platforms in the **Sample
 
 ## Getting Started: HelloWorld
 1. Start Visual Studio and create a new Console Application in C#. Let's name it `BarcodeReadDemo_DotNet`. Don't forget to choose a supported .NET Framework edition.
-2. Add Dynamsoft.Barcode namespace in `Program.cs`.
+2. Add the namespace in `Program.cs`.
    ```csharp
-    using Dynamsoft.Barcode;
+    using Dynamsoft;
+    using Dynamsoft.DBR;
    ```
-   Please add Dynamsoft Barcode Reader lib in project references. The lib file named "Dynamsoft.BarcodeReader.dll" can be found in `DBR-DotNet-{version number}\DynamsoftBarcodeReader\Lib\{Platform}\2.0` or `DBR-DotNet-{version number}\DynamsoftBarcodeReader\Lib\{Platform}\4.0`. The folder which you should choose depends on your .NET Framework edition.
+   Please add Dynamsoft Barcode Reader lib in project references. The lib files named "Dynamsoft.BarcodeReader.dll" and "DynamsoftCommon.dll" can be found in `DBR-DotNet-{version number}\DynamsoftBarcodeReader\Lib\2.0` or `DBR-DotNet-{version number}\DynamsoftBarcodeReader\Lib\4.0`. The folder which you should choose depends on your .NET Framework edition.
 
 3. Update the main function in `Program.cs`.
     ```csharp
     class Program
     {
-        statica void Main(string[] args)
+        static void Main(string[] args)
         {
             BarcodeReader reader = new BarcodeReader("<your license key here>");
             try
@@ -311,19 +312,36 @@ for .NET Framework 4.0 and above: `Dynamsoft.BarcodeReader.dll`, `DynamsoftCommo
 
 ### From version 7.x
 
-You need to replace the old assembly files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
+1. Replace the library
 
-Your previous SDK license for version 7.x is not compatible with the version 8.x. Please [contact us](https://www.dynamsoft.com/Company/Contact.aspx) to upgrade your license.
+ You need to replace the old assembly files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
 
-After you upgraded your license to version 8.x:
+2. Update existing code
 
-- If you were using `ProductKeys`, please replace the old license with the newly generated one.
+ Change the namespace from:
 
-- If you were using `InitLicenseFromServer` to connect to Dynamsoft server for license verification, then no need to change the license key. But please make sure the device has Internet connection.
+ ```csharp
+    using Dynamsoft.Barcode;
+ ```
+ to:
+ ```csharp
+    using Dynamsoft;
+    using Dynamsoft.DBR;
+ ```
 
-- If you were using `InitLicenseFromServer` + `DBR_InitLicenseFromLicenseContent` to connect to Dynamsoft server once and use the SDK offline, please follow [these steps](../../license-activation/set-full-license-7.md#connect-once) to re-register the device.
+3. Upgrade the license
 
-- If you were using `DBR_InitLicenseFromLicenseContent` to use the SDK offline, please follow [these steps](../../license-activation/set-full-license-7.md#offline) to re-register the device.
+ Your previous SDK license for version 7.x is not compatible with the version 8.x. Please [contact us](https://www.dynamsoft.com/Company/Contact.aspx) to upgrade your license.
+
+ After you upgraded your license to version 8.x:
+
+ - If you were using `ProductKeys`, please replace the old license with the newly generated one.
+
+ - If you were using `InitLicenseFromServer` to connect to Dynamsoft server for license verification, then no need to change the license key. But please make sure the device has Internet connection.
+
+ - If you were using `InitLicenseFromServer` + `DBR_InitLicenseFromLicenseContent` to connect to Dynamsoft server once and use the SDK offline, please follow [these steps](../../license-activation/set-full-license-7.md#connect-once) to re-register the device.
+
+ - If you were using `DBR_InitLicenseFromLicenseContent` to use the SDK offline, please follow [these steps](../../license-activation/set-full-license-7.md#offline) to re-register the device.
 
 ### From version 6.x
 
