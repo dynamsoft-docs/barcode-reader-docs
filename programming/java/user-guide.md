@@ -4,7 +4,8 @@ title: Dynamsoft Barcode Reader for Java - User Guide
 description: This is the user guide of Dynamsoft Barcode Reader for Java SDK.
 keywords: user guide, java
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
+needGenerateH3Content: false
+noTitleIndex: true
 ---
 
 
@@ -25,21 +26,26 @@ needGenerateH3Content: true
 ## Installation
 
 ### Option 1: Download from website
-To install Dynamsoft Barcode Reader Java SDK on your development machine, you can download the SDK from the [Dynamsoft website](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx) and unzip the dbr-java-{version number}.zip
 
-The items under the dbr-java-{version number} folder:
-Dynamsoft Barcode Reader\samples contains the source code of sample application.
-Dynamsoft Barcode Reader\documents contains the API Reference, the Developer's Guide, and legal notices.
-Dynamsoft Barcode Reader\lib\dynamsoft-barcodereader-{version number}.jar is the library file.
+To install Dynamsoft Barcode Reader Java SDK on your development machine, you can download the SDK from the [Dynamsoft website](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx) and unzip the DBR-Java-{version number}.zip
+
+The items under the DBR-Java-{version number} folder:
+
+ - DynamsoftBarcodeReader\documents contains the API Reference, the Developer's Guide, and legal notices.
+ - DynamsoftBarcodeReader\images contains the sample barcode images.
+ - DynamsoftBarcodeReader\samples contains the source code of sample application.
+ - DynamsoftBarcodeReader\lib\dynamsoft-barcodereader-{version number}.jar is the library file.
+ - DynamsoftBarcodeReader\readme.txt is the readme file to help you get started.
 
 ### Option 2: Build with Maven
+
 You can add Dynamsoft Barcode Reader as the dependency to pom.xml like this:
    ```xml
     <dependencies>
         <dependency>
             <groupId>com.dynamsoft</groupId>
             <artifactId>dbr</artifactId>
-            <version>7.6.0</version>
+            <version>8.0.0</version>
         </dependency>
     </dependencies>
     <repositories>
@@ -55,6 +61,7 @@ You can add Dynamsoft Barcode Reader as the dependency to pom.xml like this:
 
 
 ## Getting Started: HelloWorld
+
 1. Open Eclipse and create a new Java project HelloDBR.
 2. Add the required JAR file to your project.
     Click File > Properties > Java Build Path > Libraries > Add external JARs, add dynamsoft-barcodereader-{version number}.jar and click Apply.
@@ -261,7 +268,7 @@ Below is a template for your reference. To learn more about the APIs, you can ch
 }
 ```
 
-# How to Distribute
+## How to Distribute
 
 Distribute the `dynamsoft-barcodereader-{version number}.jar` file with the applications using the Dynamsoft Barcode Reader SDK. The .JAR file can be found under `DBR-Java-{version number}\DynamsoftBarcodeReader\lib`.
 
@@ -272,7 +279,7 @@ You can also distribute with Maven, like this:
       <dependency>
          <groupId>com.dynamsoft</groupId>
          <artifactId>dbr</artifactId>
-         <version>7.6.0</version>
+         <version>8.0.0</version>
       </dependency>
    </dependencies>
    <repositories>
@@ -283,9 +290,9 @@ You can also distribute with Maven, like this:
    </repositories>
 ```
 
-# How to Upgrade
+## How to Upgrade
 
-## From version 7.x
+### From version 7.x
 
 You need to replace the old assembly files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
 
@@ -301,7 +308,7 @@ After you upgraded your license to version 8.x:
 
 - If you were using `DBR_InitLicenseFromLicenseContent` to use the SDK offline, please follow [these steps](../../license-activation/set-full-license-7.md#offline) to re-register the device.
 
-## From version 6.x
+### From version 6.x
 
 We made some structural updates in the new version. To upgrade from 6.x to 8.x, we recommend you to review our sample code and re-write the barcode scanning module.
 

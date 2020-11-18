@@ -7,9 +7,9 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
-# How to set full license using License 1.0
+# How to set full license in version 7.x
 
-> This article shows how to set the license using License 1.0 protocol.
+> This article shows how to set the license in DBR version 7.x using License 1.0 protocol.
 
 ## For using C/C++/.NET/Java/Python on Windows & Linux 
 
