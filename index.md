@@ -9,6 +9,11 @@ description: Dynamsoft Barcode Reader SDK Documentation Homepage
 # Dynamsoft Barcode Reader Documentation  
 
 
+- [Introduction]({{ site.introduction }})
+   - [Overview]({{ site.introduction }}overview.html)
+   - [Principle of Algorithm]({{ site.introduction }}architecture.html)
+   - [How-to Guides]({{ site.how_to }})
+   - [FAQs]({{ site.faqs }})
 
 - [Programming]({{ site.programming }})
    - [C]({{ site.c }})
@@ -24,6 +29,11 @@ description: Dynamsoft Barcode Reader SDK Documentation Homepage
    - [Reference]({{ site.parameters_reference }})
    - [Enumerations]({{ site.enumerations }})
    - [Scenario Settings]({{ site.scenario_settings }})
+
+- [License Activation]({{ site.license_activation }})
+   - [Set Trial License]({{ site.license_activation }}set-trial-license.html)
+   - [Set Full License in version 8]({{ site.license_activation }}set-full-license.html)
+   - [Set Full License in version 7]({{ site.license_activation }}set-full-license-7.html)
 
 {%- comment -%}
  [Introduction]({{ site.introduction }})

@@ -9,6 +9,7 @@ productName: Dynamsoft Barcode Reader
 introduction: /barcode-reader/introduction/
 programming: /barcode-reader/programming/
 parameters: /barcode-reader/parameters/
+license_activation: /barcode-reader/license-activation/
 enhancements: /barcode-reader/enhancements/
 
 licensing: /barcode-reader/introduction/licensing/
@@ -20,29 +21,36 @@ structs: /barcode-reader/programming/c-cplusplus/struct/
 c: /barcode-reader/programming/c/
 c_api: /barcode-reader/programming/c/api-reference/
 c_methods: /barcode-reader/programming/c/api-reference/methods/
+c_release_notes: /barcode-reader/programming/c/release-notes/
 
 cpp: /barcode-reader/programming/cplusplus/
 cpp_api: /barcode-reader/programming/cplusplus/api-reference/
 cpp_methods: /barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/
-
+cpp_release_notes: /barcode-reader/programming/cplusplus/release-notes/
 
 js: /barcode-reader/programming/javascript/
 js_api: /barcode-reader/programming/javascript/api-reference/
+js_release_notes: /barcode-reader/programming/javascript/release-notes/
 
 dotnet: /barcode-reader/programming/dotnet/
 dotnet_api: /barcode-reader/programming/dotnet/api-reference/
+dotnet_release_notes: /barcode-reader/programming/dotnet/release-notes/
 
 oc: /barcode-reader/programming/objectivec-swift/
 oc_api: /barcode-reader/programming/objectivec-swift/api-reference/
+oc_release_notes: /barcode-reader/programming/objectivec-swift/release-notes/
 
 java: /barcode-reader/programming/java/
 java_api: /barcode-reader/programming/java/api-reference/
+java_release_notes: /barcode-reader/programming/java/release-notes/
 
 android: /barcode-reader/programming/android/
 android_api: /barcode-reader/programming/android/api-reference/
+android_release_notes: /barcode-reader/programming/android/release-notes/
   
 python: /barcode-reader/programming/python/
 python_api: /barcode-reader/programming/python/api-reference/
+python_release_notes: /barcode-reader/programming/python/release-notes/
 
 parameters_reference: /barcode-reader/parameters/reference/
 scenario_settings: /barcode-reader/parameters/scenario-settings/

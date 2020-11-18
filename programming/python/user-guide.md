@@ -4,7 +4,8 @@ title: Dynamsoft Barcode Reader for Python - User Guide
 description: This is the user guide of Dynamsoft Barcode Reader for Python SDK.
 keywords: user guide, python
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
+needGenerateH3Content: false
+noTitleIndex: true
 ---
 
 # User Guide for Python SDK
