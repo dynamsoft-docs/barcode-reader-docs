@@ -262,7 +262,7 @@ Below is a template for your reference. To learn more about the APIs, you can ch
 }
 ```
 
-# How to Distribute
+## How to Distribute
 
 Distribute the `dynamsoft-barcodereader-{version number}.jar` file with the applications using the Dynamsoft Barcode Reader SDK. The .JAR file can be found under `DBR-Java-{version number}\DynamsoftBarcodeReader\lib`.
 
@@ -284,9 +284,9 @@ You can also distribute with Maven, like this:
    </repositories>
 ```
 
-# How to Upgrade
+## How to Upgrade
 
-## From version 7.x
+### From version 7.x
 
 You need to replace the old assembly files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
 
@@ -302,7 +302,7 @@ After you upgraded your license to version 8.x:
 
 - If you were using `DBR_InitLicenseFromLicenseContent` to use the SDK offline, please follow [these steps](../../license-activation/set-full-license-7.md#offline) to re-register the device.
 
-## From version 6.x
+### From version 6.x
 
 We made some structural updates in the new version. To upgrade from 6.x to 8.x, we recommend you to review our sample code and re-write the barcode scanning module.
 

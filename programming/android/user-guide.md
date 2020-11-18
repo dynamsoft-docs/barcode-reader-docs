@@ -308,9 +308,9 @@ Below is a template for your reference. To learn more about the APIs, you can ch
 }
 ```
 
-# How to Upgrade
+## How to Upgrade
 
-## From version 7.x
+### From version 7.x
 
 You need to replace the old `DynamsoftBarcodeReaderAndroid.aar` file with the one in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
 
@@ -322,6 +322,6 @@ After you upgraded your license to version 8.x:
 
 - If you were using `initLicenseFromServer` to connect to Dynamsoft server for license verification, then no need to change the license key. But please make sure the device has Internet connection.
 
-## From version 6.x
+### From version 6.x
 
 We made some structural updates in the new version. To upgrade from 6.x to 8.x, we recommend you to review our sample code and re-write the barcode scanning module.

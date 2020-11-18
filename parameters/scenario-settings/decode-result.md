@@ -155,14 +155,14 @@ delete reader;
         "BarcodeFormatIds": [
             "BF_CODE_39"
         ], 
-	    "BarcodeTextRegExPattern": "[0-9]\\d{4}", //Limit the result to be a 4-digit string
+        "BarcodeTextRegExPattern": "[0-9]\\d{4}", //Limit the result to be a 4-digit string
         "BarcodeHeightRangeArray": [
             {
                 "MaxValue": 500, 
                 "MinValue": 0
             }
         ], // Limit the resulting barcode height to 0~500 px
-        "BarcideWidthRangeArray": [
+        "BarcodeWidthRangeArray": [
             {
                 "MaxValue": 200, 
                 "MinValue": 100
