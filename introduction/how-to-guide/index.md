@@ -13,7 +13,6 @@ breadcrumbText: How-to Guide
 This section covers the following topics:
 
 - [Check if the barcode image is clear enough for recognition](check-if-the-barcode-image-is-clear-enough-for-recognition.md)
-- [Common troubleshooting guidelines](common-troubleshooting-guidelines.md)
 - [Decode DPM data matrix](decode-dpm-data-matrix.md)
 - [Enable scale up for barcode recognition](enable-scale-up-for-barcode-recognition.md)
 - [Filter out unwanted barcode results](filter-out-unwanted-barcode-results.md)
