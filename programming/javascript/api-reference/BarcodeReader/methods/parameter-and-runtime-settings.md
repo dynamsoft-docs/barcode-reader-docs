@@ -94,7 +94,7 @@ Promise<[RuntimeSettings](../../global-interfaces.md#runtimesettings)>
 
 ## resetRuntimeSettings
 
-Reset all runtime settings to default values.
+Reset all runtime settings to `speed` mode settings. 
 
 ```javascript
 resetRuntimeSettings() returns Promise

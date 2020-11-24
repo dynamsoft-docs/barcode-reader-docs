@@ -69,7 +69,7 @@ A few examples of the domain:
 
 ```html
 <!-- Please visit https://www.dynamsoft.com/customer/license/trialLicense to get a trial license. -->
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@7.6.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.0.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
 ```
 
 In the above sample code, simply replace `PRODUCT-KEYS` with your activated key.
