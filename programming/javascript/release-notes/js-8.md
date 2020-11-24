@@ -12,13 +12,26 @@ noTitleIndex: true
 
 ## 8.0 (11/25/2020)
 
-### NEW
+### New
 
-- Added GPU acceleration on browsers supporting WebGL and OffscreenCanvas. GPU acceleration is enabled by default for browsers that support it.
-- Added an experimental 'single' option for 'BarcodeScanner' 'updateRuntimeSettings' to optimize decoding speeds when reading only one barcode at a time.
+- Added support for decoding barcodes from an existing video stream.
+- Introduced new namespace `Dynamsoft.DBR`.
+- Implemented the mechanism of loading libraries dynamically at runtime when Parameter Mode Enumerations are used (except *_AUTO and *_SKIP). Use LibraryFileName and LibraryParameters to configure.
+- Implemented a new licensing tracking mechanism, License 2.0, which makes it easier for users to track license usage.
+- Added a new format control parameter, BarcodeZoneMinDistanceToImageBorders, to set the minimum distance (in pixels) between the barcode zone and image borders.
+- Added a new format control parameter, MinRatioOfBarcodeZoneWidthToHeight, to set the minimum ratio (width/height) of the barcode zone.
+- Added a new format control parameter, BarcodeZoneBarCountRangeArray, to set the barcode zone’s range of bar count for barcode search.
+- Added a new argument, SpatialIndexBlockSize, for RPM_GENERAL_RGB_CONTRAST, RPM_GENERAL_GRAY_CONTRAST and RPM_GENERAL_HSV_CONTRAST.
+- Added a new parameter, DeblurModes, so users can use different deblur algorithms for different scenarios. DeblurModes has the following enum types: DirectBinarization, ThresholdBinarization, GrayEqulization, Smoothing, and Morphing.
 
-### IMPROVED
+### Improved
 
-- Upgraded to the latest algorithm.
+- Changed the default runtime preset setting of `BarcodeScanner` from `speed` to `single`.
+- Improved the localization speed for the `ScanDirectly` mode.
+- Improved the localization accuracy for DataMatrix codes with a narrow quiet zone.
 
-### FIXED
+### Fixed
+
+
+### Feature Deprecated
+- `DeblurLevel` is now deprecated. It still works in this version but could be removed in the near future. We recommend using `DeblurModes` instead.
