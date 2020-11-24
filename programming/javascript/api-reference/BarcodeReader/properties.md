@@ -16,6 +16,8 @@ needGenerateH3Content: false
 | `bDestroyed` | Indicates whether a `BarcodeReader` object has been destroyed. | 
 | `bSaveOriCanvas` | If set to `true`, save the original image to canvas. | 
 | `oriCanvas` | The original canvas element. | 
+| [`licenseServer`](#licenseServer) | The license server(s) used for authentication and tracking. |
+| [`sessionPwd`](#sessionPwd) | The session password used for authentication associated with the handshake code. |
 
 ---
 
@@ -26,7 +28,7 @@ Set usage of compact or full featured SDK. If set to `true`, use the fully-featu
 *Note: this API may change in the future.*
 
 ```javascript
-Dynamsoft.BarcodeReader._bUseFullFeature = Boolean
+Dynamsoft.DBR.BarcodeReader._bUseFullFeature = Boolean
 ```
 
 ### Default Value
@@ -36,8 +38,8 @@ Dynamsoft.BarcodeReader._bUseFullFeature = Boolean
 ### Sample
 
 ```javascript
-Dynamsoft.BarcodeReader._bUseFullFeature = true;
-await Dynamsoft.BarcodeReader.loadWasm();
+Dynamsoft.DBR.BarcodeReader._bUseFullFeature = true;
+await Dynamsoft.DBR.BarcodeReader.loadWasm();
 ```
 
 ### :+1: Tips and Tricks
@@ -46,3 +48,23 @@ await Dynamsoft.BarcodeReader.loadWasm();
 * This property **must** be set before [`loadWasm`](methods/initialize-and-destroy.md#loadwasm).
 * We recommend using the compact version in video decoding for its small size and quick initialization.
 * This property cannot be set in NodeJS and will always use the fully featured version. 
+
+## licenseServer
+
+Set or get the license server used to authenticate the license (handshake code) and track barcode reading usage. By default, Dynamsoft will host the license tracking server but a self hosting option is available. Learn more about [License Tracking Server 2.0](https://www.dynamsoft.com/license-tracking/docs/about/index.html?ver=latest). Set this API before calling [createInstance](methods/initialize-and-destroy.md#createInstance).
+
+### Sample
+
+```javascript
+Dynamsoft.DBR.BarcodeReader.licenseServer = ["https://your.mainServer.com", "https://your.backupServer.com"];
+```
+
+## sessionPwd
+
+Set or get the session password used for authentication of the license (handshake code) associated with the application. [Learn more](https://www.dynamsoft.com/license-tracking/docs/about/terms.html?ver=latest#session-password) about session password in License Tracking Server 2.0. Set this API before calling [createInstance](methods/initialize-and-destroy.md#createInstance).
+
+### Sample
+
+```javascript
+Dynamsoft.DBR.BarcodeReader.sessionPwd = "MyPassw0rd";
+```

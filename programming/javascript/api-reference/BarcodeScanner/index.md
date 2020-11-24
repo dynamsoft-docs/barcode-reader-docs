@@ -109,6 +109,8 @@ The following properties are inherited from the `BarcodeReader` class.
 * `bDestroyed`
 * `bSaveOriCanvas`
 * `oriCanvas`
+* [`licenseServer`](../BarcodeReader/properties.md#licenseServer) 
+* [`sessionPwd`](../BarcodeReader/properties.md#sessionPwd) 
 
 ## `BarcodeScanner` Accessors
 

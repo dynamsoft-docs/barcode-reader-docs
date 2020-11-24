@@ -58,7 +58,7 @@ The following table shows available features between the two editions:
 <sup>2</sup> For the scenario where a user only needs to scan a barcode once, the Compact Edition is recommended as it downloads and compiles faster. For scenarios where a user needs to continuously scan many barcodes or where specific uncommon barcodes or advanced features are required, use the Full Edition by simply setting the following before you call `loadWasm` or `CreateInstance`.
 
 ``` javascript
-Dynamsoft.BarcodeReader._bUseFullFeature = true;
+Dynamsoft.DBR.BarcodeReader._bUseFullFeature = true;
 ```
 
 ## System Requirements

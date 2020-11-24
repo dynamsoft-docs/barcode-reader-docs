@@ -31,6 +31,8 @@ needGenerateH3Content: false
 | `bDestroyed` | Indicates whether a `BarcodeScanner` object has been destroyed. | 
 | `bSaveOriCanvas` | If set to `true`, save the original image to canvas. | 
 | `oriCanvas` | The original canvas element. | 
+| [`licenseServer`](../BarcodeReader/properties.md#licenseServer) | The license server(s) used for authentication and tracking. |
+| [`sessionPwd`](../BarcodeReader/properties.md#sessionPwd) | The session password used for authentication associated with the handshake code. |
 
 ---
 

@@ -35,9 +35,9 @@ engineResourcePath = value
 #### Sample
 
 ```javascript
-Dynamsoft.BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@@8.0.0/dist/";
+Dynamsoft.DBR.BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@@8.0.0/dist/";
 
-await Dynamsoft.BarcodeReader.loadWasm();
+await Dynamsoft.DBR.BarcodeReader.loadWasm();
 ```
 
 ## productKeys
@@ -103,9 +103,9 @@ licenseServer(value) returns void
 #### Sample
 
 ```javascript
-Dynamsoft.BarcodeReader.licenseServer = "";
+Dynamsoft.DBR.BarcodeReader.licenseServer = "";
 
-await Dynamsoft.BarcodeReader.loadWasm();
+await Dynamsoft.DBR.BarcodeReader.loadWasm();
 ```
 
 ## sessionPwd
@@ -139,8 +139,8 @@ sessionPwd(value) returns void
 #### Sample
 
 ```javascript
-Dynamsoft.BarcodeReader.sessionPwd = "";
+Dynamsoft.DBR.BarcodeReader.sessionPwd = "";
 
-await Dynamsoft.BarcodeReader.loadWasm();
+await Dynamsoft.DBR.BarcodeReader.loadWasm();
 ```
 

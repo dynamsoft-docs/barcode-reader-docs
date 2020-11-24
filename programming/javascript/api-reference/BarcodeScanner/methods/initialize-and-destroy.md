@@ -40,7 +40,7 @@ createInstance(config) returns Promise
 ### Sample
 
 ```javascript
-let scanner = await Dynamsoft.BarcodeScanner.createInstance();
+let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 ```
 
 [Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
@@ -94,7 +94,7 @@ setUIElement(elementOrUrl) returns Promise
 ```javascript
 <video class="dbrScanner-video" playsinline="true"></video>
 <script>
-    let scanner = await Dynamsoft.BarcodeScanner.createInstance();
+    let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
     scanner.setUIElement(document.getElementsByClassName("dbrScanner-video")[0]);
     await scanner.show();
 </script>
