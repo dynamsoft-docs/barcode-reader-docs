@@ -26,3 +26,8 @@ The JavaScript documentation mainly consists of two parts. One is the [User Guid
 - [version 7.6 and below](release-notes/js-7.md)
 
 ## Samples and Demos
+
+- [Online demo](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+- [Vue example](https://github.com/Dynamsoft/javascript-barcode/tree/master/example/web/vue)    
+- [React example](https://github.com/Dynamsoft/javascript-barcode/tree/master/example/web/react)     
+- [Angular example](https://github.com/Dynamsoft/javascript-barcode/tree/master/example/web/angular)  

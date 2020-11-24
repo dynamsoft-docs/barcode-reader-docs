@@ -4,7 +4,7 @@ title: Dynamsoft Barcode Reader for JavaScript - User Guide
 description: This is the user guide of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: user guide, javascript, js
 breadcrumbText: User Guide
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 ---
 
 # Dynamsoft Barcode Reader - for JavaScript User Guide
@@ -46,7 +46,7 @@ Create an HTML file with the following content. Deploy this to your web server a
 <html>
 <body>
     <!-- Please visit https://www.dynamsoft.com/customer/license/trialLicense to get a trial license. -->
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@7.6.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.0.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
     <script>
         // initializes and uses the library
         let scanner = null;
@@ -125,9 +125,9 @@ $ npm install dynamsoft-javascript-barcode --save
 cdn
 
 ```
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@7.6.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.0.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
 <!-- or -->
-<script src="https://unpkg.com/dynamsoft-javascript-barcode@7.6.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
+<script src="https://unpkg.com/dynamsoft-javascript-barcode@8.0.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
 ```
 
 Also see [Dynamsoft JavaScript Barcode SDK for Node](https://github.com/dynamsoft-dbr/node-javascript-barcode).  

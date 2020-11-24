@@ -26,3 +26,6 @@ The .Net documentation mainly consists of two parts. One is the [User Guide](#ge
 - [version 7.6 and below](release-notes/dotnet-7.md)
 
 ## Samples and Demos
+
+- [Read barcode from scanner, webcam and files](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx?SampleID=80#gallery)
+- [Panorama Server](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx?SampleID=242)

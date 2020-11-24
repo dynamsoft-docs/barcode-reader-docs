@@ -27,3 +27,6 @@ The Java documentation mainly consists of two parts. One is the [User Guide](#ge
 - [version 7.6 and below](release-notes/java-7.md)
 
 ## Samples and Demos
+
+- [Read Barcode in JAVA](https://www.dynamsoft.com/barcode-reader/sample-downloads/?demoSampleId=83&type=2&productId=1000003&link=https%3a%2f%2fdownload2.dynamsoft.com%2fSamples%2fDBR%2fDBR_Java_BarcodeReaderDemo.zip)
+- [Read Barcodes from an Image](https://www.dynamsoft.com/barcode-reader/sample-downloads/?demoSampleId=209&type=2&productId=1000003&link=http%3a%2f%2fdownload2.dynamsoft.com%5cSamples%5cDBR%5cdbr_java_web_helloworld.zip)

@@ -75,7 +75,7 @@ getUIElement() returns HTMLElement
 
 ## setUIElement
 
-Set HTML element containing the `BarcodeScanner` object.
+Set HTML element containing the `BarcodeScanner` object. In v8.0, setUIElement can be used to set an existing video stream element. The video element of the existing video stream must specify `dbrScanner-existingVideo` className. 
 
 ```javascript
 setUIElement(elementOrUrl) returns Promise

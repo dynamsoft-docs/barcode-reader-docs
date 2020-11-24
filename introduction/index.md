@@ -7,20 +7,19 @@ needAutoGenerateSidebar: false
 breadcrumbText: Introduction
 ---
 
-# Dynamsoft Barcode Reader - Introduciton
+# Dynamsoft Barcode Reader - Introduction
 
 ## Getting Started
 
 - [SDK Overview]({{ site.introduction }}overview.html)
 - [Algorithm Principles]({{ site.introduction }}architecture.html)
 
-## How-to Guides & FAQs   
+## How-to Guides  
 
 - [How-to Guides]({{ site.how_to }})
-- [FAQs]({{ site.faqs }})
+- [Performance Tool]({{ site.introduction }}comparison-tools/batch-test.html)
 
 
-## About   
 
-- [License & Usage Tracking]({{ site.licensing }})
+
 

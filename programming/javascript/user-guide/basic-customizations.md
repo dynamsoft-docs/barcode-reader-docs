@@ -120,7 +120,7 @@ The following is an example of the 3rd option above.
         <video class="dbrScanner-video" playsinline="true"></video>
     </div>
     <!-- Please visit https://www.dynamsoft.com/customer/license/trialLicense to get a trial license. -->
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@7.6.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.0.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
     <script>
         let scanner = null;
         (async()=>{
@@ -181,3 +181,31 @@ The following code shows how to display a custom set of resolution options.
 
 [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/tnfjks4q/)
 
+## Decode Barcodes from Existing Video Stream
+
+In v8.0, we introduced a new feature to decode barcodes from an existing video stream. To set the existing video stream, we'll use [`setUIElement`](../api-reference/BarcodeScanner/methods/initialize-and-destroy.md#setuielement).
+
+```html
+<!DOCTYPE html>
+<html>
+<body>
+    <div id="div-video-container">
+        <video class="dbrScanner-existingVideo" src="myvideo.mp4"></video>
+    </div>
+    <!-- Please visit https://www.dynamsoft.com/customer/license/trialLicense to get a trial license. -->
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.0.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
+    <script>
+        let scanner = null;
+        (async()=>{
+            scanner = await Dynamsoft.BarcodeScanner.createInstance();
+            await scanner.setUIElement(document.getElementById('div-video-container'));
+            scanner.onFrameRead = results => {console.log(results);};
+            scanner.onUnduplicatedRead = (txt, result) => {alert(txt);};
+            await scanner.show();
+        })();
+    </script>
+</body>
+</html>
+```
+
+Note: the video element *must* contain the class `dbrScanner-existingVideo`.
