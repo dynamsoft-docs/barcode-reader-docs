@@ -349,6 +349,9 @@ Sets the range of bar count of the barcode zone for barcodes search.
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
 | FormatSpecification | BarcodeZoneBarCountRangeArray | *JSON Object Array* | `MinValue`: [1, 0x7fffffff]<br>`MaxValue`: [1, 0x7fffffff]<br>**MaxValue >= MinValue** | `null` |
 
+**Remarks**   
+- Default value for MinValue: 1
+- Default value for MaxValue: 128
 
 **Json Parameter Example**   
 ```
@@ -377,10 +380,6 @@ Sets the minimum distance (in pixels) between the barcode zone and image borders
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
 | FormatSpecification | BarcodeZoneMinDistanceToImageBorders | *int* | [0, 0x7fffffff] | 0 |
-
-**Remarks**   
-- Default value for MinValue: 1
-- Default value for MaxValue: 128
 
 **Json Parameter Example**   
 ```
