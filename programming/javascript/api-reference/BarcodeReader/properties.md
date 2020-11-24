@@ -42,7 +42,7 @@ await Dynamsoft.BarcodeReader.loadWasm();
 
 ### :+1: Tips and Tricks
 
-* Check out [what features are included](../../user-guide.md#compact-and-full-editions) in compact and full version.
+* Check out [what features are included](../../user-guide/features-requirements.md#compact-and-full-editions) in compact and full version.
 * This property **must** be set before [`loadWasm`](methods/initialize-and-destroy.md#loadwasm).
 * We recommend using the compact version in video decoding for its small size and quick initialization.
 * This property cannot be set in NodeJS and will always use the fully featured version. 
