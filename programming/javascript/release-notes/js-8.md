@@ -16,7 +16,6 @@ noTitleIndex: true
 
 - Added support for decoding barcodes from an existing video stream.
 - Introduced new namespace `Dynamsoft.DBR`.
-- Implemented the mechanism of loading libraries dynamically at runtime when Parameter Mode Enumerations are used (except *_AUTO and *_SKIP). Use LibraryFileName and LibraryParameters to configure.
 - Implemented a new licensing tracking mechanism, License 2.0, which makes it easier for users to track license usage.
 - Added a new format control parameter, BarcodeZoneMinDistanceToImageBorders, to set the minimum distance (in pixels) between the barcode zone and image borders.
 - Added a new format control parameter, MinRatioOfBarcodeZoneWidthToHeight, to set the minimum ratio (width/height) of the barcode zone.
