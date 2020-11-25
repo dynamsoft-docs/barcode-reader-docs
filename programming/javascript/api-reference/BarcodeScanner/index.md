@@ -110,7 +110,7 @@ The following properties are inherited from the `BarcodeReader` class.
 * `bSaveOriCanvas`
 * `oriCanvas`
 * [`licenseServer`](../BarcodeReader/properties.md#licenseServer)
-* [`productKeys`](../BarcodeReader/properties.md#productKeys)
+* [`handshakeCode`](../BarcodeReader/properties.md#handshakeCode)
 * [`sessionPassword`](../BarcodeReader/properties.md#sessionPassword)
 
 ## `BarcodeScanner` Accessors
