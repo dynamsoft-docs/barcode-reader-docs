@@ -17,6 +17,7 @@ needGenerateH3Content: false
 | `bSaveOriCanvas` | If set to `true`, save the original image to canvas. | 
 | `oriCanvas` | The original canvas element. | 
 | [`licenseServer`](#licenseServer) | The license server(s) used for authentication and tracking. |
+| [`handshakeCode`](#handshakeCode) | The handshake code to interact with the license server(s). |
 | [`sessionPassword`](#sessionPassword) | The session password used for authentication associated with the handshake code. |
 
 ---
