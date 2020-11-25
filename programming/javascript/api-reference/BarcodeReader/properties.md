@@ -17,7 +17,8 @@ needGenerateH3Content: false
 | `bSaveOriCanvas` | If set to `true`, save the original image to canvas. | 
 | `oriCanvas` | The original canvas element. | 
 | [`licenseServer`](#licenseServer) | The license server(s) used for authentication and tracking. |
-| [`sessionPwd`](#sessionPwd) | The session password used for authentication associated with the handshake code. |
+| [`handshakeCode`](#handshakeCode) | The handshake code to interact with the license server(s). |
+| [`sessionPassword`](#sessionPassword) | The session password used for authentication associated with the handshake code. |
 
 ---
 
@@ -51,7 +52,7 @@ await Dynamsoft.DBR.BarcodeReader.loadWasm();
 
 ## licenseServer
 
-Set or get the license server used to authenticate the license (handshake code) and track barcode reading usage. By default, Dynamsoft will host the license tracking server but a self hosting option is available. Learn more about [License Tracking Server 2.0](https://www.dynamsoft.com/license-tracking/docs/about/index.html?ver=latest). Set this API before calling [createInstance](methods/initialize-and-destroy.md#createInstance).
+Set or get the license server used to authenticate the license (handshakeCode) and track barcode reading usage. By default, Dynamsoft will host the license tracking server but a self hosting option is available. Learn more about [License Tracking Server 2.0](https://www.dynamsoft.com/license-tracking/docs/about/index.html?ver=latest). Set this API before calling [createInstance](methods/initialize-and-destroy.md#createInstance).
 
 ### Sample
 
@@ -59,7 +60,19 @@ Set or get the license server used to authenticate the license (handshake code) 
 Dynamsoft.DBR.BarcodeReader.licenseServer = ["https://your.mainServer.com", "https://your.backupServer.com"];
 ```
 
-## sessionPwd
+## handshakeCode
+
+Set or get the handshakeCode. Learn more about [What is handshakeCode](https://www.dynamsoft.com/license-tracking/docs/about/terms.html?ver=latest#handshake-code). Set this API before calling [createInstance](methods/initialize-and-destroy.md#createInstance).
+
+> The API [productKeys](accessors.md#productKeys) can be used to set the handshakeCode as well but we recommend using this new API instead.
+
+### Sample
+
+```javascript
+Dynamsoft.DBR.BarcodeReader.handshakeCode = "100017601-100043744";
+```
+
+## sessionPassword
 
 Set or get the session password used for authentication of the license (handshake code) associated with the application. [Learn more](https://www.dynamsoft.com/license-tracking/docs/about/terms.html?ver=latest#session-password) about session password in License Tracking Server 2.0. Set this API before calling [createInstance](methods/initialize-and-destroy.md#createInstance).
 

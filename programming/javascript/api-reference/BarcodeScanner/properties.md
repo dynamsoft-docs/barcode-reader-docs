@@ -32,7 +32,8 @@ needGenerateH3Content: false
 | `bSaveOriCanvas` | If set to `true`, save the original image to canvas. | 
 | `oriCanvas` | The original canvas element. | 
 | [`licenseServer`](../BarcodeReader/properties.md#licenseServer) | The license server(s) used for authentication and tracking. |
-| [`sessionPwd`](../BarcodeReader/properties.md#sessionPwd) | The session password used for authentication associated with the handshake code. |
+| [`handshakeCode`](../BarcodeReader/properties.md#handshakeCode) | The handshake code to interact with license server(s). |
+| [`sessionPassword`](../BarcodeReader/properties.md#sessionPassword) | The session password used for authentication associated with the handshake code. |
 
 ---
 

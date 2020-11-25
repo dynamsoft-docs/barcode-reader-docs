@@ -39,6 +39,12 @@ Use the new namespace `Dynamsoft.DBR` in place of just `Dynamsoft`. The followin
    Dynamsoft.BarcodeReader -> Dynamsoft.DBR.BarcodeReader
 ```
 
+The easiest way to quickly make the namespace change is to use the following line
+
+```js
+   Dynamsoft = Dynamsoft.DBR
+```
+
 - Deprecating `deblurLevel`
 
 `deblurLevel` has been deprecated in v8.0 and replaced with `deblurModes`. Athough `deblurLevel` will continue to work in v8.0, we recommend updating your code to use `deblurModes` as soon as possible to avoid any breaking changes in the future.

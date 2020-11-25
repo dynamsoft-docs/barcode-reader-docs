@@ -16,7 +16,8 @@ needGenerateH3Content: false
 | [`productKeys`](#productkeys) | Gets or sets the Dynamsoft Barcode Reader SDK product keys. | 
 | [`version`](#version) | Gets current version. | 
 | [`licenseServer`](#licenseserver) | Gets or sets the URL of the license tracking server. | 
-| [`sessionPwd`](#sessionpwd) | Gets or sets the session password of the handshake code set in license tracking server. | 
+| [`handshakeCode`](#handshakecode) | Gets or sets the handshakeCode. | 
+| [`sessionPassword`](#sessionpassword) | Gets or sets the session password of the handshake code set in license tracking server. | 
 
 ---
 
@@ -35,7 +36,7 @@ engineResourcePath = value
 #### Sample
 
 ```javascript
-Dynamsoft.DBR.BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@@8.0.0/dist/";
+Dynamsoft.DBR.BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.0.0/dist/";
 
 await Dynamsoft.DBR.BarcodeReader.loadWasm();
 ```
@@ -47,17 +48,39 @@ Get or set the Barcode Reader SDK product key. Please visit our [user portal](ht
 ### get
 
 ```javascript
-productKeys = keys
+productKeys() returns string
 ```
 
-#### Property Value
+#### Return Value
 
-`keys` *string*  
+`string`
+
+### set
+
+```javascript
+productKeys(value) returns void
+```
+
+#### Parameters
+
+`value` *string*  
+
+#### Return Value
+
+`void`
 
 #### Sample
 
+In the <script> tag
+  
 ```javascript
 <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@@8.0.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
+```
+
+In JavaScript
+
+```javascript
+Dynamsoft.DBR.BarcodeReader.productKeys = "100017601-100043744";
 ```
 
 ## version
@@ -108,14 +131,14 @@ Dynamsoft.DBR.BarcodeReader.licenseServer = "";
 await Dynamsoft.DBR.BarcodeReader.loadWasm();
 ```
 
-## sessionPwd
+## handshakeCode
 
-Gets or sets the session password of the handshake code set in license tracking server..
+Get or set the handshakeCode.
 
 ### get
 
 ```javascript
-sessionPwd() returns string
+handshakeCode() returns string
 ```
 
 #### Return Value
@@ -125,7 +148,7 @@ sessionPwd() returns string
 ### set
 
 ```javascript
-sessionPwd(value) returns void
+handshakeCode(value) returns void
 ```
 
 #### Parameters
@@ -139,8 +162,41 @@ sessionPwd(value) returns void
 #### Sample
 
 ```javascript
-Dynamsoft.DBR.BarcodeReader.sessionPwd = "";
+Dynamsoft.DBR.BarcodeReader.handshakeCode = "100017601-100043744";
+```
 
+## sessionPassword
+
+Gets or sets the session password of the handshake code set in license tracking server.
+
+### get
+
+```javascript
+sessionPassword() returns string
+```
+
+#### Return Value
+
+`string`
+
+### set
+
+```javascript
+sessionPassword(value) returns void
+```
+
+#### Parameters
+
+`value` *string*  
+
+#### Return Value
+
+`void`
+
+#### Sample
+
+```javascript
+Dynamsoft.DBR.BarcodeReader.sessionPassword = "";
 await Dynamsoft.DBR.BarcodeReader.loadWasm();
 ```
 
