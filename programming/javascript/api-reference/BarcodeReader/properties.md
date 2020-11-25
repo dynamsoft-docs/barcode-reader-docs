@@ -63,6 +63,8 @@ Dynamsoft.DBR.BarcodeReader.licenseServer = ["https://your.mainServer.com", "htt
 
 Set or get the handshakeCode. Learn more about [What is handshakeCode](https://www.dynamsoft.com/license-tracking/docs/about/terms.html?ver=latest#handshake-code). Set this API before calling [createInstance](methods/initialize-and-destroy.md#createInstance).
 
+> The API [productKeys](accessors.md#productKeys) can be used to set the handshakeCode as well but we recommend using this new API instead.
+
 ### Sample
 
 ```javascript
