@@ -13,7 +13,7 @@ needAutoGenerateSidebar: true
 Include the following in your code to print internal logs in the console.
 
 ```javascript
-Dynamsoft.BarcodeReader._onLog = console.log;
+Dynamsoft.DBR.BarcodeReader._onLog = console.log;
 ```
 
 ## Read a specific area/region
@@ -45,7 +45,7 @@ Try the following code to show found barcodes in `input` elements on the page.
 let iptIndex = 0;
 let scanner = null;
 (async()=>{
-    scanner = await Dynamsoft.BarcodeScanner.createInstance();
+    scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
     await scanner.setUIElement(document.getElementById('div-video-container'));
     scanner.onFrameRead = results => {console.log(results);};
     scanner.onUnduplicatedRead = (txt)=>{

@@ -51,7 +51,7 @@ Create an HTML file with the following content. Deploy this to your web server a
         // initializes and uses the library
         let scanner = null;
         (async()=>{
-            scanner = await Dynamsoft.BarcodeScanner.createInstance();
+            scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
             scanner.onFrameRead = results => {console.log(results);};
             scanner.onUnduplicatedRead = (txt, result) => {alert(txt);};
             await scanner.show();

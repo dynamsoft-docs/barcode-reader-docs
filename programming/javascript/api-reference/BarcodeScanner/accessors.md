@@ -57,7 +57,7 @@ singleFrameMode = bool;
 ### Sample
 
 ```javascript
-let scanner = await Dynamsoft.BarcodeScanner.createInstance();
+let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 scanner.singleFrameMode = true; // use singleFrameMode anyway
 scanner.show();
 ```

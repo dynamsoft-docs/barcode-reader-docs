@@ -30,6 +30,21 @@ Next, replace the value of data-productKeys to the generated handshake code in s
 
 3. API changes
 
+- :exclamation: *Namespace change*
+
+Use the new namespace `Dynamsoft.DBR` in place of just `Dynamsoft`. The following shows the equivalent changes for `BarcodeScanner` and `BarcodeReader`:
+
+```js
+   Dynamsoft.BarcodeScanner -> Dynamsoft.DBR.BarcodeScanner
+   Dynamsoft.BarcodeReader -> Dynamsoft.DBR.BarcodeReader
+```
+
+The easiest way to quickly make the namespace change is to use the following line
+
+```js
+   Dynamsoft = Dynamsoft.DBR
+```
+
 - Deprecating `deblurLevel`
 
 `deblurLevel` has been deprecated in v8.0 and replaced with `deblurModes`. Athough `deblurLevel` will continue to work in v8.0, we recommend updating your code to use `deblurModes` as soon as possible to avoid any breaking changes in the future.
@@ -40,7 +55,8 @@ Simply remove or comment out the line of code using `deblurLevel` and use deblur
     let settings = await barcodeScanner.getRuntimeSettings();
     //settings.deblurLevel = 9;
     settings.deblurModes = ["DM_DIRECT_BINARIZATION",   
-                            "DM_THRESHOLD_BINARIZATION", "DM_GRAY_EQUALIZATION",
+                            "DM_THRESHOLD_BINARIZATION", 
+                            "DM_GRAY_EQUALIZATION",
                             "DM_SMOOTHING",
                             "DM_MORPHING",
                             "DM_DEEP_ANALYSIS",

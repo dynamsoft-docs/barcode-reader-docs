@@ -23,6 +23,7 @@ The JavaScript documentation mainly consists of two parts. One is the [User Guid
 
 ## Release Notes
 
+- [version 8.0](release-notes/js-8.md)
 - [version 7.6 and below](release-notes/js-7.md)
 
 ## Samples and Demos
