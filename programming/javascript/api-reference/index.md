@@ -8,7 +8,7 @@ breadcrumbText: API Reference
 ---
 
 
-# Dynamsoft Barcode Reader SDK - Javascript API Reference
+# Dynamsoft Barcode Reader SDK - JavaScript API Reference
 
 [BarcodeReader](#barcodereader)  -- Decode barcodes from images
    * [Methods](#barcodereader-methods)  
