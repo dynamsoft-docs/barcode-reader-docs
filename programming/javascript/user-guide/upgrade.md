@@ -37,19 +37,7 @@ Use the new namespace `Dynamsoft.DBR` in place of just `Dynamsoft`. The followin
    Dynamsoft.BarcodeReader -> Dynamsoft.DBR.BarcodeReader
 ```
 
-If you are using the library as an ES/CMD module by importing the default export, you don't need to change your code. But if you are importing like this
-
-```js
-   import {Dynamsoft} from "dynamsoft-javascript-barcode";
-```
- 
-you need to change it to 
-
-```js
-import {DBR} from "dynamsoft-javascript-barcode";
-```
-
-If you are using the library by referencing its JavaScript code (either from CDN or from your own server), you can either make a global change from `Dynamsoft` to `Dynamosft.DBR` or use the following line to quickly make the namespace change
+If you are using the library as an ES/CMD module, you don’t need to change your code. Otherwise, you can either make a global change from `Dynamsoft` to `Dynamosft.DBR` or use the following line to quickly make the namespace change
 
 ```js
    Dynamsoft = Dynamsoft.DBR; //This line should be called before you call any other methods/properties of the library.
