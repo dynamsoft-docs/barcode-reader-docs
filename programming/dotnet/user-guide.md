@@ -313,24 +313,20 @@ for .NET Framework 4.0 and above: `Dynamsoft.BarcodeReader.dll`, `DynamsoftCommo
 ### From version 7.x
 
 1. Replace the library
-
- You need to replace the old assembly files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
+   You need to replace the old assembly files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
 
 2. Update existing code
-
- Change the namespace from:
-
- ```csharp
-    using Dynamsoft.Barcode;
- ```
- to:
- ```csharp
-    using Dynamsoft;
-    using Dynamsoft.DBR;
- ```
+   Change the namespace from:
+   ```csharp
+      using Dynamsoft.Barcode;
+   ```
+   to:
+   ```csharp
+      using Dynamsoft;
+      using Dynamsoft.DBR;
+   ```
 
 3. Upgrade the license
-
  Your previous SDK license for version 7.x is not compatible with the version 8.x. Please [contact us](https://www.dynamsoft.com/Company/Contact.aspx) to upgrade your license.
 
  After you upgraded your license to version 8.x:
