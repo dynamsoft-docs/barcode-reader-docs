@@ -22,9 +22,9 @@ If you are using a **CDN**, simply update the version number denoted after **@**
    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.0.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
    ```
 
-If you have deployed the library files on to your own server, you'll need to replace the old files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
+If you have deployed the library files to your server, you'll need to replace the old files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
 
-Next, replace the value of data-productKeys to the generated handshake code in step 1. In the example above, the generated handshake code would replace `PRODUCT-KEYS`. 
+Next, replace the value of data-productKeys with the generated handshake code from the section [Change your license](#change-your-license) above. In the example above, the generated handshake code would replace `PRODUCT-KEYS`. 
 
 ### API changes
 
@@ -37,7 +37,7 @@ Use the new namespace `Dynamsoft.DBR` in place of just `Dynamsoft`. The followin
    Dynamsoft.BarcodeReader -> Dynamsoft.DBR.BarcodeReader
 ```
 
-If you are using the library as an ES/CMD module, you don’t need to change your code. Otherwise, you can either make a global change from `Dynamsoft` to `Dynamosft.DBR` or use the following line to quickly make the namespace change
+If you are using the library as an ES/CMD module, you don’t need to change your code. Otherwise, you can either make a global change from `Dynamsoft` to `Dynamsoft.DBR` or use the following line to quickly make the namespace change.
 
 ```js
    Dynamsoft = Dynamsoft.DBR; //This line should be called before you call any other methods/properties of the library.
@@ -83,7 +83,7 @@ If you have explicitly specified other preset settings like `balance` or `covera
 * `BarcodeFormatString` is removed, use `barcodeFormatString` instead
 * `LocalizationResult` is removed, use `localizationResult` instead
 * `ResultPoints` in `localizationResult` is removed, use `x1,x2,x3,x4,y1,y2,y3,y4` instead
-* `accompanyingTextBytes` is removed, if you wish to use the feature or something similar, please [contact us](https://www.dynamsoft.com/Company/Contact.aspx)
+* `accompanyingTextBytes` is removed, if you wish to use the feature or something similar, please [contact us](https://www.dynamsoft.com/Company/Contact.aspx).
 
 ---
 
