@@ -109,8 +109,6 @@ You can set the license by following the steps below:
    DBRLTSLicenseVerificationListener ltsListener = new DBRLTSLicenseVerificationListener() {
       @Override
       public void LTSLicenseVerificationCallback(boolean success, Exception error) {
-         Assert.assertEquals(false, success);
-         Assert.assertEquals("ChargeWay for licenseItem is not matched.", error.getMessage());
       }
    };
    DMLTSConnectionParameters parameters = new DMLTSConnectionParameters();

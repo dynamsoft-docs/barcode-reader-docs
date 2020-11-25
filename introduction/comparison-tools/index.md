@@ -1,5 +1,5 @@
 ---
-layout: developing
+layout: default-layout
 title: Dynamsoft Barcode Reader Comparison Tools - Main Page
 description: This page shows Dynamsoft Barcode Reader Comparison Tools.
 keywords: comparison tools

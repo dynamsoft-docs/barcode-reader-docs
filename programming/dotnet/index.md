@@ -22,10 +22,11 @@ The .Net documentation mainly consists of two parts. One is the [User Guide](#ge
 - [Struct](api-reference/#structs)
 
 ## Release Notes
-- [version 8.0](release-notes/dotnet-8.md)
-- [version 7.6 and below](release-notes/dotnet-7.md)
+- [Version 8.0](release-notes/dotnet-8.md)
+- [Version 7.6 and below](release-notes/dotnet-7.md)
 
 ## Samples and Demos
 
-- [Read barcode from scanner, webcam and files](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx?SampleID=80#gallery)
-- [Panorama Server](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx?SampleID=242)
+- [Online demo](https://demo.dynamsoft.com/DBR/BarcodeReaderDemo.aspx)
+- [Code Gallery - C#](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx?Tag=c%23)
+- [Code Gallery - VB.NET](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx?Tag=vb.net#gallery)
