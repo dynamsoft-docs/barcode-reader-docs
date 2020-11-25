@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: false
 ---
 
-# Javascript API Reference - `BarcodeReader` Decode Methods 
+# JavaScript API Reference - `BarcodeReader` Decode Methods 
 
 | Method               | Description |
 |----------------------|-------------|

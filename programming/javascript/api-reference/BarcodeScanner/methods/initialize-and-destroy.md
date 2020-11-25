@@ -8,7 +8,7 @@ needGenerateH3Content: false
 ---
 
 
-# Javascript API Reference - `BarcodeScanner` Initialize and Destroy Methods
+# JavaScript API Reference - `BarcodeScanner` Initialize and Destroy Methods
 
 | Method               | Description |
 |----------------------|-------------|

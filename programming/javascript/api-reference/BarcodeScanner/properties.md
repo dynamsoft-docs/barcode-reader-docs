@@ -8,7 +8,7 @@ needGenerateH3Content: false
 ---
 
 
-# Javascript API Reference - `BarcodeScanner` Properties
+# JavaScript API Reference - `BarcodeScanner` Properties
 
 | Property             | Description |
 |----------------------|-------------|

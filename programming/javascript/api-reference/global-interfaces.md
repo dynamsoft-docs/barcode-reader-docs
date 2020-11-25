@@ -8,7 +8,7 @@ needGenerateH3Content: false
 ---
 
 
-# Javascript API Reference - Global Interfaces
+# JavaScript API Reference - Global Interfaces
 
 | Interface            | Description |
 |----------------------|-------------|
