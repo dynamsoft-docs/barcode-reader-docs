@@ -80,7 +80,7 @@ As you can see in the code, there are three types of configurations:
 
 - `get/updateVideoSettings`: Configures the data source, i.e., the video stream. These settings include which camera to use, the resolution, etc. Learn more [here](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia#Syntax).
 
-- `get/updateRuntimeSettings`: Configures the decode engine. Find a full list of these settings and their corresponding descriptions [here](api-reference/global-interfaces.md#runtimesettings). Try in [JSFiddle](https://jsfiddle.net/DynamsoftTeam/f24h8c1m/).
+- `get/updateRuntimeSettings`: Configures the decode engine. Find a full list of these settings and their corresponding descriptions [here](../api-reference/global-interfaces.md#runtimesettings). Try in [JSFiddle](https://jsfiddle.net/DynamsoftTeam/f24h8c1m/).
 
     e.g.,
 

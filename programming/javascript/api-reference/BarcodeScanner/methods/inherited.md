@@ -7,7 +7,7 @@ needAutoGenerateSidebar: false
 ---
 
 
-# Javascript API Reference - Inherited Methods from `BarcodeReader`
+# JavaScript API Reference - Inherited Methods from `BarcodeReader`
 
 ## Inherited Methods
 

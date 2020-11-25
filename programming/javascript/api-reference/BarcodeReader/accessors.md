@@ -8,7 +8,7 @@ needGenerateH3Content: false
 ---
 
 
-# Javascript API Reference - `BarcodeReader` Accessors
+# JavaScript API Reference - `BarcodeReader` Accessors
 
 | Accessors            | Description |
 |----------------------|-------------|
@@ -43,7 +43,7 @@ await Dynamsoft.DBR.BarcodeReader.loadWasm();
 
 ## productKeys
 
-Get or set the Barcode Reader SDK product key. Please visit our [user portal](https://www.dynamsoft.com/CustomerPortal/Portal/TrialLicense.aspx) to obtain a trial license.
+Get or set the Barcode Reader SDK product key. From version 8.0, the product key can also be a handshakeCode. Please visit our [user portal](https://www.dynamsoft.com/CustomerPortal/Portal/TrialLicense.aspx) to obtain a trial license.
 
 ### get
 
@@ -80,7 +80,7 @@ In the <script> tag
 In JavaScript
 
 ```javascript
-Dynamsoft.DBR.BarcodeReader.productKeys = "100017601-100043744";
+Dynamsoft.DBR.BarcodeReader.productKeys = "1000**601-1000***44"; // Set the handshakeCode
 ```
 
 ## version
@@ -162,7 +162,7 @@ handshakeCode(value) returns void
 #### Sample
 
 ```javascript
-Dynamsoft.DBR.BarcodeReader.handshakeCode = "100017601-100043744";
+Dynamsoft.DBR.BarcodeReader.handshakeCode = "1000**601-1000***44";
 ```
 
 ## sessionPassword

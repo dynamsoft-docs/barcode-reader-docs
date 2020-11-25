@@ -8,7 +8,7 @@ needGenerateH3Content: false
 ---
 
 
-# Javascript API Reference - `BarcodeReader` Initialize and Destroy Methods
+# JavaScript API Reference - `BarcodeReader` Initialize and Destroy Methods
 
 | Method               | Description |
 |----------------------|-------------|

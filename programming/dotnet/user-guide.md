@@ -312,24 +312,23 @@ for .NET Framework 4.0 and above: `Dynamsoft.BarcodeReader.dll`, `DynamsoftCommo
 
 ### From version 7.x
 
-1. Replace the library
+#### Replace the library
 
- You need to replace the old assembly files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
+   You need to replace the old assembly files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
 
-2. Update existing code
+#### Update existing code
 
- Change the namespace from:
+   Change the namespace from:
+   ```csharp
+      using Dynamsoft.Barcode;
+   ```
+   to:
+   ```csharp
+      using Dynamsoft;
+      using Dynamsoft.DBR;
+   ```
 
- ```csharp
-    using Dynamsoft.Barcode;
- ```
- to:
- ```csharp
-    using Dynamsoft;
-    using Dynamsoft.DBR;
- ```
-
-3. Upgrade the license
+####  Upgrade the license
 
  Your previous SDK license for version 7.x is not compatible with the version 8.x. Please [contact us](https://www.dynamsoft.com/Company/Contact.aspx) to upgrade your license.
 
@@ -340,7 +339,7 @@ for .NET Framework 4.0 and above: `Dynamsoft.BarcodeReader.dll`, `DynamsoftCommo
  - If you were using `InitLicenseFromServer` to connect to Dynamsoft server for license verification, then no need to change the license key. But please make sure the device has Internet connection.
 
  - If you were using `InitLicenseFromServer` + `DBR_InitLicenseFromLicenseContent` to connect to Dynamsoft server once and use the SDK offline, please follow [these steps](../../license-activation/set-full-license-7.md#connect-once) to re-register the device.
-
+ 
  - If you were using `DBR_InitLicenseFromLicenseContent` to use the SDK offline, please follow [these steps](../../license-activation/set-full-license-7.md#offline) to re-register the device.
 
 ### From version 6.x

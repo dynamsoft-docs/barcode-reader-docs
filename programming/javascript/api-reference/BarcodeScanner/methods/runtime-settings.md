@@ -8,7 +8,7 @@ needGenerateH3Content: false
 ---
 
 
-# Javascript API Reference - `BarcodeScanner` Runtime Settings Methods
+# JavaScript API Reference - `BarcodeScanner` Runtime Settings Methods
 
 | Method               | Description |
 |----------------------|-------------|

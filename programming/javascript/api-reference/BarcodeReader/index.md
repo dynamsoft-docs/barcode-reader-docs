@@ -8,7 +8,7 @@ breadcrumbText: BarcodeReader
 ---
 
 
-# Dynamsoft Barcode Reader SDK - Javascript BarcodeReader Class
+# Dynamsoft Barcode Reader SDK - JavaScript BarcodeReader Class
 
 The `BarcodeReader` class is used for **image** decoding.
 
