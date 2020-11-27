@@ -42,7 +42,7 @@ needAutoGenerateSidebar: false
 
 | Value Type | Value Range | Default Value |
 | ---------- | ----------- | ------------- |
-| *string array* or *[`BinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) array* | "BM_SKIP"<br>"BM_AUTO"<br>"BM_LOCAL_BLOCK" | ["BM_LOCAL_BLOCK", "BM_SKIP", "BM_SKIP", "BM_SKIP", "BM_SKIP", "BM_SKIP", "BM_SKIP", "BM_SKIP"] |
+| *string array* or *[`BinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) array* | "BM_SKIP"<br>"BM_AUTO"<br>"BM_LOCAL_BLOCK"<br>"BM_THRESHOLD" | ["BM_LOCAL_BLOCK", "BM_SKIP", "BM_SKIP", "BM_SKIP", "BM_SKIP", "BM_SKIP", "BM_SKIP", "BM_SKIP"] |
 
 - **See also**:   
     [`BinarizationMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)
@@ -53,6 +53,7 @@ needAutoGenerateSidebar: false
 - [EnableFillBinaryVacancy](#enablefillbinaryvacancy)
 - [ImagePreprocessingModesIndex](#imagepreprocessingmodesindex)
 - [ThreshValueCoefficient](#threshvaluecoefficient)
+- [BinarizationThreshold](#binarizationThreshold)
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)
  
@@ -123,6 +124,12 @@ Constant subtracted from the mean or weighted mean. Normally, it is positive but
 | *int* | [-255, 255] | 10 | "BM_LOCAL_BLOCK" |         
 
 
+#### BinarizationThreshold
+Sets the binarization threshold.
+
+| Value Type | Value Range | Default Value | Valid Modes | 
+| ---------- | ----------- | ------------- | ----------- |
+| *int* | [-1, 255] | -1 | "BM_THRESHOLD" |   
 
 ##### LibraryFileName 
 Sets the file name of the library to load dynamically.

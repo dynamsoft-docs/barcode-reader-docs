@@ -122,6 +122,7 @@ Describes the binarization mode.
 | BM_SKIP | EnumBinarizationModeSkip | 0x00 | Skips the binarization. |
 | BM_AUTO | EnumBinarizationModeAuto | 0x01 | **Not supported yet.** |
 | BM_LOCAL_BLOCK | EnumBinarizationModeLocalBlock | 0x02 | Binarizes the image based on the local block. Check arguments of [`BinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#mode-arguments) for available argument settings. |
+| BM_THRESHOLD | EnumBinarizationModeThreshold | 0x04 | Performs image binarization based on the given threshold. Check arguments of [`BinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#mode-arguments) for available argument settings. |
 
 
 
