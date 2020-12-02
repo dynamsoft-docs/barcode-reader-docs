@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 ---
 
 
-# .Net API Reference - BarcodeReader Result Methods
+# Python API Reference - BarcodeReader Result Methods
 
   | Method               | Description |
   |----------------------|-------------|
