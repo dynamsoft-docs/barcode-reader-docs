@@ -28,7 +28,7 @@ The Android documentation mainly consists of two parts. One is the [User Guide](
 
 ## Samples and Demos
 
-- [Barcode Scanner X Demo App (.apk)](https://download2.dynamsoft.com/dbr/android/DynamsoftBarcodeReaderDemoAndroid-7.6.apk)
-- [Code Gallery - Android](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx?tag=android#gallery)
-- [Code Gallery - Cordova](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx?tag=cordova#gallery)
-- [Code Gallery - Xamarin](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx?tag=xamarin#gallery)
+- <a href="https://download2.dynamsoft.com/dbr/android/DynamsoftBarcodeReaderDemoAndroid-8.0.apk" target="_blank">Barcode Scanner X Demo App (.apk)</a>
+- <a href="https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx?tag=android#gallery" target="_blank">Code Gallery - Android</a>
+- <a href="https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx?tag=cordova#gallery" target="_blank">Code Gallery - Cordova</a>
+- <a href="https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx?tag=xamarin#gallery" target="_blank">Code Gallery - Xamarin</a>

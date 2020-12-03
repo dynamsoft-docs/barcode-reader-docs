@@ -17,6 +17,7 @@ description: Dynamsoft Barcode Reader SDK Documentation Homepage
    {%- comment -%}
    - [FAQs]({{ site.faqs }})
    {%- endcomment -%}
+   
 
 - [Programming]({{ site.programming }})
    - [C]({{ site.c }})
