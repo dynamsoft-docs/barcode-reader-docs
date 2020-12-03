@@ -17,6 +17,7 @@ noTitleIndex: true
    - Windows 7, 8, 10.
    - Windows Server 2003, 2008, 2008 R2, 2012.
    - Linux x64 (Ubuntu 14.04.4+ LTS, Debian 8+, etc.)
+   - MacOS
    - JDK 1.7 and above. 
 
 
