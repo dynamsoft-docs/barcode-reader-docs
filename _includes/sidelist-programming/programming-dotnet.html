@@ -1,5 +1,6 @@
 <li><a href="{{ site.dotnet }}" class="otherLinkColour">.NET</a>
     <ul>
+        {%- if page.url contains '/dotnet/' or page.url contains '/dotnet-v' -%}
         <li><a href="{{ site.dotnet }}user-guide.html" class="otherLinkColour">User Guide</a></li>
         <li><a href="{{ site.dotnet_api }}" class="otherLinkColour">API Reference</a>
             <ul>
@@ -54,6 +55,6 @@
                 <li><a href="{{ site.dotnet_release_notes }}dotnet-7.html" class="otherLinkColour">Version 7.6 and below</a></li>
             </ul>
         </li>
-
+        {%- endif -%}
     </ul>
 </li>

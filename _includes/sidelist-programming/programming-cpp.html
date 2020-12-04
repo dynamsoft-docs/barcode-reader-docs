@@ -1,5 +1,6 @@
 <li><a href="{{ site.cpp }}" class="otherLinkColour">C++</a>
     <ul>
+        {%- if page.url contains '/cpp/' or page.url contains '/cpp-v' -%}
         <li><a href="{{ site.cpp }}user-guide.html" class="otherLinkColour">User Guide</a></li>
         <li><a href="{{ site.cpp_api }}" class="otherLinkColour">API Reference</a>
             <ul>
@@ -52,6 +53,6 @@
                 <li><a href="{{ site.cpp_release_notes }}cpp-7.html" class="otherLinkColour">Version 7.6 and below</a></li>
             </ul>
         </li>
-
+        {%- endif -%}
     </ul>
 </li>

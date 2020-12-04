@@ -1,5 +1,6 @@
 <li><a href="{{ site.c }}" class="otherLinkColour">C</a>
     <ul>
+        {%- if page.url contains '/c/' or page.url contains '/c-v' -%}
         <li><a href="{{ site.c }}user-guide.html" class="otherLinkColour">User Guide</a></li>
         <li><a href="{{ site.c_api }}" class="otherLinkColour">API Reference</a>
             <ul>
@@ -52,6 +53,6 @@
                 <li><a href="{{ site.c_release_notes }}c-7.html" class="otherLinkColour">Version 7.6 and below</a></li>
             </ul>
         </li>
-
+        {%- endif -%}
     </ul>
 </li>
