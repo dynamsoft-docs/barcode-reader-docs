@@ -1,5 +1,6 @@
 <li><a href="{{ site.how_to }}" class="otherLinkColour">How-to Guides</a>
     <ul>
+        {%- if page.url contains '/how-to-guide/' or page.url contains '/how-to-guide-v' -%}
         <li><a href = "{{site.how_to}}check-if-the-barcode-image-is-clear-enough-for-recognition.html"  class="otherLinkColour">Check if the barcode image is clear enough for recognition</a></li>
         <li><a href = "{{site.how_to}}decode-dpm-data-matrix.html"  class="otherLinkColour">Decode DPM data matrix</a></li>
         <li><a href = "{{site.how_to}}enable-scale-up-for-barcode-recognition.html"  class="otherLinkColour">Enable scale up for barcode recognition</a></li>
@@ -15,5 +16,6 @@
         <li><a href = "{{site.how_to}}set-custom-area-for-hsv-pre-detection.html"  class="otherLinkColour">Set custom area for HSV pre-detection</a></li>
         <li><a href = "{{site.how_to}}test-batch-scan-performance.html"  class="otherLinkColour">Test batch scan performance</a></li>
         <li><a href = "{{site.how_to}}turn-on-or-off-text-filter.html"  class="otherLinkColour">Turn on or off text filter</a></li>
+        {%- endif -%}
     </ul>
 </li>

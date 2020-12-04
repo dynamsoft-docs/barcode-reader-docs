@@ -1,0 +1,13 @@
+<li><a href="{{ site.parameters }}" class="otherLinkColour">Parameters</a>
+    <ul>
+        {%- if page.url contains '/parameters/' or page.url contains '/parameters-v' -%}
+        <li><a href="{{ site.parameters }}structure-and-interfaces-of-parameters.html" class="otherLinkColour">Structure and Interfaces of Parameters</a></li>
+        {%- include sidelist-parameters/parameters-references.html -%}
+        {%- include sidelist-parameters/parameters-enumerations.html -%}
+        {%- include sidelist-parameters/parameters-scenario-settings.html -%}
+        {%- comment -%}
+        <li class="unavailableLink">Example Image Settings</li>
+        {%- endcomment -%}
+        {%- endif -%}
+    </ul>
+</li>
