@@ -36,21 +36,8 @@
                         <input id="txtSearch" class="search" type="text">
                     </div>
                     <ul class="mainPage" id="fullTreeMenuListContainer" name="listLevel1">
-                        <li>
-                            <a href="{{ site.introduction }}" class="otherLinkColour">Introduction</a>
-                            <ul>
-                                {%- if page.url contains '/introduction/' or page.url contains '/introduction-v' -%}
-                                <li><a href="{{ site.introduction }}overview.html" class="otherLinkColour">Overview</a></li>
-                                <li><a href="{{ site.introduction }}architecture.html" class="otherLinkColour">Architecture</a></li>
-                                {%- include sidelist-introduction/introduction-how-to-guides.html -%}
-                                {%- include sidelist-introduction/introduction-comparison-tools.html -%}
-                                {%- comment -%}
-                                <li class="unavailableLink">Security Features</li>
-                                {%- endcomment -%}
-                                {%- endif -%}
-                            </ul>
-                        </li>
-                        <li><a href="{{ site.programming }}" class="otherLinkColour">Programming</a>
+                        {%- include sidelist-introduction.html -%}
+                            <li><a href="{{ site.programming }}" class="otherLinkColour">Programming</a>
                             <ul>
                                 {%- if page.url contains '/programming/' or page.url contains '/programming-v' -%}
                                 {%- include sidelist-programming/programming-c.html -%}
