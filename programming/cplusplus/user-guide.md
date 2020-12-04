@@ -14,9 +14,11 @@ noTitleIndex: true
 ## System Requirements
 
 - Operating systems:
-   - Windows: 7, 8, 10, 2003, 2008, 2008 R2, 2012.
-   - Linux x64: Ubuntu 14.04.4+ LTS, Debian 8+, etc;   
-   
+   - Windows: 7, 8, 10, 2003, 2008, 2008 R2, 2012;
+   - Linux x64: Ubuntu 14.04.4+ LTS, Debian 8+, etc;  
+   - Linux arm 32bit;
+   - Linux arm 64bit (contact us to get the SDK);
+   - macOS 64bit: 10.15+ (contact us to get the SDK).
 
 &nbsp; 
 

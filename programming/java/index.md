@@ -23,7 +23,10 @@ The Java documentation mainly consists of two parts. One is the [User Guide](#ge
 - [Class](api-reference/#classes)
 
 ## Release Notes
-- [version 8.0](release-notes/java-8.md)
-- [version 7.6 and below](release-notes/java-7.md)
+- [Version 8.0](release-notes/java-8.md)
+- [Version 7.6 and below](release-notes/java-7.md)
 
 ## Samples and Demos
+
+- <a href="https://demo.dynamsoft.com/DBR/BarcodeReaderDemo.aspx" target="_blank">Online Demo</a>
+- <a href="https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx?Tag=java" target="_blank">Code Gallery - Java</a>

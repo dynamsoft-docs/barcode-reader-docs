@@ -8,7 +8,7 @@ breadcrumbText: BarcodeScanner
 ---
 
 
-# Dynamsoft Barcode Reader SDK - Javascript BarcodeScanner Class
+# Dynamsoft Barcode Reader SDK - JavaScript BarcodeScanner Class
 
 The `BarcodeScanner` class is used for **video** decoding.
 
@@ -109,6 +109,9 @@ The following properties are inherited from the `BarcodeReader` class.
 * `bDestroyed`
 * `bSaveOriCanvas`
 * `oriCanvas`
+* [`licenseServer`](../BarcodeReader/properties.md#licenseServer)
+* [`handshakeCode`](../BarcodeReader/properties.md#handshakeCode)
+* [`sessionPassword`](../BarcodeReader/properties.md#sessionPassword)
 
 ## `BarcodeScanner` Accessors
 

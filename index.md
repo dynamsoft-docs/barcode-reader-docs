@@ -13,7 +13,11 @@ description: Dynamsoft Barcode Reader SDK Documentation Homepage
    - [Overview]({{ site.introduction }}overview.html)
    - [Principle of Algorithm]({{ site.introduction }}architecture.html)
    - [How-to Guides]({{ site.how_to }})
+   - [Comparison Tools]({{ site.comparison_tools }})
+   {%- comment -%}
    - [FAQs]({{ site.faqs }})
+   {%- endcomment -%}
+   
 
 - [Programming]({{ site.programming }})
    - [C]({{ site.c }})

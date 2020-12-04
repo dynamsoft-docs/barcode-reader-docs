@@ -4,7 +4,7 @@ title: Dynamsoft Barcode Reader Licensing - How to set full license in version 7
 description: This page shows how to set full license of Dynamsoft Barcode Reader in version 7.x.
 keywords: full license, licensing, 7.x, License 1.0
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
+needGenerateH3Content: false
 ---
 
 # How to set full license in version 7.x
@@ -323,11 +323,13 @@ reader = BarcodeReader()
 reader.init_license_from_server(license_server, license_key)
 ```
 
-#### Option 3: No Internet connection
+#### Option 3: No Internet connection {#offline}
 
 If your machine is not allowed to access Internet, you can follow the steps below to manually register the device and get the license content.
 
+
 1. Log in **[Customer Portal](https://www.dynamsoft.com/customer/license/fullLicense)** and click **License Id**.
+
 
 ![ActivatedKey_Used2][5]
 

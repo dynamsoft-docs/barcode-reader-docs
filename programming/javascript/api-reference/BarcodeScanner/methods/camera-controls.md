@@ -8,7 +8,7 @@ needGenerateH3Content: false
 ---
 
 
-# Javascript API Reference - `BarcodeScanner` Camera Control Methods
+# JavaScript API Reference - `BarcodeScanner` Camera Control Methods
 
 | Method               | Description |
 |----------------------|-------------|

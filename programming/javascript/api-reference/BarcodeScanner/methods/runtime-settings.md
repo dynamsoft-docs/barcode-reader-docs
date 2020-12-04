@@ -8,7 +8,7 @@ needGenerateH3Content: false
 ---
 
 
-# Javascript API Reference - `BarcodeScanner` Runtime Settings Methods
+# JavaScript API Reference - `BarcodeScanner` Runtime Settings Methods
 
 | Method               | Description |
 |----------------------|-------------|
@@ -18,7 +18,9 @@ needGenerateH3Content: false
 
 ## updateRuntimeSettings
 
-Update the runtime settings with a given object or use the string `speed`, `balance`, or `coverage` to use our preset settings for `BarcodeScanner`. The default setting is `speed`. Overrides [`BarcodeReader.UpdateRuntimeSettings`](../../BarcodeReader/methods/parameter-and-runtime-settings.md#updateruntimesettings).
+Update the runtime settings with a given object or use the string `single`, `speed`, `balance`, or `coverage` to use our preset settings for `BarcodeScanner`. From v8.0, the default setting is `single`. Overrides [`BarcodeReader.UpdateRuntimeSettings`](../../BarcodeReader/methods/parameter-and-runtime-settings.md#updateruntimesettings).
+
+`single` mode has been optimized to read one barcode at a time quickly. This mode performs faster than `speed` mode in this scenario. 
 
 ```javascript
 updateRuntimeSettings(settings) returns Promise

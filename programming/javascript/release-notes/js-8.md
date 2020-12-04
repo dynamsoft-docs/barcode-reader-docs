@@ -1,21 +1,22 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for iOS SDK - Release Notes v8.0
-description: This is the release notes page of Dynamsoft Barcode Reader for iOS SDK v8.0.
-keywords: release notes, ios, 
+title: Dynamsoft Barcode Reader for JavaScript SDK - Release Notes v8.x
+description: This is the release notes page of Dynamsoft Barcode Reader for JavaScript SDK v8.x.
+keywords: release notes, javascript
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
 ---
 
-# Release Notes for iOS SDK - 8.0
+# Release Notes for JavaScript SDK - 8.x
 
-## 8.0 (11/17/2020)
+## 8.0 (11/25/2020)
 
 ### New
 
-- (For IntermediateResult Advanced Module) Added support for decoding IntermediateResult. For example, users with a binarized image could use this function to skip some image preprocessing steps.
-- Implemented a new licensing tracking mechanism, License 2.0, which makes it easier for users to track license usage. 
+- Added support for decoding barcodes from an existing video stream.
+- Introduced new namespace `Dynamsoft.DBR`.
+- Implemented a new licensing tracking mechanism, License 2.0, which makes it easier for users to track license usage.
 - Added a new format control parameter, BarcodeZoneMinDistanceToImageBorders, to set the minimum distance (in pixels) between the barcode zone and image borders.
 - Added a new format control parameter, MinRatioOfBarcodeZoneWidthToHeight, to set the minimum ratio (width/height) of the barcode zone.
 - Added a new format control parameter, BarcodeZoneBarCountRangeArray, to set the barcode zone’s range of bar count for barcode search.
@@ -24,9 +25,12 @@ noTitleIndex: true
 
 ### Improved
 
-- Improved the localization speed for the ScanDirectly mode.
+- Changed the default runtime preset setting of `BarcodeScanner` from `speed` to `single`.
+- Improved the localization speed for the `ScanDirectly` mode.
 - Improved the localization accuracy for DataMatrix codes with a narrow quiet zone.
 
-### Feature Deprecated
+### Fixed
 
-- DeblurLevel is now deprecated. It still works in this version but could be removed in the near future. We recommend using DeblurModes instead.
+
+### Feature Deprecated
+- `DeblurLevel` is now deprecated. It still works in this version but could be removed in the near future. We recommend using `DeblurModes` instead.

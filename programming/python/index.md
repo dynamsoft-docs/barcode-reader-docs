@@ -23,6 +23,10 @@ The Python documentation mainly consists of two parts. One is the [User Guide](#
 
 ## Release Notes
 
-- [version 7.4 - 7.6](release-notes/python-7.md)
+- [Version 8.x](release-notes/python-8.md)
+- [Version 7.4 - 7.6](release-notes/python-7.md)
 
 ## Samples and Demos
+
+- <a href="https://demo.dynamsoft.com/DBR/BarcodeReaderDemo.aspx" target="_blank">Online Demo</a>
+- <a href="https://github.com/Dynamsoft/python-barcode/tree/master/samples" target="_blank">Python Samples</a>

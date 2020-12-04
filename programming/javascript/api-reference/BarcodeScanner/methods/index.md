@@ -8,7 +8,7 @@ breadcrumbText: Methods
 ---
 
 
-# Dynamsoft Barcode Reader SDK - Javascript  BarcodeScanner Methods
+# Dynamsoft Barcode Reader SDK - JavaScript  BarcodeScanner Methods
 
 The `BarcodeScanner` class is used for **video** decoding.
 

@@ -8,7 +8,7 @@ needGenerateH3Content: false
 ---
 
 
-# Javascript API Reference - `BarcodeReader` Parameter and Runtime Settings Methods
+# JavaScript API Reference - `BarcodeReader` Parameter and Runtime Settings Methods
 
 | Method               | Description |
 |----------------------|-------------|
@@ -94,7 +94,7 @@ Promise<[RuntimeSettings](../../global-interfaces.md#runtimesettings)>
 
 ## resetRuntimeSettings
 
-Reset all runtime settings to default values.
+Reset all runtime settings to `speed` mode settings. 
 
 ```javascript
 resetRuntimeSettings() returns Promise

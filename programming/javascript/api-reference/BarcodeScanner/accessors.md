@@ -8,7 +8,7 @@ needGenerateH3Content: false
 ---
 
 
-# Javascript API Reference - `BarcodeScanner` Accessors
+# JavaScript API Reference - `BarcodeScanner` Accessors
 
 | Accessors            | Description |
 |----------------------|-------------|
@@ -24,7 +24,8 @@ needGenerateH3Content: false
 | [`productKeys`](../BarcodeReader/accessors.md#productkeys) | Get or set the Dynamsoft Barcode Reader SDK product keys. | 
 | [`version`](../BarcodeReader/accessors.md#version) | Get current version. |
 | [`licenseServer`](../BarcodeReader/accessors.md#licenseserver) | Gets or sets the URL of the license tracking server. | 
-| [`sessionPwd`](../BarcodeReader/accessors.md#sessionpwd) | Gets or sets the session password of the handshake code set in license tracking server. | 
+| [`handshakeCode`](../BarcodeReader/accessors.md#handshakecode) | Gets or sets the handshake code. | 
+| [`sessionPassword`](../BarcodeReader/accessors.md#sessionpassword) | Gets or sets the session password of the handshake code set in license tracking server. | 
 
 ## defaultUIElementURL
 
@@ -57,7 +58,7 @@ singleFrameMode = bool;
 ### Sample
 
 ```javascript
-let scanner = await Dynamsoft.BarcodeScanner.createInstance();
+let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 scanner.singleFrameMode = true; // use singleFrameMode anyway
 scanner.show();
 ```

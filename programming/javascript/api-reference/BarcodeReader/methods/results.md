@@ -8,7 +8,7 @@ needGenerateH3Content: false
 ---
 
 
-# Javascript API Reference - `BarcodeReader` Result Methods
+# JavaScript API Reference - `BarcodeReader` Result Methods
 
 | Method             | Description |
 |----------------------|-------------|

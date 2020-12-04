@@ -51,6 +51,13 @@ You can set the license by following the steps below:
 
 ## Set the license in the code {#set}
 
+ Code snippet in JavaScript:
+ ```js
+    Dynamsoft.DBR.BarcodeReader.handshakeCode = "DynamsoftID-CustomCode";// Please replace the handshakeCode with your own
+    Dynamsoft.DBR.BarcodeReader.sessionPassword = "The-Password-You-Set";
+    let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
+ ```
+
  Code snippet in C:
  ```c
    char errorBuf[512];
@@ -109,8 +116,6 @@ You can set the license by following the steps below:
    DBRLTSLicenseVerificationListener ltsListener = new DBRLTSLicenseVerificationListener() {
       @Override
       public void LTSLicenseVerificationCallback(boolean success, Exception error) {
-         Assert.assertEquals(false, success);
-         Assert.assertEquals("ChargeWay for licenseItem is not matched.", error.getMessage());
       }
    };
    DMLTSConnectionParameters parameters = new DMLTSConnectionParameters();
