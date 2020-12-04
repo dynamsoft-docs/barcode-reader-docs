@@ -18,7 +18,7 @@ noTitleIndex: true
    - Linux x64: Ubuntu 14.04.4+ LTS, Debian 8+, etc;  
    - Linux arm 32bit;
    - Linux arm 64bit (contact us to get the SDK);
-   - macOS 64bit: 10.15+ (contact us to get the SDK).
+   - macOS 64bit: 10.12+ (contact us to get the SDK).
 
 
 &nbsp; 
