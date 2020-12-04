@@ -327,7 +327,7 @@ reader.init_license_from_server(license_server, license_key)
 
 If your machine is not allowed to access Internet, you can follow the steps below to manually register the device and get the license content.
 
-1. Log in **[Customer Portal](https://www.dynamsoft.com/customer/license/fullLicensex)** and click **Details**.
+1. Log in **[Customer Portal](https://www.dynamsoft.com/customer/license/fullLicense)** and click **License Id**.
 
 ![ActivatedKey_Used2][5]
 
