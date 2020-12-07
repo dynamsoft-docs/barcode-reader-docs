@@ -37,10 +37,10 @@ Set the MIME type for `.wasm` to `application/wasm`.
 
 Different servers are configured differently. Here are some popular ones:
 
-- NGINX: `mime.types`
-- IIS: `Web.config`
-- Java™ EE web app: `web.xml`
-- Node.js: `npm mime`
+- NGINX: [`mime.types`](https://www.nginx.com/resources/wiki/start/topics/examples/full/#mime-types)
+- IIS: [`Web.config`](https://github.com/dynamsoft-dbr/javascript-barcode/blob/dac614f8033661901d85381dfaff8d612115862a/documents/conf/Web.config)
+- Java™ EE web app: [`web.xml`](https://github.com/dynamsoft-dbr/javascript-barcode/blob/dac614f8033661901d85381dfaff8d612115862a/documents/conf/web.xml)
+- Node.js: [`npm mime`](https://github.com/broofa/node-mime)
 
 ## License Activation
 
