@@ -130,3 +130,4 @@ You can set the license by following the steps below:
 [3]:assets\set-full-license-2\ActivationContinue.png
 [4]:assets\set-full-license-2\ConfigLicense.png
 
+Add Code Snippet for Python
