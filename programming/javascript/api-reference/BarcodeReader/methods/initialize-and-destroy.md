@@ -35,7 +35,7 @@ createInstance() returns Promise
 ### Sample
 
 ```javascript
-let reader = await Dynamsoft.BarcodeReader.createInstance();
+let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 ```
 
 [Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
@@ -83,7 +83,7 @@ isLoaded() returns Boolean
 ### Sample
 
 ```javascript
-Dynamsoft.BarcodeReader.isLoaded()
+Dynamsoft.DBR.BarcodeReader.isLoaded()
 ```
 
 ## loadWasm

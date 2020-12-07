@@ -28,7 +28,7 @@ Locate the **dist/** directory under the installation folder of the library and 
 If the resource files (e.g.,`wasm` files) are not placed in the same directory as `dbr.js`, you will need to specify the path using the API `engineResourcePath` before calling `loadWasm` or `createInstance`.
 
 ```javascript
-Dynamsoft.BarcodeReader.engineResourcePath = "url/to/the/dir/";
+Dynamsoft.DBR.BarcodeReader.engineResourcePath = "url/to/the/dir/";
 ```
 
 ### Step Two: Configure the Server

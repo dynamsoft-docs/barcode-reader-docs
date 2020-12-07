@@ -232,7 +232,7 @@ The following accessors are inherited from the `BarcodeReader` class.
 ---
 ## Enumerations
 
-* [`EnumAccompanyingTextRecognitionMode`]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode)	
+* [`EnumAccompanyingTextRecognitionMode`]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode) **Currently unsupported.**
 * [`EnumBarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode)
 * [`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode)
 * [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat)

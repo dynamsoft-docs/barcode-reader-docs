@@ -24,61 +24,11 @@
         <div class="row">
             <div class="sideBar col-xs-12 col-md-3 hide-sm hide-xs">
                 <ul class="mainPage" id="fullTreeMenuListContainer" name="listLevel1">
-                    {%- comment -%}
-                    <li>
-                        <a href="{{ site.introduction }}" class="otherLinkColour">Introduction</a>
-                        <ul>
-                            {%- if page.url contains '/introduction/' -%}
-                            <li><a href="{{ site.introduction }}overview.html" class="otherLinkColour">Overview</a></li>
-                            <li><a href="{{ site.introduction }}architecture.html" class="otherLinkColour">Architecture</a></li>
-                            {%- include sidelist-introduction/introduction-licensing.html -%}
-                            {%- include sidelist-introduction/introduction-how-to-guides.html -%}
-                            {%- include sidelist-introduction/introduction-comparison-tools.html -%}
-                            <li><a href="{{ site.faqs }}" class="otherLinkColour">FAQs</a></li>
-                            <li class="unavailableLink">Security Features</li>
-                            {%- endif -%}
-                        </ul>
-                    </li>
-                    {%- endcomment -%}
-                    <li><a href="{{ site.programming }}" class="otherLinkColour">Programming</a>
-                        <ul>
-                            {%- if page.url contains '/programming/' -%}
-                            {%- include sidelist-programming/programming-c.html -%}
-                            {%- include sidelist-programming/programming-cpp.html -%}
-                            {%- include sidelist-programming/programming-dotnet.html -%}
-                            {%- include sidelist-programming/programming-java.html -%}
-                            {%- include sidelist-programming/programming-python.html -%}
-                            {%- include sidelist-programming/programming-javascript.html -%}
-                            {%- include sidelist-programming/programming-android.html -%}
-                            {%- include sidelist-programming/programming-oc.html -%}                         
-                            {%- endif -%}
-                        </ul>
-                    </li>
-                    <li><a href="{{ site.parameters }}" class="otherLinkColour">Parameters</a>
-                        <ul>
-                            {%- if page.url contains '/parameters/' -%}
-                            <li><a href="{{ site.parameters }}structure-and-interfaces-of-parameters.html" class="otherLinkColour">Structure and Interfaces of Parameters</a></li>
-                            {%- include sidelist-parameters/parameters-references.html -%}
-                            {%- include sidelist-parameters/parameters-enumerations.html -%}
-                            {%- include sidelist-parameters/parameters-scenario-settings.html -%}
-                            {%- comment -%}
-                            <li class="unavailableLink">Example Image Settings</li>
-                            {%- endcomment -%}
-                            {%- endif -%}
-                        </ul>
-                    </li>
-                    {%- comment -%}
-                    <li class="unavailableLink">Enhancements
-                        {%- if page.url contains '/enhancements/' -%}
-                        <ul>
-                            <li class="unavailableLink">DPM Codes</li>
-                            <li class="unavailableLink">Intermediate Result</li>
-                            <li class="unavailableLink">Panorama</li>
-                            <li class="unavailableLink">PDF Vector</li>
-                        </ul>
-                        {%- endif -%}
-                    </li>
-                    {%- endcomment -%}
+                    {%- include sidelist-introduction.html -%}
+                    {%- include sidelist-programming.html -%}
+                    {%- include sidelist-parameters.html -%}
+                    {%- include sidelist-enhancement.html -%}
+                    {%- include sidelist-license_activation.html -%}
                 </ul>
             </div>
             <div class="docContainer col-xs-12 col-md-9">
