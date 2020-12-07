@@ -21,7 +21,7 @@ You can set the license by following the steps below:
 
 ## Activate the license {#activate}
 
- Once you purchase a full license from our <a href ="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/" target"_blank">online store</a>, you can find your license information at <a href ="https://www.dynamsoft.com/customer/license/fullLicensex" target"_blank">Customer Portal</a>. 
+ Once you purchase a full license from our <a href ="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/" target="_blank">online store</a>, you can find your license information at <a href ="https://www.dynamsoft.com/customer/license/fullLicensex" target="_blank">Customer Portal</a>. 
 
  To activate the license, click "Please first activate the license" or the "Activate" button.
 
@@ -29,7 +29,7 @@ You can set the license by following the steps below:
 
  On the next page, set an Alias for your license or leave the default Alias and click the "Activate" button.
 
- > Read more on What is an <a href ="https://www.dynamsoft.com/license-tracking/docs/about/terms.html#alias" target"_blank">Alias</a>
+ > Read more on What is an <a href ="https://www.dynamsoft.com/license-tracking/docs/about/terms.html#alias" target="_blank">Alias</a>
  
  ![SetAlias][2]
  
@@ -45,9 +45,9 @@ You can set the license by following the steps below:
 
 ## Configure the license (optional) {#configure}
 
- After the license is activated, the Handshake Code will be generated automatically. Read more on <a href ="https://www.dynamsoft.com/license-tracking/docs/about/terms.html#handshake-code" target"_blank">What is a Handshake Code</a>.
+ After the license is activated, the Handshake Code will be generated automatically. Read more on <a href ="https://www.dynamsoft.com/license-tracking/docs/about/terms.html#handshake-code" target="_blank">What is a Handshake Code</a>.
  
- Basically, you can skip the step. But if you would like to edit the Handshake Codes for the license or view the statistics of a handshake code, please refer to <a href ="https://www.dynamsoft.com/license-tracking/docs/common/handshakeCodes.html" target"_blank">how to manage the handshake code</a>.
+ Basically, you can skip the step. But if you would like to edit the Handshake Codes for the license or view the statistics of a handshake code, please refer to <a href ="https://www.dynamsoft.com/license-tracking/docs/common/handshakeCodes.html" target="_blank">how to manage the handshake code</a>.
 
 ## Set the license in the code {#set}
 
