@@ -110,6 +110,17 @@ You can set the license by following the steps below:
     });
 }
  ```
+ Code snippet in iOS(Swift):
+ ```swift
+  let lts = iDMLTSConnectionParameters()
+  lts.handshakeCode = "*****-hs-****";
+  lts.sessionPassword = "******";
+  barcodeReader = DynamsoftBarcodeReader(licenseFromLTS: lts, verificationDelegate: self)
+  func ltsLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
+  {
+     //TODO add your code for license verification
+  }
+ ```
 
  Code snippet in Android:
  ```java
