@@ -146,24 +146,24 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"
         integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
-    <script>anchors.add();</script>
+    <script type="text/javascript">anchors.add();</script>
 
     {%- if page.needAutoGenerateSidebar -%}
     {%- unless page.needGenerateH3Content -%}
-    <script>
+    <script type="text/javascript">
         FullTreeMenuList(true, false);
     </script>
     {%- else -%}
-    <script>
+    <script type="text/javascript">
         FullTreeMenuList(true);
     </script>
     {%- endunless -%}
     {%- else -%}
-    <script>
+    <script type="text/javascript">
         FullTreeMenuList(false);
     </script>
     {%- endif -%}
-    <script>
+    <script type="text/javascript">
         UrlReplace();
     </script>
 
@@ -180,32 +180,32 @@
                     $('.editionName').html('C/C++');
                     $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dbr/DBR-C_CPP-8.0.zip');
                     $('.dbrThanksDownloading').show();
-                    $('.downloadlink').click();
+                    $('.downloadlink')[0].click();
                 } else if (curHref.indexOf('/dotnet/') > -1) {
                     $('.editionName').html('.NET');
                     $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dbr/DBR-DotNet-8.0.zip');
                     $('.dbrThanksDownloading').show();
-                    $('.downloadlink').click();
+                    $('.downloadlink')[0].click();
                 } else if (curHref.indexOf('/java/') > -1) {
                     $('.editionName').html('Java');
                     $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dbr/DBR-Java-8.0.zip');
                     $('.dbrThanksDownloading').show();
-                    $('.downloadlink').click();
+                    $('.downloadlink')[0].click();
                 } else if (curHref.indexOf('/javascript/') > -1) {
                     $('.editionName').html('Javascript');
                     $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dbr/DBR-JS-8.0.0.zip');
                     $('.dbrThanksDownloading').show();
-                    $('.downloadlink').click();
+                    $('.downloadlink')[0].click();
                 } else if (curHref.indexOf('/android/') > -1) {
                     $('.editionName').html('Android');
                     $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dbr/dbr-android-8.0.zip');
                     $('.dbrThanksDownloading').show();
-                    $('.downloadlink').click();
+                    $('.downloadlink')[0].click();
                 } else if (curHref.indexOf('/objectivec-swift/') > -1) {
                     $('.editionName').html('iOS');
                     $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dbr/dbr-iOS-8.0.zip');
                     $('.dbrThanksDownloading').show();
-                    $('.downloadlink').click();
+                    $('.downloadlink')[0].click();
                 }
             }
 
