@@ -122,6 +122,21 @@ You can set the license by following the steps below:
    parameters.handshakeCode = "200***001-1000*****"; // Please replace the handshakeCode with your own
    dbr.initLicenseFromLTS(parameters,ltsListener);
  ```
+ 
+ Code snippet in Python:
+ ```python
+ reader = BarcodeReader()
+ connection_paras = BarcodeReader.init_lts_connection_parameters
+ # Please replace the handshakeCode with your own
+ connection_paras.handshake_code = "200***001-1000*****"
+ try:
+     error = BarcodeReader.init_licesne_from_lts(connection_paras)
+     if error[0] != EnumErrorCode.DBR_OK:
+         print(error[1])
+ except BarcodeReaderError as bre:
+     print(bre)
+ ```
+ 
 
  If you run into any issues, please [contact Dynamsoft Support](https://www.dynamsoft.com/Company/Contact.aspx).
 
@@ -130,4 +145,4 @@ You can set the license by following the steps below:
 [3]:assets\set-full-license-2\ActivationContinue.png
 [4]:assets\set-full-license-2\ConfigLicense.png
 
-Add Code Snippet for Python
+
