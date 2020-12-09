@@ -169,7 +169,7 @@ Swift:
 
 ```Swift
 let lts = iDMLTSConnectionParameters()
-lts.handshakeCode = "*****-hs-****";
+lts.handshakeCode = "*****-****";
 lts.sessionPassword = "******";
 barcodeReader = DynamsoftBarcodeReader(licenseFromLTS: lts, verificationDelegate: self)
 func ltsLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
