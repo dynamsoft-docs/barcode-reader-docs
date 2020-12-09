@@ -157,7 +157,7 @@ Objective-C:
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
 iDMLTSConnectionParameters* lts = [[iDMLTSConnectionParameters alloc] init];
-lts.handshakeCode = @"*****-hs-****";
+lts.handshakeCode = @"*****-****";
 lts.sessionPassword = @"******";
 barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromLTS:lts verificationDelegate:self];
 - (void)LTSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
@@ -169,7 +169,7 @@ Swift:
 
 ```Swift
 let lts = iDMLTSConnectionParameters()
-lts.handshakeCode = "*****-hs-****";
+lts.handshakeCode = "*****-****";
 lts.sessionPassword = "******";
 barcodeReader = DynamsoftBarcodeReader(licenseFromLTS: lts, verificationDelegate: self)
 func ltsLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
