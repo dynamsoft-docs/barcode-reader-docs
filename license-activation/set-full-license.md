@@ -19,7 +19,7 @@ You can set the license by following the steps below:
 2. [Configure the license (optional)](#configure) 
 3. [Set the license in the code](#set)
 
-## Activate the license {#activate}
+## Activate the license
 
  Once you purchase a full license from our <a href ="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/" target="_blank">online store</a>, you can find your license information at <a href ="https://www.dynamsoft.com/customer/license/fullLicensex" target="_blank">Customer Portal</a>. 
 
@@ -43,13 +43,13 @@ You can set the license by following the steps below:
 
  You can repeat the above steps to activate other license keys.
 
-## Configure the license (optional) {#configure}
+## Configure the license (optional)
 
  After the license is activated, the Handshake Code will be generated automatically. Read more on <a href ="https://www.dynamsoft.com/license-tracking/docs/about/terms.html#handshake-code" target="_blank">What is a Handshake Code</a>.
  
  Basically, you can skip the step. But if you would like to edit the Handshake Codes for the license or view the statistics of a handshake code, please refer to <a href ="https://www.dynamsoft.com/license-tracking/docs/common/handshakeCodes.html" target="_blank">how to manage the handshake code</a>.
 
-## Set the license in the code {#set}
+## Set the license in the code
 
  Code snippet in JavaScript:
  ```js
