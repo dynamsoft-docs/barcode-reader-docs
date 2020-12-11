@@ -145,6 +145,8 @@
         {%- include page_footer.html -%}
     </div>
 
+    <script type="text/javascript">anchors.add();</script>
+
     {%- if page.needAutoGenerateSidebar -%}
     {%- unless page.needGenerateH3Content -%}
     <script type="text/javascript">
@@ -264,10 +266,6 @@
         document.getElementsByTagName('head')[0].appendChild(s);
         })();
     </script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"
-    integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
-    <script type="text/javascript">anchors.add();</script>
 </body>
 
 </html>
