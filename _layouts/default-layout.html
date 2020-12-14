@@ -89,8 +89,12 @@
         {%- include page_footer.html -%}
     </div>
 
+    <script type="text/javascript">
+        UrlReplace();
+    </script>
+    
     <script type="text/javascript">anchors.add();</script>
-
+    
     {%- if page.needAutoGenerateSidebar -%}
     {%- unless page.needGenerateH3Content -%}
     <script type="text/javascript">
@@ -106,9 +110,6 @@
         FullTreeMenuList(false);
     </script>
     {%- endif -%}
-    <script type="text/javascript">
-        UrlReplace();
-    </script>
 
     {%- include livehelp.html -%}
 
