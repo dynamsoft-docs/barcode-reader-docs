@@ -1,3 +1,4 @@
+
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader for JavaScript - Deployment
@@ -41,6 +42,10 @@ Different servers are configured differently. Here are some popular ones:
 - IIS: <a href="https://github.com/dynamsoft-dbr/javascript-barcode/blob/dac614f8033661901d85381dfaff8d612115862a/documents/conf/Web.config" target="_blank">Web.config</a>
 - Java™ EE web app: <a href="https://github.com/dynamsoft-dbr/javascript-barcode/blob/dac614f8033661901d85381dfaff8d612115862a/documents/conf/web.xml" target="_blank">web.xml</a>
 - Node.js: <a href="https://github.com/broofa/node-mime" target="_blank">npm mime</a>
+
+Please note that HTTPS **must** be enabled in order to use the component. For how to enable HTTPS, please check out the manual of your webserver.
+
+If deploying to a production server, it is recommended to use a valid SSL certificate.
 
 ## License Activation
 
