@@ -1,4 +1,3 @@
-
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader for JavaScript - Deployment
