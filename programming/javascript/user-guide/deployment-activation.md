@@ -50,30 +50,4 @@ If deploying to a production server, it is recommended to use a valid SSL certif
 
 A full license is required for deployment. If you have not purchased a license yet, please visit our [online store](https://www.dynamsoft.com/store/dynamsoft-barcode-reader/).
 
-### Step One : Create a Dynamsoft account
-
-If you don't have an Dynamsoft account yet, sign up [here](https://www.dynamsoft.com/api-common/Regist/Regist). Be sure to use the same email that was registered for the purchase.
-
-### Step Two : Log into Dynamsoft Customer Portal
-
-Once logged in, click License in the left menu bar to show your purchased license(s).
-
-### Step Three : Activate the License
-
-Under **Status**, click **Activate Now** to specify a domain to bind your license key. The domain binding is a security feature to protect your license, optional but highly recommended.
-
-A few examples of the domain:
-
-- www.dynamsoft.com
-- demo.dynamsoft.com
-- *.dynamsoft.com
-- *.dynamsoft.com; *.yoursite.com
-
-### Step Four : Use the License
-
-```html
-<!-- Please visit https://www.dynamsoft.com/customer/license/trialLicense to get a trial license. -->
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.0.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
-```
-
-In the above sample code, simply replace `PRODUCT-KEYS` with your activated key.
+In version 8.0, we introduced [License Tracking 2.0](https://www.dynamsoft.com/license-tracking/docs/about/index.html) to activate and track usage. Please follow the steps in [this article](https://www.dynamsoft.com/license-tracking/docs/common/mechanism.html) to activate and use your license. 

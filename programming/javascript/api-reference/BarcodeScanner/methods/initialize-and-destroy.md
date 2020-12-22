@@ -24,18 +24,12 @@ needGenerateH3Content: false
 Create a `BarcodeScanner` object. Overrides `BarcodeReader.createInstance`.
 
 ```javascript
-createInstance(config) returns Promise
+createInstance() returns Promise
 ```
-
-### Parameters
-
-`config`<sub>optional</sub> *any*  
 
 ### Return Value
 
 <code>Promise<<a href="../#barcodescanner">BarcodeScanner</a>></code>
-
-[test](../index.md#barcodescanner)
 
 ### Sample
 

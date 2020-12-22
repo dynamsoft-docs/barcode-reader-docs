@@ -43,7 +43,6 @@ Stores the FurtherModes.
 
 | Property           | Type | Description |
 |----------------------|------|-------------|
-| `accompanyingTextRecognitionModes` | [*`AccompanyingTextRecognitionMode`*]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode) | Sets the mode and priority to recognize accompanying text. **Currently unsupported.** | 
 | `barcodeColourModes` | [*`BarcodeColourMode`*]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode) | Sets the mode and priority for the barcode colour mode used to process the barcode zone. | 
 | `barcodeComplementModes` | [*`BarcodeComplementMode`*]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode) | Sets the mode and priority to complement the missing parts in the barcode. | 
 | `colourClusteringModes` | [*`ColourClusteringMode`*]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode) | Sets the mode and priority for colour categorization. | 
