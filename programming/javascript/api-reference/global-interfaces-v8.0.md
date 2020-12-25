@@ -106,7 +106,6 @@ Stores the barcode reading runtime settings. These settings control the barcode 
 |--------------------|------|---------------|-------------|
 | [`barcodeFormatIds`]({{ site.enumerations }}format-enums.html#barcodeformat) | *number* | `BF_ALL (-32505857)` | The selected barcode formats to be read from group 1 of 2. |
 | [`barcodeFormatIds_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) | *number* | `BF2_NULL (0)` | The selected barcode formats to be read from group 2 of 2.  |
-| `barcodeZoneMinDistanceToImageBorders` | *number* | `BarcodeReader`: `0` <br/>`BarcodeScanner`: `0` | Sets the minimum distance (in pixels) between the barcode zone and image borders. <br/>Value range: `[0, 0x7fffffff]` |
 | `binarizationModes` | [`EnumBinarizationMode[]`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) | `[BM_LOCAL_BLOCK, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP]` | The mode and priority for binarization. |
 | `deblurLevel`<sup>[1](#1-tips-and-tricks)</sup> | *number* | `BarcodeReader`: `9` <br/>`BarcodeScanner`: `0` | The degree of blurriness of the barcode. <br/>Value range: `[0, 9]`|
 | `deblurModes` | [`EnumDeblurMode[]`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode) | `[DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP]` | Sets the mode and priority for deblurring. |

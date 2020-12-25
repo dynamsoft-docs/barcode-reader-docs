@@ -72,12 +72,15 @@ needAutoGenerateSidebar: false
   | `DBRERR_DOTCODE_LICENSE_INVALID` | `EnumErrorCode_DOTCODE_LICENSE_INVALID` | -10061 | The DotCode license is invalid. |
 
 
-  | `DMERR_HANDSHAKE_CODE_INVALID` | `EnumErrorCode_DOTCODE_LICENSE_INVALID` | -20001 | The handshake code is invalid. |
-  | `DMERR_LICENSE_BUFFER_FAILED` | `EnumErrorCode_DOTCODE_LICENSE_INVALID` | -20002 | Failed to read or write license buffer. |
-  | `DMERR_LICENSE_SYNC_FAILED` | `EnumErrorCode_DOTCODE_LICENSE_INVALID` | -20003 | Failed to synchronize license info with license tracking server. |
-  | `DMERR_DEVICE_NOT_MATCH` | `EnumErrorCode_DOTCODE_LICENSE_INVALID` | -20004 | Device does not match with license buffer. |
-  | `DMERR_BIND_DEVICE_FAILED` | `EnumErrorCode_DOTCODE_LICENSE_INVALID` | -20005 | Failed to bind device. |
-  | `DMERR_INTERFACE_CONFLICT` | `EnumErrorCode_DOTCODE_LICENSE_INVALID` | -20006 | Interface InitLicenseFromLTS can not be used together with other license initiation interfaces. |
+  | `DMERR_HANDSHAKE_CODE_INVALID` | `EnumErrorCode_HANDSHAKE_CODE_INVALID` | -20001 | The handshake code is invalid. |
+  | `DMERR_LICENSE_BUFFER_FAILED` | `EnumErrorCode_LICENSE_BUFFER_FAILED` | -20002 | Failed to read or write license buffer. |
+  | `DMERR_LICENSE_SYNC_FAILED` | `EnumErrorCode_LICENSE_SYNC_FAILED` | -20003 | Failed to synchronize license info with license tracking server. |
+  | `DMERR_DEVICE_NOT_MATCH` | `EnumErrorCode_DEVICE_NOT_MATCH` | -20004 | Device does not match with license buffer. |
+  | `DMERR_BIND_DEVICE_FAILED` | `EnumErrorCode_BIND_DEVICE_FAILED` | -20005 | Failed to bind device. |
+  | `DMERR_LICENSE_INTERFACE_CONFLICT` | `EnumErrorCode_LICENSE_INTERFACE_CONFLICT` | -20006 | Interface InitLicenseFromLTS can not be used together with other license initiation interfaces. |
+  | `DMERR_LICENSE_CLIENT_DLL_MISSING` | `EnumErrorCode_LICENSE_CLIENT_DLL_MISSING` | -20007 | The license client dll is missing. |
+  | `DMERR_INSTANCE_COUNT_OVER_LIMITED` | `EnumErrorCode_INSTANCE_COUNT_OVER_LIMITED` | -20008 | The instance count is over limited. |
+  | `DMERR_LICENSE_INIT_SEQUENCE_FAILED` | `EnumErrorCode_LICENSE_INIT_SEQUENCE_FAILED` | -20009 | Interface InitLicenseFromLTS has to be called before creating any SDK objects. |
 
 
 ## Error code for specific programming languages  

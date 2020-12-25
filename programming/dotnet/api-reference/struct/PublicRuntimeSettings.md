@@ -44,6 +44,7 @@ public struct PublicRuntimeSettings
 | [`ScaleUpModes`](#scaleupmodes) | [`EnumScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode)[ ] |
 | [`PDFReadingMode`](#pdfreadingmode) | [`EnumPDFReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#pdfreadingmode) | 
 | [`DeblurModes`](#deblurmodes) | [`EnumDeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode)[ ] |
+| [`BarcodeZoneMinDistanceToImageBorders`](#barcodezonemindistancetoimageborders) | *int* |
 
 
 ### TerminatePhase
@@ -394,3 +395,16 @@ EnumDeblurMode[] Dynamsoft.DBR.PublicRuntimeSettings.DeblurModes
 - **Remarks**   
     The array index represents the priority of the item. The smaller index is, the higher priority is.
 
+### BarcodeZoneMinDistanceToImageBorders
+Sets the minimum distance (in pixels) between the barcode zone and image borders.
+```csharp
+int Dynamsoft.DBR.PublicRuntimeSettings.BarcodeZoneMinDistanceToImageBorders
+```
+- **Value range**   
+    [0, 0x7fffffff]
+      
+- **Default value**   
+    0
+    
+- **Remarks**   
+    0: means no limitation on the distance. 
