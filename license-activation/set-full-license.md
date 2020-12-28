@@ -69,10 +69,18 @@ You can set the license by following the steps below:
 
  Code snippet in C++:
  ```cpp
+   int iRet = -1;
+   char szErrorMsg[256];
    DM_LTSConnectionParameters ltspar;    
    reader.InitLTSConnectionParameters(&ltspar);
    ltspar.handshakeCode = "200***001-1000*****"; // Please replace the handshakeCode with your own
-   iRet = reader.InitLicenseFromLTS(&ltspar,szErrorMsg,256);
+   iRet = reader.InitLicenseFromLTS(&ltspar, szErrorMsg, 256);
+   
+   if (iRet != DBR_OK)
+    {
+        printf("Error code: %d. Error message: %s\n", iRet, szErrorMsg);
+        return -1;
+    }
  ```
 
  Code snippet in C#:
