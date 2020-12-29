@@ -314,7 +314,7 @@ needAutoGenerateSidebar: false
 
   | Erorr Code (except ObjC/Swift) | Erorr Code (ObjC/Swift) | Value | Description |
   |--------------------------------|-------------------------|-------|-------------|
-  | `DBRERR_LICENSE_DEVICE_RUNS_OUT` | `EnumErrorCode_License_Device_Runs_Out` | -10054 | The device number in the license key runs out. |
+  | `DBRERR_LICENSE_DEVICE_RUNS_OUT` | `EnumErrorCode_License_Device_Runs_Out` | -10054 | The license key has no remaining quota. |
   
 ### Error code -10055
 
