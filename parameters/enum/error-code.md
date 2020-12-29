@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader Enumerations - Error Code
 description: "This article enumerates the error codes of Dynamsoft Barcode Reader: -10000, -10001, -10002, -10003, -10004, -10005, -10006, -10007, -10008, -10009, -10010, -10011, -10012, -10013, -10014, -10015, -10016, -10017, -10018, -10019, -10020, -10021, -10022, -10023, -10024, -10025, -10026, -10027, -10028, -10029, -10030, -10031, -10032, -10033, -10034, -10035, -10036, -10037, -10038, -10039, -10040, -10041, -10042, -10043, -10044, -10045, -10046, -10047, -10048, -10049, -10050, -10051, -10052, -10053, -10054, -10055, -10056, -10057, -10058, -10059, -10060, -10061, 10000, 10001, 10002, 10003, 10004, 10005, 10006, 10007, 10008, 10009, 10010, 10011, 10012, 10013, 10014, 10015, 10016, 10017, 10018, 10019, 10020, 10021, 10022, 10023, 10024, 10025, 10026, 10027, 10028, 10029, 10030, 10031, 10032, 10033, 10034, 10035, 10036, 10037, 10038, 10039, 10040, 10041, 10042, 10043, 10044, 10045, 10046, 10047, 10048, 10049, 10050, 10051, 10052, 10053, 10054, 10055, 10056, 10057, 10058, 10059, 10060, 10061."
 keywords: error code, enumeration
 needAutoGenerateSidebar: false
+noTitleIndex: true
 ---
 
 # Dynamsoft Barcode Reader - Error Code
@@ -362,37 +363,37 @@ needAutoGenerateSidebar: false
 
   | Erorr Code (except ObjC/Swift) | Erorr Code (ObjC/Swift) | Value | Description |
   |--------------------------------|-------------------------|-------|-------------|
-  | `DMERR_HANDSHAKE_CODE_INVALID` | `EnumErrorCode_DOTCODE_LICENSE_INVALID` | -20001 | The handshake code is invalid. |
+  | `DMERR_HANDSHAKE_CODE_INVALID` | `EnumErrorCode_HANDSHAKE_CODE_INVALID` | -20001 | The handshake code is invalid. |
  
 ### Error code -20002
 
   | Erorr Code (except ObjC/Swift) | Erorr Code (ObjC/Swift) | Value | Description |
   |--------------------------------|-------------------------|-------|-------------|
-   | `DMERR_LICENSE_BUFFER_FAILED` | `EnumErrorCode_DOTCODE_LICENSE_INVALID` | -20002 | Failed to read or write license buffer. |
+   | `DMERR_LICENSE_BUFFER_FAILED` | `EnumErrorCode_LICENSE_BUFFER_FAILED` | -20002 | Failed to read or write license buffer. |
   
 ### Error code -20003
 
   | Erorr Code (except ObjC/Swift) | Erorr Code (ObjC/Swift) | Value | Description |
   |--------------------------------|-------------------------|-------|-------------|
-  | `DMERR_LICENSE_SYNC_FAILED` | `EnumErrorCode_DOTCODE_LICENSE_INVALID` | -20003 | Failed to synchronize license info with license tracking server. |
+  | `DMERR_LICENSE_SYNC_FAILED` | `EnumErrorCode_LICENSE_SYNC_FAILED` | -20003 | Failed to synchronize license info with license tracking server. |
   
 ### Error code -20004
 
   | Erorr Code (except ObjC/Swift) | Erorr Code (ObjC/Swift) | Value | Description |
   |--------------------------------|-------------------------|-------|-------------|
-  | `DMERR_DEVICE_NOT_MATCH` | `EnumErrorCode_DOTCODE_LICENSE_INVALID` | -20004 | Device does not match with license buffer. |
+  | `DMERR_DEVICE_NOT_MATCH` | `EnumErrorCode_DEVICE_NOT_MATCH` | -20004 | Device does not match with license buffer. |
   
 ### Error code -20005
 
   | Erorr Code (except ObjC/Swift) | Erorr Code (ObjC/Swift) | Value | Description |
   |--------------------------------|-------------------------|-------|-------------|
-  | `DMERR_BIND_DEVICE_FAILED` | `EnumErrorCode_DOTCODE_LICENSE_INVALID` | -20005 | Failed to bind device. |
+  | `DMERR_BIND_DEVICE_FAILED` | `EnumErrorCode_BIND_DEVICE_FAILED` | -20005 | Failed to bind device. |
   
 ### Error code -20006
 
   | Erorr Code (except ObjC/Swift) | Erorr Code (ObjC/Swift) | Value | Description |
   |--------------------------------|-------------------------|-------|-------------|
-  | `DMERR_INTERFACE_CONFLICT` | `EnumErrorCode_DOTCODE_LICENSE_INVALID` | -20006 | Interface InitLicenseFromLTS can not be used together with other license initiation interfaces. |
+  | `DMERR_INTERFACE_CONFLICT` | `EnumErrorCode_LICENSE_INTERFACE_CONFLICT` | -20006 | Interface InitLicenseFromLTS can not be used together with other license initiation interfaces. |
 
 ## Error code for specific programming languages  
 
