@@ -14,7 +14,7 @@ The Android documentation mainly consists of two parts. One is the [User Guide](
 
 ## Getting Started
 
-- [User Guide for Java](user-guide.md)
+- [User Guide for Android](user-guide.md)
 
 ## API Reference
 
