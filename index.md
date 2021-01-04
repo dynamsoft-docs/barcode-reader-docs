@@ -13,11 +13,7 @@ description: Dynamsoft Barcode Reader SDK Documentation Homepage
    - [Overview]({{ site.introduction }}overview.html)
    - [Principle of Algorithm]({{ site.introduction }}architecture.html)
    - [How-to Guides]({{ site.how_to }})
-   - [Comparison Tools]({{ site.comparison_tools }})
-   {%- comment -%}
-   - [FAQs]({{ site.faqs }})
-   {%- endcomment -%}
-   
+   - [Comparison Tools]({{ site.comparison_tools }})   
 
 - [Programming]({{ site.programming }})
    - [JavaScript]({{ site.js }})
@@ -26,7 +22,7 @@ description: Dynamsoft Barcode Reader SDK Documentation Homepage
    - [.NET]({{ site.dotnet }})
    - [Python]({{ site.python }})
    - [Java]({{ site.java }})
-   - [Java(Android)]({{ site.android }})
+   - [Java (Android)]({{ site.android }})
    - [Objective-C & Swift]({{ site.oc }})
    
 - [Parameters]({{ site.parameters }})
