@@ -20,13 +20,13 @@ description: Dynamsoft Barcode Reader SDK Documentation Homepage
    
 
 - [Programming]({{ site.programming }})
+   - [JavaScript]({{ site.js }})
    - [C]({{ site.c }})
    - [C++]({{ site.cpp }})
    - [.NET]({{ site.dotnet }})
-   - [Java]({{ site.java }})
    - [Python]({{ site.python }})
-   - [JavaScript]({{ site.js }})
-   - [Android]({{ site.android }})
+   - [Java]({{ site.java }})
+   - [Java(Android)]({{ site.android }})
    - [Objective-C & Swift]({{ site.oc }})
    
 - [Parameters]({{ site.parameters }})
