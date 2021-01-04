@@ -17,5 +17,5 @@ This section covers the following programming languages:
 - [.NET]({{ site.dotnet }})
 - [Python]({{ site.python }})
 - [Java]({{ site.java }})
-- [Java(Android)]({{ site.android }})
+- [Java (Android)]({{ site.android }})
 - [Objective-C & Swift]({{ site.oc }})
