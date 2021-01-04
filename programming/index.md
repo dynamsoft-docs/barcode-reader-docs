@@ -11,11 +11,11 @@ description: Dynamsoft Barcode Reader supports the following programming languag
 
 This section covers the following programming languages:
 
+- [JavaScript]({{ site.js }})
 - [C]({{ site.c }})
 - [C++]({{ site.cpp }})
 - [.NET]({{ site.dotnet }})
-- [Java]({{ site.java }})
 - [Python]({{ site.python }})
-- [JavaScript]({{ site.js }})
-- [Android]({{ site.android }})
+- [Java]({{ site.java }})
+- [Java(Android)]({{ site.android }})
 - [Objective-C & Swift]({{ site.oc }})
