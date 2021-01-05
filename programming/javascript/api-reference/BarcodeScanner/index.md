@@ -90,7 +90,7 @@ The following methods are inherited from the `BarcodeReader` class.
 
 | Property             | Description |
 |----------------------|-------------|
-| `bPlaySoundOnSuccessfulRead` | If set to `true`, a sound will be played when a barcode is read successfully. |
+| [`bPlaySoundOnSuccessfulRead`](accessors.md#soundonsuccessfulread) | If set to `true`, a sound will be played when a barcode is read successfully. |
 | [`barcodeFillStyle`](properties.md#barcodefillstyle) | Set the style used when filling in located barcode. | 
 | `barcodeLineWidth` | Set the width of the located barcode border. | 
 | [`barcodeStrokeStyle`](properties.md#barcodestrokestyle) | Set the style of the located barcode border. | 
