@@ -10,6 +10,12 @@ noTitleIndex: true
 
 # Release Notes for Python SDK - 8.x
 
+## 8.0.1 (01/06/2021)
+
+### FIXED
+
+- Fixed a typo in `init_license_from_lts`.
+
 ## 8.0 (11/26/2020)
 
 ### NEW
