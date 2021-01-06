@@ -1,3 +1,4 @@
+
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader Licensing - How to set full license
@@ -145,11 +146,11 @@ You can set the license by following the steps below:
  Code snippet in Python:
  ```python
  reader = BarcodeReader()
- connection_paras = BarcodeReader.init_lts_connection_parameters
+ connection_paras = reader.init_lts_connection_parameters()
  # Please replace the handshakeCode with your own
  connection_paras.handshake_code = "200***001-1000*****"
  try:
-     error = BarcodeReader.init_licesne_from_lts(connection_paras)
+     error = reader.init_licesne_from_lts(connection_paras)
      if error[0] != EnumErrorCode.DBR_OK:
          print(error[1])
  except BarcodeReaderError as bre:
