@@ -1,4 +1,3 @@
-
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader Licensing - How to set full license
