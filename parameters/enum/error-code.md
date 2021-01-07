@@ -393,7 +393,7 @@ noTitleIndex: true
 
   | Erorr Code (except ObjC/Swift) | Erorr Code (ObjC/Swift) | Value | Description |
   |--------------------------------|-------------------------|-------|-------------|
-  | `DMERR_INTERFACE_CONFLICT` | `EnumErrorCode_LICENSE_INTERFACE_CONFLICT` | -20006 | Interface InitLicenseFromLTS can not be used together with other license initiation interfaces. |
+  | `DMERR_LICENSE_INTERFACE_CONFLICT` | `EnumErrorCode_LICENSE_INTERFACE_CONFLICT` | -20006 | Interface InitLicenseFromLTS can not be used together with other license initiation interfaces. |
 
 ## Error code for specific programming languages  
 
