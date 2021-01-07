@@ -49,8 +49,10 @@ settings.furtherModes.textureDetectionModes = [
 Dynamsoft.DBR.EnumTextureDetectionMode.TDM_GENERAL_WIDTH_CONCENTRATION, 0, 0, 0, 0, 0, 0, 0];
 
 await scanner.updateRuntimeSettings(settings);
-await scanner.setModeArgument("TextureDetectionModes", 0, "Sensitivity", "9" ); //0 standards for the first mode of TextureDetectionModes, which is
-"Dynamsoft.DBR.EnumTextureDetectionMode.TDM_GENERAL_WIDTH_CONCENTRATION" in this content.
+await scanner.setModeArgument("TextureDetectionModes", 0, "Sensitivity", "9" ); 
+/*
+*0 standards for the first mode of TextureDetectionModes, which is "Dynamsoft.DBR.EnumTextureDetectionMode.TDM_GENERAL_WIDTH_CONCENTRATION" in this content.
+*/
 ```
 ## Show found barcodes
 
