@@ -34,6 +34,24 @@ await scanner.updateRuntimeSettings(settings);
 ```
 [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/taykq592/)
 
+## Set mode arguments
+
+To precisely control a mode, you could adjust the specific mode parameter.
+
+```javascript
+let settings = await scanner.getRuntimeSettings();
+
+/*
+*The following code sets the sensitivity of the TextureDetectionModes to 9
+*/
+
+settings.furtherModes.textureDetectionModes = [            
+Dynamsoft.DBR.EnumTextureDetectionMode.TDM_GENERAL_WIDTH_CONCENTRATION, 0, 0, 0, 0, 0, 0, 0];
+
+await scanner.updateRuntimeSettings(settings);
+await scanner.setModeArgument("TextureDetectionModes", 0, "Sensitivity", "9" ); //0 standards for the first mode of TextureDetectionModes, which is
+"Dynamsoft.DBR.EnumTextureDetectionMode.TDM_GENERAL_WIDTH_CONCENTRATION" in this content.
+```
 ## Show found barcodes
 
 Try the following code to show found barcodes in `input` elements on the page.
