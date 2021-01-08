@@ -21,7 +21,7 @@ needAutoGenerateSidebar: false
 ## TextResultOrderModes
 
 ### Mode Properties
-`TextResultOrderModes` is a parameter deciding the order of the text results returned. It consisits of one or more `TextResultOrderMode` items. The array index represents the priority of the item. The smaller index is, the higher priority is.
+`TextResultOrderModes` is a parameter deciding the order of the text results returned. It consists of one or more `TextResultOrderMode` items. The array index represents the priority of the item. The smaller index is, the higher priority is.
 
 | Value Type | Value Range | Default Value |
 | ---------- | ----------- | ------------- |
