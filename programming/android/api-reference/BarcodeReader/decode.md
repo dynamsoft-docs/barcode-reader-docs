@@ -75,8 +75,7 @@ All barcode text results decoded successfully.
 
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
-byte[] bufferBytes = null;
-GetBufferFromFile("your file path", bufferBytes);
+//get bufferBytes from other component
 TextResult[] result = reader.decodeFileInMemory(bufferBytes, "");
 reader.destroy();
 ```
@@ -102,7 +101,7 @@ All barcode text results decoded successfully.
 
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
-FileInputStream fis = new FileInputStream("your file path");
+//get FileInputStream fis from other component
 TextResult[] result = reader.decodeFileInMemory(fis, "");
 reader.destroy();
 ```
@@ -200,8 +199,8 @@ All barcode text results decoded successfully.
 
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
-Bitmap bitmap = BitmapFactory.decodeFile("your file path");
-TextResult[] result = reader.decodeBufferedImage(bitmap, "");
+//get BufferedImage input from other component
+TextResult[] result = reader.decodeBufferedImage(input, "");
 reader.destroy();
 ```
 
