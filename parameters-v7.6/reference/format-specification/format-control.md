@@ -49,7 +49,7 @@ The unit is barcode module. For example, if the standard barcode module is 2px a
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
-| FormatSpecification | AllModuleDeviation | *int* | [0,7fffffff] | 0 |
+| FormatSpecification | AllModuleDeviation | *int* | [0, 0x7fffffff] | 0 |
 
 
 **Json Parameter Example**   
@@ -126,7 +126,7 @@ Sets the range of barcode bytes length for barcodes search.
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
-| FormatSpecification | BarcodeBytesLengthRangeArray | *JSON Object Array* | `MinValue`: [0, 7fffffff]<br>`MaxValue`: [0, 7fffffff]<br>**MaxValue >= MinValue** | `null` |
+| FormatSpecification | BarcodeBytesLengthRangeArray | *JSON Object Array* | `MinValue`: [0, 0x7fffffff]<br>`MaxValue`: [0, 0x7fffffff]<br>**MaxValue >= MinValue** | `null` |
 
 **Json Parameter Example**   
 ```
@@ -226,7 +226,7 @@ Sets the range of barcode heights (in pixels) to for barcodes search.
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
-| FormatSpecification | BarcodeHeightRangeArray | *JSON Object Array* | `MinValue`: [0, 7fffffff]<br>`MaxValue`: [0, 7fffffff]<br>**MaxValue >= MinValue** | `null` |
+| FormatSpecification | BarcodeHeightRangeArray | *JSON Object Array* | `MinValue`: [0, 0x7fffffff]<br>`MaxValue`: [0, 0x7fffffff]<br>**MaxValue >= MinValue** | `null` |
 
 **Json Parameter Example**   
 ```
@@ -255,7 +255,7 @@ Sets the range of barcode text length for barcodes search.
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
-| FormatSpecification | BarcodeTextLengthRangeArray | *JSON Object Array* | `MinValue`: [0, 7fffffff]<br>`MaxValue`: [0, 7fffffff]<br>**MaxValue >= MinValue** | `null` |
+| FormatSpecification | BarcodeTextLengthRangeArray | *JSON Object Array* | `MinValue`: [0, 0x7fffffff]<br>`MaxValue`: [0, 0x7fffffff]<br>**MaxValue >= MinValue** | `null` |
 
 **Json Parameter Example**   
 ```
@@ -316,7 +316,7 @@ Sets the range of barcode widths (in pixels) for barcodes search.
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
-| FormatSpecification | BarcodeWidthRangeArray | *JSON Object Array* | `MinValue`: [0, 7fffffff]<br>`MaxValue`: [0, 7fffffff]<br>**MaxValue >= MinValue** | `null` |
+| FormatSpecification | BarcodeWidthRangeArray | *JSON Object Array* | `MinValue`: [0, 0x7fffffff]<br>`MaxValue`: [0, 0x7fffffff]<br>**MaxValue >= MinValue** | `null` |
 
 **Json Parameter Example**   
 ```
@@ -471,7 +471,7 @@ Sets the range of module size (in pixels) for barcodes search.
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
-| FormatSpecification | ModuleSizeRangeArray | *JSON Object Array* | `MinValue`: [0, 7fffffff]<br>`MaxValue`: [0, 7fffffff]<br>**MaxValue >= MinValue** | `null` |
+| FormatSpecification | ModuleSizeRangeArray | *JSON Object Array* | `MinValue`: [0, 0x7fffffff]<br>`MaxValue`: [0, 0x7fffffff]<br>**MaxValue >= MinValue** | `null` |
 
 **Json Parameter Example**   
 ```

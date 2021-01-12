@@ -24,7 +24,6 @@ Stores the text result.
 | [`localizationResult`](#localizationresult) | [`LocalizationResult`](LocalizationResult.md)\* |
 | [`detailedResult`](#detailedresult) | *Object* |
 | [`results`](#results) | [`ExtendedResult`](ExtendedResult.md)\[\] |
-| [`exception`](#exception) | *String* |
 
 
 ### barcodeFormat
@@ -32,7 +31,7 @@ Stores the text result.
 Barcode type in BarcodeFormat group 1.
 
 ```java
-int com.dynamsoft.dbr.TextResult.barcodeFormat
+int com.dynamsoft.dbr.barcodeFormat
 ```
 
 ### barcodeFormatString
@@ -40,7 +39,7 @@ int com.dynamsoft.dbr.TextResult.barcodeFormat
 Barcode type in BarcodeFormat group 1 as string.
 
 ```java
-String com.dynamsoft.dbr.TextResult.barcodeFormatString
+String com.dynamsoft.dbr.barcodeFormatString
 ```
 
 ### barcodeFormat_2
@@ -48,7 +47,7 @@ String com.dynamsoft.dbr.TextResult.barcodeFormatString
 Barcode type in BarcodeFormat group 2.
 
 ```java
-int com.dynamsoft.dbr.TextResult.barcodeFormat_2
+int com.dynamsoft.dbr.barcodeFormat_2
 ```
 
 ### barcodeFormatString_2
@@ -56,7 +55,7 @@ int com.dynamsoft.dbr.TextResult.barcodeFormat_2
 Barcode type in BarcodeFormat group 2 as string.
 
 ```java
-String com.dynamsoft.dbr.TextResult.barcodeFormatString_2
+String com.dynamsoft.dbr.barcodeFormatString_2
 ```
 
 ### barcodeText
@@ -64,7 +63,7 @@ String com.dynamsoft.dbr.TextResult.barcodeFormatString_2
 The barcode text, ends by '\0'.
 
 ```java
-String com.dynamsoft.dbr.TextResult.barcodeText
+String com.dynamsoft.dbr.barcodeText
 ```
 
 ### barcodeBytes
@@ -72,7 +71,7 @@ String com.dynamsoft.dbr.TextResult.barcodeText
 The barcode content in a byte array.
 
 ```java
-byte[] com.dynamsoft.dbr.TextResult.barcodeBytes
+byte[] com.dynamsoft.dbr.barcodeBytes
 ```
 
 ### barcodeBytesLength
@@ -80,7 +79,7 @@ byte[] com.dynamsoft.dbr.TextResult.barcodeBytes
 The length of the byte array.
 
 ```java
-int com.dynamsoft.dbr.TextResult.barcodeBytesLength
+int com.dynamsoft.dbr.barcodeBytesLength
 ```
 
 ### localizationResult
@@ -88,7 +87,7 @@ int com.dynamsoft.dbr.TextResult.barcodeBytesLength
 The corresponding localization result.
 
 ```java
-LocalizationResult com.dynamsoft.dbr.TextResult.localizationResult
+LocalizationResult com.dynamsoft.dbr.localizationResult
 ```
 
 ### detailedResult
@@ -96,7 +95,7 @@ LocalizationResult com.dynamsoft.dbr.TextResult.localizationResult
 One of the following: [`QRCodeDetails`](QRCodeDetails.md), [`PDF417Details`](PDF417Details.md), [`DataMatrixDetails`](DataMatrixDetails.md), [`AztecDetails`](AztecDetails.md), [`OneDCodeDetails`](OneDCodeDetails.md).
 
 ```java
-Object com.dynamsoft.dbr.TextResult.detailedResult
+Object com.dynamsoft.dbr.detailedResult
 ```
 
 ### results
@@ -104,13 +103,5 @@ Object com.dynamsoft.dbr.TextResult.detailedResult
 The extended result array.
 
 ```java
-ExtendedResult[] com.dynamsoft.dbr.TextResult.results
-```
-
-### exception
-
-The exception message.
-
-```java
-String com.dynamsoft.dbr.TextResult.exception
+ExtendedResult[] com.dynamsoft.dbr.results
 ```
