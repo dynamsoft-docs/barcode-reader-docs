@@ -49,7 +49,7 @@ The unit is barcode module. For example, if the standard barcode module is 2px a
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
-| FormatSpecification | AllModuleDeviation | *int* | [0,7fffffff] | 0 |
+| FormatSpecification | AllModuleDeviation | *int* | [0, 0x7fffffff] | 0 |
 
 
 **Json Parameter Example**   

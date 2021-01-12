@@ -52,7 +52,7 @@ The unit is barcode module. For example, if the standard barcode module is 2px a
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
-| FormatSpecification | AllModuleDeviation | *int* | [0,7fffffff] | 0 |
+| FormatSpecification | AllModuleDeviation | *int* | [0, 0x7fffffff] | 0 |
 
 
 **Json Parameter Example**   
@@ -371,7 +371,7 @@ Sets the range of bar count of the barcode zone for barcodes search.
 
 
 ## BarcodeZoneMinDistanceToImageBorders
-Sets the minimum distance (in pixels) between the barcode zone and image borders.
+Sets the minimum distance (in pixels) between the barcode zone and image borders. If a barcode region has been set, this parameter should not be used. 
 
     
 ### As Json Parameter

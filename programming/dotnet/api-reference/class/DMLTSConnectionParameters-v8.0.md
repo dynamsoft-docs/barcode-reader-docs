@@ -164,10 +164,10 @@ int Dynamsoft.DBR.DMLTSConnectionParameters.MaxBufferDays
 ```
 
 - **Value range**   
-    [0,0x7fffffff]  
+    [7,0x7fffffff]  
       
 - **Default value**   
-    0   
+    7  
     
 
 ### LimitedLicenseModules
