@@ -21,8 +21,11 @@ The Objective-C and Swift documentation mainly consists of two parts. One is the
 - [Class](api-reference/#classes)
 
 ## Release Notes
-- [Version 8.0](release-notes/ios-8.md)
+- [Version 8.x](release-notes/ios-8.md)
 - [Version 7.6 and below](release-notes/ios-7.md)
+
+## Online Store
+- <a href="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/#mobile" target="_blank">For Mobile App</a>
 
 ## Samples and Demos
 
