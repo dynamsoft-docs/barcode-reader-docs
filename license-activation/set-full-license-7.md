@@ -339,13 +339,13 @@ If your machine is not allowed to access Internet, you can follow the steps belo
 
  **For Windows:** 
  
- Download [MachineIDGenerator.exe](https://download.dynamsoft.com/MachineIDGenerator/MachineIDGenerator.exe) and run it. The returned string, e.g. `tZRk-6qb2-sEyE-wcz7-jf6j-8DH/-Di3u-zjSv-G86f-ol3x`, is the machine ID.
+ Download <a href="https://download.dynamsoft.com/MachineIDGenerator/MachineIDGenerator.exe" target="_blank">MachineIDGenerator.exe</a> and run it. The returned string, e.g. `tZRk-6qb2-sEyE-wcz7-jf6j-8DH/-Di3u-zjSv-G86f-ol3x`, is the machine ID.
 
 ![MachineID_Windows][7]
 
  **For Linux:** 
 
- Download [MachineIDGenerator.tar.gz](https://download.dynamsoft.com/MachineIDGenerator/MachineIDGenerator.tar.gz) and unzip it. Open **Terminal** and type `./MachineIDGenerator`. The returned string, e.g. `iJpN-Cajc-qQip-Sl50-NEX+-z1dJ-XmmV-lS9O-G86f-ol3x`, is the machine ID.
+ Download <a href="https://download.dynamsoft.com/MachineIDGenerator/MachineIDGenerator.tar.gz" target="_blank">MachineIDGenerator.tar.gz</a> and unzip it. Open **Terminal** and type `./MachineIDGenerator`. The returned string, e.g. `iJpN-Cajc-qQip-Sl50-NEX+-z1dJ-XmmV-lS9O-G86f-ol3x`, is the machine ID.
 
  ![MachineID_Linux][8]
 
