@@ -28,7 +28,7 @@ Locate the **dist/** directory under the installation folder of the library and 
 If the resource files (e.g.,`wasm` files) are not placed in the same directory as `dbr.js`, you will need to specify the path using the API `engineResourcePath` before calling `loadWasm` or `createInstance`.
 
 ```javascript
-Dynamsoft.BarcodeReader.engineResourcePath = "url/to/the/dir/";
+Dynamsoft.DBR.BarcodeReader.engineResourcePath = "url/to/the/dir/";
 ```
 
 ### Step Two: Configure the Server
@@ -37,39 +37,17 @@ Set the MIME type for `.wasm` to `application/wasm`.
 
 Different servers are configured differently. Here are some popular ones:
 
-- NGINX: `mime.types`
-- IIS: `Web.config`
-- Java™ EE web app: `web.xml`
-- Node.js: `npm mime`
+- NGINX: <a href="https://www.nginx.com/resources/wiki/start/topics/examples/full/#mime-types" target="_blank">mime.types</a>
+- IIS: <a href="https://github.com/dynamsoft-dbr/javascript-barcode/blob/dac614f8033661901d85381dfaff8d612115862a/documents/conf/Web.config" target="_blank">Web.config</a>
+- Java™ EE web app: <a href="https://github.com/dynamsoft-dbr/javascript-barcode/blob/dac614f8033661901d85381dfaff8d612115862a/documents/conf/web.xml" target="_blank">web.xml</a>
+- Node.js: <a href="https://github.com/broofa/node-mime" target="_blank">npm mime</a>
+
+Please note that HTTPS **must** be enabled in order to use the component. For how to enable HTTPS, please check out the manual of your webserver.
+
+If deploying to a production server, it is recommended to use a valid SSL certificate.
 
 ## License Activation
 
 A full license is required for deployment. If you have not purchased a license yet, please visit our [online store](https://www.dynamsoft.com/store/dynamsoft-barcode-reader/).
 
-### Step One : Create a Dynamsoft account
-
-If you don't have an Dynamsoft account yet, sign up [here](https://www.dynamsoft.com/api-common/Regist/Regist). Be sure to use the same email that was registered for the purchase.
-
-### Step Two : Log into Dynamsoft Customer Portal
-
-Once logged in, click License in the left menu bar to show your purchased license(s).
-
-### Step Three : Activate the License
-
-Under **Status**, click **Activate Now** to specify a domain to bind your license key. The domain binding is a security feature to protect your license, optional but highly recommended.
-
-A few examples of the domain:
-
-- www.dynamsoft.com
-- demo.dynamsoft.com
-- *.dynamsoft.com
-- *.dynamsoft.com; *.yoursite.com
-
-### Step Four : Use the License
-
-```html
-<!-- Please visit https://www.dynamsoft.com/customer/license/trialLicense to get a trial license. -->
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.0.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
-```
-
-In the above sample code, simply replace `PRODUCT-KEYS` with your activated key.
+In version 8.0, we introduced [License Tracking 2.0](https://www.dynamsoft.com/license-tracking/docs/about/index.html) to activate and track usage. Please follow the steps in [this article](https://www.dynamsoft.com/license-tracking/docs/common/mechanism.html) to activate and use your license. 

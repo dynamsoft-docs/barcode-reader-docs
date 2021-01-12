@@ -9,7 +9,7 @@ breadcrumbText: JavaScript
 
 # Dynamsoft Barcode Reader - for JavaScript Documentation
 
-The JavaScript documentation mainly consists of two parts. One is the [User Guide](#getting-started) that provides a brief guide for how to integrate the Dynamsoft Barcode Reader to your application or run the samples. The other is the [API Reference](#api-reference) that offers the manual of interfaces used for reading barcodes.
+The JavaScript documentation mainly consists of two parts. One is the `Getting Started` guide that provides a brief guide for how to integrate the Dynamsoft Barcode Reader to your application or run the samples. The other is the `API Reference` that offers the manual of interfaces used for reading barcodes.
 
 ## Getting Started
 
@@ -23,6 +23,7 @@ The JavaScript documentation mainly consists of two parts. One is the [User Guid
 
 ## Release Notes
 
+- [version 8.0](release-notes/js-8.md)
 - [version 7.6 and below](release-notes/js-7.md)
 
 ## Samples and Demos

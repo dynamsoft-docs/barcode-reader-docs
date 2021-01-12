@@ -16,18 +16,19 @@ Dynamsoft Barcode Reader (DBR) is a software development kit (SDK) with highly c
 
 As of v8.0, DBR currently supports the following barcode formats:  
 
-| 1D/Linear Barcodes       | 2D Barcodes         | GS1 DataBar             | Postal Codes          | Other Type         |     
+| 1D/Linear Barcodes       | 2D Barcodes         | GS1 DataBar             | Postal Codes          | Other Types         |     
 |--------------------------|---------------------|-------------------------| --------------------- | ------------------ |
 | Code 39/Code 39 Extended | QR Code             | Omnidirectional         | USPS Intelligent Mail | GS1 Composite Code |     
 | Code 93                  | Micro QR Code       | Truncated               | Postnet               | Patch Code         |    
-| Code 128                 | Data Matrix         | Stacked                 | Planet                | DotCode            |
+| Code 128                 | Data Matrix         | Stacked                 | Planet                | |
 | Codabar                  | PDF417              | Stacked Omnidirectional | Australian Post       | | 
 | Interleaved 2 of 5       | Micro PDF417        | Limited                 | UK Royal Mail         | |
 | EAN-8                    | Aztec Code          | Expanded                |                       | |
 | EAN-13                   | MaxiCode (mode 2-5) | Expanded Stacked        |                       | | 
-| UPC-A                    |                     |                         |                       | | 
+| UPC-A                    | DotCode             |                         |                       | | 
 | UPC-E                    |                     |                         |                       | |
-| Industrial 2 of 5        |                     |                         |                       | |       
+| Industrial 2 of 5        |                     |                         |                       | |    
+| MSI (Modified Plessey)   |                     |                         |                       | |    
 
 &nbsp;
 

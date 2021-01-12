@@ -12,24 +12,24 @@ needAutoGenerateSidebar: true
 
 The library is based on the `WebAssembly` standard; therefore, **on first use**, it needs some time to download and compile the `wasm` files. After first use, the browser may cache the file.
 
-`Dynamsoft.BarcodeReader.loadWasm` is the API to start the initialization.
+`Dynamsoft.DBR.BarcodeReader.loadWasm` is the API to start the initialization.
 
 ```javascript
 try{
-    await Dynamsoft.BarcodeReader.loadWasm();
+    await Dynamsoft.DBR.BarcodeReader.loadWasm();
 }catch(ex){
     console.error(ex);
 }
 ```
 
-Other APIs like `Dynamsoft.BarcodeReader.createInstance` and `Dynamsoft.BarcodeScanner.createInstance` will also call `loadWasm` during initialization. The following demonstrates the most common usage. 
+Other APIs like `Dynamsoft.DBR.BarcodeReader.createInstance` and `Dynamsoft.DBR.BarcodeScanner.createInstance` will also call `loadWasm` during initialization. The following demonstrates the most common usage. 
 
 ```javascript
 let reader = null;
 let scanner = null;
 try{
-    reader = await Dynamsoft.BarcodeReader.createInstance();
-    scanner = await Dynamsoft.BarcodeScanner.createInstance();
+    reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
+    scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 }catch(ex){
     console.error(ex);
 }
@@ -80,7 +80,7 @@ As you can see in the code, there are three types of configurations:
 
 - `get/updateVideoSettings`: Configures the data source, i.e., the video stream. These settings include which camera to use, the resolution, etc. Learn more [here](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia#Syntax).
 
-- `get/updateRuntimeSettings`: Configures the decode engine. Find a full list of these settings and their corresponding descriptions [here](api-reference/global-interfaces.md#runtimesettings). Try in [JSFiddle](https://jsfiddle.net/DynamsoftTeam/f24h8c1m/).
+- `get/updateRuntimeSettings`: Configures the decode engine. Find a full list of these settings and their corresponding descriptions [here](../api-reference/global-interfaces.md#runtimesettings). Try in [JSFiddle](https://jsfiddle.net/DynamsoftTeam/f24h8c1m/).
 
     e.g.,
 
@@ -105,7 +105,7 @@ The library provides a built-in UI for the `BarcodeScanner`object where the defa
 
 1. Modify the file `dist/dbr.scanner.html` directly. This option is only possible when you deploy these files yourself instead of using the CDN.
 
-2. Copy the file `dist/dbr.scanner.html`, modify it and specify the new file as the default UI by its URL `Dynamsoft.BarcodeScanner.defaultUIElementURL = url`. Note: you must set `defaultUIElementURL` before you call `createInstance`.
+2. Copy the file `dist/dbr.scanner.html`, modify it and specify the new file as the default UI by its URL `Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = url`. Note: you must set `defaultUIElementURL` before you call `createInstance`.
 
 3. Build the UI into your own web page and call `scanner.setUIElement(HTMLElement)` to specify that element.
 
@@ -124,7 +124,7 @@ The following is an example of the 3rd option above.
     <script>
         let scanner = null;
         (async()=>{
-            scanner = await Dynamsoft.BarcodeScanner.createInstance();
+            scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
             await scanner.setUIElement(document.getElementById('div-video-container'));
             scanner.onFrameRead = results => {console.log(results);};
             scanner.onUnduplicatedRead = (txt, result) => {alert(txt);};
@@ -197,7 +197,7 @@ In v8.0, we introduced a new feature to decode barcodes from an existing video s
     <script>
         let scanner = null;
         (async()=>{
-            scanner = await Dynamsoft.BarcodeScanner.createInstance();
+            scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
             await scanner.setUIElement(document.getElementById('div-video-container'));
             scanner.onFrameRead = results => {console.log(results);};
             scanner.onUnduplicatedRead = (txt, result) => {alert(txt);};

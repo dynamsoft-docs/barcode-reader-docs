@@ -8,7 +8,7 @@ breadcrumbText: BarcodeScanner
 ---
 
 
-# Dynamsoft Barcode Reader SDK - Javascript BarcodeScanner Class
+# Dynamsoft Barcode Reader SDK - JavaScript BarcodeScanner Class
 
 The `BarcodeScanner` class is used for **video** decoding.
 
@@ -90,7 +90,7 @@ The following methods are inherited from the `BarcodeReader` class.
 
 | Property             | Description |
 |----------------------|-------------|
-| `bPlaySoundOnSuccessfulRead` | If set to `true`, a sound will be played when a barcode is read successfully. |
+| `bPlaySoundOnSuccessfulRead` | If set to `true`, a sound will be played when a barcode is read successfully. You can change the sound using [`soundOnSuccessfulRead`](accessors.md#soundonsuccessfulread)|
 | [`barcodeFillStyle`](properties.md#barcodefillstyle) | Set the style used when filling in located barcode. | 
 | `barcodeLineWidth` | Set the width of the located barcode border. | 
 | [`barcodeStrokeStyle`](properties.md#barcodestrokestyle) | Set the style of the located barcode border. | 
@@ -109,6 +109,9 @@ The following properties are inherited from the `BarcodeReader` class.
 * `bDestroyed`
 * `bSaveOriCanvas`
 * `oriCanvas`
+* [`licenseServer`](../BarcodeReader/properties.md#licenseServer)
+* [`handshakeCode`](../BarcodeReader/properties.md#handshakeCode)
+* [`sessionPassword`](../BarcodeReader/properties.md#sessionPassword)
 
 ## `BarcodeScanner` Accessors
 

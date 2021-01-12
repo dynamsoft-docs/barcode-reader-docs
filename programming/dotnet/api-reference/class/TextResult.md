@@ -30,6 +30,7 @@ public class TextResult
 | [`LocalizationResult`](#localizationresult) | *[`LocalizationResult`](LocalizationResult.md)* |
 | [`DetailedResult`](#detailedresult) | *object* |
 | [`Results`](#results) | *[`ExtendedResult`](ExtendedResult.md)[ ]* |
+| [`Exception`](#Exception) | *string* |
 
 
 ### BarcodeFormat
@@ -93,4 +94,11 @@ The extended result array.
 
 ```csharp
 ExtendedResult[] Dynamsoft.DBR.TextResult.Results
+```
+
+### Exception
+The exception message.
+
+```csharp
+string Dynamsoft.DBR.TextResult.Exception
 ```

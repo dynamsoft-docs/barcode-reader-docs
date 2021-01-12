@@ -1,4 +1,5 @@
 repositoryUrl: https://github.com/Dynamsoft/barcode-reader-docs/blob/master
+repository: Dynamsoft/barcode-reader-docs
 docFullPath: https://www.dynamsoft.com/barcode-reader
 firstLevelUrl: /barcode-reader
 docHomePage: /barcode-reader/programming/
@@ -12,7 +13,6 @@ parameters: /barcode-reader/parameters/
 license_activation: /barcode-reader/license-activation/
 enhancements: /barcode-reader/enhancements/
 
-licensing: /barcode-reader/introduction/licensing/
 comparison_tools: /barcode-reader/introduction/comparison-tools/
 
 c_cplusplus: /barcode-reader/programming/c-cplusplus/

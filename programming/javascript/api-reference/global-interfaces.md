@@ -8,7 +8,7 @@ needGenerateH3Content: false
 ---
 
 
-# Javascript API Reference - Global Interfaces
+# JavaScript API Reference - Global Interfaces
 
 | Interface            | Description |
 |----------------------|-------------|
@@ -43,7 +43,6 @@ Stores the FurtherModes.
 
 | Property           | Type | Description |
 |----------------------|------|-------------|
-| `accompanyingTextRecognitionModes` | [*`AccompanyingTextRecognitionMode`*]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode) | Sets the mode and priority to recognize accompanying text. **Currently unsupported.** | 
 | `barcodeColourModes` | [*`BarcodeColourMode`*]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode) | Sets the mode and priority for the barcode colour mode used to process the barcode zone. | 
 | `barcodeComplementModes` | [*`BarcodeComplementMode`*]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode) | Sets the mode and priority to complement the missing parts in the barcode. | 
 | `colourClusteringModes` | [*`ColourClusteringMode`*]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode) | Sets the mode and priority for colour categorization. | 
@@ -106,8 +105,9 @@ Stores the barcode reading runtime settings. These settings control the barcode 
 |--------------------|------|---------------|-------------|
 | [`barcodeFormatIds`]({{ site.enumerations }}format-enums.html#barcodeformat) | *number* | `BF_ALL (-32505857)` | The selected barcode formats to be read from group 1 of 2. |
 | [`barcodeFormatIds_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) | *number* | `BF2_NULL (0)` | The selected barcode formats to be read from group 2 of 2.  |
+| `barcodeZoneMinDistanceToImageBorders` | *number* | `BarcodeReader`: `0` <br/>`BarcodeScanner`: `0` | Sets the minimum distance (in pixels) between the barcode zone and image borders. <br/>Value range: `[0, 0x7fffffff]` |
 | `binarizationModes` | [`EnumBinarizationMode[]`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) | `[BM_LOCAL_BLOCK, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP]` | The mode and priority for binarization. |
-| `deblurLevel`<sup>[1](#1-tips-and-tricks)</sup> | *number* | `BarcodeReader`: `9` <br/>`BarcodeScanner`: `0` | The degree of blurriness of the barcode. <br/>Value range: `[0, 9]`|
+| `deblurLevel`<sup>[1](#1-tips-and-tricks)</sup> | *number* | `BarcodeReader`: `9` <br/>`BarcodeScanner`: `0` | **deprecated** The degree of blurriness of the barcode. <br/>Value range: `[0, 9]`|
 | `deblurModes` | [`EnumDeblurMode[]`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode) | `[DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP]` | Sets the mode and priority for deblurring. |
 | `expectedBarcodesCount`<sup>[2](#1-tips-and-tricks)</sup> | *number* | `BarcodeReader`: `512` <br/>`BarcodeScanner`: `0` | The number of barcodes expected to be detected for each image. <br/>Value range: `[0, 0x7fffffff]` |
 | [`furtherModes`](#FurtherModes) | *strong* |  | Additional modes. |

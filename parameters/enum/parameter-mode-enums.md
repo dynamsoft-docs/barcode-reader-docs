@@ -45,7 +45,7 @@ Describes the barcode colour mode.
 | -------- | ----------- |
 | C / C++ | `enum BarcodeColourMode` |
 | .Net | `enum Dynamsoft.DBR.EnumBarcodeColourMode` |
-| JavaScript | `Dynamsoft.EnumBarcodeColourMode` |
+| JavaScript | `Dynamsoft.DBR.EnumBarcodeColourMode` |
 | Python | `class EnumBarcodeColourMode(IntEnum)` |
 | Java / Android | `class EnumBarcodeColourMode` |
 | ObjC / Swift | `enum EnumBarcodeColourMode` |
@@ -79,7 +79,7 @@ Describes the barcode complement mode.
 | -------- | ----------- |
 | C / C++ | `enum BarcodeComplementMode` |
 | .Net | `enum Dynamsoft.DBR.EnumBarcodeComplementMode` |
-| JavaScript | `Dynamsoft.EnumBarcodeComplementMode` |
+| JavaScript | `Dynamsoft.DBR.EnumBarcodeComplementMode` |
 | Python | `class EnumBarcodeComplementMode(IntEnum)` |
 | Java / Android | `class EnumBarcodeComplementMode` |
 | ObjC / Swift | `enum EnumBarcodeComplementMode` |
@@ -109,7 +109,7 @@ Describes the binarization mode.
 | -------- | ----------- |
 | C / C++ | `enum BinarizationMode` |
 | .Net | `enum Dynamsoft.DBR.EnumBinarizationMode` |
-| JavaScript | `Dynamsoft.EnumBinarizationMode` |
+| JavaScript | `Dynamsoft.DBR.EnumBinarizationMode` |
 | Python | `class EnumBinarizationMode(IntEnum)` |
 | Java / Android | `class EnumBinarizationMode` |
 | ObjC / Swift | `enum EnumBinarizationMode` |
@@ -122,6 +122,7 @@ Describes the binarization mode.
 | BM_SKIP | EnumBinarizationModeSkip | 0x00 | Skips the binarization. |
 | BM_AUTO | EnumBinarizationModeAuto | 0x01 | **Not supported yet.** |
 | BM_LOCAL_BLOCK | EnumBinarizationModeLocalBlock | 0x02 | Binarizes the image based on the local block. Check arguments of [`BinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#mode-arguments) for available argument settings. |
+| BM_THRESHOLD | EnumBinarizationModeThreshold | 0x04 | Performs image binarization based on the given threshold. Check arguments of [`BinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#mode-arguments) for available argument settings. |
 
 
 
@@ -139,7 +140,7 @@ Describes the colour clustering mode.
 | -------- | ----------- |
 | C / C++ | `enum ColourClusteringMode` |
 | .Net | `enum Dynamsoft.DBR.EnumColourClusteringMode` |
-| JavaScript | `Dynamsoft.EnumColourClusteringMode` |
+| JavaScript | `Dynamsoft.DBR.EnumColourClusteringMode` |
 | Python | `class EnumColourClusteringMode(IntEnum)` |
 | Java / Android | `class EnumColourClusteringMode` |
 | ObjC / Swift | `enum EnumColourClusteringMode` |
@@ -169,7 +170,7 @@ Describes the colour conversion mode.
 | -------- | ----------- |
 | C / C++ | `enum ColourConversionMode` |
 | .Net | `enum Dynamsoft.DBR.EnumColourConversionMode` |
-| JavaScript | `Dynamsoft.EnumColourConversionMode` |
+| JavaScript | `Dynamsoft.DBR.EnumColourConversionMode` |
 | Python | `class EnumColourConversionMode(IntEnum)` |
 | Java / Android | `class EnumColourConversionMode` |
 | ObjC / Swift | `enum EnumColourConversionMode` |
@@ -198,7 +199,7 @@ Describes the conflict mode.
 | -------- | ----------- |
 | C / C++ | `enum ConflictMode` |
 | .Net | `enum Dynamsoft.DBR.EnumConflictMode` |
-| JavaScript | `Dynamsoft.EnumConflictMode` |
+| JavaScript | `Dynamsoft.DBR.EnumConflictMode` |
 | Python | `class EnumConflictMode(IntEnum)` |
 | Java / Android | `class EnumConflictMode` |
 | ObjC / Swift | `enum EnumConflictMode` |
@@ -227,7 +228,7 @@ Describes the deblur mode.
 | -------- | ----------- |
 | C / C++ | `enum DeblurMode` |
 | .Net | `enum Dynamsoft.DBR.EnumDeblurMode` |
-| JavaScript | `Dynamsoft.EnumDeblurMode` |
+| JavaScript | `Dynamsoft.DBR.EnumDeblurMode` |
 | Python | `class EnumDeblurMode(IntEnum)` |
 | Java / Android | `class EnumDeblurMode` |
 | ObjC / Swift | `enum EnumDeblurMode` |
@@ -262,7 +263,7 @@ Describes the deformation resisting mode.
 | -------- | ----------- |
 | C / C++ | `enum DeformationResistingMode` |
 | .Net | `enum Dynamsoft.DBR.EnumDeformationResistingMode` |
-| JavaScript | `Dynamsoft.EnumDeformationResistingMode` |
+| JavaScript | `Dynamsoft.DBR.EnumDeformationResistingMode` |
 | Python | `class EnumDeformationResistingMode(IntEnum)` |
 | Java / Android | `class EnumDeformationResistingMode` |
 | ObjC / Swift | `enum EnumDeformationResistingMode` |
@@ -291,7 +292,7 @@ Describes the DPM code reading mode.
 | -------- | ----------- |
 | C / C++ | `enum DPMCodeReadingMode` |
 | .Net | `enum Dynamsoft.DBR.EnumDPMCodeReadingMode` |
-| JavaScript | `Dynamsoft.EnumDPMCodeReadingMode` |
+| JavaScript | `Dynamsoft.DBR.EnumDPMCodeReadingMode` |
 | Python | `class EnumDPMCodeReadingMode(IntEnum)` |
 | Java / Android | `class EnumDPMCodeReadingMode` |
 | ObjC / Swift | `enum EnumDPMCodeReadingMode` |
@@ -321,7 +322,7 @@ Describes the grayscale transformation mode.
 | -------- | ----------- |
 | C / C++ | `enum GrayscaleTransformationMode` |
 | .Net | `enum Dynamsoft.DBR.EnumGrayscaleTransformationMode` |
-| JavaScript | `Dynamsoft.EnumGrayscaleTransformationMode` |
+| JavaScript | `Dynamsoft.DBR.EnumGrayscaleTransformationMode` |
 | Python | `class EnumGrayscaleTransformationMode(IntEnum)` |
 | Java / Android | `class EnumGrayscaleTransformationMode` |
 | ObjC / Swift | `enum EnumGrayscaleTransformationMode` |
@@ -350,7 +351,7 @@ Describes the image preprocessing mode.
 | -------- | ----------- |
 | C / C++ | `enum ImagePreprocessingMode` |
 | .Net | `enum Dynamsoft.DBR.EnumImagePreprocessingMode` |
-| JavaScript | `Dynamsoft.EnumImagePreprocessingMode` |
+| JavaScript | `Dynamsoft.DBR.EnumImagePreprocessingMode` |
 | Python | `class EnumImagePreprocessingMode(IntEnum)` |
 | Java / Android | `class EnumImagePreprocessingMode` |
 | ObjC / Swift | `enum EnumImagePreprocessingMode` |
@@ -384,7 +385,7 @@ Describes the localization mode.
 | -------- | ----------- |
 | C / C++ | `enum LocalizationMode` |
 | .Net | `enum Dynamsoft.DBR.EnumLocalizationMode` |
-| JavaScript | `Dynamsoft.EnumLocalizationMode` |
+| JavaScript | `Dynamsoft.DBR.EnumLocalizationMode` |
 | Python | `class EnumLocalizationMode(IntEnum)` |
 | Java / Android | `class EnumLocalizationMode` |
 | ObjC / Swift | `enum EnumLocalizationMode` |
@@ -419,7 +420,7 @@ Describes the PDF reading mode.
 | -------- | ----------- |
 | C / C++ | `enum PDFReadingMode` |
 | .Net | `enum Dynamsoft.DBR.EnumPDFReadingMode` |
-| JavaScript | `Dynamsoft.EnumPDFReadingMode` |
+| JavaScript | `Dynamsoft.DBR.EnumPDFReadingMode` |
 | Python | `class EnumPDFReadingMode(IntEnum)` |
 | Java / Android | `class EnumPDFReadingMode` |
 | ObjC / Swift | `enum EnumPDFReadingMode` |
@@ -449,7 +450,7 @@ Describes the region predetection mode.
 | -------- | ----------- |
 | C / C++ | `enum RegionPredetectionMode` |
 | .Net | `enum Dynamsoft.DBR.EnumRegionPredetectionMode` |
-| JavaScript | `Dynamsoft.EnumRegionPredetectionMode` |
+| JavaScript | `Dynamsoft.DBR.EnumRegionPredetectionMode` |
 | Python | `class EnumRegionPredetectionMode(IntEnum)` |
 | Java / Android | `class EnumRegionPredetectionMode` |
 | ObjC / Swift | `enum EnumRegionPredetectionMode` |
@@ -482,7 +483,7 @@ Describes the scale up mode.
 | -------- | ----------- |
 | C / C++ | `enum ScaleUpMode` |
 | .Net | `enum Dynamsoft.DBR.EnumScaleUpMode` |
-| JavaScript | `Dynamsoft.EnumScaleUpMode` |
+| JavaScript | `Dynamsoft.DBR.EnumScaleUpMode` |
 | Python | `class EnumScaleUpMode(IntEnum)` |
 | Java / Android | `class EnumScaleUpMode` |
 | ObjC / Swift | `enum EnumScaleUpMode` |
@@ -513,7 +514,7 @@ Describes the terminate phase.
 | -------- | ----------- |
 | C / C++ | `enum TerminatePhase` |
 | .Net | `enum Dynamsoft.DBR.EnumTerminatePhase` |
-| JavaScript | `Dynamsoft.EnumTerminatePhase` |
+| JavaScript | `Dynamsoft.DBR.EnumTerminatePhase` |
 | Python | `class EnumTerminatePhase(IntEnum)` |
 | Java / Android | `class EnumTerminatePhase` |
 | ObjC / Swift | `enum EnumTerminatePhase` |
@@ -545,7 +546,7 @@ Describes the text assisted correction mode.
 | -------- | ----------- |
 | C / C++ | `enum TextAssistedCorrectionMode` |
 | .Net | `enum Dynamsoft.DBR.EnumTextAssistedCorrectionMode` |
-| JavaScript | `Dynamsoft.EnumTextAssistedCorrectionMode` |
+| JavaScript | `Dynamsoft.DBR.EnumTextAssistedCorrectionMode` |
 | Python | `class EnumTextAssistedCorrectionMode(IntEnum)` |
 | Java / Android | `class EnumTextAssistedCorrectionMode` |
 | ObjC / Swift | `enum EnumTextAssistedCorrectionMode` |
@@ -575,7 +576,7 @@ Describes the text filter mode.
 | -------- | ----------- |
 | C / C++ | `enum TextFilterMode` |
 | .Net | `enum Dynamsoft.DBR.EnumTextFilterMode` |
-| JavaScript | `Dynamsoft.EnumTextFilterMode` |
+| JavaScript | `Dynamsoft.DBR.EnumTextFilterMode` |
 | Python | `class EnumTextFilterMode(IntEnum)` |
 | Java / Android | `class EnumTextFilterMode` |
 | ObjC / Swift | `enum EnumTextFilterMode` |
@@ -605,7 +606,7 @@ Describes the texture detection mode.
 | -------- | ----------- |
 | C / C++ | `enum TextureDetectionMode` |
 | .Net | `enum Dynamsoft.DBR.EnumTextureDetectionMode` |
-| JavaScript | `Dynamsoft.EnumTextureDetectionMode` |
+| JavaScript | `Dynamsoft.DBR.EnumTextureDetectionMode` |
 | Python | `class EnumTextureDetectionMode(IntEnum)` |
 | Java / Android | `class EnumTextureDetectionMode` |
 | ObjC / Swift | `enum EnumTextureDetectionMode` |

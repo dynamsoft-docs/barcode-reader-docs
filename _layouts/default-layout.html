@@ -36,67 +36,11 @@
                         <input id="txtSearch" class="search" type="text">
                     </div>
                     <ul class="mainPage" id="fullTreeMenuListContainer" name="listLevel1">
-                        <li>
-                            <a href="{{ site.introduction }}" class="otherLinkColour">Introduction</a>
-                            <ul>
-                                {%- if page.url contains '/introduction/' or page.url contains '/introduction-v' -%}
-                                <li><a href="{{ site.introduction }}overview.html" class="otherLinkColour">Overview</a></li>
-                                <li><a href="{{ site.introduction }}architecture.html" class="otherLinkColour">Architecture</a></li>
-                                {%- include sidelist-introduction/introduction-how-to-guides.html -%}
-                                {%- include sidelist-introduction/introduction-comparison-tools.html -%}
-                                {%- comment -%}
-                                <li class="unavailableLink">Security Features</li>
-                                {%- endcomment -%}
-                                {%- endif -%}
-                            </ul>
-                        </li>
-                        <li><a href="{{ site.programming }}" class="otherLinkColour">Programming</a>
-                            <ul>
-                                {%- if page.url contains '/programming/' or page.url contains '/programming-v' -%}
-                                {%- include sidelist-programming/programming-c.html -%}
-                                {%- include sidelist-programming/programming-cpp.html -%}
-                                {%- include sidelist-programming/programming-dotnet.html -%}
-                                {%- include sidelist-programming/programming-java.html -%}
-                                {%- include sidelist-programming/programming-python.html -%}
-                                {%- include sidelist-programming/programming-javascript.html -%}
-                                {%- include sidelist-programming/programming-android.html -%}
-                                {%- include sidelist-programming/programming-oc.html -%}                         
-                                {%- endif -%}
-                            </ul>
-                        </li>
-                        <li><a href="{{ site.parameters }}" class="otherLinkColour">Parameters</a>
-                            <ul>
-                                {%- if page.url contains '/parameters/' or page.url contains '/parameters-v' -%}
-                                <li><a href="{{ site.parameters }}structure-and-interfaces-of-parameters.html" class="otherLinkColour">Structure and Interfaces of Parameters</a></li>
-                                {%- include sidelist-parameters/parameters-references.html -%}
-                                {%- include sidelist-parameters/parameters-enumerations.html -%}
-                                {%- include sidelist-parameters/parameters-scenario-settings.html -%}
-                                {%- comment -%}
-                                <li class="unavailableLink">Example Image Settings</li>
-                                {%- endcomment -%}
-                                {%- endif -%}
-                            </ul>
-                        </li>
-                        <li><a href="{{ site.license_activation }}" class="otherLinkColour">License Activation</a>
-                            <ul>
-
-                                <li><a href="{{ site.license_activation }}set-trial-license.html" class="otherLinkColour">Set Trial License</a></li>
-                                <li><a href="{{ site.license_activation }}set-full-license.html" class="otherLinkColour">Set Full License in version 8</a></li>
-                                <li><a href="{{ site.license_activation }}set-full-license-7.html" class="otherLinkColour">Set Full License in version 7</a></li>
-                            </ul>
-                        </li>
-                        {%- comment -%}
-                        <li class="unavailableLink">Enhancements
-                            {%- if page.url contains '/enhancements/' or page.url contains '/enhancements-v' -%}
-                            <ul>
-                                <li class="unavailableLink">DPM Codes</li>
-                                <li class="unavailableLink">Intermediate Result</li>
-                                <li class="unavailableLink">Panorama</li>
-                                <li class="unavailableLink">PDF Vector</li>
-                            </ul>
-                            {%- endif -%}
-                        </li>
-                        {%- endcomment -%}
+                        {%- include sidelist-introduction.html -%}
+                        {%- include sidelist-programming.html -%}
+                        {%- include sidelist-parameters.html -%}
+                        {%- include sidelist-enhancement.html -%}
+                        {%- include sidelist-license_activation.html -%}
                     </ul>
                 </div>
             </div>
@@ -147,6 +91,11 @@
 
     <script type="text/javascript">anchors.add();</script>
 
+
+    <script type="text/javascript">
+        UrlReplace();
+    </script>
+    
     {%- if page.needAutoGenerateSidebar -%}
     {%- unless page.needGenerateH3Content -%}
     <script type="text/javascript">
@@ -162,9 +111,6 @@
         FullTreeMenuList(false);
     </script>
     {%- endif -%}
-    <script type="text/javascript">
-        UrlReplace();
-    </script>
 
     {%- include livehelp.html -%}
 
