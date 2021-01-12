@@ -8,7 +8,7 @@ needGenerateH3Content: false
 ---
 
 
-# Javascript API Reference - `BarcodeScanner` Capture Settings
+# JavaScript API Reference - `BarcodeScanner` Capture Settings
 
 | Method               | Description |
 |----------------------|-------------|
@@ -114,7 +114,9 @@ setResolution(width, height) returns Promise
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+```javascript
+await scanner.setResolution(width, height);
+```
 
 ## getScanSettings
 
@@ -130,7 +132,12 @@ getScanSettings() returns Promise
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+```javascript
+  let scanSettings = await scanner.getScanSettings();
+  scanSettings.intervalTime = 50;
+  scanSettings.duplicateForgetTime = 1000;
+  await scanner.updateScanSettings(scanSettings);
+```
 
 ## updateScanSettings
 
@@ -149,7 +156,12 @@ updateScanSettings(settings) returns Promise
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+```javascript
+  let scanSettings = await scanner.getScanSettings();
+  scanSettings.intervalTime = 50;
+  scanSettings.duplicateForgetTime = 1000;
+  await scanner.updateScanSettings(scanSettings);
+```
 
 
 ## getVideoSettings
@@ -254,7 +266,9 @@ setFrameRate(value) returns Promise
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+```javascript
+await scanner.setFrameRate(10);
+```
 
 ## setZoom
 
@@ -274,7 +288,9 @@ setZoom(value) returns Promise
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+```javascript
+await scanner.setZoom(400);
+```
 
 ## turnOffTorch
 

@@ -15,9 +15,9 @@ noTitleIndex: true
 - Operating systems:
     - Windows x64
     - Linux (x64, ARM32, ARM64)
-    - Mac OS (10.15+)
+    - macOS (10.15+)
 
-- Supported Python Versions: Python 2.7 (for versions before DBR 7.4), Python 3.5, Python 3.6, Python 3.7, Python 3.8
+- Supported Python Versions: Python 2.7 (for versions below DBR 7.2.2.3), Python 3.5 (for versions below DBR 7.5), Python 3.6, Python 3.7, Python 3.8
 
 ## Installation
 
@@ -72,8 +72,10 @@ The SDK provides multiple decoding methods that support reading barcodes from di
 video stream, files in memory, base64 string, etc. Here is a list of all decoding methods:
 
 - [decode_file](api-reference/BarcodeReader/decode.md#decode_file): Reads barcodes from a specified file (BMP, JPEG, PNG, GIF, TIFF or PDF).   
-- [decode_buffer](api-reference/BarcodeReader/decode.md#decode_buffer): Decodes barcodes from the memory buffer containing image pixels in defined format.   
+- [decode_buffer](api-reference/BarcodeReader/decode.md#decode_buffer): Decodes barcodes from the memory buffer containing image pixels in defined format.  
+- [decode_buffer_manually](api-reference/BarcodeReader/decode.md#decode_buffer_manually): Decodes barcodes from the memory buffer containing image pixels in defined format. 
 - [decode_file_stream](api-reference/BarcodeReader/decode.md#decode_file_stream): Decodes barcodes from an image file in memory. 
+- [decode_intermediate_results](api-reference/BarcodeReader/decode.md#decode_intermediate_results): Decodes barcodes from intermediate results.
 
 You can find more samples in more programming languages at [Code Gallery](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx).
 

@@ -8,7 +8,7 @@ needGenerateH3Content: false
 ---
 
 
-# Javascript API Reference - `BarcodeScanner` Camera Control Methods
+# JavaScript API Reference - `BarcodeScanner` Camera Control Methods
 
 | Method               | Description |
 |----------------------|-------------|
@@ -79,7 +79,12 @@ setCurrentCamera(cameraInfoOrDeviceId) returns Promise
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+```javascript
+    let cameras = await scanner.getAllCameras();
+    if(cameras.length){
+        await scanner.setCurrentCamera(cameras[0]);
+    }
+```
 
 ## hide
 
@@ -111,7 +116,9 @@ show() returns Promise
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+```javascript
+await scanner.show();
+```
 
 ## close
 
@@ -159,7 +166,9 @@ open() returns Promise
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+```javascript
+await scanner.open();
+```
 
 ## pause
 
@@ -197,7 +206,9 @@ play(deviceId, width, height) returns Promise
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+```javascript
+await scanner.play();
+```
 
 ## stop
 

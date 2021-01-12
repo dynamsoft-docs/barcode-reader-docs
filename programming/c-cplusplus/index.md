@@ -22,3 +22,6 @@ The C Language and C++ documentation mainly consists of two parts. One is the [U
 - [Struct]({{ site.structs }})
 
 ## Samples and Demos
+
+- <a href="https://demo.dynamsoft.com/DBR/BarcodeReaderDemo.aspx" target="_blank">Online Demo</a>
+- <a href="https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx?Tag=c%2fc%2b%2b#gallery" target="_blank">Code Gallery - C/C++</a>

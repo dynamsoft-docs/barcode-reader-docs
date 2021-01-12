@@ -21,10 +21,12 @@ The Objective-C and Swift documentation mainly consists of two parts. One is the
 - [Class](api-reference/#classes)
 
 ## Release Notes
-- [version 8.0](release-notes/ios-8.md)
-- [version 7.6 and below](release-notes/ios-7.md)
+- [Version 8.0](release-notes/ios-8.md)
+- [Version 7.6 and below](release-notes/ios-7.md)
 
 ## Samples and Demos
 
-- [Barcode Reader Sample for iOS (Objective-c)](https://www.dynamsoft.com/barcode-reader/sample-downloads/?demoSampleId=151&type=2&productId=1000003&link=https%3a%2f%2fdownload2.dynamsoft.com%2fSamples%2fDBR%2fDBR_iOS_DynamsoftBarcodeReaderDemo_oc.zip)
-- [Barcode Reader Sample for iOS (Swift)](https://www.dynamsoft.com/barcode-reader/sample-downloads/?demoSampleId=215&type=2&productId=1000003&link=https%3a%2f%2fdownload2.dynamsoft.com%2fSamples%2fDBR%2fDBR_iOS_DynamsoftBarcodeReaderDemo_swift.zip)
+- <a href="https://apps.apple.com/us/app/barcode-scanner-x/id1120581630" target="_blank">Barcode Scanner X Demo App</a>
+- <a href="https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx?tag=ios#gallery" target="_blank">Code Gallery - iOS</a>
+- <a href="https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx?tag=cordova#gallery" target="_blank">Code Gallery - Cordova</a>
+- <a href="https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx?tag=xamarin#gallery" target="_blank">Code Gallery - Xamarin</a>

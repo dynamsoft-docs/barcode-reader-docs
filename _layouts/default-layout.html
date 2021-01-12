@@ -36,67 +36,11 @@
                         <input id="txtSearch" class="search" type="text">
                     </div>
                     <ul class="mainPage" id="fullTreeMenuListContainer" name="listLevel1">
-                        <li>
-                            <a href="{{ site.introduction }}" class="otherLinkColour">Introduction</a>
-                            <ul>
-                                {%- if page.url contains '/introduction/' or page.url contains '/introduction-v' -%}
-                                <li><a href="{{ site.introduction }}overview.html" class="otherLinkColour">Overview</a></li>
-                                <li><a href="{{ site.introduction }}architecture.html" class="otherLinkColour">Architecture</a></li>
-                                {%- include sidelist-introduction/introduction-how-to-guides.html -%}
-                                {%- include sidelist-introduction/introduction-comparison-tools.html -%}
-                                {%- comment -%}
-                                <li class="unavailableLink">Security Features</li>
-                                {%- endcomment -%}
-                                {%- endif -%}
-                            </ul>
-                        </li>
-                        <li><a href="{{ site.programming }}" class="otherLinkColour">Programming</a>
-                            <ul>
-                                {%- if page.url contains '/programming/' or page.url contains '/programming-v' -%}
-                                {%- include sidelist-programming/programming-c.html -%}
-                                {%- include sidelist-programming/programming-cpp.html -%}
-                                {%- include sidelist-programming/programming-dotnet.html -%}
-                                {%- include sidelist-programming/programming-java.html -%}
-                                {%- include sidelist-programming/programming-python.html -%}
-                                {%- include sidelist-programming/programming-javascript.html -%}
-                                {%- include sidelist-programming/programming-android.html -%}
-                                {%- include sidelist-programming/programming-oc.html -%}                         
-                                {%- endif -%}
-                            </ul>
-                        </li>
-                        <li><a href="{{ site.parameters }}" class="otherLinkColour">Parameters</a>
-                            <ul>
-                                {%- if page.url contains '/parameters/' or page.url contains '/parameters-v' -%}
-                                <li><a href="{{ site.parameters }}structure-and-interfaces-of-parameters.html" class="otherLinkColour">Structure and Interfaces of Parameters</a></li>
-                                {%- include sidelist-parameters/parameters-references.html -%}
-                                {%- include sidelist-parameters/parameters-enumerations.html -%}
-                                {%- include sidelist-parameters/parameters-scenario-settings.html -%}
-                                {%- comment -%}
-                                <li class="unavailableLink">Example Image Settings</li>
-                                {%- endcomment -%}
-                                {%- endif -%}
-                            </ul>
-                        </li>
-                        <li><a href="{{ site.license_activation }}" class="otherLinkColour">License Activation</a>
-                            <ul>
-
-                                <li><a href="{{ site.license_activation }}set-trial-license.html" class="otherLinkColour">Set Trial License</a></li>
-                                <li><a href="{{ site.license_activation }}set-full-license.html" class="otherLinkColour">Set Full License in version 8</a></li>
-                                <li><a href="{{ site.license_activation }}set-full-license-7.html" class="otherLinkColour">Set Full License in version 7</a></li>
-                            </ul>
-                        </li>
-                        {%- comment -%}
-                        <li class="unavailableLink">Enhancements
-                            {%- if page.url contains '/enhancements/' or page.url contains '/enhancements-v' -%}
-                            <ul>
-                                <li class="unavailableLink">DPM Codes</li>
-                                <li class="unavailableLink">Intermediate Result</li>
-                                <li class="unavailableLink">Panorama</li>
-                                <li class="unavailableLink">PDF Vector</li>
-                            </ul>
-                            {%- endif -%}
-                        </li>
-                        {%- endcomment -%}
+                        {%- include sidelist-introduction.html -%}
+                        {%- include sidelist-programming.html -%}
+                        {%- include sidelist-parameters.html -%}
+                        {%- include sidelist-enhancement.html -%}
+                        {%- include sidelist-license_activation.html -%}
                     </ul>
                 </div>
             </div>
@@ -144,152 +88,129 @@
     <div id="footerWrapper">
         {%- include page_footer.html -%}
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"
-        integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
-    <script>anchors.add();</script>
 
-    <script>
+    <script type="text/javascript">
         UrlReplace();
     </script>
+    
+    <script type="text/javascript">anchors.add();</script>
+    
     {%- if page.needAutoGenerateSidebar -%}
     {%- unless page.needGenerateH3Content -%}
-    <script>
+    <script type="text/javascript">
         FullTreeMenuList(true, false);
     </script>
     {%- else -%}
-    <script>
+    <script type="text/javascript">
         FullTreeMenuList(true);
     </script>
     {%- endunless -%}
     {%- else -%}
-    <script>
+    <script type="text/javascript">
         FullTreeMenuList(false);
     </script>
     {%- endif -%}
 
-    <script>
-        UrlReplace();
-    </script>
+    {%- include livehelp.html -%}
 
-    <!-- dbr docs -->
-    <script type="text/javascript">
-        $('#txtSearch').keydown(function(e) { 
-            if (e.keyCode == 13) {
-                window.location.href = '/barcode-reader/search.html?q=' + $('#txtSearch').val()
-            }
-        })
-    </script>
 
-    <!-- for dbr downloads -->
+    <!-- for dbr -->
     <script type="text/javascript">
         $(document).ready(function(){
-            var download = getUrlParam('download')
+            var download = getUrlParam('download');
             if(download == 'true') {
                 var curHref = window.location.href.toLowerCase()
                 if (curHref.indexOf('/c/') > -1 || curHref.indexOf('/cplusplus/') > -1) {
                     $('.editionName').html('C/C++');
                     $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dbr/DBR-C_CPP-8.0.zip');
                     $('.dbrThanksDownloading').show();
-                    $('.downloadlink').click()
-                    // Download('https://download.dynamsoft.com/dbr/DBR-C_CPP-8.0.zip')
+                    $('.downloadlink')[0].click();
                 } else if (curHref.indexOf('/dotnet/') > -1) {
                     $('.editionName').html('.NET');
                     $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dbr/DBR-DotNet-8.0.zip');
                     $('.dbrThanksDownloading').show();
-                    $('.downloadlink').click()
-                    // Download('https://download.dynamsoft.com/dbr/DBR-DotNet-8.0.zip')
+                    $('.downloadlink')[0].click();
                 } else if (curHref.indexOf('/java/') > -1) {
                     $('.editionName').html('Java');
                     $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dbr/DBR-Java-8.0.zip');
                     $('.dbrThanksDownloading').show();
-                    $('.downloadlink').click()
-                    // Download('https://download.dynamsoft.com/dbr/DBR-Java-8.0.zip')
+                    $('.downloadlink')[0].click();
                 } else if (curHref.indexOf('/javascript/') > -1) {
                     $('.editionName').html('Javascript');
-                    $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dbr/DBR-JS-7.6.0.zip');
+                    $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dbr/DBR-JS-8.0.0.zip');
                     $('.dbrThanksDownloading').show();
-                    $('.downloadlink').click()
-                    // Download('https://download.dynamsoft.com/dbr/DBR-JS-7.6.0.zip')
+                    $('.downloadlink')[0].click();
                 } else if (curHref.indexOf('/android/') > -1) {
                     $('.editionName').html('Android');
                     $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dbr/dbr-android-8.0.zip');
                     $('.dbrThanksDownloading').show();
-                    $('.downloadlink').click()
-                    // Download('https://download.dynamsoft.com/dbr/dbr-android-8.0.zip')
+                    $('.downloadlink')[0].click();
                 } else if (curHref.indexOf('/objectivec-swift/') > -1) {
                     $('.editionName').html('iOS');
                     $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dbr/dbr-iOS-8.0.zip');
                     $('.dbrThanksDownloading').show();
-                    $('.downloadlink').click()
-                    // Download('https://download.dynamsoft.com/dbr/dbr-iOS-8.0.zip')
+                    $('.downloadlink')[0].click();
                 }
             }
+
+            $('#txtSearch').keydown(function(e) { 
+                if (e.keyCode == 13) {
+                    window.location.href = '/barcode-reader/search.html?q=' + $('#txtSearch').val();
+                }
+            })
         })
     </script>
 
-    {%- include livehelp.html -%}
+    
+    <!-- Google Code for Remarketing Tag -->
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        var google_conversion_id = 1070358440;
+        var google_custom_params = window.google_tag_params;
+        var google_remarketing_only = true;
+        /* ]]> */
+    </script>
+    <script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+    </script>
+    <noscript>
+        <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1070358440/?value=0&amp;guid=ON&amp;script=0"/>
+        </div>
+    </noscript>
 
-  <!-- Google Code for Remarketing Tag -->
-  <script type="text/javascript">
-    /* <![CDATA[ */
-    var google_conversion_id = 1070358440;
-    var google_custom_params = window.google_tag_params;
-    var google_remarketing_only = true;
-    /* ]]> */
-  </script>
-  <script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
-  </script>
-  <noscript>
-    <div style="display:inline;">
-      <img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1070358440/?value=0&amp;guid=ON&amp;script=0"/>
-    </div>
-  </noscript>
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-538F83"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-538F83');</script>
+    <!-- End Google Tag Manager -->
 
-  <!-- Google Tag Manager -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-538F83"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-538F83');</script>
-  <!-- End Google Tag Manager -->
-
-  <!-- Marketo Asynchronous Tracking Code for www.dynamsoft.com -->
-  <script type="text/javascript">
-    (function() {
-    var didInit = false;
-    function initMunchkin() {
-      if(didInit === false) {
-        didInit = true;
-        Munchkin.init('465-JJI-384', { asyncOnly: true });
-      }
-    }
-    var s = document.createElement('script');
-    s.type = 'text/javascript';
-    s.async = true;
-    s.src = 'https://munchkin.marketo.net/munchkin.js';
-    s.onreadystatechange = function() {
-      if (this.readyState == 'complete' || this.readyState == 'loaded') {
-        initMunchkin();
-      }
-    };
-    s.onload = initMunchkin;
-    document.getElementsByTagName('head')[0].appendChild(s);
-    })();
-  </script>
-  
-  <!-- Marketo RTP tag --> 
-  <script type='text/javascript'>
-    (function(c,h,a,f,i,e){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-    c[a].a=i;c[a].e=e;var g=h.createElement("script");g.async=true;g.type="text/javascript";
-    g.src=f+'?aid='+i;var b=h.getElementsByTagName("script")[0];b.parentNode.insertBefore(g,b);
-    })(window,document,"rtp","https://sjrtp-cdn.marketo.com/rtp-api/v1/rtp.js","dynamsoftinc");
-
-    rtp('send','view');
-    rtp('get', 'campaign',true);
-  </script>
-  <!-- End of Marketo RTP tag -->
+    <!-- Marketo Asynchronous Tracking Code for www.dynamsoft.com -->
+    <script type="text/javascript">
+        (function() {
+        var didInit = false;
+        function initMunchkin() {
+        if(didInit === false) {
+            didInit = true;
+            Munchkin.init('465-JJI-384', { asyncOnly: true });
+        }
+        }
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'https://munchkin.marketo.net/munchkin.js';
+        s.onreadystatechange = function() {
+        if (this.readyState == 'complete' || this.readyState == 'loaded') {
+            initMunchkin();
+        }
+        };
+        s.onload = initMunchkin;
+        document.getElementsByTagName('head')[0].appendChild(s);
+        })();
+    </script>
 </body>
 
 </html>

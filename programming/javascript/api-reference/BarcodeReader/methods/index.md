@@ -8,7 +8,7 @@ breadcrumbText: Methods
 ---
 
 
-# Dynamsoft Barcode Reader SDK - Javascript BarcodeReader Methods
+# Dynamsoft Barcode Reader SDK - JavaScript BarcodeReader Methods
 
 ## Initialize and Destroy
 

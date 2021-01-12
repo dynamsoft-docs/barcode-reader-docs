@@ -372,7 +372,7 @@ Sets the range of bar count of the barcode zone for barcodes search.
 
 
 ## BarcodeZoneMinDistanceToImageBorders
-Sets the minimum distance (in pixels) between the barcode zone and image borders.
+Sets the minimum distance (in pixels) between the barcode zone and image borders. If a barcode region has been set, this parameter should not be used. 
 
     
 ### As Json Parameter

@@ -139,10 +139,10 @@ Sets the max days to buffer the license info.
 int tagDM_LTSConnectionParameters::maxBufferDays
 ```
 - **Value range**   
-    [0,0x7fffffff]   
+    [7,0x7fffffff]   
       
 - **Default value**   
-    0
+    7
 
 ### limitedLicenseModulesCount
 Sets the count of license modules to use.

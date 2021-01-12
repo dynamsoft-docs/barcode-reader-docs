@@ -155,9 +155,8 @@ Objective-C:
 DynamsoftBarcodeReader *barcodeReader;
 barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicense:@"t0260NwAAAHV***************"];
 NSError __autoreleasing * _Nullable error;
-NSInteger *frameId;
 [barcodeReader startFrameDecoding:2 maxResultQueueLength:10 width:1024 height:720 stride:720 format:EnumImagePixelFormatBinary templateName:@"" error:&error];
-frameId = [barcodeReader appendFrame:bufferBytes];
+NSInteger frameId = [barcodeReader appendFrame:bufferBytes];
 ```
 Swift:
 
@@ -342,8 +341,7 @@ Objective-C:
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
 barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicense:@"t0260NwAAAHV***************"];
-NSInteger *length;
-length = [barcodeReader getLengthOfFrameQueue];
+NSInteger length = [barcodeReader getLengthOfFrameQueue];
 ```
 Swift:
 

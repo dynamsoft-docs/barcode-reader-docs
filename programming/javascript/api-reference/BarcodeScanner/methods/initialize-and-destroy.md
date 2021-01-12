@@ -8,7 +8,7 @@ needGenerateH3Content: false
 ---
 
 
-# Javascript API Reference - `BarcodeScanner` Initialize and Destroy Methods
+# JavaScript API Reference - `BarcodeScanner` Initialize and Destroy Methods
 
 | Method               | Description |
 |----------------------|-------------|
@@ -24,23 +24,17 @@ needGenerateH3Content: false
 Create a `BarcodeScanner` object. Overrides `BarcodeReader.createInstance`.
 
 ```javascript
-createInstance(config) returns Promise
+createInstance() returns Promise
 ```
-
-### Parameters
-
-`config`<sub>optional</sub> *any*  
 
 ### Return Value
 
 <code>Promise<<a href="../#barcodescanner">BarcodeScanner</a>></code>
 
-[test](../index.md#barcodescanner)
-
 ### Sample
 
 ```javascript
-let scanner = await Dynamsoft.BarcodeScanner.createInstance();
+let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 ```
 
 [Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
@@ -75,7 +69,7 @@ getUIElement() returns HTMLElement
 
 ## setUIElement
 
-Set HTML element containing the `BarcodeScanner` object.
+Set HTML element containing the `BarcodeScanner` object. In v8.0, setUIElement can be used to set an existing video stream element. The video element of the existing video stream must specify `dbrScanner-existingVideo` className. 
 
 ```javascript
 setUIElement(elementOrUrl) returns Promise
@@ -94,7 +88,7 @@ setUIElement(elementOrUrl) returns Promise
 ```javascript
 <video class="dbrScanner-video" playsinline="true"></video>
 <script>
-    let scanner = await Dynamsoft.BarcodeScanner.createInstance();
+    let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
     scanner.setUIElement(document.getElementsByClassName("dbrScanner-video")[0]);
     await scanner.show();
 </script>

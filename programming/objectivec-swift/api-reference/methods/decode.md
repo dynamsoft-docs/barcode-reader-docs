@@ -46,9 +46,8 @@ Objective-C:
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
 barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicense:@"t0260NwAAAHV***************"];
-iTextResult *result;
 NSError __autoreleasing * _Nullable error;
-result = [barcodeReader decodeFileWithName:@"your file path" templateName:@"" error:&error];
+NSArray<iTextResult*>* result = [barcodeReader decodeFileWithName:@"your file path" templateName:@"" error:&error];
 ```
 
 Swift:
@@ -89,10 +88,9 @@ Objective-C:
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
 barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicense:@"t0260NwAAAHV***************"];
-iTextResult *result;
-UIImage *image;
+UIImage *image = [[UIImage alloc] init];
 NSError __autoreleasing * _Nullable error;
-result = [barcodeReader decodeImage:image withTemplate:@"" error:&error];
+NSArray<iTextResult*>* result = [barcodeReader decodeImage:image withTemplate:@"" error:&error];
 ```
 Swift:
 
@@ -132,14 +130,13 @@ Objective-C:
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
 barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicense:@"t0260NwAAAHV***************"];
-iTextResult *result;
 NSData *bufferBytes;
 NSInteger iWidth = 0;
 NSInteger iHeight = 0;
 NSInteger iStride = 0;
 NSInteger format;
 NSError __autoreleasing * _Nullable error;
-result = [barcodeReader decodeBuffer:bufferBytes withWidth:iWidth height:iHeight stride:iStride format:format templateName:@"" error:&error];
+NSArray<iTextResult*>* result = [barcodeReader decodeBuffer:bufferBytes withWidth:iWidth height:iHeight stride:iStride format:format templateName:@"" error:&error];
 ```
 Swift:
 
@@ -183,9 +180,8 @@ Objective-C:
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
 barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicense:@"t0260NwAAAHV***************"];
-iTextResult *result;
 NSError __autoreleasing * _Nullable error;
-result = [barcodeReader decodeBase64:@"file in base64 string" withTemplate:@"" error:&error];
+NSArray<iTextResult*>* result = [barcodeReader decodeBase64:@"file in base64 string" withTemplate:@"" error:&error];
 ```
 Swift:
 
@@ -265,15 +261,14 @@ Objective-C:
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
 barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicense:@"t0260NwAAAHV***************"];
-NSArray<iTextResult *>* result;
 NSError __autoreleasing * _Nullable error;
 [barcodeReader getRuntimeSettings:&error];
 settings.intermediateResultTypes = EnumIntermediateResultTypeOriginalImage | EnumIntermediateResultTypeTypedBarcodeZone;
 settings.intermediateResultSavingMode = EnumIntermediateResultSavingModeMemory;
 [barcodeReader updateRuntimeSettings:settings error:&error];
-result = [barcodeReader decodeFileWithName:@"your file path" templateName:@"" error:&error];
+NSArray<iTextResult*>* resultByFile = [barcodeReader decodeFileWithName:@"your file path" templateName:@"" error:&error];
 NSArray<iIntermediateResult*>* array = [barcodeReader getIntermediateResult:&error];
-result = [barcodeReader decodeIntermediateResults:array withTemplate:@"" error:&error];
+NSArray<iTextResult*>* result = [barcodeReader decodeIntermediateResults:array withTemplate:@"" error:&error];
 ```
 
 Swift:

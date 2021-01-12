@@ -4,7 +4,7 @@ title: Dynamsoft Barcode Reader Licensing - How to set full license in version 7
 description: This page shows how to set full license of Dynamsoft Barcode Reader in version 7.x.
 keywords: full license, licensing, 7.x, License 1.0
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
+needGenerateH3Content: false
 ---
 
 # How to set full license in version 7.x
@@ -22,7 +22,7 @@ You can use a development/runtime license by following the steps below:
 
 ### Activate a development/runtime license
 
- Once you obtain a Development License, you can find your license information at **[Customer Portal](https://www.dynamsoft.com/customer/license/fullLicense)**. 
+ Once you obtain a Development License, you can find your license information at <a href ="https://www.dynamsoft.com/customer/license/fullLicense" target="_blank">Customer Portal</a>. 
 
  To activate a development license (8-digit key), select **Unactivated** license, click the **Activate Now** link beside it.
 
@@ -323,11 +323,11 @@ reader = BarcodeReader()
 reader.init_license_from_server(license_server, license_key)
 ```
 
-#### Option 3: No Internet connection
+#### Option 3: No Internet connection {#offline}
 
 If your machine is not allowed to access Internet, you can follow the steps below to manually register the device and get the license content.
 
-1. Log in **[Customer Portal](https://www.dynamsoft.com/customer/license/fullLicensex)** and click **Details**.
+1. Log in <a href ="https://www.dynamsoft.com/customer/license/fullLicensex" target="_blank">Customer Portal</a> and click **License Id**.
 
 ![ActivatedKey_Used2][5]
 
@@ -339,13 +339,13 @@ If your machine is not allowed to access Internet, you can follow the steps belo
 
  **For Windows:** 
  
- Download [MachineIDGenerator.exe](http://download.dynamsoft.com/MachineIDGenerator/MachineIDGenerator.exe) and run it. The returned string, e.g. `tZRk-6qb2-sEyE-wcz7-jf6j-8DH/-Di3u-zjSv-G86f-ol3x`, is the machine ID.
+ Download <a href ="https://download.dynamsoft.com/MachineIDGenerator/MachineIDGenerator.exe" target="_blank">MachineIDGenerator.exe</a> and run it. The returned string, e.g. `tZRk-6qb2-sEyE-wcz7-jf6j-8DH/-Di3u-zjSv-G86f-ol3x`, is the machine ID.
  
 ![MachineID_Windows][7]
 
  **For Linux:** 
 
- Download [MachineIDGenerator.tar.gz](http://download.dynamsoft.com/MachineIDGenerator/MachineIDGenerator.tar.gz) and unzip it. Open **Terminal** and type `./MachineIDGenerator`. The returned string, e.g. `iJpN-Cajc-qQip-Sl50-NEX+-z1dJ-XmmV-lS9O-G86f-ol3x`, is the machine ID.
+ Download <a href ="https://download.dynamsoft.com/MachineIDGenerator/MachineIDGenerator.tar.gz" target="_blank">MachineIDGenerator.tar.gz</a> and unzip it. Open **Terminal** and type `./MachineIDGenerator`. The returned string, e.g. `iJpN-Cajc-qQip-Sl50-NEX+-z1dJ-XmmV-lS9O-G86f-ol3x`, is the machine ID.
 
  ![MachineID_Linux][8]
 
@@ -446,7 +446,7 @@ Please use a development/runtime license by following the steps below:
 
 ### Activate a development/runtime license {#activate}
 
- Once you obtain a Development License, you can find your license information at **[Customer Portal](https://www.dynamsoft.com/customer/license/fullLicense)**. 
+ Once you obtain a Development License, you can find your license information at <a href ="https://www.dynamsoft.com/customer/license/fullLicensex" target="_blank">Customer Portal</a>. 
 
  To activate a development license (8-digit key), select **Unactivated** license, click the **Activate Now** link beside it.
 
