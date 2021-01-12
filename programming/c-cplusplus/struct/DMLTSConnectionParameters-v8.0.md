@@ -32,8 +32,7 @@ typedef struct tagDM_LTSConnectionParameters  DM_LTSConnectionParameters
 | [`maxBufferDays`](#maxbufferdays) | *int* |
 | [`limitedLicenseModulesCount`](#limitedlicensemodulescount) | *int* |
 | [`limitedLicenseModules`](#limitedlicensemodules) | [`DM_LicenseModule*`]({{ site.enumerations }}other-enums.html#dm_licensemodule) |
-| [`maxConcurrentInstanceCount`](#maxconcurrentinstancecount) | *int* |
-| [`reserved`](#reserved) | *char\[60\]* |
+| [`reserved`](#reserved) | *char\[64\]* |
 
 
 ### mainServerURL
@@ -168,25 +167,10 @@ DM_LicenseModule* tagDM_LTSConnectionParameters::limitedLicenseModules
     
 - **See also**  
     [`DM_LicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
-
       
-### maxConcurrentInstanceCount
-Sets the max concurrent instance count.
-```cpp
-int tagDM_LTSConnectionParameters::maxConcurrentInstanceCount
-```
-- **Value range**   
-    [1,0x7fffffff]   
-      
-- **Default value**   
-    1
-- **Remarks**   
-    It works only when [chargeWay](#chargeway) is setting to DM_CW_CONCURRENT_INSTANCE_COUNT
-    It is the total number of instances used by multiple processes. For example, if there are two .EXE are running on the server and each .EXE may have 10 instances at most, then you should set maxConcurrentInstanceCount to 20.
-
 
 ### reserved
 Reserved memory for the struct. The length of this array indicates the size of the memory reserved for this struct.
 ```cpp
-char tagDM_LTSConnectionParameters::reserved[60]
+char tagDM_LTSConnectionParameters::reserved[64]
 ```

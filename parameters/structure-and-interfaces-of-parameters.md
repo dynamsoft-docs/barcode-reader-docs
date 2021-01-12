@@ -28,7 +28,7 @@ Dynamsoft Barcode Reader uses a template to set parameters. A template contains 
     "ImageParameterContentArray": [
       {
         "Name": "ImageParameter1", 
-        "BarcodeFormatIds": "BF_ONED"
+        "BarcodeFormatIds": ["BF_ONED"]
       },
       {
         "Name": "ImageParameter2", 
@@ -135,7 +135,7 @@ Template you set
 {
     "ImageParameter":{
         "Name": "ImageParameter1", 
-        "BarcodeFormatIds": "BF_ONED",    
+        "BarcodeFormatIds": ["BF_ONED"],    
         "FormatSpecificationNameArray": [
           "FormatSpecification1"
         ]
@@ -154,7 +154,7 @@ Template used by DBR
 {
     "ImageParameter":{
         "Name": "ImageParameter1", 
-        "BarcodeFormatIds": "BF_ONED",    
+        "BarcodeFormatIds": ["BF_ONED"],    
         "FormatSpecificationNameArray": [
           "FormatSpecification1_BF_CODE_39",
           "FormatSpecification1_BF_CODE_128"

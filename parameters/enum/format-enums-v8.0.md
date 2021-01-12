@@ -38,8 +38,8 @@ Describes the barcode types in BarcodeFormat group 1. All the formats can be com
    
 | Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
 | -------------------------- | ------------------- | ----- | ----------- |
-| BF_ALL | EnumBarcodeFormatALL | -31457281 | All supported formats in [BarcodeFormat group 1](#barcodeformat). |
-| BF_ONED | EnumBarcodeFormatONED  | 0x001007FF | Combined value of BF_CODABAR, BF_CODE_128, BF_CODE_39, BF_CODE_39_Extended, BF_CODE_93, BF_EAN_13, BF_EAN_8, INDUSTRIAL_25, BF_ITF, BF_UPC_A, BF_UPC_E, BF_MSI_CODE. |
+| BF_ALL | EnumBarcodeFormatALL | -32505857 | All supported formats in [BarcodeFormat group 1](#barcodeformat). |
+| BF_ONED | EnumBarcodeFormatONED  | 0x000007FF | Combined value of BF_CODABAR, BF_CODE_128, BF_CODE_39, BF_CODE_39_Extended, BF_CODE_93, BF_EAN_13, BF_EAN_8, INDUSTRIAL_25, BF_ITF, BF_UPC_A, BF_UPC_E. |
 | BF_GS1_DATABAR | EnumBarcodeFormatGS1DATABAR | 0x0003F800 | Combined value of BF_GS1_DATABAR_OMNIDIRECTIONAL, BF_GS1_DATABAR_TRUNCATED, BF_GS1_DATABAR_STACKED, BF_GS1_DATABAR_STACKED_OMNIDIRECTIONAL, BF_GS1_DATABAR_EXPANDED, BF_GS1_DATABAR_EXPANDED_STACKED, BF_GS1_DATABAR_LIMITED. | 
 | BF_NULL | EnumBarcodeFormatNULL | 0x00 | No barcode format in [BarcodeFormat group 1](#barcodeformat). |
 | BF_CODE_39 | EnumBarcodeFormatCODE39 | 0x01 | Code 39 |
@@ -52,7 +52,6 @@ Describes the barcode types in BarcodeFormat group 1. All the formats can be com
 | BF_UPC_A | EnumBarcodeFormatUPCA | 0x80 | UPC-A |
 | BF_UPC_E | EnumBarcodeFormatUPCE | 0x100 | UPC-E |
 | BF_INDUSTRIAL_25 | EnumBarcodeFormatINDUSTRIAL | 0x200 | Industrial 2 of 5 |
-| BF_MSI_CODE | EnumBarcodeFormatMSICODE | 0x100000 | MSI Code |
 | BF_CODE_39_EXTENDED | EnumBarcodeFormatCODE39EXTENDED | 0x400 | Code 39 Extended |
 | BF_GS1_DATABAR_OMNIDIRECTIONAL | EnumBarcodeFormatGS1DATABAROMNIDIRECTIONAL | 0x800 | GS1 Databar Omnidirectional |
 | BF_GS1_DATABAR_TRUNCATED | EnumBarcodeFormatGS1DATABARTRUNCATED | 0x1000 | GS1 Databar Truncated |

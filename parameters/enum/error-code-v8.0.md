@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader Enumerations - Error Code
-description: "This article enumerates the error codes of Dynamsoft Barcode Reader: -10000, -10001, -10002, -10003, -10004, -10005, -10006, -10007, -10008, -10009, -10010, -10011, -10012, -10013, -10014, -10015, -10016, -10017, -10018, -10019, -10020, -10021, -10022, -10023, -10024, -10025, -10026, -10027, -10028, -10029, -10030, -10031, -10032, -10033, -10034, -10035, -10036, -10037, -10038, -10039, -10040, -10041, -10042, -10043, -10044, -10045, -10046, -10047, -10048, -10049, -10050, -10051, -10052, -10053, -10054, -10055, -10056, -10057, -10058, -10059, -10060, -20000, -20001, -20002, -20003, -20004, -20005, -20006, -20007, -20008, -20009, -20010, -10061, 10000, 10001, 10002, 10003, 10004, 10005, 10006, 10007, 10008, 10009, 10010, 10011, 10012, 10013, 10014, 10015, 10016, 10017, 10018, 10019, 10020, 10021, 10022, 10023, 10024, 10025, 10026, 10027, 10028, 10029, 10030, 10031, 10032, 10033, 10034, 10035, 10036, 10037, 10038, 10039, 10040, 10041, 10042, 10043, 10044, 10045, 10046, 10047, 10048, 10049, 10050, 10051, 10052, 10053, 10054, 10055, 10056, 10057, 10058, 10059, 10060, 10061, 20000, 20001, 20002, 20003, 20004, 20005, 20006, 20007, 20008, 20009, 20010."
+description: "This article enumerates the error codes of Dynamsoft Barcode Reader: -10000, -10001, -10002, -10003, -10004, -10005, -10006, -10007, -10008, -10009, -10010, -10011, -10012, -10013, -10014, -10015, -10016, -10017, -10018, -10019, -10020, -10021, -10022, -10023, -10024, -10025, -10026, -10027, -10028, -10029, -10030, -10031, -10032, -10033, -10034, -10035, -10036, -10037, -10038, -10039, -10040, -10041, -10042, -10043, -10044, -10045, -10046, -10047, -10048, -10049, -10050, -10051, -10052, -10053, -10054, -10055, -10056, -10057, -10058, -10059, -10060, -10061, 10000, 10001, 10002, 10003, 10004, 10005, 10006, 10007, 10008, 10009, 10010, 10011, 10012, 10013, 10014, 10015, 10016, 10017, 10018, 10019, 10020, 10021, 10022, 10023, 10024, 10025, 10026, 10027, 10028, 10029, 10030, 10031, 10032, 10033, 10034, 10035, 10036, 10037, 10038, 10039, 10040, 10041, 10042, 10043, 10044, 10045, 10046, 10047, 10048, 10049, 10050, 10051, 10052, 10053, 10054, 10055, 10056, 10057, 10058, 10059, 10060, 10061."
 keywords: error code, enumeration
 needAutoGenerateSidebar: false
 noTitleIndex: true
@@ -359,12 +359,6 @@ noTitleIndex: true
   |--------------------------------|-------------------------|-------|-------------|
   | `DBRERR_DOTCODE_LICENSE_INVALID` | `EnumErrorCode_DOTCODE_LICENSE_INVALID` | -10061 | The DotCode license is invalid. |
 
-### Error code -20000
-
-  | Erorr Code (except ObjC/Swift) | Erorr Code (ObjC/Swift) | Value | Description |
-  |--------------------------------|-------------------------|-------|-------------|
-  | `DMERR_NO_LICENSE` | `EnumErrorCode_DMERR_NO_LICENSE` | -20000 | No license specified. |
-
 ### Error code -20001
 
   | Erorr Code (except ObjC/Swift) | Erorr Code (ObjC/Swift) | Value | Description |
@@ -393,7 +387,6 @@ noTitleIndex: true
 
   | Erorr Code (except ObjC/Swift) | Erorr Code (ObjC/Swift) | Value | Description |
   |--------------------------------|-------------------------|-------|-------------|
-
   | `DMERR_BIND_DEVICE_FAILED` | `EnumErrorCode_BIND_DEVICE_FAILED` | -20005 | Failed to bind device. |
   
 ### Error code -20006
@@ -401,30 +394,6 @@ noTitleIndex: true
   | Erorr Code (except ObjC/Swift) | Erorr Code (ObjC/Swift) | Value | Description |
   |--------------------------------|-------------------------|-------|-------------|
   | `DMERR_LICENSE_INTERFACE_CONFLICT` | `EnumErrorCode_LICENSE_INTERFACE_CONFLICT` | -20006 | Interface InitLicenseFromLTS can not be used together with other license initiation interfaces. |
-  
-### Error code -20007
-
-  | Erorr Code (except ObjC/Swift) | Erorr Code (ObjC/Swift) | Value | Description |
-  |--------------------------------|-------------------------|-------|-------------|
-  | `DMERR_LICENSE_CLIENT_DLL_MISSING` | `EnumErrorCode_LICENSE_CLIENT_DLL_MISSING` | -20007 | The license client dll is missing. |
-  
-### Error code -20008
-
-  | Erorr Code (except ObjC/Swift) | Erorr Code (ObjC/Swift) | Value | Description |
-  |--------------------------------|-------------------------|-------|-------------|
-  | `DMERR_INSTANCE_COUNT_OVER_LIMIT` | `EnumErrorCode_INSTANCE_COUNT_OVER_LIMIT` | -20008 | The number of instances used has exceeded the limit. |
-  
-### Error code -20009
-
-  | Erorr Code (except ObjC/Swift) | Erorr Code (ObjC/Swift) | Value | Description |
-  |--------------------------------|-------------------------|-------|-------------|
-  | `DMERR_LICENSE_INIT_SEQUENCE_FAILED` | `EnumErrorCode_LICENSE_INIT_SEQUENCE_FAILED` | -20009 | Interface InitLicenseFromLTS has to be called before creating any SDK objects. |
-
-### Error code -20010
-
-  | Erorr Code (except ObjC/Swift) | Erorr Code (ObjC/Swift) | Value | Description |
-  |--------------------------------|-------------------------|-------|-------------|
-  | `DMERR_TRIAL_LICENSE` | `EnumErrorCode_DMERR_TRIAL_LICENSE` | -20010 | Using a trial license. |
 
 ## Error code for specific programming languages  
 

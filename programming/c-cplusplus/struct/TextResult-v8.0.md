@@ -35,8 +35,7 @@ typedef struct tagTextResult*  PTextResult
 | [`detailedResult`](#detailedresult) | *void \** |
 | [`resultsCount`](#resultscount) | *int* |
 | [`results`](#results) | [`PExtendedResult`](ExtendedResult.md)\* |
-| [`exception`](#exception) | *const char \** |
-| [`reserved`](#reserved) | *char\[52\]* |
+| [`reserved`](#reserved) | *char\[56\]* |
 
 
 ### barcodeFormat
@@ -103,12 +102,6 @@ int tagTextResult::resultsCount
 The extended result array.
 ```cpp
 PExtendedResult* tagTextResult::results
-```
-
-### exception
-The exception message.
-```cpp
-const char* tagTextResult::exception
 ```
 
 ### reserved
