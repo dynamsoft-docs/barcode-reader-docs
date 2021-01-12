@@ -23,6 +23,9 @@ The C Language documentation mainly consists of two parts. One is the [User Guid
 - [Version 8.x](release-notes/c-8.md)
 - [Version 7.6 and below](release-notes/c-7.md)
 
+## Online Store
+- <a href="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/" target="_blank">Desktop and Server Deployment</a>
+
 ## Samples and Demos
 
 - <a href="https://demo.dynamsoft.com/DBR/BarcodeReaderDemo.aspx" target="_blank">Online Demo</a>

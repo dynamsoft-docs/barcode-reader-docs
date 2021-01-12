@@ -24,6 +24,9 @@ The Objective-C and Swift documentation mainly consists of two parts. One is the
 - [Version 8.x](release-notes/ios-8.md)
 - [Version 7.6 and below](release-notes/ios-7.md)
 
+## Online Store
+- <a href="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/#mobile" target="_blank">For Mobile App</a>
+
 ## Samples and Demos
 
 - <a href="https://apps.apple.com/us/app/barcode-scanner-x/id1120581630" target="_blank">Barcode Scanner X Demo App</a>
