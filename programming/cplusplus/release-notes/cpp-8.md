@@ -15,7 +15,7 @@ noTitleIndex: true
 ### New
 
 - Added support for MSI Code (Modified Plessey).
-- Added a new member `BarcodeZoneMinDistanceToImageBorders` in the `PublicRuntimeSettings` struct to set the minimum distance (in pixels) between barcode zone and image borders. previously, it is only available in the JSON template. It can be now configured by setting the struct `PublicRuntimeSettings` -> `BarcodeZoneMinDistanceToImageBorders`.
+- Added a new member `BarcodeZoneMinDistanceToImageBorders` in the `PublicRuntimeSettings` struct to set the minimum distance (in pixels) between barcode zone and image borders. Previously, it is only available in the JSON template. It can be now configured by setting the struct `PublicRuntimeSettings` -> `BarcodeZoneMinDistanceToImageBorders`.
 - Added exception error message to `TextResult` when license initialization fails or decoding authorization fails.
 
 ### Improved

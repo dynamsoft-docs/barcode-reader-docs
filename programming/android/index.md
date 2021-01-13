@@ -23,8 +23,13 @@ The Android documentation mainly consists of two parts. One is the [User Guide](
 - [Class](api-reference/#classes)
 
 ## Release Notes
-- [Version 8.0](release-notes/android-8.md)
+
+- [Version 8.x](release-notes/android-8.md)
 - [Version 7.6 and below](release-notes/android-7.md)
+
+## Online Store
+
+- <a href="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/#mobile" target="_blank">For Mobile App</a>
 
 ## Samples and Demos
 

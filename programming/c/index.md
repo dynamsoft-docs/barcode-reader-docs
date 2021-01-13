@@ -20,8 +20,11 @@ The C Language documentation mainly consists of two parts. One is the [User Guid
 - [Struct](api-reference/#structs)
 
 ## Release Notes
-- [Version 8.0](release-notes/c-8.md)
+- [Version 8.x](release-notes/c-8.md)
 - [Version 7.6 and below](release-notes/c-7.md)
+
+## Online Store
+- <a href="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/" target="_blank">Desktop and Server Deployment</a>
 
 ## Samples and Demos
 

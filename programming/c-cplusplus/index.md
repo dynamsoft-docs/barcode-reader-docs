@@ -21,6 +21,9 @@ The C Language and C++ documentation mainly consists of two parts. One is the [U
 - [C++]({{ site.cpp_methods }})
 - [Struct]({{ site.structs }})
 
+## Online Store
+- <a href="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/" target="_blank">Desktop and Server Deployment</a>
+
 ## Samples and Demos
 
 - <a href="https://demo.dynamsoft.com/DBR/BarcodeReaderDemo.aspx" target="_blank">Online Demo</a>

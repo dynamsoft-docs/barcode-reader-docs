@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
-# How to set full license in version 8.0
+# How to set full license in version 8.x
 
 Different methods are used for setting trial and full license keys. In our demo or sample applications, we use `.InitLicense()` or `.ProductKeys` to set trial license keys. 
 
