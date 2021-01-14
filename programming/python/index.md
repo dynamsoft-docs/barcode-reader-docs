@@ -16,6 +16,11 @@ The Python documentation mainly consists of two parts. One is the [User Guide](#
 
 - [User Guide for Python](user-guide.md)
 
+## Samples and Demos
+
+- <a href="https://demo.dynamsoft.com/DBR/BarcodeReaderDemo.aspx" target="_blank">Online Demo</a>
+- <a href="https://github.com/Dynamsoft/python-barcode/tree/master/samples" target="_blank">Python Samples</a>
+
 ## API Reference
 
 - [BarcodeReader](api-reference/#barcodereader-methods)
@@ -29,7 +34,4 @@ The Python documentation mainly consists of two parts. One is the [User Guide](#
 ## Online Store
 - <a href="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/" target="_blank">Desktop and Server Deployment</a>
 
-## Samples and Demos
 
-- <a href="https://demo.dynamsoft.com/DBR/BarcodeReaderDemo.aspx" target="_blank">Online Demo</a>
-- <a href="https://github.com/Dynamsoft/python-barcode/tree/master/samples" target="_blank">Python Samples</a>
