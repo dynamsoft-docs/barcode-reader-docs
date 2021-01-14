@@ -393,7 +393,6 @@ noTitleIndex: true
 
   | Erorr Code (except ObjC/Swift) | Erorr Code (ObjC/Swift) | Value | Description |
   |--------------------------------|-------------------------|-------|-------------|
-
   | `DMERR_BIND_DEVICE_FAILED` | `EnumErrorCode_BIND_DEVICE_FAILED` | -20005 | Failed to bind device. |
   
 ### Error code -20006
