@@ -17,8 +17,8 @@ Different methods are used for setting trial and full license keys. In the demo 
 
 You can use a development/runtime license by following the steps below:
 
-1. [Activate a development/runtime license](#activate)
-2. [Register the development/runtime license key](#register) 
+1. [Activate a development/runtime license](#activate-a-developmentruntime-license)
+2. [Register the development/runtime license key](#register-the-development-license-key) 
 
 ### Activate a development/runtime license
 
@@ -442,7 +442,7 @@ os.path.exists(license.txt):
 Please use a development/runtime license by following the steps below:
 
 1. [Activate a development/runtime license](#activate)
-2. [Register the development/runtime license key](#register) 
+2. [Register the development/runtime license key](#register-the-developmentruntime-license-key) 
 
 ### Activate a development/runtime license {#activate}
 
