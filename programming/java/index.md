@@ -17,6 +17,11 @@ The Java documentation mainly consists of two parts. One is the [User Guide](#ge
 ## Getting Started
 - [User Guide for Java](user-guide.md)
 
+## Samples and Demos
+
+- <a href="https://demo.dynamsoft.com/DBR/BarcodeReaderDemo.aspx" target="_blank">Online Demo</a>
+- <a href="https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx?Tag=java" target="_blank">Code Gallery - Java</a>
+
 ## API Reference
 - [BarcodeReader](api-reference/#barcodereader-methods)
 - [Interface](api-reference/#interface)
@@ -30,7 +35,3 @@ The Java documentation mainly consists of two parts. One is the [User Guide](#ge
 - <a href="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/" target="_blank">Desktop and Server Deployment</a>
 
 
-## Samples and Demos
-
-- <a href="https://demo.dynamsoft.com/DBR/BarcodeReaderDemo.aspx" target="_blank">Online Demo</a>
-- <a href="https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx?Tag=java" target="_blank">Code Gallery - Java</a>
