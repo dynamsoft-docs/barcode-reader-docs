@@ -2,7 +2,7 @@
 layout: default-layout
 title: Dynamsoft Barcode Reader Parameter Reference for FormatSpecification Object - Format Control Parameters
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for FormatSpecification Object - Format Control Parameters.
-keywords: AllModuleDeviation, AustralianPostEncodingTable, BarcodeAngleRangeArray, BarcodeBytesLengthRangeArray, BarcodeBytesRegExPattern, BarcodeFormatIds, BarcodeFormatIds_2, BarcodeHeightRangeArray, BarcodeTextLengthRangeArray, BarcodeTextRegExPattern, BarcodeWidthRangeArray, BarcodeZoneBarCountRangeArray, BarcodeZoneMinDistanceToImageBorders, Code128Subset, FindUnevenModuleBarcode, HeadModuleRatio, MinQuietZoneWidth, MinRatioOfBarcodeZoneWidthToHeight, MirrorMode, ModuleSizeRangeArray, RequireStartStopChars, StandardFormat, TailModuleRatio, FormatSpecification, format control parameters, parameter reference, parameter
+keywords: AllModuleDeviation, AustralianPostEncodingTable, BarcodeAngleRangeArray, BarcodeBytesLengthRangeArray, BarcodeBytesRegExPattern, BarcodeFormatIds, BarcodeFormatIds_2, BarcodeHeightRangeArray, BarcodeTextLengthRangeArray, BarcodeTextRegExPattern, BarcodeWidthRangeArray, BarcodeZoneBarCountRangeArray, BarcodeZoneMinDistanceToImageBorders, Code128Subset, FindUnevenModuleBarcode, HeadModuleRatio, MinQuietZoneWidth, MinRatioOfBarcodeZoneWidthToHeight, MirrorMode, ModuleSizeRangeArray, MSICodeCheckDigitCalculation, RequireStartStopChars, StandardFormat, TailModuleRatio, FormatSpecification, format control parameters, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 ---
@@ -31,6 +31,7 @@ needGenerateH3Content: false
  | [`FormatSpecification.MinRatioOfBarcodeZoneWidthToHeight`](format-control.md#minratioofbarcodezonewidthtoheight) |	Sets the minimum ratio (width/height) of the barcode zone. | 
  | [`FormatSpecification.MirrorMode`](format-control.md#mirrormode) | Sets whether to decode mirrored barcodes. | 
  | [`FormatSpecification.ModuleSizeRangeArray`](format-control.md#modulesizerangearray) | Sets the range of module size (in pixels) for barcodes search. (Hint). |
+ | [`FormatSpecification.MSICodeCheckDigitCalculation`](format-control.md#msicodecheckdigitcalculation) | Sets the scheme used for calculating a check digit of an MSI barcode. | 
  | [`FormatSpecification.RequireStartStopChars`](format-control.md#requirestartstopchars) |	Sets whether the start and stop characters are required when searching for Code 39 barcodes. |
  | [`FormatSpecification.StandardFormat`](format-control.md#standardformat) | Sets the standard barcode format. | 
  | [`FormatSpecification.TailModuleRatio`](format-control.md#tailmoduleratio) |	Sets the module count and module size ratio of the barcode tail part. | 
@@ -52,7 +53,7 @@ The unit is barcode module. For example, if the standard barcode module is 2px a
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
-| FormatSpecification | AllModuleDeviation | *int* | [0,7fffffff] | 0 |
+| FormatSpecification | AllModuleDeviation | *int* | [0, 0x7fffffff] | 0 |
 
 
 **Json Parameter Example**   
@@ -129,7 +130,7 @@ Sets the range of barcode bytes length for barcodes search.
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
-| FormatSpecification | BarcodeBytesLengthRangeArray | *JSON Object Array* | `MinValue`: [0, 7fffffff]<br>`MaxValue`: [0, 7fffffff]<br>**MaxValue >= MinValue** | `null` |
+| FormatSpecification | BarcodeBytesLengthRangeArray | *JSON Object Array* | `MinValue`: [0, 0x7fffffff]<br>`MaxValue`: [0, 0x7fffffff]<br>**MaxValue >= MinValue** | `null` |
 
 **Json Parameter Example**   
 ```
@@ -229,7 +230,7 @@ Sets the range of barcode heights (in pixels) to for barcodes search.
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
-| FormatSpecification | BarcodeHeightRangeArray | *JSON Object Array* | `MinValue`: [0, 7fffffff]<br>`MaxValue`: [0, 7fffffff]<br>**MaxValue >= MinValue** | `null` |
+| FormatSpecification | BarcodeHeightRangeArray | *JSON Object Array* | `MinValue`: [0, 0x7fffffff]<br>`MaxValue`: [0, 0x7fffffff]<br>**MaxValue >= MinValue** | `null` |
 
 **Json Parameter Example**   
 ```
@@ -258,7 +259,7 @@ Sets the range of barcode text length for barcodes search.
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
-| FormatSpecification | BarcodeTextLengthRangeArray | *JSON Object Array* | `MinValue`: [0, 7fffffff]<br>`MaxValue`: [0, 7fffffff]<br>**MaxValue >= MinValue** | `null` |
+| FormatSpecification | BarcodeTextLengthRangeArray | *JSON Object Array* | `MinValue`: [0, 0x7fffffff]<br>`MaxValue`: [0, 0x7fffffff]<br>**MaxValue >= MinValue** | `null` |
 
 **Json Parameter Example**   
 ```
@@ -319,7 +320,7 @@ Sets the range of barcode widths (in pixels) for barcodes search.
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
-| FormatSpecification | BarcodeWidthRangeArray | *JSON Object Array* | `MinValue`: [0, 7fffffff]<br>`MaxValue`: [0, 7fffffff]<br>**MaxValue >= MinValue** | `null` |
+| FormatSpecification | BarcodeWidthRangeArray | *JSON Object Array* | `MinValue`: [0, 0x7fffffff]<br>`MaxValue`: [0, 0x7fffffff]<br>**MaxValue >= MinValue** | `null` |
 
 **Json Parameter Example**   
 ```
@@ -555,7 +556,7 @@ Sets the range of module size (in pixels) for barcodes search.
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
-| FormatSpecification | ModuleSizeRangeArray | *JSON Object Array* | `MinValue`: [0, 7fffffff]<br>`MaxValue`: [0, 7fffffff]<br>**MaxValue >= MinValue** | `null` |
+| FormatSpecification | ModuleSizeRangeArray | *JSON Object Array* | `MinValue`: [0, 0x7fffffff]<br>`MaxValue`: [0, 0x7fffffff]<br>**MaxValue >= MinValue** | `null` |
 
 **Json Parameter Example**   
 ```
@@ -566,6 +567,30 @@ Sets the range of module size (in pixels) for barcodes search.
         "MaxValue": 20
     }
     ]
+}
+```
+
+
+&nbsp;
+
+## MSICodeCheckDigitCalculation
+Sets the scheme used for calculating a check digit of an MSI barcode.
+
+    
+### As Json Parameter
+
+
+| Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
+| ----------- | ------------------- | ---------- | ----------- | ------------- |
+| FormatSpecification | MSICodeCheckDigitCalculation | *string* | "MSICCDC_NO_CHECK_DIGIT"<br>"MSICCDC_MOD_10"<br>"MSICCDC_MOD_11"<br>"MSICCDC_MOD_1110"<br>"MSICCDC_MOD_1010" | `null` |
+
+**Remarks**   
+If this parameter is not set, MSICCDC_MOD_10 will be used by default.
+
+**Json Parameter Example**   
+```
+{
+    "MSICodeCheckDigitCalculation": "MSICCDC_MOD_10"
 }
 ```
 

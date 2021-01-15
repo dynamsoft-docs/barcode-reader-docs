@@ -16,12 +16,16 @@ The C Language and C++ documentation mainly consists of two parts. One is the [U
 - [User Guide for C Language]({{ site.c }}user-guide.html)
 - [User Guide for C++]({{ site.cpp }}user-guide.html)
 
+## Samples and Demos
+
+- <a href="https://demo.dynamsoft.com/DBR/BarcodeReaderDemo.aspx" target="_blank">Online Demo</a>
+- <a href="https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx?Tag=c%2fc%2b%2b#gallery" target="_blank">Code Gallery - C/C++</a>
+
 ## API Reference
 - [C Language]({{ site.c_methods }})
 - [C++]({{ site.cpp_methods }})
 - [Struct]({{ site.structs }})
 
-## Samples and Demos
+## Online Store
+- <a href="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/" target="_blank">Desktop and Server Deployment</a>
 
-- <a href="https://demo.dynamsoft.com/DBR/BarcodeReaderDemo.aspx" target="_blank">Online Demo</a>
-- <a href="https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx?Tag=c%2fc%2b%2b#gallery" target="_blank">Code Gallery - C/C++</a>

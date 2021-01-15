@@ -30,6 +30,7 @@ public class DMLTSConnectionParameters
 | [`UUIDGenerationMethod`](#uuidgenerationmethod) | *EnumDMUUIDGenerationMethod* |
 | [`MaxBufferDays`](#maxbufferdays) | *int* |
 | [`LimitedLicenseModules`](#limitedlicensemodules) | *EnumDMLicenseModule[]* |
+| [`MaxConcurrentInstanceCount`](#maxconcurrentinstancecount) | *int* |
 
 
 ### MainServerURL
@@ -187,3 +188,17 @@ EnumDMLicenseModule[] Dynamsoft.DBR.DMLTSConnectionParameters.LimitedLicenseModu
 - **See also**  
     [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)    
 
+
+### MaxConcurrentInstanceCount
+Sets the max concurrent instance count.
+```csharp
+int Dynamsoft.DBR.DMLTSConnectionParameters.MaxConcurrentInstanceCount
+```
+- **Value range**   
+    [1,0x7fffffff]   
+      
+- **Default value**   
+    1
+- **Remarks**   
+    It works only when [ChargeWay](#chargeway) is setting to DM_CW_CONCURRENT_INSTANCE_COUNT
+    It is the total number of instances used by multiple processes. For example, if there are two .EXE are running on the server and each .EXE may have 10 instances at most, then you should set maxConcurrentInstanceCount to 20.

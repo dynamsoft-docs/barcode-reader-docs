@@ -17,8 +17,8 @@ Different methods are used for setting trial and full license keys. In the demo 
 
 You can use a development/runtime license by following the steps below:
 
-1. [Activate a development/runtime license](#activate)
-2. [Register the development/runtime license key](#register) 
+1. [Activate a development/runtime license](#activate-a-developmentruntime-license)
+2. [Register the development/runtime license key](#register-the-development-license-key) 
 
 ### Activate a development/runtime license
 
@@ -339,13 +339,13 @@ If your machine is not allowed to access Internet, you can follow the steps belo
 
  **For Windows:** 
  
- Download <a href ="https://download.dynamsoft.com/MachineIDGenerator/MachineIDGenerator.exe" target="_blank">MachineIDGenerator.exe</a> and run it. The returned string, e.g. `tZRk-6qb2-sEyE-wcz7-jf6j-8DH/-Di3u-zjSv-G86f-ol3x`, is the machine ID.
- 
+ Download <a href="https://download.dynamsoft.com/MachineIDGenerator/MachineIDGenerator.exe" target="_blank">MachineIDGenerator.exe</a> and run it. The returned string, e.g. `tZRk-6qb2-sEyE-wcz7-jf6j-8DH/-Di3u-zjSv-G86f-ol3x`, is the machine ID.
+
 ![MachineID_Windows][7]
 
  **For Linux:** 
 
- Download <a href ="https://download.dynamsoft.com/MachineIDGenerator/MachineIDGenerator.tar.gz" target="_blank">MachineIDGenerator.tar.gz</a> and unzip it. Open **Terminal** and type `./MachineIDGenerator`. The returned string, e.g. `iJpN-Cajc-qQip-Sl50-NEX+-z1dJ-XmmV-lS9O-G86f-ol3x`, is the machine ID.
+ Download <a href="https://download.dynamsoft.com/MachineIDGenerator/MachineIDGenerator.tar.gz" target="_blank">MachineIDGenerator.tar.gz</a> and unzip it. Open **Terminal** and type `./MachineIDGenerator`. The returned string, e.g. `iJpN-Cajc-qQip-Sl50-NEX+-z1dJ-XmmV-lS9O-G86f-ol3x`, is the machine ID.
 
  ![MachineID_Linux][8]
 
@@ -442,7 +442,7 @@ os.path.exists(license.txt):
 Please use a development/runtime license by following the steps below:
 
 1. [Activate a development/runtime license](#activate)
-2. [Register the development/runtime license key](#register) 
+2. [Register the development/runtime license key](#register-the-developmentruntime-license-key) 
 
 ### Activate a development/runtime license {#activate}
 

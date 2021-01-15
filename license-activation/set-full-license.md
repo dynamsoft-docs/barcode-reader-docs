@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
-# How to set full license in version 8.0
+# How to set full license in version 8.x
 
 Different methods are used for setting trial and full license keys. In our demo or sample applications, we use `.InitLicense()` or `.ProductKeys` to set trial license keys. 
 
@@ -15,9 +15,9 @@ For the purchased version, you need to use `initLicenseFromLTS()` to the set the
 
 You can set the license by following the steps below:
 
-1. [Activate the license](#activate)
-2. [Configure the license (optional)](#configure) 
-3. [Set the license in the code](#set)
+1. [Activate the license](#activate-the-license)
+2. [Configure the license (optional)](#configure-the-license-optional) 
+3. [Set the license in the code](#set-the-license-in-the-code)
 
 ## Activate the license
 

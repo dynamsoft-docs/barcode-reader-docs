@@ -47,6 +47,7 @@ Defines a struct to configure the barcode reading runtime settings. These settin
 | [`scaleUpModes`](#scaleupmodes) | *NSArray\** |
 | [`pdfReadingMode`](#pdfreadingmode) | [`EnumPDFReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#pdfreadingmode) | 
 | [`deblurModes`](#deblurmodes) | *NSArray\** |
+| [`barcodeZoneMinDistanceToImageBorders`](#barcodezonemindistancetoimageborders) | *NSInteger* |
 
 
 ### terminatePhase
@@ -449,3 +450,16 @@ NSArray* deblurModes[10]
     [`EnumDeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode)
 
 
+### barcodeZoneMinDistanceToImageBorders
+Sets the minimum distance (in pixels) between the barcode zone and image borders.
+```objc
+NSInteger barcodeZoneMinDistanceToImageBorders
+```
+- **Value range**   
+    [0, 0x7fffffff]
+      
+- **Default value**   
+    0
+    
+- **Remarks**   
+    0: means no limitation on the distance. 
