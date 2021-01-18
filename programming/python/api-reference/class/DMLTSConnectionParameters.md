@@ -31,6 +31,7 @@ class DMLTSConnectionParameters
 | [`uuid_generation_method`](#uuid_generation_method) | [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod) |
 | [`max_buffer_days`](#max_buffer_days) | *int* |
 | [`limited_license_modules`](#limited_license_modules) | [`List<EnumLicenseModule>`]({{ site.enumerations }}other-enums.html#dm_licensemodule) |
+| [`max_concurrent_instance_count`](#max_concurrent_instance_count) | *int* |
 
 
 ### main_server_url
@@ -155,3 +156,17 @@ DMLTSConnectionParameters.limited_license_modules
 - **See also**  
     [`EnumLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
       
+
+### max_concurrent_instance_count
+Sets the max concurrent instance count.
+```python
+DMLTSConnectionParameters::max_concurrent_instance_count
+```
+- **Value range**   
+    [1,0x7fffffff]   
+      
+- **Default value**   
+    1
+- **Remarks**   
+    It works only when [charge_way](#charge_way) is setting to DM_CW_CONCURRENT_INSTANCE_COUNT
+    It is the total number of instances used by multiple processes. For example, if there are two .EXE are running on the server and each .EXE may have 10 instances at most, then you should set maxConcurrentInstanceCount to 20.

@@ -26,6 +26,7 @@ Defines a struct to configure the parameters to connect to license tracking serv
 | [`uuidGenerationMethod`](#uuidgenerationmethod) | *int* |
 | [`maxBufferDays`](#maxbufferdays) | *int* |
 | [`limitedLicenseModules`](#limitedlicensemodules) | *int[]* |
+| [`maxConcurrentInstanceCount`](#maxconcurrentinstancecount) | *int* |
 
 
 ### mainServerURL
@@ -177,3 +178,17 @@ int[] com.dynamsoft.dbr.DMLTSConnectionParameters.limitedLicenseModules
 - **See also**  
     [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)    
 
+
+### maxConcurrentInstanceCount
+Sets the max concurrent instance count.
+```java
+int com.dynamsoft.dbr.DMLTSConnectionParameters.maxConcurrentInstanceCount
+```
+- **Value range**   
+    [1,0x7fffffff]   
+      
+- **Default value**   
+    1
+- **Remarks**   
+    It works only when [chargeWay](#chargeway) is setting to DM_CW_CONCURRENT_INSTANCE_COUNT
+    It is the total number of instances used by multiple processes. For example, if there are two .EXE are running on the server and each .EXE may have 10 instances at most, then you should set maxConcurrentInstanceCount to 20.

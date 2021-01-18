@@ -144,12 +144,10 @@ PublicRuntimeSetting.barcode_complement_modes
 - **Remarks**   
     The list index represents the priority of the item. The smaller index is, the higher priority is.
 
-
 ### barcode_zone_min_distance_to_image_borders
-Sets barcode zone min distance to image borders.
-
+Sets the minimum distance (in pixels) between the barcode zone and image borders.
 ```python
-PublicRuntimeSettings.barcode_zone_min_distance_to_image_borders
+PublicRuntimeSetting.barcode_zone_min_distance_to_image_borders
 ```
 
 - **Value range**   
@@ -159,7 +157,8 @@ PublicRuntimeSettings.barcode_zone_min_distance_to_image_borders
     0
     
 - **Remarks**   
-    0: means no limitation on the barcode zone min distance.
+    0: means no limitation on the distance. 
+
 
 ### binarization_modes
 Sets the mode and priority for binarization.

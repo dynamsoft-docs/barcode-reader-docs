@@ -37,6 +37,13 @@ noTitleIndex: true
 - Fixed a bug where the ExpectedBarcodesCount and BarcodeFormat parameters do not work in the RegionDefinition
 
 
+## 8.0.1 (01/06/2021)
+
+### FIXED
+
+- Fixed a typo in `init_license_from_lts`.
+
+
 ## 8.0 (11/26/2020)
 
 ### NEW

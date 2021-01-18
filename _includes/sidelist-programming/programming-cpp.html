@@ -1,5 +1,6 @@
 <li><a href="{{ site.cpp }}" class="otherLinkColour">C++</a>
     <ul>
+        {%- if page.url contains '/cplusplus/' or page.url contains '/cplusplus-v' or page.url contains '/c-cplusplus/' or page.url contains '/c-cplusplus-v'-%}
         <li><a href="{{ site.cpp }}user-guide.html" class="otherLinkColour">User Guide</a></li>
         <li><a href="{{ site.cpp_api }}" class="otherLinkColour">API Reference</a>
             <ul>
@@ -48,10 +49,10 @@
 
         <li><a href="{{ site.cpp_release_notes }}" class="otherLinkColour">Release Notes</a>
             <ul>
-                <li><a href="{{ site.cpp_release_notes }}cpp-8.html" class="otherLinkColour">Version 8.0</a></li>
+                <li><a href="{{ site.cpp_release_notes }}cpp-8.html" class="otherLinkColour">Version 8.x</a></li>
                 <li><a href="{{ site.cpp_release_notes }}cpp-7.html" class="otherLinkColour">Version 7.6 and below</a></li>
             </ul>
         </li>
-
+        {%- endif -%}
     </ul>
 </li>

@@ -1,5 +1,6 @@
 <li><a href="{{ site.java }}" class="otherLinkColour">Java</a>
     <ul>
+        {%- if page.url contains '/java/' or page.url contains '/java-v' -%}
         <li><a href="{{ site.java }}user-guide.html" class="otherLinkColour">User Guide</a></li>
         <li><a href="{{ site.java_api }}" class="otherLinkColour">API Reference</a>
             <ul>
@@ -46,10 +47,10 @@
 
         <li><a href="{{ site.java_release_notes }}" class="otherLinkColour">Release Notes</a>
             <ul>
-                <li><a href="{{ site.java_release_notes }}java-8.html" class="otherLinkColour">Version 8.0</a></li>
+                <li><a href="{{ site.java_release_notes }}java-8.html" class="otherLinkColour">Version 8.x</a></li>
                 <li><a href="{{ site.java_release_notes }}java-7.html" class="otherLinkColour">Version 7.6 and below</a></li>
             </ul>
         </li>
-
+        {%- endif -%}
     </ul>
 </li>

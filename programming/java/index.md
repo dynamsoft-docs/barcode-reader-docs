@@ -17,16 +17,21 @@ The Java documentation mainly consists of two parts. One is the [User Guide](#ge
 ## Getting Started
 - [User Guide for Java](user-guide.md)
 
+## Samples and Demos
+
+- <a href="https://demo.dynamsoft.com/DBR/BarcodeReaderDemo.aspx" target="_blank">Online Demo</a>
+- <a href="https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx?Tag=java" target="_blank">Code Gallery - Java</a>
+
 ## API Reference
 - [BarcodeReader](api-reference/#barcodereader-methods)
 - [Interface](api-reference/#interface)
 - [Class](api-reference/#classes)
 
 ## Release Notes
-- [Version 8.0](release-notes/java-8.md)
+- [Version 8.x](release-notes/java-8.md)
 - [Version 7.6 and below](release-notes/java-7.md)
 
-## Samples and Demos
+## Online Store
+- <a href="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/" target="_blank">Desktop and Server Deployment</a>
 
-- [Online Demo](https://demo.dynamsoft.com/DBR/BarcodeReaderDemo.aspx)
-- [Code Gallery - Java](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx?Tag=java)
+

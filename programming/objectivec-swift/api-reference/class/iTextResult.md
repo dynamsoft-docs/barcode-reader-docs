@@ -33,6 +33,7 @@ Stores the text result.
 | [`localizationResult`](#localizationresult) | [`iLocalizationResult`](iLocalizationResult.md)\* |
 | [`detailedResult`](#detailedresult) | *NSObject \** |
 | [`extendedResults`](#extendedResults) | [`NSArray<iExtendedResult*>*`](iExtendedResult.md)\* |
+| [`exception`](#exception) | *NSString \** |
 
 
 ### barcodeFormat
@@ -105,4 +106,12 @@ The extended result array.
 
 ```objc
 NSArray<iExtendedResult*>* extendedResults
+```
+
+### exception
+
+The exception message.
+
+```objc
+NSString* exception
 ```

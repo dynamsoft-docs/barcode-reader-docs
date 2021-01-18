@@ -28,7 +28,7 @@ updateRuntimeSettings(settings) returns Promise
 
 ### Parameters
 
-`settings` [*RuntimeSettings*](../interfaces.md#runtimesettings) | *string* 
+`settings` [*RuntimeSettings*](../../global-interfaces.md#runtimesettings) | *string* 
 
 ### Return Value
 
