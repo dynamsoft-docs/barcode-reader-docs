@@ -26,6 +26,7 @@ class PublicRuntimeSetting
 | [`barcode_format_ids_2`](#barcode_format_ids_2) | *int* |
 | [`barcode_colour_modes`](#barcode_colour_modes) | list[ [`EnumBarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode) ] |
 | [`barcode_complement_modes`](#barcode_complement_modes) | list[ [`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode) ] |
+| [`barcode_zone_min_distance_to_image_borders`](#barcode_zone_min_distance_to_image_borders) | *int* |
 | [`binarization_modes`](#binarization_modes) | list[ [`EnumBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) ] |
 | [`colour_clustering_modes`](#colour_clustering_modes) | list[ [`EnumColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode) ] |
 | [`colour_conversion_modes`](#colour_conversion_modes) | list[ [`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode) ] |
@@ -142,6 +143,23 @@ PublicRuntimeSetting.barcode_complement_modes
     
 - **Remarks**   
     The list index represents the priority of the item. The smaller index is, the higher priority is.
+
+
+### barcode_zone_min_distance_to_image_borders
+Sets barcode zone min distance to image borders.
+
+```python
+PublicRuntimeSettings.barcode_zone_min_distance_to_image_borders
+```
+
+- **Value range**   
+    [0, 0x7fffffff]
+      
+- **Default value**   
+    0
+    
+- **Remarks**   
+    0: means no limitation on the barcode zone min distance.
 
 ### binarization_modes
 Sets the mode and priority for binarization.

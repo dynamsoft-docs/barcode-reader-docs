@@ -155,7 +155,12 @@ breadcrumbText: API Reference
 - [`SamplingImageData`](class/SamplingImageData.md)	 
 - [`TextResult`](class/TextResult.md)	
 - [`DMLTSConnectionParameters`](class/DMLTSConnectionParameters.md)
+- [`IntermediateResultCallBack`](class/IntermediateResultCallBack.md)
+- [`TextResultResultCallBack`](class/TextResultResultCallBack.md)
+- [`ErrorCallBack`](class/ErrorCallBack.md)
+		
 
+&nbsp;
 
 
 ## Enumerations

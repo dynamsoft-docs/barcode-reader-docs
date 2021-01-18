@@ -1,0 +1,32 @@
+---
+layout: default-layout
+title: Dynamsoft Barcode Reader Python API Reference - ErrorCallBack Class
+description: This page shows the ErrorCallBack Class of Dynamsoft Barcode Reader for Python SDK.
+keywords: ErrorCallBack, class, api reference, python
+needAutoGenerateSidebar: false
+---
+
+
+# ErrorCallBack
+An abstract class that contains a abstract method `error_callback_func`.
+
+```python
+class ErrorCallBack(ABC)
+```  
+  
+---
+  
+
+## Abstract Method
+  
+### error_callback_func
+Sets callback function to process errors generated during frame decoding. Please implement in subclass.
+
+`[in] frame_id` <int> : The ID of the frame.  
+`[in] error` <int> : Error Code generated when decoding the frame.  
+`[in] user_data` <object> : Customized arguments passed to your function.  
+        
+
+```python
+ErrorCallBack.error_callback_func(frame_id, error, user_data)
+```
