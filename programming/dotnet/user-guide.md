@@ -60,15 +60,15 @@ After installation, you can find samples for supported platforms in the **Sample
                 {
                     int iBarcodeIndex = iIndex + 1;
                     string builder = "Barcode " + iBarcodeIndex.ToString() + ":\r\n";
-                    if (result[iIndex].BarcodeFormat != 0)
+                    if (results[iIndex].BarcodeFormat != 0)
                     {
-                        builder += "    Type: " + result[iIndex].BarcodeFormatString + "\r\n";
+                        builder += "    Type: " + results[iIndex].BarcodeFormatString + "\r\n";
                     }
                     else
                     {
-                        builder += "    Type: " + result[iIndex].BarcodeFormatString_2 + "\r\n";
+                        builder += "    Type: " + results[iIndex].BarcodeFormatString_2 + "\r\n";
                     }
-                    builder += "    Value: " + result[iIndex].BarcodeText + "\r\n";
+                    builder += "    Value: " + results[iIndex].BarcodeText + "\r\n";
                     Console.WriteLine(builder);
                 }
             }
