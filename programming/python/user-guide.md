@@ -51,12 +51,14 @@ pip install dbr
 
        if text_results != None:
            for text_result in text_results:
-               print("Barcode Format :")
+               print("Barcode Format : ")
                print(text_result.barcode_format_string)
-               print("Barcode Text :")
+               print("Barcode Text : ")
                print(text_result.barcode_text)
                print("Localization Points : ")
                print(text_result.localization_result.localization_points)
+               print("Exception : ")
+               print(text_result.exception)
                print("-------------")
    except BarcodeReaderError as bre:
        print(bre)
@@ -125,12 +127,14 @@ try:
 
     if text_results != None:
         for text_result in text_results:
-            print("Barcode Format :")
+            print("Barcode Format : ")
             print(text_result.barcode_format_string)
-            print("Barcode Text :")
+            print("Barcode Text : ")
             print(text_result.barcode_text)
             print("Localization Points : ")
             print(text_result.localization_result.localization_points)
+            print("Exception : ")
+            print(text_result.exception)
             print("-------------")
 except BarcodeReaderError as bre:
     print(bre)
@@ -157,12 +161,14 @@ By default, the SDK will read as many barcodes as it can. To increase the recogn
 
       if text_results != None:
          for text_result in text_results:
-               print("Barcode Format :")
+               print("Barcode Format : ")
                print(text_result.barcode_format_string)
-               print("Barcode Text :")
+               print("Barcode Text : ")
                print(text_result.barcode_text)
                print("Localization Points : ")
                print(text_result.localization_result.localization_points)
+               print("Exception : ")
+               print(text_result.exception)
                print("-------------")
    except BarcodeReaderError as bre:
       print(bre)
@@ -196,12 +202,14 @@ To specify a region, you will need to define an area. The following code shows h
 
       if text_results != None:
          for text_result in text_results:
-               print("Barcode Format :")
+               print("Barcode Format : ")
                print(text_result.barcode_format_string)
-               print("Barcode Text :")
+               print("Barcode Text : ")
                print(text_result.barcode_text)
                print("Localization Points : ")
                print(text_result.localization_result.localization_points)
+               print("Exception : ")
+               print(text_result.exception)
                print("-------------")
    except BarcodeReaderError as bre:
       print(bre)
@@ -231,12 +239,14 @@ Besides the option of using the PublicRuntimeSettings struct, the SDK also provi
 
       if text_results != None:
          for text_result in text_results:
-               print("Barcode Format :")
+               print("Barcode Format : ")
                print(text_result.barcode_format_string)
-               print("Barcode Text :")
+               print("Barcode Text : ")
                print(text_result.barcode_text)
                print("Localization Points : ")
                print(text_result.localization_result.localization_points)
+               print("Exception : ")
+               print(text_result.exception)
                print("-------------")
    except BarcodeReaderError as bre:
       print(bre)

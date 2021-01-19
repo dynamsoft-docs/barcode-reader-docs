@@ -149,6 +149,7 @@ Sets the minimum distance (in pixels) between the barcode zone and image borders
 ```python
 PublicRuntimeSetting.barcode_zone_min_distance_to_image_borders
 ```
+
 - **Value range**   
     [0, 0x7fffffff]
       
