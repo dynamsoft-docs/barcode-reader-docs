@@ -8,7 +8,7 @@ needAutoGenerateSidebar: false
 
 
 # ErrorCallBack
-An abstract class that contains a abstract method `error_callback_func`.
+An abstract class that contains an abstract method `error_callback_func`.
 
 ```python
 class ErrorCallBack(ABC)
@@ -20,10 +20,10 @@ class ErrorCallBack(ABC)
 ## Abstract Method
   
 ### error_callback_func
-Sets callback function to process errors generated during frame decoding. Please implement in subclass.
+Sets callback function to process errors during frame decoding. You need to implement it in the subclass.
 
 `[in] frame_id` <int> : The ID of the frame.  
-`[in] error` <int> : Error Code generated when decoding the frame.  
+`[in] error` <int> : Error code generated when decoding the frame.  
 `[in] user_data` <object> : Customized arguments passed to your function.  
         
 
