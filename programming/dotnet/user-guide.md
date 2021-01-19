@@ -34,13 +34,15 @@ After installation, you can find samples for supported platforms in the **Sample
 
 
 ## Getting Started: HelloWorld
+
 1. Start Visual Studio and create a new Console Application in C#. Let's name it `BarcodeReadDemo_DotNet`. Don't forget to choose a supported .NET Framework edition.
+
 2. Add the namespace in `Program.cs`.
    ```csharp
     using Dynamsoft;
     using Dynamsoft.DBR;
    ```
-   Please add Dynamsoft Barcode Reader lib in project references. The lib files named "Dynamsoft.BarcodeReader.dll" and "DynamsoftCommon.dll" can be found in `DBR-DotNet-{version number}\DynamsoftBarcodeReader\Lib\2.0` or `DBR-DotNet-{version number}\DynamsoftBarcodeReader\Lib\4.0`. The folder which you should choose depends on your .NET Framework edition.
+   Please add Dynamsoft Barcode Reader libraries (`Dynamsoft.BarcodeReader.dll` and `DynamsoftCommon.dll`) in project references. The lib files can be found in `DBR-DotNet-{version number}\DynamsoftBarcodeReader\Lib\2.0` or `DBR-DotNet-{version number}\DynamsoftBarcodeReader\Lib\4.0`. The folder which you should choose depends on your .NET Framework edition.
 
 3. Update the main function in `Program.cs`.
     ```csharp
@@ -80,8 +82,11 @@ After installation, you can find samples for supported platforms in the **Sample
     ```
     Please update `<your image file full path>` and `<your license key here>` in the code accordingly.
 
-4. Run the project.
+4. Build the project and then copy `x64` and `x86` folders to the same folder where `Dynamsoft.BarcodeReader.dll` and `DynamsoftCommon.dll` resides. In this case, it is under `bin\Debug_VS2010\` folder.
 
+5. Run the project.
+
+ If you got the error "An exception of type 'Dynamsoft.DBR.BarcodeReaderException' occurred in Dynamsoft.BarcodeReader.dll" or "Failed to load module dll", please double check if you copied `x64` and `x86` folders as stated in Step #4.
 
 &nbsp;
 
@@ -304,9 +309,19 @@ Below is a template for your reference. To learn more about the APIs, you can ch
 
 Distribute the following required library files with the applications using the Dynamsoft Barcode Reader SDK. The distribution files can be found under:
 
-for .NET Framework 2.0 - 3.5: `Dynamsoft.BarcodeReader.dll`, `DynamsoftCommon.dll`, `x86` and `x64` folders. These files are under `DBR-DotNet-{version number}\DynamsoftBarcodeReader\Lib\{Platform}\2.0`.
+**for .NET Framework 2.0 - 3.5:** 
+`Dynamsoft.BarcodeReader.dll`, 
+`DynamsoftCommon.dll`, 
+`x86` and `x64` folders. 
 
-for .NET Framework 4.0 and above: `Dynamsoft.BarcodeReader.dll`, `DynamsoftCommon.dll`, `x86` and `x64` folders. These files are under `DBR-DotNet-{version number}\DynamsoftBarcodeReader\Lib\{Platform}\4.0`.
+These files are under `DBR-DotNet-{version number}\DynamsoftBarcodeReader\Lib\2.0`.
+
+**for .NET Framework 4.0 and above:**
+`Dynamsoft.BarcodeReader.dll`, 
+`DynamsoftCommon.dll`, 
+`x86` and `x64` folders. 
+
+These files are under `DBR-DotNet-{version number}\DynamsoftBarcodeReader\Lib\4.0`.
 
 ## How to Upgrade
 
