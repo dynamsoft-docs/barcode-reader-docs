@@ -10,9 +10,9 @@ needAutoGenerateSidebar: true
 
 ## From v8.0 to v8.1
 
-### `TextResults` exception
+### `TextResult` exception
 
-In v8.1, we added exceptions to the `TextResults` class. An exception message and code is returned with each result if a full (commercial) license is not used. 
+In v8.1, we added exceptions to the `TextResult` class. An exception message and code is returned with each result if a full (commercial) license is not used. 
 
 The following is an example of what may be returned if you are using an expired or valid trial license:
 
