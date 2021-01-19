@@ -8,7 +8,7 @@ needAutoGenerateSidebar: false
 
 
 # IntermediateResultCallBack
-An abstract class that contains a abstract method `intermediate_results_callback_func`.
+An abstract class that contains an abstract method `intermediate_results_callback_func`.
 
 ```python
 class IntermediateResultCallBack(ABC)
@@ -20,7 +20,8 @@ class IntermediateResultCallBack(ABC)
 ## Abstract Method
   
 ### intermediate_results_callback_func
-Sets callback function to process intermediate results generated during frame decoding. Please implement in subclass. 
+
+Sets callback function to process intermediate results during frame decoding. You need to implement it in the subclass. 
 
 `[in] frame_id` <int> : The ID of the frame.  
 `[in] results` <list[dict]> : The intermediate results of the frame. You can convert every item of the results to IntermediateResult Object by using IntermediateResult's constructor.  
