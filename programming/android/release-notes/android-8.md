@@ -10,6 +10,13 @@ noTitleIndex: true
 
 # Release Notes for Android SDK - 8.x
 
+## 8.1.1 (01/19/2021)
+
+### Fixed
+
+- Fixed a crash issue when calling `initLicenseFromLTS` or `decode***`  methods in Android 6.x and below.
+
+
 ## 8.1 (01/12/2021)
 
 ### New
@@ -29,6 +36,7 @@ noTitleIndex: true
 
 - Fixed a bug where Micro PDF417 may not be localized in multiple-barcode scenarios.
 - Fixed a bug where the `ExpectedBarcodesCount` and `BarcodeFormat` parameters do not work in the `RegionDefinition`.
+
 
 ## 8.0 (11/17/2020)
 
