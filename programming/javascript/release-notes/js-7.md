@@ -123,7 +123,7 @@ Added a new localization mode LM_STATISTICS_POSTAL_CODE in the struct PublicRunt
 - Improved the logic for camera selecting so that a better camera may be selected by default in the case of having multiple cameras available.
 - Improved the method updateRuntimeSettings so that it accepts three default profiles namely "speed", "coverage" & "balance" thus making it easier to use. Note that "speed" is the default profile for each BarcodeScanner instance and "coverage" for each BarcodeReader instance.
 
-## 7.2.2 (11/27/2019) · How to upgrade to this version?
+## 7.2.2 (11/27/2019)
 
 ### NEW
 
