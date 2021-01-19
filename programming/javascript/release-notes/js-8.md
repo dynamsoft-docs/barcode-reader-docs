@@ -10,13 +10,13 @@ noTitleIndex: true
 
 # Release Notes for JavaScript SDK - 8.x
 
-## 8.1 (01//2021)
+## 8.1 (01/19/2021)
 
 ### New 
  
 - Added support for MSI Code (Modified Plessey). 
 - Added a new member `BarcodeZoneMinDistanceToImageBorders` in the `PublicRuntimeSettings` struct to set the minimum distance (in pixels) between barcode zone and image borders.
-- Added exception error message to `TextResult` when license initialization fails.
+- Added exception error message to `TextResult` when license initialization fails or decoding authorization fails.
  
 ### Improved
  
