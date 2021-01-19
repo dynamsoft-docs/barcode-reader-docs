@@ -20,6 +20,7 @@ class ErrorCallBack(ABC)
 ## Abstract Method
   
 ### error_callback_func
+
 Sets callback function to process errors during frame decoding. You need to implement it in the subclass.
 
 `[in] frame_id` <int> : The ID of the frame.  
