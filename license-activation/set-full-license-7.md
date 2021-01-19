@@ -516,7 +516,7 @@ dbr.initLicenseFromServer("", "", new DBRServerLicenseVerificationListener() {
        }
     });
  ```
-# Common error code
+## Common error code
 
 - **Error Code:  -10044**
 
