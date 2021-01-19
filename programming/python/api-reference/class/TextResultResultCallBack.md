@@ -8,7 +8,7 @@ needAutoGenerateSidebar: false
 
 
 # TextResultResultCallBack
-An abstract class that contains a abstract method `text_results_callback_func`.
+An abstract class that contains an abstract method `text_results_callback_func`.
 
 ```python
 class TextResultResultCallBack(ABC)
@@ -20,7 +20,7 @@ class TextResultResultCallBack(ABC)
 ## Abstract Method
   
 ### text_results_callback_func
-Sets callback function to process text results generated during frame decoding. Please implement in subclass.
+Sets callback function to process text results during frame decoding. Please implement in subclass.
 
 `[in] frame_id` <int> : The ID of the frame.  
 `[in] results` <list[dict]> : Recognized barcode results of the frame. You can convert every item of the results to TextResult Object by using TextResult's constructor.  
