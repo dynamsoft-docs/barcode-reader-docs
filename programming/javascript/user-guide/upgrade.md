@@ -8,6 +8,31 @@ needAutoGenerateSidebar: true
 
 # How to Upgrade
 
+## From v8.0 to v8.1
+
+### `TextResult` exception
+
+In v8.1, we added exceptions to the `TextResult` class. An exception message and code is returned with each result if a full (commercial) license is not used. 
+
+The following is an example of what may be returned if you are using an expired or valid trial license:
+
+`[Attention(exceptionCode:-20010)] 0123456789`
+
+The correct result is returned for valid licenses along with the exception message. A full commercial license would return only the decoded barcode results. 
+
+More details on the exception code and description can be found within each result `exception.code` and `exception.message`.
+
+This exception has a set length so it can be easily filtered out in Javascript. Below is an example for returning only the decoded barcode text result. 
+
+```js
+   scanner.onFrameRead = async results => {
+      for(let result of results){
+         barcodeText = result.barcodeText.slice(34);
+         console.log(barcodeText);
+      }
+   }
+```
+
 ## From v7.x to v8.x
 
 ### Change your license
