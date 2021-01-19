@@ -231,9 +231,21 @@ if os.path.exists(license.txt):
    #Use the local license file to activate the SDK 
    with open("license.txt","r") as f:
       license_content = f.read()
-   reader.init_license_from_license_content(license_key, license_content)
+try
+   error = reader.init_license_from_license_content(license_key, license_content)
+   if error[0] != EnumErrorCode.DBR_OK:
+        print(error[0])
+        print(error[1])
+except BarcodeReaderError as bre:
+    print(bre)
 else:
-   reader.init_license_from_server(license_server, license_key)
+try
+   error = reader.init_license_from_server(license_server, license_key)
+   if error[0] != EnumErrorCode.DBR_OK:
+        print(error[0])
+        print(error[1])
+except BarcodeReaderError as bre:
+    print(bre)
    #If you wish to use SDK offline, store the license information as .txt or other format
    license_content = reader.output_license_to_string()
    with open("license.txt","w") as f:
@@ -320,7 +332,13 @@ from typing import List
 from dbr import *
 license_key = "Input your own license"
 reader = BarcodeReader()
-reader.init_license_from_server(license_server, license_key)
+try
+error = reader.init_license_from_server(license_server, license_key)
+if error[0] != EnumErrorCode.DBR_OK:
+        print(error[0])
+        print(error[1])
+except BarcodeReaderError as bre:
+    print(bre)
 ```
 
 #### Option 3: No Internet connection {#offline}
@@ -434,7 +452,13 @@ os.path.exists(license.txt):
    #Use the local license file to activate the SDK 
    with open("license.txt","r") as f:
       license_content = f.read()
-   reader.init_license_from_license_content(license_key, license_content)
+try
+   error = reader.init_license_from_license_content(license_key, license_content)
+   if error[0] != EnumErrorCode.DBR_OK:
+        print(error[0])
+        print(error[1])
+except BarcodeReaderError as bre:
+    print(bre)
 ```
 
 ## For iOS/Android SDK
@@ -492,7 +516,51 @@ dbr.initLicenseFromServer("", "", new DBRServerLicenseVerificationListener() {
        }
     });
  ```
+## Common error code
 
+- **Error Code:  -10044**
+
+ **Error Message:** Failed to request the license content
+
+ **Solution:**
+
+ Check your network connection and make sure you have Internet access. If you have a firewall configured on the device, it is very likely that our license server is blocked by your firewall. Please [contact Dynamsoft](https://www.dynamsoft.com/Company/Contact.aspx) to resolve the issue. 
+
+
+- **Error Code: -10054**
+
+ **Error Message:** The license key has no remaining quota
+
+ **Solution:** 
+
+ You can [contact Dynamsoft](https://www.dynamsoft.com/Company/Contact.aspx) to expand the volume of your current runtime license key. Rest assured that your license key remains unchanged during the upgrade process, so no code change is required to your application. 
+
+
+- **Error Code: -10004**
+
+ **Error Message:** The license has expired
+
+ **Solution:** 
+
+ Your annual runtime license has expired. You can log into the customer portal to renew your runtime license by credit card or PayPal. Alternatively, you can [contact Dynamsoft](https://www.dynamsoft.com/Company/Contact.aspx) if you prefer other payment methods (wire transfer or check). Rest assured that your license key remains unchanged during the upgrade process, so no code change is required to your application. 
+
+
+- **Error Code: -10042**
+
+ **Error Message:** The license DLL is missing (for C/C++)
+
+ **Solution:**
+
+ For 8-digit license keys, we use a separate license DLL to verify the License. Please copy `DynamsoftLicClientx64.dll` (or `DynamsoftLicClientx86.dll`) from `[INSTALLATION FOLDER]\Components\C_C++\Redist\x64\` (or `[INSTALLATION FOLDER]\Components\C_C++\Redist\x86`) to the same folder as the barcode reader dll `DynamsoftBarcodeReaderx64.dll` (or `DynamsoftBarcodeReaderx86.dll`).
+
+
+- **Error Code: -10052**
+
+ **Error Message:** The license content is invalid
+
+ **Solution:** 
+
+ This error happens when you are trying to use InitLicenseFromLicenseContent() API to activate the license. Please refer to [Use a Development License](#register-the-development-license-key) section to double check if the license content is correct. 
 If you run into any issues, please [contact Dynamsoft Support](https://www.dynamsoft.com/Company/Contact.aspx).
 
 [1]:assets\set-full-license\NewLicense2.png
