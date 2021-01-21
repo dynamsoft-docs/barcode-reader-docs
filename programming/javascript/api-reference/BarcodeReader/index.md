@@ -66,4 +66,7 @@ The following methods are related to customizing mode and runtime settings.
 | [`engineResourcePath`](accessors.md#engineresourcepath) | Get or set the engine (WASM) location. | 
 | [`productKeys`](accessors.md#productkeys) | Get or set the Dynamsoft Barcode Reader SDK product keys. | 
 | [`version`](accessors.md#version) | Get current version. | 
+| [`licenseServer`](accessors.md#licenseServer) |
+| [`handshakeCode`](accessors.md#handshakeCode) |
+| [`sessionPassword`](accessors.md#sessionPassword) |
 

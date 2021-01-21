@@ -109,9 +109,6 @@ The following properties are inherited from the `BarcodeReader` class.
 * `bDestroyed`
 * `bSaveOriCanvas`
 * `oriCanvas`
-* [`licenseServer`](../BarcodeReader/properties.md#licenseServer)
-* [`handshakeCode`](../BarcodeReader/properties.md#handshakeCode)
-* [`sessionPassword`](../BarcodeReader/properties.md#sessionPassword)
 
 ## `BarcodeScanner` Accessors
 
@@ -128,6 +125,9 @@ The following accessors are inherited from the `BarcodeReader` class.
 * [`engineResourcePath`](../BarcodeReader/accessors.md#engineresourcepath) 
 * [`productKeys`](../BarcodeReader/accessors.md#productkeys) 
 * [`version`](../BarcodeReader/accessors.md#version)
+* [`licenseServer`](../BarcodeReader/accessors.md#licenseServer)
+* [`handshakeCode`](../BarcodeReader/accessors.md#handshakeCode)
+* [`sessionPassword`](../BarcodeReader/accessors.md#sessionPassword)
 
 ## `BarcodeScanner` Interfaces
 

@@ -87,6 +87,9 @@ The following methods are related to customizing mode and runtime settings.
 | [`engineResourcePath`](BarcodeReader/accessors.md#engineresourcepath) | Get or set the engine (WASM) location. | 
 | [`productKeys`](BarcodeReader/accessors.md#productkeys) | Get or set the Dynamsoft Barcode Reader SDK product keys. | 
 | [`version`](BarcodeReader/accessors.md#version) | Get current version. | 
+| [`licenseServer`](BarcodeReader/accessors.md#licenseServer) |
+| [`handshakeCode`](BarcodeReader/accessors.md#handshakeCode) |
+| [`sessionPassword`](BarcodeReader/accessors.md#sessionPassword) |
 
 ---    
 ## BarcodeScanner
@@ -206,6 +209,9 @@ The following accessors are inherited from the `BarcodeReader` class.
 * [`engineResourcePath`](BarcodeReader/accessors.md#engineresourcepath) 
 * [`productKeys`](BarcodeReader/accessors.md#productkeys) 
 * [`version`](BarcodeReader/accessors.md#version)
+* [`licenseServer`](BarcodeReader/accessors.md#licenseServer)
+* [`handshakeCode`](BarcodeReader/accessors.md#handshakeCode)
+* [`sessionPassword`](BarcodeReader/accessors.md#sessionPassword)
 
 ### `BarcodeScanner` Interfaces
 
