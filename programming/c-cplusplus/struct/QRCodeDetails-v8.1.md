@@ -29,11 +29,7 @@ typedef struct tagQRCodeDetails  QRCodeDetails
 | [`errorCorrectionLevel`](#errorcorrectionlevel) | [`QRCodeErrorCorrectionLevel`]({{ site.enumerations }}other-enums.html#qrcodeerrorcorrectionlevel) |
 | [`version`](#version) | *int* |
 | [`model`](#model) | *int* |
-| [`mode`](#mode) | *int* |
-| [`page`](#page) | *int* |
-| [`totalPage`](#totalpage) | *int* |
-| [`parityData`](#paritydata) | *unsigned char* |
-| [`reserved`](#reserved) | *char\[16\]* |
+| [`reserved`](#reserved) | *char\[32\]* |
 
 
 ### moduleSize
@@ -72,41 +68,9 @@ Number of the models.
 int tagQRCodeDetails::model
 ```
 
-### mode
-
-Identify the first data encoding mode.
-
-```cpp
-int tagQRCodeDetails::mode
-```
-
-### page
-
-Identify the position of the particular symbol.
-
-```cpp
-int tagQRCodeDetails::page
-```
-
-### totalPage
-
-Identify the total number of symbols to be concatenated in the Structured Append format.
-
-```cpp
-int tagQRCodeDetails::totalPage
-```
-
-### parityData
-
-The Parity Data shall be an 8 bit byte following the Symbol Sequence Indicator. The parity data is a value obtained by XORing byte by byte the ASCII/JIS values of all the original input data before division into symbol blocks.
-
-```cpp
-unsigned char tagQRCodeDetails::parityData
-```
-
 ### reserved
 Reserved memory for the struct. The length of this array indicates the size of the memory reserved for this struct.
 ```cpp
-char tagQRCodeDetails::reserved[16]
+char tagQRCodeDetails::reserved[32]
 ```
 
