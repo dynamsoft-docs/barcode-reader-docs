@@ -31,7 +31,7 @@ class QRCodeDetailedResult
 | [`mode`](#mode) | *int* |
 | [`page`](#page) | *int* |
 | [`totalPage`](#totalpage) | *int* |
-| [`parityData`](#paritydata) | *byte* |
+| [`parityData`](#paritydata) | *int* |
 
 
 ### module_size
