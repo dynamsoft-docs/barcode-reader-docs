@@ -25,7 +25,7 @@ noTitleIndex: true
 
 To install Dynamsoft Barcode Reader Windows Edition on your development machine, you can download the SDK from the [Dynamsoft website](https://www.dynamsoft.com/barcode-reader/downloads/). The zip package includes a free trial license valid for 30 days.   
    
-After installation, you can find samples for supported platforms in the **Samples** folder under the installation folder. 
+After you unzip the file, you can find samples for supported platforms in the **Samples** folder under the installation folder. 
 
 
 ## Getting Started: HelloWorld
@@ -77,11 +77,8 @@ After installation, you can find samples for supported platforms in the **Sample
     ```
     Please update `<your image file full path>` and `<your license key here>` in the code accordingly.
 
-4. Build the project and then copy `x64` and `x86` folders to the same folder where `Dynamsoft.BarcodeReader.dll` and `DynamsoftCommon.dll` resides. In this case, it is under `bin\Debug_VS2010\` folder.
-
-5. Run the project.
-
- If you got the error "An exception of type 'Dynamsoft.DBR.BarcodeReaderException' occurred in Dynamsoft.BarcodeReader.dll" or "Failed to load module dll", please double check if you copied `x64` and `x86` folders as stated in Step #4.
+4. Run the project.
+ If you got the error "Failed to create compression directory" or "Failed to load module dll", please copy `x64` and `x86` folders to the folder where `Dynamsoft.BarcodeReader.dll` and `DynamsoftCommon.dll` resides and try again. The `x64` and `x86` folders can be found under `DBR-DotNet-{version number}\DynamsoftBarcodeReader\Lib\2.0` or `DBR-DotNet-{version number}\DynamsoftBarcodeReader\Lib\4.0`.
 
 &nbsp;
 
