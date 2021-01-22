@@ -21,11 +21,16 @@ noTitleIndex: true
 - Framework supported: .NET Framework 2.0, .NET Framework 4.0
 
 
-## Installation
+&nbsp;
 
-To install Dynamsoft Barcode Reader Windows Edition on your development machine, you can download the SDK from the [Dynamsoft website](https://www.dynamsoft.com/barcode-reader/downloads/). The zip package includes a free trial license valid for 30 days.   
+
+## Installation
+To install Dynamsoft Barcode Reader Windows Edition on your development machine, you can download the SDK from the [Dynamsoft website](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx). The zip package includes a free trial license valid for 30 days.   
    
 After installation, you can find samples for supported platforms in the **Samples** folder under the installation folder. 
+
+
+&nbsp;
 
 
 ## Getting Started: HelloWorld
@@ -77,7 +82,7 @@ After installation, you can find samples for supported platforms in the **Sample
     ```
     Please update `<your image file full path>` and `<your license key here>` in the code accordingly.
 
-4. Build the project and then copy `x64` and `x86` folders to the same folder where `Dynamsoft.BarcodeReader.dll` and `DynamsoftCommon.dll` resides. In this case, it is under `bin\Debug_VS2010\` folder.
+4. Build the project and then copy `x64` and `x86` folders to the folder where `Dynamsoft.BarcodeReader.dll` and `DynamsoftCommon.dll` resides. In this case, it is under `bin\Debug_VS2010\` folder.
 
 5. Run the project.
 

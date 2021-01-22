@@ -10,6 +10,23 @@ noTitleIndex: true
 
 # Release Notes for C++ SDK - 8.x
 
+## 8.1.2 (01/22/2021)
+
+### New
+
+- Added `mode`, `page`, `totalPage` and `parityData` in the `QRCodeDetails` Struct.
+
+### Improved
+
+- Improved the recognition accuracy for GS1 Databar.
+- Removed the exception code from `barcodeText` when using a valid trial license.
+- Included native C++ DLL files in the .NET assembly files, so users don't need to manually copy these files to the specific folder.
+
+### Fixed
+
+- Fixed a bug where `barcodeFormatString`, `barcodeFormatString_2`, `regionName` and `documentName` don't have value in the `IRT_TYPED_BARCODE_ZONE` intermediate result.
+
+
 ## 8.1 (01/12/2021)
 
 ### New

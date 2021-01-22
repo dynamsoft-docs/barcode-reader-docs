@@ -9,6 +9,7 @@ breadcrumbText: Release Notes
 
 # Dynamsoft Barcode Reader Android SDK - Release Notes
 
+- [8.1.2 (01/22/2021)](android-8.md#812-01222021)
 - [8.1.1 (01/19/2021)](android-8.md#811-01192021) 
 - [8.1   (01/12/2021)](android-8.md#81-01122021) 
 - [8.0   (11/17/2020)](android-8.md#80-11172020) 

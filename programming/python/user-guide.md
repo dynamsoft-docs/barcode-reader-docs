@@ -17,7 +17,13 @@ noTitleIndex: true
     - Linux (x64, ARM32, ARM64)
     - macOS (10.15+)
 
-- Supported Python Versions: Python 2.7 (for versions below DBR 7.2.2.3), Python 3.5 (for versions below DBR 7.5), Python 3.6, Python 3.7, Python 3.8
+- Supported Python Versions: 
+    - Python 2.7 (for versions below DBR 7.2.2.3)
+    - Python 3.5 (for versions below DBR 7.5)
+    - Python 3.6
+    - Python 3.7
+    - Python 3.8
+    - Python 3.9
 
 ## Installation
 
