@@ -23,7 +23,7 @@ noTitleIndex: true
 
 ## Installation
 
-To install Dynamsoft Barcode Reader Windows Edition on your development machine, you can download the SDK from the [Dynamsoft website](https://www.dynamsoft.com/barcode-reader/downloads/). The zip package includes a free trial license valid for 30 days.   
+You can download the .NET SDK from the [Dynamsoft website](https://www.dynamsoft.com/barcode-reader/downloads/). The zip package includes a free trial license valid for 30 days.   
    
 After you unzip the file, you can find samples for supported platforms in the **Samples** folder under the installation folder. 
 
