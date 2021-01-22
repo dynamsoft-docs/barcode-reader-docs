@@ -21,7 +21,6 @@ noTitleIndex: true
 
 - Improved the recognition accuracy for GS1 Databar.
 - Removed the exception code from `barcodeText` when using a valid trial license.
-- Included native C++ DLL files in the .NET assembly files, so users don't need to manually copy these files to the specific folder.
 
 ### Fixed
 
