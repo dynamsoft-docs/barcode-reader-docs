@@ -21,11 +21,16 @@ noTitleIndex: true
 - Framework supported: .NET Framework 2.0, .NET Framework 4.0
 
 
-## Installation
+&nbsp;
 
-You can download the .NET SDK from the [Dynamsoft website](https://www.dynamsoft.com/barcode-reader/downloads/). The zip package includes a free trial license valid for 30 days.   
+
+## Installation
+To install Dynamsoft Barcode Reader Windows Edition on your development machine, you can download the SDK from the [Dynamsoft website](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx). The zip package includes a free trial license valid for 30 days.   
    
-After you unzip the file, you can find samples for supported platforms in the **Samples** folder under the installation folder. 
+After installation, you can find samples for supported platforms in the **Samples** folder under the installation folder. 
+
+
+&nbsp;
 
 
 ## Getting Started: HelloWorld
@@ -77,8 +82,11 @@ After you unzip the file, you can find samples for supported platforms in the **
     ```
     Please update `<your image file full path>` and `<your license key here>` in the code accordingly.
 
-4. Run the project.
- If you got the error "Failed to create compression directory" or "Failed to load module dll", please copy `x64` and `x86` folders to the folder where `Dynamsoft.BarcodeReader.dll` and `DynamsoftCommon.dll` resides and try again. The `x64` and `x86` folders can be found under `DBR-DotNet-{version number}\DynamsoftBarcodeReader\Lib\2.0` or `DBR-DotNet-{version number}\DynamsoftBarcodeReader\Lib\4.0`.
+4. Build the project and then copy `x64` and `x86` folders to the folder where `Dynamsoft.BarcodeReader.dll` and `DynamsoftCommon.dll` resides. In this case, it is under `bin\Debug_VS2010\` folder.
+
+5. Run the project.
+
+ If you got the error "An exception of type 'Dynamsoft.DBR.BarcodeReaderException' occurred in Dynamsoft.BarcodeReader.dll" or "Failed to load module dll", please double check if you copied `x64` and `x86` folders as stated in Step #4.
 
 &nbsp;
 
@@ -88,7 +96,8 @@ The SDK provides multiple decoding methods that support reading barcodes from di
 video stream, files in memory, base64 string, bitmap, etc. Here is a list of all decoding methods:
 - [DecodeFile](api-reference/BarcodeReader/decode.md#decodefile): Reads barcodes from a specified file (BMP, JPEG, PNG, GIF, TIFF or PDF).   
 - [DecodeBase64String](api-reference/BarcodeReader/decode.md#decodebase64string): Reads barcodes from a base64 encoded string of a file.   
-- [DecodeBitmap](api-reference/BarcodeReader/decode.md#decodebitmap): Reads barcodes from a bitmap. When handling multi-page images, it will only decode the current page.   
+- [DecodeBitmap](api-reference/BarcodeReader/decode.md#decodebitmap): Reads barcodes from a bitmap. When handling multi-page images, it will only decode the
+current page.   
 - [DecodeBuffer](api-reference/BarcodeReader/decode.md#decodebuffer): Reads barcodes from raw buffer.
 - [DecodeFileInMemory](api-reference/BarcodeReader/decode.md#decodefileinmemory): Decodes barcodes from an image file in memory. 
 

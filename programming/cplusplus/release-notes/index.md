@@ -9,6 +9,7 @@ breadcrumbText: Release Notes
 
 # Dynamsoft Barcode Reader C++ SDK - Release Notes
 
+- [8.1.2 (01/22/2021)](cpp-8.md#812-01222021)
 - [8.1   (01/12/2021)](cpp-8.md#81-01122021) 
 - [8.0   (11/17/2020)](cpp-8.md#80-11172020) 
 - [7.6   (09/01/2020)](cpp-7.md#76-09012020)
