@@ -158,9 +158,9 @@ The video element must contain the class `dbrScanner-video` so that it can be us
 
 ### Cameras and Resolution Options
 
-Next, you can add the camera list and resolution list.
+Next, you can add the camera list and resolution list inside the UI element. In our case, the element would be `document.getElementById('div-video-container')`.
 
-   If the class names match the default ones, `dbrScanner-sel-camera` and `dbrScanner-sel-resolution`, the library will automatically populate the lists and handle the camera/resolution switching automatically.
+If the class names match the default ones, `dbrScanner-sel-camera` and `dbrScanner-sel-resolution`, the library will automatically populate the lists and handle the camera/resolution switching automatically.
 
 ```html
 <select class="dbrScanner-sel-camera"></select>
