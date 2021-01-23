@@ -12,7 +12,7 @@ needAutoGenerateSidebar: true
 
 The library is based on the `WebAssembly` standard; therefore, **on first use**, it needs some time to download and compile the `wasm` files. After first use, the browser may cache the file.
 
-`Dynamsoft.DBR.BarcodeReader.loadWasm` is the API to start the initialization.
+`Dynamsoft.DBR.BarcodeReader.loadWasm()` is the API to start the initialization.
 
 ```javascript
 try{
@@ -22,7 +22,7 @@ try{
 }
 ```
 
-Other APIs like `Dynamsoft.DBR.BarcodeReader.createInstance` and `Dynamsoft.DBR.BarcodeScanner.createInstance` will also call `loadWasm` during initialization. The following demonstrates the most common usage. 
+Other APIs like `Dynamsoft.DBR.BarcodeReader.createInstance()` and `Dynamsoft.DBR.BarcodeScanner.createInstance()` will also call `loadWasm()` during initialization. The following demonstrates the most common usage. 
 
 ```javascript
 let reader = null;
@@ -35,19 +35,23 @@ try{
 }
 ```
 
-   **NOTE**: Including the library with a script tag doesn't automatically initialize the library. For better performance, you may want to call loadWasm to download and compile the wasm file in advance and create a reader or scanner instance later.   
+*NOTE*
+
+Including the library with a script tag doesn't automatically initialize the library. For better performance, you may want to call `loadWasm()` to download and compile the wasm file in advance and create a reader or scanner instance later.   
 
 Initialization consists of the following steps:
 
-**1. Download**   
-    Download the necessary resources. Usually, we deploy the resources on CDN and set a long cache duration. If your web server is faster, you should put the resources on your own server instead of using the CDN.
+* Download
 
-**2. Compile**    
-    The `wasm` files are automatically compiled once downloaded. The compilation time varies among different devices & browsers. While it takes less than a second on latest phones or PCs, it may take longer on older devices.
+Download the necessary resources. Usually, we deploy the resources on CDN and set a long cache duration. *If your web server is faster, you should put the resources on your own server instead of using the CDN.*
 
-**3. Initialize**  
-    The library needs to initialize every time the page loads. The initialization means creating an `BarcodeReader` or `BarcodeScanner` instance with specified settings.
+* Compile    
+    
+The `wasm` files are automatically compiled once downloaded. The compilation time varies among different devices & browsers. While it takes less than a second on latest phones or PCs, it may take much longer on older devices.
 
+* Initialize
+
+The library needs to initialize every time the page loads. The initialization means creating a `BarcodeReader` or `BarcodeScanner` instance with specified settings.
 
 ## Configuring Scanner Settings
 
@@ -80,35 +84,42 @@ As you can see in the code, there are three types of configurations:
 
 - `get/updateVideoSettings`: Configures the data source, i.e., the video stream. These settings include which camera to use, the resolution, etc. Learn more [here](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia#Syntax).
 
-- `get/updateRuntimeSettings`: Configures the decode engine. Find a full list of these settings and their corresponding descriptions [here](../api-reference/global-interfaces.md#runtimesettings). Try in [JSFiddle](https://jsfiddle.net/DynamsoftTeam/f24h8c1m/).
-
-    e.g.,
+- `get/updateRuntimeSettings`: Configures the decode engine. Find a full list of these settings and their corresponding descriptions [here](../api-reference/global-interfaces.md#runtimesettings). For example, the following uses the built-in "speed" settings with updated `localizationModes`.
 
     ```javascript
     await barcodeScanner.updateRuntimeSettings("speed");
-    await barcodeScanner.updateRuntimeSettings("balance");
-    await barcodeScanner.updateRuntimeSettings("coverage");
+    //await barcodeScanner.updateRuntimeSettings("balance"); //alternative
+    //await barcodeScanner.updateRuntimeSettings("coverage"); //alternative
     let settings = await barcodeScanner.getRuntimeSettings();
     settings.localizationModes = [
         Dynamsoft.EnumLocalizationMode.LM_CONNECTED_BLOCKS,
         Dynamsoft.EnumLocalizationMode.LM_SCAN_DIRECTLY,
         Dynamsoft.EnumLocalizationMode.LM_LINES, 0, 0, 0, 0, 0];
-    settings.deblurLevel = 2;
     await barcodeScanner.updateRuntimeSettings(settings);
     ```
-
+    Try in [JSFiddle](https://jsfiddle.net/DynamsoftTeam/f24h8c1m/).
+    
 - `get/updateScanSettings`: Configures the behavior of the scanner which includes `duplicateForgetTime`, `intervalTime` and `filter`, etc.
 
 ## Customizing the UI
 
 The library provides a built-in UI for the `BarcodeScanner`object where the default scanner UI is defined in the file `dist/dbr.scanner.html`. There are 3 ways to customize it:
 
-1. Modify the file `dist/dbr.scanner.html` directly. This option is only possible when you deploy these files yourself instead of using the CDN.
+* Modify the file `dist/dbr.scanner.html` directly. 
 
-2. Copy the file `dist/dbr.scanner.html`, modify it and specify the new file as the default UI by its URL `Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = url`. Note: you must set `defaultUIElementURL` before you call `createInstance`.
+  This option is only possible when you deploy these files yourself instead of using the CDN.
 
-3. Build the UI into your own web page and call `scanner.setUIElement(HTMLElement)` to specify that element.
+* Copy the file `dist/dbr.scanner.html` to your application, modify it and specify the new file as the default UI with the API `defaultUIElementURL`
 
+  ```javascript
+  Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = url;
+  ```
+  
+  *Note*
+  
+  You must set `defaultUIElementURL` before you call `createInstance`.
+
+* Build the UI element into your own web page and call `scanner.setUIElement(HTMLElement)` to specify that element.
 
 The following is an example of the 3rd option above. 
 
@@ -137,13 +148,13 @@ The following is an example of the 3rd option above.
 
 [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/2jzeq1r6/)
 
-The element `div-video-container` is used as the UI this div contains the video element for showing the video stream.
+*NOTE*
 
-   **NOTE**: The class name of the video element must be set to `dbrScanner-video`.
+The video element must contain the class `dbrScanner-video` so that it can be used.
 
-   ```html
-   <video class="dbrScanner-video" playsinline="true"></video>
-   ```
+```html
+<video class="dbrScanner-video" playsinline="true"></video>
+```
 
 ### Cameras and Resolution Options
 
@@ -160,9 +171,12 @@ Next, you can add the camera list and resolution list.
 ```html
 <select class="dbrScanner-sel-resolution"></select>
 ```
-   8 default resolutions are populated automatically.
 
 [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/25v08paf/)
+
+*Note*
+
+By default, 8 hard-coded resolutions will be populated as options.
 
 The following code shows how to display a custom set of resolution options.
 
@@ -175,15 +189,15 @@ The following code shows how to display a custom set of resolution options.
 </select>
 ```
 
-   **Possible Issue**: Generally, you need to provide a resolution that the camera supports. However, in case a camera does not support the specified resolution, it usually uses the nearest supported resolution. As a result, the selected resolution may not be the actual resolution used.
+*NOTE*
 
-   **Solution**: Add an option with the class name `dbrScanner-opt-gotResolution` (as shown above) which the library will then use to show the actual resolution being used.
+Generally, you need to provide a resolution that the camera supports. However, in case a camera does not support the specified resolution, it usually uses the nearest supported resolution. As a result, the selected resolution may not be the actual resolution used. In this case, add an option with the class name `dbrScanner-opt-gotResolution` (as shown above) and the library will then use it to show the actual resolution.
 
 [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/tnfjks4q/)
 
 ## Decode Barcodes from Existing Video Stream
 
-In v8.0, we introduced a new feature to decode barcodes from an existing video stream. To set the existing video stream, we'll use [`setUIElement`](../api-reference/BarcodeScanner/methods/initialize-and-destroy.md#setuielement).
+In v8.0, we introduced a new feature to decode barcodes from an existing video stream. To set the existing video stream, we'll use [`setUIElement()`](../api-reference/BarcodeScanner/methods/initialize-and-destroy.md#setuielement).
 
 ```html
 <!DOCTYPE html>
@@ -207,5 +221,6 @@ In v8.0, we introduced a new feature to decode barcodes from an existing video s
 </body>
 </html>
 ```
+*NOTE*
 
-Note: the video element *must* contain the class `dbrScanner-existingVideo`.
+The video element must contain the class `dbrScanner-existingVideo`.
