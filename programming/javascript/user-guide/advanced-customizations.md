@@ -8,7 +8,7 @@ needAutoGenerateSidebar: true
 
 # Advanced Customizations
 
-## Debugging with Logs
+## Show internal logs
 
 Include the following in your code to print internal logs in the console.
 
@@ -36,48 +36,19 @@ await scanner.updateRuntimeSettings(settings);
 
 ## Set mode arguments
 
-To precisely control a mode, you could adjust the specific mode parameter.
+To precisely control a mode, you can adjust its specific parameters.
 
 ```javascript
 let settings = await scanner.getRuntimeSettings();
 
 /*
-*The following code sets the sensitivity of the TextureDetectionModes to 9
-*/
+ * The following code sets the sensitivity of the TextureDetectionModes to 9
+ */
 
 settings.furtherModes.textureDetectionModes = [            
 Dynamsoft.DBR.EnumTextureDetectionMode.TDM_GENERAL_WIDTH_CONCENTRATION, 0, 0, 0, 0, 0, 0, 0];
 
 await scanner.updateRuntimeSettings(settings);
+// The 2nd parameter 0 specifies the first mode of TextureDetectionModes, which is "Dynamsoft.DBR.EnumTextureDetectionMode.TDM_GENERAL_WIDTH_CONCENTRATION" in this case.
 await scanner.setModeArgument("TextureDetectionModes", 0, "Sensitivity", "9" ); 
-/*
-*0 standards for the first mode of TextureDetectionModes, which is "Dynamsoft.DBR.EnumTextureDetectionMode.TDM_GENERAL_WIDTH_CONCENTRATION" in this content.
-*/
 ```
-## Show found barcodes
-
-Try the following code to show found barcodes in `input` elements on the page.
-
-```javascript
-<input id="ipt-0">
-<input id="ipt-1">
-<input id="ipt-2">
-let iptIndex = 0;
-let scanner = null;
-(async()=>{
-    scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-    await scanner.setUIElement(document.getElementById('div-video-container'));
-    scanner.onFrameRead = results => {console.log(results);};
-    scanner.onUnduplicatedRead = (txt)=>{
-        document.getElementById('ipt-' + iptIndex).value = txt;
-        if(3 == ++iptIndex){
-            scanner.onUnduplicatedRead = undefined;
-            // Hide the scanner if you only need to read these three barcodes
-            scanner.hide();
-        }
-    };
-    await scanner.show();
-})();
-```
-
-[Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/tz9ngm2a/)
