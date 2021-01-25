@@ -43,7 +43,7 @@ Creat a text file anywhere on your local disk and name it "helloworld.html". Cop
 <html>
 <body>
     <!-- Please visit https://www.dynamsoft.com/customer/license/trialLicense to get a trial license. -->
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.0.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.1.2/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
     <script>
         // initializes and uses the library
         let scanner = null;
@@ -124,29 +124,29 @@ For evaluation purposes, we recommend that you get the official package of the l
 
 * From the website
 
-[Download Dynamsoft Barcode Reader](https://www.dynamsoft.com/barcode-reader/downloads/)
+  [Download Dynamsoft Barcode Reader](https://www.dynamsoft.com/barcode-reader/downloads/)
 
 * yarn
 
-```
-$ yarn add dynamsoft-javascript-barcode
-```
+  ```
+  $ yarn add dynamsoft-javascript-barcode
+  ```
 
 * npm
 
-```
-$ npm install dynamsoft-javascript-barcode --save
-```
+  ```
+  $ npm install dynamsoft-javascript-barcode --save
+  ```
 
 If you want to start building your application right away, you can also just make use of the library via CDN as shown in the previous helloworld sample code.
 
 * cdn
 
-```
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.0.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
-<!-- or -->
-<script src="https://unpkg.com/dynamsoft-javascript-barcode@8.0.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
-```
+  ```
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.1.2/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
+  <!-- or -->
+  <script src="https://unpkg.com/dynamsoft-javascript-barcode@8.1.2/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
+  ```
 
 Dynamsoft also provides a Barcode Reader SDK built for Node, see [Dynamsoft JavaScript Barcode SDK for Node](https://github.com/dynamsoft-dbr/node-javascript-barcode).
 
