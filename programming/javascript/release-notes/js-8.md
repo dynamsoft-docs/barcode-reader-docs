@@ -20,6 +20,7 @@ noTitleIndex: true
 
 - Improved the recognition accuracy for GS1 Databar.
 - Removed the exception code from `barcodeText` when using a valid trial license.
+- Optimized memory usage when using WebGL for mapping color images into grayscale images which made the process faster. 
 
 ### Fixed
 
