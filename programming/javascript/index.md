@@ -31,7 +31,7 @@ The JavaScript documentation mainly consists of two parts. One is the `Getting S
 
 ## Samples and Demos
 
-- [Online demo](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+- [Online demo](https://demo.dynamsoft.com/barcode-reader-js/)
 - [Vue example](https://github.com/Dynamsoft/javascript-barcode/tree/master/example/web/vue)    
 - [React example](https://github.com/Dynamsoft/javascript-barcode/tree/master/example/web/react)     
 - [Angular example](https://github.com/Dynamsoft/javascript-barcode/tree/master/example/web/angular)  

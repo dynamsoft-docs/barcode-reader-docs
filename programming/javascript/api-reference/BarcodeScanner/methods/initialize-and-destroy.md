@@ -37,7 +37,7 @@ createInstance() returns Promise
 let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 ```
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+[Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)
 
 ## destroy
 
@@ -65,7 +65,7 @@ getUIElement() returns HTMLElement
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+[Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)
 
 ## setUIElement
 
@@ -94,7 +94,7 @@ setUIElement(elementOrUrl) returns Promise
 </script>
 ```
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+[Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)
 
 ### :+1: Tips and Tricks 
 

@@ -100,7 +100,7 @@ hide() returns void
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+[Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)
 
 ## show
 
@@ -134,7 +134,7 @@ close() returns void
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+[Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)
 
 ## isOpen
 
@@ -150,7 +150,7 @@ isOpen() returns Boolean
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+[Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)
 
 ## open
 
@@ -184,7 +184,7 @@ pause() returns void
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+[Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)
 
 ## play
 
@@ -224,7 +224,7 @@ stop() returns void
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+[Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)
 
 ## pauseScan
 
@@ -240,7 +240,7 @@ pauseScan() returns void
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+[Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)
 
 ## resumeScan
 
@@ -256,5 +256,5 @@ resumeScan() returns void
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+[Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)
 
