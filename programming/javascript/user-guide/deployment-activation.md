@@ -6,26 +6,28 @@ keywords: user guide, deployment, javascript, js
 needAutoGenerateSidebar: true
 ---
 
-# Deployment Activation
+# Deployment and Activation
 
 ## Deployment: Self-hosted, Offline, or Intranet 
 
-The following steps guide you through how to deploy the library on your own server.
+The following steps guide you through how to deploy the library on your own server instead of using it via a CDN. If you just want to use it over CDN, check out [one-minute set-up]({{site.js }}user-guide/?ver=latest#step-one-write-the-code-in-one-minute).
 
 ### Step One: Deploy the dist folder
 
-Locate the **dist/** directory under the installation folder of the library and simply copy the entire directory to your server. The **dist/** folder should contain the following files:
+Locate the "dist/" directory under the installation folder of the library and copy the entire directory to your server.
 
-- `dbr.js` // For `<script>`
-- `dbr.browser.mjs` // For `<script type="module">`
-- `dbr.scanner.html` // Scanner default UI
-- `dbr-<version>.worker.js` // A worker thread for decoding
-- `dbr-<version>.wasm.js` // Compact Edition JS
-- `dbr-<version>.wasm` // Compact Edition WASM
-- `dbr-<version>.full.wasm.js` // Full Edition JS
-- `dbr-<version>.full.wasm` // Full Edition WASM
+"dist/" folder should contain the following files and more:
 
-If the resource files (e.g.,`wasm` files) are not placed in the same directory as `dbr.js`, you will need to specify the path using the API `engineResourcePath` before calling `loadWasm` or `createInstance`.
+- `dbr.js` // For referencing the library with a `<script>` tag
+- `dbr.browser.mjs` // For using the library as a module (`<script type="module">`)
+- `dbr.scanner.html` // Defines the default scanner UI
+- `dbr-<version>.worker.js` // Defines the worker thread for barcode reading
+- `dbr-<version>.wasm.js` // Compact edition of the library (.js)
+- `dbr-<version>.wasm` // Compact edition of the library (.wasm)
+- `dbr-<version>.full.wasm.js` // Full edition of the library (.js)
+- `dbr-<version>.full.wasm` // Full edition of the library (.wasm)
+
+If the resource files (e.g.,`wasm` files) are not placed in the same directory as `dbr.js`, you will need to specify the path using the API `engineResourcePath` before calling `loadWasm()` or `createInstance()`. For example:
 
 ```javascript
 Dynamsoft.DBR.BarcodeReader.engineResourcePath = "url/to/the/dir/";
@@ -48,6 +50,6 @@ If deploying to a production server, it is recommended to use a valid SSL certif
 
 ## License Activation
 
-A full license is required for deployment. If you have not purchased a license yet, please visit our [online store](https://www.dynamsoft.com/store/dynamsoft-barcode-reader/).
+Commercial deployment requires a full license. If you have not purchased a license yet, please visit our [online store](https://www.dynamsoft.com/store/dynamsoft-barcode-reader/).
 
 In version 8.0, we introduced [License Tracking 2.0](https://www.dynamsoft.com/license-tracking/docs/about/index.html) to activate and track usage. Please follow the steps in [this article](https://www.dynamsoft.com/license-tracking/docs/common/mechanism.html) to activate and use your license. 
