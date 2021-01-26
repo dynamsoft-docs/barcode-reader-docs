@@ -136,7 +136,7 @@ scanner.onFrameRead = results => {
     }
 };
 ```
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+[Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)
 
 ## onPlayed
 
@@ -158,7 +158,7 @@ This event is triggered the camera video stream is played.
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+[Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)
 
 ## onUnduplicatedRead
 
@@ -188,4 +188,4 @@ scanner.onUnduplicatedRead = (txt, result) => {
 };
 ```
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+[Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)

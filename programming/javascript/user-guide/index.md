@@ -154,7 +154,7 @@ Dynamsoft also provides a Barcode Reader SDK built for Node, see [Dynamsoft Java
 
 The following are the official demo of the library and examples for the most popular JavaScript Frameworks.
 
-- [Online demo](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+- [Online demo](https://demo.dynamsoft.com/barcode-reader-js/)
 - [Vue example](https://github.com/Dynamsoft/javascript-barcode/tree/master/example/web/vue)    
 - [React example](https://github.com/Dynamsoft/javascript-barcode/tree/master/example/web/react)     
 - [Angular example](https://github.com/Dynamsoft/javascript-barcode/tree/master/example/web/angular)  
