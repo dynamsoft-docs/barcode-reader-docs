@@ -8,48 +8,43 @@ needAutoGenerateSidebar: true
 
 # How to Upgrade
 
-## From v8.0 to v8.1
+## From v8.0 to v8.1.2
 
 ### `TextResult` exception
 
-In v8.1, we added exceptions to the `TextResult` class. An exception message and code is returned with each result if a full (commercial) license is not used. 
+In v8.1, we added exceptions to the `TextResult` class. An exception message and code is returned with each result if no valid license (trial or full) is present.
 
-The following is an example of what may be returned if you are using an expired or valid trial license:
+The following is an example of what may be returned:
 
-`[Attention(exceptionCode:-20010)] 0123456789`
+`[Attention(exceptionCode:-20000)] http:/*d*n*m*soft.q*.com*r/U4***U*EaRA****W9*ZB`
 
-The correct result is returned for valid licenses along with the exception message. A full commercial license would return only the decoded barcode results. 
+More details on the exception can be found within each result. For example:
 
-More details on the exception code and description can be found within each result `exception.code` and `exception.message`.
-
-This exception has a set length so it can be easily filtered out in Javascript. Below is an example for returning only the decoded barcode text result. 
-
-```js
-   scanner.onFrameRead = async results => {
-      for(let result of results){
-         barcodeText = result.barcodeText.slice(34);
-         console.log(barcodeText);
-      }
-   }
+```
+result.exception = {
+   code: "-20000",
+   message: "No license specified. Visit https://www.dynamsoft.com/customer/license/trialLicense to acquire a license or email support@dynamsoft.com."
+}
 ```
 
+---
 ## From v7.x to v8.x
 
 ### Change your license
 
-In v8.0, we introduced a new license tracking mechanism, [License Tracking Service 2.0](https://www.dynamsoft.com/license-tracking/docs/about/index.html). If you have a v7.x license and wish to upgrade to v8.x, you must [contact us](https://www.dynamsoft.com/Company/Contact.aspx) to acquire a new license (a handshake code). 
+In v8.0, we introduced a new license tracking mechanism, [License 2.0](https://www.dynamsoft.com/license-tracking/docs/about/index.html). If you have a v7.x license and wish to upgrade to v8.x, you must [contact us](https://www.dynamsoft.com/Company/Contact.aspx) to acquire a new license. 
 
 ### Update version and code
 
 If you are using a **CDN**, simply update the version number denoted after **@** in the URL.
 
-   ```html
-   <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.0.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
-   ```
+```html
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.1.2/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
+```
 
 If you have deployed the library files to your server, you'll need to replace the old files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
 
-Next, replace the value of data-productKeys with the generated handshake code from the section [Change your license](#change-your-license) above. In the example above, the generated handshake code would replace `PRODUCT-KEYS`. 
+Next, replace the value ("PRODUCT-KEYS") of `data-productKeys` with the license you receive based on License 2.0 (as mentioned in the section [Change your license](#change-your-license) above).
 
 ### API changes
 
@@ -58,48 +53,45 @@ Next, replace the value of data-productKeys with the generated handshake code fr
 Use the new namespace `Dynamsoft.DBR` in place of just `Dynamsoft`. The following shows the equivalent changes for `BarcodeScanner` and `BarcodeReader`:
 
 ```js
-   Dynamsoft.BarcodeScanner -> Dynamsoft.DBR.BarcodeScanner
-   Dynamsoft.BarcodeReader -> Dynamsoft.DBR.BarcodeReader
+Dynamsoft.BarcodeScanner -> Dynamsoft.DBR.BarcodeScanner
+Dynamsoft.BarcodeReader -> Dynamsoft.DBR.BarcodeReader
 ```
 
 If you are using the library as an ES/CMD module, you don’t need to change your code. Otherwise, you can either make a global change from `Dynamsoft` to `Dynamsoft.DBR` or use the following line to quickly make the namespace change.
 
 ```js
-   Dynamsoft = Dynamsoft.DBR; //This line should be called before you call any other methods/properties of the library.
+Dynamsoft = Dynamsoft.DBR; //This line should be called before you call any other methods/properties of the library.
 ```
 
 #### Deprecating `deblurLevel`
 
 `deblurLevel` has been deprecated in v8.0 and replaced with `deblurModes`. Athough `deblurLevel` will continue to work in v8.0, we recommend updating your code to use `deblurModes` as soon as possible to avoid any breaking changes in the future.
 
-Simply remove or comment out the line of code using `deblurLevel` and use deblurModes as demonstrated below.
+Check out the code below on how to switch from `deblurLevel` to `deblurModes`.
 
 ```js
-    let settings = await barcodeScanner.getRuntimeSettings();
-    //settings.deblurLevel = 9;
-    settings.deblurModes = ["DM_DIRECT_BINARIZATION",   
-                            "DM_THRESHOLD_BINARIZATION", 
-                            "DM_GRAY_EQUALIZATION",
-                            "DM_SMOOTHING",
-                            "DM_MORPHING",
-                            "DM_DEEP_ANALYSIS",
-                            "DM_SHARPENING",
-                            "DM_SKIP"] 
-    await barcodeScanner.updateRuntimeSettings(settings);
+let settings = await barcodeScanner.getRuntimeSettings();
+//settings.deblurLevel = 9;
+settings.deblurModes = ["DM_DIRECT_BINARIZATION",   
+                        "DM_THRESHOLD_BINARIZATION", 
+                        "DM_GRAY_EQUALIZATION",
+                        "DM_SMOOTHING",
+                        "DM_MORPHING",
+                        "DM_DEEP_ANALYSIS",
+                        "DM_SHARPENING",
+                        "DM_SKIP"] 
+await barcodeScanner.updateRuntimeSettings(settings);
 ```
 
 #### Default runtime setting has changed from `speed` to `single` for `BarcodeScanner`
 
-The `single` runtime setting was introduced in v7.5 as an experimental feature. In v8.0, `single` is now the default. The `single` setting is only applicable to `BarcodeScanner` and is suitable for scenarios where only one barcode needs to be read at a time. `single` is capable of reading a single barcode faster than `speed`. 
+The `single` runtime setting was introduced in v7.5 as an experimental feature for `BarcodeScanner`. In v8.0, `single` is made the default setting.
 
-If you have explicitly specified other preset settings like `balance` or `coverage`, you can simply comment out the updateRuntimeSettings line or set `single` explicitly. 
+Before v8.0, the default setting was `speed`.
 
-```js
-   //await barcodeScanner.updateRuntimeSettings('balance');
-   await barcodeScanner.updateRuntimeSettings('single');
-```
+*NOTE*
 
-> NOTE: `BarcodeReader` still uses the preset `coverage` by default.
+`BarcodeReader` still uses `coverage` as the default setting.
 
 #### Removed some deprecated APIs from `textResult`
 
