@@ -31,7 +31,7 @@ The following table shows available features between the two editions:
     
   | Features | Compact edition | Full edition |
   |:-:|:-:|:-:|
-  | `wasm` size<sup>1</sup>\(gzip\) | 2.78 MB | 4.16 MB |
+  | `wasm` size<sup>1</sup>\(gzip\) | 976 KB | 1.3 MB |
   | 1D | &#10003; | &#10003; |
   | QR | &#10003; | &#10003; |
   | Micro QR | - | &#10003; |
