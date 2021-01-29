@@ -12,7 +12,7 @@ needAutoGenerateSidebar: true
 
 ### Supported Symbologies:
 
-- 1D barcode: *Code 39 (including Code 39 Extended)*, *Code 128*, *Code 93*, *Codabar*, *Interleaved 2 of 5 (ITF)*, *EAN-13*, *EAN-8*, *UPC-A*, *UPC-E*, *Industrial 2 of 5* (Code 2 of 5 Industry, Standard 2 of 5, Code 2 of 5), *Code 39 Extended*, and *MSI (Modified Plessey)*.
+- 1D barcode: *Code 39 (including Code 39 Extended)*, *Code 128*, *Code 93*, *Codabar*, *Interleaved 2 of 5 (ITF)*, *EAN-13*, *EAN-8*, *UPC-A*, *UPC-E*, *Industrial 2 of 5* (Code 2 of 5 Industry, Standard 2 of 5, Code 2 of 5), and *MSI (Modified Plessey)*.
 - 2D barcode: *PDF417*, *QR (including Micro QR Code and Model 1)*, *DataMatrix*, *Aztec*, *MaxiCode*, and *DotCode*.    
 - GS1 Databar: *Omnidirectional*, *Truncated*, *Stacked*, *Stacked Omnidirectional*, *Expanded*, *Expanded Stacked* and *Limited*.
 - Patch Code
