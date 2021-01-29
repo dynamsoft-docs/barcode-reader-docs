@@ -10,9 +10,19 @@ needGenerateH3Content: false
 
 # JavaScript API Reference - `BarcodeScanner` Initialize and Destroy Methods
 
+* *Class* Methods
+
 | Method               | Description |
 |----------------------|-------------|
 | [`createInstance`](#createinstance) | Create a  `BarcodeScanner` object. |
+| [`detectEnvironment`](../../BarcodeReader/methods/initialize-and-destroy.md#detectenvironment) | Detect the current environment. Inherited from the `BarcodeReader` class. |
+| [`isLoaded`](../../BarcodeReader/methods/initialize-and-destroy.md#isloaded) | Check if the decoding module is loaded. Inherited from the `BarcodeReader` class. |
+| [`loadWasm`](../../BarcodeReader/methods/initialize-and-destroy.md#loadwasm) | Manually load and compile the decoding WASM module. Inherited from the `BarcodeReader` class. |
+
+* *Instance* Method
+
+| Method               | Description |
+|----------------------|-------------|
 | [`destroy`](#destroy) | Destroy the `BarcodeScanner` object. |
 | [`getUIElement`](#getuielement) | Get HTML element containing the `BarcodeScanner` object. |
 | [`setUIElement`](#setuielement) | Set HTML element containing the `BarcodeScanner` object. |
@@ -63,7 +73,7 @@ getUIElement() returns HTMLElement
 
 ## setUIElement
 
-Set HTML element containing the `BarcodeScanner` object. In v8.0, setUIElement can be used to set an existing video stream element. The video element of the existing video stream must specify `dbrScanner-existingVideo` className. 
+Set HTML element containing the `BarcodeScanner` object. In v8.0, `setUIElement` can be used to set an existing video stream element. The video element of the existing video stream must specify `dbrScanner-existingVideo` className. 
 
 ```javascript
 setUIElement(elementOrUrl) returns Promise
@@ -81,7 +91,7 @@ elementOrUrl: HTMLElement | string;
 
 ### Sample
 
-```javascript
+```html
 <video class="dbrScanner-video" playsinline="true"></video>
 <script>
     let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
