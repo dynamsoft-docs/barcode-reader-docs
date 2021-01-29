@@ -46,8 +46,6 @@ createInstance() returns Promise
 let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 ```
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
-
 ## detectEnvironment
 
 Detect the current device environment.
@@ -59,10 +57,6 @@ detectEnvironment() returns Promise
 ### Return Value
 
 `Promise<any>`
-
-### Sample
-
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
 
 ## isLoaded
 
@@ -93,10 +87,6 @@ loadWasm() returns Promise
 ### Return Value
 
 `Promise<void>`
-
-### Sample
-
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
 
 ## destroy
 

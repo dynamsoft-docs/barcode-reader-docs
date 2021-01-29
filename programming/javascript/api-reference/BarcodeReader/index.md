@@ -59,7 +59,7 @@ The following methods are related to customizing mode and runtime settings.
 
 | Property            | Description |
 |----------------------|-------------|
-| [`bUseFullFeature`](properties.md#_busefullfeature) | If set to `true`, use the full-featured WASM module. |
+| [`_bUseFullFeature`](properties.md#_busefullfeature) | If set to `true`, use the full-featured WASM module. |
 | [`engineResourcePath`](properties.md#engineresourcepath) | Get or set the engine (WASM) location. | 
 | [`productKeys`](properties.md#productkeys) | Get or set the Dynamsoft Barcode Reader SDK product keys. | 
 | [`version`](properties.md#version) | Get the current version. | 

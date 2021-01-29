@@ -37,8 +37,6 @@ createInstance() returns Promise
 let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 ```
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
-
 ## destroy
 
 Destroy the `BarcodeScanner` object. Equivalent to the previous method `deleteInstance()`. Overrides `BarcodeReader.destroy`.
@@ -63,10 +61,6 @@ getUIElement() returns HTMLElement
 
 `HTMLElement`
 
-### Sample
-
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
-
 ## setUIElement
 
 Set HTML element containing the `BarcodeScanner` object. In v8.0, setUIElement can be used to set an existing video stream element. The video element of the existing video stream must specify `dbrScanner-existingVideo` className. 
@@ -77,7 +71,9 @@ setUIElement(elementOrUrl) returns Promise
 
 ### Parameters
 
-`elementOrUrl` *HTMLElement | string*  
+```typescript
+elementOrUrl: HTMLElement | string;
+```
 
 ### Return Value
 
@@ -93,8 +89,6 @@ setUIElement(elementOrUrl) returns Promise
     await scanner.show();
 </script>
 ```
-
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
 
 ### :+1: Tips and Tricks 
 
