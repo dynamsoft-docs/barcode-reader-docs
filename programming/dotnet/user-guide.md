@@ -8,7 +8,7 @@ needGenerateH3Content: false
 noTitleIndex: true
 ---
 
-# User Guide for Windows Edition - .Net
+# User Guide for .Net SDK
 
 ## System Requirements
 
@@ -19,6 +19,8 @@ noTitleIndex: true
 - Environment: Visual Studio 2008 and above.
 
 - Framework supported: .NET Framework 2.0, .NET Framework 4.0
+
+> The .NET SDK is developed based on .NET Framework 2.0/4.0. If you are using .NET Core 2.1 or 3.1, please download the .NET Core SDK (Dynamsoft.NetCoreApp.Barcode) from [Nuget](https://www.nuget.org/packages/Dynamsoft.NetCoreApp.Barcode/).
 
 
 ## Installation

@@ -47,4 +47,4 @@ settings.barcodeFormatIds = Dynamsoft.EnumBarcodeFormat.BF_ONED;
 await scanner.updateRuntimeSettings(settings);
 ```
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+[Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)
