@@ -7,7 +7,9 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: false
 ---
 
-## `BarcodeScanner` *Class* Properties
+# `BarcodeScanner` Properties
+
+* *Class* Properties
 
 | Property            | Description |
 |----------------------|-------------|
@@ -20,7 +22,7 @@ needGenerateH3Content: false
 | [`handshakeCode`](../BarcodeReader/properties.md#handshakeCode) | Specify the Handshake Code which determines what authorization is acquired. Inherited from the `BarcodeReader` class. |
 | [`sessionPassword`](../BarcodeReader/properties.md#sessionPassword) | Specify a password which protects the Handshake Code from abuse. Inherited from the `BarcodeReader` class. |
 
-## `BarcodeScanner` *Instance* Properties
+* *Instance* Properties
 
 | Property             | Description |
 |----------------------|-------------|
@@ -100,32 +102,6 @@ soundOnSuccessfulRead = audio
 ```javascript
 scanner.soundOnSuccessfulRead = new Audio("./pi.mp3");
 ```
-
-# JavaScript API Reference - `BarcodeScanner` Properties
-
-| Property             | Description |
-|----------------------|-------------|
-| [`bPlaySoundOnSuccessfulRead`](#bplaysoundonsuccessfulread) | Set when a sound is played if a barcode is read successfully. |
-| [`barcodeFillStyle`](#barcodefillstyle) | Set the style used when filling in located barcode. | 
-| `barcodeLineWidth` | Set the width of the located barcode border. | 
-| [`barcodeStrokeStyle`](#barcodestrokestyle) | Set the style of the located barcode border. | 
-| [`regionMaskFillStyle`](#regionmaskfillstyle) | Set the style used when filling the mask beyond the region. | 
-| `regionMaskLineWidth` | Set the width of the region border. | 
-| [`regionMaskStrokeStyle`](#regionmaskstrokestyle) | Set the style of the region border. | 
-| [`onFrameRead`](#onframeread) | Triggered a frame has been scanned. | 
-| [`onPlayed`](#onplayed) | Triggered when the camera video stream is played. | 
-| [`onUnduplicatedRead`](#onunduplicatedread) | Triggered when a new, unduplicated barcode is found. | 
-
-### Inherited Properties From `BarcodeReader`
-
-| Property             | Description |
-|----------------------|-------------|
-| [`_bUseFullFeature`](../BarcodeReader/properties.md#_busefullfeature) | If set to `true`, use the fully-featured WASM module. |
-| `bDestroyed` | Indicates whether a `BarcodeScanner` object has been destroyed. | 
-| `bSaveOriCanvas` | If set to `true`, save the original image to canvas. | 
-| `oriCanvas` | The original canvas element. | 
-
----
 
 ## bPlaySoundOnSuccessfulRead
 
