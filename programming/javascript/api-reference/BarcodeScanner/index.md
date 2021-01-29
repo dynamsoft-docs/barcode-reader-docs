@@ -96,7 +96,7 @@ The following methods are related to customizing runtime settings.
 | Property            | Description |
 |----------------------|-------------|
 | [`defaultUIElementURL`](properties.md#defaultuielementurl) | Get or set the default scanner UI. | 
-| [`bUseFullFeature`](../BarcodeReader/properties.md#_busefullfeature) | If set to `true`, use the full-featured WASM module. Inherited from the `BarcodeReader` class. |
+| [`_bUseFullFeature`](../BarcodeReader/properties.md#_busefullfeature) | If set to `true`, use the full-featured WASM module. Inherited from the `BarcodeReader` class. |
 | [`engineResourcePath`](../BarcodeReader/properties.md#engineresourcepath) | Get or set the engine (WASM) location. Inherited from the `BarcodeReader` class. | 
 | [`productKeys`](../BarcodeReader/properties.md#productkeys) | Get or set the Dynamsoft Barcode Reader SDK product keys. Inherited from the `BarcodeReader` class. | 
 | [`version`](../BarcodeReader/properties.md#version) | Get the current version. Inherited from the `BarcodeReader` class. | 

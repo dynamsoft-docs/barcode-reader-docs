@@ -7,7 +7,9 @@ needAutoGenerateSidebar: false
 breadcrumbText: Methods
 ---
 
-## `BarcodeScanner` *Class* Methods
+# `BarcodeScanner` Methods
+
+## *Class* Methods
 
 ### Initialize
 
@@ -20,7 +22,7 @@ The following methods are related to the initialization of `BarcodeScanner` inst
 | [`isLoaded`](../BarcodeReader/methods/initialize-and-destroy.md#isloaded) | Check if the decoding module is loaded. Inherited from the `BarcodeReader` class. |
 | [`loadWasm`](../BarcodeReader/methods/initialize-and-destroy.md#loadwasm) | Manually load and compile the decoding WASM module. Inherited from the `BarcodeReader` class. |
 
-## `BarcodeScanner` *Instance* Methods
+## *Instance* Methods
 
 The `BarcodeScanner` class is used for **video** decoding.
 
