@@ -93,7 +93,7 @@ let rsl = await scanner.getResolution();
 console.log(rsl.width + " x " + rsl.height);
 ```
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+[Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)
 
 ## setResolution
 
@@ -178,7 +178,7 @@ getVideoSettings() returns MediaStreamConstraints
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+[Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)
 
 ## updateVideoSettings
 
@@ -206,7 +206,7 @@ await scanner.updateVideoSettings({
 });
 ```
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+[Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)
 
 ## setColorTemperature
 
@@ -226,7 +226,7 @@ setColorTemperature(value) returns Promise
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+[Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)
 
 ## setExposureCompensation
 
@@ -246,7 +246,7 @@ setExposureCompensation(value) returns Promise
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+[Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)
 
 ## setFrameRate
 
@@ -306,7 +306,7 @@ turnOffTorch() returns Promise
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+[Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)
 
 ## turnOnTorch
 
@@ -322,4 +322,4 @@ turnOnTorch() returns Promise
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+[Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)

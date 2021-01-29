@@ -15,7 +15,6 @@ needGenerateH3Content: false
 | Method               | Description |
 |----------------------|-------------|
 | [`createInstance`](#createinstance) | Create a  `BarcodeReader` object. |
-| [`destroy`](#destroy) | Destroy the `BarcodeReader` object. |
 | [`detectEnvironment`](#detectenvironment) | Detect the current environment. |
 | [`isLoaded`](#isloaded) | Check if the decoding module is loaded. |
 | [`loadWasm`](#loadwasm) | Manually load and compile the decoding WASM module. |

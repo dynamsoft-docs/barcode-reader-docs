@@ -92,7 +92,7 @@ decodeBuffer(buffer, width, height, stride, format, config) returns Promise
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+[Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)
 
 ## decodeUrl
 
