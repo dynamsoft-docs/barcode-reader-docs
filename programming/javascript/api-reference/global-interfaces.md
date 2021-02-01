@@ -154,3 +154,15 @@ Stores the decoded barcode text results.
 | `barcodeFormatString` | *string* | Barcode type as a string. | 
 | `barcodeText` | *string* | The barcode result text. | 
 | `localizationResult` | [`LocalizationResult`](#localizationresult) | The corresponding localization result. |
+| `exception` | [`Exception`](#exception) | License exception information. |
+<!--
+| `detailedResult` | [`DetailedResult`](#detailedResult) | Extra details of the result. | -->
+
+## Exception
+
+Stores exception code and message in case of a license exception.
+
+| Property          | Description |
+|-------------------|-------------|
+| `code` | Exception code |
+| `message` | Exception message |
