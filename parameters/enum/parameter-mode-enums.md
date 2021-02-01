@@ -218,7 +218,7 @@ Describes the conflict mode.
 
 
 
-## DeblurMode
+## DeblurMode {#deblurmode}
 Describes the deblur mode.
 
 
