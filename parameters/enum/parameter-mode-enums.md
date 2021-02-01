@@ -473,7 +473,7 @@ Describes the region predetection mode.
 
 
 
-## ScaleUpMode
+## ScaleUpMode {#scaleupmodes}
 Describes the scale up mode. 
 
 
