@@ -163,18 +163,6 @@ The coordinate type.
 ResultCoordinateType tagLocalizationResult::resultCoordinateType
 ```
 
-### accompanyingTextBytes
-The accompanying text content in a byte array.
-```cpp
-unsigned char* tagLocalizationResult::accompanyingTextBytes
-```
-
-### accompanyingTextBytesLength
-The length of the accompanying text byte array.
-```cpp
-int tagLocalizationResult::accompanyingTextBytesLength
-```
-
 ### confidence
 The confidence of the localization result.
 ```cpp
