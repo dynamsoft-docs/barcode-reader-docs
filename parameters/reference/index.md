@@ -149,7 +149,7 @@ breadcrumbText: Reference
  | [`FormatSpecification.FindUnevenModuleBarcode`](format-specification/format-control.md#findunevenmodulebarcode) | Specifies whether to find barcodes with uneven barcode modules. Not support yet. | 
  | [`FormatSpecification.HeadModuleRatio`](format-specification/format-control.md#headmoduleratio) | Set the module count and module size ratio of the barcode head part. | 
  | [`FormatSpecification.MinQuietZoneWidth`](format-specification/format-control.md#minquietzonewidth) | The minimum width of the barcode quiet zone. | 
- | [`FormatSpecification.MinRatioOfBarcodeZoneWidthToHeight`](format-control.md#minratioofbarcodezonewidthtoheight) |	Sets the minimum ratio (width/height) of the barcode zone. | 
+ | [`FormatSpecification.MinRatioOfBarcodeZoneWidthToHeight`](format-specification/format-control.md#minratioofbarcodezonewidthtoheight) |	Sets the minimum ratio (width/height) of the barcode zone. | 
  | [`FormatSpecification.MirrorMode`](format-specification/format-control.md#mirrormode) | Sets whether to decode mirrored barcodes. | 
  | [`FormatSpecification.ModuleSizeRangeArray`](format-specification/format-control.md#modulesizerangearray) | Sets the range of module size (in pixels) for barcodes search. (Hint). |
  | [`FormatSpecification.MSICodeCheckDigitCalculation`](format-specification/format-control.md#msicodecheckdigitcalculation) | Sets the scheme used for calculating a check digit of an MSI barcode. | 
