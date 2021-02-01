@@ -7,22 +7,32 @@ needAutoGenerateSidebar: false
 breadcrumbText: Methods
 ---
 
+# Dynamsoft Barcode Reader SDK - JavaScript BarcodeReader Class
 
-# Dynamsoft Barcode Reader SDK - JavaScript BarcodeReader Methods
+The `BarcodeReader` class is used for **image** decoding.
 
-## Initialize and Destroy
+## `BarcodeReader` *Class* Methods
 
-The following methods are related to initializing and destroying the `BarcodeReader` object.
+### Initialize
+
+The following methods are related to the initialization of `BarcodeReader` instances.
 
 | Method               | Description |
 |----------------------|-------------|
-| [`createInstance`](initialize-and-destroy.md#createinstance) | Create a  `BarcodeReader` object. |
-| [`destroy`](initialize-and-destroy.md#destroy) | Destroy the `BarcodeReader` object. |
+| [`createInstance`](initialize-and-destroy.md#createinstance) | Create a  `BarcodeReader` instance. |
 | [`detectEnvironment`](initialize-and-destroy.md#detectenvironment) | Detect the current environment. |
 | [`isLoaded`](initialize-and-destroy.md#isloaded) | Check if the decoding module is loaded. |
 | [`loadWasm`](initialize-and-destroy.md#loadwasm) | Manually load and compile the decoding WASM module. |
 
-## Decode
+## `BarcodeReader` *Instance* Methods
+
+### Destroy
+
+| Method               | Description |
+|----------------------|-------------|
+| [`destroy`](initialize-and-destroy.md#destroy) | Destroy the `BarcodeReader` instance. |
+
+### Decode
 
 The following methods are related to decoding barcodes.
 
@@ -33,14 +43,14 @@ The following methods are related to decoding barcodes.
 | [`decodeBuffer`](decode.md#decodebuffer) | Decode barcodes from raw buffer. |
 | [`decodeUrl`](decode.md#decodeurl) | Decode barcodes from a URL. |
 
-## Parameter and Runtime Settings
+### Parameter and Runtime Settings
 
 The following methods are related to customizing mode and runtime settings.
 
 | Method               | Description |
 |----------------------|-------------|
-| [`getModeArgument`](parameter-and-runtime-settings.md#getmodeargument) | Get argument value for the specified mode parameter. |
-| [`setModeArgument`](parameter-and-runtime-settings.md#setmodeargument) | Set argument value for the specified mode parameter. |
 | [`getRuntimeSettings`](parameter-and-runtime-settings.md#getruntimesettings) | Get current runtime settings. |
 | [`resetRuntimeSettings`](parameter-and-runtime-settings.md#resetruntimesettings) | Reset runtime settings to default. |
 | [`updateRuntimeSettings`](parameter-and-runtime-settings.md#updateruntimesettings) | Modify and update the current runtime settings. |
+| [`getModeArgument`](parameter-and-runtime-settings.md#getmodeargument) | Get argument value for the specified mode parameter. |
+| [`setModeArgument`](parameter-and-runtime-settings.md#setmodeargument) | Set argument value for the specified mode parameter. |
