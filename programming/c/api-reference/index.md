@@ -196,7 +196,6 @@ breadcrumbText: API Reference
 
 
 ## [Enumerations]({{ site.enumerations }})
-- [`AccompanyingTextRecognitionMode`]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode)	
 - [`BarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode)	
 - [`BarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode)	
 - [`BarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat)	
