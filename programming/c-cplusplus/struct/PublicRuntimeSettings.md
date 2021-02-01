@@ -45,7 +45,7 @@ typedef struct tagPublicRuntimeSettings  PublicRuntimeSettings
 | [`minResultConfidence`](#minresultconfidence) | *int* |
 | [`scaleUpModes`](#scaleupmodes) | [`ScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#scaleupmodes)\[8\] |
 | [`pdfReadingMode`](#pdfreadingmode) | [`PDFReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#pdfreadingmode) | 
-| [`deblurModes`](#deblurmodes) | [`DeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#DeblurMode)\[10\] | 
+| [`deblurModes`](#deblurmodes) | [`DeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode)\[10\] | 
 | [`barcodeZoneMinDistanceToImageBorders`](#barcodezonemindistancetoimageborders) | *int* |
 | [`reserved`](#reserved) | *char\[36\]* |
 
