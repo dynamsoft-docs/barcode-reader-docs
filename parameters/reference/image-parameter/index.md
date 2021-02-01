@@ -72,9 +72,9 @@ breadcrumbText: ImageParameter
  | Parameter Name | Description |
  | -------------- | ----------- | 
  | [`ImageParameter.IntermediateResultTypes`](result-control.md#intermediateresulttypes) | Sets which types of intermediate result to be kept for further reference. Intermediate result types can be combined. | 
- | [`ImageParameter.IntermediateResultSavingMode`](result-control.md#intermediateresultsavingmode) | Sets the mode for saving the intermediate result. | 
+ | [`ImageParameter.IntermediateResultSavingMode`](IntermediateResultSavingMode.md#intermediateresultsavingmode) | Sets the mode for saving the intermediate result. | 
  | [`ImageParameter.ResultCoordinateType`](result-control.md#resultcoordinatetype) | Specifies the format for the coordinates returned | 
- | [`ImageParameter.TextResultOrderModes`](result-control.md#textresultordermodes) | Sets the mode and priority for the order of the text results returned. | 
+ | [`ImageParameter.TextResultOrderModes`](TextResultOrderModes.md#textresultordermodes) | Sets the mode and priority for the order of the text results returned. | 
  | [`ImageParameter.ReturnBarcodeZoneClarity`](result-control.md#returnbarcodezoneclarity) | Sets whether or not to return the clarity of the barcode zone. | 
 
 
