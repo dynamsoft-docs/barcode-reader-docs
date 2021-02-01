@@ -10,13 +10,20 @@ needGenerateH3Content: false
 
 # JavaScript API Reference - `BarcodeReader` Initialize and Destroy Methods
 
+* *Class* Methods
+
 | Method               | Description |
 |----------------------|-------------|
 | [`createInstance`](#createinstance) | Create a  `BarcodeReader` object. |
-| [`destroy`](#destroy) | Destroy the `BarcodeReader` object. |
 | [`detectEnvironment`](#detectenvironment) | Detect the current environment. |
 | [`isLoaded`](#isloaded) | Check if the decoding module is loaded. |
 | [`loadWasm`](#loadwasm) | Manually load and compile the decoding WASM module. |
+
+* *Instance* Method
+
+| Method               | Description |
+|----------------------|-------------|
+| [`destroy`](#destroy) | Destroy the `BarcodeReader` object. |
 
 ---
 
@@ -38,20 +45,6 @@ createInstance() returns Promise
 let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 ```
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)
-
-## destroy
-
-Destroy the `BarcodeReader` object. Equivalent to the previous method `deleteInstance()`.
-
-```javascript
-destroy() returns Promise
-```
-
-### Return Value
-
-`Promise<any>`
-
 ## detectEnvironment
 
 Detect the current device environment.
@@ -63,10 +56,6 @@ detectEnvironment() returns Promise
 ### Return Value
 
 `Promise<any>`
-
-### Sample
-
-[Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)
 
 ## isLoaded
 
@@ -98,6 +87,23 @@ loadWasm() returns Promise
 
 `Promise<void>`
 
+## destroy
+
+Destroy the `BarcodeReader` object.
+
+```javascript
+destroy() returns Promise
+```
+
+### Return Value
+
+`Promise<any>`
+
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)
+```javascript
+let scanner = null;
+scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+// Do the job
+scanner.destroy();
+```

@@ -13,6 +13,10 @@ needGenerateH3Content: false
 | Method               | Description |
 |----------------------|-------------|
 | [`updateRuntimeSettings`](#updateruntimesettings) | Modify and update the current runtime settings. |
+| [`getModeArgument`](../../BarcodeReader/methods/parameter-and-runtime-settings.md#getmodeargument) | Get argument value for the specified mode parameter. Inherited from the `BarcodeReader` class. |
+| [`setModeArgument`](../../BarcodeReader/methods/parameter-and-runtime-settings.md#setmodeargument) | Set argument value for the specified mode parameter. Inherited from the `BarcodeReader` class. |
+| [`getRuntimeSettings`](../../BarcodeReader/methods/parameter-and-runtime-settings.md#getruntimesettings) | Get current runtime settings. Inherited from the `BarcodeReader` class. |
+| [`resetRuntimeSettings`](../../BarcodeReader/methods/parameter-and-runtime-settings.md#resetruntimesettings) | Reset runtime settings to default. Inherited from the `BarcodeReader` class. |
 
 ---
 
