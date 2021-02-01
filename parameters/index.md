@@ -22,6 +22,3 @@ breadcrumbText: Parameters
 
 - [Scenario Settings]({{ site.scenario_settings }})
 
-## Miscellaneous
-
-- Example Image Settings
