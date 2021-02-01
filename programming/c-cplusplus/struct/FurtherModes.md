@@ -239,23 +239,6 @@ BarcodeColourMode tagFurtherModes::barcodeColourModes[8]
 - **See also**  
    [`BarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode)
 
-### accompanyingTextRecognitionModes
-Sets the mode and priority to recognize accompanying text.
-```cpp
-AccompanyingTextRecognitionMode tagFurtherModes::accompanyingTextRecognitionModes[8]
-```
-- **Value range**  
-   Each array item can be any one of the [`AccompanyingTextRecognitionMode`]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode) Enumeration items.  
-     
-- **Default value**  
-   `[ATRM_SKIP,ATRM_SKIP,ATRM_SKIP,ATRM_SKIP,ATRM_SKIP,ATRM_SKIP,ATRM_SKIP,ATRM_SKIP]`  
-     
-- **Remarks**  
-   The array index represents the priority of the item. The smaller index is, the higher priority is.  
-   
-- **See also**  
-   [`AccompanyingTextRecognitionMode`]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode)
-
 ### reserved
 Reserved memory for struct. The length of this array indicates the size of the memory reserved for this struct.
 ```cpp
