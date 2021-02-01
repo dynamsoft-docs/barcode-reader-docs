@@ -21,9 +21,6 @@ noTitleIndex: true
    - JDK 1.7 and above
 
 
-&nbsp;
-
-
 ## Installation
 
 ### Option 1: Download from website
@@ -46,7 +43,7 @@ You can add Dynamsoft Barcode Reader as the dependency to pom.xml like this:
         <dependency>
             <groupId>com.dynamsoft</groupId>
             <artifactId>dbr</artifactId>
-            <version>8.0.0</version>
+            <version>8.1.2</version>
         </dependency>
     </dependencies>
     <repositories>
@@ -280,7 +277,7 @@ You can also distribute with Maven, like this:
       <dependency>
          <groupId>com.dynamsoft</groupId>
          <artifactId>dbr</artifactId>
-         <version>8.0.0</version>
+         <version>8.1.2</version>
       </dependency>
    </dependencies>
    <repositories>
