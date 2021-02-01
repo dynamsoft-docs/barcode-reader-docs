@@ -101,8 +101,8 @@ You can add Dynamsoft Barcode Reader like below:
 3. Add the following code to initiate and use the Dynamsoft Barcode Reader SDK.
 
     ```java
-   import com.dynamsoft.dbr.BarcodeReader;
-   import com.dynamsoft.dbr.TextResult;
+   import com.dynamsoft.barcode.BarcodeReader;
+   import com.dynamsoft.barcode.TextResult;
    import android.util.Log;
    public class MainActivity extends AppCompatActivity {
       @Override
@@ -310,7 +310,53 @@ Below is a template for your reference. To learn more about the APIs, you can ch
 
 ## How to Upgrade
 
-### From version 7.x
+### From x8.0 to 8.x
+
+**Update the SDK**
+
+Replace the old `DynamsoftBarcodeReaderAndroid.aar` file with the one in the latest version. If you are using Maven, then change the version number in the `build.gradle` file.
+
+**API changes**
+
+Change Name of Import from `import com.dynamsoft.barcode.***;` to `import com.dynamsoft.dbr.***;`, like this:
+
+Change:
+```java
+import com.dynamsoft.barcode.BarcodeReader;
+import com.dynamsoft.barcode.EnumBarcodeFormat;
+import com.dynamsoft.barcode.EnumImagePixelFormat;
+import com.dynamsoft.barcode.EnumIntermediateResultSavingMode;
+import com.dynamsoft.barcode.EnumIntermediateResultType;
+import com.dynamsoft.barcode.EnumBarcodeFormat_2;
+import com.dynamsoft.barcode.EnumConflictMode;
+import com.dynamsoft.barcode.FrameDecodingParameters;
+import com.dynamsoft.barcode.IntermediateResult;
+import com.dynamsoft.barcode.LocalizationResult;
+import com.dynamsoft.barcode.Point;
+import com.dynamsoft.barcode.PublicRuntimeSettings;
+import com.dynamsoft.barcode.TextResult;
+import com.dynamsoft.barcode.TextResultCallback;
+```
+
+to:
+```java
+import com.dynamsoft.dbr.BarcodeReader;
+import com.dynamsoft.dbr.EnumBarcodeFormat;
+import com.dynamsoft.dbr.EnumImagePixelFormat;
+import com.dynamsoft.dbr.EnumIntermediateResultSavingMode;
+import com.dynamsoft.dbr.EnumIntermediateResultType;
+import com.dynamsoft.dbr.EnumBarcodeFormat_2;
+import com.dynamsoft.dbr.EnumConflictMode;
+import com.dynamsoft.dbr.FrameDecodingParameters;
+import com.dynamsoft.dbr.IntermediateResult;
+import com.dynamsoft.dbr.LocalizationResult;
+import com.dynamsoft.dbr.Point;
+import com.dynamsoft.dbr.PublicRuntimeSettings;
+import com.dynamsoft.dbr.TextResult;
+import com.dynamsoft.dbr.TextResultCallback;
+```
+
+### From v7.x to 8.x
 
 You need to replace the old `DynamsoftBarcodeReaderAndroid.aar` file with the one in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
 
@@ -322,6 +368,6 @@ After you upgraded your license to version 8.x:
 
 - If you were using `initLicenseFromServer` to connect to Dynamsoft server for license verification, then no need to change the license key. But please make sure the device has Internet connection.
 
-### From version 6.x
+### From v6.x to 8.x
 
 We made some structural updates in the new version. To upgrade from 6.x to 8.x, we recommend you to review our sample code and re-write the barcode scanning module.
