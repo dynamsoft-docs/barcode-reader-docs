@@ -20,7 +20,6 @@ breadcrumbText: Enumerations
 
   | Enumeration | Description |
   |-------------|-------------|
-  | [`AccompanyingTextRecognitionMode`](parameter-mode-enums.md#accompanyingtextrecognitionmode) | Describes the accompanying text recognition mode. |
   | [`BarcodeColourMode`](parameter-mode-enums.md#barcodecolourmode) | Describes the barcode colour mode. |
   | [`BarcodeComplementMode`](parameter-mode-enums.md#barcodecomplementmode) | Describes the barcode complement mode. |
   | [`BinarizationMode`](parameter-mode-enums.md#binarizationmode) | Describes the binarization mode. |
