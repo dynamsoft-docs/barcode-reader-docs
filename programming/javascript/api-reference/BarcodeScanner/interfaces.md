@@ -27,8 +27,8 @@ Filter and discard video frames that are out of focus during the scanning operat
 
 | Property         | Type | Default Value | Description |
 |------------------|------|---------------|-------------|
-| region<sup>optional</sup> | [`RegionDefinition`](#regiondefinition) | <pre>{ regionLeft = 0, <br/>regionRight = 100, <br/>regionTop = 0, <br/>regionBottom = 100, <br/>regionMeasuredByPercentage = true }</pre> | Detecting area of a frame. | 
-| threshold<sup>optional</sup> | *number* | `0.1` | Threshold used for filtering images. <br>Value range: [0, 1]. <br>An indicator is calculated for each frame from `AppendFrame()`. If the change rate of the indicators between the current frame and historic frames is larger than this threshold, the current frame will be discarded. |
+| region | [`RegionDefinition`](#regiondefinition) | ```{ regionLeft = 0, regionRight = 100, regionTop = 0, regionBottom = 100, regionMeasuredByPercentage = true }``` | Detecting area of a frame. | 
+| threshold | *number* | `0.1` | Threshold used for filtering images. <br>Value range: [0, 1]. <br>An indicator is calculated for each frame from `AppendFrame()`. If the change rate of the indicators between the current frame and historic frames is larger than this threshold, the current frame will be discarded. |
 
 ## ScannerPlayCallbackInfo
 
@@ -49,9 +49,9 @@ Configures the video stream settings. Previously known as `ScannerConfig`.
 
 | Property         | Type | Default Value | Description |
 |------------------|------|---------------|-------------|
-| duplicateForgetTime<sup>optional</sup> | *number* | `3000` | Ignore duplicated results found in the specified time period. Measured in ms. | 
-| frameFilter<sup>optional</sup> | [`FrameFilter`](#framefilter) |  | Filter and discard video frames that are out of focus. |
-| intervalTime<sup>optional</sup> | *number* | `100` | Scan interval used to allow the library to release the CPU periodically. Measured in ms. |
+| duplicateForgetTime | *number* | `3000` | Ignore duplicated results found in the specified time period. Measured in ms. | 
+| frameFilter | [`FrameFilter`](#framefilter) |  | Filter and discard video frames that are out of focus. |
+| intervalTime | *number* | `100` | Scan interval used to allow the library to release the CPU periodically. Measured in ms. |
 
 ## VideoDeviceInfo
 
