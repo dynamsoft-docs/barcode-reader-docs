@@ -101,7 +101,7 @@ delete runtimeSettings;
 delete reader;
 ```
 - FormatSpecification   
-If you only want to configure certain parameters for a specific pattern, then `FormatSpecification` should be used. This object defines the configuration used for a specific barcode format. If the configuration is inconsistent with the global ImageParameter configuration, then `FormatSpecification` has a higher priority. For specific configurable parameters and applicable scenarios, please refer to our documentation for [specific barcode format configuration parameters](). 
+If you only want to configure certain parameters for a specific pattern, then `FormatSpecification` should be used. This object defines the configuration used for a specific barcode format. If the configuration is inconsistent with the global ImageParameter configuration, then `FormatSpecification` has a higher priority. For specific configurable parameters and applicable scenarios, please refer to our documentation for [specific barcode format configuration parameters][2]. 
 In Json, use the  `FormatSpecificationArray` to define one or multiple `FormatSpecification` objects, which are distinguished by defining different `Name`. 
 Use `FormatSpecificationNameArray` to specify the `Name` that each `FormatSpecification` needs to use. 
  
@@ -156,7 +156,8 @@ In the following example, we have defined two `RegionDefinition`, "RP_1" and "RP
 }
 ```
 
-[1]:barcode-format-and-expected-barcode-counts.html
+[1]:manually-define-region-of-interest.html
+[2]:barcode-format-and-expected-barcode-counts.html
 
 
 
