@@ -156,7 +156,7 @@ In the following example, we have defined two `RegionDefinition`, "RP_1" and "RP
 }
 ```
 
-[1]:manually-define-region-of-interest.html
+[1]:barcode-format-and-expected-barcode-counts.html
 
 
 
