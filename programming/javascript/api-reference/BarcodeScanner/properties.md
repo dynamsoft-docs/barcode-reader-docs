@@ -61,7 +61,7 @@ defaultUIElementURL = 'url'
 
 ## singleFrameMode
 
-Get or set the camera mode. If `true`, single video frames will be used instead of a continuous video stream. It's especially useful for cameras that lack webcam access (lack of WebRTC support, e.g. Chrome on iOS).
+Get or set the camera mode. If `true`, single video frames will be used instead of a continuous video stream. It's especially useful for cameras that lack webcam access (lack of WebRTC support, e.g. Chrome on iOS 14.2 and below).
 
 ```javascript
 singleFrameMode = bool;
