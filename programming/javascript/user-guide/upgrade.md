@@ -116,7 +116,7 @@ If you are using a **CDN**, simply update the version number denoted after **@**
 
 If you have deployed the library files on your own server, you'll need to replace the old files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
 
-### From version 7.2.2-v2 or below
+### Prior to version 7.2.2-v2
 
 Some major changes were made in version 7.2.2-v2 and will require existing code updates in your application.
 
