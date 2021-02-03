@@ -148,13 +148,14 @@ Stores the decoded barcode text results.
 ### Properties
 
 | Property           | Type | Description |
-|----------------------|------|-------------|
+|--------------------|------|-------------|
 | `barcodeBytes` | *number[]* | Barcode result content in a byte array. | 
-| `barcodeFormat` | *number* \| [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) | The barcode format. | 
+| `barcodeFormat` | *number* | [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) | The barcode format. | 
 | `barcodeFormatString` | *string* | Barcode type as a string. | 
 | `barcodeText` | *string* | The barcode result text. | 
 | `localizationResult` | [`LocalizationResult`](#localizationresult) | The corresponding localization result. |
 | `exception` | [`Exception`](#exception) | License exception information. |
+
 <!--
 | `detailedResult` | [`DetailedResult`](#detailedResult) | Extra details of the result. | -->
 
