@@ -43,8 +43,6 @@ typedef struct tagLocalizationResult*  PLocalizationResult
 | [`regionName`](#regionname) | *const char \** |
 | [`documentName`](#documentname)| *const char \** |
 | [`resultCoordinateType`](#resultcoordinatetype) | [`ResultCoordinateType`]({{ site.enumerations }}result-enums.html#resultcoordinatetype) |
-| [`accompanyingTextBytes`](#accompanyingtextbytes) | *unsigned char \** |
-| [`accompanyingTextBytesLength`](#accompanyingtextbyteslength) | *int* |
 | [`confidence`](#confidence) | *int* |
 | [`reserved`](#reserved) | *char\[52\]* |
 
