@@ -35,7 +35,6 @@ typedef struct tagFurtherModes  FurtherModes
 | [`deformationResistingModes`](#deformationresistingmodes) | [`DeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode)\[8\] |
 | [`barcodeComplementModes`](#barcodecomplementmodes) | [`BarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode)\[8\] |
 | [`barcodeColourModes`](#barcodecolourmodes) | [`BarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode)\[8\] |
-| [`accompanyingTextRecognitionModes`](#accompanyingtextrecognitionmodes) | [`AccompanyingTextRecognitionMode`]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode)\[8\] |
 | [`reserved`](#reserved) | *char\[32\]* |
 
 ### colourClusteringModes
