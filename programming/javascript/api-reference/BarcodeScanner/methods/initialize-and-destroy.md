@@ -102,4 +102,4 @@ elementOrUrl: HTMLElement | string;
 
 ### :+1: Tips and Tricks 
 
-* This API changes the UI on the fly. If you want the UI to change as soon as the camera is created, use [`defaultUIElementURL`](../accessors.md#defaultuielementurl) instead.
+* This API changes the UI on the fly. If you want the UI to change as soon as the camera is created, use [`defaultUIElementURL`](../properties.md#defaultuielementurl) instead.
