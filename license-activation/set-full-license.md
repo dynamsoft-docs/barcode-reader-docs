@@ -156,6 +156,8 @@ You can set the license by following the steps below:
      print(bre)
  ```
  
+ Code snipprt in Xamarin:
+ Please refer to <a href="https://github.com/Dynamsoft/xamarin/tree/master/examples" target="_blank">this article</a>.
 
  If you run into any issues, please [contact Dynamsoft Support](https://www.dynamsoft.com/Company/Contact.aspx).
 
