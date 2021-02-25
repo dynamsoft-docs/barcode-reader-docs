@@ -43,11 +43,16 @@ You can add Dynamsoft Barcode Reader like below:
    }
    ```
 
-2. implement Dynamsoft Barcode Reader at dependencies in your module's `build.gradle`.
+2. Implement Dynamsoft Barcode Reader at dependencies in your module's `build.gradle`.
 
    ```
    implementation 'com.dynamsoft:dynamsoftbarcodereader:{version-number}@aar'
    ```
+   Please replace `{version-number}` with the correct version number, e.g. 
+   ```
+   implementation 'com.dynamsoft:dynamsoftbarcodereader:8.1.2@aar'
+   ```
+
 
 ## Getting Started: HelloWorld
 
@@ -101,8 +106,8 @@ You can add Dynamsoft Barcode Reader like below:
 3. Add the following code to initiate and use the Dynamsoft Barcode Reader SDK.
 
     ```java
-   import com.dynamsoft.barcode.BarcodeReader;
-   import com.dynamsoft.barcode.TextResult;
+   import com.dynamsoft.dbr.BarcodeReader;
+   import com.dynamsoft.dbr.TextResult;
    import android.util.Log;
    public class MainActivity extends AppCompatActivity {
       @Override
@@ -114,6 +119,7 @@ You can add Dynamsoft Barcode Reader like below:
             // Note: If you do not have a valid license for the SDK, some characters of the barcode results will be replaced with "***".
             // Leave the template name empty ("") will use the settings from PublicRuntimeSettings.
             TextResult[] results = dbr.decodeFile("put your file path here", "");
+            // e.g. TextResult[] results = dbr.decodeFile("/storage/dbr-preview-img/test.jpg", "");
             if (results.length > 0) {
                String resultContent = "Found " + results.length + " barcode(s):\n";
                for (int i = 0; i < results.length; i++) {
