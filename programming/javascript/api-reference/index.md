@@ -38,9 +38,9 @@ The following methods are related to the initialization of `BarcodeReader` insta
 | Method               | Description |
 |----------------------|-------------|
 | [`createInstance`](BarcodeReader/methods/initialize-and-destroy.md#createinstance) | Create a  `BarcodeReader` instance. |
-| [`detectEnvironment`](barcodereader/methods/initialize-and-destroy.md#detectenvironment) | Detect the current environment. |
-| [`isLoaded`](barcodereader/methods/initialize-and-destroy.md#isloaded) | Check if the decoding module is loaded. |
-| [`loadWasm`](barcodereader/methods/initialize-and-destroy.md#loadwasm) | Manually load and compile the decoding WASM module. |
+| [`detectEnvironment`](BarcodeReader/methods/initialize-and-destroy.md#detectenvironment) | Detect the current environment. |
+| [`isLoaded`](BarcodeReader/methods/initialize-and-destroy.md#isloaded) | Check if the decoding module is loaded. |
+| [`loadWasm`](BarcodeReader/methods/initialize-and-destroy.md#loadwasm) | Manually load and compile the decoding WASM module. |
 
 ## `BarcodeReader` *Instance* Methods
 
@@ -48,7 +48,7 @@ The following methods are related to the initialization of `BarcodeReader` insta
 
 | Method               | Description |
 |----------------------|-------------|
-| [`destroy`](barcodereader/methods/initialize-and-destroy.md#destroy) | Destroy the `BarcodeReader` instance. |
+| [`destroy`](BarcodeReader/methods/initialize-and-destroy.md#destroy) | Destroy the `BarcodeReader` instance. |
 
 ### Decode
 
@@ -56,10 +56,10 @@ The following methods are related to decoding barcodes.
 
 | Method               | Description |
 |----------------------|-------------|
-| [`decode`](barcodereader/methods/decode.md#decode) | Decode barcodes from images, binary data, URLs, and more. |
-| [`decodeBase64String`](barcodereader/methods/decode.md#decodebase64string) | Decode barcodes from a base64 encoded string. |
-| [`decodeBuffer`](barcodereader/methods/decode.md#decodebuffer) | Decode barcodes from raw buffer. |
-| [`decodeUrl`](barcodereader/methods/decode.md#decodeurl) | Decode barcodes from a URL. |
+| [`decode`](BarcodeReader/methods/decode.md#decode) | Decode barcodes from images, binary data, URLs, and more. |
+| [`decodeBase64String`](BarcodeReader/methods/decode.md#decodebase64string) | Decode barcodes from a base64 encoded string. |
+| [`decodeBuffer`](BarcodeReader/methods/decode.md#decodebuffer) | Decode barcodes from raw buffer. |
+| [`decodeUrl`](BarcodeReader/methods/decode.md#decodeurl) | Decode barcodes from a URL. |
 
 ### Parameter and Runtime Settings
 
@@ -67,23 +67,23 @@ The following methods are related to customizing mode and runtime settings.
 
 | Method               | Description |
 |----------------------|-------------|
-| [`getRuntimeSettings`](barcodereader/methods/parameter-and-runtime-settings.md#getruntimesettings) | Get current runtime settings. |
-| [`resetRuntimeSettings`](barcodereader/methods/parameter-and-runtime-settings.md#resetruntimesettings) | Reset runtime settings to default. |
-| [`updateRuntimeSettings`](barcodereader/methods/parameter-and-runtime-settings.md#updateruntimesettings) | Modify and update the current runtime settings. |
-| [`getModeArgument`](barcodereader/methods/parameter-and-runtime-settings.md#getmodeargument) | Get argument value for the specified mode parameter. |
-| [`setModeArgument`](barcodereader/methods/parameter-and-runtime-settings.md#setmodeargument) | Set argument value for the specified mode parameter. |
+| [`getRuntimeSettings`](BarcodeReader/methods/parameter-and-runtime-settings.md#getruntimesettings) | Get current runtime settings. |
+| [`resetRuntimeSettings`](BarcodeReader/methods/parameter-and-runtime-settings.md#resetruntimesettings) | Reset runtime settings to default. |
+| [`updateRuntimeSettings`](BarcodeReader/methods/parameter-and-runtime-settings.md#updateruntimesettings) | Modify and update the current runtime settings. |
+| [`getModeArgument`](BarcodeReader/methods/parameter-and-runtime-settings.md#getmodeargument) | Get argument value for the specified mode parameter. |
+| [`setModeArgument`](BarcodeReader/methods/parameter-and-runtime-settings.md#setmodeargument) | Set argument value for the specified mode parameter. |
 
 ## `BarcodeReader` *Class* Properties
 
 | Property            | Description |
 |----------------------|-------------|
-| [`_bUseFullFeature`](barcodereader/properties.md#_busefullfeature) | If set to `true`, use the full-featured WASM module. |
-| [`engineResourcePath`](barcodereader/properties.md#engineresourcepath) | Get or set the engine (WASM) location. | 
-| [`productKeys`](barcodereader/properties.md#productkeys) | Get or set the Dynamsoft Barcode Reader SDK product keys. | 
-| [`version`](barcodereader/properties.md#version) | Get the current version. | 
-| [`licenseServer`](barcodereader/properties.md#licenseServer) | Specify by URL the license server from where authorization is acquired at runtime. |
-| [`handshakeCode`](barcodereader/properties.md#handshakeCode) | Specify the Handshake Code which determines what authorization is acquired. |
-| [`sessionPassword`](barcodereader/properties.md#sessionPassword) | Specify a password which protects the Handshake Code from abuse. | 
+| [`_bUseFullFeature`](BarcodeReader/properties.md#_busefullfeature) | If set to `true`, use the full-featured WASM module. |
+| [`engineResourcePath`](BarcodeReader/properties.md#engineresourcepath) | Get or set the engine (WASM) location. | 
+| [`productKeys`](BarcodeReader/properties.md#productkeys) | Get or set the Dynamsoft Barcode Reader SDK product keys. | 
+| [`version`](BarcodeReader/properties.md#version) | Get the current version. | 
+| [`licenseServer`](BarcodeReader/properties.md#licenseServer) | Specify by URL the license server from where authorization is acquired at runtime. |
+| [`handshakeCode`](BarcodeReader/properties.md#handshakeCode) | Specify the Handshake Code which determines what authorization is acquired. |
+| [`sessionPassword`](BarcodeReader/properties.md#sessionPassword) | Specify a password which protects the Handshake Code from abuse. | 
 
 ## `BarcodeReader` *Instance* Properties
 
