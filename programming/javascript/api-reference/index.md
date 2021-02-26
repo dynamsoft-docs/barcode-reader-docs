@@ -37,7 +37,7 @@ The following methods are related to the initialization of `BarcodeReader` insta
 
 | Method               | Description |
 |----------------------|-------------|
-| [`createInstance`](barcodereader/methods/initialize-and-destroy.md#createinstance) | Create a  `BarcodeReader` instance. |
+| [`createInstance`](BarcodeReader/methods/initialize-and-destroy.md#createinstance) | Create a  `BarcodeReader` instance. |
 | [`detectEnvironment`](barcodereader/methods/initialize-and-destroy.md#detectenvironment) | Detect the current environment. |
 | [`isLoaded`](barcodereader/methods/initialize-and-destroy.md#isloaded) | Check if the decoding module is loaded. |
 | [`loadWasm`](barcodereader/methods/initialize-and-destroy.md#loadwasm) | Manually load and compile the decoding WASM module. |
