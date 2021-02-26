@@ -25,15 +25,11 @@ noTitleIndex: true
    
 ## Installation
 
-To install Dynamsoft Barcode Reader iOS Edition on your development machine, you can download the SDK from the [Dynamsoft website](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx) and run the setup program. The trial installer includes a free trial license valid for 30 days.   
-   
-After installation, you can find samples for supported platforms in the **Samples** folder under the installation folder.  
-
-
-&nbsp; 
+Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx) and unzip the package. The trial package includes a free trial license valid for 30 days.   
 
 
 ## Getting Started: HelloWorld
+
 To build a Hello World app that reads barcodes from an image, you can follow the steps below:
 1. Create a new iOS project in Xcode.
 2. Add the barcode reader framework to your project
