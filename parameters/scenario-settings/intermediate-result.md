@@ -3,7 +3,7 @@ layout: default-layout
 description: In this article, we will introduce how to obtain and use intermediate results 
 title: How to obtain and use intermediate results
 keywords: IntermediateResult
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 ---
 # How to obtain and use intermediate results
 
