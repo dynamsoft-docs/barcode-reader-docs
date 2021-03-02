@@ -425,6 +425,12 @@ noTitleIndex: true
   |--------------------------------|-------------------------|-------|-------------|
   | `DMERR_TRIAL_LICENSE` | `EnumErrorCode_DMERR_TRIAL_LICENSE` | -20010 | Using a trial license. |
 
+### More error codes
+
+Error codes between -20199 and -20100 are thrown by the License Tracking Server (LTS). See <a href="https://www.dynamsoft.com/license-tracking/docs/common/errorlist.html?ver=latest" target="_blank">LTS Error List</a> for details.
+
+
+
 ## Error code for specific programming languages  
 
 ### Java/Android/JavaScript
