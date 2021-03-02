@@ -24,9 +24,13 @@ You can use a development/runtime license by following the steps below:
 
  Once you obtain a Development License, you can find your license information at <a href ="https://www.dynamsoft.com/customer/license/fullLicense" target="_blank">Customer Portal</a>. 
 
- To activate a development license (8-digit key), select **Unactivated** license, click the **Activate Now** link beside it.
-
+ To activate a development license (8-digit key), select **Unactivated** license, click the **License Id** link beside it.
+ 
  ![NewLicense2][1]
+ 
+ On the license page, click the **Activate** button on the top left.
+ 
+![LicensePage][11]
 
  On the next page, click the **Activate** button.
  
@@ -573,3 +577,4 @@ If you run into any issues, please [contact Dynamsoft Support](https://www.dynam
 [8]:assets\set-full-license\MachineID_Linux.png
 [9]:assets\set-full-license\ManuallyActivate2.png
 [10]:assets\set-full-license\DownloadLicense.png
+[11]:assets\set-full-license\LicensePage.png
