@@ -25,7 +25,7 @@ noTitleIndex: true
    
 ## Installation
 
-Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx) and unzip the package. The trial package includes a free trial license valid for 30 days.   
+Download the Dynamsoft Barcode Reader SDK from the [Dynamsoft website](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx) and unzip the package. The trial package includes a free trial license valid for 30 days.   
 
 
 ## Getting Started: HelloWorld
