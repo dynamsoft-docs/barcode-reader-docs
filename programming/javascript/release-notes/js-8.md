@@ -10,11 +10,11 @@ noTitleIndex: true
 
 # Release Notes for JavaScript SDK - 8.x
 
-## 8.1.3 (01/22/2021)
+## 8.1.3 (03/04/2021)
 
 ### New
 
-- Added support for SSR and 3 related samples for Nextjs, Nuxtjs and gatsby.
+- Added support for SSR (Server-side Rendering) and 3 related samples for Nextjs, Nuxtjs and gatsby respectively.
 
 ### Fixed
 
