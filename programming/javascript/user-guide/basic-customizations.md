@@ -103,7 +103,7 @@ As you can see in the code, there are three types of configurations:
 
 ## Customizing the UI
 
-The library provides a built-in UI for the `BarcodeScanner`object where the default scanner UI is defined in the file `dist/dbr.scanner.html`. There are 3 ways to customize it:
+The library provides a built-in UI for the `BarcodeScanner`object where the default scanner UI is defined in the file `dist/dbr.scanner.html`. There are a few ways to customize it:
 
 * Modify the file `dist/dbr.scanner.html` directly. 
 
@@ -120,6 +120,16 @@ The library provides a built-in UI for the `BarcodeScanner`object where the defa
   You must set `defaultUIElementURL` before you call `createInstance`.
 
 * Build the UI element into your own web page and call `scanner.setUIElement(HTMLElement)` to specify that element.
+* Append the default UI element to an element on your page. After that, you can customize it further. The following shows how to append the default UI to a DIV and hide the close button.
+  
+  ```html
+  <div id="scannerUI"></div>
+  ```
+  
+  ```javascript
+  document.getElementById('scannerUI').appendChild(scanner.getUIElement());
+  document.getElementsByClassName('dbrScanner-btn-close')[0].hidden = true;
+  ```
 
 The following is an example of the 3rd option above. 
 
