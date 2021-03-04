@@ -23,7 +23,7 @@ You can set the license by following the steps below:
 
  Once you purchase a full license from our <a href ="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/" target="_blank">online store</a>, you can find your license information at <a href ="https://www.dynamsoft.com/customer/license/fullLicense" target="_blank">Customer Portal</a>. 
 
- To activate the license, click "Please first activate the license" or the "Activate" button.
+ To activate the license, click "Please first activate the license".
 
  ![FullLicenseList][1]
 
