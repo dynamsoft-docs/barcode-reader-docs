@@ -52,7 +52,7 @@ await Dynamsoft.DBR.BarcodeReader.loadWasm();
 
 ## engineResourcePath
 
-Get or set the Barcode Reader SDK engine path. The path should lead to a folder containing the distributed JS and WASM files.
+Get or set the Barcode Reader SDK engine path. The path should lead to a folder containing the JS and WASM files for distribution.
 
 ```javascript
 engineResourcePath = value
