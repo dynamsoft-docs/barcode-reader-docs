@@ -28,7 +28,7 @@ noTitleIndex: true
 You can download the .NET SDK from the [Dynamsoft website](https://www.dynamsoft.com/barcode-reader/downloads/). The zip package includes a free trial license valid for 30 days.   
    
 After you unzip the file, you can find samples for supported platforms in the **Samples** folder under the installation folder. 
-
+> The .NET SDK is developed based on .NET Framework 2.0/4.0. If you are using .NET Core 2.1 or 3.1, please download the .NET Core SDK (Dynamsoft.NetCoreApp.Barcode) from [Nuget](https://www.nuget.org/packages/Dynamsoft.NetCoreApp.Barcode/). For .Net core installation guide, please refer to [this](../../introduction/how-to-guide/DBRDotNetCore-Linux.md) article.
 
 ## Getting Started: HelloWorld
 
