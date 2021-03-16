@@ -19,9 +19,8 @@ The Objective-C and Swift documentation mainly consists of two parts. One is the
 ## Samples and Demos
 
 - <a href="https://apps.apple.com/us/app/barcode-scanner-x/id1120581630" target="_blank">Barcode Scanner X Demo App</a>
-- <a href="https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx?tag=ios#gallery" target="_blank">Code Gallery - iOS</a>
-- <a href="https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx?tag=cordova#gallery" target="_blank">Code Gallery - Cordova</a>
-- <a href="https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx?tag=xamarin#gallery" target="_blank">Code Gallery - Xamarin</a>
+- <a href="https://www.dynamsoft.com/barcode-reader/resources/code-gallery/?tag=objective-c" target="_blank">Code Gallery - Objective-C</a>
+- <a href="https://www.dynamsoft.com/barcode-reader/resources/code-gallery/?tag=swift" target="_blank">Code Gallery - Swift</a>
 
 ## API Reference
 - [ObjectiveC/Swift](api-reference/)
