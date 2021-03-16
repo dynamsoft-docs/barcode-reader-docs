@@ -18,7 +18,7 @@ The C Language documentation mainly consists of two parts. One is the [User Guid
 ## Samples and Demos
 
 - <a href="https://demo.dynamsoft.com/barcode-reader/" target="_blank">Online Demo</a>
-- <a href="https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx?Tag=c%2fc%2b%2b#gallery" target="_blank">Code Gallery - C/C++</a>
+- <a href="https://www.dynamsoft.com/barcode-reader/resources/code-gallery/?tag=c/c++" target="_blank">Code Gallery - C/C++</a>
 
 ## API Reference
 - [Methods](api-reference/#methods)
