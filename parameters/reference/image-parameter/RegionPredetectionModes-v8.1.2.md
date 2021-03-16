@@ -61,7 +61,6 @@ If the image is large and the barcode on the image is very small, it is recommen
 - [SpatialIndexBlockSize](#spatialindexblocksize)
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)
-- [FindAccurateBoundary](#findaccurateboundary)
  
 ##### MinImageDimension 
 Sets the minimum image dimension (in pixels) to pre-detect barcode regions.
@@ -189,17 +188,6 @@ Sets the parameters passed to the library to load dynamically.
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing parameters. | "" | All `RegionPredetectionMode` items except RPM_SKIP and RPM_AUTO |         
 
-
-##### FindAccurateBoundary 
-Sets whether to enable finding accurate boundary.
-
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [0, 1] | 0 | "RPM_GENERAL_HSV_CONTRAST" |         
-
-- **Remarks**     
-  0: disable.<br>
-  1: enable.
 
 
 ### Setting Methods
