@@ -19,8 +19,8 @@ The .Net documentation mainly consists of two parts. One is the [User Guide](#ge
 ## Samples and Demos
 
 - <a href="https://demo.dynamsoft.com/barcode-reader/" target="_blank">Online Demo</a>
-- <a href="https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx?Tag=c%23" target="_blank">Code Gallery - C#</a>
-- <a href="https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx?Tag=vb.net#gallery" target="_blank">Code Gallery - VB.NET</a>
+- <a href="https://www.dynamsoft.com/barcode-reader/resources/code-gallery/?tag=c-sharp" target="_blank">Code Gallery - C#</a>
+- <a href="https://www.dynamsoft.com/barcode-reader/resources/code-gallery/?tag=vb.net" target="_blank">Code Gallery - VB.NET</a>
 
 ## API Reference
 - [BarcodeReader](api-reference/#barcodereader-methods)
