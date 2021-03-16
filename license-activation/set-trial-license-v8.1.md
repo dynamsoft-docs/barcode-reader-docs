@@ -9,7 +9,7 @@ needGenerateH3Content: false
 
 # How to set trial license
 
-From version 8.2, if you are using the mobile edition, please check [how to apply for a private trial license](how-to-apply-for-a-privaite-trial-license). For other editions, please follow the steps below:
+To use a trial license, you can follow the steps below:
 
 ## Get a trial license key.
 
@@ -71,13 +71,3 @@ Code snippet in JavaScript:
 ```
 
 Then please save and rebuild your application.
-
-## How to apply for a private trial license
-
-From version 8.2, the mobile edition comes with a 7-day free trial license called a ["public trial"](https://www.dynamsoft.com/license-tracking/docs/about/terms.html?ver=latest#public-trial-license) license which is built into the product itself. When this public trial license expires, you can get a 30-day free trial license called a ["private trial"](https://www.dynamsoft.com/license-tracking/docs/about/terms.html?ver=latest#private-trial-license) license following the steps below
-
-1. Email trial@dynamsoft.com and make sure to include the word "privateTrial" in the email title.
-2. Dynamsoft will automatically create an organization for you and generate a 30-day trial license for that organization. After that, an email will be sent to you.
-3. You can then access the private trial license by specifying the organization ID in your code with the API "organizationID".
-
-NOTE: In case a private trial license fails to be generated, Dynamsoft Support team will get in touch with you.
