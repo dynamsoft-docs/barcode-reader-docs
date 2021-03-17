@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # Release Notes for .NET SDK - 8.x
 
-## 8.2 (03/18/2021)
+## 8.2 (03/17/2021)
 
 ### New
 - Added a new mode argument, `FindAccurateBoundary`, to [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes) that determines if the SDK attempts to find an accurate boundary when RegionPredetectionModes is set to `RPM_GENERAL_HSV_CONTRAST`. 
