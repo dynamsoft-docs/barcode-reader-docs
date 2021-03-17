@@ -61,7 +61,7 @@ Sets the parameters passed to the library to load dynamically.
 ### Setting Methods
 
 #### As JSON Parameter
-`BarcodeColourModes` as a JSON parameter is a JSON Object array. Each JSON Object has several keys for setting the mode and the value of arguments. The array index decides the priority the mode Sets for the barcode colour mode used to process the barcode zone. Default values will be used if there is no manual setting.   
+`BarcodeColourModes` as a JSON parameter is a JSON Object array. Each JSON Object has several keys for setting the mode and the value of arguments. The array index decides the priority of the modes. Default values will be used if there is no manual setting.   
 
 
 | Json Object |	Json Parameter Name | Value Type |
@@ -86,7 +86,7 @@ Sets the parameters passed to the library to load dynamically.
 
 
 #### As `PublicRuntimeSettings` Member
-`BarcodeColourModes` is a [`BarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode) array defines in `furtherModes` which is a struct member of `PublicRuntimeSettings`. It is used for setting the modes and the priority Sets for the barcode colour mode used to process the barcode zone. Default value will be used if there is no manual setting.
+`BarcodeColourModes` is a [`BarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode) array defines in `furtherModes` which is a struct member of `PublicRuntimeSettings`. It is used for setting the modes and the priority. Default value will be used if there is no manual setting.
 
 | Struct |	Struct Member Name | Value Type |
 | ------ | ------------------ | ---------- |
