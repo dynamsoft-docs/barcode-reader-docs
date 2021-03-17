@@ -170,10 +170,13 @@ Sets the parameters passed to the library to load dynamically.
 ## ScaleDownThreshold
 Sets the threshold for the image shrinking. 
 
-**Remarks**   
-If the shorter edge size is larger than the given value, the library will calculate the required height and width of the barcode image and shrink the image to that size before localization. Otherwise, it will perform barcode localization on the original image.   
-If you have an image whose shorter edge size is larger than the given value and the barcode is a small part on it, you can set this value to be larger than the shorter edge of this image.   
-If you have an image whose shorter edge size is larger than the given value and the barcode is clear and big, you can set this value to a smaller one than the default value.
+**Remarks**
+If the shorter edge size is larger than the given value, the library will proportionally shrink the image to that size before localization. Otherwise, it will perform barcode localization on the original image.
+
+For images whose shorter edge size is larger than the default value:
+
+- If the barcode is relatively small, you can set the threshold to a larger number (to avoid image shrinking).
+- If the barcode is clear and relatively big, you can set the threshold to a smaller value.
 
 
 ### As Json Parameter
