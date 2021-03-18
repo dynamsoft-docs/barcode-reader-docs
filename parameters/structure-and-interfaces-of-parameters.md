@@ -3,11 +3,11 @@ description: Introduce the parameter definitions, organization structure, usage 
 title: Dynamsoft Barcode Reader Parameters - Structure and Interfaces of Parameters
 keywords: Parameter,Interface,Hierarchy
 layout: default-layout
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 ---
 
 
-# Hierarchy and work domain of parameters 
+# Structure and Interfaces of Parameters
 This article introduces the parameter definitions, organization structure, usage rules and related interfaces involved in Dynamsoft Barcode Reader.
 
 ## Definitions
