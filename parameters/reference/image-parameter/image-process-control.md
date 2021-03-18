@@ -6,9 +6,7 @@ keywords: DeblurLevel, Pages, PDFRasterDPI, PDFReadingMode, ScaleDownThreshold, 
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 ---
-# ImageParameter Object | DeblurLevel
-
-
+# ImageParameter Object - Image Process Control Parameters
 
 ## DeblurLevel
 Sets the degree of blurriness of the barcode.

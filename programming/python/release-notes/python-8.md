@@ -10,6 +10,21 @@ noTitleIndex: true
 
 # Release Notes for Python SDK - 8.x
 
+## 8.2 (03/17/2021)
+
+### New
+
+- Added a new mode argument, `FindAccurateBoundary`, to [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes) that determines if the SDK attempts to find an accurate boundary when RegionPredetectionModes is set to `RPM_GENERAL_HSV_CONTRAST`. 
+
+### Improved
+
+- Improved both the localization and decoding algorithms for Postal Codes. 
+- LocalizationMode `LM_STATISTICS_POSTAL_CODE` will not be added automatically when enabling Postal Code in your runtime settings. Instead, users must manually add it to the LocalizationMode array if it is required.
+
+### Fixed
+
+- Resolved a bug that infrequently causes the application to crash when decoding a MicroPDF417 barcode.
+
 ## 8.1.2 (01/22/2021)
 
 ### New
