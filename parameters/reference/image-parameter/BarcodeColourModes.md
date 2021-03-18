@@ -26,7 +26,7 @@ needAutoGenerateSidebar: false
 - [LibraryParameters](#libraryparameters)
  
 ##### LightReflection 
-Sets the minimum image dimension (in pixels) to filter the text.
+Sets if there is light reflection on the barocde zone.
 
 
 | Value Type | Value Range | Default Value | Valid Modes | 
