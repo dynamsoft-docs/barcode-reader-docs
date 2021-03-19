@@ -169,7 +169,7 @@ Sets the parameters passed to the library to load dynamically.
 Sets the threshold for the image shrinking. 
 
 **Remarks**
-If the shorter edge size is larger than the given value, the library will proportionally shrink the image to that size before localization. Otherwise, it will perform barcode localization on the original image.
+If the shorter edge size is larger than the given value, the library will shrink the image before localization. Otherwise, it will perform barcode localization on the original image.
 
 For images whose shorter edge size is larger than the default value:
 
