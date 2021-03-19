@@ -15,7 +15,7 @@ noTitleIndex: true
 ### New
 
 - Added a new mode argument, `FindAccurateBoundary`, to [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes) that determines if the SDK attempts to find an accurate boundary when RegionPredetectionModes is set to `RPM_GENERAL_HSV_CONTRAST`. 
-- Added a new an attribute, `organizationID` (string) to `DMLTSConnectionParameters`/ `iDMLTSConnectionParameters`. The attribute adds a new layer of security for both full and trial licenses.
+- Added a new an attribute, `organizationID` (string) to `DMLTSConnectionParameters`. The attribute adds a new layer of security for both full and trial licenses.
 
 ### Improved
 
