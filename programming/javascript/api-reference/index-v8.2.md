@@ -267,6 +267,7 @@ The following methods are related to customizing runtime settings.
 * [`EnumResultType`]({{ site.enumerations }}result-enums.html#resulttype)
 * [`EnumScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode)
 * [`EnumTerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase)
+* [`EnumTextAssistedCorrectionMode`]({{ site.enumerations }}parameter-mode-enums.html#textassistedcorrectionmode)
 * [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode)
 * [`EnumTextResultOrderMode`]({{ site.enumerations }}result-enums.html#textresultordermode)
 * [`EnumTextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode)

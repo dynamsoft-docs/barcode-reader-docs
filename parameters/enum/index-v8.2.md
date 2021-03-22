@@ -36,6 +36,7 @@ breadcrumbText: Enumerations
   | [`RegionPredetectionMode`](parameter-mode-enums.md#regionpredetectionmode) | Describes the region predetection mode. |
   | [`ScaleUpMode`](parameter-mode-enums.md#scaleupmode) | Describes the scale up mode. |
   | [`TerminatePhase`](parameter-mode-enums.md#terminatephase) | Describes the terminate phase. |
+  | [`TextAssistedCorrectionMode`](parameter-mode-enums.md#textassistedcorrectionmode) | Describes the text assisted correction mode. |
   | [`TextFilterMode`](parameter-mode-enums.md#textfiltermode) | Describes the text filter mode. |
   | [`TextureDetectionMode`](parameter-mode-enums.md#texturedetectionmode) | Describes the texture detection mode. | 
 

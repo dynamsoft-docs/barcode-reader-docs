@@ -28,6 +28,7 @@ public struct FurtherModes
 | [`ImagePreprocessingModes`](#imagepreprocessingmodes) | [`EnumImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode)[ ] |
 | [`TextureDetectionModes`](#texturedetectionmodes) | [`EnumTextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode)[ ] |
 | [`TextFilterModes`](#textfiltermodes) | [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode)[ ] |
+| [`TextAssistedCorrectionMode`](#textassistedcorrectionmode) | [`EnumTextAssistedCorrectionMode`]({{ site.parameters_reference }}image-parameter/TextAssistedCorrectionMode.html#textassistedcorrectionmode) |
 | [`DPMCodeReadingModes`](#dpmcodereadingmodes) | [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode)[ ] |
 | [`DeformationResistingModes`](#deformationresistingmodes) | [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode)[ ] |
 | [`BarcodeComplementModes`](#barcodecomplementmodes) | [`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode)[ ] |
@@ -146,6 +147,18 @@ EnumTextFilterMode[] Dynamsoft.DBR.FurtherModes.TextFilterModes
 - **Remarks**  
    The array index represents the priority of the item. The smaller index is, the higher priority is. If the image contains a lot of text, you can enable text filter to speed up the localization process.
 
+### TextAssistedCorrectionMode
+Sets the mode of text assisted correction for barcode decoding. ***Not supported yet***.
+
+```csharp
+EnumTextAssistedCorrectionMode Dynamsoft.DBR.FurtherModes.TextAssistedCorrectionMode
+```
+
+- **Value range**  
+   Any one of the [`TextAssistedCorrectionMode`]({{ site.parameters_reference }}image-parameter/TextAssistedCorrectionMode.html#textassistedcorrectionmode) Enumeration items.  
+     
+- **Default value**  
+   `EnumTextAssistedCorrectionMode.TACM_VERIFYING`  
 
 ### DPMCodeReadingModes
 Sets the mode and priority for DPM code reading.

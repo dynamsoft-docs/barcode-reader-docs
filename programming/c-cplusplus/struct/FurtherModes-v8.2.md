@@ -30,6 +30,7 @@ typedef struct tagFurtherModes  FurtherModes
 | [`imagePreprocessingModes`](#imagepreprocessingmodes) | [`ImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode)\[8\] |
 | [`textureDetectionModes`](#texturedetectionmodes) | [`TextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode)\[8\] |
 | [`textFilterModes`](#textfiltermodes) | [`TextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode)\[8\] |
+| [`textAssistedCorrectionMode`](#textassistedcorrectionmode) | [`TextAssistedCorrectionMode`]({{ site.enumerations }}parameter-mode-enums.html#textassistedcorrectionmode) |
 | [`dpmCodeReadingModes`](#dpmcodereadingmodes) | [`DPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode)\[8\] |
 | [`deformationResistingModes`](#deformationresistingmodes) | [`DeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode)\[8\] |
 | [`barcodeComplementModes`](#barcodecomplementmodes) | [`BarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode)\[8\] |
@@ -155,6 +156,19 @@ TextFilterMode tagFurtherModes::textFilterModes[8]
 - **See also**  
    [`TextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode)
    
+### textAssistedCorrectionMode
+Sets the mode of text assisted correction for barcode decoding. ***Not supported yet***.
+```cpp
+TextAssistedCorrectionMode tagFurtherModes::textAssistedCorrectionMode
+```
+- **Value range**  
+   Any one of the [`TextAssistedCorrectionMode`]({{ site.enumerations }}parameter-mode-enums.html#textassistedcorrectionmode) Enumeration items.  
+     
+- **Default value**  
+   `TACM_VERIFYING`  
+   
+- **See also**  
+   [`TextAssistedCorrectionMode`]({{ site.enumerations }}parameter-mode-enums.html#textassistedcorrectionmode)
    
 ### dpmCodeReadingModes
 Sets the mode and priority for DPM code reading.
