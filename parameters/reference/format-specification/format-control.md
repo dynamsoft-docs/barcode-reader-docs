@@ -484,7 +484,18 @@ The unit is barcode module. For example, if barcode module is 2px and MinQuietZo
 **Json Parameter Example**   
 ```
 {
-    "MinQuietZoneWidth": 10
+  "ImageParameter": {
+    "Name": "ImageParameter1",
+    "FormatSpecificationNameArray": [ "FormatSpecification1" ]
+  },
+  "FormatSpecification": {
+    "BarcodeFormatIds": [
+      "BF_QR_CODE"
+    ],
+    "MinQuietZoneWidth": 2,
+    "Name": "FormatSpecification1"
+  },
+  "Version": "3.0"
 }
 ```
 
