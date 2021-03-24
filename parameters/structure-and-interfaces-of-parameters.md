@@ -226,6 +226,12 @@ Template used by DBR
 
 ## Modes, Mode, Arguments 
 The entire decoding process of Dynamsoft Barcode Reader consists of many subdivided functions, among which the control parameters of some function blocks are designed in accordance with the format of Modes-Mode-Argument. That is, a function is controlled by a Modes parameter. There are many ways to implement this function, each method (Mode) has multiple unique settings, and each setting is an Argument. 
+
+<div align="center">
+   <p><img src="assets/hierarchy-modes-mode-argument.png" alt="Modes-Mode-Argument hierarchy" width="100%" /></p>
+   
+</div>   
+
 For example, one of the functions in the decoding process is barcode localization. Dynamsoft Barcode Reader provides the `LocalizationModes` parameter to control this function. It provides `LM_CONNECTED_BLOCKS`, `LM_STATISTICS`, `LM_LINES`, `LM_SCAN_DIRECTLY`, `LM_STATISTICS_MARKS`, `LM_STATISTICS_POSTAL_CODE`, a total of 6 methods to implement barcode localization. For LM_SCAN_DIRECTLY, there are two Arguments, `ScanStride` and `ScanDirection`.
 
 ## Interfaces to change settings 
