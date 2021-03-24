@@ -10,7 +10,7 @@ needAutoGenerateSidebar: false
 # How-to Guides - Enable Scale Up for Barcode Recognition
 
 
-For some barcodes with small module size, our library will automatically enlarge the barcode to a proper size before recognition.    
+For some barcodes with small module size, Dynamsoft Barcode Reader SDK will automatically enlarge the barcode to a proper size before recognition.    
 
 
 Since version 7.3, Dynamsoft Barcode Reader SDK provides [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html)->[`ScaleUpModes`]({{ site.structs }}PublicRuntimeSettings.html)#scaleupmodes) with arguments - `ModuleSizeThreshold`, `AcuteAngleWithXThreshold` and `TargetModuleSize` APIs which allow you to set the custom rules for scaling up. To enable it, you need to set [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html)->[`ScaleUpModes`]({{ site.structs }}PublicRuntimeSettings.html#scaleupmodes) to `SUM_LINEAR_INTERPOLATION` or `SUM_NEAREST_NEIGHBOUR_INTERPOLATION`, then set the rest parameters.   

@@ -17,13 +17,12 @@ For reference, here are two sample images of DPM codes:
 ![DPM sample image1][1]
 ![DPM sample image2][2]
 
-## How to configure the Barcode Reader to read DPM Codes
+## How to configure the barcode reader to read DPM codes
 
-To enable the DPM feature, you first need to add `LM_STATISTICS_MARKS` to the LocalizationModes and then add `DPMCRM_GENERAL` to [`DPMCodeReadingModes`]({{ site.parameters_reference }}image-parameter/DPMCodeReadingModes.html#dpmcodereadingmodes). 
+To enable the DPM feature, simply add `DPMCRM_GENERAL` to the array of [`DPMCodeReadingModes`]({{ site.parameters_reference }}image-parameter/DPMCodeReadingModes.html#dpmcodereadingmodes). 
 
-`LM_STATISTICS_MARKS` is a dot matrix-based localization method specifically for DPM code and DotCode. For the allowed enumeration values of [`DPMCodeReadingModes`]({{ site.parameters_reference }}image-parameter/DPMCodeReadingModes.html#dpmcodereadingmodes), please refer to its documentation page.
-
-In order to facilitate the configuration, adding `DPMCRM_GENERAL` to [`DPMCodeReadingModes`]({{ site.parameters_reference }}image-parameter/DPMCodeReadingModes.html#dpmcodereadingmodes) automatically adds `LM_STATISTICS_MARKS` to LocalizationModes. Therefore, if you would like to enable DPM, you only need to set [`DPMCodeReadingModes`]({{ site.parameters_reference }}image-parameter/DPMCodeReadingModes.html#dpmcodereadingmodes) to `DPMCRM_GENERAL`. 
+>Note: Adding `DPMCRM_GENERAL` to [`DPMCodeReadingModes`]({{ site.parameters_reference }}image-parameter/DPMCodeReadingModes.html#dpmcodereadingmodes) will change the default value of LocalizationModes. It automatically adds a new mode `LM_STATISTICS_MARKS` to LocalizationModes.    
+`LM_STATISTICS_MARKS` is a dot matrix-based localization method specifically for DPM code and DotCode. 
 
 ## Example
 

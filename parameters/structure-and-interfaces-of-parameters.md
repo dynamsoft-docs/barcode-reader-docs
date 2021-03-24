@@ -8,13 +8,13 @@ needAutoGenerateSidebar: true
 
 
 # Structure and Interfaces of Parameters
-This article introduces the parameter definitions, organization structure, usage rules and related interfaces involved in Dynamsoft Barcode Reader.
+This article introduces the parameter definitions, organization structure, usage rules, and related interfaces involved in Dynamsoft Barcode Reader.
 
 ## Definitions
 Dynamsoft Barcode Reader uses a template to set parameters. A template contains three types of data: `ImageParameter`, `RegionDefinition`, and `FormatSpecification`.
-- `ImageParameter` is used to specify the decoding operation settings on the entire image. The value of the `ImageParameter.Name` field is the unique identifier of the `ImageParameter`.
-- `RegionDefinition` is used to specify a decoding region. It is also used to specify the decoding operation settings in this area. The value of the `RegionDefinition.Name` field is the unique identifier of `RegionDefinition`.
-- `FormatSpecification` is used to specify a barcode format. It is also used to specify the decoding operation settings of this barcode format. The value of the `FormatSpecification.Name` field is the unique identifier of `FormatSpecification`.
+- `ImageParameter` is used to specify the decoding settings on the entire image. The value of the `ImageParameter.Name` field is the unique identifier of the `ImageParameter`.
+- `RegionDefinition` is used to specify a decoding region. It is also used to specify the decoding settings in this area. The value of the `RegionDefinition.Name` field is the unique identifier of `RegionDefinition`.
+- `FormatSpecification` is used to specify a barcode format. It is also used to specify the decoding settings of this barcode format. The value of the `FormatSpecification.Name` field is the unique identifier of `FormatSpecification`.
 
 ## Organizational Relationship
 - There is only one `ImageParameter` in a template definition. The `ImageParameter.Name` field denotes the unique identifier of the template;
@@ -25,16 +25,24 @@ Dynamsoft Barcode Reader uses a template to set parameters. A template contains 
 
 ```JSON
 {
-    "ImageParameterContentArray": [
-      {
-        "Name": "ImageParameter1", 
-        "BarcodeFormatIds": ["BF_ONED"]
-      },
-      {
-        "Name": "ImageParameter2", 
-        "BarcodeFormatIds": ["BF_ALL"]
-      }
-    ]
+	"FormatSpecificationArray": [{
+		"Name": "IP1_BF_QR_CODE"
+	}],
+	"ImageParameter": {
+		"FormatSpecificationNameArray": [
+			"IP1_BF_QR_CODE"
+		],
+
+		"Name": "default",
+
+		"RegionDefinitionNameArray": [
+			"region1"
+		]
+	},
+	"RegionDefinition": {
+		"Name": "region1"
+	},
+	"Version": "3.0"
 }
 ```
 
@@ -218,6 +226,12 @@ Template used by DBR
 
 ## Modes, Mode, Arguments 
 The entire decoding process of Dynamsoft Barcode Reader consists of many subdivided functions, among which the control parameters of some function blocks are designed in accordance with the format of Modes-Mode-Argument. That is, a function is controlled by a Modes parameter. There are many ways to implement this function, each method (Mode) has multiple unique settings, and each setting is an Argument. 
+
+<div align="center">
+   <p><img src="assets/hierarchy-modes-mode-argument.png" alt="Modes-Mode-Argument hierarchy" width="100%" /></p>
+   
+</div>   
+
 For example, one of the functions in the decoding process is barcode localization. Dynamsoft Barcode Reader provides the `LocalizationModes` parameter to control this function. It provides `LM_CONNECTED_BLOCKS`, `LM_STATISTICS`, `LM_LINES`, `LM_SCAN_DIRECTLY`, `LM_STATISTICS_MARKS`, `LM_STATISTICS_POSTAL_CODE`, a total of 6 methods to implement barcode localization. For LM_SCAN_DIRECTLY, there are two Arguments, `ScanStride` and `ScanDirection`.
 
 ## Interfaces to change settings 
