@@ -492,7 +492,7 @@ The unit is barcode module. For example, if barcode module is 2px and MinQuietZo
     "BarcodeFormatIds": [
       "BF_QR_CODE"
     ],
-    "MinQuietZoneWidth": 0,
+    "MinQuietZoneWidth": 2,
     "Name": "FormatSpecification1"
   },
   "Version": "3.0"
