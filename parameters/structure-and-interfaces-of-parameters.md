@@ -87,7 +87,6 @@ The parameters of `ImageParameter` are:
 - ImageParameter.ScaleDownThreshold
 - ImageParameter.ScaleUpModes
 - ImageParameter.TerminatePhase
-- ImageParameter.TextAssistedCorrectionMode
 - ImageParameter.TextFilterModes
 - ImageParameter.TextResultOrderModes
 - ImageParameter.TextureDetectionModes
@@ -217,7 +216,6 @@ Template used by DBR
     - ReturnBarcodeZoneClarity
     - ScaleUpModes
     - TerminatePhase
-    - TextAssistedCorrectionMode
     - TextFilterModes
     - TextResultOrderModes
     - TextureDetectionModes

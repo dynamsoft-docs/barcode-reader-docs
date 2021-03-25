@@ -22,6 +22,7 @@ Stores the FurtherModes.
 | [`imagePreprocessingModes`](#imagepreprocessingmodes) | *int\[\]* |
 | [`textureDetectionModes`](#texturedetectionmodes) | *int\[\]* |
 | [`textFilterModes`](#textfiltermodes) | *int\[\]* |
+| [`textAssistedCorrectionMode`](#textassistedcorrectionmode) | *int* |
 | [`dpmCodeReadingModes`](#dpmcodereadingmodes) | *int\[\]* |
 | [`deformationResistingModes`](#deformationresistingmodes) | *int\[\]* |
 | [`barcodeComplementModes`](#barcodecomplementmodes) | *int\[\]* |
@@ -147,6 +148,19 @@ int[] com.dynamsoft.dbr.FurtherModes.textFilterModes
 - **See also**  
    [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#enumtextfiltermode)
    
+### textAssistedCorrectionMode
+Sets the mode of text assisted correction for barcode decoding. ***Not supported yet***.
+```java
+int com.dynamsoft.dbr.FurtherModes.textAssistedCorrectionMode
+```
+- **Value range**  
+   Any one of the [`EnumTextAssistedCorrectionMode`]({{ site.enumerations }}parameter-mode-enums.html#enumtextassistedcorrectionmode) Enumeration items.  
+     
+- **Default value**  
+   `TACM_VERIFYING`  
+   
+- **See also**  
+   [`EnumTextAssistedCorrectionMode`]({{ site.enumerations }}parameter-mode-enums.html#enumtextassistedcorrectionmode)
    
 ### dpmCodeReadingModes
 Sets the mode and priority for DPM code reading.

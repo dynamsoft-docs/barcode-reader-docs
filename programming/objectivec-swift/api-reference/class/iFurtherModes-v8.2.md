@@ -31,6 +31,7 @@ Stores the FurtherModes.
 | [`imagePreprocessingModes`](#imagepreprocessingmodes) | *NSArray*\* |
 | [`textureDetectionModes`](#texturedetectionmodes) | *NSArray*\* |
 | [`textFilterModes`](#textfiltermodes) | *NSArray*\* |
+| [`textAssistedCorrectionMode`](#textassistedcorrectionmode) | [`EnumTextAssistedCorrectionMode`]({{ site.enumerations }}parameter-mode-enums.html#textassistedcorrectionmode) |
 | [`dpmCodeReadingModes`](#dpmcodereadingmodes) | *NSArray*\* |
 | [`deformationResistingModes`](#deformationresistingmodes) | *NSArray*\* |
 | [`barcodeComplementModes`](#barcodecomplementmodes) | *NSArray*\* |
@@ -174,6 +175,22 @@ NSArray* textFilterModes[8]
 - **See also**  
    [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode)
    
+### textAssistedCorrectionMode
+
+Sets the mode of text assisted correction for barcode decoding. ***Not supported yet***.
+
+```objc
+EnumTextAssistedCorrectionMode textAssistedCorrectionMode
+```
+
+- **Value range**  
+   Any one of the [`EnumTextAssistedCorrectionMode`]({{ site.enumerations }}parameter-mode-enums.html#textassistedcorrectionmode) Enumeration items.  
+     
+- **Default value**  
+   `EnumTextAssistedCorrectionModeVerifying`  
+   
+- **See also**  
+   [`EnumTextAssistedCorrectionMode`]({{ site.enumerations }}parameter-mode-enums.html#textassistedcorrectionmode)
    
 ### dpmCodeReadingModes
 

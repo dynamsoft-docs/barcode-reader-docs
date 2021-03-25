@@ -604,6 +604,18 @@ PublicRuntimeSetting.texture_detection_modes
 - **Remarks**   
     The array index represents the priority of the item. The smaller the index, the higher the priority.  
 
+### text_assisted_correction_mode
+Sets the mode of text assisted correction for barcode decoding. Not supported yet.
+
+```python
+PublicRuntimeSetting.text_assisted_correction_mode
+```
+
+- **Value range**   
+    Any one of the TextAssistedCorrectionMode Enumeration items.
+      
+- **Default value**   
+    EnumTextAssistedCorrectionMode.TACM_VERIFYING
     
 ### text_filter_modes
 Sets the mode and priority for text filter.

@@ -2,7 +2,7 @@
 layout: default-layout
 title: Dynamsoft Barcode Reader Enumerations - Parameter Mode Enumerations
 description: This article shows Parameter Mode Enumerations of Dynamsoft Barcode Reader.
-keywords: BarcodeColourMode, BarcodeComplementMode, BinarizationMode, ColourClusteringMode, ColourConversionMode, ConflictMode, DeblurMode, DeformationResistingMode, DPMCodeReadingMode, GrayscaleTransformationMode, ImagePreprocessingMode, LocalizationMode, PDFReadingMode, RegionPredetectionMode, ScaleUpMode, TerminatePhase, TextFilterMode, TextureDetectionMode, parameter mode enumeration, enumeration
+keywords: BarcodeColourMode, BarcodeComplementMode, BinarizationMode, ColourClusteringMode, ColourConversionMode, ConflictMode, DeblurMode, DeformationResistingMode, DPMCodeReadingMode, GrayscaleTransformationMode, ImagePreprocessingMode, LocalizationMode, PDFReadingMode, RegionPredetectionMode, ScaleUpMode, TerminatePhase, TextAssistedCorrectionMode, TextFilterMode, TextureDetectionMode, parameter mode enumeration, enumeration
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 ---
@@ -27,6 +27,7 @@ needGenerateH3Content: false
   | [`RegionPredetectionMode`](#regionpredetectionmode) | Describes the region predetection mode. |
   | [`ScaleUpMode`](#scaleupmode) | Describes the scale up mode. |
   | [`TerminatePhase`](#terminatephase) | Describes the terminate phase. |
+  | [`TextAssistedCorrectionMode`](#textassistedcorrectionmode) | Describes the text assisted correction mode. |
   | [`TextFilterMode`](#textfiltermode) | Describes the text filter mode. |
   | [`TextureDetectionMode`](#texturedetectionmode) | Describes the texture detection mode. | 
 
@@ -534,6 +535,35 @@ Describes the terminate phase.
 
 &nbsp;
 
+
+
+## TextAssistedCorrectionMode
+Describes the text assisted correction mode.
+
+### Declarations
+   
+| Language | Declaration |
+| -------- | ----------- |
+| C / C++ | `enum TextAssistedCorrectionMode` |
+| .Net | `enum Dynamsoft.DBR.EnumTextAssistedCorrectionMode` |
+| JavaScript | `Dynamsoft.DBR.EnumTextAssistedCorrectionMode` |
+| Python | `class EnumTextAssistedCorrectionMode(IntEnum)` |
+| Java / Android | `class EnumTextAssistedCorrectionMode` |
+| ObjC / Swift | `enum EnumTextAssistedCorrectionMode` |
+
+
+### Members
+   
+| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
+| -------------------------- | ------------------- | ----- | ----------- |
+| TACM_SKIP | EnumTextAssistedCorrectionModeSkip | 0x00 | Skips the text assisted correction. |
+| TACM_AUTO | EnumTextAssistedCorrectionModeAuto | 0x01 | **Not supported yet.** |
+| TACM_VERIFYING | EnumTextAssistedCorrectionModeVerifying | 0x02 | Uses the accompanying text to verify the decoded barcode result. Check arguments of [`TextAssistedCorrectionMode`]({{ site.parameters_reference }}image-parameter/TextAssistedCorrectionMode.html#mode-arguments) for available argument settings. |
+| TACM_VERIFYING_PATCHING | EnumTextAssistedCorrectionModeVerifyingPatching | 0x04 | Uses the accompanying text to verify and patch the decoded barcode result. Check arguments of [`TextAssistedCorrectionMode`]({{ site.parameters_reference }}image-parameter/TextAssistedCorrectionMode.html#mode-arguments) for available argument settings. |
+
+
+
+&nbsp;
 
 
 

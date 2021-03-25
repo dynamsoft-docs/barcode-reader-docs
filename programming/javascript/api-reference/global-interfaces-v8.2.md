@@ -52,6 +52,7 @@ Stores the FurtherModes.
 | `grayscaleTransformationModes` | [*`GrayscaleTransformationMode`*]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode) | Sets the mode and priority for the grayscale image conversion. | 
 | `imagePreprocessingModes` | [*`ImagePreprocessingMode`*]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode) | Sets the mode and priority for image preprocessing algorithms. | 
 | `regionPredetectionModes` | [*`RegionPredetectionMode`*]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode) | Sets the region pre-detection mode for barcodes search. | 
+| `textAssistedCorrectionMode` | [*`TextAssistedCorrectionMode`*]({{ site.enumerations }}parameter-mode-enums.html#textassistedcorrectionmode) | Sets the mode of text assisted correction for barcode decoding. | 
 | `textFilterModes` | [*`TextFilterMode`*]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode) | Sets the mode and priority for text filter. | 
 | `textureDetectionModes` | [*`TextureDetectionMode`*]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode) | Sets the mode and priority for texture detection. | 
 
