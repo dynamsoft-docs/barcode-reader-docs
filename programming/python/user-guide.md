@@ -332,3 +332,21 @@ Below is a template for your reference. To learn more about the APIs, you can ch
    "Version" : "3.0"
 }
 ```
+## How to Upgrade
+
+### From version 8.0 to 8.x
+
+`pip install dbr --upgrade`
+
+
+### From version 7.x to 8.x
+
+`pip install dbr --upgrade`
+
+In v8.0, we introduced a new license tracking mechanism, <a href="https://www.dynamsoft.com/license-tracking/docs/about/index.html" target="_blank">License 2.0</a>. 
+
+If you wish to use License 2.0, please refer to [this article](../../license-activation/set-full-license.md) to set the license.
+
+After you upgraded your license to version 8.x:
+
+Please download the samples via our <a href="https://github.com/Dynamsoft/python-barcode/tree/master/samples" target="_blank">Python GitHub Repository</a>. 
