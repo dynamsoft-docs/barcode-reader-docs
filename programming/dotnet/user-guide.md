@@ -338,6 +338,14 @@ These files are under `DBR-DotNet-{version number}\DynamsoftBarcodeReader\Lib\4.
 
 ####  Upgrade the license
 
+### From version 8.0 to 8.x
+
+Just replace the old assembly files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx). Your existing license for 8.0 is compatible with 8.x.
+
+### From version 7.x
+
+You need to replace the old assembly files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
+
  Your previous SDK license for version 7.x is not compatible with the version 8.x. Please [contact us](https://www.dynamsoft.com/Company/Contact.aspx) to upgrade your license.
 
  After you upgraded your license to version 8.x:
