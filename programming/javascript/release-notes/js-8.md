@@ -10,6 +10,12 @@ noTitleIndex: true
 
 # Release Notes for JavaScript SDK - 8.x
 
+## 8.2.1 (03/29/2021)
+
+### Fixed
+
+- Resolved a bug that returns the error as a Promise object instead of a string when calling the method loadWasm().
+
 ## 8.2 (03/17/2021)
 
 ### New
