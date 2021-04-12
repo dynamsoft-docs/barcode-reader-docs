@@ -441,8 +441,9 @@ try{
    BarcodeReader reader = new BarcodeReader();
    // Use the SDK offline
    reader.initLicenseFromLicenseContent("licenseKey1;licenseKey2", "LicenseContent");
-}catch(Exception e) { //if your license is invalid, a BarcodeReaderException will be throw out
-   System.out.println(e);
+}catch(BarcodeReaderException e) { //if your license is invalid, a BarcodeReaderException will be thrown
+   System.out.println(e.getErrorCode());
+   System.out.println(e.getMessage());
 }
 ```
 
