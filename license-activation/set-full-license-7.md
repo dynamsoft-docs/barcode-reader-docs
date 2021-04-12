@@ -440,7 +440,7 @@ Code snippet in Java:
 try{
    BarcodeReader reader = new BarcodeReader();
    // Use the SDK offline
-   reader.initLicenseFromLicenseContent("", "licenseKey1;licenseKey2", "LicenseContent");
+   reader.initLicenseFromLicenseContent("licenseKey1;licenseKey2", "LicenseContent");
 }catch(Exception e) { //if your license is invalid, a BarcodeReaderException will be throw out
    System.out.println(e);
 }
