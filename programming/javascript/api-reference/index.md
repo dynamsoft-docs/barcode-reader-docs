@@ -189,7 +189,7 @@ The following method is related to decoding barcodes.
 
 | Method               | Description |
 |----------------------|-------------|
-| [`decodeCurrentFrame`](BarcodeScanner/methods/decodeCurrentFrame.md#decodecurrentframe) | Decode barcodes from the current frame. |
+| [`decodeCurrentFrame`](BarcodeScanner/methods/decode.md#decodecurrentframe) | Decode barcodes from the current frame. |
 
 ## `BarcodeScanner` *Class* Properties
 
