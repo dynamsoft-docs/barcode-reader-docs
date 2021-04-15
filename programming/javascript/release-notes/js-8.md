@@ -10,6 +10,24 @@ noTitleIndex: true
 
 # Release Notes for JavaScript SDK - 8.x
 
+## 8.2.3 (04/15/2021)
+
+### New
+
+- Added properties `bVibrateOnSuccessfulRead` and `vibrateDuration` to control the vibration of a device when barcodes are found.
+- Added methods `showVideo()` and `decodeCurrentFrame()` to make it possible for users to show the video and manually trigger the decoding of a frame.
+- Added a sample for [Vue 3](https://v3.vuejs.org/).
+
+### Improved
+
+- Optimized how the WASM files are created to make them smaller (18% smaller).
+- When opening a camera takes too long and times out, an exception will be thrown.
+- When the webpage in which a `BarcodeScanner` instance is running gets hidden (not visible to the user), the barcode scanning will stop automatically. Later when it becomes visible again, the scanning will resume automatically.
+
+### Changed
+
+- Added a "Powered by Dynamsoft" logo to the default Barcode Scanner UI.
+
 ## 8.2.1 (03/29/2021)
 
 ### Fixed
