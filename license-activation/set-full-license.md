@@ -72,9 +72,9 @@ You can set the license by following the steps below:
    int iRet = -1;
    char szErrorMsg[256];
    DM_LTSConnectionParameters ltspar;    
-   reader.InitLTSConnectionParameters(&ltspar);
+   CBarcodeReader::InitLTSConnectionParameters(&ltspar);
    ltspar.handshakeCode = "200***001-1000*****"; // Please replace the handshakeCode with your own
-   iRet = reader.InitLicenseFromLTS(&ltspar, szErrorMsg, 256);
+   iRet = CBarcodeReader::InitLicenseFromLTS(&ltspar, szErrorMsg, 256);
    
    if (iRet != DBR_OK)
     {
@@ -85,18 +85,17 @@ You can set the license by following the steps below:
 
  Code snippet in C#:
  ```csharp
-   DMLTSConnectionParameters ltspar = _br.InitLTSConnectionParamters();           
+   DMLTSConnectionParameters ltspar = BarcodeReader.InitLTSConnectionParamters();           
    ltspar.HandshakeCode = "200***001-1000*****"; // Please replace the handshakeCode with your own
    EnumErrorCode iRet = BarcodeReader.InitLicenseFromLTS(ltspar, out strErrorMSG);
  ```
 
  Code snippet in Java:
  ```java
-   BarcodeReader br = new BarcodeReader("");
-   DMLTSConnectionParameters ltspar = br.initLTSConnectionParameters();
+   DMLTSConnectionParameters ltspar = BarcodeReader.initLTSConnectionParameters();
    ltspar.handshakeCode = "200***001-1000*****"; // Please replace the handshakeCode with your own
    ltspar.deploymentType = EnumDMDeploymentType.DM_DT_DESKTOP; // Please replace the deploymentType with your own
-   br.initLicenseFromLTS(ltspar);
+   BarcodeReader.initLicenseFromLTS(ltspar);
  ```
 
  Code snippet in iOS (Objective-C):
