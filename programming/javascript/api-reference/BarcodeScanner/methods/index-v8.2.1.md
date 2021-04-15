@@ -49,7 +49,6 @@ The following methods are related to controlling the camera and its settings.
 | [`getCurrentCamera`](camera-controls.md#getcurrentcamera) | Get information about the currently used camera. |
 | [`setCurrentCamera`](camera-controls.md#setcurrentcamera) | Set camera by its information or device ID. |
 | [`show`](camera-controls.md#show) | Show the camera UI element, open the camera, and start decoding. |
-| [`showVideo`](camera-controls.md#showvideo) | Show the camera UI element, open the camera but do not start decoding. |
 | [`hide`](camera-controls.md#hide) | Stop the camera and hide the camera UI element. |
 | [`open`](camera-controls.md#open) | Open the camera. |
 | [`close`](camera-controls.md#close) | Close and release the camera. |
@@ -91,11 +90,3 @@ The following methods are related to customizing runtime settings.
 | [`updateRuntimeSettings`](runtime-settings.md#updateruntimesettings.md) | Modify and update the current runtime settings. |
 | [`getModeArgument`](../BarcodeReader/methods/parameter-and-runtime-settings.md#getmodeargument) | Get argument value for the specified mode parameter. Inherited from the `BarcodeReader` class. |
 | [`setModeArgument`](../BarcodeReader/methods/parameter-and-runtime-settings.md#setmodeargument) | Set argument value for the specified mode parameter. Inherited from the `BarcodeReader` class. |
-
-### Decode
-
-The following method is related to decoding barcodes.
-
-| Method               | Description |
-|----------------------|-------------|
-| [`decodeCurrentFrame`](decode.md#decodecurrentframe) | Decode barcodes from the current frame. |

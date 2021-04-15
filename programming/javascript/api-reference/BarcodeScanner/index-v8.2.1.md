@@ -49,7 +49,6 @@ The following methods are related to controlling the camera and its settings.
 | [`getCurrentCamera`](methods/camera-controls.md#getcurrentcamera) | Get information about the currently used camera. |
 | [`setCurrentCamera`](methods/camera-controls.md#setcurrentcamera) | Set camera by its information or device ID. |
 | [`show`](methods/camera-controls.md#show) | Show the camera UI element, open the camera, and start decoding. |
-| [`showVideo`](methods/camera-controls.md#showvideo) | Show the camera UI element, open the camera but do not start decoding. |
 | [`hide`](methods/camera-controls.md#hide) | Stop the camera and hide the camera UI element. |
 | [`open`](methods/camera-controls.md#open) | Open the camera. |
 | [`close`](methods/camera-controls.md#close) | Close and release the camera. |
@@ -92,14 +91,6 @@ The following methods are related to customizing runtime settings.
 | [`getModeArgument`](../BarcodeReader/methods/parameter-and-runtime-settings.md#getmodeargument) | Get argument value for the specified mode parameter. Inherited from the `BarcodeReader` class. |
 | [`setModeArgument`](../BarcodeReader/methods/parameter-and-runtime-settings.md#setmodeargument) | Set argument value for the specified mode parameter. Inherited from the `BarcodeReader` class. |
 
-### Decode
-
-The following method is related to decoding barcodes.
-
-| Method               | Description |
-|----------------------|-------------|
-| [`decodeCurrentFrame`](methods/decodeCurrentFrame.md#decodecurrentframe) | Decode barcodes from the current frame. |
-
 ## `BarcodeScanner` *Class* Properties
 
 | Property            | Description |
@@ -122,7 +113,6 @@ The following method is related to decoding barcodes.
 | `oriCanvas` |  An [OffscreenCanvas](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas) object that holds the original image. Inherited from the `BarcodeReader` class. |
 | `_bUseWebgl` | Whether to enable image preprocessing with WebGL APIs, this API may change in the future. Inherited from the `BarcodeReader` class. |
 | `bPlaySoundOnSuccessfulRead` | If set to `true`, a sound will be played when a barcode is read successfully. You can change the sound using [`soundOnSuccessfulRead`](properties.md#soundonsuccessfulread)|
-| [`bVibrateOnSuccessfulRead`](properties.md#bvibrateonsuccessfulread) | Whether to vibrate when the scanner reads a barcode successfully. |
 | [`barcodeFillStyle`](properties.md#barcodefillstyle) | Set the style used when filling in located barcode. | 
 | `barcodeLineWidth` | Set the width of the located barcode border. | 
 | [`barcodeStrokeStyle`](properties.md#barcodestrokestyle) | Set the style of the located barcode border. | 
@@ -134,7 +124,6 @@ The following method is related to decoding barcodes.
 | [`onUnduplicatedRead`](properties.md#onunduplicatedread) | Triggered when a new, unduplicated barcode is found. |
 | [`singleFrameMode`](properties.md#singleframemode) | If set to `true`, single video frames will be used instead of a continuous video stream. | 
 | [`soundOnSuccessfulRead`](properties.md#soundonsuccessfulread) | Get or set the sound to play when a barcode is read successfully. | 
-| [`vibrateDuration`](properties.md#vibrateduration) | Get or set how long the vibration lasts. |
 
 ## `BarcodeScanner` Interfaces
 
