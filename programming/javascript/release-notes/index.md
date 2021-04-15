@@ -9,6 +9,7 @@ breadcrumbText: Release Notes
 
 # Dynamsoft Barcode Reader JavaScript SDK - Release Notes
 
+- [8.2.3 (04/15/2021)](js-8.md#823-04152021)
 - [8.2.1 (03/29/2021)](js-8.md#821-03292021)
 - [8.2 (03/17/2021)](js-8.md#82-03172021)
 - [8.1.3   (03/04/2021)](js-8.md#813-03042021)
