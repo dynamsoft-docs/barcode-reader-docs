@@ -98,7 +98,7 @@ The following method is related to decoding barcodes.
 
 | Method               | Description |
 |----------------------|-------------|
-| [`decodeCurrentFrame`](methods/decodeCurrentFrame.md#decodecurrentframe) | Decode barcodes from the current frame. |
+| [`decodeCurrentFrame`](methods/decode.md#decodecurrentframe) | Decode barcodes from the current frame. |
 
 ## `BarcodeScanner` *Class* Properties
 

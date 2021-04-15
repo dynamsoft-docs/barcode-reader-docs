@@ -30,7 +30,7 @@ needGenerateH3Content: false
 | `bSaveOriCanvas` | If set to `true`, save the original image in `oriCanvas`. Inherited from the `BarcodeReader` class. |
 | `oriCanvas` |  An [OffscreenCanvas](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas) object that holds the original image. Inherited from the `BarcodeReader` class. |
 | `_bUseWebgl` | Whether to enable image preprocessing with WebGL APIs, this API may change in the future. Inherited from the `BarcodeReader` class. |
-| `bPlaySoundOnSuccessfulRead` | If set to `true`, a sound will be played when a barcode is read successfully. You can change the sound using [`soundOnSuccessfulRead`](#soundonsuccessfulread)|
+| [`bPlaySoundOnSuccessfulRead`](#bplaysoundonsuccessfulread) | If set to `true`, a sound will be played when a barcode is read successfully. You can change the sound using [`soundOnSuccessfulRead`](#soundonsuccessfulread)|
 | [`barcodeFillStyle`](#barcodefillstyle) | Set the style used when filling in located barcode. | 
 | `barcodeLineWidth` | Set the width of the located barcode border. | 
 | [`barcodeStrokeStyle`](#barcodestrokestyle) | Set the style of the located barcode border. | 
