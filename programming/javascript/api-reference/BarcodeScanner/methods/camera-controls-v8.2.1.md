@@ -17,7 +17,6 @@ needGenerateH3Content: false
 | [`setCurrentCamera`](#setcurrentcamera) | Set camera by its information or device ID. |
 | [`hide`](#hide) | Stop the camera and hide the camera UI element. |
 | [`show`](#show) | Show the camera UI element, open the camera, and start decoding. |
-| [`showVideo`](#showvideo) | Show the camera UI element, open the camera but do not start decoding. |
 | [`close`](#close) | Close and release the camera. |
 | [`isOpen`](#isopen) | Check if the camera is open. |
 | [`open`](#open) | Open the camera. |
@@ -119,24 +118,6 @@ show() returns Promise
 
 ```javascript
 await scanner.show();
-```
-
-## showVideo
-
-Bind UI, open the camera, remove the UIElement `display` style if the original style is `display:none;`, but do not start decoding.
-
-```javascript
-showVideo() returns Promise
-```
-
-### Return Value
-
-<code>Promise<<a href="../interfaces.html#scannerplaycallbackinfo">ScannerPlayCallbackInfo</a>></code>
-
-### Sample
-
-```javascript
-await scanner.showVideo();
 ```
 
 ## close

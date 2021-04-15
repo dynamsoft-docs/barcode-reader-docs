@@ -30,8 +30,7 @@ needGenerateH3Content: false
 | `bSaveOriCanvas` | If set to `true`, save the original image in `oriCanvas`. Inherited from the `BarcodeReader` class. |
 | `oriCanvas` |  An [OffscreenCanvas](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas) object that holds the original image. Inherited from the `BarcodeReader` class. |
 | `_bUseWebgl` | Whether to enable image preprocessing with WebGL APIs, this API may change in the future. Inherited from the `BarcodeReader` class. |
-| [`bPlaySoundOnSuccessfulRead`](#bplaysoundonsuccessfulread) | If set to `true`, a sound will be played when a barcode is read successfully. You can change the sound using [`soundOnSuccessfulRead`](#soundonsuccessfulread)|
-| [`bVibrateOnSuccessfulRead`](#bvibrateonsuccessfulread) | Whether to vibrate when the scanner reads a barcode successfully. |
+| `bPlaySoundOnSuccessfulRead` | If set to `true`, a sound will be played when a barcode is read successfully. You can change the sound using [`soundOnSuccessfulRead`](#soundonsuccessfulread)|
 | [`barcodeFillStyle`](#barcodefillstyle) | Set the style used when filling in located barcode. | 
 | `barcodeLineWidth` | Set the width of the located barcode border. | 
 | [`barcodeStrokeStyle`](#barcodestrokestyle) | Set the style of the located barcode border. | 
@@ -42,8 +41,7 @@ needGenerateH3Content: false
 | [`onPlayed`](#onplayed) | Triggered when the camera video stream is played. | 
 | [`onUnduplicatedRead`](#onunduplicatedread) | Triggered when a new, unduplicated barcode is found. |
 | [`singleFrameMode`](#singleframemode) | If set to `true`, single video frames will be used instead of a continuous video stream. | 
-| [`soundOnSuccessfulRead`](#soundonsuccessfulread) | Get or set the sound to play when a barcode is read successfully. |
-| [`vibrateDuration`](#vibrateduration) | Get or set how long the vibration lasts. |
+| [`soundOnSuccessfulRead`](#soundonsuccessfulread) | Get or set the sound to play when a barcode is read successfully. | 
 
 ## defaultUIElementURL
 
@@ -120,24 +118,6 @@ scanner.bPlaySoundOnSuccessfulRead = "frame";
 
 scanner.bPlaySoundOnSuccessfulRead = "unduplicated";
 ```
-
-## bVibrateOnSuccessfulRead
-
-Whether to vibrate when the scanner reads a barcode successfully. Default value is `false`, which does not vibrate. Use frame or true to play a sound when any barcode is found within a frame. Use unduplicated to play a sound only when any unique/unduplicated barcode is found within a frame.
-
-```javascript
-// https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#chrome_enterprise_policies
-    
-scanner.bVibrateOnSuccessfulRead = false;
-
-scanner.bVibrateOnSuccessfulRead = true;
-
-scanner.bVibrateOnSuccessfulRead = "frame";
-
-scanner.bVibrateOnSuccessfulRead = "unduplicated";
-```
-
-refer: favicon bug https://bugs.chromium.org/p/chromium/issues/detail?id=1069731&q=favicon&can=2
 
 ## barcodeFillStyle
 
@@ -278,13 +258,3 @@ scanner.onUnduplicatedRead = (txt, result) => {
 ```
 
 [Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)
-
-## vibrateDuration
-
-Set in milliseconds how long the vibration lasts.
-
-### Type Declaration
-
-```typescript
-vibrateDuration: number = 300
-```
