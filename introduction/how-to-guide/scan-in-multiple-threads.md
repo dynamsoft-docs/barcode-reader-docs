@@ -10,7 +10,7 @@ needAutoGenerateSidebar: false
 # How-to Guides - Scan in Multiple Threads    
 
 
-To scan barcodes in multiple threads using Dynamsoft Barcode Reader, you need to create multiple instances of `BarcodeReader` and run separate instance in each thread. Dynamsoft Barcode Reader SDK is non-thread safe. Please don't have multiple threads access the same `BarcodeReader` object.     
+To scan barcodes in multiple threads using Dynamsoft Barcode Reader, you need to create multiple instances of `BarcodeReader` and run separate instance in each thread. Please don't have multiple threads access the same `BarcodeReader` object.     
 
 
 
