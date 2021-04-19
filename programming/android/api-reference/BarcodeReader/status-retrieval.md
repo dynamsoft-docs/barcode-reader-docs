@@ -29,7 +29,18 @@ The version information string.
 ### Code Snippet
 
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader reader = new BarcodeReader();
+DMLTSConnectionParameters info = new DMLTSConnectionParameters();
+info.organizationID = "200001";
+info.sessionPassword = "******";
+reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
+   @Override
+   public void LTSLicenseVerificationCallback(boolean b, Exception e) {
+      if (!b && e != null) {
+         e.printStackTrace();
+      }
+   }
+}
 String versionInfo = reader.getVersion();
 reader.destroy();
 ```

@@ -60,7 +60,14 @@ Objective-C:
 
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
-barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicense:@"t0260NwAAAHV***************"];
+iDMLTSConnectionParameters* lts = [[iDMLTSConnectionParameters alloc] init];
+lts.organizationID = @"200001";
+lts.sessionPassword = @"******";
+barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromLTS:lts verificationDelegate:self];
+- (void)LTSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
+{
+        //TODO add your code for license verification
+}
 iPublicRuntimeSettings *settings;
 NSError __autoreleasing * _Nullable error;
 NSMutableArray *mArray = [NSMutableArray arrayWithArray:settings.binarizationModes];
@@ -75,7 +82,14 @@ Swift:
 ```Swift
 let error: NSError? = NSError()
 let mArray: NSMutableArray? = NSMutableArray()
-let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
+let lts = iDMLTSConnectionParameters()
+lts.organizationID = "200001"
+lts.sessionPassword = "******"
+let barcodeReader = DynamsoftBarcodeReader(licenseFromLTS: lts, verificationDelegate: self)
+func ltsLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
+{
+    print("isSucc : \(isSuccess) error : \(String(describing: error))")
+}
 let settings = barcodeReader.getRuntimeSettings(error: nil)
 mArray!.setArray(settings.binarizationModes as! [Any])
 mArray![0] = EnumBinarizationMode.LocalBlock
@@ -128,7 +142,14 @@ Objective-C:
 
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
-barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicense:@"t0260NwAAAHV***************"];
+iDMLTSConnectionParameters* lts = [[iDMLTSConnectionParameters alloc] init];
+lts.organizationID = @"200001";
+lts.sessionPassword = @"******";
+barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromLTS:lts verificationDelegate:self];
+- (void)LTSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
+{
+        //TODO add your code for license verification
+}
 iPublicRuntimeSettings *settings;
 NSError __autoreleasing * _Nullable error;
 NSString *argumentValue;
@@ -145,7 +166,14 @@ Swift:
 ```Swift
 let error: NSError? = NSError()
 let mArray: NSMutableArray? = NSMutableArray()
-let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
+let lts = iDMLTSConnectionParameters()
+lts.organizationID = "200001"
+lts.sessionPassword = "******"
+let barcodeReader = DynamsoftBarcodeReader(licenseFromLTS: lts, verificationDelegate: self)
+func ltsLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
+{
+    print("isSucc : \(isSuccess) error : \(String(describing: error))")
+}
 let settings = barcodeReader.getRuntimeSettings(error: nil)
 mArray!.setArray(settings.binarizationModes as! [Any])
 mArray![0] = EnumBinarizationMode.LocalBlock
@@ -177,7 +205,14 @@ Objective-C:
 
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
-barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicense:@"t0260NwAAAHV***************"];
+iDMLTSConnectionParameters* lts = [[iDMLTSConnectionParameters alloc] init];
+lts.organizationID = @"200001";
+lts.sessionPassword = @"******";
+barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromLTS:lts verificationDelegate:self];
+- (void)LTSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
+{
+        //TODO add your code for license verification
+}
 NSError __autoreleasing * _Nullable error;
 [barcodeReader getRuntimeSettings:&error];
 ```
@@ -185,7 +220,14 @@ Swift:
 
 ```Swift
 let error: NSError? = NSError()
-let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
+let lts = iDMLTSConnectionParameters()
+lts.organizationID = "200001"
+lts.sessionPassword = "******"
+let barcodeReader = DynamsoftBarcodeReader(licenseFromLTS: lts, verificationDelegate: self)
+func ltsLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
+{
+    print("isSucc : \(isSuccess) error : \(String(describing: error))")
+}
 let licenseString = barcodeReader.getRuntimeSettings(error: &error)
 ```
 
@@ -209,7 +251,14 @@ Objective-C:
 
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
-barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicense:@"t0260NwAAAHV***************"];
+iDMLTSConnectionParameters* lts = [[iDMLTSConnectionParameters alloc] init];
+lts.organizationID = @"200001";
+lts.sessionPassword = @"******";
+barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromLTS:lts verificationDelegate:self];
+- (void)LTSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
+{
+        //TODO add your code for license verification
+}
 NSError __autoreleasing * _Nullable error;
 iPublicRuntimeSettings *settings;
 
@@ -219,7 +268,14 @@ Swift:
 
 ```Swift
 let error: NSError? = NSError()
-let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
+let lts = iDMLTSConnectionParameters()
+lts.organizationID = "200001"
+lts.sessionPassword = "******"
+let barcodeReader = DynamsoftBarcodeReader(licenseFromLTS: lts, verificationDelegate: self)
+func ltsLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
+{
+    print("isSucc : \(isSuccess) error : \(String(describing: error))")
+}
 let settings = barcodeReader.getRuntimeSettings(error: nil)
 barcodeReader.updateRuntimeSettings(settings: settings, error: &error)
 ```
@@ -242,7 +298,14 @@ Objective-C:
 
 ```objc
 DynamsoftBarcodeReader *barcodeReader;
-barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicense:@"t0260NwAAAHV***************"];
+iDMLTSConnectionParameters* lts = [[iDMLTSConnectionParameters alloc] init];
+lts.organizationID = @"200001";
+lts.sessionPassword = @"******";
+barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromLTS:lts verificationDelegate:self];
+- (void)LTSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
+{
+        //TODO add your code for license verification
+}
 NSError __autoreleasing * _Nullable error;
 
 [barcodeReader resetRuntimeSettings:&error];
@@ -251,6 +314,13 @@ Swift:
 
 ```Swift
 let error: NSError? = NSError()
-let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
+let lts = iDMLTSConnectionParameters()
+lts.organizationID = "200001"
+lts.sessionPassword = "******"
+let barcodeReader = DynamsoftBarcodeReader(licenseFromLTS: lts, verificationDelegate: self)
+func ltsLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
+{
+    print("isSucc : \(isSuccess) error : \(String(describing: error))")
+}
 barcodeReader.resetRuntimeSettings(error: &error)
 ```

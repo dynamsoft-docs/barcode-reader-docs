@@ -40,7 +40,18 @@ void com.dynamsoft.dbr.BarcodeReader.initRuntimeSettingsWithFile(String filePath
 ### Code Snippet
 
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader reader = new BarcodeReader();
+DMLTSConnectionParameters info = new DMLTSConnectionParameters();
+info.organizationID = "200001";
+info.sessionPassword = "******";
+reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
+   @Override
+   public void LTSLicenseVerificationCallback(boolean b, Exception e) {
+      if (!b && e != null) {
+         e.printStackTrace();
+      }
+   }
+}
 reader.initRuntimeSettingsWithFile("your template file path", EnumConflictMode.CM_OVERWRITE);
 reader.destroy();
 ```
@@ -65,7 +76,18 @@ void com.dynamsoft.dbr.BarcodeReader.initRuntimeSettingsWithString(String conten
 ### Code Snippet
 
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader reader = new BarcodeReader();
+DMLTSConnectionParameters info = new DMLTSConnectionParameters();
+info.organizationID = "200001";
+info.sessionPassword = "******";
+reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
+   @Override
+   public void LTSLicenseVerificationCallback(boolean b, Exception e) {
+      if (!b && e != null) {
+         e.printStackTrace();
+      }
+   }
+}
 reader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", EnumConflictMode.CM_OVERWRITE);
 reader.destroy();
 ```
@@ -90,7 +112,18 @@ void com.dynamsoft.dbr.BarcodeReader.appendTplFileToRuntimeSettings(String fileP
 ### Code Snippet
 
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader reader = new BarcodeReader();
+DMLTSConnectionParameters info = new DMLTSConnectionParameters();
+info.organizationID = "200001";
+info.sessionPassword = "******";
+reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
+   @Override
+   public void LTSLicenseVerificationCallback(boolean b, Exception e) {
+      if (!b && e != null) {
+         e.printStackTrace();
+      }
+   }
+}
 reader.appendTplFileToRuntimeSettings("your template file path", EnumConflictMode.CM_IGNORE);
 reader.destroy();
 ```
@@ -115,7 +148,18 @@ void com.dynamsoft.dbr.BarcodeReader.appendTplStringToRuntimeSettings(String con
 ### Code Snippet
 
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader reader = new BarcodeReader();
+DMLTSConnectionParameters info = new DMLTSConnectionParameters();
+info.organizationID = "200001";
+info.sessionPassword = "******";
+reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
+   @Override
+   public void LTSLicenseVerificationCallback(boolean b, Exception e) {
+      if (!b && e != null) {
+         e.printStackTrace();
+      }
+   }
+}
 reader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", EnumConflictMode.CM_OVERWRITE);
 reader.appendTplStringToRuntimeSettings("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_OneD\"], \"ExpectedBarcodesCount\":20}}", EnumConflictMode.CM_IGNORE);
 reader.destroy();
@@ -140,7 +184,18 @@ The template name array.
 ### Code Snippet
 
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader reader = new BarcodeReader();
+DMLTSConnectionParameters info = new DMLTSConnectionParameters();
+info.organizationID = "200001";
+info.sessionPassword = "******";
+reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
+   @Override
+   public void LTSLicenseVerificationCallback(boolean b, Exception e) {
+      if (!b && e != null) {
+         e.printStackTrace();
+      }
+   }
+}
 String[] templateNames = reader.getAllParameterTemplateNames();
 reader.destroy();
 ```
@@ -165,7 +220,18 @@ void com.dynamsoft.dbr.BarcodeReader.outputSettingsToFile(String filePath, Strin
 ### Code Snippet
 
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader reader = new BarcodeReader();
+DMLTSConnectionParameters info = new DMLTSConnectionParameters();
+info.organizationID = "200001";
+info.sessionPassword = "******";
+reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
+   @Override
+   public void LTSLicenseVerificationCallback(boolean b, Exception e) {
+      if (!b && e != null) {
+         e.printStackTrace();
+      }
+   }
+}
 reader.outputSettingsToFile("your saving file path", "currentRuntimeSettings");
 reader.destroy();
 ```
@@ -189,7 +255,18 @@ The output string which stores the contents of current settings.
 ### Code Snippet
 
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader reader = new BarcodeReader();
+DMLTSConnectionParameters info = new DMLTSConnectionParameters();
+info.organizationID = "200001";
+info.sessionPassword = "******";
+reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
+   @Override
+   public void LTSLicenseVerificationCallback(boolean b, Exception e) {
+      if (!b && e != null) {
+         e.printStackTrace();
+      }
+   }
+}
 String settingStr = reader.outputSettingsToString("currentRuntimeSettings");
 reader.destroy();
 ```
