@@ -40,7 +40,14 @@ NSError __autoreleasing * _Nullable error;
 NSArray<iTextResult *> *result;
 NSArray<iIntermediateResult *> *irResult;
 DynamsoftBarcodeReader *barcodeReader;
-barcodeReader = [[DynamsoftBarcodeReader alloc] initWithLicense:@"t0260NwAAAHV***************"];
+iDMLTSConnectionParameters* lts = [[iDMLTSConnectionParameters alloc] init];
+lts.organizationID = @"200001";
+lts.sessionPassword = @"******";
+barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromLTS:lts verificationDelegate:self];
+- (void)LTSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
+{
+        //TODO add your code for license verification
+}
 
 [m_barcodeReader getRuntimeSettings:&error];
 settings.intermediateResultTypes = EnumIntermediateResultTypeColourConvertedGrayScaleImage|EnumIntermediateResultTypeOriginalImage|EnumIntermediateResultTypeColourClusteredImage;
@@ -52,7 +59,14 @@ Swift:
 
 ```Swift
 let error: NSError? = NSError()
-let barcodeReader = DynamsoftBarcodeReader.init(license: "t0260NwAAAHV***************")
+let lts = iDMLTSConnectionParameters()
+lts.organizationID = "200001"
+lts.sessionPassword = "******"
+let barcodeReader = DynamsoftBarcodeReader(licenseFromLTS: lts, verificationDelegate: self)
+func ltsLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
+{
+    print("isSucc : \(isSuccess) error : \(String(describing: error))")
+}
 let settings = barcodeReader.getRuntimeSettings(error: nil)
 settings.intermediateResultTypes = EnumIntermediateResultType.ColourConvertedGrayScaleImage.rawValue | EnumIntermediateResultType.OriginalImage.rawValue | EnumIntermediateResultType.ColourClusteredImage.rawValue
 barcodeReader.updateRuntimeSettings(settings:settings, error:nil)
