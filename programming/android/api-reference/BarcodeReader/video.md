@@ -76,7 +76,7 @@ reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
          e.printStackTrace();
       }
    }
-}
+});
 reader.setErrorCallback(new ErrorCallback() {
     @Override
     public void errorCallback(int frameId, int errorCode, Object userData) {
@@ -117,7 +117,7 @@ reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
          e.printStackTrace();
       }
    }
-}
+});
 FrameDecodingParameters parameters = reader.initFrameDecodingParameters();
 parameters.maxQueueLength = 2;
 parameters.maxResultQueueLength = 10;
@@ -165,7 +165,7 @@ reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
          e.printStackTrace();
       }
    }
-}
+});
 reader.startFrameDecoding(2, 10, 1024, 720, 1024, EnumImagePixelFormat.IPF_GRAYSCALED, "");
 int frameId = reader.appendFrame(bufferBytes);
 reader.destroy();
@@ -197,7 +197,7 @@ reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
          e.printStackTrace();
       }
    }
-}
+});
 reader.startFrameDecoding(2, 10, 1024, 720, 1024, EnumImagePixelFormat.IPF_GRAYSCALED, "");
 reader.stopFrameDecoding();
 reader.destroy();
@@ -233,7 +233,7 @@ reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
          e.printStackTrace();
       }
    }
-}
+});
 FrameDecodingParameters parameters = reader.initFrameDecodingParameters();
 reader.destroy();
 ```
@@ -269,7 +269,7 @@ reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
          e.printStackTrace();
       }
    }
-}
+});
 reader.setErrorCallback(new ErrorCallback() {
     @Override
     public void errorCallback(int frameId, int errorCode, Object userData) {
@@ -310,7 +310,7 @@ reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
          e.printStackTrace();
       }
    }
-}
+});
 reader.setTextResultCallback(new TextResultCallback() {
     @Override
     public void textResultCallback(int frameId, TextResult[] results, Object userData) {
@@ -351,7 +351,7 @@ reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
          e.printStackTrace();
       }
    }
-}
+});
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 settings.intermediateResultTypes = EnumIntermediateResultType.IRT_ORIGINAL_IMAGE | EnumIntermediateResultType.IRT_COLOUR_CLUSTERED_IMAGE | EnumIntermediateResultType.IRT_COLOUR_CONVERTED_GRAYSCALE_IMAGE;
 reader.updateRuntimeSettings(settings);
@@ -390,7 +390,7 @@ reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
          e.printStackTrace();
       }
    }
-}
+});
 int length = reader.getLengthOfFrameQueue();
 reader.destroy();
 ```

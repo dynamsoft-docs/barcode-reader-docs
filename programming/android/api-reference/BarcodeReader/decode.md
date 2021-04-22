@@ -56,7 +56,7 @@ reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
          e.printStackTrace();
       }
    }
-}
+});
 TextResult[] result = reader.decodeFile("your file path", "");
 reader.destroy();
 ```
@@ -96,7 +96,7 @@ reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
          e.printStackTrace();
       }
    }
-}
+});
 //get bufferBytes from other component
 TextResult[] result = reader.decodeFileInMemory(bufferBytes, "");
 reader.destroy();
@@ -133,7 +133,7 @@ reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
          e.printStackTrace();
       }
    }
-}
+});
 //get FileInputStream fis from other component
 TextResult[] result = reader.decodeFileInMemory(fis, "");
 reader.destroy();
@@ -178,7 +178,7 @@ reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
          e.printStackTrace();
       }
    }
-}
+});
 byte[] bufferBytes;
 int iWidth = 0;
 int iHeight = 0;
@@ -224,7 +224,7 @@ reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
          e.printStackTrace();
       }
    }
-}
+});
 TextResult[] result = reader.decodeBase64String("file in base64 string", "");
 reader.destroy();
 ```
@@ -264,7 +264,7 @@ reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
          e.printStackTrace();
       }
    }
-}
+});
 //get BufferedImage input from other component
 TextResult[] result = reader.decodeBufferedImage(input, "");
 reader.destroy();
@@ -304,7 +304,7 @@ reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
          e.printStackTrace();
       }
    }
-}
+});
 IntermediateResult imResult = reader.initIntermediateResult(EnumIntermediateResultType.IRT_ORIGINAL_IMAGE);
 ```
 
@@ -343,7 +343,7 @@ reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
          e.printStackTrace();
       }
    }
-}
+});
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 settings.intermediateResultTypes = EnumIntermediateResultType.IRT_ORIGINAL_IMAGE;
 reader.updateRuntimeSettings(settings);
