@@ -158,6 +158,6 @@ reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
          e.printStackTrace();
       }
    }
-}
-   ```
+});
+```
 

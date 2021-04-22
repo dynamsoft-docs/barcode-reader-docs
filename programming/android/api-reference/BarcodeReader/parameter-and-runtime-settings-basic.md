@@ -69,7 +69,7 @@ reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
          e.printStackTrace();
       }
    }
-}
+});
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 settings.binarizationModes[0] = EnumBinarizationMode.BM_LOCAL_BLOCK;
 reader.updateRuntimeSettings(settings);
@@ -130,7 +130,7 @@ reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
          e.printStackTrace();
       }
    }
-}
+});
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 settings.binarizationModes[0] = EnumBinarizationMode.BM_LOCAL_BLOCK;
 reader.updateRuntimeSettings(settings);
@@ -169,7 +169,7 @@ reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
          e.printStackTrace();
       }
    }
-}
+});
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 reader.destroy();
 ```
@@ -204,7 +204,7 @@ reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
          e.printStackTrace();
       }
    }
-}
+});
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 settings.deblurLevel = 9;
 reader.updateRuntimeSettings(settings);
@@ -237,7 +237,7 @@ reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
          e.printStackTrace();
       }
    }
-}
+});
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 settings.deblurLevel = 9;
 reader.updateRuntimeSettings(settings);
