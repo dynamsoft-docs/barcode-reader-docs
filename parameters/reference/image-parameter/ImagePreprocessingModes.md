@@ -28,7 +28,7 @@ needAutoGenerateSidebar: false
 - [SharpenBlockSizeY](#sharpenblocksizey)
 - [MorphOperation](#morphoperation)
 - [MorphShape](#morphshape)
-- [MorphOperationKernelSizeX](#morphoperationkernelsizex )
+- [MorphOperationKernelSizeX](#morphoperationkernelsizex)
 - [MorphOperationKernelSizeY](#morphoperationkernelsizey)
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)
@@ -36,9 +36,9 @@ needAutoGenerateSidebar: false
 ##### Sensitivity 
 Sets the sensitivity used for gray equalization.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [1, 9] | 5 | "IPM_GRAY_EQUALIZE" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [1, 9] | 5 |         
 
 - **Remarks**     
   If you have an image with a low level of contrast, you can set the property to a larger value. A larger value means a higher possibility that gray equalization will be activated. This may cause adverse effect on images with a high level of contrast.  
@@ -47,9 +47,9 @@ Sets the sensitivity used for gray equalization.
 ##### SmoothBlockSizeX 
 Sets the horizontal block size for the smoothing process.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [3, 1000] | 3 | "IPM_GRAY_SMOOTH"<br>"IPM_SHARPEN_SMOOTH" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [3, 1000] | 3 |         
 
 - **Remarks**     
   Block size refers to the size of a pixel neighborhood used to calculate the threshold for the pixel. An appropriate value can help increase the accuracy of barcode localization.
@@ -58,9 +58,9 @@ Sets the horizontal block size for the smoothing process.
 ##### SmoothBlockSizeY 
 Sets the vertical block size for the smoothing process.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [3, 1000] | 3 | "IPM_GRAY_SMOOTH"<br>"IPM_SHARPEN_SMOOTH" |         
+| Value Type | Value Range | Default Value |
+| ---------- | ----------- | ------------- |
+| *int* | [3, 1000] | 3 |         
 
 - **Remarks**     
   Block size refers to the size of a pixel neighborhood used to calculate the threshold for the pixel. An appropriate value can help increase the accuracy of barcode localization.  
@@ -69,9 +69,9 @@ Sets the vertical block size for the smoothing process.
 ##### SharpenBlockSizeX 
 Sets the horizontal block size for the sharpening process.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [3, 1000] | 3 | "IPM_SHARPEN_SMOOTH" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [3, 1000] | 3 |         
 
 - **Remarks**     
   Block size refers to the size of a pixel neighborhood used to calculate the threshold for the pixel. An appropriate value can help increase the accuracy of barcode localization.
@@ -80,9 +80,9 @@ Sets the horizontal block size for the sharpening process.
 ##### SharpenBlockSizeY 
 Sets the vertical block size for the sharpening process.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [3, 1000] | 3 | "IPM_SHARPEN_SMOOTH" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [3, 1000] | 3 |         
 
 - **Remarks**     
   Block size refers to the size of a pixel neighborhood used to calculate the threshold for the pixel. An appropriate value can help increase the accuracy of barcode localization.
@@ -92,9 +92,9 @@ Sets the vertical block size for the sharpening process.
 ##### MorphOperation 
 Sets the morph operation for the morphology process. 
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *string* | "Erode"<br>"Dilate"<br>"Open"<br>"Close" | "Close" | "IPM_MORPHOLOGY" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *string* | "Erode"<br>"Dilate"<br>"Open"<br>"Close" | "Close" |         
 
 - **Remarks**    
    - "Erode": Perform erosion process.
@@ -108,9 +108,9 @@ Sets the morph operation for the morphology process.
 ##### MorphShape  
  Sets the morph shape for the morphology process.  
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *string* | "Rectangle"<br>"Cross"<br>"Ellipse" | "Rectangle" | "IPM_MORPHOLOGY" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *string* | "Rectangle"<br>"Cross"<br>"Ellipse" | "Rectangle" |         
 
 - **Remarks**    
    - "Rectangle": 
@@ -122,36 +122,36 @@ Sets the morph operation for the morphology process.
 ##### MorphOperationKernelSizeX  
 Sets the horizontal kernel size for the morphology process. 
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [0, 1000]  | 0 | "IPM_MORPHOLOGY" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [0, 1000]  | 0 |         
 
 
 
 ##### MorphOperationKernelSizeY  
  Sets the vertical kernel size for the morphology process.  
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [0, 1000]  | 0 | "IPM_MORPHOLOGY" |       
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [0, 1000]  | 0 |       
 
 
 ##### LibraryFileName 
 Sets the file name of the library to load dynamically.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
+| Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing file name. | "" | All `ImagePreprocessingMode` items except IPM_SKIP and IPM_AUTO |         
 
 
 - **Remarks**     
-  - The library must be in the same place with Dynamsoft Barcode Reader Library.
+  The library must be in the same place with Dynamsoft Barcode Reader Library.
 
 
 ##### LibraryParameters 
 Sets the parameters passed to the library to load dynamically.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
+| Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing parameters. | "" | All `ImagePreprocessingMode` items except IPM_SKIP and IPM_AUTO |         
 

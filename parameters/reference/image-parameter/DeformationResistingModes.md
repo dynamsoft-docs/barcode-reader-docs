@@ -28,9 +28,9 @@ needAutoGenerateSidebar: false
 Sets the effort level used for deformation resisting. **Not supported yet.**
 
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [1, 9] | 5 | "DRM_GENERAL" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [1, 9] | 5 |         
 
 - **Remarks**     
   A larger value means the library will take more effort to resist deformation.
@@ -39,19 +39,19 @@ Sets the effort level used for deformation resisting. **Not supported yet.**
 ##### LibraryFileName 
 Sets the file name of the library to load dynamically.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
+| Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing file name. | "" | All `DeformationResistingMode` items except DRM_SKIP and DRM_AUTO |         
 
 
 - **Remarks**     
-  - The library must be in the same place with Dynamsoft Barcode Reader Library.
+  The library must be in the same place with Dynamsoft Barcode Reader Library.
 
 
 ##### LibraryParameters 
 Sets the parameters passed to the library to load dynamically.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
+| Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing parameters. | "" | All `DeformationResistingMode` items except DRM_SKIP and DRM_AUTO |         
 

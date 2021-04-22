@@ -29,9 +29,9 @@ needAutoGenerateSidebar: false
 Sets the minimum image dimension (in pixels) to filter the text.
 
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [65536, 0x7fffffff] | 65536 | "TFM_GENERAL_CONTOUR" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [65536, 0x7fffffff] | 65536 |         
 
 - **Remarks**     
   If the image dimension is larger than the given value, the library will enable the text filtering feature. Otherwise, it will skip this step when doing barcode recognition. The feature can speed up the recognition process.
@@ -39,31 +39,31 @@ Sets the minimum image dimension (in pixels) to filter the text.
 ##### Sensitivity 
 Sets the sensitivity used for text filtering.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [0, 9] | 0 | "TFM_GENERAL_CONTOUR" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [0, 9] | 0 |         
 
 - **Remarks**     
-  0: automatically set by the library.   
-  A larger value means the library will take more effort to filter text.
+  - 0: automatically set by the library.   
+  - A larger value means the library will take more effort to filter text.
 
 
 ##### LibraryFileName 
 Sets the file name of the library to load dynamically.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
+| Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing file name. | "" | All `TextFilterMode` items except TFM_SKIP and TFM_AUTO |         
 
 
 - **Remarks**     
-  - The library must be in the same place with Dynamsoft Barcode Reader Library.
+  The library must be in the same place with Dynamsoft Barcode Reader Library.
 
 
 ##### LibraryParameters 
 Sets the parameters passed to the library to load dynamically.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
+| Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing parameters. | "" | All `TextFilterMode` items except TFM_SKIP and TFM_AUTO |         
 

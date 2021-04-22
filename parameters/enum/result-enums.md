@@ -76,12 +76,12 @@ Describes the intermediate result saving mode.
 
 ### Members
    
-| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
-| -------------------------- | ------------------- | ----- | ----------- |
-| IRSM_MEMORY | EnumIntermediateResultSavingModeMemory | 0x01 | Saves intermediate results in memory with public data format. |
-| IRSM_FILESYSTEM | EnumIntermediateResultSavingModeFileSystem | 0x02 | Saves intermediate results in file system. Check arguments of [`IntermediateResultSavingMode`]({{ site.parameters_reference }}image-parameter/IntermediateResultSavingMode.html#mode-arguments) for available argument settings. |
-| IRSM_BOTH | EnumIntermediateResultSavingModeBoth | 0x04 | Saves intermediate results using IRSM_MEMORY and IRSM_FILESYSTEM. Check arguments of [`IntermediateResultSavingMode`]({{ site.parameters_reference }}image-parameter/IntermediateResultSavingMode.html#mode-arguments) for available argument settings. |
-| IRSM_REFERENCE_MEMORY | EnumIntermediateResultSavingModeReferenceMemory | 0x08 | Saves intermediate results in memory with internal data format. |
+| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description | Valid Argument(s) |
+| -------------------------- | ------------------- | ----- | ----------- | ----------------- |
+| IRSM_MEMORY | EnumIntermediateResultSavingModeMemory | 0x01 | Saves intermediate results in memory with public data format. | `N/A` |
+| IRSM_FILESYSTEM | EnumIntermediateResultSavingModeFileSystem | 0x02 | Saves intermediate results in file system. | [`FolderPath`]({{ site.parameters_reference }}image-parameter/IntermediateResultSavingMode.html#folderpath)<br>[`RecordsetSizeOfLatestImages`]({{ site.parameters_reference }}image-parameter/IntermediateResultSavingMode.html#recordsetsizeoflatestimages) |
+| IRSM_BOTH | EnumIntermediateResultSavingModeBoth | 0x04 | Saves intermediate results using IRSM_MEMORY and IRSM_FILESYSTEM. | [`FolderPath`]({{ site.parameters_reference }}image-parameter/IntermediateResultSavingMode.html#folderpath) |
+| IRSM_REFERENCE_MEMORY | EnumIntermediateResultSavingModeReferenceMemory | 0x08 | Saves intermediate results in memory with internal data format. | [`FolderPath`]({{ site.parameters_reference }}image-parameter/IntermediateResultSavingMode.html#folderpath)<br>[`RecordsetSizeOfLatestImages`]({{ site.parameters_reference }}image-parameter/IntermediateResultSavingMode.html#recordsetsizeoflatestimages) |
 
 
 

@@ -52,15 +52,15 @@ Describes the barcode colour mode.
 
 ### Members
    
-| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
-| -------------------------- | ------------------- | ----- | ----------- |
-| BICM_SKIP | EnumBarcodeColourModeSkip | 0x00 | Skips the barcode colour operation. |
-| BICM_DARK_ON_LIGHT | EnumBarcodeColourModeDarkOnLight | 0x01 | Dark items on a light background. Check arguments of [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#mode-arguments) for available argument settings. |
-| BICM_LIGHT_ON_DARK  | EnumBarcodeColourModeLightOnDark | 0x02 | Light items on a dark background. **Not supported yet**. Check arguments of [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#mode-arguments) for available argument settings. |
-| BICM_DARK_ON_DARK  | EnumBarcodeColourModeDarkOnDark | 0x04 | Dark items on a dark background. **Not supported yet**. Check arguments of [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#mode-arguments) for available argument settings. |
-| BICM_LIGHT_ON_LIGHT  | EnumBarcodeColourModeLightOnLight | 0x08 | Light items on a light background. **Not supported yet**. Check arguments of [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#mode-arguments) for available argument settings. |
-| BICM_DARK_LIGHT_MIXED  | EnumBarcodeColourModeDarkLightMixed | 0x10 | The background is mixed by dark and light. **Not supported yet**. Check arguments of [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#mode-arguments) for available argument settings. |
-| BICM_DARK_ON_LIGHT_DARK_SURROUNDING  | EnumBarcodeColourModeDarkOnLightDarkSurrounding | 0x20 | Dark item on a light background surrounded by dark. Check arguments of [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#mode-arguments) for available argument settings. |
+| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description | Valid Argument(s) |
+| -------------------------- | ------------------- | ----- | ----------- | ----------------- |
+| BICM_SKIP | EnumBarcodeColourModeSkip | 0x00 | Skips the barcode colour operation. | `N/A` |
+| BICM_DARK_ON_LIGHT | EnumBarcodeColourModeDarkOnLight | 0x01 | Dark items on a light background. | [`LightReflection`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#lightreflection) |
+| BICM_LIGHT_ON_DARK  | EnumBarcodeColourModeLightOnDark | 0x02 | Light items on a dark background. **Not supported yet**.  | `N/A` |
+| BICM_DARK_ON_DARK  | EnumBarcodeColourModeDarkOnDark | 0x04 | Dark items on a dark background. **Not supported yet**.  | `N/A` |
+| BICM_LIGHT_ON_LIGHT  | EnumBarcodeColourModeLightOnLight | 0x08 | Light items on a light background. **Not supported yet**.  | `N/A` |
+| BICM_DARK_LIGHT_MIXED  | EnumBarcodeColourModeDarkLightMixed | 0x10 | The background is mixed by dark and light. **Not supported yet**.  | `N/A` |
+| BICM_DARK_ON_LIGHT_DARK_SURROUNDING  | EnumBarcodeColourModeDarkOnLightDarkSurrounding | 0x20 | Dark item on a light background surrounded by dark.  | [`LightReflection`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#lightreflection) |
 
 
 
@@ -86,11 +86,11 @@ Describes the barcode complement mode.
 
 ### Members
    
-| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
-| -------------------------- | ------------------- | ----- | ----------- |
-| BCM_SKIP | EnumBarcodeComplementModeSkip | 0x00 | Skips the barcode complement. |
-| BCM_AUTO | EnumBarcodeComplementModeAuto | 0x01 | **Not supported yet.** |
-| BCM_GENERAL | EnumBarcodeComplementModeGeneral | 0x02 | Complements the barcode using the general algorithm. |
+| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description | Valid Argument(s) |
+| -------------------------- | ------------------- | ----- | ----------- | ----------------- |
+| BCM_SKIP | EnumBarcodeComplementModeSkip | 0x00 | Skips the barcode complement. | `N/A` |
+| BCM_AUTO | EnumBarcodeComplementModeAuto | 0x01 | **Not supported yet.** | `N/A` |
+| BCM_GENERAL | EnumBarcodeComplementModeGeneral | 0x02 | Complements the barcode using the general algorithm. | `N/A` |
 
 
 
@@ -116,12 +116,12 @@ Describes the binarization mode.
 
 ### Members
    
-| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
-| -------------------------- | ------------------- | ----- | ----------- |
-| BM_SKIP | EnumBinarizationModeSkip | 0x00 | Skips the binarization. |
-| BM_AUTO | EnumBinarizationModeAuto | 0x01 | **Not supported yet.** |
-| BM_LOCAL_BLOCK | EnumBinarizationModeLocalBlock | 0x02 | Binarizes the image based on the local block. Check arguments of [`BinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#mode-arguments) for available argument settings. |
-| BM_THRESHOLD | EnumBinarizationModeThreshold | 0x04 | Performs image binarization based on the given threshold. Check arguments of [`BinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#mode-arguments) for available argument settings. |
+| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description | Valid Argument(s) |
+| -------------------------- | ------------------- | ----- | ----------- | ----------------- |
+| BM_SKIP | EnumBinarizationModeSkip | 0x00 | Skips the binarization. | `N/A` |
+| BM_AUTO | EnumBinarizationModeAuto | 0x01 | **Not supported yet.** | `N/A` |
+| BM_LOCAL_BLOCK | EnumBinarizationModeLocalBlock | 0x02 | Binarizes the image based on the local block. | [`BlockSizeX`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#blocksizex)<br>[`BlockSizeY`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#blocksizey)<br>[`EnableFillBinaryVacancy`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#enablefillbinaryvacancy)<br>[`ImagePreprocessingModesIndex`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#imagepreprocessingmodesindex)<br>[`ThreshValueCoefficient`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#threshvaluecoefficient)<br> |
+| BM_THRESHOLD | EnumBinarizationModeThreshold | 0x04 | Performs image binarization based on the given threshold. | [`BinarizationThreshold`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#binarizationThreshold)<br>[`ImagePreprocessingModesIndex`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#imagepreprocessingmodesindex) |
 
 
 
@@ -147,11 +147,11 @@ Describes the colour clustering mode.
 
 ### Members
    
-| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
-| -------------------------- | ------------------- | ----- | ----------- |
-| CCM_SKIP | EnumColourClusteringModeSkip | 0x00 | Skips the colour clustering. |
-| CCM_AUTO | EnumColourClusteringModeAuto | 0x01 | **Not supported yet.** |
-| CCM_GENERAL_HSV | EnumColourClusteringModeGeneralHSV | 0x02 | Clusters colours using the general algorithm based on HSV. Check arguments of [`ColourClusteringModes`]({{ site.parameters_reference }}image-parameter/ColourClusteringModes.html#mode-arguments) for available argument settings. |
+| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description | Valid Argument(s) |
+| -------------------------- | ------------------- | ----- | ----------- | ----------------- |
+| CCM_SKIP | EnumColourClusteringModeSkip | 0x00 | Skips the colour clustering. | `N/A` |
+| CCM_AUTO | EnumColourClusteringModeAuto | 0x01 | **Not supported yet.** | `N/A` |
+| CCM_GENERAL_HSV | EnumColourClusteringModeGeneralHSV | 0x02 | Clusters colours using the general algorithm based on HSV. | [`Sensitivity`]({{ site.parameters_reference }}image-parameter/ColourClusteringModes.html#sensitivity) |
 
 
 
@@ -177,10 +177,10 @@ Describes the colour conversion mode.
 
 ### Members
    
-| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
-| -------------------------- | ------------------- | ----- | ----------- |
-| CICM_SKIP | EnumColourConversionModeSkip | 0x00 | Skip the colour conversion. |
-| CICM_GENERAL | EnumColourConversionModeGeneral | 0x01 | Converts a colour image to a grayscale image using the general algorithm. Check arguments of [`ColourConversionModes`]({{ site.parameters_reference }}image-parameter/ColourConversionModes.html#mode-arguments) for available argument settings. |
+| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description | Valid Argument(s) |
+| -------------------------- | ------------------- | ----- | ----------- | ----------------- |
+| CICM_SKIP | EnumColourConversionModeSkip | 0x00 | Skip the colour conversion. | `N/A` |
+| CICM_GENERAL | EnumColourConversionModeGeneral | 0x01 | Converts a colour image to a grayscale image using the general algorithm. | [`BlueChannelWeight`]({{ site.parameters_reference }}image-parameter/ColourConversionModes.html#bluechannelweight)<br>[`GreenChannelWeight`]({{ site.parameters_reference }}image-parameter/ColourConversionModes.html#greenchannelweight)<br>[`RedChannelWeight`]({{ site.parameters_reference }}image-parameter/ColourConversionModes.html#redchannelweight) |
 
 
 
@@ -217,7 +217,7 @@ Describes the conflict mode.
 
 
 
-## DeblurMode {#deblurmode}
+## DeblurMode
 Describes the deblur mode.
 
 
@@ -235,8 +235,8 @@ Describes the deblur mode.
 
 ### Members
    
-| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
-| -------------------------- | ------------------- | ----- | ----------- |
+| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description | Valid Argument(s) |
+| -------------------------- | ------------------- | ----- | ----------- | ----------------- |
 | DM_SKIP | EnumDeblurModeSkip | 0x00 | Skips the deblur process. |
 | DM_DIRECT_BINARIZATION | EnumDeblurModeDirectBinarization | 0x01 | Performs deblur process using the direct binarization algorithm. |
 | DM_THRESHOLD_BINARIZATION | EnumDeblurModeThresholdBinarization | 0x02 | Performs deblur process using the threshold binarization algorithm. |
@@ -270,11 +270,11 @@ Describes the deformation resisting mode.
 
 ### Members
    
-| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
-| -------------------------- | ------------------- | ----- | ----------- |
-| DRM_SKIP | EnumDeformationResistingModeSkip | 0x00 | Skip the deformation resisting. |
-| DRM_AUTO | EnumDeformationResistingModeAuto | 0x01 | **Not supported yet.** |
-| DRM_GENERAL | EnumDeformationResistingModeGeneral | 0x02 | Resists deformation using the general algorithm. Check arguments of [`DeformationResistingModes`]({{ site.parameters_reference }}image-parameter/DeformationResistingModes.html#mode-arguments) for available argument settings.|
+| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description | Valid Argument(s) |
+| -------------------------- | ------------------- | ----- | ----------- | ----------------- |
+| DRM_SKIP | EnumDeformationResistingModeSkip | 0x00 | Skip the deformation resisting. | `N/A` |
+| DRM_AUTO | EnumDeformationResistingModeAuto | 0x01 | **Not supported yet.** | `N/A` |
+| DRM_GENERAL | EnumDeformationResistingModeGeneral | 0x02 | Resists deformation using the general algorithm. | [`Level`]({{ site.parameters_reference }}image-parameter/DeformationResistingModes.html#level) |
 
 
 
@@ -358,15 +358,15 @@ Describes the image preprocessing mode.
 
 ### Members
    
-| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
-| -------------------------- | ------------------- | ----- | ----------- |
-| IPM_SKIP | EnumImagePreprocessingModeSkip | 0x00 | Skips image preprocessing. |
-| IPM_AUTO | EnumImagePreprocessingModeAuto | 0x01 | **Not supported yet.** |
-| IPM_GENERAL | EnumImagePreprocessingModeGeneral | 0x02 | Takes the unpreprocessed image for following operations. |
-| IPM_GRAY_EQUALIZE | EnumImagePreprocessingModeGrayEqualize | 0x04 | Preprocesses the image using the gray equalization algorithm. Check arguments of [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#mode-arguments) for available argument settings. |
-| IPM_GRAY_SMOOTH | EnumImagePreprocessingModeGraySmooth | 0x08 | Preprocesses the image using the gray smoothing algorithm. Check arguments of [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#mode-arguments) for available argument settings. |
-| IPM_SHARPEN_SMOOTH | EnumImagePreprocessingModeSharpenSmooth | 0x10 | Preprocesses the image using the sharpening and smoothing algorithm. Check arguments of [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#mode-arguments) for available argument settings. |
-| IPM_MORPHOLOGY  | EnumImagePreprocessingModeMorphology | 0x20 | Preprocesses the image using the morphology algorithm. Check arguments of [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#mode-arguments) for available argument settings. |
+| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description | Valid Argument(s) |
+| -------------------------- | ------------------- | ----- | ----------- | ----------------- |
+| IPM_SKIP | EnumImagePreprocessingModeSkip | 0x00 | Skips image preprocessing. | `N/A` |
+| IPM_AUTO | EnumImagePreprocessingModeAuto | 0x01 | **Not supported yet.** | `N/A` |
+| IPM_GENERAL | EnumImagePreprocessingModeGeneral | 0x02 | Takes the unpreprocessed image for following operations. | `N/A` |
+| IPM_GRAY_EQUALIZE | EnumImagePreprocessingModeGrayEqualize | 0x04 | Preprocesses the image using the gray equalization algorithm. | [`Sensitivity`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#sensitivity) |
+| IPM_GRAY_SMOOTH | EnumImagePreprocessingModeGraySmooth | 0x08 | Preprocesses the image using the gray smoothing algorithm. | [`SmoothBlockSizeX`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#smoothblocksizex)<br>[`SmoothBlockSizeY`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#smoothblocksizey) |
+| IPM_SHARPEN_SMOOTH | EnumImagePreprocessingModeSharpenSmooth | 0x10 | Preprocesses the image using the sharpening and smoothing algorithm. | [`SmoothBlockSizeX`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#smoothblocksizex)<br>[`SmoothBlockSizeY`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#smoothblocksizey)<br>[`SharpenBlockSizeX`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#sharpenblocksizex)<br>[`SharpenBlockSizeY`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#sharpenblocksizey) |
+| IPM_MORPHOLOGY  | EnumImagePreprocessingModeMorphology | 0x20 | Preprocesses the image using the morphology algorithm. | [MorphOperation]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#morphoperation)<br>[MorphShape]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#morphshape)<br>[MorphOperationKernelSizeX]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#morphoperationkernelsizex)<br>[MorphOperationKernelSizeY]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#morphoperationkernelsizey) |
 
 
 
@@ -392,16 +392,16 @@ Describes the localization mode.
 
 ### Members
    
-| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
-| -------------------------- | ------------------- | ----- | ----------- |
-| LM_SKIP | EnumLocalizationModeSkip | 0x00 | Skips localization. |
-| LM_AUTO  | EnumLocalizationModeAuto | 0x01 | Not supported yet. |
-| LM_CONNECTED_BLOCKS | EnumLocalizationModeConnectedBlocks | 0x02 | Localizes barcodes by searching for connected blocks. This algorithm usually gives best result and it is recommended to set ConnectedBlocks to the highest priority. |
-| LM_STATISTICS | EnumLocalizationModeStatistics | 0x04 | Localizes barcodes by groups of contiguous black-white regions. This is optimized for QRCode and DataMatrix. |
-| LM_LINES | EnumLocalizationModeLines | 0x08 | Localizes barcodes by searching for groups of lines. This is optimized for 1D and PDF417 barcodes. |
-| LM_SCAN_DIRECTLY | EnumLocalizationModeScanDirectly | 0x10 |  Localizes barcodes quickly. This mode is recommended in interactive scenario. Check arguments of [`LocalizationModes`]({{ site.parameters_reference }}image-parameter/LocalizationModes.html#mode-arguments) for available argument settings. |
-| LM_STATISTICS_MARKS | EnumLocalizationModeStatisticsMarks | 0x20 | Localizes barcodes by groups of marks.This is optimized for DPM codes. |
-| LM_STATISTICS_POSTAL_CODE | EnumLocalizationModeStatisticsPostalCode | 0x40 | Localizes barcodes by groups of connected blocks and lines.This is optimized for postal codes. |
+| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description | Valid Argument(s) |
+| -------------------------- | ------------------- | ----- | ----------- | ----------------- |
+| LM_SKIP | EnumLocalizationModeSkip | 0x00 | Skips localization. | `N/A` |
+| LM_AUTO  | EnumLocalizationModeAuto | 0x01 | Not supported yet. | `N/A` |
+| LM_CONNECTED_BLOCKS | EnumLocalizationModeConnectedBlocks | 0x02 | Localizes barcodes by searching for connected blocks. This algorithm usually gives best result and it is recommended to set ConnectedBlocks to the highest priority. | `N/A` |
+| LM_STATISTICS | EnumLocalizationModeStatistics | 0x04 | Localizes barcodes by groups of contiguous black-white regions. This is optimized for QRCode and DataMatrix. | `N/A` |
+| LM_LINES | EnumLocalizationModeLines | 0x08 | Localizes barcodes by searching for groups of lines. This is optimized for 1D and PDF417 barcodes. | `N/A` |
+| LM_SCAN_DIRECTLY | EnumLocalizationModeScanDirectly | 0x10 |  Localizes barcodes quickly. This mode is recommended in interactive scenario. | [`ScanStride`]({{ site.parameters_reference }}image-parameter/LocalizationModes.html#scanstride)<br>[`ScanDirection`]({{ site.parameters_reference }}image-parameter/LocalizationModes.html#scandirection) |
+| LM_STATISTICS_MARKS | EnumLocalizationModeStatisticsMarks | 0x20 | Localizes barcodes by groups of marks.This is optimized for DPM codes. | `N/A` |
+| LM_STATISTICS_POSTAL_CODE | EnumLocalizationModeStatisticsPostalCode | 0x40 | Localizes barcodes by groups of connected blocks and lines.This is optimized for postal codes. | `N/A` |
 
 
 
@@ -457,14 +457,14 @@ Describes the region predetection mode.
 
 ### Members
    
-| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
-| -------------------------- | ------------------- | ----- | ----------- |
-| RPM_SKIP | EnumRegionPredetectionModeSkip | 0x00 | Skips region detection. |
-| RPM_AUTO | EnumRegionPredetectionModeAuto | 0x01 | Lets the library choose an algorithm automatically to detect region. |
-| RPM_GENERAL | EnumRegionPredetectionModeGeneral | 0x02 | Takes the whole image as a region. |
-| RPM_GENERAL_RGB_CONTRAST | EnumRegionPredetectionModeGeneralRGBContrast | 0x04 | Detects region using the general algorithm based on RGB colour contrast. Check arguments of [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#mode-arguments) for available argument settings. |
-| RPM_GENERAL_GRAY_CONTRAST | EnumRegionPredetectionModeGeneralGrayContrast | 0x08 | Detects region using the general algorithm based on gray contrast. Check arguments of [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#mode-arguments) for available argument settings. |
-| RPM_GENERAL_HSV_CONTRAST | EnumRegionPredetectionModeGeneralHSVContrast | 0x10 | Detects region using the general algorithm based on HSV colour contrast. Check arguments of [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#mode-arguments) for available argument settings. |
+| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description | Valid Argument(s) |
+| -------------------------- | ------------------- | ----- | ----------- | ----------------- |
+| RPM_SKIP | EnumRegionPredetectionModeSkip | 0x00 | Skips region detection. | `N/A` |
+| RPM_AUTO | EnumRegionPredetectionModeAuto | 0x01 | Lets the library choose an algorithm automatically to detect region. | `N/A` |
+| RPM_GENERAL | EnumRegionPredetectionModeGeneral | 0x02 | Takes the whole image as a region. | `N/A` |
+| RPM_GENERAL_RGB_CONTRAST | EnumRegionPredetectionModeGeneralRGBContrast | 0x04 | Detects region using the general algorithm based on RGB colour contrast. | [`MinImageDimension`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#minimagedimension)<br>[`Sensitivity`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#sensitivity)<br>[`SpatialIndexBlockSize`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#spatialindexblocksize) |
+| RPM_GENERAL_GRAY_CONTRAST | EnumRegionPredetectionModeGeneralGrayContrast | 0x08 | Detects region using the general algorithm based on gray contrast. | [`MinImageDimension`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#minimagedimension)<br>[`Sensitivity`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#sensitivity)<br>[`SpatialIndexBlockSize`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#spatialindexblocksize) |
+| RPM_GENERAL_HSV_CONTRAST | EnumRegionPredetectionModeGeneralHSVContrast | 0x10 | Detects region using the general algorithm based on HSV colour contrast. | [`AspectRatioRange`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#aspectratiorange)<br>[`FindAccurateBoundary`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#findaccurateboundary)<br>[`ForeAndBackgroundColours`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#foreandbackgroundcolours)<br>[`HeightRange`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#heightrange)<br>[`MinImageDimension`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#minimagedimension)<br>[`RelativeBarcodeRegions`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#relativebarcoderegions)<br>[`Sensitivity`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#sensitivity)<br>[`SpatialIndexBlockSize`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#spatialindexblocksize)<br>[`WidthRange`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#widthrange) |
 
 
 
@@ -472,7 +472,7 @@ Describes the region predetection mode.
 
 
 
-## ScaleUpMode {#scaleupmode}
+## ScaleUpMode
 Describes the scale up mode. 
 
 
@@ -490,12 +490,12 @@ Describes the scale up mode.
 
 ### Members
    
-| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
-| -------------------------- | ------------------- | ----- | ----------- |
-| SUM_SKIP | EnumScaleUpModeSkip | 0x00 | Skip the scale-up process. |
-| SUM_AUTO | EnumScaleUpModeAuto | 0x01 | The library chooses an interpolation method automatically to scale up. |
-| SUM_LINEAR_INTERPOLATION | EnumScaleUpModeLinearInterpolation | 0x02 | Scales up using the linear interpolation method. Check arguments of [`ScaleUpModes`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#mode-arguments) for available argument settings. |
-| SUM_NEAREST_NEIGHBOUR_INTERPOLATION | EnumScaleUpModeNearestNeighbourInterpolation | 0x04 | Scales up using the nearest-neighbour interpolation method. Check arguments of [`ScaleUpModes`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#mode-arguments) for available argument settings. |
+| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description | Valid Argument(s) |
+| -------------------------- | ------------------- | ----- | ----------- | ----------------- |
+| SUM_SKIP | EnumScaleUpModeSkip | 0x00 | Skip the scale-up process. | `N/A` |
+| SUM_AUTO | EnumScaleUpModeAuto | 0x01 | The library chooses an interpolation method automatically to scale up. | `N/A` |
+| SUM_LINEAR_INTERPOLATION | EnumScaleUpModeLinearInterpolation | 0x02 | Scales up using the linear interpolation method. | [`AcuteAngleWithXThreshold`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#acuteanglewithxthreshold)<br>[`ModuleSizeThreshold`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#modulesizethreshold)<br>[`TargetModuleSize`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#targetmodulesize) |
+| SUM_NEAREST_NEIGHBOUR_INTERPOLATION | EnumScaleUpModeNearestNeighbourInterpolation | 0x04 | Scales up using the nearest-neighbour interpolation method. | [`AcuteAngleWithXThreshold`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#acuteanglewithxthreshold)<br>[`ModuleSizeThreshold`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#modulesizethreshold)<br>[`TargetModuleSize`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#targetmodulesize) |
 
 
 
@@ -554,11 +554,11 @@ Describes the text filter mode.
 
 ### Members
    
-| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
-| -------------------------- | ------------------- | ----- | ----------- |
-| TFM_SKIP | EnumTextFilterModeSkip | 0x00 | Skip the text filtering. |
-| TFM_AUTO | EnumTextFilterModeAuto | 0x01 | **Not supported yet.** |
-| TFM_GENERAL_CONTOUR | EnumTextFilterModeGeneralContour | 0x02 | Filters text using the general algorithm based on contour. Check arguments of [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#mode-arguments) for available argument settings. |
+| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description | Valid Argument(s) |
+| -------------------------- | ------------------- | ----- | ----------- | ----------------- |
+| TFM_SKIP | EnumTextFilterModeSkip | 0x00 | Skip the text filtering. | `N/A` |
+| TFM_AUTO | EnumTextFilterModeAuto | 0x01 | **Not supported yet.** | `N/A` |
+| TFM_GENERAL_CONTOUR | EnumTextFilterModeGeneralContour | 0x02 | Filters text using the general algorithm based on contour. | [`MinImageDimension`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#minimagedimension)<br>[`Sensitivity`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#sensitivity) |
 
 
 
@@ -584,10 +584,10 @@ Describes the texture detection mode.
 
 ### Members
    
-| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
-| -------------------------- | ------------------- | ----- | ----------- |
-| TDM_SKIP  | EnumTextureDetectionModeSkip | 0x00 | Skips texture detection. |
-| TDM_AUTO  | EnumTextureDetectionModeAuto | 0x01 | Not supported yet. |
-| TDM_GENERAL_WIDTH_CONCENTRATION  | EnumTextureDetectionModeGeneralWidthConcentration | 0x02 | Detects texture using the general algorithm. Check arguments of [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#mode-arguments) for available argument settings. |
+| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description | Valid Argument(s) |
+| -------------------------- | ------------------- | ----- | ----------- | ----------------- |
+| TDM_SKIP  | EnumTextureDetectionModeSkip | 0x00 | Skips texture detection. | `N/A` |
+| TDM_AUTO  | EnumTextureDetectionModeAuto | 0x01 | Not supported yet. | `N/A` |
+| TDM_GENERAL_WIDTH_CONCENTRATION  | EnumTextureDetectionModeGeneralWidthConcentration | 0x02 | Detects texture using the general algorithm. | [`Sensitivity`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#sensitivity) |
 
 
