@@ -34,21 +34,21 @@ If the module size of the barcode is smaller than the [ModuleSizeThreshold](#mod
 Sets the acute angle threshold for scale-up.
 
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [-1, 90] | -1 | "SUM_LINEAR_INTERPOLATION"<br>"SUM_NEAREST_NEIGHBOUR_INTERPOLATION" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [-1, 90] | -1 |         
 
 - **Remarks**     
-  -1 : means automatically set by the library.
+  1 : means automatically set by the library.
 
 
 ##### ModuleSizeThreshold 
 Sets the module size threshold for scale-up.
 
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [0, 0x7fffffff] | 0 | "SUM_LINEAR_INTERPOLATION"<br>"SUM_NEAREST_NEIGHBOUR_INTERPOLATION" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [0, 0x7fffffff] | 0 |         
 
 - **Remarks**     
   0 : means automatically set by the library.
@@ -58,9 +58,9 @@ Sets the module size threshold for scale-up.
 Sets the target module size for scale-up.
 
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [0, 0x7fffffff] | 0 | "SUM_LINEAR_INTERPOLATION"<br>"SUM_NEAREST_NEIGHBOUR_INTERPOLATION" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [0, 0x7fffffff] | 0 |         
 
 - **Remarks**     
   0 : means automatically set by the library.
@@ -68,19 +68,19 @@ Sets the target module size for scale-up.
 ##### LibraryFileName 
 Sets the file name of the library to load dynamically.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
+| Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing file name. | "" | All `ScaleUpMode` items except SUM_SKIP and SUM_AUTO |         
 
 
 - **Remarks**     
-  - The library must be in the same place with Dynamsoft Barcode Reader Library.
+  The library must be in the same place with Dynamsoft Barcode Reader Library.
 
 
 ##### LibraryParameters 
 Sets the parameters passed to the library to load dynamically.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
+| Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing parameters. | "" | All `ScaleUpMode` items except SUM_SKIP and SUM_AUTO |         
 

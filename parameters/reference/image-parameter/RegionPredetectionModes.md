@@ -27,7 +27,7 @@ If the image is large and the barcode on the image is very small, it is recommen
 - [MinImageDimension](#minimagedimension)
 - [Sensitivity](#sensitivity)
 - [RelativeBarcodeRegions](#relativebarcoderegions)
-- [ForeAndBackgroundColours](#foreandbackgroundcolours )
+- [ForeAndBackgroundColours](#foreandbackgroundcolours)
 - [AspectRatioRange](#aspectratiorange )
 - [HeightRange](#heightrange)
 - [WidthRange](#widthrange)
@@ -39,9 +39,9 @@ If the image is large and the barcode on the image is very small, it is recommen
 ##### MinImageDimension 
 Sets the minimum image dimension (in pixels) to pre-detect barcode regions.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [16384, 0x7fffffff] | 262144 | "RPM_GENERAL_GRAY_CONTRAST"<br>"RPM_GENERAL_HSV_CONTRAST"<br>"RPM_GENERAL_RGB_CONTRAST" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [16384, 0x7fffffff] | 262144 |         
 
 - **Remarks**     
   If the image dimension is larger than the given value, the library will enable the feature of pre-detecting barcode regions. Otherwise, it will skip this step when searching for barcodes.  
@@ -50,9 +50,9 @@ Sets the minimum image dimension (in pixels) to pre-detect barcode regions.
 ##### Sensitivity 
 Sets the sensitivity used for region predetection algorithm.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [1, 9] | 1 | "RPM_GENERAL_GRAY_CONTRAST"<br>"RPM_GENERAL_HSV_CONTRAST"<br>"RPM_GENERAL_RGB_CONTRAST" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [1, 9] | 1 |         
 
 - **Remarks**     
   A larger value means the library will take more effort to detect regions.  
@@ -61,9 +61,9 @@ Sets the sensitivity used for region predetection algorithm.
 ##### RelativeBarcodeRegions 
  Sets the barcode regions relative to the predetected region.  
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *string* | A string value representing one or more regions. | "" | "RPM_GENERAL_HSV_CONTRAST" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *string* | A string value representing one or more regions. | "" |         
 
 
 - **Remarks**     
@@ -77,9 +77,9 @@ Sets the sensitivity used for region predetection algorithm.
 ##### ForeAndBackgroundColours 
 Specifies a set (or multiple sets) of the foreground and background colours used for region predetection algorithm.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *string* | A string value representing one or more colour sets. | "" | "RPM_GENERAL_HSV_CONTRAST" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *string* | A string value representing one or more colour sets. | "" |         
 
 
 - **Remarks**     
@@ -94,13 +94,13 @@ Specifies a set (or multiple sets) of the foreground and background colours used
 ##### AspectRatioRange 
 Sets the aspect ratio range of the bounding rectangle of the predetected region.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *string* | A string value representing aspect ratio range. | "" | "RPM_GENERAL_HSV_CONTRAST" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *string* | A string value representing aspect ratio range. | "" |         
 
 
 - **Remarks**     
-  -  The aspect ratio range need to be defined as [`MinAspectRatio`, `MaxAspectRatio`]. There will be no limitation without manual setting.
+  - The aspect ratio range need to be defined as [`MinAspectRatio`, `MaxAspectRatio`]. There will be no limitation without manual setting.
   - Aspect ratio equals to *height/width\*100*. `MinAspectRatio` and `MaxAspectRatio` are used for limiting the aspect ratio range of the predetected region.
   - Value range of `MinAspectRatio`, `MaxAspectRatio`: [1,10000]
   
@@ -109,9 +109,9 @@ Sets the aspect ratio range of the bounding rectangle of the predetected region.
 ##### HeightRange 
 Sets the height range of the bounding rectangle of the predetected region.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *string* | A string value representing height range. | "" | "RPM_GENERAL_HSV_CONTRAST" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *string* | A string value representing height range. | "" |         
 
 
 - **Remarks**     
@@ -122,9 +122,9 @@ Sets the height range of the bounding rectangle of the predetected region.
 ##### WidthRange 
 Sets the width range of the bounding rectangle of the predetected region.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *string* | A string value representing width range. | "" | "RPM_GENERAL_HSV_CONTRAST" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *string* | A string value representing width range. | "" |         
 
 
 - **Remarks**     
@@ -135,9 +135,9 @@ Sets the width range of the bounding rectangle of the predetected region.
 ##### SpatialIndexBlockSize 
 Sets the spatial index block size used for region predetection algorithm.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [1, 32] | 5 | "RPM_GENERAL_GRAY_CONTRAST"<br>"RPM_GENERAL_HSV_CONTRAST"<br>"RPM_GENERAL_RGB_CONTRAST" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [1, 32] | 5 |         
 
 - **Remarks**     
   The block size used for region predetection would be 2 to the power of N. The allowed values of SpatialIndexBlockSize is the power number (N=1,2,3...).
@@ -146,19 +146,19 @@ Sets the spatial index block size used for region predetection algorithm.
 ##### LibraryFileName 
 Sets the file name of the library to load dynamically.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
+| Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing file name. | "" | All `RegionPredetectionMode` items except RPM_SKIP and RPM_AUTO |         
 
 
 - **Remarks**     
-  - The library must be in the same place with Dynamsoft Barcode Reader Library.
+  The library must be in the same place with Dynamsoft Barcode Reader Library.
 
 
 ##### LibraryParameters 
 Sets the parameters passed to the library to load dynamically.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
+| Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing parameters. | "" | All `RegionPredetectionMode` items except RPM_SKIP and RPM_AUTO |         
 
@@ -166,13 +166,13 @@ Sets the parameters passed to the library to load dynamically.
 ##### FindAccurateBoundary 
 Sets whether to enable finding accurate boundary.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [0, 1] | 0 | "RPM_GENERAL_HSV_CONTRAST" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [0, 1] | 0 |         
 
 - **Remarks**     
-  0: disable.<br>
-  1: enable.
+  - 0: disable.
+  - 1: enable.
 
 
 ### Setting Methods

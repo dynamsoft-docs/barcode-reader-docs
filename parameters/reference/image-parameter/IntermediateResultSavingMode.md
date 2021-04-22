@@ -25,7 +25,7 @@ needAutoGenerateSidebar: false
 
 | Value Type | Value Range | Default Value |
 | ---------- | ----------- | ------------- |
-| *string* or *[`IntermediateResultSavingMode`]({{ site.enumerations }}result-enums.html#intermediateresultsavingmode) enum* | "IRSM_MEMORY"<br>"IRSM_FILESYSTEM"<br>"IRSM_BOTH" | "IRSM_MEMORY" |
+| *string* or *[`IntermediateResultSavingMode`]({{ site.enumerations }}result-enums.html#intermediateresultsavingmode) enum* | "IRSM_MEMORY"<br>"IRSM_FILESYSTEM"<br>"IRSM_BOTH"<br>"IRSM_REFERENCE_MEMORY" | "IRSM_MEMORY" |
 
 - **See also**:   
     [`IntermediateResultSavingMode` Enumeration]({{ site.enumerations }}result-enums.html#intermediateresultsavingmode)  
@@ -37,24 +37,24 @@ needAutoGenerateSidebar: false
 ##### FolderPath 
 Sets the path of the output folder which stores intermediate results.   
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *string* | A string value representing the folder path with max length 480. | "" | "IRSM_FILESYSTEM"<br>"IRSM_BOTH" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *string* | A string value representing the folder path with max length 480. | "" |         
 
 - **Remarks**     
-    "": The library path.    
-    Please make sure the path exists and your application has the appropriate permissions for saving the results.   
+    - "": The library path.    
+    - Please make sure the path exists and your application has the appropriate permissions for saving the results.   
 
 ##### RecordsetSizeOfLatestImages
 Sets the maximum count of recordset to store the latest images' intermediate results.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [0,0x7fffffff]  |  0 | "IRSM_MEMORY"<br>"IRSM_FILESYSTEM"<br>"IRSM_BOTH" | 
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [0,0x7fffffff]  |  0 | 
 
 - **Remarks**     
-    0: no limitation on the count of recordset.   
-    When the count exceeds, the old recordset will be replaced by the new one.
+    - 0: no limitation on the count of recordset.   
+    - When the count exceeds, the old recordset will be replaced by the new one.
 
 ### Setting Methods
 

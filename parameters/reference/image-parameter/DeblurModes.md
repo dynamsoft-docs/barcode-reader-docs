@@ -28,19 +28,19 @@ needAutoGenerateSidebar: false
 ##### LibraryFileName 
 Sets the file name of the library to load dynamically.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
+| Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing file name. | "" | All `DeblurMode` items except DM_SKIP |         
 
 
 - **Remarks**     
-  - The library must be in the same place with Dynamsoft Barcode Reader Library.
+  The library must be in the same place with Dynamsoft Barcode Reader Library.
 
 
 ##### LibraryParameters 
 Sets the parameters passed to the library to load dynamically.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
+| Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing parameters. | "" | All `DeblurMode` items except DM_SKIP |         
 

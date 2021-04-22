@@ -31,44 +31,44 @@ needAutoGenerateSidebar: false
 ##### ScanStride 
 Sets the stride in pixels between scans when searching for barcodes.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [0, 0x7fffffff] | 0 | "LM_SCAN_DIRECTLY" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [0, 0x7fffffff] | 0 |         
 
 - **Remarks**     
-  0: automatically set by the library.   
-  When the set value is greater than half the width or height of the current image, the actual processing is 0.  
+  - 0: automatically set by the library.   
+  - When the set value is greater than half the width or height of the current image, the actual processing is 0.  
 
 
 ##### ScanDirection 
 Sets the scan direction when searching barcode.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [0, 2] | 0 | "LM_SCAN_DIRECTLY" |             
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [0, 2] | 0 |             
 
 - **Remarks**     
-  0: Both vertical and horizontal direction.   
-  1: Vertical direction.   
-  2: Horizontal direction. 
+  - 0: Both vertical and horizontal direction.   
+  - 1: Vertical direction.   
+  - 2: Horizontal direction. 
   
 
 ##### LibraryFileName 
 Sets the file name of the library to load dynamically.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
+| Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing file name. | "" | All `LocalizationMode` items except LM_SKIP and LM_AUTO |         
 
 
 - **Remarks**     
-  - The library must be in the same place with Dynamsoft Barcode Reader Library.
+  The library must be in the same place with Dynamsoft Barcode Reader Library.
 
 
 ##### LibraryParameters 
 Sets the parameters passed to the library to load dynamically.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
+| Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing parameters. | "" | All `LocalizationMode` items except LM_SKIP and LM_AUTO |         
 

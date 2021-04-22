@@ -33,9 +33,9 @@ needAutoGenerateSidebar: false
 ##### BlockSizeX 
 Sets the horizontal block size for the binarization process.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [0, 1000] | 0 | "BM_LOCAL_BLOCK" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [0, 1000] | 0 |         
 
 - **Remarks**    
   Block size refers to the size of a pixel neighborhood used to calculate a threshold value for the pixel. An appropriate value for binarization. BlockSize can help generate a high-quality binary image and increase the accuracy of barcode localization.   
@@ -51,9 +51,9 @@ Sets the horizontal block size for the binarization process.
 ##### BlockSizeY 
 Sets the vertical block size for the binarization process.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [0, 1000] | 0 | "BM_LOCAL_BLOCK" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [0, 1000] | 0 |         
 
 - **Remarks**     
   Block size refers to the size of a pixel neighborhood used to calculate a threshold value for the pixel. An appropriate value for binarization. BlockSize can help generate a high-quality binary image and increase the accuracy of barcode localization.   
@@ -67,13 +67,13 @@ Sets the vertical block size for the binarization process.
 ##### EnableFillBinaryVacancy 
 Sets whether to enable binary vacancy filling.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [0, 1] | 1 | "BM_LOCAL_BLOCK" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [0, 1] | 1 |         
 
 - **Remarks**     
-  0: disable.   
-  1: enable.
+  - 0: disable.   
+  - 1: enable.
 
   For barcodes with a large module size, there might be a vacant area in the position detection pattern after binarization. The vacant area may result in decoding failure. Setting this to True will fill in the vacant area with black and may help improve the decoding success rate. 
   
@@ -81,9 +81,9 @@ Sets whether to enable binary vacancy filling.
 ##### ImagePreprocessingModesIndex 
 The index of a specific image preprocessing mode in the [ImagePreprocessingModes](ImagePreprocessingModes.md#imagepreprocessingmodes) parameter which the current binarization mode is applied to.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [-1, 0x7fffffff] | -1 | "BM_LOCAL_BLOCK" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [-1, 0x7fffffff] | -1 |         
 
 - **Remarks**     
   -1: The current binarization mode is applied to all modes in parameter [ImagePreprocessingModes](ImagePreprocessingModes.md#imagepreprocessingmodes).
@@ -92,34 +92,34 @@ The index of a specific image preprocessing mode in the [ImagePreprocessingModes
 ##### ThreshValueCoefficient 
 Constant subtracted from the mean or weighted mean. Normally, it is positive but may be zero or negative as well.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [-255, 255] | 10 | "BM_LOCAL_BLOCK" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [-255, 255] | 10 |         
 
 
 ##### BinarizationThreshold
 Sets the binarization threshold.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [-1, 255] | -1 | "BM_THRESHOLD" |   
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [-1, 255] | -1 |   
 
 ##### LibraryFileName 
 Sets the file name of the library to load dynamically.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
+| Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing file name. | "" | All `BinarizationMode` items except BM_SKIP and BM_AUTO |         
 
 
 - **Remarks**     
-  - The library must be in the same place with Dynamsoft Barcode Reader Library.
+  The library must be in the same place with Dynamsoft Barcode Reader Library.
 
 
 ##### LibraryParameters 
 Sets the parameters passed to the library to load dynamically.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
+| Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing parameters. | "" | All `BinarizationMode` items except BM_SKIP and BM_AUTO |         
 
