@@ -86,11 +86,11 @@ Describes the barcode complement mode.
 
 ### Members
    
-| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description | Valid Argument(s) |
-| -------------------------- | ------------------- | ----- | ----------- | ----------------- |
-| BCM_SKIP | EnumBarcodeComplementModeSkip | 0x00 | Skips the barcode complement. | `N/A` |
-| BCM_AUTO | EnumBarcodeComplementModeAuto | 0x01 | **Not supported yet.** | `N/A` |
-| BCM_GENERAL | EnumBarcodeComplementModeGeneral | 0x02 | Complements the barcode using the general algorithm. | `N/A` |
+| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
+| -------------------------- | ------------------- | ----- | ----------- |
+| BCM_SKIP | EnumBarcodeComplementModeSkip | 0x00 | Skips the barcode complement. |
+| BCM_AUTO | EnumBarcodeComplementModeAuto | 0x01 | **Not supported yet.** |
+| BCM_GENERAL | EnumBarcodeComplementModeGeneral | 0x02 | Complements the barcode using the general algorithm. |
 
 
 
@@ -235,8 +235,8 @@ Describes the deblur mode.
 
 ### Members
    
-| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description | Valid Argument(s) |
-| -------------------------- | ------------------- | ----- | ----------- | ----------------- |
+| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
+| -------------------------- | ------------------- | ----- | ----------- |
 | DM_SKIP | EnumDeblurModeSkip | 0x00 | Skips the deblur process. |
 | DM_DIRECT_BINARIZATION | EnumDeblurModeDirectBinarization | 0x01 | Performs deblur process using the direct binarization algorithm. |
 | DM_THRESHOLD_BINARIZATION | EnumDeblurModeThresholdBinarization | 0x02 | Performs deblur process using the threshold binarization algorithm. |
@@ -366,7 +366,7 @@ Describes the image preprocessing mode.
 | IPM_GRAY_EQUALIZE | EnumImagePreprocessingModeGrayEqualize | 0x04 | Preprocesses the image using the gray equalization algorithm. | [`Sensitivity`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#sensitivity) |
 | IPM_GRAY_SMOOTH | EnumImagePreprocessingModeGraySmooth | 0x08 | Preprocesses the image using the gray smoothing algorithm. | [`SmoothBlockSizeX`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#smoothblocksizex)<br>[`SmoothBlockSizeY`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#smoothblocksizey) |
 | IPM_SHARPEN_SMOOTH | EnumImagePreprocessingModeSharpenSmooth | 0x10 | Preprocesses the image using the sharpening and smoothing algorithm. | [`SmoothBlockSizeX`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#smoothblocksizex)<br>[`SmoothBlockSizeY`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#smoothblocksizey)<br>[`SharpenBlockSizeX`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#sharpenblocksizex)<br>[`SharpenBlockSizeY`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#sharpenblocksizey) |
-| IPM_MORPHOLOGY  | EnumImagePreprocessingModeMorphology | 0x20 | Preprocesses the image using the morphology algorithm. | [MorphOperation]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#morphoperation)<br>[MorphShape]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#morphshape)<br>[MorphOperationKernelSizeX]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#morphoperationkernelsizex)<br>[MorphOperationKernelSizeY]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#morphoperationkernelsizey) |
+| IPM_MORPHOLOGY  | EnumImagePreprocessingModeMorphology | 0x20 | Preprocesses the image using the morphology algorithm. | [`MorphOperation`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#morphoperation)<br>[`M`orphShape`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#morphshape)<br>[`MorphOperationKernelSizeX`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#morphoperationkernelsizex)<br>[`MorphOperationKernelSizeY`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#morphoperationkernelsizey) |
 
 
 
