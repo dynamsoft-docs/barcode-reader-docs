@@ -238,14 +238,12 @@
           $(".sideBar").toggleClass('hide-sm');
           $(".sideBar").toggleClass('hide-xs');
           setTimeout(function() {
-              console.log('sidebar' + $('.sideBar').width())
               $('#sideBarCnt').css({'width': $('.sideBar').width() + 'px'})
           }, 100)
       })
 
       let timeInt = setInterval(function() {
           var container = $('#sideBarCnt'), scrollTo = $('#sideBarCnt .activeLink');
-          console.log(scrollTo)
           if (scrollTo.length>0) {
               container.scrollTop(
                   scrollTo.offset().top - container.offset().top + container.scrollTop()
