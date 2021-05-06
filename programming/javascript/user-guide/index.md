@@ -11,32 +11,55 @@ needAutoGenerateSidebar: true
 
 ![Dynamsoft JavaScript Barcode SDK](assets/index/dbr-js-sdk.png)  
 
-[Dynamsoft BarcodeReader SDK for Web](https://www.dynamsoft.com/Products/barcode-recognition-javascript.aspx) is a JavaScript SDK for barcode scanning based on **WebAssembly**. It supports real-time barcode localization and decoding of various barcode types. The library is capable of scanning barcodes directly from live video streams and static images. It also supports reading multiple barcodes at once.  
+[Dynamsoft Barcode Reader SDK for Web](https://www.dynamsoft.com/Products/barcode-recognition-javascript.aspx) allows robust barcode scanning from a web page using any camera-equipped device, including mobile, laptop, or tablet. Built using JavaScript and **WebAssembly**, the SDK offers real-time single or multiple barcode localization, decoding of various [barcode types](https://www.dynamsoft.com/barcode-reader/features/#Supported-Barcode-Types), and short compilation times. In addition to live video stream decoding, the library can also read barcodes from static images.
 
-In this guide, you will learn step by step how to use Dynamsoft Barcode Reader JavaScript Edition in your application:
+In this guide, we help you step through the process of integrating the Dynamsoft Barcode Reader into your web application. Please find the table of contents below:
 
+- [Basic Requirements](#basic-requirements)
 - [Getting Started](#getting-started---hello-world)
-- [Installation](#installation)
+- [Import the Library](#import-the-library)
 - [Basic Customizations]({{ site.js }}user-guide/basic-customizations.html)
 - [Advanced Customizations]({{ site.js }}user-guide/advanced-customizations.html)
 - [Deployment Activation]({{ site.js }}user-guide/deployment-activation.html)
 - [Features Requirements]({{ site.js }}user-guide/features-requirements.html)
 - [Upgrade]({{ site.js }}user-guide/upgrade.html)
 
+## Basic Requirements
+
+- Camera-equipped device
+- Internet connection
+- Supported Browser(s)
+    - Chrome v52+ (v55+ on Android/iOS)
+    - Firefox v57+ (v59+ on Android/iOS)
+    - Edge v16+
+    - Safari v11+ (Safari 11.2.2 ~ 11.2.6 are not supported)
+
 
 ## Getting Started - Hello World  
 
-Let's start by using the library to build a simple web application that will decode barcodes from a live video stream.  
+Let's start by demonstrating the minimum JavaScript code needed to get the library up and running in a simple `HTML` page.
 
 ### Basic Requirements
 
-- Internet connection  
-- Supported Browser  
-- Camera access  
+- Camera-equipped device (mobile, laptop/PC, tablet)
+- Internet connection
+- Supported Browser(s)
+    - Chrome v52+ (v55+ on Android/iOS)
+    - Firefox v57+ (v59+ on Android/iOS)
+    - Edge v16+
+    - Safari v11+ (Safari 11.2.2 ~ 11.2.6 are not supported)
 
-### Step One: Write the code in one minute  
+### Import the Library
 
-Create an HTML file with the following content. Deploy this to your web server and run the application over **HTTPS**.
+First, create a simple `HTML` page that follows the template of any simple `HTML` file. Afterwards, import the SDK using [jsDelivr](https://www.jsdelivr.com/) or [UNPKG](https://unpkg.com/) CDN:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.0.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
+
+<!-- or -->
+
+<script src="https://unpkg.com/dynamsoft-javascript-barcode@8.0.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
+```
 
 - You will need to replace `PRODUCT-KEYS` with a trial key for the sample code to work correctly. You can acquire a trial key [here](https://www.dynamsoft.com/customer/license/trialLicense).
 - If you don't have a ready-to-use web server but have a package manager like npm or yarn, you can set up a simple HTTP server in minutes. Check out `http-server` on npm or yarn.
