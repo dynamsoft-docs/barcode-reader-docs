@@ -82,7 +82,7 @@ Firefox | v52+ (v55+ on Android/iOS<sup>1</sup>)
 Edge<sup>2</sup> | v16+
 Safari<sup>3</sup> | v11+
 
-<sup>1</sup> Camera video streaming is only supported in Safari on iOS 14.2 and below.  
+<sup>1</sup> iOS 14.3+ is required for camera video streaming in Chrome and Firefox or Apps using webviews.
 <sup>2</sup> On Edge, due to strict Same-origin policy, you must host the library on the same domain as your webpage.  
 <sup>3</sup> Safari 11.2.2 ~ 11.2.6 are not supported.
      
