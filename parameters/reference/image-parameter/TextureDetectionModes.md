@@ -12,7 +12,7 @@ needAutoGenerateSidebar: false
 ## TextureDetectionModes 
 
 ### Mode Properties
-`TextureDetectionModes` is a parameter for setting the mode  for texture detection. It consisits of one or more `TextureDetectionMode` items and each item has its own arguments. The array index represents the priority of the item. The smaller index is, the higher priority is.
+`TextureDetectionModes` is a parameter for setting the mode  for texture detection. It consists of one or more `TextureDetectionMode` items and each item has its own arguments. The array index represents the priority of the item. The smaller index is, the higher priority is.
 
 | Value Type | Value Range | Default Value |
 | ---------- | ----------- | ------------- |
