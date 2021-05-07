@@ -17,7 +17,9 @@ In this guide, we help you step through the process of integrating the Dynamsoft
 
 - [Basic Requirements](#basic-requirements)
 - [Getting Started](#getting-started---hello-world)
-- [Import the Library](#import-the-library)
+    - [Import the Library](#import-the-library)
+    - [Testing Hello World](#testing-hello-world)
+    - [Barcode Reader vs Barcode Scanner](#barcode-reader-vs-barcode-scanner)
 - [Basic Customizations]({{ site.js }}user-guide/basic-customizations.html)
 - [Advanced Customizations]({{ site.js }}user-guide/advanced-customizations.html)
 - [Deployment Activation]({{ site.js }}user-guide/deployment-activation.html)
@@ -35,23 +37,13 @@ In this guide, we help you step through the process of integrating the Dynamsoft
     - Safari v11+ (Safari 11.2.2 ~ 11.2.6 are not supported)
 
 
-## Getting Started - Hello World  
+## Getting Started - Hello World
 
 Let's start by demonstrating the minimum JavaScript code needed to get the library up and running in a simple `HTML` page.
 
-### Basic Requirements
-
-- Camera-equipped device (mobile, laptop/PC, tablet)
-- Internet connection
-- Supported Browser(s)
-    - Chrome v52+ (v55+ on Android/iOS)
-    - Firefox v57+ (v59+ on Android/iOS)
-    - Edge v16+
-    - Safari v11+ (Safari 11.2.2 ~ 11.2.6 are not supported)
-
 ### Import the Library
 
-First, create a simple `HTML` page that follows the template of any simple `HTML` file. Afterwards, import the SDK using [jsDelivr](https://www.jsdelivr.com/) or [UNPKG](https://unpkg.com/) CDN:
+First, create a `HTML` page that follows the template of any simple `HTML` file. Afterwards, import the SDK using the [jsDelivr](https://www.jsdelivr.com/) or [UNPKG](https://unpkg.com/) CDN:
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.0.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
@@ -61,15 +53,18 @@ First, create a simple `HTML` page that follows the template of any simple `HTML
 <script src="https://unpkg.com/dynamsoft-javascript-barcode@8.0.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
 ```
 
-- You will need to replace `PRODUCT-KEYS` with a trial key for the sample code to work correctly. You can acquire a trial key [here](https://www.dynamsoft.com/customer/license/trialLicense).
-- If you don't have a ready-to-use web server but have a package manager like npm or yarn, you can set up a simple HTTP server in minutes. Check out `http-server` on npm or yarn.
+You will need to replace `PRODUCT-KEYS` with a trial key for the sample code to work correctly. You can acquire a trial key [here](https://www.dynamsoft.com/customer/license/trialLicense).
+
+If you don't have a ready-to-use web server but have a package manager like npm or yarn, you can set up a simple HTTP server in minutes. Check out `http-server` on npm or yarn.
+
+Please find the minimum `Hello World` code below:
 
 ```html
 <!DOCTYPE html>
 <html>
 <body>
     <!-- Please visit https://www.dynamsoft.com/customer/license/trialLicense to get a trial license. -->
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.0.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.3/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
     <script>
         // initializes and uses the library
         let scanner = null;
@@ -87,18 +82,20 @@ First, create a simple `HTML` page that follows the template of any simple `HTML
 [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/pL4e7yrd/)
 
 
-`onFrameRead`: This event is triggered after each single frame is scanned. The `results` object contains all the barcode results that the library found on this frame. In this example, we will print the results found in every frame to the console. 
+`onFrameRead`: This event is triggered after each single frame is scanned. The `results` object contains all the barcode results that the library found on this frame. In the above code, the results found in every frame are printed to the console. 
 
 `onUnduplicatedRead`: This event is triggered when a new barcode (not a duplicate) is found. `txt` holds the barcode text value while `result` is an object that holds details of the found barcode. In this example, an alert will be displayed for each unique barcode found. 
   
 
-### Step Two: Enable camera access
+### Testing Hello World
 
-Open the HTML page in your browser and you should see a pop-up asking for permission to access the camera. Once camera access is granted, the video stream will start in the default UI of the **BarcodeScanner** object.  
+Open the HTML page in your browser and you should see a pop-up asking for permission to access the camera. Once camera access is granted, the video stream will start in the default UI of the **BarcodeScanner** object.
 
-**Note**: If you don't see the pop-up, wait a few seconds for the initialization to finish.   
+**Note**: If you don't see the pop-up, wait a few seconds for the library to finish compiling.   
 
-In this step, you might run into the following issues:
+Place a barcode in front of the camera once it opens up. Once the barcode is detected, you will see an alert with the text result. In addition, the located barcode will be highlighted via the default UI of the scanner.
+
+Please be wary of the following two issues that you might encounter when opening the Hello World sample you just created, either locally or via a server.
 
 #### getUserMedia non-HTTPS access issue
 
@@ -112,9 +109,9 @@ In Safari 12 the equivalent error is:
 
 To access the camera with the API [getUserMedia](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia), HTTPS is required.
 
-**Note**: If you use Chrome or Firefox, you might not get the error because these two browsers allow camera access via file:/// and http://localhost.
+**Note**: If you use Chrome or Firefox, you might not get the error because these two browsers allow camera access via `file:///` and `http://localhost`.
 
-To make sure your web application can access the camera, please configure your web server to support HTTPS. The following links may help.
+To make sure your web application can access the camera and resolve this error, please configure your web server to support HTTPS. The following links may help depending on the server framework:
 
 - NGINX: [Configuring HTTPS servers](https://nginx.org/en/docs/http/configuring_https_servers.html)
 - IIS: [Create a Self Signed Certificate in IIS](https://aboutssl.org/how-to-create-a-self-signed-certificate-in-iis/)
@@ -127,33 +124,13 @@ For testing purposes, a self-signed certificate can be used when configuring HTT
 
 In a production environment, you will need a valid HTTPS certificate.
 
-### Step Three: Time to scan
+### Barcode Reader vs Barcode Scanner
 
-Place a barcode in front of the camera. You should see an alert pop up with the decoded barcode result and a coloured region on the video to highlight the barcode location. 
+DBR JavaScript comes with two main classes:
+1. [`BarcodeReader`](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeReader/) is used when image decoding. If your typical use case does not involve an interactive video scenario (decoding barcodes directly from a video stream) but rather, just images, then going with the `BarcodeReader` class is recommended.
+2. [`BarcodeScanner`](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeScanner/) is the opposite, and should be used when video decoding. Therefore, this class comes with more API addressing camera control and the video settings.
 
-## Installation
-
-yarn
-
-```
-$ yarn add dynamsoft-javascript-barcode
-```
-
-npm
-
-```
-$ npm install dynamsoft-javascript-barcode --save
-```
-
-cdn
-
-```
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.0.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
-<!-- or -->
-<script src="https://unpkg.com/dynamsoft-javascript-barcode@8.0.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
-```
-
-Also see [Dynamsoft JavaScript Barcode SDK for Node](https://github.com/dynamsoft-dbr/node-javascript-barcode).  
+## Customization and Configuration
 
 
 ## Demos and Examples
