@@ -51,7 +51,7 @@ reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
          e.printStackTrace();
       }
    }
-}
+});
 reader.initRuntimeSettingsWithFile("your template file path", EnumConflictMode.CM_OVERWRITE);
 reader.destroy();
 ```
@@ -87,7 +87,7 @@ reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
          e.printStackTrace();
       }
    }
-}
+});
 reader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", EnumConflictMode.CM_OVERWRITE);
 reader.destroy();
 ```
@@ -123,7 +123,7 @@ reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
          e.printStackTrace();
       }
    }
-}
+});
 reader.appendTplFileToRuntimeSettings("your template file path", EnumConflictMode.CM_IGNORE);
 reader.destroy();
 ```
@@ -159,7 +159,7 @@ reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
          e.printStackTrace();
       }
    }
-}
+});
 reader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", EnumConflictMode.CM_OVERWRITE);
 reader.appendTplStringToRuntimeSettings("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_OneD\"], \"ExpectedBarcodesCount\":20}}", EnumConflictMode.CM_IGNORE);
 reader.destroy();
@@ -195,7 +195,7 @@ reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
          e.printStackTrace();
       }
    }
-}
+});
 String[] templateNames = reader.getAllParameterTemplateNames();
 reader.destroy();
 ```
@@ -231,7 +231,7 @@ reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
          e.printStackTrace();
       }
    }
-}
+});
 reader.outputSettingsToFile("your saving file path", "currentRuntimeSettings");
 reader.destroy();
 ```
@@ -266,7 +266,7 @@ reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
          e.printStackTrace();
       }
    }
-}
+});
 String settingStr = reader.outputSettingsToString("currentRuntimeSettings");
 reader.destroy();
 ```

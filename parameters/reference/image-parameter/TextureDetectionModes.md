@@ -29,9 +29,9 @@ needAutoGenerateSidebar: false
 ##### Sensitivity 
 Sets the sensitivity used for texture detection.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [1, 9] | 5 | "TDM_GENERAL_WIDTH_CONCENTRATION" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [1, 9] | 5 |         
 
 - **Remarks**    
   A larger value means the library will take more effort to detect texture.
@@ -39,19 +39,19 @@ Sets the sensitivity used for texture detection.
 ##### LibraryFileName 
 Sets the file name of the library to load dynamically.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
+| Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing file name. | "" | All `TextureDetectionMode` items except TDM_SKIP and TDM_AUTO|         
 
 
 - **Remarks**     
-  - The library must be in the same place with Dynamsoft Barcode Reader Library.
+  The library must be in the same place with Dynamsoft Barcode Reader Library.
 
 
 ##### LibraryParameters 
 Sets the parameters passed to the library to load dynamically.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
+| Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing parameters. | "" | All `TextureDetectionMode` items except TDM_SKIP and TDM_AUTO |         
 

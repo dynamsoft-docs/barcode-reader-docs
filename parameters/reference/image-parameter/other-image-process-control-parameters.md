@@ -126,25 +126,6 @@ To ensure your barcodes in the PDF files are readable, please set the resolution
 ## PDFReadingMode
 Sets how to detect barcodes from a PDF file when using DecodeFile method.
 
-##### LibraryFileName 
-Sets the file name of the library to load dynamically.
-
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *string* | A string value representing file name. | "" | "RPM_GENERAL"<br>"RPM_GENERAL_GRAY_CONTRAST"<br>"RPM_GENERAL_HSV_CONTRAST"<br>"RPM_GENERAL_RGB_CONTRAST" |         
-
-
-- **Remarks**     
-  - The library must be in the same place with Dynamsoft Barcode Reader Library.
-
-
-##### LibraryParameters 
-Sets the parameters passed to the library to load dynamically.
-
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *string* | A string value representing parameters. | "" | "RPM_GENERAL"<br>"RPM_GENERAL_GRAY_CONTRAST"<br>"RPM_GENERAL_HSV_CONTRAST"<br>"RPM_GENERAL_RGB_CONTRAST" |         
-
 
 ### As Json Parameter
 

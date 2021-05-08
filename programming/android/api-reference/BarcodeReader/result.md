@@ -45,7 +45,7 @@ reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
          e.printStackTrace();
       }
    }
-}
+});
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 settings.intermediateResultTypes = EnumIntermediateResultType.IRT_ORIGINAL_IMAGE | EnumIntermediateResultType.IRT_COLOUR_CLUSTERED_IMAGE | EnumIntermediateResultType.IRT_COLOUR_CONVERTED_GRAYSCALE_IMAGE;
 reader.updateRuntimeSettings(settings);

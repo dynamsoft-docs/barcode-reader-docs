@@ -29,31 +29,31 @@ needAutoGenerateSidebar: false
 Sets if there is light reflection on the barocde zone.
 
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [0, 1] | 1 | "BICM_DARK_ON_LIGHT"<br>"BICM_LIGHT_ON_DARK"<br>"BICM_DARK_ON_DARK"<br>"BICM_LIGHT_ON_LIGHT"<br>"BICM_DARK_LIGHT_MIXED"<br>"BICM_DARK_ON_LIGHT_DARK_SURROUNDING" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [0, 1] | 1 |         
 
 - **Remarks**     
-  0: no light reflection.   
-  1: has light reflection.
+  - 0: no light reflection.   
+  - 1: has light reflection.
 
 
 ##### LibraryFileName 
 Sets the file name of the library to load dynamically.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
+| Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing the file name. | "" | All `BarcodeColourMode` items except BICM_SKIP |         
 
 
 - **Remarks**     
-  - The library must be in the same place with Dynamsoft Barcode Reader Library.
+  The library must be in the same place with Dynamsoft Barcode Reader Library.
 
 
 ##### LibraryParameters 
 Sets the parameters passed to the library to load dynamically.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
+| Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing parameters. | "" | All `BarcodeColourMode` items except BICM_SKIP |         
 

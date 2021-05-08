@@ -30,9 +30,9 @@ needAutoGenerateSidebar: false
 ##### Sensitivity 
 Sets the sensitivity used for colour categorization.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [1, 9] | 5 | "CCM_GENERAL_HSV" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [1, 9] | 5 |         
 
 - **Remarks**     
   A higher level means less colours will be clustered as the same colour.   
@@ -41,19 +41,19 @@ Sets the sensitivity used for colour categorization.
 ##### LibraryFileName 
 Sets the file name of the library to load dynamically.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
+| Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing file name. | "" | All `ColourClusteringMode` items except CCM_SKIP and CCM_AUTO |         
 
 
 - **Remarks**     
-  - The library must be in the same place with Dynamsoft Barcode Reader Library.
+  The library must be in the same place with Dynamsoft Barcode Reader Library.
 
 
 ##### LibraryParameters 
 Sets the parameters passed to the library to load dynamically.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
+| Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing parameters. | "" | All `ColourClusteringMode` items except CCM_SKIP and CCM_AUTO |         
 

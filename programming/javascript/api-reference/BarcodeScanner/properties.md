@@ -210,7 +210,7 @@ This event is triggered when a single frame has been scanned. The results object
 
 ### Parameters
 
-`results` [*`TextResult`*](interfaces.md#textresult)[]
+`result` [*`TextResult`*](../global-interfaces.md#textresult)[]
 
 ### Return Value
 

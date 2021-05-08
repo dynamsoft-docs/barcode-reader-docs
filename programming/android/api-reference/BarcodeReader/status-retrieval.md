@@ -40,7 +40,7 @@ reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
          e.printStackTrace();
       }
    }
-}
+});
 String versionInfo = reader.getVersion();
 reader.destroy();
 ```

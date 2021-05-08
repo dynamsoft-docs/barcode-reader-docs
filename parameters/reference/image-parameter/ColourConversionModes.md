@@ -32,9 +32,9 @@ needAutoGenerateSidebar: false
 ##### BlueChannelWeight 
 Sets the weight value of Blue Colour Channel used for converting a colour image to a grayscale image.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [-1, 1000] | -1 | "CICM_GENERAL" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [-1, 1000] | -1 |         
 
 - **Remarks**     
   -1: The weight value will be set automatically by the SDK. 
@@ -43,9 +43,9 @@ Sets the weight value of Blue Colour Channel used for converting a colour image 
 ##### GreenChannelWeight 
 Sets the weight value of Green Colour Channel used for converting a colour image to a grayscale image.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [-1, 1000] | -1 | "CICM_GENERAL" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [-1, 1000] | -1 |         
 
 - **Remarks**     
   -1: The weight value will be set automatically by the SDK. 
@@ -54,9 +54,9 @@ Sets the weight value of Green Colour Channel used for converting a colour image
 ##### RedChannelWeight 
 Sets the weight value of Red Colour Channel used for converting a colour image to a grayscale image.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [-1, 1000] | -1 | "CICM_GENERAL" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [-1, 1000] | -1 |         
 
 - **Remarks**     
   -1: The weight value will be set automatically by the SDK. 
@@ -65,19 +65,19 @@ Sets the weight value of Red Colour Channel used for converting a colour image t
 ##### LibraryFileName 
 Sets the file name of the library to load dynamically.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
+| Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing file name. | "" | All `ColourConversionMode` items except CICM_SKIP |         
 
 
 - **Remarks**     
-  - The library must be in the same place with Dynamsoft Barcode Reader Library.
+  The library must be in the same place with Dynamsoft Barcode Reader Library.
 
 
 ##### LibraryParameters 
 Sets the parameters passed to the library to load dynamically.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
+| Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing parameters. | "" | All `ColourConversionMode` items except CICM_SKIP |         
 
