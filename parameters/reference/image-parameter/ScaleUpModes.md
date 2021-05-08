@@ -12,7 +12,7 @@ needAutoGenerateSidebar: false
 ## ScaleUpModes  
 
 ### Mode Properties
-`ScaleUpModes` is a parameter for setting the mode to control the sampling methods of scale-up for linear barcodes with small module sizes. It consisits of one or more `ScaleUpMode` items and each item has its own arguments. The array index represents the priority of the item. The smaller index is, the higher priority is.
+`ScaleUpModes` is an array that consists of one or more `ScaleUpMode` items. Each mode represents a sampling method of scale-up. Each mode has its own arguments. The array index represents the priority of the sampling methods. A smaller index means higher priority. This API is typically used for linear and 2D barcodes with small module sizes.
 
 | Value Type | Value Range | Default Value |
 | ---------- | ----------- | ------------- |
@@ -28,10 +28,10 @@ needAutoGenerateSidebar: false
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)
 
-If the module size of the barcode is smaller than the [ModuleSizeThreshold](#modulesizethreshold) and the acute angle with X of the barcode is larger than the [AcuteAngleWithXThreshold](#acuteanglewithxthreshold), the barcode will be enlarged to N times (N=1,2,3…) till N * modulesize >= [TargetModuleSize](#targetmodulesize).
+If the module size of the barcode is smaller than the [ModuleSizeThreshold](#modulesizethreshold) and the acute angle with X of the barcode is larger than the [AcuteAngleWithXThreshold](#acuteanglewithxthreshold), the barcode will be enlarged by a scale factor of N (N=1,2,3…) till N * modulesize >= [TargetModuleSize](#targetmodulesize).
  
 ##### AcuteAngleWithXThreshold 
-Sets the acute angle threshold for scale-up.
+Sets the minimum acute angle threshold for scale-up
 
 
 | Value Type | Value Range | Default Value | 
@@ -39,11 +39,12 @@ Sets the acute angle threshold for scale-up.
 | *int* | [-1, 90] | -1 |         
 
 - **Remarks**     
-  1 : means automatically set by the library.
+  -1: means automatically set by the library.
+
 
 
 ##### ModuleSizeThreshold 
-Sets the module size threshold for scale-up.
+Sets the minimum module size threshold for scale-up
 
 
 | Value Type | Value Range | Default Value | 
@@ -51,11 +52,11 @@ Sets the module size threshold for scale-up.
 | *int* | [0, 0x7fffffff] | 0 |         
 
 - **Remarks**     
-  0 : means automatically set by the library.
+  0: means automatically set by the library.
 
 
 ##### TargetModuleSize 
-Sets the target module size for scale-up.
+Sets the target module size for scale-up
 
 
 | Value Type | Value Range | Default Value | 
@@ -63,7 +64,7 @@ Sets the target module size for scale-up.
 | *int* | [0, 0x7fffffff] | 0 |         
 
 - **Remarks**     
-  0 : means automatically set by the library.
+  0: means automatically set by the library.
 
 ##### LibraryFileName 
 Sets the file name of the library to load dynamically.
@@ -74,7 +75,8 @@ Sets the file name of the library to load dynamically.
 
 
 - **Remarks**     
-  The library must be in the same place with Dynamsoft Barcode Reader Library.
+  The library must be in the same place as Dynamsoft Barcode Reader Library.
+
 
 
 ##### LibraryParameters 

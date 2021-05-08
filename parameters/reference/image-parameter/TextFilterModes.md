@@ -10,7 +10,7 @@ needAutoGenerateSidebar: false
 ## TextFilterModes  
 
 ### Mode Properties
-`TextFilterModes` is a parameter for setting the mode for text filter. It consisits of one or more `TextFilterMode` items and each item has its own arguments. The array index represents the priority of the item. The smaller index is, the higher priority is.
+`TextFilterModes` is a parameter for setting the mode for text filter. It consists of one or more `TextFilterMode` items and each item has its own arguments. The array index represents the priority of the item. The smaller index is, the higher priority is.
 
 | Value Type | Value Range | Default Value |
 | ---------- | ----------- | ------------- |
