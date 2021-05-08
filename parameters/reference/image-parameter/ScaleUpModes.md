@@ -51,7 +51,7 @@ Sets the minimum module size threshold for scale-up
 | *int* | [0, 0x7fffffff] | 0 | "SUM_LINEAR_INTERPOLATION"<br>"SUM_NEAREST_NEIGHBOUR_INTERPOLATION" |         
 
 - **Remarks**     
-  0 : means automatically set by the library.
+  0: means automatically set by the library.
 
 
 ##### TargetModuleSize 
@@ -63,7 +63,7 @@ Sets the target module size for scale-up
 | *int* | [0, 0x7fffffff] | 0 | "SUM_LINEAR_INTERPOLATION"<br>"SUM_NEAREST_NEIGHBOUR_INTERPOLATION" |         
 
 - **Remarks**     
-  0 : means automatically set by the library.
+  0: means automatically set by the library.
 
 ##### LibraryFileName 
 Sets the file name of the library to load dynamically.
@@ -74,7 +74,7 @@ Sets the file name of the library to load dynamically.
 
 
 - **Remarks**     
-  - The library must be in the same place as Dynamsoft Barcode Reader Library.
+  The library must be in the same place as Dynamsoft Barcode Reader Library.
 
 
 ##### LibraryParameters 
