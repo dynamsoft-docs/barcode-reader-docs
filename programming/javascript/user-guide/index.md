@@ -20,7 +20,9 @@ In this guide, we help you step through the process of integrating the Dynamsoft
     - [Import the Library](#import-the-library)
     - [Testing Hello World](#testing-hello-world)
     - [Barcode Reader vs Barcode Scanner](#barcode-reader-vs-barcode-scanner)
-- [Basic Customizations]({{ site.js }}user-guide/basic-customizations.html)
+- [Configuration and Customization](#configuration-and-customization)
+    - [Capture Settings](#capture-settings)
+    - [Runtime Settings](#runtime-settings)
 - [Advanced Customizations]({{ site.js }}user-guide/advanced-customizations.html)
 - [Deployment Activation]({{ site.js }}user-guide/deployment-activation.html)
 - [Features Requirements]({{ site.js }}user-guide/features-requirements.html)
@@ -128,10 +130,54 @@ In a production environment, you will need a valid HTTPS certificate.
 
 DBR JavaScript comes with two main classes:
 1. [`BarcodeReader`](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeReader/) is used when image decoding. If your typical use case does not involve an interactive video scenario (decoding barcodes directly from a video stream) but rather, just images, then going with the `BarcodeReader` class is recommended.
-2. [`BarcodeScanner`](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeScanner/) is the opposite, and should be used when video decoding. Therefore, this class comes with more API addressing camera control and the video settings.
+2. [`BarcodeScanner`](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeScanner/) is the opposite, and should be used when video decoding. Therefore, this class comes with API addressing camera control and video settings.
 
-## Customization and Configuration
+## Configuration and Customization 
+The SDK comes with a variety of settings to help optimize the performance of the `BarcodeReader` or the `BarcodeScanner`, depending on your use. The settings are divided into two main categories, Capture Settings and Runtime Settings, with the latter being its own class `RuntimeSettings`.  The capture settings will mainly deal with two classes, `VideoSettings` and `ScanSettings`. The following section will break down each of these settings and how to use them.
 
+### Capture Settings
+
+This first section will look into the capture settings of the `BarcodeScanner` class. These settings are used to control the video media constraints and some of the more niche video scanner settings. Please note that these settings are not applicable to the `BarcodeReader` class.
+
+#### Video Settings
+The video settings are directly inherited from the [MediaStreamConstraints](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia) dictionary used by `getUserMedia`. Please note that we will only use the `video` track constraint when it comes to DBR JavaScript.
+
+To update these `MediaStreamConstraints` settings such as video width, video height, frame rate, or choosing which camera to use (in case a device is equipped with multiple cameras), the [updateVideoSettings](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeScanner/methods/capture-settings.html?ver=latest#updatevideosettings) method can be used.
+
+To retrieve the current video settings, you can use the [getVideoSettings](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeScanner/methods/capture-settings.html?ver=latest#getvideosettings) method. Please note that `updateVideoSettings` and `getVideoSettings` are only applicable to the `BarcodeScanner` class.
+
+The library offers several methods that allow you to set some of the video settings directly rather than through the `updateVideoSettings` method. Here is a quick breakdown:
+- `setResolution`: Sets the current video resolution
+- `setFrameRate`: Sets the current video frame rate
+- `setColorTemperature`: Adjusts the video color temperature
+- `setExposureCompensation`: Adjusts the exposure level of the video
+- `setZoom`: Zoom in or out of the video stream
+- `turnOnTorch`/`turnOffTorch`: Some cameras come equipped with a flash, like most phone cameras nowadays. These two methods allow the user to control the flash/torch camera feature from within the browser.
+
+#### Scan Settings
+The capture settings also include settings related to the video scanner behaviour, called the `ScanSettings`. To retrieve the current scan settings, you can use the [getScanSettings](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeScanner/methods/capture-settings.html#getscansettings).
+
+The `ScanSettings` class lets the users control more niche things related to the scanner specifically. For instance, `duplicateForgetTime` specifies the time that the library remembers a found barcode, therefore allowing the library to ignore any duplicate results within the specified time period. This setting is very handy in situations where the user is scanning multiple barcodes on the same video frame.
+
+The other members of `ScanSettings` are:
+- `frameFilter`: Filters and discards video frames that are out of focus
+- `intervalTime`: The duration of the scan interval to allow the library to release the CPU periodically.
+
+### Runtime Settings
+The `RuntimeSettings` interface is common to both the `BarcodeReader` and the `BarcodeScanner` classes. These settings are concerned more with the operation of the barcode decoding process itself, whether it has to do with localization, binarization, or any of the other various steps involved.
+
+DBR JavScript comes with a few pre-built runtime settings templates that you can use depending on the scenario. There are currently 4 pre-built templates: `single`, `speed`, `balance`, and `coverage`.
+
+- `single`: The **default** template used. This mode has been optimized to read a single barcode at a time very quickly.
+- `speed`: This mode prioritizes speed over coverage when scanning a frame or image, and is recommended when decoding from a video stream. However, please note that this mode is slower than `single` if scanning a single barcode at a time.
+- `coverage`: Vice-versa of the `speed` mode. This mode is recommended when there are multiple barcodes per frame or image and you want to ensure that the library consistently locates them all, despite taking a longer time to do so.
+- `balance`: As the name suggests, this mode finds a balance between the two extremes of `speed` and `coverage`. If you find that the `speed` mode is missing barcodes, but the `coverage` mode is able to locate them all but the time cost is too high, then `balance` mode can find a good point in the middle.
+
+The `RuntimeSettings` interface controls a lot of aspects of the library, such as choosing which barcode formats to detect or defining a specific region of an image or video stream to read barcodes from, among many others.
+
+In fact, to best learn about all of the runtime settings and which scenarios call for which settings, it is best to refer to our [RuntimeSettings Parameters](https://www.dynamsoft.com/barcode-reader/parameters/) page. 
+
+However, please note that not all of the parameters of `RuntimeSettings` is applicable to both core classes of DBR JavaScript. To learn which specifically apply to the JavaScript edition, please refer to this [page](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/global-interfaces.html#runtimesettings).
 
 ## Demos and Examples
 
