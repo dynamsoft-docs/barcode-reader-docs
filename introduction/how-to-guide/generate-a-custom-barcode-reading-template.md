@@ -13,7 +13,7 @@ needAutoGenerateSidebar: false
 Starting from Dynamsoft Barcode Reader version 6, it is recommended to set all barcode reading configurations in the template (*.json). This article will talk about how to customize your own template based on our standard templates on our online demo.    
 
 
-1. Open our [Online Demo](https://demo.dynamsoft.com/DBR/BarcodeReaderDemo.aspx):    
+1. Open our [Online Demo](https://demo.dynamsoft.com/barcode-reader/):    
     ![Online Demo Example Image][1]     
 
 2. Modify the settings on the right panel:     

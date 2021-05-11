@@ -23,12 +23,15 @@ The JavaScript documentation mainly consists of two parts. One is the `Getting S
 
 ## Release Notes
 
-- [version 8.0](release-notes/js-8.md)
+- [version 8.x](release-notes/js-8.md)
 - [version 7.6 and below](release-notes/js-7.md)
+
+## Online Store
+- <a href="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/#JavaScript" target="_blank">JavaScript Edition for Browsers</a>
 
 ## Samples and Demos
 
-- [Online demo](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+- [Online demo](https://demo.dynamsoft.com/barcode-reader-js/)
 - [Vue example](https://github.com/Dynamsoft/javascript-barcode/tree/master/example/web/vue)    
 - [React example](https://github.com/Dynamsoft/javascript-barcode/tree/master/example/web/react)     
 - [Angular example](https://github.com/Dynamsoft/javascript-barcode/tree/master/example/web/angular)  

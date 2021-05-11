@@ -62,7 +62,7 @@ void com.dynamsoft.dbr.BarcodeReader.initLicenseFromServer(String licenseServer,
 ### Code Snippet
 
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader reader = new BarcodeReader();
 reader.initLicenseFromServer("", "C087****",  new DBRServerLicenseVerificationListener() {
     @Override
     public void licenseVerificationCallback(boolean isSuccess, Exception error) {
@@ -91,8 +91,9 @@ void com.dynamsoft.dbr.BarcodeReader.initLicenseFromLicenseContent(String licens
 ### Code Snippet
 
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
-reader.initLicenseFromLicenseContent("t0260NwAAAHV***************", "C087****");
+BarcodeReader reader = new BarcodeReader();
+//get String licenseContent from reader.outputLicenseToString();
+reader.initLicenseFromLicenseContent("C087****",licenseContent);
 reader.destroy();
 ```
 
@@ -119,9 +120,13 @@ The output string which stores the contents of license.
 ### Code Snippet
 
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
-reader.initLicenseFromLicenseContent("t0260NwAAAHV***************", "C087****");
-String licenseInfo = reader.outputLicenseToString();
+BarcodeReader reader = new BarcodeReader();
+reader.initLicenseFromServer("", "C087****",  new DBRServerLicenseVerificationListener() {
+    @Override
+    public void licenseVerificationCallback(boolean isSuccess, Exception error) {
+    }
+});
+String licenseContent = reader.outputLicenseToString();
 reader.destroy();
 ```
 
@@ -144,7 +149,7 @@ void com.dynamsoft.dbr.BarcodeReader.initLicenseFromLTS(DMLTSConnectionParameter
 ```java
 BarcodeReader reader = new BarcodeReader();
 DMLTSConnectionParameters info = new DMLTSConnectionParameters();
-info.handShakeCode = "*****-hs-****";
+info.organizationID = "200001";
 info.sessionPassword = "******";
 reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
    @Override
@@ -153,6 +158,6 @@ reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
          e.printStackTrace();
       }
    }
-}
-   ```
+});
+```
 

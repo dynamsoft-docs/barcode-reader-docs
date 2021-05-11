@@ -28,6 +28,10 @@ public class QRCodeDetails
 | [`ErrorCorrectionLevel`](#errorcorrectionlevel) | [`EnumQRCodeErrorCorrectionLevel`]({{ site.enumerations }}other-enums.html#qrcodeerrorcorrectionlevel) |
 | [`Version`](#version) | *int* |
 | [`Model`](#model) | *int* |
+| [`Mode`](#mode) | *int* |
+| [`Page`](#page) | *int* |
+| [`TotalPage`](#totalpage) | *int* |
+| [`ParityData`](#paritydata) | *byte* |
 
 
 ### ModuleSize
@@ -70,4 +74,36 @@ Number of the models.
 
 ```csharp
 int Dynamsoft.DBR.QRCodeDetails.Model
+```
+
+### Mode
+
+Identify the first data encoding mode.
+
+```csharp
+int Dynamsoft.DBR.QRCodeDetails.Mode
+```
+
+### Page
+
+Identify the position of the particular symbol.
+
+```csharp
+int Dynamsoft.DBR.QRCodeDetails.Page
+```
+
+### TotalPage
+
+Identify the total number of symbols to be concatenated in the Structured Append format.
+
+```csharp
+int Dynamsoft.DBR.QRCodeDetails.TotalPage
+```
+
+### ParityData
+
+The Parity Data shall be an 8 bit byte following the Symbol Sequence Indicator. The parity data is a value obtained by XORing byte by byte the ASCII/JIS values of all the original input data before division into symbol blocks.
+
+```csharp
+byte Dynamsoft.DBR.QRCodeDetails.ParityData
 ```

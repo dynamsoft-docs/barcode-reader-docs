@@ -1,14 +1,75 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for Android SDK - Release Notes v7.6.1 and below
-description: This is the release notes page of Dynamsoft Barcode Reader for Android SDK v7.6.1 and below.
-keywords: release notes, android, 
+title: Dynamsoft Barcode Reader for Android SDK - Release Notes v8.x
+description: This is the release notes page of Dynamsoft Barcode Reader for Android SDK v8.x.
+keywords: release notes, android, version 8.x,
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
 ---
 
-# Release Notes for Android SDK - 8.0
+# Release Notes for Android SDK - 8.x
+
+## 8.2 (03/17/2021)
+
+### New
+
+- Added a new mode argument, `FindAccurateBoundary`, to [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes) that determines if the SDK attempts to find an accurate boundary when RegionPredetectionModes is set to `RPM_GENERAL_HSV_CONTRAST`. 
+- Added a new an attribute, `organizationID` (string) to `DMLTSConnectionParameters`. The attribute adds a new layer of security for both full and trial licenses.
+
+### Improved
+
+- Improved both the localization and decoding algorithms for Postal Codes. 
+- LocalizationMode `LM_STATISTICS_POSTAL_CODE` will not be added automatically when enabling Postal Code in your runtime settings. Instead, users must manually add it to the LocalizationMode array if it is required.
+
+### Fixed
+
+- Resolved a bug that infrequently causes the application to crash when decoding a MicroPDF417 barcode.
+
+## 8.1.2 (01/22/2021)
+
+### New
+
+- Added `mode`, `page`, `totalPage` and `parityData` in the `QRCodeDetails` Class.
+
+### Improved
+
+- Improved the recognition accuracy for GS1 Databar.
+- Removed the exception code from `barcodeText` when using a valid trial license.
+- Included native C++ DLL files in the .NET assembly files, so users don't need to manually copy these files to the specific folder.
+
+### Fixed
+
+- Fixed a bug where `barcodeFormatString`, `barcodeFormatString_2`, `regionName` and `documentName` don't have value in the `IRT_TYPED_BARCODE_ZONE` intermediate result.
+
+
+## 8.1.1 (01/19/2021)
+
+### Fixed
+
+- Fixed a crash issue when calling `initLicenseFromLTS` or `decode***`  methods in Android 6.x and below.
+
+
+## 8.1 (01/12/2021)
+
+### New
+
+- Added support for MSI Code (Modified Plessey).
+- Added a new member `barcodeZoneMinDistanceToImageBorders` in the `PublicRuntimeSettings` Class to set the minimum distance (in pixels) between barcode zone and image borders. Previously, it is only available in the JSON template. It can be now configured by setting `PublicRuntimeSettings` -> `barcodeZoneMinDistanceToImageBorders`.
+- Added exception error message to `TextResult` when license initialization fails or decoding authorization fails.
+
+### Improved
+
+- Improved the localization robustness for QR Code.
+- Improved the localization for low quality 1D barcodes.
+- Improved the deblurring performance and recognition rate for DataMatrix. 
+- Improved the recognition rate for Aztec.
+
+### Fixed
+
+- Fixed a bug where Micro PDF417 may not be localized in multiple-barcode scenarios.
+- Fixed a bug where the `ExpectedBarcodesCount` and `BarcodeFormat` parameters do not work in the `RegionDefinition`.
+
 
 ## 8.0 (11/17/2020)
 

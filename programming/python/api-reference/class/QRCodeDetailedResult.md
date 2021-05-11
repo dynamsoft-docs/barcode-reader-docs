@@ -28,6 +28,10 @@ class QRCodeDetailedResult
 | [`error_correction_level`](#error_correction_level) | [`EnumQRCodeErrorCorrectionLevel`]({{ site.enumerations }}other-enums.html#qrcodeerrorcorrectionlevel) |
 | [`version`](#version) | *int* |
 | [`model`](#model) | *int* |
+| [`mode`](#mode) | *int* |
+| [`page`](#page) | *int* |
+| [`totalPage`](#totalpage) | *int* |
+| [`parityData`](#paritydata) | *int* |
 
 
 ### module_size
@@ -70,4 +74,36 @@ Number of the models.
 
 ```python
 QRCodeDetailedResult.model
+```
+
+### mode
+
+Identify the first data encoding mode.
+
+```python
+QRCodeDetailedResult.mode
+```
+
+### page
+
+Identify the position of the particular symbol.
+
+```python
+QRCodeDetailedResult.page
+```
+
+### totalPage
+
+Identify the total number of symbols to be concatenated in the Structured Append format.
+
+```python
+QRCodeDetailedResult.totalPage
+```
+
+### parityData
+
+The Parity Data shall be an 8 bit byte following the Symbol Sequence Indicator. The parity data is a value obtained by XORing byte by byte the ASCII/JIS values of all the original input data before division into symbol blocks.
+
+```python
+QRCodeDetailedResult.parityData
 ```

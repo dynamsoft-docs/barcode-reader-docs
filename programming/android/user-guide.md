@@ -15,7 +15,7 @@ noTitleIndex: true
 
 - Operating systems:
    - Supported OS: Android 5 or higher (Android 7 or higher recommended)
-   - Supported ABI: armeabi-v7a/arm64-v8a
+   - Supported ABI: armeabi-v7a, arm64-v8a, x86 and x86_64
 
 ## Installation
 
@@ -43,11 +43,16 @@ You can add Dynamsoft Barcode Reader like below:
    }
    ```
 
-2. implement Dynamsoft Barcode Reader at dependencies in your module's `build.gradle`.
+2. Implement Dynamsoft Barcode Reader at dependencies in your module's `build.gradle`.
 
    ```
    implementation 'com.dynamsoft:dynamsoftbarcodereader:{version-number}@aar'
    ```
+   Please replace `{version-number}` with the correct version number, e.g. 
+   ```
+   implementation 'com.dynamsoft:dynamsoftbarcodereader:8.1.2@aar'
+   ```
+
 
 ## Getting Started: HelloWorld
 
@@ -114,6 +119,7 @@ You can add Dynamsoft Barcode Reader like below:
             // Note: If you do not have a valid license for the SDK, some characters of the barcode results will be replaced with "***".
             // Leave the template name empty ("") will use the settings from PublicRuntimeSettings.
             TextResult[] results = dbr.decodeFile("put your file path here", "");
+            // e.g. TextResult[] results = dbr.decodeFile("/storage/dbr-preview-img/test.jpg", "");
             if (results.length > 0) {
                String resultContent = "Found " + results.length + " barcode(s):\n";
                for (int i = 0; i < results.length; i++) {
@@ -310,11 +316,61 @@ Below is a template for your reference. To learn more about the APIs, you can ch
 
 ## How to Upgrade
 
-### From version 7.x
+### From x8.0 to 8.x
+
+**Update the SDK**
+
+Replace the old `DynamsoftBarcodeReaderAndroid.aar` file with the one in the latest version. If you are using Maven, then change the version number in the `build.gradle` file.
+
+**API changes**
+
+Change Name of Import from `import com.dynamsoft.barcode.***;` to `import com.dynamsoft.dbr.***;`, like this:
+
+Change:
+```java
+import com.dynamsoft.barcode.BarcodeReader;
+import com.dynamsoft.barcode.EnumBarcodeFormat;
+import com.dynamsoft.barcode.EnumImagePixelFormat;
+import com.dynamsoft.barcode.EnumIntermediateResultSavingMode;
+import com.dynamsoft.barcode.EnumIntermediateResultType;
+import com.dynamsoft.barcode.EnumBarcodeFormat_2;
+import com.dynamsoft.barcode.EnumConflictMode;
+import com.dynamsoft.barcode.FrameDecodingParameters;
+import com.dynamsoft.barcode.IntermediateResult;
+import com.dynamsoft.barcode.LocalizationResult;
+import com.dynamsoft.barcode.Point;
+import com.dynamsoft.barcode.PublicRuntimeSettings;
+import com.dynamsoft.barcode.TextResult;
+import com.dynamsoft.barcode.TextResultCallback;
+```
+
+to:
+```java
+import com.dynamsoft.dbr.BarcodeReader;
+import com.dynamsoft.dbr.EnumBarcodeFormat;
+import com.dynamsoft.dbr.EnumImagePixelFormat;
+import com.dynamsoft.dbr.EnumIntermediateResultSavingMode;
+import com.dynamsoft.dbr.EnumIntermediateResultType;
+import com.dynamsoft.dbr.EnumBarcodeFormat_2;
+import com.dynamsoft.dbr.EnumConflictMode;
+import com.dynamsoft.dbr.FrameDecodingParameters;
+import com.dynamsoft.dbr.IntermediateResult;
+import com.dynamsoft.dbr.LocalizationResult;
+import com.dynamsoft.dbr.Point;
+import com.dynamsoft.dbr.PublicRuntimeSettings;
+import com.dynamsoft.dbr.TextResult;
+import com.dynamsoft.dbr.TextResultCallback;
+```
+
+### From v7.x to 8.x
 
 You need to replace the old `DynamsoftBarcodeReaderAndroid.aar` file with the one in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
 
 Your previous SDK license for version 7.x is not compatible with the version 8.x. Please [contact us](https://www.dynamsoft.com/Company/Contact.aspx) to upgrade your license.
+
+In v8.0, we introduced a new license tracking mechanism, <a href="https://www.dynamsoft.com/license-tracking/docs/about/index.html" target="_blank">License 2.0</a>. 
+
+If you wish to use License 2.0, please refer to [this article](../../license-activation/set-full-license.md) to set the license.
 
 After you upgraded your license to version 8.x:
 
@@ -322,6 +378,6 @@ After you upgraded your license to version 8.x:
 
 - If you were using `initLicenseFromServer` to connect to Dynamsoft server for license verification, then no need to change the license key. But please make sure the device has Internet connection.
 
-### From version 6.x
+### From v6.x to 8.x
 
 We made some structural updates in the new version. To upgrade from 6.x to 8.x, we recommend you to review our sample code and re-write the barcode scanning module.

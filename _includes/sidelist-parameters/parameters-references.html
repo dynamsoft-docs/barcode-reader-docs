@@ -1,7 +1,9 @@
 <li><a href="{{ site.parameters_reference }}" class="otherLinkColour">Reference</a>
     <ul>
+        {%- if page.url contains '/reference/' or page.url contains '/reference-v' -%}
         <li><a href="{{ site.parameters_reference }}image-parameter/" class="otherLinkColour">ImageParameter Object</a>
             <ul>
+                {%- if page.url contains '/image-parameter/' or page.url contains '/image-parameter-v' -%}
                 <li><a href="{{ site.parameters_reference }}image-parameter/content-organization-control.html" class="otherLinkColour">Content Organization Control Parameters</a></li>
                 <li><a href="{{ site.parameters_reference }}image-parameter/cost-control.html" class="otherLinkColour">Cost Control Parameters</a></li>
                 <li><a href="{{ site.parameters_reference }}image-parameter/format-control.html" class="otherLinkColour">Format Control Parameters</a>
@@ -20,36 +22,41 @@
                         <li><a href="{{ site.parameters_reference }}image-parameter/LocalizationModes.html#localizationmodes" class="otherLinkColour">LocalizationModes</a></li>
                         <li><a href="{{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes" class="otherLinkColour">RegionPredetectionModes</a></li>
                         <li><a href="{{ site.parameters_reference }}image-parameter/ScaleUpModes.html#scaleupmodes" class="otherLinkColour">ScaleUpModes</a></li>
-                        <li><a href="{{ site.parameters_reference }}image-parameter/TextAssistedCorrectionMode.html#textassistedcorrectionmode" class="otherLinkColour">TextAssistedCorrectionMode</a></li>
                         <li><a href="{{ site.parameters_reference }}image-parameter/TextFilterModes.html#textfiltermodes" class="otherLinkColour">TextFilterModes</a></li>
                         <li><a href="{{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes" class="otherLinkColour">TextureDetectionModes</a></li>
-                        <li><a href="{{ site.parameters_reference }}image-parameter/image-process-control.html#deblurlevel" class="otherLinkColour">Other Image Process Control Parameters</a></li>
+                        <li><a href="{{ site.parameters_reference }}image-parameter/other-image-process-control-parameters.html" class="otherLinkColour">Other Image Process Control Parameters</a></li>
                     </ul>
                 </li>
                 <li><a href="{{ site.parameters_reference }}image-parameter/result-control.html" class="otherLinkColour">Result Control Parameters</a>
                     <ul>
                         <li><a href="{{ site.parameters_reference }}image-parameter/IntermediateResultSavingMode.html#intermediateresultsavingmode" class="otherLinkColour">IntermediateResultSavingMode</a></li>
                         <li><a href="{{ site.parameters_reference }}image-parameter/TextResultOrderModes.html#textresultordermodes" class="otherLinkColour">TextResultOrderModes</a></li>
-                        <li><a href="{{ site.parameters_reference }}image-parameter/result-control.html#intermediateresulttypes" class="otherLinkColour">Other Result Control Parameters</a></li>
+                        <li><a href="{{ site.parameters_reference }}image-parameter/other-result-control-parameters.html" class="otherLinkColour">Other Result Control Parameters</a></li>
                     </ul>
                 </li>
+                {%- endif -%}
             </ul>
         </li>
         <li><a href="{{ site.parameters_reference }}region-definition/" class="otherLinkColour">RegionDefinition Object</a>
             <ul>
+                {%- if page.url contains '/region-definition/' or page.url contains '/region-definition-v' -%}
                 <li><a href="{{ site.parameters_reference }}region-definition/format-control.html" class="otherLinkColour">Format Control Parameters</a></li>
                 <li><a href="{{ site.parameters_reference }}region-definition/image-process-control.html" class="otherLinkColour">Image Process Control Parameters</a></li>
                 <li><a href="{{ site.parameters_reference }}region-definition/cost-control.html" class="otherLinkColour">Cost Control Parameters</a></li>
                 <li><a href="{{ site.parameters_reference }}region-definition/content-organization-control.html" class="otherLinkColour">Content Organization Control Parameters</a></li>
+                {%- endif -%}
             </ul>
         </li>
         <li><a href="{{ site.parameters_reference }}format-specification/" class="otherLinkColour">FormatSpecification Object</a>
             <ul>
+                {%- if page.url contains '/format-specification/' or page.url contains '/format-specification-v' -%}
                 <li><a href="{{ site.parameters_reference }}format-specification/image-process-control.html" class="otherLinkColour">Image Process Control Parameters</a></li>
                 <li><a href="{{ site.parameters_reference }}format-specification/format-control.html" class="otherLinkColour">Format Control Parameters</a></li>
                 <li><a href="{{ site.parameters_reference }}format-specification/result-control.html" class="otherLinkColour">Result Control Parameters</a></li>
                 <li><a href="{{ site.parameters_reference }}format-specification/content-organization-control.html" class="otherLinkColour">Content Organization Control Parameters</a></li>
+                {%- endif -%}
             </ul>
-        </li>                
+        </li> 
+        {%- endif -%}               
     </ul>
 </li>

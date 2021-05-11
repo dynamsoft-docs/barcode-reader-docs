@@ -241,7 +241,6 @@ breadcrumbText: API Reference
 - [`ResultType`]({{ site.enumerations }}result-enums.html#resulttype)	
 - [`ScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode)	
 - [`TerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase)	
-- [`TextAssistedCorrectionMode`]({{ site.enumerations }}parameter-mode-enums.html#textassistedcorrectionmode)	
 - [`TextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode)	
 - [`TextResultOrderMode`]({{ site.enumerations }}result-enums.html#textresultordermode)	
 - [`TextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode)

@@ -16,18 +16,24 @@ Before you use the BatchDecode program, you need to use another program called B
 You can follow the steps below to use the daemon tool: 
 
 - Open GuardianConfig.ini and configure the settings. Fields in the configuration file:   
-ApplicationPath: Specifies the program to be guarded.    
-ApplicationArgument: Sets the input parameters of the guarded program, separated by spaces.    
-ApplicationLogDir: Configures the log output folder of the guarded program.    
-TimeOutMin: Sets the daemon timeout value. When the guarded program has no new output for the specified time, the program will be restarted. The default timeout value is 2 minutes. Time unit: minutes.  
-The default settings are shown as below.  
-![guardian config default][1]
+    - ApplicationPath: Specifies the program to be guarded.    
+    - ApplicationArgument: Sets the input parameters of the guarded program, separated by spaces.    
+    - ApplicationLogDir: Configures the log output folder of the guarded program.    
+    - TimeOutMin: Sets the daemon timeout value. When the guarded program has no new output for the specified time, the program will be restarted. The default timeout value is 2 minutes. Time unit: minutes.  
+
+    The default settings are shown as below.  
+    ![guardian config default][1]
 - Set -i of the ApplicationArgument field to the file directory of the barcode images to be processed. The default directory is the Images folder under the installation folder of Dynamsoft Barcode Reader. 
 - Save the settings and double click BatchDecodeProjectGuardian.exe to run and it will open a console window as follows (take BatchDecode as an example).       
 ![daemon execution interface][2]
-- Once the tool is started, it will output a record every 10 seconds to report the current running status of the guarded program. The tool will exit when the program finishes the execution and exits successfully.    
-If the guarded program crashes or times out when BatchDecodeProjectGuardian.exe is running, the daemon tool will actively restart the program and display the corresponding restart information in the console interface as well as record it in the GuardianLog file which is a csv file with the name "GuardianLog_" + daemon name + runtime and it will be created in the same directory. The file records the working status of the daemon. Each time the guarded program is started or restarted, a new record will be registered in the log file.     
-You can also check the performance results in DBR_T_xxxx_xxxxx.csv in the directory of BatchDecode.exe.   
+
+Once the tool is started, it will output a record every 10 seconds to report the current running status of the guarded program. The tool will exit when the program finishes the execution and exits successfully.
+
+If the guarded program crashes or times out when BatchDecodeProjectGuardian.exe is running, the daemon tool will actively restart the program and display the corresponding restart information in the console interface as well as record it in the GuardianLog file. 
+
+The log file is a csv file with the name "GuardianLog_" + daemon name + runtime and it will be created in the same directory. The file records the working status of the daemon. Each time the guarded program is started or restarted, a new record will be registered in the log file.     
+
+You can check the performance results in DBR_T_xxxx_xxxxx.csv in the directory of BatchDecode.exe.   
 
 |Field in log | Description |
 |-------|-------|
@@ -40,13 +46,14 @@ You can also check the performance results in DBR_T_xxxx_xxxxx.csv in the direct
 ## How to use the performance testing tool - BatchDecode 
 
 ### Start up and Configuration 
-Command line startup parameters    
+Command-line startup parameters    
 BatchDecode.exe[-i] [-o]   
 - -i: Sets the directory of where the barcode files to be evaluated is located, for example:  -i "D:\\images"    
 The default directory is where BatchDecode.exe exists.    
 - -o: Sets the directory to output the evaluation results, for example:  -o "D:\\output" The default directory is where BatchDecode.exe exists.    
 
-If the program is started without any command line parameters or you run it by    double clicking, the following interface will be displayed:  
+If the program is started without any command-line parameters or you run it by double-clicking, the following interface will be displayed:  
+
 ![batch decode started][3]
 
 You can follow the interface prompts. After setting the parameters, input r to automatically start the performance evaluation of your barcode files.  You can find the performance result in the output directory you specified, with the name of DBR_T_DEFAULT_xxxxx.csv. There is an additional file DBR_T_DEFAULT_xxxxx_original.txt storing the original barcode decoding results which cannot be displayed in the csv file.

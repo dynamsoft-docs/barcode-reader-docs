@@ -196,7 +196,6 @@ breadcrumbText: API Reference
 
 
 ## [Enumerations]({{ site.enumerations }})
-- [`AccompanyingTextRecognitionMode`]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode)	
 - [`BarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode)	
 - [`BarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode)	
 - [`BarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat)	
@@ -228,7 +227,6 @@ breadcrumbText: API Reference
 - [`ResultType`]({{ site.enumerations }}result-enums.html#resulttype)	
 - [`ScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode)	
 - [`TerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase)	
-- [`TextAssistedCorrectionMode`]({{ site.enumerations }}parameter-mode-enums.html#textassistedcorrectionmode)	
 - [`TextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode)	
 - [`TextResultOrderMode`]({{ site.enumerations }}result-enums.html#textresultordermode)	
 - [`TextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode)

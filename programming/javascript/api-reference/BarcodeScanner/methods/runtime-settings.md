@@ -13,6 +13,10 @@ needGenerateH3Content: false
 | Method               | Description |
 |----------------------|-------------|
 | [`updateRuntimeSettings`](#updateruntimesettings) | Modify and update the current runtime settings. |
+| [`getModeArgument`](../../BarcodeReader/methods/parameter-and-runtime-settings.md#getmodeargument) | Get argument value for the specified mode parameter. Inherited from the `BarcodeReader` class. |
+| [`setModeArgument`](../../BarcodeReader/methods/parameter-and-runtime-settings.md#setmodeargument) | Set argument value for the specified mode parameter. Inherited from the `BarcodeReader` class. |
+| [`getRuntimeSettings`](../../BarcodeReader/methods/parameter-and-runtime-settings.md#getruntimesettings) | Get current runtime settings. Inherited from the `BarcodeReader` class. |
+| [`resetRuntimeSettings`](../../BarcodeReader/methods/parameter-and-runtime-settings.md#resetruntimesettings) | Reset runtime settings to default. Inherited from the `BarcodeReader` class. |
 
 ---
 
@@ -28,7 +32,7 @@ updateRuntimeSettings(settings) returns Promise
 
 ### Parameters
 
-`settings` [*RuntimeSettings*](../interfaces.md#runtimesettings) | *string* 
+`settings` [*RuntimeSettings*](../../global-interfaces.md#runtimesettings) | *string* 
 
 ### Return Value
 
@@ -43,4 +47,4 @@ settings.barcodeFormatIds = Dynamsoft.EnumBarcodeFormat.BF_ONED;
 await scanner.updateRuntimeSettings(settings);
 ```
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+[Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)

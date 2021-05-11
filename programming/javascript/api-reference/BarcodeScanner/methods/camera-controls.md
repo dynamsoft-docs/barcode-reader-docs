@@ -17,6 +17,7 @@ needGenerateH3Content: false
 | [`setCurrentCamera`](#setcurrentcamera) | Set camera by its information or device ID. |
 | [`hide`](#hide) | Stop the camera and hide the camera UI element. |
 | [`show`](#show) | Show the camera UI element, open the camera, and start decoding. |
+| [`showVideo`](#showvideo) | Show the camera UI element, open the camera but do not start decoding. |
 | [`close`](#close) | Close and release the camera. |
 | [`isOpen`](#isopen) | Check if the camera is open. |
 | [`open`](#open) | Open the camera. |
@@ -79,7 +80,12 @@ setCurrentCamera(cameraInfoOrDeviceId) returns Promise
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+```javascript
+    let cameras = await scanner.getAllCameras();
+    if(cameras.length){
+        await scanner.setCurrentCamera(cameras[0]);
+    }
+```
 
 ## hide
 
@@ -95,7 +101,7 @@ hide() returns void
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+[Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)
 
 ## show
 
@@ -111,7 +117,27 @@ show() returns Promise
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+```javascript
+await scanner.show();
+```
+
+## showVideo
+
+Bind UI, open the camera, remove the UIElement `display` style if the original style is `display:none;`, but do not start decoding.
+
+```javascript
+showVideo() returns Promise
+```
+
+### Return Value
+
+<code>Promise<<a href="../interfaces.html#scannerplaycallbackinfo">ScannerPlayCallbackInfo</a>></code>
+
+### Sample
+
+```javascript
+await scanner.showVideo();
+```
 
 ## close
 
@@ -127,7 +153,7 @@ close() returns void
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+[Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)
 
 ## isOpen
 
@@ -143,7 +169,7 @@ isOpen() returns Boolean
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+[Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)
 
 ## open
 
@@ -159,7 +185,9 @@ open() returns Promise
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+```javascript
+await scanner.open();
+```
 
 ## pause
 
@@ -175,7 +203,7 @@ pause() returns void
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+[Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)
 
 ## play
 
@@ -197,7 +225,9 @@ play(deviceId, width, height) returns Promise
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+```javascript
+await scanner.play();
+```
 
 ## stop
 
@@ -213,7 +243,7 @@ stop() returns void
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+[Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)
 
 ## pauseScan
 
@@ -229,7 +259,7 @@ pauseScan() returns void
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+[Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)
 
 ## resumeScan
 
@@ -245,5 +275,5 @@ resumeScan() returns void
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+[Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)
 

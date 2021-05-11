@@ -45,7 +45,18 @@ All barcode text results decoded successfully.
 ### Code Snippet
 
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader reader = new BarcodeReader();
+DMLTSConnectionParameters info = new DMLTSConnectionParameters();
+info.organizationID = "200001";
+info.sessionPassword = "******";
+reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
+   @Override
+   public void LTSLicenseVerificationCallback(boolean b, Exception e) {
+      if (!b && e != null) {
+         e.printStackTrace();
+      }
+   }
+});
 TextResult[] result = reader.decodeFile("your file path", "");
 reader.destroy();
 ```
@@ -74,9 +85,19 @@ All barcode text results decoded successfully.
 ### Code Snippet
 
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
-byte[] bufferBytes = null;
-GetBufferFromFile("your file path", bufferBytes);
+BarcodeReader reader = new BarcodeReader();
+DMLTSConnectionParameters info = new DMLTSConnectionParameters();
+info.organizationID = "200001";
+info.sessionPassword = "******";
+reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
+   @Override
+   public void LTSLicenseVerificationCallback(boolean b, Exception e) {
+      if (!b && e != null) {
+         e.printStackTrace();
+      }
+   }
+});
+//get bufferBytes from other component
 TextResult[] result = reader.decodeFileInMemory(bufferBytes, "");
 reader.destroy();
 ```
@@ -101,8 +122,19 @@ All barcode text results decoded successfully.
 ### Code Snippet
 
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
-FileInputStream fis = new FileInputStream("your file path");
+BarcodeReader reader = new BarcodeReader();
+DMLTSConnectionParameters info = new DMLTSConnectionParameters();
+info.organizationID = "200001";
+info.sessionPassword = "******";
+reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
+   @Override
+   public void LTSLicenseVerificationCallback(boolean b, Exception e) {
+      if (!b && e != null) {
+         e.printStackTrace();
+      }
+   }
+});
+//get FileInputStream fis from other component
 TextResult[] result = reader.decodeFileInMemory(fis, "");
 reader.destroy();
 ```
@@ -135,7 +167,18 @@ All barcode text results decoded successfully.
 ### Code Snippet
 
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader reader = new BarcodeReader();
+DMLTSConnectionParameters info = new DMLTSConnectionParameters();
+info.organizationID = "200001";
+info.sessionPassword = "******";
+reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
+   @Override
+   public void LTSLicenseVerificationCallback(boolean b, Exception e) {
+      if (!b && e != null) {
+         e.printStackTrace();
+      }
+   }
+});
 byte[] bufferBytes;
 int iWidth = 0;
 int iHeight = 0;
@@ -170,7 +213,18 @@ All barcode text results decoded successfully.
 ### Code Snippet
 
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader reader = new BarcodeReader();
+DMLTSConnectionParameters info = new DMLTSConnectionParameters();
+info.organizationID = "200001";
+info.sessionPassword = "******";
+reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
+   @Override
+   public void LTSLicenseVerificationCallback(boolean b, Exception e) {
+      if (!b && e != null) {
+         e.printStackTrace();
+      }
+   }
+});
 TextResult[] result = reader.decodeBase64String("file in base64 string", "");
 reader.destroy();
 ```
@@ -199,9 +253,20 @@ All barcode text results decoded successfully.
 ### Code Snippet
 
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
-Bitmap bitmap = BitmapFactory.decodeFile("your file path");
-TextResult[] result = reader.decodeBufferedImage(bitmap, "");
+BarcodeReader reader = new BarcodeReader();
+DMLTSConnectionParameters info = new DMLTSConnectionParameters();
+info.organizationID = "200001";
+info.sessionPassword = "******";
+reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
+   @Override
+   public void LTSLicenseVerificationCallback(boolean b, Exception e) {
+      if (!b && e != null) {
+         e.printStackTrace();
+      }
+   }
+});
+//get BufferedImage input from other component
+TextResult[] result = reader.decodeBufferedImage(input, "");
 reader.destroy();
 ```
 
@@ -228,7 +293,18 @@ An intermediateResult struct with default values.
 ### Code Snippet
 
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader reader = new BarcodeReader();
+DMLTSConnectionParameters info = new DMLTSConnectionParameters();
+info.organizationID = "200001";
+info.sessionPassword = "******";
+reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
+   @Override
+   public void LTSLicenseVerificationCallback(boolean b, Exception e) {
+      if (!b && e != null) {
+         e.printStackTrace();
+      }
+   }
+});
 IntermediateResult imResult = reader.initIntermediateResult(EnumIntermediateResultType.IRT_ORIGINAL_IMAGE);
 ```
 
@@ -256,7 +332,18 @@ All barcode text results decoded successfully.
 ### Code Snippet
 
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader reader = new BarcodeReader();
+DMLTSConnectionParameters info = new DMLTSConnectionParameters();
+info.organizationID = "200001";
+info.sessionPassword = "******";
+reader.initLicenseFromLTS(info, new DBRLTSLicenseVerificationListener() {
+   @Override
+   public void LTSLicenseVerificationCallback(boolean b, Exception e) {
+      if (!b && e != null) {
+         e.printStackTrace();
+      }
+   }
+});
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 settings.intermediateResultTypes = EnumIntermediateResultType.IRT_ORIGINAL_IMAGE;
 reader.updateRuntimeSettings(settings);

@@ -30,6 +30,10 @@ Stores the QRCode details.
 | [`errorCorrectionLevel`](#errorcorrectionlevel) | [`EnumQRCodeErrorCorrectionLevel`]({{ site.enumerations }}other-enums.html#qrcodeerrorcorrectionlevel) |
 | [`version`](#version) | *NSInteger* |
 | [`model`](#model) | *NSInteger* |
+| [`mode`](#mode) | *NSInteger* |
+| [`page`](#page) | *NSInteger* |
+| [`totalPage`](#totalpage) | *NSInteger* |
+| [`parityData`](#paritydata) | *byte* |
 
 
 ### moduleSize
@@ -78,4 +82,37 @@ Number of the models.
 
 ```objc
 NSInteger model
+```
+
+
+### mode
+
+Identify the first data encoding mode.
+
+```objc
+NSInteger mode
+```
+
+### page
+
+Identify the position of the particular symbol.
+
+```objc
+NSInteger page
+```
+
+### totalPage
+
+Identify the total number of symbols to be concatenated in the Structured Append format.
+
+```objc
+NSInteger totalPage
+```
+
+### parityData
+
+The Parity Data shall be an 8 bit byte following the Symbol Sequence Indicator. The parity data is a value obtained by XORing byte by byte the ASCII/JIS values of all the original input data before division into symbol blocks.
+
+```objc
+byte parityData
 ```

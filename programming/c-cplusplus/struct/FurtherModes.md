@@ -30,12 +30,10 @@ typedef struct tagFurtherModes  FurtherModes
 | [`imagePreprocessingModes`](#imagepreprocessingmodes) | [`ImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode)\[8\] |
 | [`textureDetectionModes`](#texturedetectionmodes) | [`TextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode)\[8\] |
 | [`textFilterModes`](#textfiltermodes) | [`TextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode)\[8\] |
-| [`textAssistedCorrectionMode`](#textassistedcorrectionmode) | [`TextAssistedCorrectionMode`]({{ site.enumerations }}parameter-mode-enums.html#textassistedcorrectionmode) |
 | [`dpmCodeReadingModes`](#dpmcodereadingmodes) | [`DPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode)\[8\] |
 | [`deformationResistingModes`](#deformationresistingmodes) | [`DeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode)\[8\] |
 | [`barcodeComplementModes`](#barcodecomplementmodes) | [`BarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode)\[8\] |
 | [`barcodeColourModes`](#barcodecolourmodes) | [`BarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode)\[8\] |
-| [`accompanyingTextRecognitionModes`](#accompanyingtextrecognitionmodes) | [`AccompanyingTextRecognitionMode`]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode)\[8\] |
 | [`reserved`](#reserved) | *char\[32\]* |
 
 ### colourClusteringModes
@@ -157,19 +155,6 @@ TextFilterMode tagFurtherModes::textFilterModes[8]
 - **See also**  
    [`TextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode)
    
-### textAssistedCorrectionMode
-Sets the mode of text assisted correction for barcode decoding. ***Not supported yet***.
-```cpp
-TextAssistedCorrectionMode tagFurtherModes::textAssistedCorrectionMode
-```
-- **Value range**  
-   Any one of the [`TextAssistedCorrectionMode`]({{ site.enumerations }}parameter-mode-enums.html#textassistedcorrectionmode) Enumeration items.  
-     
-- **Default value**  
-   `TACM_VERIFYING`  
-   
-- **See also**  
-   [`TextAssistedCorrectionMode`]({{ site.enumerations }}parameter-mode-enums.html#textassistedcorrectionmode)
    
 ### dpmCodeReadingModes
 Sets the mode and priority for DPM code reading.
@@ -238,23 +223,6 @@ BarcodeColourMode tagFurtherModes::barcodeColourModes[8]
    
 - **See also**  
    [`BarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode)
-
-### accompanyingTextRecognitionModes
-Sets the mode and priority to recognize accompanying text.
-```cpp
-AccompanyingTextRecognitionMode tagFurtherModes::accompanyingTextRecognitionModes[8]
-```
-- **Value range**  
-   Each array item can be any one of the [`AccompanyingTextRecognitionMode`]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode) Enumeration items.  
-     
-- **Default value**  
-   `[ATRM_SKIP,ATRM_SKIP,ATRM_SKIP,ATRM_SKIP,ATRM_SKIP,ATRM_SKIP,ATRM_SKIP,ATRM_SKIP]`  
-     
-- **Remarks**  
-   The array index represents the priority of the item. The smaller index is, the higher priority is.  
-   
-- **See also**  
-   [`AccompanyingTextRecognitionMode`]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode)
 
 ### reserved
 Reserved memory for struct. The length of this array indicates the size of the memory reserved for this struct.

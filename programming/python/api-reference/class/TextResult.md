@@ -30,6 +30,7 @@ public class TextResult
 | [`localization_result`](#localization_result) | *[`LocalizationResult`](LocalizationResult.md)* |
 | [`detailed_result`](#detailed_result) | *One of the following: [OnedDetailedResult](OnedDetailedResult.md), [PDFDetailedResult](PDFDetailedResult.md), [DataMatrixDetailedResult](DataMatrixDetailedResult.md), [AztecDetailedResult](AztecDetailedResult.md), [QRCodeDetailedResult](QRCodeDetailedResult.md)* |
 | [`extended_results`](#extended_results) | *list[[`ExtendedResult`](ExtendedResult.md)]* |
+| [`exception`](#exception) | *str* |
 
 
 ### barcode_format
@@ -93,4 +94,11 @@ The extended result list
 
 ```python
 TextResult.extended_results
+```
+
+### exception
+Exception message
+
+```python
+TextResult.exception
 ```

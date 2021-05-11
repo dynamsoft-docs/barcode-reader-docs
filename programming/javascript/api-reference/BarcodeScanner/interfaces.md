@@ -27,8 +27,8 @@ Filter and discard video frames that are out of focus during the scanning operat
 
 | Property         | Type | Default Value | Description |
 |------------------|------|---------------|-------------|
-| region<sub>optional</sub> | [`RegionDefinition`](#regiondefinition) | <pre>{ regionLeft = 0, <br/>regionRight = 100, <br/>regionTop = 0, <br/>regionBottom = 100, <br/>regionMeasuredByPercentage = true }</pre> | Detecting area of a frame. | 
-| threshold<sub>optional</sub> | *number* | `0.1` | Threshold used for filtering images. <br>Value range: [0, 1]. <br>An indicator is calculated for each frame from `AppendFrame()`. If the change rate of the indicators between the current frame and historic frames is larger than this threshold, the current frame will be discarded. |
+| region | [`RegionDefinition`](#regiondefinition) | ```{ regionLeft = 0, regionRight = 100, regionTop = 0, regionBottom = 100, regionMeasuredByPercentage = true }``` | Detecting area of a frame. | 
+| threshold | *number* | `0.1` | Threshold used for filtering images. <br>Value range: [0, 1]. <br>An indicator is calculated for each frame from `AppendFrame()`. If the change rate of the indicators between the current frame and historic frames is larger than this threshold, the current frame will be discarded. |
 
 ## ScannerPlayCallbackInfo
 
@@ -45,21 +45,36 @@ Stores the height and width constraints of the video stream.
 
 Configures the video stream settings. Previously known as `ScannerConfig`.
 
-### Properties
+### duplicateForgetTime
 
 | Property         | Type | Default Value | Description |
 |------------------|------|---------------|-------------|
-| duplicateForgetTime<sub>optional</sub> | *number* | `3000` | Ignore duplicated results found in the specified time period. Measured in ms. | 
-| frameFilter<sub>optional</sub> | [`FrameFilter`](#framefilter) |  | Filter and discard video frames that are out of focus. |
-| intervalTime<sub>optional</sub> | *number* | `100` | Scan interval used to allow the library to release the CPU periodically. Measured in ms. |
+| duplicateForgetTime | *number* | `3000` | Ignore duplicated results found in the specified time period. Measured in ms. | 
+
+### frameFilter
+
+| Property         | Type | Default Value | Description |
+|------------------|------|---------------|-------------|
+| frameFilter | [`FrameFilter`](#framefilter) |  | Filter and discard video frames that are out of focus. |
+
+### intervalTime
+
+| Property         | Type | Default Value | Description |
+|------------------|------|---------------|-------------|
+| intervalTime | *number* | `100` | Scan interval used to allow the library to release the CPU periodically. Measured in ms. |
 
 ## VideoDeviceInfo
 
 Stores the video device information.
 
-### Properties
+### deviceId
 
 | Property           | Type | Description |
 |--------------------|------|-------------|
 | `deviceId` | *string* | Identifier for the represented device that is persisted across sessions. It is un-guessable by other applications and unique to the origin of the calling application. It is reset when the user clears cookies. | 
+
+### label
+
+| Property           | Type | Description |
+|--------------------|------|-------------|
 | `label` | *string* | The label describing the device. | 

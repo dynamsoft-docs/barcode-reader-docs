@@ -65,7 +65,7 @@ This step will identify and standardize the type of located Barcode Region, incl
 
 - Find the exact boundary of barcode region
 - Barcode region standardization
-•	In the process of barcode region standardization, the barcode region that is too small may be enlarged. For more information, please refer to this article: [How to read barcodes with small module size](how-to-set-scaleup-modes.md).
+-	In the process of barcode region standardization, the barcode region that is too small may be enlarged. For more information, please refer to this article: [How to read barcodes with small module size](how-to-set-scaleup-modes.md).
 
 ### Decode Located Barcode Region
 

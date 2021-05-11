@@ -4,7 +4,7 @@ title: Dynamsoft Barcode Reader Licensing - How to set full license in version 7
 description: This page shows how to set full license of Dynamsoft Barcode Reader in version 7.x.
 keywords: full license, licensing, 7.x, License 1.0
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
+needGenerateH3Content: false
 ---
 
 # How to set full license in version 7.x
@@ -17,16 +17,20 @@ Different methods are used for setting trial and full license keys. In the demo 
 
 You can use a development/runtime license by following the steps below:
 
-1. [Activate a development/runtime license](#activate)
-2. [Register the development/runtime license key](#register) 
+1. [Activate a development/runtime license](#activate-a-developmentruntime-license)
+2. [Register the development/runtime license key](#register-the-development-license-key) 
 
 ### Activate a development/runtime license
 
- Once you obtain a Development License, you can find your license information at **[Customer Portal](https://www.dynamsoft.com/customer/license/fullLicense)**. 
+ Once you obtain a Development License, you can find your license information at <a href ="https://www.dynamsoft.com/customer/license/fullLicense" target="_blank">Customer Portal</a>. 
 
- To activate a development license (8-digit key), select **Unactivated** license, click the **Activate Now** link beside it.
-
+ To activate a development license (8-digit key), select **Unactivated** license, click the **License Id** link beside it.
+ 
  ![NewLicense2][1]
+ 
+ On the license page, click the **Activate** button on the top left.
+ 
+![LicensePage][11]
 
  On the next page, click the **Activate** button.
  
@@ -231,9 +235,21 @@ if os.path.exists(license.txt):
    #Use the local license file to activate the SDK 
    with open("license.txt","r") as f:
       license_content = f.read()
-   reader.init_license_from_license_content(license_key, license_content)
+try
+   error = reader.init_license_from_license_content(license_key, license_content)
+   if error[0] != EnumErrorCode.DBR_OK:
+        print(error[0])
+        print(error[1])
+except BarcodeReaderError as bre:
+    print(bre)
 else:
-   reader.init_license_from_server(license_server, license_key)
+try
+   error = reader.init_license_from_server(license_server, license_key)
+   if error[0] != EnumErrorCode.DBR_OK:
+        print(error[0])
+        print(error[1])
+except BarcodeReaderError as bre:
+    print(bre)
    #If you wish to use SDK offline, store the license information as .txt or other format
    license_content = reader.output_license_to_string()
    with open("license.txt","w") as f:
@@ -320,14 +336,20 @@ from typing import List
 from dbr import *
 license_key = "Input your own license"
 reader = BarcodeReader()
-reader.init_license_from_server(license_server, license_key)
+try
+error = reader.init_license_from_server(license_server, license_key)
+if error[0] != EnumErrorCode.DBR_OK:
+        print(error[0])
+        print(error[1])
+except BarcodeReaderError as bre:
+    print(bre)
 ```
 
-#### Option 3: No Internet connection
+#### Option 3: No Internet connection {#offline}
 
 If your machine is not allowed to access Internet, you can follow the steps below to manually register the device and get the license content.
 
-1. Log in **[Customer Portal](https://www.dynamsoft.com/customer/license/fullLicensex)** and click **Details**.
+1. Log in <a href ="https://www.dynamsoft.com/customer/license/fullLicensex" target="_blank">Customer Portal</a> and click **License Id**.
 
 ![ActivatedKey_Used2][5]
 
@@ -339,13 +361,13 @@ If your machine is not allowed to access Internet, you can follow the steps belo
 
  **For Windows:** 
  
- Download [MachineIDGenerator.exe](http://download.dynamsoft.com/MachineIDGenerator/MachineIDGenerator.exe) and run it. The returned string, e.g. `tZRk-6qb2-sEyE-wcz7-jf6j-8DH/-Di3u-zjSv-G86f-ol3x`, is the machine ID.
- 
+ Download <a href="https://download.dynamsoft.com/MachineIDGenerator/MachineIDGenerator.exe" target="_blank">MachineIDGenerator.exe</a> and run it. The returned string, e.g. `tZRk-6qb2-sEyE-wcz7-jf6j-8DH/-Di3u-zjSv-G86f-ol3x`, is the machine ID.
+
 ![MachineID_Windows][7]
 
  **For Linux:** 
 
- Download [MachineIDGenerator.tar.gz](http://download.dynamsoft.com/MachineIDGenerator/MachineIDGenerator.tar.gz) and unzip it. Open **Terminal** and type `./MachineIDGenerator`. The returned string, e.g. `iJpN-Cajc-qQip-Sl50-NEX+-z1dJ-XmmV-lS9O-G86f-ol3x`, is the machine ID.
+ Download <a href="https://download.dynamsoft.com/MachineIDGenerator/MachineIDGenerator.tar.gz" target="_blank">MachineIDGenerator.tar.gz</a> and unzip it. Open **Terminal** and type `./MachineIDGenerator`. The returned string, e.g. `iJpN-Cajc-qQip-Sl50-NEX+-z1dJ-XmmV-lS9O-G86f-ol3x`, is the machine ID.
 
  ![MachineID_Linux][8]
 
@@ -418,9 +440,10 @@ Code snippet in Java:
 try{
    BarcodeReader reader = new BarcodeReader();
    // Use the SDK offline
-   reader.initLicenseFromLicenseContent("", "licenseKey1;licenseKey2", "LicenseContent");
-}catch(Exception e) { //if your license is invalid, a BarcodeReaderException will be throw out
-   System.out.println(e);
+   reader.initLicenseFromLicenseContent("licenseKey1;licenseKey2", "LicenseContent");
+}catch(BarcodeReaderException e) { //if your license is invalid, a BarcodeReaderException will be thrown
+   System.out.println(e.getErrorCode());
+   System.out.println(e.getMessage());
 }
 ```
 
@@ -434,7 +457,13 @@ os.path.exists(license.txt):
    #Use the local license file to activate the SDK 
    with open("license.txt","r") as f:
       license_content = f.read()
-   reader.init_license_from_license_content(license_key, license_content)
+try
+   error = reader.init_license_from_license_content(license_key, license_content)
+   if error[0] != EnumErrorCode.DBR_OK:
+        print(error[0])
+        print(error[1])
+except BarcodeReaderError as bre:
+    print(bre)
 ```
 
 ## For iOS/Android SDK
@@ -442,11 +471,11 @@ os.path.exists(license.txt):
 Please use a development/runtime license by following the steps below:
 
 1. [Activate a development/runtime license](#activate)
-2. [Register the development/runtime license key](#register) 
+2. [Register the development/runtime license key](#register-the-developmentruntime-license-key) 
 
 ### Activate a development/runtime license {#activate}
 
- Once you obtain a Development License, you can find your license information at **[Customer Portal](https://www.dynamsoft.com/customer/license/fullLicense)**. 
+ Once you obtain a Development License, you can find your license information at <a href ="https://www.dynamsoft.com/customer/license/fullLicensex" target="_blank">Customer Portal</a>. 
 
  To activate a development license (8-digit key), select **Unactivated** license, click the **Activate Now** link beside it.
 
@@ -492,7 +521,51 @@ dbr.initLicenseFromServer("", "", new DBRServerLicenseVerificationListener() {
        }
     });
  ```
+## Common error code
 
+- **Error Code:  -10044**
+
+ **Error Message:** Failed to request the license content
+
+ **Solution:**
+
+ Check your network connection and make sure you have Internet access. If you have a firewall configured on the device, it is very likely that our license server is blocked by your firewall. Please [contact Dynamsoft](https://www.dynamsoft.com/Company/Contact.aspx) to resolve the issue. 
+
+
+- **Error Code: -10054**
+
+ **Error Message:** The license key has no remaining quota
+
+ **Solution:** 
+
+ You can [contact Dynamsoft](https://www.dynamsoft.com/Company/Contact.aspx) to expand the volume of your current runtime license key. Rest assured that your license key remains unchanged during the upgrade process, so no code change is required to your application. 
+
+
+- **Error Code: -10004**
+
+ **Error Message:** The license has expired
+
+ **Solution:** 
+
+ Your annual runtime license has expired. You can log into the customer portal to renew your runtime license by credit card or PayPal. Alternatively, you can [contact Dynamsoft](https://www.dynamsoft.com/Company/Contact.aspx) if you prefer other payment methods (wire transfer or check). Rest assured that your license key remains unchanged during the upgrade process, so no code change is required to your application. 
+
+
+- **Error Code: -10042**
+
+ **Error Message:** The license DLL is missing (for C/C++)
+
+ **Solution:**
+
+ For 8-digit license keys, we use a separate license DLL to verify the License. Please copy `DynamsoftLicClientx64.dll` (or `DynamsoftLicClientx86.dll`) from `[INSTALLATION FOLDER]\Components\C_C++\Redist\x64\` (or `[INSTALLATION FOLDER]\Components\C_C++\Redist\x86`) to the same folder as the barcode reader dll `DynamsoftBarcodeReaderx64.dll` (or `DynamsoftBarcodeReaderx86.dll`).
+
+
+- **Error Code: -10052**
+
+ **Error Message:** The license content is invalid
+
+ **Solution:** 
+
+ This error happens when you are trying to use InitLicenseFromLicenseContent() API to activate the license. Please refer to [Use a Development License](#register-the-development-license-key) section to double check if the license content is correct. 
 If you run into any issues, please [contact Dynamsoft Support](https://www.dynamsoft.com/Company/Contact.aspx).
 
 [1]:assets\set-full-license\NewLicense2.png
@@ -505,3 +578,4 @@ If you run into any issues, please [contact Dynamsoft Support](https://www.dynam
 [8]:assets\set-full-license\MachineID_Linux.png
 [9]:assets\set-full-license\ManuallyActivate2.png
 [10]:assets\set-full-license\DownloadLicense.png
+[11]:assets\set-full-license\LicensePage.png

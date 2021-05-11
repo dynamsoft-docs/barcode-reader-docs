@@ -34,6 +34,21 @@ int Dynamsoft.DBR.BarcodeReader.InitLicenseFromServer(string licenseServer, stri
 #### Return value
 Returns error code.
 
+#### Code Snippet
+```csharp
+int iLicMsg = -1;
+BarcodeReader _br = new BarcodeReader();
+// Connect to Dynamsoft server to verify the license. 
+iLicMsg = _br.InitLicenseFromServer("", "licenseKey1;licenseKey2");
+if(iLicMsg != 0)
+{
+   Console.WriteLine("License error Code:",iLicMsg);
+   return; 
+}
+// Decode barcodes happens here
+//....
+_br.Dispose();
+```
 
 &nbsp;
 
@@ -56,13 +71,18 @@ Returns error code.
 
 #### Code Snippet
 ```csharp
-BarcodeReader reader = new BarcodeReader();
-PublicRuntimeSettings settings = reader.GetRuntimeSettings();
-settings.IntermediateResultType = (int)EnumIntermediateResultType.IRT_ORIGINAL_IMAGE;
-reader.UpdateRuntimeSettings(settings);
-reader.DecodeFile("Your file path", "");
-IntermediateResult[] IMR = reader.GetIntermediateResults();
-TextResult[] result = reader.DecodeIntermediateResults();
+int iLicMsg = -1;
+BarcodeReader _br = new BarcodeReader();
+// Use the SDK offline 
+iLicMsg = _br.InitLicenseFromLicenseContent("licenseKey1;licenseKey2", "LicenseContent");
+if(iLicMsg != 0)
+{
+   Console.WriteLine("License error Code:",iLicMsg);
+   return; 
+}
+// Decode barcodes happens here
+//....
+_br.Dispose();
 ```
 
 
@@ -80,7 +100,40 @@ string Dynamsoft.DBR.BarcodeReader.OutputLicenseToString()
 #### Return value
 The output string which stores the contents of license. 
 
-
+#### Code Snippet
+```csharp
+int iLicMsg = -1;
+string path = @"Put your file path here";
+// To be able to use the license key offline, you need to store the license file obtained from Dynamsoft server once you use the API, InitLicenseFromServer.
+BarcodeReader _br = new BarcodeReader();
+// Check if there is a license file in the local machine. If not, connect to Dynamsoft Hosted server to verify the license. Otherwise, use the local license file.
+if (!File.Exists(path))
+{
+   // Connect to Dynamsoft server to verify the license
+   iLicMsg = _br.InitLicenseFromServer("", "licenseKey1;licenseKey2");
+   // The first parameter is the string of the license server. Leaving it empty ("") means it will connect to Dynamsoft License Server for online verification.
+   if(iLicMsg != 0)
+   {
+      Console.WriteLine("License error Code:",iLicMsg);
+      return; 
+   }
+   // If you wish to use SDK offline, store the license information as txt format
+   string license = _br.OutputLicenseToString();
+   File.WriteAllText(path, license);
+}
+else{
+   // Use the local license file and use Dynamsoft Barcode Reader SDK 
+   string license = File.ReadAllText(path);
+   iLicMsg = _br.InitLicenseFromLicenseContent("licenseKey1;licenseKey2",license);
+   if(iLicMsg != 0)
+   {
+      Console.WriteLine("Error Code:",iLicMsg);
+      return; 
+   }
+}
+// Decode barcodes happens here
+//....
+```
 
 &nbsp;
 

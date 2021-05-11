@@ -111,7 +111,7 @@ Table 4 – Parameters to Deal with Varying Quality Situation
 | [`BarcodeComplementModes`]({{ site.parameters_reference }}image-parameter/BarcodeComplementModes.html#barcodecomplementmodes) | To detect and complete a barcode with missing border modules. | Available for QRCode and DataMatrix |
 | [`DeformationResistingModes`]({{ site.parameters_reference }}image-parameter/DeformationResistingModes.html#deformationresistingmodes) | To detect and restore a two-dimensional barcode from deformation. | Available for QRCode and DataMatrix |
 | [`DPMCodeReadingModes`]({{ site.parameters_reference }}image-parameter/DPMCodeReadingModes.html#dpmcodereadingmodes) | To separate and identify modules of a DPM barcode. | Available for DataMatrix |
-| [`DeblurLevel`]({{ site.parameters_reference }}image-parameter/image-process-control.html#deblurlevel) | To apply a variety of image processing methods to sample modules. The higher the level, the more attempts. | Available |
+| [`DeblurLevel`]({{ site.parameters_reference }}image-parameter/image-process-control.html#deblurlevel)/[`DeblurModes`]({{ site.parameters_reference }}image-parameter/DeblurModes.html#deblurmodes) | To apply a variety of image processing methods to sample modules. The higher the level, the more attempts. | Available |
 | [`MirrorMode`]({{ site.parameters_reference }}format-specification/format-control.html#mirrormode) | To try to decode barcode with mirroring. | Available |
 
 ### Stage 5 is to output results. 
@@ -127,7 +127,7 @@ Table 5 – Parameters to Organize the Results
 | [`BarcodeTextLengthRangeArray`]({{ site.parameters_reference }}format-specification/format-control.html#barcodetextlengthrangearray)  | To filter text results with length limitations. | Available |
 | [`BarcodeBytesRegExPattern`]({{ site.parameters_reference }}format-specification/format-control.html#barcodebytesregexpattern) | To filter bytes results with a regular expression. | Available |
 | [`BarcodeBytesLengthRangeArray`]({{ site.parameters_reference }}format-specification/format-control.html#barcodebyteslengthrangearray) | To filter bytes result with length limitations. | Available |
-| [`TextResultOrderModes`]({{ site.parameters_reference }}image-parameter/result-control.html#textresultordermodes) | To sort the results according to certain factors. | Available |
+| [`TextResultOrderModes`]({{ site.parameters_reference }}image-parameter/textresultordermodes.html#textresultordermodes) | To sort the results according to certain factors. | Available |
 
 ## Customizable Balance of Speed and Accuracy
 

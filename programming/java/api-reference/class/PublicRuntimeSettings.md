@@ -38,6 +38,7 @@ Defines a struct to configure the barcode reading runtime settings. These settin
 | [`scaleUpModes`](#scaleupmodes) | *int\[\]* |
 | [`pdfReadingMode`](#pdfreadingmode) | *int* | 
 | [`deblurModes`](#deblurmodes) | *int\[\]* |
+| [`barcodeZoneMinDistanceToImageBorders`](#barcodezonemindistancetoimageborders) | *int* |
 
 
 ### terminatePhase
@@ -378,3 +379,16 @@ int[] com.dynamsoft.dbr.PublicRuntimeSettings.deblurModes
     [`EnumDeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode)
 
 
+### barcodeZoneMinDistanceToImageBorders
+Sets the minimum distance (in pixels) between the barcode zone and image borders.
+```java
+int com.dynamsoft.dbr.PublicRuntimeSettings.barcodeZoneMinDistanceToImageBorders
+```
+- **Value range**   
+    [0, 0x7fffffff]
+      
+- **Default value**   
+    0
+    
+- **Remarks**   
+    0: means no limitation on the distance. 

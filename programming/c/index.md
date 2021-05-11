@@ -15,15 +15,20 @@ The C Language documentation mainly consists of two parts. One is the [User Guid
 ## Getting Started
 - [User Guide for C Language](user-guide.md)
 
+## Samples and Demos
+
+- <a href="https://demo.dynamsoft.com/barcode-reader/" target="_blank">Online Demo</a>
+- <a href="https://www.dynamsoft.com/barcode-reader/resources/code-gallery/?tag=c/c++" target="_blank">Code Gallery - C/C++</a>
+
 ## API Reference
 - [Methods](api-reference/#methods)
 - [Struct](api-reference/#structs)
 
 ## Release Notes
-- [Version 8.0](release-notes/c-8.md)
+- [Version 8.x](release-notes/c-8.md)
 - [Version 7.6 and below](release-notes/c-7.md)
 
-## Samples and Demos
+## Online Store
+- <a href="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/" target="_blank">Desktop and Server Deployment</a>
 
-- [Online Demo](https://demo.dynamsoft.com/DBR/BarcodeReaderDemo.aspx)
-- [Code Gallery - C/C++](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx?Tag=c%2fc%2b%2b#gallery)
+

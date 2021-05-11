@@ -1,14 +1,66 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for .NET SDK - Release Notes v8.0
-description: This is the release notes page of Dynamsoft Barcode Reader for .NET SDK v8.0.
+title: Dynamsoft Barcode Reader for .NET SDK - Release Notes v8.x
+description: This is the release notes page of Dynamsoft Barcode Reader for .NET SDK v8.x.
 keywords: release notes, .net
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
 ---
 
-# Release Notes for .NET SDK - 8.0
+# Release Notes for .NET SDK - 8.x
+
+## 8.2 (03/17/2021)
+
+### New
+
+- Added a new mode argument, `FindAccurateBoundary`, to [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes) that determines if the SDK attempts to find an accurate boundary when RegionPredetectionModes is set to `RPM_GENERAL_HSV_CONTRAST`. 
+
+### Improved
+
+- Improved both the localization and decoding algorithms for Postal Codes. 
+- LocalizationMode `LM_STATISTICS_POSTAL_CODE` will not be added automatically when enabling Postal Code in your runtime settings. Instead, users must manually add it to the LocalizationMode array if it is required.
+
+### Fixed
+
+- Resolved a bug that infrequently causes the application to crash when decoding a MicroPDF417 barcode.
+
+## 8.1.2 (01/22/2021)
+
+### New
+
+- Added `Mode`, `Page`, `TotalPage` and `ParityData` in the `QRCodeDetails` Class.
+
+### Improved
+
+- Improved the recognition accuracy for GS1 Databar.
+- Removed the exception code from `BarcodeText` when using a valid trial license.
+- Included native C++ DLL files in the .NET assembly files, so users don't need to manually copy these files to the specific folder.
+
+### Fixed
+
+- Fixed a bug where `BarcodeFormatString`, `BarcodeFormatString_2`, `RegionName` and `DocumentName` don't have value in the `IRT_TYPED_BARCODE_ZONE` intermediate result.
+
+
+## 8.1 (01/12/2021)
+
+### New
+
+- Added support for MSI Code (Modified Plessey).
+- Added a new member `BarcodeZoneMinDistanceToImageBorders` in the `PublicRuntimeSettings` struct to set the minimum distance (in pixels) between barcode zone and image borders. Previously, it is only available in the JSON template. It can be now configured by setting the struct `PublicRuntimeSettings` -> `BarcodeZoneMinDistanceToImageBorders`.
+- Added exception error message to `TextResult` when license initialization fails or decoding authorization fails.
+
+### Improved
+
+- Improved the localization robustness for QR Code.
+- Improved the localization for low quality 1D barcodes.
+- Improved the deblurring performance and recognition rate for DataMatrix. 
+- Improved the recognition rate for Aztec.
+
+### Fixed
+
+- Fixed a bug where Micro PDF417 may not be localized in multiple-barcode scenarios.
+- Fixed a bug where the `ExpectedBarcodesCount` and `BarcodeFormat` parameters do not work in the `RegionDefinition`.
 
 ## 8.0 (11/17/2020)
 

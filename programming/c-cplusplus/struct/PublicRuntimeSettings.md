@@ -45,8 +45,9 @@ typedef struct tagPublicRuntimeSettings  PublicRuntimeSettings
 | [`minResultConfidence`](#minresultconfidence) | *int* |
 | [`scaleUpModes`](#scaleupmodes) | [`ScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#scaleupmodes)\[8\] |
 | [`pdfReadingMode`](#pdfreadingmode) | [`PDFReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#pdfreadingmode) | 
-| [`deblurModes`](#deblurmodes) | [`DeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#DeblurMode)\[10\] | 
-| [`reserved`](#reserved) | *char\[40\]* |
+| [`deblurModes`](#deblurmodes) | [`DeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode)\[10\] | 
+| [`barcodeZoneMinDistanceToImageBorders`](#barcodezonemindistancetoimageborders) | *int* |
+| [`reserved`](#reserved) | *char\[36\]* |
 
 
 ### terminatePhase
@@ -387,8 +388,23 @@ DeblurMode tagPublicRuntimeSettings::deblurModes[10]
     [`DeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode)
 
 
+### barcodeZoneMinDistanceToImageBorders
+Sets the minimum distance (in pixels) between the barcode zone and image borders.
+```cpp
+int tagPublicRuntimeSettings::barcodeZoneMinDistanceToImageBorders
+```
+- **Value range**   
+    [0, 0x7fffffff]
+      
+- **Default value**   
+    0
+    
+- **Remarks**   
+    0: means no limitation on the distance. 
+
+
 ### reserved
 Reserved memory for struct. The length of this array indicates the size of the memory reserved for this struct.
 ```cpp
-char tagPublicRuntimeSettings::reserved[84]
+char tagPublicRuntimeSettings::reserved[36]
 ```

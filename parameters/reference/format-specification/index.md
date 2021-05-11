@@ -42,6 +42,7 @@ breadcrumbText: FormatSpecification
  | [`FormatSpecification.MinRatioOfBarcodeZoneWidthToHeight`](format-control.md#minratioofbarcodezonewidthtoheight) |	Sets the minimum ratio (width/height) of the barcode zone. | 
  | [`FormatSpecification.MirrorMode`](format-control.md#mirrormode) | Sets whether to decode mirrored barcodes. | 
  | [`FormatSpecification.ModuleSizeRangeArray`](format-control.md#modulesizerangearray) | Sets the range of module size (in pixels) for barcodes search. (Hint). |
+ | [`FormatSpecification.MSICodeCheckDigitCalculation`](format-control.md#msicodecheckdigitcalculation) | Sets the scheme used for calculating a check digit of an MSI barcode. | 
  | [`FormatSpecification.RequireStartStopChars`](format-control.md#requirestartstopchars) |	Sets whether the start and stop characters are required when searching for Code 39 barcodes. |
  | [`FormatSpecification.StandardFormat`](format-control.md#standardformat) | Set the standard barcode format. | 
  | [`FormatSpecification.TailModuleRatio`](format-control.md#tailmoduleratio) |	Set the module count and module size ratio of the barcode tail part. | 

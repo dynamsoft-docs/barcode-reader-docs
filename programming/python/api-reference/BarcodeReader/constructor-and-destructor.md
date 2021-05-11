@@ -10,16 +10,25 @@ needAutoGenerateSidebar: true
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`BarcodeReader`](#barcodereader) | Default constructor of `BarcodeReader` object.|
+  | [`BarcodeReader`](#barcodereader) | The default constructor of `BarcodeReader` object.|
+  | [`__del__`](#__del__) | The default destructor of `BarcodeReader` object.|
 
 ---
 
 ## BarcodeReader
 
 ### BarcodeReader()
-
-Default constructor of a `BarcodeReader` object.
+The default constructor of a `BarcodeReader` object.
 
 ```python
 BarcodeReader BarcodeReader()
+```
+
+### __del__()
+
+The default destructor of a `BarcodeReader` object.
+
+```python
+reader = BarcodeReader()
+del reader
 ```

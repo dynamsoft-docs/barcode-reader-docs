@@ -1,5 +1,6 @@
 <li><a href="{{ site.oc }}" class="otherLinkColour">Objective-C & Swift</a>
     <ul>
+        {%- if page.url contains '/objectivec-swift/' or page.url contains '/objectivec-swift-v' -%}
         <li><a href="{{ site.oc }}user-guide.html" class="otherLinkColour">User Guide</a></li>
         <li><a href="{{ site.oc_api }}" class="otherLinkColour">API Reference</a>
             <ul>
@@ -44,10 +45,10 @@
 
         <li><a href="{{ site.oc_release_notes }}" class="otherLinkColour">Release Notes</a>
             <ul>
-                <li><a href="{{ site.oc_release_notes }}ios-8.html" class="otherLinkColour">Version 8.0</a></li>
+                <li><a href="{{ site.oc_release_notes }}ios-8.html" class="otherLinkColour">Version 8.x</a></li>
                 <li><a href="{{ site.oc_release_notes }}ios-7.html" class="otherLinkColour">Version 7.6 and below</a></li>
             </ul>
         </li>
-
+        {%- endif -%}
     </ul>
 </li>

@@ -15,9 +15,15 @@ noTitleIndex: true
 - Operating systems:
     - Windows x64
     - Linux (x64, ARM32, ARM64)
-    - Mac OS (10.15+)
+    - macOS (10.15+)
 
-- Supported Python Versions: Python 2.7 (for versions before DBR 7.4), Python 3.5, Python 3.6, Python 3.7, Python 3.8
+- Supported Python Versions: 
+    - Python 2.7 (for versions below DBR 7.2.2.3)
+    - Python 3.5 (for versions below DBR 7.5)
+    - Python 3.6
+    - Python 3.7
+    - Python 3.8
+    - Python 3.9
 
 ## Installation
 
@@ -51,12 +57,14 @@ pip install dbr
 
        if text_results != None:
            for text_result in text_results:
-               print("Barcode Format :")
+               print("Barcode Format : ")
                print(text_result.barcode_format_string)
-               print("Barcode Text :")
+               print("Barcode Text : ")
                print(text_result.barcode_text)
                print("Localization Points : ")
                print(text_result.localization_result.localization_points)
+               print("Exception : ")
+               print(text_result.exception)
                print("-------------")
    except BarcodeReaderError as bre:
        print(bre)
@@ -72,8 +80,10 @@ The SDK provides multiple decoding methods that support reading barcodes from di
 video stream, files in memory, base64 string, etc. Here is a list of all decoding methods:
 
 - [decode_file](api-reference/BarcodeReader/decode.md#decode_file): Reads barcodes from a specified file (BMP, JPEG, PNG, GIF, TIFF or PDF).   
-- [decode_buffer](api-reference/BarcodeReader/decode.md#decode_buffer): Decodes barcodes from the memory buffer containing image pixels in defined format.   
+- [decode_buffer](api-reference/BarcodeReader/decode.md#decode_buffer): Decodes barcodes from the memory buffer containing image pixels in defined format.  
+- [decode_buffer_manually](api-reference/BarcodeReader/decode.md#decode_buffer_manually): Decodes barcodes from the memory buffer containing image pixels in defined format. 
 - [decode_file_stream](api-reference/BarcodeReader/decode.md#decode_file_stream): Decodes barcodes from an image file in memory. 
+- [decode_intermediate_results](api-reference/BarcodeReader/decode.md#decode_intermediate_results): Decodes barcodes from intermediate results.
 
 You can find more samples in more programming languages at [Code Gallery](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx).
 
@@ -123,12 +133,14 @@ try:
 
     if text_results != None:
         for text_result in text_results:
-            print("Barcode Format :")
+            print("Barcode Format : ")
             print(text_result.barcode_format_string)
-            print("Barcode Text :")
+            print("Barcode Text : ")
             print(text_result.barcode_text)
             print("Localization Points : ")
             print(text_result.localization_result.localization_points)
+            print("Exception : ")
+            print(text_result.exception)
             print("-------------")
 except BarcodeReaderError as bre:
     print(bre)
@@ -155,12 +167,14 @@ By default, the SDK will read as many barcodes as it can. To increase the recogn
 
       if text_results != None:
          for text_result in text_results:
-               print("Barcode Format :")
+               print("Barcode Format : ")
                print(text_result.barcode_format_string)
-               print("Barcode Text :")
+               print("Barcode Text : ")
                print(text_result.barcode_text)
                print("Localization Points : ")
                print(text_result.localization_result.localization_points)
+               print("Exception : ")
+               print(text_result.exception)
                print("-------------")
    except BarcodeReaderError as bre:
       print(bre)
@@ -194,12 +208,14 @@ To specify a region, you will need to define an area. The following code shows h
 
       if text_results != None:
          for text_result in text_results:
-               print("Barcode Format :")
+               print("Barcode Format : ")
                print(text_result.barcode_format_string)
-               print("Barcode Text :")
+               print("Barcode Text : ")
                print(text_result.barcode_text)
                print("Localization Points : ")
                print(text_result.localization_result.localization_points)
+               print("Exception : ")
+               print(text_result.exception)
                print("-------------")
    except BarcodeReaderError as bre:
       print(bre)
@@ -229,12 +245,14 @@ Besides the option of using the PublicRuntimeSettings struct, the SDK also provi
 
       if text_results != None:
          for text_result in text_results:
-               print("Barcode Format :")
+               print("Barcode Format : ")
                print(text_result.barcode_format_string)
-               print("Barcode Text :")
+               print("Barcode Text : ")
                print(text_result.barcode_text)
                print("Localization Points : ")
                print(text_result.localization_result.localization_points)
+               print("Exception : ")
+               print(text_result.exception)
                print("-------------")
    except BarcodeReaderError as bre:
       print(bre)
@@ -314,3 +332,21 @@ Below is a template for your reference. To learn more about the APIs, you can ch
    "Version" : "3.0"
 }
 ```
+## How to Upgrade
+
+### From version 8.0 to 8.x
+
+`pip install dbr --upgrade`
+
+
+### From version 7.x to 8.x
+
+`pip install dbr --upgrade`
+
+In v8.0, we introduced a new license tracking mechanism, <a href="https://www.dynamsoft.com/license-tracking/docs/about/index.html" target="_blank">License 2.0</a>. 
+
+If you wish to use License 2.0, please refer to [this article](../../license-activation/set-full-license.md) to set the license.
+
+After you upgraded your license to version 8.x:
+
+Please download the samples via our <a href="https://github.com/Dynamsoft/python-barcode/tree/master/samples" target="_blank">Python GitHub Repository</a>. 

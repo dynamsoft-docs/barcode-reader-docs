@@ -86,7 +86,7 @@ For the position coordinates of the decoding result, the parameter [`ResultCoord
 
 ## Ordering
 
-[`TextResultOrderModes`]({{ site.parameters_reference }}image-parameter/result-control.html#textresultordermodes) is used to sort the decoding results.
+[`TextResultOrderModes`]({{ site.parameters_reference }}image-parameter/TextResultOrderModes.html#textresultordermodes) is used to sort the decoding results.
 
 |Name|Notes|
 |------|-----|

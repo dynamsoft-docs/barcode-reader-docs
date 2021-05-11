@@ -25,15 +25,11 @@ noTitleIndex: true
    
 ## Installation
 
-To install Dynamsoft Barcode Reader iOS Edition on your development machine, you can download the SDK from the [Dynamsoft website](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx) and run the setup program. The trial installer includes a free trial license valid for 30 days.   
-   
-After installation, you can find samples for supported platforms in the **Samples** folder under the installation folder.  
-
-
-&nbsp; 
+Download the Dynamsoft Barcode Reader SDK from the [Dynamsoft website](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx) and unzip the package. The trial package includes a free trial license valid for 30 days.   
 
 
 ## Getting Started: HelloWorld
+
 To build a Hello World app that reads barcodes from an image, you can follow the steps below:
 1. Create a new iOS project in Xcode.
 2. Add the barcode reader framework to your project
@@ -404,11 +400,19 @@ Below is a template for your reference. To learn more about the APIs, you can ch
 
 ## How to Upgrade
 
+### From version 8.0 to 8.x
+
+You need to replace the old `DynamsoftBarcodeReader.framework` file with the one in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx). You could also download it via terminal `pod install ‘DynamsoftBarcodeReader’`. 
+
 ### From version 7.x
 
 You need to replace the old `DynamsoftBarcodeReader.framework` file with the one in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
 
 Your previous SDK license for version 7.x is not compatible with the version 8.x. Please [contact us](https://www.dynamsoft.com/Company/Contact.aspx) to upgrade your license.
+
+In v8.0, we introduced a new license tracking mechanism, <a href="https://www.dynamsoft.com/license-tracking/docs/about/index.html" target="_blank">License 2.0</a>. 
+
+If you wish to use License 2.0, please refer to [this article](../../license-activation/set-full-license.md) to set the license.
 
 After you upgraded your license to version 8.x:
 

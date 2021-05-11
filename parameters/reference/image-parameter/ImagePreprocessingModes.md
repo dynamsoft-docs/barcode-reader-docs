@@ -5,34 +5,7 @@ description: This page shows Dynamsoft Barcode Reader Parameter Reference for Im
 keywords: ImagePreprocessingModes, ImageParameter, image process control parameters, parameter reference, parameter
 needAutoGenerateSidebar: false
 ---
-
-# ImageParameter Object - Image Process Control Parameters
-
- | Parameter Name | Description |
- | -------------- | ----------- | 
- | [`ImageParameter.BarcodeColourModes`](BarcodeColourModes.md#barcodecolourmodes) | Sets the mode and priority for the barcode colour mode used to process the barcode zone. |
- | [`ImageParameter.BarcodeComplementModes`](BarcodeComplementModes.md#barcodecomplementmodes) | Sets the mode and priority to complement the missing parts in the barcode. |
- | [`ImageParameter.BinarizationModes`](BinarizationModes.md#binarizationmodes) | 	Sets the mode and priority for binarization. |
- | [`ImageParameter.ColourClusteringModes`](ColourClusteringModes.md#colourclusteringmodes) | Sets the mode and priority for colour categorization. Not supported yet. |
- | [`ImageParameter.ColourConversionModes`](ColourConversionModes.md#colourconversionmodes) | Sets the mode and priority for converting a colour image to a grayscale image. |
- | [`ImageParameter.DeblurLevel`](image-process-control.md#deblurlevel) | Sets the degree of blurriness of the barcode. |
- | [`ImageParameter.DeblurModes`](DeblurModes.md#deblurmodes) | Sets the mode and priority for deblurring. |
- | [`ImageParameter.DeformationResistingModes`](DeformationResistingModes.md#deformationresistingmodes) | Sets the mode and priority for deformation resisting. |
- | [`ImageParameter.DPMCodeReadingModes`](DPMCodeReadingModes.md#dpmcodereadingmodes) | Sets the mode and priority for DPM code reading. Not support yet. |
- | [`ImageParameter.GrayscaleTransformationModes`](GrayscaleTransformationModes.md#grayscaletransformationmodes) | Sets the mode and priority for the grayscale image conversion. |
- | [`ImageParameter.ImagePreprocessingModes`](#imagepreprocessingmodes) | Sets the mode and priority for image preprocessing algorithms. |
- | [`ImageParameter.LocalizationModes`](LocalizationModes.md#localizationmodes) | 	Sets the mode and priority for localization algorithms. |
- | [`ImageParameter.Pages`](image-process-control.md#pages) | Sets the specific pages or the range of pages of a file (.tiff or .pdf) for barcode searching. |
- | [`ImageParameter.PDFRasterDPI`](image-process-control.md#pdfrasterdpi) | Sets the output image resolution. |
- | [`ImageParameter.PDFReadingMode`](image-process-control.md#pdfreadingmode) | Sets the way to detect barcodes from a PDF file when using the DecodeFile method. |
- | [`ImageParameter.RegionPredetectionModes`](RegionPredetectionModes.md#regionpredetectionmodes) | Sets the region pre-detection mode for barcodes search. |
- | [`ImageParameter.ScaleDownThreshold`](image-process-control.md#scaledownthreshold) | Sets the threshold for the image shrinking. |
- | [`ImageParameter.ScaleUpModes`](ScaleUpModes.md#scaleupmodes) | Sets the mode and priority to control the sampling methods of scale-up for linear barcodes with small module sizes. | 
- | [`ImageParameter.TextAssistedCorrectionMode`](TextAssistedCorrectionMode.md#textassistedcorrectionmode) | Sets the mode of text assisted correction for barcode decoding. Not support yet. |
- | [`ImageParameter.TextFilterModes`](TextFilterModes.md#textfiltermodes) | 	Sets the mode and priority for text filter. |
- | [`ImageParameter.TextureDetectionModes`](TextureDetectionModes.md#texturedetectionmodes) | 	Sets the mode and priority for texture detection. |
-
----
+# ImageParameter Object | ImagePreprocessingModes
 
 
 ## ImagePreprocessingModes  
@@ -55,7 +28,7 @@ needAutoGenerateSidebar: false
 - [SharpenBlockSizeY](#sharpenblocksizey)
 - [MorphOperation](#morphoperation)
 - [MorphShape](#morphshape)
-- [MorphOperationKernelSizeX](#morphoperationkernelsizex )
+- [MorphOperationKernelSizeX](#morphoperationkernelsizex)
 - [MorphOperationKernelSizeY](#morphoperationkernelsizey)
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)
@@ -63,9 +36,9 @@ needAutoGenerateSidebar: false
 ##### Sensitivity 
 Sets the sensitivity used for gray equalization.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [1, 9] | 5 | "IPM_GRAY_EQUALIZE" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [1, 9] | 5 |         
 
 - **Remarks**     
   If you have an image with a low level of contrast, you can set the property to a larger value. A larger value means a higher possibility that gray equalization will be activated. This may cause adverse effect on images with a high level of contrast.  
@@ -74,9 +47,9 @@ Sets the sensitivity used for gray equalization.
 ##### SmoothBlockSizeX 
 Sets the horizontal block size for the smoothing process.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [3, 1000] | 3 | "IPM_GRAY_SMOOTH"<br>"IPM_SHARPEN_SMOOTH" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [3, 1000] | 3 |         
 
 - **Remarks**     
   Block size refers to the size of a pixel neighborhood used to calculate the threshold for the pixel. An appropriate value can help increase the accuracy of barcode localization.
@@ -85,9 +58,9 @@ Sets the horizontal block size for the smoothing process.
 ##### SmoothBlockSizeY 
 Sets the vertical block size for the smoothing process.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [3, 1000] | 3 | "IPM_GRAY_SMOOTH"<br>"IPM_SHARPEN_SMOOTH" |         
+| Value Type | Value Range | Default Value |
+| ---------- | ----------- | ------------- |
+| *int* | [3, 1000] | 3 |         
 
 - **Remarks**     
   Block size refers to the size of a pixel neighborhood used to calculate the threshold for the pixel. An appropriate value can help increase the accuracy of barcode localization.  
@@ -96,9 +69,9 @@ Sets the vertical block size for the smoothing process.
 ##### SharpenBlockSizeX 
 Sets the horizontal block size for the sharpening process.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [3, 1000] | 3 | "IPM_SHARPEN_SMOOTH" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [3, 1000] | 3 |         
 
 - **Remarks**     
   Block size refers to the size of a pixel neighborhood used to calculate the threshold for the pixel. An appropriate value can help increase the accuracy of barcode localization.
@@ -107,9 +80,9 @@ Sets the horizontal block size for the sharpening process.
 ##### SharpenBlockSizeY 
 Sets the vertical block size for the sharpening process.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [3, 1000] | 3 | "IPM_SHARPEN_SMOOTH" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [3, 1000] | 3 |         
 
 - **Remarks**     
   Block size refers to the size of a pixel neighborhood used to calculate the threshold for the pixel. An appropriate value can help increase the accuracy of barcode localization.
@@ -119,9 +92,9 @@ Sets the vertical block size for the sharpening process.
 ##### MorphOperation 
 Sets the morph operation for the morphology process. 
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *string* | "Erode"<br>"Dilate"<br>"Open"<br>"Close" | "Close" | "IPM_MORPHOLOGY" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *string* | "Erode"<br>"Dilate"<br>"Open"<br>"Close" | "Close" |         
 
 - **Remarks**    
    - "Erode": Perform erosion process.
@@ -135,9 +108,9 @@ Sets the morph operation for the morphology process.
 ##### MorphShape  
  Sets the morph shape for the morphology process.  
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *string* | "Rectangle"<br>"Cross"<br>"Ellipse" | "Rectangle" | "IPM_MORPHOLOGY" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *string* | "Rectangle"<br>"Cross"<br>"Ellipse" | "Rectangle" |         
 
 - **Remarks**    
    - "Rectangle": 
@@ -149,36 +122,36 @@ Sets the morph operation for the morphology process.
 ##### MorphOperationKernelSizeX  
 Sets the horizontal kernel size for the morphology process. 
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [0, 1000]  | 0 | "IPM_MORPHOLOGY" |         
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [0, 1000]  | 0 |         
 
 
 
 ##### MorphOperationKernelSizeY  
  Sets the vertical kernel size for the morphology process.  
 
-| Value Type | Value Range | Default Value | Valid Modes | 
-| ---------- | ----------- | ------------- | ----------- |
-| *int* | [0, 1000]  | 0 | "IPM_MORPHOLOGY" |       
+| Value Type | Value Range | Default Value | 
+| ---------- | ----------- | ------------- |
+| *int* | [0, 1000]  | 0 |       
 
 
 ##### LibraryFileName 
 Sets the file name of the library to load dynamically.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
+| Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing file name. | "" | All `ImagePreprocessingMode` items except IPM_SKIP and IPM_AUTO |         
 
 
 - **Remarks**     
-  - The library must be in the same place with Dynamsoft Barcode Reader Library.
+  The library must be in the same place with Dynamsoft Barcode Reader Library.
 
 
 ##### LibraryParameters 
 Sets the parameters passed to the library to load dynamically.
 
-| Value Type | Value Range | Default Value | Valid Modes | 
+| Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing parameters. | "" | All `ImagePreprocessingMode` items except IPM_SKIP and IPM_AUTO |         
 

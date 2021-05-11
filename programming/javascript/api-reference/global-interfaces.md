@@ -43,7 +43,6 @@ Stores the FurtherModes.
 
 | Property           | Type | Description |
 |----------------------|------|-------------|
-| `accompanyingTextRecognitionModes` | [*`AccompanyingTextRecognitionMode`*]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode) | Sets the mode and priority to recognize accompanying text. **Currently unsupported.** | 
 | `barcodeColourModes` | [*`BarcodeColourMode`*]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode) | Sets the mode and priority for the barcode colour mode used to process the barcode zone. | 
 | `barcodeComplementModes` | [*`BarcodeComplementMode`*]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode) | Sets the mode and priority to complement the missing parts in the barcode. | 
 | `colourClusteringModes` | [*`ColourClusteringMode`*]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode) | Sets the mode and priority for colour categorization. | 
@@ -53,7 +52,6 @@ Stores the FurtherModes.
 | `grayscaleTransformationModes` | [*`GrayscaleTransformationMode`*]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode) | Sets the mode and priority for the grayscale image conversion. | 
 | `imagePreprocessingModes` | [*`ImagePreprocessingMode`*]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode) | Sets the mode and priority for image preprocessing algorithms. | 
 | `regionPredetectionModes` | [*`RegionPredetectionMode`*]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode) | Sets the region pre-detection mode for barcodes search. | 
-| `textAssistedCorrectionMode` | [*`TextAssistedCorrectionMode`*]({{ site.enumerations }}parameter-mode-enums.html#textassistedcorrectionmode) | Sets the mode of text assisted correction for barcode decoding. | 
 | `textFilterModes` | [*`TextFilterMode`*]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode) | Sets the mode and priority for text filter. | 
 | `textureDetectionModes` | [*`TextureDetectionMode`*]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode) | Sets the mode and priority for texture detection. | 
 
@@ -106,6 +104,7 @@ Stores the barcode reading runtime settings. These settings control the barcode 
 |--------------------|------|---------------|-------------|
 | [`barcodeFormatIds`]({{ site.enumerations }}format-enums.html#barcodeformat) | *number* | `BF_ALL (-32505857)` | The selected barcode formats to be read from group 1 of 2. |
 | [`barcodeFormatIds_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) | *number* | `BF2_NULL (0)` | The selected barcode formats to be read from group 2 of 2.  |
+| `barcodeZoneMinDistanceToImageBorders` | *number* | `BarcodeReader`: `0` <br/>`BarcodeScanner`: `0` | Sets the minimum distance (in pixels) between the barcode zone and image borders. <br/>Value range: `[0, 0x7fffffff]` |
 | `binarizationModes` | [`EnumBinarizationMode[]`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) | `[BM_LOCAL_BLOCK, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP, BM_SKIP]` | The mode and priority for binarization. |
 | `deblurLevel`<sup>[1](#1-tips-and-tricks)</sup> | *number* | `BarcodeReader`: `9` <br/>`BarcodeScanner`: `0` | **deprecated** The degree of blurriness of the barcode. <br/>Value range: `[0, 9]`|
 | `deblurModes` | [`EnumDeblurMode[]`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode) | `[DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP, DM_SKIP]` | Sets the mode and priority for deblurring. |
@@ -148,9 +147,22 @@ Stores the decoded barcode text results.
 ### Properties
 
 | Property           | Type | Description |
-|----------------------|------|-------------|
+|--------------------|------|-------------|
 | `barcodeBytes` | *number[]* | Barcode result content in a byte array. | 
-| `barcodeFormat` | *number* \| [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) | The barcode format. | 
+| `barcodeFormat` | *number* | [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) | The barcode format. | 
 | `barcodeFormatString` | *string* | Barcode type as a string. | 
 | `barcodeText` | *string* | The barcode result text. | 
 | `localizationResult` | [`LocalizationResult`](#localizationresult) | The corresponding localization result. |
+| `exception` | [`Exception`](#exception) | License exception information. |
+
+<!--
+| `detailedResult` | [`DetailedResult`](#detailedResult) | Extra details of the result. | -->
+
+## Exception
+
+Stores exception code and message in case of a license exception.
+
+| Property          | Description |
+|-------------------|-------------|
+| `code` | Exception code |
+| `message` | Exception message |

@@ -1,5 +1,6 @@
 <li><a href ="{{ site.scenario_settings }}" class="otherLinkColour">Scenario Settings</a>
     <ul>    
+        {%- if page.url contains '/scenario-settings/' or page.url contains '/scenario-settings-v' -%}
         <li><a href ="{{ site.scenario_settings }}how-to-set-parameters.html" class="otherLinkColour">Select the Appropriate DBR Parameter Configuration</a></li>
         <li><a href ="{{ site.scenario_settings }}barcode-format-and-expected-barcode-counts.html" class="otherLinkColour">Set the Barcode Format and the Number of Barcodes Expected to be Detected</a></li>
         <li><a href ="{{ site.scenario_settings }}read-from-diff-source.html" class="otherLinkColour">Read Images from Different Sources</a></li>
@@ -21,5 +22,6 @@
         <li><a href ="{{ site.scenario_settings }}intermediate-result.html" class="otherLinkColour">Obtain and Use Intermediate Results</a></li>
         <li><a href ="{{ site.scenario_settings }}terminate.html" class="otherLinkColour">Control the Terminate Phase</a></li>
         <li><a href ="{{ site.scenario_settings }}format-specification.html" class="otherLinkColour">Configure Parameters for Specific Barcode Formats</a></li>
+    {%- endif -%}
     </ul>
 </li>

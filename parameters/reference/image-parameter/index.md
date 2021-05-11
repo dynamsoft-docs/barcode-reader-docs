@@ -61,7 +61,6 @@ breadcrumbText: ImageParameter
  | [`ImageParameter.RegionPredetectionModes`](RegionPredetectionModes.md#regionpredetectionmodes) | Sets the region pre-detection mode for barcodes search. |
  | [`ImageParameter.ScaleDownThreshold`](image-process-control.md#scaledownthreshold) | Sets the threshold for the image shrinking. |
  | [`ImageParameter.ScaleUpModes`](ScaleUpModes.md#scaleupmodes) | Sets the mode and priority to control the sampling methods of scale-up for linear barcodes with small module sizes. | 
- | [`ImageParameter.TextAssistedCorrectionMode`](TextAssistedCorrectionMode.md#textassistedcorrectionmode) | Sets the mode of text assisted correction for barcode decoding. Not support yet. |
  | [`ImageParameter.TextFilterModes`](TextFilterModes.md#textfiltermodes) | 	Sets the mode and priority for text filter. |
  | [`ImageParameter.TextureDetectionModes`](TextureDetectionModes.md#texturedetectionmodes) | 	Sets the mode and priority for texture detection. |
 
@@ -71,10 +70,10 @@ breadcrumbText: ImageParameter
 
  | Parameter Name | Description |
  | -------------- | ----------- | 
- | [`ImageParameter.IntermediateResultTypes`](result-control.md#intermediateresulttypes) | Sets which types of intermediate result to be kept for further reference. Intermediate result types can be combined. | 
- | [`ImageParameter.IntermediateResultSavingMode`](result-control.md#intermediateresultsavingmode) | Sets the mode for saving the intermediate result. | 
- | [`ImageParameter.ResultCoordinateType`](result-control.md#resultcoordinatetype) | Specifies the format for the coordinates returned | 
- | [`ImageParameter.TextResultOrderModes`](result-control.md#textresultordermodes) | Sets the mode and priority for the order of the text results returned. | 
- | [`ImageParameter.ReturnBarcodeZoneClarity`](result-control.md#returnbarcodezoneclarity) | Sets whether or not to return the clarity of the barcode zone. | 
+ | [`ImageParameter.IntermediateResultTypes`](other-result-control-parameters.md#intermediateresulttypes) | Sets which types of intermediate result to be kept for further reference. Intermediate result types can be combined. | 
+ | [`ImageParameter.IntermediateResultSavingMode`](IntermediateResultSavingMode.md#intermediateresultsavingmode) | Sets the mode for saving the intermediate result. | 
+ | [`ImageParameter.ResultCoordinateType`](other-result-control-parameters.md#resultcoordinatetype) | Specifies the format for the coordinates returned | 
+ | [`ImageParameter.TextResultOrderModes`](TextResultOrderModes.md#textresultordermodes) | Sets the mode and priority for the order of the text results returned. | 
+ | [`ImageParameter.ReturnBarcodeZoneClarity`](other-result-control-parameters.md#returnbarcodezoneclarity) | Sets whether or not to return the clarity of the barcode zone. | 
 
 

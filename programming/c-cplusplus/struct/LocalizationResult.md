@@ -43,8 +43,6 @@ typedef struct tagLocalizationResult*  PLocalizationResult
 | [`regionName`](#regionname) | *const char \** |
 | [`documentName`](#documentname)| *const char \** |
 | [`resultCoordinateType`](#resultcoordinatetype) | [`ResultCoordinateType`]({{ site.enumerations }}result-enums.html#resultcoordinatetype) |
-| [`accompanyingTextBytes`](#accompanyingtextbytes) | *unsigned char \** |
-| [`accompanyingTextBytesLength`](#accompanyingtextbyteslength) | *int* |
 | [`confidence`](#confidence) | *int* |
 | [`reserved`](#reserved) | *char\[52\]* |
 
@@ -161,18 +159,6 @@ const char* tagLocalizationResult::documentName
 The coordinate type.
 ```cpp
 ResultCoordinateType tagLocalizationResult::resultCoordinateType
-```
-
-### accompanyingTextBytes
-The accompanying text content in a byte array.
-```cpp
-unsigned char* tagLocalizationResult::accompanyingTextBytes
-```
-
-### accompanyingTextBytesLength
-The length of the accompanying text byte array.
-```cpp
-int tagLocalizationResult::accompanyingTextBytesLength
 ```
 
 ### confidence

@@ -36,7 +36,12 @@ Promise<[TextResult[]](../../global-interfaces.md#textresult)>
  
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+```javascript
+    let results = await reader.decode(blob);
+    for(let result of results){
+        console.log(result.barcodeText);
+    }
+```
 
 ## decodeBase64String
 
@@ -57,7 +62,12 @@ Promise<[TextResult[]](../../global-interfaces.md#textresult)>
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+```javascript
+    let results = await reader.decodeBase64String(strBase64);
+    for(let result of results){
+        console.log(result.barcodeText);
+    }
+```
 
 ## decodeBuffer
 
@@ -82,7 +92,7 @@ decodeBuffer(buffer, width, height, stride, format, config) returns Promise
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+[Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)
 
 ## decodeUrl
 
@@ -102,4 +112,9 @@ Promise<[TextResult[]](../../global-interfaces.md#textresult)>
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+```javascript
+    let results = await reader.decodeUrl("./1.png");
+    for(let result of results){
+        console.log(result.barcodeText);
+    }
+```

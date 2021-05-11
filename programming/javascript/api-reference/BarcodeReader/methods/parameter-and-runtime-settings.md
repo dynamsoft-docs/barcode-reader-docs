@@ -40,14 +40,16 @@ getModeArgument(modeName, index, argumentName) returns Promise
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+```javascript
+    let argumentValue = await reader.getModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy");
+```
 
 ## setModeArgument
 
 Set the argument value for the specified mode parameter.
 
 ```javascript
-setModeArgument(modeName, index, argumentName, argumentValue) returns Promise
+    setModeArgument(modeName, index, argumentName, argumentValue) returns Promise
 ```
 
 ### Parameters
@@ -67,7 +69,7 @@ setModeArgument(modeName, index, argumentName, argumentValue) returns Promise
 await reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "1");
 ```
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+[Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)
 
 ### :+1: Tips and Tricks 
 
@@ -90,7 +92,11 @@ Promise<[RuntimeSettings](../../global-interfaces.md#runtimesettings)>
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+```javascript
+    let settings = await reader.getRuntimeSettings();
+    settings.expectedBarcodesCount = 5;
+    await reader.updateRuntimeSettings(settings);
+```
 
 ## resetRuntimeSettings
 
@@ -106,7 +112,9 @@ resetRuntimeSettings() returns Promise
 
 ### Sample
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+```javascript
+    await reader.resetRuntimeSettings();
+```
 
 ## updateRuntimeSettings
 
@@ -127,10 +135,10 @@ updateRuntimeSettings(settings) returns Promise
 ### Sample
 
 ```javascript
-await reader.updateRuntimeSettings('balance');
-let settings = await reader.getRuntimeSettings();
-settings.barcodeFormatIds = Dynamsoft.EnumBarcodeFormat.BF_ONED;
-await reader.updateRuntimeSettings(settings);
+    await reader.updateRuntimeSettings('balance');
+    let settings = await reader.getRuntimeSettings();
+    settings.barcodeFormatIds = Dynamsoft.EnumBarcodeFormat.BF_ONED;
+    await reader.updateRuntimeSettings(settings);
 ```
 
-[Read barcodes from live camera](https://demo.dynamsoft.com/dbr_wasm/barcode_reader_javascript.html)
+[Read barcodes from live camera](https://demo.dynamsoft.com/barcode-reader-js/)
