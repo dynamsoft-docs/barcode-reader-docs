@@ -14,19 +14,19 @@ Dynamsoft Barcode Reader enables developers to easily implement 1D and 2D barcod
 
 - for web applications (pure JavaScript)
 
-    [Enable browser-based barcode scanning using a web SDK](../programming/javascript/user-guide/)
+    [Enable browser-based barcode scanning with JavaScript](../programming/javascript/user-guide/)
 
 - for desktop and server applications (including web applications where the barcode scanning happens on the server)
 
-    [Enable Barcode Scanning with C programming language](../programming/c/user-guide.md/)
+    [Barcode scanning with C programming language](../programming/c/user-guide.md/)
 
-    [Enable Barcode Scanning with C++](../programming/cplusplus/user-guide.md/)
+    [Barcode scanning with C++](../programming/cplusplus/user-guide.md/)
 
-    [Enable Barcode Scanning with .NET](../programming/dotnet/user-guide.md/)
+    [Barcode scanning with .NET](../programming/dotnet/user-guide.md/)
 
-    [Enable Barcode Scanning with Java](../programming/java/user-guide.md/)
+    [Barcode scanning with Java](../programming/java/user-guide.md/)
 
-    [Enable Barcode Scanning with Python](../programming/python/user-guide.md/)
+    [Barcode scanning with Python](../programming/python/user-guide.md/)
 
 - for native apps
 
