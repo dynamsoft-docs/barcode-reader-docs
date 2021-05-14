@@ -86,7 +86,7 @@ NSString* barcodeFormatString_2
 The resultPoints are Four CGPoints that localize the result area.
 
 ```objc
-NSArray resultPoints
+NSArray* resultPoints
 ```
 
 ### angle
