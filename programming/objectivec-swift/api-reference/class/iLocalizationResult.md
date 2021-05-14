@@ -29,7 +29,7 @@ Stores the localization result.
 | [`barcodeFormatString`](#barcodeformatstring) | *NSString \** |
 | [`barcodeFormat_2 `](#barcodeformat_2 ) | [`EnumBarcodeFormat2 `]({{ site.enumerations }}format-enums.html#barcodeformat_2) |
 | [`barcodeFormatString_2`](#barcodeformatstring_2) | *NSString \** |
-| [`resultPoints`](#resultpoints) | *NSArray* |
+| [`resultPoints`](#resultpoints) | *NSArray \** |
 | [`angle`](#angle) | *NSInteger* |
 | [`moduleSize`](#modulesize) | *NSInteger* |
 | [`pageNumber`](#pagenumber) | *NSInteger* |
