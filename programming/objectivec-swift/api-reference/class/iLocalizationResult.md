@@ -29,14 +29,7 @@ Stores the localization result.
 | [`barcodeFormatString`](#barcodeformatstring) | *NSString \** |
 | [`barcodeFormat_2 `](#barcodeformat_2 ) | [`EnumBarcodeFormat2 `]({{ site.enumerations }}format-enums.html#barcodeformat_2) |
 | [`barcodeFormatString_2`](#barcodeformatstring_2) | *NSString \** |
-| [`x1`](#x1) | *NSInteger* |
-| [`y1`](#y1) | *NSInteger* |
-| [`x2`](#x2) | *NSInteger* |
-| [`y2`](#y2) | *NSInteger* |
-| [`x3`](#x3) | *NSInteger* |
-| [`y3`](#y3) | *NSInteger* |
-| [`x4`](#x4) | *NSInteger* |
-| [`y4`](#y4) | *NSInteger* |
+| [`resultPoints`](#resultpoints) | *NSArray* |
 | [`angle`](#angle) | *NSInteger* |
 | [`moduleSize`](#modulesize) | *NSInteger* |
 | [`pageNumber`](#pagenumber) | *NSInteger* |
@@ -88,68 +81,12 @@ Barcode type in BarcodeFormat group 2 as string.
 NSString* barcodeFormatString_2
 ```
 
-### x1
+### resultPoints
 
-The X coordinate of the left-most point.
-
-```objc
-NSInteger x1
-```
-
-### y1
-
-The Y coordinate of the left-most point.
+The resultPoints are Four CGPoints that localize the result area.
 
 ```objc
-NSInteger y1
-```
-
-### x2
-
-The X coordinate of the second point in a clockwise direction.
-
-```objc
-NSInteger x2
-```
-
-### y2
-
-The Y coordinate of the second point in a clockwise direction.
-
-```objc
-NSInteger y2
-```
-
-### x3
-
-The X coordinate of the third point in a clockwise direction.
-
-```objc
-NSInteger x3
-```
-
-### y3
-
-The Y coordinate of the third point in a clockwise direction.
-
-```objc
-NSInteger y3
-```
-
-### x4
-
-The X coordinate of the fourth point in a clockwise direction.
-
-```objc
-NSInteger x4
-```
-
-### y4
-
-The Y coordinate of the fourth point in a clockwise direction.
-
-```objc
-NSInteger y4
+NSArray resultPoints
 ```
 
 ### angle
