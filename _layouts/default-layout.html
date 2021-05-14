@@ -98,9 +98,15 @@
 
     <!-- for dbr -->
     <script type="text/javascript">
+        function getCookie(name) {
+            var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+            return (arr = document.cookie.match(reg)) ? unescape(arr[2]) : null;
+        }
+
+
         $(document).ready(function(){
             var download = getUrlParam('download');
-            if(download == 'true') {
+            if(download == 'true' && getCookie('DynamsoftEmail')) {
                 var curHref = window.location.href.toLowerCase()
                 if (curHref.indexOf('/c/') > -1 || curHref.indexOf('/cplusplus/') > -1) {
                     $('.editionName').html('C/C++');
