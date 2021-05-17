@@ -9,7 +9,7 @@ breadcrumbText: API Reference
 
 # Dynamsoft Barcode Reader SDK - Android API Reference
 
-- [`BarcodeReader` Methods](#barcodereader-methods) 
+- [`BarcodeReader` Methods](#barcodereader-methods)
 - [Interface](#interface)
 - [Error Code](#error-code)
 - [Classes](#classes)  
@@ -22,7 +22,17 @@ breadcrumbText: API Reference
   | Method               | Description |
   |----------------------|-------------|
   | [`BarcodeReader`](BarcodeReader/initialize-and-destroy.md#barcodereader) | Initialization of `BarcodeReader` object.|
-  | [`destroy`](BarcodeReader/initialize-and-destroy.md#destroy) | Destroys an instance of `BarcodeReader` object.|   
+  | [`destroy`](BarcodeReader/initialize-and-destroy.md#destroy) | Destroys an instance of `BarcodeReader` object.|
+
+### Camera Enhancer
+  
+   | Method               | Description |
+   |----------------------|-------------|
+   | [`StartCameraEnhancer`](BarcodeReader/camera.md#start-stop-pause-resume-camera-enhancer) | Start using Dynamsoft Camera Enhancer |
+   | [`StopCameraEnhancer`](BarcodeReader/camera.md#start-stop-pause-resume-camera-enhancer) | Stop using Dynamsoft Camera Enhancer |
+   | [`PauseCameraEnhancer`](BarcodeReader/camera.md#start-stop-pause-resume-camera-enhancer) | Pause the process of Dynamsoft Camera Enhancer |
+   | [`ResumeCameraEnhancer`](BarcodeReader/camera.md#start-stop-pause-resume-camera-enhancer) | Pause the process of Dynamsoft Camera Enhancer |
+   | [`SetCameraEnhancerParam`](BarcodeReader/camera.md#setcameraenhancerparam) | Set the parameters for Dynamsoft Camera Enhancer in Barcode reader |
 
 ### Decode
 
@@ -39,7 +49,7 @@ breadcrumbText: API Reference
 ### Parameter and Runtime Settings
 
 #### Basic
-   
+
   | Method               | Description |
   |----------------------|-------------|
   | [`setModeArgument`](BarcodeReader/parameter-and-runtime-settings-basic.md#setmodeargument) | Set argument value for the specified mode parameter. |
@@ -59,7 +69,6 @@ breadcrumbText: API Reference
   | [`getAllParameterTemplateNames`](BarcodeReader/parameter-and-runtime-settings-advanced.md#getallparametertemplatenames) | Gets the parameter templates name array. |
   | [`outputSettingsToFile`](BarcodeReader/parameter-and-runtime-settings-advanced.md#outputsettingstofile) | Output runtime settings to a settings file (JSON file). |
   | [`outputSettingsToString`](BarcodeReader/parameter-and-runtime-settings-advanced.md#outputsettingstostring) | Output runtime settings to a string. |
-
 
 ### License
   
@@ -127,61 +136,62 @@ breadcrumbText: API Reference
 
 ## Classes
 
-- [`AztecDetails`](class/AztecDetails.md)	 
-- [`BarcodeReaderException`](class/BarcodeReaderException.md)	
-- [`Contour`](class/Contour.md)	 
-- [`DataMatrixDetails`](class/DataMatrixDetails.md)	 
-- [`DMLTSConnectionParameters`](class/DMLTSConnectionParameters.md)	 
-- [`ExtendedResult`](class/ExtendedResult.md)	
+- [`AztecDetails`](class/AztecDetails.md)
+- [`BarcodeReaderException`](class/BarcodeReaderException.md)
+- [`Contour`](class/Contour.md)
+- [`DataMatrixDetails`](class/DataMatrixDetails.md)
+- [`DCESettingParameters`](class/DCESettingParameters.md)
+- [`DMLTSConnectionParameters`](class/DMLTSConnectionParameters.md)
+- [`ExtendedResult`](class/ExtendedResult.md)
 - [`FrameDecodingParameters`](class/FrameDecodingParameters.md)
 - [`FurtherModes`](class/FurtherModes.md)
-- [`ImageData`](class/ImageData.md)	 
-- [`IntermediateResult`](class/IntermediateResult.md)	
-- [`LineSegment`](class/LineSegment.md)	 
-- [`LocalizationResult`](class/LocalizationResult.md)	
-- [`OneDCodeDetails`](class/OneDCodeDetails.md)	
-- [`PDF417Details`](class/PDF417Details.md)	
-- [`PublicRuntimeSettings`](class/PublicRuntimeSettings.md)	
-- [`QRCodeDetails`](class/QRCodeDetails.md)	
-- [`Quadrilateral`](class/Quadrilateral.md)	 
-- [`RegionDefinition`](class/RegionDefinition.md)	
-- [`RegionOfInterest`](class/RegionOfInterest.md)	 
-- [`SamplingImageData`](class/SamplingImageData.md)	 
-- [`TextResult`](class/TextResult.md)		
+- [`ImageData`](class/ImageData.md)
+- [`IntermediateResult`](class/IntermediateResult.md)
+- [`LineSegment`](class/LineSegment.md)
+- [`LocalizationResult`](class/LocalizationResult.md)
+- [`OneDCodeDetails`](class/OneDCodeDetails.md)
+- [`PDF417Details`](class/PDF417Details.md)
+- [`PublicRuntimeSettings`](class/PublicRuntimeSettings.md)
+- [`QRCodeDetails`](class/QRCodeDetails.md)
+- [`Quadrilateral`](class/Quadrilateral.md)
+- [`RegionDefinition`](class/RegionDefinition.md)
+- [`RegionOfInterest`](class/RegionOfInterest.md)
+- [`SamplingImageData`](class/SamplingImageData.md)
+- [`TextResult`](class/TextResult.md)
 
 ## Enumerations
 
-- [`EnumAccompanyingTextRecognitionMode`]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode)	
-- [`EnumBarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode)	
-- [`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode)	
-- [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat)	
-- [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)	
+- [`EnumAccompanyingTextRecognitionMode`]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode)
+- [`EnumBarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode)
+- [`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode)
+- [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat)
+- [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
 - [`EnumBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)
-- [`EnumClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod) 
-- [`EnumClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode) 
-- [`EnumColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode)	
-- [`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode)	
-- [`EnumConflictMode`]({{ site.enumerations }}parameter-mode-enums.html#conflictmode)	
-- [`EnumDeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode)	
-- [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode)	
-- [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)	
-- [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)	
-- [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)	
-- [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode)	
-- [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)	
-- [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat)	
-- [`EnumImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode)	
-- [`EnumIMResultDataType`]({{ site.enumerations }}result-enums.html#imresultdatatype)	
-- [`EnumIntermediateResultSavingMode`]({{ site.enumerations }}result-enums.html#intermediateresultsavingmode)	
-- [`EnumIntermediateResultType`]({{ site.enumerations }}result-enums.html#intermediateresulttype)	
+- [`EnumClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod)
+- [`EnumClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode)
+- [`EnumColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode)
+- [`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode)
+- [`EnumConflictMode`]({{ site.enumerations }}parameter-mode-enums.html#conflictmode)
+- [`EnumDeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode)
+- [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode)
+- [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)
+- [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
+- [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
+- [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode)
+- [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)
+- [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat)
+- [`EnumImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode)
+- [`EnumIMResultDataType`]({{ site.enumerations }}result-enums.html#imresultdatatype)
+- [`EnumIntermediateResultSavingMode`]({{ site.enumerations }}result-enums.html#intermediateresultsavingmode)
+- [`EnumIntermediateResultType`]({{ site.enumerations }}result-enums.html#intermediateresulttype)
 - [`EnumLocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode)
-- [`EnumPDFReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#pdfreadingmode)   
-- [`EnumQRCodeErrorCorrectionLevel`]({{ site.enumerations }}other-enums.html#qrcodeerrorcorrectionlevel)	
-- [`EnumRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode)	
-- [`EnumResultCoordinateType`]({{ site.enumerations }}result-enums.html#resultcoordinatetype)	
-- [`EnumResultType`]({{ site.enumerations }}result-enums.html#resulttype)	
-- [`EnumScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode)	
-- [`EnumTerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase)	
-- [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode)	
-- [`EnumTextResultOrderMode`]({{ site.enumerations }}result-enums.html#textresultordermode)	
+- [`EnumPDFReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#pdfreadingmode)
+- [`EnumQRCodeErrorCorrectionLevel`]({{ site.enumerations }}other-enums.html#qrcodeerrorcorrectionlevel)
+- [`EnumRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode)
+- [`EnumResultCoordinateType`]({{ site.enumerations }}result-enums.html#resultcoordinatetype)
+- [`EnumResultType`]({{ site.enumerations }}result-enums.html#resulttype)
+- [`EnumScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode)
+- [`EnumTerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase)
+- [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode)
+- [`EnumTextResultOrderMode`]({{ site.enumerations }}result-enums.html#textresultordermode)
 - [`EnumTextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode)

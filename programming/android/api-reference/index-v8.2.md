@@ -140,7 +140,8 @@ breadcrumbText: API Reference
 - [`AztecDetails`](class/AztecDetails.md)	 
 - [`BarcodeReaderException`](class/BarcodeReaderException.md)	
 - [`Contour`](class/Contour.md)	 
-- [`DataMatrixDetails`](class/DataMatrixDetails.md)	 
+- [`DataMatrixDetails`](class/DataMatrixDetails.md)
+- [`DCESettingParameters`](class/DCESettingParameters.md)
 - [`DMLTSConnectionParameters`](class/DMLTSConnectionParameters.md)	 
 - [`ExtendedResult`](class/ExtendedResult.md)	
 - [`FrameDecodingParameters`](class/FrameDecodingParameters.md)
@@ -158,7 +159,6 @@ breadcrumbText: API Reference
 - [`RegionOfInterest`](class/RegionOfInterest.md)	 
 - [`SamplingImageData`](class/SamplingImageData.md)	 
 - [`TextResult`](class/TextResult.md)
-- [`DCESettingParameters`](class/DCESettingParameters.md)
 
 ## Enumerations
 

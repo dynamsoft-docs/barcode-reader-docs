@@ -182,7 +182,7 @@ NSString* license
 - [`iRegionOfInterest`](class/iRegionOfInterest.md)		
 - [`iSamplingImageData`](class/iSamplingImageData.md)		
 - [`iTextResult`](class/iTextResult.md)
-- [`DCESettingParameters`](class/DCESettingParameters.md)
+- [`iDCESettingParameters`](class/DCESettingParameters.md)
 
 
 &nbsp; 

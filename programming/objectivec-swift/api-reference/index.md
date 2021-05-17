@@ -15,9 +15,9 @@ breadcrumbText: API Reference
 - [Classes](#classes)
 - [Enumerations](#enumerations)  
 
-&nbsp; 
+&nbsp;
 
-## Attributes 
+## Attributes
   
 | Attribute | Type |
 |---------- | ---- |
@@ -41,9 +41,19 @@ NSString* license
   |----------------------|-------------|
   | [`init`](methods/initialize.md#init) | Create an instance of Dynamsoft Barcode Reader. |
 
+&nbsp;
 
-&nbsp; 
+### Camera Enhancer
+  
+   | Method               | Description |
+   |----------------------|-------------|
+   | [`StartCameraEnhancer`](methods/camera.md#start-stop-pause-resume-camera-enhancer) | Start using Dynamsoft Camera Enhancer |
+   | [`StopCameraEnhancer`](methods/camera.md#start-stop-pause-resume-camera-enhancer) | Stop using Dynamsoft Camera Enhancer |
+   | [`PauseCameraEnhancer`](methods/camera.md#start-stop-pause-resume-camera-enhancer) | Pause the process of Dynamsoft Camera Enhancer |
+   | [`ResumeCameraEnhancer`](methods/camera.md#start-stop-pause-resume-camera-enhancer) | Pause the process of Dynamsoft Camera Enhancer |
+   | [`SetCameraEnhancerParam`](methods/camera.md#setcameraenhancerparam) | Set the parameters for Dynamsoft Camera Enhancer in Barcode reader |
 
+&nbsp;
 
 ### Decode
 
@@ -56,9 +66,7 @@ NSString* license
   | [`createIntermediateResult`](methods/decode.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](methods/decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
-
-&nbsp; 
-
+&nbsp;
 
 ### Parameter and Runtime Settings
 
@@ -84,12 +92,10 @@ NSString* license
   | [`outputSettingsToFile`](methods/parameter-and-runtime-settings-advanced.md#outputsettingstofile) | Output runtime settings to a settings file (JSON file). |
   | [`outputSettingsToString`](methods/parameter-and-runtime-settings-advanced.md#outputsettingstostring) | Output runtime settings to a string. |
 
-
-&nbsp; 
-
+&nbsp;
 
 ### License
-   
+
   | Method               | Description |
   |----------------------|-------------|
   | [`initWithLicense`](methods/license.md#initwithlicense) | Read product key and activate the SDK. |
@@ -97,23 +103,20 @@ NSString* license
   | [`outputLicenseToString`](methods/license.md#outputlicensetostring) | Output the license content to a string from the license server. |
   | [`initLicenseFromLTS`](methods/license.md#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
 
-&nbsp; 
-
+&nbsp;
 
 ### Result
-   
+
   | Method               | Description |
   |----------------------|-------------|
   | [`getIntermediateResult`](methods/result.md#getintermediateresult) | Get intermediate results. |
 
-
-&nbsp; 
-
+&nbsp;
 
 ### Video
 
 #### Decode
-   
+
   | Method               | Description |
   |----------------------|-------------|
   | [`startFrameDecoding`](methods/video.md#startframedecoding) | Decode barcodes from inner frame queue. |
@@ -122,13 +125,13 @@ NSString* license
   | [`stopFrameDecoding`](methods/video.md#stopframedecoding) | Stop thread used for frame decoding. |
 
 #### Parameter
-   
+
   | Method               | Description |
   |----------------------|-------------|
   | [`getFrameDecodingParameters`](methods/video.md#getframedecodingparameters) | Initialize frame decoding parameter. |
 
 #### Delegate
-   
+
   | Method               | Description |
   |----------------------|-------------|
   | [`setDBRErrorDelegate`](methods/video.md#setdbrerrordelegate) | Set callback function to process errors generated during frame decoding. |
@@ -136,83 +139,77 @@ NSString* license
   | [`setDBRIntermediateResultDelegate`](methods/video.md#setdbrintermediateresultdelegate) | Set callback function to process intermediate results generated during frame decoding. |
 
 #### Status retrieval
-   
+
   | Method               | Description |
   |----------------------|-------------|
   | [`getLengthOfFrameQueue`](methods/video.md#getlengthofframequeue) | Get length of current inner frame queue. |
   
-
-&nbsp; 
+&nbsp;
 
 ## [Error Code]({{ site.enumerations }}error-code.html)
-		
 
 &nbsp;
 
 ## [Classes]
 
-- [`iAztecDetails`](class/iAztecDetails.md)	
-- [`iContour`](class/iContour.md)	
-- [`iDBRPoint`](class/iDBRPoint.md)	
-- [`iDMLTSConnectionParameters`](class/iDMLTSConnectionParameters.md)		
-- [`iDataMatrixDetails`](class/iDataMatrixDetails.md)		
-- [`iExtendedResult`](class/iExtendedResult.md)		
-- [`iFrameDecodingParameters`](class/iFrameDecodingParameters.md)	
-- [`iFurtherModes`](class/iFurtherModes.md)		
-- [`iImageData`](class/iImageData.md)		
-- [`iIntermediateResult`](class/iIntermediateResult.md)	
-- [`iLineSegment`](class/iLineSegment.md)		
-- [`iLocalizationResult`](class/iLocalizationResult.md)		
-- [`iOneDCodeDetails`](class/iOneDCodeDetails.md)		
-- [`iPDF417Details`](class/iPDF417Details.md)		
-- [`iPublicRuntimeSettings`](class/iPublicRuntimeSettings.md)		
+- [`iAztecDetails`](class/iAztecDetails.md)
+- [`iContour`](class/iContour.md)
+- [`iDBRPoint`](class/iDBRPoint.md)
+- [`iDMLTSConnectionParameters`](class/iDMLTSConnectionParameters.md)
+- [`iDataMatrixDetails`](class/iDataMatrixDetails.md)
+- [`iExtendedResult`](class/iExtendedResult.md)
+- [`iFrameDecodingParameters`](class/iFrameDecodingParameters.md)
+- [`iFurtherModes`](class/iFurtherModes.md)
+- [`iImageData`](class/iImageData.md)
+- [`iIntermediateResult`](class/iIntermediateResult.md)
+- [`iLineSegment`](class/iLineSegment.md)
+- [`iLocalizationResult`](class/iLocalizationResult.md)
+- [`iOneDCodeDetails`](class/iOneDCodeDetails.md)
+- [`iPDF417Details`](class/iPDF417Details.md)
+- [`iPublicRuntimeSettings`](class/iPublicRuntimeSettings.md)
 - [`iQRCodeDetails`](class/iQRCodeDetails.md)
 - [`iQuadrilateral`](class/iQuadrilateral.md)
-- [`iRegionDefinition`](class/iRegionDefinition.md)		
-- [`iRegionOfInterest`](class/iRegionOfInterest.md)		
-- [`iSamplingImageData`](class/iSamplingImageData.md)		
+- [`iRegionDefinition`](class/iRegionDefinition.md)
+- [`iRegionOfInterest`](class/iRegionOfInterest.md)
+- [`iSamplingImageData`](class/iSamplingImageData.md)
 - [`iTextResult`](class/iTextResult.md)
+- [`DCESettingParameters`](class/DCESettingParameters.md)
 
+&nbsp;
 
-&nbsp; 
+## [Enumerations]({{ site.enumerations }})
 
-
-## [Enumerations]()
-
-- [`EnumAccompanyingTextRecognitionMode`]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode)	
-- [`EnumBarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode)	
-- [`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode)	
-- [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat)	
-- [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)	
+- [`EnumAccompanyingTextRecognitionMode`]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode)
+- [`EnumBarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode)
+- [`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode)
+- [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat)
+- [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
 - [`EnumBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)
-- [`EnumClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod) 
-- [`EnumClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode) 
-- [`EnumColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode)	
-- [`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode)	
-- [`EnumConflictMode`]({{ site.enumerations }}parameter-mode-enums.html#conflictmode)	
+- [`EnumClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod)
+- [`EnumClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode)
+- [`EnumColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode)
+- [`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode)
+- [`EnumConflictMode`]({{ site.enumerations }}parameter-mode-enums.html#conflictmode)
 - [`EnumDeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode)
 - [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode)
 - [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)
 - [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
 - [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
-- [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode)	
-- [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)	
-- [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat)	
-- [`EnumImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode)	
-- [`EnumIMResultDataType`]({{ site.enumerations }}result-enums.html#imresultdatatype)	
-- [`EnumIntermediateResultSavingMode`]({{ site.enumerations }}result-enums.html#intermediateresultsavingmode)	
-- [`EnumIntermediateResultType`]({{ site.enumerations }}result-enums.html#intermediateresulttype)	
+- [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode)
+- [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)
+- [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat)
+- [`EnumImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode)
+- [`EnumIMResultDataType`]({{ site.enumerations }}result-enums.html#imresultdatatype)
+- [`EnumIntermediateResultSavingMode`]({{ site.enumerations }}result-enums.html#intermediateresultsavingmode)
+- [`EnumIntermediateResultType`]({{ site.enumerations }}result-enums.html#intermediateresulttype)
 - [`EnumLocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode)
-- [`EnumPDFReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#pdfreadingmode)   
-- [`EnumQRCodeErrorCorrectionLevel`]({{ site.enumerations }}other-enums.html#qrcodeerrorcorrectionlevel)	
-- [`EnumRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode)	
-- [`EnumResultCoordinateType`]({{ site.enumerations }}result-enums.html#resultcoordinatetype)	
-- [`EnumResultType`]({{ site.enumerations }}result-enums.html#resulttype)	
-- [`EnumScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode)	
-- [`EnumTerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase)	
-- [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode)	
-- [`EnumTextResultOrderMode`]({{ site.enumerations }}result-enums.html#textresultordermode)	
+- [`EnumPDFReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#pdfreadingmode)
+- [`EnumQRCodeErrorCorrectionLevel`]({{ site.enumerations }}other-enums.html#qrcodeerrorcorrectionlevel)
+- [`EnumRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode)
+- [`EnumResultCoordinateType`]({{ site.enumerations }}result-enums.html#resultcoordinatetype)
+- [`EnumResultType`]({{ site.enumerations }}result-enums.html#resulttype)
+- [`EnumScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode)
+- [`EnumTerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase)
+- [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode)
+- [`EnumTextResultOrderMode`]({{ site.enumerations }}result-enums.html#textresultordermode)
 - [`EnumTextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode)
-
-
-
