@@ -140,12 +140,22 @@ NSString* license
   | Method               | Description |
   |----------------------|-------------|
   | [`getLengthOfFrameQueue`](methods/video.md#getlengthofframequeue) | Get length of current inner frame queue. |
-  
 
-&nbsp; 
+&nbsp;
+
+### Camera Enhancer
+  
+   | Method               | Description |
+   |----------------------|-------------|
+   | [`StartCameraEnhancer`](methods/camera.md#start-stop-pause-resume-camera-enhancer) | Start using Dynamsoft Camera Enhancer |
+   | [`StopCameraEnhancer`](methods/camera.md#start-stop-pause-resume-camera-enhancer) | Stop using Dynamsoft Camera Enhancer |
+   | [`PauseCameraEnhancer`](methods/camera.md#start-stop-pause-resume-camera-enhancer) | Pause the process of Dynamsoft Camera Enhancer |
+   | [`ResumeCameraEnhancer`](methods/camera.md#start-stop-pause-resume-camera-enhancer) | Pause the process of Dynamsoft Camera Enhancer |
+   | [`SetCameraEnhancerParam`](methods/camera.md#setcameraenhancerparam) | Set the parameters for Dynamsoft Camera Enhancer in Barcode reader |
+
+&nbsp;
 
 ## [Error Code]({{ site.enumerations }}error-code.html)
-		
 
 &nbsp;
 
@@ -172,6 +182,7 @@ NSString* license
 - [`iRegionOfInterest`](class/iRegionOfInterest.md)		
 - [`iSamplingImageData`](class/iSamplingImageData.md)		
 - [`iTextResult`](class/iTextResult.md)
+- [`DCESettingParameters`](class/DCESettingParameters.md)
 
 
 &nbsp; 

@@ -114,6 +114,16 @@ breadcrumbText: API Reference
    |----------------------|-------------|
    | [`getLengthOfFrameQueue`](BarcodeReader/video.md#getlengthofframequeue) | Get length of current inner frame queue. |
 
+### Camera Enhancer
+  
+   | Method               | Description |
+   |----------------------|-------------|
+   | [`StartCameraEnhancer`](BarcodeReader/camera.md#start-stop-pause-resume-camera-enhancer) | Start using Dynamsoft Camera Enhancer |
+   | [`StopCameraEnhancer`](BarcodeReader/camera.md#start-stop-pause-resume-camera-enhancer) | Stop using Dynamsoft Camera Enhancer |
+   | [`PauseCameraEnhancer`](BarcodeReader/camera.md#start-stop-pause-resume-camera-enhancer) | Pause the process of Dynamsoft Camera Enhancer |
+   | [`ResumeCameraEnhancer`](BarcodeReader/camera.md#start-stop-pause-resume-camera-enhancer) | Pause the process of Dynamsoft Camera Enhancer |
+   | [`SetCameraEnhancerParam`](BarcodeReader/camera.md#setcameraenhancerparam) | Set the parameters for Dynamsoft Camera Enhancer in Barcode reader |
+
 ## Interface
 
   | Function | Description |
@@ -147,7 +157,8 @@ breadcrumbText: API Reference
 - [`RegionDefinition`](class/RegionDefinition.md)	
 - [`RegionOfInterest`](class/RegionOfInterest.md)	 
 - [`SamplingImageData`](class/SamplingImageData.md)	 
-- [`TextResult`](class/TextResult.md)		
+- [`TextResult`](class/TextResult.md)
+- [`DCESettingParameters`](class/DCESettingParameters.md)
 
 ## Enumerations
 
