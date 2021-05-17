@@ -14,11 +14,11 @@ Stores the DCESettingParameters information.
 
 | Attribute | type |
 |-----------|------|
-| [`_CameraInstance`](#camerainstance) | *Object* |
-| [`_textResultCallback`](#textresultcallback) | [`TextResultCallback`]({{site.android_api}}interface.html#textresultcallback) |
-| [`_textResultCallback_UserData`](#textresultcallbackuserdata) | *Object* |
-| [`_irtCallback`](#irtcallback) | [`IntermediateResultCallback`]({{site.android_api}}interface.html#intermediateresultcallback) |
-| [`_irtCallback_UserData`](#irtcallbackuserdata) | *Object* |
+| [`_CameraInstance`](#_camerainstance) | *Object* |
+| [`_textResultCallback`](#_textresultcallback) | [`TextResultCallback`]({{site.android_api}}interface.html#textresultcallback) |
+| [`_textResultCallback_UserData`](#_textresultcallback_userdata) | *Object* |
+| [`_irtCallback`](#_irtcallback) | [`IntermediateResultCallback`]({{site.android_api}}interface.html#intermediateresultcallback) |
+| [`_irtCallback_UserData`](#_irtcallback_userdata) | *Object* |
 
 ## _CameraInstance
 

@@ -15,10 +15,10 @@ Stores the DCESettingParameters information.
 | Attribute | type |
 |-----------|------|
 | [`cameraInstance`](#camerainstance) | *DynamsoftCameraEnhancer* |
-| [`textResultDelegate`](#textresultcallback) | *DBRTextResultDelegate* |
-| [`textResultData`](#textresultcallbackuserdata) | *NSObject* |
-| [`intermediateResultDelegate`](#irtcallback) | *DBRIntermediateResultDelegate* |
-| [`intermediateResultData`](#irtcallbackuserdata) | *NSObject* |
+| [`textResultDelegate`](#textresultdelegate) | *DBRTextResultDelegate* |
+| [`textResultData`](#textresultdata) | *NSObject* |
+| [`intermediateResultDelegate`](#intermediateresultdelegate) | *DBRIntermediateResultDelegate* |
+| [`intermediateResultData`](#intermediateresultdata) | *NSObject* |
 
 ## cameraInstance
 
