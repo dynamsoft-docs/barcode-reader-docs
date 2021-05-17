@@ -11,11 +11,11 @@ needAutoGenerateSidebar: true
 
 | Method | Description |
 |--------|-------------|
-| `StartCameraEnhancer` | Start using Dynamsoft Camera Enhancer |
-| `StopCameraEnhancer` | Stop using Dynamsoft Camera Enhancer |
-| `PauseCameraEnhancer` | Pause the process of Dynamsoft Camera Enhancer |
-| `ResumeCameraEnhancer` | Pause the process of Dynamsoft Camera Enhancer |
-| `SetCameraEnhancerParam` | Set the parameters for Dynamsoft Camera Enhancer in Barcode reader |
+| [`StartCameraEnhancer`](#start-stop-pause-resume-camera-enhancer) | Start using Dynamsoft Camera Enhancer |
+| [`StopCameraEnhancer`](#start-stop-pause-resume-camera-enhancer) | Stop using Dynamsoft Camera Enhancer |
+| [`PauseCameraEnhancer`](#start-stop-pause-resume-camera-enhancer) | Pause the process of Dynamsoft Camera Enhancer |
+| [`ResumeCameraEnhancer`](#start-stop-pause-resume-camera-enhancer) | Pause the process of Dynamsoft Camera Enhancer |
+| [`SetCameraEnhancerParam`](#setcameraenhancerparam) | Set the parameters for Dynamsoft Camera Enhancer in Barcode reader |
 
 This page illustrates the controlling of `Dynamsoft Camera Enhancer`. To get a better understanding of this section, please read more about [`Dynamsoft Camera Enhancer`](https://www.dynamsoft.com/camera-enhancer/docs/introduction/?ver=latest).
 
