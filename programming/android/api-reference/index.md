@@ -46,6 +46,16 @@ breadcrumbText: API Reference
   | [`initIntermediateResult`](BarcodeReader/decode.md#initintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](BarcodeReader/decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
+### License
+  
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`initLicense`](BarcodeReader/license.md#initlicense) | Read product key and activate the SDK. |
+  | [`initLicenseFromServer`](BarcodeReader/license.md#initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
+  | [`initLicenseFromLicenseContent`](BarcodeReader/license.md#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
+  | [`outputLicenseToString`](BarcodeReader/license.md#outputlicensetostring) | Output the license content to a string from the license server. |
+  | [`initLicenseFromLTS`](BarcodeReader/license.md#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
+
 ### Parameter and Runtime Settings
 
 #### Basic
@@ -69,16 +79,6 @@ breadcrumbText: API Reference
   | [`getAllParameterTemplateNames`](BarcodeReader/parameter-and-runtime-settings-advanced.md#getallparametertemplatenames) | Gets the parameter templates name array. |
   | [`outputSettingsToFile`](BarcodeReader/parameter-and-runtime-settings-advanced.md#outputsettingstofile) | Output runtime settings to a settings file (JSON file). |
   | [`outputSettingsToString`](BarcodeReader/parameter-and-runtime-settings-advanced.md#outputsettingstostring) | Output runtime settings to a string. |
-
-### License
-  
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`initLicense`](BarcodeReader/license.md#initlicense) | Read product key and activate the SDK. |
-  | [`initLicenseFromServer`](BarcodeReader/license.md#initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
-  | [`initLicenseFromLicenseContent`](BarcodeReader/license.md#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
-  | [`outputLicenseToString`](BarcodeReader/license.md#outputlicensetostring) | Output the license content to a string from the license server. |
-  | [`initLicenseFromLTS`](BarcodeReader/license.md#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
 
 ### Result
 
@@ -134,7 +134,7 @@ breadcrumbText: API Reference
 
 ## [Error Code]({{ site.enumerations }}error-code.html)
 
-## Classes
+## [Classes]({{site.android_class}})
 
 - [`AztecDetails`](class/AztecDetails.md)
 - [`BarcodeReaderException`](class/BarcodeReaderException.md)
@@ -159,7 +159,7 @@ breadcrumbText: API Reference
 - [`SamplingImageData`](class/SamplingImageData.md)
 - [`TextResult`](class/TextResult.md)
 
-## Enumerations
+## [Enumerations]({{site.enumerations}})
 
 - [`EnumAccompanyingTextRecognitionMode`]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode)
 - [`EnumBarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode)

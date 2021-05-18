@@ -39,6 +39,7 @@ dotnet_release_notes: /barcode-reader/programming/dotnet/release-notes/
 oc: /barcode-reader/programming/objectivec-swift/
 oc_api: /barcode-reader/programming/objectivec-swift/api-reference/
 oc_release_notes: /barcode-reader/programming/objectivec-swift/release-notes/
+oc_class: /barcode-reader/programming/objectivec-swift/api-reference/class/
 
 java: /barcode-reader/programming/java/
 java_api: /barcode-reader/programming/java/api-reference/
@@ -47,6 +48,7 @@ java_release_notes: /barcode-reader/programming/java/release-notes/
 android: /barcode-reader/programming/android/
 android_api: /barcode-reader/programming/android/api-reference/
 android_release_notes: /barcode-reader/programming/android/release-notes/
+android_class: /barcode-reader/programming/android/api-reference/class/
   
 python: /barcode-reader/programming/python/
 python_api: /barcode-reader/programming/python/api-reference/

@@ -47,10 +47,6 @@ NSString* license
   
    | Method               | Description |
    |----------------------|-------------|
-   | [`StartCameraEnhancer`](methods/camera.md#start-stop-pause-resume-camera-enhancer) | Start using Dynamsoft Camera Enhancer |
-   | [`StopCameraEnhancer`](methods/camera.md#start-stop-pause-resume-camera-enhancer) | Stop using Dynamsoft Camera Enhancer |
-   | [`PauseCameraEnhancer`](methods/camera.md#start-stop-pause-resume-camera-enhancer) | Pause the process of Dynamsoft Camera Enhancer |
-   | [`ResumeCameraEnhancer`](methods/camera.md#start-stop-pause-resume-camera-enhancer) | Pause the process of Dynamsoft Camera Enhancer |
    | [`SetCameraEnhancerParam`](methods/camera.md#setcameraenhancerparam) | Set the parameters for Dynamsoft Camera Enhancer in Barcode reader |
 
 &nbsp;
@@ -150,13 +146,14 @@ NSString* license
 
 &nbsp;
 
-## [Classes]
+## [Classes]({{site.oc_class}})
 
 - [`iAztecDetails`](class/iAztecDetails.md)
 - [`iContour`](class/iContour.md)
-- [`iDBRPoint`](class/iDBRPoint.md)
-- [`iDMLTSConnectionParameters`](class/iDMLTSConnectionParameters.md)
 - [`iDataMatrixDetails`](class/iDataMatrixDetails.md)
+- [`iDBRPoint`](class/iDBRPoint.md)
+- [`iDCESettingParameters`](class/iDCESettingParameters.md)
+- [`iDMLTSConnectionParameters`](class/iDMLTSConnectionParameters.md)
 - [`iExtendedResult`](class/iExtendedResult.md)
 - [`iFrameDecodingParameters`](class/iFrameDecodingParameters.md)
 - [`iFurtherModes`](class/iFurtherModes.md)
@@ -173,7 +170,6 @@ NSString* license
 - [`iRegionOfInterest`](class/iRegionOfInterest.md)
 - [`iSamplingImageData`](class/iSamplingImageData.md)
 - [`iTextResult`](class/iTextResult.md)
-- [`DCESettingParameters`](class/DCESettingParameters.md)
 
 &nbsp;
 

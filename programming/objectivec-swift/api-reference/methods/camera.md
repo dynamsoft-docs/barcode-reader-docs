@@ -21,7 +21,7 @@ Set the callback parameters for Camera Enhancer
 Objective-C:
 
 ```objectivec
-DCESettingParameters* para = [[DCESettingsParameters alloc] init];
+iDCESettingParameters* para = [[iDCESettingsParameters alloc] init];
 para.cameraInstance = _dce;
 para.textResultDelegate = self;
 [_barcodeReader setCameraEnhancerPara:para];
@@ -30,7 +30,7 @@ para.textResultDelegate = self;
 Swift:
 
 ```swift
-let para = DCESettingParameters.init()
+let para = iDCESettingParameters.init()
 para.cameraInstance = dce
 para.textResultDelegate = self
 barcodeReader.setCameraEnhancerPara(para)

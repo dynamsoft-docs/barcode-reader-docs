@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - DCESettingParameters Class
-description: This page shows the DCESettingParameters Class of Dynamsoft Barcode Reader for iOS SDK.
-keywords: DCESettingParameters, class, api reference, iOS
+title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iDCESettingParameters Class
+description: This page shows the iDCESettingParameters Class of Dynamsoft Barcode Reader for iOS SDK.
+keywords: iDCESettingParameters, class, api reference, iOS
 needAutoGenerateSidebar: false
 ---
 
-# DCESettingParameters
+# iDCESettingParameters
 
-Stores the DCESettingParameters information.
+Stores the iDCESettingParameters information.
 
 # Attributes
 
@@ -22,7 +22,7 @@ Stores the DCESettingParameters information.
 
 ## cameraInstance
 
-The instance of Camera Enhancer. This instance will enable DBR to fetch frames from the Camera Enhancer frame queue and also take control of the status of camera.
+The instance of Camera Enhancer. This instance will enable DBR to fetch frames from the Camera Enhancer frame queue and also take control of the status of the camera.
 
 ```objectivec
     DynamsoftCameraEnhancer* cameraInstance
