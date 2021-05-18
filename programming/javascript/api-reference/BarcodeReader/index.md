@@ -64,6 +64,7 @@ The following methods are related to customizing mode and runtime settings.
 | [`productKeys`](properties.md#productkeys) | Get or set the Dynamsoft Barcode Reader SDK product keys. | 
 | [`version`](properties.md#version) | Get the current version. | 
 | [`licenseServer`](properties.md#licenseServer) | Specify by URL the license server from where authorization is acquired at runtime. |
+| [`organizationID`](properties.md#organizationid) | Specify the Organization ID which determines which licenses are available. |
 | [`handshakeCode`](properties.md#handshakeCode) | Specify the Handshake Code which determines what authorization is acquired. |
 | [`sessionPassword`](properties.md#sessionPassword) | Specify a password which protects the Handshake Code from abuse. | 
 

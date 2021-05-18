@@ -7,7 +7,7 @@ needAutoGenerateSidebar: false
 breadcrumbText: JavaScript
 ---
 
-# Dynamsoft Barcode Reader - for JavaScript Documentation
+# Dynamsoft Barcode Reader for JavaScript - Documentation
 
 The JavaScript documentation mainly consists of two parts. One is the `Getting Started` guide that provides a brief guide for how to integrate the Dynamsoft Barcode Reader to your application or run the samples. The other is the `API Reference` that offers the manual of interfaces used for reading barcodes.
 

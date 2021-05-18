@@ -17,6 +17,7 @@ needGenerateH3Content: false
 | [`productKeys`](#productkeys) | Gets or sets the Dynamsoft Barcode Reader SDK product keys. | 
 | [`version`](#version) | Gets current version. | 
 | [`licenseServer`](#licenseserver) | Gets or sets the URL of the license server(s) used for authentication and tracking. | 
+| [`organizationID`](#organizationid) | Specify the Organization ID which determines which licenses are available. |
 | [`handshakeCode`](#handshakecode) | Gets or sets the handshake code to interact with the license server(s). | 
 | [`sessionPassword`](#sessionpassword) | Gets or sets the session password of the handshake code set in license tracking server. | 
 
@@ -158,6 +159,16 @@ licenseServer(value) returns void
 Dynamsoft.DBR.BarcodeReader.licenseServer = ["https://your.mainServer.com", "https://your.backupServer.com"];
 
 await Dynamsoft.DBR.BarcodeReader.loadWasm();
+```
+
+## organizationID
+
+Get or set the organization ID. Check out more on [how to specify the Organization ID](https://www.dynamsoft.com/license-tracking/docs/common/mechanism.html?ver=latest#specify-the-organization-id).
+
+#### Sample
+
+```javascript
+Dynamsoft.DBR.BarcodeReader.organizationID = "123456"; // replace the number 123456 with YOUR-ORGANIZATION-ID
 ```
 
 ## handshakeCode
