@@ -14,7 +14,7 @@ noTitleIndex: true
 
 ### New
 
-- Added a new class, [`iDCESettingParameters`]({{site.oc_class}}iDCESettingParameters.html), and a new API, [`SetCameraEnhancerParam`](({{site.oc_methods}}camera.html#setcameraenhancerparam)), to enable the parameter transfer between DBR and the Camera Enhancer.
+- Added a new class, [`iDCESettingParameters`]({{site.oc_class}}iDCESettingParameters.html), and a new API, [`SetCameraEnhancerParam`]({{site.oc_methods}}camera.html#setcameraenhancerparam), to enable the parameter transfer between DBR and the Camera Enhancer.
 
 ## 8.2 (03/17/2021)
 

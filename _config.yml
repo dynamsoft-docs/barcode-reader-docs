@@ -50,7 +50,7 @@ android: /barcode-reader/programming/android/
 android_api: /barcode-reader/programming/android/api-reference/
 android_release_notes: /barcode-reader/programming/android/release-notes/
 android_class: /barcode-reader/programming/android/api-reference/class/
-android_methods: /barcode-reader/programming/android/api-reference/methods/
+android_methods: /barcode-reader/programming/android/api-reference/BarcodeReader/
   
 python: /barcode-reader/programming/python/
 python_api: /barcode-reader/programming/python/api-reference/
