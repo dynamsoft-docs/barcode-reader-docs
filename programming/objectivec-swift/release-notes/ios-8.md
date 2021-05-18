@@ -10,11 +10,17 @@ noTitleIndex: true
 
 # Release Notes for iOS SDK - 8.x
 
+## 8.2.1 (05/20/2021)
+
+### New
+
+- Added a new class, [`iDCESettingParameters`]({{site.oc_class}}iDCESettingParameters.html), and a new API, [`SetCameraEnhancerParam`](({{site.oc_methods}}camera.html#setcameraenhancerparam)), to enable the parameter transfer between DBR and the Camera Enhancer.
+
 ## 8.2 (03/17/2021)
 
 ### New
 
-- Added a new mode argument, `FindAccurateBoundary`, to [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes) that determines if the SDK attempts to find an accurate boundary when RegionPredetectionModes is set to `RPM_GENERAL_HSV_CONTRAST`. 
+- Added a new mode argument, `FindAccurateBoundary`, to [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes) that determines if the SDK attempts to find an accurate boundary when RegionPredetectionModes is set to `RPM_GENERAL_HSV_CONTRAST`.
 - Added a new an attribute, `organizationID` (string) to `iDMLTSConnectionParameters`. The attribute adds a new layer of security for both full and trial licenses.
 
 ### Improved

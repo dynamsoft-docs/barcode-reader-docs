@@ -40,6 +40,7 @@ oc: /barcode-reader/programming/objectivec-swift/
 oc_api: /barcode-reader/programming/objectivec-swift/api-reference/
 oc_release_notes: /barcode-reader/programming/objectivec-swift/release-notes/
 oc_class: /barcode-reader/programming/objectivec-swift/api-reference/class/
+oc_methods: /barcode-reader/programming/objectivec-swift/api-reference/methods/
 
 java: /barcode-reader/programming/java/
 java_api: /barcode-reader/programming/java/api-reference/
@@ -49,6 +50,7 @@ android: /barcode-reader/programming/android/
 android_api: /barcode-reader/programming/android/api-reference/
 android_release_notes: /barcode-reader/programming/android/release-notes/
 android_class: /barcode-reader/programming/android/api-reference/class/
+android_methods: /barcode-reader/programming/android/api-reference/methods/
   
 python: /barcode-reader/programming/python/
 python_api: /barcode-reader/programming/python/api-reference/

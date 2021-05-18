@@ -10,6 +10,11 @@ noTitleIndex: true
 
 # Release Notes for Android SDK - 8.x
 
+## 8.2.1 (05/20/2021)
+
+- Added [Camera Enhancer setting APIs]({{site.android_methods}}camera.html#start-stop-pause-resume-camera-enhancer) to control the status of the Camera Enhancer.
+- Added a new class, [`DCESettingParameters`]({{site.android_class}}DCESettingParameters.html), and a new API, [`SetCameraEnhancerParam`]({{site.android_methods}}camera.html#setcameraenhancerparam), to enable the parameter transfer between DBR and the Camera Enhancer.
+
 ## 8.2 (03/17/2021)
 
 ### New
