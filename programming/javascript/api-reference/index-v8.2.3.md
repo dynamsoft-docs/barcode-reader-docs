@@ -82,7 +82,6 @@ The following methods are related to customizing mode and runtime settings.
 | [`productKeys`](BarcodeReader/properties.md#productkeys) | Get or set the Dynamsoft Barcode Reader SDK product keys. | 
 | [`version`](BarcodeReader/properties.md#version) | Get the current version. | 
 | [`licenseServer`](BarcodeReader/properties.md#licenseServer) | Specify by URL the license server from where authorization is acquired at runtime. |
-| [`organizationID`](BarcodeReader/properties.md#organizationid) | Specify the Organization ID which determines which licenses are available. |
 | [`handshakeCode`](BarcodeReader/properties.md#handshakeCode) | Specify the Handshake Code which determines what authorization is acquired. |
 | [`sessionPassword`](BarcodeReader/properties.md#sessionPassword) | Specify a password which protects the Handshake Code from abuse. | 
 
@@ -202,7 +201,6 @@ The following method is related to decoding barcodes.
 | [`productKeys`](BarcodeReader/properties.md#productkeys) | Get or set the Dynamsoft Barcode Reader SDK product keys. Inherited from the `BarcodeReader` class. | 
 | [`version`](BarcodeReader/properties.md#version) | Get the current version. Inherited from the `BarcodeReader` class. | 
 | [`licenseServer`](BarcodeReader/properties.md#licenseServer) | Specify by URL the license server from where authorization is acquired at runtime. Inherited from the `BarcodeReader` class. |
-| [`organizationID`](BarcodeReader/properties.md#organizationid) | Specify the Organization ID which determines which licenses are available. Inherited from the `BarcodeReader` class. |
 | [`handshakeCode`](BarcodeReader/properties.md#handshakeCode) | Specify the Handshake Code which determines what authorization is acquired. Inherited from the `BarcodeReader` class. |
 | [`sessionPassword`](BarcodeReader/properties.md#sessionPassword) | Specify a password which protects the Handshake Code from abuse. Inherited from the `BarcodeReader` class. |
 
