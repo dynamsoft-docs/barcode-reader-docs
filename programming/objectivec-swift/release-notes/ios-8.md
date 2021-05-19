@@ -14,7 +14,8 @@ noTitleIndex: true
 
 ### New
 
-- Added a new class, [`iDCESettingParameters`]({{site.oc_class}}iDCESettingParameters.html), and a new API, [`SetCameraEnhancerParam`]({{site.oc_methods}}camera.html#setcameraenhancerparam), to enable the parameter transfer between DBR and the Camera Enhancer.
+- [Dynamsoft Camera Enhancer (DCE)]({{site.camera}}) is now available for DBR users to quickly setup the camera module. We added a new API and a new class to simplify the user operations when using DBR and DCE at the same time.  
+- Added a new class, [`iDCESettingParameters`]({{site.oc_class}}iDCESettingParameters.html), and a new API, [`SetCameraEnhancerParam`]({{site.oc_methods}}camera.html#setcameraenhancerparam), to enable the parameter transfer between DBR and the DCE. The parameter transferring will improve the focus ability of the camera.
 
 ## 8.2 (03/17/2021)
 

@@ -71,6 +71,8 @@ dbr_icon: /barcode-reader/assets/img-icon/icon-dbr.svg
 dwt_icon: /barcode-reader/assets/img-icon/icon-dwt.svg
 dnt_icon: /barcode-reader/assets/img-icon/icon-dnt.svg
 
+camera: /camera-enhancer/docs/introduction/
+
 baseurl: "/barcode-reader"
 plugins:
   - jemoji

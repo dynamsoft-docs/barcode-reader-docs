@@ -14,8 +14,9 @@ noTitleIndex: true
 
 ### New
 
-- Added [Camera Enhancer setting APIs]({{site.android_methods}}camera.html#start-stop-pause-resume-camera-enhancer) to control the status of the Camera Enhancer.
-- Added a new class, [`DCESettingParameters`]({{site.android_class}}DCESettingParameters.html), and a new API, [`SetCameraEnhancerParam`]({{site.android_methods}}camera.html#setcameraenhancerparam), to enable the parameter transfer between DBR and the Camera Enhancer.
+- [Dynamsoft Camera Enhancer (DCE)]({{site.camera}}) is now available for DBR users to quickly setup the camera module. We added new APIs and a new class to simplify the user operations when using DBR and DCE at the same time.
+- Added [Camera Enhancer setting APIs]({{site.android_methods}}camera.html#start-stop-pause-resume-camera-enhancer). These new APIs will benefit users by easily controlling the status of DCE.
+- Added a new class, [`DCESettingParameters`]({{site.android_class}}DCESettingParameters.html), and a new API, [`SetCameraEnhancerParam`]({{site.android_methods}}camera.html#setcameraenhancerparam), to enable the parameter transfer between DBR and DCE. The parameter transferring will improve the focus ability of the camera.
 
 ## 8.2 (03/17/2021)
 
