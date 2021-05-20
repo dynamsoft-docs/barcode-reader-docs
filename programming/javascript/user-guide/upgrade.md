@@ -8,7 +8,11 @@ needAutoGenerateSidebar: true
 
 # How to Upgrade
 
-## From v8.0 to v8.1.2
+## From v8.x to v8.2.5
+
+In v8.2.5, we introduced the API `organizationID` as the recommended way to fetch a trackable license. However, all old ways of licensing the library are still supported.
+
+## From v8.x to v8.1.2
 
 ### `TextResult` exception
 

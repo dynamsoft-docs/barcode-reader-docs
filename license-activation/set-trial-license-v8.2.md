@@ -9,7 +9,7 @@ needGenerateH3Content: false
 
 # How to set trial license
 
-If you are using the mobile edition (8.2+) or the JavaScript edition (8.2.5+), please check [how to apply for a private trial license](#how-to-apply-for-a-private-trial-license). For other editions, please follow the steps below:
+From version 8.2, if you are using the mobile edition, please check [how to apply for a private trial license](#how-to-apply-for-a-private-trial-license). For other editions, please follow the steps below:
   
 
 ## Get a trial license key.
@@ -73,43 +73,35 @@ Code snippet in Python:
  reader.init_license("t0068NQAAAI8+mMcYRNwmijAzExhq******")
 ```
 
+Code snippet in JavaScript:
+
+``` js
+ < script src = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@{version-number}/dist/dbr.js"
+ data - productKeys = "t0068NQAAAI8+mMcYRNwmijAzExhq******" > < /script>
+```
+
 Then please save and rebuild your application.
 
 ## How to apply for a private trial license
 
-For mobile edition (8.2+) and the JavaScript edition (8.2.5+), a 7-day free trial license called a ["public trial"](https://www.dynamsoft.com/license-tracking/docs/about/terms.html?ver=latest#public-trial-license) license will be used by default if no license is specified in your code. When this public trial license expires, you can get a 30-day free trial license called a ["private trial"](https://www.dynamsoft.com/license-tracking/docs/about/terms.html?ver=latest#private-trial-license) license. The following shows how to request this license.
-
-### Option One
+From version 8.2, the mobile edition comes with a 7-day free trial license called a ["public trial"](https://www.dynamsoft.com/license-tracking/docs/about/terms.html?ver=latest#public-trial-license) license which is built into the product itself. When this public trial license expires, you can get a 30-day free trial license called a ["private trial"](https://www.dynamsoft.com/license-tracking/docs/about/terms.html?ver=latest#private-trial-license) license following the steps below
 
 1. Email trial@dynamsoft.com and make sure to include the word "privateTrial" in the email title.
-2. Dynamsoft will automatically create an organization for you and generate a 30-day private-trial license for that organization. After that, an email will be sent to you.
-3. You can then access the license by [specifying the organization ID](https://www.dynamsoft.com/license-tracking/docs/common/mechanism.html?ver=latest#specify-the-organization-id) in your code with the API "organizationID".
-
-### Option Two
-
-1. Request the private trial license in the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense), register for a Dynamsoft account if necessary.
-2. A 30-day private-trial license will be generated and configured to your organization. 
-3. [Specify your organization ID](https://www.dynamsoft.com/license-tracking/docs/common/mechanism.html?ver=latest#specify-the-organization-id) in your code with the API "organizationID".
+2. Dynamsoft will automatically create an organization for you and generate a 30-day trial license for that organization. After that, an email will be sent to you.
+3. You can then access the private trial license by specifying the organization ID in your code with the API "organizationID".
 
 > NOTE
 >  
-> In case a private trial license fails to be generated, Dynamsoft Support team will get in touch with you. Or you can [contact us](https://www.dynamsoft.com/company/contact/).
+> In case a private trial license fails to be generated, Dynamsoft Support team will get in touch with you.
 
 ### Code snippets
-
-* JavaScript
-
-``` javascript
-Dynamsoft.DBR.BarcodeReader.organizationID = "123456"; // replace the number 123456 with YOUR-ORGANIZATION-ID
-var reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
-```
 
 * Java for Android
 
 ``` java
 mbarcodeReader = new BarcodeReader();
 DMLTSConnectionParameters ltspar = new DMLTSConnectionParameters();
-ltspar.organizationID = "123456"; // replace the number 123456 with YOUR-ORGANIZATION-ID
+ltspar.organizationID = "Your-organization-id"; //automatically generated and sent to you by our system
 mbarcodeReader.initLicenseFromLTS(ltspar, new DBRLTSLicenseVerificationListener() {
     @Override
     public void LTSLicenseVerificationCallback(boolean b, Exception e) {
@@ -123,10 +115,10 @@ mbarcodeReader.initLicenseFromLTS(ltspar, new DBRLTSLicenseVerificationListener(
 ``` obj-c
 DynamsoftBarcodeReader *barcodeReader; 
 iDMLTSConnectionParameters* lts = [[iDMLTSConnectionParameters alloc] init]; 
-lts.organizationID = @"123456"; // replace the number 123456 with YOUR-ORGANIZATION-ID
+lts.organizationID = @"Your-organization-id"; //automatically generated and sent to you by our system
 barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromLTS:lts verificationDelegate:self]; 
 * (void)LTSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
-{
+{​​​​​​​​
     //TODO add your code for license verification
-}
+}​​​​​​​​
 ```

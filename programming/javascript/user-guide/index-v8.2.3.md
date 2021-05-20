@@ -7,17 +7,16 @@ breadcrumbText: User Guide
 needAutoGenerateSidebar: true
 ---
 
-# Dynamsoft Barcode Reader for Your Website
+# Dynamsoft Barcode Reader - for JavaScript User Guide
 
-Turn your web page into a barcode scanner with just a few lines of code.
+![Dynamsoft JavaScript Barcode SDK](assets/index/dbr-js-sdk.png)  
 
-Once integrated, your users can open your website in a browser, access their cameras and read barcodes directly from the video input.
+[Dynamsoft BarcodeReader SDK for Web](https://www.dynamsoft.com/Products/barcode-recognition-javascript.aspx) is a JavaScript SDK for barcode scanning based on **WebAssembly**. It supports real-time barcode localization and decoding of various barcode types. The library is capable of scanning barcodes directly from live video streams as well as static images. It also supports reading multiple barcodes at once.  
 
-In this guide, you will learn step by step on how to integrate this library into your website.
+In this guide, you will learn step by step how to use Dynamsoft Barcode Reader JavaScript Edition in your application:
 
 - [Getting Started](#getting-started---hello-world)
 - [Installation](#installation)
-- [Request A Trial](#request-a-trial)
 - [Basic Customizations]({{ site.js }}user-guide/basic-customizations.html)
 - [Advanced Customizations]({{ site.js }}user-guide/advanced-customizations.html)
 - [Deployment Activation]({{ site.js }}user-guide/deployment-activation.html)
@@ -27,12 +26,12 @@ In this guide, you will learn step by step on how to integrate this library into
 
 ## Getting Started - Hello World  
 
-Let's start by using the library to build a simple web page that decodes barcodes from a live video stream.  
+Let's start by using the library to build a simple web application that will decode barcodes from a live video stream.  
 
 ### Basic Requirements
 
 - Internet connection  
-- [A Supported Browser]({{site.js}}user-guide/features-requirements.html#system-requirements)
+- [Supported Browser]({{site.js}}user-guide/features-requirements.html#system-requirements)
 - Camera access  
 
 ### Step One: Write the code in one minute  
@@ -43,7 +42,8 @@ Creat a text file anywhere on your local disk and name it "helloworld.html". Cop
 <!DOCTYPE html>
 <html>
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js"></script>
+    <!-- Please visit https://www.dynamsoft.com/customer/license/trialLicense to get a trial license. -->
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.1.2/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
     <script>
         // initializes and uses the library
         let scanner = null;
@@ -60,29 +60,24 @@ Creat a text file anywhere on your local disk and name it "helloworld.html". Cop
 
 *About the code*
 
-- `createInstance()`: This method creates a `BarcodeScanner` instance. This instance makes use of cameras based on the [`MediaDevices` interface](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) and shows the barcode reading process with its built-in UI. Note that the UI is hidden until the method `show()` is called (as shown in the code).
-
 - `onFrameRead`: This event is triggered after the library finishes scanning a frame from the video stream. The `results` object contains all the barcode results that the library found on this frame. In this example, we print the results to the browser console.
 
-- `onUnduplicatedRead`: This event is triggered when the library finds a new barcode, which is not a duplicate among multiple frames. `txt` holds the barcode text value while `result` is an object that holds details of the barcode. In this example, an alert will be displayed for each unique barcode.
+- `onUnduplicatedRead`: This event is triggered when a new barcode (not a duplicate) is found. `txt` holds the barcode text value while `result` is an object that holds details of the barcode. In this example, an alert will be displayed for each unique barcode found. Notice that if the same barcode is found on multiple consecutive frames, this event is only triggered once.
 
-- `show()`: This method brings up the built-in UI of the created `BarcodeScanner` instance.
 
 [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/pL4e7yrd/)
 
 *Note*:
 
-- The recommendation is to deploy this page to your web server and run it over **HTTPS**. If you don't have a ready-to-use web server but have a package manager like *npm* or *yarn*, you can set up a simple HTTP server in minutes. Check out [`http-server` on npm](https://www.npmjs.com/package/http-server) or [yarn](https://yarnpkg.com/package/http-server). However, for simple testing purposes, it's perfectly fine to just open the file directly from your local disk.
+- The recommendation is to deploy this page to your web server and run it over **HTTPS**. If you don't have a ready-to-use web server but have a package manager like npm or yarn, you can set up a simple HTTP server in minutes. Check out [`http-server` on npm](https://www.npmjs.com/package/http-server) or [yarn](https://yarnpkg.com/package/http-server). However, for simple testing purposes, it's perfectly fine to just open the file directly from your local disk.
 
-- The library only scans a new frame when it has finished scanning the previous frame. The interval between two frames might not be enough time for the library to process the 1st frame (for 30 FPS, the interval is about 33 ms), therefore, not all frames are scanned.
+- You will need to replace `PRODUCT-KEYS` with a trial key (or your Handshake Code if you have got one) for the sample code to work correctly. You can acquire a trial key [here](https://www.dynamsoft.com/customer/license/trialLicense). Notice that the library will still read barcodes without a valid key (Code), but will return an annotated result string.
 
-- The library requires a license to work. However, when no license is specified in the code, Dynamsoft allows a 7-day free trial period during which you can make initial evaluation of the library to decide whether or not you want to evaluate it further. If you do, you can [request a trial](#request-a-trial).
-
-> Network connection is required for the 7-day trial license to work.
+- The library only scans a new frame when it has finished scanning the previous frame. Generally, frames come in faster than the library processes a frame (for 30 FPS, the interval is about 33 ms), therefore not all frames are scanned.
 
 ### Step Two: Enable camera access
 
-Open the HTML page in your browser and you should see a pop-up asking for permission to access the camera. Once the access is granted, the video stream will start playing on the page.  
+Open the HTML page in your browser and you should see a pop-up asking for permission to access the camera. Once the access is granted, the video stream will start in the default UI of the **BarcodeScanner** object.  
 
 *Note*: 
 
@@ -96,11 +91,13 @@ If you opened the HTML file as `file:///` or `http://`, the following error may 
 
 > [Deprecation] getUserMedia() no longer works on insecure origins. To use this feature, you should consider switching your application to a secure origin, such as HTTPS. See https://goo.gl/rStTGz for more details.
 
-- In Safari 12 the equivalent error is:
+In Safari 12 the equivalent error is:
 
 > Trying to call getUserMedia from an insecure document.
 
 You get this error because to access the camera with the API [getUserMedia](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia), HTTPS is required.
+
+*Note*
 
 - If you use Chrome or Firefox, you might not get the error because these two browsers allow camera access via file:/// and http://localhost.
 
@@ -146,26 +143,12 @@ If you want to start building your application right away, you can also just mak
 * cdn
 
   ```
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.1.2/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
   <!-- or -->
   <script src="https://unpkg.com/dynamsoft-javascript-barcode@8.1.2/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
   ```
 
 Dynamsoft also provides a Barcode Reader SDK built for Node, see [Dynamsoft JavaScript Barcode SDK for Node](https://github.com/dynamsoft-dbr/node-javascript-barcode).
-
-## Request A Trial
-
-From version 8.2.5 of the library, if no license is specified, a 7-day trial license will be used by default. 
-
-> NOTE: This trial license requires a network connection to work.
-
-After that, if you want to evaluate the library further, you can request a 30-day trial license in one of the following ways
-
-* [Email trial@dynamsoft.com](mailto:trial@dynamsoft.com?subject=privateTrial) and make sure to put "privateTrial" in the subject. This email will then be automatically processed by our system and the 30-day trial license will be sent to you immediately.
-
-* [Register for a Dynamsoft account](https://www.dynamsoft.com/api-common/Regist/Regist) manually (if you haven't already done so) and request the trial in the [customer portal](https://www.dynamsoft.com/CustomerPortal/Portal/TrialLicense.aspx). Note that you must choose the correct product | edition | version combination in order to get the correct trial license.
-
-* If you like, you can also [contact our support team](https://www.dynamsoft.com/company/contact/) to get a trial license.
 
 ## Demos and Examples
 
