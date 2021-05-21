@@ -4,7 +4,7 @@ title: Dynamsoft Barcode Reader for Android - User Guide - v8.4
 description: This is the user guide - v8.4 of Dynamsoft Barcode Reader for Android SDK.
 keywords: user guide - v8.4, android
 needAutoGenerateSidebar: true
-needGenerateH3Content: false
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
@@ -30,7 +30,7 @@ You can add Dynamsoft Barcode Reader like below:
 1. Add download URL in your project's `build.gradle`.
 
    ```java
-    allprojects {
+   allprojects {
       repositories {
          google()
          jcenter()
@@ -165,38 +165,17 @@ You can add Dynamsoft Barcode Reader like below:
 
 4. Run the project.
 
-## Decoding Methods
+## Barcode reading settings
 
-The SDK provides multiple decoding methods that support reading barcodes from different sources, including static images, video stream, files in memory, base64 string, bitmap, etc. Here is a list of all decoding methods:
+### Decoding methods
 
-- [DecodeFile](api-reference/BarcodeReader/decode.md#decodefile): Reads barcodes from a specified file (BMP, JPEG, PNG, GIF, TIFF or PDF).
-- [DecodeBase64String](api-reference/BarcodeReader/decode.md#decodebase64string): Reads barcodes from a base64 encoded string of a file.  
-- [DecodeBitmap](api-reference/BarcodeReader/decode.md#decodebitmap): Reads barcodes from a bitmap. When handling multi-page images, it will only decode the current page.
-- [DecodeBuffer](api-reference/BarcodeReader/decode.md#decodebuffer): Reads barcodes from raw buffer.
-- [DecodeFileInMemory](api-reference/BarcodeReader/decode.md#decodefileinmemory): Decodes barcodes from an image file in memory.
+- [`DecodeFile`](api-reference/BarcodeReader/decode.md#decodefile)
+- [`DecodeBase64String`](api-reference/BarcodeReader/decode.md#decodebase64string)
+- [`DecodeBitmap`](api-reference/BarcodeReader/decode.md#decodebitmap)
+- [`DecodeBuffer`](api-reference/BarcodeReader/decode.md#decodebuffer)
+- [`DecodeFileInMemory`](api-reference/BarcodeReader/decode.md#decodefileinmemory)
 
-You can find more samples in more programming languages at [Code Gallery](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx) or [Github Repositories](https://github.com/dynamsoft-dbr?q=java&type=&language=).
-
-## Barcode Reading Settings
-
-Calling the [decoding methods](#decoding-methods) directly will use the default scanning modes and it will satisfy most of the needs. The SDK also allows you to adjust the scanning settings to optimize the scanning performance for different usage scenarios.
-
-There are two ways to change the barcode reading settings - using the `PublicRuntimeSettings` class or template. For new developers, We recommend you to start with the `PublicRuntimeSettings` class; For those who are experienced with the SDK, you may use a template which is more flexible and easier to update.
-
-- [Use `PublicRuntimeSettings` class to Change Settings](#use-publicruntimesettings-class-to-change-settings)
-- [Use A Template to Change Settings](#use-a-template-to-change-settings)
-
-### Use [`PublicRuntimeSettings`](api-reference/class/PublicRuntimeSettings.md) class to Change Settings
-
-Here are some common scanning settings you might find helpful:
-
-- [Specify Barcode Type to Read](#specify-barcode-type-to-read)
-- [Specify Maximum Barcode Count](#specify-maximum-barcode-count)
-- [Specify a Scan Region](#specify-a-scan-region)  
-
-For more scanning settings guide, check out the [How To](#how-to-guide) section.
-
-#### Specify Barcode Type to Read
+### Barcode format setting
 
 By default, the SDK will read all the supported barcode formats except Postal Codes and Dotcode from the image. (See [Product Overview]({{ site.introduction }}overview.html) for the full supported barcode list.)
 
@@ -215,25 +194,10 @@ dbr.updateRuntimeSettings(runtimeSettings);
 TextResult[] result = dbr.decodeFile("<Put your file path here>","");
 ```
 
-#### Specify maximum barcode count
-
-By default, the SDK will read as many barcodes as it can. To increase the recognition efficiency, you can use `expectedBarcodesCount` to specify the maximum number of barcodes to recognize according to your scenario.
-
-```java
-BarcodeReader dbr = new BarcodeReader();
-dbr.initLicense("<Put your license key here>"); //Replace "<Put your license key here>" with your own license
-PublicRuntimeSettings rts = dbr.getRuntimeSettings();
-rts.expectedBarcodesCount = 10;
-dbr.updateRuntimeSettings(rts);
-//Replace "<Put the path of your file here>" with your own file path
-TextResult[] result = dbr.decodeFile("<Put your file path here>","");
-reader.destroy();
-```
-
-#### Specify a scan region
+### Scan region setting
 
 By default, the barcode reader will search the whole image for barcodes. This can lead to poor performance especially when
-dealing with high-resolution images. You can speed up the recognition process by restricting the scanning region.
+dealling with high-resolution images. You can speed up the recognition process by restricting the scanning region.
 
 To specify a region, you will need to define an area. The following code shows how to create a template string and define the region.  
 
@@ -252,7 +216,22 @@ TextResult[] result = dbr.decodeFile("<Put your file path here>","");
 reader.destroy();
 ```
 
-### Use A Template to Change Settings
+### Barcode count setting
+
+By default, the SDK will read as many barcodes as it can. To increase the recognition efficiency, you can use `expectedBarcodesCount` to specify the maximum number of barcodes to recognize according to your scenario.
+
+```java
+BarcodeReader dbr = new BarcodeReader();
+dbr.initLicense("<Put your license key here>"); //Replace "<Put your license key here>" with your own license
+PublicRuntimeSettings rts = dbr.getRuntimeSettings();
+rts.expectedBarcodesCount = 10;
+dbr.updateRuntimeSettings(rts);
+//Replace "<Put the path of your file here>" with your own file path
+TextResult[] result = dbr.decodeFile("<Put your file path here>","");
+reader.destroy();
+```
+
+### Update settings with template
 
 Besides the option of using the PublicRuntimeSettings class, the SDK also provides [`initRuntimeSettingsWithString`](api-reference/BarcodeReader/parameter-and-runtime-settings-advanced.md#initruntimesettingswithstring) and [`initRuntimeSettingsWithFile`](api-reference/BarcodeReader/parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile) APIs that enable you to use a template to control all the runtime settings. With a template, instead of writing many codes to modify the settings, you can manage all the runtime settings in a JSON file/string.
 
