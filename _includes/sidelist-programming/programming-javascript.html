@@ -2,11 +2,22 @@
     <ul>
         {%- if page.url contains '/javascript/' or page.url contains '/javascript-v' -%}
         <li><a href="{{ site.js }}user-guide/" class="otherLinkColour">User Guide</a>
+            {%- if page.url contains '-v8.2.3' or page.url contains '-v7.6' -%}
+            <ul>
+                <li><a href="{{ site.js }}user-guide/#getting-started---hello-world" class="otherLinkColour">Getting Started</a></li>
+                <li><a href="{{ site.js }}user-guide/basic-customizations.html" class="otherLinkColour">Basic Customizations</a></li>
+                <li><a href="{{ site.js }}user-guide/advanced-customizations.html" class="otherLinkColour">Advanced Customizations</a></li>
+                <li><a href="{{ site.js }}user-guide/deployment-activation.html" class="otherLinkColour">Deployment Activation</a></li>
+                <li><a href="{{ site.js }}user-guide/features-requirements.html" class="otherLinkColour">Features Requirements</a></li>
+                <li><a href="{{ site.js }}user-guide/upgrade.html" class="otherLinkColour">Upgrade</a></li>
+            </ul>
+            {%- else -%}
             <ul>
                 <li><a href="{{ site.js }}user-guide/#getting-started---hello-world" class="otherLinkColour">Getting Started</a></li>
                 <li><a href="{{ site.js }}user-guide/advanced-customizations.html" class="otherLinkColour">Advanced Usage</a></li>
                 <li><a href="{{ site.js }}user-guide/upgrade.html" class="otherLinkColour">Upgrade</a></li>
             </ul>
+            {%- endif -%}   
         </li>
         <li><a href="{{ site.js_api }}" class="otherLinkColour">API Reference</a>
             <ul>
