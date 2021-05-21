@@ -21,7 +21,7 @@ Table of Contents:
 * [Basic Usage](#basic-usage)
 * [Request A Trial](#request-a-trial)
 * [System Requirements](#system-requirements)
-* [Host the library](#host-the-library)
+* [Host the Library](#host-the-library)
 * [Advanced Usage]({{ site.js }}user-guide/advanced-customizations.html)
 * [Upgrade]({{ site.js }}user-guide/upgrade.html)
 
@@ -31,12 +31,12 @@ Let's start by using the library to build a simple web page that decodes barcode
 
 * Basic Requirements
   + Internet connection  
-  + [A Supported Browser]({{site.js}}user-guide/features-requirements.html#system-requirements)
+  + [A supported browser](#system-requirements)
   + Camera access  
 
 ### Step One: Write the code in one minute  
 
-Creat a text file anywhere on your local disk and name it "helloworld.html". Copy the following content in the file and save. 
+Create a text file anywhere on your local disk and name it "helloworld.html". Copy the following content in the file and save. 
 
 ``` html
 <!DOCTYPE html>
@@ -67,35 +67,33 @@ Creat a text file anywhere on your local disk and name it "helloworld.html". Cop
 
 *About the code*
 
-  + `createInstance()`: This method creates a `BarcodeScanner` instance. This instance makes use of cameras based on the [`MediaDevices` interface](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) and shows the barcode reading process with its built-in UI. Note that the UI is hidden until the method `show()` is called (as shown in the code).
+  + `createInstance()`: This method creates a `BarcodeScanner` object. This object can read barcodes directly from a video input with the help of its interactive UI (hidden by default) and the [MediaDevices interface](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices).
 
-  + `onFrameRead`: This event is triggered after the library finishes scanning a frame from the video stream. The `results` object contains all the barcode results that the library found on this frame. In this example, we print the results to the browser console.
+  + `onFrameRead`: This event is triggered every time the library finishes scanning a video frame. The `results` object contains all the barcode results that the library have found on this frame. In this example, we print the results to the browser console.
 
-  + `onUnduplicatedRead`: This event is triggered when the library finds a new barcode, which is not a duplicate among multiple frames. `txt` holds the barcode text value while `result` is an object that holds details of the barcode. In this example, an alert will be displayed for each unique barcode.
+  + `onUnduplicatedRead`: This event is triggered when the library finds a new barcode, which is not a duplicate among multiple frames. `txt` holds the barcode text value while `result` is an object that holds details of the barcode. In this example, an alert will be displayed for this new barcode.
 
-  + `show()`: This method brings up the built-in UI of the created `BarcodeScanner` instance.
+  + `show()`: This method brings up the built-in UI of the `BarcodeScanner` object.
 
 *Note*:
 
   + The recommendation is to deploy this page to your web server and run it over **HTTPS**. If you don't have a ready-to-use web server but have a package manager like *npm* or *yarn*, you can set up a simple HTTP server in minutes. Check out [`http-server` on npm](https://www.npmjs.com/package/http-server) or [yarn](https://yarnpkg.com/package/http-server). However, for simple testing purposes, it's perfectly fine to just open the file directly from your local disk.
 
-  + The library only scans a new frame when it has finished scanning the previous frame. The interval between two frames might not be enough time for the library to process the 1st frame (for 30 FPS, the interval is about 33 ms), therefore, not all frames are scanned.
+  + The library only scans a new frame when it has finished scanning the previous frame. The interval between two consecutive frames might not be enough time for the library to process the 1st frame (for 30 FPS, the interval is about 33 ms), therefore, not all frames are scanned.
 
   + The library requires a license to work. However, when no license is specified in the code, Dynamsoft allows a 7-day free trial period during which you can make initial evaluation of the library to decide whether or not you want to evaluate it further. If you do, you can [request a trial](#request-a-trial).
 
-  > Network connection is required for the 7-day trial license to work.
+    > Network connection is required for the 7-day trial license to work.
 
 ### Step Two: Enable camera access
 
 Open the HTML page in your browser and you should see a pop-up asking for permission to access the camera. Once the access is granted, the video stream will start playing on the page.  
 
-*Note*: 
-
-  + If you don't see the pop-up, wait a few seconds for the initialization to finish.   
+  > If you don't see the pop-up, wait a few seconds for the initialization to finish.   
 
 In this step, you might run into the following issues:
 
-#### getUserMedia non-HTTPS access issue
+#### 1.2.1 getUserMedia non-HTTPS access issue
 
 If you opened the HTML file as `file:///` or `http://` , the following error may appear in the browser console:
 
@@ -105,18 +103,18 @@ If you opened the HTML file as `file:///` or `http://` , the following error may
 
 > Trying to call getUserMedia from an insecure document.
 
-You get this error because to access the camera with the API [getUserMedia](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia), HTTPS is required.
+You get this error because the API [getUserMedia](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia) requires HTTPS to access the camera.
 
 * If you use Chrome or Firefox, you might not get the error because these two browsers allow camera access via file:/// and http://localhost.
 
 To make sure your web application can access the camera, please configure your web server to support HTTPS. The following links may help.
 
-  + NGINX: [Configuring HTTPS servers](https://nginx.org/en/docs/http/configuring_https_servers.html)
-  + IIS: [Create a Self Signed Certificate in IIS](https://aboutssl.org/how-to-create-a-self-signed-certificate-in-iis/)
-  + Tomcat: [Setting Up SSL on Tomcat in 5 minutes](https://dzone.com/articles/setting-ssl-tomcat-5-minutes)
-  + Node.js: [npm tls](https://nodejs.org/docs/v0.4.1/api/tls.html)
+  - NGINX: [Configuring HTTPS servers](https://nginx.org/en/docs/http/configuring_https_servers.html)
+  - IIS: [Create a Self Signed Certificate in IIS](https://aboutssl.org/how-to-create-a-self-signed-certificate-in-iis/)
+  - Tomcat: [Setting Up SSL on Tomcat in 5 minutes](https://dzone.com/articles/setting-ssl-tomcat-5-minutes)
+  - Node.js: [npm tls](https://nodejs.org/docs/v0.4.1/api/tls.html)
 
-#### Self-signed certificate issue
+#### 1.2.2 Self-signed certificate issue
 
 For testing purposes, a self-signed certificate can be used when configuring HTTPS. When accessing the site, the browser might say "the site is not secure". In this case, go to the certificate settings and trust this certificate.
 
@@ -124,7 +122,9 @@ In a production environment, a valid HTTPS certificate is required.
 
 ### Step Three: Time to scan
 
-Place a barcode in front of the camera. You should see an alert pop up with the decoded barcode result and a coloured region on the video to highlight the barcode location. 
+Point the camera at something with a barcode to scan it.
+
+An alert will pop up with the decoded barcode result. At the same time, the barcode location will be highlighted in the video feed. 
 
 ## Basic Usage
 
@@ -146,7 +146,7 @@ The simplest way to include the library is to use either the [jsDelivr](https://
 
 Besides using the CDN, you can also download the library and host its files on your own website / server before including it in your application.
 
-> It is highly recommended to host the library yourself.
+  > It is highly recommended to host the library yourself.
 
 The following shows a few ways to download the library.
 
@@ -184,7 +184,7 @@ Read more on [how to host the library](#host-the-library).
 
 Before using the library, you need to configure a few things.
 
-* Specify the license
+#### 2.2.1 Specify the license
 
   The library requires a license to work, use the APIs `organizationID` and `handshakeCode` to specify how to acquire the license.
 
@@ -199,12 +199,14 @@ Before using the library, you need to configure a few things.
 
   + Network connection is required for the license to work.
   + If nothing is specified, a 7-day (public) trial license will be used by default which is the case in the above "hello world" sample.
-  + The license is actually fetched during the creation of an `BarcodeScanner` or `BarcodeReader` instance.
+  + The license is actually fetched during the creation of an `BarcodeScanner` or `BarcodeReader` object.
   + If a public network connection is not available, you can choose to host a license server in your private network or even get an offline license that does not require any network connection. [Contact us](https://www.dynamsoft.com/company/contact/) for more information.
 
-* Specify the location of the "engine" files
+#### 2.2.2 Specify the location of the "engine" files
 
-  The "engine" files refer to *.worker.js, *.wasm.js and *.wasm, etc. which are loaded by the main library at runtime. This configuration option is often not required as these files usually are in the same location with the main library (dbr.js). However, in cases where the main library is compiled into another file like how frameworks like Angular or React works, this configuration will be required.
+  The "engine" files refer to *.worker.js, *.wasm.js and *.wasm, etc. which are loaded by the main library at runtime. This configuration option uses the API `engineResourcePath` and is often not required as these files usually are in the same location with the main library (dbr.js). However, in cases where the main library is compiled into another file (like how frameworks like Angular or React works), this configuration will be required.
+
+  The following code uses the jsDelivr CDN, feel free to change it to your own location of these files.
 
   ``` javascript
   import DBR from "dynamsoft-javascript-barcode";
@@ -212,20 +214,21 @@ Before using the library, you need to configure a few things.
   export default DBR;
   ```
 
-* Specify the engine to use
+#### 2.2.3 Specify which engine to use
 
   The library comes with two engines: "compact" and "full". They may be merged into one in the future, but right now you can choose one to use.
 
+  By default, the compact engine is used. The following line changes it to the full engine.
+
   ``` javascript
-  // By default, the compact engine is used. The following line changes it to the full engine.
   Dynamsoft.DBR.BarcodeScanner._bUseFullFeature = true;
   ```
 
-  The following table shows available features between the two engines:
+  The following table compares the features between the two engines:
 
   | Features | Compact edition | Full edition |
   |:-:|:-:|:-:|
-  | `wasm` size<sup>1</sup>\(gzip\) | 897 KB | 1.2 MB |
+  | *.wasm* size<sup>*</sup>\(gzip\) | 897 KB | 1.2 MB |
   | 1D | &#10003; | &#10003; |
   | QR | &#10003; | &#10003; |
   | Micro QR | - | &#10003; |
@@ -245,19 +248,18 @@ Before using the library, you need to configure a few things.
   | getIntermediateResults | - | &#10003; |
   | initRuntimeSettingsWithString | - | &#10003; |
   | outputSettingsToString | - | &#10003; |
-  | *recommended scenario<sup>2</sup>* | Customer Facing Application | Enterprise Solution  |
 
-  <sup>1</sup> The `wasm` file size is of version 8.2.5. In other versions, the size may differ.
+  <sup>*</sup> The *.wasm* file size is of version 8.2.5. In other versions, the size may differ.
 
 ### Interact with the library
 
-#### Create a `BarcodeScanner` instance
+#### 2.3.1 Create a `BarcodeScanner` object
 
 You can use one of two classes ( `BarcodeScanner` and `BarcodeReader` ) to interact with the library. `BarcodeReader` is a low-level class that processes images directly. `BarcodeScanner` , on the other hand, inherits from `BarcodeReader` and provides high-level APIs and a built-in UI to allow barcode scanning via cameras. We'll focus on `BarcodeScanner` in this guide.
 
-To use the library, we first create a `BarcodeScanner` instance.
+To use the library, we first create a `BarcodeScanner` object.
 
-`Dynamsoft. DBR. BarcodeScanner.loadWasm()` is the API to start the initialization.
+`Dynamsoft.DBR.BarcodeScanner.loadWasm()` is the API to start the initialization.
 
 ``` javascript
 try {
@@ -269,9 +271,9 @@ try {
 
 *Note*
 
-* The creation of an instance consists of two parallel tasks: one is to download and compile the "engine", the other is to fetch a license from the License Tracking Server. 
+* The creation of an object consists of two parallel tasks: one is to download and compile the "engine", the other is to fetch a license from the License Tracking Server. 
 
-#### Configure the `BarcodeScanner` instance
+#### Configure the `BarcodeScanner` object
 
 Let's take a look at the following code snippet first:
 
@@ -329,7 +331,7 @@ As you can see in the code, there are three types of configurations:
 
 #### Customize the UI
 
-The built-in UI of the `BarcodeScanner` instance is defined in the file `dist/dbr.scanner.html` . There are a few ways to customize it:
+The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.scanner.html` . There are a few ways to customize it:
 
 * Modify the file `dist/dbr.scanner.html` directly. 
 
