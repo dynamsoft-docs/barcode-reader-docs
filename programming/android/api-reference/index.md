@@ -31,7 +31,7 @@ breadcrumbText: API Reference
    | [`StartCameraEnhancer`](BarcodeReader/camera.md#start-stop-pause-resume-camera-enhancer) | Start using Dynamsoft Camera Enhancer |
    | [`StopCameraEnhancer`](BarcodeReader/camera.md#start-stop-pause-resume-camera-enhancer) | Stop using Dynamsoft Camera Enhancer |
    | [`PauseCameraEnhancer`](BarcodeReader/camera.md#start-stop-pause-resume-camera-enhancer) | Pause the process of Dynamsoft Camera Enhancer |
-   | [`ResumeCameraEnhancer`](BarcodeReader/camera.md#start-stop-pause-resume-camera-enhancer) | Pause the process of Dynamsoft Camera Enhancer |
+   | [`ResumeCameraEnhancer`](BarcodeReader/camera.md#start-stop-pause-resume-camera-enhancer) | Resume the process of Dynamsoft Camera Enhancer |
    | [`SetCameraEnhancerParam`](BarcodeReader/camera.md#setcameraenhancerparam) | Set the parameters for Dynamsoft Camera Enhancer in Barcode reader |
 
 ### Decode

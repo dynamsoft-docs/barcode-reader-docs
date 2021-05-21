@@ -104,36 +104,64 @@ You can add Dynamsoft Barcode Reader like below:
 
 3. Add the following code to initiate and use the Dynamsoft Barcode Reader SDK.
 
-    ```java
+   ```java
+   import androidx.appcompat.app.AppCompatActivity;
+   import android.os.Bundle;
    import com.dynamsoft.dbr.BarcodeReader;
-   import com.dynamsoft.dbr.TextResult;
-   import android.util.Log;
+   import com.dynamsoft.dbr.BarcodeReaderException;
+   import com.dynamsoft.dbr.DBRLTSLicenseVerificationListener;
+   import com.dynamsoft.dbr.DCESettingParameters;
+   import com.dynamsoft.dce.CameraEnhancer;
+   import com.dynamsoft.dce.CameraLTSLicenseVerificationListener;
+   import com.dynamsoft.dce.CameraView;
    public class MainActivity extends AppCompatActivity {
+      CameraView cameraView;
+      BarcodeReader reader;
+      CameraEnhancer mCameraEnhancer;
       @Override
       protected void onCreate(Bundle savedInstanceState) {
          super.onCreate(savedInstanceState);
          setContentView(R.layout.activity_main);
+         cameraView = findViewById(R.id.cameraView);
          try {
-            BarcodeReader dbr = new BarcodeReader("your license here");
-            // Note: If you do not have a valid license for the SDK, some characters of the barcode results will be replaced with "***".
-            // Leave the template name empty ("") will use the settings from PublicRuntimeSettings.
-            TextResult[] results = dbr.decodeFile("put your file path here", "");
-            // e.g. TextResult[] results = dbr.decodeFile("/storage/dbr-preview-img/test.jpg", "");
-            if (results.length > 0) {
-               String resultContent = "Found " + results.length + " barcode(s):\n";
-               for (int i = 0; i < results.length; i++) {
-                  resultContent += results[i].barcodeText + "\n";
-               }
-               Log.i("DBR", resultContent);
-            } else {
-               Log.i("DBR", "No barcode found");
-            }
-         } catch (Exception ex) {
-            ex.printStackTrace();
+               reader = new BarcodeReader();
+               com.dynamsoft.dbr.DMLTSConnectionParameters parameters = new com.dynamsoft.dbr.DMLTSConnectionParameters();
+               parameters.organizationID = "Put your organization ID here";
+               reader.initLicenseFromLTS(parameters, new DBRLTSLicenseVerificationListener() {
+                  @Override
+                  public void LTSLicenseVerificationCallback(boolean b, Exception e) {
+                     if (!b) { e.printStackTrace(); }
+                  }
+               });
+         } catch (BarcodeReaderException e) {
+               e.printStackTrace();
          }
+         mCameraEnhancer = new CameraEnhancer(MainActivity.this);
+         mCameraEnhancer.addCameraView(cameraView);
+         com.dynamsoft.dce.DMLTSConnectionParameters info = new com.dynamsoft.dce.DMLTSConnectionParameters();
+         info.organizationID = "Put your organization ID here";
+         mCameraEnhancer.initLicenseFromLTS(info,new CameraLTSLicenseVerificationListener() {
+               @Override
+               public void LTSLicenseVerificationCallback(boolean isSuccess, Exception error) {
+                  if(!isSuccess){ error.printStackTrace(); }
+               }
+         });
+         DCESettingParameters dceSettingParameters = new DCESettingParameters();
+         dceSettingParameters._cameraInstance = mCameraEnhancer;
+         reader.SetCameraEnhancerParam(dceSettingParameters);
+      }
+      @Override
+      public void onResume() {
+         reader.StartCameraEnhancer();
+         super.onResume();
+      }
+      @Override
+      public void onPause() {
+         reader.StopCameraEnhancer();
+         super.onPause();
       }
    }
-    ```
+   ```
 
 4. Run the project.
 
