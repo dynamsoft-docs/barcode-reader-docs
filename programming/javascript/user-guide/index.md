@@ -177,7 +177,20 @@ The `RuntimeSettings` interface controls a lot of aspects of the library, such a
 
 In fact, to best learn about all of the runtime settings and which scenarios call for which settings, it is best to refer to our [RuntimeSettings Parameters](https://www.dynamsoft.com/barcode-reader/parameters/) page. 
 
-However, please note that not all of the parameters of `RuntimeSettings` is applicable to both core classes of DBR JavaScript. To learn which specifically apply to the JavaScript edition, please refer to this [page](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/global-interfaces.html#runtimesettings).
+However, please note that not all of the parameters of `RuntimeSettings` are applicable to both core classes of DBR JavaScript. To learn which specifically apply to the JavaScript edition, please refer to this [page](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/global-interfaces.html#runtimesettings).
+
+### Customizing the UI
+The `BarcodeScanner` class of the JavaScript edition comes with its own default UI. This default UI, defined in `dbr.scanner.html` of the library files, comes with 3 core components:
+- **Video Viewer**: This is the main component of the UI that displays the video stream from the camera, mobile or desktop. This viewer also comes with a canvas component that highlights any detected barcodes by default. This viewer, 
+- **Source Select Dropdown**: This second component is used to select which camera to use should there be mutiple cameras available. By default, this dropdown auto-populates with all the available cameras to choose from.
+- **Resolution Select Dropdown**: The last component is used to select the video resolution. Please note that your camera may not support all of the resolutions listed in the dropdown, especially the higher ones. To learn about your camera's capabilities and whether a certain resolution is supported, you can use the `getCapabilities` method after selecting the camera in question.
+
+The SDK does, however, give you the ability to customize the UI to fit your application. In fact, there are 3 ways in which you can do this:
+
+1. Modifying the `dbr.scanner.html` file directly can allow you to customize the default UI elements for any scanner instance that is created.
+
+2. If you do not feel comfortable modifying the `dbr.scanner.html` file directly, you can copy it and modify the duplicate instead. Then, specify the modified file as the main UI file using the `defaultUIElementURL` property of the `BarcodeScanner` class as such: `Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = url` where `url` is the URL/path to the new file.
+
 
 ## Demos and Examples
 
