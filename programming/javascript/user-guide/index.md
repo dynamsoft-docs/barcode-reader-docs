@@ -191,6 +191,68 @@ The SDK does, however, give you the ability to customize the UI to fit your appl
 
 2. If you do not feel comfortable modifying the `dbr.scanner.html` file directly, you can copy it and modify the duplicate instead. Then, specify the modified file as the main UI file using the `defaultUIElementURL` property of the `BarcodeScanner` class as such: `Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = url` where `url` is the URL/path to the new file.
 
+3. Build the UI as its own HTML element in the webpage. In order to do this, the HTML Element must either (1) be a `video` element with the `dbrScanner-video` class or (2) contain a `video` element with the `dbrScanner-video` class. Then, once the element is created, tell the SDK to use it via the `setUIElement` method as such:
+    ```html
+    <body>
+        <div id="div-video-container">
+            <video class="dbrScanner-video" playsinline="true"></video>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
+        <script>
+            let scanner = null;
+            (async()=>{
+                scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+                await scanner.setUIElement(document.getElementById('div-video-container'));
+                scanner.onFrameRead = results => {console.log(results);};
+                scanner.onUnduplicatedRead = (txt, result) => {alert(txt);};
+                await scanner.show();
+            })();
+        </script>
+    </body>
+    ```
+    Please note that if the element does not exist once the `setUIElement` method is called, an error will be thrown. Therefore, the element must be declared manually in the HTML code, or created programatically via JavaScript. 
+
+In the above example, we only included the video viewer component in the custom UI element `div-video-container`. What if we also wanted to include the source select dropdown or the resolution select dropdown elements? In that case, you would need to manually include the `select` elements and assign each the appropriate class:
+```html
+<video class="dbrScanner-video" playsinline="true"></video> <!-- Video Viewer component -->
+<select class="dbrScanner-sel-camera"></select> <!-- Source Select component -->
+<select class="dbrScanner-sel-resolution"></select> <!-- Resolution Select component -->
+```
+
+It is necessary to assign the correct class to the `select` dropdown elements so that the SDK will know to automatically populate them with the available options. 
+
+The `dbrScanner-sel-camera` dropdown populates with the available camera sources.
+
+The `dbrScanner-sel-resolution` dropdown populates with 8 resolution options by default. However, not all cameras out there support all of the resolution options, so you must check if the selected camera supports the resolution that you are trying to set it to. In case a camera does not support a certain resolution, the SDK will automatically choose the closest supported resolution less than the desired resolution.
+
+You can also limit the number of resolution options if you believe that having all 8 options could be a little overwhelming and unnecessary for your users. To do so, manually define the options that you want to include. The currently used resolution value can be displayed as its own option, as long as it has the class `dbrScanner-opt-gotResolution`.
+
+The following demonstrates putting all of these elements together, including limiting the number of resolution options:
+```html
+<body>
+    <div id="div-video-container">
+        <select class="dbrScanner-sel-camera"></select>
+        <select class="dbrScanner-sel-resolution">
+            <option class="dbrScanner-opt-gotResolution" value="got"></option>
+            <option data-width="1920" data-height="1080">1920 x 1080</option>
+            <option data-width="1280" data-height="720">1280 x 720</option>
+            <option data-width="640" data-height="480">640 x 480</option>
+        </select><br>
+        <video class="dbrScanner-video" playsinline="true"></video>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
+    <script>
+        let scanner = null;
+        (async()=>{
+            scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+            await scanner.setUIElement(document.getElementById('div-video-container'));
+            scanner.onFrameRead = results => {console.log(results);};
+            scanner.onUnduplicatedRead = (txt, result) => {alert(txt);};
+            await scanner.show();
+        })();
+    </script>
+</body>
+```
 
 ## Demos and Examples
 
