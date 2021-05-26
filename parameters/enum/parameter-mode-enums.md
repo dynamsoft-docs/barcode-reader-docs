@@ -512,7 +512,7 @@ Describes the terminate phase.
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum TerminatePhase` |
-| .Net | `enum Dynamsoft.DBR.EnumTerminatePhase` |
+| .Net | `enum Dynamsoft.EnumTerminatePhase` |
 | JavaScript | `Dynamsoft.DBR.EnumTerminatePhase` |
 | Python | `class EnumTerminatePhase(IntEnum)` |
 | Java / Android | `class EnumTerminatePhase` |

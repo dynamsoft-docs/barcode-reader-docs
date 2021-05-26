@@ -24,6 +24,7 @@ Defines a struct to configure the parameters to connect to license tracking serv
 | [`maxBufferDays`](#maxbufferdays) | *int* |
 | [`limitedLicenseModules`](#limitedlicensemodules) | *List<Integer>* |
 | [`chargeWay`](#chargeway) | *int* |
+| [`organizationID`](#organizationid) | *String* |
 
 
 ### mainServerURL
@@ -156,3 +157,14 @@ int com.dynamsoft.dbr.DMLTSConnectionParameters.chargeWay
 - **See also**  
     [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeWay)    
 
+
+### organizationID
+The organization ID got from Dynamsoft.
+```java
+String com.dynamsoft.dbr.DMLTSConnectionParameters.organizationID
+```
+- **Value range**   
+    Any string value   
+      
+- **Default value**   
+    ""

@@ -32,41 +32,41 @@ public class DataMatrixDetails
 The barcode module size (the minimum bar width in pixel).
 
 ```csharp
-int Dynamsoft.DBR.DataMatrixDetails.ModuleSize
+int Dynamsoft.DataMatrixDetails.ModuleSize
 ```
 
 ### Rows
 The row count of the barcode.
 
 ```csharp
-int Dynamsoft.DBR.DataMatrixDetails.Rows
+int Dynamsoft.DataMatrixDetails.Rows
 ```
 
 ### Columns
 The column count of the barcode.
 
 ```csharp
-int Dynamsoft.DBR.DataMatrixDetails.Columns
+int Dynamsoft.DataMatrixDetails.Columns
 ```
 
 ### DataRegionRows 
 The data region row count of the barcode.
 
 ```csharp
-int Dynamsoft.DBR.DataMatrixDetails.DataRegionRows
+int Dynamsoft.DataMatrixDetails.DataRegionRows
 ```
 
 ### DataRegionColumns
 The data region column count of the barcode.
 
 ```csharp
-int Dynamsoft.DBR.DataMatrixDetails.DataRegionColumns
+int Dynamsoft.DataMatrixDetails.DataRegionColumns
 ```
 
 ### DataRegionNumber
 The data region count.
 
 ```csharp
-int Dynamsoft.DBR.DataMatrixDetails.DataRegionNumber
+int Dynamsoft.DataMatrixDetails.DataRegionNumber
 ```
 
