@@ -40,7 +40,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 <br>
 
-> **Create and Destroy Instance**
+> [**Create and Destroy Instance**](#create-and-destroy-instance)
 >
 > | Property             | Description |
 > |----------------------|-------------|
@@ -56,7 +56,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 <br>
 
-> **Decode Barcode**
+> [**Decode Barcode**](#decode-barcode)
 >
 > | Method               | Description |
 > |----------------------|-------------|
@@ -67,7 +67,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 <br>
 
-> **Decoding Settings**
+> [**Decoding Settings**](#decoding-settings)
 >
 > Changing the barcode decoding process will affect the speed and accuracy.
 >
@@ -81,7 +81,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 <br>
 
-> **License**
+> [**License**](#license)
 >
 > | Property            | Description |
 > |---------------------|-------------|
@@ -93,7 +93,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 <br>
 
-> **Other**
+> [**Other**](#other)
 >
 > | Property            | Description |
 > |---------------------|-------------|
