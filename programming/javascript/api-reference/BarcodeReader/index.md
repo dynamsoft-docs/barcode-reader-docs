@@ -22,7 +22,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 > }
 > ```
 
-<hr>
+<br>
 
 ## Index
 
@@ -105,7 +105,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 > |----------------------|-------------|
 > | [detectEnvironment](#detectenvironment) | Detect environment and get a report. |
 
-<hr>
+<br>
 
 ## Initialize the Engine
 
@@ -119,6 +119,8 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 > Dynamsoft.DBR.BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/";
 > await Dynamsoft.DBR.BarcodeReader.loadWasm();
 >```
+
+<br>
 
 ### _bUseFullFeature
 
@@ -165,11 +167,15 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 > await DBR.BarcodeReader.loadWasm();
 > ```
 
+<br>
+
 ### isLoaded
 
 * `static` isLoaded(): *boolean*
 
 > Check if the decoding module is loaded.
+
+<br>
 
 ### loadWasm
 
@@ -189,7 +195,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 > });
 > ```
 
-<hr>
+<br>
 
 ## Create and Destroy Instance
 
@@ -198,6 +204,8 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 * bDestroyed: *boolean*
 
 > Indicates whether the instance has been destroyed.
+
+<br>
 
 ### createInstance
 
@@ -209,13 +217,15 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 > let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 > ```
 
+<br>
+
 ### destroy
 
 * destroy(): *Promise&lt;void&gt;*
 
 > Destroy the `BarcodeReader` instance. If your page needs to create new instances from time to time, don't forget to destroy unused old instances, otherwise it will cause memory leaks.
 
-<hr>
+<br>
 
 ## Decode Barcode
 
@@ -257,6 +267,8 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 >
 > *@see* [decodeBase64String](#decodeBase64String), [decodeUrl](#decodeUrl)
 
+<br>
+
 ### decodeBase64String
 
 * decodeBase64String(base64: *string*): *Promise&lt;[TextResult](../interface/textresult.md)[]&gt;*
@@ -270,6 +282,8 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 > }
 > ```
 
+<br>
+
 ### decodeUrl
 
 * decodeUrl(url: *string*): *Promise&lt;[TextResult](../interface/textresult.md)[]&gt;*
@@ -282,6 +296,8 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 > }
 > ```
 
+<br>
+
 ### decodeBuffer
 
 * decodeBuffer(<br>
@@ -292,7 +308,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 > Decode barcodes from raw image data.
 
-<hr>
+<br>
 
 ## Decoding Settings
 
@@ -307,6 +323,8 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 > await reader.updateRuntimeSettings(settings);
 > ```
 
+<br>
+
 ### updateRuntimeSettings
 
 * updateRuntimeSettings(settings: *[RuntimeSettings](../interface/runtimesettings.md) | string*): *Promise&lt;void&gt;*
@@ -320,6 +338,8 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 > await reader.updateRuntimeSettings(settings);
 > ```
 
+<br>
+
 ### resetRuntimeSettings
 
 * resetRuntimeSettings(): *Promise&lt;void&gt;*
@@ -328,6 +348,8 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 > ```js
 > await reader.resetRuntimeSettings();
 > ```
+
+<br>
 
 ### getModeArgument
 
@@ -341,6 +363,8 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 >
 > *@see* TODO
 
+<br>
+
 ### setModeArgument
 
 * setModeArgument(modeName: *string*, index: *number*, argumentName: *string*, argumentValue: *string*): *Promise&lt;string&gt;*
@@ -353,7 +377,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 >
 > *@see* TODO
 
-<hr>
+<br>
 
 ## License
 
@@ -370,11 +394,15 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 > <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
 > ```
 
+<br>
+
 ### licenseServer
 
 * `static` licenseServer: *string[] | string*
 
 > Specify the license server URL.
+
+<br>
 
 ### handshakeCode
 
@@ -389,6 +417,8 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 > <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js" data-handshakeCode="123****-mytest"></script>
 > ```
 
+<br>
+
 ### organizationID
 
 * `static` organizationID: *string*
@@ -401,6 +431,8 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 > ```html
 > <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js" data-organizationID="123****"></script>
 > ```
+
+<br>
 
 ### sessionPassword
 
@@ -416,7 +448,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 > <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js" data-handshakeCode="123****-mytest" data-sessionPassword="@#$%****"></script>
 > ```
 
-<hr>
+<br>
 
 ## Other
 
@@ -431,6 +463,8 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 > document.body.append(reader.oriCanvas);
 > ```
 
+<br>
+
 ### oriCanvas
 
 * `readonly` oriCanvas: *HTMLCanvasElement|OffscreenCanvas*
@@ -441,6 +475,8 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 > let results = await reader.decode(source);
 > document.body.append(reader.oriCanvas);
 > ```
+
+<br>
 
 ### version
 
@@ -454,6 +490,8 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 > console.log(Dynamsoft.DBR.BarcodeReader.version); // "8.4.0.8960(JS 8.2.5.20210426)"
 > ```
 
+<br>
+
 ### detectEnvironment
 
 * `static` detectEnvironment(): *Promise&lt;any&gt;*
@@ -463,5 +501,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 > console.log(Dynamsoft.DBR.BarcodeReader.detectEnvironment());
 > // {"wasm":true, "worker":true, "getUserMedia":true, "camera":true, "browser":"Chrome", "version":90, "OS":"Windows"}
 > ```
+
+<br>
 
 
