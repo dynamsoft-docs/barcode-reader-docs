@@ -25,6 +25,7 @@ Defines a struct to configure the parameters to connect to license tracking serv
 | [`UUIDGenerationMethod`](#uuidgenerationmethod) | *EnumDMUUIDGenerationMethod* |
 | [`maxBufferDays`](#maxbufferdays) | *NSInteger* |
 | [`limitedLicenseModules`](#limitedlicensemodules) | *NSArray\** |
+| [`organizationID`](#organizationid) | *NSString\** |
 
 
 ### mainServerURL
@@ -159,3 +160,14 @@ NSArray* limitedLicenseModules
 - **See also**  
     [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)    
 
+
+### organizationID
+The organization ID got from Dynamsoft.
+```objc
+NSString* organizationID
+```
+- **Value range**   
+    Any string value   
+      
+- **Default value**   
+    ""

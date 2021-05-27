@@ -37,68 +37,68 @@ public class TextResult
 Barcode type in BarcodeFormat group 1.
 
 ```csharp
-EnumBarcodeFormat Dynamsoft.DBR.TextResult.BarcodeFormat
+EnumBarcodeFormat Dynamsoft.TextResult.BarcodeFormat
 ```
 
 ### BarcodeFormatString
 Barcode type in BarcodeFormat group 1 as string.
 
 ```csharp
-string Dynamsoft.DBR.TextResult.BarcodeFormatString
+string Dynamsoft.TextResult.BarcodeFormatString
 ```
 
 ### BarcodeFormat_2
 Barcode type in BarcodeFormat group 2.
 
 ```csharp
-EnumBarcodeFormat_2 Dynamsoft.DBR.TextResult.BarcodeFormat_2
+EnumBarcodeFormat_2 Dynamsoft.TextResult.BarcodeFormat_2
 ```
 
 ### BarcodeFormatString_2
 Barcode type in BarcodeFormat group 2 as string.
 
 ```csharp
-string Dynamsoft.DBR.TextResult.BarcodeFormatString_2
+string Dynamsoft.TextResult.BarcodeFormatString_2
 ```
 
 ### BarcodeText
 The barcode text, ends by '\0'.
 
 ```csharp
-string Dynamsoft.DBR.TextResult.BarcodeText
+string Dynamsoft.TextResult.BarcodeText
 ```
 
 ### BarcodeBytes
 The barcode content in a byte array.
 
 ```csharp
-byte[] Dynamsoft.DBR.TextResult.BarcodeBytes
+byte[] Dynamsoft.TextResult.BarcodeBytes
 ```
 
 ### LocalizationResult
 The corresponding localization result.
 
 ```csharp
-LocalizationResult Dynamsoft.DBR.TextResult.LocalizationResult
+LocalizationResult Dynamsoft.TextResult.LocalizationResult
 ```
 
 ### DetailedResult
 One of the following: [`QRCodeDetails`](QRCodeDetails.md), [`PDF417Details`](PDF417Details.md), [`DataMatrixDetails`](DataMatrixDetails.md), [`AztecDetails`](AztecDetails.md), [`OneDCodeDetails`](OneDCodeDetails.md).
 
 ```csharp
-object Dynamsoft.DBR.TextResult.DetailedResult
+object Dynamsoft.TextResult.DetailedResult
 ```
 
 ### Results
 The extended result array.
 
 ```csharp
-ExtendedResult[] Dynamsoft.DBR.TextResult.Results
+ExtendedResult[] Dynamsoft.TextResult.Results
 ```
 
 ### Exception
 The exception message.
 
 ```csharp
-string Dynamsoft.DBR.TextResult.Exception
+string Dynamsoft.TextResult.Exception
 ```

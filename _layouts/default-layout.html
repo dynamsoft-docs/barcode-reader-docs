@@ -98,9 +98,15 @@
 
     <!-- for dbr -->
     <script type="text/javascript">
+        function getCookie(name) {
+            var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+            return (arr = document.cookie.match(reg)) ? unescape(arr[2]) : null;
+        }
+
+
         $(document).ready(function(){
             var download = getUrlParam('download');
-            if(download == 'true') {
+            if(download == 'true' && getCookie('DynamsoftEmail')) {
                 var curHref = window.location.href.toLowerCase()
                 if (curHref.indexOf('/c/') > -1 || curHref.indexOf('/cplusplus/') > -1) {
                     $('.editionName').html('C/C++');
@@ -119,17 +125,17 @@
                     $('.downloadlink')[0].click();
                 } else if (curHref.indexOf('/javascript/') > -1) {
                     $('.editionName').html('Javascript');
-                    $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dbr/DBR-JS-8.2.3.zip');
+                    $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dbr/DBR-JS-8.2.5.zip');
                     $('.dbrThanksDownloading').show();
                     $('.downloadlink')[0].click();
                 } else if (curHref.indexOf('/android/') > -1) {
                     $('.editionName').html('Android');
-                    $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dbr/dbr-android-8.2.zip');
+                    $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dbr/dbr-android-8.2.1.zip');
                     $('.dbrThanksDownloading').show();
                     $('.downloadlink')[0].click();
                 } else if (curHref.indexOf('/objectivec-swift/') > -1) {
                     $('.editionName').html('iOS');
-                    $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dbr/dbr-ios-8.2.zip');
+                    $('.downloadlink').attr('href', 'https://download.dynamsoft.com/dbr/dbr-ios-8.2.1.zip');
                     $('.dbrThanksDownloading').show();
                     $('.downloadlink')[0].click();
                 }

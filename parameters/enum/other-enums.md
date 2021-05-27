@@ -31,7 +31,7 @@ Describes charge way.
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum DM_ChargeWay` |
-| .Net | `enum Dynamsoft.DBR.EnumDMChargeWay` |
+| .Net | `enum Dynamsoft.EnumDMChargeWay` |
 | JavaScript | `N/A` |
 | Python | `class EnumDMChargeWay(IntEnum)` |
 | Java / Android | `class EnumDMChargeWay` |
@@ -65,7 +65,7 @@ Describes the deployment type.
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum DM_DeploymentType` |
-| .Net | `enum Dynamsoft.DBR.EnumDMDeploymentType` |
+| .Net | `enum Dynamsoft.EnumDMDeploymentType` |
 | JavaScript | `N/A` |
 | Python | `class EnumDMDeploymentType(IntEnum)` |
 | Java | `class EnumDMDeploymentType` |
@@ -95,7 +95,7 @@ Describes Dynamsoft license modules.
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum DM_LicenseModule` |
-| .Net | `enum Dynamsoft.DBR.EnumDMLicenseModule` |
+| .Net | `enum Dynamsoft.EnumDMLicenseModule` |
 | JavaScript | `N/A` |
 | Python | `class EnumDMLicenseModule(IntEnum)` |
 | Java / Android | `class EnumDMLicenseModule` |
@@ -133,7 +133,7 @@ Describes UUID generation method.
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum DM_UUIDGenerationMethod` |
-| .Net | `enum Dynamsoft.DBR.EnumDMUUIDGenerationMethod` |
+| .Net | `enum Dynamsoft.EnumDMUUIDGenerationMethod` |
 | JavaScript | `N/A` |
 | Python | `class EnumDMUUIDGenerationMethod(IntEnum)` |
 | Java / Android | `class EnumDMUUIDGenerationMethod` |

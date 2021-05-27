@@ -139,7 +139,7 @@ Describes the result coordinate type.
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum ResultCoordinateType` |
-| .Net | `enum Dynamsoft.DBR.EnumResultCoordinateType` |
+| .Net | `enum Dynamsoft.EnumResultCoordinateType` |
 | JavaScript | `Dynamsoft.EnumResultCoordinateType` |
 | Python | `class EnumResultCoordinateType(IntEnum)` |
 | Java / Android | `class EnumResultCoordinateType` |
@@ -168,7 +168,7 @@ Describes the extended result type.
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum ResultType` |
-| .Net | `enum Dynamsoft.DBR.EnumResultType` |
+| .Net | `enum Dynamsoft.EnumResultType` |
 | JavaScript | `Dynamsoft.EnumResultType` |
 | Python | `class EnumResultType(IntEnum)` |
 | Java / Android | `class EnumResultType` |
