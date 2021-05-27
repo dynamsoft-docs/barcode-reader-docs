@@ -22,6 +22,8 @@ In this guide, we help you step through the process of integrating the Dynamsoft
     - [Barcode Reader vs Barcode Scanner](#barcode-reader-vs-barcode-scanner)
 - [Configuration and Customization](#configuration-and-customization)
     - [Capture Settings](#capture-settings)
+        - [Video Settings](#video-settings)
+        - [Scan Settings](#scan-settings)
     - [Runtime Settings](#runtime-settings)
 - [Advanced Customizations]({{ site.js }}user-guide/advanced-customizations.html)
 - [Deployment Activation]({{ site.js }}user-guide/deployment-activation.html)
@@ -45,28 +47,73 @@ Let's start by demonstrating the minimum JavaScript code needed to get the libra
 
 ### Import the Library
 
+There are several ways through which you can include the library in your own application. The most popular method is to import it directly via a CDN such as `jsDelivr` or `UNPKG`. However, you can also use `npm` or `yarn` to import the library which works better in certain scenarios. Finally, you can also download the library and host it yourself should you have concerns regarding the usage of a CDN or the `npm` package.
+
+#### Importing via CDN
+
 First, create a `HTML` page that follows the template of any simple `HTML` file. Afterwards, import the SDK using the [jsDelivr](https://www.jsdelivr.com/) or [UNPKG](https://unpkg.com/) CDN:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.0.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js"></script>
 
 <!-- or -->
 
-<script src="https://unpkg.com/dynamsoft-javascript-barcode@8.0.0/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
+<script src="https://unpkg.com/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js"></script>
 ```
 
-You will need to replace `PRODUCT-KEYS` with a trial key for the sample code to work correctly. You can acquire a trial key [here](https://www.dynamsoft.com/customer/license/trialLicense).
+#### Importing via npm or yarn
+
+This import method is mostly used when using a framework such as React, Angular, or Vue. In order to include the library in your application using this method:
+```bash
+npm install dynamsoft-javascript-barcode
+
+OR
+
+yarn add dynamsoft-javascript-barcode
+```
+#### Importing the library manually and hosting it yourself
+You can also choose to download the library and host the library yourself. To download the library, please use the following [link](https://www.dynamsoft.com/barcode-reader/downloads/). Hosting the library yourself involves a few more configuration steps that the other options do.
+
+##### Step One: Deploy the dist folder
+Once you have downloaded the library, copy `dist` folder from the library directory into your server (usually as part of your website / web application). Here is a quick breakdown of the files inside the `dist` folder:
+
+- dbr.js // For referencing the library with a <script> tag
+- dbr.browser.mjs // For using the library as a module (<script type="module">)
+- dbr.scanner.html // Defines the default scanner UI
+- dbr-<version>.worker.js // Defines the worker thread for barcode reading
+- dbr-<version>.wasm.js // Compact edition of the library (.js)
+- dbr-<version>.wasm // Compact edition of the library (.wasm)
+- dbr-<version>.full.wasm.js // Full edition of the library (.js)
+- dbr-<version>.full.wasm // Full edition of the library (.wasm)
+
+##### Step Two: Configure the Server
+Now that the `dist` folder is in the application directory on the server, it's time to configure the server to be able to host and serve the library. This involves two small steps:
+1. Set the MIME type to include `application/wasm` so that `.wasm` files are supported. Different servers are configured differently, so here are some of the most popular frameworks
+    - NGINX: [mime.types](https://www.nginx.com/resources/wiki/start/topics/examples/full/#mime-types)
+    - IIS: [Web.config](https://github.com/dynamsoft-dbr/javascript-barcode/blob/dac614f8033661901d85381dfaff8d612115862a/documents/conf/Web.config)
+    - Java™ EE web app: [web.xml](https://github.com/dynamsoft-dbr/javascript-barcode/blob/dac614f8033661901d85381dfaff8d612115862a/documents/conf/web.xml)
+    - Node.js: [npm mime](https://github.com/broofa/node-mime)
+2. Enable `HTTPS`: To use the library, you must access the web application via a secure `HTTPS` connection. This is due to browser security restrictions which only grant camera video streaming access to a [secure context](https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts). Here is how to enable HTTPS on some of the most popular server frameworks:
+
+    - NGINX: [Configuring HTTPS servers](https://nginx.org/en/docs/http/configuring_https_servers.html)
+    - IIS: [Create a Self Signed Certificate in IIS](https://aboutssl.org/how-to-create-a-self-signed-certificate-in-iis/)
+    - Tomcat: [Setting Up SSL on Tomcat in 5 minutes](https://dzone.com/articles/setting-ssl-tomcat-5-minutes)
+    - Node.js: [npm tls](https://nodejs.org/docs/v0.4.1/api/tls.html)
+
+### Assigning a License
+
+Once the library is imported, the license, trial or full, must be specified.
 
 If you don't have a ready-to-use web server but have a package manager like npm or yarn, you can set up a simple HTTP server in minutes. Check out `http-server` on npm or yarn.
 
-Please find the minimum `Hello World` code below:
+Please find the `Hello World` code below:
 
 ```html
 <!DOCTYPE html>
 <html>
 <body>
     <!-- Please visit https://www.dynamsoft.com/customer/license/trialLicense to get a trial license. -->
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.3/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js" ></script>
     <script>
         // initializes and uses the library
         let scanner = null;
@@ -83,6 +130,7 @@ Please find the minimum `Hello World` code below:
 
 [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/pL4e7yrd/)
 
+`createInstance`: This method instantiates a `BarcodeReader` object or a `BarcodeScanner` object, depending on the scenario. For details on the difference between the two classes, please refer to the [BarcodeReader vs BarcodeScanner section](#barcode-reader-vs-barcode-scanner)
 
 `onFrameRead`: This event is triggered after each single frame is scanned. The `results` object contains all the barcode results that the library found on this frame. In the above code, the results found in every frame are printed to the console. 
 
@@ -99,38 +147,12 @@ Place a barcode in front of the camera once it opens up. Once the barcode is det
 
 Please be wary of the following two issues that you might encounter when opening the Hello World sample you just created, either locally or via a server.
 
-#### getUserMedia non-HTTPS access issue
-
-If you open the HTML file as `file:///` or `http://`, the following error may appear in the browser console:
-
-> [Deprecation] getUserMedia() no longer works on insecure origins. To use this feature, you should consider switching your application to a secure origin, such as HTTPS. See https://goo.gl/rStTGz for more details.
-
-In Safari 12 the equivalent error is:
-
-> Trying to call getUserMedia from an insecure document.
-
-To access the camera with the API [getUserMedia](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia), HTTPS is required.
-
-**Note**: If you use Chrome or Firefox, you might not get the error because these two browsers allow camera access via `file:///` and `http://localhost`.
-
-To make sure your web application can access the camera and resolve this error, please configure your web server to support HTTPS. The following links may help depending on the server framework:
-
-- NGINX: [Configuring HTTPS servers](https://nginx.org/en/docs/http/configuring_https_servers.html)
-- IIS: [Create a Self Signed Certificate in IIS](https://aboutssl.org/how-to-create-a-self-signed-certificate-in-iis/)
-- Tomcat: [Setting Up SSL on Tomcat in 5 minutes](https://dzone.com/articles/setting-ssl-tomcat-5-minutes)
-- Node.js: [npm tls](https://nodejs.org/docs/v0.4.1/api/tls.html)
-
-#### Self-signed certificate issue
-
-For testing purposes, a self-signed certificate can be used when configuring HTTPS. When accessing the site, the browser might say "the site is not secure". In this case, go to the certificate settings and set to trust this certificate.
-
-In a production environment, you will need a valid HTTPS certificate.
-
-### Barcode Reader vs Barcode Scanner
+### Using the Barcode Reader vs Barcode Scanner
 
 DBR JavaScript comes with two main classes:
 1. [`BarcodeReader`](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeReader/) is used when image decoding. If your typical use case does not involve an interactive video scenario (decoding barcodes directly from a video stream) but rather, just images, then going with the `BarcodeReader` class is recommended.
-2. [`BarcodeScanner`](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeScanner/) is the opposite, and should be used when video decoding. Therefore, this class comes with API addressing camera control and video settings.
+2. [`BarcodeScanner`](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeScanner/) is the opposite, and should be used in the aforementioned interactive video scenarios. Therefore, this class comes with API addressing camera control and video settings which are not available in the other class.
+
 
 ## Configuration and Customization 
 The SDK comes with a variety of settings to help optimize the performance of the `BarcodeReader` or the `BarcodeScanner`, depending on your use. The settings are divided into two main categories, Capture Settings and Runtime Settings, with the latter being its own class `RuntimeSettings`.  The capture settings will mainly deal with two classes, `VideoSettings` and `ScanSettings`. The following section will break down each of these settings and how to use them.
@@ -253,6 +275,35 @@ The following demonstrates putting all of these elements together, including lim
     </script>
 </body>
 ```
+
+## Known Issues
+
+#### getUserMedia non-HTTPS access issue
+
+If you open the HTML file as `file:///` or `http://`, the following error may appear in the browser console:
+
+> [Deprecation] getUserMedia() no longer works on insecure origins. To use this feature, you should consider switching your application to a secure origin, such as HTTPS. See https://goo.gl/rStTGz for more details.
+
+In Safari 12 the equivalent error is:
+
+> Trying to call getUserMedia from an insecure document.
+
+To access the camera with the API [getUserMedia](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia), HTTPS is required.
+
+**Note**: If you use Chrome or Firefox, you might not get the error because these two browsers allow camera access via `file:///` and `http://localhost`.
+
+To make sure your web application can access the camera and resolve this error, please configure your web server to support HTTPS. The following links may help depending on the server framework:
+
+- NGINX: [Configuring HTTPS servers](https://nginx.org/en/docs/http/configuring_https_servers.html)
+- IIS: [Create a Self Signed Certificate in IIS](https://aboutssl.org/how-to-create-a-self-signed-certificate-in-iis/)
+- Tomcat: [Setting Up SSL on Tomcat in 5 minutes](https://dzone.com/articles/setting-ssl-tomcat-5-minutes)
+- Node.js: [npm tls](https://nodejs.org/docs/v0.4.1/api/tls.html)
+
+#### Self-signed certificate issue
+
+For testing purposes, a self-signed certificate can be used when configuring HTTPS. When accessing the site, the browser might say "the site is not secure". In this case, go to the certificate settings and set to trust this certificate.
+
+In a production environment, you will need a valid HTTPS certificate.
 
 ## Demos and Examples
 
