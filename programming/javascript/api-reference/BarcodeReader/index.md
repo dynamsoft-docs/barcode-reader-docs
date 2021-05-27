@@ -467,7 +467,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 ### oriCanvas
 
-* `readonly` oriCanvas: *HTMLCanvasElement|OffscreenCanvas*
+* `readonly` oriCanvas: *[HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement) | [OffscreenCanvas](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas)*
 
 > An [canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas) object that holds the original image.
 > ```js
