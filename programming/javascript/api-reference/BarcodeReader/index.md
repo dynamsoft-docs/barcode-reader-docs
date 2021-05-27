@@ -7,74 +7,461 @@ needAutoGenerateSidebar: false
 breadcrumbText: BarcodeReader
 ---
 
-# Dynamsoft Barcode Reader SDK - JavaScript BarcodeReader Class
+Dynamsoft Barcode Reader SDK - JavaScript API
+# Class BarcodeReader
 
-The `BarcodeReader` class is used for **image** decoding.
+> The `BarcodeReader` class is used for **image** decoding.
+>
+> Comparing to [BarcodeScanner](../BarcodeScanner/index.md), the default [decoding settings](#decoing-settings) are more accurate but slower.
+>
+> ```js
+> let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
+> let results = await reader.decode(imageSource);
+> for(let result of results){
+>     console.log(result.barcodeText);
+> }
+> ```
 
-## `BarcodeReader` *Class* Methods
+<hr>
 
-### Initialize
+## Index
 
-The following methods are related to the initialization of `BarcodeReader` instances.
+> [**Initialize the Engine**](#initialize-the-engine)
+>
+> | Static Property      | Description |
+> |----------------------|-------------|
+> | [engineResourcePath](#engineresourcepath) | Specify the engine (WASM) url. | 
+> | [_bUseFullFeature](#_busefullfeature) | If set to `true`, use the full-featured WASM module. |
+>
+> | Static Method        | Description |
+> |----------------------|-------------|
+> | [isLoaded](#isloaded) | Check if the decoding module is loaded. |
+> | [loadWasm](#loadwasm) | Manually load and compile the decoding WASM module. |
 
-| Method               | Description |
-|----------------------|-------------|
-| [`createInstance`](methods/initialize-and-destroy.md#createinstance) | Create a  `BarcodeReader` instance. |
-| [`detectEnvironment`](methods/initialize-and-destroy.md#detectenvironment) | Detect the current environment. |
-| [`isLoaded`](methods/initialize-and-destroy.md#isloaded) | Check if the decoding module is loaded. |
-| [`loadWasm`](methods/initialize-and-destroy.md#loadwasm) | Manually load and compile the decoding WASM module. |
+<br>
 
-## `BarcodeReader` *Instance* Methods
+> **Create and Destroy Instance**
+>
+> | Property             | Description |
+> |----------------------|-------------|
+> | [bDestroyed](#bDestroyed) | Indicates whether the instance has been destroyed. | 
+>
+> | Static Method        | Description |
+> |----------------------|-------------|
+> | [createInstance](#createinstance) | Create a `BarcodeReader` instance. |
+>
+> | Method               | Description |
+> |----------------------|-------------|
+> | [destroy](#destroy) | Destroy the `BarcodeReader` instance. |
 
-### Destroy
+<br>
 
-| Method               | Description |
-|----------------------|-------------|
-| [`destroy`](methods/initialize-and-destroy.md#destroy) | Destroy the `BarcodeReader` instance. |
+> **Decode Barcode**
+>
+> | Method               | Description |
+> |----------------------|-------------|
+> | [decode](#decode) | Decode barcodes from images, binary data, URLs, and more. |
+> | [decodeBase64String](#decodebase64string) | Decode barcodes from a base64 encoded string. |
+> | [decodeUrl](#decodeurl) | Decode barcodes from a URL. |
+> | [decodeBuffer](#decodebuffer) | Decode barcodes from raw image data. |
 
-### Decode
+<br>
 
-The following methods are related to decoding barcodes.
+> **Decoding Settings**
+>
+> Changing the barcode decoding process will affect the speed and accuracy.
+>
+> | Method               | Description |
+> |----------------------|-------------|
+> | [getRuntimeSettings](#getruntimesettings) | Get current runtime settings. |
+> | [updateRuntimeSettings](#updateruntimesettings) | Modify and update the current runtime settings. |
+> | [resetRuntimeSettings](#resetruntimesettings) | Reset runtime settings to default. |
+> | [getModeArgument](#getmodeargument) | Get argument value for the specified mode parameter. |
+> | [setModeArgument](#setmodeargument) | Set argument value for the specified mode parameter. |
 
-| Method               | Description |
-|----------------------|-------------|
-| [`decode`](methods/decode.md#decode) | Decode barcodes from images, binary data, URLs, and more. |
-| [`decodeBase64String`](methods/decode.md#decodebase64string) | Decode barcodes from a base64 encoded string. |
-| [`decodeBuffer`](methods/decode.md#decodebuffer) | Decode barcodes from raw buffer. |
-| [`decodeUrl`](methods/decode.md#decodeurl) | Decode barcodes from a URL. |
+<br>
 
-### Parameter and Runtime Settings
+> **License**
+>
+> | Property            | Description |
+> |---------------------|-------------|
+> | [productKeys](#productkeys) | Get or set the Dynamsoft Barcode Reader SDK product keys. | 
+> | [licenseServer](#licenseServer) | Specify the license server URL. |
+> | [handshakeCode](#handshakeCode) | Use Handshake Code to get authentication from network. |
+> | [organizationID](#organizationID) | Use organization ID to get authentication from network. |
+> | [sessionPassword](#sessionPassword) | Specify a password to protect the Handshake Code from abuse. |
 
-The following methods are related to customizing mode and runtime settings.
+<br>
 
-| Method               | Description |
-|----------------------|-------------|
-| [`getRuntimeSettings`](methods/parameter-and-runtime-settings.md#getruntimesettings) | Get current runtime settings. |
-| [`resetRuntimeSettings`](methods/parameter-and-runtime-settings.md#resetruntimesettings) | Reset runtime settings to default. |
-| [`updateRuntimeSettings`](methods/parameter-and-runtime-settings.md#updateruntimesettings) | Modify and update the current runtime settings. |
-| [`getModeArgument`](methods/parameter-and-runtime-settings.md#getmodeargument) | Get argument value for the specified mode parameter. |
-| [`setModeArgument`](methods/parameter-and-runtime-settings.md#setmodeargument) | Set argument value for the specified mode parameter. |
+> **Other**
+>
+> | Property            | Description |
+> |---------------------|-------------|
+> | [bSaveOriCanvas](#bSaveOriCanvas) | If set to `true`, save the original image in `oriCanvas`. |
+> | [oriCanvas](#oriCanvas) |  An [canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas) object that holds the original image. |
+> | [version](#version) | Get the current version. |
+>
+> | Static Method        | Description |
+> |----------------------|-------------|
+> | [detectEnvironment](#detectenvironment) | Detect environment and get a report. |
 
-## `BarcodeReader` *Class* Properties
+<hr>
 
-| Property            | Description |
-|----------------------|-------------|
-| [`_bUseFullFeature`](properties.md#_busefullfeature) | If set to `true`, use the full-featured WASM module. |
-| [`engineResourcePath`](properties.md#engineresourcepath) | Get or set the engine (WASM) location. | 
-| [`productKeys`](properties.md#productkeys) | Get or set the Dynamsoft Barcode Reader SDK product keys. | 
-| [`version`](properties.md#version) | Get the current version. | 
-| [`licenseServer`](properties.md#licenseServer) | Specify by URL the license server from where authorization is acquired at runtime. |
-| [`handshakeCode`](properties.md#handshakeCode) | Specify the Handshake Code which determines what authorization is acquired. |
-| [`sessionPassword`](properties.md#sessionPassword) | Specify a password which protects the Handshake Code from abuse. | 
+## Initialize the Engine
 
-## `BarcodeReader` *Instance* Properties
+### engineResourcePath
 
-| Property             | Description |
-|----------------------|-------------|
-| `bDestroyed` | Indicates whether a `BarcodeReader` instance has been destroyed. | 
-| `bSaveOriCanvas` | If set to `true`, save the original image in `oriCanvas`. | 
-| `oriCanvas`<sup>1</sup> |  An [OffscreenCanvas](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas) object that holds the original image. |
-| `_bUseWebgl` | Whether to enable image preprocessing with WebGL APIs, this API may change in the future. |
+* `static` engineResourcePath: *string*
 
-<sup>1</sup> The original canvas means the actual canvas which holds the image to be passed to the barcode reader engine for decoding. Read more [here]({{ site.js }}user-guide/advanced-customizations.html#display-the-intermediate-result-images-or-the-original-canvas).
+> Specify the Barcode Reader SDK engine (WASM) url. The SDK tries to automatically explore the engine location. If the auto-explored engine location is incorrect, you can manually specify the engine location. The property needs to be set before [loadWasm](#loadWasm).
+>
+> ```js
+> Dynamsoft.DBR.BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/";
+> await Dynamsoft.DBR.BarcodeReader.loadWasm();
+>```
+
+### _bUseFullFeature
+
+* `static` _bUseFullFeature: *boolean* = false
+
+> Whether to use full feature wasm. The property needs to be set before [loadWasm](#loadWasm).
+>
+> For web, `_bUseFullFeature` is `false` as default.
+>
+> For Node.js, `_bUseFullFeature` does not work, and the Barcode Reader SDK always works on the full feature.
+>
+> The api may change in later version.
+>
+> <hr>
+>
+> Compact wasm:
+>
+> oned + qr + pdf417 + datamatrix
+>
+> <hr>
+>
+> Full wasm:
+>
+> all supported barcode format + 
+>
+> high level deblur available (lv8, 9) + 
+>
+> DPM +
+>
+> template API +
+>
+> intermediate results API
+>
+> <hr>
+>
+> e.g.:
+>
+> Use min in video deocode (small, download and initialization fast).
+>
+> Use full in file decode (need high level deblur).
+>
+> ```js
+> DBR.BarcodeReader._bUseFullFeature = true;
+> await DBR.BarcodeReader.loadWasm();
+> ```
+
+### isLoaded
+
+* `static` isLoaded(): *boolean*
+
+> Check if the decoding module is loaded.
+
+### loadWasm
+
+* `static` loadWasm(): *Promise&lt;void&gt;*
+
+> Before most operations, `loadWasm` needs to be excuted firstly.
+>
+> Most time, you do not need excute `loadWasm` manually. Because when you excute [createInstance](#createInstance), `loadWasm` will be excuted implicitly.
+>
+> Some properties can't be changed after `loadWasm`.
+>
+> Calling `loadWasm` in advance can avoid the long wait when `createInstance`. 
+>
+> ```js
+> window.addEventListener('DOMContentLoaded', (event) => {
+>   DBR.BarcodeReader.loadWasm();
+> });
+> ```
+
+<hr>
+
+## Create and Destroy Instance
+
+### bDestroyed
+
+* bDestroyed: *boolean*
+
+> Indicates whether the instance has been destroyed.
+
+### createInstance
+
+* `static` createInstance(): *Promise&lt;[BarcodeReader](#class-barcodereader)&gt;*
+
+> Create a `BarcodeReader` instance.
+>
+> ```js
+> let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
+> ```
+
+### destroy
+
+* destroy(): *Promise&lt;void&gt;*
+
+> Destroy the `BarcodeReader` instance. If your page needs to create new instances from time to time, don't forget to destroy unused old instances, otherwise it will cause memory leaks.
+
+<hr>
+
+## Decode Barcode
+
+### decode
+
+* decode(source: *[Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) | [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer) | [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) | [Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) | [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray) | [HTMLImageElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement) | [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement) | [HTMLVideoElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement) | string*): *Promise&lt;[TextResult](../interface/textresult.md)[]&gt;*
+
+> Decode barcodes from a image.
+>
+> The main decoding method can accept a variety of data types, including binary data, images, base64 (with mime), urls, etc.
+>
+> The image format can be `png`, `jpeg`, `bmp`, `gif` and a few other (some browsers support `webp`, `tif`).
+>
+> ```js
+> let results = await reader.decode(blob);
+> for(let result of results){
+>     console.log(result.barcodeText);
+> }
+>
+> let results2 = await reader.decode(htmlImageElement);
+> let results2 = await reader.decode(url);
+>
+> // like `data:image/png;base64,iV************`
+> let results3 = await reader.decode(strBase64WithMime);
+> ```
+>
+> And you can get a frame to decode from the `HTMLVideoElement`.
+>
+> ```js
+> // The frame currently played will be decode.
+> let results;
+> try{
+>   results = await reader.decode(htmlVideoElement);
+> }catch(ex){
+>   // If no frame in the video, will throw an exception.   
+> }
+> ```
+> If you need to continuously decode a video, you can use [BarcodeScanner](../BarcodeScanner/index.md) instead.
+>
+> *@see* [decodeBase64String](#decodeBase64String), [decodeUrl](#decodeUrl)
+
+### decodeBase64String
+
+* decodeBase64String(base64: *string*): *Promise&lt;[TextResult](../interface/textresult.md)[]&gt;*
+
+> The decoding method can accept base64 with or without mime.
+> e.g. `data:image/jpg;base64,Xfjshekk....` or `Xfjshekk...`.
+> ```js
+> let results = await reader.decodeBase64String(strBase64);
+> for(let result of results){
+>   console.log(result.barcodeText);
+> }
+> ```
+
+### decodeUrl
+
+* decodeUrl(url: *string*): *Promise&lt;[TextResult](../interface/textresult.md)[]&gt;*
+
+> The decoding method can accept url. The url source need to be in the same domain or allowed cors.
+> ```js
+> let results = await reader.decodeUrl("./1.png");
+> for(let result of results){
+>     console.log(result.barcodeText);
+> }
+> ```
+
+### decodeBuffer
+
+* decodeBuffer(<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;buffer: *[Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) | [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray) | [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) | [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) | [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer)*,<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;width: *number*, height: *number*, stride: *number*,<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;format: *[EnumImagePixelFormat](../enum/enumimagepixelformat.md)*<br>
+  ): *Promise&lt;[TextResult](../interface/textresult.md)[]&gt;*
+
+> Decode barcodes from raw image data.
+
+<hr>
+
+## Decoding Settings
+
+### getRuntimeSettings
+
+* getRuntimeSettings(): *Promise&lt;[RuntimeSettings](../interface/runtimesettings.md)&gt;*
+
+> Gets current runtime settings.
+> ```js
+> let settings = await reader.getRuntimeSettings();
+> settings.deblurLevel = 5;
+> await reader.updateRuntimeSettings(settings);
+> ```
+
+### updateRuntimeSettings
+
+* updateRuntimeSettings(settings: *[RuntimeSettings](../interface/runtimesettings.md) | string*): *Promise&lt;void&gt;*
+
+> Update runtime settings with a given struct, or a string of `speed`, `balance` or `coverage` to use preset settings for BarcodeReader.
+> The default settings for BarcodeReader is `coverage`.
+> ```js
+> await reader.updateRuntimeSettings('balance');
+> let settings = await reader.getRuntimeSettings();
+> settings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED;
+> await reader.updateRuntimeSettings(settings);
+> ```
+
+### resetRuntimeSettings
+
+* resetRuntimeSettings(): *Promise&lt;void&gt;*
+
+> Resets all parameters to default values.
+> ```js
+> await reader.resetRuntimeSettings();
+> ```
+
+### getModeArgument
+
+* getModeArgument(modeName: *string*, index: *number*, argumentName: *string*): *Promise&lt;string&gt;*
+
+> Get argument value for the specified mode parameter.
+>
+> ```js
+> let argumentValue = await reader.getModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy");
+> ```
+>
+> *@see* TODO
+
+### setModeArgument
+
+* setModeArgument(modeName: *string*, index: *number*, argumentName: *string*, argumentValue: *string*): *Promise&lt;string&gt;*
+
+> Set argument value for the specified mode parameter.
+>
+> ```js
+> await reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "1");
+> ```
+>
+> *@see* TODO
+
+<hr>
+
+## License
+
+### productKeys
+
+* `static` productKeys: *string*
+
+> Get or set the Dynamsoft Barcode Reader SDK product keys.
+> ```js
+> Dynamsoft.DBR.BarcodeReader.productKeys = "PRODUCT-KEYS";
+> ```
+> For convenience, you can set `productKeys` in `script` tag instead.
+> ```html
+> <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
+> ```
+
+### licenseServer
+
+* `static` licenseServer: *string[] | string*
+
+> Specify the license server URL.
+
+### handshakeCode
+
+* `static` handshakeCode: *string*
+
+> Get or set the Dynamsoft Barcode Reader SDK handshake code. The `handshakeCode` is an alias of `productKeys`. Specifically refers to the key that requires **network** authentication.
+> ```js
+> Dynamsoft.DBR.BarcodeReader.handshakeCode = "123****-mytest";
+> ```
+> For convenience, you can set `handshakeCode` in `script` tag instead.
+> ```html
+> <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js" data-handshakeCode="123****-mytest"></script>
+> ```
+
+### organizationID
+
+* `static` organizationID: *string*
+
+> Use organization ID to get authentication from network. Keep handshakeCode empty if you want to use default [handshake](#handshakeCode) of the organization.
+> ```js
+> Dynamsoft.DBR.BarcodeReader.organizationID = "123****";
+> ```
+> For convenience, you can set `organizationID` in `script` tag instead.
+> ```html
+> <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js" data-organizationID="123****"></script>
+> ```
+
+### sessionPassword
+
+* `static` sessionPassword: *string*
+
+> Specify a password to protect the [Handshake Code](#handshakeCode) from abuse.
+> ```js
+> Dynamsoft.DBR.BarcodeReader.handshakeCode = "123****-mytest";
+> Dynamsoft.DBR.BarcodeReader.sessionPassword = "@#$%****";
+> ```
+> For convenience, you can set `organizationID` in `script` tag instead.
+> ```html
+> <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js" data-handshakeCode="123****-mytest" data-sessionPassword="@#$%****"></script>
+> ```
+
+<hr>
+
+## Other
+
+### bSaveOriCanvas
+
+* bSaveOriCanvas: *boolean* = false;
+
+> Whether to save the original image into canvas.
+> ```js
+> reader.bSaveOriCanvas = true;
+> let results = await reader.decode(source);
+> document.body.append(reader.oriCanvas);
+> ```
+
+### oriCanvas
+
+* `readonly` oriCanvas: *HTMLCanvasElement|OffscreenCanvas*
+
+> An [canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas) object that holds the original image.
+> ```js
+> reader.bSaveOriCanvas = true;
+> let results = await reader.decode(source);
+> document.body.append(reader.oriCanvas);
+> ```
+
+### version
+
+* `readonly` `static` version: *string*
+
+> Get the current version: Algorithm version (js wrapper version).
+> Algorithm version can only get after [loadWasm](#loadWasm).
+> ```js
+> console.log(Dynamsoft.DBR.BarcodeReader.version); // "loading...(JS 8.2.5.20210426)"
+> await Dynamsoft.DBR.BarcodeReader.loadWasm();
+> console.log(Dynamsoft.DBR.BarcodeReader.version); // "8.4.0.8960(JS 8.2.5.20210426)"
+> ```
+
+### detectEnvironment
+
+* `static` detectEnvironment(): *Promise&lt;any&gt;*
+
+> Detect environment and get a report.
+> ```js
+> console.log(Dynamsoft.DBR.BarcodeReader.detectEnvironment());
+> // {"wasm":true, "worker":true, "getUserMedia":true, "camera":true, "browser":"Chrome", "version":90, "OS":"Windows"}
+> ```
+
 
