@@ -15,9 +15,15 @@ breadcrumbText: Methods
   |----------------------|-------------|
   | [`init`](initialize.md#init) | Create an instance of Dynamsoft Barcode Reader. |
 
+&nbsp;
 
-&nbsp; 
+### Camera Enhancer
+  
+   | Method               | Description |
+   |----------------------|-------------|
+   | [`SetCameraEnhancerParam`](camera.md#setcameraenhancerparam) | Set the parameters for Dynamsoft Camera Enhancer in Barcode reader |
 
+&nbsp;
 
 ## Decode
 
@@ -30,9 +36,7 @@ breadcrumbText: Methods
   | [`createIntermediateResult`](decode.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
-
-&nbsp; 
-
+&nbsp;
 
 ## Parameter and Runtime Settings
 
@@ -58,12 +62,10 @@ breadcrumbText: Methods
   | [`outputSettingsToFile`](parameter-and-runtime-settings-advanced.md#outputsettingstofile) | Output runtime settings to a settings file (JSON file). |
   | [`outputSettingsToString`](parameter-and-runtime-settings-advanced.md#outputsettingstostring) | Output runtime settings to a string. |
 
-
-&nbsp; 
-
+&nbsp;
 
 ## License
-   
+
   | Method               | Description |
   |----------------------|-------------|
   | [`initWithLicense`](license.md#initwithlicense) | Read product key and activate the SDK. |
@@ -71,23 +73,20 @@ breadcrumbText: Methods
   | [`outputLicenseToString`](license.md#outputlicensetostring) | Output the license content to a string from the license server. |
   | [`initLicenseFromLTS`](license.md#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
 
-&nbsp; 
-
+&nbsp;
 
 ## Result
-   
+
   | Method               | Description |
   |----------------------|-------------|
   | [`getIntermediateResult`](result.md#getintermediateresult) | Get intermediate results. |
 
-
-&nbsp; 
-
+&nbsp;
 
 ## Video
 
 ### Decode
-   
+
   | Method               | Description |
   |----------------------|-------------|
   | [`startFrameDecoding`](video.md#startframedecoding) | Decode barcodes from inner frame queue. |
@@ -96,13 +95,13 @@ breadcrumbText: Methods
   | [`stopFrameDecoding`](video.md#stopframedecoding) | Stop thread used for frame decoding. |
 
 ### Parameter
-   
+
   | Method               | Description |
   |----------------------|-------------|
   | [`getFrameDecodingParameters`](video.md#getframedecodingparameters) | Initialize frame decoding parameter. |
 
 ### Delegate
-   
+
   | Method               | Description |
   |----------------------|-------------|
   | [`setDBRErrorDelegate`](video.md#setdbrerrordelegate) | Set callback function to process errors generated during frame decoding. |
@@ -110,7 +109,7 @@ breadcrumbText: Methods
   | [`setDBRIntermediateResultDelegate`](video.md#setdbrintermediateresultdelegate) | Set callback function to process intermediate results generated during frame decoding. |
 
 ### Status retrieval
-   
+
   | Method               | Description |
   |----------------------|-------------|
   | [`getLengthOfFrameQueue`](video.md#getlengthofframequeue) | Get length of current inner frame queue. |

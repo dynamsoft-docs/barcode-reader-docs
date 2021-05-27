@@ -10,16 +10,28 @@ noTitleIndex: true
 
 # Release Notes for Android SDK - 8.x
 
+## 8.2.1 (05/27/2021)
+
+### New
+
+- [Dynamsoft Camera Enhancer (DCE)]({{site.camera}}) is now available for DBR users to quickly deploy the camera module. We added new APIs and a new class to simplify the user operations when using DBR and DCE at the same time.
+- Added [Camera Enhancer setting APIs]({{site.android_methods}}camera.html#start-stop-pause-resume-camera-enhancer). These new APIs will benefit users by easily controlling the status of DCE.
+- Added a new class, [`DCESettingParameters`]({{site.android_class}}DCESettingParameters.html), and a new API, [`SetCameraEnhancerParam`]({{site.android_methods}}camera.html#setcameraenhancerparam), to enable the parameter transfer between DBR and DCE. The parameter transferring will improve the focus ability of the camera.
+
+### Improved
+
+- Samples are updated. DCE is handling the camera-related settings in the samples.
+
 ## 8.2 (03/17/2021)
 
 ### New
 
-- Added a new mode argument, `FindAccurateBoundary`, to [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes) that determines if the SDK attempts to find an accurate boundary when RegionPredetectionModes is set to `RPM_GENERAL_HSV_CONTRAST`. 
+- Added a new mode argument, `FindAccurateBoundary`, to [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes) that determines if the SDK attempts to find an accurate boundary when RegionPredetectionModes is set to `RPM_GENERAL_HSV_CONTRAST`.
 - Added a new an attribute, `organizationID` (string) to `DMLTSConnectionParameters`. The attribute adds a new layer of security for both full and trial licenses.
 
 ### Improved
 
-- Improved both the localization and decoding algorithms for Postal Codes. 
+- Improved both the localization and decoding algorithms for Postal Codes.
 - LocalizationMode `LM_STATISTICS_POSTAL_CODE` will not be added automatically when enabling Postal Code in your runtime settings. Instead, users must manually add it to the LocalizationMode array if it is required.
 
 ### Fixed
@@ -42,13 +54,11 @@ noTitleIndex: true
 
 - Fixed a bug where `barcodeFormatString`, `barcodeFormatString_2`, `regionName` and `documentName` don't have value in the `IRT_TYPED_BARCODE_ZONE` intermediate result.
 
-
 ## 8.1.1 (01/19/2021)
 
 ### Fixed
 
 - Fixed a crash issue when calling `initLicenseFromLTS` or `decode***`  methods in Android 6.x and below.
-
 
 ## 8.1 (01/12/2021)
 
@@ -62,7 +72,7 @@ noTitleIndex: true
 
 - Improved the localization robustness for QR Code.
 - Improved the localization for low quality 1D barcodes.
-- Improved the deblurring performance and recognition rate for DataMatrix. 
+- Improved the deblurring performance and recognition rate for DataMatrix.
 - Improved the recognition rate for Aztec.
 
 ### Fixed
@@ -70,13 +80,12 @@ noTitleIndex: true
 - Fixed a bug where Micro PDF417 may not be localized in multiple-barcode scenarios.
 - Fixed a bug where the `ExpectedBarcodesCount` and `BarcodeFormat` parameters do not work in the `RegionDefinition`.
 
-
 ## 8.0 (11/17/2020)
 
 ### New
 
 - (For IntermediateResult Advanced Module) Added support for decoding IntermediateResult. For example, users with a binarized image could use this function to skip some image preprocessing steps.
-- Implemented a new licensing tracking mechanism, License 2.0, which makes it easier for users to track license usage. 
+- Implemented a new licensing tracking mechanism, License 2.0, which makes it easier for users to track license usage.
 - Added a new format control parameter, BarcodeZoneMinDistanceToImageBorders, to set the minimum distance (in pixels) between the barcode zone and image borders.
 - Added a new format control parameter, MinRatioOfBarcodeZoneWidthToHeight, to set the minimum ratio (width/height) of the barcode zone.
 - Added a new format control parameter, BarcodeZoneBarCountRangeArray, to set the barcode zone’s range of bar count for barcode search.

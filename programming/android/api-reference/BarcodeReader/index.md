@@ -16,6 +16,16 @@ breadcrumbText: BarcodeReader Methods
   | [`BarcodeReader`](initialize-and-destroy.md#barcodereader) | Initialization of `BarcodeReader` object.|
   | [`destroy`](initialize-and-destroy.md#destroy) | Destroys an instance of `BarcodeReader` object.|
 
+## Camera Enhancer
+  
+   | Method               | Description |
+   |----------------------|-------------|
+   | [`StartCameraEnhancer`](camera.md#start-stop-pause-resume-camera-enhancer) | Start using Dynamsoft Camera Enhancer |
+   | [`StopCameraEnhancer`](camera.md#start-stop-pause-resume-camera-enhancer) | Stop using Dynamsoft Camera Enhancer |
+   | [`PauseCameraEnhancer`](camera.md#start-stop-pause-resume-camera-enhancer) | Pause the process of Dynamsoft Camera Enhancer |
+   | [`ResumeCameraEnhancer`](camera.md#start-stop-pause-resume-camera-enhancer) | Pause the process of Dynamsoft Camera Enhancer |
+   | [`SetCameraEnhancerParam`](camera.md#setcameraenhancerparam) | Set the parameters for Dynamsoft Camera Enhancer in Barcode reader |
+
 ## Decode
 
   | Method               | Description |
@@ -67,13 +77,13 @@ breadcrumbText: BarcodeReader Methods
   | Method               | Description |
   |----------------------|-------------|
   | [`getIntermediateResults`](result.md#getintermediateresults) | Get intermediate results. |
-   
+
 ## Status Retrieval
 
   | Method               | Description |
   |----------------------|-------------|
   | [`getVersion`](status-retrieval.md#getversion) | Get version information of SDK.|
-   
+
 ## Video
 
 ### Decode

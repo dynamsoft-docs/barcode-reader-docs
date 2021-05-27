@@ -14,13 +14,12 @@ Stores the Aztec details.
 ## Attributes
   
 | Attribute | Type |
-|---------- | ----------- | 
+|---------- | ----------- |
 | [`moduleSize`](#modulesize) | *int* |
-| [`rows`](#rows) | *int* | 
+| [`rows`](#rows) | *int* |
 | [`columns`](#columns) | *int* |
 | [`layerNumber`](#layernumber) | *int* |
-  
-  
+
 ### moduleSize
 
 The barcode module size (the minimum bar width in pixel).
