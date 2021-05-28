@@ -25,6 +25,8 @@ In this guide, we help you step through the process of integrating the Dynamsoft
         - [Video Settings](#video-settings)
         - [Scan Settings](#scan-settings)
     - [Runtime Settings](#runtime-settings)
+    - [Customizing the UI](#customizing-the-ui)
+- [Known Issues](#known-issues)
 - [Advanced Customizations]({{ site.js }}user-guide/advanced-customizations.html)
 - [Deployment Activation]({{ site.js }}user-guide/deployment-activation.html)
 - [Features Requirements]({{ site.js }}user-guide/features-requirements.html)
@@ -102,7 +104,9 @@ Now that the `dist` folder is in the application directory on the server, it's t
 
 ### Assigning a License
 
-Once the library is imported, the license, trial or full, must be specified.
+The library requires a license to work, so one of the first things that must be done when the page loads is to assign the license. The license is specified mainly using the properties [`organizationID`](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeReader/properties.html#organizationid) and [`handshakeCode`](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeReader/properties.html#handshakeCode).
+
+Starting from v8.2.5 of the JavaScript edition, you can 
 
 If you don't have a ready-to-use web server but have a package manager like npm or yarn, you can set up a simple HTTP server in minutes. Check out `http-server` on npm or yarn.
 
@@ -116,6 +120,7 @@ Please find the `Hello World` code below:
     <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js" ></script>
     <script>
         // initializes and uses the library
+
         let scanner = null;
         (async()=>{
             scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
@@ -134,8 +139,9 @@ Please find the `Hello World` code below:
 
 `onFrameRead`: This event is triggered after each single frame is scanned. The `results` object contains all the barcode results that the library found on this frame. In the above code, the results found in every frame are printed to the console. 
 
-`onUnduplicatedRead`: This event is triggered when a new barcode (not a duplicate) is found. `txt` holds the barcode text value while `result` is an object that holds details of the found barcode. In this example, an alert will be displayed for each unique barcode found. 
-  
+`onUnduplicatedRead`: This event is triggered when a new barcode (not a duplicate) is found. `txt` holds the barcode text value while `result` is an object that holds details of the found barcode. In this example, an alert will be displayed for each unique barcode found.
+
+`show`: Displays the UI of the `BarcodeScanner` object and starts the scanning process.
 
 ### Testing Hello World
 
@@ -147,11 +153,18 @@ Place a barcode in front of the camera once it opens up. Once the barcode is det
 
 Please be wary of the following two issues that you might encounter when opening the Hello World sample you just created, either locally or via a server.
 
-### Using the Barcode Reader vs Barcode Scanner
+### Barcode Reader vs Barcode Scanner
 
 DBR JavaScript comes with two main classes:
 1. [`BarcodeReader`](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeReader/) is used when image decoding. If your typical use case does not involve an interactive video scenario (decoding barcodes directly from a video stream) but rather, just images, then going with the `BarcodeReader` class is recommended.
+    ```
+    reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
+    ```
 2. [`BarcodeScanner`](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeScanner/) is the opposite, and should be used in the aforementioned interactive video scenarios. Therefore, this class comes with API addressing camera control and video settings which are not available in the other class.
+    ```
+    scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+    ```
+
 
 
 ## Configuration and Customization 
