@@ -19,6 +19,9 @@ Table of Contents:
 
 * [Hello World - Simplest Implementation](#hello-world---simplest-implementation)
 * [Building your own page](#building-your-own-page)
+  - [Include the library](#include-the-library)
+  - [Configure the library](#configure-the-library)
+  - [Interact with the library](#interact-with-the-library)
 * [Requesting A Trial](#requesting-a-trial)
 * [System Requirements](#system-requirements)
 * [Hosting the Library](#hosting-the-library)
