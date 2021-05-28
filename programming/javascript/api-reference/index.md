@@ -10,10 +10,10 @@ breadcrumbText: API Reference
 Dynamsoft Barcode Reader SDK
 # JavaScript API Reference
 
-[BarcodeReader](BarcodeReader/index.md) -- Decode barcodes from images
+[BarcodeReader](BarcodeReader.md) -- Decode barcodes from images
 
-[BarcodeScanner](BarcodeScanner/index.md) -- Decode barcodes from videos
+[BarcodeScanner](BarcodeScanner.md) -- Decode barcodes from videos
 
-[Interfaces](interfaces.md)
+[Interface](interface/index.md)
 
-[Enumerations](enumerations.md) 
+[Enum](enum/index.md)

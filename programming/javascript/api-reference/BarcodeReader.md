@@ -3,16 +3,18 @@ layout: default-layout
 title: Dynamsoft Barcode Reader JavaScript API Reference - BarcodeReader
 description: This page shows the BarcodeReader Class of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: BarcodeReader, api reference, javascript, js
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 breadcrumbText: BarcodeReader
 ---
 
 Dynamsoft Barcode Reader SDK - JavaScript API
-# Class BarcodeReader
+# BarcodeReader
+
+* `Class` BarcodeReader
 
 > The `BarcodeReader` class is used for **image** decoding.
 >
-> Comparing to [BarcodeScanner](../BarcodeScanner/index.md), the default [decoding settings](#decoing-settings) are more accurate but slower.
+> Comparing to [BarcodeScanner](./BarcodeScanner.md), the default [decoding settings](#decoing-settings) are more accurate but slower.
 >
 > ```js
 > let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
@@ -95,11 +97,14 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 > [**Other**](#other)
 >
+> | Static Property     | Description |
+> |---------------------|-------------|
+> | [version](#version) | Get the current version. |
+>
 > | Property            | Description |
 > |---------------------|-------------|
 > | [bSaveOriCanvas](#bSaveOriCanvas) | If set to `true`, save the original image in `oriCanvas`. |
 > | [oriCanvas](#oriCanvas) |  An [canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas) object that holds the original image. |
-> | [version](#version) | Get the current version. |
 >
 > | Static Method        | Description |
 > |----------------------|-------------|
@@ -134,13 +139,13 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 >
 > The api may change in later version.
 >
-> <hr>
+> <br>
 >
 > Compact wasm:
 >
 > oned + qr + pdf417 + datamatrix
 >
-> <hr>
+> <br>
 >
 > Full wasm:
 >
@@ -154,7 +159,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 >
 > intermediate results API
 >
-> <hr>
+> <br>
 >
 > e.g.:
 >
@@ -209,7 +214,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 ### createInstance
 
-* `static` createInstance(): *Promise&lt;[BarcodeReader](#class-barcodereader)&gt;*
+* `static` createInstance(): *Promise&lt;[BarcodeReader](#barcodereader)&gt;*
 
 > Create a `BarcodeReader` instance.
 >
@@ -231,7 +236,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 ### decode
 
-* decode(source: *[Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) | [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer) | [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) | [Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) | [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray) | [HTMLImageElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement) | [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement) | [HTMLVideoElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement) | string*): *Promise&lt;[TextResult](../interface/textresult.md)[]&gt;*
+* decode(source: *[Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) | [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer) | [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) | [Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) | [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray) | [HTMLImageElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement) | [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement) | [HTMLVideoElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement) | string*): *Promise&lt;[TextResult](./interface/textresult.md)[]&gt;*
 
 > Decode barcodes from a image.
 >
@@ -263,7 +268,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 >   // If no frame in the video, will throw an exception.   
 > }
 > ```
-> If you need to continuously decode a video, you can use [BarcodeScanner](../BarcodeScanner/index.md) instead.
+> If you need to continuously decode a video, you can use [BarcodeScanner](./BarcodeScanner.md) instead.
 >
 > *@see* [decodeBase64String](#decodeBase64String), [decodeUrl](#decodeUrl)
 
@@ -271,7 +276,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 ### decodeBase64String
 
-* decodeBase64String(base64: *string*): *Promise&lt;[TextResult](../interface/textresult.md)[]&gt;*
+* decodeBase64String(base64: *string*): *Promise&lt;[TextResult](./interface/textresult.md)[]&gt;*
 
 > The decoding method can accept base64 with or without mime.
 > e.g. `data:image/jpg;base64,Xfjshekk....` or `Xfjshekk...`.
@@ -286,7 +291,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 ### decodeUrl
 
-* decodeUrl(url: *string*): *Promise&lt;[TextResult](../interface/textresult.md)[]&gt;*
+* decodeUrl(url: *string*): *Promise&lt;[TextResult](./interface/textresult.md)[]&gt;*
 
 > The decoding method can accept url. The url source need to be in the same domain or allowed cors.
 > ```js
@@ -303,8 +308,8 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 * decodeBuffer(<br>
   &nbsp;&nbsp;&nbsp;&nbsp;buffer: *[Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) | [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray) | [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) | [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) | [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer)*,<br>
   &nbsp;&nbsp;&nbsp;&nbsp;width: *number*, height: *number*, stride: *number*,<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;format: *[EnumImagePixelFormat](../enum/enumimagepixelformat.md)*<br>
-  ): *Promise&lt;[TextResult](../interface/textresult.md)[]&gt;*
+  &nbsp;&nbsp;&nbsp;&nbsp;format: *[EnumImagePixelFormat](./enum/enumimagepixelformat.md)*<br>
+  ): *Promise&lt;[TextResult](./interface/textresult.md)[]&gt;*
 
 > Decode barcodes from raw image data.
 
@@ -314,7 +319,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 ### getRuntimeSettings
 
-* getRuntimeSettings(): *Promise&lt;[RuntimeSettings](../interface/runtimesettings.md)&gt;*
+* getRuntimeSettings(): *Promise&lt;[RuntimeSettings](./interface/runtimesettings.md)&gt;*
 
 > Gets current runtime settings.
 > ```js
@@ -327,7 +332,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 ### updateRuntimeSettings
 
-* updateRuntimeSettings(settings: *[RuntimeSettings](../interface/runtimesettings.md) | string*): *Promise&lt;void&gt;*
+* updateRuntimeSettings(settings: *[RuntimeSettings](./interface/runtimesettings.md) | string*): *Promise&lt;void&gt;*
 
 > Update runtime settings with a given struct, or a string of `speed`, `balance` or `coverage` to use preset settings for BarcodeReader.
 > The default settings for BarcodeReader is `coverage`.
