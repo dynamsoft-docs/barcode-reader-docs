@@ -12,6 +12,7 @@ needAutoGenerateSidebar: true
 
 In v8.2.5, we introduced the API `organizationID` as the recommended way to fetch a trackable license. However, all old ways of licensing the library are still supported.
 
+---
 ## From v8.x to v8.1.2
 
 ### `TextResult` exception
@@ -107,7 +108,6 @@ Before v8.0, the default setting was `speed`.
 * `accompanyingTextBytes` is removed, if you wish to use the feature or something similar, please [contact us](https://www.dynamsoft.com/Company/Contact.aspx).
 
 ---
-
 ## Upgrade to v7.x
 
 ### From version 7.2.2-v2 and above
