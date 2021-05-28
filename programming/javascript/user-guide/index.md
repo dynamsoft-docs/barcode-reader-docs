@@ -17,26 +17,38 @@ In this guide, you will learn step by step on how to integrate this library into
 
 Table of Contents:
 
-* [Getting Started](#getting-started---hello-world)
-* [Basic Usage](#basic-usage)
-* [Request A Trial](#request-a-trial)
+* [Hello World - Simplest Implementation](#hello-world---simplest-implementation)
+* [Building your own page](#building-your-own-page)
+* [Requesting A Trial](#requesting-a-trial)
 * [System Requirements](#system-requirements)
-* [Host the Library](#host-the-library)
-* [Advanced Usage]({{ site.js }}user-guide/advanced-customizations.html)
-* [Upgrade]({{ site.js }}user-guide/upgrade.html)
+* [Hosting the Library](#hosting-the-library)
+* [Advanced Usage](#advanced-usage)
+* [How to Upgrade](#how-to-upgrade)
+* [FAQ](#faq)
 
-## Getting Started - Hello World  
+Example Code:
 
-Let's start by using the library to build a simple web page that decodes barcodes from a live video stream.  
+* [Use the library in Angular](https://github.com/Dynamsoft/dbr-browser-samples/tree/master/1.hello-world/3.read-video-angular)
+* [Use the library in React](https://github.com/Dynamsoft/dbr-browser-samples/tree/master/1.hello-world/4.read-video-react)
+* [Use the library in Vue](https://github.com/Dynamsoft/dbr-browser-samples/tree/master/1.hello-world/5.read-video-vue)
+
+You can also:
+
+* [Try All Online Examples](https://dynamsoft.github.io/dbr-browser-samples/index.html)
+* [Try the Official Demo](https://demo.dynamsoft.com/barcode-reader-js/)
+
+## Hello World - Simplest Implementation
+
+Let's start by testing the "Hello World" example of the library which demonstrates how to use the minimum code to enable a web page to read barcodes from a live video stream.  
 
 * Basic Requirements
   + Internet connection  
   + [A supported browser](#system-requirements)
   + Camera access  
 
-### Step One: Write the code in one minute  
+### Step One: Check the code of the example
 
-Create a text file anywhere on your local disk and name it "helloworld.html". Copy the following content in the file and save. 
+The complete code for the "Hello World" example is shown below
 
 ``` html
 <!DOCTYPE html>
@@ -63,7 +75,7 @@ Create a text file anywhere on your local disk and name it "helloworld.html". Co
 </html>
 ```
 
-[Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/pL4e7yrd/)
+> You can also find the code (with more comments) [on GitHub](https://github.com/Dynamsoft/dbr-browser-samples/blob/master/1.hello-world/1.minimum-code.html).
 
 *About the code*
 
@@ -75,58 +87,31 @@ Create a text file anywhere on your local disk and name it "helloworld.html". Co
 
   + `show()`: This method brings up the built-in UI of the `BarcodeScanner` object.
 
-*Note*:
+### Step Two: Test the example
 
-  + The recommendation is to deploy this page to your web server and run it over **HTTPS**. If you don't have a ready-to-use web server but have a package manager like *npm* or *yarn*, you can set up a simple HTTP server in minutes. Check out [`http-server` on npm](https://www.npmjs.com/package/http-server) or [yarn](https://yarnpkg.com/package/http-server). However, for simple testing purposes, it's perfectly fine to just open the file directly from your local disk.
+You can choose one of three ways to test the example:
+
+* [Hello World example via GitHub Pages](https://dynamsoft.github.io/dbr-browser-samples/1.hello-world/1.minimum-code.html) 
+* [Hello World example via JSFiddle](https://jsfiddle.net/DynamsoftTeam/pL4e7yrd/)
+* [Download a copy](https://tst.dynamsoft.com/public/download/dbr/browser/code/helloworld.zip) of the example code and set it up locally
+
+Either way, you open the example page in a browser, allow the page to access your camera and the video will show up on the page. After that, you can point the camera at something with a barcode to read it.
+
+If the barcode is decoded, an alert will pop up with the result text. At the same time, the barcode location will be highlighted in the video feed. 
+
+  > For first use, you may need to wait a few seconds for the library to initialize.
+
+*Note*:
 
   + The library only scans a new frame when it has finished scanning the previous frame. The interval between two consecutive frames might not be enough time for the library to process the 1st frame (for 30 FPS, the interval is about 33 ms), therefore, not all frames are scanned.
 
-  + The library requires a license to work. However, when no license is specified in the code, Dynamsoft allows a 7-day free trial period during which you can make initial evaluation of the library to decide whether or not you want to evaluate it further. If you do, you can [request a trial](#request-a-trial).
+  + The library requires a license to work. However, when no license is specified in the code, Dynamsoft allows a 7-day free trial period during which you can make initial evaluation of the library to decide whether or not you want to evaluate it further. If you do, you can [request a trial](#requesting-a-trial).
 
     > Network connection is required for the 7-day trial license to work.
 
-### Step Two: Enable camera access
+If the test doesn't go as expected, you can check out the [FAQ](#faq).
 
-Open the HTML page in your browser and you should see a pop-up asking for permission to access the camera. Once the access is granted, the video stream will start playing on the page.  
-
-  > If you don't see the pop-up, wait a few seconds for the initialization to finish.   
-
-In this step, you might run into the following issues:
-
-#### 1.2.1 getUserMedia non-HTTPS access issue
-
-If you opened the HTML file as `file:///` or `http://` , the following error may appear in the browser console:
-
-> [Deprecation] getUserMedia() no longer works on insecure origins. To use this feature, you should consider switching your application to a secure origin, such as HTTPS. See https://goo.gl/rStTGz for more details.
-
-* In Safari 12 the equivalent error is:
-
-> Trying to call getUserMedia from an insecure document.
-
-You get this error because the API [getUserMedia](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia) requires HTTPS to access the camera.
-
-* If you use Chrome or Firefox, you might not get the error because these two browsers allow camera access via file:/// and http://localhost.
-
-To make sure your web application can access the camera, please configure your web server to support HTTPS. The following links may help.
-
-  - NGINX: [Configuring HTTPS servers](https://nginx.org/en/docs/http/configuring_https_servers.html)
-  - IIS: [Create a Self Signed Certificate in IIS](https://aboutssl.org/how-to-create-a-self-signed-certificate-in-iis/)
-  - Tomcat: [Setting Up SSL on Tomcat in 5 minutes](https://dzone.com/articles/setting-ssl-tomcat-5-minutes)
-  - Node.js: [npm tls](https://nodejs.org/docs/v0.4.1/api/tls.html)
-
-#### 1.2.2 Self-signed certificate issue
-
-For testing purposes, a self-signed certificate can be used when configuring HTTPS. When accessing the site, the browser might say "the site is not secure". In this case, go to the certificate settings and trust this certificate.
-
-In a production environment, a valid HTTPS certificate is required.
-
-### Step Three: Time to scan
-
-Point the camera at something with a barcode to scan it.
-
-An alert will pop up with the decoded barcode result. At the same time, the barcode location will be highlighted in the video feed. 
-
-## Basic Usage
+## Building your own page
 
 ### Include the library
 
@@ -144,9 +129,7 @@ The simplest way to include the library is to use either the [jsDelivr](https://
   <script src="https://unpkg.com/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js"></script>
   ```
 
-Besides using the CDN, you can also download the library and host its files on your own website / server before including it in your application.
-
-  > It is highly recommended to host the library yourself.
+However, instead of using the CDN, it is recommended that you download the library and host its files on your own website / server before including it in your application.
 
 The following shows a few ways to download the library.
 
@@ -178,7 +161,7 @@ or
 <script src="/node_modules/dynamsoft-javascript-barcode/dist/dbr.js"></script>
 ```
 
-Read more on [how to host the library](#host-the-library).
+Read more on [how to host the library](#hosting-the-library).
 
 ### Configure the library
 
@@ -189,7 +172,7 @@ Before using the library, you need to configure a few things.
   The library requires a license to work, use the APIs `organizationID` and `handshakeCode` to specify how to acquire the license.
 
   ``` javascript
-  Dynamsoft.DBR.BarcodeScanner.organizationID = "YOUR-ORGANIZATION-ID";
+  Dynamsoft.DBR.BarcodeScanner.organizationID = "YOUR-ORGANIZATION-ID"; // Required.
   Dynamsoft.DBR.BarcodeScanner.handshakeCode = "A-SPECIFIC-HANDSHAKECODE"; // Optional, if not specified, the default handshake code is used.
   Dynamsoft.DBR.BarcodeScanner.sessionPassword = "PASSWORD-TO-PROTECT-YOUR-LICENSE"; // Optional but recomended, use it to protect your license.
   Dynamsoft.DBR.BarcodeScanner.licenseServer = ["YOUR-OWN-MAIN-LTS", "YOUR-OWN-STANDBY-LTS"]; //Optional, ignore this line if you are using Dynamsoft-hosting LTS.
@@ -228,7 +211,7 @@ Before using the library, you need to configure a few things.
 
   | Features | Compact edition | Full edition |
   |:-:|:-:|:-:|
-  | *.wasm* size<sup>*</sup>\(gzip\) | 897 KB | 1.2 MB |
+  | *.wasm* size<sup>1</sup>\(gzip\) | 897 KB | 1.2 MB |
   | 1D | &#10003; | &#10003; |
   | QR | &#10003; | &#10003; |
   | Micro QR | - | &#10003; |
@@ -249,7 +232,7 @@ Before using the library, you need to configure a few things.
   | initRuntimeSettingsWithString | - | &#10003; |
   | outputSettingsToString | - | &#10003; |
 
-  <sup>*</sup> The *.wasm* file size is of version 8.2.5. In other versions, the size may differ.
+  <sup>*</sup> The file size is of version 8.2.5. In other versions, the size may differ.
 
 ### Interact with the library
 
@@ -273,7 +256,7 @@ try {
 
 * The creation of an object consists of two parallel tasks: one is to download and compile the "engine", the other is to fetch a license from the License Tracking Server. 
 
-#### Configure the `BarcodeScanner` object
+#### 2.3.2 Configure the `BarcodeScanner` object
 
 Let's take a look at the following code snippet first:
 
@@ -329,7 +312,7 @@ As you can see in the code, there are three types of configurations:
 
 * `get/updateScanSettings`: Configures the behavior of the scanner which includes `duplicateForgetTime`,  `intervalTime` and `filter`, etc.
 
-#### Customize the UI
+#### 2.3.3 Customize the UI
 
 The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.scanner.html` . There are a few ways to customize it:
 
@@ -415,19 +398,15 @@ Next, you can add the camera list and resolution list inside the UI element. If 
 
 * Generally, you need to provide a resolution that the camera supports. However, in case a camera does not support the specified resolution, it usually uses the nearest supported resolution. As a result, the selected resolution may not be the actual resolution used. In this case, add an option with the class name `dbrScanner-opt-gotResolution` (as shown above) and the library will then use it to show the actual resolution.
 
-## Request A Trial
+## Requesting A Trial
 
 From version 8.2.5 of the library, if no license is specified, a 7-day trial license will be used by default. 
 
 > NOTE: This trial license requires a network connection to work.
 
-After that, if you want to evaluate the library further, you can request a 30-day trial license in one of the following ways
+After that, if you want to evaluate the library further, you can [register for a Dynamsoft account](https://www.dynamsoft.com/api-common/Regist/Regist) (if you haven't already done so) and request a 30-day trial in the [customer portal](https://www.dynamsoft.com/CustomerPortal/Portal/TrialLicense.aspx).
 
-* [Email trial@dynamsoft.com](mailto:trial@dynamsoft.com?subject=privateTrial) and make sure to put "privateTrial" in the subject. This email will then be automatically processed by our system and the 30-day trial license will be sent to you immediately.
-
-* [Register for a Dynamsoft account](https://www.dynamsoft.com/api-common/Regist/Regist) manually (if you haven't already done so) and request the trial in the [customer portal](https://www.dynamsoft.com/CustomerPortal/Portal/TrialLicense.aspx). Note that you must choose the correct product | edition | version combination in order to get the correct trial license.
-
-* If you like, you can also [contact our support team](https://www.dynamsoft.com/company/contact/) to get a trial license.
+* If you like, you can also [contact our support team](https://www.dynamsoft.com/company/contact/) to get a trial extension.
 
 ## System Requirements
 
@@ -458,7 +437,7 @@ Safari<sup>3</sup> | v11+
 
 * Apart from the browsers, the operating systems may impose some limitations of their own that could restrict the use of the library. Browser compatibility ultimately depends on whether the browser on that particular operating system supports the features listed above.
 
-## Host the library
+## Hosting the library
 
 ### Step One: Deploy the dist folder
 
@@ -489,3 +468,38 @@ Once you have downloaded the library, you can locate the "dist" directory and co
   To use the library, you must access your website / web application via a secure HTTPS connection. This is due to browser security restrictions which only grant camera video streaming access to a [secure context](https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts).
 
   > For convenience, self-signed certificates are allowed during development and testing.
+
+## Advanced Usage
+
+In addition to the content mentioned above, the library has many other settings and options that you can adjust to best suit your usage. To read more, please see [advanced usage](https://www.dynamsoft.com/barcode-reader/programming/javascript/user-guide/advanced-usage.html?ver=latest).
+
+## How to Upgrade
+
+If you are using an older version of the library and want to upgrade it to the latest version, please read more on [how to upgrade](https://www.dynamsoft.com/barcode-reader/programming/javascript/user-guide/upgrade.html?ver=latest).
+
+## FAQ
+
+### Can I open the web page directly from the hard drive?
+
+Yes, for simple testing purposes, it's perfectly fine to open the file directly from the hard drive. However, you might encounter some issues in doing so (like unable to access the camera, etc.). The recommendation is to deploy this page to your web server and run it over **HTTPS**. If you don't have a ready-to-use web server but have a package manager like *npm* or *yarn*, you can set up a simple HTTP server in minutes. Check out [`http-server` on npm](https://www.npmjs.com/package/http-server) or [yarn](https://yarnpkg.com/package/http-server). 
+
+### Why can't I use my camera?
+
+If you open the web page as `file:///` or `http://`, the camera may not work and you see the following error in the browser console:
+
+> [Deprecation] getUserMedia() no longer works on insecure origins. To use this feature, you should consider switching your application to a secure origin, such as HTTPS. See https://goo.gl/rStTGz for more details.
+
+* In Safari 12 the equivalent error is:
+
+> Trying to call getUserMedia from an insecure document.
+
+You get this error because the API [getUserMedia](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia) requires HTTPS to access the camera.
+
+* If you use Chrome or Firefox, you might not get the error because these two browsers allow camera access via file:/// and http://localhost.
+
+To make sure your web application can access the camera, please configure your web server to support HTTPS. The following links may help.
+
+  - NGINX: [Configuring HTTPS servers](https://nginx.org/en/docs/http/configuring_https_servers.html)
+  - IIS: [Create a Self Signed Certificate in IIS](https://aboutssl.org/how-to-create-a-self-signed-certificate-in-iis/)
+  - Tomcat: [Setting Up SSL on Tomcat in 5 minutes](https://dzone.com/articles/setting-ssl-tomcat-5-minutes)
+  - Node.js: [npm tls](https://nodejs.org/docs/v0.4.1/api/tls.html)
