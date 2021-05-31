@@ -18,7 +18,7 @@ In this guide, we help you step through the process of integrating the Dynamsoft
 - [Basic Requirements](#basic-requirements)
 - [Getting Started](#getting-started---hello-world)
     - [Import the Library](#import-the-library)
-    - [Testing Hello World](#testing-hello-world)
+    - [Test It Out](#test-it-out)
     - [Barcode Reader vs Barcode Scanner](#barcode-reader-vs-barcode-scanner)
 - [Configuration and Customization](#configuration-and-customization)
     - [Capture Settings](#capture-settings)
@@ -45,7 +45,7 @@ In this guide, we help you step through the process of integrating the Dynamsoft
 
 ## Getting Started - Hello World
 
-Let's start by demonstrating the minimum JavaScript code needed to get the library up and running in a simple `HTML` page.
+Let's start by creating a simple web page that imports the library and uses the default UI.
 
 ### Import the Library
 
@@ -113,8 +113,9 @@ Starting from **v8.2.5** of the JavaScript edition, the `organizationID` can be 
     ```javascript
     Dynamsoft.DBR.BarcodeReader.organizationID = "123456"; // replace the number 123456 with YOUR-ORGANIZATION-ID
     ```
+> Note: Should the organization ID not be specified in the code, a 7-day public trial license will be used by default.
 
-In versions earlier than v8.2.5, the trial and full licenses are both specified by the [`productKeys`](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeReader/properties.html#productkeys) property.
+> Note: In versions earlier than v8.2.5, the trial and full licenses are both specified by the [`productKeys`](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeReader/properties.html#productkeys) property.
 
 ### The Code
 
@@ -151,7 +152,7 @@ Please find the `Hello World` code below:
 
 `show`: Displays the UI of the `BarcodeScanner` object and starts the scanning process.
 
-### Testing Hello World
+### Test It Out
 
 Open the HTML page in your browser and you should see a pop-up asking for permission to access the camera. Once camera access is granted, the video stream will start in the default UI of the **BarcodeScanner** object.
 
@@ -159,7 +160,7 @@ Open the HTML page in your browser and you should see a pop-up asking for permis
 
 Place a barcode in front of the camera once it opens up. Once the barcode is detected, you will see an alert with the text result. In addition, the located barcode will be highlighted via the default UI of the scanner.
 
-Please be wary of the following two issues that you might encounter when opening the Hello World sample you just created, either locally or via a server.
+Please be aware of the [potential issues](#known-issues) you might encounter when you open the web page you just created for the first time.
 
 ### Barcode Reader vs Barcode Scanner
 
