@@ -9,11 +9,18 @@ needAutoGenerateSidebar: true
 
 # Dynamsoft Barcode Reader for Your Website
 
+![version](https://img.shields.io/npm/v/dynamsoft-javascript-barcode.svg)
+![downloads](https://img.shields.io/npm/dm/dynamsoft-javascript-barcode.svg) 
+![jsdelivr](https://img.shields.io/jsdelivr/npm/hm/dynamsoft-javascript-barcode.svg)
+![](https://img.shields.io/snyk/vulnerabilities/npm/dynamsoft-javascript-barcode.svg)
+
 Turn your web page into a barcode scanner with just a few lines of code.
 
 Once integrated, your users can open your website in a browser, access their cameras and read barcodes directly from the video input.
 
 In this guide, you will learn step by step on how to integrate this library into your website.
+
+> Also see [Dynamsoft Barcode Reader for Node](https://github.com/Dynamsoft/javascript-barcode/blob/master/README.NODE.md).
 
 Table of Contents:
 
