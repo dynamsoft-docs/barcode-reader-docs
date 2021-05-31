@@ -106,9 +106,17 @@ Now that the `dist` folder is in the application directory on the server, it's t
 
 The library requires a license to work, so one of the first things that must be done when the page loads is to assign the license. The license is specified mainly using the properties [`organizationID`](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeReader/properties.html#organizationid) and [`handshakeCode`](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeReader/properties.html#handshakeCode).
 
-Starting from v8.2.5 of the JavaScript edition, you can 
+Starting from **v8.2.5** of the JavaScript edition, the `organizationID` can be used to specify the **trial license**. As a developer, this is what you need to do to obtain and use a trial license:
+1. Log into the [customer portal trial license page](https://www.dynamsoft.com/customer/license/trialLicense). Please note your organization ID, printed at the top of the page.
+2. Request a new trial license for the Dynamsoft Barcode Reader (v8.x - JavaScript edition). Afterwards you will find a new license under 'Requested Licenses'.
+3. Now that a new trial license has been attached to your organization ID, all you need to do is simply specify the organization ID before creating the `BarcodeReader` or a `BarcodeScanner` instance as such:
+    ```javascript
+    Dynamsoft.DBR.BarcodeReader.organizationID = "123456"; // replace the number 123456 with YOUR-ORGANIZATION-ID
+    ```
 
-If you don't have a ready-to-use web server but have a package manager like npm or yarn, you can set up a simple HTTP server in minutes. Check out `http-server` on npm or yarn.
+In versions earlier than v8.2.5, the trial and full licenses are both specified by the [`productKeys`](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeReader/properties.html#productkeys) property.
+
+### The Code
 
 Please find the `Hello World` code below:
 
