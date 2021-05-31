@@ -51,7 +51,7 @@ Let's start by testing the "Hello World" example of the library which demonstrat
 
 ### Step One: Check the code of the example
 
-The complete code for the "Hello World" example is shown below
+The complete code of the "Hello World" example is shown below
 
 ``` html
 <!DOCTYPE html>
@@ -110,15 +110,17 @@ If the barcode is decoded, an alert will pop up with the result text. At the sam
 
   + The library requires a license to work. However, when no license is specified in the code, Dynamsoft allows a 7-day free trial period during which you can make initial evaluation of the library to decide whether or not you want to evaluate it further. If you do, you can [request a trial](#requesting-a-trial).
 
-    > Network connection is required for the 7-day trial license to work.
+    > Network connection is required for the 7-day trial to work.
 
-If the test doesn't go as expected, you can check out the [FAQ](#faq).
+If the test doesn't go as expected, you can check out the [FAQ](#faq) or [contact us](https://www.dynamsoft.com/company/contact/).
 
 ## Building your own page
 
 ### Include the library
 
-The simplest way to include the library is to use either the [jsDelivr](https://jsdelivr.com/) or [UNPKG](https://unpkg.com/) CDN. The "hello world" sample above uses **jsDelivr**.
+#### 2.1.1 Use a CDN
+
+The simplest way to include the library is to use either the [jsDelivr](https://jsdelivr.com/) or [UNPKG](https://unpkg.com/) CDN. The "hello world" example above uses **jsDelivr**.
 
 * jsDelivr
 
@@ -132,7 +134,9 @@ The simplest way to include the library is to use either the [jsDelivr](https://
   <script src="https://unpkg.com/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js"></script>
   ```
 
-However, instead of using the CDN, it is recommended that you download the library and host its files on your own website / server before including it in your application.
+#### 2.1.2 Host the library yourself (recommended)
+
+Besides using the CDN, you can also download the library and host its files on your own website / server before including it in your application.
 
 The following shows a few ways to download the library.
 
@@ -184,16 +188,16 @@ Before using the library, you need to configure a few things.
   *Note*:
 
   + Network connection is required for the license to work.
-  + If nothing is specified, a 7-day (public) trial license will be used by default which is the case in the above "hello world" sample.
+  + If nothing is specified, a 7-day (public) trial will be used by default which is the case in the above "hello world" example.
   + The license is actually fetched during the creation of an `BarcodeScanner` or `BarcodeReader` object.
   + If a public network connection is not available, you can choose to host a license server in your private network or even get an offline license that does not require any network connection. [Contact us](https://www.dynamsoft.com/company/contact/) for more information.
 
 #### 2.2.2 Specify the location of the "engine" files
 
-  The "engine" files refer to *.worker.js, *.wasm.js and *.wasm, etc. which are loaded by the main library at runtime. This configuration option uses the API `engineResourcePath` and is often not required as these files usually are in the same location with the main library (dbr.js). However, in cases where the main library is compiled into another file (like how frameworks like Angular or React works), this configuration will be required.
+  The "engine" files refer to *.worker.js, *.wasm.js and *.wasm, etc. which are loaded by the main library at runtime. This configuration option uses the API `engineResourcePath` and is often not required as these files usually are in the same location with the main library file (dbr.js). However, in cases where the engine files are not in the same location as the main library file (for example, with frameworks like Angular or React, dbr.js is compiled into another file), this configuration will be required.
 
   The following code uses the jsDelivr CDN, feel free to change it to your own location of these files.
-
+  
   ``` javascript
   import DBR from "dynamsoft-javascript-barcode";
   DBR.BarcodeScanner.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.3/dist/";
@@ -214,7 +218,7 @@ Before using the library, you need to configure a few things.
 
   | Features | Compact edition | Full edition |
   |:-:|:-:|:-:|
-  | *.wasm* size<sup>1</sup>\(gzip\) | 897 KB | 1.2 MB |
+  | *.wasm* size<sup>*</sup>\(gzip\) | 897 KB | 1.2 MB |
   | 1D | &#10003; | &#10003; |
   | QR | &#10003; | &#10003; |
   | Micro QR | - | &#10003; |
@@ -235,7 +239,7 @@ Before using the library, you need to configure a few things.
   | initRuntimeSettingsWithString | - | &#10003; |
   | outputSettingsToString | - | &#10003; |
 
-  <sup>*</sup> The file size is of version 8.2.5. In other versions, the size may differ.
+  <sup>*</sup> The file size is version 8.2.5. In other versions, the size may be different.
 
 ### Interact with the library
 
@@ -245,8 +249,6 @@ You can use one of two classes ( `BarcodeScanner` and `BarcodeReader` ) to inter
 
 To use the library, we first create a `BarcodeScanner` object.
 
-`Dynamsoft.DBR.BarcodeScanner.loadWasm()` is the API to start the initialization.
-
 ``` javascript
 try {
     await Dynamsoft.DBR.BarcodeScanner.createInstance();
@@ -255,13 +257,13 @@ try {
 }
 ```
 
-*Note*
+*Note*:
 
-* The creation of an object consists of two parallel tasks: one is to download and compile the "engine", the other is to fetch a license from the License Tracking Server. 
+* The creation of an object consists of two parallel tasks: one is to download and compile the "engine", the other is to fetch a license from the License Tracking Server (assuming an online license is used).
 
 #### 2.3.2 Configure the `BarcodeScanner` object
 
-Let's take a look at the following code snippet first:
+Let's take a look at the following code snippets first:
 
 ``` javascript
 // set which camera and what resolution to use
@@ -272,15 +274,9 @@ await scanner.updateVideoSettings({
         facingMode: "environment"
     }
 });
+```
 
-// use one of the built-in RuntimeSetting templates: "single" (decode a single barcode, default mode), "speed", "balance", "coverage". "speed" is recommended for decoding from a video stream
-await scanner.updateRuntimeSettings("speed");
-
-// make changes to the template. The code below demonstrates how to specify which symbologies are enabled
-let runtimeSettings = await scanner.getRuntimeSettings();
-runtimeSettings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED | Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE;
-await scanner.updateRuntimeSettings(runtimeSettings);
-
+``` javascript
 // set up the scanner behavior
 let scanSettings = await scanner.getScanSettings();
 // disregard duplicated results found in a specified time period
@@ -290,13 +286,25 @@ scanSettings.intervalTime = 300;
 await scanner.updateScanSettings(scanSettings);
 ```
 
+``` javascript
+// use one of the built-in RuntimeSetting templates: "single" (decode a single barcode, default mode), "speed", "balance", "coverage". "speed" is recommended for decoding from a video stream
+await scanner.updateRuntimeSettings("speed");
+
+// make changes to the template. The code below demonstrates how to specify which symbologies are enabled
+let runtimeSettings = await scanner.getRuntimeSettings();
+runtimeSettings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED | Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE;
+await scanner.updateRuntimeSettings(runtimeSettings);
+```
+
 [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/yfkcajxz/)
 
-As you can see in the code, there are three types of configurations:
+As you can see from the above code snippets, there are three types of configurations:
 
 * `get/updateVideoSettings`: Configures the data source, i.e., the camera. These settings include which camera to use, the resolution, etc. Learn more [here](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia#Syntax).
 
-* `get/updateRuntimeSettings`: Configures the decode engine. Find a full list of these settings and their corresponding descriptions [here](../api-reference/global-interfaces.md#runtimesettings). For example, the following uses the built-in "speed" settings with updated `localizationModes`.
+* `get/updateScanSettings`: Configures the behavior of the scanner which includes `duplicateForgetTime`,  `intervalTime` and `filter`, etc.
+
+* `get/updateRuntimeSettings`: Configures the decode engine. Find a full list of these settings and their corresponding descriptions [here](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/global-interfaces.html#runtimesettings). For example, the following uses the built-in "speed" settings with updated `localizationModes`.
 
   ``` javascript
   await barcodeScanner.updateRuntimeSettings("speed");
@@ -313,7 +321,7 @@ As you can see in the code, there are three types of configurations:
 
   Try in [JSFiddle](https://jsfiddle.net/DynamsoftTeam/f24h8c1m/).
 
-* `get/updateScanSettings`: Configures the behavior of the scanner which includes `duplicateForgetTime`,  `intervalTime` and `filter`, etc.
+  See also [settings samples on GitHub](https://dynamsoft.github.io/dbr-browser-samples/3.settings/index.html).
 
 #### 2.3.3 Customize the UI
 
@@ -329,9 +337,7 @@ The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.
   Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = "THE-URL-TO-THE-FILE";
   ```
   
-  *Note*
-  
-  + You must set `defaultUIElementURL` before you call `createInstance()` .
+  > You must set `defaultUIElementURL` before you call `createInstance()` .
 
 * Append the default UI element to your page, customize it before showing it.
 
@@ -346,66 +352,68 @@ The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.
 
 * Build the UI element into your own web page and specify it with the API `setUIElement(HTMLElement)`.
 
-  ``` html
-  <div id="div-video-container">
-      <video class="dbrScanner-video" playsinline="true" style="width:100%;height:100%;position:absolute;left:0;top:0;"></video>
-  </div>
-  <script>
-      let scanner = null;
-      (async()=>{
-          scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-          await scanner.setUIElement(document.getElementById('div-video-container'));
-          scanner.onFrameRead = results => {console.log(results);};
-          scanner.onUnduplicatedRead = (txt, result) => {alert(txt);};
-          await scanner.show();
-      })();
-  </script>
-  ```
+  - Embed the video
 
-  [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/2jzeq1r6/)
+    ``` html
+    <div id="div-video-container">
+        <video class="dbrScanner-video" playsinline="true" style="width:100%;height:100%;position:absolute;left:0;top:0;"></video>
+    </div>
+    <script>
+        let scanner = null;
+        (async()=>{
+            scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+            await scanner.setUIElement(document.getElementById('div-video-container'));
+            scanner.onFrameRead = results => {console.log(results);};
+            scanner.onUnduplicatedRead = (txt, result) => {alert(txt);};
+            await scanner.show();
+        })();
+    </script>
+    ```
 
-  *NOTE*
+    > The video element must have the class `dbrScanner-video` .
 
-  + The video element must have the class `dbrScanner-video` .
+    [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/2jzeq1r6/)
 
-Next, you can add the camera list and resolution list inside the UI element. If the class names match the default ones, `dbrScanner-sel-camera` and `dbrScanner-sel-resolution` , the library will automatically populate the lists and handle the camera/resolution switching.
+  - Add the camera list and resolution list
+  
+    If the class names for these lists match the default ones, `dbrScanner-sel-camera` and `dbrScanner-sel-resolution` , the library will automatically populate the lists and handle the camera/resolution switching.
 
-``` html
-<select class="dbrScanner-sel-camera"></select>
-```
+    ``` html
+    <select class="dbrScanner-sel-camera"></select>
+    ```
 
-[Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/nbj75vxu/)
+    [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/nbj75vxu/)
 
-``` html
-<select class="dbrScanner-sel-resolution"></select>
-```
+    ``` html
+    <select class="dbrScanner-sel-resolution"></select>
+    ```
 
-[Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/25v08paf/)
+    [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/25v08paf/)
 
-*Note*
+    > By default, 8 hard-coded resolutions are populated as options. You can show only a custom set of options by hardcoding them.
 
-* By default, 8 hard-coded resolutions are populated as options. You can show only a custom set of options by hardcoding them.
+    ``` html
+    <select class="dbrScanner-sel-resolution">
+        <option class="dbrScanner-opt-gotResolution" value="got"></option>
+        <option data-width="1920" data-height="1080">1920 x 1080</option>
+        <option data-width="1280" data-height="720">1280 x 720</option>
+        <option data-width="640" data-height="480">640 x 480</option>
+    </select>
+    ```
 
-``` html
-<select class="dbrScanner-sel-resolution">
-    <option class="dbrScanner-opt-gotResolution" value="got"></option>
-    <option data-width="1920" data-height="1080">1920 x 1080</option>
-    <option data-width="1280" data-height="720">1280 x 720</option>
-    <option data-width="640" data-height="480">640 x 480</option>
-</select>
-```
+    [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/tnfjks4q/)
 
-[Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/tnfjks4q/)
+    > Generally, you need to provide a resolution that the camera supports. However, in case a camera does not support the specified resolution, it usually uses the nearest supported resolution. As a result, the selected resolution may not be the actual resolution used. In this case, add an option with the class name `dbrScanner-opt-gotResolution` (as shown above) and the library will then use it to show the actual resolution.
 
-*NOTE*
+See also [UI customization samples on GitHub](https://dynamsoft.github.io/dbr-browser-samples/2.ui-tweaking/index.html).
 
-* Generally, you need to provide a resolution that the camera supports. However, in case a camera does not support the specified resolution, it usually uses the nearest supported resolution. As a result, the selected resolution may not be the actual resolution used. In this case, add an option with the class name `dbrScanner-opt-gotResolution` (as shown above) and the library will then use it to show the actual resolution.
+Interested to test it further? Read on to learn how to request a 30-day free trial.
 
 ## Requesting A Trial
 
-From version 8.2.5 of the library, if no license is specified, a 7-day trial license will be used by default. 
+From version 8.2.5 of the library, if no license is specified, a 7-day trial will be used by default. 
 
-> NOTE: This trial license requires a network connection to work.
+> Network connection is required for the 7-day trial to work.
 
 After that, if you want to evaluate the library further, you can [register for a Dynamsoft account](https://www.dynamsoft.com/api-common/Regist/Regist) (if you haven't already done so) and request a 30-day trial in the [customer portal](https://www.dynamsoft.com/CustomerPortal/Portal/TrialLicense.aspx).
 
@@ -413,7 +421,7 @@ After that, if you want to evaluate the library further, you can [register for a
 
 ## System Requirements
 
-This library requires some advanced features supported by all modern mainstream browsers:
+This library requires the following features which are supported by all modern mainstream browsers:
 
 * `WebAssembly`, `Blob`, `URL`/`createObjectURL`, `Web Workers`  
     
@@ -421,9 +429,9 @@ This library requires some advanced features supported by all modern mainstream 
 
 * `MediaDevices`/`getUserMedia` 
     
-  This is only required for in-browser video streaming. If a browser does not support this API, "Single Frame Mode" will be used automatically. If the API exists but doesn't work correctly, "Single Frame Mode" can be used as an alternative.  
+  This API is only required for in-browser video streaming. If a browser does not support this API, the [Single Frame Mode](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeScanner/properties.html?ver=latest#singleframemode) will be used automatically. If the API exists but doesn't work correctly,  the Single Frame Mode can be used as an alternative way to access the camera.
 
-The following table is a list of supported browsers:
+The following table is a list of supported browsers based on the above requirements:
 
 Browser Name | Version
 :-: | :-:
@@ -433,12 +441,12 @@ Edge<sup>2</sup> | v16+
 Safari<sup>3</sup> | v11+
 
 <sup>1</sup> iOS 14.3+ is required for camera video streaming in Chrome and Firefox or Apps using webviews.
-<sup>2</sup> On Edge, due to strict Same-origin policy, you must host the library files on the same domain as your web page.  
+
+<sup>2</sup> On Edge, due to strict Same-origin policy, you must host the library files on the same domain as your web page. 
+
 <sup>3</sup> Safari 11.2.2 ~ 11.2.6 are not supported.
      
-*Note*
-
-* Apart from the browsers, the operating systems may impose some limitations of their own that could restrict the use of the library. Browser compatibility ultimately depends on whether the browser on that particular operating system supports the features listed above.
+Apart from the browsers, the operating systems may impose some limitations of their own that could restrict the use of the library. Browser compatibility ultimately depends on whether the browser on that particular operating system supports the features listed above.
 
 ## Hosting the library
 
@@ -446,7 +454,7 @@ Safari<sup>3</sup> | v11+
 
 Once you have downloaded the library, you can locate the "dist" directory and copy it to your server (usually as part of your website / web application). The following shows some of the files in this directory:
 
-* `dbr.js` // For referencing the library with a `<script>` tag
+* `dbr.js` // The main library file
 * `dbr.browser.mjs` // For using the library as a module (`<script type="module">`)
 * `dbr.scanner.html` // Defines the default scanner UI
 * `dbr-<version>.worker.js` // Defines the worker thread for barcode reading
