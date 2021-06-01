@@ -244,7 +244,6 @@ Describes Dynamsoft products.
 | PROD_DLR | EnumProductDLR | 0x0002 | Dynamsoft Label Recognition |
 | PROD_DWT | EnumProductDWT | 0x0004 | Dynamic Web Twain |
 | PROD_DCE | EnumProductDCE | 0x0008 | Dynamsoft Camera Enhancer |
-| PROD_DCS | EnumProductDCS | 0x0010 | Not supported yet |
-| PROD_DPS | EnumProductDPS | 0x0020 | Dynamsoft Panorama |
+| PROD_DPS | EnumProductDPS | 0x0010 | Dynamsoft Panorama |
 | PROD_ALL | EnumProductALL | 0xFFFF | All Dynamsoft products |
 
