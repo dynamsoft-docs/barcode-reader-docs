@@ -28,7 +28,6 @@ Code snippet in C:
  void *hBarcode = NULL;
  hBarcode = DBR_CreateInstance();
  DBR_InitLicense(hBarcode, "t0068NQAAAI8+mMcYRNwmijAzExhq******");
- DBR_DestroyInstance(hBarcode);
 ```
 
 Code snippet in C++:
