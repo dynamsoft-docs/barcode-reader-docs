@@ -79,14 +79,14 @@ You can also choose to download the library and host the library yourself. To do
 ##### Step One: Deploy the dist folder
 Once you have downloaded the library, copy `dist` folder from the library directory into your server (usually as part of your website / web application). Here is a quick breakdown of the files inside the `dist` folder:
 
-- dbr.js // For referencing the library with a <script> tag
-- dbr.browser.mjs // For using the library as a module (<script type="module">)
-- dbr.scanner.html // Defines the default scanner UI
-- dbr-<version>.worker.js // Defines the worker thread for barcode reading
-- dbr-<version>.wasm.js // Compact edition of the library (.js)
-- dbr-<version>.wasm // Compact edition of the library (.wasm)
-- dbr-<version>.full.wasm.js // Full edition of the library (.js)
-- dbr-<version>.full.wasm // Full edition of the library (.wasm)
+- `dbr.js` // For referencing the library with a <script> tag
+- `dbr.browser.mjs` // For using the library as a module (<script type="module">)
+- `dbr.scanner.html` // Defines the default scanner UI
+- `dbr-<version>.worker.js` // Defines the worker thread for barcode reading
+- `dbr-<version>.wasm.js` // Compact edition of the library (.js)
+- `dbr-<version>.wasm` // Compact edition of the library (.wasm)
+- `dbr-<version>.full.wasm.js` // Full edition of the library (.js)
+- `dbr-<version>.full.wasm` // Full edition of the library (.wasm)
 
 ##### Step Two: Configure the Server
 Now that the `dist` folder is in the application directory on the server, it's time to configure the server to be able to host and serve the library. This involves two small steps:
@@ -106,6 +106,8 @@ Now that the `dist` folder is in the application directory on the server, it's t
 
 The library requires a license to work, so one of the first things that must be done when the page loads is to assign the license. The license is specified mainly using the properties [`organizationID`](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeReader/properties.html#organizationid) and [`handshakeCode`](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeReader/properties.html#handshakeCode).
 
+#### Trial License
+
 Starting from **v8.2.5** of the JavaScript edition, the `organizationID` can be used to specify the **trial license**. As a developer, this is what you need to do to obtain and use a trial license:
 1. Log into the [customer portal trial license page](https://www.dynamsoft.com/customer/license/trialLicense). Please note your organization ID, printed at the top of the page.
 2. Request a new trial license for the Dynamsoft Barcode Reader (v8.x - JavaScript edition). Afterwards you will find a new license under 'Requested Licenses'.
@@ -116,6 +118,10 @@ Starting from **v8.2.5** of the JavaScript edition, the `organizationID` can be 
 > Note: Should the organization ID not be specified in the code, a 7-day public trial license will be used by default.
 
 > Note: In versions earlier than v8.2.5, the trial and full licenses are both specified by the [`productKeys`](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeReader/properties.html#productkeys) property insted.
+
+#### Full License
+
+If you have acquired a full license, please refer to this [article](https://www.dynamsoft.com/barcode-reader/license-activation/set-full-license.html?ver=latest) on how to use it.
 
 ### The Code
 
