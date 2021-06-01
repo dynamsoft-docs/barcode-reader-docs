@@ -15,7 +15,7 @@ needAutoGenerateSidebar: true
 
 In this guide, we help you step through the process of integrating the Dynamsoft Barcode Reader into your web application. Please find the table of contents below:
 
-- [Basic Requirements](#basic-requirements)
+- [System Requirements](#system-requirements)
 - [Getting Started](#getting-started---hello-world)
     - [Import the Library](#import-the-library)
     - [Test It Out](#test-it-out)
@@ -26,13 +26,10 @@ In this guide, we help you step through the process of integrating the Dynamsoft
         - [Scan Settings](#scan-settings)
     - [Runtime Settings](#runtime-settings)
     - [Customizing the UI](#customizing-the-ui)
-- [Known Issues](#known-issues)
-- [Advanced Customizations]({{ site.js }}user-guide/advanced-customizations.html)
-- [Deployment Activation]({{ site.js }}user-guide/deployment-activation.html)
-- [Features Requirements]({{ site.js }}user-guide/features-requirements.html)
-- [Upgrade]({{ site.js }}user-guide/upgrade.html)
+- [Upgrading to the Latest Version](#upgrading-to-the-latest-version)
+- [FAQ](#faq)
 
-## Basic Requirements
+## System Requirements
 
 - Camera-equipped device
 - Internet connection
@@ -42,6 +39,9 @@ In this guide, we help you step through the process of integrating the Dynamsoft
     - Edge v16+
     - Safari v11+ (Safari 11.2.2 ~ 11.2.6 are not supported)
 
+The browsers listed above support the `WebAssembly`, `Blob`, `URL`/`createObjectURL`, and `Web Workers` features, which the library requires to work.
+
+`MediaDevices`/`getUserMedia` are required for in-browser video streaming. If a browser does not support this API (e.g. Chrome/Firefox in iOS 13.x or earlier), [`singleFrameMode`](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeScanner/properties.html?ver=latest#singleframemode) will be activated. `singleFrameMode` allows the user to capture singluar frames since the browser does not support a continuous video stream.
 
 ## Getting Started - Hello World
 
@@ -115,7 +115,7 @@ Starting from **v8.2.5** of the JavaScript edition, the `organizationID` can be 
     ```
 > Note: Should the organization ID not be specified in the code, a 7-day public trial license will be used by default.
 
-> Note: In versions earlier than v8.2.5, the trial and full licenses are both specified by the [`productKeys`](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeReader/properties.html#productkeys) property.
+> Note: In versions earlier than v8.2.5, the trial and full licenses are both specified by the [`productKeys`](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeReader/properties.html#productkeys) property insted.
 
 ### The Code
 
@@ -129,9 +129,9 @@ Please find the `Hello World` code below:
     <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js" ></script>
     <script>
         // initializes and uses the library
-
         let scanner = null;
         (async()=>{
+            Dynamsoft.DBR.BarcodeReader.organizationID = "123456"; // replace the number 123456 with YOUR-ORGANIZATION-ID
             scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
             scanner.onFrameRead = results => {console.log(results);};
             scanner.onUnduplicatedRead = (txt, result) => {alert(txt);};
@@ -160,7 +160,7 @@ Open the HTML page in your browser and you should see a pop-up asking for permis
 
 Place a barcode in front of the camera once it opens up. Once the barcode is detected, you will see an alert with the text result. In addition, the located barcode will be highlighted via the default UI of the scanner.
 
-Please be aware of the [potential issues](#known-issues) you might encounter when you open the web page you just created for the first time.
+Please be aware of the [potential issues](#faq) you might encounter when you open the web page you just created for the first time.
 
 ### Barcode Reader vs Barcode Scanner
 
@@ -173,8 +173,6 @@ DBR JavaScript comes with two main classes:
     ```
     scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
     ```
-
-
 
 ## Configuration and Customization 
 The SDK comes with a variety of settings to help optimize the performance of the `BarcodeReader` or the `BarcodeScanner`, depending on your use. The settings are divided into two main categories, Capture Settings and Runtime Settings, with the latter being its own class `RuntimeSettings`.  The capture settings will mainly deal with two classes, `VideoSettings` and `ScanSettings`. The following section will break down each of these settings and how to use them.
@@ -241,10 +239,11 @@ The SDK does, however, give you the ability to customize the UI to fit your appl
         <div id="div-video-container">
             <video class="dbrScanner-video" playsinline="true"></video>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
+        <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js"></script>
         <script>
             let scanner = null;
             (async()=>{
+                Dynamsoft.DBR.BarcodeReader.organizationID = "123456"; // replace the number 123456 with YOUR-ORGANIZATION-ID
                 scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
                 await scanner.setUIElement(document.getElementById('div-video-container'));
                 scanner.onFrameRead = results => {console.log(results);};
@@ -254,12 +253,12 @@ The SDK does, however, give you the ability to customize the UI to fit your appl
         </script>
     </body>
     ```
-    Please note that if the element does not exist once the `setUIElement` method is called, an error will be thrown. Therefore, the element must be declared manually in the HTML code, or created programatically via JavaScript. 
+    > Please note that if the element does not exist once the `setUIElement` method is called, an error will be thrown. Therefore, the element must be declared manually in the HTML code, or created programatically via JavaScript. 
 
 In the above example, we only included the video viewer component in the custom UI element `div-video-container`. What if we also wanted to include the source select dropdown or the resolution select dropdown elements? In that case, you would need to manually include the `select` elements and assign each the appropriate class:
 ```html
 <video class="dbrScanner-video" playsinline="true"></video> <!-- Video Viewer component -->
-<select class="dbrScanner-sel-camera"></select> <!-- Source Select component -->
+<select class="dbrScanner-sel-camera"></select> <!-- Source/Camera Select component -->
 <select class="dbrScanner-sel-resolution"></select> <!-- Resolution Select component -->
 ```
 
@@ -269,7 +268,7 @@ The `dbrScanner-sel-camera` dropdown populates with the available camera sources
 
 The `dbrScanner-sel-resolution` dropdown populates with 8 resolution options by default. However, not all cameras out there support all of the resolution options, so you must check if the selected camera supports the resolution that you are trying to set it to. In case a camera does not support a certain resolution, the SDK will automatically choose the closest supported resolution less than the desired resolution.
 
-You can also limit the number of resolution options if you believe that having all 8 options could be a little overwhelming and unnecessary for your users. To do so, manually define the options that you want to include. The currently used resolution value can be displayed as its own option, as long as it has the class `dbrScanner-opt-gotResolution`.
+You can also limit the number of resolution options if you believe that having all 8 options could be a little overwhelming and unnecessary for your users. To do so, manually define the options that you want to include. The currently used resolution can be displayed as a separate option, as long as it has the class `dbrScanner-opt-gotResolution`.
 
 The following demonstrates putting all of these elements together, including limiting the number of resolution options:
 ```html
@@ -284,10 +283,11 @@ The following demonstrates putting all of these elements together, including lim
         </select><br>
         <video class="dbrScanner-video" playsinline="true"></video>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js" data-productKeys="PRODUCT-KEYS"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js"></script>
     <script>
         let scanner = null;
         (async()=>{
+            Dynamsoft.DBR.BarcodeReader.organizationID = "123456"; // replace the number 123456 with YOUR-ORGANIZATION-ID
             scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
             await scanner.setUIElement(document.getElementById('div-video-container'));
             scanner.onFrameRead = results => {console.log(results);};
@@ -298,9 +298,13 @@ The following demonstrates putting all of these elements together, including lim
 </body>
 ```
 
-## Known Issues
+## Upgrading to the Latest Version
 
-#### getUserMedia non-HTTPS access issue
+If you are using an older version of the library and want to upgrade to the latest version, please refer to the [upgrade article](https://www.dynamsoft.com/barcode-reader/programming/javascript/user-guide/upgrade.html?ver=latest).
+
+## FAQ
+
+#### Why can't I use my camera when I open the web page?
 
 If you open the HTML file as `file:///` or `http://`, the following error may appear in the browser console:
 
@@ -314,18 +318,35 @@ To access the camera with the API [getUserMedia](https://developer.mozilla.org/e
 
 **Note**: If you use Chrome or Firefox, you might not get the error because these two browsers allow camera access via `file:///` and `http://localhost`.
 
-To make sure your web application can access the camera and resolve this error, please configure your web server to support HTTPS. The following links may help depending on the server framework:
+To make sure your web application can access the camera and resolve this error, please deploy the page to a web server configure your web server to support HTTPS. The following links may help depending on the server framework:
 
 - NGINX: [Configuring HTTPS servers](https://nginx.org/en/docs/http/configuring_https_servers.html)
 - IIS: [Create a Self Signed Certificate in IIS](https://aboutssl.org/how-to-create-a-self-signed-certificate-in-iis/)
 - Tomcat: [Setting Up SSL on Tomcat in 5 minutes](https://dzone.com/articles/setting-ssl-tomcat-5-minutes)
 - Node.js: [npm tls](https://nodejs.org/docs/v0.4.1/api/tls.html)
 
-#### Self-signed certificate issue
 
-For testing purposes, a self-signed certificate can be used when configuring HTTPS. When accessing the site, the browser might say "the site is not secure". In this case, go to the certificate settings and set to trust this certificate.
+#### Can I use a self-signed cerificate when configuring HTTPS for my server?
+
+For testing purposes, a self-signed certificate can be used when configuring HTTPS. When accessing the site using this certificate, the browser might say "the site is not secure". In this case, go to the certificate settings and set to trust this certificate.
 
 In a production environment, you will need a valid HTTPS certificate.
+
+#### What are the exact differences between the different built-in modes?
+
+In the customization and configuration section of the guide, we introduced the runtime settings and the corresponding built-in templates, `single`, `speed`, `coverage`, and `balance`.
+
+We went over the different scenarios that each mode correspond to, without going into specific details on how each mode affects the individual runtime settings. If you are wondering what those exact differences are, here is a breakdown:
+
+|        Runtime Setting       |            speed           |           balance          |           coverage          |          single          |
+|:----------------------------:|:--------------------------:|:--------------------------:|:---------------------------:|:-------------------------:|
+|          deblurLevel         |               3            |               5            |               9             |             9             |
+|      barcodeFormatIds      |           32505858         |           32505858         |            32505858         |             0             |
+|     expectedBarcodesCount    |              512           |              512           |              512            |             0             |
+| grayscaleTransformationModes |  [2, 0, 0, 0, 0, 0, 0, 0]  |  [2, 0, 0, 0, 0, 0, 0, 0]  |   [2, 1, 0, 0, 0, 0, 0, 0]  |  [2, 0, 0, 0, 0, 0, 0, 0] |
+|        textFilterModes       |  [0, 0, 0, 0, 0, 0, 0, 0]  |  [2, 0, 0, 0, 0, 0, 0, 0]  |   [2, 0, 0, 0, 0, 0, 0, 0]  |  [2, 0, 0, 0, 0, 0, 0, 0] |
+|       localizationModes      | [2, 32, 64, 0, 0, 0, 0, 0] | [2, 4, 32, 64, 0, 0, 0, 0] | [2, 16, 4, 8, 32, 64, 0, 0] | [2, 16, 4, 8, 0, 0, 0, 0] |
+|      scaleDownThreshold      |            2300            |            2300            |          214748347          |            2300           |
 
 ## Demos and Examples
 
