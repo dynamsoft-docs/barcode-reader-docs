@@ -203,7 +203,7 @@ catch(BarcodeReaderException exp)
 reader.Dispose();
 ```
 
-Below is a template for your reference. For more scanning settings guide, check out the [`Structure and Interfaces of Parameters`]({{ site.parameters }}structure-and-interfaces-of-parameters.md).
+Below is a template for your reference. For more scanning settings guide, check out the [`Structure and Interfaces of Parameters`]({{ site.parameters }}structure-and-interfaces-of-parameters.html).
 .  
 ```json
 {
