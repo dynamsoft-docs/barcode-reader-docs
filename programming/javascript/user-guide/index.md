@@ -102,6 +102,17 @@ Now that the `dist` folder is in the application directory on the server, it's t
     - Tomcat: [Setting Up SSL on Tomcat in 5 minutes](https://dzone.com/articles/setting-ssl-tomcat-5-minutes)
     - Node.js: [npm tls](https://nodejs.org/docs/v0.4.1/api/tls.html)
 
+##### Step Three: Now to include the library
+
+Finally, all you need to do is include a reference to `dbr.js` from the library directory on your server.Depending on how you downloaded the library and where you put it, the reference can look something like this:
+```
+<script src="/DBR-JS-8.2.5/dist/dbr.js"></script>
+
+OR
+
+<script src="/node_modules/dynamsoft-javascript-barcode/dist/dbr.js"></script>
+```
+
 ### Assigning a License
 
 The library requires a license to work, so one of the first things that must be done when the page loads is to assign the license. The license is specified mainly using the properties [`organizationID`](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeReader/properties.html#organizationid) and [`handshakeCode`](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeReader/properties.html#handshakeCode).
