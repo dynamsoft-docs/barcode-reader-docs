@@ -10,7 +10,7 @@ breadcrumbText: BarcodeReader
 Dynamsoft Barcode Reader SDK - JavaScript API
 # BarcodeReader
 
-* `Class` BarcodeReader
+* `class` BarcodeReader
 
 > The `BarcodeReader` class is used for **image** decoding.
 >
@@ -20,7 +20,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 > let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 > let results = await reader.decode(imageSource);
 > for(let result of results){
->     console.log(result.barcodeText);
+>   console.log(result.barcodeText);
 > }
 > ```
 

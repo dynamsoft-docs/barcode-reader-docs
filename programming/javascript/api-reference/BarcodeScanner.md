@@ -10,7 +10,7 @@ breadcrumbText: BarcodeScanner
 Dynamsoft Barcode Reader SDK - JavaScript API
 # BarcodeScanner
 
-* `Class` BarcodeScanner *extends [BarcodeReader](./BarcodeReader.md)*
+* `class` BarcodeScanner *extends [BarcodeReader](./BarcodeReader.md)*
 
 > The `BarcodeScanner` class is used for **video** decoding.
 > `Node.js` does not support `BarcodeScanner`.
@@ -231,7 +231,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 ### onUnduplicatedRead
 
-* onUnduplicatedRead?: *(txt: string, result: [TextResult](./interface/textresult.md)) => void*
+* `event` onUnduplicatedRead?: *(txt: string, result: [TextResult](./interface/textresult.md)) => void*
 
 > This event is triggered when a new, unduplicated barcode is found.
 > `txt` holds the barcode text string. `result` contains more info.
@@ -243,9 +243,11 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 > }
 > ```
 
+<br>
+
 ### onFrameRead
 
-* onFrameRead?: *(results: [TextResult](./interface/textresult.md)[]) => void*
+* `event` onFrameRead?: *(results: [TextResult](./interface/textresult.md)[]) => void*
 
 > The event is triggered after a frame has been scanned.
 > The results object contains all the barcode results in this frame.
@@ -256,6 +258,8 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 >     }
 > };
 > ```
+
+<br>
 
 ### decodeCurrentFrame
 
@@ -281,6 +285,8 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 > ```
 > *@see* [show](#show)
 
+<br>
+
 ### close
 
 * close(): *Promise&lt;void&gt;*
@@ -294,6 +300,8 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 > await scanner.close();
 > ```
 
+<br>
+
 ### show
 
 * show(): *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
@@ -305,104 +313,595 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 > await scanner.show();
 > ```
 
+<br>
+
 ### hide
+
+* hide(): *Promise&lt;void&gt;*
+
+> Stop decoding, release camera, unbind UI.
+> ```js
+> await scanner.open();
+> await scanner.hide();
+> 
+> await scanner.openVideo();
+> await scanner.hide();
+> ```
+
+<br>
 
 ### openVideo
 
+* openVideo(): *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
+
+> Bind UI, open the camera, but not decode.
+> ```js
+> await scanner.setUIElement(document.getElementById("my-barcode-scanner"));
+> await scanner.openVideo();
+> console.log(await scanner.decodeCurrentFrame());
+> ```
+
+<br>
+
 ### showVideo
 
+* showVideo(): *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
+
+> Bind UI, open the camera, but not decode.
+> ```js
+> await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.scanner.html");
+> await scanner.showVideo();
+> console.log(await scanner.decodeCurrentFrame());
+> ```
+
+<br>
+
 ### isOpen
+
+* isOpen(): *boolean*
+
+> Check if the scanner is open.
+
+<br>
 
 ## Play and Pause
 
 ### onPlayed
 
+* `event` onPlayed?: *(info: [ScannerPlayCallbackInfo](./interface/scannerplaycallbackinfo)) => void*
+
+> Triggered when the camera video stream is played.
+> ```js
+> scanner.onplayed = rsl=>{ console.log(rsl.width+'x'+rsl.height) };
+> await scanner.show(); // or open, play, setCurrentCamera, like these.
+> ```
+
+<br>
+
 ### play
+
+* play(deviceId?: *string*, width?: *number*, height?: *number*): *Promise&lt;[ScannerPlayCallbackInfo](../interface/scannerplaycallbackinfo.md)&gt;*
+
+> Continue the video.
+> ```js
+> scanner.pause();
+> \\*** a lot of work ***
+> await scanner.play();
+> ```
+
+<br>
 
 ### pause
 
+* pause(): *void*
+
+> Pause the video. Do not release the camera.
+
+<br>
+
 ### stop
+
+* stop(): *void*
+
+> Stop the video, and release the camera.
+
+<br>
 
 ### pauseScan
 
+* pauseScan(): *void*
+
+> Pause the decoding process.
+
+<br>
+
 ### resumeScan
+
+* resumeScan(): *void*
+
+> Resume the decoding process.
+
+<br>
 
 ## UI
 
 ### defaultUIElementURL
 
+* `static` defaultUIElementURL: *string*
+
+> The url of the default scanner UI.
+>
+> Can only be changed before [createInstance](#createInstance).
+>
+> ```js
+> Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.scanner.html";
+> let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+> await scanner.show();
+> ```
+
+<br>
+
 ### regionMaskFillStyle
+
+* regionMaskFillStyle: *string = "rgba(0,0,0,0.5)"*
+
+> Set the style used when filling the mask beyond the region.
+
+<br>
 
 ### regionMaskStrokeStyle
 
+* regionMaskStrokeStyle: *string = "rgb(254,142,20)"*
+
+> Set the style of the region border.
+
+<br>
+
 ### regionMaskLineWidth
+
+* regionMaskLineWidth: *number = 2*
+
+> Set the style used when filling in located barcode.
+
+<br>
 
 ### barcodeFillStyle
 
+* barcodeFillStyle: *string = "rgba(254,180,32,0.3)"*
+
+> Set the style used when filling in located barcode.
+
+<br>
+
 ### barcodeStrokeStyle
+
+* barcodeStrokeStyle: *string = "rgba(254,180,32,0.9)"*
+
+> Set the style of the located barcode border.
+
+<br>
 
 ### barcodeLineWidth
 
+* barcodeLineWidth: *number = 1*
+
+> Set the width of the located barcode border.
+
+<br>
+
 ### getUIElement
 
+* getUIElement(): *HTMLElement*
+
+> Get HTML element containing the [BarcodeScanner](#BarcodeScanner) instance.
+
+<br>
+
 ### setUIElement
+
+* setUIElement(elementOrUrl: *HTMLElement | string*): *Promise&lt;void&gt;*
+
+> Set html element containing the `BarcodeScanner` instance.
+> ```html
+> <video class="dbrScanner-video" playsinline="true"></video>
+> <script>
+>   let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+>   await scanner.setUIElement(document.getElementsByClassName("dbrScanner-video")[0]);
+>   await scanner.open();
+> </script>
+> ```
+> ```html
+> <!-- <video class="dbrScanner-video" playsinline="true"></video> -->
+> <script>
+>   let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+>   await scanner.setUIElement("https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.scanner.html");
+>   await scanner.show();
+> </script>
+> ```
+
+<br>
 
 ## Camera Settings
 
 ### getAllCameras
 
+* getAllCameras(): *Promise&lt;[VideoDeviceInfo](./interface/videodeviceinfo)[]&gt;*
+
+> Get infomation of all available cameras on the device.
+> ```js
+> let cameras = await scanner.getAllCameras();
+> if(cameras.length){
+>   await scanner.setCurrentCamera(cameras[0]);
+> }
+> ```
+
+<br>
+
 ### getCurrentCamera
+
+* getCurrentCamera(): *Promise&lt;[VideoDeviceInfo](./interface/videodeviceinfo) | null&gt;*
+
+> Get information about the currently used camera.
+> ```js
+> let camera = await scanner.getCurrentCamera();
+> ```
+
+<br>
 
 ### setCurrentCamera
 
+* setCurrentCamera(cameraInfoOrDeviceId: *any*): *Promise&lt;[ScannerPlayCallbackInfo](./interface/scannerplaycallbackinfo)&gt;*
+
+> Choose the camera and play it by its information or devide id.
+> ```js
+> let cameras = await scanner.getAllCameras();
+> if(cameras.length){
+>   await scanner.setCurrentCamera(cameras[0]);
+> }
+> ```
+
+<br>
+
 ### getResolution
+
+* getResolution(): *number[]*
+
+> Get current camera resolution.
+> ```js
+> let rsl = await scanner.getResolution();
+> console.log(rsl.width + " x " + rsl.height);
+> ```
+
+<br>
 
 ### setResolution
 
+* setResolution(width: *number|number[]*, height: *number*)
+
+> Set current camera resolution.
+> ```js
+> await scanner.setResolution(width, height);
+> ```
+
+<br>
+
 ### getVideoSettings
+
+* getVideoSettings(): *[MediaStreamConstraints](https://developer.mozilla.org/en-US/docs/Web/API/Media_Streams_API/Constraints)*
+
+> Get current video settings.
+
+<br>
 
 ### updateVideoSettings
 
+* updateVideoSettings([MediaStreamConstraints](https://developer.mozilla.org/en-US/docs/Web/API/Media_Streams_API/Constraints): *any*): *Promise&lt;[ScannerPlayCallbackInfo](./interface/scannerplaycallback.md) | void&gt;*
+
+> Modify and update video settings.
+> ```js
+> await scanner.updateVideoSettings({ video: {width: {ideal: 1280}, height: {ideal: 720}, facingMode: {ideal: 'environment'}} });
+> ```
+
+<br>
+
 ### getCapabilities
+
+* getCapabilities(): *[MediaTrackCapabilities](https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/getCapabilities)*
+
+> Get the camera capabilities. Chrome only.
+> Only available when the scanner is open.
+> ```console
+> > scanner.getCapabilities()
+> < {
+>   "aspectRatio":{"max":3840,"min":0.000462962962962963},
+>   "colorTemperature":{max: 7000, min: 2850, step: 50},
+>   "deviceId":"1e...3af7",
+>   "exposureCompensation": {max: 2.0000040531158447, min: -2.0000040531158447, step: 0.16666699945926666},
+>   "exposureMode":["continuous","manual"],
+>   "facingMode":["environment"],
+>   "focusMode":["continuous","single-shot","manual"],
+>   "frameRate":{"max":30,"min":0},
+>   "groupId":"71...a935",
+>   "height":{"max":2160,"min":1},
+>   "resizeMode":["none","crop-and-scale"],
+>   "torch":true,
+>   "whiteBalanceMode":["continuous","manual"],
+>   "width":{"max":3840,"min":1},
+>   "zoom":{max: 606, min: 100, step: 2}
+> }
+> ```
+
+<br>
 
 ### turnOnTorch
 
+* turnOnTorch(): *Promise&lt;void&gt;*
+
+> Turn on the torch/flashlight. Chrome only.
+> Only available when the scanner is open.
+> Will reject if not support.
+> ```js
+> await scanner.turnOnTorch();
+> ```
+> *@see* [turnOffTorch](#turnOffTorch) [getCapabilities](#getCapabilities)
+
+<br>
+
 ### turnOffTorch
+
+* turnOffTorch(): *Promise&lt;void&gt;*
+
+> Turn off the torch. Chrome only.
+> Only available when the scanner is open.
+> Will reject if not support.
+> ```js
+> await scanner.turnOffTorch();
+> ```
+> *@see* [turnOnTorch](#turnOnTorch) [getCapabilities](#getCapabilities)
+
+<br>
 
 ### setColorTemperature
 
+* setColorTemperature(value: *number*): *Promise&lt;void&gt;*
+
+> Adjusts the color temperature. Chrome only.
+> Only available when the scanner is open.
+> Will reject if not support.
+> ```js
+> await scanner.setColorTemperature(5000);
+> ```
+> *@see* [getCapabilities](#getCapabilities)
+
+<br>
+
 ### setExposureCompensation
+
+* setExposureCompensation(value: *number*): *Promise&lt;void&gt;*
+
+> Adjusts the exposure level. Chrome only.
+> Only available when the scanner is open.
+> Will reject if not support.
+> ```js
+> await scanner.setExposureCompensation(-0.7);
+> ```
+> *@see* [getCapabilities](#getCapabilities)
+
+<br>
 
 ### setZoom
 
+* setZoom(value: *number*): *Promise&lt;void&gt;*
+
+> Adjusts the zoom ratio. Chrome only.
+> Only available when the scanner is open.
+> Will reject if not support.
+> ```js
+> await scanner.setZoom(400);
+> ```
+> *@see* [getCapabilities](#getCapabilities)
+
+<br>
+
 ### setFrameRate
+
+* setFrameRate(value: *number*): *Promise&lt;void&gt;*
+
+> Adjusts the frame rate. Chrome only.
+> Only available when the scanner is open.
+> Will reject if not support.
+> ```js
+> await scanner.setFrameRate(10);
+> ```
+> *@see* [getCapabilities](#getCapabilities)
+
+<br>
 
 ## Decoding Settings
 
 ### getRuntimeSettings
 
+* getRuntimeSettings(): *Promise&lt;[RuntimeSettings](./interface/runtimesettings.md)&gt;*
+
+> Gets current runtime settings.
+> ```js
+> let settings = await scanner.getRuntimeSettings();
+> settings.deblurLevel = 5;
+> await scanner.updateRuntimeSettings(settings);
+> ```
+
+<br>
+
 ### updateRuntimeSettings
+
+* updateRuntimeSettings(settings: *[RuntimeSettings](./interface/RuntimeSettings.md) | string*): *Promise&lt;void&gt;*
+
+> Update runtime settings with a given struct, or a string of `speed`, `balance`, `coverage` and `single` to use preset settings for BarcodeScanner.
+>
+> We recommend using the speed-optimized `single` preset if scanning only one barcode at a time. The `single` is only available in `BarcodeScanner`.
+>
+> The default settings for BarcodeScanner is `single`.
+>
+> ```js
+> await scanner.updateRuntimeSettings('balance');
+> let settings = await scanner.getRuntimeSettings();
+> settings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED;
+> await scanner.updateRuntimeSettings(settings);
+> ```
+> *@see* [RuntimeSettings](./interface/RuntimeSettings.md)
+
+<br>
 
 ### resetRuntimeSettings
 
+* resetRuntimeSettings(): *Promise&lt;void&gt;*
+
+> Resets all parameters to default values.
+> ```js
+> await scanner.resetRuntimeSettings();
+> ```
+
+<br>
+
 ### getModeArgument
 
+* getModeArgument(modeName: *string*, index: *number*, argumentName: *string*): *Promise&lt;string&gt;*
+
+> Get argument value for the specified mode parameter.
+>
+> ```js
+> let argumentValue = await scanner.getModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy");
+> ```
+>
+> *@see* TODO
+
+<br>
+
 ### setModeArgument
+
+* setModeArgument(modeName: *string*, index: *number*, argumentName: *string*, argumentValue: *string*): *Promise&lt;string&gt;*
+
+> Set argument value for the specified mode parameter.
+>
+> ```js
+> await scanner.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "1");
+> ```
+>
+> *@see* TODO
+
+<br>
 
 ## Other
 
 ### bSaveOriCanvas
 
+* bSaveOriCanvas: *boolean* = false;
+
+> Whether to save the original image into canvas.
+> ```js
+> scanner.bSaveOriCanvas = true;
+> let results = await scanner.decode(source);
+> document.body.append(scanner.oriCanvas);
+> ```
+
+<br>
+
 ### oriCanvas
+
+* `readonly` oriCanvas: *[HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement) | [OffscreenCanvas](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas)*
+
+> An [canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas) object that holds the original image.
+> ```js
+> scanner.bSaveOriCanvas = true;
+> let results = await scanner.decode(source);
+> document.body.append(scanner.oriCanvas);
+> ```
+
+<br>
 
 ### bPlaySoundOnSuccessfulRead
 
+* bPlaySoundOnSuccessfulRead: *(boolean | string) = false*;
+
+> Whether to play sound when the scanner reads a barcode successfully.
+> Default value is `false`, which does not play sound.
+> Use `frame` or `true` to play a sound when any barcode is found within a frame.
+> Use `unduplicated` to play a sound only when any unique/unduplicated barcode is found within a frame.
+> ```js
+> // A user gesture required. https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#chrome_enterprise_policies
+> startPlayButton.addEventListener('click', function() {
+>   scanner.bPlaySoundOnSuccessfulRead = true;
+> });
+> ```
+> refer: `favicon bug` https://bugs.chromium.org/p/chromium/issues/detail?id=1069731&q=favicon&can=2
+
+<br>
+
 ### soundOnSuccessfullRead
+
+* soundOnSuccessfullRead: [HTMLAudioElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement)
+
+> The sound to play when the scanner get successfull read.
+> ```js
+> scanner.soundOnSuccessfullRead = new Audio("./pi.mp3");
+> ```
+
+<br>
 
 ### bVibrateOnSuccessfulRead
 
+* bVibrateOnSuccessfulRead: *(boolean | string) = false*
+
+> Whether to vibrate when the scanner reads a barcode successfully.
+> Default value is `false`, which does not vibrate.
+> Use `frame` or `true` to vibrate when any barcode is found within a frame.
+> Use `unduplicated` to vibrate only when any unique/unduplicated barcode is found within a frame.
+> ```js
+> // Can I use? https://caniuse.com/?search=vibrate
+> // A user gesture required. https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#chrome_enterprise_policies
+> startVibrateButton.addEventListener('click', function() {
+>   scanner.bVibrateOnSuccessfulRead = true;
+> });
+> ```
+
+<br>
+
 ### vibrateDuration
+
+* vibrateDuration: *number = 300*
+
+> Get or set how long (ms) the vibration lasts.
+>
+> *@see* [bVibrateOnSuccessfulRead](#bVibrateOnSuccessfulRead)
+
+<br>
 
 ### getScanSettings
 
+* getScanSettings(): *Promise&lt;[ScanSettings](./interface/scansettings.md)&gt;*
+
+> Get current scan settings.
+> ```js
+> let scanSettings = await scanner.getScanSettings();
+> scanSettings.intervalTime = 50;
+> scanSettings.duplicateForgetTime = 1000;
+> await scanner.updateScanSettings(scanSettings);
+> ```
+
+<br>
+
 ### updateScanSettings
+
+* updateScanSettings(settings: *[ScanSettings](./interface/scansettings.md)*): *Promise&lt;void&gt;*
+
+> Modify and update scan settings.
+> ```js
+> let scanSettings = await scanner.getScanSettings();
+> scanSettings.intervalTime = 50;
+> scanSettings.duplicateForgetTime = 1000;
+> await scanner.updateScanSettings(scanSettings);
+> ```
+
+<br>
+
+
