@@ -67,11 +67,11 @@ First, create a `HTML` page that follows the template of any simple `HTML` file.
 
 This import method is mostly used when using a framework such as React, Angular, or Vue. In order to include the library in your application using this method:
 ```bash
-npm install dynamsoft-javascript-barcode
+$ npm install dynamsoft-javascript-barcode
 
 OR
 
-yarn add dynamsoft-javascript-barcode
+$ yarn add dynamsoft-javascript-barcode
 ```
 #### Importing the library manually and hosting it yourself
 You can also choose to download the library and host the library yourself. To download the library, please use the following [link](https://www.dynamsoft.com/barcode-reader/downloads/). Hosting the library yourself involves a few more configuration steps that the other options do.
