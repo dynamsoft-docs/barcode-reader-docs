@@ -44,7 +44,7 @@ Stores the intermediate result.
 | [`ccmIndex`](#ccmindex) | *int* |
 | [`scaleDownRatio`](#scaledownratio) | *int* |
 | [`frameId`](#frameid) | *int* |
-
+| [`rpmColourArgumentIndex`](#rpmcolourargumentindex) | *int* |
 
 ### results
 
@@ -278,3 +278,10 @@ The ID of the operated frame.
 int com.dynamsoft.dbr.IntermediateResult.frameId
 ```
 
+### rpmColourArgumentIndex
+
+The index of the rpm colour argument.
+
+```java
+int com.dynamsoft.dbr.IntermediateResult.rpmColourArgumentIndex
+```
