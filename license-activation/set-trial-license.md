@@ -129,3 +129,12 @@ barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromLTS:lts verificat
     //TODO add your code for license verification
 }
 ```
+
+* Swift for iOS
+
+```swift
+var barcodeReader:DynamsoftBarcodeReader! = nil
+let lts = iDMLTSConnectionParameters()
+lts.organizationID = "123456" // replace the number 123456 with YOUR-ORGANIZATION-ID
+barcodeReader = DynamsoftBarcodeReader(licenseFromLTS: lts, verificationDelegate: self)
+```
