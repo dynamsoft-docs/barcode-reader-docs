@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader JavaScript API Reference - BarcodeReader
 description: This page shows the BarcodeReader Class of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: RuntimeSettings, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
+noTitleIndex: true
 breadcrumbText: RuntimeSettings
 ---
 
@@ -12,7 +13,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 `interface` RuntimeSettings
 
-* barcodeFormatIds: *number | EnumBarcodeFormat*
+* barcodeFormatIds: *number | [EnumBarcodeFormat](../enum/EnumBarcodeFormat.md)*
 
   > Sets the formats of the barcode in BarcodeFormat group 1 to be read. Barcode formats in BarcodeFormat group 1 can be combined.
   > ```js
@@ -23,13 +24,13 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
   <br>
 
-* barcodeFormatIds_2: *number | EnumBarcodeFormat_2*
+* barcodeFormatIds_2: *number | [EnumBarcodeFormat_2](../enum/EnumBarcodeFormat_2.md)*
 
   > Sets the formats of the barcode in BarcodeFormat group 2 to be read. Barcode formats in BarcodeFormat group 1 can be combined.
 
   <br>
 
-* binarizationModes: *EnumBinarizationMode[]*
+* binarizationModes: *[EnumBinarizationMode](../enum/EnumBinarizationMode.md)[]*
 
   <br>
 
@@ -49,11 +50,11 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
   <br>
 
-* intermediateResultTypes: *EnumIntermediateResultType*
+* intermediateResultTypes: *[EnumIntermediateResultType](../enum/EnumIntermediateResultType.md)*
 
   <br>
 
-* localizationModes: *number[] | EnumLocalizationMode[]*
+* localizationModes: *number[] | [EnumLocalizationMode](../enum/EnumLocalizationMode.md)[]*
 
   > Sets the mode and priority for localization algorithms.
 
@@ -67,13 +68,13 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
   <br>
 
-* PDFReadingMode: *EnumPDFReadingMode*
+* PDFReadingMode: *[EnumPDFReadingMode](../enum/EnumPDFReadingMode.md)*
 
   > Not available in JS.
 
   <br>
 
-* region: *RegionDefinition | RegionDefinition[]*
+* region: *[RegionDefinition](RegionDefinition.md) | [RegionDefinition](RegionDefinition.md)[]*
 
   > Sets the region definition including the regionTop, regionLeft, regionRight, regionBottom and regionMeasuredByPercentage.
   >
@@ -104,7 +105,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
   <br>
 
-* resultCoordinateType: *number | EnumResultCoordinateType*
+* resultCoordinateType: *number | [EnumResultCoordinateType](../enum/EnumResultCoordinateType.md)*
 
   <br>
 
@@ -116,15 +117,15 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
   <br>
 
-* scaleUpModes: *EnumScaleUpMode[]*
+* scaleUpModes: *[EnumScaleUpMode](../enum/EnumScaleUpMode.md)[]*
 
   <br>
 
-* terminatePhase: *EnumTerminatePhase*
+* terminatePhase: *[EnumTerminatePhase](../enum/EnumTerminatePhase.md)*
 
   <br>
 
-* textResultOrderModes: *EnumTextResultOrderMode[]*
+* textResultOrderModes: *[EnumTextResultOrderMode](../enum/EnumTextResultOrderMode.md)[]*
 
   <br>
 
