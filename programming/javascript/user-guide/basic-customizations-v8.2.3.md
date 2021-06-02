@@ -61,7 +61,7 @@ When creating an instance of the `BarcodeScanner` object, there are several conf
 // set which camera and what resolution to use
 await scanner.updateVideoSettings({ video: { width: 1280, height: 720, facingMode: "environment" } });
 
-// use one of three built-in RuntimeSetting templates, 'speed' is recommended for decoding from a video stream
+// use one of the built-in RuntimeSetting templates: "single" (decode single barcode, default mode), "speed", "balance", "coverage". "speed" is recommended for decoding from a video stream
 await scanner.updateRuntimeSettings("speed");
 
 // make changes to the template. The code snippet below demonstrates how to specify which symbologies are enabled

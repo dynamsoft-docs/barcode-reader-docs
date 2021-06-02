@@ -10,6 +10,21 @@ noTitleIndex: true
 
 # Release Notes for JavaScript SDK - 8.x
 
+## 8.2.5 (05/18/2021)
+
+### New
+
+- Added property `organizationID` which can be used to fetch license(s) belonging to the specified organization from the License Tracking Server.
+- Added a class name to the powered-by message element on the built-in UI so that it can be manipulated in CSS.
+
+### Improved
+
+- Removed redundant warning messages for duplicate barcodes.
+
+### Fixed
+
+- Fixed a bug with the API `bSaveOriCanvas` where the same canvas is reused resulting in duplicated original image for different barcodes.
+
 ## 8.2.3 (04/15/2021)
 
 ### New

@@ -27,7 +27,7 @@ Describes the barcode types in BarcodeFormat group 1. All the formats can be com
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum BarcodeFormat` |
-| .Net | `enum Dynamsoft.DBR.EnumBarcodeFormat ` |
+| .Net | `enum Dynamsoft.EnumBarcodeFormat ` |
 | JavaScript | `Dynamsoft.EnumBarcodeFormat` |
 | Python | `class EnumBarcodeFormat(IntEnum)` |
 | Java / Android | `class EnumBarcodeFormat` |
@@ -86,7 +86,7 @@ Describes the barcode types in BarcodeFormat group 2. Note: The barcode format o
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum BarcodeFormat_2` |
-| .Net | `enum Dynamsoft.DBR.EnumBarcodeFormat_2` |
+| .Net | `enum Dynamsoft.EnumBarcodeFormat_2` |
 | JavaScript | `Dynamsoft.EnumBarcodeFormat_2` |
 | Python | `class EnumBarcodeFormat_2(IntEnum)` |
 | Java / Android | `class EnumBarcodeFormat_2` |
