@@ -235,7 +235,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 > This event is triggered when a new, unduplicated barcode is found.
 > `txt` holds the barcode text string. `result` contains more info.
-> Old barcodes will be remembered for [duplicateForgetTime](TODO).
+> Old barcodes will be remembered for [duplicateForgetTime](./interface/scanSettings.md).
 > ```js
 > scanner.onUnduplicatedRead = (txt, result) => {
 >   alert(txt);
@@ -773,7 +773,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 > let argumentValue = await scanner.getModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy");
 > ```
 >
-> *@see* TODO
+> *@see* [C++ getModeArgument](https://www.dynamsoft.com/barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/parameter-and-runtime-settings-basic.html?ver=latest#getmodeargument)
 
 <br>
 
@@ -787,7 +787,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 > await scanner.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "1");
 > ```
 >
-> *@see* TODO
+> *@see* [C++ setModeArgument](https://www.dynamsoft.com/barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/parameter-and-runtime-settings-basic.html?ver=latest#setmodeargument)
 
 <br>
 
