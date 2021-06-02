@@ -46,7 +46,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 >
 > | Property             | Description |
 > |----------------------|-------------|
-> | [bDestroyed](#bDestroyed) | Indicates whether the instance has been destroyed. | 
+> | [bDestroyed](#bdestroyed) | Indicates whether the instance has been destroyed. | 
 >
 > | Static Method        | Description |
 > |----------------------|-------------|
@@ -88,10 +88,10 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 > | Property            | Description |
 > |---------------------|-------------|
 > | [productKeys](#productkeys) | Get or set the Dynamsoft Barcode Reader SDK product keys. | 
-> | [licenseServer](#licenseServer) | Specify the license server URL. |
-> | [handshakeCode](#handshakeCode) | Use Handshake Code to get authentication from network. |
-> | [organizationID](#organizationID) | Use organization ID to get authentication from network. |
-> | [sessionPassword](#sessionPassword) | Specify a password to protect the Handshake Code from abuse. |
+> | [licenseServer](#licenseserver) | Specify the license server URL. |
+> | [handshakeCode](#handshakecode) | Use Handshake Code to get authentication from network. |
+> | [organizationID](#organizationid) | Use organization ID to get authentication from network. |
+> | [sessionPassword](#sessionpassword) | Specify a password to protect the Handshake Code from abuse. |
 
 <br>
 
@@ -103,8 +103,8 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 >
 > | Property            | Description |
 > |---------------------|-------------|
-> | [bSaveOriCanvas](#bSaveOriCanvas) | If set to `true`, save the original image in `oriCanvas`. |
-> | [oriCanvas](#oriCanvas) |  An [canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas) object that holds the original image. |
+> | [bSaveOriCanvas](#bsaveoricanvas) | If set to `true`, save the original image in `oriCanvas`. |
+> | [oriCanvas](#oricanvas) |  An [canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas) object that holds the original image. |
 >
 > | Static Method        | Description |
 > |----------------------|-------------|
@@ -118,7 +118,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 * `static` engineResourcePath: *string*
 
-> Specify the Barcode Reader SDK engine (WASM) url. The SDK tries to automatically explore the engine location. If the auto-explored engine location is incorrect, you can manually specify the engine location. The property needs to be set before [loadWasm](#loadWasm).
+> Specify the Barcode Reader SDK engine (WASM) url. The SDK tries to automatically explore the engine location. If the auto-explored engine location is incorrect, you can manually specify the engine location. The property needs to be set before [loadWasm](#loadwasm).
 >
 > ```js
 > Dynamsoft.DBR.BarcodeReader.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/";
@@ -131,7 +131,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 * `static` _bUseFullFeature: *boolean* = false
 
-> Whether to use full feature wasm. The property needs to be set before [loadWasm](#loadWasm).
+> Whether to use full feature wasm. The property needs to be set before [loadWasm](#loadwasm).
 >
 > For web, `_bUseFullFeature` is `false` as default.
 >
@@ -188,7 +188,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 > Before most operations, `loadWasm` needs to be excuted firstly.
 >
-> Most time, you do not need excute `loadWasm` manually. Because when you excute [createInstance](#createInstance), `loadWasm` will be excuted implicitly.
+> Most time, you do not need excute `loadWasm` manually. Because when you excute [createInstance](#createinstance), `loadWasm` will be excuted implicitly.
 >
 > Some properties can't be changed after `loadWasm`.
 >
@@ -270,13 +270,13 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 > ```
 > If you need to continuously decode a video, you can use [BarcodeScanner](./BarcodeScanner.md) instead.
 >
-> *@see* [decodeBase64String](#decodeBase64String), [decodeUrl](#decodeUrl)
+> *@see* [decodeBase64String](#decodebase64string), [decodeUrl](#decodeurl)
 
 <br>
 
 ### decodeBase64String
 
-* decodeBase64String(base64: *string*): *Promise&lt;[TextResult](./interface/textresult.md)[]&gt;*
+* decodeBase64String(base64: *string*): *Promise&lt;[TextResult](./interface/TextResult.md)[]&gt;*
 
 > The decoding method can accept base64 with or without mime.
 > e.g. `data:image/jpg;base64,Xfjshekk....` or `Xfjshekk...`.
@@ -291,7 +291,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 ### decodeUrl
 
-* decodeUrl(url: *string*): *Promise&lt;[TextResult](./interface/textresult.md)[]&gt;*
+* decodeUrl(url: *string*): *Promise&lt;[TextResult](./interface/TextResult.md)[]&gt;*
 
 > The decoding method can accept url. The url source need to be in the same domain or allowed cors.
 > ```js
@@ -319,7 +319,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 ### getRuntimeSettings
 
-* getRuntimeSettings(): *Promise&lt;[RuntimeSettings](./interface/runtimesettings.md)&gt;*
+* getRuntimeSettings(): *Promise&lt;[RuntimeSettings](./interface/RuntimeSettings.md)&gt;*
 
 > Gets current runtime settings.
 > ```js
@@ -332,7 +332,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 ### updateRuntimeSettings
 
-* updateRuntimeSettings(settings: *[RuntimeSettings](./interface/runtimesettings.md) | string*): *Promise&lt;void&gt;*
+* updateRuntimeSettings(settings: *[RuntimeSettings](./interface/RuntimeSettings.md) | string*): *Promise&lt;void&gt;*
 
 > Update runtime settings with a given struct, or a string of `speed`, `balance` or `coverage` to use preset settings for BarcodeReader.
 > The default settings for BarcodeReader is `coverage`.
@@ -488,7 +488,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 * `readonly` `static` version: *string*
 
 > Get the current version: Algorithm version (js wrapper version).
-> Algorithm version can only get after [loadWasm](#loadWasm).
+> Algorithm version can only get after [loadWasm](#loadwasm).
 > ```js
 > console.log(Dynamsoft.DBR.BarcodeReader.version); // "loading...(JS 8.2.5.20210426)"
 > await Dynamsoft.DBR.BarcodeReader.loadWasm();

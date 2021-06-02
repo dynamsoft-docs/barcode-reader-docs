@@ -2,7 +2,7 @@
 layout: default-layout
 title: Dynamsoft Barcode Reader JavaScript API Reference - BarcodeScanner
 description: This page shows the BarcodeScanner class of Dynamsoft Barcode Reader JavaScript SDK.
-keywords: BarcodeScanner, api reference, javascript, js
+keywords: BarcodeScanner, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true
 breadcrumbText: BarcodeScanner
 ---
@@ -79,7 +79,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 > |[hide](#hide)|Stop decoding, release camera, unbind UI, and set the Element as `display:none;`.|
 > |[openVideo](#open)|Bind UI, open the camera, but not decode.|
 > |[showVideo](#show)|Bind UI, open the camera, but not decode, and remove the UIElement `display` style if the original style is `display:none;`.|
-> |[isOpen](#isOpen)|Check if the scanner is open.|
+> |[isOpen](#isopen)|Check if the scanner is open.|
 
 <br>
 
@@ -89,15 +89,15 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 >
 > | Event                | Description |
 > |----------------------|-------------|
-> | [onPlayed](#onPlayed) | Triggered when the camera video stream is played. |
+> | [onPlayed](#onplayed) | Triggered when the camera video stream is played. |
 >
 > | Method               | Description |
 > |----------------------|-------------|
 > |[play](#play)|Continue the video.|
 > |[pause](#pause)|Pause the video. Do not release the camera.|
 > |[stop](#stop)|Stop the video, and release the camera.|
-> |[pauseScan](#pauseScan)|Pause the decoding process.|
-> |[resumeScan](#resumeScan)|Resume the decoding process.|
+> |[pauseScan](#pausescan)|Pause the decoding process.|
+> |[resumeScan](#resumescan)|Resume the decoding process.|
 
 <br>
 
@@ -107,18 +107,18 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 >
 > | Property             | Description |
 > |----------------------|-------------|
-> |[defaultUIElementURL](#defaultUIElementURL)|The url of the default scanner UI.|
-> |[regionMaskFillStyle](#regionMaskFillStyle)|Set the style used when filling the mask beyond the region.|
-> |[regionMaskStrokeStyle](#regionMaskStrokeStyle)|Set the style of the region border.|
-> |[regionMaskLineWidth](#regionMaskLineWidth)|Set the width of the region border.|
-> |[barcodeFillStyle](#barcodeFillStyle)|Set the style used when filling in located barcode.|
-> |[barcodeStrokeStyle](barcodeStrokeStyle)|Set the style of the located barcode border.|
-> |[barcodeLineWidth](barcodeLineWidth)|Set the width of the located barcode border.|
+> |[defaultUIElementURL](#defaultuielementurl)|The url of the default scanner UI.|
+> |[regionMaskFillStyle](#regionmaskfillstyle)|Set the style used when filling the mask beyond the region.|
+> |[regionMaskStrokeStyle](#regionmaskstrokestyle)|Set the style of the region border.|
+> |[regionMaskLineWidth](#regionmasklinewidth)|Set the width of the region border.|
+> |[barcodeFillStyle](#barcodefillstyle)|Set the style used when filling in located barcode.|
+> |[barcodeStrokeStyle](#barcodestrokestyle)|Set the style of the located barcode border.|
+> |[barcodeLineWidth](#barcodelinewidth)|Set the width of the located barcode border.|
 >
 > | Method               | Description |
 > |----------------------|-------------|
-> |[getUIElement](#getUIElement)|Get HTML element containing the `BarcodeScanner` instance.|
-> |[setUIElement](#setUIElement)|Set HTML element containing the `BarcodeScanner` instance.|
+> |[getUIElement](#getuielement)|Get HTML element containing the `BarcodeScanner` instance.|
+> |[setUIElement](#setuielement)|Set HTML element containing the `BarcodeScanner` instance.|
 
 <br>
 
@@ -128,20 +128,20 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 >
 > | Method               | Description |
 > |----------------------|-------------|
-> |[getAllCameras](getAllCameras)|Get infomation of all available cameras on the device.|
-> |[getCurrentCamera](getCurrentCamera)|Get information about the currently used camera.|
-> |[setCurrentCamera](setCurrentCamera)|Choose the camera and play it by its information or devide id.|
-> |[getResolution](getResolution)|Get current camera resolution.|
-> |[setResolution](setResolution)|Set current camera resolution.|
-> |[getVideoSettings](getVideoSettings)|Get current video settings.|
-> |[updateVideoSettings](updateVideoSettings)|Modify and update video settings.|
-> |[getCapabilities](getCapabilities)|Get the camera capabilities. Chrome only.|
-> |[turnOnTorch](turnOnTorch)|Turn on the torch/flashlight. Chrome only.|
-> |[turnOffTorch](turnOffTorch)|Turn off the torch/flashlight. Chrome only.|
-> |[setColorTemperature](setColorTemperature)|Adjusts the color temperature. Chrome only.|
-> |[setExposureCompensation](setExposureCompensation)|Adjusts the exposure level. Chrome only.|
-> |[setZoom](setZoom)|Adjusts the zoom ratio. Chrome only.|
-> |[setFrameRate](setFrameRate)|Adjusts the frame rate. Chrome only.|
+> |[getAllCameras](#getallcameras)|Get infomation of all available cameras on the device.|
+> |[getCurrentCamera](#getcurrentcamera)|Get information about the currently used camera.|
+> |[setCurrentCamera](#setcurrentcamera)|Choose the camera and play it by its information or devide id.|
+> |[getResolution](#getresolution)|Get current camera resolution.|
+> |[setResolution](#setresolution)|Set current camera resolution.|
+> |[getVideoSettings](#getvideosettings)|Get current video settings.|
+> |[updateVideoSettings](#updatevideosettings)|Modify and update video settings.|
+> |[getCapabilities](#getcapabilities)|Get the camera capabilities. Chrome only.|
+> |[turnOnTorch](#turnontorch)|Turn on the torch/flashlight. Chrome only.|
+> |[turnOffTorch](#turnofftorch)|Turn off the torch/flashlight. Chrome only.|
+> |[setColorTemperature](#setcolortemperature)|Adjusts the color temperature. Chrome only.|
+> |[setExposureCompensation](#setexposurecompensation)|Adjusts the exposure level. Chrome only.|
+> |[setZoom](#setzoom)|Adjusts the zoom ratio. Chrome only.|
+> |[setFrameRate](#setframerate)|Adjusts the frame rate. Chrome only.|
 
 <br>
 
@@ -164,10 +164,10 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 > | Property            | Description |
 > |---------------------|-------------|
 > | [productKeys *(BarcodeReader)*](BarcodeReader.md#productkeys) | Get or set the Dynamsoft Barcode Reader SDK product keys. | 
-> | [licenseServer *(BarcodeReader)*](BarcodeReader.md#licenseServer) | Specify the license server URL. |
-> | [handshakeCode *(BarcodeReader)*](BarcodeReader.md#handshakeCode) | Use Handshake Code to get authentication from network. |
-> | [organizationID *(BarcodeReader)*](BarcodeReader.md#organizationID) | Use organization ID to get authentication from network. |
-> | [sessionPassword *(BarcodeReader)*](BarcodeReader.md#sessionPassword) | Specify a password to protect the Handshake Code from abuse. |
+> | [licenseServer *(BarcodeReader)*](BarcodeReader.md#licenseserver) | Specify the license server URL. |
+> | [handshakeCode *(BarcodeReader)*](BarcodeReader.md#handshakecode) | Use Handshake Code to get authentication from network. |
+> | [organizationID *(BarcodeReader)*](BarcodeReader.md#organizationid) | Use organization ID to get authentication from network. |
+> | [sessionPassword *(BarcodeReader)*](BarcodeReader.md#sessionpassword) | Specify a password to protect the Handshake Code from abuse. |
 
 <br>
 
@@ -179,12 +179,12 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 >
 > | Property            | Description |
 > |---------------------|-------------|
-> | [bSaveOriCanvas](#bSaveOriCanvas) | If set to `true`, save the original image in `oriCanvas`. |
-> | [oriCanvas](#oriCanvas) |  An [canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas) object that holds the original image. |
-> |[bPlaySoundOnSuccessfulRead](#bPlaySoundOnSuccessfulRead)|Whether to play sound when the scanner reads a barcode successfully.|
-> |[soundOnSuccessfullRead](#soundOnSuccessfullRead)|The sound to play when the scanner get successfull read.|
-> |[bVibrateOnSuccessfulRead](#bVibrateOnSuccessfulRead)|Whether to vibrate when the scanner reads a barcode successfully.|
-> |[vibrateDuration](#vibrateDuration)|Get or set how long (ms) the vibration lasts.|
+> | [bSaveOriCanvas](#bsaveoricanvas) | If set to `true`, save the original image in `oriCanvas`. |
+> | [oriCanvas](#oricanvas) |  An [canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas) object that holds the original image. |
+> |[bPlaySoundOnSuccessfulRead](#bplaysoundonsuccessfulread)|Whether to play sound when the scanner reads a barcode successfully.|
+> |[soundOnSuccessfullRead](#soundonsuccessfullread)|The sound to play when the scanner get successfull read.|
+> |[bVibrateOnSuccessfulRead](#bvibrateonsuccessfulread)|Whether to vibrate when the scanner reads a barcode successfully.|
+> |[vibrateDuration](#vibrateduration)|Get or set how long (ms) the vibration lasts.|
 >
 > | Static Method        | Description |
 > |----------------------|-------------|
@@ -192,8 +192,8 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 >
 > | Method               | Description |
 > |----------------------|-------------|
-> | [getScanSettings](#getScanSettings) | Get current scan settings. |
-> | [updateScanSettings](#updateScanSettings) | Modify and update scan settings. |
+> | [getScanSettings](#getscansettings) | Get current scan settings. |
+> | [updateScanSettings](#updatescansettings) | Modify and update scan settings. |
 
 <br>
 
@@ -209,7 +209,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 ### createInstance
 
-* `static` createInstance(): *Promise&lt;[BarcodeScanner](#BarcodeScanner)&gt;*
+* `static` createInstance(): *Promise&lt;[BarcodeScanner](#barcodescanner)&gt;*
 
 > Create a `BarcodeScanner` instance.
 >
@@ -231,11 +231,11 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 ### onUnduplicatedRead
 
-* `event` onUnduplicatedRead?: *(txt: string, result: [TextResult](./interface/textresult.md)) => void*
+* `event` onUnduplicatedRead?: *(txt: string, result: [TextResult](./interface/TextResult.md)) => void*
 
 > This event is triggered when a new, unduplicated barcode is found.
 > `txt` holds the barcode text string. `result` contains more info.
-> Old barcodes will be remembered for [duplicateForgetTime](./interface/scanSettings.md).
+> Old barcodes will be remembered for [duplicateForgetTime](./interface/ScanSettings.md).
 > ```js
 > scanner.onUnduplicatedRead = (txt, result) => {
 >   alert(txt);
@@ -247,7 +247,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 ### onFrameRead
 
-* `event` onFrameRead?: *(results: [TextResult](./interface/textresult.md)[]) => void*
+* `event` onFrameRead?: *(results: [TextResult](./interface/TextResult.md)[]) => void*
 
 > The event is triggered after a frame has been scanned.
 > The results object contains all the barcode results in this frame.
@@ -263,7 +263,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 ### decodeCurrentFrame
 
-* decodeCurrentFrame(): *Promise&lt;[TextResult](./interface/textresult.md)[]&gt;*
+* decodeCurrentFrame(): *Promise&lt;[TextResult](./interface/TextResult.md)[]&gt;*
 
 > Decode barcodes from the current frame of the video.
 > ```js
@@ -368,7 +368,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 ### onPlayed
 
-* `event` onPlayed?: *(info: [ScannerPlayCallbackInfo](./interface/scannerplaycallbackinfo)) => void*
+* `event` onPlayed?: *(info: [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)) => void*
 
 > Triggered when the camera video stream is played.
 > ```js
@@ -380,7 +380,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 ### play
 
-* play(deviceId?: *string*, width?: *number*, height?: *number*): *Promise&lt;[ScannerPlayCallbackInfo](../interface/scannerplaycallbackinfo.md)&gt;*
+* play(deviceId?: *string*, width?: *number*, height?: *number*): *Promise&lt;[ScannerPlayCallbackInfo](../interface/ScannerPlayCallbackInfo.md)&gt;*
 
 > Continue the video.
 > ```js
@@ -431,7 +431,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 > The url of the default scanner UI.
 >
-> Can only be changed before [createInstance](#createInstance).
+> Can only be changed before [createInstance](#createinstance).
 >
 > ```js
 > Dynamsoft.DBR.BarcodeScanner.defaultUIElementURL = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.scanner.html";
@@ -493,7 +493,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 * getUIElement(): *HTMLElement*
 
-> Get HTML element containing the [BarcodeScanner](#BarcodeScanner) instance.
+> Get HTML element containing the [BarcodeScanner](#barcodescanner) instance.
 
 <br>
 
@@ -525,7 +525,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 ### getAllCameras
 
-* getAllCameras(): *Promise&lt;[VideoDeviceInfo](./interface/videodeviceinfo)[]&gt;*
+* getAllCameras(): *Promise&lt;[VideoDeviceInfo](./interface/VideoDeviceInfo.md)[]&gt;*
 
 > Get infomation of all available cameras on the device.
 > ```js
@@ -539,7 +539,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 ### getCurrentCamera
 
-* getCurrentCamera(): *Promise&lt;[VideoDeviceInfo](./interface/videodeviceinfo) | null&gt;*
+* getCurrentCamera(): *Promise&lt;[VideoDeviceInfo](./interface/VideoDeviceInfo.md) | null&gt;*
 
 > Get information about the currently used camera.
 > ```js
@@ -550,7 +550,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 ### setCurrentCamera
 
-* setCurrentCamera(cameraInfoOrDeviceId: *any*): *Promise&lt;[ScannerPlayCallbackInfo](./interface/scannerplaycallbackinfo)&gt;*
+* setCurrentCamera(cameraInfoOrDeviceId: *any*): *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
 
 > Choose the camera and play it by its information or devide id.
 > ```js
@@ -643,7 +643,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 > ```js
 > await scanner.turnOnTorch();
 > ```
-> *@see* [turnOffTorch](#turnOffTorch) [getCapabilities](#getCapabilities)
+> *@see* [turnOffTorch](#turnofftorch) [getCapabilities](#getcapabilities)
 
 <br>
 
@@ -657,7 +657,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 > ```js
 > await scanner.turnOffTorch();
 > ```
-> *@see* [turnOnTorch](#turnOnTorch) [getCapabilities](#getCapabilities)
+> *@see* [turnOnTorch](#turnontorch) [getCapabilities](#getcapabilities)
 
 <br>
 
@@ -671,7 +671,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 > ```js
 > await scanner.setColorTemperature(5000);
 > ```
-> *@see* [getCapabilities](#getCapabilities)
+> *@see* [getCapabilities](#getcapabilities)
 
 <br>
 
@@ -685,7 +685,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 > ```js
 > await scanner.setExposureCompensation(-0.7);
 > ```
-> *@see* [getCapabilities](#getCapabilities)
+> *@see* [getCapabilities](#getcapabilities)
 
 <br>
 
@@ -699,7 +699,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 > ```js
 > await scanner.setZoom(400);
 > ```
-> *@see* [getCapabilities](#getCapabilities)
+> *@see* [getCapabilities](#getcapabilities)
 
 <br>
 
@@ -713,7 +713,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 > ```js
 > await scanner.setFrameRate(10);
 > ```
-> *@see* [getCapabilities](#getCapabilities)
+> *@see* [getCapabilities](#getcapabilities)
 
 <br>
 
@@ -721,7 +721,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 ### getRuntimeSettings
 
-* getRuntimeSettings(): *Promise&lt;[RuntimeSettings](./interface/runtimesettings.md)&gt;*
+* getRuntimeSettings(): *Promise&lt;[RuntimeSettings](./interface/RuntimeSettings.md)&gt;*
 
 > Gets current runtime settings.
 > ```js
@@ -872,13 +872,13 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 > Get or set how long (ms) the vibration lasts.
 >
-> *@see* [bVibrateOnSuccessfulRead](#bVibrateOnSuccessfulRead)
+> *@see* [bVibrateOnSuccessfulRead](#bvibrateonsuccessfulread)
 
 <br>
 
 ### getScanSettings
 
-* getScanSettings(): *Promise&lt;[ScanSettings](./interface/scansettings.md)&gt;*
+* getScanSettings(): *Promise&lt;[ScanSettings](./interface/ScanSettings.md)&gt;*
 
 > Get current scan settings.
 > ```js
@@ -892,7 +892,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 ### updateScanSettings
 
-* updateScanSettings(settings: *[ScanSettings](./interface/scansettings.md)*): *Promise&lt;void&gt;*
+* updateScanSettings(settings: *[ScanSettings](./interface/ScanSettings.md)*): *Promise&lt;void&gt;*
 
 > Modify and update scan settings.
 > ```js
