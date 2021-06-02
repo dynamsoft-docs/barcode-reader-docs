@@ -25,6 +25,7 @@ Defines a struct to configure the parameters to connect to license tracking serv
 | [`UUIDGenerationMethod`](#uuidgenerationmethod) | *EnumDMUUIDGenerationMethod* |
 | [`maxBufferDays`](#maxbufferdays) | *NSInteger* |
 | [`limitedLicenseModules`](#limitedlicensemodules) | *NSArray\** |
+| [`organizationID`](#organizationid) | *NSString\** |
 
 
 ### mainServerURL
@@ -42,7 +43,7 @@ NSString* mainServerURL
     nil
 
 - **Remarks**   
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to nil (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
+    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to nil (default value), it will connect to Dynamsoft's license tracking servers for online verification.
 
 
 ### standbyServerURL
@@ -159,3 +160,14 @@ NSArray* limitedLicenseModules
 - **See also**  
     [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)    
 
+
+### organizationID
+The organization ID got from Dynamsoft.
+```objc
+NSString* organizationID
+```
+- **Value range**   
+    Any string value   
+      
+- **Default value**   
+    ""

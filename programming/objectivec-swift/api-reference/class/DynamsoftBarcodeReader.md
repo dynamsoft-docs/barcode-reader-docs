@@ -35,14 +35,12 @@ Four methods are now supported for editing runtime settings — reset, initializ
 ```  
   
 ---
-  
 
-## Attributes 
+## Attributes
   
 | Attribute | Type |
 |---------- | ---- |
 | [`license`](#license) | *NSString\** |
-
 
 ### license
 
@@ -60,7 +58,6 @@ NSString* license
   |----------------------|-------------|
   | [`init`](../api/initialize.md#init) | Create an instance of Dynamsoft Barcode Reader. |
 
-
 ### Decode
 
   | Method               | Description |
@@ -69,7 +66,6 @@ NSString* license
   | [`decodeImage`](../api/decode.md#decodeimage) | Decode barcodes from an image file in memory. |
   | [`decodeBuffer`](../api/decode.md#decodebuffer) | Decode barcodes from raw buffer. |
   | [`decodeBase64`](../api/decode.md#decodebase64) | Decode barcodes from a base64 encoded string. |
-
 
 ### Parameter and Runtime Settings
 
@@ -95,33 +91,28 @@ NSString* license
   | [`outputSettingsToFile`](../api/parameter-and-runtime-settings-advanced.md#outputsettingstofile) | Output runtime settings to a settings file (JSON file). |
   | [`outputSettingsToString`](../api/parameter-and-runtime-settings-advanced.md#outputsettingstostring) | Output runtime settings to a string. |
 
-
-&nbsp; 
-
+&nbsp;
 
 ### License related
-   
+
   | Method               | Description |
   |----------------------|-------------|
   | [`initWithLicense`](../api/license.md#initwithlicense) | Read product key and activate the SDK. |
   | [`initWithLicenseFromServer`](../api/license.md#initwithlicensefromserver) | Initialize license and connect to the specified server for online verification. |
   | [`outputLicenseToString`](../api/license.md#outputlicensetostring) | Output the license content to a string from the license server. |
 
-
 ### Result
-   
+
   | Method               | Description |
   |----------------------|-------------|
   | [`getIntermediateResult`](../api/result.md#getintermediateresult) | Get intermediate results. |
 
-
-&nbsp; 
-
+&nbsp;
 
 ### Video
 
 #### Decode
-   
+
   | Method               | Description |
   |----------------------|-------------|
   | [`startFrameDecoding`](../api/video.md#startframedecoding) | Decode barcodes from inner frame queue. |
@@ -130,13 +121,13 @@ NSString* license
   | [`stopFrameDecoding`](../api/video.md#stopframedecoding) | Stop thread used for frame decoding. |
 
 #### Parameter
-   
+
   | Method               | Description |
   |----------------------|-------------|
   | [`getFrameDecodingParameters`](../api/video.md#getframedecodingparameters) | Initialize frame decoding parameter. |
 
 #### Delegate
-   
+
   | Method               | Description |
   |----------------------|-------------|
   | [`setDBRErrorDelegate`](../api/video.md#setdbrerrordelegate) | Set callback function to process errors generated during frame decoding. |
@@ -144,10 +135,9 @@ NSString* license
   | [`setDBRIntermediateResultDelegate`](../api/video.md#setdbrintermediateresultdelegate) | Set callback function to process intermediate results generated during frame decoding. |
 
 #### Status retrieval
-   
+
   | Method               | Description |
   |----------------------|-------------|
   | [`getLengthOfFrameQueue`](../api/video.md#getlengthofframequeue) | Get length of current inner frame queue. |
-  
 
-&nbsp; 
+&nbsp;

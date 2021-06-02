@@ -37,82 +37,82 @@ public class ExtendedResult
 Extended result type. 
 
 ```csharp
-EnumResultType Dynamsoft.DBR.ExtendedResult.ResultType
+EnumResultType Dynamsoft.ExtendedResult.ResultType
 ```
 
 ### BarcodeFormat
 Barcode type in BarcodeFormat group 1. 
 
 ```csharp
-EnumBarcodeFormat Dynamsoft.DBR.ExtendedResult.BarcodeFormat
+EnumBarcodeFormat Dynamsoft.ExtendedResult.BarcodeFormat
 ```
 
 ### BarcodeFormatString
 Barcode type in BarcodeFormat group 1 as string.
 
 ```csharp
-string Dynamsoft.DBR.ExtendedResult.BarcodeFormatString
+string Dynamsoft.ExtendedResult.BarcodeFormatString
 ```
 
 ### BarcodeFormat_2
 Barcode type in BarcodeFormat group 2.
 
 ```csharp
-EnumBarcodeFormat_2 Dynamsoft.DBR.ExtendedResult.BarcodeFormat_2
+EnumBarcodeFormat_2 Dynamsoft.ExtendedResult.BarcodeFormat_2
 ```
  
 ### BarcodeFormatString_2
 Barcode type in BarcodeFormat group 2 as string.
 
 ```csharp
-string Dynamsoft.DBR.ExtendedResult.BarcodeFormatString_2
+string Dynamsoft.ExtendedResult.BarcodeFormatString_2
 ```
 
 ### Confidence
 The confidence of the result.
 
 ```csharp
-int Dynamsoft.DBR.ExtendedResult.Confidence
+int Dynamsoft.ExtendedResult.Confidence
 ```
 
 ### Bytes
 The content in a byte array.
 
 ```csharp
-byte[] Dynamsoft.DBR.ExtendedResult.Bytes
+byte[] Dynamsoft.ExtendedResult.Bytes
 ```
 
 ### AccompanyingTextBytes
 The accompanying text content in a byte array.
 
 ```csharp
-byte[] Dynamsoft.DBR.ExtendedResult.AccompanyingTextBytes
+byte[] Dynamsoft.ExtendedResult.AccompanyingTextBytes
 ```
 
 ### Deformation
 The deformation value.
 
 ```csharp
-int Dynamsoft.DBR.ExtendedResult.Deformation
+int Dynamsoft.ExtendedResult.Deformation
 ```
 
 ### DetailedResult
 One of the following: [`QRCodeDetails`](QRCodeDetails.md), [`PDF417Details`](PDF417Details.md), [`DataMatrixDetails`](DataMatrixDetails.md), [`AztecDetails`](AztecDetails.md), [`OneDCodeDetails`](OneDCodeDetails.md).
 
 ```csharp
-object Dynamsoft.DBR.ExtendedResult.DetailedResult
+object Dynamsoft.ExtendedResult.DetailedResult
 ```
 
 ### SamplingImage
 The sampling image info.
 
 ```csharp
-SamplingImageData Dynamsoft.DBR.ExtendedResult.SamplingImage
+SamplingImageData Dynamsoft.ExtendedResult.SamplingImage
 ```
  
 ### Clarity
 The clarity of the barcode zone in percentage.
 
 ```csharp
-int Dynamsoft.DBR.ExtendedResult.Clarity
+int Dynamsoft.ExtendedResult.Clarity
 ```
