@@ -12,13 +12,13 @@ Dynamsoft Barcode Reader SDK
 
 [BarcodeReader](BarcodeReader.md)
 
-> Decode barcodes from images
+> Read barcodes from existing images.
 
 <br>
 
 [BarcodeScanner](BarcodeScanner.md) 
 
-> Decode barcodes from videos
+> Get and show camera input and scan video frames for barcodes.
 
 <br>
 
