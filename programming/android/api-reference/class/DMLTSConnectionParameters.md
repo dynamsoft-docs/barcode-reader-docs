@@ -11,9 +11,8 @@ needAutoGenerateSidebar: false
 
 Defines a struct to configure the parameters to connect to license tracking server.  
 
-
 ## Attributes
-    
+
 | Attribute | Type |
 |---------- | ---- |
 | [`mainServerURL`](#mainserverurl) | *String* |
@@ -24,7 +23,7 @@ Defines a struct to configure the parameters to connect to license tracking serv
 | [`maxBufferDays`](#maxbufferdays) | *int* |
 | [`limitedLicenseModules`](#limitedlicensemodules) | *List<Integer>* |
 | [`chargeWay`](#chargeway) | *int* |
-
+| [`organizationID`](#organizationid) | *String* |
 
 ### mainServerURL
 
@@ -34,15 +33,14 @@ The URL of the license tracking server.
 String com.dynamsoft.dbr.DMLTSConnectionParameters.mainServerURL
 ```
 
-- **Value range**   
-    Any string value   
-      
-- **Default value**   
+- **Value range**
+    Any string value
+
+- **Default value**
     null
 
-- **Remarks**   
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
-
+- **Remarks**
+    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.
 
 ### standbyServerURL
 
@@ -52,14 +50,14 @@ The URL of the standby license tracking server.
 String com.dynamsoft.dbr.DMLTSConnectionParameters.standbyServerURL
 ```
 
-- **Value range**   
-    Any string value   
-      
-- **Default value**   
+- **Value range**
+    Any string value
+
+- **Default value**
     null
 
-- **Remarks**   
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
+- **Remarks**
+    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.
 
 ### handshakeCode
 
@@ -69,10 +67,10 @@ The handshake code.
 String com.dynamsoft.dbr.DMLTSConnectionParameters.handshakeCode
 ```
 
-- **Value range**   
-    Any string value   
-      
-- **Default value**   
+- **Value range**
+    Any string value
+
+- **Default value**
     null
 
 ### sessionPassword
@@ -83,12 +81,11 @@ The session password of the handshake code set in license tracking server.
 String com.dynamsoft.dbr.DMLTSConnectionParameters.sessionPassword
 ```
 
-- **Value range**   
-    Any string value   
-      
-- **Default value**   
-    null
+- **Value range**
+    Any string value
 
+- **Default value**
+    null
 
 ### uuidGenerationMethod
 
@@ -98,14 +95,14 @@ Sets the method to generate UUID.
 int com.dynamsoft.dbr.DMLTSConnectionParameters.uuidGenerationMethod
 ```
 
-- **Value range**   
-    Any one of the [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod) Enumeration items.   
-      
-- **Default value**   
-    DM_UUIDGM_RANDOM   
-    
+- **Value range**
+    Any one of the [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod) Enumeration items.
+
+- **Default value**
+    DM_UUIDGM_RANDOM
+
 - **See also**  
-    [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)    
+    [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
 
 ### maxBufferDays
 
@@ -115,12 +112,11 @@ Sets the max days to buffer the license info.
 int com.dynamsoft.dbr.DMLTSConnectionParameters.maxBufferDays
 ```
 
-- **Value range**   
+- **Value range**
     [7,0x7fffffff]  
-      
-- **Default value**   
-    7   
 
+- **Default value**
+    7
 
 ### limitedLicenseModules
 
@@ -130,14 +126,14 @@ Sets the license modules to use.
 List<Integer> com.dynamsoft.dbr.DMLTSConnectionParameters.limitedLicenseModules
 ```
 
-- **Value range**   
-    A list of the [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule) Enumeration items.   
-      
-- **Default value**   
-    null   
-    
+- **Value range**
+    A list of the [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule) Enumeration items.
+
+- **Default value**
+    null
+
 - **See also**  
-    [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)    
+    [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
 
 ### chargeWay
 
@@ -147,12 +143,16 @@ Sets the charge way.
 int com.dynamsoft.dbr.DMLTSConnectionParameters.chargeWay
 ```
 
+- **Value range**
+    Any one of the [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeWay) Enumeration items.
+
+### organizationID
+The organization ID got from Dynamsoft.
+```java
+String com.dynamsoft.dbr.DMLTSConnectionParameters.organizationID
+```
 - **Value range**   
-    Any one of the [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeWay) Enumeration items.   
+    Any string value   
       
 - **Default value**   
-    DM_CW_AUTO   
-    
-- **See also**  
-    [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeWay)    
-
+    ""

@@ -28,7 +28,7 @@ noTitleIndex: true
 You can download the .NET SDK from the [Dynamsoft website](https://www.dynamsoft.com/barcode-reader/downloads/). The zip package includes a free trial license valid for 30 days.   
    
 After you unzip the file, you can find samples for supported platforms in the **Samples** folder under the installation folder. 
-> The .NET SDK is developed based on .NET Framework 2.0/4.0. If you are using .NET Core 2.1 or 3.1, please download the .NET Core SDK (Dynamsoft.NetCoreApp.Barcode) from [Nuget](https://www.nuget.org/packages/Dynamsoft.NetCoreApp.Barcode/). For .Net core installation guide, please refer to [this](../../introduction/how-to-guide/DBRDotNetCore-Linux.md) article.
+> The .NET SDK is developed based on .NET Framework 2.0/4.0. If you are using .NET Core 2.1 or 3.1, please download the .NET Core SDK (Dynamsoft.NetCoreApp.Barcode) from [Nuget](https://www.nuget.org/packages/Dynamsoft.NetCoreApp.Barcode/).
 
 ## Getting Started: HelloWorld
 
@@ -47,7 +47,7 @@ After you unzip the file, you can find samples for supported platforms in the **
     {
         static void Main(string[] args)
         {
-            BarcodeReader reader = new BarcodeReader("<your license key here>");
+            BarcodeReader reader = new BarcodeReader("<your license key>");
             try
             {
                 TextResult[] results = reader.DecodeFile(@"<your image file full path>","");
@@ -77,7 +77,7 @@ After you unzip the file, you can find samples for supported platforms in the **
         }
     }
     ```
-    Please update `<your image file full path>` and `<your license key here>` in the code accordingly.
+    Please update `<your image file full path>` and `<your license key>` in the code accordingly.
 
 4. Run the project.
  If you got the error "Failed to create compression directory" or "Failed to load module dll", please copy `x64` and `x86` folders to the folder where `Dynamsoft.BarcodeReader.dll` and `DynamsoftCommon.dll` resides and try again. The `x64` and `x86` folders can be found under `DBR-DotNet-{version number}\DynamsoftBarcodeReader\Lib\2.0` or `DBR-DotNet-{version number}\DynamsoftBarcodeReader\Lib\4.0`.
@@ -110,37 +110,32 @@ you may use a template which is more flexible and easier to update.
 - [Use `PublicRuntimeSettings` Struct to Change Settings](#use-publicruntimesettings-struct-to-change-settings)   
 - [Use A Template to Change Settings](#use-a-template-to-change-settings)   
 
-### Use [`PublicRuntimeSettings`](api-reference/struct/PublicRuntimeSettings.md) Struct to Change Settings
+### Use `PublicRuntimeSettings` Struct to Change Settings
 Here are some common scanning settings you might find helpful:   
 - [Specify Barcode Type to Read](#specify-barcode-type-to-read)   
 - [Specify Maximum Barcode Count](#specify-maximum-barcode-count)   
 - [Specify a Scan Region](#specify-a-scan-region)  
 
-For more scanning settings guide, check out the [How To](#how-to-guide) section.
+For more scanning settings guide, check out the [`PublicRuntimeSettings`](api-reference/struct/PublicRuntimeSettings.md) Struct.
 
 #### Specify Barcode Type to Read
-By default, the SDK will read all the supported barcode formats except Postal Codes and Dotcode from the image. (See [Product Overview]() for the full supported barcode list.)   
+By default, the SDK will read all the supported barcode formats except Postal Codes and Dotcode from the image. (See [Product Overview](({{ site.introduction }}overview.html#barcode-formats)) for the full supported barcode list.)   
 
-If your full license only covers some barcode formats, you can use `BarcodeFormatIds` and `BarcodeFormatIds_2` to specify the barcode format(s). Check out [`BarcodeFormat`]() and [`BarcodeFormat_2`]().   
+If your full license only covers some barcode formats, you can use `BarcodeFormatIds` and `BarcodeFormatIds_2` to specify the barcode format(s).  
 
 For example, to enable only 1D barcode reading, you can use the following code:   
 
 ```csharp
-//Initialize license prior to any decoding
-//Replace "<Put your license key here>" with your own license
-BarcodeReader reader = new BarcodeReader("<your license key here>");
+BarcodeReader reader = new BarcodeReader("<your license key>");
 PublicRuntimeSettings settings = reader.GetRuntimeSettings();
-//Set the barcode format
 settings.BarcodeFormatIds = (int)EnumBarcodeFormat.BF_ONED;
 reader.UpdateRuntimeSettings(settings);
 try
 {
-    //Replace "<Put the path of your file here>" with your own file path
     TextResult[] results = reader.DecodeFile(@"<your image file full path>","");
 }
 catch(BarcodeReaderException exp)
 {
-    Console.WriteLine(exp.Message);
 }
 reader.Dispose();
 ```
@@ -150,21 +145,16 @@ reader.Dispose();
 By default, the SDK will read as many barcodes as it can. To increase the recognition efficiency, you can use `expectedBarcodesCount` to specify the maximum number of barcodes to recognize according to your scenario. 
 
 ```csharp
-//Initialize license prior to any decoding
-//Replace "<Put your license key here>" with your own license
-BarcodeReader reader = new BarcodeReader("<your license key here>");
+BarcodeReader reader = new BarcodeReader("<your license key>");
 PublicRuntimeSettings settings = reader.GetRuntimeSettings();
-//Set the barcode format
 settings.ExpectedBarcodesCount = 1;
 reader.UpdateRuntimeSettings(settings);
 try
 {
-    //Replace "<Put the path of your file here>" with your own file path
     TextResult[] results = reader.DecodeFile(@"<your image file full path>","");
 }
 catch(BarcodeReaderException exp)
 {
-    Console.WriteLine(exp.Message);
 }
 reader.Dispose();
 ```
@@ -177,11 +167,8 @@ dealing with high-resolution images. You can speed up the recognition process by
 To specify a region, you will need to define an area. The following code shows how to create a template string and define the region.
 
 ```csharp
-//Initialize license prior to any decoding
-//Replace "<Put your license key here>" with your own license
-BarcodeReader reader = new BarcodeReader("<your license key here>");
+BarcodeReader reader = new BarcodeReader("<your license key>");
 PublicRuntimeSettings settings = reader.GetRuntimeSettings();
-//Set the barcode format
 settings.Region.RegionBottom = 100;
 settings.Region.RegionLeft = 0;
 settings.Region.RegionRight = 50;
@@ -190,12 +177,10 @@ settings.Region.RegionMeasuredByPercentage = 1;
 reader.UpdateRuntimeSettings(settings);
 try
 {
-    //Replace "<Put the path of your file here>" with your own file path
     TextResult[] results = reader.DecodeFile(@"<your image file full path>","");
 }
 catch(BarcodeReaderException exp)
 {
-    Console.WriteLine(exp.Message);
 }
 reader.Dispose();
 ```
@@ -206,24 +191,20 @@ Besides the option of using the PublicRuntimeSettings struct, the SDK also provi
 
 ```csharp
 string errorMsg = "";
-//Initialize license prior to any decoding
-//Replace "<Put your license key here>" with your own license
-BarcodeReader reader = new BarcodeReader("<your license key here>");
-EnumErrorCode error = reader.InitRuntimeSettingsWithFile(@"<Put your file path here>", EnumConflictMode.CM_OVERWRITE, out errorMsg);
-reader.OutputSettingsToFile(@"<Put your output file path here>","CurrentRuntimeSettings");
+BarcodeReader reader = new BarcodeReader("<your license key>");
+EnumErrorCode error = reader.InitRuntimeSettingsWithFile(@"<your template file path>", EnumConflictMode.CM_OVERWRITE, out errorMsg);
 try
 {
-    //Replace "<Put the path of your file here>" with your own file path
     TextResult[] results = reader.DecodeFile(@"<your image file full path>","");
 }
 catch(BarcodeReaderException exp)
 {
-    Console.WriteLine(exp.Message);
 }
 reader.Dispose();
 ```
 
-Below is a template for your reference. To learn more about the APIs, you can check out [`PublicRuntimeSettings`](api-reference/struct/PublicRuntimeSettings.md) Struct.  
+Below is a template for your reference. For more scanning settings guide, check out the [`Structure and Interfaces of Parameters`]({{ site.parameters }}structure-and-interfaces-of-parameters.html).
+.  
 ```json
 {
    "ImageParameter" : {
@@ -318,11 +299,15 @@ These files are under `DBR-DotNet-{version number}\DynamsoftBarcodeReader\Lib\4.
 
 ## How to Upgrade
 
+### From version 8.0 to 8.x
+
+Just replace the old assembly files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx). Your existing license for 8.0 is compatible with 8.x.
+
 ### From version 7.x
 
 #### Replace the library
 
-   You need to replace the old assembly files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
+You need to replace the old assembly files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
 
 #### Update existing code
 
@@ -337,14 +322,6 @@ These files are under `DBR-DotNet-{version number}\DynamsoftBarcodeReader\Lib\4.
    ```
 
 ####  Upgrade the license
-
-### From version 8.0 to 8.x
-
-Just replace the old assembly files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx). Your existing license for 8.0 is compatible with 8.x.
-
-### From version 7.x
-
-You need to replace the old assembly files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
 
  Your previous SDK license for version 7.x is not compatible with the version 8.x. Please [contact us](https://www.dynamsoft.com/Company/Contact.aspx) to upgrade your license.
 

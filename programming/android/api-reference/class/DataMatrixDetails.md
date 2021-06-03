@@ -18,12 +18,11 @@ Stores the DataMatrix details.
 | Attribute | Type |
 |---------- | ---- |
 | [`moduleSize`](#modulesize) | *int* |
-| [`rows`](#rows) | *int* | 
+| [`rows`](#rows) | *int* |
 | [`columns`](#columns) | *int* |
-| [`dataRegionRows`](#dataregionrows) | *int* | 
+| [`dataRegionRows`](#dataregionrows) | *int* |
 | [`dataRegionColumns`](#dataregioncolumns) | *int* |
 | [`dataRegionNumber`](#dataregionnumber) | *int* |
-
 
 ### moduleSize
 
@@ -49,7 +48,7 @@ The column count of the barcode.
 int com.dynamsoft.dbr.DataMatrixDetails.columns
 ```
 
-### dataRegionRows 
+### dataRegionRows
 
 The data region row count of the barcode.
 

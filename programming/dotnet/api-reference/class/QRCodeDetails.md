@@ -38,42 +38,42 @@ public class QRCodeDetails
 The barcode module size (the minimum bar width in pixel).  
 
 ```csharp
-int Dynamsoft.DBR.QRCodeDetails.ModuleSize
+int Dynamsoft.QRCodeDetails.ModuleSize
 ```
 
 ### Rows
 The row count of the barcode.  
 
 ```csharp
-int Dynamsoft.DBR.QRCodeDetails.Rows
+int Dynamsoft.QRCodeDetails.Rows
 ```
 
 ### Columns
 The column count of the barcode. 
 
 ```csharp
-int Dynamsoft.DBR.QRCodeDetails.Columns
+int Dynamsoft.QRCodeDetails.Columns
 ```
 
 ### ErrorCorrectionLevel
 The error correction level of the barcode.  
 
 ```csharp
-EnumQRCodeErrorCorrectionLevel Dynamsoft.DBR.QRCodeDetails.ErrorCorrectionLevel
+EnumQRCodeErrorCorrectionLevel Dynamsoft.QRCodeDetails.ErrorCorrectionLevel
 ```
 
 ### Version
 The version of the QR Code.
 
 ```csharp
-int Dynamsoft.DBR.QRCodeDetails.Version
+int Dynamsoft.QRCodeDetails.Version
 ```
 
 ### Model
 Number of the models.
 
 ```csharp
-int Dynamsoft.DBR.QRCodeDetails.Model
+int Dynamsoft.QRCodeDetails.Model
 ```
 
 ### Mode
@@ -81,7 +81,7 @@ int Dynamsoft.DBR.QRCodeDetails.Model
 Identify the first data encoding mode.
 
 ```csharp
-int Dynamsoft.DBR.QRCodeDetails.Mode
+int Dynamsoft.QRCodeDetails.Mode
 ```
 
 ### Page
@@ -89,7 +89,7 @@ int Dynamsoft.DBR.QRCodeDetails.Mode
 Identify the position of the particular symbol.
 
 ```csharp
-int Dynamsoft.DBR.QRCodeDetails.Page
+int Dynamsoft.QRCodeDetails.Page
 ```
 
 ### TotalPage
@@ -97,7 +97,7 @@ int Dynamsoft.DBR.QRCodeDetails.Page
 Identify the total number of symbols to be concatenated in the Structured Append format.
 
 ```csharp
-int Dynamsoft.DBR.QRCodeDetails.TotalPage
+int Dynamsoft.QRCodeDetails.TotalPage
 ```
 
 ### ParityData
@@ -105,5 +105,5 @@ int Dynamsoft.DBR.QRCodeDetails.TotalPage
 The Parity Data shall be an 8 bit byte following the Symbol Sequence Indicator. The parity data is a value obtained by XORing byte by byte the ASCII/JIS values of all the original input data before division into symbol blocks.
 
 ```csharp
-byte Dynamsoft.DBR.QRCodeDetails.ParityData
+byte Dynamsoft.QRCodeDetails.ParityData
 ```

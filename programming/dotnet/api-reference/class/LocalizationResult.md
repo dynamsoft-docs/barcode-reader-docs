@@ -41,96 +41,96 @@ public class LocalizationResult
 The terminate phase of localization result.
 
 ```csharp
-EnumTerminatePhase Dynamsoft.DBR.LocalizationResult.TerminatePhase
+EnumTerminatePhase Dynamsoft.LocalizationResult.TerminatePhase
 ```
 
 ### BarcodeFormat
 Barcode type in BarcodeFormat group 1.
 
 ```csharp
-EnumBarcodeFormat Dynamsoft.DBR.LocalizationResult.BarcodeFormat
+EnumBarcodeFormat Dynamsoft.LocalizationResult.BarcodeFormat
 ```
 
 ### BarcodeFormatString
 Barcode type in BarcodeFormat group 1 as string.
 
 ```csharp
-string Dynamsoft.DBR.LocalizationResult.BarcodeFormatString
+string Dynamsoft.LocalizationResult.BarcodeFormatString
 ```
 
 ### BarcodeFormat_2
 Barcode type in BarcodeFormat group 2.
 
 ```csharp
-EnumBarcodeFormat_2 Dynamsoft.DBR.LocalizationResult.BarcodeFormat_2
+EnumBarcodeFormat_2 Dynamsoft.LocalizationResult.BarcodeFormat_2
 ```
 
 ### BarcodeFormatString_2
 Barcode type in BarcodeFormat group 2 as string.
 
 ```csharp
-string Dynamsoft.DBR.LocalizationResult.BarcodeFormatString_2
+string Dynamsoft.LocalizationResult.BarcodeFormatString_2
 ```
 
 ### ResultPoints
 The array which stores the coordinates of four result points. 
 
 ```csharp
-Point[] Dynamsoft.DBR.LocalizationResult.ResultPoints
+Point[] Dynamsoft.LocalizationResult.ResultPoints
 ```
 
 ### Angle
 The angle of a barcode. Values range is from 0 to 360.
 
 ```csharp
-int Dynamsoft.DBR.LocalizationResult.Angle
+int Dynamsoft.LocalizationResult.Angle
 ```
 
 ### ModuleSize
 The barcode module size (the minimum bar width in pixel).
 
 ```csharp
-int Dynamsoft.DBR.LocalizationResult.ModuleSize
+int Dynamsoft.LocalizationResult.ModuleSize
 ```
 
 ### PageNumber
 The page number the barcode located in. The index is 0-based.
 
 ```csharp
-int Dynamsoft.DBR.LocalizationResult.PageNumber
+int Dynamsoft.LocalizationResult.PageNumber
 ```
 
 ### RegionName
 The region name the barcode located in.
 
 ```csharp
-string Dynamsoft.DBR.LocalizationResult.RegionName
+string Dynamsoft.LocalizationResult.RegionName
 ```
 
 ### DocumentName
 The document name.
 
 ```csharp
-string Dynamsoft.DBR.LocalizationResult.DocumentName
+string Dynamsoft.LocalizationResult.DocumentName
 ```
 
 ### ResultCoordinateType
 The coordinate type.
 
 ```csharp
-EnumResultCoordinateType Dynamsoft.DBR.LocalizationResult.ResultCoordinateType
+EnumResultCoordinateType Dynamsoft.LocalizationResult.ResultCoordinateType
 ```
 
 ### AccompanyingTextBytes
 The accompanying text content in a byte array.
 
 ```csharp
-byte[] Dynamsoft.DBR.LocalizationResult.AccompanyingTextBytes
+byte[] Dynamsoft.LocalizationResult.AccompanyingTextBytes
 ```
 
 ### Confidence
 The confidence of the localization result.
 
 ```csharp
-int Dynamsoft.DBR.LocalizationResult.Confidence
+int Dynamsoft.LocalizationResult.Confidence
 ```

@@ -6,15 +6,7 @@ keywords: user guide, advanced customizations, debug, area, region, javascript, 
 needAutoGenerateSidebar: true
 ---
 
-# Advanced Customizations
-
-## Show internal logs
-
-Include the following in your code to print internal logs in the console.
-
-```javascript
-Dynamsoft.DBR.BarcodeReader._onLog = console.log;
-```
+# Advanced Usage
 
 ## Read a specific area/region
 
@@ -33,6 +25,14 @@ settings.region.regionBottom = 75;
 await scanner.updateRuntimeSettings(settings);
 ```
 [Try in JSFiddle](https://jsfiddle.net/DynamsoftTeam/taykq592/)
+
+## Show internal logs
+
+Include the following in your code to print internal logs in the console.
+
+```javascript
+Dynamsoft.DBR.BarcodeReader._onLog = console.log;
+```
 
 ## Set mode arguments
 

@@ -28,7 +28,6 @@ Code snippet in C:
  void *hBarcode = NULL;
  hBarcode = DBR_CreateInstance();
  DBR_InitLicense(hBarcode, "t0068NQAAAI8+mMcYRNwmijAzExhq******");
- DBR_DestroyInstance(hBarcode);
 ```
 
 Code snippet in C++:
@@ -129,4 +128,13 @@ barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromLTS:lts verificat
 {
     //TODO add your code for license verification
 }
+```
+
+* Swift for iOS
+
+```swift
+var barcodeReader:DynamsoftBarcodeReader! = nil
+let lts = iDMLTSConnectionParameters()
+lts.organizationID = "123456" // replace the number 123456 with YOUR-ORGANIZATION-ID
+barcodeReader = DynamsoftBarcodeReader(licenseFromLTS: lts, verificationDelegate: self)
 ```

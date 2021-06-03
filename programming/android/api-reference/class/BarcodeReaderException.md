@@ -7,14 +7,14 @@ needAutoGenerateSidebar: false
 ---
 
 
-# BarcodeReaderException 
+# BarcodeReaderException
+
 Exception for signalling barcode reader errors.
-  
 
 ## Method
   
 | Method | Type |
-|---------- | ----------- | 
+|---------- | ----------- |
 | [`getErrorCode`][#geterrorcode]| *int* |
 
 ### getErrorCode
@@ -22,5 +22,5 @@ Exception for signalling barcode reader errors.
 Gets the error code.
 
 ```java
-int com.dynamsoft.dbr.BarcodeReaderException.getErrorCode()	
+int com.dynamsoft.dbr.BarcodeReaderException.getErrorCode()
 ```
