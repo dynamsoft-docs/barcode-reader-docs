@@ -21,7 +21,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 * regionTop: *number*
 
-* regionMeasuredByPercentage: *number | boolean*
+* regionMeasuredByPercentage: *number \| boolean*
 
   > `1` means `true`. `0` means `false`.
 
