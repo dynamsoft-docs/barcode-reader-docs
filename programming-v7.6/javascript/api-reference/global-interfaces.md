@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API Reference - Global Interfaces
+title: Dynamsoft Barcode Reader JavaScript API - Global Interfaces
 description: This page shows Global Interfaces of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: BarcodeReaderException, FurtherModes, LocalizationResult, RegionDefinition, RuntimeSettings, TextResult, global interfaces, api reference, javascript, js
 needAutoGenerateSidebar: true

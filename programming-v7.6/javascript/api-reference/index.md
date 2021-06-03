@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API Reference - Main Page
+title: Dynamsoft Barcode Reader JavaScript API - Main Page
 description: This is the main page of Dynamsoft Barcode Reader JavaScript SDK API Reference.
 keywords: api reference, javascript, js
 needAutoGenerateSidebar: false
@@ -8,7 +8,7 @@ breadcrumbText: API Reference
 ---
 
 
-# Dynamsoft Barcode Reader SDK - Javascript API Reference
+#  Reference
 
 [BarcodeReader](#barcodereader)  -- Decode barcodes from images
    * [Methods](#barcodereader-methods)  
