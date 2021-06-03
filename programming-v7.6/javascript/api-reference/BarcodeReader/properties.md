@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API Reference - BarcodeReader Properties
+title: Dynamsoft Barcode Reader JavaScript API - BarcodeReader Properties
 description: This page shows BarcodeReader Properties of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: _bUseFullFeature, bDestroyed, bSaveOriCanvas, oriCanvas, properties, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: true

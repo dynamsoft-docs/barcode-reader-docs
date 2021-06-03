@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader JavaScript API Reference - BarcodeReader
+title: Dynamsoft Barcode Reader JavaScript API - BarcodeReader
 description: This page shows the BarcodeReader Class of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: EnumIMResultDataType, BarcodeReader, api reference, javascript, js
 needAutoGenerateSidebar: false
@@ -8,7 +8,7 @@ noTitleIndex: true
 breadcrumbText: EnumIMResultDataType
 ---
 
-Dynamsoft Barcode Reader SDK - JavaScript API
+
 # EnumIMResultDataType
 
 ```ts
