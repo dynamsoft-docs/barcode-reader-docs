@@ -44,7 +44,7 @@ breadcrumbText: BarcodeScanner
 >
 > | Property             | Description |
 > |----------------------|-------------|
-> | [bDestroyed](#bDestroyed) | Indicates whether the `BarcodeReader` instance has been destroyed. | 
+> | [bDestroyed](#bdestroyed) | Indicates whether the `BarcodeReader` instance has been destroyed. | 
 >
 > | Static Method        | Description |
 > |----------------------|-------------|
@@ -60,12 +60,12 @@ breadcrumbText: BarcodeScanner
 >
 > | Event                | Description |
 > |----------------------|-------------|
-> | [onUnduplicatedRead](#onUnduplicatedRead) | Triggered when a new, unduplicated barcode is found. |
-> | [onFrameRead](#onFrameRead) | Triggered after a frame has been scanned. |
+> | [onUnduplicatedRead](#onunduplicatedread) | Triggered when a new, unduplicated barcode is found. |
+> | [onFrameRead](#onframeread) | Triggered after a frame has been scanned. |
 >
 > | Method               | Description |
 > |----------------------|-------------|
-> | [decodeCurrentFrame](#decodeCurrentFrame) | Decode barcodes from the current frame of the video. |
+> | [decodeCurrentFrame](#decodecurrentframe) | Decode barcodes from the current frame of the video. |
 
 <br>
 
@@ -211,7 +211,7 @@ breadcrumbText: BarcodeScanner
 
 ### createInstance
 
-* `static` createInstance(): *Promise&lt;[BarcodeScanner](#barcodescanner)&gt;*
+* `static` createInstance&#40;&#41;: *Promise&lt;[BarcodeScanner](#barcodescanner)&gt;*
 
 > Create a `BarcodeScanner` instance.
 >
@@ -223,7 +223,7 @@ breadcrumbText: BarcodeScanner
 
 ### destroy
 
-* destroy(): *Promise&lt;void&gt;*
+* destroy&#40;&#41;: *Promise&lt;void&gt;*
 
 > Destroy the `BarcodeScanner` instance. If your page needs to create new instances from time to time, don't forget to destroy unused old instances, otherwise it will cause memory leaks.
 
@@ -233,7 +233,7 @@ breadcrumbText: BarcodeScanner
 
 ### onUnduplicatedRead
 
-* `event` onUnduplicatedRead?: *(txt: string, result: [TextResult](./interface/TextResult.md)) => void*
+* `event` onUnduplicatedRead?: *&#40;txt: string, result: [TextResult](./interface/TextResult.md)&#41; => void*
 
 > This event is triggered when a new, unduplicated barcode is found.
 > `txt` holds the barcode text string. `result` contains more info.
@@ -249,7 +249,7 @@ breadcrumbText: BarcodeScanner
 
 ### onFrameRead
 
-* `event` onFrameRead?: *(results: [TextResult](./interface/TextResult.md)[]) => void*
+* `event` onFrameRead?: *&#40;results: [TextResult](./interface/TextResult.md)&#91;&#93;&#41; => void*
 
 > The event is triggered after a frame has been scanned.
 > The results object contains all the barcode results in this frame.
@@ -265,7 +265,7 @@ breadcrumbText: BarcodeScanner
 
 ### decodeCurrentFrame
 
-* decodeCurrentFrame(): *Promise&lt;[TextResult](./interface/TextResult.md)[]&gt;*
+* decodeCurrentFrame&#40;&#41;: *Promise&lt;[TextResult](./interface/TextResult.md)&#91;&#93;&gt;*
 
 > Decode barcodes from the current frame of the video.
 > ```js
@@ -277,7 +277,7 @@ breadcrumbText: BarcodeScanner
 
 ### open
 
-* open(): *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
+* open&#40;&#41;: *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
 
 > Bind UI, open the camera, start decoding.
 > ```js
@@ -291,7 +291,7 @@ breadcrumbText: BarcodeScanner
 
 ### close
 
-* close(): *Promise&lt;void&gt;*
+* close&#40;&#41;: *Promise&lt;void&gt;*
 
 > Stop decoding, release camera, unbind UI.
 > ```js
@@ -306,7 +306,7 @@ breadcrumbText: BarcodeScanner
 
 ### show
 
-* show(): *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
+* show&#40;&#41;: *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
 
 > Bind UI, open the camera, start decoding, and remove the UIElement `display` style if the original style is `display:none;`.
 > ```js
@@ -319,7 +319,7 @@ breadcrumbText: BarcodeScanner
 
 ### hide
 
-* hide(): *Promise&lt;void&gt;*
+* hide&#40;&#41;: *Promise&lt;void&gt;*
 
 > Stop decoding, release camera, unbind UI.
 > ```js
@@ -334,7 +334,7 @@ breadcrumbText: BarcodeScanner
 
 ### openVideo
 
-* openVideo(): *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
+* openVideo&#40;&#41;: *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
 
 > Bind UI, open the camera, but not decode.
 > ```js
@@ -347,7 +347,7 @@ breadcrumbText: BarcodeScanner
 
 ### showVideo
 
-* showVideo(): *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
+* showVideo&#40;&#41;: *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
 
 > Bind UI, open the camera, but not decode.
 > ```js
@@ -360,7 +360,7 @@ breadcrumbText: BarcodeScanner
 
 ### isOpen
 
-* isOpen(): *boolean*
+* isOpen&#40;&#41;: *boolean*
 
 > Check if the scanner is open.
 
@@ -370,7 +370,7 @@ breadcrumbText: BarcodeScanner
 
 ### onPlayed
 
-* `event` onPlayed?: *(info: [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)) => void*
+* `event` onPlayed?: *&#40;info: [ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&#41; => void*
 
 > Triggered when the camera video stream is played.
 > ```js
@@ -382,7 +382,7 @@ breadcrumbText: BarcodeScanner
 
 ### play
 
-* play(deviceId?: *string*, width?: *number*, height?: *number*): *Promise&lt;[ScannerPlayCallbackInfo](../interface/ScannerPlayCallbackInfo.md)&gt;*
+* play&#40;deviceId?: *string*, width?: *number*, height?: *number*&#41;: *Promise&lt;[ScannerPlayCallbackInfo](../interface/ScannerPlayCallbackInfo.md)&gt;*
 
 > Continue the video.
 > ```js
@@ -395,7 +395,7 @@ breadcrumbText: BarcodeScanner
 
 ### pause
 
-* pause(): *void*
+* pause&#40;&#41;: *void*
 
 > Pause the video. Do not release the camera.
 
@@ -403,7 +403,7 @@ breadcrumbText: BarcodeScanner
 
 ### stop
 
-* stop(): *void*
+* stop&#40;&#41;: *void*
 
 > Stop the video, and release the camera.
 
@@ -411,7 +411,7 @@ breadcrumbText: BarcodeScanner
 
 ### pauseScan
 
-* pauseScan(): *void*
+* pauseScan&#40;&#41;: *void*
 
 > Pause the decoding process.
 
@@ -419,7 +419,7 @@ breadcrumbText: BarcodeScanner
 
 ### resumeScan
 
-* resumeScan(): *void*
+* resumeScan&#40;&#41;: *void*
 
 > Resume the decoding process.
 
@@ -493,7 +493,7 @@ breadcrumbText: BarcodeScanner
 
 ### getUIElement
 
-* getUIElement(): *HTMLElement*
+* getUIElement&#40;&#41;: *HTMLElement*
 
 > Get HTML element containing the [BarcodeScanner](#barcodescanner) instance.
 
@@ -501,7 +501,7 @@ breadcrumbText: BarcodeScanner
 
 ### setUIElement
 
-* setUIElement(elementOrUrl: *HTMLElement &#124; string*): *Promise&lt;void&gt;*
+* setUIElement&#40;elementOrUrl: *HTMLElement &#124; string*&#41;: *Promise&lt;void&gt;*
 
 > Set html element containing the `BarcodeScanner` instance.
 > ```html
@@ -527,7 +527,7 @@ breadcrumbText: BarcodeScanner
 
 ### getAllCameras
 
-* getAllCameras(): *Promise&lt;[VideoDeviceInfo](./interface/VideoDeviceInfo.md)[]&gt;*
+* getAllCameras&#40;&#41;: *Promise&lt;[VideoDeviceInfo](./interface/VideoDeviceInfo.md)&#91;&#93;&gt;*
 
 > Get infomation of all available cameras on the device.
 > ```js
@@ -541,7 +541,7 @@ breadcrumbText: BarcodeScanner
 
 ### getCurrentCamera
 
-* getCurrentCamera(): *Promise&lt;[VideoDeviceInfo](./interface/VideoDeviceInfo.md) &#124; null&gt;*
+* getCurrentCamera&#40;&#41;: *Promise&lt;[VideoDeviceInfo](./interface/VideoDeviceInfo.md) &#124; null&gt;*
 
 > Get information about the currently used camera.
 > ```js
@@ -552,7 +552,7 @@ breadcrumbText: BarcodeScanner
 
 ### setCurrentCamera
 
-* setCurrentCamera(cameraInfoOrDeviceId: *any*): *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
+* setCurrentCamera&#40;cameraInfoOrDeviceId: *any*&#41;: *Promise&lt;[ScannerPlayCallbackInfo](./interface/ScannerPlayCallbackInfo.md)&gt;*
 
 > Choose the camera and play it by its information or devide id.
 > ```js
@@ -566,7 +566,7 @@ breadcrumbText: BarcodeScanner
 
 ### getResolution
 
-* getResolution(): *number[]*
+* getResolution&#40;&#41;: *number&#91;&#93;*
 
 > Get current camera resolution.
 > ```js
@@ -578,7 +578,7 @@ breadcrumbText: BarcodeScanner
 
 ### setResolution
 
-* setResolution(width: *number &#124; number[]*, height: *number*)
+* setResolution&#40;width: *number &#124; number&#91;&#93;*, height: *number*&#41;
 
 > Set current camera resolution.
 > ```js
@@ -589,7 +589,7 @@ breadcrumbText: BarcodeScanner
 
 ### getVideoSettings
 
-* getVideoSettings(): *[MediaStreamConstraints](https://developer.mozilla.org/en-US/docs/Web/API/Media_Streams_API/Constraints)*
+* getVideoSettings&#40;&#41;: *[MediaStreamConstraints](https://developer.mozilla.org/en-US/docs/Web/API/Media_Streams_API/Constraints)*
 
 > Get current video settings.
 
@@ -597,7 +597,7 @@ breadcrumbText: BarcodeScanner
 
 ### updateVideoSettings
 
-* updateVideoSettings([MediaStreamConstraints](https://developer.mozilla.org/en-US/docs/Web/API/Media_Streams_API/Constraints): *any*): *Promise&lt;[ScannerPlayCallbackInfo](./interface/scannerplaycallback.md) &#124; void&gt;*
+* updateVideoSettings&#40;[MediaStreamConstraints](https://developer.mozilla.org/en-US/docs/Web/API/Media_Streams_API/Constraints): *any*&#41;: *Promise&lt;[ScannerPlayCallbackInfo](./interface/scannerplaycallback.md) &#124; void&gt;*
 
 > Modify and update video settings.
 > ```js
@@ -608,7 +608,7 @@ breadcrumbText: BarcodeScanner
 
 ### getCapabilities
 
-* getCapabilities(): *[MediaTrackCapabilities](https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/getCapabilities)*
+* getCapabilities&#40;&#41;: *[MediaTrackCapabilities](https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/getCapabilities)*
 
 > Get the camera capabilities. Chrome only.
 > Only available when the scanner is open.
@@ -637,7 +637,7 @@ breadcrumbText: BarcodeScanner
 
 ### turnOnTorch
 
-* turnOnTorch(): *Promise&lt;void&gt;*
+* turnOnTorch&#40;&#41;: *Promise&lt;void&gt;*
 
 > Turn on the torch/flashlight. Chrome only.
 > Only available when the scanner is open.
@@ -651,7 +651,7 @@ breadcrumbText: BarcodeScanner
 
 ### turnOffTorch
 
-* turnOffTorch(): *Promise&lt;void&gt;*
+* turnOffTorch&#40;&#41;: *Promise&lt;void&gt;*
 
 > Turn off the torch. Chrome only.
 > Only available when the scanner is open.
@@ -665,7 +665,7 @@ breadcrumbText: BarcodeScanner
 
 ### setColorTemperature
 
-* setColorTemperature(value: *number*): *Promise&lt;void&gt;*
+* setColorTemperature&#40;value: *number*&#41;: *Promise&lt;void&gt;*
 
 > Adjusts the color temperature. Chrome only.
 > Only available when the scanner is open.
@@ -679,7 +679,7 @@ breadcrumbText: BarcodeScanner
 
 ### setExposureCompensation
 
-* setExposureCompensation(value: *number*): *Promise&lt;void&gt;*
+* setExposureCompensation&#40;value: *number*&#41;: *Promise&lt;void&gt;*
 
 > Adjusts the exposure level. Chrome only.
 > Only available when the scanner is open.
@@ -693,7 +693,7 @@ breadcrumbText: BarcodeScanner
 
 ### setZoom
 
-* setZoom(value: *number*): *Promise&lt;void&gt;*
+* setZoom&#40;value: *number*&#41;: *Promise&lt;void&gt;*
 
 > Adjusts the zoom ratio. Chrome only.
 > Only available when the scanner is open.
@@ -707,7 +707,7 @@ breadcrumbText: BarcodeScanner
 
 ### setFrameRate
 
-* setFrameRate(value: *number*): *Promise&lt;void&gt;*
+* setFrameRate&#40;value: *number*&#41;: *Promise&lt;void&gt;*
 
 > Adjusts the frame rate. Chrome only.
 > Only available when the scanner is open.
@@ -723,7 +723,7 @@ breadcrumbText: BarcodeScanner
 
 ### getRuntimeSettings
 
-* getRuntimeSettings(): *Promise&lt;[RuntimeSettings](./interface/RuntimeSettings.md)&gt;*
+* getRuntimeSettings&#40;&#41;: *Promise&lt;[RuntimeSettings](./interface/RuntimeSettings.md)&gt;*
 
 > Gets current runtime settings.
 > ```js
@@ -736,7 +736,7 @@ breadcrumbText: BarcodeScanner
 
 ### updateRuntimeSettings
 
-* updateRuntimeSettings(settings: *[RuntimeSettings](./interface/RuntimeSettings.md) &#124; string*): *Promise&lt;void&gt;*
+* updateRuntimeSettings&#40;settings: *[RuntimeSettings](./interface/RuntimeSettings.md) &#124; string*&#41;: *Promise&lt;void&gt;*
 
 > Update runtime settings with a given struct, or a string of `speed`, `balance`, `coverage` and `single` to use preset settings for BarcodeScanner.
 >
@@ -756,7 +756,7 @@ breadcrumbText: BarcodeScanner
 
 ### resetRuntimeSettings
 
-* resetRuntimeSettings(): *Promise&lt;void&gt;*
+* resetRuntimeSettings&#40;&#41;: *Promise&lt;void&gt;*
 
 > Resets all parameters to default values.
 > ```js
@@ -767,7 +767,7 @@ breadcrumbText: BarcodeScanner
 
 ### getModeArgument
 
-* getModeArgument(modeName: *string*, index: *number*, argumentName: *string*): *Promise&lt;string&gt;*
+* getModeArgument&#40;modeName: *string*, index: *number*, argumentName: *string*&#41;: *Promise&lt;string&gt;*
 
 > Get argument value for the specified mode parameter.
 >
@@ -781,7 +781,7 @@ breadcrumbText: BarcodeScanner
 
 ### setModeArgument
 
-* setModeArgument(modeName: *string*, index: *number*, argumentName: *string*, argumentValue: *string*): *Promise&lt;string&gt;*
+* setModeArgument&#40;modeName: *string*, index: *number*, argumentName: *string*, argumentValue: *string*&#41;: *Promise&lt;string&gt;*
 
 > Set argument value for the specified mode parameter.
 >
@@ -880,7 +880,7 @@ breadcrumbText: BarcodeScanner
 
 ### getScanSettings
 
-* getScanSettings(): *Promise&lt;[ScanSettings](./interface/ScanSettings.md)&gt;*
+* getScanSettings&#40;&#41;: *Promise&lt;[ScanSettings](./interface/ScanSettings.md)&gt;*
 
 > Get current scan settings.
 > ```js
@@ -894,7 +894,7 @@ breadcrumbText: BarcodeScanner
 
 ### updateScanSettings
 
-* updateScanSettings(settings: *[ScanSettings](./interface/ScanSettings.md)*): *Promise&lt;void&gt;*
+* updateScanSettings&#40;settings: *[ScanSettings](./interface/ScanSettings.md)*&#41;: *Promise&lt;void&gt;*
 
 > Modify and update scan settings.
 > ```js

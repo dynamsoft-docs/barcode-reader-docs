@@ -30,7 +30,7 @@ breadcrumbText: RuntimeSettings
 
   <br>
 
-* binarizationModes: *[EnumBinarizationMode](../enum/EnumBinarizationMode.md)[]*
+* binarizationModes: *[EnumBinarizationMode](../enum/EnumBinarizationMode.md)&#91;&#93;*
 
   <br>
 
@@ -54,7 +54,7 @@ breadcrumbText: RuntimeSettings
 
   <br>
 
-* localizationModes: *number[] &#124; [EnumLocalizationMode](../enum/EnumLocalizationMode.md)[]*
+* localizationModes: *number&#91;&#93; &#124; [EnumLocalizationMode](../enum/EnumLocalizationMode.md)&#91;&#93;*
 
   > Sets the mode and priority for localization algorithms.
 
@@ -74,7 +74,7 @@ breadcrumbText: RuntimeSettings
 
   <br>
 
-* region: *[RegionDefinition](RegionDefinition.md) &#124; [RegionDefinition](RegionDefinition.md)[]*
+* region: *[RegionDefinition](RegionDefinition.md) &#124; [RegionDefinition](RegionDefinition.md)&#91;&#93;*
 
   > Sets the region definition including the regionTop, regionLeft, regionRight, regionBottom and regionMeasuredByPercentage.
   >
@@ -117,7 +117,7 @@ breadcrumbText: RuntimeSettings
 
   <br>
 
-* scaleUpModes: *[EnumScaleUpMode](../enum/EnumScaleUpMode.md)[]*
+* scaleUpModes: *[EnumScaleUpMode](../enum/EnumScaleUpMode.md)&#91;&#93;*
 
   <br>
 
@@ -125,7 +125,7 @@ breadcrumbText: RuntimeSettings
 
   <br>
 
-* textResultOrderModes: *[EnumTextResultOrderMode](../enum/EnumTextResultOrderMode.md)[]*
+* textResultOrderModes: *[EnumTextResultOrderMode](../enum/EnumTextResultOrderMode.md)&#91;&#93;*
 
   <br>
 
