@@ -238,11 +238,11 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 ### decode
 
-* decode(source: *[Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) \| [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer) \| [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| [Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) \| [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)*<br>
+* decode(source: *[Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) &#124; [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer) &#124; [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) &#124; [Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) &#124; [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)*<br>
   
-  *\| [HTMLImageElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement) \| [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement) \| [HTMLVideoElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement)*<br>
+  *&#124; [HTMLImageElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement) &#124; [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement) &#124; [HTMLVideoElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement)*<br>
   
-  *\| string*): *Promise&lt;[TextResult](./interface/textresult.md)[]&gt;*
+  *&#124; string*): *Promise&lt;[TextResult](./interface/textresult.md)[]&gt;*
 
 > Decode barcodes from a image.
 >
@@ -312,7 +312,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 ### decodeBuffer
 
 * decodeBuffer(<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;buffer: *[Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) \| [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray) \| [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) \| [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer)*,<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;buffer: *[Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) &#124; [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray) &#124; [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) &#124; [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) &#124; [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer)*,<br>
   &nbsp;&nbsp;&nbsp;&nbsp;width: *number*, height: *number*, stride: *number*,<br>
   &nbsp;&nbsp;&nbsp;&nbsp;format: *[EnumImagePixelFormat](./enum/enumimagepixelformat.md)*<br>
   ): *Promise&lt;[TextResult](./interface/textresult.md)[]&gt;*
@@ -338,7 +338,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 ### updateRuntimeSettings
 
-* updateRuntimeSettings(settings: *[RuntimeSettings](./interface/RuntimeSettings.md) \| string*): *Promise&lt;void&gt;*
+* updateRuntimeSettings(settings: *[RuntimeSettings](./interface/RuntimeSettings.md) &#124; string*): *Promise&lt;void&gt;*
 
 > Update runtime settings with a given struct, or a string of `speed`, `balance` or `coverage` to use preset settings for BarcodeReader.
 > The default settings for BarcodeReader is `coverage`.
@@ -409,7 +409,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 ### licenseServer
 
-* `static` licenseServer: *string[] \| string*
+* `static` licenseServer: *string[] &#124; string*
 
 > Specify the license server URL.
 
@@ -478,7 +478,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 ### oriCanvas
 
-* `readonly` oriCanvas: *[HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement) \| [OffscreenCanvas](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas)*
+* `readonly` oriCanvas: *[HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement) &#124; [OffscreenCanvas](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas)*
 
 > An [canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas) object that holds the original image.
 > ```js
