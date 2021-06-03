@@ -178,7 +178,7 @@ breadcrumbText: BarcodeReader
 
 ### isLoaded
 
-* `static` isLoaded(): *boolean*
+* `static` isLoaded&#40;&#41;: *boolean*
 
 > Check if the decoding module is loaded.
 
@@ -186,7 +186,7 @@ breadcrumbText: BarcodeReader
 
 ### loadWasm
 
-* `static` loadWasm(): *Promise&lt;void&gt;*
+* `static` loadWasm&#40;&#41;: *Promise&lt;void&gt;*
 
 > Before most operations, `loadWasm` needs to be excuted firstly.
 >
@@ -216,7 +216,7 @@ breadcrumbText: BarcodeReader
 
 ### createInstance
 
-* `static` createInstance(): *Promise&lt;[BarcodeReader](#barcodereader)&gt;*
+* `static` createInstance&#40;&#41;: *Promise&lt;[BarcodeReader](#barcodereader)&gt;*
 
 > Create a `BarcodeReader` instance.
 >
@@ -228,7 +228,7 @@ breadcrumbText: BarcodeReader
 
 ### destroy
 
-* destroy(): *Promise&lt;void&gt;*
+* destroy&#40;&#41;: *Promise&lt;void&gt;*
 
 > Destroy the `BarcodeReader` instance. If your page needs to create new instances from time to time, don't forget to destroy unused old instances, otherwise it will cause memory leaks.
 
@@ -238,11 +238,11 @@ breadcrumbText: BarcodeReader
 
 ### decode
 
-* decode(source: *[Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) &#124; [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer) &#124; [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) &#124; [Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) &#124; [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)*<br>
+* decode&#40;source: *[Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) &#124; [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer) &#124; [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) &#124; [Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) &#124; [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)*<br>
   
   *&#124; [HTMLImageElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement) &#124; [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement) &#124; [HTMLVideoElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement)*<br>
   
-  *&#124; string*): *Promise&lt;[TextResult](./interface/textresult.md)[]&gt;*
+  *&#124; string*&#41;: *Promise&lt;[TextResult](./interface/textresult.md)&#91;&#93;&gt;*
 
 > Decode barcodes from a image.
 >
@@ -282,7 +282,7 @@ breadcrumbText: BarcodeReader
 
 ### decodeBase64String
 
-* decodeBase64String(base64: *string*): *Promise&lt;[TextResult](./interface/TextResult.md)[]&gt;*
+* decodeBase64String&#40;base64: *string*&#41;: *Promise&lt;[TextResult](./interface/TextResult.md)&#91;&#93;&gt;*
 
 > The decoding method can accept base64 with or without mime.
 > e.g. `data:image/jpg;base64,Xfjshekk....` or `Xfjshekk...`.
@@ -297,7 +297,7 @@ breadcrumbText: BarcodeReader
 
 ### decodeUrl
 
-* decodeUrl(url: *string*): *Promise&lt;[TextResult](./interface/TextResult.md)[]&gt;*
+* decodeUrl&#40;url: *string*&#41;: *Promise&lt;[TextResult](./interface/TextResult.md)&#91;&#93;&gt;*
 
 > The decoding method can accept url. The url source need to be in the same domain or allowed cors.
 > ```js
@@ -311,11 +311,11 @@ breadcrumbText: BarcodeReader
 
 ### decodeBuffer
 
-* decodeBuffer(<br>
+* decodeBuffer&#40;<br>
   &nbsp;&nbsp;&nbsp;&nbsp;buffer: *[Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) &#124; [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray) &#124; [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) &#124; [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) &#124; [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer)*,<br>
   &nbsp;&nbsp;&nbsp;&nbsp;width: *number*, height: *number*, stride: *number*,<br>
   &nbsp;&nbsp;&nbsp;&nbsp;format: *[EnumImagePixelFormat](./enum/enumimagepixelformat.md)*<br>
-  ): *Promise&lt;[TextResult](./interface/textresult.md)[]&gt;*
+  &#41;: *Promise&lt;[TextResult](./interface/textresult.md)&#91;&#93;&gt;*
 
 > Decode barcodes from raw image data.
 
@@ -325,7 +325,7 @@ breadcrumbText: BarcodeReader
 
 ### getRuntimeSettings
 
-* getRuntimeSettings(): *Promise&lt;[RuntimeSettings](./interface/RuntimeSettings.md)&gt;*
+* getRuntimeSettings&#40;&#41;: *Promise&lt;[RuntimeSettings](./interface/RuntimeSettings.md)&gt;*
 
 > Gets current runtime settings.
 > ```js
@@ -338,7 +338,7 @@ breadcrumbText: BarcodeReader
 
 ### updateRuntimeSettings
 
-* updateRuntimeSettings(settings: *[RuntimeSettings](./interface/RuntimeSettings.md) &#124; string*): *Promise&lt;void&gt;*
+* updateRuntimeSettings&#40;settings: *[RuntimeSettings](./interface/RuntimeSettings.md) &#124; string*&#41;: *Promise&lt;void&gt;*
 
 > Update runtime settings with a given struct, or a string of `speed`, `balance` or `coverage` to use preset settings for BarcodeReader.
 > The default settings for BarcodeReader is `coverage`.
@@ -353,7 +353,7 @@ breadcrumbText: BarcodeReader
 
 ### resetRuntimeSettings
 
-* resetRuntimeSettings(): *Promise&lt;void&gt;*
+* resetRuntimeSettings&#40;&#41;: *Promise&lt;void&gt;*
 
 > Resets all parameters to default values.
 > ```js
@@ -364,7 +364,7 @@ breadcrumbText: BarcodeReader
 
 ### getModeArgument
 
-* getModeArgument(modeName: *string*, index: *number*, argumentName: *string*): *Promise&lt;string&gt;*
+* getModeArgument&#40;modeName: *string*, index: *number*, argumentName: *string*&#41;: *Promise&lt;string&gt;*
 
 > Get argument value for the specified mode parameter.
 >
@@ -378,7 +378,7 @@ breadcrumbText: BarcodeReader
 
 ### setModeArgument
 
-* setModeArgument(modeName: *string*, index: *number*, argumentName: *string*, argumentValue: *string*): *Promise&lt;string&gt;*
+* setModeArgument&#40;modeName: *string*, index: *number*, argumentName: *string*, argumentValue: *string*&#41;: *Promise&lt;string&gt;*
 
 > Set argument value for the specified mode parameter.
 >
@@ -409,7 +409,7 @@ breadcrumbText: BarcodeReader
 
 ### licenseServer
 
-* `static` licenseServer: *string[] &#124; string*
+* `static` licenseServer: *string&#91;&#93; &#124; string*
 
 > Specify the license server URL.
 
@@ -505,7 +505,7 @@ breadcrumbText: BarcodeReader
 
 ### detectEnvironment
 
-* `static` detectEnvironment(): *Promise&lt;any&gt;*
+* `static` detectEnvironment&#40;&#41;: *Promise&lt;any&gt;*
 
 > Detect environment and get a report.
 > ```js

@@ -25,7 +25,7 @@ breadcrumbText: TextResult
 
   > Barcode type in string.
 
-* barcodeBytes: *number[]*
+* barcodeBytes: *number&#91;&#93;*
 
   > The barcode content in a byte array.
 
