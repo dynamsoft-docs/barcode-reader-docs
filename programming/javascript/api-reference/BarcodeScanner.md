@@ -501,7 +501,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 ### setUIElement
 
-* setUIElement(elementOrUrl: *HTMLElement \| string*): *Promise&lt;void&gt;*
+* setUIElement(elementOrUrl: *HTMLElement &#124; string*): *Promise&lt;void&gt;*
 
 > Set html element containing the `BarcodeScanner` instance.
 > ```html
@@ -541,7 +541,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 ### getCurrentCamera
 
-* getCurrentCamera(): *Promise&lt;[VideoDeviceInfo](./interface/VideoDeviceInfo.md) \| null&gt;*
+* getCurrentCamera(): *Promise&lt;[VideoDeviceInfo](./interface/VideoDeviceInfo.md) &#124; null&gt;*
 
 > Get information about the currently used camera.
 > ```js
@@ -578,7 +578,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 ### setResolution
 
-* setResolution(width: *number \| number[]*, height: *number*)
+* setResolution(width: *number &#124; number[]*, height: *number*)
 
 > Set current camera resolution.
 > ```js
@@ -597,7 +597,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 ### updateVideoSettings
 
-* updateVideoSettings([MediaStreamConstraints](https://developer.mozilla.org/en-US/docs/Web/API/Media_Streams_API/Constraints): *any*): *Promise&lt;[ScannerPlayCallbackInfo](./interface/scannerplaycallback.md) \| void&gt;*
+* updateVideoSettings([MediaStreamConstraints](https://developer.mozilla.org/en-US/docs/Web/API/Media_Streams_API/Constraints): *any*): *Promise&lt;[ScannerPlayCallbackInfo](./interface/scannerplaycallback.md) &#124; void&gt;*
 
 > Modify and update video settings.
 > ```js
@@ -736,7 +736,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 ### updateRuntimeSettings
 
-* updateRuntimeSettings(settings: *[RuntimeSettings](./interface/RuntimeSettings.md) \| string*): *Promise&lt;void&gt;*
+* updateRuntimeSettings(settings: *[RuntimeSettings](./interface/RuntimeSettings.md) &#124; string*): *Promise&lt;void&gt;*
 
 > Update runtime settings with a given struct, or a string of `speed`, `balance`, `coverage` and `single` to use preset settings for BarcodeScanner.
 >
@@ -810,7 +810,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 ### oriCanvas
 
-* `readonly` oriCanvas: *[HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement) \| [OffscreenCanvas](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas)*
+* `readonly` oriCanvas: *[HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement) &#124; [OffscreenCanvas](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas)*
 
 > An [canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas) object that holds the original image.
 > ```js
@@ -823,7 +823,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 ### bPlaySoundOnSuccessfulRead
 
-* bPlaySoundOnSuccessfulRead: *(boolean \| string) = false*;
+* bPlaySoundOnSuccessfulRead: *(boolean &#124; string) = false*;
 
 > Whether to play sound when the scanner reads a barcode successfully.
 > Default value is `false`, which does not play sound.
@@ -852,7 +852,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 ### bVibrateOnSuccessfulRead
 
-* bVibrateOnSuccessfulRead: *(boolean \| string) = false*
+* bVibrateOnSuccessfulRead: *(boolean &#124; string) = false*
 
 > Whether to vibrate when the scanner reads a barcode successfully.
 > Default value is `false`, which does not vibrate.

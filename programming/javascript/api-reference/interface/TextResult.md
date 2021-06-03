@@ -17,7 +17,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
   > The barcode text.
 
-* barcodeFormat: *number \| [EnumBarcodeFormat](../enum/EnumBarcodeFormat.md)*
+* barcodeFormat: *number &#124; [EnumBarcodeFormat](../enum/EnumBarcodeFormat.md)*
 
   > The barcode format.
 

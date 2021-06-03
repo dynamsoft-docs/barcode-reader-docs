@@ -13,18 +13,18 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
 `interface` RuntimeSettings
 
-* barcodeFormatIds: *number \| [EnumBarcodeFormat](../enum/EnumBarcodeFormat.md)*
+* barcodeFormatIds: *number &#124; [EnumBarcodeFormat](../enum/EnumBarcodeFormat.md)*
 
   > Sets the formats of the barcode in BarcodeFormat group 1 to be read. Barcode formats in BarcodeFormat group 1 can be combined.
   > ```js
   > let runtimeSettings = await reader.getRuntimeSettings();
-  > runtimeSettings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED \| Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE;
+  > runtimeSettings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED &#124; Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE;
   > await reader.updateRuntimeSettings(runtimeSettings);
   > ```
 
   <br>
 
-* barcodeFormatIds_2: *number \| [EnumBarcodeFormat_2](../enum/EnumBarcodeFormat_2.md)*
+* barcodeFormatIds_2: *number &#124; [EnumBarcodeFormat_2](../enum/EnumBarcodeFormat_2.md)*
 
   > Sets the formats of the barcode in BarcodeFormat group 2 to be read. Barcode formats in BarcodeFormat group 1 can be combined.
 
@@ -54,7 +54,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
   <br>
 
-* localizationModes: *number[] \| [EnumLocalizationMode](../enum/EnumLocalizationMode.md)[]*
+* localizationModes: *number[] &#124; [EnumLocalizationMode](../enum/EnumLocalizationMode.md)[]*
 
   > Sets the mode and priority for localization algorithms.
 
@@ -74,7 +74,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
   <br>
 
-* region: *[RegionDefinition](RegionDefinition.md) \| [RegionDefinition](RegionDefinition.md)[]*
+* region: *[RegionDefinition](RegionDefinition.md) &#124; [RegionDefinition](RegionDefinition.md)[]*
 
   > Sets the region definition including the regionTop, regionLeft, regionRight, regionBottom and regionMeasuredByPercentage.
   >
@@ -105,7 +105,7 @@ Dynamsoft Barcode Reader SDK - JavaScript API
 
   <br>
 
-* resultCoordinateType: *number \| [EnumResultCoordinateType](../enum/EnumResultCoordinateType.md)*
+* resultCoordinateType: *number &#124; [EnumResultCoordinateType](../enum/EnumResultCoordinateType.md)*
 
   <br>
 
