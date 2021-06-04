@@ -165,7 +165,7 @@ breadcrumbText: BarcodeReader
 >
 > e.g.:
 >
-> Use min in video deocode (small, download and initialization fast).
+> Use compact in video deocode (small, download and initialization fast).
 >
 > Use full in file decode (need high level deblur).
 >
