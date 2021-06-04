@@ -242,7 +242,7 @@ breadcrumbText: BarcodeReader
   
   *&#124; [HTMLImageElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement) &#124; [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement) &#124; [HTMLVideoElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement)*<br>
   
-  *&#124; string*&#41;: *Promise&lt;[TextResult](./interface/textresult.md)&#91;&#93;&gt;*
+  *&#124; string*&#41;: *Promise&lt;[TextResult](./interface/TextResult.md)&#91;&#93;&gt;*
 
 > Decode barcodes from a image.
 >
@@ -314,8 +314,8 @@ breadcrumbText: BarcodeReader
 * decodeBuffer&#40;<br>
   &nbsp;&nbsp;&nbsp;&nbsp;buffer: *[Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) &#124; [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray) &#124; [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) &#124; [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) &#124; [Buffer](https://nodejs.org/api/buffer.html#buffer_class_buffer)*,<br>
   &nbsp;&nbsp;&nbsp;&nbsp;width: *number*, height: *number*, stride: *number*,<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;format: *[EnumImagePixelFormat](./enum/enumimagepixelformat.md)*<br>
-  &#41;: *Promise&lt;[TextResult](./interface/textresult.md)&#91;&#93;&gt;*
+  &nbsp;&nbsp;&nbsp;&nbsp;format: *[EnumImagePixelFormat](./enum/EnumImagePixelFormat.md)*<br>
+  &#41;: *Promise&lt;[TextResult](./interface/TextResult.md)&#91;&#93;&gt;*
 
 > Decode barcodes from raw image data.
 
