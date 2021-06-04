@@ -16,7 +16,7 @@ breadcrumbText: BarcodeReader
 
 > The `BarcodeReader` class is used for **image** decoding.
 >
-> Comparing to [BarcodeScanner](./BarcodeScanner.md), the default [decoding settings](#decoing-settings) are more accurate but slower.
+> Comparing to [BarcodeScanner](./BarcodeScanner.md), the default [decoding settings](#decoding-settings) are more accurate but slower.
 >
 > ```js
 > let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
