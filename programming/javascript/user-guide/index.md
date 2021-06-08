@@ -4,23 +4,26 @@ title: Dynamsoft Barcode Reader for JavaScript - User Guide
 description: This is the user guide of Dynamsoft Barcode Reader JavaScript SDK.
 keywords: user guide, javascript, js
 breadcrumbText: User Guide
+noTitleIndex: true
 needAutoGenerateSidebar: true
 ---
 
 # Dynamsoft Barcode Reader for Your Website
+
+Turn your web page into a barcode scanner with just a few lines of code.
 
 ![version](https://img.shields.io/npm/v/dynamsoft-javascript-barcode.svg)
 ![downloads](https://img.shields.io/npm/dm/dynamsoft-javascript-barcode.svg) 
 ![jsdelivr](https://img.shields.io/jsdelivr/npm/hm/dynamsoft-javascript-barcode.svg)
 ![](https://img.shields.io/snyk/vulnerabilities/npm/dynamsoft-javascript-barcode.svg)
 
-Turn your web page into a barcode scanner with just a few lines of code.
+[![](https://img.shields.io/badge/Download-Offline%20SDK-orange)](https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=github&product=dbr&package=js)
 
 Once integrated, your users can open your website in a browser, access their cameras and read barcodes directly from the video input.
 
 In this guide, you will learn step by step on how to integrate this library into your website.
 
-> For barcode reading with Node.js, also see [Dynamsoft Barcode Reader for Node](https://github.com/Dynamsoft/javascript-barcode/blob/master/README.NODE.md).
+> For back-end barcode reading with Node.js, also see [Dynamsoft Barcode Reader for Node](https://github.com/Dynamsoft/javascript-barcode/blob/master/README.NODE.md).
 
 Table of Contents:
 
@@ -125,7 +128,7 @@ If the test doesn't go as expected, you can check out the [FAQ](#faq) or [contac
 
 ### Include the library
 
-#### 2.1.1 Use a CDN
+#### Use a CDN
 
 The simplest way to include the library is to use either the [jsDelivr](https://jsdelivr.com/) or [UNPKG](https://unpkg.com/) CDN. The "hello world" example above uses **jsDelivr**.
 
@@ -141,7 +144,7 @@ The simplest way to include the library is to use either the [jsDelivr](https://
   <script src="https://unpkg.com/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js"></script>
   ```
 
-#### 2.1.2 Host the library yourself (recommended)
+#### Host the library yourself (recommended)
 
 Besides using the CDN, you can also download the library and host its files on your own website / server before including it in your application.
 
@@ -181,7 +184,7 @@ Read more on [how to host the library](#hosting-the-library).
 
 Before using the library, you need to configure a few things.
 
-#### 2.2.1 Specify the license
+#### Specify the license
 
   The library requires a license to work, use the APIs `organizationID` and `handshakeCode` to specify how to acquire the license.
 
@@ -197,9 +200,22 @@ Before using the library, you need to configure a few things.
   + Network connection is required for the license to work.
   + If nothing is specified, a 7-day (public) trial will be used by default which is the case in the above "hello world" example.
   + The license is actually fetched during the creation of an `BarcodeScanner` or `BarcodeReader` object.
-  + If a public network connection is not available, you can choose to host a license server in your private network or even get an offline license that does not require any network connection. [Contact us](https://www.dynamsoft.com/company/contact/) for more information.
+  + If a public network connection is not available, you can choose to host a license server in your private network.
 
-#### 2.2.2 Specify the location of the "engine" files
+  An alternative way to specify the license is to use an alphanumeric string which does not require a network connection. The following shows how it could be used. [Contact us](https://www.dynamsoft.com/company/contact/) for more information.
+  
+  ```javascript
+  Dynamsoft.DBR.BarcodeReader.productKeys = "t0068NQAAACgTVU2aucyxqETXKkiomqhV7YoLrnqjLiQQRSH5DBV1UtIs4..."
+  ```
+  
+  Or
+  
+  ```html
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.5/dist/dbr.js" data-productKeys="t0068NQAAACgTVU2aucyxqETXKkiomqhV7YoLrnqjLiQQRSH5DBV1UtIs4..."></script>
+  ```
+
+
+#### Specify the location of the "engine" files
 
   The "engine" files refer to *.worker.js, *.wasm.js and *.wasm, etc. which are loaded by the main library at runtime. This configuration option uses the API `engineResourcePath` and is often not required as these files usually are in the same location with the main library file (dbr.js). However, in cases where the engine files are not in the same location as the main library file (for example, with frameworks like Angular or React, dbr.js is compiled into another file), this configuration will be required.
 
@@ -207,11 +223,11 @@ Before using the library, you need to configure a few things.
   
   ``` javascript
   import DBR from "dynamsoft-javascript-barcode";
-  DBR.BarcodeScanner.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@8.2.3/dist/";
+  DBR.BarcodeScanner.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@/dist/";
   export default DBR;
   ```
 
-#### 2.2.3 Specify which engine to use
+#### Specify which engine to use
 
   The library comes with two engines: "compact" and "full". They may be merged into one in the future, but right now you can choose one to use.
 
@@ -250,7 +266,7 @@ Before using the library, you need to configure a few things.
 
 ### Interact with the library
 
-#### 2.3.1 Create a `BarcodeScanner` object
+#### Create a `BarcodeScanner` object
 
 You can use one of two classes ( `BarcodeScanner` and `BarcodeReader` ) to interact with the library. `BarcodeReader` is a low-level class that processes images directly. `BarcodeScanner` , on the other hand, inherits from `BarcodeReader` and provides high-level APIs and a built-in UI to allow barcode scanning via cameras. We'll focus on `BarcodeScanner` in this guide.
 
@@ -268,7 +284,7 @@ try {
 
 * The creation of an object consists of two parallel tasks: one is to download and compile the "engine", the other is to fetch a license from the License Tracking Server (assuming an online license is used).
 
-#### 2.3.2 Configure the `BarcodeScanner` object
+#### Configure the `BarcodeScanner` object
 
 Let's take a look at the following code snippets first:
 
@@ -330,7 +346,7 @@ As you can see from the above code snippets, there are three types of configurat
 
   See also [settings samples on GitHub](https://dynamsoft.github.io/dbr-browser-samples/3.settings/index.html).
 
-#### 2.3.3 Customize the UI
+#### Customize the UI
 
 The built-in UI of the `BarcodeScanner` object is defined in the file `dist/dbr.scanner.html` . There are a few ways to customize it:
 
@@ -422,7 +438,7 @@ From version 8.2.5 of the library, if no license is specified, a 7-day trial wil
 
 > Network connection is required for the 7-day trial to work.
 
-After that, if you want to evaluate the library further, you can [register for a Dynamsoft account](https://www.dynamsoft.com/api-common/Regist/Regist) (if you haven't already done so) and request a 30-day trial in the [customer portal](https://www.dynamsoft.com/CustomerPortal/Portal/TrialLicense.aspx).
+After that, if you want to evaluate the library further, you can [register for a Dynamsoft account](https://www.dynamsoft.com/api-common/Regist/Regist) (if you haven't already done so) and request a 30-day trial in the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&deploymenttype=browser).
 
 * If you like, you can also [contact our support team](https://www.dynamsoft.com/company/contact/) to get a trial extension.
 
