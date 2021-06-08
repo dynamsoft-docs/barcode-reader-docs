@@ -18,14 +18,16 @@ Stores the OneD code details.
 | [`startCharsBytes`](#startcharsbytes) | *byte\[\]* |
 | [`stopCharsBytes`](#stopcharsbytes) | *byte\[\]* |
 | [`checkDigitBytes`](#checkdigitbytes) | *byte\[\]* |
-
+| [`startPatternRange`](#startpatternrange) | *float\[\]* |
+| [`middlePatternRange`](#middlepatternrange) | *float\[\]* |
+| [`endPatternRange`](#endpatternrange) | *float\[\]* |
 
 ### moduleSize
 
 The barcode module size (the minimum bar width in pixel).
 
 ```java
-int com.dynamsoft.dbr.LocalizationResult.moduleSize
+int com.dynamsoft.dbr.OneDCodeDetails.moduleSize
 ```
 
 ### startCharsBytes
@@ -33,7 +35,7 @@ int com.dynamsoft.dbr.LocalizationResult.moduleSize
 The start chars in a byte array.
 
 ```java
-byte[] com.dynamsoft.dbr.LocalizationResult.startCharsBytes
+byte[] com.dynamsoft.dbr.OneDCodeDetails.startCharsBytes
 ```
 
 ### stopCharsBytes
@@ -41,7 +43,7 @@ byte[] com.dynamsoft.dbr.LocalizationResult.startCharsBytes
 The stop chars in a byte array.
 
 ```java
-byte[] com.dynamsoft.dbr.LocalizationResult.stopCharsBytes
+byte[] com.dynamsoft.dbr.OneDCodeDetails.stopCharsBytes
 ```
 
 ### checkDigitBytes
@@ -49,6 +51,29 @@ byte[] com.dynamsoft.dbr.LocalizationResult.stopCharsBytes
 The check digit chars in a byte array.
 
 ```java
-byte[] com.dynamsoft.dbr.LocalizationResult.checkDigitBytes
+byte[] com.dynamsoft.dbr.OneDCodeDetails.checkDigitBytes
 ```
 
+### startPatternRange
+
+The start pattern range of the OneDcode.
+
+```java
+byte[] com.dynamsoft.dbr.OneDCodeDetails.startPatternRange
+```
+
+### middlePatternRange
+
+The middle pattern range of the OneDcode.
+
+```java
+byte[] com.dynamsoft.dbr.OneDCodeDetails.middlePatternRange
+```
+
+### endPatternRange
+
+The end pattern range of the OneDcode.
+
+```java
+byte[] com.dynamsoft.dbr.OneDCodeDetails.endPatternRange
+```

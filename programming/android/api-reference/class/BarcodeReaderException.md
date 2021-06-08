@@ -15,7 +15,7 @@ Exception for signalling barcode reader errors.
   
 | Method | Type |
 |---------- | ----------- |
-| [`getErrorCode`][#geterrorcode]| *int* |
+| [`getErrorCode`](#geterrorcode)| *int* |
 
 ### getErrorCode
 
