@@ -34,16 +34,21 @@ js_release_notes: /barcode-reader/programming/javascript/release-notes/
 
 dotnet: /barcode-reader/programming/dotnet/
 dotnet_api: /barcode-reader/programming/dotnet/api-reference/
+dotnet_methods: /barcode-reader/programming/dotnet/api-reference/BarcodeReader/
+dotnet_class: /barcode-reader/programming/dotnet/api-reference/class/
 dotnet_release_notes: /barcode-reader/programming/dotnet/release-notes/
 
 oc: /barcode-reader/programming/objectivec-swift/
 oc_api: /barcode-reader/programming/objectivec-swift/api-reference/
 oc_release_notes: /barcode-reader/programming/objectivec-swift/release-notes/
+oc_methods: /barcode-reader/programming/objectivec-swift/api-reference/methods/
 oc_class: /barcode-reader/programming/objectivec-swift/api-reference/class/
 oc_methods: /barcode-reader/programming/objectivec-swift/api-reference/methods/
 
 java: /barcode-reader/programming/java/
 java_api: /barcode-reader/programming/java/api-reference/
+java_methods: /barcode-reader/programming/java/api-reference/BarcodeReader/
+java_class: /barcode-reader/programming/java/api-reference/class/
 java_release_notes: /barcode-reader/programming/java/release-notes/
 
 android: /barcode-reader/programming/android/
@@ -54,9 +59,12 @@ android_methods: /barcode-reader/programming/android/api-reference/BarcodeReader
   
 python: /barcode-reader/programming/python/
 python_api: /barcode-reader/programming/python/api-reference/
+python_methods: /barcode-reader/programming/python/api-reference/BarcodeReader/
+python_class: /barcode-reader/programming/python/api-reference/class/
 python_release_notes: /barcode-reader/programming/python/release-notes/
 
 parameters_reference: /barcode-reader/parameters/reference/
+image_parameters: /barcode-reader/parameters/reference/image_parameters/
 scenario_settings: /barcode-reader/parameters/scenario-settings/
 enumerations: /barcode-reader/parameters/enum/
 
