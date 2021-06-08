@@ -54,7 +54,7 @@ The minimum confidence of the result.
 
 ## ReturnPartialBarcodeValue
 Sets whether or not to return partial barcode value(s).   
-**Not support yet.**    
+**Not supported yet.**    
 &nbsp;
 
 **Remarks**   
