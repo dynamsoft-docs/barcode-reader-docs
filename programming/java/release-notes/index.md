@@ -9,7 +9,8 @@ breadcrumbText: Release Notes
 
 # Dynamsoft Barcode Reader Java SDK - Release Notes
 
-- [8.2 (03/17/2021)](java-8.md#82-03172021)
+- [8.4   (06/08/2021)](java-8.md#84-06082021)
+- [8.2   (03/17/2021)](java-8.md#82-03172021)
 - [8.1.2 (01/22/2021)](java-8.md#812-01222021)
 - [8.1   (01/12/2021)](java-8.md#81-01122021) 
 - [8.0   (11/17/2020)](java-8.md#80-11172020) 

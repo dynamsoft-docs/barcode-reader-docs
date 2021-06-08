@@ -10,11 +10,36 @@ noTitleIndex: true
 
 # Release Notes for .NET SDK - 8.x
 
+## 8.4 （06/08/2021)
+
+### New
+
+- Added a new method [`GetIdleInstancesCount`]({{site.dotnet_methods}}license.html#getidleinstancescount) to return the number of available instances when using the ‘per concurrent instance’ licensing model.
+- Added the [`organizationID`]({{site.dotnet_class}}DMLTSConnectionParameters.html#organizationid) property for license authentication.
+- Added new attributes [`isMirrored`]({{site.dotnet_class}}TextResult.html#ismirrored) and [`isDPM`]({{site.dotnet_class}}TextResult.html#isdpm) to the `TextResult` class. `IsMirrored` returns whether the barcode is mirrored and `isDPM` returns whether the result is recognized as a `DPM` code.
+- Added a new argument, [`ThresholdCompensation`]({{site.image_parameters}}BinarizationModes.html#thresholdcompensation), to the `BinarizationModes` mode arguments.
+
+### Improved
+
+- Faster recognition speeds when detecting dense QR Codes.
+- Improved the performance of boundary identification for DataMatrix codes.
+
+### Deprecated
+
+- ThreshValueCoefficient is now deprecated. It still works in this version but could be removed in the near future. We recommend using ThresholdCompensation instead.
+
+### Fixed
+
+- Fixed a bug that may cause the error 'Failed to get the address of DBR_CreateInstance' when initializing DBR.
+- Fixed an issue when [`handShakeCode`]({{site.dotnet_class}}DMLTSConnectionParameters.html#handshakecode) is not set when calling initLicenseFromLTS.
+- Fixed a potential memory leak.
+- Replaced the static library with a dynamic library to avoid compatibility issues with other Dynamsoft products or third-party libraries.
+
 ## 8.2 (03/17/2021)
 
 ### New
 
-- Added a new mode argument, `FindAccurateBoundary`, to [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes) that determines if the SDK attempts to find an accurate boundary when RegionPredetectionModes is set to `RPM_GENERAL_HSV_CONTRAST`. 
+- Added a new mode argument, `FindAccurateBoundary`, to [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes) that determines if the SDK attempts to find an accurate boundary when RegionPredetectionModes is set to `RPM_GENERAL_HSV_CONTRAST`.
 
 ### Improved
 

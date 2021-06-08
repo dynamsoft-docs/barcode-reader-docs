@@ -10,6 +10,29 @@ noTitleIndex: true
 
 # Release Notes for Android SDK - 8.x
 
+## 8.4 （06/08/2021)
+
+### New
+
+- Added new attributes [`isMirrored`]({{site.android_class}}TextResult.html#ismirrored) and [`isDPM`]({{site.android_class}}TextResult.html#isdpm) to the `TextResult` class. `IsMirrored` returns whether the barcode is mirrored and `isDPM` returns whether the result is recognized as a `DPM` code.
+- Added a new argument, [`ThresholdCompensation`]({{site.image_parameters}}BinarizationModes.html#thresholdcompensation), to the `BinarizationModes` mode arguments.
+
+### Improved
+
+- Faster recognition speeds when detecting dense QR Codes.
+- Improved the performance of boundary identification for DataMatrix codes.
+
+### Deprecated
+
+- ThreshValueCoefficient is now deprecated. It still works in this version but could be removed in the near future. We recommend using ThresholdCompensation instead.
+
+### Fixed
+
+- Fixed an issue when [`handShakeCode`]({{site.android_class}}DMLTSConnectionParameters.html#handshakecode) is not set when calling initLicenseFromLTS.
+- Fixed a bug when trying to build the project in the release mode with code shrinker enabled.
+- Fixed a potential memory leak.
+- Replaced the static library with a dynamic library to avoid compatibility issues with other Dynamsoft products or third-party libraries.
+
 ## 8.2.1 (05/27/2021)
 
 ### New
