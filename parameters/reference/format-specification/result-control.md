@@ -12,7 +12,7 @@ needGenerateH3Content: false
  | Parameter Name | Description |
  | -------------- | ----------- | 
  | [`FormatSpecification.MinResultConfidence`](#minresultconfidence) | The minimum confidence of the result. | 
- | [`FormatSpecification.ReturnPartialBarcodeValue`](#returnpartialbarcodevalue) | Sets whether or not to return partial barcode value(s). Not support yet. | 
+ | [`FormatSpecification.ReturnPartialBarcodeValue`](#returnpartialbarcodevalue) | Sets whether or not to return partial barcode value(s). Not supported yet. | 
 
 ---
 
