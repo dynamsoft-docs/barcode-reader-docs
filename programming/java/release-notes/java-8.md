@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # Release Notes for Java SDK - 8.x
 
-# 8.4（06/08/2021)
+# 8.4 (06/08/2021)
 
 ### New
 
