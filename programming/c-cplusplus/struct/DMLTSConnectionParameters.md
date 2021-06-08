@@ -22,10 +22,10 @@ typedef struct tagDM_LTSConnectionParameters  DM_LTSConnectionParameters
     
 | Attribute | Type |
 |---------- | ---- |
-| [`mainServerURL`](#mainserverurl) | *const char\** |
-| [`standbyServerURL`](#standbyserverurl) | *const char\** |
-| [`handshakeCode`](#handshakecode) | *const char\** |
-| [`sessionPassword`](#sessionpassword) | *const char\** |
+| [`mainServerURL`](#mainserverurl) | *char\** |
+| [`standbyServerURL`](#standbyserverurl) | *char\** |
+| [`handshakeCode`](#handshakecode) | *char\** |
+| [`sessionPassword`](#sessionpassword) | *char\** |
 | [`deploymentType`](#deploymenttype) | [`DM_DeploymentType`]({{ site.enumerations }}other-enums.html#dm_deploymenttype) |
 | [`chargeWay`](#chargeway) | [`DM_ChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway) |
 | [`UUIDGenerationMethod`](#uuidgenerationmethod) | [`DM_UUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod) |
@@ -33,13 +33,15 @@ typedef struct tagDM_LTSConnectionParameters  DM_LTSConnectionParameters
 | [`limitedLicenseModulesCount`](#limitedlicensemodulescount) | *int* |
 | [`limitedLicenseModules`](#limitedlicensemodules) | [`DM_LicenseModule*`]({{ site.enumerations }}other-enums.html#dm_licensemodule) |
 | [`maxConcurrentInstanceCount`](#maxconcurrentinstancecount) | *int* |
-| [`reserved`](#reserved) | *char\[60\]* |
+| [`organizationID`](#organizationid) | *char\** |
+| [`products`](#products) | *int* |
+| [`reserved`](#reserved) | *char\[52\]* |
 
 
 ### mainServerURL
 The URL of the license tracking server.
 ```cpp
-const char*  tagDM_LTSConnectionParameters::mainServerURL
+char* tagDM_LTSConnectionParameters::mainServerURL
 ```
 - **Value range**   
     Any string value   
@@ -54,7 +56,7 @@ const char*  tagDM_LTSConnectionParameters::mainServerURL
 ### standbyServerURL
 The URL of the standby license tracking server.
 ```cpp
-const char*  tagDM_LTSConnectionParameters::standbyServerURL
+char* tagDM_LTSConnectionParameters::standbyServerURL
 ```
 - **Value range**   
     Any string value   
@@ -69,7 +71,7 @@ const char*  tagDM_LTSConnectionParameters::standbyServerURL
 ### handshakeCode
 The handshake code.
 ```cpp
-const char*  tagDM_LTSConnectionParameters::handshakeCode
+char* tagDM_LTSConnectionParameters::handshakeCode
 ```
 - **Value range**   
     Any string value   
@@ -80,7 +82,7 @@ const char*  tagDM_LTSConnectionParameters::handshakeCode
 ### sessionPassword
 The session password of the handshake code set in license tracking server.
 ```cpp
-const char*  tagDM_LTSConnectionParameters::sessionPassword
+char* tagDM_LTSConnectionParameters::sessionPassword
 ```
 - **Value range**   
     Any string value   
@@ -185,8 +187,32 @@ int tagDM_LTSConnectionParameters::maxConcurrentInstanceCount
     It is the total number of instances used by multiple processes. For example, if there are two .EXE are running on the server and each .EXE may have 10 instances at most, then you should set maxConcurrentInstanceCount to 20.
 
 
+
+### organizationID
+The organization ID got from Dynamsoft.
+```cpp
+char* tagDM_LTSConnectionParameters::organizationID
+```
+- **Value range**   
+    Any string value   
+      
+- **Default value**   
+    ""
+
+### products
+Sets the products to get the license for. Product values can be combined.
+```cpp
+int tagDM_LTSConnectionParameters::products
+```
+- **Value range**   
+    A combined value of [`Product`]({{ site.enumerations }}other-enums.html#product) Enumeration items
+      
+- **Default value**   
+    `PROD_ALL`
+    
+
 ### reserved
 Reserved memory for the struct. The length of this array indicates the size of the memory reserved for this struct.
 ```cpp
-char tagDM_LTSConnectionParameters::reserved[60]
+char tagDM_LTSConnectionParameters::reserved[52]
 ```

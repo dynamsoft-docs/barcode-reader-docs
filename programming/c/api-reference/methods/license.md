@@ -18,6 +18,7 @@ needAutoGenerateSidebar: true
   | [`DBR_FreeLicenseString`](#dbr_freelicensestring) | Free memory allocated for the license string. |
   | [`DBR_InitLTSConnectionParameters`](#dbr_initltsconnectionparameters) | Initializes a DM_LTSConnectionParameters struct with default values. |
   | [`DBR_InitLicenseFromLTS`](#dbr_initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`DBR_GetIdleInstancesCount`](#dbr_getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
   
   
   ---
@@ -213,6 +214,32 @@ DMLTSConnectionParameters paramters;
 DBR_InitLTSConnectionParameters(&paramters);
 paramters.handshakeCode = "Your handshake code";
 DBR_InitLicenseFromLTS(&paramters, errorBuf, 512);
+```
+
+&nbsp;
+
+## DBR_GetIdleInstancesCount
+Gets available instances count when charging by concurrent instances count.
+
+```c
+DBR_API int DBR_GetIdleInstancesCount()
+```   
+
+#### Return value
+Returns available instances count.    
+
+#### Code Snippet
+```c
+//...
+int count = DBR_GetIdleInstancesCount();
+if(count > 0)
+{
+  //create instance and process further
+}
+else 
+{
+  //waiting for available instances 
+}
 ```
 
 &nbsp;

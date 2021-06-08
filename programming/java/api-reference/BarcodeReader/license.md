@@ -17,6 +17,7 @@ needAutoGenerateSidebar: true
   | [`outputLicenseToString`](#outputlicensetostring) | Outputs the license content to a string from the license server. |
   | [`initLTSConnectionParameters`](#initltsconnectionparameters) | Initializes a DMLTSConnectionParameters struct with default values. |
   | [`initLicenseFromLTS`](#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`getIdleInstancesCount`](#getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
 
   ---
 
@@ -145,17 +146,17 @@ reader.destroy();
 Initializes a DMLTSConnectionParameters struct with default values.
 
 ```java
-DMLTSConnectionParameters com.dynamsoft.dbr.BarcodeReader.initLTSConnectionParameters() throws BarcodeReaderException
+static DMLTSConnectionParameters com.dynamsoft.dbr.BarcodeReader.initLTSConnectionParameters() throws BarcodeReaderException
 ```
    
 ### Code Snippet
 
 ```java
-BarcodeReader reader = new BarcodeReader();
-DMLTSConnectionParameters info = reader.initLTSConnectionParameters();
+DMLTSConnectionParameters info = BarcodeReader.initLTSConnectionParameters();
 info.handShakeCode = "*****-hs-****";
 info.sessionPassword = "******";
-reader.initLicenseFromLTS(info);
+BarcodeReader.initLicenseFromLTS(info);
+BarcodeReader reader = new BarcodeReader();
 ```
 
 &nbsp;
@@ -166,7 +167,7 @@ reader.initLicenseFromLTS(info);
 Initializes the barcode reader license and connects to the specified server for online verification.
 
 ```java
-void com.dynamsoft.dbr.BarcodeReader.initLicenseFromLTS(DMLTSConnectionParameters ltsInfo) throws BarcodeReaderException
+static void com.dynamsoft.dbr.BarcodeReader.initLicenseFromLTS(DMLTSConnectionParameters ltsInfo) throws BarcodeReaderException
 ```
 
 ### Parameters
@@ -177,11 +178,39 @@ void com.dynamsoft.dbr.BarcodeReader.initLicenseFromLTS(DMLTSConnectionParameter
 ### Code Snippet
 
 ```java
-BarcodeReader reader = new BarcodeReader();
-DMLTSConnectionParameters info = reader.initLTSConnectionParameters();
+DMLTSConnectionParameters info = BarcodeReader.initLTSConnectionParameters();
 info.handShakeCode = "*****-hs-****";
 info.sessionPassword = "******";
-reader.initLicenseFromLTS(info);
+BarcodeReader.initLicenseFromLTS(info);
+BarcodeReader reader = new BarcodeReader();
 ```
 
 &nbsp;
+
+
+## getIdleInstancesCount
+Gets available instances count when charging by concurrent instances count.
+
+```java
+static int com.dynamsoft.dbr.BarcodeReader.getIdleInstancesCount()
+```   
+
+#### Return value
+Returns available instances count.    
+
+#### Code Snippet
+```java
+//...
+int count = BarcodeReader.getIdleInstancesCount();
+if(count > 0)
+{
+  //create instance and process further
+}
+else 
+{
+  //waiting for available instances 
+}
+```
+
+&nbsp;
+

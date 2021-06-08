@@ -19,6 +19,7 @@ needAutoGenerateSidebar: true
   | [`FreeLicenseString`](#freelicensestring) | Free memory allocated for the license string. |
   | [`InitLTSConnectionParameters`](#initltsconnectionparameters) | Initializes a DM_LTSConnectionParameters struct with default values. |
   | [`InitLicenseFromLTS`](#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`GetIdleInstancesCount`](#getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
 
   ---
 
@@ -216,6 +217,32 @@ DMLTSConnectionParameters paramters;
 dynamsoft::dbr::CBarcodeReader::InitLTSConnectionParameters(&paramters);
 paramters.handshakeCode = "Your handshake code";
 dynamsoft::dbr::CBarcodeReader::InitLicenseFromLTS(&paramters);
+```
+
+&nbsp;
+
+## GetIdleInstancesCount
+Gets available instances count when charging by concurrent instances count.
+
+```cpp
+static int dynamsoft::dbr::CBarcodeReader::GetIdleInstancesCount()
+```   
+
+#### Return value
+Returns available instances count.    
+
+#### Code Snippet
+```cpp
+//...
+int count = dynamsoft::dbr::CBarcodeReader::GetIdleInstancesCount();
+if(count > 0)
+{
+  //create instance and process further
+}
+else 
+{
+  //waiting for available instances 
+}
 ```
 
 &nbsp;

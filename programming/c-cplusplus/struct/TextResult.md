@@ -36,7 +36,9 @@ typedef struct tagTextResult*  PTextResult
 | [`resultsCount`](#resultscount) | *int* |
 | [`results`](#results) | [`PExtendedResult`](ExtendedResult.md)\* |
 | [`exception`](#exception) | *const char \** |
-| [`reserved`](#reserved) | *char\[52\]* |
+| [`isDPM`](#isdpm) | *int* |
+| [`isMirrored`](#ismirrored) | *int* |
+| [`reserved`](#reserved) | *char\[44\]* |
 
 
 ### barcodeFormat
@@ -111,8 +113,20 @@ The exception message.
 const char* tagTextResult::exception
 ```
 
+### isDPM
+Identify whether the barcode is decoded using the DPM feature.
+```cpp
+int tagTextResult::isDPM
+```
+
+### isMirrored
+Identify whether the barcode is mirrored.
+```cpp
+int tagTextResult::isMirrored
+```
+
 ### reserved
 Reserved memory for the struct. The length of this array indicates the size of the memory reserved for this struct.
 ```cpp
-char tagTextResult::reserved[56]
+char tagTextResult::reserved[44]
 ```

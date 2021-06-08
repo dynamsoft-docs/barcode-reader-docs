@@ -31,6 +31,8 @@ public class DMLTSConnectionParameters
 | [`MaxBufferDays`](#maxbufferdays) | *int* |
 | [`LimitedLicenseModules`](#limitedlicensemodules) | *EnumDMLicenseModule[]* |
 | [`MaxConcurrentInstanceCount`](#maxconcurrentinstancecount) | *int* |
+| [`OrganizationID`](#organizationid) | *string* |
+| [`Products`](#products) | *int* |
 
 
 ### MainServerURL
@@ -202,3 +204,29 @@ int Dynamsoft.DMLTSConnectionParameters.MaxConcurrentInstanceCount
 - **Remarks**   
     It works only when [ChargeWay](#chargeway) is setting to DM_CW_CONCURRENT_INSTANCE_COUNT
     It is the total number of instances used by multiple processes. For example, if there are two .EXE are running on the server and each .EXE may have 10 instances at most, then you should set maxConcurrentInstanceCount to 20.
+
+
+### OrganizationID
+The organization ID got from Dynamsoft.
+
+```csharp
+string Dynamsoft.DMLTSConnectionParameters.OrganizationID
+```
+
+- **Value range**   
+    Any string value   
+      
+- **Default value**   
+    null
+
+
+### Products
+Sets the products to get the license for. Product values can be combined.
+```csharp
+int Dynamsoft.DMLTSConnectionParameters.Products
+```
+- **Value range**   
+    A combined value of [`Product`]({{ site.enumerations }}other-enums.html#product) Enumeration items
+      
+- **Default value**   
+    `PROD_ALL`

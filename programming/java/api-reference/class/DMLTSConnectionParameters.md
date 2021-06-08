@@ -27,6 +27,8 @@ Defines a struct to configure the parameters to connect to license tracking serv
 | [`maxBufferDays`](#maxbufferdays) | *int* |
 | [`limitedLicenseModules`](#limitedlicensemodules) | *int[]* |
 | [`maxConcurrentInstanceCount`](#maxconcurrentinstancecount) | *int* |
+| [`organizationID`](#organizationid) | *String* |
+| [`products`](#products) | *int* |
 
 
 ### mainServerURL
@@ -192,3 +194,28 @@ int com.dynamsoft.dbr.DMLTSConnectionParameters.maxConcurrentInstanceCount
 - **Remarks**   
     It works only when [chargeWay](#chargeway) is setting to DM_CW_CONCURRENT_INSTANCE_COUNT
     It is the total number of instances used by multiple processes. For example, if there are two .EXE are running on the server and each .EXE may have 10 instances at most, then you should set maxConcurrentInstanceCount to 20.
+
+
+### organizationID
+The organization ID got from Dynamsoft.
+```java
+String com.dynamsoft.dbr.DMLTSConnectionParameters.organizationID
+```
+- **Value range**   
+    Any string value   
+      
+- **Default value**   
+    ""
+
+### products
+Sets the products to get the license for. Product values can be combined.
+```java
+int com.dynamsoft.dbr.DMLTSConnectionParameters.products
+```
+- **Value range**   
+    A combined value of [`Product`]({{ site.enumerations }}other-enums.html#product) Enumeration items
+      
+- **Default value**   
+    `PROD_ALL`
+    
+
