@@ -87,6 +87,7 @@ breadcrumbText: API Reference
   | [`OutputLicenseToString`](BarcodeReader/license.md#outputlicensetostring) | Outputs the license content as an encrypted string from the license server to be used for offline license verification.|
   | [`InitLTSConnectionParameters`](BarcodeReader/license.md#initltsconnectionparameters) | Initializes a DMLTSConnectionParameters struct with default values. |
   | [`InitLicenseFromLTS`](BarcodeReader/license.md#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`GetIdleInstancesCount`](BarcodeReader/license.md#getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
    
    
 &nbsp; 
@@ -234,6 +235,7 @@ breadcrumbText: API Reference
 - [`IntermediateResultSavingMode`]({{ site.enumerations }}result-enums.html#intermediateresultsavingmode)	
 - [`IntermediateResultType`]({{ site.enumerations }}result-enums.html#intermediateresulttype)	
 - [`LocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode)
+- [`Product`]({{ site.enumerations }}other-enums.html#product)   
 - [`PDFReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#pdfreadingmode)   
 - [`QRCodeErrorCorrectionLevel`]({{ site.enumerations }}other-enums.html#qrcodeerrorcorrectionlevel)	
 - [`RegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode)	

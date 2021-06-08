@@ -90,6 +90,7 @@ breadcrumbText: API Reference
   | [`DBR_FreeLicenseString`](methods/license.md#dbr_freelicensestring) | Free memory allocated for the license string. |
   | [`DBR_InitLTSConnectionParameters`](methods/license.md#dbr_initltsconnectionparameters) | Initializes a DM_LTSConnectionParameters struct with default values. |
   | [`DBR_InitLicenseFromLTS`](methods/license.md#dbr_initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`DBR_GetIdleInstancesCount`](methods/license.md#dbr_getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
 
 &nbsp; 
 
@@ -221,6 +222,7 @@ breadcrumbText: API Reference
 - [`IntermediateResultType`]({{ site.enumerations }}result-enums.html#intermediateresulttype)	
 - [`LocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode)
 - [`PDFReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#pdfreadingmode)   
+- [`Product`]({{ site.enumerations }}other-enums.html#product)   
 - [`QRCodeErrorCorrectionLevel`]({{ site.enumerations }}other-enums.html#qrcodeerrorcorrectionlevel)	
 - [`RegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode)	
 - [`ResultCoordinateType`]({{ site.enumerations }}result-enums.html#resultcoordinatetype)	

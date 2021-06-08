@@ -10,6 +10,28 @@ noTitleIndex: true
 
 # Release Notes for C++ SDK - 8.x
 
+## 8.4 (06/08/2021)
+
+### New
+
+- Added a new method [`GetIdleInstancesCount`]({{site.cpp_methods}}license.html#getidleinstancescount) to return the number of available instances when using the ‘per concurrent instance’ licensing model.
+- Added the [`organizationID`]({{site.structs}}DMLTSConnectionParameters.html?src=cpp#organizationid) property for license authentication.
+- Added new attributes [`isMirrored`]({{site.structs}}TextResult.html?src=cpp#ismirrored) to the `TextResult` class. `IsMirrored` returns whether the barcode is mirrored.
+- Added a new argument, `ThresholdCompensation`, to the `BinarizationModes` mode arguments.
+
+### Improved
+
+- Faster recognition speeds when detecting dense QR Codes.
+- Improved the performance of boundary identification for DataMatrix codes.
+
+### Deprecated
+
+- `ThreshValueCoefficient` is now deprecated. It still works in this version but could be removed in the near future. We recommend using ThresholdCompensation instead.
+
+### Fixed
+
+- Fixed an issue that happens when calling initLicenseFromLTS if [`handShakeCode`]({{site.structs}}DMLTSConnectionParameters.html?src=cpp#handshakecode) is not set.
+
 ## 8.2 (03/17/2021)
 
 ### New
@@ -53,7 +75,7 @@ noTitleIndex: true
 
 - Improved the localization robustness for QR Code.
 - Improved the localization for low quality 1D barcodes.
-- Improved the deblurring performance and recognition rate for DataMatrix. 
+- Improved the deblurring performance and recognition rate for DataMatrix.
 - Improved the recognition rate for Aztec.
 
 ### Fixed
@@ -67,7 +89,7 @@ noTitleIndex: true
 
 - Implemented the mechanism of loading libraries dynamically at runtime when [Parameter Mode Enumerations]({{ site.enumerations }}parameter-mode-enums.html) are used (except *_AUTO and *_SKIP). Use LibraryFileName and LibraryParameters to configure.
 - (For IntermediateResult Advanced Module) Added support for decoding IntermediateResult. For example, users with a binarized image could use this function to skip some image preprocessing steps.
-- Implemented a new licensing tracking mechanism, License 2.0, which makes it easier for users to track license usage. 
+- Implemented a new licensing tracking mechanism, License 2.0, which makes it easier for users to track license usage.
 - Added a new format control parameter, BarcodeZoneMinDistanceToImageBorders, to set the minimum distance (in pixels) between the barcode zone and image borders.
 - Added a new format control parameter, MinRatioOfBarcodeZoneWidthToHeight, to set the minimum ratio (width/height) of the barcode zone.
 - Added a new format control parameter, BarcodeZoneBarCountRangeArray, to set the barcode zone’s range of bar count for barcode search.

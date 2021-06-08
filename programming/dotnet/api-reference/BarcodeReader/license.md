@@ -16,6 +16,7 @@ needAutoGenerateSidebar: true
   | [`OutputLicenseToString`](#outputlicensetostring) | Outputs the license content as an encrypted string from the license server to be used for offline license verification.|
   | [`InitLTSConnectionParameters`](#initltsconnectionparameters) | Initializes a DMLTSConnectionParameters struct with default values. |
   | [`InitLicenseFromLTS`](#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`GetIdleInstancesCount`](#getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
   
   ---
 
@@ -142,17 +143,17 @@ else{
 Initializes a DMLTSConnectionParameters struct with default values.
 
 ```csharp
-DMLTSConnectionParameters Dynamsoft.DBR.BarcodeReader.InitLTSConnectionParameters()
+static DMLTSConnectionParameters Dynamsoft.DBR.BarcodeReader.InitLTSConnectionParameters()
 ```   
 
 #### Code Snippet
 ```csharp
-BarcodeReader reader = new BarcodeReader();
-DMLTSConnectionParameters ltsInfo = reader.InitLTSConnectionParameters();
+DMLTSConnectionParameters ltsInfo = BarcodeReader.InitLTSConnectionParameters();
 ltsInfo.HandShake = "*****-hs-****";
 ltsInfo.SessionPassword = "******";
 string errorMsg;
-readr.InitLicenseFromLts(ltsInfo, out errorMsg);
+BarcodeReader.InitLicenseFromLts(ltsInfo, out errorMsg);
+BarcodeReader reader = new BarcodeReader();
 ```
 
 &nbsp;
@@ -162,7 +163,7 @@ readr.InitLicenseFromLts(ltsInfo, out errorMsg);
 Initializes the barcode reader license and connects to the specified server for online verification.
 
 ```csharp
-EnumErrorCode Dynamsoft.DBR.BarcodeReader.InitLicenseFromLTS(DMLTSConnectionParameters ltsConnectionParameters, out string errorMsg)
+static EnumErrorCode Dynamsoft.DBR.BarcodeReader.InitLicenseFromLTS(DMLTSConnectionParameters ltsConnectionParameters, out string errorMsg)
 ```   
    
 #### Parameters
@@ -174,12 +175,38 @@ Returns error code.
 
 #### Code Snippet
 ```csharp
-BarcodeReader reader = new BarcodeReader();
-DMLTSConnectionParameters ltsInfo = reader.InitLTSConnectionParameters();
+DMLTSConnectionParameters ltsInfo = BarcodeReader.InitLTSConnectionParameters();
 ltsInfo.HandShake = "*****-hs-****";
 ltsInfo.SessionPassword = "******";
 string errorMsg;
-readr.InitLicenseFromLts(ltsInfo, out errorMsg);
+BarcodeReader.InitLicenseFromLts(ltsInfo, out errorMsg);
+BarcodeReader reader = new BarcodeReader();
+```
+
+&nbsp;
+
+## GetIdleInstancesCount
+Gets available instances count when charging by concurrent instances count.
+
+```csharp
+static int Dynamsoft.DBR.BarcodeReader.GetIdleInstancesCount()
+```   
+
+#### Return value
+Returns available instances count.    
+
+#### Code Snippet
+```csharp
+//...
+int count = BarcodeReader.GetIdleInstancesCount();
+if(count > 0)
+{
+  //create instance and process further
+}
+else 
+{
+  //waiting for available instances 
+}
 ```
 
 &nbsp;

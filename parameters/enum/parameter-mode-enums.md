@@ -120,7 +120,7 @@ Describes the binarization mode.
 | -------------------------- | ------------------- | ----- | ----------- | ----------------- |
 | BM_SKIP | EnumBinarizationModeSkip | 0x00 | Skips the binarization. | `N/A` |
 | BM_AUTO | EnumBinarizationModeAuto | 0x01 | **Not supported yet.** | `N/A` |
-| BM_LOCAL_BLOCK | EnumBinarizationModeLocalBlock | 0x02 | Binarizes the image based on the local block. | [`BlockSizeX`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#blocksizex)<br>[`BlockSizeY`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#blocksizey)<br>[`EnableFillBinaryVacancy`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#enablefillbinaryvacancy)<br>[`ImagePreprocessingModesIndex`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#imagepreprocessingmodesindex)<br>[`ThreshValueCoefficient`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#threshvaluecoefficient)<br> |
+| BM_LOCAL_BLOCK | EnumBinarizationModeLocalBlock | 0x02 | Binarizes the image based on the local block. | [`BlockSizeX`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#blocksizex)<br>[`BlockSizeY`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#blocksizey)<br>[`EnableFillBinaryVacancy`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#enablefillbinaryvacancy)<br>[`ImagePreprocessingModesIndex`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#imagepreprocessingmodesindex)<br>[`ThresholdCompensation`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#thresholdcompensation)<br> |
 | BM_THRESHOLD | EnumBinarizationModeThreshold | 0x04 | Performs image binarization based on the given threshold. | [`BinarizationThreshold`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#binarizationThreshold)<br>[`ImagePreprocessingModesIndex`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#imagepreprocessingmodesindex) |
 
 
@@ -512,7 +512,7 @@ Describes the terminate phase.
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum TerminatePhase` |
-| .Net | `enum Dynamsoft.EnumTerminatePhase` |
+| .Net | `enum Dynamsoft.DBR.EnumTerminatePhase` |
 | JavaScript | `Dynamsoft.DBR.EnumTerminatePhase` |
 | Python | `class EnumTerminatePhase(IntEnum)` |
 | Java / Android | `class EnumTerminatePhase` |

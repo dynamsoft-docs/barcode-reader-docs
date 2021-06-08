@@ -18,7 +18,6 @@ Stores the text result.
 ```  
   
 ---
-  
 
 ## Attributes
   
@@ -34,7 +33,8 @@ Stores the text result.
 | [`detailedResult`](#detailedresult) | *NSObject \** |
 | [`extendedResults`](#extendedResults) | [`NSArray<iExtendedResult*>*`](iExtendedResult.md)\* |
 | [`exception`](#exception) | *NSString \** |
-
+| [`isDPM`](#isdpm) | *NSInteger* |
+| [`isMirrored`](#ismirrored) | *NSInteger* |
 
 ### barcodeFormat
 
@@ -114,4 +114,20 @@ The exception message.
 
 ```objc
 NSString* exception
+```
+
+### isDPM
+
+This attribute stands for whether the result is a DPM result.
+
+```objc
+NSInteger isDPM
+```
+
+### isMirrored
+
+This attribute stands for whether the barcode is mirrored.
+
+```objc
+NSInteger isMirrored
 ```

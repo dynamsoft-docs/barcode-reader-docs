@@ -142,119 +142,77 @@ you may use a template which is more flexible and easier to update.
 - [Use `PublicRuntimeSettings` Struct to Change Settings](#use-publicruntimesettings-struct-to-change-settings)   
 - [Use A Template to Change Settings](#use-a-template-to-change-settings)   
 
-### Use [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) Struct to Change Settings
+### Use `PublicRuntimeSettings` Struct to Change Settings
 Here are some common scanning settings you might find helpful:   
 - [Specify Barcode Type to Read](#specify-barcode-type-to-read)   
 - [Specify Maximum Barcode Count](#specify-maximum-barcode-count)   
 - [Specify a Scan Region](#specify-a-scan-region)  
 
-For more scanning settings guide, check out the [How To](#how-to-guide) section.
+For more scanning settings guide, check out the [`PublicRuntimeSettings`](({{ site.structs }}PublicRuntimeSettings.html)) Struct.
 
 #### Specify Barcode Type to Read
-By default, the SDK will read all the supported barcode formats except Postal Codes and Dotcode from the image. (See [Product Overview]({{ site.dbrOverview }}) for the full supported barcode list.)   
+By default, the SDK will read all the supported barcode formats except Postal Codes and Dotcode from the image. If you know exactly the barcode format(s) you want to read, use `barcodeFormatIds` and `barcodeFormatIds_2` to specify the barcode format(s) to speed up the process and improve the accuracy. Check out [`Barcode Format Enumeration`]({{ site.enumerations }}format-enums.html) for full supported barcode list.   
 
-If your full license only covers some barcode formats, you can use `BarcodeFormatIds` and `BarcodeFormatIds_2` to specify the barcode format(s). Check out [`BarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) and [`BarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2).   
-
-For example, to enable only 1D barcode reading, you can use the following code:   
+For example, to read QR Code only, you can use the following code:   
 
 ```c
-void *hBarcode = NULL;
 char sError[512];
-TextResultArray* pResult = NULL;
 PublicRuntimeSettings runtimeSettings;
-hBarcode = DBR_CreateInstance();
-// Initialize license prior to any decoding
-//Replace "<Put your license key here>" with your own license
-DBR_InitLicense(hBarcode, "<Put your license key here>");
-//Set the barcode format
+//...Initialization code
 DBR_GetRuntimeSettings(hBarcode, &runtimeSettings);
-runtimeSettings.barcodeFormatIds = 2047; // OneD barcode
-DBR_UpdateRuntimeSettings(hBarcode, &runtimeSettings,sError,512);
-//Replace "Put the path of your file here" with your own file path
-DBR_DecodeFile(hBarcode,"<Put your file path here>","");
-DBR_GetAllTextResults(hBarcode, &pResult);
-DBR_FreeTextResults(&pResult);
-DBR_DestroyInstance(hBarcode);
+runtimeSettings.barcodeFormatIds = BF_QR_CODE; 
+runtimeSettings.barcodeFormatIds_2 = BF2_NULL; 
+DBR_UpdateRuntimeSettings(hBarcode, &runtimeSettings, sError, 512);
+//...Decode and do something with the result
 ```
 
 #### Specify maximum barcode count
-By default, the SDK will read as many barcodes as it can. To increase the recognition efficiency, you can use `expectedBarcodesCount` to specify the maximum number of barcodes to recognize according to your scenario.   
+By default, the SDK will read as many barcodes as it can. If you know exactly the barcode count or the maximum count you want to read, use `expectedBarcodesCount` to specify the count value to speed up the process.   
+
+For example, to read two barcodes only, you can use the following code:   
 
 ```c
-void *hBarcode = NULL;
 char sError[512];
-TextResultArray* pResult = NULL;
 PublicRuntimeSettings runtimeSettings;
-hBarcode = DBR_CreateInstance();
-// Initialize license prior to any decoding
-//Replace "<Put your license key here>" with your own license
-DBR_InitLicense(hBarcode, "<Put your license key here>");
-//Set the number of barcodes to be expected
+//...Initialization code
 DBR_GetRuntimeSettings(hBarcode, &runtimeSettings);
-runtimeSettings.expectedBarcodesCount = 1;
+runtimeSettings.expectedBarcodesCount = 2;
 DBR_UpdateRuntimeSettings(hBarcode, &runtimeSettings, sError, 512);
-//Replace "<Put the path of your file here>" with your own file path
-DBR_DecodeFile(hBarcode,"<Put your file path here>","");
-DBR_GetAllTextResults(hBarcode, &pResult);
-DBR_FreeTextResults(&pResult);
-DBR_DestroyInstance(hBarcode);
+//...Decode and do something with the result
 ```
 
 #### Specify a scan region
-By default, the barcode reader will search the whole image for barcodes. This can lead to poor performance especially when
-dealing with high-resolution images. You can speed up the recognition process by restricting the scanning region.   
+By default, the SDK will search the whole image for barcodes. This can lead to poor performance especially when
+dealing with high-resolution images. If you know exactly where the barcode locates, use `region` to specify the barcode location.   
 
-To specify a region, you will need to define an area. The following code shows how to create a template string and define the region.   
+For example, to find the barcode located in the middle of the image, you can use the following code:   
 
 ```c
-void *hBarcode = NULL;
 char sError[512];
-TextResultArray* pResult = NULL;
 PublicRuntimeSettings runtimeSettings;
-hBarcode = DBR_CreateInstance();
-// Initialize license prior to any decoding
-//Replace "<Put your license key here>" with your own license
-DBR_InitLicense(hBarcode, "<Put your license key here>");
-//Decode the barcodes on the left half of the image
+//...Initialization code
 DBR_GetRuntimeSettings(hBarcode, &runtimeSettings);
-runtimeSettings.region.regionBottom = 100;
-runtimeSettings.region.regionLeft = 0;
-runtimeSettings.region.regionRight = 50;
-runtimeSettings.region.regionTop = 0;
-runtimeSettings.region.regionMeasuredByPercentage = 1; //The region is determined by percentage
-DBR_UpdateRuntimeSettings(hBarcode, &runtimeSettings,sError,512);
-//Replace "<Put the path of your file here>" with your own file path
-DBR_DecodeFile(hBarcode,"put your file path here","");
-DBR_GetAllTextResults(hBarcode, &pResult);
-DBR_FreeTextResults(&pResult);
-DBR_DestroyInstance(hBarcode);
+runtimeSettings.region.regionLeft = 25;
+runtimeSettings.region.regionTop = 25;
+runtimeSettings.region.regionRight = 75;
+runtimeSettings.region.regionBottom = 75;
+runtimeSettings.region.regionMeasuredByPercentage = 1; 
+DBR_UpdateRuntimeSettings(hBarcode, &runtimeSettings, sError, 512);
+//...Decode and do something with the result
 ```
 
 ### Use A Template to Change Settings
-Besides the option of using the PublicRuntimeSettings struct, the SDK also provides [`DBR_InitRuntimeSettingsWithString`]({{ site.c_methods }}parameter-and-runtime-settings-advanced.html#dbr_initruntimesettingswithstring) and [`DBR_InitRuntimeSettingsWithFile`]({{ site.c_methods }}parameter-and-runtime-settings-advanced.html#dbr_initruntimesettingswithfile) APIs that enable you to use a template to control all the runtime settings. With a template, instead of writing many codes to modify the settings, you can manage all the runtime settings in a JSON file/string.    
+Besides the option of using the PublicRuntimeSettings struct, the SDK also provides [`DBR_InitRuntimeSettingsWithString`]({{ site.c_methods }}parameter-and-runtime-settings-advanced.html#dbr_initruntimesettingswithstring) and [`DBR_InitRuntimeSettingsWithFile`]({{ site.c_methods }}parameter-and-runtime-settings-advanced.html#dbr_initruntimesettingswithfile) APIs that enable you to use a template to control all the settings. With a template, instead of writing many codes to modify the settings, you can manage all the settings in a JSON file/string.    
 
 ```c
-void *hBarcode = NULL;
 char sError[512];
-TextResultArray* pResult = NULL;
-hBarcode = DBR_CreateInstance();
-// Initialize license prior to any decoding
-//Replace "<Put your license key here>" with your own license
-DBR_InitLicense(hBarcode, "<Put your license key here>");
-//Use a template to modify the runtime settings
-//DBR_InitRuntimeSettingsWithString() can also be used to modify the runtime settings with a json string
+//...Initialization code
 DBR_InitRuntimeSettingsWithFile(hBarcode, "<Put your file path here>", CM_OVERWRITE, sError, 512);
-//Output runtime settings to a json file.
-//DBR_OutputLicenseToString() can also be used to output the settings to a string
-DBR_OutputSettingsToFile(hBarcode, "<Put your file path here>", "runtimeSettings");
-//Replace "<Put your file path here>" with your own file path
-DBR_DecodeFile(hBarcode,"put your file path here","");
-DBR_GetAllTextResults(hBarcode, &pResult);
-DBR_FreeTextResults(&pResult);
-DBR_DestroyInstance(hBarcode);
+//...Decode and do something with the result
 ```  
 
-Below is a template for your reference. To learn more about the APIs, you can check out [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) Struct.  
+Below is a template for your reference. For more scanning settings guide, check out the [`Structure and Interfaces of Parameters`]({{ site.parameters }}structure-and-interfaces-of-parameters.html).
+
 ```json
 {
    "ImageParameter" : {

@@ -25,6 +25,7 @@ needAutoGenerateSidebar: false
 - [BlockSizeY](#blocksizey)
 - [EnableFillBinaryVacancy](#enablefillbinaryvacancy)
 - [ImagePreprocessingModesIndex](#imagepreprocessingmodesindex)
+- [ThresholdCompensation](#thresholdcompensation)
 - [ThreshValueCoefficient](#threshvaluecoefficient)
 - [BinarizationThreshold](#binarizationThreshold)
 - [LibraryFileName](#libraryfilename)
@@ -89,13 +90,15 @@ The index of a specific image preprocessing mode in the [ImagePreprocessingModes
   -1: The current binarization mode is applied to all modes in parameter [ImagePreprocessingModes](ImagePreprocessingModes.md#imagepreprocessingmodes).
 
 
-##### ThreshValueCoefficient 
+##### ThresholdCompensation 
 Constant subtracted from the mean or weighted mean. Normally, it is positive but may be zero or negative as well.
 
 | Value Type | Value Range | Default Value | 
 | ---------- | ----------- | ------------- |
 | *int* | [-255, 255] | 10 |         
 
+##### ThreshValueCoefficient 
+Deprecated. Use [ThresholdCompensation](#thresholdcompensation) instead.
 
 ##### BinarizationThreshold
 Sets the binarization threshold.

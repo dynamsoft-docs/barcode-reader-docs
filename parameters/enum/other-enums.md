@@ -18,6 +18,7 @@ needGenerateH3Content: false
   | [`DM_UUIDGenerationMethod`](#dm_uuidgenerationmethod) | Describes the UUID generation method. |
   | [`ImagePixelFormat`](#imagepixelformat) | Describes the image pixel format. |
   | [`QRCodeErrorCorrectionLevel`](#qrcodeerrorcorrectionlevel) | Describes the QR Code error correction level.   |
+  | [`Product`](#product) | Describes Dynamsoft products.   |
   
 ---
 
@@ -31,7 +32,7 @@ Describes charge way.
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum DM_ChargeWay` |
-| .Net | `enum Dynamsoft.EnumDMChargeWay` |
+| .Net | `enum Dynamsoft.DBR.EnumDMChargeWay` |
 | JavaScript | `N/A` |
 | Python | `class EnumDMChargeWay(IntEnum)` |
 | Java / Android | `class EnumDMChargeWay` |
@@ -65,7 +66,7 @@ Describes the deployment type.
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum DM_DeploymentType` |
-| .Net | `enum Dynamsoft.EnumDMDeploymentType` |
+| .Net | `enum Dynamsoft.DBR.EnumDMDeploymentType` |
 | JavaScript | `N/A` |
 | Python | `class EnumDMDeploymentType(IntEnum)` |
 | Java | `class EnumDMDeploymentType` |
@@ -95,7 +96,7 @@ Describes Dynamsoft license modules.
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum DM_LicenseModule` |
-| .Net | `enum Dynamsoft.EnumDMLicenseModule` |
+| .Net | `enum Dynamsoft.DBR.EnumDMLicenseModule` |
 | JavaScript | `N/A` |
 | Python | `class EnumDMLicenseModule(IntEnum)` |
 | Java / Android | `class EnumDMLicenseModule` |
@@ -133,7 +134,7 @@ Describes UUID generation method.
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum DM_UUIDGenerationMethod` |
-| .Net | `enum Dynamsoft.EnumDMUUIDGenerationMethod` |
+| .Net | `enum Dynamsoft.DBR.EnumDMUUIDGenerationMethod` |
 | JavaScript | `N/A` |
 | Python | `class EnumDMUUIDGenerationMethod(IntEnum)` |
 | Java / Android | `class EnumDMUUIDGenerationMethod` |
@@ -217,4 +218,32 @@ Describes the QR Code error correction level.
 | QRECL_ERROR_CORRECTION_L | EnumQRCodeErrorCorrectionLevelErrorCorrectionL | 1 | Error Correction Level L (low) |
 | QRECL_ERROR_CORRECTION_M | EnumQRCodeErrorCorrectionLevelErrorCorrectionM | 2 | Error Correction Level M (medium-low) |
 | QRECL_ERROR_CORRECTION_Q | EnumQRCodeErrorCorrectionLevelErrorCorrectionQ | 3 | Error Correction Level Q (medium-high) |
+
+
+
+## Product
+Describes Dynamsoft products.
+
+
+### Declarations
+   
+| Language | Declaration |
+| -------- | ----------- |
+| C / C++ | `enum Product` |
+| .Net | `enum Dynamsoft.EnumProduct` |
+| JavaScript | `Dynamsoft.EnumProduct` |
+| Python | `class EnumProduct(IntEnum)` |
+| Java / Android | `class EnumProduct` |
+| ObjC / Swift | `enum EnumProduct` |
+
+### Members
+   
+| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
+| -------------------------- | ------------------- | ----- | ----------- |
+| PROD_DBR | EnumProductDBR | 0x0001 | Dynamsoft Barcode Reader |
+| PROD_DLR | EnumProductDLR | 0x0002 | Dynamsoft Label Recognition |
+| PROD_DWT | EnumProductDWT | 0x0004 | Dynamic Web Twain |
+| PROD_DCE | EnumProductDCE | 0x0008 | Dynamsoft Camera Enhancer |
+| PROD_DPS | EnumProductDPS | 0x0010 | Dynamsoft Panorama |
+| PROD_ALL | EnumProductALL | 0xFFFF | All Dynamsoft products |
 

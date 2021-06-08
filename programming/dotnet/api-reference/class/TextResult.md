@@ -31,74 +31,88 @@ public class TextResult
 | [`DetailedResult`](#detailedresult) | *object* |
 | [`Results`](#results) | *[`ExtendedResult`](ExtendedResult.md)[ ]* |
 | [`Exception`](#Exception) | *string* |
+| [`IsDPM`](#isdpm) | *int* |
+| [`IsMirrored`](#ismirrored) | *int* |
 
 
 ### BarcodeFormat
 Barcode type in BarcodeFormat group 1.
 
 ```csharp
-EnumBarcodeFormat Dynamsoft.TextResult.BarcodeFormat
+EnumBarcodeFormat Dynamsoft.DBR.TextResult.BarcodeFormat
 ```
 
 ### BarcodeFormatString
 Barcode type in BarcodeFormat group 1 as string.
 
 ```csharp
-string Dynamsoft.TextResult.BarcodeFormatString
+string Dynamsoft.DBR.TextResult.BarcodeFormatString
 ```
 
 ### BarcodeFormat_2
 Barcode type in BarcodeFormat group 2.
 
 ```csharp
-EnumBarcodeFormat_2 Dynamsoft.TextResult.BarcodeFormat_2
+EnumBarcodeFormat_2 Dynamsoft.DBR.TextResult.BarcodeFormat_2
 ```
 
 ### BarcodeFormatString_2
 Barcode type in BarcodeFormat group 2 as string.
 
 ```csharp
-string Dynamsoft.TextResult.BarcodeFormatString_2
+string Dynamsoft.DBR.TextResult.BarcodeFormatString_2
 ```
 
 ### BarcodeText
 The barcode text, ends by '\0'.
 
 ```csharp
-string Dynamsoft.TextResult.BarcodeText
+string Dynamsoft.DBR.TextResult.BarcodeText
 ```
 
 ### BarcodeBytes
 The barcode content in a byte array.
 
 ```csharp
-byte[] Dynamsoft.TextResult.BarcodeBytes
+byte[] Dynamsoft.DBR.TextResult.BarcodeBytes
 ```
 
 ### LocalizationResult
 The corresponding localization result.
 
 ```csharp
-LocalizationResult Dynamsoft.TextResult.LocalizationResult
+LocalizationResult Dynamsoft.DBR.TextResult.LocalizationResult
 ```
 
 ### DetailedResult
 One of the following: [`QRCodeDetails`](QRCodeDetails.md), [`PDF417Details`](PDF417Details.md), [`DataMatrixDetails`](DataMatrixDetails.md), [`AztecDetails`](AztecDetails.md), [`OneDCodeDetails`](OneDCodeDetails.md).
 
 ```csharp
-object Dynamsoft.TextResult.DetailedResult
+object Dynamsoft.DBR.TextResult.DetailedResult
 ```
 
 ### Results
 The extended result array.
 
 ```csharp
-ExtendedResult[] Dynamsoft.TextResult.Results
+ExtendedResult[] Dynamsoft.DBR.TextResult.Results
 ```
 
 ### Exception
 The exception message.
 
 ```csharp
-string Dynamsoft.TextResult.Exception
+string Dynamsoft.DBR.TextResult.Exception
+```
+
+### IsDPM
+Identify whether the barcode is decoded using the DPM feature.
+```cpp
+int Dynamsoft.DBR.TextResult.IsDPM
+```
+
+### IsMirrored
+Identify whether the barcode is mirrored.
+```cpp
+int Dynamsoft.DBR.TextResult.IsMirrored
 ```

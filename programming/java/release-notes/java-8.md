@@ -10,11 +10,33 @@ noTitleIndex: true
 
 # Release Notes for Java SDK - 8.x
 
+# 8.4 (06/08/2021)
+
+### New
+
+- Added a new method [`GetIdleInstancesCount`]({{site.java_methods}}license.html#getidleinstancescount) to return the number of available instances when using the ‘per concurrent instance’ licensing model.
+- Added the [`organizationID`]({{site.java_class}}DMLTSConnectionParameters.html#organizationid) property for license authentication.
+- Added new attributes [`isMirrored`]({{site.java_class}}TextResult.html#ismirrored) to the `TextResult` class. `IsMirrored` returns whether the barcode is mirrored.
+- Added a new argument, `ThresholdCompensation`, to the `BinarizationModes` mode arguments.
+
+### Improved
+
+- Faster recognition speeds when detecting dense QR Codes.
+- Improved the performance of boundary identification for DataMatrix codes.
+
+### Deprecated
+
+- `ThreshValueCoefficient` is now deprecated. It still works in this version but could be removed in the near future. We recommend using ThresholdCompensation instead.
+
+### Fixed
+
+- Fixed an issue that happens when calling initLicenseFromLTS if [`handShakeCode`]({{site.java_class}}DMLTSConnectionParameters.html#handshakecode) is not set.
+
 ## 8.2 (03/17/2021)
 
 ### New
 
-- Added a new mode argument, `FindAccurateBoundary`, to [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes) that determines if the SDK attempts to find an accurate boundary when RegionPredetectionModes is set to `RPM_GENERAL_HSV_CONTRAST`. 
+- Added a new mode argument, `FindAccurateBoundary`, to [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes) that determines if the SDK attempts to find an accurate boundary when RegionPredetectionModes is set to `RPM_GENERAL_HSV_CONTRAST`.
 
 ### Improved
 

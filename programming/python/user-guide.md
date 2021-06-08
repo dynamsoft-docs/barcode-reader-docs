@@ -98,7 +98,7 @@ you may use a template which is more flexible and easier to update.
 - [Use `PublicRuntimeSettings` Struct to Change Settings](#use-publicruntimesettings-struct-to-change-settings)   
 - [Use A Template to Change Settings](#use-a-template-to-change-settings)   
 
-### Use [`PublicRuntimeSettings`](api-reference/class/PublicRuntimeSettings.md) Class to Change Settings
+### Use `PublicRuntimeSettings` Class to Change Settings
 
 Here are some common scanning settings you might find helpful:
 
@@ -106,159 +106,66 @@ Here are some common scanning settings you might find helpful:
 - [Specify Maximum Barcode Count](#specify-maximum-barcode-count)   
 - [Specify a Scan Region](#specify-a-scan-region)  
 
-For more scanning settings guide, check out the [How To](#how-to-guide) section.
+For more scanning settings guide, check out the [`PublicRuntimeSettings`](api-reference/class/PublicRuntimeSettings.md) Struct.
 
 #### Specify Barcode Type to Read
+By default, the SDK will read all the supported barcode formats except Postal Codes and Dotcode from the image. If you know exactly the barcode format(s) you want to read, use `barcode_format_ids` and `barcode_format_ids_2` to specify the barcode format(s) to speed up the process and improve the accuracy. Check out [`Barcode Format Enumeration`]({{ site.enumerations }}format-enums.html) for full supported barcode list.   
 
-By default, the SDK will read all the supported barcode formats except Postal Codes and Dotcode from the image. (See [Product Overview]({{ site.introduction }}overview.html) for the full supported barcode list.)   
-
-If your full license only covers some barcode formats, you can use `BarcodeFormatIds` and `BarcodeFormatIds_2` to specify the barcode format(s). Check out [`BarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) and [`BarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2).   
-
-For example, to enable only 1D barcode reading, you can use the following code:
+For example, to read QR Code only, you can use the following code:   
 
 ```python
-license_key = "<your license key here>"
-image = r"<your image file full path>"
-
-reader = BarcodeReader()
-
-reader.init_license(license_key)
-
+#...Initialization code
 settings = reader.get_runtime_settings()
-settings.barcode_format_ids = EnumBarcodeFormat.BF_ONED
-
-try:
-    reader.update_runtime_settings(settings)
-    text_results = reader.decode_file(image)
-
-    if text_results != None:
-        for text_result in text_results:
-            print("Barcode Format : ")
-            print(text_result.barcode_format_string)
-            print("Barcode Text : ")
-            print(text_result.barcode_text)
-            print("Localization Points : ")
-            print(text_result.localization_result.localization_points)
-            print("Exception : ")
-            print(text_result.exception)
-            print("-------------")
-except BarcodeReaderError as bre:
-    print(bre)
+settings.barcode_format_ids = EnumBarcodeFormat.BF_QR_CODE
+settings.barcode_format_ids_2 = EnumBarcodeFormat_2.BF2_NULL
+reader.update_runtime_settings(settings)
+#...Decode and do something with the result
 ```
 
 #### Specify maximum barcode count
 
-By default, the SDK will read as many barcodes as it can. To increase the recognition efficiency, you can use `expectedBarcodesCount` to specify the maximum number of barcodes to recognize according to your scenario. 
+By default, the SDK will read as many barcodes as it can. If you know exactly the barcode count or the maximum count you want to read, use `expected_barcodes_count` to specify the count value to speed up the process.   
+
+For example, to read two barcodes only, you can use the following code:   
 
 ```python
-   license_key = "<your license key here>"
-   image = r"<your image file full path>"
-
-   reader = BarcodeReader()
-
-   reader.init_license(license_key)
-
-   settings = reader.get_runtime_settings()
-   settings.expected_barcodes_count = 1
-
-   try:
-      reader.update_runtime_settings(settings)
-      text_results = reader.decode_file(image)
-
-      if text_results != None:
-         for text_result in text_results:
-               print("Barcode Format : ")
-               print(text_result.barcode_format_string)
-               print("Barcode Text : ")
-               print(text_result.barcode_text)
-               print("Localization Points : ")
-               print(text_result.localization_result.localization_points)
-               print("Exception : ")
-               print(text_result.exception)
-               print("-------------")
-   except BarcodeReaderError as bre:
-      print(bre)
+#...Initialization code
+settings = reader.get_runtime_settings()
+settings.expected_barcodes_count = 2
+reader.update_runtime_settings(settings)
+#...Decode and do something with the result
 ```
 
 ### Specify a scan region
 
-By default, the barcode reader will search the whole image for barcodes. This can lead to poor performance especially when
-dealing with high-resolution images. You can speed up the recognition process by restricting the scanning region.
+By default, the SDK will search the whole image for barcodes. This can lead to poor performance especially when
+dealing with high-resolution images. If you know exactly where the barcode locates, use `region` to specify the barcode location.   
 
-To specify a region, you will need to define an area. The following code shows how to create a template string and define the region.
+For example, to find the barcode located in the middle of the image, you can use the following code:   
 
 ```python
-   license_key = "<your license key here>"
-   image = r"<your image file full path>"
-
-   reader = BarcodeReader()
-
-   reader.init_license(license_key)
-
-   settings = reader.get_runtime_settings()
-   settings.region_bottom  = 100
-   settings.region_left    = 0
-   settings.region_right   = 50
-   settings.region_top     = 0
-   settings.region_measured_by_percentage   = 1
-
-   try:
-      reader.update_runtime_settings(settings)
-      text_results = reader.decode_file(image)
-
-      if text_results != None:
-         for text_result in text_results:
-               print("Barcode Format : ")
-               print(text_result.barcode_format_string)
-               print("Barcode Text : ")
-               print(text_result.barcode_text)
-               print("Localization Points : ")
-               print(text_result.localization_result.localization_points)
-               print("Exception : ")
-               print(text_result.exception)
-               print("-------------")
-   except BarcodeReaderError as bre:
-      print(bre)
+#...Initialization code
+settings = reader.get_runtime_settings()
+settings.region_left    = 25
+settings.region_top     = 25
+settings.region_right   = 75
+settings.region_bottom  = 75
+settings.region_measured_by_percentage   = 1
+reader.update_runtime_settings(settings)
+#...Decode and do something with the result
 ```
 
 ### Use A Template to Change Settings
 
-Besides the option of using the PublicRuntimeSettings struct, the SDK also provides [`init_runtime_settings_with_string`](api-reference/BarcodeReader/parameter-and-runtime-settings-advanced.md#init_runtime_settings_with_string) and [`init_runtime_settings_with_file`](api-reference/BarcodeReader/parameter-and-runtime-settings-advanced.md#init_runtime_settings_with_file) APIs that enable you to use a template to control all the runtime settings. With a template, instead of writing many codes to modify the settings, you can manage all the runtime settings in a JSON file/string.
+Besides the option of using the PublicRuntimeSettings struct, the SDK also provides [`init_runtime_settings_with_string`](api-reference/BarcodeReader/parameter-and-runtime-settings-advanced.md#init_runtime_settings_with_string) and [`init_runtime_settings_with_file`](api-reference/BarcodeReader/parameter-and-runtime-settings-advanced.md#init_runtime_settings_with_file) APIs that enable you to use a template to control all the settings. With a template, instead of writing many codes to modify the settings, you can manage all the settings in a JSON file/string.
 
 ```python
-   license_key = "<your license key here>"
-   image = r"<your image file full path>"
-   json_file = r"<your template file path>"
-
-   reader = BarcodeReader()
-
-   reader.init_license(license_key)
-
-   error = reader.init_runtime_settings_with_file(json_file)
-
-   if error[0] != EnumErrorCode.DBR_OK:
-      print(error[1])
-
-   try:
-      reader.update_runtime_settings(settings)
-      text_results = reader.decode_file(image)
-
-      if text_results != None:
-         for text_result in text_results:
-               print("Barcode Format : ")
-               print(text_result.barcode_format_string)
-               print("Barcode Text : ")
-               print(text_result.barcode_text)
-               print("Localization Points : ")
-               print(text_result.localization_result.localization_points)
-               print("Exception : ")
-               print(text_result.exception)
-               print("-------------")
-   except BarcodeReaderError as bre:
-      print(bre)
+#...Initialization code
+error = reader.init_runtime_settings_with_file(json_file)
+#...Decode and do something with the result
 ```
 
-Below is a template for your reference. To learn more about the APIs, you can check out [`PublicRuntimeSettings`](api-reference/class/PublicRuntimeSettings.md) class. 
+Below is a template for your reference. For more scanning settings guide, check out the [`Structure and Interfaces of Parameters`]({{ site.parameters }}structure-and-interfaces-of-parameters.html).
 
 ```json
 {

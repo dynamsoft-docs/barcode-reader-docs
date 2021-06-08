@@ -67,6 +67,7 @@ breadcrumbText: Enumerations
   | [`DM_UUIDGenerationMethod`](other-enums.md#dm_uuidgenerationmethod) | Describes the UUID generation method. |
   | [`ImagePixelFormat`](other-enums.md#imagepixelformat) | Describes the image pixel format. |
   | [`QRCodeErrorCorrectionLevel`](other-enums.md#qrcodeerrorcorrectionlevel) | Describes the QR Code error correction level. |
+  | [`Product`](other-enums.md#product) | Describes Dynamsoft products. |
 
 ## [Error Code](error-code.md)
   

@@ -25,7 +25,8 @@ Stores the text result.
 | [`detailedResult`](#detailedresult) | *Object* |
 | [`results`](#results) | [`ExtendedResult`](ExtendedResult.md)\[\] |
 | [`exception`](#exception) | *String* |
-
+| [`isDPM`](#isdpm) | *int* |
+| [`isMirrored`](#ismirrored) | *int* |
 
 ### barcodeFormat
 
@@ -113,4 +114,20 @@ The exception message.
 
 ```java
 String com.dynamsoft.dbr.TextResult.exception
+```
+
+### isDPM
+
+This attribute stands for whether the result is a DPM result.
+
+```java
+int com.dynamsoft.dbr.TextResult.isDPM
+```
+
+### isMirrored
+
+This attribute stands for whether the barcode is mirrored.
+
+```java
+int com.dynamsoft.dbr.TextResult.isMirrored
 ```
