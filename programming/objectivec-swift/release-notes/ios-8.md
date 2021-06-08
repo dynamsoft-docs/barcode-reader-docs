@@ -29,6 +29,7 @@ noTitleIndex: true
 ### Fixed
 
 - Fixed an issue that happens when calling initLicenseFromLTS if [`handShakeCode`]({{site.oc_class}}iDMLTSConnectionParameters.html#handshakecode) is not set.
+- Replaced the static library with a dynamic library to avoid compatibility issues with other Dynamsoft products or third-party libraries.
 
 ## 8.2.1 (05/27/2021)
 
