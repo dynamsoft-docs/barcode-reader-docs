@@ -15,7 +15,7 @@ noTitleIndex: true
 ### New
 
 - Added new attributes [`isMirrored`]({{site.oc_class}}iTextResult.html#ismirrored) to the `TextResult` class. `IsMirrored` returns whether the barcode is mirrored.
-- Added a new argument, [`ThresholdCompensation`]({{site.image_parameters}}BinarizationModes.html#thresholdcompensation), to the `BinarizationModes` mode arguments.
+- Added a new argument, `ThresholdCompensation`, to the `BinarizationModes` mode arguments.
 
 ### Improved
 
@@ -24,7 +24,7 @@ noTitleIndex: true
 
 ### Deprecated
 
-- ThreshValueCoefficient is now deprecated. It still works in this version but could be removed in the near future. We recommend using ThresholdCompensation instead.
+- `ThreshValueCoefficient` is now deprecated. It still works in this version but could be removed in the near future. We recommend using ThresholdCompensation instead.
 
 ### Fixed
 
