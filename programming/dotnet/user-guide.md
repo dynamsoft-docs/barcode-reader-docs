@@ -119,70 +119,50 @@ Here are some common scanning settings you might find helpful:
 For more scanning settings guide, check out the [`PublicRuntimeSettings`](api-reference/struct/PublicRuntimeSettings.md) Struct.
 
 #### Specify Barcode Type to Read
-By default, the SDK will read all the supported barcode formats except Postal Codes and Dotcode from the image. (See [Product Overview](({{ site.introduction }}overview.html#barcode-formats)) for the full supported barcode list.)   
+By default, the SDK will read all the supported barcode formats except Postal Codes and Dotcode from the image. If you know exactly the barcode format(s) you want to read, use `barcodeFormatIds` and `barcodeFormatIds_2` to specify the barcode format(s) to speed up the process and improve the accuracy. Check out [`Barcode Format Enumeration`]({{ site.enumerations }}format-enums.html) for full supported barcode list.   
 
-If your full license only covers some barcode formats, you can use `BarcodeFormatIds` and `BarcodeFormatIds_2` to specify the barcode format(s).  
-
-For example, to enable only 1D barcode reading, you can use the following code:   
+For example, to read QR Code only, you can use the following code:   
 
 ```csharp
 BarcodeReader reader = new BarcodeReader("<your license key>");
 PublicRuntimeSettings settings = reader.GetRuntimeSettings();
-settings.BarcodeFormatIds = (int)EnumBarcodeFormat.BF_ONED;
+settings.BarcodeFormatIds = (int)EnumBarcodeFormat.BF_QR_CODE;
+settings.BarcodeFormatIds_2 = (int)EnumBarcodeFormat_2.BF2_NULL;
 reader.UpdateRuntimeSettings(settings);
-try
-{
-    TextResult[] results = reader.DecodeFile(@"<your image file full path>","");
-}
-catch(BarcodeReaderException exp)
-{
-}
-reader.Dispose();
+//...Decode and do something with the result
 ```
 
 
 #### Specify maximum barcode count
-By default, the SDK will read as many barcodes as it can. To increase the recognition efficiency, you can use `expectedBarcodesCount` to specify the maximum number of barcodes to recognize according to your scenario. 
+By default, the SDK will read as many barcodes as it can. If you know exactly the barcode count or the maximum count you want to read, use `ExpectedBarcodesCount` to specify the count value to speed up the process.   
+
+For example, to read two barcodes only, you can use the following code:   
 
 ```csharp
 BarcodeReader reader = new BarcodeReader("<your license key>");
 PublicRuntimeSettings settings = reader.GetRuntimeSettings();
-settings.ExpectedBarcodesCount = 1;
+settings.ExpectedBarcodesCount = 2;
 reader.UpdateRuntimeSettings(settings);
-try
-{
-    TextResult[] results = reader.DecodeFile(@"<your image file full path>","");
-}
-catch(BarcodeReaderException exp)
-{
-}
-reader.Dispose();
+//...Decode and do something with the result
 ```
 
 
 #### Specify a scan region
-By default, the barcode reader will search the whole image for barcodes. This can lead to poor performance especially when
-dealing with high-resolution images. You can speed up the recognition process by restricting the scanning region.   
+By default, the SDK will search the whole image for barcodes. This can lead to poor performance especially when
+dealing with high-resolution images. If you know exactly where the barcode locates, use `Region` to specify the barcode location.   
 
-To specify a region, you will need to define an area. The following code shows how to create a template string and define the region.
+For example, to find the barcode located in the middle of the image, you can use the following code:   
 
 ```csharp
 BarcodeReader reader = new BarcodeReader("<your license key>");
 PublicRuntimeSettings settings = reader.GetRuntimeSettings();
-settings.Region.RegionBottom = 100;
-settings.Region.RegionLeft = 0;
-settings.Region.RegionRight = 50;
-settings.Region.RegionTop = 0;
+settings.Region.RegionLeft = 25;
+settings.Region.RegionTop = 25;
+settings.Region.RegionRight = 75;
+settings.Region.RegionBottom = 75;
 settings.Region.RegionMeasuredByPercentage = 1;
 reader.UpdateRuntimeSettings(settings);
-try
-{
-    TextResult[] results = reader.DecodeFile(@"<your image file full path>","");
-}
-catch(BarcodeReaderException exp)
-{
-}
-reader.Dispose();
+//...Decode and do something with the result
 ```
 
 
@@ -193,18 +173,11 @@ Besides the option of using the PublicRuntimeSettings struct, the SDK also provi
 string errorMsg = "";
 BarcodeReader reader = new BarcodeReader("<your license key>");
 EnumErrorCode error = reader.InitRuntimeSettingsWithFile(@"<your template file path>", EnumConflictMode.CM_OVERWRITE, out errorMsg);
-try
-{
-    TextResult[] results = reader.DecodeFile(@"<your image file full path>","");
-}
-catch(BarcodeReaderException exp)
-{
-}
-reader.Dispose();
+//...Decode and do something with the result
 ```
 
 Below is a template for your reference. For more scanning settings guide, check out the [`Structure and Interfaces of Parameters`]({{ site.parameters }}structure-and-interfaces-of-parameters.html).
-.  
+  
 ```json
 {
    "ImageParameter" : {

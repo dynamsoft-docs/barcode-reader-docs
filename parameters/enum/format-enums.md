@@ -9,18 +9,18 @@ needGenerateH3Content: false
 
 
 # Dynamsoft Barcode Reader Enumeration - Format Enumeration
+The barcode format our library will search for is composed of [BarcodeFormat group 1](#barcodeformat) and [BarcodeFormat group 2](#barcodeformat_2), so you need to specify the barcode format in group 1 and group 2 individually.
 
   | Enumeration | Description |
   |-------------|-------------|
   | [`BarcodeFormat`](#barcodeformat) | Describes the barcode types in BarcodeFormat group 1. |
   | [`BarcodeFormat_2`](#barcodeformat_2) | Describes the barcode types in BarcodeFormat group 2. |
   
----
 
 
 
 ## BarcodeFormat
-Describes the barcode types in BarcodeFormat group 1. All the formats can be combined, such as BF_CODE_39 | BF_CODE_128. Note: The barcode format our library will search for is composed of [BarcodeFormat group 1](#barcodeformat) and [BarcodeFormat group 2](#barcodeformat_2), so you need to specify the barcode format in group 1 and group 2 individually.
+Describes the barcode types in BarcodeFormat group 1. 
 
 ### Declarations
    
@@ -78,7 +78,7 @@ Describes the barcode types in BarcodeFormat group 1. All the formats can be com
 
 
 ## BarcodeFormat_2
-Describes the barcode types in BarcodeFormat group 2. Note: The barcode format our library will search for is composed of [BarcodeFormat group 1](#barcodeformat) and [BarcodeFormat group 2](#barcodeformat_2), so you need to specify the barcode format in group 1 and group 2 individually.
+Describes the barcode types in BarcodeFormat group 2.
 
 
 ### Declarations

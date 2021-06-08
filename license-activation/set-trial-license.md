@@ -78,14 +78,6 @@ Then please save and rebuild your application.
 
 For mobile edition (8.2+) and the JavaScript edition (8.2.5+), a 7-day free trial license called a ["public trial"](https://www.dynamsoft.com/license-tracking/docs/about/terms.html?ver=latest#public-trial-license) license will be used by default if no license is specified in your code. When this public trial license expires, you can get a 30-day free trial license called a ["private trial"](https://www.dynamsoft.com/license-tracking/docs/about/terms.html?ver=latest#private-trial-license) license. The following shows how to request this license.
 
-### Option One
-
-1. Email trial@dynamsoft.com and make sure to include the word "privateTrial" in the email title.
-2. Dynamsoft will automatically create an organization for you and generate a 30-day private-trial license for that organization. After that, an email will be sent to you.
-3. You can then access the license by [specifying the organization ID](https://www.dynamsoft.com/license-tracking/docs/common/mechanism.html?ver=latest#specify-the-organization-id) in your code with the API "organizationID".
-
-### Option Two
-
 1. Request the private trial license in the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense), register for a Dynamsoft account if necessary.
 2. A 30-day private-trial license will be generated and configured to your organization. 
 3. [Specify your organization ID](https://www.dynamsoft.com/license-tracking/docs/common/mechanism.html?ver=latest#specify-the-organization-id) in your code with the API "organizationID".
