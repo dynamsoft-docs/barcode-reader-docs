@@ -14,7 +14,7 @@ noTitleIndex: true
 
 ### New
 
-- Added new attributes [`isMirrored`]({{site.oc_class}}iTextResult.html#ismirrored) and [`isDPM`]({{site.oc_class}}iTextResult.html#isdpm) to the `TextResult` class. `IsMirrored` returns whether the barcode is mirrored and `isDPM` returns whether the result is recognized as a `DPM` code.
+- Added new attributes [`isMirrored`]({{site.oc_class}}iTextResult.html#ismirrored) to the `TextResult` class. `IsMirrored` returns whether the barcode is mirrored.
 - Added a new argument, [`ThresholdCompensation`]({{site.image_parameters}}BinarizationModes.html#thresholdcompensation), to the `BinarizationModes` mode arguments.
 
 ### Improved
@@ -28,9 +28,7 @@ noTitleIndex: true
 
 ### Fixed
 
-- Fixed an issue when [`handShakeCode`]({{site.oc_class}}iDMLTSConnectionParameters.html#handshakecode) is not set when calling initLicenseFromLTS.
-- Fixed a potential memory leak.
-- Replaced the static library with a dynamic library to avoid compatibility issues with other Dynamsoft products or third-party libraries.
+- Fixed an issue that happens when calling initLicenseFromLTS if [`handShakeCode`]({{site.oc_class}}iDMLTSConnectionParameters.html#handshakecode) is not set.
 
 ## 8.2.1 (05/27/2021)
 

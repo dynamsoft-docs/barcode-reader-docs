@@ -16,7 +16,7 @@ noTitleIndex: true
 
 - Added a new method [`GetIdleInstancesCount`]({{site.dotnet_methods}}license.html#getidleinstancescount) to return the number of available instances when using the ‘per concurrent instance’ licensing model.
 - Added the [`organizationID`]({{site.dotnet_class}}DMLTSConnectionParameters.html#organizationid) property for license authentication.
-- Added new attributes [`isMirrored`]({{site.dotnet_class}}TextResult.html#ismirrored) and [`isDPM`]({{site.dotnet_class}}TextResult.html#isdpm) to the `TextResult` class. `IsMirrored` returns whether the barcode is mirrored and `isDPM` returns whether the result is recognized as a `DPM` code.
+- Added new attributes [`isMirrored`]({{site.dotnet_class}}TextResult.html#ismirrored) to the `TextResult` class. `IsMirrored` returns whether the barcode is mirrored.
 - Added a new argument, [`ThresholdCompensation`]({{site.image_parameters}}BinarizationModes.html#thresholdcompensation), to the `BinarizationModes` mode arguments.
 
 ### Improved
@@ -31,9 +31,7 @@ noTitleIndex: true
 ### Fixed
 
 - Fixed a bug that may cause the error 'Failed to get the address of DBR_CreateInstance' when initializing DBR.
-- Fixed an issue when [`handShakeCode`]({{site.dotnet_class}}DMLTSConnectionParameters.html#handshakecode) is not set when calling initLicenseFromLTS.
-- Fixed a potential memory leak.
-- Replaced the static library with a dynamic library to avoid compatibility issues with other Dynamsoft products or third-party libraries.
+- Fixed an issue that happens when calling initLicenseFromLTS if [`handShakeCode`]({{site.dotnet_class}}DMLTSConnectionParameters.html#handshakecode) is not set.
 
 ## 8.2 (03/17/2021)
 

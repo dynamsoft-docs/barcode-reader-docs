@@ -64,7 +64,7 @@ python_class: /barcode-reader/programming/python/api-reference/class/
 python_release_notes: /barcode-reader/programming/python/release-notes/
 
 parameters_reference: /barcode-reader/parameters/reference/
-image_parameters: /barcode-reader/parameters/reference/image_parameters/
+image_parameters: /barcode-reader/parameters/reference/image_parameter/
 scenario_settings: /barcode-reader/parameters/scenario-settings/
 enumerations: /barcode-reader/parameters/enum/
 

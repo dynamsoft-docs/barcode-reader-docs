@@ -16,7 +16,7 @@ noTitleIndex: true
 
 - Added a new method [`GetIdleInstancesCount`]({{site.java_methods}}license.html#getidleinstancescount) to return the number of available instances when using the ‘per concurrent instance’ licensing model.
 - Added the [`organizationID`]({{site.java_class}}DMLTSConnectionParameters.html#organizationid) property for license authentication.
-- Added new attributes [`isMirrored`]({{site.java_class}}TextResult.html#ismirrored) and [`isDPM`]({{site.java_class}}TextResult.html#isdpm) to the `TextResult` class. `IsMirrored` returns whether the barcode is mirrored and `isDPM` returns whether the result is recognized as a `DPM` code.
+- Added new attributes [`isMirrored`]({{site.java_class}}TextResult.html#ismirrored) to the `TextResult` class. `IsMirrored` returns whether the barcode is mirrored.
 - Added a new argument, [`ThresholdCompensation`]({{site.image_parameters}}BinarizationModes.html#thresholdcompensation), to the `BinarizationModes` mode arguments.
 
 ### Improved
@@ -30,15 +30,13 @@ noTitleIndex: true
 
 ### Fixed
 
-- Fixed an issue when [`handShakeCode`]({{site.java_class}}DMLTSConnectionParameters.html#handshakecode) is not set when calling initLicenseFromLTS.
-- Fixed a potential memory leak.
-- Replaced the static library with a dynamic library to avoid compatibility issues with other Dynamsoft products or third-party libraries.
+- Fixed an issue that happens when calling initLicenseFromLTS if [`handShakeCode`]({{site.java_class}}DMLTSConnectionParameters.html#handshakecode) is not set.
 
 ## 8.2 (03/17/2021)
 
 ### New
 
-- Added a new mode argument, `FindAccurateBoundary`, to [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes) that determines if the SDK attempts to find an accurate boundary when RegionPredetectionModes is set to `RPM_GENERAL_HSV_CONTRAST`. 
+- Added a new mode argument, `FindAccurateBoundary`, to [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes) that determines if the SDK attempts to find an accurate boundary when RegionPredetectionModes is set to `RPM_GENERAL_HSV_CONTRAST`.
 
 ### Improved
 

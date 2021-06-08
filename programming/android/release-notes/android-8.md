@@ -14,7 +14,7 @@ noTitleIndex: true
 
 ### New
 
-- Added new attributes [`isMirrored`]({{site.android_class}}TextResult.html#ismirrored) and [`isDPM`]({{site.android_class}}TextResult.html#isdpm) to the `TextResult` class. `IsMirrored` returns whether the barcode is mirrored and `isDPM` returns whether the result is recognized as a `DPM` code.
+- Added new attributes [`isMirrored`]({{site.android_class}}TextResult.html#ismirrored) to the `TextResult` class. `IsMirrored` returns whether the barcode is mirrored.
 - Added a new argument, [`ThresholdCompensation`]({{site.image_parameters}}BinarizationModes.html#thresholdcompensation), to the `BinarizationModes` mode arguments.
 
 ### Improved
@@ -28,10 +28,8 @@ noTitleIndex: true
 
 ### Fixed
 
-- Fixed an issue when [`handShakeCode`]({{site.android_class}}DMLTSConnectionParameters.html#handshakecode) is not set when calling initLicenseFromLTS.
+- Fixed an issue that happens when calling initLicenseFromLTS if [`handShakeCode`]({{site.android_class}}DMLTSConnectionParameters.html#handshakecode) is not set.
 - Fixed a bug when trying to build the project in the release mode with code shrinker enabled.
-- Fixed a potential memory leak.
-- Replaced the static library with a dynamic library to avoid compatibility issues with other Dynamsoft products or third-party libraries.
 
 ## 8.2.1 (05/27/2021)
 
