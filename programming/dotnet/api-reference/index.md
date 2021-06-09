@@ -38,12 +38,12 @@ breadcrumbText: API Reference
   | Method               | Description |
   |----------------------|-------------|
   | [`DecodeFile`](BarcodeReader/decode.md#decodefile) | Decodes barcodes from a specified image file. |
-  | [`DecodeFileInMemory`](BarcodeReader/decode.md#decodefileinmemory) | Decode barcodes from an image file in memory. |
+  | [`DecodeFileInMemory`](BarcodeReader/decode.md#decodefileinmemory) | Decodes barcodes from an image file in memory. |
   | [`DecodeBuffer`](BarcodeReader/decode.md#decodebuffer) | Decodes barcodes from the memory buffer containing image pixels in defined format. |
   | [`DecodeBase64String`](BarcodeReader/decode.md#decodebase64string) | Decodes barcodes from a base64 encoded string. |
-  | [`DecodeBitmap`](BarcodeReader/decode.md#decodebitmap) | Decodes barcode from a bitmap. |
+  | [`DecodeBitmap`](BarcodeReader/decode.md#decodebitmap) | Decodes barcodes from a bitmap. |
   | [`InitIntermediateResult`](BarcodeReader/decode.md#initintermediateresult) | Inits an intermediateResult struct with default values. |
-  | [`DecodeIntermediateResults`](BarcodeReader/decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
+  | [`DecodeIntermediateResults`](BarcodeReader/decode.md#decodeintermediateresults) | Decodes barcodes from intermediate results. |
    
    
 &nbsp; 
@@ -59,7 +59,7 @@ breadcrumbText: API Reference
   | [`SetModeArgument`](BarcodeReader/parameter-and-runtime-settings-basic.md#setmodeargument) | Sets the optional argument for a specified mode in Modes parameters. |
   | [`GetModeArgument`](BarcodeReader/parameter-and-runtime-settings-basic.md#getmodeargument) | Gets the optional argument for a specified mode in Modes parameters.  |
   | [`GetRuntimeSettings`](BarcodeReader/parameter-and-runtime-settings-basic.md#getruntimesettings) | Gets current runtime settings. |
-  | [`UpdateRuntimeSettings`](BarcodeReader/parameter-and-runtime-settings-basic.md#updateruntimesettings) | Update runtime settings with a given struct. |
+  | [`UpdateRuntimeSettings`](BarcodeReader/parameter-and-runtime-settings-basic.md#updateruntimesettings) | Updates runtime settings with a given struct. |
   | [`ResetRuntimeSettings`](BarcodeReader/parameter-and-runtime-settings-basic.md#resetruntimesettings) | Resets all parameters to default values. |
 
 #### Advanced
@@ -112,7 +112,7 @@ breadcrumbText: API Reference
    | [`StartFrameDecoding`](BarcodeReader/video.md#startframedecoding) | Starts a new thread to decode barcodes from the inner frame queue. |
    | [`StartFrameDecodingEx`](BarcodeReader/video.md#startframedecodingex) | Starts a new thread to decode barcodes from the inner frame queue. |
    | [`AppendFrame`](BarcodeReader/video.md#appendframe) | Appends a frame image buffer to the inner frame queue. |
-   | [`StopFrameDecoding`](BarcodeReader/video.md#stopframedecoding) | Stops the frame decoding thread created by StartFrameDecoding. |
+   | [`StopFrameDecoding`](BarcodeReader/video.md#stopframedecoding) | Stops the frame decoding thread created by `StartFrameDecoding`. |
 
 #### Parameter
    
@@ -125,9 +125,9 @@ breadcrumbText: API Reference
 
    | Method               | Description |
    |----------------------|-------------|
-   | [`SetErrorCallback`](BarcodeReader/video.md#seterrorcallback) | Set callback function to process errors generated during frame decoding. |
-   | [`SetTextResultCallback`](BarcodeReader/video.md#settextresultcallback) | Set callback function to process text results generated during frame decoding. |
-   | [`SetIntermediateResultCallback`](BarcodeReader/video.md#setintermediateresultcallback) | Set callback function to process intermediate results generated during frame decoding. |
+   | [`SetErrorCallback`](BarcodeReader/video.md#seterrorcallback) | Sets callback function to process errors generated during frame decoding. |
+   | [`SetTextResultCallback`](BarcodeReader/video.md#settextresultcallback) | Sets callback function to process text results generated during frame decoding. |
+   | [`SetIntermediateResultCallback`](BarcodeReader/video.md#setintermediateresultcallback) | Sets callback function to process intermediate results generated during frame decoding. |
 
 #### Status retrieval
    
