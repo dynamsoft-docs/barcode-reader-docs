@@ -23,9 +23,11 @@ class IntermediateResultCallBack(ABC)
 
 Sets callback function to process intermediate results during frame decoding. You need to implement it in the subclass. 
 
-`[in] frame_id` <int> : The ID of the frame.  
-`[in] results` <list[dict]> : The intermediate results of the frame. You can convert every item of the results to IntermediateResult Object by using IntermediateResult's constructor.  
-`[in] user_data` <object> : Customized arguments passed to your function.  
+`[in] frame_id <int>` : The ID of the frame.
+  
+`[in] results <list[dict]>` : The intermediate results of the frame. You can convert every item of the results to `IntermediateResult` Object by using IntermediateResult's constructor.  
+  
+`[in] user_data <object>` : Customized arguments passed to your function.  
         
 
 ```python
