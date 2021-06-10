@@ -8,18 +8,17 @@ noTitleIndex: true
 breadcrumbText: API Reference
 ---
 
-Dynamsoft Barcode Reader SDK
-# JavaScript API Reference
+# Dynamsoft Barcode Reader SDK - JavaScript API Reference
 
 [BarcodeReader](BarcodeReader.md)
 
-> Read barcodes from existing images.
+Reads barcodes from images.
 
 <br>
 
 [BarcodeScanner](BarcodeScanner.md) 
 
-> Get and show camera input and scan video frames for barcodes.
+Gets camera input and scans barcodes from video frames.
 
 <br>
 
