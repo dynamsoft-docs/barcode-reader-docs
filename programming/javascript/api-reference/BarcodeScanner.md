@@ -44,15 +44,15 @@ breadcrumbText: BarcodeScanner
 >
 > | Property             | Description |
 > |----------------------|-------------|
-> | [bDestroyed](#bdestroyed) | Indicates whether the `BarcodeReader` instance has been destroyed. | 
+> | [bDestroyed](#bdestroyed) | Indicates whether the `BarcodeScanner` instance has been destroyed. | 
 >
 > | Static Method        | Description |
 > |----------------------|-------------|
-> | [createInstance](#createinstance) | Create a `BarcodeReader` instance. |
+> | [createInstance](#createinstance) | Create a `BarcodeScanner` instance. |
 >
 > | Method               | Description |
 > |----------------------|-------------|
-> | [destroy](#destroy) | Destroy the `BarcodeReader` instance. |
+> | [destroy](#destroy) | Destroy the `BarcodeScanner` instance. |
 
 <br>
 
