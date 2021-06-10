@@ -30,10 +30,6 @@ breadcrumbText: RuntimeSettings
 
   <br>
 
-* binarizationModes: *[EnumBinarizationMode](../enum/EnumBinarizationMode.md)&#91;&#93;*
-
-  <br>
-
 * deblurLevel: *number*
 
   > Sets the degree of blurriness of the barcode.
@@ -46,31 +42,13 @@ breadcrumbText: RuntimeSettings
 
   <br>
 
-* furtherModes: *any*
-
-  <br>
-
-* intermediateResultTypes: *[EnumIntermediateResultType](../enum/EnumIntermediateResultType.md)*
-
-  <br>
-
 * localizationModes: *number&#91;&#93; &#124; [EnumLocalizationMode](../enum/EnumLocalizationMode.md)&#91;&#93;*
 
   > Sets the mode and priority for localization algorithms.
 
   <br>
 
-* minBarcodeTextLength: *number*
-
-  <br>
-
 * minResultConfidence: *number*
-
-  <br>
-
-* PDFReadingMode: *[EnumPDFReadingMode](../enum/EnumPDFReadingMode.md)*
-
-  > Not available in JS.
 
   <br>
 
@@ -106,26 +84,6 @@ breadcrumbText: RuntimeSettings
   <br>
 
 * resultCoordinateType: *number &#124; [EnumResultCoordinateType](../enum/EnumResultCoordinateType.md)*
-
-  <br>
-
-* returnBarcodeZoneClarity: *number*
-
-  <br>
-
-* scaleDownThreshold: *number*
-
-  <br>
-
-* scaleUpModes: *[EnumScaleUpMode](../enum/EnumScaleUpMode.md)&#91;&#93;*
-
-  <br>
-
-* terminatePhase: *[EnumTerminatePhase](../enum/EnumTerminatePhase.md)*
-
-  <br>
-
-* textResultOrderModes: *[EnumTextResultOrderMode](../enum/EnumTextResultOrderMode.md)&#91;&#93;*
 
   <br>
 
