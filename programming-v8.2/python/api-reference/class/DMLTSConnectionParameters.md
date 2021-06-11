@@ -32,8 +32,6 @@ class DMLTSConnectionParameters
 | [`max_buffer_days`](#max_buffer_days) | *int* |
 | [`limited_license_modules`](#limited_license_modules) | [`List<EnumLicenseModule>`]({{ site.enumerations }}other-enums.html#dm_licensemodule) |
 | [`max_concurrent_instance_count`](#max_concurrent_instance_count) | *int* |
-| [`organization_id`](#organization_id) | *str* |
-| [`products`](#products) | [`EnumProduct`]({{ site.enumerations }}other-enums.html#product) |
 
 
 ### main_server_url
@@ -172,28 +170,3 @@ DMLTSConnectionParameters::max_concurrent_instance_count
 - **Remarks**   
     It works only when [charge_way](#charge_way) is setting to DM_CW_CONCURRENT_INSTANCE_COUNT
     It is the total number of instances used by multiple processes. For example, if there are two .EXE are running on the server and each .EXE may have 10 instances at most, then you should set maxConcurrentInstanceCount to 20.
-
-
-### organization_id
-The organization ID got from Dynamsoft.
-
-```python
-DMLTSConnectionParameters.organization_id
-```
-
-- **Value range**   
-    Any string value   
-      
-- **Default value**   
-    ""
-
-### products
-Sets the products to get the license for. Product values can be combined.
-```python
-DMLTSConnectionParameters.products
-```
-- **Value range**   
-    A combined value of [`EnumProduct`]({{ site.enumerations }}other-enums.html#product) Enumeration items
-      
-- **Default value**   
-    `PROD_ALL`

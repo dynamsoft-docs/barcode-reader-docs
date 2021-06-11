@@ -30,8 +30,6 @@ public class TextResult
 | [`detailed_result`](#detailed_result) | *One of the following: [OnedDetailedResult](OnedDetailedResult.md), [PDFDetailedResult](PDFDetailedResult.md), [DataMatrixDetailedResult](DataMatrixDetailedResult.md), [AztecDetailedResult](AztecDetailedResult.md), [QRCodeDetailedResult](QRCodeDetailedResult.md)* |
 | [`extended_results`](#extended_results) | *list[[`ExtendedResult`](ExtendedResult.md)]* |
 | [`exception`](#exception) | *str* |
-| [`is_dpm`](#is_dpm) | *int* |
-| [`is_mirrored`](#is_mirrored) | *int* |
 
 
 ### barcode_format
@@ -102,16 +100,4 @@ Exception message
 
 ```python
 TextResult.exception
-```
-
-### is_dpm
-Identify whether the barcode is decoded using the DPM feature.
-```python
-TextResult.is_dpm
-```
-
-### is_mirrored
-Identify whether the barcode is mirrored.
-```python
-TextResult.is_mirrored
 ```
