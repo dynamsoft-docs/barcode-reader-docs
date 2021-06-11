@@ -17,7 +17,6 @@ needAutoGenerateSidebar: true
   | [`output_license_to_string`](#output_license_to_string) | Outputs the license content as an encrypted string from the license server to be used for offline license verification.|
   | [`init_lts_connection_parameters`](#init_lts_connection_parameters) | Initializes a DMLTSConnectionParameters struct with default values. |
   | [`init_license_from_lts`](#init_license_from_lts) | Initializes the barcode reader license and connects to the specified server for online verification. |
-  | [`get_idle_instances_count`](#get_idle_instances_count) | Gets available instances count when charging by concurrent instances count. |
   
   ---
 
@@ -116,17 +115,3 @@ BarcodeReader.init_license_from_lts(lts_connection_parameters)
 ### Return value
 
 `error` <*tuple*> : error_code = error[0], error_message = error[1], if error_code != EnumErrorCode.DBR_OK, you can get the detailed error message by error_message.
-
-
-
-## get_idle_instances_count
-Gets available instances count when charging by concurrent instances count.
-
-```python
-BarcodeReader.get_idle_instances_count()
-```   
-
-#### Return value
-count <*int*> : Returns available instances count.    
-
-

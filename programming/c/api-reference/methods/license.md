@@ -183,7 +183,7 @@ Returns error code (returns 0 if the function operates successfully).
 #### Code Snippet
 ```c
 char errorBuf[512];
-DMLTSConnectionParameters paramters;
+DM_LTSConnectionParameters paramters;
 DBR_InitLTSConnectionParameters(&paramters);
 paramters.handshakeCode = "Your handshake code";
 DBR_InitLicenseFromLTS(&paramters, errorBuf, 512);
@@ -210,7 +210,7 @@ Returns error code (returns 0 if the function operates successfully).
 #### Code Snippet
 ```c
 char errorBuf[512];
-DMLTSConnectionParameters paramters;
+DM_LTSConnectionParameters paramters;
 DBR_InitLTSConnectionParameters(&paramters);
 paramters.handshakeCode = "Your handshake code";
 DBR_InitLicenseFromLTS(&paramters, errorBuf, 512);

@@ -186,7 +186,7 @@ Returns error code (returns 0 if the function operates successfully).
 
 #### Code Snippet
 ```cpp
-DMLTSConnectionParameters paramters;
+DM_LTSConnectionParameters paramters;
 dynamsoft::dbr::CBarcodeReader::InitLTSConnectionParameters(&paramters);
 paramters.handshakeCode = "Your handshake code";
 dynamsoft::dbr::CBarcodeReader::InitLicenseFromLTS(&paramters);
@@ -213,7 +213,7 @@ Returns error code (returns 0 if the function operates successfully).
 
 #### Code Snippet
 ```cpp
-DMLTSConnectionParameters paramters;
+DM_LTSConnectionParameters paramters;
 dynamsoft::dbr::CBarcodeReader::InitLTSConnectionParameters(&paramters);
 paramters.handshakeCode = "Your handshake code";
 dynamsoft::dbr::CBarcodeReader::InitLicenseFromLTS(&paramters);

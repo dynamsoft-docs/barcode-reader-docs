@@ -10,6 +10,29 @@ noTitleIndex: true
 
 # Release Notes for Python SDK - 8.x
 
+## 8.4 （06/10/2021)
+
+### New
+
+- Added a new method [`get_idle_instances_count`]({{site.python_methods}}license.html#get_idle_instances_count) to return the number of available instances when using the 'per concurrent instance' licensing model.
+- Added the [`organizationID`]({{site.python_class}}DMLTSConnectionParameters.html#organization_id) property for license authentication.
+- Added new attributes [`is_mirrored`]({{site.python_class}}TextResult.html#is_mirrored) and [`is_dpm`]({{site.python_class}}TextResult.html#is_dpm) to the `TextResult` class. `is_mirrored` returns whether the barcode is mirrored and `is_dpm` returns whether the result is recognized as a `DPM` code.
+- Added a new argument, [`ThresholdCompensation`]({{site.image_parameters}}BinarizationModes.html#thresholdcompensation), to the `BinarizationModes` mode arguments.
+
+### Improved
+
+- Faster recognition speeds when detecting dense QR Codes.
+- Improved the performance of boundary identification for DataMatrix codes.
+
+### Deprecated
+
+- `ThreshValueCoefficient` is now deprecated. It still works in this version but could be removed in the near future. We recommend using `ThresholdCompensation` instead.
+
+### Fixed
+
+- Fixed an issue that happens when calling initLicenseFromLTS if `handshake_code` is not set.
+
+
 ## 8.2 (03/17/2021)
 
 ### New

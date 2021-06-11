@@ -14,7 +14,7 @@ noTitleIndex: true
 
 ### New
 
-- Added a new method [`GetIdleInstancesCount`]({{site.java_methods}}license.html#getidleinstancescount) to return the number of available instances when using the ‘per concurrent instance’ licensing model.
+- Added a new method [`GetIdleInstancesCount`]({{site.java_methods}}license.html#getidleinstancescount) to return the number of available instances when using the 'per concurrent instance' licensing model.
 - Added the [`organizationID`]({{site.java_class}}DMLTSConnectionParameters.html#organizationid) property for license authentication.
 - Added new attributes [`isMirrored`]({{site.java_class}}TextResult.html#ismirrored) to the `TextResult` class. `IsMirrored` returns whether the barcode is mirrored.
 - Added a new argument, `ThresholdCompensation`, to the `BinarizationModes` mode arguments.
