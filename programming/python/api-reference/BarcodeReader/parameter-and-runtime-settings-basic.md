@@ -13,15 +13,15 @@ needAutoGenerateSidebar: true
   |----------------------|-------------|
   | [`set_mode_argument`](#set_mode_argument) | Sets the optional argument for a specified mode in Modes parameters. |
   | [`get_mode_argument`](#get_mode_argument) | Gets the optional argument for a specified mode in Modes parameters.  |
-  | [`get_runtime_settings`](#get_runtime_settings) | Get current runtime settings. |
-  | [`update_runtime_settings`](#update_runtime_settings) | Update runtime settings with a given struct. |
+  | [`get_runtime_settings`](#get_runtime_settings) | Gets current runtime settings. |
+  | [`update_runtime_settings`](#update_runtime_settings) | Updates runtime settings with a given struct. |
   | [`reset_runtime_settings`](#reset_runtime_settings) | Resets all parameters to default values. |
 
   ---
 
 ## set_mode_argument
 
-Sets the optional argument for a specified mode in Modes parameters. 
+Sets the optional argument for a specified mode in `Modes` parameters. 
 
 ```python
 BarcodeReader.set_mode_argument(modes_name, index, argument_name, argument_value)
@@ -29,18 +29,18 @@ BarcodeReader.set_mode_argument(modes_name, index, argument_name, argument_value
 
 ### Parameters
 
-- `[in]	modes_name` <*str*> : The mode(s) parameter name to set argument.  
-- `[in]	index` <*int*> : The array index of modes parameter to indicate a specific mode.   
-- `[in]	argument_name` <*str*> : The name of the argument to set.  
-- `[in]	argument_value` <*str*> : The value of the argument to set.  
+- `[in]	modes_name <*str*>` : The mode(s) parameter name to set argument.  
+- `[in]	index <*int*>` : The array index of modes parameter to indicate a specific mode.   
+- `[in]	argument_name <*str*>` : The name of the argument to set.  
+- `[in]	argument_value <*str*>` : The value of the argument to set.  
 
 ### Return value
 
-`error` <*tuple*> : error_code = error[0], error_message = error[1], if error_code != EnumErrorCode.DBR_OK, you can get the detailed error message by error_message.
+`error <*tuple*>` : `error_code = error[0]`, `error_message = error[1]`, if `error_code != EnumErrorCode.DBR_OK`, you can get the detailed error message by `error_message`.
 
 ### Remark
 
-Check follow link for available modes and arguments:
+Check the available modes and arguments below:
 
 - [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#barcodecolourmodes)
 - [`BinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#binarizationmodes)
@@ -75,7 +75,7 @@ except BarcodeReaderError as e:
 
 ## get_mode_argument
 
-Get argument value for the specified mode parameter.
+Gets argument value for the specified mode parameter.
 
 ```python
 BarcodeReader.get_mode_argument(modes_name, index, argument_name)
@@ -83,13 +83,13 @@ BarcodeReader.get_mode_argument(modes_name, index, argument_name)
 
 ### Parameters  
 
-- `[in]	modes_name` <*str*> : The mode(s) parameter name to get argument.  
-- `[in]	index` <*int*> : The array index of modes parameter to indicate a specific mode.   
-- `[in]	argument_name` <*str*> : The name of the argument to get.  
+- `[in]	modes_name <*str*>` : The mode(s) parameter name to get argument.  
+- `[in]	index <*int*>` : The array index of modes parameter to indicate a specific mode.   
+- `[in]	argument_name <*str*>` : The name of the argument to get.  
 
 ### Return value
 
-`argument_value` <*str*> : The value of the argument to get.
+`argument_value <*str*>` : The value of the argument to get.
 
 ### Exception
 
@@ -97,7 +97,7 @@ BarcodeReader.get_mode_argument(modes_name, index, argument_name)
 
 ### Remark
 
-Check follow link for available modes and arguments:
+Check the available modes and arguments below:
 
 - [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#barcodecolourmodes)
 - [`BinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#binarizationmodes)
@@ -132,7 +132,7 @@ except BarcodeReaderError as e:
 
 ## get_runtime_settings
 
-Gets current settings and save it into a PublicRuntimeSetting object. 
+Gets current settings and saves them into a `PublicRuntimeSetting` object. 
 
 ```python
 BarcodeReader.get_runtime_settings()
@@ -140,7 +140,7 @@ BarcodeReader.get_runtime_settings()
 
 ### Return value
 
-`runtime_settings` <*class PublicRuntimeSetting*> : The PublicRuntimeSetting object of current runtime settings.
+`runtime_settings <*class PublicRuntimeSetting*>` : The `PublicRuntimeSetting` object of current runtime settings.
 
 ### Code Snippet
 
@@ -155,7 +155,7 @@ print(settings.excepted_barcodes_count)
 
 ## update_runtime_settings
 
-Update runtime settings with a given PublicRuntimeSetting object. 
+Updates runtime settings with a given `PublicRuntimeSetting` object. 
 
 ```python
 BarcodeReader.update_runtime_settings(settings)
@@ -163,11 +163,11 @@ BarcodeReader.update_runtime_settings(settings)
 
 ### Parameters
 
-`[in]	settings` <*class PublicRuntimeSetting*> : a PublicRuntimeSetting object.    
+`[in]	settings <*class PublicRuntimeSetting*>` : a `PublicRuntimeSetting` object.    
  
 ### Exception
 
-[`BarcodeReaderError`](../class/BarcodeReaderError.md) : If error happens, this function will throw a BarcodeReaderError exception that can report the detailed error message.
+[`BarcodeReaderError`](../class/BarcodeReaderError.md) : If error happens, this function will throw a `BarcodeReaderError` exception that can report the detailed error message.
 
 ### Code Snippet
 
@@ -189,7 +189,7 @@ except BarcodeReaderError as e:
 
 ## reset_runtime_settings
 
-Reset all parameters to default values.
+Resets all parameters to default values.
 
 ```python
 BarcodeReader.reset_runtime_settings() 
