@@ -9,8 +9,8 @@ breadcrumbText: API Reference
 
 # Dynamsoft Barcode Reader SDK - Python API Reference
 
-- [`BarcodeReader` Methods](#barcodereader-methods) 
-- [`BarcodeReader` Attributes](#barcodereader-attributes) 
+- [BarcodeReader Methods](#barcodereader-methods) 
+- [BarcodeReader Attributes](#barcodereader-attributes) 
 - [Error Code](#error-code)
 - [Classes](#classes)
 - [Enumerations](#enumerations)
@@ -56,7 +56,7 @@ breadcrumbText: API Reference
   | [`set_mode_argument`](BarcodeReader/parameter-and-runtime-settings-basic.md#set_mode_argument) | Sets the optional argument for a specified mode in Modes parameters. |
   | [`get_mode_argument`](BarcodeReader/parameter-and-runtime-settings-basic.md#get_mode_argument) | Gets the optional argument for a specified mode in Modes parameters.  |
   | [`get_runtime_settings`](BarcodeReader/parameter-and-runtime-settings-basic.md#get_runtime_settings) | Gets current runtime settings. |
-  | [`update_runtime_settings`](BarcodeReader/parameter-and-runtime-settings-basic.md#update_runtime_settings) | Update runtime settings with a given struct. |
+  | [`update_runtime_settings`](BarcodeReader/parameter-and-runtime-settings-basic.md#update_runtime_settings) | Updates runtime settings with a given struct. |
   | [`reset_runtime_settings`](BarcodeReader/parameter-and-runtime-settings-basic.md#reset_runtime_settings) | Resets all parameters to default values. |
 
 #### Advanced
@@ -80,10 +80,10 @@ breadcrumbText: API Reference
   | Method               | Description |
   |----------------------|-------------|
   | [`init_license`](BarcodeReader/license.md#init_license) | Reads product key and activates the SDK.  |
-  | [`init_license_from_server`](BarcodeReader/license.md#init_license_from_server) | Initializes license and connect to the specified server for online verification. |
+  | [`init_license_from_server`](BarcodeReader/license.md#init_license_from_server) | Initializes license and connects to the specified server for online verification. |
   | [`init_license_from_license_content`](BarcodeReader/license.md#init_license_from_license_content) | Initializes license from the license content on client machine for offline verification. |
   | [`output_license_to_string`](BarcodeReader/license.md#output_license_to_string) | Outputs the license content as an encrypted string from the license server to be used for offline license verification.|
-  | [`init_lts_connection_parameters`](BarcodeReader/license.md#init_lts_connection_parameters) | Initializes a DMLTSConnectionParameters struct with default values. |
+  | [`init_lts_connection_parameters`](BarcodeReader/license.md#init_lts_connection_parameters) | Initializes a `DMLTSConnectionParameters` struct with default values. |
   | [`init_license_from_lts`](BarcodeReader/license.md#init_license_from_lts) | Initializes the barcode reader license and connects to the specified server for online verification. |
    
    
@@ -98,7 +98,7 @@ breadcrumbText: API Reference
    |----------------------|-------------|
    | [`start_video_mode`](BarcodeReader/video.md#start_video_mode) | Starts a new thread to decode barcodes from the inner frame queue. |
    | [`append_video_frame`](BarcodeReader/video.md#append_video_frame) | Appends a frame image buffer to the inner frame queue. |
-   | [`stop_video_mode`](BarcodeReader/video.md#stop_video_mode) | Stops the frame decoding thread created by start_video_mode(). |
+   | [`stop_video_mode`](BarcodeReader/video.md#stop_video_mode) | Stops the frame decoding thread created by `start_video_mode()`. |
 
 #### Parameter
    
