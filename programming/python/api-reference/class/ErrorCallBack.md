@@ -23,9 +23,9 @@ class ErrorCallBack(ABC)
 
 Sets callback function to process errors during frame decoding. You need to implement it in the subclass.
 
-`[in] frame_id` <int> : The ID of the frame.  
-`[in] error` <int> : Error code generated when decoding the frame.  
-`[in] user_data` <object> : Customized arguments passed to your function.  
+`[in] frame_id <int>` : The ID of the frame.  
+`[in] error <int>` : Error code generated when decoding the frame.  
+`[in] user_data <object>` : Customized arguments passed to your function.  
         
 
 ```python

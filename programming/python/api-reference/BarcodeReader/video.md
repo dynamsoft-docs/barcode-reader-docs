@@ -43,7 +43,7 @@ BarcodeReader.start_video_mode(frame_decoding_parameters, call_back_func, templa
 `[in] frame_decoding_parameters` <*class FrameDecodingParameters*> : The frame decoding parameters. You can get it by using init_frame_decoding_parameters() then modifying its parameters' value.  
 `[in] text_result_callback_func` <*function pointer*> : Sets callback function to process text results during frame decoding.  
 - This callback function pointer must follow the following format: callback_func_name(frameId, results, user_data);  
-- Or you can inherit the abstract class TextResultResultCallBack to implement the abstract method text_results_callback_func.  
+- Or you can inherit the abstract class TextResultCallBack to implement the abstract method text_results_callback_func.  
 - If you would like to learn how to use it, please refer to the [sample](https://github.com/Dynamsoft/python-barcode/blob/master/samples/test_DecodeVideoByCamera.py).
 
 `[in] template_name` (optional)<*str*> : The template name.  

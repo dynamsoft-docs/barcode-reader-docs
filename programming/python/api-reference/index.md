@@ -157,7 +157,7 @@ breadcrumbText: API Reference
 - [`TextResult`](class/TextResult.md)	
 - [`DMLTSConnectionParameters`](class/DMLTSConnectionParameters.md)
 - [`IntermediateResultCallBack`](class/IntermediateResultCallBack.md)
-- [`TextResultResultCallBack`](class/TextResultResultCallBack.md)
+- [`TextResultCallBack`](class/TextResultCallBack.md)
 - [`ErrorCallBack`](class/ErrorCallBack.md)
 		
 

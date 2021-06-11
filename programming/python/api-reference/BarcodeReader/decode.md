@@ -172,11 +172,11 @@ BarcodeReader.decode_buffer_manually(self, buffer, width, height, stride, image_
 ```   
    
 ### Parameters
-`[in] buffer` <*bytes or bytearray*> : The array of bytes which contain the image data.
-`[in] width` <*int*> : The width of the image in pixels.
-`[in] height` <*int*> : The height of the image in pixels.
-`[in] stride` <*int*> : The stride (or scan width) of the image.
-`[in] image_pixel_format` <*class EnumImagePixelFormat*> : The image pixel format used in the image byte array. Default value = EnumImagePixelFormat.IPF_RGB_888.
+`[in] buffer` <*bytes or bytearray*> : The array of bytes which contain the image data.  
+`[in] width` <*int*> : The width of the image in pixels.  
+`[in] height` <*int*> : The height of the image in pixels.  
+`[in] stride` <*int*> : The stride (or scan width) of the image.  
+`[in] image_pixel_format` <*class EnumImagePixelFormat*> : The image pixel format used in the image byte array. Default value = EnumImagePixelFormat.IPF_RGB_888.  
 `[in] template_name` <*optional*><*str*> : The template name.
 
 
