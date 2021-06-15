@@ -10,19 +10,12 @@ breadcrumbText: API Reference
 
 # Dynamsoft Barcode Reader SDK - JavaScript API Reference
 
-[BarcodeReader](BarcodeReader.md)
+Classes
 
-Reads barcodes from images.
+- [BarcodeReader](BarcodeReader.md): Reads barcodes from images.
+- [BarcodeScanner](BarcodeScanner.md) : Gets camera input and scans barcodes from video frames.
 
-<br>
-
-[BarcodeScanner](BarcodeScanner.md) 
-
-Gets camera input and scans barcodes from video frames.
-
-<br>
-
-Interface
+Interfaces
 
 - [LocalizationResult](interface/LocalizationResult.md)
 - [RegionDefinition](interface/RegionDefinition.md)
@@ -32,7 +25,7 @@ Interface
 - [TextResult](interface/TextResult.md)
 - [VideoDeviceInfo](interface/VideoDeviceInfo.md)
 
-Enum
+Enums
 
 - [EnumBarcodeColourMode](enum/EnumBarcodeColourMode.md)
 - [EnumBarcodeComplementMode](enum/EnumBarcodeComplementMode.md)
