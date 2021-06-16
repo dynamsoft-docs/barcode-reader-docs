@@ -10,21 +10,25 @@ breadcrumbText: Python
 
 # Dynamsoft Barcode Reader - for Python Documentation
 
-The Python documentation mainly consists of two parts. One is the [User Guide](#getting-started) that provides a brief guide for how to integrate the Dynamsoft Barcode Reader to your application or run the samples. The other is the [API Reference](#api-reference) that offers the manual of interfaces used for reading barcodes.
+Dynamsoft Barcode Reader offers a Python package that enables decoding 1D and 2D barcodes accurately and efficiently, including QR codes, Data Matrix, PDF417, Code 128, and more.
 
 ## Getting Started
 
+This provides a brief guide on how to integrate Dynamsoft Barcode Reader into your application.
+
 - [User Guide for Python](user-guide.md)
+
+## API Reference
+
+The API reference offers the manual of interfaces used for reading barcodes.
+
+- [BarcodeReader](api-reference/#barcodereader-methods)
+- [Class](api-reference/#classes)
 
 ## Samples and Demos
 
 - <a href="https://demo.dynamsoft.com/barcode-reader/" target="_blank">Online Demo</a>
 - <a href="https://github.com/Dynamsoft/python-barcode/tree/master/samples" target="_blank">Python Samples</a>
-
-## API Reference
-
-- [BarcodeReader](api-reference/#barcodereader-methods)
-- [Class](api-reference/#classes)
 
 ## Release Notes
 
