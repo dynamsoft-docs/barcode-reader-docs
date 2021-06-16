@@ -8,11 +8,14 @@
 
 ## Installation
 
-### Copy dbr library
+1. Dynamsoft.DotNet.Barcode
+Please [contact us](https://www.dynamsoft.com/company/contact/) to get the latest DBR DotNet library. 
+2. Dynamsoft Barcode Reader SDK
+You can download the latest DBR library via [this](https://www.dynamsoft.com/barcode-reader/programming/c?download=true) page.
 
-```shell
-cp ~/DynamsoftBarcodeReader/Lib/Linux/* /usr/lib
-```
+**For the SDK used in this article, please use [this](http://tst.dynamsoft.com/temp/DotNetCoreDbr.zip) link to download both DotNet and DBR library.**
+
+## Coding
 
 ### Create project
 
@@ -45,10 +48,20 @@ You could refer to .Net user guide [here](https://www.dynamsoft.com/barcode-read
 </Project>
 ```
 
+## Run your Project
+
+### Copy dbr library
+
+After downloaded the DBR package, uncompress the file and follow the below steps:
+
+```shell
+cp DynamsoftBarcodeReader/Lib/Linux/* /usr/lib
+```
+
 ### Copy the .Net core library to the project
 
 ```shell
-cp DynamsoftCommon.dll Dynamsoft.BarcodeReader.dll ~/TestDbrDotCore
+cp DynamsoftCommon.dll Dynamsoft.BarcodeReader.dll /Your path to/TestDbrDotCore
 ```
 
 ## Run your project
