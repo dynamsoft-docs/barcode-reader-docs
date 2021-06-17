@@ -4,7 +4,7 @@ title: Dynamsoft Barcode Reader for C Language - User Guide
 description: This is the user guide of Dynamsoft Barcode Reader for C Language.
 keywords: user guide, c
 needAutoGenerateSidebar: true
-needGenerateH3Content: false
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
@@ -76,7 +76,7 @@ DBR_UpdateRuntimeSettings(hBarcode, &runtimeSettings, sError, 512);
 ```
 
 #### Specify Maximum Barcode Count
-By default, the SDK will read at least one barcode from the image. If you know exactly the barcode count or the maximum count you want to read, use `expectedBarcodesCount` to specify the count value to speed up the process. For this tutorial, we will set the application to detect 1 barcodes.
+By default, the SDK will read at least one barcode from the image. If you know exactly the barcode count or the maximum count you want to read, use `expectedBarcodesCount` to specify the count value to speed up the process. For this tutorial, we will set the application to detect 1 barcode.
 
 ```c
 char sError[512];
