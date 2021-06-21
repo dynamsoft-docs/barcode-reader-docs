@@ -90,19 +90,17 @@ plugins:
 defaults:
   - scope:
       path: ""
-      type: "posts"
     values:
-      repo: "original-repo"
+      category: "original-repo"
   - scope:
-      path: "/barcode-reader/programming/javascript/"
+      path: "programming/javascript"
     values:
-      repo: js-repo"
+      category: "js-repo"
   - scope:
-      path: "/barcode-reader/programming/android/"
-      type: "posts"
+      path: "programming/android"
     values:
-      repo: "mobile-repo"
+      category: "mobile-repo"
   - scope:
-      path: "/barcode-reader/programming/objectivec-swift/"
+      path: "programming/objectivec-swift"
     values:
-      repo: "mobile-repo"
+      category: "mobile-repo"
