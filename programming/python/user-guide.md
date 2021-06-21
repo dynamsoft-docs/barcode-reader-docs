@@ -25,7 +25,9 @@ noTitleIndex: true
     - Python 3.8
     - Python 3.9
 
-## Installation
+## Installation of Dynamsoft Barcode Reader Python Package
+
+The package name is 'dbr', which is short for Dynamsoft Barcode Reader.
 
 ```
 pip install dbr
@@ -40,7 +42,7 @@ pip install dbr
     from dbr import *
    ```
 
-   Before this, please make sure dbr python package has been installed successful. You can start terminal or command prompt to run command "`pip show dbr`" to show dbr python package information.
+   Before this, please make sure dbr python package has been installed successfully. You can start terminal or command prompt to run command "`pip show dbr`" to show dbr python package information.
 
 3. Update the main code in `BarcodeReadDemo_python.py`.
 
@@ -74,9 +76,9 @@ pip install dbr
 
 4. Run `BarcodeReadDemo_python.py`.
 
-## Decoding Methods
+## Barcode Decoding Methods
 
-The SDK provides multiple decoding methods that support reading barcodes from different sources, including static images,
+The barcode reader library provides multiple decoding methods that support reading 1D and 2D barcodes from different sources, including static images,
 video stream, files in memory, base64 string, etc. Here is a list of all decoding methods:
 
 - [decode_file](api-reference/BarcodeReader/decode.md#decode_file): Reads barcodes from a specified file (BMP, JPEG, PNG, GIF, TIFF or PDF).   
@@ -85,15 +87,15 @@ video stream, files in memory, base64 string, etc. Here is a list of all decodin
 - [decode_file_stream](api-reference/BarcodeReader/decode.md#decode_file_stream): Decodes barcodes from an image file in memory. 
 - [decode_intermediate_results](api-reference/BarcodeReader/decode.md#decode_intermediate_results): Decodes barcodes from intermediate results.
 
-You can find more samples in more programming languages at [Code Gallery](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx).
+You can find more samples in more programming languages at [Code Gallery](https://www.dynamsoft.com/barcode-reader/resources/code-gallery/?tag=python).
 
-## Barcode Reading Settings
+## Barcode Scanning Settings
 
-Calling the [decoding methods](#decoding-methods) directly will use the default scanning modes and it will satisfy most of the needs. The SDK also allows you to adjust the scanning settings to optimize the scanning performance for different usage scenarios.   
+Calling the [decoding methods](#decoding-methods) will use the default scanning modes, and it will satisfy most of the needs. The barcode package also allows you to adjust the scanning settings to optimize the scanning performance for different usage scenarios.
    
-There are two ways to change the barcode reading settings - using the PublicRuntimeSettings Class or template. For new
+There are two ways to change the barcode reading settings. For new
 developers, We recommend you to start with the PublicRuntimeSettings Class; For those who are experienced with the SDK,
-you may use a template which is more flexible and easier to update.
+you may use a template, which is more flexible and easier to update.
 
 - [Use `PublicRuntimeSettings` Struct to Change Settings](#use-publicruntimesettings-struct-to-change-settings)   
 - [Use A Template to Change Settings](#use-a-template-to-change-settings)   
@@ -108,7 +110,7 @@ Here are some common scanning settings you might find helpful:
 
 For more scanning settings guide, check out the [`PublicRuntimeSettings`](api-reference/class/PublicRuntimeSettings.md) Struct.
 
-#### Specify Barcode Type to Read
+#### Specify barcode types to read
 By default, the SDK will read all the supported barcode formats except Postal Codes and Dotcode from the image. If you know exactly the barcode format(s) you want to read, use `barcode_format_ids` and `barcode_format_ids_2` to specify the barcode format(s) to speed up the process and improve the accuracy. Check out [`Barcode Format Enumeration`]({{ site.enumerations }}format-enums.html) for full supported barcode list.   
 
 For example, to read QR Code only, you can use the following code:   
@@ -136,10 +138,9 @@ reader.update_runtime_settings(settings)
 #...Decode and do something with the result
 ```
 
-### Specify a scan region
+#### Specify a scan region
 
-By default, the SDK will search the whole image for barcodes. This can lead to poor performance especially when
-dealing with high-resolution images. If you know exactly where the barcode locates, use `region` to specify the barcode location.   
+By default, the SDK will search the whole image for barcodes. This can lead to poor performance, especially when dealing with high-resolution images. If you know exactly where the barcode locates, use `region` to specify the barcode location.   
 
 For example, to find the barcode located in the middle of the image, you can use the following code:   
 
