@@ -1,4 +1,6 @@
 repositoryUrl: https://github.com/Dynamsoft/barcode-reader-docs/blob/master
+repositoryUrlJS: https://github.com/Dynamsoft/barcode-reader-docs-js/blob/master
+repositoryUrlMobile: https://github.com/Dynamsoft/barcode-reader-docs-mobile/blob/master
 repository: Dynamsoft/barcode-reader-docs
 docFullPath: https://www.dynamsoft.com/barcode-reader
 firstLevelUrl: /barcode-reader
@@ -84,3 +86,21 @@ camera: /camera-enhancer/docs/introduction/
 baseurl: "/barcode-reader"
 plugins:
   - jemoji
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      category: "original-repo"
+  - scope:
+      path: "programming/javascript"
+    values:
+      category: "js-repo"
+  - scope:
+      path: "programming/android"
+    values:
+      category: "mobile-repo"
+  - scope:
+      path: "programming/objectivec-swift"
+    values:
+      category: "mobile-repo"
