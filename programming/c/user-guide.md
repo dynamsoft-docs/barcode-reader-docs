@@ -25,14 +25,12 @@ In this guide, you will learn step by step on how to build a barcode reading app
 - GCC 4.2+  
 
 ## Installation
-If you haven't downloaded the SDK yet, download the `C/C++ Package` now from [Dynamsoft website](https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs) and unpack the package into the directory of your choice.
+If you haven't downloaded the SDK yet, download the `C/C++ Package` now from <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a> and unpack the package into the directory of your choice.
 >For this tutorial, we unpack it to `C:\Users\dynamsoft\Downloads\DynamsoftBarcodeReader` on Windows and `/home/dynamsoft/Downloads/DynamsoftBarcodeReader` on Linux/ARM/Mac, change it to your unpacking path for the following content.
 
 ## Build Your First Application
-sample description
-download bin and souce code
-Let's start by creating the "Hello World" application which demonstrates how to use the minimum code to read barcodes from an image file.  
-You can find the entire source code for this "Hello World" application in `DBR-C_CPP-{version number}\DynamsoftBarcodeReader\Samples\HelloWorld`.
+Let's start by creating a console application which demonstrates how to use the minimum code to read barcodes from an image file.  
+If you want to try out the application to see how it works, download the entire source code and compiled program from [Here](../assets/DBRCSample.zip).
 
 ### Create a New Project 
 
