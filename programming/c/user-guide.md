@@ -8,165 +8,199 @@ needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-
 # User Guide for C Language
 In this guide, you will learn step by step on how to build a barcode reading application with Dynamsoft Barcode Reader SDK using C language.
-If you haven't downloaded the SDK yet, download the `C/C++ Package` now from [Dynamsoft website](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx) and unzip the package to your local disk.
 
+## Requirements
+   
+### Windows 
+- Windows 7, 8, 10, 2003, 2008, 2008 R2, 2012, 2016
+- Visual Studio 2008 or above
 
-## Hello World - Simplest Implementation
+### Linux/ARM/Mac
+- Linux x64: Ubuntu 14.04.4+ LTS, Debian 8+, etc
+- Linux arm 32bit
+- Linux arm 64bit (contact us to get the SDK)
+- MacOS 64bit: 10.12+ (contact us to get the SDK)
+- GCC 4.2+  
+
+## Installation
+If you haven't downloaded the SDK yet, download the `C/C++ Package` now from [Dynamsoft website](https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs) and unpack the package into the directory of your choice.
+>For this tutorial, we unpack it to `C:\Users\dynamsoft\Downloads\DynamsoftBarcodeReader` on Windows and `/home/dynamsoft/Downloads/DynamsoftBarcodeReader` on Linux/ARM/Mac, change it to your unpacking path for the following content.
+
+## Build Your First Application
+sample description
+download bin and souce code
 Let's start by creating the "Hello World" application which demonstrates how to use the minimum code to read barcodes from an image file.  
 You can find the entire source code for this "Hello World" application in `DBR-C_CPP-{version number}\DynamsoftBarcodeReader\Samples\HelloWorld`.
-### Include the Header Files
-The header file(s) that can be found in `DBR-C_CPP-{version number}\DynamsoftBarcodeReader\Include\`.
 
+### Create a New Project 
+
+#### For Windows
+
+1. Open Visual Studio. Go to File > New > Project, create a new Empty Project and set Project name as `DBRCSample`.
+
+2. Add a new source file named `DBRCSample.c` into the project.
+
+#### For Linux/ARM/Mac
+1. Create a new source file named `DBRCSample.c` and place it into the folder `/home/dynamsoft/Downloads/DynamsoftBarcodeReader/Samples`.
+
+### Include the Library
+
+1. Add headers and libs in `DBRCSample.c`.   
+   
 ```c
-#include "DynamsoftCommon.h"
+#include <stdio.h>
 #include "DynamsoftBarcodeReader.h"
+#if defined(_WIN64) || defined(_WIN32)
+    #ifdef _WIN64
+        #pragma comment(lib, "./Windows/x64/DBRx64.lib")
+    #else
+        #pragma comment(lib, "./Windows/x86/DBRx86.lib")
+    #endif
+#endif
 ```
- 
-### Create a Barcode Reader Instance
+
+>Note:   
+You need to configure the include and library path for building, see [Build and Run the Project](#build-and-run-the-project). 
+
+### Initialize a Barcode Reader Instance
+1. Create an instance of Dynamsoft Barcode Reader.
 
 ```c
-void *hBarcode = NULL;
-hBarcode = DBR_CreateInstance();
+void *hBarcode = DBR_CreateInstance();
 ```
- 
-### Call Decoding Function
+
+2. Initialize the license key.
 
 ```c
-DBR_DecodeFile(hBarcode, "<your image file full path>", "");
-```
- 
-### Get Barcode Results
-For this tutorial, we print out the total barcodes count.
-
-```c
-TextResultArray* pResult = NULL;
-DBR_GetAllTextResults(hBarcode, &pResult);
-printf("%d total barcode(s) found. \n", pResult->resultsCount);
-```
-
-
-## Build Your Own Application
-Now, we will extend the above "Hello World" application to meet real-world usage scenarios.
-You can find the entire source code for this application in `DBR-C_CPP-{version number}\DynamsoftBarcodeReader\Samples\CommandLineCommonSettings`.
-
-### Request and Specify a License
-The Barcode Reader Instance expects a valid license to return the full result. You can log in the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">Customer Portal</a> and request a trial license. After that, add the code line to specify the license. 
-
-```c
-DBR_InitLicense(hBarcode, "<your license key here>");
-```
+DBR_InitLicense(hBarcode, "<insert DBR license key here>");
+```    
+    
+>Please replace `<insert DBR license key here>` with a valid DBR licensekey. There are two ways to obtain one:
+>- Search `DBR_InitLicense` and find the license from `C:\Users\dynamsoft\Downloads\DynamsoftBarcodeReader\Samples\BarcodeReaderDemo\BarcodeReaderDemo.cpp`.
+>- Request a trial license from <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">Customer Portal</a>. 
 
 ### Configure the Barcode Scanning Behavior
-
-#### Specify Barcode Format to Read
-By default, the SDK will read all the supported barcode formats except Postal Codes and DotCode from the image. The barcode formats to enable is highly application-specific. We recommend that you only enable the barcode formats your application requires. Check out [`Barcode Format Enumeration`]({{ site.enumerations }}format-enums.html) for full supported barcode formats. For this tutorial, we will set the application to detect QR Code only.
+1. Set barcode format and count to read.
 
 ```c
 char sError[512];
 PublicRuntimeSettings runtimeSettings;
-//...Initialization code
 DBR_GetRuntimeSettings(hBarcode, &runtimeSettings);
-runtimeSettings.barcodeFormatIds = BF_QR_CODE; 
-runtimeSettings.barcodeFormatIds_2 = BF2_NULL; 
+runtimeSettings.barcodeFormatIds = BF_ALL; 
+runtimeSettings.barcodeFormatIds_2 = BF2_POSTALCODE | BF2_DOTCODE; 
+runtimeSettings.expectedBarcodesCount = 32;
 DBR_UpdateRuntimeSettings(hBarcode, &runtimeSettings, sError, 512);
-//...Decode and do something with the result
 ```
+>The barcode formats to enable is highly application-specific. We recommend that you only enable the barcode formats your application requires. Check out [`Barcode Format Enumeration`]({{ site.enumerations }}format-enums.html) for full supported barcode formats. 
+>If you know exactly the barcode count you want to read, specify `expectedBarcodesCount` to speed up the process and improve the accuracy. 
 
-#### Specify Maximum Barcode Count
-By default, the SDK will read at least one barcode from the image. If you know exactly the barcode count or the maximum count you want to read, use `expectedBarcodesCount` to specify the count value to speed up the process. For this tutorial, we will set the application to detect 1 barcode.
+### Decode and Output Results 
+1. Decode barcodes from an image file.
 
 ```c
-char sError[512];
-PublicRuntimeSettings runtimeSettings;
-//...Initialization code
-DBR_GetRuntimeSettings(hBarcode, &runtimeSettings);
-runtimeSettings.expectedBarcodesCount = 1;
-DBR_UpdateRuntimeSettings(hBarcode, &runtimeSettings, sError, 512);
-//...Decode and do something with the result
+int iErrorCode = -1;
+iErrorCode = DBR_DecodeFile(hBarcode, "C:\\Users\\dynamsoft\\Downloads\\DynamsoftBarcodeReader\\Images\\AllSupportedBarcodeTypes.png", "");
+//iErrorCode = DBR_DecodeFile(hBarcode, "/home/dynamsoft/Downloads/DynamsoftBarcodeReader/Images/AllSupportedBarcodeTypes.png", "");
+if(iErrorCode != DBR_OK)
+    printf("%s\n", DBR_GetErrorString(iErrorCode));
+
 ```
 
-#### Specify a Scan Region
-By default, the SDK will search the whole image for barcodes. This can lead to poor performance, especially when
-dealing with high-resolution images. If you know exactly where the barcode locates, use `region` to specify the barcode location.   
-For this tutorial, we will set the application to find the barcode located in the middle of the image.   
+>For the error handling mechanism, the SDK returns Error Code for each function and provides a function `DBR_GetErrorString` to get the readable message. You should add codes for error handling based on your needs. Check out [Error Code]({{site.enumerations}}error-code.html) for full supported error codes.
+
+2. Get and output barcode results.
+
+    ```c
+    TextResultArray* pResult = NULL;
+    DBR_GetAllTextResults(hBarcode, &pResult);
+    if (pResult != NULL && pResult->resultsCount > 0)
+    {
+        printf("%d total barcode(s) found. \n", pResult->resultsCount);
+        for (int iIndex = 0; iIndex < pResult->resultsCount; iIndex++)
+        {
+            printf("Result %d\n", iIndex + 1);
+            printf("Barcode Format: %s\n", pResult->results[iIndex] ->barcodeFormatString);
+            printf("Barcode Text: %s \n", pResult->results[iIndex]  ->barcodeText);
+        }
+    }
+    getchar();
+    ```
+
+>The SDK returns multiple barcode information, including barcode count, barcode format, barcode text, location, barcode raw data, etc. Check out [`TextResult`]({{ site.structs }}TextResult.html) for full supported result data.
+
+### Release Allocated Memory
+
+1. Release the allocated memory for the barcode results and instance
 
 ```c
-char sError[512];
-PublicRuntimeSettings runtimeSettings;
-//...Initialization code
-DBR_GetRuntimeSettings(hBarcode, &runtimeSettings);
-runtimeSettings.region.regionLeft = 25;
-runtimeSettings.region.regionTop = 25;
-runtimeSettings.region.regionRight = 75;
-runtimeSettings.region.regionBottom = 75;
-runtimeSettings.region.regionMeasuredByPercentage = 1; 
-DBR_UpdateRuntimeSettings(hBarcode, &runtimeSettings, sError, 512);
-//...Decode and do something with the result
-```
-#### Advanced Settings
-In addition to the content mentioned above, the SDK has many other settings and options that you can adjust to best suit your usage. To read more, please see [Scenario Settings]({{ site.scenario_settings }})
+if(pResult != NULL)           
+    DBR_FreeTextResults(&pResult);
 
-### Choose an Image Source 
-The SDK provides multiple decoding functions that support reading barcodes from different sources, including static file,
-video stream, files in memory, base64 string, bitmap, etc. Check out [`Decode Functions`]({{ site.c_methods }}decode.html) for full supported decoding functions. For this tutorial, we will set the application to read barcodes from an image file as the above "Hello World" application introduced.
-
-### Use the Barcode Result 
-The SDK returns multiple information of the decoded barcode, including barcode count, barcode format, barcode text, location, barcode raw data, etc. Check out [`TextResult`]({{ site.structs }}TextResult.html) for full supported result data. For this tutorial, we will set the application to print out the barcode count, format and text.
-
-```c
-TextResultArray* pResult = NULL;
-DBR_GetAllTextResults(hBarcode, &pResult);
-printf("%d total barcode(s) found. \n", pResult->resultsCount);
-for (int iIndex = 0; iIndex < pResult->resultsCount; iIndex++)
-{
-    printf("Result %d\n", iIndex + 1);
-    printf("Barcode Format: %s\n", pResult->results[iIndex]->barcodeFormatString);
-    printf("Text reads: %s \n", pResult->results[iIndex]->barcodeText);
-}
+DBR_DestroyInstance(hBarcode);
 ```
 
-### Handle the Error
-For the error handling mechanism, the SDK returns Error Code for each function and provides a function `DBR_GetErrorString` to get the readable message. You should add codes for error handling based on your needs. Check out [`Error Code`]({{ site.enumerations }}error-code.html) for full supported error codes.
+### Build and Run the Project
 
-## How to Distribute
-To distribute your application, make sure the library files under `DBR-C_CPP-{version number}\DynamsoftBarcodeReader\Lib\{Platform}\` are distributed in the same folder as the application.
-- Supported operating systems:
-   - Windows: 7, 8, 10, 2003, 2008, 2008 R2, 2012;
-   - Linux x64: Ubuntu 14.04.4+ LTS, Debian 8+, etc;  
-   - Linux arm 32bit;
-   - Linux arm 64bit (contact us to get the SDK);
-   - macOS 64bit: 10.12+ (contact us to get the SDK).
+#### For Windows
+1. Configure additional include and library directory
+- In Visual Studio, right click on the project, select **Properties**.
+- In **DBRCSample Property Pages** window, locate **Configuration Properties** > **C/C++** > **Additional Include Directories**, add a new path `C:\Users\dynamsoft\Downloads\DynamsoftBarcodeReader\Include\`.
+- In **DBRCSample Property Pages** window, locate **Configuration Properties** > **Linker** > **Additional Library Directories**, add a new path `C:\Users\dynamsoft\Downloads\DynamsoftBarcodeReader\Lib\`.
+- Apply the settings and close the **DBRCSample Property Pages** window.
+
+2. Build the project through Visual Studio to generate program `DBRCSample.exe`.
+
+3. Copy the DLL files to the same folder as the `DBRCSample.exe`.
+    >Note: Please copy **ALL** `*.dll` files under `C:\Users\dynamsoft\Downloads\DynamsoftBarcodeReader\Lib\Windows\x86` or `C:\Users\dynamsoft\Downloads\DynamsoftBarcodeReader\Lib\Windows\x64` based on your project's platform setting.
+
+2. Run the program `DBRCSample.exe`.
+
+#### For Linux/ARM/Mac
+1. Create a file named `Makefile` with following content and put it in the same directory as the file `DBRCSample.c`.
+
+    ```makefile
+    CC=gcc
+    CCFLAGS=-c
+
+    DBR_LIB_PATH=../Lib/Linux
+    DBR_INCLUDE_PATH=../Include
+
+    LDFLAGS=-lDynamsoftBarcodeReader -L $(DBR_LIB_PATH) -Wl,-rpath=$(DBR_LIB_PATH) -Wl,-rpath=./
+
+    TARGET=DBRCSample
+    OBJECT=DBRCSample.o
+    SOURCE=DBRCSample.c
+
+    # build rule for target.
+    $(TARGET): $(OBJECT)
+        $(CC) -o $(TARGET) $(OBJECT) $(LDFLAGS)
+
+    # target to build an object file
+    $(OBJECT): $(SOURCE)
+        $(CC) $(CCFLAGS) -I $(DBR_INCLUDE_PATH) $(SOURCE)
+
+    # the clean target
+    .PHONY : clean
+    clean: 
+        rm -f $(OBJECT) $(TARGET)
+    ```
+
+2. Open a terminal and change to the target directory where `Makefile` located in. Build the sample:
+
+    ```bash
+    cd /home/dynamsoft/Downloads/DynamsoftBarcodeReader
+    make
+    ```
+
+3. Run the program `DBRCSample`.
+
+    ```bash
+    ./DBRCSample
+    ```
 
 
-## How to Upgrade
-
-### From version 8.0 to 8.x
-
-Just replace the old assembly files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx). Your existing license for 8.0 is compatible with 8.x.
-
-### From version 7.x
-
-You need to replace the old assembly files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
-
-Your previous SDK license for version 7.x is not compatible with the version 8.x. Please [contact us](https://www.dynamsoft.com/Company/Contact.aspx) to upgrade your license.
-
-In v8.0, we introduced a new license tracking mechanism, <a href="https://www.dynamsoft.com/license-tracking/docs/about/index.html" target="_blank">License 2.0</a>. 
-
-If you wish to use License 2.0, please refer to [this article](../../license-activation/set-full-license.md) to set the license.
-
-After you upgraded your license to version 8.x:
-
-- If you were using `DBR_InitLicense`, please replace the old license with the newly generated one.
-
-- If you were using `DBR_InitLicenseFromServer` to connect to Dynamsoft server for license verification, then no need to change the license key. But please make sure the device has Internet connection.
-
-- If you were using `DBR_InitLicenseFromServer` + `DBR_InitLicenseFromLicenseContent` to connect to Dynamsoft server once and use the SDK offline, please follow [these steps](../../license-activation/set-full-license-7.md#connect-once) to re-register the device.
-
-- If you were using `DBR_InitLicenseFromLicenseContent` to use the SDK offline, please follow [these steps](../../license-activation/set-full-license-7.md#offline) to re-register the device.
-
-### From version 6.x
-
-We made some structural updates in the new version. To upgrade from 6.x to 8.x, we recommend you to review our sample code and re-write the barcode scanning module.
+## Related Articles
+- [How to select the appropriate DBR parameter configuration]({{ site.scenario_settings }})
+- [How to upgrade to latest version]({{ site.how_to }})/upgrade-to-latest-version.html
