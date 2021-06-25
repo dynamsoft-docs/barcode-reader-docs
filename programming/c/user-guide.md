@@ -47,66 +47,67 @@ If you want to try out the application to see how it works, download the entire 
 
 1. Add headers and libs in `DBRCSample.c`.   
    
-```c
-#include <stdio.h>
-#include "DynamsoftBarcodeReader.h"
-#if defined(_WIN64) || defined(_WIN32)
-    #ifdef _WIN64
-        #pragma comment(lib, "./Windows/x64/DBRx64.lib")
-    #else
-        #pragma comment(lib, "./Windows/x86/DBRx86.lib")
+    ```c
+    #include <stdio.h>
+    #include "DynamsoftBarcodeReader.h"
+    #if defined(_WIN64) || defined(_WIN32)
+        #ifdef _WIN64
+            #pragma comment(lib, "./Windows/x64/DBRx64.lib")
+        #else
+            #pragma comment(lib, "./Windows/x86/DBRx86.lib")
+        #endif
     #endif
-#endif
-```
+    ```
 
->Note:   
-You need to configure the include and library path for building, see [Build and Run the Project](#build-and-run-the-project). 
+    >Note:   
+    You need to configure the include and library path for building, see [Build and Run the Project](#build-and-run-the-project). 
 
 ### Initialize a Barcode Reader Instance
 1. Create an instance of Dynamsoft Barcode Reader.
 
-```c
-void *hBarcode = DBR_CreateInstance();
-```
+    ```c
+    void *hBarcode = DBR_CreateInstance();
+    ```
 
 2. Initialize the license key.
 
-```c
-DBR_InitLicense(hBarcode, "<insert DBR license key here>");
-```    
+    ```c
+    DBR_InitLicense(hBarcode, "<insert DBR license key here>");
+    ```    
     
->Please replace `<insert DBR license key here>` with a valid DBR licensekey. There are two ways to obtain one:
->- Search `DBR_InitLicense` and find the license from `C:\Users\dynamsoft\Downloads\DynamsoftBarcodeReader\Samples\BarcodeReaderDemo\BarcodeReaderDemo.cpp`.
->- Request a trial license from <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">Customer Portal</a>. 
+    >Please replace `<insert DBR license key here>` with a valid DBR    licensekey. There are two ways to obtain one:
+    >- Search `DBR_InitLicense` and find the license from   `C:\Users\dynamsoft\Downloads\DynamsoftBarcodeReader\Samples\BarcodeReaderD   emo\BarcodeReaderDemo.cpp`.
+    >- Request a trial license from <a href="https://www.dynamsoft.com/ customer/license/trialLicense?utm_source=docs" target="_blank">Customer  Portal</a>. 
 
 ### Configure the Barcode Scanning Behavior
 1. Set barcode format and count to read.
 
-```c
-char sError[512];
-PublicRuntimeSettings runtimeSettings;
-DBR_GetRuntimeSettings(hBarcode, &runtimeSettings);
-runtimeSettings.barcodeFormatIds = BF_ALL; 
-runtimeSettings.barcodeFormatIds_2 = BF2_POSTALCODE | BF2_DOTCODE; 
-runtimeSettings.expectedBarcodesCount = 32;
-DBR_UpdateRuntimeSettings(hBarcode, &runtimeSettings, sError, 512);
-```
->The barcode formats to enable is highly application-specific. We recommend that you only enable the barcode formats your application requires. Check out [`Barcode Format Enumeration`]({{ site.enumerations }}format-enums.html) for full supported barcode formats. 
->If you know exactly the barcode count you want to read, specify `expectedBarcodesCount` to speed up the process and improve the accuracy. 
+    ```c
+    char sError[512];
+    PublicRuntimeSettings runtimeSettings;
+    DBR_GetRuntimeSettings(hBarcode, &runtimeSettings);
+    runtimeSettings.barcodeFormatIds = BF_ALL; 
+    runtimeSettings.barcodeFormatIds_2 = BF2_POSTALCODE | BF2_DOTCODE; 
+    runtimeSettings.expectedBarcodesCount = 32;
+    DBR_UpdateRuntimeSettings(hBarcode, &runtimeSettings, sError, 512);
+    ```
+
+    >The barcode formats to enable is highly application-specific. We   recommend that you only enable the barcode formats your application   requires. Check out [Barcode Format Enumeration]({{ site.enumerations }}    format-enums.html) for full supported barcode formats. 
+
+    >If you know exactly the barcode count you want to read, specify    `expectedBarcodesCount` to speed up the process and improve the accuracy. 
 
 ### Decode and Output Results 
 1. Decode barcodes from an image file.
 
-```c
-int iErrorCode = -1;
-iErrorCode = DBR_DecodeFile(hBarcode, "C:\\Users\\dynamsoft\\Downloads\\DynamsoftBarcodeReader\\Images\\AllSupportedBarcodeTypes.png", "");
-//iErrorCode = DBR_DecodeFile(hBarcode, "/home/dynamsoft/Downloads/DynamsoftBarcodeReader/Images/AllSupportedBarcodeTypes.png", "");
-if(iErrorCode != DBR_OK)
-    printf("%s\n", DBR_GetErrorString(iErrorCode));
+    ```c
+    int iErrorCode = -1;
+    iErrorCode = DBR_DecodeFile(hBarcode, "C:\\Users\\dynamsoft\\Downloads\\DynamsoftBarcodeReader\\Images\\AllSupportedBarcodeTypes.png", "");
+    //iErrorCode = DBR_DecodeFile(hBarcode, "/home/dynamsoft/Downloads/DynamsoftBarcodeReader/Images/AllSupportedBarcodeTypes.png", "");
+    if(iErrorCode != DBR_OK)
+        printf("%s\n", DBR_GetErrorString(iErrorCode));
+    ```
 
-```
-
->For the error handling mechanism, the SDK returns Error Code for each function and provides a function `DBR_GetErrorString` to get the readable message. You should add codes for error handling based on your needs. Check out [Error Code]({{site.enumerations}}error-code.html) for full supported error codes.
+    >For the error handling mechanism, the SDK returns Error Code for each function and provides a function `DBR_GetErrorString` to get the readable message. You should add codes for error handling based on your needs. Check out [Error Code]({{site.enumerations}}error-code.html) for full supported error codes.
 
 2. Get and output barcode results.
 
@@ -126,18 +127,18 @@ if(iErrorCode != DBR_OK)
     getchar();
     ```
 
->The SDK returns multiple barcode information, including barcode count, barcode format, barcode text, location, barcode raw data, etc. Check out [`TextResult`]({{ site.structs }}TextResult.html) for full supported result data.
+    >The SDK returns multiple barcode information, including barcode count, barcode format, barcode text, location, barcode raw data, etc. Check out [TextResult]({{ site.structs }}TextResult.html) for full supported result data.
 
 ### Release Allocated Memory
 
 1. Release the allocated memory for the barcode results and instance
 
-```c
-if(pResult != NULL)           
-    DBR_FreeTextResults(&pResult);
+    ```c
+    if(pResult != NULL)           
+        DBR_FreeTextResults(&pResult);
 
-DBR_DestroyInstance(hBarcode);
-```
+    DBR_DestroyInstance(hBarcode);
+    ```
 
 ### Build and Run the Project
 
@@ -201,4 +202,4 @@ DBR_DestroyInstance(hBarcode);
 
 ## Related Articles
 - [How to select the appropriate DBR parameter configuration]({{ site.scenario_settings }})
-- [How to upgrade to latest version]({{ site.how_to }})/upgrade-to-latest-version.html
+- [How to upgrade to latest version]({{ site.how_to }}upgrade-to-latest-version.html)
