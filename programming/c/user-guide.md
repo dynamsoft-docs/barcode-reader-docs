@@ -13,16 +13,16 @@ In this guide, you will learn step by step on how to build a barcode reading app
 
 ## Requirements
    
-### Operating System: 
-- Windows 7, 8, 10, 2003, 2008, 2008 R2, 2012, 2016
-- Linux x64: Ubuntu 14.04.4+ LTS, Debian 8+, etc
-- Linux arm 32bit
-- Linux arm 64bit (contact us to get the SDK)
-- MacOS 64bit: 10.12+ (contact us to get the SDK)
+- Operating System: 
+    - Windows 7, 8, 10, 2003, 2008, 2008 R2, 2012, 2016
+    - Linux x64: Ubuntu 14.04.4+ LTS, Debian 8+, etc
+    - Linux arm 32bit
+    - Linux arm 64bit (contact us to get the SDK)
+    - MacOS 64bit: 10.12+ (contact us to get the SDK)
 
-### Developing Tool
-- Visual Studio 2008 or above
-- GCC 5.4+  
+- Developing Tool
+    - Visual Studio 2008 or above
+    - GCC 5.4+  
 
 ## Installation
 If you haven't downloaded the SDK yet, download the `C/C++ Package` now from <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a> and unpack the package into the directory of your choice.
