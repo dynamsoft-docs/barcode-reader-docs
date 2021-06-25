@@ -131,7 +131,7 @@ If you want to try out the application to see how it works, download the entire 
 
 ### Release Allocated Memory
 
-1. Release the allocated memory for the barcode results and instance
+1. Release the allocated memory for the barcode results and instance.
 
     ```c
     if(pResult != NULL)           
@@ -143,7 +143,7 @@ If you want to try out the application to see how it works, download the entire 
 ### Build and Run the Project
 
 #### For Windows
-1. Configure additional include and library directory
+1. Configure additional include and library directory.
 - In Visual Studio, right click on the project, select **Properties**.
 - In **DBRCSample Property Pages** window, locate **Configuration Properties** > **C/C++** > **Additional Include Directories**, add a new path `C:\Users\dynamsoft\Downloads\DynamsoftBarcodeReader\Include\`.
 - In **DBRCSample Property Pages** window, locate **Configuration Properties** > **Linker** > **Additional Library Directories**, add a new path `C:\Users\dynamsoft\Downloads\DynamsoftBarcodeReader\Lib\`.
@@ -152,7 +152,8 @@ If you want to try out the application to see how it works, download the entire 
 2. Build the project through Visual Studio to generate program `DBRCSample.exe`.
 
 3. Copy the DLL files to the same folder as the `DBRCSample.exe`.
-    >Note: Please copy **ALL** `*.dll` files under `C:\Users\dynamsoft\Downloads\DynamsoftBarcodeReader\Lib\Windows\x86` or `C:\Users\dynamsoft\Downloads\DynamsoftBarcodeReader\Lib\Windows\x64` based on your project's platform setting.
+    >Note:  
+    Please copy **ALL** `*.dll` files under `C:\Users\dynamsoft\Downloads\DynamsoftBarcodeReader\Lib\Windows\x86` or `C:\Users\dynamsoft\Downloads\DynamsoftBarcodeReader\Lib\Windows\x64` based on your project's platform setting.
 
 2. Run the program `DBRCSample.exe`.
 
