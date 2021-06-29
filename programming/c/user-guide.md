@@ -26,11 +26,11 @@ In this guide, you will learn step by step on how to build a barcode reading app
 
 ## Installation
 If you haven't downloaded the SDK yet, download the `C/C++ Package` now from <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a> and unpack the package into the directory of your choice.
->For this tutorial, we unpack it to `C:\Users\dynamsoft\Downloads\DynamsoftBarcodeReader` on Windows and `/home/dynamsoft/Downloads/DynamsoftBarcodeReader` on Linux/ARM/Mac, change it to your unpacking path for the following content.
+>For this tutorial, we unpack it to `[INSTALLATION FOLDER]`, change it to your unpacking path for the following content.
 
 ## Build Your First Application
 Let's start by creating a console application which demonstrates how to use the minimum code to read barcodes from an image file.  
-If you want to try out the application to see how it works, download the entire source code and compiled program from [Here](../assets/DBRCSample.zip).
+If you want to try out the application to see how it works, download the entire source code and compiled program from [Here](assets/user-guide/dbr-c-sample.zip).
 
 ### Create a New Project 
 
@@ -41,7 +41,7 @@ If you want to try out the application to see how it works, download the entire 
 2. Add a new source file named `DBRCSample.c` into the project.
 
 #### For Linux/ARM/Mac
-1. Create a new source file named `DBRCSample.c` and place it into the folder `/home/dynamsoft/Downloads/DynamsoftBarcodeReader/Samples`.
+1. Create a new source file named `DBRCSample.c` and place it into the folder `[INSTALLATION FOLDER]/Samples`.
 
 ### Include the Library
 
@@ -49,18 +49,15 @@ If you want to try out the application to see how it works, download the entire 
    
     ```c
     #include <stdio.h>
-    #include "DynamsoftBarcodeReader.h"
+    #include "[INSTALLATION FOLDER]/Include/DynamsoftBarcodeReader.h"
     #if defined(_WIN64) || defined(_WIN32)
         #ifdef _WIN64
-            #pragma comment(lib, "./Windows/x64/DBRx64.lib")
+            #pragma comment(lib, "[INSTALLATION FOLDER]/Lib/Windows/x64/DBRx64.lib")
         #else
-            #pragma comment(lib, "./Windows/x86/DBRx86.lib")
+            #pragma comment(lib, "[INSTALLATION FOLDER]/Lib/Windows/x86/DBRx86.lib")
         #endif
     #endif
     ```
-
-    >Note:   
-    You need to configure the include and library path for building, see [Build and Run the Project](#build-and-run-the-project). 
 
 ### Initialize a Barcode Reader Instance
 1. Create an instance of Dynamsoft Barcode Reader.
@@ -75,9 +72,9 @@ If you want to try out the application to see how it works, download the entire 
     DBR_InitLicense(hBarcode, "<insert DBR license key here>");
     ```    
     
-    >Please replace `<insert DBR license key here>` with a valid DBR    licensekey. There are two ways to obtain one:
-    >- Search `DBR_InitLicense` and find the license from   `C:\Users\dynamsoft\Downloads\DynamsoftBarcodeReader\Samples\BarcodeReaderD   emo\BarcodeReaderDemo.cpp`.
-    >- Request a trial license from <a href="https://www.dynamsoft.com/ customer/license/trialLicense?utm_source=docs" target="_blank">Customer  Portal</a>. 
+    >Please replace `<insert DBR license key here>` with a valid DBR licensekey. There are two ways to obtain one:
+    >- Search `DBR_InitLicense` and find the license from `[INSTALLATION FOLDER]/Samples/BarcodeReaderDemo/BarcodeReaderDemo.cpp`.
+    >- Request a trial license from <a href="https://www.dynamsoft.com/ customer/license/trialLicense?utm_source=docs" target="_blank">Customer Portal</a>. 
 
 ### Configure the Barcode Scanning Behavior
 1. Set barcode format and count to read.
@@ -92,17 +89,16 @@ If you want to try out the application to see how it works, download the entire 
     DBR_UpdateRuntimeSettings(hBarcode, &runtimeSettings, sError, 512);
     ```
 
-    >The barcode formats to enable is highly application-specific. We   recommend that you only enable the barcode formats your application   requires. Check out [Barcode Format Enumeration]({{ site.enumerations }}    format-enums.html) for full supported barcode formats. 
+    >The barcode formats to enable is highly application-specific. We recommend that you only enable the barcode formats your application requires. Check out [Barcode Format Enumeration]({{ site.enumerations }}format-enums.html) for full supported barcode formats. 
 
-    >If you know exactly the barcode count you want to read, specify    `expectedBarcodesCount` to speed up the process and improve the accuracy. 
+    >If you know exactly the barcode count you want to read, specify `expectedBarcodesCount` to speed up the process and improve the accuracy. 
 
 ### Decode and Output Results 
 1. Decode barcodes from an image file.
 
     ```c
     int iErrorCode = -1;
-    iErrorCode = DBR_DecodeFile(hBarcode, "C:\\Users\\dynamsoft\\Downloads\\DynamsoftBarcodeReader\\Images\\AllSupportedBarcodeTypes.png", "");
-    //iErrorCode = DBR_DecodeFile(hBarcode, "/home/dynamsoft/Downloads/DynamsoftBarcodeReader/Images/AllSupportedBarcodeTypes.png", "");
+    iErrorCode = DBR_DecodeFile(hBarcode, "[INSTALLATION FOLDER]/Images/AllSupportedBarcodeTypes.png", "");
     if(iErrorCode != DBR_OK)
         printf("%s\n", DBR_GetErrorString(iErrorCode));
     ```
@@ -121,7 +117,7 @@ If you want to try out the application to see how it works, download the entire 
         {
             printf("Result %d\n", iIndex + 1);
             printf("Barcode Format: %s\n", pResult->results[iIndex] ->barcodeFormatString);
-            printf("Barcode Text: %s \n", pResult->results[iIndex]  ->barcodeText);
+            printf("Barcode Text: %s \n", pResult->results[iIndex] ->barcodeText);
         }
     }
     getchar();
@@ -136,26 +132,27 @@ If you want to try out the application to see how it works, download the entire 
     ```c
     if(pResult != NULL)           
         DBR_FreeTextResults(&pResult);
-
     DBR_DestroyInstance(hBarcode);
     ```
+
+>Note:  
+Please change all `[INSTALLATION FOLDER]` in above code snippet to your unpacking path.
+
+>You can download the entire source code and compiled program from [Here](assets/user-guide/dbr-c-sample.zip).
+
 
 ### Build and Run the Project
 
 #### For Windows
-1. Configure additional include and library directory.
-- In Visual Studio, right click on the project, select **Properties**.
-- In **DBRCSample Property Pages** window, locate **Configuration Properties** > **C/C++** > **Additional Include Directories**, add a new path `C:\Users\dynamsoft\Downloads\DynamsoftBarcodeReader\Include\`.
-- In **DBRCSample Property Pages** window, locate **Configuration Properties** > **Linker** > **Additional Library Directories**, add a new path `C:\Users\dynamsoft\Downloads\DynamsoftBarcodeReader\Lib\`.
-- Apply the settings and close the **DBRCSample Property Pages** window.
+1. In Visual Studio, set the solution to build as Release|x64.
 
-2. Build the project through Visual Studio to generate program `DBRCSample.exe`.
+2. Build the project to generate program `DBRCSample.exe`.
 
-3. Copy the DLL files to the same folder as the `DBRCSample.exe`.
-    >Note:  
-    Please copy **ALL** `*.dll` files under `C:\Users\dynamsoft\Downloads\DynamsoftBarcodeReader\Lib\Windows\x86` or `C:\Users\dynamsoft\Downloads\DynamsoftBarcodeReader\Lib\Windows\x64` based on your project's platform setting.
+3. Copy **ALL** `*.dll` files under `[INSTALLATION FOLDER]\Lib\Windows\x64` to the same folder as the `DBRCSample.exe`.
 
-2. Run the program `DBRCSample.exe`.
+4. Run the program `DBRCSample.exe`.
+
+>The SDK supports both x86 and x64, please set the platform based on your needs.
 
 #### For Linux/ARM/Mac
 1. Create a file named `Makefile` with following content and put it in the same directory as the file `DBRCSample.c`.
@@ -190,7 +187,6 @@ If you want to try out the application to see how it works, download the entire 
 2. Open a terminal and change to the target directory where `Makefile` located in. Build the sample:
 
     ```bash
-    cd /home/dynamsoft/Downloads/DynamsoftBarcodeReader
     make
     ```
 
