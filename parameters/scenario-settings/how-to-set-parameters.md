@@ -7,20 +7,32 @@ needAutoGenerateSidebar: false
 ---
 
 # How to set DBR parameters 
-DBR provides flexible parameter configuration to meet user 's decoding requirements under different scenarios and different needs. Users can modify the configuration through RuntimeSetting and the Json template. 
-- RuntimeSetting   
-RuntimeSetting is an object that manages various parameters during runtime. If you need to dynamically change the DBR configuration when the program is running, modifying RuntimeSetting will be a good choice. RuntimeSetting only provides some common parameters for setting, the complete parameter setting can be achieved through the Json template. 
-- Json template 
-The Json template provided by DBR allows you to manage various parameters in the form of configuration files. If your application scenario is relatively fixed and you do not need to change the DBR configuration frequently, the Json template will be a suitable choice. The Json template can be used along side with RuntimeSetting: first use the Json template to read the complete and stable settings, and then use RuntimeSetting for common and variable settings. 
 
-Next, we will introduce two methods in detail: 
+DBR provides flexible parameter configurations to meet your barcode decoding requirements under different scenarios. You can modify the configurations either through the `RuntimeSetting` object or a JSON template. 
+
+- [RuntimeSetting](#RuntimeSetting-object)  
+ 
+  `RuntimeSetting` is an object that manages various parameters during runtime. If you need to *dynamically* change the DBR configuration when the program is running, modifying `RuntimeSetting` will be a good choice. 
+
+  `RuntimeSetting` only provides some common parameters though. The complete parameter setting can be achieved through the JSON template. 
+
+- [JSON template](#JSON-template)
+
+  DBR also allows you to manage various parameters via a JSON template. If your application scenario is relatively fixed and you do not need to change the scanning configurations frequently, the JSON template will be a suitable choice. 
+
+  You can use the JSON template along with `RuntimeSetting`: first use the JSON template to read the complete and stable settings, and then use `RuntimeSetting` for common and variable settings. 
 
 ## RuntimeSetting object 
-`RuntimeSetting`  object manages various parameters of the DBR runtime. The user can change the DBR configuration by modifying the field values in `RuntimeSetting`. This method is suitable for scenarios that require dynamic configuration changes. 
 
-First, you need to get the current `RuntimeSetting`  object through `GetRuntimeSetting` , modify the corresponding field configuration, and then use  `UpdateRuntimeSetting`  to make the configuration effective. Specific modifiable field values will be introduced in detail in subsequent documents. 
+`RuntimeSetting` object manages various parameters of the DBR runtime. You can change the DBR configurations by modifying the field values in `RuntimeSetting`. This method is suitable for scenarios that require dynamic configuration changes. 
 
-The following example shows changing the  `barcodeFormatIds` field in `RuntimeSetting`  to set the barcode format that needs to be processed.  
+Basic steps:
+
+1. Get the current `RuntimeSetting` object through `GetRuntimeSetting` 
+2. Update the corresponding field configuration
+3. Use  `UpdateRuntimeSetting`  to make the configuration take effect
+
+The following C++ example shows how to specify barcode types to be processed by changing the `barcodeFormatIds` field in `RuntimeSetting`.  
 
 ```c++
 CBarcodeReader* reader = new CBarcodeReader();   
@@ -37,26 +49,36 @@ dynamsoft::dbr::CBarcodeReader::FreeTextResults(&paryResult);
 delete runtimeSettings;   
 delete reader;  
 ```
-## Json template 
 
-DBR allows users to manage parameters in the form of configuration files that follow Json syntax. This method is suitable for the case where the parameter configuration is relatively fixed . The Json template mainly involves `ImageParameter`, `FormatSpecification` and `RegionDefinition` . 
-   
-`ImageParameter`: Define the global configuration used for the entire image. 
-`FormatSpecification`: Define the configuration used for a particular pattern. 
-`RegionDefinition` : Define the configuration within a specific area of the image. 
+## JSON template 
 
-Let's go into more detail. 
+DBR also supports managing parameters via JSON configuration files. This method is suitable for cases where the parameter configurations are relatively fixed. The JSON template mainly includes:
 
-- ImageParameter   
-`ImageParameter` defines the global configuration used for the entire image. One or multiple may be defined. We will introduce the specific configurable fields in the subsequent documents.  
-When defining an `ImageParameter`, it can be specified by the `ImageParameter` in Json. When defining multiple `ImageParameter`, use the `ImageParameterArray`, each `ImageParameter` object needs to specify a different `Name`. 
-To use the `ImageParameter` configuration defined in the Json template, first we need to use `InitRuntimeSettingsWithFile` to load a Json file, or use `InitRuntimeSettingsWithString` to load a Json string, and then when calling the DBR decoding function, specify the configuration through `Name` of `ImageParameter`. If not specified, the default `ImageParameter` configuration object will be used. 
-The `emSettingPriority` parameters in the `InitRuntimeSettingsWithFile` and `InitRuntimeSettingsWithString` interfaces are used to specify how to operate the default configuration of the DBR when loading the Json configuration. If `CM_IGNORE` is set, the default configuration will not be changed. If set to `CM_OVERWRITE`, the `ImageParameter` configuration you just loaded will be used and the default template will be merged. 
+- `ImageParameter`: Defines the global configurations used for the entire image.
+- `FormatSpecification`: Defines the configurations used for a particular barcode format. 
+- `RegionDefinition`: Defines the configurations for a specific area of the image. 
 
- The following is a sample Json template. In this example, we use the parameter `pTemplateName` of `DecodeFile` to specify the `ImageParameter` whose `Name` is "IP1".
+### ImageParameter   
+
+`ImageParameter` defines the global configurations used for the entire image. 
+
+You can define one or multiple `ImageParameter`. When defining multiple `ImageParameter`, use `ImageParameterArray` and specify a different `Name` for each `ImageParameter` object. 
+
+To use the `ImageParameter` configuration defined in the JSON template:
+
+1. Use `InitRuntimeSettingsWithFile` to load a JSON file, or use `InitRuntimeSettingsWithString` to load a JSON string.
+2. When calling DBR decoding functions, specify the configurations through `Name` of `ImageParameter`. 
+  If not specified, the default `ImageParameter` configuration object will be used. 
+
+The `emSettingPriority` parameters in the `InitRuntimeSettingsWithFile` and `InitRuntimeSettingsWithString` interfaces are used to specify how to operate the default configuration of the DBR when loading the JSON configuration. 
+
+- If set to `CM_IGNORE`, the default configuration will not be changed. 
+- If set to `CM_OVERWRITE`, the `ImageParameter` configuration you just loaded will be used and the default template will be merged. 
+
+Below is a sample JSON template. In this example, we use the parameter `pTemplateName` of `DecodeFile` to specify the `ImageParameter` whose `Name` is "IP1".
 
 ```json
-// One ImageParameter example { 
+// One ImageParameter example 
 {
     "Version": "3.0",
     "ImageParameter": {                   
@@ -65,8 +87,9 @@ The `emSettingPriority` parameters in the `InitRuntimeSettingsWithFile` and `Ini
         "BarcodeFormatIds": ["BF_ALL"]
      }
 }
-
-//Multiple ImageParameter example{ 
+```
+```json
+//Multiple ImageParameter example 
 {
     "Version": "3.0", 
     "ImageParameterArray": [                        
@@ -100,12 +123,16 @@ dynamsoft::dbr::CBarcodeReader::FreeTextResults(&paryResult);
 delete runtimeSettings;         
 delete reader;
 ```
-- FormatSpecification   
-If you only want to configure certain parameters for a specific pattern, then `FormatSpecification` should be used. This object defines the configuration used for a specific barcode format. If the configuration is inconsistent with the global ImageParameter configuration, then `FormatSpecification` has a higher priority. For specific configurable parameters and applicable scenarios, please refer to our documentation for [specific barcode format configuration parameters][2]. 
-In Json, use the  `FormatSpecificationArray` to define one or multiple `FormatSpecification` objects, which are distinguished by defining different `Name`. 
-Use `FormatSpecificationNameArray` to specify the `Name` that each `FormatSpecification` needs to use. 
+
+### FormatSpecification
+
+If you only want to configure certain parameters for a specific pattern, then `FormatSpecification` should be used. This object defines the configuration used for a specific barcode format. 
+
+If the configurations are inconsistent with the global `ImageParameter` configurations, then `FormatSpecification` has a higher priority. For specific configurable parameters and applicable scenarios, please refer to our documentation for [specific barcode format configuration parameters][2]. 
+
+In JSON, use the `FormatSpecificationArray` to define one or multiple `FormatSpecification` objects, which can be distinguished by different `Name`. 
  
-In the following example, we defined a `FormatSpecification` named "FS_1". 
+In the following example, we defines a `FormatSpecification` named "FS_1". 
 
 ```json
 {
@@ -123,12 +150,16 @@ In the following example, we defined a `FormatSpecification` named "FS_1".
     "Version": "3.0"
 }
 ```
-- RegionDefinition 
-If you only care about a specific area on the image instead of the entire image or you want to make additional configurations for a specific area of the image, you should use `RegionDefinition`. Setting the area can help DBR to narrow the range of the image to be processed, which helps to increase the speed. 
-The `RegionDefinition` object defines the configuration in the specified area of the image. If the configuration is inconsistent with the global `ImageParameter`  configuration, then the RegionDefinition has a higher priority. For specific configurable parameters, please refer to our [detailed documentation][1] on `RegionDefinition` . 
-In Json, one or more `RegionDefinitionArray` are defined by `RegionDefinitionArray`, and distinguished by different `Name`.  
 
-In the following example, we have defined two `RegionDefinition`, "RP_1" and "RP_2" 
+### RegionDefinition
+
+If you only care about a specific area on the image instead of the entire image or you want to make additional configurations for a specific area of the image, you can use `RegionDefinition`. Specifying the interested area can help DBR narrow the range of the image to be processed which helps increase the speed. 
+
+The `RegionDefinition` object defines the configurations for the specified area of the image. If the configurations are inconsistent with the global `ImageParameter`  configurations, then the `RegionDefinition` has a higher priority. For specific configurable parameters, please refer to our [detailed documentation][1] on `RegionDefinition` . 
+
+In JSON, one or more `RegionDefinitionArray` are defined by `RegionDefinitionArray` and distinguished by different `Name`.  
+
+In the following example, we define two `RegionDefinition`, "RP_1" and "RP_2". 
 
 ```json
 {
