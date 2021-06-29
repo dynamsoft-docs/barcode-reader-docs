@@ -145,7 +145,7 @@ Please change all `[INSTALLATION FOLDER]` in above code snippet to your unpackin
 ### Build and Run the Project
 
 #### For Windows
-1. In Visual Studio, set the solution to build as Release|x64.
+1. In Visual Studio, set the solution to build as Release\|x64.
 
 2. Build the project to generate program `DBRCPPSample.exe`.
 
