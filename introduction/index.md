@@ -9,41 +9,37 @@ breadcrumbText: Introduction
 
 # Dynamsoft Barcode Reader - Introduction
 
+Dynamsoft Barcode Reader (DBR) SDK enables you to easily implement 1D and 2D barcode scanning into your applications running on different platforms. 
 
-Dynamsoft Barcode Reader enables developers to easily implement 1D and 2D barcode scanning into their applications running on different platforms. It offers support for a variety of programming languages.
+## Using DBR in Different Programming Languages
 
-- for web applications (pure JavaScript)
+- for **web** applications (pure JavaScript/WASM)
 
     [Enable browser-based barcode scanning with JavaScript](../programming/javascript/user-guide/)
 
-- for desktop and server applications (including web applications where the barcode scanning happens on the server)
+- for **desktop and server** applications (including web applications for server-side barcode scanning)
 
-    [Barcode scanning with C programming language](../programming/c/user-guide.md/)
+    [C](../programming/c/user-guide.md/) | [C++](../programming/cplusplus/user-guide.md/) | [.NET](../programming/dotnet/user-guide.md/) | [Java](../programming/java/user-guide.md/) | [Python](../programming/python/user-guide.md/)
 
-    [Barcode scanning with C++](../programming/cplusplus/user-guide.md/)
-
-    [Barcode scanning with .NET](../programming/dotnet/user-guide.md/)
-
-    [Barcode scanning with Java](../programming/java/user-guide.md/)
-
-    [Barcode scanning with Python](../programming/python/user-guide.md/)
-
-- for native apps
+- for **native mobile** apps
 
     [Build an Android app with Java](../programming/android/user-guide.md/)
 
     [Build an iOS app with Objective-C or Swift](../programming/objectivec-swift/user-guide.md/)
 
+## How-To Guides  
 
-## Getting Started
+- [How-to Guides]({{ site.how_to }})
+- [Customize Parameters for Different Scenarios](../parameters/scenario-settings.md/) 
+- [Test Batch Scanning with Performance Tool]({{ site.introduction }}comparison-tools/batch-test.html)
+- [License Activation](../license-activation/set-trial-license.md/)
+
+## Learn More about DBR
 
 - [SDK Overview]({{ site.introduction }}overview.html)
 - [Algorithm Principles]({{ site.introduction }}architecture.html)
 
-## How-to Guides  
 
-- [How-to Guides]({{ site.how_to }})
-- [Performance Tool]({{ site.introduction }}comparison-tools/batch-test.html)
 
 
 
