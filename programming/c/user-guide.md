@@ -199,4 +199,4 @@ Please change all `[INSTALLATION FOLDER]` in above code snippet to your unpackin
 
 ## Related Articles
 - [How to select the appropriate DBR parameter configuration]({{ site.scenario_settings }})
-- [How to upgrade to latest version]({{ site.how_to }}upgrade-to-latest-version.html)
+- [How to upgrade to latest version](upgrade-instruction.md)

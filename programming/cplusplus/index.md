@@ -29,6 +29,9 @@ The C++ documentation mainly consists of two parts. One is the [User Guide](#get
 - [Version 8.x](release-notes/cpp-8.md)
 - [Version 7.6 and below](release-notes/cpp-7.md)
 
+## Upgrade Instruction
+- [How to upgrade to latest version](upgrade-instruction.md)
+
 ## Online Store
 - <a href="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/" target="_blank">Desktop and Server Deployment</a>
 

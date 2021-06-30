@@ -27,5 +27,4 @@ This section covers the following topics:
 - [Set custom area for HSV pre-detection](set-custom-area-for-hsv-pre-detection.md)
 - [Test batch scan performance](test-batch-scan-performance.md)
 - [Turn on or off text filter](turn-on-or-off-text-filter.md)
-- [Upgrade to Latest Version](upgrade-to-latest-version.md)
 
