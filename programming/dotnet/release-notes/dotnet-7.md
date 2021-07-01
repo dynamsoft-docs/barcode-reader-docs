@@ -8,7 +8,7 @@ needGenerateH3Content: false
 noTitleIndex: true
 ---
 
-# Release Notes for C Language - 7.6 and below
+# Release Notes for .NET SDK - 7.6 and below
 
 ## 7.6 (09/01/2020)
 
