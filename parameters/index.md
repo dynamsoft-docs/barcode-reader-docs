@@ -9,6 +9,8 @@ breadcrumbText: Parameters
 
 # Dynamsoft Barcode Reader - Parameters
 
+Dynamsoft Barcode Reader provides rich template parameters that you can customize and optimize for different usage scenarios for best scanning performance.
+
 ## Getting Started
 
 - [Hierarchy and Work Domain of Parameters](structure-and-interfaces-of-parameters.md)
