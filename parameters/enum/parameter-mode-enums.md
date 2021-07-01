@@ -245,8 +245,6 @@ Describes the deblur mode.
 | DM_MORPHING | EnumDeblurModeMorphing | 0x10 | Performs deblur process using the morphing algorithm.|
 | DM_DEEP_ANALYSIS | EnumDeblurModeDeepAnalysis | 0x20 | Performs deblur process using the deep analysis algorithm. |
 | DM_SHARPENING | EnumDeblurModeSharpening | 0x40 | Performs deblur process using the sharpening algorithm. |
-| DM_BASED_ON_LOC_BIN | EnumDeblurModeBasedOnLocBin | 0x80 | Performs deblur process based on the binary image from the localization process. |
-| DM_SHARPENING_SMOOTHING | EnumDeblurModeSharpeningSmoothing | 0x100 | Performs deblur process using the sharpening and smoothing algorithm.|
 
 
 
