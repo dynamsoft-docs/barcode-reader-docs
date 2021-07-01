@@ -19,7 +19,7 @@ Dynamsoft Barcode Reader (DBR) SDK enables you to easily implement 1D and 2D bar
 
 - for **desktop and server** applications (including web applications for server-side barcode scanning)
 
-    [C](../programming/c/user-guide.md/) | [C++](../programming/cplusplus/user-guide.md/) | [.NET](../programming/dotnet/user-guide.md/) | [Java](../programming/java/user-guide.md/) | [Python](../programming/python/user-guide.md/)
+    [C](../programming/c/user-guide.md/) \| [C++](../programming/cplusplus/user-guide.md/) \| [.NET](../programming/dotnet/user-guide.md/) \| [Java](../programming/java/user-guide.md/) \| [Python](../programming/python/user-guide.md/)
 
 - for **native mobile** apps
 
