@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader C Language API Reference - Status Retrieval Methods
-description: This page shows the status retrieval methods of Dynamsoft Barcode Reader for C Language.
-keywords: DBR_GetErrorString, DBR_GetVersion, status retrieval methods, api reference, c
+title: Dynamsoft Barcode Reader C Language API Reference - Status Retrieval Functions
+description: This page shows the status retrieval functions of Dynamsoft Barcode Reader for C Language.
+keywords: DBR_GetErrorString, DBR_GetVersion, status retrieval functions, api reference, c
 needAutoGenerateSidebar: true
 ---
 
-# Status Retrieval Methods
+# Status Retrieval Functions
 
-  | Method               | Description |
+  | Function               | Description |
   |----------------------|-------------|
   | [`DBR_GetErrorString`](#dbr_geterrorstring) | Get error message by error code. |
   | [`DBR_GetVersion`](#dbr_getversion) | Get version information of SDK. |

@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader C Language API Reference - License Methods
-description: This page shows the license methods of Dynamsoft Barcode Reader for C Language.
-keywords: DBR_InitLicense, DBR_InitLicenseFromServer, DBR_InitLicenseFromLicenseContent, DBR_OutputLicenseToString, DBR_OutputLicenseToStringPtr, DBR_FreeLicenseString, license methods, api reference, c
+title: Dynamsoft Barcode Reader C Language API Reference - License Functions
+description: This page shows the license functions of Dynamsoft Barcode Reader for C Language.
+keywords: DBR_InitLicense, DBR_InitLicenseFromServer, DBR_InitLicenseFromLicenseContent, DBR_OutputLicenseToString, DBR_OutputLicenseToStringPtr, DBR_FreeLicenseString, license functions, api reference, c
 needAutoGenerateSidebar: true
 ---
 
-# License Methods
+# License Functions
 
-  | Method               | Description |
+  | Function               | Description |
   |----------------------|-------------|
   | [`DBR_InitLicense`](#dbr_initlicense) | Read product key and activate the SDK. |
   | [`DBR_InitLicenseFromServer`](#dbr_initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
@@ -87,7 +87,7 @@ DBR_API int DBR_InitLicenseFromLicenseContent (void* barcodeReader, const char* 
 #### Parameters
 `[in] barcodeReader` Handle of the barcode reader instance.  
 `[in]	pLicenseKey`	The license key.  
-`[in]	pLicenseContent`	An encrypted string representing the license content (quota, expiration date, barcode type, etc.) obtained from the method [`DBR_OutputLicenseToString`](#dbr_outputlicensetostring).
+`[in]	pLicenseContent`	An encrypted string representing the license content (quota, expiration date, barcode type, etc.) obtained from the function [`DBR_OutputLicenseToString`](#dbr_outputlicensetostring).
 
 #### Return value
 Returns error code (returns 0 if the function operates successfully).    
@@ -116,7 +116,7 @@ Returns error code (returns 0 if the function operates successfully).
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
 #### Remark
-[`DBR_InitLicenseFromServer`](#dbr_initlicensefromserver) has to be successfully called before calling this method.
+[`DBR_InitLicenseFromServer`](#dbr_initlicensefromserver) has to be successfully called before calling this function.
 
 
 
@@ -141,7 +141,7 @@ Returns error code (returns 0 if the function operates successfully).
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
 #### Remark
-[`DBR_InitLicenseFromServer`](#dbr_initlicensefromserver) has to be successfully called before calling this method.
+[`DBR_InitLicenseFromServer`](#dbr_initlicensefromserver) has to be successfully called before calling this function.
 
 
 
@@ -160,7 +160,7 @@ DBR_API void DBR_FreeLicenseString (char** content)
 `[in]	content` The output string which stores the content of license. 
 
 #### Remark
-[`DBR_OutputLicenseToStringPtr`](#dbr_outputlicensetostringptr) has to be successfully called before calling this method.
+[`DBR_OutputLicenseToStringPtr`](#dbr_outputlicensetostringptr) has to be successfully called before calling this function.
 
 
 
