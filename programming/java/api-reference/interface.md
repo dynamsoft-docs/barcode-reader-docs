@@ -33,7 +33,7 @@ void com.dynamsoft.dbr.ErrorCallback.errorCallback(int frameId, int errorCode, O
 `errorCode` Error Code generated when decoding the frame.
 `userData` Arguments passed to your function.
 
-&nbsp;
+
 
 
 
@@ -54,7 +54,7 @@ void com.dynamsoft.dbr.IntermediateResultCallback.intermediateResultCallback(int
 #### See Also
 [IntermediateResult](class/IntermediateResult.md)
 
-&nbsp;
+
 
 
 
@@ -75,7 +75,7 @@ void textResultCallback(int frameId, TextResult[] results, Object userData)
 #### See Also
 [TextResult](class/TextResult.md)
 
-&nbsp;
+
 
 
 

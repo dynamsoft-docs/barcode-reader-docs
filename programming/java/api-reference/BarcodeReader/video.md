@@ -6,7 +6,7 @@ keywords: startFrameDecoding, startFrameDecodingEx, appendFrame, stopFrameDecodi
 needAutoGenerateSidebar: true
 ---
 
-# Java API Reference - BarcodeReader Video Methods
+# Video Methods
 
 - Decode
     
@@ -79,7 +79,7 @@ reader.setErrorCallback(new ErrorCallback() {
 reader.startFrameDecoding(2, 10, 1024, 720, 1024, EnumImagePixelFormat.IPF_GRAYSCALED, "");
 ```
 
-&nbsp; 
+ 
 
 
 
@@ -122,7 +122,7 @@ reader.startFrameDecodingEx(parameters, "");
 reader.destroy();
 ```
 
-&nbsp; 
+ 
 
 
 
@@ -150,7 +150,7 @@ int frameId = reader.appendFrame(bufferBytes);
 reader.destroy();
 ```
 
-&nbsp; 
+ 
 
 
 
@@ -177,7 +177,7 @@ reader.stopFrameDecoding();
 reader.destroy();
 ```
 
-&nbsp; 
+ 
 
 
 
@@ -207,7 +207,7 @@ FrameDecodingParameters parameters = reader.initFrameDecodingParameters();
 reader.destroy();
 ```
 
-&nbsp; 
+ 
 
 
 
@@ -242,7 +242,7 @@ reader.setErrorCallback(new ErrorCallback() {
 reader.startFrameDecoding(2, 10, 1024, 720, 1024, EnumImagePixelFormat.IPF_GRAYSCALED, "");
 ```
 
-&nbsp; 
+ 
 
 
 
@@ -276,7 +276,7 @@ reader.setTextResultCallback(new TextResultCallback() {
 reader.startFrameDecoding(2, 10, 1024, 720, 1024, EnumImagePixelFormat.IPF_GRAYSCALED, "");
 ```
 
-&nbsp; 
+ 
 
 
 
@@ -313,7 +313,7 @@ reader.setIntermediateResultCallback(new IntermediateResultCallback() {
 reader.startFrameDecoding(2, 10, 1024, 720, 1024, EnumImagePixelFormat.IPF_GRAYSCALED, "");
 ```
 
-&nbsp; 
+ 
 
 
 

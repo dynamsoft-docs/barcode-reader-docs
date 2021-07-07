@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 ---
 
 
-# C API Reference - Initialize and Destroy Methods
+# Initialize and Destroy Methods
 
   | Method               | Description |
   |----------------------|-------------|

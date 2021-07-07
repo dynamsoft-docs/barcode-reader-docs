@@ -8,7 +8,7 @@ breadcrumbText: Class
 ---
 
 
-# Dynamsoft Barcode Reader SDK - Java BarcodeReader Methods
+# Java API Reference - Auxiliary Classes
 
 - [`AztecDetails`](AztecDetails.md)	 
 - [`BarcodeReaderException`](BarcodeReaderException.md)	

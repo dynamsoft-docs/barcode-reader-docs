@@ -6,7 +6,7 @@ keywords: InitRuntimeSettingsWithFile, InitRuntimeSettingsWithString, AppendTplF
 needAutoGenerateSidebar: true
 ---
 
-# .Net API Reference - BarcodeReader Parameter and Runtime Settings Advanced Methods
+# Parameter and Runtime Settings Advanced Methods
 
   | Method               | Description |
   |----------------------|-------------|
@@ -48,7 +48,7 @@ reader.Dispose();
 ```
 
 
-&nbsp; 
+ 
 
 
 ## InitRuntimeSettingsWithString
@@ -78,7 +78,7 @@ reader.Dispose();
 ```
 
 
-&nbsp; 
+ 
 
 
 ## AppendTplFileToRuntimeSettings
@@ -107,7 +107,7 @@ reader.Dispose();
 ```
 
 
-&nbsp; 
+ 
 
 
 ## AppendTplStringToRuntimeSettings
@@ -136,7 +136,7 @@ reader.Dispose();
 ```
 
 
-&nbsp; 
+ 
 
 
 ## GetAllParameterTemplateNames
@@ -162,7 +162,7 @@ reader.Dispose();
 ```
 
 
-&nbsp; 
+ 
 
 
 ## OutputSettingsToFile
@@ -191,7 +191,7 @@ reader.Dispose();
 ```
 
 
-&nbsp; 
+ 
 
 
 ## OutputSettingsToString

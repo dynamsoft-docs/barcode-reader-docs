@@ -6,7 +6,7 @@ keywords: DBR_InitLicense, DBR_InitLicenseFromServer, DBR_InitLicenseFromLicense
 needAutoGenerateSidebar: true
 ---
 
-# C API Reference - License Methods
+# License Methods
 
   | Method               | Description |
   |----------------------|-------------|
@@ -49,7 +49,7 @@ DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 
@@ -71,7 +71,7 @@ DBR_API int DBR_InitLicenseFromServer (void* barcodeReader, const char* pLicense
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-&nbsp;
+
 
 
 
@@ -93,7 +93,7 @@ DBR_API int DBR_InitLicenseFromLicenseContent (void* barcodeReader, const char* 
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-&nbsp;
+
 
 
 
@@ -118,7 +118,7 @@ Returns error code (returns 0 if the function operates successfully).
 #### Remark
 [`DBR_InitLicenseFromServer`](#dbr_initlicensefromserver) has to be successfully called before calling this method.
 
-&nbsp;
+
 
 
 
@@ -143,7 +143,7 @@ Returns error code (returns 0 if the function operates successfully).
 #### Remark
 [`DBR_InitLicenseFromServer`](#dbr_initlicensefromserver) has to be successfully called before calling this method.
 
-&nbsp;
+
 
 
 
@@ -163,7 +163,7 @@ DBR_API void DBR_FreeLicenseString (char** content)
 [`DBR_OutputLicenseToStringPtr`](#dbr_outputlicensetostringptr) has to be successfully called before calling this method.
 
 
-&nbsp;
+
 
 
 ## DBR_InitLTSConnectionParameters
@@ -189,7 +189,7 @@ paramters.handshakeCode = "Your handshake code";
 DBR_InitLicenseFromLTS(&paramters, errorBuf, 512);
 ```
 
-&nbsp;
+
 
 ## DBR_InitLicenseFromLTS
 Initializes the barcode reader license and connects to the specified server for online verification.
@@ -216,7 +216,7 @@ paramters.handshakeCode = "Your handshake code";
 DBR_InitLicenseFromLTS(&paramters, errorBuf, 512);
 ```
 
-&nbsp;
+
 
 ## DBR_GetIdleInstancesCount
 Gets available instances count when charging by concurrent instances count.
@@ -242,5 +242,5 @@ else
 }
 ```
 
-&nbsp;
+
 

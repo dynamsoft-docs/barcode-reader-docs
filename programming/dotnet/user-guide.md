@@ -14,13 +14,13 @@ In this guide, you will learn step by step on how to build a barcode reading app
 ## Requirements
 
 - Operating Systems:
-    - Windows 7, 8, 10.
-    - Windows Server 2003, 2008, 2008 R2, 2012, 2016.
+    - Windows 7, 8, 10
+    - Windows Server 2003, 2008, 2008 R2, 2012, 2016
 
 - Developing Environment:
-   - Visual Studio 2008 or above.
+   - Visual Studio 2008 or above
    - .NET Framework 2.0, .NET Framework 4.0 or above
-   - .NET Core 3.1
+   - .NET Core 3.1 or 5.0
 
 > The .NET SDK is developed based on .NET Framework 2.0/4.0. If you are using .NET Core 2.1 or 3.1, please download the .NET Core SDK (Dynamsoft.NetCoreApp.Barcode) from [Nuget](https://www.nuget.org/packages/Dynamsoft.NetCoreApp.Barcode/).
 
@@ -35,7 +35,7 @@ After you unzip the file, you can find samples for supported platforms in the **
 
 ## Build Your First Application
 Let's start by creating a console application which demonstrates how to use the minimum code to read barcodes from an image file.  
-If you want to try out the application to see how it works, download the entire source code and compiled program from [Here](assets/user-guide/dbr-csharp-sample.zip).
+>You can download the entire source code and compiled program from [Here](assets/user-guide/dbr-csharp-sample.zip).
 
 ### Create a New Project 
 
@@ -56,7 +56,7 @@ If you want to try out the application to see how it works, download the entire 
 1. Create an instance of Dynamsoft Barcode Reader.
 
     ```csharp
-    BarcodeReader reader = new BarcodeReader(<insert DBR license key here>)
+    BarcodeReader reader = new BarcodeReader("<insert DBR license key here>")
     ```
     
     >Please replace `<insert DBR license key here>` with a valid DBR licensekey. There are two ways to obtain one:
@@ -124,8 +124,6 @@ If you want to try out the application to see how it works, download the entire 
 >Note:  
 Please change all `[INSTALLATION FOLDER]` in above code snippet to your unpacking path.
 
->You can download the entire source code and compiled program from [Here](assets/user-guide/dbr-csharp-sample.zip).
-
 
 ### Build and Run the Project
 
@@ -134,6 +132,9 @@ Please change all `[INSTALLATION FOLDER]` in above code snippet to your unpackin
 2. Run the program `DBRCSharpSample.exe`.
 
  >If you got the exception "Failed to create compression directory" or "Failed to load module dll", please copy `x64` and `x86` folders to the folder where `Dynamsoft.BarcodeReader.dll` and `DynamsoftCommon.dll` resides and try again. The `x64` and `x86` folders can be found under `[INSTALLATION FOLDER]\Lib\2.0` or `[INSTALLATION FOLDER]\Lib\4.0`.
+
+
+>You can download the entire source code and compiled program from [Here](assets/user-guide/dbr-csharp-sample.zip).
 
 ## Related Articles
 - [How to select the appropriate DBR parameter configuration]({{ site.scenario_settings }})

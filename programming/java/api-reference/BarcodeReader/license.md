@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 ---
 
 
-# Java API Reference - BarcodeReader License Methods
+# License Methods
 
   | Method               | Description |
   |----------------------|-------------|

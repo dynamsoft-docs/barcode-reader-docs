@@ -1,13 +1,13 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader C++ API Reference - Function Pointer
-description: This page shows the function pointers of Dynamsoft Barcode Reader for C++ Language.
-keywords: CB_Error, CB_IntermediateResult, CB_TextResult, function pointer, api reference, c++
+description: This page shows the callbacks of Dynamsoft Barcode Reader for C++ Language.
+keywords: CB_Error, CB_IntermediateResult, CB_TextResult, callbacks, api reference, c++
 needAutoGenerateSidebar: true
 ---
 
 
-# C++ API Reference - Function Pointer
+# Callbacks
 
   | Function | Description |
   |----------|-------------|
@@ -36,7 +36,7 @@ typedef void(* CB_Error) (int frameId, int errorCode, void* pUser)
 #### See Also
 [Error Code]({{ site.enumerations }}error-code.html)
 
-&nbsp;
+
 
 
 
@@ -57,7 +57,7 @@ typedef void(* CB_IntermediateResult) (int frameId, IntermediateResultArray* pRe
 #### See Also
 [IntermediateResultArray]({{ site.structs }}IntermediateResultArray.html)
 
-&nbsp;
+
 
 
 
@@ -78,6 +78,6 @@ typedef void(* CB_TextResult) (int frameId, TextResultArray *pResults, void *pUs
 #### See Also
 [TextResultArray]({{ site.structs }}TextResultArray.html)
 
-&nbsp;
+
 
 

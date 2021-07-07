@@ -6,7 +6,7 @@ keywords: BarcodeReader, destroy, initialization and destroy, api reference, jav
 needAutoGenerateSidebar: true
 ---
 
-# Java API Reference - BarcodeReader Initialization and Destroy
+# Initialization and Destroy
 
   | Method               | Description |
   |----------------------|-------------|
@@ -40,7 +40,7 @@ If you initialize DynamsoftBarcodeReader by this method without license, the dec
 BarcodeReader reader = new BarcodeReader();
 ```
 
-&nbsp;
+
 
 Initialization of `BarcodeReader` with license.
 
@@ -58,7 +58,7 @@ BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
 ```
 
 
-&nbsp;
+
 
 ## Destroy
 

@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 ---
 
 
-# .Net API Reference - BarcodeReader License Methods
+# License Methods
 
   | Method               | Description |
   |----------------------|-------------|
@@ -51,7 +51,7 @@ if(iLicMsg != 0)
 _br.Dispose();
 ```
 
-&nbsp;
+
 
 
 ## InitLicenseFromLicenseContent
@@ -87,7 +87,7 @@ _br.Dispose();
 ```
 
 
-&nbsp;
+
 
 
 ## OutputLicenseToString
@@ -136,7 +136,7 @@ else{
 //....
 ```
 
-&nbsp;
+
 
 
 ## InitLTSConnectionParameters
@@ -156,7 +156,7 @@ BarcodeReader.InitLicenseFromLts(ltsInfo, out errorMsg);
 BarcodeReader reader = new BarcodeReader();
 ```
 
-&nbsp;
+
 
 
 ## InitLicenseFromLTS
@@ -183,7 +183,7 @@ BarcodeReader.InitLicenseFromLts(ltsInfo, out errorMsg);
 BarcodeReader reader = new BarcodeReader();
 ```
 
-&nbsp;
+
 
 ## GetIdleInstancesCount
 Gets available instances count when charging by concurrent instances count.
@@ -209,5 +209,5 @@ else
 }
 ```
 
-&nbsp;
+
 

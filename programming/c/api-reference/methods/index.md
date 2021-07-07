@@ -1,28 +1,28 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader C Language API Reference - Methods
-description: This page shows all methods of Dynamsoft Barcode Reader for C Language.
-keywords: methods, api reference, c
+title: Dynamsoft Barcode Reader C Language API Reference - Functions
+description: This page shows all functions of Dynamsoft Barcode Reader for C Language.
+keywords: functions, api reference, c
 needAutoGenerateSidebar: false
-breadcrumbText: Methods
+breadcrumbText: Functions
 ---
 
-# Dynamsoft Barcode Reader SDK - C Methods
+# C API Reference - Global Functions
 
 ## Initialize and Destroy
   
-  | Method               | Description |
+  | Function               | Description |
   |----------------------|-------------|
   | [`DBR_CreateInstance`](initialize-and-destroy.md#dbr_createinstance) | Create an instance of Dynamsoft Barcode Reader. |
   | [`DBR_DestroyInstance`](initialize-and-destroy.md#dbr_destroyinstance) | Destroy the instance of Dynamsoft Barcode Reader. |
 
 
-&nbsp; 
+
 
 
 ## Decode
 
-  | Method               | Description |
+  | Function               | Description |
   |----------------------|-------------|
   | [`DBR_DecodeFile`](decode.md#dbr_decodefile) | Decode barcodes from a specified image file. |
   | [`DBR_DecodeFileInMemory`](decode.md#dbr_decodefileinmemory) | Decode barcodes from an image file in memory. |
@@ -33,14 +33,14 @@ breadcrumbText: Methods
   | [`DBR_DecodeIntermediateResults`](decode.md#dbr_decodeintermediateresults) | Decodes barcode from intermediate results. |
 
 
-&nbsp; 
+
 
 
 ## Parameter and Runtime Settings
 
 ### Basic
   
-  | Method               | Description |
+  | Function               | Description |
   |----------------------|-------------|
   | [`DBR_SetModeArgument`](parameter-and-runtime-settings-basic.md#dbr_setmodeargument) | Set argument value for the specified mode parameter. |
   | [`DBR_GetModeArgument`](parameter-and-runtime-settings-basic.md#dbr_getmodeargument) | Get argument value for the specified mode parameter. |
@@ -50,7 +50,7 @@ breadcrumbText: Methods
 
 ### Advanced
   
-  | Method               | Description |
+  | Function               | Description |
   |----------------------|-------------|
   | [`DBR_InitRuntimeSettingsWithFile`](parameter-and-runtime-settings-advanced.md#dbr_initruntimesettingswithfile) | Initialize runtime settings with the settings in a given JSON file. |
   | [`DBR_InitRuntimeSettingsWithString`](parameter-and-runtime-settings-advanced.md#dbr_initruntimesettingswithstring) | Initialize runtime settings with the settings in a given JSON string. |
@@ -64,12 +64,12 @@ breadcrumbText: Methods
   | [`DBR_FreeSettingsString`](parameter-and-runtime-settings-advanced.md#dbr_freesettingsstring) | Free memory allocated for runtime settings string. |
 
 
-&nbsp; 
+
 
 
 ## License
    
-  | Method               | Description |
+  | Function               | Description |
   |----------------------|-------------|
   | [`DBR_InitLicense`](license.md#dbr_initlicense) | Read product key and activate the SDK. |
   | [`DBR_InitLicenseFromServer`](license.md#dbr_initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
@@ -80,12 +80,12 @@ breadcrumbText: Methods
   | [`DBR_InitLTSConnectionParameters`](license.md#dbr_initltsconnectionparameters) | Initializes a DM_LTSConnectionParameters struct with default values. |
   | [`DBR_InitLicenseFromLTS`](license.md#dbr_initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
 
-&nbsp; 
+
 
 
 ## Result
    
-  | Method               | Description |
+  | Function               | Description |
   |----------------------|-------------|
   | [`DBR_GetAllTextResults`](result.md#dbr_getalltextresults) | Get all recognized barcode results.  |
   | [`DBR_FreeTextResults`](result.md#dbr_freetextresults) | Free memory allocated for text results. |
@@ -93,24 +93,24 @@ breadcrumbText: Methods
   | [`DBR_FreeIntermediateResults`](result.md#dbr_freeintermediateresults) | Free memory allocated for the intermediate results. |
 
 
-&nbsp; 
+
 
 
 ## Status Retrieval
   
-  | Method               | Description |
+  | Function               | Description |
   |----------------------|-------------|
   | [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) | Get error message by error code. |
   | [`DBR_GetVersion`](status-retrieval.md#dbr_getversion) | Get version information of SDK. |
 
 
-&nbsp; 
+
 
 
 ## Video
 ### Decode
    
-  | Method               | Description |
+  | Function               | Description |
   |----------------------|-------------|
   | [`DBR_StartFrameDecoding`](video.md#dbr_startframedecoding) | Decode barcodes from inner frame queue. |
   | [`DBR_StartFrameDecodingEx`](video.md#dbr_startframedecodingex) | Decode barcodes from inner frame queue. |
@@ -119,13 +119,13 @@ breadcrumbText: Methods
 
 ### Parameter
    
-  | Method               | Description |
+  | Function               | Description |
   |----------------------|-------------|
   | [`DBR_InitFrameDecodingParameters`](video.md#dbr_initframedecodingparameters) | Initialize frame decoding parameter. |
 
 ### Callback
    
-  | Method               | Description |
+  | Function               | Description |
   |----------------------|-------------|
   | [`DBR_SetErrorCallback`](video.md#dbr_seterrorcallback) | Set callback function to process errors generated during frame decoding. |
   | [`DBR_SetTextResultCallback`](video.md#dbr_settextresultcallback) | Set callback function to process text results generated during frame decoding. |
@@ -133,9 +133,8 @@ breadcrumbText: Methods
 
 ### Status retrieval
    
-  | Method               | Description |
+  | Function               | Description |
   |----------------------|-------------|
   | [`DBR_GetLengthOfFrameQueue`](video.md#dbr_getlengthofframequeue) | Get length of current inner frame queue. |
   
 
-&nbsp; 

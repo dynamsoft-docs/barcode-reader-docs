@@ -6,7 +6,7 @@ keywords: DBR_GetErrorString, DBR_GetVersion, status retrieval methods, api refe
 needAutoGenerateSidebar: true
 ---
 
-# C API Reference - Status Retrieval Methods
+# Status Retrieval Methods
 
   | Method               | Description |
   |----------------------|-------------|
@@ -46,7 +46,7 @@ const char* errorString = DBR_GetErrorString(errorCode);
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 ## DBR_GetVersion
 

@@ -1,18 +1,18 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader C Language API Reference - Function Pointer
-description: This is the function pointer of Dynamsoft Barcode Reader for C Language.
-keywords: CB_Error, CB_IntermediateResult, CB_TextResult, function pointer, api reference, c
+title: Dynamsoft Barcode Reader C Language API Reference - Callbacks
+description: This is the callbacks of Dynamsoft Barcode Reader for C Language.
+keywords: CB_Error, CB_IntermediateResult, CB_TextResult, Callbacks, api reference, c
 needAutoGenerateSidebar: true
 ---
 
-# C API Reference - Function Pointer
+# Callbacks
 
   | Function | Description |
   |----------|-------------|
-  | [`CB_Error`](#cb_error) | Represents the method that will handle the error code returned by the SDK. |
-  | [`CB_IntermediateResult`](#cb_intermediateresult) | Represents the method that will handle the intermediate result array returned by the SDK. |
-  | [`CB_TextResult`](#cb_textresult) | Represents the method that will handle the text result array returned by the SDK. | 
+  | [`CB_Error`](#cb_error) | Represents the function that will handle the error code returned by the SDK. |
+  | [`CB_IntermediateResult`](#cb_intermediateresult) | Represents the function that will handle the intermediate result array returned by the SDK. |
+  | [`CB_TextResult`](#cb_textresult) | Represents the function that will handle the text result array returned by the SDK. | 
   
 ---
  
@@ -21,7 +21,7 @@ needAutoGenerateSidebar: true
 
 
 ## CB_Error
-Represents the method that will handle the error code returned by the SDK.
+Represents the function that will handle the error code returned by the SDK.
 
 ```c
 typedef void(* CB_Error) (int frameId, int errorCode, void* pUser)
@@ -35,14 +35,14 @@ typedef void(* CB_Error) (int frameId, int errorCode, void* pUser)
 #### See Also
 [Error Code]({{ site.enumerations }}error-code.html)
 
-&nbsp;
+
 
 
 
 
 
 ## CB_IntermediateResult
-Represents the method that will handle the intermediate result array returned by the SDK.
+Represents the function that will handle the intermediate result array returned by the SDK.
 
 ```c
 typedef void(* CB_IntermediateResult) (int frameId, IntermediateResultArray* pResults, void* pUser)
@@ -56,14 +56,14 @@ typedef void(* CB_IntermediateResult) (int frameId, IntermediateResultArray* pRe
 #### See Also
 [IntermediateResultArray]({{ site.structs }}IntermediateResultArray.html)
 
-&nbsp;
+
 
 
 
 
 
 ## CB_TextResult
-Represents the method that will handle the error code returned by the SDK.
+Represents the function that will handle the error code returned by the SDK.
 
 ```c
 typedef void(* CB_TextResult) (int frameId, TextResultArray *pResults, void *pUser)
@@ -77,6 +77,6 @@ typedef void(* CB_TextResult) (int frameId, TextResultArray *pResults, void *pUs
 #### See Also
 [TextResultArray]({{ site.structs }}TextResultArray.html)
 
-&nbsp;
+
 
 

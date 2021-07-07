@@ -6,7 +6,7 @@ keywords: GetVersion, status retrieval methods, BarcodeReader, api reference, .N
 needAutoGenerateSidebar: true
 ---
 
-# .Net API Reference - BarcodeReader Status Retrieval Methods
+# Status Retrieval Methods
 
   | Method               | Description |
   |----------------------|-------------|

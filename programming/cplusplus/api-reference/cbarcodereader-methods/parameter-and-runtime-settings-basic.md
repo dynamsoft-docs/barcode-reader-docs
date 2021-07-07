@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 ---
 
 
-# C++ API Reference - CBarcodeReader Parameter and Runtime Settings Basic Methods
+# Parameter and Runtime Settings Basic Methods
 
   | Method               | Description |
   |----------------------|-------------|
@@ -71,7 +71,7 @@ delete pSettings;
 delete reader;
 ```
 
-&nbsp;
+
 
 
 
@@ -129,7 +129,7 @@ delete pSettings;
 delete reader;
 ```
 
-&nbsp;
+
 
 
 
@@ -160,7 +160,7 @@ delete pSettings;
 delete reader;
 ```
 
-&nbsp;
+
 
 
 
@@ -196,7 +196,7 @@ delete pSettings;
 delete reader;
 ```
 
-&nbsp;
+
 
 
 

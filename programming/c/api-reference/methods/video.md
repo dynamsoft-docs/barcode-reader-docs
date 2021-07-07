@@ -6,7 +6,7 @@ keywords: DBR_StartFrameDecoding, DBR_StartFrameDecodingEx, DBR_AppendFrame, DBR
 needAutoGenerateSidebar: true
 ---
 
-# C API Reference - Video Methods
+# Video Methods
 
 - Decode
    
@@ -72,7 +72,7 @@ int errorCode = DBR_StartFrameDecoding(barcodeReader, 2, 10, 1024, 720, 720, IPF
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 
@@ -120,7 +120,7 @@ if(errorCode == DBR_OK)
 }
 ```
 
-&nbsp;
+
 
 
 
@@ -147,7 +147,7 @@ int frameId = DBR_AppendFrame(barcodeReader, pBufferBytes);
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 
@@ -181,7 +181,7 @@ int errorCode = DBR_StopFrameDecoding(barcodeReader);
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 
@@ -228,7 +228,7 @@ if(errorCode == DBR_OK)
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 
@@ -263,7 +263,7 @@ DBR_SetErrorCallback(barcodeReader, ErrorFunction, NULL);
 DBR_StartFrameDecoding(barcodeReader, 2, 10, 1024, 720, 720, IPF_BINARY, "");
 ```
 
-&nbsp;
+
 
 
 
@@ -297,7 +297,7 @@ DBR_SetTextResultCallback(barcodeReader, TextResultFunction, NULL);
 DBR_StartFrameDecoding(barcodeReader, 2, 10, 1024, 720, 720, IPF_BINARY, "");
 ```
 
-&nbsp;
+
 
 
 
@@ -336,7 +336,7 @@ DBR_SetIntermediateResultCallback(barcodeReader, IntermediateResultFunction, NUL
 DBR_StartFrameDecoding(barcodeReader, 2, 10, 1024, 720, 720, IPF_BINARY, "");
 ```
 
-&nbsp;
+
 
 
 

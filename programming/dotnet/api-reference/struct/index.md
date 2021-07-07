@@ -7,7 +7,7 @@ needAutoGenerateSidebar: false
 breadcrumbText: Struct
 ---
 
-# Dynamsoft Barcode Reader SDK - .Net Struct
+# .Net API Reference - Structs
 
 - [`FurtherModes`](FurtherModes.md)		
 - [`PublicRuntimeSettings`](PublicRuntimeSettings.md)		

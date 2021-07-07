@@ -8,7 +8,7 @@ breadcrumbText: BarcodeReader Methods
 ---
 
 
-# Dynamsoft Barcode Reader SDK - Java BarcodeReader Methods
+# Class com.dynamsoft.dbr.BarcodeReader
 
 ## Initialize and Destroy
    
@@ -18,7 +18,7 @@ breadcrumbText: BarcodeReader Methods
   | [`destroy`](initialize-and-destroy.md#destroy) | Destroys an instance of `BarcodeReader` object.|
    
    
-&nbsp; 
+
    
    
 ## Decode
@@ -34,7 +34,7 @@ breadcrumbText: BarcodeReader Methods
   | [`decodeIntermediateResults`](decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
    
    
-&nbsp; 
+
    
    
    
@@ -63,7 +63,7 @@ breadcrumbText: BarcodeReader Methods
   | [`outputSettingsToString`](parameter-and-runtime-settings-advanced.md#outputsettingstostring) | Output runtime settings to a string. |
    
       
-&nbsp; 
+
 
    
 ## License
@@ -78,7 +78,7 @@ breadcrumbText: BarcodeReader Methods
   | [`initLicenseFromLTS`](license.md#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
    
    
-&nbsp; 
+
    
    
 ## Result
@@ -88,7 +88,7 @@ breadcrumbText: BarcodeReader Methods
   | [`getIntermediateResults`](result.md#getintermediateresults) | Get intermediate results. |
    
       
-&nbsp; 
+
 
    
 ## Status Retrieval
@@ -98,7 +98,7 @@ breadcrumbText: BarcodeReader Methods
   | [`getVersion`](status-retrieval.md#getversion) | Get version information of SDK.|
    
       
-&nbsp; 
+
 
    
 ## Video

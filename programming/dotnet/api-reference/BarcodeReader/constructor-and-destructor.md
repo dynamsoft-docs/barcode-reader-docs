@@ -6,7 +6,7 @@ keywords: BarcodeReader, Dispose, api reference, .Net
 needAutoGenerateSidebar: true
 ---
 
-# .Net API Reference - BarcodeReader Constructor and Destructor
+# Constructor and Destructor
 
   | Method               | Description |
   |----------------------|-------------|
@@ -50,7 +50,7 @@ Dynamsoft.DBR.BarcodeReader.BarcodeReader(string modulePath, string productKey)
 `[in] modulePath` <*string*> : The path where you store these DLLs.  
 `[in] productKey` <*string*> : Product key. 
 
-&nbsp;
+
 
 
 ## Dispose

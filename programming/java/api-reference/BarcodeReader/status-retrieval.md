@@ -6,7 +6,7 @@ keywords: getVersion, status retrieval methods, BarcodeReader, api reference, ja
 needAutoGenerateSidebar: true
 ---
 
-# Java API Reference - BarcodeReader Status Retrieval Methods
+# Status Retrieval Methods
 
   | Method               | Description |
   |----------------------|-------------|

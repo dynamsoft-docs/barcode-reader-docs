@@ -7,7 +7,7 @@ needAutoGenerateSidebar: false
 breadcrumbText: BarcodeReader Methods
 ---
 
-# Dynamsoft Barcode Reader SDK - .Net BarcodeReader Methods
+# Class Dynamsoft.DBR.BarcodeReader
 
 ## Constructor and Destructor
    
@@ -16,7 +16,7 @@ breadcrumbText: BarcodeReader Methods
   | [`BarcodeReader`](constructor-and-destructor.md#barcodereader) | Constructor of `BarcodeReader` object.|
   | [`Dispose`](constructor-and-destructor.md#dispose) | Destroys an instance of Dynamsoft Barcode Reader. |
    
-&nbsp; 
+ 
    
    
 ## Decode
@@ -32,7 +32,7 @@ breadcrumbText: BarcodeReader Methods
   | [`DecodeIntermediateResults`](decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
   
    
-&nbsp; 
+ 
    
    
    
@@ -61,7 +61,7 @@ breadcrumbText: BarcodeReader Methods
   | [`OutputSettingsToString`](parameter-and-runtime-settings-advanced.md#outputsettingstostring) | Outputs runtime settings to a string. |
    
       
-&nbsp; 
+ 
 
    
 ## License
@@ -75,7 +75,7 @@ breadcrumbText: BarcodeReader Methods
   | [`InitLicenseFromLTS`](license.md#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
    
    
-&nbsp; 
+ 
    
    
 ## Status Retrieval
@@ -85,7 +85,7 @@ breadcrumbText: BarcodeReader Methods
   | [`GetVersion`](status-retrieval.md#getversion) | Gets version information of SDK. |
    
       
-&nbsp; 
+ 
 
    
 ## Video
@@ -121,7 +121,7 @@ breadcrumbText: BarcodeReader Methods
    | [`GetLengthOfFrameQueue`](video.md#getlengthofframequeue) | Gets length of current inner frame queue. |
  
    
-&nbsp; 
+ 
 
 
 ## Result
@@ -131,7 +131,7 @@ breadcrumbText: BarcodeReader Methods
    | [`GetIntermediateResults`](result.md#getintermediateresults) | Returns intermediate results containing the original image, the colour clustered image, the binarized Image, contours, Lines, TextBlocks, etc.  |
 
 
-&nbsp; 
+ 
 
 
 ## `BarcodeReader` Attributes
@@ -141,4 +141,4 @@ breadcrumbText: BarcodeReader Methods
   | `ProductKeys`  | Product keys used for Dynamsoft Barcode Reader. |
   
    
-&nbsp; 
+ 

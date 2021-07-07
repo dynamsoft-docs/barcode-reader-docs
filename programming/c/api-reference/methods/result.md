@@ -6,7 +6,7 @@ keywords: DBR_GetAllTextResults, DBR_FreeTextResults, DBR_GetIntermediateResults
 needAutoGenerateSidebar: true
 ---
 
-# C API Reference - Result Methods
+# Result Methods
 
   | Method               | Description |
   |----------------------|-------------|
@@ -47,7 +47,7 @@ DBR_FreeTextResults(&pResults);
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 
@@ -74,7 +74,7 @@ DBR_FreeTextResults(&pResults);
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 
@@ -113,7 +113,7 @@ DBR_FreeIntermediateResults(&pResults);
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 

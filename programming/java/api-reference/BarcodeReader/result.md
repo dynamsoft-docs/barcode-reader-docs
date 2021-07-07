@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 ---
 
 
-# Java API Reference - BarcodeReader Result Methods
+# Result Methods
 
   | Method               | Description |
   |----------------------|-------------|
@@ -45,5 +45,5 @@ IntermediateResult[] irtResult = reader.getIntermediateResults();
 reader.destroy();
 ```
 
-&nbsp;
+
 

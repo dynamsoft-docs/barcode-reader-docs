@@ -6,7 +6,7 @@ keywords: DBR_SetModeArgument, DBR_GetModeArgument, DBR_GetRuntimeSettings, DBR_
 needAutoGenerateSidebar: true
 ---
 
-# C API Reference - Parameter and Runtime Settings Basic Methods
+# Parameter and Runtime Settings Basic Methods
    
   | Method               | Description |
   |----------------------|-------------|
@@ -72,7 +72,7 @@ DBR_SetModeArgument(barcodeReader, "BinarizationModes", 0, "EnableFillBinaryVaca
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 
@@ -129,7 +129,7 @@ DBR_GetModeArgument(barcodeReader, "BinarizationModes", 0, "EnableFillBinaryVaca
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 
@@ -159,7 +159,7 @@ int errorCode = DBR_GetRuntimeSettings(barcodeReader, &settings);
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 
@@ -194,7 +194,7 @@ DBR_UpdateRuntimeSettings(barcodeReader, &settings, errorMessage, 256);
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 
