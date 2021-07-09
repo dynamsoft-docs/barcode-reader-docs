@@ -7,7 +7,7 @@ needAutoGenerateSidebar: false
 breadcrumbText: Struct
 ---
 
-# .Net API Reference - Structs
+# Structs
 
 - [`FurtherModes`](FurtherModes.md)		
 - [`PublicRuntimeSettings`](PublicRuntimeSettings.md)		

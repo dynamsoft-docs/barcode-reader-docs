@@ -36,9 +36,21 @@ breadcrumbText: Functions
 
 
 
-## Parameter and Runtime Settings
+## License
+   
+  | Function               | Description |
+  |----------------------|-------------|
+  | [`DBR_InitLicense`](license.md#dbr_initlicense) | Read product key and activate the SDK. |
+  | [`DBR_InitLicenseFromServer`](license.md#dbr_initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
+  | [`DBR_InitLicenseFromLicenseContent`](license.md#dbr_initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
+  | [`DBR_OutputLicenseToString`](license.md#dbr_outputlicensetostring) | Output the license content to a string from the license server. |
+  | [`DBR_OutputLicenseToStringPtr`](license.md#dbr_outputlicensetostringptr) | Output the license content to a string from the license server. |
+  | [`DBR_FreeLicenseString`](license.md#dbr_freelicensestring) | Free memory allocated for the license string. |
+  | [`DBR_InitLTSConnectionParameters`](license.md#dbr_initltsconnectionparameters) | Initializes a DM_LTSConnectionParameters struct with default values. |
+  | [`DBR_InitLicenseFromLTS`](license.md#dbr_initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
 
-### Basic
+
+## Basic Settings Functions
   
   | Function               | Description |
   |----------------------|-------------|
@@ -48,7 +60,7 @@ breadcrumbText: Functions
   | [`DBR_UpdateRuntimeSettings`](parameter-and-runtime-settings-basic.md#dbr_updateruntimesettings) | Modify and update the current runtime settings. |
   | [`DBR_ResetRuntimeSettings`](parameter-and-runtime-settings-basic.md#dbr_resetruntimesettings) | Reset runtime settings to default. |
 
-### Advanced
+## Advanced Settings Functions
   
   | Function               | Description |
   |----------------------|-------------|
@@ -63,22 +75,6 @@ breadcrumbText: Functions
   | [`DBR_OutputSettingsToStringPtr`](parameter-and-runtime-settings-advanced.md#dbr_outputsettingstostringptr) | Output runtime settings to a string. |
   | [`DBR_FreeSettingsString`](parameter-and-runtime-settings-advanced.md#dbr_freesettingsstring) | Free memory allocated for runtime settings string. |
 
-
-
-
-
-## License
-   
-  | Function               | Description |
-  |----------------------|-------------|
-  | [`DBR_InitLicense`](license.md#dbr_initlicense) | Read product key and activate the SDK. |
-  | [`DBR_InitLicenseFromServer`](license.md#dbr_initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
-  | [`DBR_InitLicenseFromLicenseContent`](license.md#dbr_initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
-  | [`DBR_OutputLicenseToString`](license.md#dbr_outputlicensetostring) | Output the license content to a string from the license server. |
-  | [`DBR_OutputLicenseToStringPtr`](license.md#dbr_outputlicensetostringptr) | Output the license content to a string from the license server. |
-  | [`DBR_FreeLicenseString`](license.md#dbr_freelicensestring) | Free memory allocated for the license string. |
-  | [`DBR_InitLTSConnectionParameters`](license.md#dbr_initltsconnectionparameters) | Initializes a DM_LTSConnectionParameters struct with default values. |
-  | [`DBR_InitLicenseFromLTS`](license.md#dbr_initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
 
 
 
