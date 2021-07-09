@@ -7,7 +7,7 @@ needAutoGenerateSidebar: false
 breadcrumbText: Functions
 ---
 
-# C API Reference - Global Functions
+# Global Functions
 
 ## Initialize and Destroy
   

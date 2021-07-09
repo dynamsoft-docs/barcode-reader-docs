@@ -7,7 +7,7 @@ needAutoGenerateSidebar: false
 breadcrumbText: CBarcodeReader Methods
 ---
 
-# C++ API Reference - class dynamsoft::dbr::CBarcodeReader
+# class dynamsoft::dbr::CBarcodeReader
 
 ## Constructor and Destructor
    
