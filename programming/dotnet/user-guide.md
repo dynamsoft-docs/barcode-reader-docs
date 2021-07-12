@@ -22,8 +22,6 @@ In this guide, you will learn step by step on how to build a barcode reading app
    - .NET Framework 2.0, .NET Framework 4.0 or above
    - .NET Core 3.1 or 5.0
 
-> The .NET SDK is developed based on .NET Framework 2.0/4.0. If you are using .NET Core 2.1 or 3.1, please download the .NET Core SDK (Dynamsoft.NetCoreApp.Barcode) from [Nuget](https://www.nuget.org/packages/Dynamsoft.NetCoreApp.Barcode/).
-
 
 ## Installation
 If you haven't downloaded the SDK yet, download the `.NET Package` now from <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a> and unpack the package into the directory of your choice.
