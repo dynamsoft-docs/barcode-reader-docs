@@ -7,16 +7,14 @@ needAutoGenerateSidebar: false
 ---
 
 
-# Java API Reference - Interface
+# Interfaces
 
   | Function | Description |
   |----------|-------------|
   | [`ErrorCallback`](#errorcallback) | Represents the method that will handle the error code returned by the SDK. |
   | [`IntermediateResultCallback`](#intermediateresultcallback) | Represents the method that will handle the intermediate result array returned by the SDK. |
   | [`TextResultCallback`](#textresultcallback) | Represents the method that will handle the text result array returned by the SDK. | 
-  
----
- 
+   
 
 
 

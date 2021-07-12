@@ -20,7 +20,19 @@ breadcrumbText: BarcodeReader Methods
    
 
    
-   
+
+## License
+  
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`initLicense`](license.md#initlicense) | Read product key and activate the SDK. |
+  | [`initLicenseFromServer`](license.md#initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
+  | [`initLicenseFromLicenseContent`](license.md#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
+  | [`outputLicenseToString`](license.md#outputlicensetostring) | Output the license content to a string from the license server. |
+  | [`initLTSConnectionParameters`](license.md#initltsconnectionparameters) | Initializes a DMLTSConnectionParameters struct with default values. |
+  | [`initLicenseFromLTS`](license.md#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
+
+
 ## Decode
    
   | Method               | Description |
@@ -34,13 +46,8 @@ breadcrumbText: BarcodeReader Methods
   | [`decodeIntermediateResults`](decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
    
    
-
    
-   
-   
-## Parameter and Runtime Settings
-
-### Basic
+## Basic Settings Functions
    
   | Method               | Description |
   |----------------------|-------------|
@@ -50,7 +57,7 @@ breadcrumbText: BarcodeReader Methods
   | [`updateRuntimeSettings`](parameter-and-runtime-settings-basic.md#updateruntimesettings) | Modify and update the current runtime settings. |
   | [`resetRuntimeSettings`](parameter-and-runtime-settings-basic.md#resetruntimesettings) | Reset runtime settings to default. |
 
-### Advanced
+## Advanced Settings Functions
   
   | Method               | Description |
   |----------------------|-------------|
@@ -63,22 +70,6 @@ breadcrumbText: BarcodeReader Methods
   | [`outputSettingsToString`](parameter-and-runtime-settings-advanced.md#outputsettingstostring) | Output runtime settings to a string. |
    
       
-
-
-   
-## License
-  
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`initLicense`](license.md#initlicense) | Read product key and activate the SDK. |
-  | [`initLicenseFromServer`](license.md#initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
-  | [`initLicenseFromLicenseContent`](license.md#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
-  | [`outputLicenseToString`](license.md#outputlicensetostring) | Output the license content to a string from the license server. |
-  | [`initLTSConnectionParameters`](license.md#initltsconnectionparameters) | Initializes a DMLTSConnectionParameters struct with default values. |
-  | [`initLicenseFromLTS`](license.md#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
-   
-   
-
    
    
 ## Result

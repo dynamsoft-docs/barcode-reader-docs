@@ -17,19 +17,7 @@ needGenerateH3Content: true
   | [`CBarcodeReader`](constructor-and-destructor.md#cbarcodereader) | Default constructor of `CBarcodeReader` object.|
   | [`~CBarcodeReader`](constructor-and-destructor.md#~cbarcodereader) | Destructor of `CBarcodeReader` object.|
       
-   
-### Decode Methods
-   
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`DecodeFile`](decode.md#decodefile) | Decode barcodes from a specified image file. |
-  | [`DecodeFileInMemory`](decode.md#decodefileinmemory) | Decode barcodes from an image file in memory. |
-  | [`DecodeBuffer`](decode.md#decodebuffer) | Decode barcodes from raw buffer. |
-  | [`DecodeBase64String`](decode.md#decodebase64string) | Decode barcodes from a base64 encoded string. |
-  | [`DecodeDIB`](decode.md#decodedib) | Decode barcode from a handle of device-independent bitmap (DIB). |
-  | [`InitIntermediateResult`](decode.md#initintermediateresult) | Inits an intermediateResult struct with default values. |
-  | [`DecodeIntermediateResults`](decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
-      
+
 ### License Methods
   
   | Method               | Description |
@@ -44,6 +32,18 @@ needGenerateH3Content: true
   | [`InitLicenseFromLTS`](license.md#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
    
 
+### Decode Methods
+   
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`DecodeFile`](decode.md#decodefile) | Decode barcodes from a specified image file. |
+  | [`DecodeFileInMemory`](decode.md#decodefileinmemory) | Decode barcodes from an image file in memory. |
+  | [`DecodeBuffer`](decode.md#decodebuffer) | Decode barcodes from raw buffer. |
+  | [`DecodeBase64String`](decode.md#decodebase64string) | Decode barcodes from a base64 encoded string. |
+  | [`DecodeDIB`](decode.md#decodedib) | Decode barcode from a handle of device-independent bitmap (DIB). |
+  | [`InitIntermediateResult`](decode.md#initintermediateresult) | Inits an intermediateResult struct with default values. |
+  | [`DecodeIntermediateResults`](decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
+      
 ### Basic Settings Methods
    
   | Method               | Description |

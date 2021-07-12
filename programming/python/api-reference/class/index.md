@@ -7,7 +7,7 @@ needAutoGenerateSidebar: false
 breadcrumbText: Class
 ---
 
-# Dynamsoft Barcode Reader SDK - Python Class
+# Python API Reference - Auxiliary Classes
  
 - [`AztecDetailedResult`](AztecDetailedResult.md)	 
 - [`BarcodeReaderError`](BarcodeReaderError.md)	
