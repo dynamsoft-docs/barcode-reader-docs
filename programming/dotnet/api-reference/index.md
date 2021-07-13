@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
-# Dynamsoft Barcode Reader SDK - .Net API Reference
+# .Net API Reference
 
 ## BarcodeReader Class
 

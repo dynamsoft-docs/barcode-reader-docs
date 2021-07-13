@@ -8,7 +8,7 @@ breadcrumbText: Struct
 ---
 
 
-# Dynamsoft Barcode Reader SDK - C and C++ Struct
+# C and C++ Struct
 
  | Struct | Description |
  | ------ | ----------- |

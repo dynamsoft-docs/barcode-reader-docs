@@ -7,7 +7,7 @@ needAutoGenerateSidebar: false
 breadcrumbText: Release Notes
 ---
 
-# Dynamsoft Barcode Reader C++ SDK - Release Notes
+# C++ SDK - Release Notes
 
 - [8.4   (06/08/2021)](cpp-8.md#84-06082021)
 - [8.2 (03/17/2021)](cpp-8.md#82-03172021)

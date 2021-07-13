@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
-# Dynamsoft Barcode Reader SDK - Python API Reference
+# Python API Reference
  
 ## BarcodeReader Class
 

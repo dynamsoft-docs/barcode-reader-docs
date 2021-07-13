@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 
-# Dynamsoft Barcode Reader SDK - Java API Reference
+# Java API Reference
    
 ## BarcodeReader Class
 

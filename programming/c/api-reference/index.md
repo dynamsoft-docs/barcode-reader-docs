@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
-# Dynamsoft Barcode Reader SDK - C API Reference
+# C API Reference
 		
 ## Global Functions
 

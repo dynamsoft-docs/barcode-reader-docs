@@ -8,7 +8,7 @@ needGenerateH3Content: false
 ---
 
 
-# Dynamsoft Barcode Reader Enumeration - Format Enumeration
+# Format Enumeration
 The barcode format our library will search for is composed of [BarcodeFormat group 1](#barcodeformat) and [BarcodeFormat group 2](#barcodeformat_2), so you need to specify the barcode format in group 1 and group 2 individually.
 
   | Enumeration | Description |

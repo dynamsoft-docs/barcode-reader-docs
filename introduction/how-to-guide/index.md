@@ -8,7 +8,7 @@ breadcrumbText: How-to Guide
 ---
 
 
-# Dynamsoft Barcode Reader - How-to Guide
+# How-to Guide
 
 This section covers the following topics:
 

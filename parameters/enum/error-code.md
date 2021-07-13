@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# Dynamsoft Barcode Reader - Error Code
+# Error Code
   
 ## Error code common to all programming languages
 

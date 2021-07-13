@@ -7,7 +7,7 @@ needAutoGenerateSidebar: false
 breadcrumbText: License Activation
 ---
 
-# Dynamsoft Barcode Reader - License Activation
+# License Activation
 
 This section covers the following topics:
 

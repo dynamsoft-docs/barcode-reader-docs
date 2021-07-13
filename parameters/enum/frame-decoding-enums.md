@@ -8,7 +8,7 @@ needGenerateH3Content: false
 ---
 
 
-# Dynamsoft Barcode Reader Enumeration - Frame Decoding Enumeration
+# Frame Decoding Enumeration
 
   | Enumeration | Description |
   |-------------|-------------|

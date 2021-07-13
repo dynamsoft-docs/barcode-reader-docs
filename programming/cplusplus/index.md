@@ -7,7 +7,7 @@ needAutoGenerateSidebar: false
 breadcrumbText: C++
 ---
 
-# Dynamsoft Barcode Reader - for C++ Documentation
+# C++ Documentation
 
 This is the main page of Dynamsoft Barcode Reader SDK documentation for C++ Language. Go to [User Guide](#getting-started) which provides a brief guide for how to integrate the Dynamsoft Barcode Reader to your application or run the samples. Go to [API Reference](#api-reference) which offers the manual of interfaces used for reading barcodes.
 
@@ -28,7 +28,7 @@ This is the main page of Dynamsoft Barcode Reader SDK documentation for C++ Lang
 - [Version 8.x](release-notes/cpp-8.md)
 - [Version 7.6 and below](release-notes/cpp-7.md)
 
-## Upgrade Instruction
+## Upgrade Instructions
 - [How to upgrade to latest version](upgrade-instruction.md)
 
 ## Online Store
