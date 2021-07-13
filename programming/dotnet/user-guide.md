@@ -40,7 +40,7 @@ Let's start by creating a console application which demonstrates how to use the 
 1. Start Visual Studio and create a new Console Application in C#. Let's name it `DBRCSharpSample`.
 
 ### Add the Library Reference
-1. Follow one of the below steps to There are two ways, local file reference or NuGet package, to add Dynamsoft Barcode Reader SDK to your project.
+1. Follow one of the below steps to add Dynamsoft Barcode Reader SDK to your project.
    - Right click on Project -> Add -> Reference, Browse to `[INSTALLATION FOLDER]\Lib\4.0` and Select `Dynamsoft.BarcodeReader.dll` and `DynamsoftCommon.dll`.
    >Browse to `[INSTALLATION FOLDER]\Lib\2.0` if you want to use .NET Framework 2.0.
    - Right click on Project -> Manage NuGet Packages, Search and Install package `Dynamsoft.DotNet.Barcode`.
