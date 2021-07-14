@@ -28,8 +28,11 @@ needGenerateH3Content: true
   | [`DBR_OutputLicenseToString`](methods/license.md#dbr_outputlicensetostring) | Output the license content to a string from the license server. |
   | [`DBR_OutputLicenseToStringPtr`](methods/license.md#dbr_outputlicensetostringptr) | Output the license content to a string from the license server. |
   | [`DBR_FreeLicenseString`](methods/license.md#dbr_freelicensestring) | Free memory allocated for the license string. |
-  | [`DBR_InitLTSConnectionParameters`](methods/license.md#dbr_initltsconnectionparameters) | Initializes a DM_LTSConnectionParameters struct with default values. |
-  | [`DBR_InitLicenseFromLTS`](methods/license.md#dbr_initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`DBR_InitDLSConnectionParameters`](methods/license.md#dbr_initdlsconnectionparameters) | Initializes a DM_DLSConnectionParameters struct with default values. |
+  | [`DBR_InitLicenseFromDLS`](methods/license.md#dbr_initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`DBR_GetIdleInstancesCount`](methods/license.md#dbr_getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
+  | [`DBR_InitLTSConnectionParameters`](methods/license.md#dbr_initltsconnectionparameters) | `Deprecated`. Use [DBR_InitDLSConnectionParameters](methods/license.md#dbr_initdlsconnectionparameters) instead. |
+  | [`DBR_InitLicenseFromLTS`](methods/license.md#dbr_initlicensefromlts) | `Deprecated`. Use [DBR_InitLicenseFromDLS](methods/license.md#dbr_initlicensefromdls) instead. |
 
 
 
@@ -128,7 +131,7 @@ needGenerateH3Content: true
  | [`Contour`]({{ site.structs }}Contour.html?src=c) | Stores the contour information. |
  | [`DBRPoint`]({{ site.structs }}DBRPoint.html?src=c) | Stores an x- and y-coordinate pair in two-dimensional space. |
  | [`DataMatrixDetails`]({{ site.structs }}DataMatrixDetails.html?src=c) | Stores the DataMatrix details. |	
- | [`DM_LTSConnectionParameters`]({{ site.structs }}DMLTSConnectionParameters.html?src=c) | Defines a struct to configure the parameters to connect to license tracking server. |
+ | [`DM_DLSConnectionParameters`]({{ site.structs }}DMLTSConnectionParameters.html?src=c) | Defines a struct to configure the parameters to connect to license tracking server. |
  | [`ExtendedResult`]({{ site.structs }}ExtendedResult.html?src=c) | Stores the extended result. |
  | [`FrameDecodingParameters`]({{ site.structs }}FrameDecodingParameters.html?src=c) | Defines a struct to configure the frame decoding Parameters. |
  | [`FurtherModes`]({{ site.structs }}FurtherModes.html?src=c) | Stores the FurtherModes. |

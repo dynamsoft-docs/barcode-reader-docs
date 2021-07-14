@@ -14,6 +14,7 @@ breadcrumbText: Class
 - [`BarcodeReaderException`](BarcodeReaderException.md)	
 - [`Contour`](Contour.md)	 
 - [`DataMatrixDetails`](DataMatrixDetails.md)	 
+- [`DMDLSConnectionParameters`](DMLTSConnectionParameters.md)
 - [`DMLTSConnectionParameters`](DMLTSConnectionParameters.md)
 - [`ExtendedResult`](ExtendedResult.md)	
 - [`FrameDecodingParameters`](FrameDecodingParameters.md)

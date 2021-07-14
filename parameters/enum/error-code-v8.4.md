@@ -381,7 +381,7 @@ noTitleIndex: true
 
   | Erorr Code (except ObjC/Swift) | Erorr Code (ObjC/Swift) | Value | Description |
   |--------------------------------|-------------------------|-------|-------------|
-  | `DMERR_LICENSE_SYNC_FAILED` | `EnumErrorCode_LICENSE_SYNC_FAILED` | -20003 | Failed to synchronize license info with License Server. |
+  | `DMERR_LICENSE_SYNC_FAILED` | `EnumErrorCode_LICENSE_SYNC_FAILED` | -20003 | Failed to synchronize license info with license tracking server. |
   
 ### Error code -20004
 
@@ -399,7 +399,7 @@ noTitleIndex: true
 
   | Erorr Code (except ObjC/Swift) | Erorr Code (ObjC/Swift) | Value | Description |
   |--------------------------------|-------------------------|-------|-------------|
-  | `DMERR_LICENSE_INTERFACE_CONFLICT` | `EnumErrorCode_LICENSE_INTERFACE_CONFLICT` | -20006 | Interface InitLicenseFromDLS can not be used together with other license initiation interfaces. |
+  | `DMERR_LICENSE_INTERFACE_CONFLICT` | `EnumErrorCode_LICENSE_INTERFACE_CONFLICT` | -20006 | Interface InitLicenseFromLTS can not be used together with other license initiation interfaces. |
   
 ### Error code -20007
 
@@ -417,7 +417,7 @@ noTitleIndex: true
 
   | Erorr Code (except ObjC/Swift) | Erorr Code (ObjC/Swift) | Value | Description |
   |--------------------------------|-------------------------|-------|-------------|
-  | `DMERR_LICENSE_INIT_SEQUENCE_FAILED` | `EnumErrorCode_LICENSE_INIT_SEQUENCE_FAILED` | -20009 | Interface InitLicenseFromDLS has to be called before creating any SDK objects. |
+  | `DMERR_LICENSE_INIT_SEQUENCE_FAILED` | `EnumErrorCode_LICENSE_INIT_SEQUENCE_FAILED` | -20009 | Interface InitLicenseFromLTS has to be called before creating any SDK objects. |
 
 ### Error code -20010
 
@@ -425,15 +425,9 @@ noTitleIndex: true
   |--------------------------------|-------------------------|-------|-------------|
   | `DMERR_TRIAL_LICENSE` | `EnumErrorCode_DMERR_TRIAL_LICENSE` | -20010 | Using a trial license. |
 
-### Error code -20200
-
-  | Erorr Code (except ObjC/Swift) | Erorr Code (ObjC/Swift) | Value | Description |
-  |--------------------------------|-------------------------|-------|-------------|
-  | `DMERR_FAILED_TO_REACH_DLS` | `EnumErrorCode_FAILED_TO_REACH_DLS` | -20200 | Failed to reach License Server. |
-
 ### More error codes
 
-Error codes between -20199 and -20100 are thrown by the License Server. See <a href="https://www.dynamsoft.com/license-server/docs/common/errorlist.html?ver=latest" target="_blank">DLS Error List</a> for details.
+Error codes between -20199 and -20100 are thrown by the License Tracking Server (LTS). See <a href="https://www.dynamsoft.com/license-tracking/docs/common/errorlist.html?ver=latest" target="_blank">LTS Error List</a> for details.
 
 
 

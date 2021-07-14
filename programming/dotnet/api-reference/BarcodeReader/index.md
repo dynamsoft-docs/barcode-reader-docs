@@ -17,6 +17,19 @@ breadcrumbText: BarcodeReader Methods
   | [`Dispose`](constructor-and-destructor.md#dispose) | Destroys an instance of Dynamsoft Barcode Reader. |
    
  
+## License
+  
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`InitLicenseFromServer`](license.md#initlicensefromserver) | Initializes license and connect to the specified server for online verification. |
+  | [`InitLicenseFromLicenseContent`](license.md#initlicensefromlicensecontent) | Initializes license from the license content on client machine for offline verification. |
+  | [`OutputLicenseToString`](license.md#outputlicensetostring) | Outputs the license content as an encrypted string from the license server to be used for offline license verification.|
+  | [`InitDLSConnectionParameters`](license.md#initdlsconnectionparameters) | Initializes a DMDLSConnectionParameters struct with default values. |
+  | [`InitLicenseFromDLS`](license.md#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`GetIdleInstancesCount`](license.md#getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
+  | [`InitLTSConnectionParameters`](license.md#initltsconnectionparameters) | `Deprecated`. Use [InitDLSConnectionParameters](license.md#initdlsconnectionparameters) instead. |
+  | [`InitLicenseFromLTS`](license.md#initlicensefromlts) | `Deprecated`. Use [InitLicenseFromDLS](license.md#initlicensefromdls) instead. |
+   
    
    
 ## Decode
@@ -31,23 +44,6 @@ breadcrumbText: BarcodeReader Methods
   | [`InitIntermediateResult`](decode.md#initintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`DecodeIntermediateResults`](decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
   
-   
- 
-   
-   
-   
-
-
-## License
-  
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`InitLicenseFromServer`](license.md#initlicensefromserver) | Initializes license and connect to the specified server for online verification. |
-  | [`InitLicenseFromLicenseContent`](license.md#initlicensefromlicensecontent) | Initializes license from the license content on client machine for offline verification. |
-  | [`OutputLicenseToString`](license.md#outputlicensetostring) | Outputs the license content as an encrypted string from the license server to be used for offline license verification.|
-  | [`InitLTSConnectionParameters`](license.md#initltsconnectionparameters) | Initializes a DMLTSConnectionParameters struct with default values. |
-  | [`InitLicenseFromLTS`](license.md#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
-   
    
 
 ## Basic Settings Functions

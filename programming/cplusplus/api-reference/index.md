@@ -22,52 +22,57 @@ needGenerateH3Content: true
   
   | Method               | Description |
   |----------------------|-------------|
-  | [`InitLicense`](license.md#initlicense) | Read product key and activate the SDK. |
-  | [`InitLicenseFromServer`](license.md#initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
-  | [`InitLicenseFromLicenseContent`](license.md#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
-  | [`OutputLicenseToString`](license.md#outputlicensetostring) | Output the license content to a string from the license server. |
-  | [`OutputLicenseToStringPtr`](license.md#outputlicensetostringptr) | Output the license content to a string from the license server. |
-  | [`FreeLicenseString`](license.md#freelicensestring) | Free memory allocated for the license string. |
-  | [`InitLTSConnectionParameters`](license.md#initltsconnectionparameters) | Initializes a DM_LTSConnectionParameters struct with default values. |
-  | [`InitLicenseFromLTS`](license.md#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`InitLicense`](cbarcodereader-methods/license.md#initlicense) | Read product key and activate the SDK. |
+  | [`InitLicenseFromServer`](cbarcodereader-methods/license.md#initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
+  | [`InitLicenseFromLicenseContent`](cbarcodereader-methods/license.md#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
+  | [`OutputLicenseToString`](cbarcodereader-methods/license.md#outputlicensetostring) | Output the license content to a string from the license server. |
+  | [`OutputLicenseToStringPtr`](cbarcodereader-methods/license.md#outputlicensetostringptr) | Output the license content to a string from the license server. |
+  | [`FreeLicenseString`](cbarcodereader-methods/license.md#freelicensestring) | Free memory allocated for the license string. |
+  | [`InitLTSConnectionParameters`](cbarcodereader-methods/license.md#initltsconnectionparameters) | Initializes a DM_LTSConnectionParameters struct with default values. |
+  | [`InitLicenseFromLTS`](cbarcodereader-methods/license.md#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`InitDLSConnectionParameters`](cbarcodereader-methods/license.md#initdlsconnectionparameters) | Initializes a DM_DLSConnectionParameters struct with default values. |
+  | [`InitLicenseFromDLS`](cbarcodereader-methods/license.md#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`GetIdleInstancesCount`](cbarcodereader-methods/license.md#getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
+  | [`InitLTSConnectionParameters`](cbarcodereader-methods/license.md#initltsconnectionparameters) | `Deprecated`. Use [InitDLSConnectionParameters](cbarcodereader-methods/license.md#initdlsconnectionparameters) instead. |
+  | [`InitLicenseFromLTS`](cbarcodereader-methods/license.md#initlicensefromlts) | `Deprecated`. Use [InitLicenseFromDLS](cbarcodereader-methods/license.md#initlicensefromdls) instead. |
    
 
 ### Decode Methods
    
   | Method               | Description |
   |----------------------|-------------|
-  | [`DecodeFile`](decode.md#decodefile) | Decode barcodes from a specified image file. |
-  | [`DecodeFileInMemory`](decode.md#decodefileinmemory) | Decode barcodes from an image file in memory. |
-  | [`DecodeBuffer`](decode.md#decodebuffer) | Decode barcodes from raw buffer. |
-  | [`DecodeBase64String`](decode.md#decodebase64string) | Decode barcodes from a base64 encoded string. |
-  | [`DecodeDIB`](decode.md#decodedib) | Decode barcode from a handle of device-independent bitmap (DIB). |
-  | [`InitIntermediateResult`](decode.md#initintermediateresult) | Inits an intermediateResult struct with default values. |
-  | [`DecodeIntermediateResults`](decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
+  | [`DecodeFile`](cbarcodereader-methods/decode.md#decodefile) | Decode barcodes from a specified image file. |
+  | [`DecodeFileInMemory`](cbarcodereader-methods/decode.md#decodefileinmemory) | Decode barcodes from an image file in memory. |
+  | [`DecodeBuffer`](cbarcodereader-methods/decode.md#decodebuffer) | Decode barcodes from raw buffer. |
+  | [`DecodeBase64String`](cbarcodereader-methods/decode.md#decodebase64string) | Decode barcodes from a base64 encoded string. |
+  | [`DecodeDIB`](cbarcodereader-methods/decode.md#decodedib) | Decode barcode from a handle of device-independent bitmap (DIB). |
+  | [`InitIntermediateResult`](cbarcodereader-methods/decode.md#initintermediateresult) | Inits an intermediateResult struct with default values. |
+  | [`DecodeIntermediateResults`](cbarcodereader-methods/decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
       
 ### Basic Settings Methods
    
   | Method               | Description |
   |----------------------|-------------|
-  | [`SetModeArgument`](parameter-and-runtime-settings-basic.md#setmodeargument) | Set argument value for the specified mode parameter. |
-  | [`GetModeArgument`](parameter-and-runtime-settings-basic.md#getmodeargument) | Get argument value for the specified mode parameter. |
-  | [`GetRuntimeSettings`](parameter-and-runtime-settings-basic.md#getruntimesettings) | Get current runtime settings. |
-  | [`UpdateRuntimeSettings`](parameter-and-runtime-settings-basic.md#updateruntimesettings) | Modify and update the current runtime settings. |
-  | [`ResetRuntimeSettings`](parameter-and-runtime-settings-basic.md#resetruntimesettings) | Reset runtime settings to default. |
+  | [`SetModeArgument`](cbarcodereader-methods/parameter-and-runtime-settings-basic.md#setmodeargument) | Set argument value for the specified mode parameter. |
+  | [`GetModeArgument`](cbarcodereader-methods/parameter-and-runtime-settings-basic.md#getmodeargument) | Get argument value for the specified mode parameter. |
+  | [`GetRuntimeSettings`](cbarcodereader-methods/parameter-and-runtime-settings-basic.md#getruntimesettings) | Get current runtime settings. |
+  | [`UpdateRuntimeSettings`](cbarcodereader-methods/parameter-and-runtime-settings-basic.md#updateruntimesettings) | Modify and update the current runtime settings. |
+  | [`ResetRuntimeSettings`](cbarcodereader-methods/parameter-and-runtime-settings-basic.md#resetruntimesettings) | Reset runtime settings to default. |
 
 ### Advanced Settings Methods
   
   | Method               | Description |
   |----------------------|-------------|
-  | [`InitRuntimeSettingsWithFile`](parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile)  | Initialize runtime settings with the settings in a given JSON file. |
-  | [`InitRuntimeSettingsWithString`](parameter-and-runtime-settings-advanced.md#initruntimesettingswithstring) | Initialize runtime settings with the settings in a given JSON string. |
-  | [`AppendTplFileToRuntimeSettings`](parameter-and-runtime-settings-advanced.md#appendtplfiletoruntimesettings) | Append a new template file to the current runtime settings. |
-  | [`AppendTplStringToRuntimeSettings`](parameter-and-runtime-settings-advanced.md#appendtplstringtoruntimesettings) | Append a new template string to the current runtime settings. |
-  | [`GetParameterTemplateCount`](parameter-and-runtime-settings-advanced.md#getparametertemplatecount) | Get the count of the parameter templates. |
-  | [`GetParameterTemplateName`](parameter-and-runtime-settings-advanced.md#getparametertemplatename) | Get the parameter template name by index. |
-  | [`OutputSettingsToFile`](parameter-and-runtime-settings-advanced.md#outputsettingstofile) | Output runtime settings to a settings file (JSON file). |
-  | [`OutputSettingsToString`](parameter-and-runtime-settings-advanced.md#outputsettingstostring) | Output runtime settings to a string. |
-  | [`OutputSettingsToStringPtr`](parameter-and-runtime-settings-advanced.md#outputsettingstostringptr) | Output runtime settings to a string. |
-  | [`FreeSettingsString`](parameter-and-runtime-settings-advanced.md#freesettingsstring) | Free memory allocated for runtime settings string. |
+  | [`InitRuntimeSettingsWithFile`](cbarcodereader-methods/parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile)  | Initialize runtime settings with the settings in a given JSON file. |
+  | [`InitRuntimeSettingsWithString`](cbarcodereader-methods/parameter-and-runtime-settings-advanced.md#initruntimesettingswithstring) | Initialize runtime settings with the settings in a given JSON string. |
+  | [`AppendTplFileToRuntimeSettings`](cbarcodereader-methods/parameter-and-runtime-settings-advanced.md#appendtplfiletoruntimesettings) | Append a new template file to the current runtime settings. |
+  | [`AppendTplStringToRuntimeSettings`](cbarcodereader-methods/parameter-and-runtime-settings-advanced.md#appendtplstringtoruntimesettings) | Append a new template string to the current runtime settings. |
+  | [`GetParameterTemplateCount`](cbarcodereader-methods/parameter-and-runtime-settings-advanced.md#getparametertemplatecount) | Get the count of the parameter templates. |
+  | [`GetParameterTemplateName`](cbarcodereader-methods/parameter-and-runtime-settings-advanced.md#getparametertemplatename) | Get the parameter template name by index. |
+  | [`OutputSettingsToFile`](cbarcodereader-methods/parameter-and-runtime-settings-advanced.md#outputsettingstofile) | Output runtime settings to a settings file (JSON file). |
+  | [`OutputSettingsToString`](cbarcodereader-methods/parameter-and-runtime-settings-advanced.md#outputsettingstostring) | Output runtime settings to a string. |
+  | [`OutputSettingsToStringPtr`](cbarcodereader-methods/parameter-and-runtime-settings-advanced.md#outputsettingstostringptr) | Output runtime settings to a string. |
+  | [`FreeSettingsString`](cbarcodereader-methods/parameter-and-runtime-settings-advanced.md#freesettingsstring) | Free memory allocated for runtime settings string. |
    
       
 
@@ -82,18 +87,18 @@ needGenerateH3Content: true
    
   | Method               | Description |
   |----------------------|-------------|
-  | [`GetAllTextResults`](result.md#getalltextresults) | Get all recognized barcode results. |
-  | [`FreeTextResults`](result.md#freetextresults) | Free memory allocated for text results. |
-  | [`GetIntermediateResults`](result.md#getintermediateresults) | Get intermediate results. |
-  | [`FreeIntermediateResults`](result.md#freeintermediateresults) | Free memory allocated for the intermediate results. |
+  | [`GetAllTextResults`](cbarcodereader-methods/result.md#getalltextresults) | Get all recognized barcode results. |
+  | [`FreeTextResults`](cbarcodereader-methods/result.md#freetextresults) | Free memory allocated for text results. |
+  | [`GetIntermediateResults`](cbarcodereader-methods/result.md#getintermediateresults) | Get intermediate results. |
+  | [`FreeIntermediateResults`](cbarcodereader-methods/result.md#freeintermediateresults) | Free memory allocated for the intermediate results. |
    
    
 ### Status Retrieval Methods
    
   | Method               | Description |
   |----------------------|-------------|
-  | [`GetErrorString`](status-retrieval.md#geterrorstring) | Get error message by error code.|
-  | [`GetVersion`](status-retrieval.md#getversion) | Get version information of SDK.|
+  | [`GetErrorString`](cbarcodereader-methods/status-retrieval.md#geterrorstring) | Get error message by error code.|
+  | [`GetVersion`](cbarcodereader-methods/status-retrieval.md#getversion) | Get version information of SDK.|
    
    
 ### Video Methods
@@ -102,30 +107,30 @@ needGenerateH3Content: true
     
    | Method               | Description |
    |----------------------|-------------|
-   | [`StartFrameDecoding`](video.md#startframedecoding) | Decode barcodes from inner frame queue. |
-   | [`StartFrameDecodingEx`](video.md#startframedecodingex) | Decode barcodes from inner frame queue. |
-   | [`AppendFrame`](video.md#appendframe) | Append a frame image buffer to the inner frame queue. |
-   | [`StopFrameDecoding`](video.md#stopframedecoding) | Stop thread used for frame decoding. |
+   | [`StartFrameDecoding`](cbarcodereader-methods/video.md#startframedecoding) | Decode barcodes from inner frame queue. |
+   | [`StartFrameDecodingEx`](cbarcodereader-methods/video.md#startframedecodingex) | Decode barcodes from inner frame queue. |
+   | [`AppendFrame`](cbarcodereader-methods/video.md#appendframe) | Append a frame image buffer to the inner frame queue. |
+   | [`StopFrameDecoding`](cbarcodereader-methods/video.md#stopframedecoding) | Stop thread used for frame decoding. |
 
 #### Parameter
    
    | Method               | Description |
    |----------------------|-------------|
-   | [`InitFrameDecodingParameters`](video.md#initframedecodingparameters) | Initialize frame decoding parameter. |
+   | [`InitFrameDecodingParameters`](cbarcodereader-methods/video.md#initframedecodingparameters) | Initialize frame decoding parameter. |
 
 #### Callback
    
    | Method               | Description |
    |----------------------|-------------|
-   | [`SetErrorCallback`](video.md#seterrorcallback) | Set callback function to process errors generated during frame decoding. |
-   | [`SetTextResultCallback`](video.md#settextresultcallback) | Set callback function to process text results generated during frame decoding. |
-   | [`SetIntermediateResultCallback`](video.md#setintermediateresultcallback) | Set callback function to process intermediate results generated during frame decoding. |
+   | [`SetErrorCallback`](cbarcodereader-methods/video.md#seterrorcallback) | Set callback function to process errors generated during frame decoding. |
+   | [`SetTextResultCallback`](cbarcodereader-methods/video.md#settextresultcallback) | Set callback function to process text results generated during frame decoding. |
+   | [`SetIntermediateResultCallback`](cbarcodereader-methods/video.md#setintermediateresultcallback) | Set callback function to process intermediate results generated during frame decoding. |
 
 #### Status retrieval
    
    | Method               | Description |
    |----------------------|-------------|
-   | [`GetLengthOfFrameQueue`](video.md#getlengthofframequeue) | Get length of current inner frame queue. |
+   | [`GetLengthOfFrameQueue`](cbarcodereader-methods/video.md#getlengthofframequeue) | Get length of current inner frame queue. |
  
 
 
@@ -137,7 +142,7 @@ needGenerateH3Content: true
  | [`Contour`]({{ site.structs }}Contour.html?src=cpp) | Stores the contour information. |
  | [`DBRPoint`]({{ site.structs }}DBRPoint.html?src=cpp) | Stores an x- and y-coordinate pair in two-dimensional space. |
  | [`DataMatrixDetails`]({{ site.structs }}DataMatrixDetails.html?src=cpp) | Stores the DataMatrix details. |	
- | [`DM_LTSConnectionParameters`]({{ site.structs }}DMLTSConnectionParameters.html?src=cpp) | Defines a struct to configure the parameters to connect to license tracking server. |
+ | [`DM_DLSConnectionParameters`]({{ site.structs }}DMLTSConnectionParameters.html?src=cpp) | Defines a struct to configure the parameters to connect to license tracking server. |
  | [`ExtendedResult`]({{ site.structs }}ExtendedResult.html?src=cpp) | Stores the extended result. |
  | [`FrameDecodingParameters`]({{ site.structs }}FrameDecodingParameters.html?src=cpp) | Defines a struct to configure the frame decoding Parameters. |
  | [`FurtherModes`]({{ site.structs }}FurtherModes.html?src=cpp) | Stores the FurtherModes. |

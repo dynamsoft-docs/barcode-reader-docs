@@ -15,11 +15,12 @@ needAutoGenerateSidebar: true
   | [`initLicenseFromServer`](#initlicensefromserver) | Initializes license and connect to the specified server for online verification. |
   | [`initLicenseFromLicenseContent`](#initlicensefromlicensecontent) | Initializes license from the license content on client machine for offline verification. |
   | [`outputLicenseToString`](#outputlicensetostring) | Outputs the license content to a string from the license server. |
-  | [`initLTSConnectionParameters`](#initltsconnectionparameters) | Initializes a DMLTSConnectionParameters struct with default values. |
-  | [`initLicenseFromLTS`](#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`initDLSConnectionParameters`](#initdlsconnectionparameters) | Initializes a DMDLSConnectionParameters struct with default values. |
+  | [`initLicenseFromDLS`](#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
   | [`getIdleInstancesCount`](#getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
+  | [`initLTSConnectionParameters`](#initltsconnectionparameters) | `Deprecated`. Use [initDLSConnectionParameters](#initdlsconnectionparameters) instead. |
+  | [`initLicenseFromLTS`](#initlicensefromlts) | `Deprecated`. Use [initLicenseFromDLS](#initlicensefromdls) instead. |
 
-  ---
 
 ## initLicense
 
@@ -125,43 +126,43 @@ String licenseInfo = reader.outputLicenseToString();
 reader.destroy();
 ```
 
-## initLTSConnectionParameters
+## initDLSConnectionParameters
 
-Initializes a `DMLTSConnectionParameters` struct with default values.
+Initializes a `DMDLSConnectionParameters` struct with default values.
 
 ```java
-static DMLTSConnectionParameters com.dynamsoft.dbr.BarcodeReader.initLTSConnectionParameters() throws BarcodeReaderException
+static DMDLSConnectionParameters com.dynamsoft.dbr.BarcodeReader.initDLSConnectionParameters() throws BarcodeReaderException
 ```
    
 ### Code Snippet
 
 ```java
-DMLTSConnectionParameters info = BarcodeReader.initLTSConnectionParameters();
+DMDLSConnectionParameters info = BarcodeReader.initDLSConnectionParameters();
 info.handShakeCode = "*****-hs-****";
 info.sessionPassword = "******";
-BarcodeReader.initLicenseFromLTS(info);
+BarcodeReader.initLicenseFromDLS(info);
 BarcodeReader reader = new BarcodeReader();
 ```
 
-## initLicenseFromLTS
+## initLicenseFromDLS
 
 Initializes the barcode reader license and connects to the specified server for online verification.
 
 ```java
-static void com.dynamsoft.dbr.BarcodeReader.initLicenseFromLTS(DMLTSConnectionParameters ltsInfo) throws BarcodeReaderException
+static void com.dynamsoft.dbr.BarcodeReader.initLicenseFromDLS(DMDLSConnectionParameters dlsInfo) throws BarcodeReaderException
 ```
 
 ### Parameters
 
-- `ltsInfo`: The struct `DMLTSConnectionParameters` with customized settings.  
+- `dlsInfo`: The struct `DMDLSConnectionParameters` with customized settings.  
 
 ### Code Snippet
 
 ```java
-DMLTSConnectionParameters info = BarcodeReader.initLTSConnectionParameters();
+DMDLSConnectionParameters info = BarcodeReader.initDLSConnectionParameters();
 info.handShakeCode = "*****-hs-****";
 info.sessionPassword = "******";
-BarcodeReader.initLicenseFromLTS(info);
+BarcodeReader.initLicenseFromDLS(info);
 BarcodeReader reader = new BarcodeReader();
 ```
 
@@ -191,3 +192,8 @@ else
   //waiting for available instances 
 }
 ```
+
+## initLTSConnectionParameters
+`Deprecated`. Use [initDLSConnectionParameters](#initdlsconnectionparameters) instead.
+## initLicenseFromLTS
+`Deprecated`. Use [initLicenseFromDLS](#initlicensefromdls) instead.

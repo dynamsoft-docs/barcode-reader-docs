@@ -17,6 +17,21 @@ breadcrumbText: CBarcodeReader Methods
   | [`~CBarcodeReader`](constructor-and-destructor.md#~cbarcodereader) | Destructor of `CBarcodeReader` object.|
    
    
+ ## License
+  
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`InitLicense`](license.md#initlicense) | Read product key and activate the SDK. |
+  | [`InitLicenseFromServer`](license.md#initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
+  | [`InitLicenseFromLicenseContent`](license.md#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
+  | [`OutputLicenseToString`](license.md#outputlicensetostring) | Output the license content to a string from the license server. |
+  | [`OutputLicenseToStringPtr`](license.md#outputlicensetostringptr) | Output the license content to a string from the license server. |
+  | [`FreeLicenseString`](license.md#freelicensestring) | Free memory allocated for the license string. |
+  | [`InitDLSConnectionParameters`](license.md#initdlsconnectionparameters) | Initializes a DM_DLSConnectionParameters struct with default values. |
+  | [`InitLicenseFromDLS`](license.md#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`GetIdleInstancesCount`](license.md#getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
+  | [`InitLTSConnectionParameters`](license.md#initltsconnectionparameters) | `Deprecated`. Use [InitDLSConnectionParameters](license.md#initdlsconnectionparameters) instead. |
+  | [`InitLicenseFromLTS`](license.md#initlicensefromlts) | `Deprecated`. Use [InitLicenseFromDLS](license.md#initlicensefromdls) instead. |
 
    
    
@@ -33,18 +48,6 @@ breadcrumbText: CBarcodeReader Methods
   | [`DecodeIntermediateResults`](decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
    
    
- ## License
-  
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`InitLicense`](license.md#initlicense) | Read product key and activate the SDK. |
-  | [`InitLicenseFromServer`](license.md#initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
-  | [`InitLicenseFromLicenseContent`](license.md#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
-  | [`OutputLicenseToString`](license.md#outputlicensetostring) | Output the license content to a string from the license server. |
-  | [`OutputLicenseToStringPtr`](license.md#outputlicensetostringptr) | Output the license content to a string from the license server. |
-  | [`FreeLicenseString`](license.md#freelicensestring) | Free memory allocated for the license string. |
-  | [`InitLTSConnectionParameters`](license.md#initltsconnectionparameters) | Initializes a DM_LTSConnectionParameters struct with default values. |
-  | [`InitLicenseFromLTS`](license.md#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
    
  
 ## Basic Settings Functions

@@ -16,13 +16,11 @@ needAutoGenerateSidebar: true
   | [`DBR_OutputLicenseToString`](#dbr_outputlicensetostring) | Output the license content to a string from the license server. |
   | [`DBR_OutputLicenseToStringPtr`](#dbr_outputlicensetostringptr) | Output the license content to a string from the license server. |
   | [`DBR_FreeLicenseString`](#dbr_freelicensestring) | Free memory allocated for the license string. |
-  | [`DBR_InitLTSConnectionParameters`](#dbr_initltsconnectionparameters) | Initializes a DM_LTSConnectionParameters struct with default values. |
-  | [`DBR_InitLicenseFromLTS`](#dbr_initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`DBR_InitDLSConnectionParameters`](#dbr_initdlsconnectionparameters) | Initializes a DM_DLSConnectionParameters struct with default values. |
+  | [`DBR_InitLicenseFromDLS`](#dbr_initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
   | [`DBR_GetIdleInstancesCount`](#dbr_getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
-  
-  
-  ---
-  
+  | [`DBR_InitLTSConnectionParameters`](#dbr_initltsconnectionparameters) | `Deprecated`. Use [DBR_InitDLSConnectionParameters](#dbr_initdlsconnectionparameters) instead. |
+  | [`DBR_InitLicenseFromLTS`](#dbr_initlicensefromlts) | `Deprecated`. Use [DBR_InitLicenseFromDLS](#dbr_initlicensefromdls) instead. |
   
   
   
@@ -165,16 +163,15 @@ DBR_API void DBR_FreeLicenseString (char** content)
 
 
 
-
-## DBR_InitLTSConnectionParameters
-Initializes a DM_LTSConnectionParameters struct with default values.
+## DBR_InitDLSConnectionParameters
+Initializes a DM_DLSConnectionParameters struct with default values.
 
 ```c
-DBR_API int DBR_InitLTSConnectionParameters (DM_LTSConnectionParameters *pLTSConnectionParameters)
+DBR_API int DBR_InitDLSConnectionParameters (DM_DLSConnectionParameters *pDLSConnectionParameters)
 ```   
 
 #### Parameters
-`[in, out] pLTSConnectionParameters` The struct of [`DM_LTSConnectionParameters`]({{ site.structs }}DMLTSConnectionParameters.html).   
+`[in, out] pDLSConnectionParameters` The struct of [`DM_DLSConnectionParameters`]({{ site.structs }}DMLTSConnectionParameters.html).   
 
 #### Return value
 Returns error code (returns 0 if the function operates successfully).    
@@ -183,23 +180,23 @@ Returns error code (returns 0 if the function operates successfully).
 #### Code Snippet
 ```c
 char errorBuf[512];
-DM_LTSConnectionParameters paramters;
-DBR_InitLTSConnectionParameters(&paramters);
+DM_DLSConnectionParameters paramters;
+DBR_InitDLSConnectionParameters(&paramters);
 paramters.handshakeCode = "Your handshake code";
-DBR_InitLicenseFromLTS(&paramters, errorBuf, 512);
+DBR_InitLicenseFromDLS(&paramters, errorBuf, 512);
 ```
 
 
 
-## DBR_InitLicenseFromLTS
+## DBR_InitLicenseFromDLS
 Initializes the barcode reader license and connects to the specified server for online verification.
 
 ```c
-DBR_API int DBR_InitLicenseFromLTS(DM_LTSConnectionParameters *pLTSConnectionParameters, char errorMsgBuffer[], const int errorMsgBufferLen)
+DBR_API int DBR_InitLicenseFromDLS(DM_DLSConnectionParameters *pDLSConnectionParameters, char errorMsgBuffer[], const int errorMsgBufferLen)
 ```   
 
 #### Parameters
-`[in] pLTSConnectionParameters` The struct [`DM_LTSConnectionParameters`]({{ site.structs }}DMLTSConnectionParameters.html) with customized settings.   
+`[in] pDLSConnectionParameters` The struct [`DM_DLSConnectionParameters`]({{ site.structs }}DMLTSConnectionParameters.html) with customized settings.   
 `[in, out] errorMsgBuffer` The buffer is allocated by caller and the recommending length is 256. The error message will be copied to the buffer.  
 `[in]	errorMsgBufferLen` The length of allocated buffer.  
 
@@ -210,10 +207,10 @@ Returns error code (returns 0 if the function operates successfully).
 #### Code Snippet
 ```c
 char errorBuf[512];
-DM_LTSConnectionParameters paramters;
-DBR_InitLTSConnectionParameters(&paramters);
+DM_DLSConnectionParameters paramters;
+DBR_InitDLSConnectionParameters(&paramters);
 paramters.handshakeCode = "Your handshake code";
-DBR_InitLicenseFromLTS(&paramters, errorBuf, 512);
+DBR_InitLicenseFromDLS(&paramters, errorBuf, 512);
 ```
 
 
@@ -243,4 +240,9 @@ else
 ```
 
 
+## DBR_InitLTSConnectionParameters
+`Deprecated`. Use [DBR_InitDLSConnectionParameters](#dbr_initdlsconnectionparameters) instead.   
+
+## DBR_InitLicenseFromLTS
+`Deprecated`. Use [DBR_InitLicenseFromDLS](#dbr_initlicensefromdls) instead.  
 

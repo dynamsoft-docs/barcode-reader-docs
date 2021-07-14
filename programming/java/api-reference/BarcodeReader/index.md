@@ -29,8 +29,11 @@ breadcrumbText: BarcodeReader Methods
   | [`initLicenseFromServer`](license.md#initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
   | [`initLicenseFromLicenseContent`](license.md#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
   | [`outputLicenseToString`](license.md#outputlicensetostring) | Output the license content to a string from the license server. |
-  | [`initLTSConnectionParameters`](license.md#initltsconnectionparameters) | Initializes a DMLTSConnectionParameters struct with default values. |
-  | [`initLicenseFromLTS`](license.md#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`initDLSConnectionParameters`](license.md#initdlsconnectionparameters) | Initializes a DMDLSConnectionParameters struct with default values. |
+  | [`initLicenseFromDLS`](license.md#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`getIdleInstancesCount`](license.md#getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
+  | [`initLTSConnectionParameters`](license.md#initltsconnectionparameters) | `Deprecated`. Use [initDLSConnectionParameters](license.md#initdlsconnectionparameters) instead. |
+  | [`initLicenseFromLTS`](license.md#initlicensefromlts) | `Deprecated`. Use [initLicenseFromDLS](license.md#initlicensefromdls) instead. |
 
 
 ## Decode
