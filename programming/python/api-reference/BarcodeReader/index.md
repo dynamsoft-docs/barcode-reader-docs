@@ -3,11 +3,10 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Python API Reference - BarcodeReader Methods
 description: This page shows BarcodeReader Methods of Dynamsoft Barcode Reader for Python SDK.
 keywords: methods, BarcodeReader, api reference, python
-needAutoGenerateSidebar: false
-breadcrumbText: BarcodeReader Methods
+needAutoGenerateSidebar: true
 ---
 
-# Dynamsoft Barcode Reader SDK - Python BarcodeReader Methods
+# class BarcodeReader
 
 
 ## Constructor and Destructor
@@ -15,6 +14,23 @@ breadcrumbText: BarcodeReader Methods
   | Method               | Description |
   |----------------------|-------------|
   | [`BarcodeReader`](constructor-and-destructor.md#barcodereader) | Constructor of `BarcodeReader` object.|
+
+
+## License
+  
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`init_license`](license.md#init_license) | Reads product key and activates the SDK.  |
+  | [`init_license_from_server`](license.md#init_license_from_server) | Initializes license and connect to the specified server for online verification. |
+  | [`init_license_from_license_content`](license.md#init_license_from_license_content) | Initializes license from the license content on client machine for offline verification. |
+  | [`output_license_to_string`](license.md#output_license_to_string) | Outputs the license content as an encrypted string from the license server to be used for offline license verification.|
+  | [`init_dls_connection_parameters`](license.md#init_dls_connection_parameters) | Initializes a DMDLSConnectionParameters struct with default values. |
+  | [`init_license_from_dls`](license.md#init_license_from_dls) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`get_idle_instances_count`](license.md#get_idle_instances_count) | Gets available instances count when charging by concurrent instances count. |
+  | [`init_lts_connection_parameters`](license.md#init_lts_connection_parameters) | `Deprecated`. Use [init_dls_connection_parameters](license.md#init_dls_connection_parameters) instead. |
+  | [`init_license_from_lts`](license.md#init_license_from_lts) | `Deprecated`. Use [init_license_from_dls](license.md#init_license_from_dls) instead. |
+
+
 
 ## Decode
    
@@ -27,9 +43,7 @@ breadcrumbText: BarcodeReader Methods
   | [`init_intermediate_result`](decode.md#initintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decode_intermediate_results`](decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
-## Parameter and Runtime Settings
-
-### Basic
+## Basic Settings Functions
    
   | Method               | Description |
   |----------------------|-------------|
@@ -39,7 +53,7 @@ breadcrumbText: BarcodeReader Methods
   | [`update_runtime_settings`](parameter-and-runtime-settings-basic.md#update_runtime_settings) | Update runtime settings with a given struct. |
   | [`reset_runtime_settings`](parameter-and-runtime-settings-basic.md#reset_runtime_settings) | Resets all parameters to default values. |
 
-### Advanced
+## Advanced Settings Functions
   
   | Method               | Description |
   |----------------------|-------------|
@@ -50,17 +64,6 @@ breadcrumbText: BarcodeReader Methods
   | [`get_all_template_names`](parameter-and-runtime-settings-advanced.md#get_all_template_names) | Gets the parameter templates name array. |
   | [`output_settings_to_json_file`](parameter-and-runtime-settings-advanced.md#output_settings_to_json_file) | Outputs runtime settings to a settings file (JSON file). |
   | [`output_settings_to_json_string`](parameter-and-runtime-settings-advanced.md#output_settings_to_json_string) | Outputs runtime settings to a string. |
-
-## License
-  
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`init_license`](license.md#init_license) | Reads product key and activates the SDK.  |
-  | [`init_license_from_server`](license.md#init_license_from_server) | Initializes license and connect to the specified server for online verification. |
-  | [`init_license_from_license_content`](license.md#init_license_from_license_content) | Initializes license from the license content on client machine for offline verification. |
-  | [`output_license_to_string`](license.md#output_license_to_string) | Outputs the license content as an encrypted string from the license server to be used for offline license verification.|
-  | [`init_lts_connection_parameters`](license.md#init_lts_connection_parameters) | Initializes a DMLTSConnectionParameters struct with default values. |
-  | [`init_license_from_lts`](license.md#init_license_from_lts) | Initializes the barcode reader license and connects to the specified server for online verification. |
 
 ## Video
 

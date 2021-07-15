@@ -7,7 +7,7 @@ needAutoGenerateSidebar: false
 breadcrumbText: Release Notes
 ---
 
-# Dynamsoft Barcode Reader .NET SDK - Release Notes
+# .NET SDK - Release Notes
 
 - [8.4   (06/08/2021)](dotnet-8.md#84-06082021)
 - [8.2 (03/17/2021)](dotnet-8.md#82-03172021)

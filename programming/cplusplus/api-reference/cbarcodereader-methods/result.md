@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 ---
 
 
-# C++ API Reference - CBarcodeReader Result Methods
+# Result Methods
 
   | Method               | Description |
   |----------------------|-------------|
@@ -49,7 +49,7 @@ dynamsoft::dbr::CBarcodeReader::FreeTextResults(&pResults);
 delete reader;
 ```
 
-&nbsp;
+
 
 
 
@@ -76,7 +76,7 @@ dynamsoft::dbr::CBarcodeReader::FreeTextResults(&pResults);
 delete reader;
 ```
 
-&nbsp;
+
 
 
 
@@ -113,7 +113,7 @@ delete pSettings;
 delete reader;
 ```
 
-&nbsp;
+
 
 
 

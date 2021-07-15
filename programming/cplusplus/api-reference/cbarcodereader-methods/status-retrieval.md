@@ -6,7 +6,7 @@ keywords: GetErrorString, GetVersion, status retrieval methods, CBarcodeReader, 
 needAutoGenerateSidebar: true
 ---
 
-# C++ API Reference - CBarcodeReader Status Retrieval Methods
+# Status Retrieval Methods
 
   | Method               | Description |
   |----------------------|-------------|
@@ -43,7 +43,7 @@ const char* errorString = dynamsoft::dbr::CBarcodeReader::GetErrorString(errorCo
 delete reader;
 ```
 
-&nbsp;
+
 
 
 

@@ -1,16 +1,16 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader C Language API Reference - Video Methods
-description: This page shows video methods of Dynamsoft Barcode Reader for C Language.
-keywords: DBR_StartFrameDecoding, DBR_StartFrameDecodingEx, DBR_AppendFrame, DBR_StopFrameDecoding, DBR_InitFrameDecodingParameters, DBR_SetErrorCallback, DBR_SetTextResultCallback, DBR_SetIntermediateResultCallback, DBR_GetLengthOfFrameQueue, video methods, api reference, c
+title: Dynamsoft Barcode Reader C Language API Reference - Video Functions
+description: This page shows video functions of Dynamsoft Barcode Reader for C Language.
+keywords: DBR_StartFrameDecoding, DBR_StartFrameDecodingEx, DBR_AppendFrame, DBR_StopFrameDecoding, DBR_InitFrameDecodingParameters, DBR_SetErrorCallback, DBR_SetTextResultCallback, DBR_SetIntermediateResultCallback, DBR_GetLengthOfFrameQueue, video functions, api reference, c
 needAutoGenerateSidebar: true
 ---
 
-# C API Reference - Video Methods
+# Video Functions
 
 - Decode
    
-  | Method               | Description |
+  | Function               | Description |
   |----------------------|-------------|
   | [`DBR_StartFrameDecoding`](#dbr_startframedecoding) | Decode barcodes from inner frame queue. |
   | [`DBR_StartFrameDecodingEx`](#dbr_startframedecodingex) | Decode barcodes from inner frame queue. |
@@ -19,13 +19,13 @@ needAutoGenerateSidebar: true
 
 - Parameter
    
-  | Method               | Description |
+  | Function               | Description |
   |----------------------|-------------|
   | [`DBR_InitFrameDecodingParameters`](#dbr_initframedecodingparameters) | Initialize frame decoding parameter. |
 
 - Callback
    
-  | Method               | Description |
+  | Function               | Description |
   |----------------------|-------------|
   | [`DBR_SetErrorCallback`](#dbr_seterrorcallback) | Set callback function to process errors generated during frame decoding. |
   | [`DBR_SetTextResultCallback`](#dbr_settextresultcallback) | Set callback function to process text results generated during frame decoding. |
@@ -33,7 +33,7 @@ needAutoGenerateSidebar: true
 
 - Status retrieval
    
-  | Method               | Description |
+  | Function               | Description |
   |----------------------|-------------|
   | [`DBR_GetLengthOfFrameQueue`](#dbr_getLengthOfframequeue) | Get length of current inner frame queue. |
   
@@ -72,7 +72,7 @@ int errorCode = DBR_StartFrameDecoding(barcodeReader, 2, 10, 1024, 720, 720, IPF
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 
@@ -120,7 +120,7 @@ if(errorCode == DBR_OK)
 }
 ```
 
-&nbsp;
+
 
 
 
@@ -147,7 +147,7 @@ int frameId = DBR_AppendFrame(barcodeReader, pBufferBytes);
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 
@@ -181,7 +181,7 @@ int errorCode = DBR_StopFrameDecoding(barcodeReader);
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 
@@ -228,7 +228,7 @@ if(errorCode == DBR_OK)
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 
@@ -263,7 +263,7 @@ DBR_SetErrorCallback(barcodeReader, ErrorFunction, NULL);
 DBR_StartFrameDecoding(barcodeReader, 2, 10, 1024, 720, 720, IPF_BINARY, "");
 ```
 
-&nbsp;
+
 
 
 
@@ -297,7 +297,7 @@ DBR_SetTextResultCallback(barcodeReader, TextResultFunction, NULL);
 DBR_StartFrameDecoding(barcodeReader, 2, 10, 1024, 720, 720, IPF_BINARY, "");
 ```
 
-&nbsp;
+
 
 
 
@@ -336,7 +336,7 @@ DBR_SetIntermediateResultCallback(barcodeReader, IntermediateResultFunction, NUL
 DBR_StartFrameDecoding(barcodeReader, 2, 10, 1024, 720, 720, IPF_BINARY, "");
 ```
 
-&nbsp;
+
 
 
 

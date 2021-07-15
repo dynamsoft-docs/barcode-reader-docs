@@ -9,7 +9,7 @@ needAutoGenerateSidebar: false
 
 # DMLTSConnectionParameters
 
-Defines a struct to configure the parameters to connect to license tracking server.  
+`Deprecated`. Use [DMDLSConnectionParameters](DMDLSConnectionParameters.md) instead.  
 
 
 
@@ -33,7 +33,7 @@ Defines a struct to configure the parameters to connect to license tracking serv
 
 ### mainServerURL
 
-The URL of the license tracking server.
+The URL of the license server.
 
 ```java
 String com.dynamsoft.dbr.DMLTSConnectionParameters.mainServerURL
@@ -46,12 +46,12 @@ String com.dynamsoft.dbr.DMLTSConnectionParameters.mainServerURL
     null
 
 - **Remarks**   
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
+    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license servers for online verification.   
 
 
 ### standbyServerURL
 
-The URL of the standby license tracking server.
+The URL of the standby license server.
 
 ```java
 String com.dynamsoft.dbr.DMLTSConnectionParameters.standbyServerURL
@@ -64,7 +64,7 @@ String com.dynamsoft.dbr.DMLTSConnectionParameters.standbyServerURL
     null
 
 - **Remarks**   
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
+    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license servers for online verification.   
 
 
 ### handshakeCode
@@ -83,7 +83,7 @@ String com.dynamsoft.dbr.DMLTSConnectionParameters.handshakeCode
 
 ### sessionPassword
 
-The session password of the handshake code set in license tracking server.
+The session password of the handshake code set in license server.
 
 ```java
 String com.dynamsoft.dbr.DMLTSConnectionParameters.sessionPassword

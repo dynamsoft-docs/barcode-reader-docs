@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 ---
 
 
-# C++ API Reference - CBarcodeReader License Methods
+# License Methods
 
   | Method               | Description |
   |----------------------|-------------|
@@ -17,14 +17,11 @@ needAutoGenerateSidebar: true
   | [`OutputLicenseToString`](#outputlicensetostring) | Output the license content to a string from the license server. |
   | [`OutputLicenseToStringPtr`](#outputlicensetostringptr) | Output the license content to a string from the license server. |
   | [`FreeLicenseString`](#freelicensestring) | Free memory allocated for the license string. |
-  | [`InitLTSConnectionParameters`](#initltsconnectionparameters) | Initializes a DM_LTSConnectionParameters struct with default values. |
-  | [`InitLicenseFromLTS`](#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`InitDLSConnectionParameters`](#initdlsconnectionparameters) | Initializes a DM_DLSConnectionParameters struct with default values. |
+  | [`InitLicenseFromDLS`](#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
   | [`GetIdleInstancesCount`](#getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
-
-  ---
-
-
-
+  | [`InitLTSConnectionParameters`](#initltsconnectionparameters) | `Deprecated`. Use [InitDLSConnectionParameters](#initdlsconnectionparameters) instead. |
+  | [`InitLicenseFromLTS`](#initlicensefromlts) | `Deprecated`. Use [InitLicenseFromDLS](#initlicensefromdls) instead. |
 
 
 ## InitLicense
@@ -50,7 +47,7 @@ reader->InitLicense("t0260NwAAAHV***************");
 delete reader;
 ```
 
-&nbsp;
+
 
 
 
@@ -71,7 +68,7 @@ int dynamsoft::dbr::CBarcodeReader::InitLicenseFromServer (const char* pLicenseS
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
-&nbsp;
+
 
 
 
@@ -94,7 +91,7 @@ int dynamsoft::dbr::CBarcodeReader::InitLicenseFromLicenseContent (const char* p
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
-&nbsp;
+
 
 
 
@@ -119,7 +116,7 @@ Returns error code (returns 0 if the function operates successfully).
 #### Remark
 [`InitLicenseFromServer`](#initlicensefromserver) has to be successfully called before calling this method.
 
-&nbsp;
+
 
 
 
@@ -143,7 +140,7 @@ Returns error code (returns 0 if the function operates successfully).
 #### Remarks
 [`InitLicenseFromServer`](#initlicensefromserver) has to be successfully called before calling this method.
 
-&nbsp;
+
 
 
 
@@ -167,18 +164,15 @@ void dynamsoft::dbr::CBarcodeReader::FreeLicenseString (char** content)
 
 
 
-&nbsp;
-
-
-## InitLTSConnectionParameters
-Initializes a DM_LTSConnectionParameters struct with default values.
+## InitDLSConnectionParameters
+Initializes a DM_DLSConnectionParameters struct with default values.
 
 ```cpp
-static int dynamsoft::dbr::CBarcodeReader::InitLTSConnectionParameters(DM_LTSConnectionParameters *pLTSConnectionParameters)
+static int dynamsoft::dbr::CBarcodeReader::InitDLSConnectionParameters(DM_DLSConnectionParameters *pDLSConnectionParameters)
 ```   
    
 #### Parameters
-`[in, out] pLTSConnectionParameters` The struct of [`DM_LTSConnectionParameters`]({{ site.structs }}DMLTSConnectionParameters.html).   
+`[in, out] pDLSConnectionParameters` The struct of [`DM_DLSConnectionParameters`]({{ site.structs }}DMLTSConnectionParameters.html).   
 
 #### Return value
 Returns error code (returns 0 if the function operates successfully).    
@@ -186,23 +180,23 @@ Returns error code (returns 0 if the function operates successfully).
 
 #### Code Snippet
 ```cpp
-DM_LTSConnectionParameters paramters;
-dynamsoft::dbr::CBarcodeReader::InitLTSConnectionParameters(&paramters);
+DM_DLSConnectionParameters paramters;
+dynamsoft::dbr::CBarcodeReader::InitDLSConnectionParameters(&paramters);
 paramters.handshakeCode = "Your handshake code";
-dynamsoft::dbr::CBarcodeReader::InitLicenseFromLTS(&paramters);
+dynamsoft::dbr::CBarcodeReader::InitLicenseFromDLS(&paramters);
 ```
 
-&nbsp;
 
-## InitLicenseFromLTS
+
+## InitLicenseFromDLS
 Initializes the barcode reader license and connects to the specified server for online verification.
 
 ```cpp
-static int dynamsoft::dbr::CBarcodeReader::InitLicenseFromLTS(DM_LTSConnectionParameters *pLTSConnectionParameters, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)
+static int dynamsoft::dbr::CBarcodeReader::InitLicenseFromDLS(DM_DLSConnectionParameters *pDLSConnectionParameters, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)
 ```   
    
 #### Parameters
-`[in] pLTSConnectionParameters` The struct [`DM_LTSConnectionParameters`]({{ site.structs }}DMLTSConnectionParameters.html) with customized settings.   
+`[in] pDLSConnectionParameters` The struct [`DM_DLSConnectionParameters`]({{ site.structs }}DMLTSConnectionParameters.html) with customized settings.   
 `[in, out] errorMsgBuffer`<sub>Optional</sub> The buffer is allocated by the caller and the recommended length is 256. The error message will be copied to the buffer.  
 `[in]	errorMsgBufferLen`<sub>Optional</sub> The length of the allocated buffer.  
 
@@ -213,13 +207,13 @@ Returns error code (returns 0 if the function operates successfully).
 
 #### Code Snippet
 ```cpp
-DM_LTSConnectionParameters paramters;
-dynamsoft::dbr::CBarcodeReader::InitLTSConnectionParameters(&paramters);
+DM_DLSConnectionParameters paramters;
+dynamsoft::dbr::CBarcodeReader::InitDLSConnectionParameters(&paramters);
 paramters.handshakeCode = "Your handshake code";
-dynamsoft::dbr::CBarcodeReader::InitLicenseFromLTS(&paramters);
+dynamsoft::dbr::CBarcodeReader::InitLicenseFromDLS(&paramters);
 ```
 
-&nbsp;
+
 
 ## GetIdleInstancesCount
 Gets available instances count when charging by concurrent instances count.
@@ -245,5 +239,11 @@ else
 }
 ```
 
-&nbsp;
+
+
+## InitLTSConnectionParameters
+`Deprecated`. Use [InitDLSConnectionParameters](#initdlsconnectionparameters) instead.
+
+## InitLicenseFromLTS
+`Deprecated`. Use [InitLicenseFromDLS](#initlicensefromdls) instead.
 

@@ -6,7 +6,7 @@ keywords: CBarcodeReader, ~CBarcodeReader, constructor and destructor, api refer
 needAutoGenerateSidebar: true
 ---
 
-# C++ API Reference - CBarcodeReader Constructor and Destructor
+# Constructor and Destructor
 
   | Method               | Description |
   |----------------------|-------------|
@@ -26,9 +26,6 @@ Default constructor of a `CBarcodeReader` object.
 ```cpp
 dynamsoft::dbr::CBarcodeReader::CBarcodeReader()
 ```
-
-&nbsp;
-
 
 
 

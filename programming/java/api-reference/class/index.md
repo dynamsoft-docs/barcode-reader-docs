@@ -1,19 +1,20 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Java API Reference - Class
-description: This page shows all Classes of Dynamsoft Barcode Reader for Java SDK API Reference.
+title: Dynamsoft Barcode Reader Java API Reference - Auxiliary Class
+description: This page shows all Auxiliary Classes of Dynamsoft Barcode Reader for Java SDK API Reference.
 keywords: class, api reference, java
 needAutoGenerateSidebar: false
 breadcrumbText: Class
 ---
 
 
-# Dynamsoft Barcode Reader SDK - Java BarcodeReader Methods
+# Java API Reference - Auxiliary Classes
 
 - [`AztecDetails`](AztecDetails.md)	 
 - [`BarcodeReaderException`](BarcodeReaderException.md)	
 - [`Contour`](Contour.md)	 
 - [`DataMatrixDetails`](DataMatrixDetails.md)	 
+- [`DMDLSConnectionParameters`](DMDLSConnectionParameters.md)
 - [`DMLTSConnectionParameters`](DMLTSConnectionParameters.md)
 - [`ExtendedResult`](ExtendedResult.md)	
 - [`FrameDecodingParameters`](FrameDecodingParameters.md)

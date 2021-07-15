@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader C Language API Reference - Parameter and Runtime Settings Advanced Methods
-description: This page shows advanced Runtime Settings methods of Dynamsoft Barcode Reader for C Language.
-keywords: DBR_InitRuntimeSettingsWithFile, DBR_InitRuntimeSettingsWithString, DBR_AppendTplFileToRuntimeSettings, DBR_AppendTplStringToRuntimeSettings, DBR_GetParameterTemplateCount, DBR_GetParameterTemplateName, DBR_OutputSettingsToFile, DBR_OutputSettingsToString, DBR_OutputSettingsToStringPtr, DBR_FreeSettingsString, parameter and runtime settings advanced methods, api reference, c
+title: Dynamsoft Barcode Reader C Language API Reference - Parameter and Runtime Settings Advanced Functions
+description: This page shows advanced Runtime Settings functions of Dynamsoft Barcode Reader for C Language.
+keywords: DBR_InitRuntimeSettingsWithFile, DBR_InitRuntimeSettingsWithString, DBR_AppendTplFileToRuntimeSettings, DBR_AppendTplStringToRuntimeSettings, DBR_GetParameterTemplateCount, DBR_GetParameterTemplateName, DBR_OutputSettingsToFile, DBR_OutputSettingsToString, DBR_OutputSettingsToStringPtr, DBR_FreeSettingsString, parameter and runtime settings advanced functions, api reference, c
 needAutoGenerateSidebar: true
 ---
 
-# C API Reference - Parameter and Runtime Settings Advanced Methods
+# Parameter and Runtime Settings Advanced Functions
    
-  | Method               | Description |
+  | Function               | Description |
   |----------------------|-------------|
   | [`DBR_InitRuntimeSettingsWithFile`](#dbr_initruntimesettingswithfile) | Initialize runtime settings with the settings in a given JSON file. |
   | [`DBR_InitRuntimeSettingsWithString`](#dbr_initruntimesettingswithstring) | Initialize runtime settings with the settings in a given JSON string. |
@@ -55,7 +55,7 @@ DBR_InitRuntimeSettingsWithFile(barcodeReader, "C:\\Program Files (x86)\\Dynamso
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 
@@ -89,7 +89,7 @@ DBR_InitRuntimeSettingsWithString(barcodeReader, "{\"Version\":\"3.0\", \"ImageP
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 
@@ -123,7 +123,7 @@ DBR_AppendTplFileToRuntimeSettings(barcodeReader, "C:\\Program Files (x86)\\Dyna
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 
@@ -157,7 +157,7 @@ DBR_AppendTplStringToRuntimeSettings(barcodeReader, "{\"Version\":\"3.0\", \"Ima
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 
@@ -189,7 +189,7 @@ int currentTemplateCount = DBR_GetParameterTemplateCount(barcodeReader);
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 
@@ -229,7 +229,7 @@ DBR_GetParameterTemplateName(barcodeReader, templateIndex, templateName, 256);
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 
@@ -264,7 +264,7 @@ DBR_OutputSettingsToFile(barcodeReader, "C:\\Program Files (x86)\\Dynamsoft\\{Ve
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 
@@ -301,7 +301,7 @@ DBR_OutputSettingsToString(barcodeReader, pContent, 256, "currentRuntimeSettings
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 
@@ -339,7 +339,7 @@ DBR_DestroyInstance(barcodeReader);
 ```
 
 
-&nbsp;
+
 
 
 

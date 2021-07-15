@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 ---
 
 
-# .Net API Reference - BarcodeReader Result Methods
+# Result Methods
 
   | Method               | Description |
   |----------------------|-------------|
@@ -16,7 +16,7 @@ needAutoGenerateSidebar: true
   ---
 
 
-&nbsp; 
+ 
 
 
 ## GetIntermediateResults

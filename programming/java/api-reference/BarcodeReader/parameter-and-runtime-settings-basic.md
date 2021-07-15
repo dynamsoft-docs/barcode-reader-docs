@@ -1,13 +1,13 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Java API Reference - BarcodeReader Parameter and Runtime Settings Basic Methods
-description: This page shows BarcodeReader basic Runtime Settings methods of Dynamsoft Barcode Reader for Java SDK API Reference.
-keywords: setModeArgument, getModeArgument, getRuntimeSettings, updateRuntimeSettings, resetRuntimeSettings, parameter and runtime settings basic methods, BarcodeReader, api reference, java
+title: Dynamsoft Barcode Reader Java API Reference - Basic Settings Methods
+description: This page shows basic Runtime Settings methods of Dynamsoft Barcode Reader for Java SDK API Reference.
+keywords: setModeArgument, getModeArgument, getRuntimeSettings, updateRuntimeSettings, resetRuntimeSettings, Basic Settings Methods, BarcodeReader, api reference, java
 needAutoGenerateSidebar: true
 ---
 
 
-# Java API Reference - BarcodeReader Parameter and Runtime Settings Basic Methods
+# Basic Settings Methods
 
   | Method               | Description |
   |----------------------|-------------|
@@ -65,7 +65,7 @@ reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "1");
 reader.destroy();
 ```
 
-&nbsp;
+
 
 
 
@@ -116,7 +116,7 @@ String argumentValue = reader.getModeArgument("BinarizationModes", 0, "EnableFil
 reader.destroy();
 ```
 
-&nbsp;
+
 
 
 
@@ -143,7 +143,7 @@ PublicRuntimeSettings settings = reader.getRuntimeSettings();
 reader.destroy();
 ```
 
-&nbsp;
+
 
 
 
@@ -172,7 +172,7 @@ reader.updateRuntimeSettings(settings);
 reader.destroy();
 ```
 
-&nbsp;
+
 
 
 

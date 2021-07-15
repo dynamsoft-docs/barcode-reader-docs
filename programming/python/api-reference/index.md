@@ -3,23 +3,22 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Python API Reference - Main Page
 description: This is the main page of Dynamsoft Barcode Reader for Python SDK API Reference.
 keywords: api reference, python
-needAutoGenerateSidebar: false
-breadcrumbText: API Reference
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
-# Dynamsoft Barcode Reader SDK - Python API Reference
+# Python API Reference
+ 
+## BarcodeReader Class
 
-- [BarcodeReader Methods](#barcodereader-methods) 
-- [BarcodeReader Attributes](#barcodereader-attributes) 
-- [Error Code](#error-code)
-- [Classes](#classes)
-- [Enumerations](#enumerations)
-
-     
-&nbsp; 
-
-
-## BarcodeReader Methods
+### `BarcodeReader` Attributes
+  
+  | Attribute            | Description |
+  |----------------------|-------------|
+  | `version`  | dbr-python version |
+  | `dbr_version`  | Dynamsoft Barcode Reader version |
+  
+   
 
 ### Constructor and Destructor
    
@@ -28,10 +27,25 @@ breadcrumbText: API Reference
   | [`BarcodeReader`](BarcodeReader/constructor-and-destructor.md#barcodereader) | Constructor of `BarcodeReader` object.|
 
    
-&nbsp; 
+ 
    
-   
-### Decode
+
+### License Methods
+  
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`init_license`](BarcodeReader/license.md#init_license) | Reads product key and activates the SDK.  |
+  | [`init_license_from_server`](BarcodeReader/license.md#init_license_from_server) | Initializes license and connects to the specified server for online verification. |
+  | [`init_license_from_license_content`](BarcodeReader/license.md#init_license_from_license_content) | Initializes license from the license content on client machine for offline verification. |
+  | [`output_license_to_string`](BarcodeReader/license.md#output_license_to_string) | Outputs the license content as an encrypted string from the license server to be used for offline license verification.|
+  | [`init_dls_connection_parameters`](BarcodeReader/license.md#init_dls_connection_parameters) | Initializes a DMDLSConnectionParameters struct with default values. |
+  | [`init_license_from_dls`](BarcodeReader/license.md#init_license_from_dls) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`get_idle_instances_count`](BarcodeReader/license.md#get_idle_instances_count) | Gets available instances count when charging by concurrent instances count. |
+  | [`init_lts_connection_parameters`](BarcodeReader/license.md#init_lts_connection_parameters) | `Deprecated`. Use [init_dls_connection_parameters](BarcodeReader/license.md#init_dls_connection_parameters) instead. |
+  | [`init_license_from_lts`](BarcodeReader/license.md#init_license_from_lts) | `Deprecated`. Use [init_license_from_dls](BarcodeReader/license.md#init_license_from_dls) instead. |
+      
+
+### Decode Methods
    
   | Method               | Description |
   |----------------------|-------------|
@@ -43,13 +57,9 @@ breadcrumbText: API Reference
   | [`decode_intermediate_results`](BarcodeReader/decode.md#decode_intermediateresults) | Decodes barcode from intermediate results. |
    
    
-&nbsp; 
-   
-   
-   
-### Parameter and Runtime Settings
+ 
 
-#### Basic
+### Basic Settings Methods
    
   | Method               | Description |
   |----------------------|-------------|
@@ -59,7 +69,7 @@ breadcrumbText: API Reference
   | [`update_runtime_settings`](BarcodeReader/parameter-and-runtime-settings-basic.md#update_runtime_settings) | Updates runtime settings with a given struct. |
   | [`reset_runtime_settings`](BarcodeReader/parameter-and-runtime-settings-basic.md#reset_runtime_settings) | Resets all parameters to default values. |
 
-#### Advanced
+### Advanced Settings Methods
   
   | Method               | Description |
   |----------------------|-------------|
@@ -72,26 +82,10 @@ breadcrumbText: API Reference
   | [`output_settings_to_json_string`](BarcodeReader/parameter-and-runtime-settings-advanced.md#output_settings_to_json_string) | Outputs runtime settings to a string. |
    
       
-&nbsp; 
+ 
 
    
-### License
-  
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`init_license`](BarcodeReader/license.md#init_license) | Reads product key and activates the SDK.  |
-  | [`init_license_from_server`](BarcodeReader/license.md#init_license_from_server) | Initializes license and connects to the specified server for online verification. |
-  | [`init_license_from_license_content`](BarcodeReader/license.md#init_license_from_license_content) | Initializes license from the license content on client machine for offline verification. |
-  | [`output_license_to_string`](BarcodeReader/license.md#output_license_to_string) | Outputs the license content as an encrypted string from the license server to be used for offline license verification.|
-  | [`init_lts_connection_parameters`](BarcodeReader/license.md#init_lts_connection_parameters) | Initializes a `DMLTSConnectionParameters` struct with default values. |
-  | [`init_license_from_lts`](BarcodeReader/license.md#init_license_from_lts) | Initializes the barcode reader license and connects to the specified server for online verification. |
-  | [`get_idle_instances_count`](BarcodeReader/license.md#get_idle_instances_count) | Gets available instances count when charging by concurrent instances count. |
-   
-   
-&nbsp; 
-   
-   
-### Video
+### Video Methods
 
 #### Decode
     
@@ -115,27 +109,10 @@ breadcrumbText: API Reference
    | [`get_length_of_frame_queue`](BarcodeReader/video.md#get_length_of_frame_queue) | Gets length of current inner frame queue. |
  
    
-&nbsp; 
 
 
-## `BarcodeReader` Attributes
-  
-  | Attribute            | Description |
-  |----------------------|-------------|
-  | `version`  | dbr-python version |
-  | `dbr_version`  | Dynamsoft Barcode Reader version |
-  
-   
-&nbsp; 
+## Auxiliary Classes
 
-
-## [Error Code]({{ site.enumerations }}error-code.html)
-		
-
-&nbsp;
-
-
-## Classes
 - [`AztecDetailedResult`](class/AztecDetailedResult.md)	 
 - [`BarcodeReaderError`](class/BarcodeReaderError.md)	
 - [`Contour`](class/Contour.md)	 
@@ -161,7 +138,7 @@ breadcrumbText: API Reference
 - [`ErrorCallBack`](class/ErrorCallBack.md)
 		
 
-&nbsp;
+
 
 
 ## Enumerations

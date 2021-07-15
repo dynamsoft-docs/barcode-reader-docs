@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 ---
 
 
-# Java API Reference - BarcodeReader Decode Methods
+# Decode Methods
 
   | Method               | Description |
   |----------------------|-------------|
@@ -46,7 +46,7 @@ TextResult[] result = reader.decodeFile("your file path", "");
 reader.destroy();
 ```
 
-&nbsp;
+
 
 
 ## DecodeFileInMemory
@@ -75,7 +75,7 @@ TextResult[] result = reader.decodeFileInMemory(bufferBytes, "");
 reader.destroy();
 ```
 
-&nbsp;
+
 
 ```java
 TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeFileInMemory(InputStream fileStream, String templateName) throws BarcodeReaderException, IOException
@@ -99,7 +99,7 @@ TextResult[] result = reader.decodeFileInMemory(fis, "");
 reader.destroy();
 ```
 
-&nbsp;
+
 
 
 
@@ -138,7 +138,7 @@ TextResult[] result = reader.decodeBuffer(bufferBytes, iWidth,  iHeight, iStride
 reader.destroy();
 ```
 
-&nbsp;
+
 
 
 
@@ -169,7 +169,7 @@ TextResult[] result = reader.decodeBase64String("file in base64 string", "");
 reader.destroy();
 ```
 
-&nbsp;
+
 
 
 
@@ -201,7 +201,7 @@ TextResult[] result = reader.decodeBufferedImage(input, "");
 reader.destroy();
 ```
 
-&nbsp;
+
 
 
 ## initIntermediateResult
@@ -227,7 +227,7 @@ BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
 IntermediateResult imResult = reader.initIntermediateResult(EnumIntermediateResultType.IRT_ORIGINAL_IMAGE);
 ```
 
-&nbsp;
+
 
 
 ## decodeIntermediateResults
@@ -258,6 +258,6 @@ IntermediateResult[] irtResult = reader.getIntermediateResults();
 TextResult[] result = reader.decodeIntermediateResults(irtResult, "");
 ```
 
-&nbsp;
+
 
 

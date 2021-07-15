@@ -7,7 +7,7 @@ needAutoGenerateSidebar: false
 breadcrumbText: Release Notes
 ---
 
-# Dynamsoft Barcode Reader Python SDK - Release Notes
+# Python SDK - Release Notes
 
 - [8.4   (06/10/2021)](python-8.md#84-06102021)
 - [8.2   (03/17/2021)](python-8.md#82-03172021)

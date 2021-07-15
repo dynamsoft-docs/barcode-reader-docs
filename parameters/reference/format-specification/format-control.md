@@ -225,7 +225,7 @@ Sets the range of barcode heights (in pixels) to for barcodes search.
 
 
 ### As Json Parameter
-`BarcodeHeightRangeArray` as a JSON parameter is a JSON Object array. Each JSON Object has two keys `MinValue` and `MaxValue` for setting the range of barcode bytes length for barcodes search. Default values will be used if there is no manual setting. 
+`BarcodeHeightRangeArray` as a JSON parameter is a JSON Object array. Each JSON Object has two keys `MinValue` and `MaxValue` for setting the range of barcode height for barcodes search. Default values will be used if there is no manual setting. 
 
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
@@ -315,7 +315,7 @@ Sets the range of barcode widths (in pixels) for barcodes search.
 
 
 ### As Json Parameter
-`BarcodeWidthRangeArray` as a JSON parameter is a JSON Object array. Each JSON Object has two keys `MinValue` and `MaxValue` for setting the range of barcode bytes length for barcodes search. Default values will be used if there is no manual setting. 
+`BarcodeWidthRangeArray` as a JSON parameter is a JSON Object array. Each JSON Object has two keys `MinValue` and `MaxValue` for setting the range of barcode width for barcodes search. Default values will be used if there is no manual setting. 
 
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |

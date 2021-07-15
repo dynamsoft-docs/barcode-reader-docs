@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader C++ API Reference - CBarcodeReader Parameter and Runtime Settings Advanced Methods
-description: This page shows CBarcodeReader advanced Runtime Settings methods of Dynamsoft Barcode Reader for C++ Language.
-keywords: InitRuntimeSettingsWithFile, InitRuntimeSettingsWithString, AppendTplFileToRuntimeSettings, AppendTplStringToRuntimeSettings, GetParameterTemplateCount, GetParameterTemplateName, OutputSettingsToFile, OutputSettingsToString, OutputSettingsToStringPtr, FreeSettingsString, parameter and runtime settings advanced methods, CBarcodeReader, api reference, c++
+title: Dynamsoft Barcode Reader C++ API Reference - Advanced Settings Methods
+description: This page shows advanced Runtime Settings methods of Dynamsoft Barcode Reader for C++ Language.
+keywords: InitRuntimeSettingsWithFile, InitRuntimeSettingsWithString, AppendTplFileToRuntimeSettings, AppendTplStringToRuntimeSettings, GetParameterTemplateCount, GetParameterTemplateName, OutputSettingsToFile, OutputSettingsToString, OutputSettingsToStringPtr, FreeSettingsString, Advanced Settings Methods, CBarcodeReader, api reference, c++
 needAutoGenerateSidebar: true
 ---
 
-# C++ API Reference - CBarcodeReader Parameter and Runtime Settings Advanced Methods
+# Advanced Settings Methods
 
   | Method               | Description |
   |----------------------|-------------|
@@ -55,7 +55,7 @@ reader->InitRuntimeSettingsWithFile("C:\\Program Files (x86)\\Dynamsoft\\{Versio
 delete reader;
 ```
 
-&nbsp; 
+ 
 
 
 
@@ -89,7 +89,7 @@ reader->InitRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":
 delete reader;
 ```
 
-&nbsp; 
+ 
 
 
 
@@ -122,7 +122,7 @@ reader->AppendTplFileToRuntimeSettings("C:\\Program Files (x86)\\Dynamsoft\\{Ver
 delete reader;
 ```
 
-&nbsp; 
+ 
 
 
 
@@ -156,7 +156,7 @@ reader->AppendTplStringToRuntimeSettings("{\"Version\":\"3.0\", \"ImageParameter
 delete reader;
 ```
 
-&nbsp; 
+ 
 
 
 
@@ -186,7 +186,7 @@ int currentTemplateCount = reader->GetParameterTemplateCount();
 delete reader;
 ```
 
-&nbsp; 
+ 
 
 
 
@@ -224,7 +224,7 @@ reader->GetParameterTemplateName(templateIndex, templateName, 256);
 delete reader;
 ```
 
-&nbsp; 
+ 
 
 
 
@@ -258,7 +258,7 @@ reader->OutputSettingsToFile("C:\\Program Files (x86)\\Dynamsoft\\{Version numbe
 delete reader;
 ```
 
-&nbsp; 
+ 
 
 
 
@@ -293,7 +293,7 @@ reader->OutputSettingsToString(content, 256, "currentRuntimeSettings");
 delete reader;
 ```
 
-&nbsp; 
+ 
 
 
 
@@ -328,7 +328,7 @@ reader->FreeSettingsString(&content);
 delete reader;
 ```
 
-&nbsp; 
+ 
 
 
 

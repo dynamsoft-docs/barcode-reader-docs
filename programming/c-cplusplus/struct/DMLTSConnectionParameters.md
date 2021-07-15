@@ -6,14 +6,13 @@ keywords: DM_LTSConnectionParameters, struct, c, c++
 needAutoGenerateSidebar: false
 ---
 
-
 # DM_LTSConnectionParameters
-Defines a struct to configure the parameters to connect to license tracking server.  
+`Deprecated`. Use [DM_DLSConnectionParameters](DMDLSConnectionParameters.md) instead.  
 
 ## Typedefs
 
 ```cpp
-typedef struct tagDM_LTSConnectionParameters  DM_LTSConnectionParameters
+typedef struct tagDM_DLSConnectionParameters  DM_LTSConnectionParameters
 ```
 
 ---
@@ -39,9 +38,9 @@ typedef struct tagDM_LTSConnectionParameters  DM_LTSConnectionParameters
 
 
 ### mainServerURL
-The URL of the license tracking server.
+The URL of the license  server.
 ```cpp
-char* tagDM_LTSConnectionParameters::mainServerURL
+char* mainServerURL
 ```
 - **Value range**   
     Any string value   
@@ -50,13 +49,13 @@ char* tagDM_LTSConnectionParameters::mainServerURL
     ""
 
 - **Remarks**   
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
+    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license  servers for online verification.   
 
 
 ### standbyServerURL
-The URL of the standby license tracking server.
+The URL of the standby license  server.
 ```cpp
-char* tagDM_LTSConnectionParameters::standbyServerURL
+char* standbyServerURL
 ```
 - **Value range**   
     Any string value   
@@ -65,13 +64,13 @@ char* tagDM_LTSConnectionParameters::standbyServerURL
     ""
 
 - **Remarks**   
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
+    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license  servers for online verification.   
 
 
 ### handshakeCode
 The handshake code.
 ```cpp
-char* tagDM_LTSConnectionParameters::handshakeCode
+char* handshakeCode
 ```
 - **Value range**   
     Any string value   
@@ -80,9 +79,9 @@ char* tagDM_LTSConnectionParameters::handshakeCode
     ""
 
 ### sessionPassword
-The session password of the handshake code set in license tracking server.
+The session password of the handshake code set in license  server.
 ```cpp
-char* tagDM_LTSConnectionParameters::sessionPassword
+char* sessionPassword
 ```
 - **Value range**   
     Any string value   
@@ -93,7 +92,7 @@ char* tagDM_LTSConnectionParameters::sessionPassword
 ### deploymentType
 Sets the deployment type.
 ```cpp
-DM_DeploymentType tagDM_LTSConnectionParameters::deploymentType
+DM_DeploymentType deploymentType
 ```
 - **Value range**   
     A value of [`DM_DeploymentType`]({{ site.enumerations }}other-enums.html#dm_deploymenttype) Enumeration items.
@@ -108,7 +107,7 @@ DM_DeploymentType tagDM_LTSConnectionParameters::deploymentType
 ### chargeWay
 Sets the charge way.
 ```cpp
-DM_ChargeWay tagDM_LTSConnectionParameters::chargeWay
+DM_ChargeWay chargeWay
 ```
 - **Value range**   
     A value of [`DM_ChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway) Enumeration items.
@@ -123,7 +122,7 @@ DM_ChargeWay tagDM_LTSConnectionParameters::chargeWay
 ### UUIDGenerationMethod
 Sets the method to generate UUID.
 ```cpp
-DM_UUIDGenerationMethod tagDM_LTSConnectionParameters::UUIDGenerationMethod
+DM_UUIDGenerationMethod UUIDGenerationMethod
 ```
 - **Value range**   
     A value of [`DM_UUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod) Enumeration items.
@@ -138,7 +137,7 @@ DM_UUIDGenerationMethod tagDM_LTSConnectionParameters::UUIDGenerationMethod
 ### maxBufferDays
 Sets the max days to buffer the license info.
 ```cpp
-int tagDM_LTSConnectionParameters::maxBufferDays
+int maxBufferDays
 ```
 - **Value range**   
     [7,0x7fffffff]   
@@ -149,7 +148,7 @@ int tagDM_LTSConnectionParameters::maxBufferDays
 ### limitedLicenseModulesCount
 Sets the count of license modules to use.
 ```cpp
-int tagDM_LTSConnectionParameters::limitedLicenseModulesCount
+int limitedLicenseModulesCount
 ```
 - **Value range**   
     [0,0x7fffffff]   
@@ -160,7 +159,7 @@ int tagDM_LTSConnectionParameters::limitedLicenseModulesCount
 ### limitedLicenseModules
 Sets the license modules to use.
 ```cpp
-DM_LicenseModule* tagDM_LTSConnectionParameters::limitedLicenseModules
+DM_LicenseModule* limitedLicenseModules
 ```
 - **Value range**   
     Each array item can be any one of the [`DM_LicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule) Enumeration items.
@@ -175,7 +174,7 @@ DM_LicenseModule* tagDM_LTSConnectionParameters::limitedLicenseModules
 ### maxConcurrentInstanceCount
 Sets the max concurrent instance count.
 ```cpp
-int tagDM_LTSConnectionParameters::maxConcurrentInstanceCount
+int maxConcurrentInstanceCount
 ```
 - **Value range**   
     [1,0x7fffffff]   
@@ -191,7 +190,7 @@ int tagDM_LTSConnectionParameters::maxConcurrentInstanceCount
 ### organizationID
 The organization ID got from Dynamsoft.
 ```cpp
-char* tagDM_LTSConnectionParameters::organizationID
+char* organizationID
 ```
 - **Value range**   
     Any string value   
@@ -202,7 +201,7 @@ char* tagDM_LTSConnectionParameters::organizationID
 ### products
 Sets the products to get the license for. Product values can be combined.
 ```cpp
-int tagDM_LTSConnectionParameters::products
+int products
 ```
 - **Value range**   
     A combined value of [`Product`]({{ site.enumerations }}other-enums.html#product) Enumeration items
@@ -214,5 +213,5 @@ int tagDM_LTSConnectionParameters::products
 ### reserved
 Reserved memory for the struct. The length of this array indicates the size of the memory reserved for this struct.
 ```cpp
-char tagDM_LTSConnectionParameters::reserved[52]
+char reserved[52]
 ```

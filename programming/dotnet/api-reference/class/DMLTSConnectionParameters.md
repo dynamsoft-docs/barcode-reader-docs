@@ -8,14 +8,12 @@ needAutoGenerateSidebar: false
 
 
 # DMLTSConnectionParameters
-
-Defines a struct to configure the parameters to connect to license tracking server.  
+`Deprecated`. Use [DMDLSConnectionParameters](DMDLSConnectionParameters.md) instead.  
 
 ```csharp
 public class DMLTSConnectionParameters
 ```  
 
----
 
 ## Attributes
     
@@ -37,7 +35,7 @@ public class DMLTSConnectionParameters
 
 ### MainServerURL
 
-The URL of the license tracking server.
+The URL of the license server.
 
 ```csharp
 string Dynamsoft.DMLTSConnectionParameters.MainServerURL
@@ -50,15 +48,15 @@ string Dynamsoft.DMLTSConnectionParameters.MainServerURL
     null
     
 - **Remarks**  
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.
+    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license servers for online verification.
 
 - **Remarks**   
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
+    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license servers for online verification.   
 
 
 ### StandbyServerURL
 
-The URL of the standby license tracking server.
+The URL of the standby license server.
 
 ```csharp
 string Dynamsoft.DMLTSConnectionParameters.StandbyServerURL
@@ -71,10 +69,10 @@ string Dynamsoft.DMLTSConnectionParameters.StandbyServerURL
     null
     
 - **Remarks**  
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.
+    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license servers for online verification.
 
 - **Remarks**   
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
+    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license servers for online verification.   
 
 
 ### HandshakeCode
@@ -93,7 +91,7 @@ string Dynamsoft.DMLTSConnectionParameters.HandshakeCode
 
 ### SessionPassword
 
-The session password of the handshake code set in license tracking server.
+The session password of the handshake code set in license server.
 
 ```csharp
 string Dynamsoft.DMLTSConnectionParameters.SessionPassword

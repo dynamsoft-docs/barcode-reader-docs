@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Java API Reference - BarcodeReader Parameter and Runtime Settings Advanced Methods
-description: This page shows BarcodeReader advanced Runtime Settings methods of Dynamsoft Barcode Reader for Java SDK API Reference.
-keywords: initRuntimeSettingsWithFile, initRuntimeSettingsWithString, appendTplFileToRuntimeSettings, appendTplStringToRuntimeSettings, getAllParameterTemplateNames, outputSettingsToFile, outputSettingsToString, parameter and runtime settings advanced methods, BarcodeReader, api reference, java
+title: Dynamsoft Barcode Reader Java API Reference - Advanced Settings Methods
+description: This page shows advanced Runtime Settings methods of Dynamsoft Barcode Reader for Java SDK API Reference.
+keywords: initRuntimeSettingsWithFile, initRuntimeSettingsWithString, appendTplFileToRuntimeSettings, appendTplStringToRuntimeSettings, getAllParameterTemplateNames, outputSettingsToFile, outputSettingsToString, Advanced Settings Methods, BarcodeReader, api reference, java
 needAutoGenerateSidebar: true
 ---
 
-# Java API Reference - BarcodeReader Parameter and Runtime Settings Advanced Methods
+# Advanced Settings Methods
 
   | Method               | Description |
   |----------------------|-------------|
@@ -47,7 +47,7 @@ reader.initRuntimeSettingsWithFile("your template file path", EnumConflictMode.C
 reader.destroy();
 ```
 
-&nbsp; 
+ 
 
 
 
@@ -76,7 +76,7 @@ reader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{
 reader.destroy();
 ```
 
-&nbsp; 
+ 
 
 
 
@@ -104,7 +104,7 @@ reader.appendTplFileToRuntimeSettings("your template file path", EnumConflictMod
 reader.destroy();
 ```
 
-&nbsp; 
+ 
 
 
 
@@ -134,7 +134,7 @@ reader.appendTplStringToRuntimeSettings("{\"Version\":\"3.0\", \"ImageParameter\
 reader.destroy();
 ```
 
-&nbsp; 
+ 
 
 
 
@@ -160,7 +160,7 @@ String[] templateNames = reader.getAllParameterTemplateNames();
 reader.destroy();
 ```
 
-&nbsp;
+
 
 
 
@@ -188,7 +188,7 @@ reader.outputSettingsToFile("your saving file path", "currentRuntimeSettings");
 reader.destroy();
 ```
 
-&nbsp; 
+ 
 
 
 
@@ -214,7 +214,7 @@ String settingStr = reader.outputSettingsToString("currentRuntimeSettings");
 reader.destroy();
 ```
 
-&nbsp;
+
 
 
 

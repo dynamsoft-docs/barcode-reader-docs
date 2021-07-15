@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader C Language API Reference - License Methods
-description: This page shows the license methods of Dynamsoft Barcode Reader for C Language.
-keywords: DBR_InitLicense, DBR_InitLicenseFromServer, DBR_InitLicenseFromLicenseContent, DBR_OutputLicenseToString, DBR_OutputLicenseToStringPtr, DBR_FreeLicenseString, license methods, api reference, c
+title: Dynamsoft Barcode Reader C Language API Reference - License Functions
+description: This page shows the license functions of Dynamsoft Barcode Reader for C Language.
+keywords: DBR_InitLicense, DBR_InitLicenseFromServer, DBR_InitLicenseFromLicenseContent, DBR_OutputLicenseToString, DBR_OutputLicenseToStringPtr, DBR_FreeLicenseString, license functions, api reference, c
 needAutoGenerateSidebar: true
 ---
 
-# C API Reference - License Methods
+# License Functions
 
-  | Method               | Description |
+  | Function               | Description |
   |----------------------|-------------|
   | [`DBR_InitLicense`](#dbr_initlicense) | Read product key and activate the SDK. |
   | [`DBR_InitLicenseFromServer`](#dbr_initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
@@ -16,13 +16,11 @@ needAutoGenerateSidebar: true
   | [`DBR_OutputLicenseToString`](#dbr_outputlicensetostring) | Output the license content to a string from the license server. |
   | [`DBR_OutputLicenseToStringPtr`](#dbr_outputlicensetostringptr) | Output the license content to a string from the license server. |
   | [`DBR_FreeLicenseString`](#dbr_freelicensestring) | Free memory allocated for the license string. |
-  | [`DBR_InitLTSConnectionParameters`](#dbr_initltsconnectionparameters) | Initializes a DM_LTSConnectionParameters struct with default values. |
-  | [`DBR_InitLicenseFromLTS`](#dbr_initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`DBR_InitDLSConnectionParameters`](#dbr_initdlsconnectionparameters) | Initializes a DM_DLSConnectionParameters struct with default values. |
+  | [`DBR_InitLicenseFromDLS`](#dbr_initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
   | [`DBR_GetIdleInstancesCount`](#dbr_getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
-  
-  
-  ---
-  
+  | [`DBR_InitLTSConnectionParameters`](#dbr_initltsconnectionparameters) | `Deprecated`. Use [DBR_InitDLSConnectionParameters](#dbr_initdlsconnectionparameters) instead. |
+  | [`DBR_InitLicenseFromLTS`](#dbr_initlicensefromlts) | `Deprecated`. Use [DBR_InitLicenseFromDLS](#dbr_initlicensefromdls) instead. |
   
   
   
@@ -49,7 +47,7 @@ DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 
@@ -71,7 +69,7 @@ DBR_API int DBR_InitLicenseFromServer (void* barcodeReader, const char* pLicense
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-&nbsp;
+
 
 
 
@@ -87,13 +85,13 @@ DBR_API int DBR_InitLicenseFromLicenseContent (void* barcodeReader, const char* 
 #### Parameters
 `[in] barcodeReader` Handle of the barcode reader instance.  
 `[in]	pLicenseKey`	The license key.  
-`[in]	pLicenseContent`	An encrypted string representing the license content (quota, expiration date, barcode type, etc.) obtained from the method [`DBR_OutputLicenseToString`](#dbr_outputlicensetostring).
+`[in]	pLicenseContent`	An encrypted string representing the license content (quota, expiration date, barcode type, etc.) obtained from the function [`DBR_OutputLicenseToString`](#dbr_outputlicensetostring).
 
 #### Return value
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-&nbsp;
+
 
 
 
@@ -116,9 +114,9 @@ Returns error code (returns 0 if the function operates successfully).
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
 #### Remark
-[`DBR_InitLicenseFromServer`](#dbr_initlicensefromserver) has to be successfully called before calling this method.
+[`DBR_InitLicenseFromServer`](#dbr_initlicensefromserver) has to be successfully called before calling this function.
 
-&nbsp;
+
 
 
 
@@ -141,9 +139,9 @@ Returns error code (returns 0 if the function operates successfully).
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
 #### Remark
-[`DBR_InitLicenseFromServer`](#dbr_initlicensefromserver) has to be successfully called before calling this method.
+[`DBR_InitLicenseFromServer`](#dbr_initlicensefromserver) has to be successfully called before calling this function.
 
-&nbsp;
+
 
 
 
@@ -160,21 +158,20 @@ DBR_API void DBR_FreeLicenseString (char** content)
 `[in]	content` The output string which stores the content of license. 
 
 #### Remark
-[`DBR_OutputLicenseToStringPtr`](#dbr_outputlicensetostringptr) has to be successfully called before calling this method.
+[`DBR_OutputLicenseToStringPtr`](#dbr_outputlicensetostringptr) has to be successfully called before calling this function.
 
 
-&nbsp;
 
 
-## DBR_InitLTSConnectionParameters
-Initializes a DM_LTSConnectionParameters struct with default values.
+## DBR_InitDLSConnectionParameters
+Initializes a DM_DLSConnectionParameters struct with default values.
 
 ```c
-DBR_API int DBR_InitLTSConnectionParameters (DM_LTSConnectionParameters *pLTSConnectionParameters)
+DBR_API int DBR_InitDLSConnectionParameters (DM_DLSConnectionParameters *pDLSConnectionParameters)
 ```   
 
 #### Parameters
-`[in, out] pLTSConnectionParameters` The struct of [`DM_LTSConnectionParameters`]({{ site.structs }}DMLTSConnectionParameters.html).   
+`[in, out] pDLSConnectionParameters` The struct of [`DM_DLSConnectionParameters`]({{ site.structs }}DMLTSConnectionParameters.html).   
 
 #### Return value
 Returns error code (returns 0 if the function operates successfully).    
@@ -183,23 +180,23 @@ Returns error code (returns 0 if the function operates successfully).
 #### Code Snippet
 ```c
 char errorBuf[512];
-DM_LTSConnectionParameters paramters;
-DBR_InitLTSConnectionParameters(&paramters);
+DM_DLSConnectionParameters paramters;
+DBR_InitDLSConnectionParameters(&paramters);
 paramters.handshakeCode = "Your handshake code";
-DBR_InitLicenseFromLTS(&paramters, errorBuf, 512);
+DBR_InitLicenseFromDLS(&paramters, errorBuf, 512);
 ```
 
-&nbsp;
 
-## DBR_InitLicenseFromLTS
+
+## DBR_InitLicenseFromDLS
 Initializes the barcode reader license and connects to the specified server for online verification.
 
 ```c
-DBR_API int DBR_InitLicenseFromLTS(DM_LTSConnectionParameters *pLTSConnectionParameters, char errorMsgBuffer[], const int errorMsgBufferLen)
+DBR_API int DBR_InitLicenseFromDLS(DM_DLSConnectionParameters *pDLSConnectionParameters, char errorMsgBuffer[], const int errorMsgBufferLen)
 ```   
 
 #### Parameters
-`[in] pLTSConnectionParameters` The struct [`DM_LTSConnectionParameters`]({{ site.structs }}DMLTSConnectionParameters.html) with customized settings.   
+`[in] pDLSConnectionParameters` The struct [`DM_DLSConnectionParameters`]({{ site.structs }}DMLTSConnectionParameters.html) with customized settings.   
 `[in, out] errorMsgBuffer` The buffer is allocated by caller and the recommending length is 256. The error message will be copied to the buffer.  
 `[in]	errorMsgBufferLen` The length of allocated buffer.  
 
@@ -210,13 +207,13 @@ Returns error code (returns 0 if the function operates successfully).
 #### Code Snippet
 ```c
 char errorBuf[512];
-DM_LTSConnectionParameters paramters;
-DBR_InitLTSConnectionParameters(&paramters);
+DM_DLSConnectionParameters paramters;
+DBR_InitDLSConnectionParameters(&paramters);
 paramters.handshakeCode = "Your handshake code";
-DBR_InitLicenseFromLTS(&paramters, errorBuf, 512);
+DBR_InitLicenseFromDLS(&paramters, errorBuf, 512);
 ```
 
-&nbsp;
+
 
 ## DBR_GetIdleInstancesCount
 Gets available instances count when charging by concurrent instances count.
@@ -242,5 +239,10 @@ else
 }
 ```
 
-&nbsp;
+
+## DBR_InitLTSConnectionParameters
+`Deprecated`. Use [DBR_InitDLSConnectionParameters](#dbr_initdlsconnectionparameters) instead.   
+
+## DBR_InitLicenseFromLTS
+`Deprecated`. Use [DBR_InitLicenseFromDLS](#dbr_initlicensefromdls) instead.  
 

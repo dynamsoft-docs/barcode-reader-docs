@@ -7,9 +7,9 @@ needAutoGenerateSidebar: false
 breadcrumbText: .NET
 ---
 
-# Dynamsoft Barcode Reader - for .Net Documentation
+# .Net Documentation
 
-The .Net documentation mainly consists of two parts. One is the [User Guide](#getting-started) that provides a brief guide for how to integrate the Dynamsoft Barcode Reader to your application or run the samples. The other is the [API Reference](#api-reference) that offers the manual of interfaces used for reading barcodes.
+This is the main page of Dynamsoft Barcode Reader SDK documentation for .Net Language. Go to [User Guide](#getting-started) which provides a brief guide for how to integrate the Dynamsoft Barcode Reader to your application or run the samples. Go to [API Reference](#api-reference) which offers the manual of interfaces used for reading barcodes.
 
 
 
@@ -23,13 +23,14 @@ The .Net documentation mainly consists of two parts. One is the [User Guide](#ge
 - <a href="https://www.dynamsoft.com/barcode-reader/resources/code-gallery/?tag=vb.net" target="_blank">Code Gallery - VB.NET</a>
 
 ## API Reference
-- [BarcodeReader](api-reference/#barcodereader-methods)
-- [Class](api-reference/#classes)
-- [Struct](api-reference/#structs)
+- [API Reference](api-reference/index.md)
 
 ## Release Notes
 - [Version 8.x](release-notes/dotnet-8.md)
 - [Version 7.6 and below](release-notes/dotnet-7.md)
+
+## Upgrade Instructions
+- [How to upgrade to latest version](upgrade-instruction.md)
 
 ## Online Store
 - <a href="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/" target="_blank">Desktop and Server Deployment</a>

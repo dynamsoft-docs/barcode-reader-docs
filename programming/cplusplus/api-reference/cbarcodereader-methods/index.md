@@ -3,11 +3,10 @@ layout: default-layout
 title: Dynamsoft Barcode Reader C++ API Reference - CBarcodeReader Methods
 description: This page shows CBarcodeReader methods of Dynamsoft Barcode Reader for C++ Language.
 keywords: methods, CBarcodeReader, api reference, c++
-needAutoGenerateSidebar: false
-breadcrumbText: CBarcodeReader Methods
+needAutoGenerateSidebar: true
 ---
 
-# Dynamsoft Barcode Reader SDK - C++ CBarcodeReader Methods
+# class dynamsoft::dbr::CBarcodeReader
 
 ## Constructor and Destructor
    
@@ -17,7 +16,22 @@ breadcrumbText: CBarcodeReader Methods
   | [`~CBarcodeReader`](constructor-and-destructor.md#~cbarcodereader) | Destructor of `CBarcodeReader` object.|
    
    
-&nbsp; 
+ ## License
+  
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`InitLicense`](license.md#initlicense) | Read product key and activate the SDK. |
+  | [`InitLicenseFromServer`](license.md#initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
+  | [`InitLicenseFromLicenseContent`](license.md#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
+  | [`OutputLicenseToString`](license.md#outputlicensetostring) | Output the license content to a string from the license server. |
+  | [`OutputLicenseToStringPtr`](license.md#outputlicensetostringptr) | Output the license content to a string from the license server. |
+  | [`FreeLicenseString`](license.md#freelicensestring) | Free memory allocated for the license string. |
+  | [`InitDLSConnectionParameters`](license.md#initdlsconnectionparameters) | Initializes a DM_DLSConnectionParameters struct with default values. |
+  | [`InitLicenseFromDLS`](license.md#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`GetIdleInstancesCount`](license.md#getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
+  | [`InitLTSConnectionParameters`](license.md#initltsconnectionparameters) | `Deprecated`. Use [InitDLSConnectionParameters](license.md#initdlsconnectionparameters) instead. |
+  | [`InitLicenseFromLTS`](license.md#initlicensefromlts) | `Deprecated`. Use [InitLicenseFromDLS](license.md#initlicensefromdls) instead. |
+
    
    
 ## Decode
@@ -33,13 +47,9 @@ breadcrumbText: CBarcodeReader Methods
   | [`DecodeIntermediateResults`](decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
    
    
-&nbsp; 
    
-   
-   
-## Parameter and Runtime Settings
-
-### Basic
+ 
+## Basic Settings Functions
    
   | Method               | Description |
   |----------------------|-------------|
@@ -49,7 +59,7 @@ breadcrumbText: CBarcodeReader Methods
   | [`UpdateRuntimeSettings`](parameter-and-runtime-settings-basic.md#updateruntimesettings) | Modify and update the current runtime settings. |
   | [`ResetRuntimeSettings`](parameter-and-runtime-settings-basic.md#resetruntimesettings) | Reset runtime settings to default. |
 
-### Advanced
+## Advanced Settings Functions
   
   | Method               | Description |
   |----------------------|-------------|
@@ -63,26 +73,9 @@ breadcrumbText: CBarcodeReader Methods
   | [`OutputSettingsToString`](parameter-and-runtime-settings-advanced.md#outputsettingstostring) | Output runtime settings to a string. |
   | [`OutputSettingsToStringPtr`](parameter-and-runtime-settings-advanced.md#outputsettingstostringptr) | Output runtime settings to a string. |
   | [`FreeSettingsString`](parameter-and-runtime-settings-advanced.md#freesettingsstring) | Free memory allocated for runtime settings string. |
-   
       
-&nbsp; 
+   
 
-   
-## License
-  
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`InitLicense`](license.md#initlicense) | Read product key and activate the SDK. |
-  | [`InitLicenseFromServer`](license.md#initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
-  | [`InitLicenseFromLicenseContent`](license.md#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
-  | [`OutputLicenseToString`](license.md#outputlicensetostring) | Output the license content to a string from the license server. |
-  | [`OutputLicenseToStringPtr`](license.md#outputlicensetostringptr) | Output the license content to a string from the license server. |
-  | [`FreeLicenseString`](license.md#freelicensestring) | Free memory allocated for the license string. |
-  | [`InitLTSConnectionParameters`](license.md#initltsconnectionparameters) | Initializes a DM_LTSConnectionParameters struct with default values. |
-  | [`InitLicenseFromLTS`](license.md#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
-   
-   
-&nbsp; 
    
    
 ## Result
@@ -95,7 +88,7 @@ breadcrumbText: CBarcodeReader Methods
   | [`FreeIntermediateResults`](result.md#freeintermediateresults) | Free memory allocated for the intermediate results. |
    
       
-&nbsp; 
+
 
    
 ## Status Retrieval
@@ -106,7 +99,7 @@ breadcrumbText: CBarcodeReader Methods
   | [`GetVersion`](status-retrieval.md#getversion) | Get version information of SDK.|
    
       
-&nbsp; 
+
 
    
 ## Video
@@ -140,16 +133,5 @@ breadcrumbText: CBarcodeReader Methods
    |----------------------|-------------|
    | [`GetLengthOfFrameQueue`](video.md#getlengthofframequeue) | Get length of current inner frame queue. |
  
-   
-&nbsp; 
 
-
-## `CBarcodeReader` Protected Attribute
-  
-  | Attribute            | Description |
-  |----------------------|-------------|
-  | [`m_pBarcodeReader`]()  | |
-  
-   
-&nbsp; 
 
