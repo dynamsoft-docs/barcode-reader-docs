@@ -22,7 +22,7 @@ noTitleIndex: true
 
 - Improved the confidence calculation algorithm for oneD barcode results. Bounded by 30, the misread results will be scored below 30-confidence as many as possible.
 
-# 8.4 (06/08/2021)
+## 8.4 (06/08/2021)
 
 ### New
 
