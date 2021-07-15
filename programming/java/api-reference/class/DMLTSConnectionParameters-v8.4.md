@@ -9,7 +9,7 @@ needAutoGenerateSidebar: false
 
 # DMLTSConnectionParameters
 
-`Deprecated`. Use [DMDLSConnectionParameters](DMDLSConnectionParameters.md) instead.  
+Defines a struct to configure the parameters to connect to license server.  
 
 
 

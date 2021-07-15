@@ -1,42 +1,44 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Java API Reference - DMLTSConnectionParameters Class
-description: This page shows the DMLTSConnectionParameters Class of Dynamsoft Barcode Reader for Java SDK API Reference.
-keywords: DMLTSConnectionParameters, class, api reference, java
+title: Dynamsoft Barcode Reader .NET API Reference - DMDLSConnectionParameters Class
+description: This page shows the DMDLSConnectionParameters Class of Dynamsoft Barcode Reader for .NET SDK.
+keywords: DMDLSConnectionParameters, class, api reference, .Net
 needAutoGenerateSidebar: false
 ---
 
 
-# DMLTSConnectionParameters
+# DMDLSConnectionParameters
+Defines a struct to configure the parameters to connect to license server.  
 
-`Deprecated`. Use [DMDLSConnectionParameters](DMDLSConnectionParameters.md) instead.  
-
+```csharp
+public class DMDLSConnectionParameters
+```  
 
 
 ## Attributes
     
 | Attribute | Type |
 |---------- | ---- |
-| [`mainServerURL`](#mainserverurl) | *String* |
-| [`standbyServerURL`](#standbyserverurl) | *String* |
-| [`handshakeCode`](#handshakecode) | *String* |
-| [`sessionPassword`](#sessionpassword) | *String* |
-| [`deploymentType`](#deploymenttype) | *int* |
-| [`chargeWay`](#chargeway) | *int* |
-| [`uuidGenerationMethod`](#uuidgenerationmethod) | *int* |
-| [`maxBufferDays`](#maxbufferdays) | *int* |
-| [`limitedLicenseModules`](#limitedlicensemodules) | *int[]* |
-| [`maxConcurrentInstanceCount`](#maxconcurrentinstancecount) | *int* |
-| [`organizationID`](#organizationid) | *String* |
-| [`products`](#products) | *int* |
+| [`MainServerURL`](#mainserverurl) | *string* |
+| [`StandbyServerURL`](#standbyserverurl) | *string* |
+| [`HandshakeCode`](#handshakecode) | *string* |
+| [`SessionPassword`](#sessionpassword) | *string* |
+| [`DeploymentType`](#deploymenttype) | *EnumDMDeploymentType* |
+| [`ChargeWay`](#chargeway) | *EnumDMChargeWay* |
+| [`UUIDGenerationMethod`](#uuidgenerationmethod) | *EnumDMUUIDGenerationMethod* |
+| [`MaxBufferDays`](#maxbufferdays) | *int* |
+| [`LimitedLicenseModules`](#limitedlicensemodules) | *EnumDMLicenseModule[]* |
+| [`MaxConcurrentInstanceCount`](#maxconcurrentinstancecount) | *int* |
+| [`OrganizationID`](#organizationid) | *string* |
+| [`Products`](#products) | *int* |
 
 
-### mainServerURL
+### MainServerURL
 
 The URL of the license server.
 
-```java
-String com.dynamsoft.dbr.DMLTSConnectionParameters.mainServerURL
+```csharp
+string Dynamsoft.DMDLSConnectionParameters.MainServerURL
 ```
 
 - **Value range**   
@@ -44,17 +46,20 @@ String com.dynamsoft.dbr.DMLTSConnectionParameters.mainServerURL
       
 - **Default value**   
     null
+    
+- **Remarks**  
+    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license servers for online verification.
 
 - **Remarks**   
     If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license servers for online verification.   
 
 
-### standbyServerURL
+### StandbyServerURL
 
 The URL of the standby license server.
 
-```java
-String com.dynamsoft.dbr.DMLTSConnectionParameters.standbyServerURL
+```csharp
+string Dynamsoft.DMDLSConnectionParameters.StandbyServerURL
 ```
 
 - **Value range**   
@@ -62,17 +67,20 @@ String com.dynamsoft.dbr.DMLTSConnectionParameters.standbyServerURL
       
 - **Default value**   
     null
+    
+- **Remarks**  
+    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license servers for online verification.
 
 - **Remarks**   
     If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license servers for online verification.   
 
 
-### handshakeCode
+### HandshakeCode
 
 The handshake code.
 
-```java
-String com.dynamsoft.dbr.DMLTSConnectionParameters.handshakeCode
+```csharp
+string Dynamsoft.DMDLSConnectionParameters.HandshakeCode
 ```
 
 - **Value range**   
@@ -81,12 +89,12 @@ String com.dynamsoft.dbr.DMLTSConnectionParameters.handshakeCode
 - **Default value**   
     null
 
-### sessionPassword
+### SessionPassword
 
 The session password of the handshake code set in license server.
 
-```java
-String com.dynamsoft.dbr.DMLTSConnectionParameters.sessionPassword
+```csharp
+string Dynamsoft.DMDLSConnectionParameters.SessionPassword
 ```
 
 - **Value range**   
@@ -96,12 +104,12 @@ String com.dynamsoft.dbr.DMLTSConnectionParameters.sessionPassword
     null
 
 
-### deploymentType
+### DeploymentType
 
 Sets the deployment type.
 
-```java
-int com.dynamsoft.dbr.DMLTSConnectionParameters.deploymentType
+```csharp
+EnumDMDeploymentType Dynamsoft.DMDLSConnectionParameters.DeploymentType
 ```
 
 - **Value range**   
@@ -113,12 +121,12 @@ int com.dynamsoft.dbr.DMLTSConnectionParameters.deploymentType
 - **See also**  
     [`EnumDMDeploymentType`]({{ site.enumerations }}other-enums.html#dm_deploymenttype)    
 
-### chargeWay
+### ChargeWay
 
 Sets the charge way.
 
-```java
-int com.dynamsoft.dbr.DMLTSConnectionParameters.chargeWay
+```csharp
+EnumDMChargeWay Dynamsoft.DMDLSConnectionParameters.ChargeWay
 ```
 
 - **Value range**   
@@ -131,12 +139,12 @@ int com.dynamsoft.dbr.DMLTSConnectionParameters.chargeWay
     [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeWay)    
 
 
-### uuidGenerationMethod
+### UUIDGenerationMethod
 
 Sets the method to generate UUID.
 
-```java
-int com.dynamsoft.dbr.DMLTSConnectionParameters.uuidGenerationMethod
+```csharp
+EnumDMUUIDGenerationMethod Dynamsoft.DMDLSConnectionParameters.UUIDGenerationMethod
 ```
 
 - **Value range**   
@@ -148,27 +156,27 @@ int com.dynamsoft.dbr.DMLTSConnectionParameters.uuidGenerationMethod
 - **See also**  
     [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)    
 
-### maxBufferDays
+### MaxBufferDays
 
 Sets the max days to buffer the license info.
 
-```java
-int com.dynamsoft.dbr.DMLTSConnectionParameters.maxBufferDays
+```csharp
+int Dynamsoft.DMDLSConnectionParameters.MaxBufferDays
 ```
 
 - **Value range**   
     [7,0x7fffffff]  
       
 - **Default value**   
-    7   
+    7  
     
 
-### limitedLicenseModules
+### LimitedLicenseModules
 
 Sets the license modules to use.
 
-```java
-int[] com.dynamsoft.dbr.DMLTSConnectionParameters.limitedLicenseModules
+```csharp
+EnumDMLicenseModule[] Dynamsoft.DMDLSConnectionParameters.LimitedLicenseModules
 ```
 
 - **Value range**   
@@ -181,10 +189,10 @@ int[] com.dynamsoft.dbr.DMLTSConnectionParameters.limitedLicenseModules
     [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)    
 
 
-### maxConcurrentInstanceCount
+### MaxConcurrentInstanceCount
 Sets the max concurrent instance count.
-```java
-int com.dynamsoft.dbr.DMLTSConnectionParameters.maxConcurrentInstanceCount
+```csharp
+int Dynamsoft.DMDLSConnectionParameters.MaxConcurrentInstanceCount
 ```
 - **Value range**   
     [1,0x7fffffff]   
@@ -192,30 +200,31 @@ int com.dynamsoft.dbr.DMLTSConnectionParameters.maxConcurrentInstanceCount
 - **Default value**   
     1
 - **Remarks**   
-    It works only when [chargeWay](#chargeway) is setting to DM_CW_CONCURRENT_INSTANCE_COUNT
+    It works only when [ChargeWay](#chargeway) is setting to DM_CW_CONCURRENT_INSTANCE_COUNT
     It is the total number of instances used by multiple processes. For example, if there are two .EXE are running on the server and each .EXE may have 10 instances at most, then you should set maxConcurrentInstanceCount to 20.
 
 
-### organizationID
+### OrganizationID
 The organization ID got from Dynamsoft.
-```java
-String com.dynamsoft.dbr.DMLTSConnectionParameters.organizationID
+
+```csharp
+string Dynamsoft.DMDLSConnectionParameters.OrganizationID
 ```
+
 - **Value range**   
     Any string value   
       
 - **Default value**   
-    ""
+    null
 
-### products
+
+### Products
 Sets the products to get the license for. Product values can be combined.
-```java
-int com.dynamsoft.dbr.DMLTSConnectionParameters.products
+```csharp
+int Dynamsoft.DMDLSConnectionParameters.Products
 ```
 - **Value range**   
     A combined value of [`Product`]({{ site.enumerations }}other-enums.html#product) Enumeration items
       
 - **Default value**   
     `PROD_ALL`
-    
-

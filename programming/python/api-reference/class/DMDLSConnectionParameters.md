@@ -1,21 +1,22 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Python API Reference - DMLTSConnectionParameters Class
-description: This page shows the DMLTSConnectionParameters Class of Dynamsoft Barcode Reader for Python SDK.
-keywords: DMLTSConnectionParameters, class, api reference, python
+title: Dynamsoft Barcode Reader Python API Reference - DMDLSConnectionParameters Class
+description: This page shows the DMDLSConnectionParameters Class of Dynamsoft Barcode Reader for Python SDK.
+keywords: DMDLSConnectionParameters, class, api reference, python
 needAutoGenerateSidebar: false
 ---
 
 
-# DMLTSConnectionParameters
-`Deprecated`. Use [DMDLSConnectionParameters](DMDLSConnectionParameters.md) instead.  
+# DMDLSConnectionParameters
+Defines a struct to configure the parameters to connect to license server.  
 
 ## Typedefs
 
 ```python
-class DMLTSConnectionParameters
+class DMDLSConnectionParameters
 ```
 
+---
 
 ## Attributes
     
@@ -38,7 +39,7 @@ class DMLTSConnectionParameters
 ### main_server_url
 The URL of the license server.
 ```python
-DMLTSConnectionParameters.main_server_url
+DMDLSConnectionParameters.main_server_url
 ```
 - **Value range**   
     Any string value   
@@ -53,7 +54,7 @@ DMLTSConnectionParameters.main_server_url
 ### standby_server_url
 The URL of the standby license server.
 ```python
-DMLTSConnectionParameters.standby_server_url
+DMDLSConnectionParameters.standby_server_url
 ```
 - **Value range**   
     Any string value   
@@ -68,7 +69,7 @@ DMLTSConnectionParameters.standby_server_url
 ### handshake_code
 The handshake code.
 ```python
-DMLTSConnectionParameters.handshake_code
+DMDLSConnectionParameters.handshake_code
 ```
 - **Value range**   
     Any string value   
@@ -79,7 +80,7 @@ DMLTSConnectionParameters.handshake_code
 ### session_password
 The session password of the handshake code set in license server.
 ```python
-DMLTSConnectionParameters.session_password
+DMDLSConnectionParameters.session_password
 ```
 - **Value range**   
     Any string value   
@@ -90,7 +91,7 @@ DMLTSConnectionParameters.session_password
 ### deployment_type
 Sets the deployment type.
 ```python
-DMLTSConnectionParameters.deployment_type
+DMDLSConnectionParameters.deployment_type
 ```
 - **Value range**   
     A value of [`EnumDMDeploymentType`]({{ site.enumerations }}other-enums.html#dm_deployment_type) Enumeration items.
@@ -105,7 +106,7 @@ DMLTSConnectionParameters.deployment_type
 ### charge_way
 Sets the charge way.
 ```python
-DMLTSConnectionParameters.charge_way
+DMDLSConnectionParameters.charge_way
 ```
 - **Value range**   
     A value of [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway) Enumeration items.
@@ -120,7 +121,7 @@ DMLTSConnectionParameters.charge_way
 ### uuid_generation_method
 Sets the method to generate UUID.
 ```python
-DMLTSConnectionParameters.uuid_generation_method
+DMDLSConnectionParameters.uuid_generation_method
 ```
 - **Value range**   
     A value of [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod) Enumeration items.
@@ -135,7 +136,7 @@ DMLTSConnectionParameters.uuid_generation_method
 ### max_buffer_days
 Sets the max days to buffer the license info.
 ```python
-DMLTSConnectionParameters.max_buffer_days
+DMDLSConnectionParameters.max_buffer_days
 ```
 - **Value range**   
     [0,0x7fffffff]   
@@ -146,7 +147,7 @@ DMLTSConnectionParameters.max_buffer_days
 ### limited_license_modules
 Sets the license modules to use.
 ```python
-DMLTSConnectionParameters.limited_license_modules
+DMDLSConnectionParameters.limited_license_modules
 ```
 - **Value range**   
     Each list item can be any one of the [`EnumLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule) Enumeration items.
@@ -161,7 +162,7 @@ DMLTSConnectionParameters.limited_license_modules
 ### max_concurrent_instance_count
 Sets the max concurrent instance count.
 ```python
-DMLTSConnectionParameters::max_concurrent_instance_count
+DMDLSConnectionParameters::max_concurrent_instance_count
 ```
 - **Value range**   
     [1,0x7fffffff]   
@@ -177,7 +178,7 @@ DMLTSConnectionParameters::max_concurrent_instance_count
 The organization ID got from Dynamsoft.
 
 ```python
-DMLTSConnectionParameters.organization_id
+DMDLSConnectionParameters.organization_id
 ```
 
 - **Value range**   
@@ -189,7 +190,7 @@ DMLTSConnectionParameters.organization_id
 ### products
 Sets the products to get the license for. Product values can be combined.
 ```python
-DMLTSConnectionParameters.products
+DMDLSConnectionParameters.products
 ```
 - **Value range**   
     A combined value of [`EnumProduct`]({{ site.enumerations }}other-enums.html#product) Enumeration items

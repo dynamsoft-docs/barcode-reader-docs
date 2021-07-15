@@ -15,7 +15,8 @@ needAutoGenerateSidebar: false
  | [`Contour`]({{ site.structs }}Contour.html?src=c) | Stores the contour information. |
  | [`DBRPoint`]({{ site.structs }}DBRPoint.html?src=c) | Stores an x- and y-coordinate pair in two-dimensional space. |
  | [`DataMatrixDetails`]({{ site.structs }}DataMatrixDetails.html?src=c) | Stores the DataMatrix details. |	
- | [`DM_LTSConnectionParameters`]({{ site.structs }}DMLTSConnectionParameters.html?src=c) | Defines a struct to configure the parameters to connect to license tracking server. |
+ | [`DM_DLSConnectionParameters`]({{ site.structs }}DMDLSConnectionParameters.html?src=c) | Defines a struct to configure the parameters to connect to license tracking server. |
+ | [`DM_LTSConnectionParameters`]({{ site.structs }}DMLTSConnectionParameters.html?src=c) | `Deprecated`. Use [`DM_DLSConnectionParameters`]({{ site.structs }}DMDLSConnectionParameters.html?src=c) instead. |
  | [`ExtendedResult`]({{ site.structs }}ExtendedResult.html?src=c) | Stores the extended result. |
  | [`FrameDecodingParameters`]({{ site.structs }}FrameDecodingParameters.html?src=c) | Defines a struct to configure the frame decoding Parameters. |
  | [`FurtherModes`]({{ site.structs }}FurtherModes.html?src=c) | Stores the FurtherModes. |

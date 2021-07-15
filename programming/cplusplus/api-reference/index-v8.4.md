@@ -28,11 +28,9 @@ needGenerateH3Content: true
   | [`OutputLicenseToString`](cbarcodereader-methods/license.md#outputlicensetostring) | Output the license content to a string from the license server. |
   | [`OutputLicenseToStringPtr`](cbarcodereader-methods/license.md#outputlicensetostringptr) | Output the license content to a string from the license server. |
   | [`FreeLicenseString`](cbarcodereader-methods/license.md#freelicensestring) | Free memory allocated for the license string. |
-  | [`InitDLSConnectionParameters`](cbarcodereader-methods/license.md#initdlsconnectionparameters) | Initializes a DM_DLSConnectionParameters struct with default values. |
-  | [`InitLicenseFromDLS`](cbarcodereader-methods/license.md#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`InitLTSConnectionParameters`](cbarcodereader-methods/license.md#initltsconnectionparameters) | Initializes a DM_LTSConnectionParameters struct with default values. |
+  | [`InitLicenseFromLTS`](cbarcodereader-methods/license.md#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
   | [`GetIdleInstancesCount`](cbarcodereader-methods/license.md#getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
-  | [`InitLTSConnectionParameters`](cbarcodereader-methods/license.md#initltsconnectionparameters) | `Deprecated`. Use [InitDLSConnectionParameters](cbarcodereader-methods/license.md#initdlsconnectionparameters) instead. |
-  | [`InitLicenseFromLTS`](cbarcodereader-methods/license.md#initlicensefromlts) | `Deprecated`. Use [InitLicenseFromDLS](cbarcodereader-methods/license.md#initlicensefromdls) instead. |
    
 
 ### Decode Methods
@@ -140,8 +138,7 @@ needGenerateH3Content: true
  | [`Contour`]({{ site.structs }}Contour.html?src=cpp) | Stores the contour information. |
  | [`DBRPoint`]({{ site.structs }}DBRPoint.html?src=cpp) | Stores an x- and y-coordinate pair in two-dimensional space. |
  | [`DataMatrixDetails`]({{ site.structs }}DataMatrixDetails.html?src=cpp) | Stores the DataMatrix details. |	
- | [`DM_DLSConnectionParameters`]({{ site.structs }}DMDLSConnectionParameters.html?src=c) | Defines a struct to configure the parameters to connect to license tracking server. |
- | [`DM_LTSConnectionParameters`]({{ site.structs }}DMLTSConnectionParameters.html?src=c) | `Deprecated`. Use [`DM_DLSConnectionParameters`]({{ site.structs }}DMDLSConnectionParameters.html?src=c) instead. |
+ | [`DM_LTSConnectionParameters`]({{ site.structs }}DMLTSConnectionParameters.html?src=cpp) | Defines a struct to configure the parameters to connect to license tracking server. |
  | [`ExtendedResult`]({{ site.structs }}ExtendedResult.html?src=cpp) | Stores the extended result. |
  | [`FrameDecodingParameters`]({{ site.structs }}FrameDecodingParameters.html?src=cpp) | Defines a struct to configure the frame decoding Parameters. |
  | [`FurtherModes`]({{ site.structs }}FurtherModes.html?src=cpp) | Stores the FurtherModes. |

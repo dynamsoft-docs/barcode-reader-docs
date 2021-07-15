@@ -15,11 +15,9 @@ needAutoGenerateSidebar: true
   | [`init_license_from_server`](#init_license_from_server) | Initializes license and connect to the specified server for online verification. |
   | [`init_license_from_license_content`](#init_license_from_license_content) | Initializes barcode reader license and connects to the specified server for online verification. |
   | [`output_license_to_string`](#output_license_to_string) | Outputs the license content as an encrypted string from the license server to be used for offline license verification.|
-  | [`init_dls_connection_parameters`](#init_dls_connection_parameters) | Initializes a DMDLSConnectionParameters struct with default values. |
-  | [`init_license_from_dls`](#init_license_from_dls) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`init_lts_connection_parameters`](#init_lts_connection_parameters) | Initializes a DMLTSConnectionParameters struct with default values. |
+  | [`init_license_from_lts`](#init_license_from_lts) | Initializes the barcode reader license and connects to the specified server for online verification. |
   | [`get_idle_instances_count`](#get_idle_instances_count) | Gets available instances count when charging by concurrent instances count. |
-  | [`init_lts_connection_parameters`](#init_lts_connection_parameters) | `Deprecated`. Use [init_dls_connection_parameters](#init_dls_connection_parameters) instead. |
-  | [`init_license_from_lts`](#init_license_from_lts) | `Deprecated`. Use [init_license_from_dls](#init_license_from_dls) instead. |
   
 
 ## init_license
@@ -88,31 +86,31 @@ BarcodeReader.output_license_to_string()
 
 [`BarcodeReaderError`](../class/BarcodeReaderError.md) : If error happens, this function will throw a BarcodeReaderError exception that can report the detailed error message.
 
-## init_dls_connection_parameters
+## init_lts_connection_parameters
 
-Initializes a DMDLSConnectionParameters struct with default values.
+Initializes a DMLTSConnectionParameters struct with default values.
 
 ```python
-BarcodeReader.init_dls_connection_parameters()
+BarcodeReader.init_lts_connection_parameters()
 ```
 
 ### Return value
 
-`DMDLSConnectionParameters` <*class DMDLSConnectionParameters*> : A DMDLSConnectionParameters struct with default values.
+`DMLTSConnectionParameters` <*class DMLTSConnectionParameters*> : A DMLTSConnectionParameters struct with default values.
 
 
 
-## init_license_from_dls
+## init_license_from_lts
 
 Initializes the barcode reader license and connects to the specified server for online verification.
 
 ```python
-BarcodeReader.init_license_from_dls(dls_connection_parameters)
+BarcodeReader.init_license_from_lts(lts_connection_parameters)
 ```
 
 ### Parameters
 
-- `[in]	dls_connection_parameters` <*class DMDLSConnectionParameters*> : The struct DMDLSConnectionParameters with customized settings.  
+- `[in]	lts_connection_parameters` <*class DMLTSConnectionParameters*> : The struct DMLTSConnectionParameters with customized settings.  
 
 ### Return value
 
@@ -130,8 +128,3 @@ BarcodeReader.get_idle_instances_count()
 #### Return value
 count <*int*> : Returns available instances count.    
 
-## init_lts_connection_parameters
-`Deprecated`. Use [init_dls_connection_parameters](#init_dls_connection_parameters) instead.
-
-## init_license_from_lts
-`Deprecated`. Use [init_license_from_dls](#init_license_from_dls) instead.

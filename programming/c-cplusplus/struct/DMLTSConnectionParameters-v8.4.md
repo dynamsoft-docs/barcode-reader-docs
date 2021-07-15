@@ -6,13 +6,14 @@ keywords: DM_LTSConnectionParameters, struct, c, c++
 needAutoGenerateSidebar: false
 ---
 
+
 # DM_LTSConnectionParameters
-`Deprecated`. Use [DM_DLSConnectionParameters](DMDLSConnectionParameters.md) instead.  
+Defines a struct to configure the parameters to connect to license tracking server.  
 
 ## Typedefs
 
 ```cpp
-typedef struct tagDM_DLSConnectionParameters  DM_LTSConnectionParameters
+typedef struct tagDM_LTSConnectionParameters  DM_LTSConnectionParameters
 ```
 
 ---
@@ -38,9 +39,9 @@ typedef struct tagDM_DLSConnectionParameters  DM_LTSConnectionParameters
 
 
 ### mainServerURL
-The URL of the license  server.
+The URL of the license tracking server.
 ```cpp
-char* mainServerURL
+char* tagDM_LTSConnectionParameters::mainServerURL
 ```
 - **Value range**   
     Any string value   
@@ -49,13 +50,13 @@ char* mainServerURL
     ""
 
 - **Remarks**   
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license  servers for online verification.   
+    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
 
 
 ### standbyServerURL
-The URL of the standby license  server.
+The URL of the standby license tracking server.
 ```cpp
-char* standbyServerURL
+char* tagDM_LTSConnectionParameters::standbyServerURL
 ```
 - **Value range**   
     Any string value   
@@ -64,13 +65,13 @@ char* standbyServerURL
     ""
 
 - **Remarks**   
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license  servers for online verification.   
+    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
 
 
 ### handshakeCode
 The handshake code.
 ```cpp
-char* handshakeCode
+char* tagDM_LTSConnectionParameters::handshakeCode
 ```
 - **Value range**   
     Any string value   
@@ -79,9 +80,9 @@ char* handshakeCode
     ""
 
 ### sessionPassword
-The session password of the handshake code set in license  server.
+The session password of the handshake code set in license tracking server.
 ```cpp
-char* sessionPassword
+char* tagDM_LTSConnectionParameters::sessionPassword
 ```
 - **Value range**   
     Any string value   
@@ -92,7 +93,7 @@ char* sessionPassword
 ### deploymentType
 Sets the deployment type.
 ```cpp
-DM_DeploymentType deploymentType
+DM_DeploymentType tagDM_LTSConnectionParameters::deploymentType
 ```
 - **Value range**   
     A value of [`DM_DeploymentType`]({{ site.enumerations }}other-enums.html#dm_deploymenttype) Enumeration items.
@@ -107,7 +108,7 @@ DM_DeploymentType deploymentType
 ### chargeWay
 Sets the charge way.
 ```cpp
-DM_ChargeWay chargeWay
+DM_ChargeWay tagDM_LTSConnectionParameters::chargeWay
 ```
 - **Value range**   
     A value of [`DM_ChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway) Enumeration items.
@@ -122,7 +123,7 @@ DM_ChargeWay chargeWay
 ### UUIDGenerationMethod
 Sets the method to generate UUID.
 ```cpp
-DM_UUIDGenerationMethod UUIDGenerationMethod
+DM_UUIDGenerationMethod tagDM_LTSConnectionParameters::UUIDGenerationMethod
 ```
 - **Value range**   
     A value of [`DM_UUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod) Enumeration items.
@@ -137,7 +138,7 @@ DM_UUIDGenerationMethod UUIDGenerationMethod
 ### maxBufferDays
 Sets the max days to buffer the license info.
 ```cpp
-int maxBufferDays
+int tagDM_LTSConnectionParameters::maxBufferDays
 ```
 - **Value range**   
     [7,0x7fffffff]   
@@ -148,7 +149,7 @@ int maxBufferDays
 ### limitedLicenseModulesCount
 Sets the count of license modules to use.
 ```cpp
-int limitedLicenseModulesCount
+int tagDM_LTSConnectionParameters::limitedLicenseModulesCount
 ```
 - **Value range**   
     [0,0x7fffffff]   
@@ -159,7 +160,7 @@ int limitedLicenseModulesCount
 ### limitedLicenseModules
 Sets the license modules to use.
 ```cpp
-DM_LicenseModule* limitedLicenseModules
+DM_LicenseModule* tagDM_LTSConnectionParameters::limitedLicenseModules
 ```
 - **Value range**   
     Each array item can be any one of the [`DM_LicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule) Enumeration items.
@@ -174,7 +175,7 @@ DM_LicenseModule* limitedLicenseModules
 ### maxConcurrentInstanceCount
 Sets the max concurrent instance count.
 ```cpp
-int maxConcurrentInstanceCount
+int tagDM_LTSConnectionParameters::maxConcurrentInstanceCount
 ```
 - **Value range**   
     [1,0x7fffffff]   
@@ -190,7 +191,7 @@ int maxConcurrentInstanceCount
 ### organizationID
 The organization ID got from Dynamsoft.
 ```cpp
-char* organizationID
+char* tagDM_LTSConnectionParameters::organizationID
 ```
 - **Value range**   
     Any string value   
@@ -201,7 +202,7 @@ char* organizationID
 ### products
 Sets the products to get the license for. Product values can be combined.
 ```cpp
-int products
+int tagDM_LTSConnectionParameters::products
 ```
 - **Value range**   
     A combined value of [`Product`]({{ site.enumerations }}other-enums.html#product) Enumeration items
@@ -213,5 +214,5 @@ int products
 ### reserved
 Reserved memory for the struct. The length of this array indicates the size of the memory reserved for this struct.
 ```cpp
-char reserved[52]
+char tagDM_LTSConnectionParameters::reserved[52]
 ```

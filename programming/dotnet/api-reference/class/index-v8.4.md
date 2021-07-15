@@ -13,7 +13,6 @@ breadcrumbText: Auxiliary Class
 - [`BarcodeReaderException`](BarcodeReaderException.md)	
 - [`Contour`](Contour.md)	 
 - [`DataMatrixDetails`](DataMatrixDetails.md)	
-- [`DMDLSConnectionParameters`](DMDLSConnectionParameters.md) 
 - [`DMLTSConnectionParameters`](DMLTSConnectionParameters.md) 
 - [`ExtendedResult`](ExtendedResult.md)	
 - [`FrameDecodingParameters`](FrameDecodingParameters.md)	

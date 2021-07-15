@@ -36,11 +36,9 @@ needGenerateH3Content: true
   | [`InitLicenseFromServer`](BarcodeReader/license.md#initlicensefromserver) | Initializes license and connect to the specified server for online verification. |
   | [`InitLicenseFromLicenseContent`](BarcodeReader/license.md#initlicensefromlicensecontent) | Initializes license from the license content on client machine for offline verification. |
   | [`OutputLicenseToString`](BarcodeReader/license.md#outputlicensetostring) | Outputs the license content as an encrypted string from the license server to be used for offline license verification.|
-  | [`InitDLSConnectionParameters`](BarcodeReader/license.md#initdlsconnectionparameters) | Initializes a DMDLSConnectionParameters struct with default values. |
-  | [`InitLicenseFromDLS`](BarcodeReader/license.md#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`InitLTSConnectionParameters`](BarcodeReader/license.md#initltsconnectionparameters) | Initializes a DMLTSConnectionParameters struct with default values. |
+  | [`InitLicenseFromLTS`](BarcodeReader/license.md#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
   | [`GetIdleInstancesCount`](BarcodeReader/license.md#getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
-  | [`InitLTSConnectionParameters`](BarcodeReader/license.md#initltsconnectionparameters) | `Deprecated`. Use [InitDLSConnectionParameters](BarcodeReader/license.md#initdlsconnectionparameters) instead. |
-  | [`InitLicenseFromLTS`](BarcodeReader/license.md#initlicensefromlts) | `Deprecated`. Use [InitLicenseFromDLS](BarcodeReader/license.md#initlicensefromdls) instead. |
    
    
 
@@ -149,7 +147,6 @@ needGenerateH3Content: true
 - [`BarcodeReaderException`](class/BarcodeReaderException.md)	
 - [`Contour`](class/Contour.md)	 
 - [`DataMatrixDetails`](class/DataMatrixDetails.md)	
-- [`DMDLSConnectionParameters`](class/DMDLSConnectionParameters.md) 
 - [`DMLTSConnectionParameters`](class/DMLTSConnectionParameters.md) 
 - [`ExtendedResult`](class/ExtendedResult.md)	
 - [`FrameDecodingParameters`](class/FrameDecodingParameters.md)	
