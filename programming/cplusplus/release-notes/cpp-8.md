@@ -10,6 +10,18 @@ noTitleIndex: true
 
 # Release Notes for C++ SDK - 8.x
 
+## 8.6 (07/15/2021)
+
+### New
+
+- Added two DeblurMode Enumerations, `DM_BASED_ON_LOC_BIN` and `DM_SHARPENING_SMOOTHING`, to support more usage scenarios.
+- Added methods `InitDLSConnectionParameters` and `InitLicenseFromDLS` in `CBarcodeReader` class to replace methods `InitLTSConnectionParameters` and `InitLicenseFromLTS`.
+- Added class `DM_DLSConnectionParameters` to replace class `DM_LTSConnectionParameters`.
+
+### Improved
+
+- Improved the confidence calculation algorithm for oneD barcode results. Bounded by 30, the misread results will be scored below 30-confidence as many as possible.
+
 ## 8.4 (06/08/2021)
 
 ### New
@@ -61,7 +73,6 @@ noTitleIndex: true
 ### Fixed
 
 - Fixed a bug where `barcodeFormatString`, `barcodeFormatString_2`, `regionName` and `documentName` don't have value in the `IRT_TYPED_BARCODE_ZONE` intermediate result.
-
 
 ## 8.1 (01/12/2021)
 
