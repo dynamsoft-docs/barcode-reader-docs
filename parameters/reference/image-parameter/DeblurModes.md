@@ -16,7 +16,7 @@ needAutoGenerateSidebar: false
 
 | Value Type | Value Range | Default Value |
 | ---------- | ----------- | ------------- |
-| *[`DeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode) array* | "DM_SKIP"<br>"DM_DIRECT_BINARIZATION"<br>"DM_THRESHOLD_BINARIZATION"<br>"DM_GRAY_EQUALIZATION"<br>"DM_SMOOTHING"<br>"DM_MORPHING"<br>"DM_DEEP_ANALYSIS"<br>"DM_SHARPENING" | ["DM_SKIP", "DM_SKIP", "DM_SKIP", "DM_SKIP", "DM_SKIP", "DM_SKIP", "DM_SKIP", "DM_SKIP"] |
+| *[`DeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode) array* | "DM_SKIP"<br>"DM_DIRECT_BINARIZATION"<br>"DM_THRESHOLD_BINARIZATION"<br>"DM_GRAY_EQUALIZATION"<br>"DM_SMOOTHING"<br>"DM_MORPHING"<br>"DM_DEEP_ANALYSIS"<br>"DM_SHARPENING"<br>"DM_BASED_ON_LOC_BIN"<br>"DM_SHARPENING_SMOOTHING" | ["DM_SKIP", "DM_SKIP", "DM_SKIP", "DM_SKIP", "DM_SKIP", "DM_SKIP", "DM_SKIP", "DM_SKIP"] |
 
 - **See also**:   
     [`DeblurMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#deblurmode)
