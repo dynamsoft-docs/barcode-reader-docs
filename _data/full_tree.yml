@@ -6,6 +6,8 @@ tree_file_list:
   - sidelist-parameters/parameters-references.html
   - sidelist-parameters/parameters-scenario-settings.html
   - sidelist-programming/programming-javascript.html
+  - sidelist-programming/programming-javascript-v7.6.html
+  - sidelist-programming/programming-javascript-v8.2.html
   - sidelist-programming/programming-c.html
   - sidelist-programming/programming-cpp.html
   - sidelist-programming/programming-dotnet.html
