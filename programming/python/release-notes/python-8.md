@@ -10,6 +10,18 @@ noTitleIndex: true
 
 # Release Notes for Python SDK - 8.x
 
+## 8.6 (07/20/2021)
+
+### New
+
+- Added two DeblurMode Enumerations, `DM_BASED_ON_LOC_BIN` and `DM_SHARPENING_SMOOTHING`, to support more usage scenarios.
+- Added methods `init_license_from_dls` and `init_dls_connection_parameters` in `BarcodeReader` class to replace `init_license_from_lts` and `init_lts_connection_parameters`.
+- Added class `DMDLSConnectionParameters` to replace class `DMLTSConnectionParameters`.
+
+### Improved
+
+- Improved the [`confidence`]({{site.python_class}}ExtendedResult.html#confidence) algorithm for 1D barcode results. Users can get even more accurate results by configuring the `confidence` filter.
+
 ## 8.4 (06/10/2021)
 
 ### New
@@ -31,7 +43,6 @@ noTitleIndex: true
 ### Fixed
 
 - Fixed an issue that happens when calling initLicenseFromLTS if `handshake_code` is not set.
-
 
 ## 8.2 (03/17/2021)
 
@@ -90,13 +101,11 @@ noTitleIndex: true
 - Fixed a bug where Micro PDF417 may not be localized in multiple-barcode scenarios.
 - Fixed a bug where the `ExpectedBarcodesCount` and `BarcodeFormat` parameters do not work in the `RegionDefinition`.
 
-
 ## 8.0.1 (01/06/2021)
 
 ### FIXED
 
 - Fixed a typo in `init_license_from_lts`.
-
 
 ## 8.0 (11/26/2020)
 
