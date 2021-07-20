@@ -7,18 +7,19 @@ needAutoGenerateSidebar: true
 ---
 
 
-# .Net API Reference - BarcodeReader License Methods
+# License Methods
 
   | Method               | Description |
   |----------------------|-------------|
   | [`InitLicenseFromServer`](#initlicensefromserver) | Initializes license and connect to the specified server for online verification. |
   | [`InitLicenseFromLicenseContent`](#initlicensefromlicensecontent) | Initializes barcode reader license and connects to the specified server for online verification. |
   | [`OutputLicenseToString`](#outputlicensetostring) | Outputs the license content as an encrypted string from the license server to be used for offline license verification.|
-  | [`InitLTSConnectionParameters`](#initltsconnectionparameters) | Initializes a DMLTSConnectionParameters struct with default values. |
-  | [`InitLicenseFromLTS`](#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`InitDLSConnectionParameters`](#initdlsconnectionparameters) | Initializes a DMDLSConnectionParameters struct with default values. |
+  | [`InitLicenseFromDLS`](#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
   | [`GetIdleInstancesCount`](#getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
+  | [`InitLTSConnectionParameters`](#initltsconnectionparameters) | `Deprecated`. Use [InitDLSConnectionParameters](#initdlsconnectionparameters) instead. |
+  | [`InitLicenseFromLTS`](#initlicensefromlts) | `Deprecated`. Use [InitLicenseFromDLS](#initlicensefromdls) instead. |
   
-  ---
 
 
 ## InitLicenseFromServer
@@ -51,7 +52,7 @@ if(iLicMsg != 0)
 _br.Dispose();
 ```
 
-&nbsp;
+
 
 
 ## InitLicenseFromLicenseContent
@@ -87,7 +88,7 @@ _br.Dispose();
 ```
 
 
-&nbsp;
+
 
 
 ## OutputLicenseToString
@@ -136,38 +137,36 @@ else{
 //....
 ```
 
-&nbsp;
 
-
-## InitLTSConnectionParameters
-Initializes a DMLTSConnectionParameters struct with default values.
+## InitDLSConnectionParameters
+Initializes a DMDLSConnectionParameters struct with default values.
 
 ```csharp
-static DMLTSConnectionParameters Dynamsoft.DBR.BarcodeReader.InitLTSConnectionParameters()
+static DMDLSConnectionParameters Dynamsoft.DBR.BarcodeReader.InitDLSConnectionParameters()
 ```   
 
 #### Code Snippet
 ```csharp
-DMLTSConnectionParameters ltsInfo = BarcodeReader.InitLTSConnectionParameters();
-ltsInfo.HandShake = "*****-hs-****";
-ltsInfo.SessionPassword = "******";
+DMDLSConnectionParameters dlsInfo = BarcodeReader.InitDLSConnectionParameters();
+dlsInfo.HandShake = "*****-hs-****";
+dlsInfo.SessionPassword = "******";
 string errorMsg;
-BarcodeReader.InitLicenseFromLts(ltsInfo, out errorMsg);
+BarcodeReader.InitLicenseFromDLS(dlsInfo, out errorMsg);
 BarcodeReader reader = new BarcodeReader();
 ```
 
-&nbsp;
 
 
-## InitLicenseFromLTS
+
+## InitLicenseFromDLS
 Initializes the barcode reader license and connects to the specified server for online verification.
 
 ```csharp
-static EnumErrorCode Dynamsoft.DBR.BarcodeReader.InitLicenseFromLTS(DMLTSConnectionParameters ltsConnectionParameters, out string errorMsg)
+static EnumErrorCode Dynamsoft.DBR.BarcodeReader.InitLicenseFromDLS(DMDLSConnectionParameters dlsConnectionParameters, out string errorMsg)
 ```   
    
 #### Parameters
-`[in]	ltsConnectionParameters` <*string*> : The struct DMLTSConnectionParameters with customized settings.  
+`[in]	dlsConnectionParameters` <*string*> : The struct DMDLSConnectionParameters with customized settings.  
 `[in, out]	errorMsg` <*string*> : The detailed error message.
 
 #### Return value
@@ -175,15 +174,15 @@ Returns error code.
 
 #### Code Snippet
 ```csharp
-DMLTSConnectionParameters ltsInfo = BarcodeReader.InitLTSConnectionParameters();
-ltsInfo.HandShake = "*****-hs-****";
-ltsInfo.SessionPassword = "******";
+DMDLSConnectionParameters dlsInfo = BarcodeReader.InitDLSConnectionParameters();
+dlsInfo.HandShake = "*****-hs-****";
+dlsInfo.SessionPassword = "******";
 string errorMsg;
-BarcodeReader.InitLicenseFromLts(ltsInfo, out errorMsg);
+BarcodeReader.InitLicenseFromDLS(dlsInfo, out errorMsg);
 BarcodeReader reader = new BarcodeReader();
 ```
 
-&nbsp;
+
 
 ## GetIdleInstancesCount
 Gets available instances count when charging by concurrent instances count.
@@ -209,5 +208,10 @@ else
 }
 ```
 
-&nbsp;
+
+
+## InitLTSConnectionParameters
+`Deprecated`. Use [InitDLSConnectionParameters](#initdlsconnectionparameters) instead.
+## InitLicenseFromLTS
+`Deprecated`. Use [InitLicenseFromDLS](#initlicensefromdls) instead.
 

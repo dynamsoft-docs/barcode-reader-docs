@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 ---
 
 
-# .Net API Reference - BarcodeReader Decode Methods
+# Decode Methods
 
   | Method               | Description |
   |----------------------|-------------|
@@ -54,7 +54,7 @@ reader.Dispose();
 #### See Also
 [`TextResult`](../class/TextResult.md)
 
-&nbsp;
+
 
 
 ## DecodeFileInMemory
@@ -87,7 +87,7 @@ reader.Dispose();
 #### See Also
 [`TextResult`](../class/TextResult.md)
 
-&nbsp;
+
 
 
 ## DecodeBuffer
@@ -133,7 +133,7 @@ reader.Dispose();
 [`TextResult`](../class/TextResult.md)
 
 
-&nbsp;
+
 
 
 ## DecodeBase64String
@@ -167,7 +167,7 @@ reader.Dispose();
 #### See Also 
 [`TextResult`](../class/TextResult.md)
 
-&nbsp;
+
 
 
 ## DecodeBitmap
@@ -201,7 +201,7 @@ reader.Dispose();
 [`TextResult`](../class/TextResult.md)
 
 
-&nbsp;
+
 
 
 ## InitIntermediateResult
@@ -229,7 +229,7 @@ IntermediateResult imResult = reader.InitIntermediateResult(EnumIntermediateResu
 [`IntermediateResult`](../class/IntermediateResult.md)
 
 
-&nbsp;
+
 
 
 ## DecodeIntermediateResults
@@ -266,6 +266,6 @@ TextResult[] result = reader.DecodeIntermediateResults(IMRs, "");
 #### See Also
 [`TextResult`](../class/TextResult.md)
 
-&nbsp;
+
 
 

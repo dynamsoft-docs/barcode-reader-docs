@@ -9,7 +9,7 @@ breadcrumbText: Reference
 ---
 
 
-# Dynamsoft Barcode Reader SDK - RegionDefinition Object Parameters
+# RegionDefinition Object Parameters
 
 
 

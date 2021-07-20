@@ -3,24 +3,14 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Java API Reference - Main Page
 description: This is the main page of Dynamsoft Barcode Reader for Java SDK API Reference.
 keywords: api reference, java
-needAutoGenerateSidebar: false
-breadcrumbText: API Reference
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 
-# Dynamsoft Barcode Reader SDK - Java API Reference
-
-- [`BarcodeReader` Methods](#barcodereader-methods) 
-- [Interface](#interface)
-- [Error Code](#error-code)
-- [Classes](#classes)  
-- [Enumerations](#enumerations)
-
-     
-&nbsp; 
-
-
-## BarcodeReader Methods
+# Java API Reference
+   
+## BarcodeReader Class
 
 ### Initialize and Destroy
    
@@ -29,11 +19,23 @@ breadcrumbText: API Reference
   | [`BarcodeReader`](BarcodeReader/initialize-and-destroy.md#barcodereader) | Initialization of `BarcodeReader` object.|
   | [`destroy`](BarcodeReader/initialize-and-destroy.md#destroy) | Destroys an instance of `BarcodeReader` object.|
    
-   
-&nbsp; 
-   
-   
-### Decode
+
+### License Methods
+  
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`initLicense`](BarcodeReader/license.md#initlicense) | Read product key and activate the SDK. |
+  | [`initLicenseFromServer`](BarcodeReader/license.md#initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
+  | [`initLicenseFromLicenseContent`](BarcodeReader/license.md#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
+  | [`outputLicenseToString`](BarcodeReader/license.md#outputlicensetostring) | Output the license content to a string from the license server. |
+  | [`initDLSConnectionParameters`](BarcodeReader/license.md#initdlsconnectionparameters) | Initializes a DMDLSConnectionParameters struct with default values. |
+  | [`initLicenseFromDLS`](BarcodeReader/license.md#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`getIdleInstancesCount`](BarcodeReader/license.md#getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
+  | [`initLTSConnectionParameters`](BarcodeReader/license.md#initltsconnectionparameters) | `Deprecated`. Use [initDLSConnectionParameters](BarcodeReader/license.md#initdlsconnectionparameters) instead. |
+  | [`initLicenseFromLTS`](BarcodeReader/license.md#initlicensefromlts) | `Deprecated`. Use [initLicenseFromDLS](BarcodeReader/license.md#initlicensefromdls) instead. |
+
+
+### Decode Methods
    
   | Method               | Description |
   |----------------------|-------------|
@@ -41,18 +43,13 @@ breadcrumbText: API Reference
   | [`decodeFileInMemory`](BarcodeReader/decode.md#decodefileinmemory) | Decode barcodes from an image file in memory. |
   | [`decodeBuffer`](BarcodeReader/decode.md#decodebuffer) | Decode barcodes from raw buffer. |
   | [`decodeBase64String`](BarcodeReader/decode.md#decodebase64string) | Decode barcodes from a base64 encoded string. |
-  | [`decodeBufferedImage`](BarcodeReader/decode.md#decodeBufferedImage) | Decodes barcode from a buffered image (bitmap). |
+  | [`decodeBufferedImage`](BarcodeReader/decode.md#decodeBufferedImage) | Decodes barcode from a buffered imag (bitmap). |
   | [`initIntermediateResult`](BarcodeReader/decode.md#initintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](BarcodeReader/decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
    
    
-&nbsp; 
    
-   
-   
-### Parameter and Runtime Settings
-
-#### Basic
+### Basic Settings Methods
    
   | Method               | Description |
   |----------------------|-------------|
@@ -62,7 +59,7 @@ breadcrumbText: API Reference
   | [`updateRuntimeSettings`](BarcodeReader/parameter-and-runtime-settings-basic.md#updateruntimesettings) | Modify and update the current runtime settings. |
   | [`resetRuntimeSettings`](BarcodeReader/parameter-and-runtime-settings-basic.md#resetruntimesettings) | Reset runtime settings to default. |
 
-#### Advanced
+### Advanced Settings Methods
   
   | Method               | Description |
   |----------------------|-------------|
@@ -75,46 +72,29 @@ breadcrumbText: API Reference
   | [`outputSettingsToString`](BarcodeReader/parameter-and-runtime-settings-advanced.md#outputsettingstostring) | Output runtime settings to a string. |
    
       
-&nbsp; 
-
-   
-### License
-  
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`initLicense`](BarcodeReader/license.md#initlicense) | Read product key and activate the SDK. |
-  | [`initLicenseFromServer`](BarcodeReader/license.md#initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
-  | [`initLicenseFromLicenseContent`](BarcodeReader/license.md#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
-  | [`outputLicenseToString`](BarcodeReader/license.md#outputlicensetostring) | Output the license content to a string from the license server. |
-  | [`initLTSConnectionParameters`](BarcodeReader/license.md#initltsconnectionparameters) | Initializes a DMLTSConnectionParameters struct with default values. |
-  | [`initLicenseFromLTS`](BarcodeReader/license.md#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
-  | [`getIdleInstancesCount`](BarcodeReader/license.md#getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
    
    
-&nbsp; 
-   
-   
-### Result
+### Result Methods
    
   | Method               | Description |
   |----------------------|-------------|
   | [`getIntermediateResults`](BarcodeReader/result.md#getintermediateresults) | Get intermediate results. |
    
       
-&nbsp; 
+
 
    
-### Status Retrieval
+### Status Retrieval Methods
    
   | Method               | Description |
   |----------------------|-------------|
   | [`getVersion`](BarcodeReader/status-retrieval.md#getversion) | Get version information of SDK.|
    
       
-&nbsp; 
+
 
    
-### Video
+### Video Methods
 
 #### Decode
     
@@ -145,35 +125,17 @@ breadcrumbText: API Reference
    |----------------------|-------------|
    | [`getLengthOfFrameQueue`](BarcodeReader/video.md#getlengthofframequeue) | Get length of current inner frame queue. |
  
-   
-  
-   
-&nbsp; 
 
-## Interface
+## Auxiliary Classes  
 
-  | Function | Description |
-  |----------|-------------|
-  | [`ErrorCallback`](interface.md#errorcallback) | Represents the method that will handle the error code returned by the SDK. |
-  | [`IntermediateResultCallback`](interface.md#intermediateresultcallback) | Represents the method that will handle the intermediate result array returned by the SDK. |
-  | [`TextResultCallback`](interface.md#cb_textresult) | Represents the method that will handle the text result array returned by the SDK. | 
-
-&nbsp;
-
-
-## [Error Code]({{ site.enumerations }}error-code.html)
-		
-
-&nbsp;
-
-## Classes
 - [`AztecDetails`](class/AztecDetails.md)	 
 - [`BarcodeReaderException`](class/BarcodeReaderException.md)	
 - [`Contour`](class/Contour.md)	 
-- [`DMLTSConnectionParameters`](class/DMLTSConnectionParameters.md)		
-- [`DataMatrixDetails`](class/DataMatrixDetails.md)	 
+- [`DataMatrixDetails`](class/DataMatrixDetails.md)	
+- [`DMDLSConnectionParameters`](class/DMDLSConnectionParameters.md) 
+- [`DMLTSConnectionParameters`](class/DMLTSConnectionParameters.md) 
 - [`ExtendedResult`](class/ExtendedResult.md)	
-- [`FrameDecodingParameters`](class/FrameDecodingParameters.md)
+- [`FrameDecodingParameters`](class/FrameDecodingParameters.md)	
 - [`FurtherModes`](class/FurtherModes.md)
 - [`ImageData`](class/ImageData.md)	 
 - [`IntermediateResult`](class/IntermediateResult.md)	
@@ -187,46 +149,76 @@ breadcrumbText: API Reference
 - [`RegionDefinition`](class/RegionDefinition.md)	
 - [`RegionOfInterest`](class/RegionOfInterest.md)	 
 - [`SamplingImageData`](class/SamplingImageData.md)	 
-- [`TextResult`](class/TextResult.md)		
+- [`TextResult`](class/TextResult.md)	
+
+## Enumerations  
+
+### Format Enumeration
+
+  | Enumeration | Description |
+  |-------------|-------------|
+  | [`BarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) | Describes the barcode types in BarcodeFormat group 1. |
+  | [`BarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) | Describes the barcode types in BarcodeFormat group 2. |
+
+### Parameter Mode Enumeration
+
+  | Enumeration | Description |
+  |-------------|-------------|
+  | [`BarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode) | Describes the barcode colour mode. |
+  | [`BarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode) | Describes the barcode complement mode. |
+  | [`BinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) | Describes the binarization mode. |
+  | [`ColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode) | Describes the colour clustering mode. |
+  | [`ColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode) | Describes the colour conversion mode. |
+  | [`ConflictMode`]({{ site.enumerations }}parameter-mode-enums.html#conflictmode) | Describes the conflict mode. |
+  | [`DeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode) | Describes the deblur mode. |
+  | [`DeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode) | Describes the deformation resisting mode. |
+  | [`DPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode) | Describes the DPM code reading mode. |
+  | [`GrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode) | Describes the grayscale transformation mode. |
+  | [`ImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode) | Describes the image preprocessing mode. |
+  | [`LocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode) | Describes the localization mode. | 
+  | [`PDFReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#pdfreadingmode) | Describes the PDF reading mode. |
+  | [`RegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode) | Describes the region predetection mode. |
+  | [`ScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode) | Describes the scale up mode. |
+  | [`TerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase) | Describes the terminate phase. |
+  | [`TextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode) | Describes the text filter mode. |
+  | [`TextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode) | Describes the texture detection mode. | 
+
+### Result Related Enumeration
+
+  | Enumeration | Description |
+  |-------------|-------------|
+  | [`IMResultDataType`]({{ site.enumerations }}result-enums.html#imresultdatatype) | Describes the intermediate result data type. |
+  | [`IntermediateResultSavingMode`]({{ site.enumerations }}result-enums.html#intermediateresultsavingmode) | Describes the intermediate result saving mode. |
+  | [`IntermediateResultType`]({{ site.enumerations }}result-enums.html#intermediateresulttype) | Describes the intermediate result type. |
+  | [`ResultCoordinateType`]({{ site.enumerations }}result-enums.html#resultcoordinatetype) | Describes the result coordinate type. |
+  | [`ResultType`]({{ site.enumerations }}result-enums.html#resulttype) | Describes the extended result type. |
+  | [`TextResultOrderMode`]({{ site.enumerations }}result-enums.html#textresultordermode) | Describes the text result order mode. |
+
+### Frame Decoding Enumeration
+
+  | Enumeration | Description |
+  |-------------|-------------|
+  | [`ClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod) | Describes the clarity calculation method. |
+  | [`ClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode) | Describes the clarity filter mode. |
+  
+### Other Enumeration
+
+  | Enumeration | Description |
+  |-------------|-------------|
+  | [`DM_ChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway) | Describes the charge way. |
+  | [`DM_DeploymentType`]({{ site.enumerations }}other-enums.html#dm_deploymenttype) | Describes the deployment type. |
+  | [`DM_LicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule) | Describes Dynamsoft license modules. |
+  | [`DM_UUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod) | Describes the UUID generation method. |
+  | [`ImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) | Describes the image pixel format. |
+  | [`QRCodeErrorCorrectionLevel`]({{ site.enumerations }}other-enums.html#qrcodeerrorcorrectionlevel) | Describes the QR Code error correction level. |
+  | [`Product`]({{ site.enumerations }}other-enums.html#product) | Describes Dynamsoft products. |
 
 
-&nbsp; 
 
+## Interfaces
 
-## Enumerations
-- [`EnumAccompanyingTextRecognitionMode`]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode)	
-- [`EnumBarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode)	
-- [`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode)	
-- [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat)	
-- [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)	
-- [`EnumBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)
-- [`EnumClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod) 
-- [`EnumClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode) 
-- [`EnumColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode)	
-- [`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode)	
-- [`EnumConflictMode`]({{ site.enumerations }}parameter-mode-enums.html#conflictmode)	
-- [`EnumDeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode)	
-- [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode)	
-- [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)	
-- [`EnumDMDeploymentType`]({{ site.enumerations }}other-enums.html#dm_deploymenttype)	
-- [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)	
-- [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)	
-- [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode)	
-- [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)	
-- [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat)	
-- [`EnumImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode)	
-- [`EnumIMResultDataType`]({{ site.enumerations }}result-enums.html#imresultdatatype)	
-- [`EnumIntermediateResultSavingMode`]({{ site.enumerations }}result-enums.html#intermediateresultsavingmode)	
-- [`EnumIntermediateResultType`]({{ site.enumerations }}result-enums.html#intermediateresulttype)	
-- [`EnumLocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode)
-- [`EnumProduct`]({{ site.enumerations }}other-enums.html#product)   
-- [`EnumPDFReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#pdfreadingmode)   
-- [`EnumQRCodeErrorCorrectionLevel`]({{ site.enumerations }}other-enums.html#qrcodeerrorcorrectionlevel)	
-- [`EnumRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode)	
-- [`EnumResultCoordinateType`]({{ site.enumerations }}result-enums.html#resultcoordinatetype)	
-- [`EnumResultType`]({{ site.enumerations }}result-enums.html#resulttype)	
-- [`EnumScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode)	
-- [`EnumTerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase)	
-- [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode)	
-- [`EnumTextResultOrderMode`]({{ site.enumerations }}result-enums.html#textresultordermode)	
-- [`EnumTextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode)
+  | Interface | Description |
+  |----------|-------------|
+  | [`ErrorCallback`](interface.md#errorcallback) | Represents the method that will handle the error code returned by the SDK. |
+  | [`IntermediateResultCallback`](interface.md#intermediateresultcallback) | Represents the method that will handle the intermediate result array returned by the SDK. |
+  | [`TextResultCallback`](interface.md#textresultcallback) | Represents the method that will handle the text result array returned by the SDK. | 

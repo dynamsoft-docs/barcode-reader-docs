@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # Release Notes for Python SDK - 8.x
 
-## 8.6 (07/15/2021)
+## 8.6 (07/20/2021)
 
 ### New
 

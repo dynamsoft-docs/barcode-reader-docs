@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader C Language API Reference - Parameter and Runtime Settings Basic Methods
-description: This page shows basic Runtime Settings methods of Dynamsoft Barcode Reader for C Language.
-keywords: DBR_SetModeArgument, DBR_GetModeArgument, DBR_GetRuntimeSettings, DBR_UpdateRuntimeSettings, DBR_ResetRuntimeSettings, parameter and runtime settings basic methods, api reference, c
+title: Dynamsoft Barcode Reader C Language API Reference - Parameter and Runtime Settings Basic Functions
+description: This page shows basic Runtime Settings functions of Dynamsoft Barcode Reader for C Language.
+keywords: DBR_SetModeArgument, DBR_GetModeArgument, DBR_GetRuntimeSettings, DBR_UpdateRuntimeSettings, DBR_ResetRuntimeSettings, parameter and runtime settings basic functions, api reference, c
 needAutoGenerateSidebar: true
 ---
 
-# C API Reference - Parameter and Runtime Settings Basic Methods
+# Parameter and Runtime Settings Basic Functions
    
-  | Method               | Description |
+  | Function               | Description |
   |----------------------|-------------|
   | [`DBR_SetModeArgument`](#dbr_setmodeargument) | Set argument value for the specified mode parameter. |
   | [`DBR_GetModeArgument`](#dbr_getmodeargument) | Get argument value for the specified mode parameter. |
@@ -72,7 +72,7 @@ DBR_SetModeArgument(barcodeReader, "BinarizationModes", 0, "EnableFillBinaryVaca
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 
@@ -129,7 +129,7 @@ DBR_GetModeArgument(barcodeReader, "BinarizationModes", 0, "EnableFillBinaryVaca
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 
@@ -159,7 +159,7 @@ int errorCode = DBR_GetRuntimeSettings(barcodeReader, &settings);
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 
@@ -194,7 +194,7 @@ DBR_UpdateRuntimeSettings(barcodeReader, &settings, errorMessage, 256);
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 

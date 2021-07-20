@@ -9,7 +9,7 @@ breadcrumbText: FormatSpecification
 ---
 
 
-# Dynamsoft Barcode Reader SDK - FormatSpecification Object Parameters
+# FormatSpecification Object Parameters
 
 ## Content Organization Control
 

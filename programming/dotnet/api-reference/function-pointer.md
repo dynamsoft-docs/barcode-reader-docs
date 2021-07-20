@@ -1,22 +1,20 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader .NET API Reference - Function Pointers
-description: This page shows Function Pointers of Dynamsoft Barcode Reader for .NET SDK.
-keywords: CB_Error, CB_IntermediateResult, CB_TextResult, function pointers, api reference, .Net
+title: Dynamsoft Barcode Reader .NET API Reference - Delegates
+description: This page shows Delegates of Dynamsoft Barcode Reader for .NET SDK.
+keywords: CB_Error, CB_IntermediateResult, CB_TextResult, delegates, api reference, .Net
 needAutoGenerateSidebar: false
 ---
 
 
-# .Net API Reference - Function Pointers
+# Delegates
 
-  | Function | Description |
+  | Delegate | Description |
   |----------|-------------|
   | [`CB_Error`](#cb_error) | Represents the method that will handle the error code returned by the SDK. |
   | [`CB_IntermediateResult`](#cb_intermediateresult) | Represents the method that will handle the intermediate result array returned by the SDK. |
   | [`CB_TextResult`](#cb_textresult) | Represents the method that will handle the text result array returned by the SDK. | 
-  
----
- 
+   
 
 
 ## CB_Error
@@ -32,7 +30,7 @@ delegate void Dynamsoft.DBR.CB_Error(int frameId, int errorCode, IntPtr pUser)
 `[in, out] pUser` Arguments pass to your function.  
 
 
-&nbsp; 
+
 
 
 ## CB_IntermediateResult
@@ -48,7 +46,7 @@ delegate void Dynamsoft.DBR.CB_IntermediateResult(int frameId, IntermediateResul
 `[in, out] pUser` Arguments pass to your function.  
 
 
-&nbsp; 
+
 
 
 ## CB_TextResult

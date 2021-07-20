@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: false
 ---
 
-# Dynamsoft Barcode Reader Enumeration - Result Enumeration
+# Result Enumeration
 
   | Enumeration | Description |
   |-------------|-------------|

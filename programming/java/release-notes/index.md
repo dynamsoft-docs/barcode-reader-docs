@@ -7,7 +7,7 @@ needAutoGenerateSidebar: false
 breadcrumbText: Release Notes
 ---
 
-# Dynamsoft Barcode Reader Java SDK - Release Notes
+# Java SDK - Release Notes
 
 
 - [8.6 (07/15/2021)](java-8.md#86-07152021)

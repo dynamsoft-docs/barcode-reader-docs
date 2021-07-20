@@ -6,7 +6,7 @@ keywords: StartFrameDecoding, StartFrameDecodingEx, AppendFrame, StopFrameDecodi
 needAutoGenerateSidebar: true
 ---
 
-# .Net API Reference - BarcodeReader Video Methods
+# Video Methods
 
 - Decode
     
@@ -75,7 +75,7 @@ reader.Dispose();
 ```
 
 
-&nbsp; 
+ 
 
 
 ## StartFrameDecodingEx
@@ -116,7 +116,7 @@ reader.Dispose();
 
 ```
 
-&nbsp; 
+ 
 
 
 ## AppendFrame
@@ -142,7 +142,7 @@ reader.Dispose();
 ```
 
 
-&nbsp; 
+ 
 
 
 ## StopFrameDecoding
@@ -164,7 +164,7 @@ EnumErrorCode err = reader.StopFrameDecoding();
 reader.Dispose();
 ```
 
-&nbsp; 
+ 
 
 
 ## InitFrameDecodingParameters
@@ -179,7 +179,7 @@ FrameDecodingParameters Dynamsoft.DBR.BarcodeReader.InitFrameDecodingParameters(
 Returns the frame decoding parameters.
 
 
-&nbsp; 
+ 
 
 
 ## SetErrorCallback

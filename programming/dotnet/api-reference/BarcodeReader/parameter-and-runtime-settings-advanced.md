@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader .NET API Reference - BarcodeReader Parameter and Runtime Settings Advanced Methods
-description: This page shows BarcodeReader advanced Runtime Settings methods of Dynamsoft Barcode Reader for .NET SDK.
-keywords: InitRuntimeSettingsWithFile, InitRuntimeSettingsWithString, AppendTplFileToRuntimeSettings, AppendTplStringToRuntimeSettings, GetAllParameterTemplateNames, OutputSettingsToFile, OutputSettingsToString, parameter and runtime settings advanced methods, BarcodeReader, api reference, .Net
+title: Dynamsoft Barcode Reader .NET API Reference - Advanced Settings Methods
+description: This page shows advanced Runtime Settings methods of Dynamsoft Barcode Reader for .NET SDK.
+keywords: InitRuntimeSettingsWithFile, InitRuntimeSettingsWithString, AppendTplFileToRuntimeSettings, AppendTplStringToRuntimeSettings, GetAllParameterTemplateNames, OutputSettingsToFile, OutputSettingsToString, Advanced Settings Methods, BarcodeReader, api reference, .Net
 needAutoGenerateSidebar: true
 ---
 
-# .Net API Reference - BarcodeReader Parameter and Runtime Settings Advanced Methods
+# Advanced Settings Methods
 
   | Method               | Description |
   |----------------------|-------------|
@@ -18,7 +18,6 @@ needAutoGenerateSidebar: true
   | [`OutputSettingsToFile`](#outputsettingstofile) | Outputs runtime settings to a settings file (JSON file). |
   | [`OutputSettingsToString`](#outputsettingstostring) | Outputs runtime settings to a string. |
 
-  ---
 
 
 ## InitRuntimeSettingsWithFile
@@ -48,7 +47,7 @@ reader.Dispose();
 ```
 
 
-&nbsp; 
+ 
 
 
 ## InitRuntimeSettingsWithString
@@ -78,7 +77,7 @@ reader.Dispose();
 ```
 
 
-&nbsp; 
+ 
 
 
 ## AppendTplFileToRuntimeSettings
@@ -107,7 +106,7 @@ reader.Dispose();
 ```
 
 
-&nbsp; 
+ 
 
 
 ## AppendTplStringToRuntimeSettings
@@ -136,7 +135,7 @@ reader.Dispose();
 ```
 
 
-&nbsp; 
+ 
 
 
 ## GetAllParameterTemplateNames
@@ -162,7 +161,7 @@ reader.Dispose();
 ```
 
 
-&nbsp; 
+ 
 
 
 ## OutputSettingsToFile
@@ -191,7 +190,7 @@ reader.Dispose();
 ```
 
 
-&nbsp; 
+ 
 
 
 ## OutputSettingsToString

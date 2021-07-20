@@ -8,7 +8,7 @@ needGenerateH3Content: false
 ---
 
 
-# Dynamsoft Barcode Reader Enumeration - Other Enumeration
+# Other Enumeration
 
   | Enumeration | Description |
   |-------------|-------------|

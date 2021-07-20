@@ -31,6 +31,8 @@ Gets or sets the error code.
 ```csharp
 EnumErrorCode Dynamsoft.DBR.BarcodeReaderException.Code
 ```  
+**See also**
+- [EnumErrorCode]({{site.enumerations}}error-code.html)
 
 ### Message
 Gets the message that describes the current exception. 
@@ -39,7 +41,7 @@ Gets the message that describes the current exception.
 override string Dynamsoft.DBR.BarcodeReaderException.Message
 ```  
 
-### Code
+### StackTrace
 Gets the string representation of the frames on the call stack at the time the current exception was thrown. 
 
 ```csharp

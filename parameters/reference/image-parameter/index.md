@@ -9,7 +9,7 @@ breadcrumbText: ImageParameter
 ---
 
 
-# Dynamsoft Barcode Reader SDK - ImageParameter Object Parameters
+# ImageParameter Object Parameters
 
 ## Content Organization Control
 

@@ -3,12 +3,11 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Java API Reference - BarcodeReader Methods
 description: This page shows all BarcodeReader methods of Dynamsoft Barcode Reader for Java SDK API Reference.
 keywords: methods, BarcodeReader, api reference, java
-needAutoGenerateSidebar: false
-breadcrumbText: BarcodeReader Methods
+needAutoGenerateSidebar: true
 ---
 
 
-# Dynamsoft Barcode Reader SDK - Java BarcodeReader Methods
+# Class com.dynamsoft.dbr.BarcodeReader
 
 ## Initialize and Destroy
    
@@ -18,9 +17,24 @@ breadcrumbText: BarcodeReader Methods
   | [`destroy`](initialize-and-destroy.md#destroy) | Destroys an instance of `BarcodeReader` object.|
    
    
-&nbsp; 
+
    
-   
+
+## License
+  
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`initLicense`](license.md#initlicense) | Read product key and activate the SDK. |
+  | [`initLicenseFromServer`](license.md#initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
+  | [`initLicenseFromLicenseContent`](license.md#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
+  | [`outputLicenseToString`](license.md#outputlicensetostring) | Output the license content to a string from the license server. |
+  | [`initDLSConnectionParameters`](license.md#initdlsconnectionparameters) | Initializes a DMDLSConnectionParameters struct with default values. |
+  | [`initLicenseFromDLS`](license.md#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`getIdleInstancesCount`](license.md#getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
+  | [`initLTSConnectionParameters`](license.md#initltsconnectionparameters) | `Deprecated`. Use [initDLSConnectionParameters](license.md#initdlsconnectionparameters) instead. |
+  | [`initLicenseFromLTS`](license.md#initlicensefromlts) | `Deprecated`. Use [initLicenseFromDLS](license.md#initlicensefromdls) instead. |
+
+
 ## Decode
    
   | Method               | Description |
@@ -34,13 +48,8 @@ breadcrumbText: BarcodeReader Methods
   | [`decodeIntermediateResults`](decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
    
    
-&nbsp; 
    
-   
-   
-## Parameter and Runtime Settings
-
-### Basic
+## Basic Settings Functions
    
   | Method               | Description |
   |----------------------|-------------|
@@ -50,7 +59,7 @@ breadcrumbText: BarcodeReader Methods
   | [`updateRuntimeSettings`](parameter-and-runtime-settings-basic.md#updateruntimesettings) | Modify and update the current runtime settings. |
   | [`resetRuntimeSettings`](parameter-and-runtime-settings-basic.md#resetruntimesettings) | Reset runtime settings to default. |
 
-### Advanced
+## Advanced Settings Functions
   
   | Method               | Description |
   |----------------------|-------------|
@@ -63,22 +72,6 @@ breadcrumbText: BarcodeReader Methods
   | [`outputSettingsToString`](parameter-and-runtime-settings-advanced.md#outputsettingstostring) | Output runtime settings to a string. |
    
       
-&nbsp; 
-
-   
-## License
-  
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`initLicense`](license.md#initlicense) | Read product key and activate the SDK. |
-  | [`initLicenseFromServer`](license.md#initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
-  | [`initLicenseFromLicenseContent`](license.md#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
-  | [`outputLicenseToString`](license.md#outputlicensetostring) | Output the license content to a string from the license server. |
-  | [`initLTSConnectionParameters`](license.md#initltsconnectionparameters) | Initializes a DMLTSConnectionParameters struct with default values. |
-  | [`initLicenseFromLTS`](license.md#initlicensefromlts) | Initializes the barcode reader license and connects to the specified server for online verification. |
-   
-   
-&nbsp; 
    
    
 ## Result
@@ -88,7 +81,7 @@ breadcrumbText: BarcodeReader Methods
   | [`getIntermediateResults`](result.md#getintermediateresults) | Get intermediate results. |
    
       
-&nbsp; 
+
 
    
 ## Status Retrieval
@@ -98,7 +91,7 @@ breadcrumbText: BarcodeReader Methods
   | [`getVersion`](status-retrieval.md#getversion) | Get version information of SDK.|
    
       
-&nbsp; 
+
 
    
 ## Video

@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader C Language API Reference - Result Methods
-description: This page shows result methods of Dynamsoft Barcode Reader for C Language.
-keywords: DBR_GetAllTextResults, DBR_FreeTextResults, DBR_GetIntermediateResults, DBR_FreeIntermediateResults, result methods, api reference, c
+title: Dynamsoft Barcode Reader C Language API Reference - Result Functions
+description: This page shows result functions of Dynamsoft Barcode Reader for C Language.
+keywords: DBR_GetAllTextResults, DBR_FreeTextResults, DBR_GetIntermediateResults, DBR_FreeIntermediateResults, result functions, api reference, c
 needAutoGenerateSidebar: true
 ---
 
-# C API Reference - Result Methods
+# Result Functions
 
-  | Method               | Description |
+  | Function               | Description |
   |----------------------|-------------|
   | [`DBR_GetAllTextResults`](#dbr_getalltextresults) | Get all recognized barcode results.  |
   | [`DBR_FreeTextResults`](#dbr_freetextresults) | Free memory allocated for text results. |
@@ -47,7 +47,7 @@ DBR_FreeTextResults(&pResults);
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 
@@ -74,7 +74,7 @@ DBR_FreeTextResults(&pResults);
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 
@@ -113,7 +113,7 @@ DBR_FreeIntermediateResults(&pResults);
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 

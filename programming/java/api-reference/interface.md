@@ -7,16 +7,14 @@ needAutoGenerateSidebar: false
 ---
 
 
-# Java API Reference - Interface
+# Interfaces
 
   | Function | Description |
   |----------|-------------|
   | [`ErrorCallback`](#errorcallback) | Represents the method that will handle the error code returned by the SDK. |
   | [`IntermediateResultCallback`](#intermediateresultcallback) | Represents the method that will handle the intermediate result array returned by the SDK. |
   | [`TextResultCallback`](#textresultcallback) | Represents the method that will handle the text result array returned by the SDK. | 
-  
----
- 
+   
 
 
 
@@ -33,7 +31,7 @@ void com.dynamsoft.dbr.ErrorCallback.errorCallback(int frameId, int errorCode, O
 `errorCode` Error Code generated when decoding the frame.
 `userData` Arguments passed to your function.
 
-&nbsp;
+
 
 
 
@@ -54,7 +52,7 @@ void com.dynamsoft.dbr.IntermediateResultCallback.intermediateResultCallback(int
 #### See Also
 [IntermediateResult](class/IntermediateResult.md)
 
-&nbsp;
+
 
 
 
@@ -75,7 +73,7 @@ void textResultCallback(int frameId, TextResult[] results, Object userData)
 #### See Also
 [TextResult](class/TextResult.md)
 
-&nbsp;
+
 
 
 

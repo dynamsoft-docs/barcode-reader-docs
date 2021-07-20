@@ -1,18 +1,19 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader .NET API Reference - Class
-description: This page shows all Classes of Dynamsoft Barcode Reader for .NET SDK.
+description: This page shows all Auxiliary Classes of Dynamsoft Barcode Reader for .NET SDK.
 keywords: class, api reference, .Net
 needAutoGenerateSidebar: false
-breadcrumbText: Class
+breadcrumbText: Auxiliary Class
 ---
 
-# Dynamsoft Barcode Reader SDK - .Net Class
+# .Net API Reference - Auxiliary Classes
 
 - [`AztecDetails`](AztecDetails.md)	 
 - [`BarcodeReaderException`](BarcodeReaderException.md)	
 - [`Contour`](Contour.md)	 
 - [`DataMatrixDetails`](DataMatrixDetails.md)	
+- [`DMDLSConnectionParameters`](DMDLSConnectionParameters.md) 
 - [`DMLTSConnectionParameters`](DMLTSConnectionParameters.md) 
 - [`ExtendedResult`](ExtendedResult.md)	
 - [`FrameDecodingParameters`](FrameDecodingParameters.md)	

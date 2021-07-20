@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 ---
 
 
-# C++ API Reference - CBarcodeReader Decode Methods
+# Decode Methods
 
   | Method               | Description |
   |----------------------|-------------|
@@ -51,7 +51,7 @@ int errorCode = reader->DecodeFile("C:\\Program Files (x86)\\Dynamsoft\\{Version
 delete reader;
 ```
 
-&nbsp;
+
 
 
 
@@ -88,7 +88,7 @@ int errorCode = reader->DecodeFileInMemory(pFileBytes, nFileSize, "");
 delete reader;
 ```
 
-&nbsp;
+
 
 
 
@@ -131,7 +131,7 @@ int errorCode = reader->DecodeBuffer(pBufferBytes, iWidth, iHeight, iStride, for
 delete reader;
 ```
 
-&nbsp;
+
 
 
 
@@ -169,7 +169,7 @@ int errorCode = reader->DecodeBase64String(strBase64String, "");
 delete reader;
 ```
 
-&nbsp;
+
 
 
 
@@ -205,7 +205,7 @@ delete reader;
 ```
 
 
-&nbsp;
+
 
 
 
@@ -231,7 +231,7 @@ dynamsoft::dbr::CBarcodeReader::InitIntermediateResult(IRT_ORIGINAL_IMAGE, &imRe
 ```
 
 
-&nbsp;
+
 
 
 
@@ -267,6 +267,6 @@ TextArray * results = NULL;
 reader->GetAllTextResults(&results);
 ```
 
-&nbsp;
+
 
 

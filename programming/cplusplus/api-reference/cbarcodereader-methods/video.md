@@ -6,7 +6,7 @@ keywords: StartFrameDecoding, StartFrameDecodingEx, AppendFrame, StopFrameDecodi
 needAutoGenerateSidebar: true
 ---
 
-# C++ API Reference - CBarcodeReader Video Methods
+# Video Methods
 
 - Decode
     
@@ -77,7 +77,7 @@ reader->StartFrameDecoding(2, 10, 1024, 720, 720, IPF_BINARY, "");
 delete reader;
 ```
 
-&nbsp; 
+ 
 
 
 
@@ -128,7 +128,7 @@ if(errorCode == DBR_OK)
 delete reader;
 ```
 
-&nbsp; 
+ 
 
 
 
@@ -156,7 +156,7 @@ int frameId = reader->AppendFrame(pBufferBytes);
 delete reader;
 ```
 
-&nbsp; 
+ 
 
 
 
@@ -187,7 +187,7 @@ int errorCode = reader->StopFrameDecoding();
 delete reader;
 ```
 
-&nbsp; 
+ 
 
 
 
@@ -236,7 +236,7 @@ if(errorCode == DBR_OK)
 delete reader;
 ```
 
-&nbsp; 
+ 
 
 
 
@@ -271,7 +271,7 @@ reader->SetErrorCallback(ErrorFunction, NULL);
 reader->StartFrameDecoding(2, 10, 1024, 720, 720, IPF_BINARY, "");
 ```
 
-&nbsp; 
+ 
 
 
 
@@ -305,7 +305,7 @@ reader->SetTextResultCallback(TextResultFunction, NULL);
 reader->StartFrameDecoding(2, 10, 1024, 720, 720, IPF_BINARY, "");
 ```
 
-&nbsp; 
+ 
 
 
 
@@ -345,7 +345,7 @@ reader->SetIntermediateResultCallback(IntermediateResultFunction, NULL);
 reader->StartFrameDecoding(2, 10, 1024, 720, 720, IPF_BINARY, "");
 ```
 
-&nbsp; 
+ 
 
 
 

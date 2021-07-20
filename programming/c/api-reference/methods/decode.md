@@ -1,15 +1,15 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader C Language API Reference - Decode Methods
-description: This page shows the Decode methods of Dynamsoft Barcode Reader for C Language.
-keywords: DBR_DecodeFile, DBR_DecodeFileInMemory, DBR_DecodeBuffer, DBR_DecodeBase64String, DBR_DecodeDIB, decode methods, api reference, c
+title: Dynamsoft Barcode Reader C Language API Reference - Decode Functions
+description: This page shows the Decode functions of Dynamsoft Barcode Reader for C Language.
+keywords: DBR_DecodeFile, DBR_DecodeFileInMemory, DBR_DecodeBuffer, DBR_DecodeBase64String, DBR_DecodeDIB, decode functions, api reference, c
 needAutoGenerateSidebar: true
 ---
 
 
-# C API Reference - Decode Methods
+# Decode Functions
 
-  | Method               | Description |
+  | Function               | Description |
   |----------------------|-------------|
   | [`DBR_DecodeFile`](#dbr_decodefile) | Decode barcodes from a specified image file. |
   | [`DBR_DecodeFileInMemory`](#dbr_decodefileinmemory) | Decode barcodes from an image file in memory. |
@@ -49,7 +49,7 @@ int errorCode = DBR_DecodeFile(barcodeReader, "C:\\Program Files (x86)\\Dynamsof
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 
@@ -83,7 +83,7 @@ int errorCode = DBR_DecodeFileInMemory(barcodeReader, pFileBytes, nFileSize, "")
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 
@@ -123,7 +123,7 @@ int errorCode = DBR_DecodeBuffer(barcodeReader, pBufferBytes, iWidth, iHeight, i
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 
@@ -157,7 +157,7 @@ int errorCode = DBR_DecodeBase64String(barcodeReader, strBase64String, "");
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 
@@ -190,7 +190,7 @@ DBR_DestroyInstance(barcodeReader);
 ```
 
 
-&nbsp;
+
 
 
 ## DBR_InitIntermediateResult
@@ -215,7 +215,7 @@ DBR_InitIntermediateResult(IRT_ORIGINAL_IMAGE, &imResult);
 ```
 
 
-&nbsp;
+
 
 
 
@@ -254,7 +254,7 @@ DBR_FreeTextResults(&results);
 DBR_DestroyInstance(barcodeReader);
 ```
 
-&nbsp;
+
 
 
 

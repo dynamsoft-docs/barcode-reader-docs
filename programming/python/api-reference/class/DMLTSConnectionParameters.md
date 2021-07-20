@@ -8,7 +8,7 @@ needAutoGenerateSidebar: false
 
 
 # DMLTSConnectionParameters
-Defines a struct to configure the parameters to connect to license tracking server.  
+`Deprecated`. Use [DMDLSConnectionParameters](DMDLSConnectionParameters.md) instead.  
 
 ## Typedefs
 
@@ -16,7 +16,6 @@ Defines a struct to configure the parameters to connect to license tracking serv
 class DMLTSConnectionParameters
 ```
 
----
 
 ## Attributes
     
@@ -37,7 +36,7 @@ class DMLTSConnectionParameters
 
 
 ### main_server_url
-The URL of the license tracking server.
+The URL of the license server.
 ```python
 DMLTSConnectionParameters.main_server_url
 ```
@@ -48,11 +47,11 @@ DMLTSConnectionParameters.main_server_url
     ""
 
 - **Remarks**   
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
+    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license servers for online verification.   
 
 
 ### standby_server_url
-The URL of the standby license tracking server.
+The URL of the standby license server.
 ```python
 DMLTSConnectionParameters.standby_server_url
 ```
@@ -63,7 +62,7 @@ DMLTSConnectionParameters.standby_server_url
     ""
 
 - **Remarks**   
-    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification.   
+    If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license servers for online verification.   
 
 
 ### handshake_code
@@ -78,7 +77,7 @@ DMLTSConnectionParameters.handshake_code
     ""
 
 ### session_password
-The session password of the handshake code set in license tracking server.
+The session password of the handshake code set in license server.
 ```python
 DMLTSConnectionParameters.session_password
 ```

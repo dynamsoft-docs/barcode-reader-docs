@@ -9,7 +9,7 @@ breadcrumbText: Reference
 ---
 
 
-# Dynamsoft Barcode Reader SDK - Parameters
+# Parameters
 
 
 ## ImageParameter Object
