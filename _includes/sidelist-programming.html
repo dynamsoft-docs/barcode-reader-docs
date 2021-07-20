@@ -1,14 +1,12 @@
 <li><a href="{{ site.programming }}" class="otherLinkColour">Programming</a>
     <ul>
-        {%- if page.url contains '/programming/' or page.url contains '/programming-v' -%}
-        {%- include sidelist-programming/programming-javascript.html -%}
-        {%- include sidelist-programming/programming-c.html -%}
-        {%- include sidelist-programming/programming-cpp.html -%}
-        {%- include sidelist-programming/programming-dotnet.html -%}
-        {%- include sidelist-programming/programming-python.html -%}
-        {%- include sidelist-programming/programming-java.html -%}
-        {%- include sidelist-programming/programming-android.html -%}
-        {%- include sidelist-programming/programming-oc.html -%}                         
-        {%- endif -%}
+        {%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath targetRelativePath="sidelist-programming/programming-javascript.html" -%}
+        {%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath targetRelativePath="sidelist-programming/programming-c.html" -%}
+        {%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath targetRelativePath="sidelist-programming/programming-cpp.html" -%}
+        {%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath targetRelativePath="sidelist-programming/programming-dotnet.html" -%}
+        {%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath targetRelativePath="sidelist-programming/programming-python.html" -%}
+        {%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath targetRelativePath="sidelist-programming/programming-java.html" -%}
+        {%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath targetRelativePath="sidelist-programming/programming-android.html" -%}
+        {%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath targetRelativePath="sidelist-programming/programming-oc.html" -%}                         
     </ul>
 </li>
