@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader C Struct - Main Page
 description: This page shows all Structs of Dynamsoft Barcode Reader for C Language.
 keywords: struct, c
 needAutoGenerateSidebar: false
+pageStartVer: 8.6
 ---
 
 
