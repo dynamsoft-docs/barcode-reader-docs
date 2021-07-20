@@ -11,7 +11,7 @@ needGenerateH3Content: true
 
 Different methods are used for setting trial and full license keys. In our demo or sample applications, we use `.InitLicense()` or `.ProductKeys` to set trial license keys. 
 
-For the purchased version, you need to use `initLicenseFromLTS()` to the set the Handshake Codes for your licenses.
+For the purchased version, you need to use `initLicenseFromLTS()` to set the Handshake Codes for your licenses.
 
 You can set the license by following the steps below:
 
