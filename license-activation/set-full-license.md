@@ -161,8 +161,8 @@ You can set the license by following the steps below:
  If you run into any issues, please [contact Dynamsoft Support](https://www.dynamsoft.com/Company/Contact.aspx).
 
 [1]:assets\set-full-license-2\FullLicenseList.png
-[2]:assets\set-full-license-2\SetAlias.png
+[2]:assets\set-full-license-2\SetAlias8.6.png
 [3]:assets\set-full-license-2\ActivationContinue.png
-[4]:assets\set-full-license-2\ConfigLicense.png
+[4]:assets\set-full-license-2\ConfigLicense8.6.png
 
 
