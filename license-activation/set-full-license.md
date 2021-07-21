@@ -53,28 +53,27 @@ You can set the license by following the steps below:
 
  Code snippet in JavaScript:
  ```js
-    Dynamsoft.DBR.BarcodeReader.handshakeCode = "DynamsoftID-CustomCode";// Please replace the handshakeCode with your own
-    Dynamsoft.DBR.BarcodeReader.sessionPassword = "The-Password-You-Set";
+    Dynamsoft.DBR.BarcodeReader.organizationID = "YOUR-ORGANIZATION-ID";// Please replace the organizationID with your own
     let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
  ```
 
  Code snippet in C:
  ```c
    char errorBuf[512];
-   DMLTSConnectionParameters paramters;
-   DBR_InitLTSConnectionParameters(&paramters);
-   paramters.handshakeCode = "handshakeCode"; // Please replace the handshakeCode with your own
-   DBR_InitLicenseFromLTS(&paramters, errorBuf, 512);
+   DMDLSConnectionParameters paramters;
+   DBR_InitDLSConnectionParameters(&paramters);
+   paramters.organizationID = "YOUR-ORGANIZATION-ID"; // Please replace the organizationID with your own
+   DBR_InitLicenseFromDLS(&paramters, errorBuf, 512);
  ```
 
  Code snippet in C++:
  ```cpp
    int iRet = -1;
    char szErrorMsg[256];
-   DM_LTSConnectionParameters ltspar;    
-   CBarcodeReader::InitLTSConnectionParameters(&ltspar);
-   ltspar.handshakeCode = "200***001-1000*****"; // Please replace the handshakeCode with your own
-   iRet = CBarcodeReader::InitLicenseFromLTS(&ltspar, szErrorMsg, 256);
+   DM_DLSConnectionParameters dlspar;    
+   CBarcodeReader::InitDLSConnectionParameters(&dlspar);
+   dlspar.organizationID = "YOUR-ORGANIZATION-ID"; // Please replace the organizationID with your own
+   iRet = CBarcodeReader::InitLicenseFromDLS(&dlspar, szErrorMsg, 256);
    
    if (iRet != DBR_OK)
     {
@@ -85,25 +84,24 @@ You can set the license by following the steps below:
 
  Code snippet in C#:
  ```csharp
-   DMLTSConnectionParameters ltspar = BarcodeReader.InitLTSConnectionParamters();           
-   ltspar.HandshakeCode = "200***001-1000*****"; // Please replace the handshakeCode with your own
-   EnumErrorCode iRet = BarcodeReader.InitLicenseFromLTS(ltspar, out strErrorMSG);
+   DMDLSConnectionParameters dlspar = BarcodeReader.InitDLSConnectionParamters();           
+   dlspar.OrganizationID = "YOUR-ORGANIZATION-ID"; // Please replace the organizationID with your own
+   EnumErrorCode iRet = BarcodeReader.InitLicenseFromDLS(dlspar, out strErrorMSG);
  ```
 
  Code snippet in Java:
  ```java
-   DMLTSConnectionParameters ltspar = BarcodeReader.initLTSConnectionParameters();
-   ltspar.handshakeCode = "200***001-1000*****"; // Please replace the handshakeCode with your own
-   ltspar.deploymentType = EnumDMDeploymentType.DM_DT_DESKTOP; // Please replace the deploymentType with your own
-   BarcodeReader.initLicenseFromLTS(ltspar);
+   DMDLSConnectionParameters dlspar = BarcodeReader.initDLSConnectionParameters();
+   dlspar.organizationID = "YOUR-ORGANIZATION-ID"; // Please replace the organizationID with your own
+   BarcodeReader.initLicenseFromDLS(dlspar);
  ```
 
  Code snippet in iOS (Objective-C):
  ```objc
-   iDMLTSConnectionParameters* lts = [[iDMLTSConnectionParameters alloc] init];
-   lts.handshakeCode = @"handshakeCode"; // Please replace the handshakeCode with your own
-   _dbr = [[DynamsoftBarcodeReader alloc] initLicenseFromLTS:lts verificationDelegate:self];
-- (void)LTSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
+   iDMDLSConnectionParameters* dls = [[iDMDLSConnectionParameters alloc] init];
+   dls.organizationID = @"YOUR-ORGANIZATION-ID"; // Please replace the organizationID with your own
+   _dbr = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:dls verificationDelegate:self];
+- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
 {
     NSNumber* boolNumber = [NSNumber numberWithBool:isSuccess];
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -119,11 +117,10 @@ You can set the license by following the steps below:
  ```
  Code snippet in iOS(Swift):
  ```swift
-  let lts = iDMLTSConnectionParameters();
-  lts.handshakeCode = "*****-hs-****";
-  lts.sessionPassword = "******";
-  barcodeReader = DynamsoftBarcodeReader(licenseFromLTS: lts, verificationDelegate: self)
-  func ltsLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
+  let dls = iDMDLSConnectionParameters();
+  dls.organizationID = "YOUR-ORGANIZATION-ID";
+  barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
+  func dlsLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
   {
      //TODO add your code for license verification
   }
@@ -131,24 +128,24 @@ You can set the license by following the steps below:
 
  Code snippet in Android:
  ```java
-   DBRLTSLicenseVerificationListener ltsListener = new DBRLTSLicenseVerificationListener() {
+   DBRDLSLicenseVerificationListener dlsListener = new DBRDLSLicenseVerificationListener() {
       @Override
-      public void LTSLicenseVerificationCallback(boolean success, Exception error) {
+      public void DLSLicenseVerificationCallback(boolean success, Exception error) {
       }
    };
-   DMLTSConnectionParameters parameters = new DMLTSConnectionParameters();
-   parameters.handshakeCode = "200***001-1000*****"; // Please replace the handshakeCode with your own
-   dbr.initLicenseFromLTS(parameters,ltsListener);
+   DMDLSConnectionParameters parameters = new DMDLSConnectionParameters();
+   parameters.organizationID = "YOUR-ORGANIZATION-ID"; // Please replace the organizationID with your own
+   dbr.initLicenseFromDLS(parameters,dlsListener);
  ```
  
  Code snippet in Python:
  ```python
  reader = BarcodeReader()
- connection_paras = reader.init_lts_connection_parameters()
- # Please replace the handshakeCode with your own
- connection_paras.handshake_code = "200***001-1000*****"
+ connection_paras = reader.init_dls_connection_parameters()
+ # Please replace the organizationID with your own
+ connection_paras.organization_id = "YOUR-ORGANIZATION-ID"
  try:
-     error = reader.init_licesne_from_lts(connection_paras)
+     error = reader.init_licesne_from_dls(connection_paras)
      if error[0] != EnumErrorCode.DBR_OK:
          print(error[1])
  except BarcodeReaderError as bre:
