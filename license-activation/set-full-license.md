@@ -37,7 +37,7 @@ You can set the license by following the steps below:
  
  ![ActivationContinue][3]
  
- Then you can see the message "Activate Success! You can start configuring your license now". Click "start configuring your license" to continue.
+ Then you can see the message "Activation secceeded!...". Click "configure this new license item at this page" to continue.
  
  ![ConfigLicense][4]
 
