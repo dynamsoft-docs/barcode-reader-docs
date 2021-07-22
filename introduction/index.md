@@ -30,7 +30,7 @@ Dynamsoft Barcode Reader (DBR) SDK enables you to easily implement 1D and 2D bar
 ## How-To Guides  
 
 - [How-to Guides]({{ site.how_to }})
-- [Customize Parameters for Different Scenarios](../parameters/scenario-settings.md/) 
+- [Customize Parameters for Different Scenarios](../parameters/scenario-settings/) 
 - [Test Batch Scanning with Performance Tool]({{ site.introduction }}comparison-tools/batch-test.html)
 - [License Activation](../license-activation/set-trial-license.md/)
 
