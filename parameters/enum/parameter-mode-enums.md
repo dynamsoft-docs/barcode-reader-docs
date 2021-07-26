@@ -404,6 +404,7 @@ Describes the localization mode.
 | LM_SCAN_DIRECTLY | EnumLocalizationModeScanDirectly | 0x10 |  Localizes barcodes quickly. This mode is recommended in interactive scenario. | [`ScanStride`]({{ site.parameters_reference }}image-parameter/LocalizationModes.html#scanstride)<br>[`ScanDirection`]({{ site.parameters_reference }}image-parameter/LocalizationModes.html#scandirection) |
 | LM_STATISTICS_MARKS | EnumLocalizationModeStatisticsMarks | 0x20 | Localizes barcodes by groups of marks.This is optimized for DPM codes. | `N/A` |
 | LM_STATISTICS_POSTAL_CODE | EnumLocalizationModeStatisticsPostalCode | 0x40 | Localizes barcodes by groups of connected blocks and lines.This is optimized for postal codes. | `N/A` |
+| LM_CENTRE | EnumLocalizationModeCentre | 0x80 | Localizes barcodes from the centre of the image. | `N/A` |
 
 
 
