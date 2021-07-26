@@ -7,7 +7,7 @@ needAutoGenerateSidebar: false
 breadcrumbText: Introduction
 ---
 
-# Dynamsoft Barcode Reader - Introduction
+# Introduction
 
 Dynamsoft Barcode Reader (DBR) SDK enables you to easily implement 1D and 2D barcode scanning into your applications running on different platforms. 
 
