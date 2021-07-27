@@ -30,7 +30,7 @@ Sets the optional argument for a specified mode in Modes parameters.
 ```java
 void com.dynamsoft.dbr.BarcodeReader.setModeArgument(String modesName, int index, String argumentName, String argumentValue)	throws BarcodeReaderException
 ```   
-#### Parameters
+**Parameters**
 `modesName` The mode parameter name to set argument.  
 `index` The array index of mode parameter to indicate a specific mode.  
 `argumentName` The name of the argument to set.  
@@ -79,7 +79,7 @@ Gets the optional argument for a specified mode in Modes parameters.
 String com.dynamsoft.dbr.BarcodeReader.getModeArgument(String modesName, int index, String argumentName) throws BarcodeReaderException
 ```   
    
-#### Parameters  
+**Parameters**  
 `modesName` The mode parameter name to get argument.  
 `index` The array index of mode parameter to indicate a specific mode.  
 `argumentName` The name of the argument to get.
@@ -157,7 +157,7 @@ Update runtime settings with a given [`PublicRuntimeSettings`](../class/PublicRu
 void com.dynamsoft.dbr.BarcodeReader.updateRuntimeSettings(PublicRuntimeSettings settings) throws BarcodeReaderException
 ```   
    
-#### Parameters
+**Parameters**
 `settings`	The struct of template settings.
 
 #### Exceptions

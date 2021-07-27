@@ -31,7 +31,7 @@ Read product key and activate the SDK.
 int dynamsoft::dbr::CBarcodeReader::InitLicense (const char* pLicense)	
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	pLicense` The product keys.
 
 
@@ -60,7 +60,7 @@ Initialize the license and connect to the specified server for online verificati
 int dynamsoft::dbr::CBarcodeReader::InitLicenseFromServer (const char* pLicenseServer, const char* pLicenseKey)
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	pLicenseServer` The URL of the license server.  
 `[in]	pLicenseKey`The license key.
 
@@ -82,7 +82,7 @@ Initialize barcode reader license from the license content on the client machine
 int dynamsoft::dbr::CBarcodeReader::InitLicenseFromLicenseContent (const char* pLicenseKey, const char* pLicenseContent)	
 ```   
 
-#### Parameters
+**Parameters**
 `[in]	pLicenseKey`	The license key.  
 `[in]	pLicenseContent`	An encrypted string representing the license content (quota, expiration date, barcode type, etc.) obtained from the method [`OutputLicenseToString`](#outputlicensetostring).
 
@@ -105,7 +105,7 @@ Output the license content as an encrypted string from the license server to be 
 int dynamsoft::dbr::CBarcodeReader::OutputLicenseToString (char content[], const int contentLen)
 ```   
    
-#### Parameters
+**Parameters**
 `[in,out]	content` The output string which stores the content of license.  
 `[in]	contentLen` The length of output string. The recommended length is 512 per license key.
 
@@ -130,7 +130,7 @@ Output the license content as an encrypted string from the license server to be 
 int dynamsoft::dbr::CBarcodeReader::OutputLicenseToStringPtr (char** content)
 ```   
 
-#### Parameters
+**Parameters**
 `[in,out]	content` The output string which stores the content of license.
 
 #### Return value
@@ -155,7 +155,7 @@ void dynamsoft::dbr::CBarcodeReader::FreeLicenseString (char** content)
 
 ---
    
-#### Parameters
+**Parameters**
 `[in]	content` The output string which stores the content of license.
 
 
@@ -171,7 +171,7 @@ Initializes a DM_DLSConnectionParameters struct with default values.
 static int dynamsoft::dbr::CBarcodeReader::InitDLSConnectionParameters(DM_DLSConnectionParameters *pDLSConnectionParameters)
 ```   
    
-#### Parameters
+**Parameters**
 `[in, out] pDLSConnectionParameters` The struct of [`DM_DLSConnectionParameters`]({{ site.structs }}DMLTSConnectionParameters.html).   
 
 #### Return value
@@ -195,7 +195,7 @@ Initializes the barcode reader license and connects to the specified server for 
 static int dynamsoft::dbr::CBarcodeReader::InitLicenseFromDLS(DM_DLSConnectionParameters *pDLSConnectionParameters, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)
 ```   
    
-#### Parameters
+**Parameters**
 `[in] pDLSConnectionParameters` The struct [`DM_DLSConnectionParameters`]({{ site.structs }}DMLTSConnectionParameters.html) with customized settings.   
 `[in, out] errorMsgBuffer`<sub>Optional</sub> The buffer is allocated by the caller and the recommended length is 256. The error message will be copied to the buffer.  
 `[in]	errorMsgBufferLen`<sub>Optional</sub> The length of the allocated buffer.  

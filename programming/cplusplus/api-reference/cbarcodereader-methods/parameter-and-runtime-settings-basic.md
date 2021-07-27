@@ -29,7 +29,7 @@ Set argument value for the specified mode parameter.
 ```cpp
 int dynamsoft::dbr::CBarcodeReader::SetModeArgument (const char* pModesName, const int index, const char* pArgumentName, const char* pArgumentValue, char errorMsgBuffer[] = NULL,  onst int errorMsgBufferLen = 0)	
 ```   
-#### Parameters
+**Parameters**
 `[in]	pModesName` The mode parameter name to set argument.  
 `[in]	index` The array index of mode parameter to indicate a specific mode.  
 `[in]	pArgumentName` The name of the argument to set.  
@@ -84,7 +84,7 @@ Get argument value for the specified mode parameter.
 int dynamsoft::dbr::CBarcodeReader::GetModeArgument (const char* pModesName, const int index, const char* pArgumentName, char valueBuffer[], const int valueBufferLen, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)	
 ```   
    
-#### Parameters  
+**Parameters**  
 `[in]	pModesName` The mode parameter name to get argument.  
 `[in]	index` The array index of mode parameter to indicate a specific mode.  
 `[in]	pArgumentName` The name of the argument to get.  
@@ -142,7 +142,7 @@ Get current settings and save them into a [`PublicRuntimeSettings`]({{ site.stru
 int dynamsoft::dbr::CBarcodeReader::GetRuntimeSettings (PublicRuntimeSettings* psettings)	
 ```   
 
-#### Parameters
+**Parameters**
 `[in,out]	psettings`	The struct of template settings.
  
 #### Return value
@@ -173,7 +173,7 @@ Update runtime settings with a given [`PublicRuntimeSettings`]({{ site.structs }
 int dynamsoft::dbr::CBarcodeReader::UpdateRuntimeSettings (PublicRuntimeSettings* pSettings, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	pSettings`	The struct of template settings.  
 `[in,out]	errorMsgBuffer`<sub>Optional</sub> The buffer is allocated by caller and the recommended length is 256. The error message will be copied to the buffer.  
 `[in]	errorMsgBufferLen`<sub>Optional</sub> The length of the allocated buffer.  

@@ -28,7 +28,7 @@ Initialize runtime settings with the settings in a given JSON file.
 EnumErrorCode Dynamsoft.DBR.BarcodeReader.InitRuntimeSettingsWithFile(string jsonFileName, EnumConflictMode conflictMode, out string errorMessage)
 ```
 
-#### Parameters
+**Parameters**
 `[in]	jsonFileName` <*string*> : The path of the settings file.  
 `[in]	conflictMode` <*EnumConflictMode*> : The parameter setting mode, which decides to inherit parameters from previous template setting or overwrite previous settings and replace by new template.   
 `[in,out]	errorMessage` <*string*> : Output parameter storing detailed error message. 
@@ -58,7 +58,7 @@ Initialize runtime settings with the settings in given JSON string.
 EnumErrorCode Dynamsoft.DBR.BarcodeReader.InitRuntimeSettingsWithString(string jsonContent, EnumConflictMode conflictMode, out string errorMessage)
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	jsonContent` <*string*> : A JSON string that represents the content of the settings.  
 `[in]	conflictMode` <*EnumConflictMode*> : The parameter setting mode, which decides to inherit parameters from previous template setting or overwrite previous settings and replace by new template.   
 `[in,out]	errorMessage` <*string*> : Output parameter storing detailed error message. 
@@ -88,7 +88,7 @@ Append a new template file to the current runtime settings.
 EnumErrorCode Dynamsoft.DBR.BarcodeReader.AppendTplFileToRuntimeSettings(string jsonFileName, EnumConflictMode conflictMode, out string errorMessage)
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	jsonFileName` <*string*> : The path of the settings file.  
 `[in]	conflictMode` <*EnumConflictMode*> : The parameter setting mode, which decides to inherit parameters from previous template setting or overwrite previous settings and replace by new template.   
 `[in,out]	errorMessage` <*string*> : Output parameter storing detailed error message. 
@@ -117,7 +117,7 @@ Append a new template string to the current runtime settings.
 EnumErrorCode Dynamsoft.DBR.BarcodeReader.AppendTplStringToRuntimeSettings(string  jsonContent, EnumConflictMode  conflictMode, out string errorMessage) 
 ```   
 
-#### Parameters
+**Parameters**
 `[in]	jsonContent` <*string*> : A JSON string that represents the content of the settings.  
 `[in]	conflictMode` <*EnumConflictMode*> : The parameter setting mode, which decides to inherit parameters from previous template setting or overwrite previous settings and replace by new template.   
 `[in,out]	errorMessage` <*string*> : Output parameter storing detailed error message.
@@ -171,7 +171,7 @@ Output runtime settings to a settings file (JSON file).
 void Dynamsoft.DBR.BarcodeReader.OutputSettingsToFile(string outputFilePath, string settingsName)
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	outputFilePath` <*string*> : The output file path which stores current settings.  
 `[in]	settingsName` <*string*> : A unique name for declaring current runtime settings. 
 
@@ -200,7 +200,7 @@ Output runtime settings to a string.
 string Dynamsoft.DBR.BarcodeReader.OutputSettingsToString(string settingsName)
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	settingsName` <*string*> : A unique name for declaring current runtime settings.  
 
 #### Return value

@@ -35,7 +35,7 @@ Constructor with a given product key.
 Dynamsoft.DBR.BarcodeReader.BarcodeReader(string productKey)
 ```
 
-#### Parameters
+**Parameters**
 `[in] productKey` <*string*> : Product key. 
 
 ### BarcodeReader(string modulePath, string productKey)
@@ -46,7 +46,7 @@ Constructor with a given product key and a given path to load DLLs.
 Dynamsoft.DBR.BarcodeReader.BarcodeReader(string modulePath, string productKey)
 ```
 
-#### Parameters
+**Parameters**
 `[in] modulePath` <*string*> : The path where you store these DLLs.  
 `[in] productKey` <*string*> : Product key. 
 

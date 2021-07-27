@@ -34,7 +34,7 @@ Initialize runtime settings with the parameters obtained from a JSON file.
 DBR_API int DBR_InitRuntimeSettingsWithFile (void* barcodeReader, const char* pFilePath, const ConflictMode conflictMode, char errorMsgBuffer[], const int errorMsgBufferLen)
 ```   
    
-#### Parameters
+**Parameters**
 `[in] barcodeReader` Handle of the barcode reader instance.  
 `[in]	pFilePath` The settings file path.  
 `[in]	conflictMode` The parameter setting mode, which decides whether to inherit parameters from previous template settings or to overwrite previous settings with the new template.  
@@ -68,7 +68,7 @@ Initialize runtime settings with the parameters obtained from a JSON string.
 DBR_API int DBR_InitRuntimeSettingsWithString (void* barcodeReader, const char* content, const ConflictMode conflictMode, char errorMsgBuffer[], const int errorMsgBufferLen)
 ```   
    
-#### Parameters
+**Parameters**
 `[in] barcodeReader` Handle of the barcode reader instance.  
 `[in]	content` A JSON string that represents the content of the settings.  
 `[in]	conflictMode` The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings with the new template.  
@@ -102,7 +102,7 @@ Append a new template file to the current runtime settings.
 DBR_API int DBR_AppendTplFileToRuntimeSettings (void* barcodeReader, const char* pFilePath, const ConflictMode conflictMode, char errorMsgBuffer[], const int errorMsgBufferLen)
 ```   
  
-#### Parameters
+**Parameters**
 `[in] barcodeReader` Handle of the barcode reader instance.  
 `[in]	pFilePath` The settings file path.     
 `[in]	conflictMode` The parameter setting mode, which decides whether to inherit parameters from previous template settings or to overwrite previous settings with the new template.     
@@ -136,7 +136,7 @@ Append a new template string to the current runtime settings.
 DBR_API int DBR_AppendTplStringToRuntimeSettings (void* barcodeReader, const char* content, const ConflictMode conflictMode, char errorMsgBuffer[], const int errorMsgBufferLen)
 ```   
    
-#### Parameters
+**Parameters**
 `[in] barcodeReader` Handle of the barcode reader instance.  
 `[in] content` A JSON string that represents the content of the settings.   
 `[in] conflictMode` The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings with the new template.   
@@ -170,7 +170,7 @@ Get count of parameter templates.
 DBR_API int DBR_GetParameterTemplateCount (void* barcodeReader)
 ```   
    
-#### Parameters
+**Parameters**
 `[in] barcodeReader` Handle of the barcode reader instance.  
 
 
@@ -202,7 +202,7 @@ Get parameter template name by index.
 DBR_API int DBR_GetParameterTemplateName (void* barcodeReader, const int index, char nameBuffer[], const int nameBufferLen)
 ```   
 
-#### Parameters
+**Parameters**
 `[in] barcodeReader` Handle of the barcode reader instance.  
 `[in]	index` The index of parameter template array.   
 `[in,out]	nameBuffer` The buffer is allocated by caller and the recommended length is 256. The template name will be copied to the buffer.   
@@ -242,7 +242,7 @@ Outputs runtime settings and save them into a settings file (JSON file).
 DBR_API int DBR_OutputSettingsToFile (void* barcodeReader, const char* pFilePath, const char* pSettingsName)
 ```   
    
-#### Parameters
+**Parameters**
 `[in] barcodeReader` Handle of the barcode reader instance.  
 `[in]	pFilePath` The path of the output file which stores current settings.  
 `[in]	pSettingsName` A unique name for declaring current runtime settings.  
@@ -277,7 +277,7 @@ Output runtime settings to a string.
 DBR_API int DBR_OutputSettingsToString (void* barcodeReader, char content[], const int contentLen, const char* pSettingsName)
 ```   
    
-#### Parameters
+**Parameters**
 `[in] barcodeReader` Handle of the barcode reader instance.  
 `[in,out]	content` The output string which stores the contents of current settings.   
 `[in]	contentLen` The length of output string.   
@@ -314,7 +314,7 @@ Output runtime settings to a string.
 DBR_API int DBR_OutputSettingsToStringPtr (void* barcodeReader, char** content, const char* pSettingsName)
 ```   
    
-#### Parameters
+**Parameters**
 `[in] barcodeReader` Handle of the barcode reader instance.    
 `[in,out]	content` The output string which stores the contents of current settings.   
 `[in]	pSettingsName` A unique name for declaring current runtime settings.   
@@ -352,7 +352,7 @@ Free memory allocated for runtime settings string.
 DBR_API void DBR_FreeSettingsString (char** content)
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	content` The runtime settings string.  
 
 #### Code Snippet

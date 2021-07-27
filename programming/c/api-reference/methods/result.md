@@ -28,7 +28,7 @@ Get all recognized barcode results.
 DBR_API int DBR_GetAllTextResults (void* barcodeReader, TextResultArray** pResults)	
 ```   
    
-#### Parameters
+**Parameters**
 `[in] barcodeReader` Handle of the barcode reader instance.  
 `[out] pResults`	Barcode text results returned by last calling function [`DBR_DecodeFile`](decode.md#dbr_decodefile) / [`DBR_DecodeFileInMemory`](decode.md#dbr_decodefileinmemory) / [`DBR_DecodeBuffer`](decode.md#dbr_decodebuffer) / [`DBR_DecodeBase64String`](decode.md#dbr_decodebase64string) / [`DBR_DecodeDIB`](decode.md#dbr_decodedib). The results is allocated by SDK and should be freed by calling function [`DBR_FreeTextResults`](#dbr_freetextresults).
 
@@ -60,7 +60,7 @@ Free memory allocated for text results.
 DBR_API void DBR_FreeTextResults (TextResultArray** pResults)	
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	pResults` Text results.
 
 #### Code Snippet
@@ -88,7 +88,7 @@ DBR_API int DBR_GetIntermediateResults (void* barcodeReader, IntermediateResultA
 ```   
 
    
-#### Parameters
+**Parameters**
 `[in] barcodeReader` Handle of the barcode reader instance.  
 `[out]	pResult` The intermediate results returned by the SDK.
 
@@ -127,7 +127,7 @@ Frees memory allocated for the intermediate results.
 DBR_API void DBR_FreeIntermediateResults (IntermediateResultArray** pResults)
 ```   
    
-#### Parameters
+**Parameters**
 `[in] pResults` The intermediate results.
 
 #### Code Snippet

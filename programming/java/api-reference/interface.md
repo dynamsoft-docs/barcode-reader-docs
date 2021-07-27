@@ -26,7 +26,7 @@ Represents the method that will handle the error code returned by the SDK.
 void com.dynamsoft.dbr.ErrorCallback.errorCallback(int frameId, int errorCode, Object userData)	
 ```   
    
-#### Parameters
+**Parameters**
 `frameId` 	The ID of the frame.    
 `errorCode` Error Code generated when decoding the frame.
 `userData` Arguments passed to your function.
@@ -44,7 +44,7 @@ Represents the method that will handle the intermediate result array returned by
 void com.dynamsoft.dbr.IntermediateResultCallback.intermediateResultCallback(int frameId, IntermediateResult[] results, Object userData)	
 ```   
    
-#### Parameters
+**Parameters**
 `frameId` 	The ID of the frame.  
 `results` The intermediate results of the frame.   
 `userData` Arguments passed to your function.   
@@ -65,7 +65,7 @@ Represents the method that will handle the error code returned by the SDK.
 void textResultCallback(int frameId, TextResult[] results, Object userData)
 ```   
    
-#### Parameters
+**Parameters**
 `frameId` The ID of the frame.  
 `results` Recognized barcode results of the frame.   
 `userData` Arguments passed to your function.

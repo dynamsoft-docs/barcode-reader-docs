@@ -38,7 +38,7 @@ Starts a new thread to decode barcodes from the inner frame queue.
 BarcodeReader.start_video_mode(frame_decoding_parameters, call_back_func, template_name="")
 ```
 
-### Parameters
+**Parameters**
 
 `[in] frame_decoding_parameters` <*class FrameDecodingParameters*> : The frame decoding parameters. You can get it by using init_frame_decoding_parameters() then modifying its parameters' value.  
 `[in] text_result_callback_func` <*function pointer*> : Sets callback function to process text results during frame decoding.  
@@ -165,7 +165,7 @@ Appends a frame image buffer to the inner frame queue.
 BarcodeReader.append_video_frame(video_frame)
 ```
 
-### Parameters
+**Parameters**
 
 `[in] video_frame` : Gets video frame by opencv.
 

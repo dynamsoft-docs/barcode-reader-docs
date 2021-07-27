@@ -28,7 +28,7 @@ Get error message by error code.
 static const char* dynamsoft::dbr::CBarcodeReader::GetErrorString (const int iErrorCode)
 ```
 
-#### Parameters
+**Parameters**
 `[in] iErrorCode`	Error code.
 
 #### Return value

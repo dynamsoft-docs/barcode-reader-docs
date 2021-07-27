@@ -48,7 +48,7 @@ Destroys an instance of Dynamsoft Barcode Reader.
 DBR_API void DBR_DestroyInstance (void* barcodeReader)	
 ```   
    
-### Parameters
+**Parameters**
 
 `[in]	barcodeReader` Handle of the barcode reader instance.
 

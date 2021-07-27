@@ -33,7 +33,7 @@ Initialize runtime settings with the settings in a given JSON file.
 void com.dynamsoft.dbr.BarcodeReader.initRuntimeSettingsWithFile(String filePath, int enumConflictMode) throws BarcodeReaderException
 ```   
 
-#### Parameters
+**Parameters**
 `filePath` The path of the settings file.  
 `enumConflictMode` The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings and replace with the new template. 
 
@@ -62,7 +62,7 @@ Initialize runtime settings with the settings in a given JSON string.
 void com.dynamsoft.dbr.BarcodeReader.initRuntimeSettingsWithString(String content, int enumConflictMode)throws BarcodeReaderException
 ```   
    
-#### Parameters
+**Parameters**
 `content` A JSON string that represents the content of the settings.   
 `enumConflictMode` The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings and replace with the new template. 
 
@@ -90,7 +90,7 @@ Append a new template file to the current runtime settings.
 void com.dynamsoft.dbr.BarcodeReader.appendTplFileToRuntimeSettings(String filePath, int enumConflictMode) throws BarcodeReaderException
 ```   
    
-#### Parameters
+**Parameters**
 `filePath` The path of the settings file.  
 `enumConflictMode` The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings with the new template. 
 
@@ -119,7 +119,7 @@ void com.dynamsoft.dbr.BarcodeReader.appendTplStringToRuntimeSettings(String con
 ```   
 
    
-#### Parameters
+**Parameters**
 `content` A JSON string that represents the content of the settings.  
 `enumConflictMode` The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings with the new template.  
 
@@ -173,7 +173,7 @@ Output runtime settings to a settings file (JSON file).
 void com.dynamsoft.dbr.BarcodeReader.outputSettingsToFile(String filePath, String settingsName) throws BarcodeReaderException
 ```   
    
-#### Parameters
+**Parameters**
 `filePath` The output file path which stores current settings.  
 `settingsName` A unique name for declaring current runtime settings.
 
@@ -201,7 +201,7 @@ Output runtime settings to a string.
 String com.dynamsoft.dbr.BarcodeReader.outputSettingsToString(String settingsName) throws BarcodeReaderException
 ```   
    
-#### Parameters 
+**Parameters** 
 `settingsName` A unique name for declaring current runtime settings.  
 
 #### Return value

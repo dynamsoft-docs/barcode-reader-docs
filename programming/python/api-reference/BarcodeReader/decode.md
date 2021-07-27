@@ -28,7 +28,7 @@ Decode barcodes from a specified image file.
 BarcodeReader.decode_file(image_file_name, template_name="")
 ```
 
-### Parameters
+**Parameters**
 
 - `[in] image_file_name` <*str*> :	A string defining the file name.   
 - `[in] template_name` <*optional*><*str*> : The template name.
@@ -73,7 +73,7 @@ Decodes barcodes from the memory buffer containing image pixels in defined forma
 BarcodeReader.decode_buffer(image, image_pixel_format=EnumImagePixelFormat.IPF_RGB_888, template_name="")
 ```   
    
-### Parameters
+**Parameters**
 `[in] image` <*class numpy.ndarray*> : The image which is processed by opencv.  
 `[in] image_pixel_format` <*class EnumImagePixelFormat*> : The image pixel format used in the image byte array.  
 `[in] template_name` <*optional*><*str*> : The template name.
@@ -122,7 +122,7 @@ Decodes barcodes from an image file in memory.
 BarcodeReader.decode_file_stream(file_stream, template_name="")
 ```
 
-### Parameters
+**Parameters**
 
 - `[in]	file_stream` <*bytearray*>  : The image file bytes in memory.  
 - `[in] templateName` <*optional*><*str*>: The template name.
@@ -171,7 +171,7 @@ Decodes barcodes from the memory buffer containing image pixels in defined forma
 BarcodeReader.decode_buffer_manually(self, buffer, width, height, stride, image_pixel_format, template_name="")
 ```   
    
-### Parameters
+**Parameters**
 `[in] buffer` <*bytes or bytearray*> : The array of bytes which contain the image data.  
 `[in] width` <*int*> : The width of the image in pixels.  
 `[in] height` <*int*> : The height of the image in pixels.  
@@ -194,7 +194,7 @@ Inits an intermediateResult struct with default values.
 BarcodeReader.init_intermediate_result(intermediate_result_type)
 ```
 
-### Parameters
+**Parameters**
 
 - `[in] intermediate_result_type` <*class EnumImagePixelFormat*> :	The type of the intermediate result to init.   
 
@@ -238,7 +238,7 @@ Decodes barcode from intermediate results.
 BarcodeReader.decode_intermediate_results(intermediate_results, template_name="")
 ```
 
-### Parameters
+**Parameters**
 
 - `[in] intermediate_results` <*list[class IntermediateResults]*> :	The intermediate result array for decoding.   
 - `[in] template_name` <*optional*><*str*> : The template name.

@@ -32,7 +32,7 @@ Decode barcodes from a specified image file.
 DBR_API int DBR_DecodeFile (void* barcodeReader, const char* pFileName, const char* pTemplateName)	
 ```   
    
-#### Parameters
+**Parameters**
 `[in] barcodeReader` Handle of the barcode reader instance.  
 `[in]	pFileName` A string defining the file name.  
 `[in]	pTemplateName` The template name.
@@ -62,7 +62,7 @@ Decode barcodes from an image file in memory.
 DBR_API int DBR_DecodeFileInMemory (void* barcodeReader, const unsigned char* pFileBytes, const int fileSize, const char* pTemplateName)	
 ```  
    
-#### Parameters
+**Parameters**
 `[in] barcodeReader` Handle of the barcode reader instance.  
 `[in]	pFileBytes` The image file bytes in memory.  
 `[in]	fileSize`	The length of the file bytes in memory.  
@@ -96,7 +96,7 @@ Decode barcodes from the memory buffer containing image pixels in defined format
 DBR_API int DBR_DecodeBuffer (void* barcodeReader, const unsigned char* pBufferBytes, const int width, const int height, const int stride, const ImagePixelFormat format, const char* pTemplateName)
 ```   
    
-#### Parameters
+**Parameters**
 `[in] barcodeReader` Handle of the barcode reader instance.  
 `[in]	pBufferBytes` The array of bytes which contain the image data.  
 `[in]	width` The width of the image in pixels.  
@@ -135,7 +135,7 @@ Decode barcodes from an image file encoded as a base64 string.
 DBR_API int DBR_DecodeBase64String (void* barcodeReader, const char* pBase64String, const char* pTemplateName)	
 ```   
 
-#### Parameters
+**Parameters**
 `[in] barcodeReader` Handle of the barcode reader instance.   
 `[in]	pBase64String` A base64 encoded string that represents an image.  
 `[in]	pTemplateName` The template name.  
@@ -170,7 +170,7 @@ Decode barcodes from a handle of device-independent bitmap (DIB).
 DBR_API int DBR_DecodeDIB (void* barcodeReader, const HANDLE hDIB, const char* pTemplateName)	
 ```   
    
-#### Parameters
+**Parameters**
 `[in] barcodeReader` Handle of the barcode reader instance.  
 `[in]	hDIB` Handle of the device-independent bitmap.  
 `[in]	pTemplateName` The template name.  
@@ -200,7 +200,7 @@ Inits an intermediateResult struct with default values.
 DBR_API int DBR_InitIntermediateResult (IntermediateResultType intermediateResultType, IntermediateResult* pIntermediateResult)	
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	intermediateResultType` The type of the intermediate result to init.  
 `[in, out]	pIntermediateResult` The intermediate result struct.  
 
@@ -226,7 +226,7 @@ Decodes barcode from intermediate results.
 DBR_API int DBR_DecodeIntermediateResults (void* barcodeReader, const IntermediateResultArray *pIntermediateResultArray, const char* pTemplateName)	
 ```   
    
-#### Parameters
+**Parameters**
 `[in] barcodeReader` Handle of the barcode reader instance.  
 `[in]	pIntermediateResultArray` The intermediate result array for decoding.  
 `[in]	pTemplateName` The template name.

@@ -28,7 +28,7 @@ Sets the optional argument for a specified mode in Modes parameters.
 ```csharp
 EnumErrorCode Dynamsoft.DBR.BarcodeReader.SetModeArgument(string modesName, int index, string argumentName, string argumentValue, out string errorMessage)
 ```   
-#### Parameters
+**Parameters**
 `[in]	modesName` <*string*> : The mode parameter name to set argument.  
 `[in]	index` <*int*> : The array index of mode parameter to indicate a specific mode.  
 `[in]	argumentName` <*string*> : The name of the argument to set.  
@@ -77,7 +77,7 @@ Get argument value for the specified mode parameter.
 EnumErrorCode Dynamsoft.DBR.BarcodeReader.GetModeArgument(string modesName, int index, string argumentName, out string argumentValue, out string errorMessage)
 ```   
    
-#### Parameters  
+**Parameters**  
 `[in]	modesName` <*string*> : The mode parameter name to get argument.  
 `[in]	index` <*int*> : The array index of mode parameter to indicate a specific mode.  
 `[in]	argumentName` <*string*> : The name of the argument to get.  
@@ -160,7 +160,7 @@ Update runtime settings with a given struct.
 void Dynamsoft.DBR.BarcodeReader.UpdateRuntimeSettings(PublicRuntimeSettings settings)
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	settings` <*[PublicRuntimeSettings](../struct/PublicRuntimeSettings.md)*> : The struct of template settings.    
  
 #### Exceptions

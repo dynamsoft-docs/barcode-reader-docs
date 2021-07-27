@@ -36,7 +36,7 @@ Initialize runtime settings with the settings in a given JSON file.
 int dynamsoft::dbr::CBarcodeReader::InitRuntimeSettingsWithFile (const char* pFilePath, const ConflictMode conflictMode, char errorMsgBuffer[] = NULL, int errorMsgBufferLen = 0)	
 ```   
 
-#### Parameters
+**Parameters**
 `[in]	pFilePath` The path of the settings file.  
 `[in]	conflictMode` The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings and replace with the new template.  
 `[in,out]	errorMsgBuffer`<sub>Optional</sub> The buffer is allocated by caller and the recommended length is 256. The error message will be copied to the buffer.  
@@ -70,7 +70,7 @@ Initialize runtime settings with the settings in a given JSON string.
 int dynamsoft::dbr::CBarcodeReader::InitRuntimeSettingsWithString (const char* content, const ConflictMode conflictMode, char errorMsgBuffer[] = NULL, int errorMsgBufferLen = 0)	
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	content` A JSON string that represents the content of the settings.   
 `[in]	conflictMode` The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings and replace with the new template.  
 `[in,out]	errorMsgBuffer`<sub>Optional</sub> The buffer is allocated by caller and the recommended length is 256. The error message will be copied to the buffer.  
@@ -103,7 +103,7 @@ Append a new template file to the current runtime settings.
 int dynamsoft::dbr::CBarcodeReader::AppendTplFileToRuntimeSettings (const char* pFilePath, const ConflictMode conflictMode, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	pFilePath` The path of the settings file.  
 `[in]	conflictMode` The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings with the new template.  
 `[in,out] errorMsgBuffer`<sub>Optional</sub> The buffer is allocated by caller and the recommended length is 256. The error message will be copied to the buffer.  
@@ -137,7 +137,7 @@ int dynamsoft::dbr::CBarcodeReader::AppendTplStringToRuntimeSettings (const char
 ```   
 
    
-#### Parameters
+**Parameters**
 `[in]	content` A JSON string that represents the content of the settings.  
 `[in]	conflictMode` The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings with the new template.  
 `[in,out]	errorMsgBuffer`<sub>Optional</sub> The buffer is allocated by caller and the recommended length is 256. The error message will be copied to the buffer.   
@@ -199,7 +199,7 @@ Gets the parameter template name by index.
 int dynamsoft::dbr::CBarcodeReader::GetParameterTemplateName (const int index, char nameBuffer[], int nameBufferLen)	
 ```  
    
-#### Parameters
+**Parameters**
 `[in]	index` The index of the parameter template array.  
 `[in,out]` nameBuffer	The buffer is allocated by caller and the recommended nameBufferLen is 256. The template name will be copied to the buffer.  
 `[in]	nameBufferLen` The length of allocated buffer.  
@@ -237,7 +237,7 @@ Output runtime settings to a settings file (JSON file).
 int dynamsoft::dbr::CBarcodeReader::OutputSettingsToFile (const char* pFilePath, const char* pSettingsName)	
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	pFilePath` The output file path which stores current settings.  
 `[in]	pSettingsName` A unique name for declaring current runtime settings.
 
@@ -271,7 +271,7 @@ Output runtime settings to a string.
 int dynamsoft::dbr::CBarcodeReader::OutputSettingsToString (char content[], const int contentLen, const char* pSettingsName)
 ```   
    
-#### Parameters
+**Parameters**
 `[in,out]	content` The output string which stores the contents of current settings.  
 `[in]	contentLen` The length of the output string.  
 `[in]	pSettingsName` A unique name for declaring current runtime settings.  
@@ -306,7 +306,7 @@ Output runtime settings to a string.
 int dynamsoft::dbr::CBarcodeReader::OutputSettingsToStringPtr (char** content, const char* pSettingsName)	
 ```   
    
-#### Parameters
+**Parameters**
 `[in,out]	content`	The output string which stores the contents of current settings.  
 `[in]	pSettingsName`	A unique name for declaring current runtime settings.
 
@@ -341,7 +341,7 @@ Free memory allocated for runtime settings string.
 void dynamsoft::dbr::CBarcodeReader::FreeSettingsString (char** content	)	
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	content`	The runtime settings string.
 
 #### Code Snippet

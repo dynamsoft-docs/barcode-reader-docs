@@ -53,7 +53,7 @@ Start a new thread to decode barcodes from the inner frame queue with specific f
 int dynamsoft::dbr::CBarcodeReader::StartFrameDecoding (const int maxQueueLength, const int maxResultQueueLength, const int width, const int height, const int stride, const ImagePixelFormat format, const char* pTemplateName = "") 
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	maxQueueLength` The max number of frames waiting for decoding.  
 `[in]	maxResultQueueLength` The max number of frames whose results (text result/localization result) will be kept.  
 `[in]	width` The width of the frame image in pixels.  
@@ -91,7 +91,7 @@ Start a new thread to decode barcodes from the inner frame queue with specific f
 int dynamsoft::dbr::CBarcodeReader::StartFrameDecodingEx (FrameDecodingParameters parameters, const char* pTemplateName = "")	
 ```   
    
-#### Parameters
+**Parameters**
 `[in] parameters` The frame decoding parameters.   
 `[in] pTemplateName`<sub>Optional</sub> The template name.
 
@@ -142,7 +142,7 @@ Append a frame image buffer to the inner frame queue.
 int dynamsoft::dbr::CBarcodeReader::AppendFrame (unsigned char* pBufferBytes) 
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	pBufferBytes` The array of bytes which contain the image data.
 
 #### Return value
@@ -171,7 +171,7 @@ Stop the frame decoding thread created by [`StartFrameDecoding`](#startframedeco
 int dynamsoft::dbr::CBarcodeReader::AppendFrame (unsigned char* pBufferBytes) 
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	pBufferBytes` The array of bytes which contain the image data.
 
 #### Return value
@@ -202,7 +202,7 @@ Initialize frame decoding parameters with default values.
 int dynamsoft::dbr::CBarcodeReader::InitFrameDecodingParameters (FrameDecodingParameters* pParameters)
 ```   
    
-#### Parameters
+**Parameters**
 `[in,out] pParameters` The frame decoding parameters.
 
 #### Return value
@@ -250,7 +250,7 @@ Set callback function to process errors generated during frame decoding.
 int dynamsoft::dbr::CBarcodeReader::SetErrorCallback (CB_Error cbFunction, void* pUser)	
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	cbFunction`	Callback function.   
 `[in]	pUser` Customized arguments passed to your function.
 
@@ -284,7 +284,7 @@ Set callback function to process text results generated during frame decoding.
 int dynamsoft::dbr::CBarcodeReader::SetTextResultCallback (CB_TextResult cbFunction, void* pUser)	
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	cbFunction`	Callback function.   
 `[in]	pUser` Customized arguments passed to your function.
 
@@ -318,7 +318,7 @@ Set callback function to process intermediate results generated during frame dec
 int dynamsoft::dbr::CBarcodeReader::SetIntermediateResultCallback (CB_IntermediateResult cbFunction, void* pUser)		
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	cbFunction`	Callback function.   
 `[in]	pUser` Customized arguments passed to your function.
 

@@ -27,7 +27,7 @@ Sets the optional argument for a specified mode in `Modes` parameters.
 BarcodeReader.set_mode_argument(modes_name, index, argument_name, argument_value)
 ```
 
-### Parameters
+**Parameters**
 
 - `[in]	modes_name <*str*>` : The mode(s) parameter name to set argument.  
 - `[in]	index <*int*>` : The array index of modes parameter to indicate a specific mode.   
@@ -81,7 +81,7 @@ Gets argument value for the specified mode parameter.
 BarcodeReader.get_mode_argument(modes_name, index, argument_name)
 ```
 
-### Parameters  
+**Parameters**  
 
 - `[in]	modes_name <*str*>` : The mode(s) parameter name to get argument.  
 - `[in]	index <*int*>` : The array index of modes parameter to indicate a specific mode.   
@@ -161,7 +161,7 @@ Updates runtime settings with a given `PublicRuntimeSetting` object.
 BarcodeReader.update_runtime_settings(settings)
 ```
 
-### Parameters
+**Parameters**
 
 `[in]	settings <*class PublicRuntimeSetting*>` : a `PublicRuntimeSetting` object.    
  

@@ -27,7 +27,7 @@ Get error message by error code.
 DBR_API const char* DBR_GetErrorString (int errorCode)	
 ```   
    
-### Parameters
+**Parameters**
 
 `[in]	errorCode` The error code.
  

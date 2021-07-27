@@ -29,7 +29,7 @@ Initializes the license and connect to the specified server for online verificat
 int Dynamsoft.DBR.BarcodeReader.InitLicenseFromServer(string licenseServer, string licenseKey)
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	licenseServer` <*string*> : The name/IP of the license server.  
 `[in]	licenseKey` <*string*> : The license key of Barcode Reader.
 
@@ -62,7 +62,7 @@ Initializes barcode reader license and connects to the specified server for onli
 int Dynamsoft.DBR.BarcodeReader.InitLicenseFromLicenseContent(string licenseKey, string strLicenseContent)
 ```
 
-#### Parameters
+**Parameters**
 `[in]	licenseKey`	<*string*> : The license key of Barcode Reader.   
 `[in]	pLicenseContent` <*string*> : An encrypted string representing the license content (runtime number, expiry date, barcode type, etc.) obtained from the method [`OutputLicenseToString()`](#outputlicensetostring). 
 
@@ -165,7 +165,7 @@ Initializes the barcode reader license and connects to the specified server for 
 static EnumErrorCode Dynamsoft.DBR.BarcodeReader.InitLicenseFromDLS(DMDLSConnectionParameters dlsConnectionParameters, out string errorMsg)
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	dlsConnectionParameters` <*string*> : The struct DMDLSConnectionParameters with customized settings.  
 `[in, out]	errorMsg` <*string*> : The detailed error message.
 

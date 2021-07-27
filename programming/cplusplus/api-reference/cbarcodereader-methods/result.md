@@ -31,7 +31,7 @@ Get all recognized barcode results.
 int dynamsoft::dbr::CBarcodeReader::GetAllTextResults (TextResultArray** pResults)	
 ```   
    
-#### Parameters
+**Parameters**
 `[out] pResults` Barcode text results returned by the last called function [`DecodeFile`](decode.md#decodefile) / [`DecodeFileInMemory`](decode.md#decodefileinmemory) / [`DecodeBuffer`](decode.md#decodebuffer) / [`DecodeBase64String`](decode.md#decodebase64string) / [`DecodeDIB`](decode.md#decodedib). The `pResults` is allocated by the SDK and should be freed by calling the function [`FreeTextResults`](#freetextresults).
 
 #### Return value
@@ -62,7 +62,7 @@ Free memory allocated for text results.
 static void dynamsoft::dbr::CBarcodeReader::FreeTextResults (TextResultArray** pResults)
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	pResults` Text results.
 
 #### Code Snippet
@@ -89,7 +89,7 @@ Get intermediate results containing the original image, the colour clustered ima
 int dynamsoft::dbr::CBarcodeReader::GetIntermediateResults (IntermediateResultArray** pResults) 
 ```   
    
-#### Parameters
+**Parameters**
 `[out] pResults` The intermediate results returned by the SDK.
 
 #### Return value
@@ -127,7 +127,7 @@ Free memory allocated for the intermediate results.
 static void dynamsoft::dbr::CBarcodeReader::FreeIntermediateResults (IntermediateResultArray** pResults)
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	pResults` The intermediate results.
 
 #### Code Snippet

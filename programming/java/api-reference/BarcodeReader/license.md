@@ -30,7 +30,7 @@ Reads product key and activates the SDK.
 void com.dynamsoft.dbr.BarcodeReader.initLicense(String license) throws BarcodeReaderException
 ```   
    
-### Parameters
+**Parameters**
 
 - `license` The product keys.
 
@@ -54,7 +54,7 @@ Initializes the license and connects to the specified server for online verifica
 void com.dynamsoft.dbr.BarcodeReader.initLicenseFromServer(String licenseServer, String licenseKey)	throws BarcodeReaderException
 ```   
    
-### Parameters
+**Parameters**
 
 - `licenseServer` The URL of the license server.  
 - `licenseKey` The license key.
@@ -79,7 +79,7 @@ Initializes barcode reader license from the license content on the client machin
 void com.dynamsoft.dbr.BarcodeReader.initLicenseFromLicenseContent(String licenseKey, String licenseContent) throws BarcodeReaderException
 ```   
 
-### Parameters
+**Parameters**
 
 - `licenseKey` The license key.  
 - `licenseContent` An encrypted string representing the license content (quota, expiration date, barcode type, etc.) obtained from the method [`OutputLicenseToString`](#outputlicensetostring).
@@ -152,7 +152,7 @@ Initializes the barcode reader license and connects to the specified server for 
 static void com.dynamsoft.dbr.BarcodeReader.initLicenseFromDLS(DMDLSConnectionParameters dlsInfo) throws BarcodeReaderException
 ```
 
-### Parameters
+**Parameters**
 
 - `dlsInfo`: The struct `DMDLSConnectionParameters` with customized settings.  
 

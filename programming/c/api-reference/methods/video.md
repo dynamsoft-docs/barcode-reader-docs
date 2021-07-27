@@ -50,7 +50,7 @@ Start a new thread to decode barcodes from the inner frame queue with specific f
 DBR_API int DBR_StartFrameDecoding (void* barcodeReader, const int maxQueueLength, const int maxResultQueueLength, const int width, const int height, const int stride, const ImagePixelFormat format, const char* pTemplateName)	
 ```   
    
-#### Parameters
+**Parameters**
 `[in] barcodeReader` Handle of the barcode reader instance.  
 `[in]	maxQueueLength` The max number of frames waiting for decoding.  
 `[in]	maxResultQueueLength` The max number of frames whose results (text result/localization result) will be kept.  
@@ -85,7 +85,7 @@ Start a new thread to decode barcodes from the inner frame queue with specific f
 DBR_API int DBR_StartFrameDecodingEx (void* barcodeReader, FrameDecodingParameters parameters, const char* pTemplateName)	
 ```   
 
-#### Parameters
+**Parameters**
 `[in] barcodeReader` Handle of the barcode reader instance.  
 `[in]	parameters` The frame decoding parameters.  
 `[in]	pTemplateName` The template name.  
@@ -132,7 +132,7 @@ Appends a frame image buffer to the inner frame queue.
 DBR_API int DBR_AppendFrame (void* barcodeReader, unsigned char* pBufferBytes)
 ```   
    
-#### Parameters
+**Parameters**
 `[in] barcodeReader` Handle of the barcode reader instance.  
 `[in]	pBufferBytes` The array of bytes which contain the image data.  
 
@@ -164,7 +164,7 @@ DBR_API int DBR_StopFrameDecoding (void* barcodeReader)
 
 ---
    
-#### Parameters
+**Parameters**
 `[in] barcodeReader` Handle of the barcode reader instance.  
 
 #### Return value
@@ -195,7 +195,7 @@ Initialize frame decoding parameters with default values.
 DBR_API int DBR_InitFrameDecodingParameters (void* barcodeReader, FrameDecodingParameters* pParameters)	
 ```   
 
-#### Parameters
+**Parameters**
 `[in] barcodeReader` Handle of the barcode reader instance.   
 `[in,out]	pParameters` The frame decoding parameters.  
 
@@ -241,7 +241,7 @@ Set callback function to process errors generated during frame decoding.
 DBR_API int DBR_SetErrorCallback (void* barcodeReader, CB_Error cbFunction, void* pUser)
 ```   
    
-#### Parameters
+**Parameters**
 `[in] barcodeReader` Handle of the barcode reader instance.  
 `[in]	cbFunction` Callback function.  
 `[in]	pUser` Customized arguments passed to your function.
@@ -275,7 +275,7 @@ Set callback function to process text results generated during frame decoding.
 DBR_API int DBR_SetTextResultCallback (void* barcodeReader, CB_TextResult cbFunction, void* pUser)
 ```   
    
-#### Parameters
+**Parameters**
 `[in] barcodeReader` Handle of the barcode reader instance.  
 `[in]	cbFunction` Callback function.  
 `[in]	pUser`Customized arguments passed to your function.
@@ -309,7 +309,7 @@ Set callback function to process intermediate results generated during frame dec
 DBR_API int DBR_SetIntermediateResultCallback (void* barcodeReader, CB_IntermediateResult cbFunction, void* pUser)	
 ```   
    
-#### Parameters
+**Parameters**
 `[in] barcodeReader` Handle of the barcode reader instance.  
 `[in]	cbFunction` Callback function.  
 `[in]	pUser` Customized arguments passed to your function.
@@ -350,7 +350,7 @@ DBR_API int DBR_GetLengthOfFrameQueue (void* barcodeReader)
 
 ---
    
-#### Parameters
+**Parameters**
 `[in] barcodeReader` Handle of the barcode reader instance.  
 
 #### Return value

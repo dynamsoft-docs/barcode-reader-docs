@@ -30,7 +30,7 @@ Reads product key and activates the SDK.
 BarcodeReader.init_license(dbr_license)
 ```
 
-### Parameters
+**Parameters**
 
 `[in]	dbr_license` <*str*> : The product keys.
 
@@ -46,7 +46,7 @@ Initialize the license and connect to the specified server for online verificati
 BarcodeReader.init_license_from_server(license_server, license_key)
 ```
 
-### Parameters
+**Parameters**
 
 - `[in]	license_server` <*str*> : The name/IP of the license server.  
 - `[in]	license_key` <*str*> : The license key of Barcode Reader.
@@ -63,7 +63,7 @@ Initializes barcode reader license from the license content on the client machin
 BarcodeReader.init_license_from_license_content(license_key, license_content)
 ```
 
-### Parameters
+**Parameters**
 
 `[in]	license_key` <*str*> :	The license key of Barcode Reader.   
 `[in]	license_content` <*str*> :	An encrypted string representing the license content (runtime number, expiry date, barcode type, etc.) obtained from the method output_license_to_string(). 
@@ -110,7 +110,7 @@ Initializes the barcode reader license and connects to the specified server for 
 BarcodeReader.init_license_from_dls(dls_connection_parameters)
 ```
 
-### Parameters
+**Parameters**
 
 - `[in]	dls_connection_parameters` <*class DMDLSConnectionParameters*> : The struct DMDLSConnectionParameters with customized settings.  
 
