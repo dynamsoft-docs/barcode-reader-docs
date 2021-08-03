@@ -20,7 +20,7 @@ noTitleIndex: true
 
 ### Improved
 
-- Improved the confidence calculation algorithm for oneD barcode results. Bounded by 30, the misread results will be scored below 30-confidence as many as possible.
+- Improved the [`confidence`]({{site.dotnet_class}}ExtendedResult.html#confidence) algorithm for 1D barcode results. Users can get even more accurate results by configuring the `confidence` filter.
 
 ## 8.4 (06/08/2021)
 
