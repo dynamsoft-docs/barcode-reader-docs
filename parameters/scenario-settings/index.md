@@ -10,11 +10,11 @@ breadcrumbText: Scenario Settings
 
 Dynamsoft Barcode Reader (DBR) offers flexible parameters to meet the decoding requirements of different scenarios and requirements. Here you can learn how to choose the appropriate parameter configurations for your project.
 
-- [DBR Parameter Configuration Methods](#DBR-Parameter-Configuration-Methods)
-- [DBR Barcode Format and Expected Barcode Counts](#DBR-Barcode-Format-and-Expected-Barcode-Counts)
-- [DBR Algorithm Flow](#DBR-Algorithm-Flow)
-- [Control Terminate Phase for DBR](#Control-Terminate-Phase)
-- [Configuration parameters for specific barcode formats](#Configure-parameters-for-specific-barcode-formats)
+- [DBR Parameter Configuration Methods](#dbr-parameter-configuration-methods)
+- [DBR Barcode Format and Expected Barcode Counts](#dbr-barcode-format-and-expected-barcode-counts)
+- [DBR Algorithm Flow](#dbr-algorithm-flow)
+- [Control Terminate Phase for DBR](#control-terminate-phase)
+- [Configuration parameters for specific barcode formats](#configure-parameters-for-specific-barcode-formats)
 
 ## DBR Parameter Configuration Methods
 
