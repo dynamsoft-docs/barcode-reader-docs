@@ -18,7 +18,7 @@ needAutoGenerateSidebar: false
 | ---------- | ----------- | ------------- |
 | *string array* or *[`GrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode) array* | "GTM_SKIP"<br>"GTM_INVERTED"<br>"GTM_ORIGINAL" | ["GTM_ORIGINAL", "GTM_SKIP", "GTM_SKIP", "GTM_SKIP", "GTM_SKIP", "GTM_SKIP", "GTM_SKIP", "GTM_SKIP"] |
 
-- **See also**:   
+**See Also**    :   
     [`GrayscaleTransformationMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)
     
 #### Mode Arguments
@@ -33,7 +33,7 @@ Sets the file name of the library to load dynamically.
 | *string* | A string value representing file name. | "" | All `GrayscaleTransformationMode` items except GTM_SKIP |         
 
 
-- **Remarks**     
+**Remarks**         
   The library must be in the same place with Dynamsoft Barcode Reader Library.
 
 
@@ -79,7 +79,7 @@ Sets the parameters passed to the library to load dynamically.
 | ------ | ------------------ | ---------- |
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html)->[`furtherModes`]({{ site.structs }}PublicRuntimeSettings.html#furthermodes) | [`grayscaleTransformationModes`]({{ site.structs }}FurtherModes.html#grayscaletransformationmodes) | [`GrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)[8] |
 
-**See Also**    
+**See Also**      
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 - [`FurtherModes` Struct]({{ site.structs }}FurtherModes.html)
 - [`GrayscaleTransformationMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)

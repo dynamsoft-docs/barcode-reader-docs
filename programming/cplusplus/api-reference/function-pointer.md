@@ -28,12 +28,12 @@ Represents the method that will handle the error code returned by the SDK.
 typedef void(* CB_Error) (int frameId, int errorCode, void* pUser)
 ```   
    
-**Parameters**
+**Parameters**  
 `frameId` 	The ID of the frame.    
 `errorCode` Error Code generated when decoding the frame.    
 `pUser` Customized arguments passed to your function.   
 
-**See Also**
+**See Also**  
 [Error Code]({{ site.enumerations }}error-code.html)
 
 
@@ -49,12 +49,12 @@ Represents the method that will handle the intermediate result array returned by
 typedef void(* CB_IntermediateResult) (int frameId, IntermediateResultArray* pResults, void* pUser)
 ```   
    
-**Parameters**
+**Parameters**  
 `frameId` 	The ID of the frame.  
 `pResults` The intermediate results of the frame.   
 `pUser` Arguments passed to your function.   
 
-**See Also**
+**See Also**  
 [IntermediateResultArray]({{ site.structs }}IntermediateResultArray.html)
 
 
@@ -70,12 +70,12 @@ Represents the method that will handle the error code returned by the SDK.
 typedef void(* CB_TextResult) (int frameId, TextResultArray *pResults, void *pUser)
 ```   
    
-**Parameters**
+**Parameters**  
 `frameId` 	The ID of the frame.  
 `errorCode` Recognized barcode results of the frame.   
 `pUser` Arguments passed to your function.
 
-**See Also**
+**See Also**  
 [TextResultArray]({{ site.structs }}TextResultArray.html)
 
 

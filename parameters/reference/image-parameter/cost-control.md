@@ -21,7 +21,7 @@ needGenerateH3Content: false
 ## TerminatePhase
 Sets the phase where the algorithm stops.   
 
-**Remarks**   
+**Remarks**     
 When the recognition result is not desired, this parameter can be set to skip certain processing stages.    
 
 ### As Json Parameter
@@ -43,7 +43,7 @@ When the recognition result is not desired, this parameter can be set to skip ce
 | ------ | ------------------ | ---------- | ----------- | -------------- |
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) | [`terminatePhase`]({{ site.structs }}PublicRuntimeSettings.html#terminatephase) | [`TerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase) | Any one of the [`TerminatePhase` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#terminatephase) items | `TP_BARCODE_RECOGNIZED` |
 
-**See Also**   
+**See Also**     
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 - [`TerminatePhase` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#terminatephase)
 
@@ -58,7 +58,7 @@ When the recognition result is not desired, this parameter can be set to skip ce
 ## Timeout
 Sets the maximum amount of time (in milliseconds) that should be spent searching for a barcode per page. It does not include the time taken to load/decode an image (Tiff, PNG, etc) from disk into memory.   
 
-**Remarks**   
+**Remarks**     
 If you want to stop reading barcodes after a specified amount of time, you can use this parameter to set a timeout.
 
 ### As Json Parameter
@@ -80,7 +80,7 @@ If you want to stop reading barcodes after a specified amount of time, you can u
 | ------ | ------------------ | ---------- | ----------- | -------------- |
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) | [`timeout`]({{ site.structs }}PublicRuntimeSettings.html#timeout) | `int` | [0,0x7fffffff] | 10000 |
 
-**See Also**   
+**See Also**     
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 
 
@@ -95,7 +95,7 @@ If you want to stop reading barcodes after a specified amount of time, you can u
 ## MaxAlgorithmThreadCount
 Sets the number of threads the image processing algorithm will use to decode barcodes.   
 
-**Remarks**   
+**Remarks**     
 By default, the library concurrently runs four different threads for decoding barcodes in order to keep a balance between speed and quality. For some devices (e.g. Raspberry Pi) that only use one core, you can set it to 1 for best speed. If you create BarcodeReader instances in multiple threads, please set this property to 1 in case the algorithm threads affect your application.
 
 
@@ -118,7 +118,7 @@ By default, the library concurrently runs four different threads for decoding ba
 | ------ | ------------------ | ---------- | ----------- | -------------- |
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) | [`maxAlgorithmThreadCount`]({{ site.structs }}PublicRuntimeSettings.html#maxalgorithmthreadcount) | `int` | [1,4] | 4 |
 
-**See Also**   
+**See Also**     
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 
 
@@ -132,7 +132,7 @@ By default, the library concurrently runs four different threads for decoding ba
 ## ExpectedBarcodesCount
 Sets the number of barcodes expected to be detected for each image.
 
-**Remarks**   
+**Remarks**     
 0: means Unknown and it will find at least one barcode.   
 1: try to find one barcode. If one barcode is found, the library will stop the localization process and perform barcode decoding.   
 n: try to find n barcodes. If the library only finds m (m < n) barcode, it will try different algorithms till n barcodes are found or all algorithms are used.   
@@ -158,6 +158,6 @@ n: try to find n barcodes. If the library only finds m (m < n) barcode, it will 
 | ------ | ------------------ | ---------- | ----------- | -------------- |
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) | [`expectedBarcodesCount`]({{ site.structs }}PublicRuntimeSettings.html#expectedbarcodescount) | `int` | [0,0x7fffffff] | 0 |
 
-**See Also**   
+**See Also**     
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 

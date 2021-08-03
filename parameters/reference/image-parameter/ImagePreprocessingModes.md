@@ -17,7 +17,7 @@ needAutoGenerateSidebar: false
 | ---------- | ----------- | ------------- |
 | *string array* or *[`ImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode) array* | "IPM_SKIP"<br>"IPM_AUTO"<br>"IPM_GENERAL"<br>"IPM_GRAY_EQUALIZE"<br>"IPM_GRAY_SMOOTH"<br>"IPM_SHARPEN_SMOOTH"<br>"IPM_MORPHOLOGY" | ["IPM_GENERAL", "IPM_SKIP", "IPM_SKIP", "IPM_SKIP", "IPM_SKIP", "IPM_SKIP", "IPM_SKIP", "IPM_SKIP"] |
 
-- **See also**:   
+**See Also**    :   
     [`ImagePreprocessingMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode)
     
 #### Mode Arguments
@@ -40,7 +40,7 @@ Sets the sensitivity used for gray equalization.
 | ---------- | ----------- | ------------- |
 | *int* | [1, 9] | 5 |         
 
-- **Remarks**     
+**Remarks**         
   If you have an image with a low level of contrast, you can set the property to a larger value. A larger value means a higher possibility that gray equalization will be activated. This may cause adverse effect on images with a high level of contrast.  
 
 
@@ -51,7 +51,7 @@ Sets the horizontal block size for the smoothing process.
 | ---------- | ----------- | ------------- |
 | *int* | [3, 1000] | 3 |         
 
-- **Remarks**     
+**Remarks**         
   Block size refers to the size of a pixel neighborhood used to calculate the threshold for the pixel. An appropriate value can help increase the accuracy of barcode localization.
 
 
@@ -62,7 +62,7 @@ Sets the vertical block size for the smoothing process.
 | ---------- | ----------- | ------------- |
 | *int* | [3, 1000] | 3 |         
 
-- **Remarks**     
+**Remarks**         
   Block size refers to the size of a pixel neighborhood used to calculate the threshold for the pixel. An appropriate value can help increase the accuracy of barcode localization.  
   
 
@@ -73,7 +73,7 @@ Sets the horizontal block size for the sharpening process.
 | ---------- | ----------- | ------------- |
 | *int* | [3, 1000] | 3 |         
 
-- **Remarks**     
+**Remarks**         
   Block size refers to the size of a pixel neighborhood used to calculate the threshold for the pixel. An appropriate value can help increase the accuracy of barcode localization.
 
 
@@ -84,7 +84,7 @@ Sets the vertical block size for the sharpening process.
 | ---------- | ----------- | ------------- |
 | *int* | [3, 1000] | 3 |         
 
-- **Remarks**     
+**Remarks**         
   Block size refers to the size of a pixel neighborhood used to calculate the threshold for the pixel. An appropriate value can help increase the accuracy of barcode localization.
   
 
@@ -96,7 +96,7 @@ Sets the morph operation for the morphology process.
 | ---------- | ----------- | ------------- |
 | *string* | "Erode"<br>"Dilate"<br>"Open"<br>"Close" | "Close" |         
 
-- **Remarks**    
+**Remarks**        
    - "Erode": Perform erosion process.
    - "Dilate": Perform dilation process.
    - "Open": Perform erosion first, then perform dilation.
@@ -112,7 +112,7 @@ Sets the morph operation for the morphology process.
 | ---------- | ----------- | ------------- |
 | *string* | "Rectangle"<br>"Cross"<br>"Ellipse" | "Rectangle" |         
 
-- **Remarks**    
+**Remarks**        
    - "Rectangle": 
    - "Cross": 
    - "Ellipse": 
@@ -144,7 +144,7 @@ Sets the file name of the library to load dynamically.
 | *string* | A string value representing file name. | "" | All `ImagePreprocessingMode` items except IPM_SKIP and IPM_AUTO |         
 
 
-- **Remarks**     
+**Remarks**         
   The library must be in the same place with Dynamsoft Barcode Reader Library.
 
 
@@ -199,11 +199,11 @@ Default values will be used if there is no manual setting.
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html)->[`furtherModes`]({{ site.structs }}PublicRuntimeSettings.html#furthermodes) | [`imagePreprocessingModes`]({{ site.structs }}FurtherModes.html#imagepreprocessingmodes) | [`ImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode)[8] |
 
 
-**Remarks**   
+**Remarks**     
 [`GetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) and [`SetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) need to be called for getting or setting the value of [arguments](#mode-arguments).
 
 
-**See Also**    
+**See Also**      
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 - [`FurtherModes` Struct]({{ site.structs }}FurtherModes.html)
 - [`ImagePreprocessingMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode)

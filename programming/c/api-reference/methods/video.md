@@ -7,37 +7,19 @@ needAutoGenerateSidebar: true
 ---
 
 # Video Functions
-
-- Decode
-   
+  
   | Function               | Description |
   |----------------------|-------------|
   | [`DBR_StartFrameDecoding`](#dbr_startframedecoding) | Decode barcodes from inner frame queue. |
   | [`DBR_StartFrameDecodingEx`](#dbr_startframedecodingex) | Decode barcodes from inner frame queue. |
   | [`DBR_AppendFrame`](#dbr_appendframe) | Append a frame image buffer to the inner frame queue. |
   | [`DBR_StopFrameDecoding`](#dbr_stopframedecoding) | Stop thread used for frame decoding. |
-
-- Parameter
-   
-  | Function               | Description |
-  |----------------------|-------------|
   | [`DBR_InitFrameDecodingParameters`](#dbr_initframedecodingparameters) | Initialize frame decoding parameter. |
-
-- Callback
-   
-  | Function               | Description |
-  |----------------------|-------------|
   | [`DBR_SetErrorCallback`](#dbr_seterrorcallback) | Set callback function to process errors generated during frame decoding. |
   | [`DBR_SetTextResultCallback`](#dbr_settextresultcallback) | Set callback function to process text results generated during frame decoding. |
   | [`DBR_SetIntermediateResultCallback`](#dbr_setintermediateresultcallback) | Set callback function to process intermediate results generated during frame decoding. |
-
-- Status retrieval
-   
-  | Function               | Description |
-  |----------------------|-------------|
   | [`DBR_GetLengthOfFrameQueue`](#dbr_getLengthOfframequeue) | Get length of current inner frame queue. |
   
----
 
 
 
@@ -50,7 +32,7 @@ Start a new thread to decode barcodes from the inner frame queue with specific f
 DBR_API int DBR_StartFrameDecoding (void* barcodeReader, const int maxQueueLength, const int maxResultQueueLength, const int width, const int height, const int stride, const ImagePixelFormat format, const char* pTemplateName)	
 ```   
    
-**Parameters**
+**Parameters**  
 `[in] barcodeReader` Handle of the barcode reader instance.  
 `[in]	maxQueueLength` The max number of frames waiting for decoding.  
 `[in]	maxResultQueueLength` The max number of frames whose results (text result/localization result) will be kept.  
@@ -60,11 +42,11 @@ DBR_API int DBR_StartFrameDecoding (void* barcodeReader, const int maxQueueLengt
 `[in]	format` The image pixel format used in the image byte array.  
 `[in]	pTemplateName` The template name.  
 
-**Return Value**
+**Return Value**  
 Returns error code. Possible return(s): DBR_OK; DBRERR_FRAME_DECODING_THREAD_EXISTS; DBRERR_PARAMETER_VALUE_INVALID; DBRERR_NULL_POINTER.  
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-**Code Snippet**
+**Code Snippet**  
 ```c
 void* barcodeReader = DBR_CreateInstance();
 DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
@@ -85,16 +67,16 @@ Start a new thread to decode barcodes from the inner frame queue with specific f
 DBR_API int DBR_StartFrameDecodingEx (void* barcodeReader, FrameDecodingParameters parameters, const char* pTemplateName)	
 ```   
 
-**Parameters**
+**Parameters**  
 `[in] barcodeReader` Handle of the barcode reader instance.  
 `[in]	parameters` The frame decoding parameters.  
 `[in]	pTemplateName` The template name.  
 
-**Return Value**
+**Return Value**  
 Returns error code. Possible return(s): DBR_OK; DBRERR_FRAME_DECODING_THREAD_EXISTS; DBRERR_PARAMETER_VALUE_INVALID; DBRERR_NULL_POINTER.  
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-**Code Snippet**
+**Code Snippet**  
 ```c
 void* barcodeReader = DBR_CreateInstance();
 DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
@@ -132,14 +114,14 @@ Appends a frame image buffer to the inner frame queue.
 DBR_API int DBR_AppendFrame (void* barcodeReader, unsigned char* pBufferBytes)
 ```   
    
-**Parameters**
+**Parameters**  
 `[in] barcodeReader` Handle of the barcode reader instance.  
 `[in]	pBufferBytes` The array of bytes which contain the image data.  
 
-**Return Value**
+**Return Value**  
 Returns the ID of the appended frame.
 
-**Code Snippet**
+**Code Snippet**  
 ```c
 void* barcodeReader = DBR_CreateInstance();
 DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
@@ -162,18 +144,16 @@ Stops the frame decoding thread created by [`DBR_StartFrameDecoding`](#dbr_start
 DBR_API int DBR_StopFrameDecoding (void* barcodeReader)
 ```   
 
----
    
-**Parameters**
+**Parameters**  
 `[in] barcodeReader` Handle of the barcode reader instance.  
 
-**Return Value**
+**Return Value**  
 Returns error code. Possible return(s): DBR_OK; DBRERR_STOP_DECODING_THREAD_FAILED.     
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
----
 
-**Code Snippet**
+**Code Snippet**  
 ```c
 void* barcodeReader = DBR_CreateInstance();
 DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
@@ -195,15 +175,15 @@ Initialize frame decoding parameters with default values.
 DBR_API int DBR_InitFrameDecodingParameters (void* barcodeReader, FrameDecodingParameters* pParameters)	
 ```   
 
-**Parameters**
+**Parameters**  
 `[in] barcodeReader` Handle of the barcode reader instance.   
 `[in,out]	pParameters` The frame decoding parameters.  
 
-**Return Value**
+**Return Value**  
 Returns error code. Possible return(s): DBR_OK; DBRERR_NULL_POINTER.  
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-**Code Snippet**
+**Code Snippet**  
 ```c
 void* barcodeReader = DBR_CreateInstance();
 DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
@@ -241,17 +221,17 @@ Set callback function to process errors generated during frame decoding.
 DBR_API int DBR_SetErrorCallback (void* barcodeReader, CB_Error cbFunction, void* pUser)
 ```   
    
-**Parameters**
+**Parameters**  
 `[in] barcodeReader` Handle of the barcode reader instance.  
 `[in]	cbFunction` Callback function.  
 `[in]	pUser` Customized arguments passed to your function.
 
 
-**Return Value**
+**Return Value**  
 Returns error code. Possible return(s): DBR_OK; DBRERR_FRAME_DECODING_THREAD_EXISTS.  
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-**Code Snippet**
+**Code Snippet**  
 ```c
 void ErrorFunction(int frameId, int errorCode, void * pUser)
 {
@@ -275,17 +255,17 @@ Set callback function to process text results generated during frame decoding.
 DBR_API int DBR_SetTextResultCallback (void* barcodeReader, CB_TextResult cbFunction, void* pUser)
 ```   
    
-**Parameters**
+**Parameters**  
 `[in] barcodeReader` Handle of the barcode reader instance.  
 `[in]	cbFunction` Callback function.  
 `[in]	pUser`Customized arguments passed to your function.
 
 
-**Return Value**
+**Return Value**  
 Returns error code. Possible return(s): DBR_OK; DBRERR_FRAME_DECODING_THREAD_EXISTS.  
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-**Code Snippet**
+**Code Snippet**  
 ```c
 void TextResultFunction(int frameId, TextResultArray *pResults, void * pUser)
 {
@@ -309,17 +289,17 @@ Set callback function to process intermediate results generated during frame dec
 DBR_API int DBR_SetIntermediateResultCallback (void* barcodeReader, CB_IntermediateResult cbFunction, void* pUser)	
 ```   
    
-**Parameters**
+**Parameters**  
 `[in] barcodeReader` Handle of the barcode reader instance.  
 `[in]	cbFunction` Callback function.  
 `[in]	pUser` Customized arguments passed to your function.
 
 
-**Return Value**
+**Return Value**  
 Returns error code. Possible return(s): DBR_OK; DBRERR_FRAME_DECODING_THREAD_EXISTS.
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-**Code Snippet**
+**Code Snippet**  
 ```c
 void IntermediateResultFunction(int frameId, IntermediateResultArray *pResults, void * pUser)
 {
@@ -348,17 +328,15 @@ Get length of current inner frame queue.
 DBR_API int DBR_GetLengthOfFrameQueue (void* barcodeReader)
 ```   
 
----
    
-**Parameters**
+**Parameters**  
 `[in] barcodeReader` Handle of the barcode reader instance.  
 
-**Return Value**
+**Return Value**  
 Returns the length of the inner frame queue.
 
----
 
-**Code Snippet**
+**Code Snippet**  
 ```c
 void* barcodeReader = DBR_CreateInstance();
 DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");

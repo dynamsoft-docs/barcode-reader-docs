@@ -27,7 +27,7 @@ needAutoGenerateSidebar: false
 | ---------- | ----------- | ------------- |
 | *string* or *[`IntermediateResultSavingMode`]({{ site.enumerations }}result-enums.html#intermediateresultsavingmode) enum* | "IRSM_MEMORY"<br>"IRSM_FILESYSTEM"<br>"IRSM_BOTH"<br>"IRSM_REFERENCE_MEMORY" | "IRSM_MEMORY" |
 
-- **See also**:   
+**See Also**    :   
     [`IntermediateResultSavingMode` Enumeration]({{ site.enumerations }}result-enums.html#intermediateresultsavingmode)  
     
 #### Mode Arguments
@@ -41,7 +41,7 @@ Sets the path of the output folder which stores intermediate results.
 | ---------- | ----------- | ------------- |
 | *string* | A string value representing the folder path with max length 480. | "" |         
 
-- **Remarks**     
+**Remarks**         
     - "": The library path.    
     - Please make sure the path exists and your application has the appropriate permissions for saving the results.   
 
@@ -52,7 +52,7 @@ Sets the maximum count of recordset to store the latest images' intermediate res
 | ---------- | ----------- | ------------- |
 | *int* | [0,0x7fffffff]  |  0 | 
 
-- **Remarks**     
+**Remarks**         
     - 0: no limitation on the count of recordset.   
     - When the count exceeds, the old recordset will be replaced by the new one.
 
@@ -86,10 +86,10 @@ Sets the maximum count of recordset to store the latest images' intermediate res
 | ------ | ------------------ | ---------- |
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) | [`intermediateResultSavingMode`]({{ site.structs }}PublicRuntimeSettings.html#intermediateresultsavingmode) | [`IntermediateResultSavingMode`]({{ site.enumerations }}result-enums.html#intermediateresultsavingmode) |
 
-**Remarks**   
+**Remarks**     
 [`GetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) and [`SetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) need to be called for getting or setting the value of [arguments](#mode-arguments).
 
-**See Also**    
+**See Also**      
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 - [`IntermediateResultSavingMode` Enumeration]({{ site.enumerations }}result-enums.html#intermediateresultsavingmode)
 

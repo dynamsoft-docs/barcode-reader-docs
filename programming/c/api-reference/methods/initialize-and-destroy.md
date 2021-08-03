@@ -14,7 +14,6 @@ needAutoGenerateSidebar: true
   | [`DBR_CreateInstance`](#dbr_createinstance) | Creates an instance of Dynamsoft Barcode Reader. |
   | [`DBR_DestroyInstance`](#dbr_destroyinstance) | Destroys the instance of Dynamsoft Barcode Reader. |
   
-  ---
   
 ## DBR_CreateInstance
 
@@ -24,21 +23,23 @@ Creates an instance of Dynamsoft Barcode Reader.
 DBR_API void* DBR_CreateInstance ()	
 ```   
 
-**Return Value**
+**Return Value**  
 
 Returns an instance of Dynamsoft Barcode Reader. If failed, returns `NULL`.
 
-**Remarks**
 
-Partial of the decoding result will be masked with "\*" without a valid license key.
-
-**Code Snippet**
+**Code Snippet**  
 
 ```c
 void* barcodeReader = DBR_CreateInstance();
 DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 DBR_DestroyInstance(barcodeReader);
 ```
+
+**Remarks**  
+
+Partial of the decoding result will be masked with "\*" without a valid license key.
+
 
 ## DBR_DestroyInstance
 
@@ -48,11 +49,11 @@ Destroys an instance of Dynamsoft Barcode Reader.
 DBR_API void DBR_DestroyInstance (void* barcodeReader)	
 ```   
    
-**Parameters**
+**Parameters**  
 
 `[in]	barcodeReader` Handle of the barcode reader instance.
 
-**Code Snippet**
+**Code Snippet**  
 
 ```c
 void* barcodeReader = DBR_CreateInstance();

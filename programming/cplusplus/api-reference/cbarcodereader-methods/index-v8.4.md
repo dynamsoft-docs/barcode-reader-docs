@@ -17,7 +17,7 @@ breadcrumbText: CBarcodeReader Methods
   | [`~CBarcodeReader`](constructor-and-destructor.md#~cbarcodereader) | Destructor of `CBarcodeReader` object.|
    
    
- ## License
+## License
   
   | Method               | Description |
   |----------------------|-------------|

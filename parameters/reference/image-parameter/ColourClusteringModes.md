@@ -19,7 +19,7 @@ needAutoGenerateSidebar: false
 | ---------- | ----------- | ------------- |
 | *string array* or *[`ColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode) array* | "CCM_SKIP"<br>"CCM_AUTO"<br>"CCM_GENERAL_HSV" | ["CCM_SKIP", "CCM_SKIP", "CCM_SKIP", "CCM_SKIP", "CCM_SKIP", "CCM_SKIP", "CCM_SKIP", "CCM_SKIP"] |
 
-- **See also**:   
+**See Also**    :   
     [`ColourClusteringMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode)
     
 #### Mode Arguments
@@ -34,7 +34,7 @@ Sets the sensitivity used for colour categorization.
 | ---------- | ----------- | ------------- |
 | *int* | [1, 9] | 5 |         
 
-- **Remarks**     
+**Remarks**         
   A higher level means less colours will be clustered as the same colour.   
   
 
@@ -46,7 +46,7 @@ Sets the file name of the library to load dynamically.
 | *string* | A string value representing file name. | "" | All `ColourClusteringMode` items except CCM_SKIP and CCM_AUTO |         
 
 
-- **Remarks**     
+**Remarks**         
   The library must be in the same place with Dynamsoft Barcode Reader Library.
 
 
@@ -93,10 +93,10 @@ Sets the parameters passed to the library to load dynamically.
 | ------ | ------------------ | ---------- |
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html)->[`furtherModes`]({{ site.structs }}PublicRuntimeSettings.html#furthermodes) | [`colourClusteringModes`]({{ site.structs }}FurtherModes.html#colourclusteringmodes) | [`ColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode)[8] |
 
-**Remarks**   
+**Remarks**     
 [`GetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) and [`SetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) need to be called for getting or setting the value of [arguments](#mode-arguments).
 
-**See Also**    
+**See Also**      
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 - [`FurtherModes` Struct]({{ site.structs }}FurtherModes.html)
 - [`ColourClusteringMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode)

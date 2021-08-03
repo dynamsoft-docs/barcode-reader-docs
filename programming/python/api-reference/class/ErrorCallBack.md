@@ -13,9 +13,7 @@ An abstract class that contains an abstract method `error_callback_func`.
 ```python
 class ErrorCallBack(ABC)
 ```  
-  
----
-  
+ 
 
 ## Abstract Method
   
@@ -23,6 +21,7 @@ class ErrorCallBack(ABC)
 
 Sets callback function to process errors during frame decoding. You need to implement it in the subclass.
 
+**Parameters**  
 `[in] frame_id <int>` : The ID of the frame.  
 `[in] error <int>` : Error code generated when decoding the frame.  
 `[in] user_data <object>` : Customized arguments passed to your function.  

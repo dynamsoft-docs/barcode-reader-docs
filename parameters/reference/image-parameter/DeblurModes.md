@@ -18,7 +18,7 @@ needAutoGenerateSidebar: false
 | ---------- | ----------- | ------------- |
 | *[`DeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode) array* | "DM_SKIP"<br>"DM_DIRECT_BINARIZATION"<br>"DM_THRESHOLD_BINARIZATION"<br>"DM_GRAY_EQUALIZATION"<br>"DM_SMOOTHING"<br>"DM_MORPHING"<br>"DM_DEEP_ANALYSIS"<br>"DM_SHARPENING"<br>"DM_BASED_ON_LOC_BIN"<br>"DM_SHARPENING_SMOOTHING" | ["DM_SKIP", "DM_SKIP", "DM_SKIP", "DM_SKIP", "DM_SKIP", "DM_SKIP", "DM_SKIP", "DM_SKIP"] |
 
-- **See also**:   
+**See Also**    :   
     [`DeblurMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#deblurmode)
     
 #### Mode Arguments
@@ -33,7 +33,7 @@ Sets the file name of the library to load dynamically.
 | *string* | A string value representing file name. | "" | All `DeblurMode` items except DM_SKIP |         
 
 
-- **Remarks**     
+**Remarks**         
   The library must be in the same place with Dynamsoft Barcode Reader Library.
 
 
@@ -78,7 +78,7 @@ Sets the parameters passed to the library to load dynamically.
 | ------ | ------------------ | ---------- |
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) | [`deblurModes`]({{ site.structs }}PublicRuntimeSettings.html#deblurmodes) | [`DeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode)[10] |
 
-**See Also**    
+**See Also**      
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 - [`DeblurMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#deblurmode)
 

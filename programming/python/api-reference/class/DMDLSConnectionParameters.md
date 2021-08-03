@@ -42,13 +42,13 @@ The URL of the license server.
 ```python
 DMDLSConnectionParameters.main_server_url
 ```
-- **Value range**   
+**Value Range**     
     Any string value   
       
-- **Default value**   
+**Default Value**     
     ""
 
-- **Remarks**   
+**Remarks**       
     If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license servers for online verification.   
 
 
@@ -57,13 +57,13 @@ The URL of the standby license server.
 ```python
 DMDLSConnectionParameters.standby_server_url
 ```
-- **Value range**   
+**Value Range**     
     Any string value   
       
-- **Default value**   
+**Default Value**     
     ""
 
-- **Remarks**   
+**Remarks**       
     If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license servers for online verification.   
 
 
@@ -72,10 +72,10 @@ The handshake code.
 ```python
 DMDLSConnectionParameters.handshake_code
 ```
-- **Value range**   
+**Value Range**     
     Any string value   
       
-- **Default value**   
+**Default Value**     
     ""
 
 ### session_password
@@ -83,10 +83,10 @@ The session password of the handshake code set in license server.
 ```python
 DMDLSConnectionParameters.session_password
 ```
-- **Value range**   
+**Value Range**     
     Any string value   
       
-- **Default value**   
+**Default Value**     
     ""
 
 ### deployment_type
@@ -94,13 +94,13 @@ Sets the deployment type.
 ```python
 DMDLSConnectionParameters.deployment_type
 ```
-- **Value range**   
+**Value Range**     
     A value of [`EnumDMDeploymentType`]({{ site.enumerations }}other-enums.html#dm_deployment_type) Enumeration items.
       
-- **Default value**   
+**Default Value**     
     `DM_DT_DESKTOP`
     
-- **See also**  
+**See Also**      
     [`EnumDMDeploymentType`]({{ site.enumerations }}other-enums.html#dm_deployment_type)
       
 
@@ -109,13 +109,13 @@ Sets the charge way.
 ```python
 DMDLSConnectionParameters.charge_way
 ```
-- **Value range**   
+**Value Range**     
     A value of [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway) Enumeration items.
       
-- **Default value**   
+**Default Value**     
     `DM_CW_AUTO`
     
-- **See also**  
+**See Also**      
     [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)
       
 
@@ -124,13 +124,13 @@ Sets the method to generate UUID.
 ```python
 DMDLSConnectionParameters.uuid_generation_method
 ```
-- **Value range**   
+**Value Range**     
     A value of [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod) Enumeration items.
       
-- **Default value**   
+**Default Value**     
     `DM_UUIDGM_RANDOM`
     
-- **See also**  
+**See Also**      
     [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
       
 
@@ -139,10 +139,10 @@ Sets the max days to buffer the license info.
 ```python
 DMDLSConnectionParameters.max_buffer_days
 ```
-- **Value range**   
+**Value Range**     
     [0,0x7fffffff]   
       
-- **Default value**   
+**Default Value**     
     0
 
 ### limited_license_modules
@@ -150,13 +150,13 @@ Sets the license modules to use.
 ```python
 DMDLSConnectionParameters.limited_license_modules
 ```
-- **Value range**   
+**Value Range**     
     Each list item can be any one of the [`EnumLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule) Enumeration items.
       
-- **Default value**   
+**Default Value**     
     None
     
-- **See also**  
+**See Also**      
     [`EnumLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
       
 
@@ -165,12 +165,12 @@ Sets the max concurrent instance count.
 ```python
 DMDLSConnectionParameters::max_concurrent_instance_count
 ```
-- **Value range**   
+**Value Range**     
     [1,0x7fffffff]   
       
-- **Default value**   
+**Default Value**     
     1
-- **Remarks**   
+**Remarks**       
     It works only when [charge_way](#charge_way) is setting to DM_CW_CONCURRENT_INSTANCE_COUNT
     It is the total number of instances used by multiple processes. For example, if there are two .EXE are running on the server and each .EXE may have 10 instances at most, then you should set maxConcurrentInstanceCount to 20.
 
@@ -182,10 +182,10 @@ The organization ID got from Dynamsoft.
 DMDLSConnectionParameters.organization_id
 ```
 
-- **Value range**   
+**Value Range**     
     Any string value   
       
-- **Default value**   
+**Default Value**     
     ""
 
 ### products
@@ -193,8 +193,8 @@ Sets the products to get the license for. Product values can be combined.
 ```python
 DMDLSConnectionParameters.products
 ```
-- **Value range**   
+**Value Range**     
     A combined value of [`EnumProduct`]({{ site.enumerations }}other-enums.html#product) Enumeration items
       
-- **Default value**   
+**Default Value**     
     `PROD_ALL`

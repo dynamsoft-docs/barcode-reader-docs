@@ -19,7 +19,7 @@ needAutoGenerateSidebar: false
 | ---------- | ----------- | ------------- |
 | *string array* or *[`ColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode) array* | "CICM_SKIP"<br>"CICM_GENERAL" | ["CICM_GENERAL", "CICM_SKIP", "CICM_SKIP", "CICM_SKIP", "CICM_SKIP", "CICM_SKIP", "CICM_SKIP", "CICM_SKIP"] |
 
-- **See also**:   
+**See Also**    :   
     [`ColourConversionMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode)
     
 #### Mode Arguments
@@ -36,7 +36,7 @@ Sets the weight value of Blue Colour Channel used for converting a colour image 
 | ---------- | ----------- | ------------- |
 | *int* | [-1, 1000] | -1 |         
 
-- **Remarks**     
+**Remarks**         
   -1: The weight value will be set automatically by the SDK. 
   
 
@@ -47,7 +47,7 @@ Sets the weight value of Green Colour Channel used for converting a colour image
 | ---------- | ----------- | ------------- |
 | *int* | [-1, 1000] | -1 |         
 
-- **Remarks**     
+**Remarks**         
   -1: The weight value will be set automatically by the SDK. 
 
 
@@ -58,7 +58,7 @@ Sets the weight value of Red Colour Channel used for converting a colour image t
 | ---------- | ----------- | ------------- |
 | *int* | [-1, 1000] | -1 |         
 
-- **Remarks**     
+**Remarks**         
   -1: The weight value will be set automatically by the SDK. 
 
 
@@ -70,7 +70,7 @@ Sets the file name of the library to load dynamically.
 | *string* | A string value representing file name. | "" | All `ColourConversionMode` items except CICM_SKIP |         
 
 
-- **Remarks**     
+**Remarks**         
   The library must be in the same place with Dynamsoft Barcode Reader Library.
 
 
@@ -113,11 +113,11 @@ Sets the parameters passed to the library to load dynamically.
 | ------ | ------------------ | ---------- |
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html)->[`furtherModes`]({{ site.structs }}PublicRuntimeSettings.html#furthermodes) | [`colourConversionModes`]({{ site.structs }}FurtherModes.html#colourconversionmodes) | [`ColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode)[8] |
 
-**Remarks**   
+**Remarks**     
 [`GetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) and [`SetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) need to be called for getting or setting the value of [arguments](#mode-arguments).
 
 
-**See Also**    
+**See Also**      
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 - [`FurtherModes` Struct]({{ site.structs }}FurtherModes.html)
 - [`ColourConversionMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode)

@@ -20,7 +20,7 @@ needGenerateH3Content: false
 ## BarcodeFormatIds
 Sets the formats of the barcode to be read. Barcode formats can be combined.  
 
-**Remarks**   
+**Remarks**     
 If you already know the barcode type(s) before performing barcode reading, specifying the barcode type(s) to be read will speed up the recognition process.
 
 ### As Json Parameter
@@ -42,7 +42,7 @@ If you already know the barcode type(s) before performing barcode reading, speci
 | ------ | ------------------ | ---------- | ----------- | ------------- |
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) | [`barcodeFormatIds`]({{ site.structs }}PublicRuntimeSettings.html#barcodeformatids) | *int* | A combined value of [`BarcodeFormat` Enumeration]({{ site.enumerations }}format-enums.html#barcodeformat) items. | `BF_ALL` |
 
-**See Also**   
+**See Also**     
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 - [`BarcodeFormat` Enumeration]({{ site.enumerations }}format-enums.html#barcodeformat)
 
@@ -51,7 +51,7 @@ If you already know the barcode type(s) before performing barcode reading, speci
 ## BarcodeFormatIds_2 
 Sets the formats of the barcode in BarcodeFormat group 2 to be read. Barcode formats in BarcodeFormat group 2 can be combined.   
 
-**Remarks**   
+**Remarks**     
 If the barcode type(s) are certain, specifying the barcode type(s) to be read will speed up the recognition process.    
 The barcode format our library will search for is composed of BarcodeFormat group 1 and BarcodeFormat group 2, so you need to specify the barcode format in group 1 and group 2 individually.
 
@@ -74,6 +74,6 @@ The barcode format our library will search for is composed of BarcodeFormat grou
 | ------ | ------------------ | ---------- | ----------- | ------------- |
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) | [`barcodeFormatIds_2`]({{ site.structs }}PublicRuntimeSettings.html#barcodeformatids_2) | *int* | A combined value of [`BarcodeFormat_2` Enumeration]({{ site.enumerations }}format-enums.html#barcodeformat_2) items. | `BF2_NULL` |
 
-**See Also**   
+**See Also**     
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 - [`BarcodeFormat_2` Enumeration]({{ site.enumerations }}format-enums.html#barcodeformat_2)

@@ -17,7 +17,7 @@ needAutoGenerateSidebar: false
 | ---------- | ----------- | ------------- |
 | *string array* or *[`BarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode) array* | "BICM_SKIP"<br>"BICM_DARK_ON_LIGHT"<br>"BICM_LIGHT_ON_DARK"<br>"BICM_DARK_ON_DARK"<br>"BICM_LIGHT_ON_LIGHT"<br>"BICM_DARK_LIGHT_MIXED"<br>"BICM_DARK_ON_LIGHT_DARK_SURROUNDING" | ["BICM_DARK_ON_LIGHT", "BICM_SKIP", "BICM_SKIP", "BICM_SKIP", "BICM_SKIP", "BICM_SKIP", "BICM_SKIP", "BICM_SKIP"] |
 
-- **See also**:   
+**See Also**    :   
     [`BarcodeColourMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode)
     
 #### Mode Arguments
@@ -33,7 +33,7 @@ Sets if there is light reflection on the barocde zone.
 | ---------- | ----------- | ------------- |
 | *int* | [0, 1] | 1 |         
 
-- **Remarks**     
+**Remarks**         
   - 0: no light reflection.   
   - 1: has light reflection.
 
@@ -46,7 +46,7 @@ Sets the file name of the library to load dynamically.
 | *string* | A string value representing the file name. | "" | All `BarcodeColourMode` items except BICM_SKIP |         
 
 
-- **Remarks**     
+**Remarks**         
   The library must be in the same place with Dynamsoft Barcode Reader Library.
 
 
@@ -92,11 +92,11 @@ Sets the parameters passed to the library to load dynamically.
 | ------ | ------------------ | ---------- |
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html)->[`furtherModes`]({{ site.structs }}PublicRuntimeSettings.html#furthermodes) | [`barcodeColourModes`]({{ site.structs }}FurtherModes.html#barcodecolourmodes) | [`BarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode)[8] |
 
-**Remarks**   
+**Remarks**     
 [`GetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) and [`SetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) need to be called for getting or setting the value of [arguments](#mode-arguments).
 
 
-**See Also**    
+**See Also**      
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 - [`FurtherModes` Struct]({{ site.structs }}FurtherModes.html)
 - [`BarcodeColourMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode)

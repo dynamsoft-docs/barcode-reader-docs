@@ -17,7 +17,6 @@ needAutoGenerateSidebar: true
   | [`updateRuntimeSettings`](#updateruntimesettings) | Modify and update the current runtime settings. |
   | [`resetRuntimeSettings`](#resetruntimesettings) | Reset runtime settings to default. |
 
-  ---
 
 
 
@@ -30,17 +29,28 @@ Sets the optional argument for a specified mode in Modes parameters.
 ```java
 void com.dynamsoft.dbr.BarcodeReader.setModeArgument(String modesName, int index, String argumentName, String argumentValue)	throws BarcodeReaderException
 ```   
-**Parameters**
+**Parameters**  
 `modesName` The mode parameter name to set argument.  
 `index` The array index of mode parameter to indicate a specific mode.  
 `argumentName` The name of the argument to set.  
 `argumentValue` The value of the argument to set. 
 
-#### Exceptions
+**Exception**  
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
 
-**Remarks**
+
+**Code Snippet**  
+```java
+BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+PublicRuntimeSettings settings = reader.getRuntimeSettings();
+settings.binarizationModes[0] = EnumBinarizationMode.BM_LOCAL_BLOCK;
+reader.updateRuntimeSettings(settings);
+reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "1");
+reader.destroy();
+```
+
+**Remarks**  
 Check follow link for available modes and arguments:
 - [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#barcodecolourmodes)
 - [`BinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#binarizationmodes)
@@ -55,17 +65,6 @@ Check follow link for available modes and arguments:
 - [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#textfiltermodes)
 - [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes) 
 
-**Code Snippet**
-```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
-PublicRuntimeSettings settings = reader.getRuntimeSettings();
-settings.binarizationModes[0] = EnumBinarizationMode.BM_LOCAL_BLOCK;
-reader.updateRuntimeSettings(settings);
-reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "1");
-reader.destroy();
-```
-
-
 
 
 
@@ -79,18 +78,30 @@ Gets the optional argument for a specified mode in Modes parameters.
 String com.dynamsoft.dbr.BarcodeReader.getModeArgument(String modesName, int index, String argumentName) throws BarcodeReaderException
 ```   
    
-**Parameters**  
+**Parameters**    
 `modesName` The mode parameter name to get argument.  
 `index` The array index of mode parameter to indicate a specific mode.  
 `argumentName` The name of the argument to get.
 
-**Return Value**
+**Return Value**  
 the optional argument for a specified mode in Modes parameters.
 
-#### Exceptions
+**Exception**  
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-**Remarks**
+
+**Code Snippet**  
+```java
+BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+PublicRuntimeSettings settings = reader.getRuntimeSettings();
+settings.binarizationModes[0] = EnumBinarizationMode.BM_LOCAL_BLOCK;
+reader.updateRuntimeSettings(settings);
+reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "1");
+String argumentValue = reader.getModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy");
+reader.destroy();
+```
+
+**Remarks**  
 Check follow link for available modes and arguments:
 - [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#barcodecolourmodes)
 - [`BinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#binarizationmodes)
@@ -105,18 +116,6 @@ Check follow link for available modes and arguments:
 - [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#textfiltermodes)
 - [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes)    
 
-**Code Snippet**
-```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
-PublicRuntimeSettings settings = reader.getRuntimeSettings();
-settings.binarizationModes[0] = EnumBinarizationMode.BM_LOCAL_BLOCK;
-reader.updateRuntimeSettings(settings);
-reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "1");
-String argumentValue = reader.getModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy");
-reader.destroy();
-```
-
-
 
 
 
@@ -130,13 +129,13 @@ Get current settings and save them into a [`PublicRuntimeSettings`](../class/Pub
 PublicRuntimeSettings com.dynamsoft.dbr.BarcodeReader.getRuntimeSettings() throws BarcodeReaderException	
 ```   
  
-**Return Value**
+**Return Value**  
 The struct of template settings.
 
-#### Exceptions
+**Exception**  
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-**Code Snippet**
+**Code Snippet**  
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
@@ -157,13 +156,13 @@ Update runtime settings with a given [`PublicRuntimeSettings`](../class/PublicRu
 void com.dynamsoft.dbr.BarcodeReader.updateRuntimeSettings(PublicRuntimeSettings settings) throws BarcodeReaderException
 ```   
    
-**Parameters**
+**Parameters**  
 `settings`	The struct of template settings.
 
-#### Exceptions
+**Exception**  
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-**Code Snippet**
+**Code Snippet**  
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
@@ -185,11 +184,12 @@ Reset all parameters to default values.
 ```java
 void com.dynamsoft.dbr.BarcodeReader.resetRuntimeSettings()	throws BarcodeReaderException
 
-#### Exceptions
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
 ```   
 
-**Code Snippet**
+**Exception**  
+[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+
+**Code Snippet**  
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
 PublicRuntimeSettings settings = reader.getRuntimeSettings();

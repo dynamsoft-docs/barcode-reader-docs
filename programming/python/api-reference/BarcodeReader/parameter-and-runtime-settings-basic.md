@@ -17,7 +17,6 @@ needAutoGenerateSidebar: true
   | [`update_runtime_settings`](#update_runtime_settings) | Updates runtime settings with a given struct. |
   | [`reset_runtime_settings`](#reset_runtime_settings) | Resets all parameters to default values. |
 
-  ---
 
 ## set_mode_argument
 
@@ -27,35 +26,19 @@ Sets the optional argument for a specified mode in `Modes` parameters.
 BarcodeReader.set_mode_argument(modes_name, index, argument_name, argument_value)
 ```
 
-**Parameters**
+**Parameters**  
 
-- `[in]	modes_name <*str*>` : The mode(s) parameter name to set argument.  
-- `[in]	index <*int*>` : The array index of modes parameter to indicate a specific mode.   
-- `[in]	argument_name <*str*>` : The name of the argument to set.  
-- `[in]	argument_value <*str*>` : The value of the argument to set.  
+`[in]	modes_name <*str*>` : The mode(s) parameter name to set argument.  
+`[in]	index <*int*>` : The array index of modes parameter to indicate a specific mode.   
+`[in]	argument_name <*str*>` : The name of the argument to set.  
+`[in]	argument_value <*str*>` : The value of the argument to set.  
 
-**Return Value**
+**Return Value**  
 
 `error <*tuple*>` : `error_code = error[0]`, `error_message = error[1]`, if `error_code != EnumErrorCode.DBR_OK`, you can get the detailed error message by `error_message`.
 
-**Remarks**
 
-Check the available modes and arguments below:
-
-- [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#barcodecolourmodes)
-- [`BinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#binarizationmodes)
-- [`ColourClusteringModes`]({{ site.parameters_reference }}image-parameter/ColourClusteringModes.html#colourclusteringmodes)
-- [`ColourConversionModes`]({{ site.parameters_reference }}image-parameter/ColourConversionModes.html#colourconversionmodes)
-- [`DeformationResistingModes`]({{ site.parameters_reference }}image-parameter/DeformationResistingModes.html#deformationresistingmodes)
-- [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#imagepreprocessingmodes)
-- [`IntermediateResultSavingMode`]({{ site.parameters_reference }}image-parameter/IntermediateResultSavingMode.html#intermediateresultsavingmode)
-- [`LocalizationModes`]({{ site.parameters_reference }}image-parameter/LocalizationModes.html#localizationmodes)
-- [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes)
-- [`ScaleUpModes`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#scaleupmodes)
-- [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#textfiltermodes)
-- [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes) 
-
-**Code Snippet**
+**Code Snippet**  
 
 ```python
 from dbr import *
@@ -73,30 +56,7 @@ except BarcodeReaderError as e:
     print(e)
 ```
 
-## get_mode_argument
-
-Gets argument value for the specified mode parameter.
-
-```python
-BarcodeReader.get_mode_argument(modes_name, index, argument_name)
-```
-
-**Parameters**  
-
-- `[in]	modes_name <*str*>` : The mode(s) parameter name to get argument.  
-- `[in]	index <*int*>` : The array index of modes parameter to indicate a specific mode.   
-- `[in]	argument_name <*str*>` : The name of the argument to get.  
-
-**Return Value**
-
-`argument_value <*str*>` : The value of the argument to get.
-
-### Exception
-
-[`BarcodeReaderError`](../class/BarcodeReaderError.md) : If error happens, this function will throw a BarcodeReaderError exception that can report the detailed error message.
-
-**Remarks**
-
+**Remarks**  
 Check the available modes and arguments below:
 
 - [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#barcodecolourmodes)
@@ -110,9 +70,33 @@ Check the available modes and arguments below:
 - [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes)
 - [`ScaleUpModes`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#scaleupmodes)
 - [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#textfiltermodes)
-- [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes)
+- [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes) 
 
-**Code Snippet**
+
+## get_mode_argument
+
+Gets argument value for the specified mode parameter.
+
+```python
+BarcodeReader.get_mode_argument(modes_name, index, argument_name)
+```
+
+**Parameters**    
+
+`[in]	modes_name <*str*>` : The mode(s) parameter name to get argument.  
+`[in]	index <*int*>` : The array index of modes parameter to indicate a specific mode.   
+`[in]	argument_name <*str*>` : The name of the argument to get.  
+
+**Return Value**  
+
+`argument_value <*str*>` : The value of the argument to get.
+
+**Exception**  
+
+[`BarcodeReaderError`](../class/BarcodeReaderError.md) : If error happens, this function will throw a BarcodeReaderError exception that can report the detailed error message.
+
+
+**Code Snippet**  
 
 ```python
 from dbr import *
@@ -130,6 +114,24 @@ except BarcodeReaderError as e:
     print(e)
 ```
 
+
+**Remarks**  
+Check the available modes and arguments below:
+
+- [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#barcodecolourmodes)
+- [`BinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#binarizationmodes)
+- [`ColourClusteringModes`]({{ site.parameters_reference }}image-parameter/ColourClusteringModes.html#colourclusteringmodes)
+- [`ColourConversionModes`]({{ site.parameters_reference }}image-parameter/ColourConversionModes.html#colourconversionmodes)
+- [`DeformationResistingModes`]({{ site.parameters_reference }}image-parameter/DeformationResistingModes.html#deformationresistingmodes)
+- [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#imagepreprocessingmodes)
+- [`IntermediateResultSavingMode`]({{ site.parameters_reference }}image-parameter/IntermediateResultSavingMode.html#intermediateresultsavingmode)
+- [`LocalizationModes`]({{ site.parameters_reference }}image-parameter/LocalizationModes.html#localizationmodes)
+- [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes)
+- [`ScaleUpModes`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#scaleupmodes)
+- [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#textfiltermodes)
+- [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes)
+
+
 ## get_runtime_settings
 
 Gets current settings and saves them into a `PublicRuntimeSetting` object. 
@@ -138,11 +140,11 @@ Gets current settings and saves them into a `PublicRuntimeSetting` object.
 BarcodeReader.get_runtime_settings()
 ```
 
-**Return Value**
+**Return Value**  
 
 `runtime_settings <*class PublicRuntimeSetting*>` : The `PublicRuntimeSetting` object of current runtime settings.
 
-**Code Snippet**
+**Code Snippet**  
 
 ```python
 from dbr import *
@@ -161,15 +163,15 @@ Updates runtime settings with a given `PublicRuntimeSetting` object.
 BarcodeReader.update_runtime_settings(settings)
 ```
 
-**Parameters**
+**Parameters**  
 
 `[in]	settings <*class PublicRuntimeSetting*>` : a `PublicRuntimeSetting` object.    
  
-### Exception
+**Exception**  
 
 [`BarcodeReaderError`](../class/BarcodeReaderError.md) : If error happens, this function will throw a `BarcodeReaderError` exception that can report the detailed error message.
 
-**Code Snippet**
+**Code Snippet**  
 
 ```python
 from dbr import *
@@ -195,7 +197,7 @@ Resets all parameters to default values.
 BarcodeReader.reset_runtime_settings() 
 ```
 
-**Code Snippet**
+**Code Snippet**  
 
 ```python
 from dbr import *

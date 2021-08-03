@@ -27,7 +27,7 @@ needAutoGenerateSidebar: false
 | ---------- | ----------- | ------------- |
 | *string array* or *[`TextResultOrderMode`]({{ site.enumerations }}result-enums.html#textresultordermode) array* | "TROM_SKIP"<br>"TROM_CONFIDENCE"<br>"TROM_POSITION"<br>"TROM_FORMAT" | ["TROM_CONFIDENCE", "TROM_POSITION", "TROM_FORMAT", "TROM_SKIP", "TROM_SKIP", "TROM_SKIP", "TROM_SKIP", "TROM_SKIP"] |
 
-- **See also**:   
+**See Also**    :   
     [`TextResultOrderMode` Enumeration]({{ site.enumerations }}result-enums.html#textresultordermode)
     
     
@@ -62,7 +62,7 @@ needAutoGenerateSidebar: false
 | ------ | ------------------ | ---------- |
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) | [`textResultOrderModes`]({{ site.structs }}PublicRuntimeSettings.html#textresultordermodes) | [`TextResultOrderMode`]({{ site.enumerations }}result-enums.html#textresultordermode)[8] |
 
-**See Also**    
+**See Also**      
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 - [`TextResultOrderMode` Enumeration]({{ site.enumerations }}result-enums.html#textresultordermode)
 

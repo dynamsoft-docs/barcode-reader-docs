@@ -86,7 +86,7 @@ For mobile edition (8.2+) and the JavaScript edition (8.2.5+), a 7-day free tria
 >  
 > In case a private trial license fails to be generated, Dynamsoft Support team will get in touch with you. Or you can [contact us](https://www.dynamsoft.com/company/contact/).
 
-**Code Snippet**
+**Code Snippet**  
 
 * JavaScript
 

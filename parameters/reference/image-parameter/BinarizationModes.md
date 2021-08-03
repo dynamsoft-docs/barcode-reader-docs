@@ -17,7 +17,7 @@ needAutoGenerateSidebar: false
 | ---------- | ----------- | ------------- |
 | *string array* or *[`BinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) array* | "BM_SKIP"<br>"BM_AUTO"<br>"BM_LOCAL_BLOCK"<br>"BM_THRESHOLD" | ["BM_LOCAL_BLOCK", "BM_SKIP", "BM_SKIP", "BM_SKIP", "BM_SKIP", "BM_SKIP", "BM_SKIP", "BM_SKIP"] |
 
-- **See also**:   
+**See Also**    :   
     [`BinarizationMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)
     
 #### Mode Arguments
@@ -38,7 +38,7 @@ Sets the horizontal block size for the binarization process.
 | ---------- | ----------- | ------------- |
 | *int* | [0, 1000] | 0 |         
 
-- **Remarks**    
+**Remarks**        
   Block size refers to the size of a pixel neighborhood used to calculate a threshold value for the pixel. An appropriate value for binarization. BlockSize can help generate a high-quality binary image and increase the accuracy of barcode localization.   
 
   - 0: the block size used for binarization will be set to a value which is calculated automatically.   
@@ -56,7 +56,7 @@ Sets the vertical block size for the binarization process.
 | ---------- | ----------- | ------------- |
 | *int* | [0, 1000] | 0 |         
 
-- **Remarks**     
+**Remarks**         
   Block size refers to the size of a pixel neighborhood used to calculate a threshold value for the pixel. An appropriate value for binarization. BlockSize can help generate a high-quality binary image and increase the accuracy of barcode localization.   
 
   - 0: the block size used for binarization will be set to a value which is calculated automatically.   
@@ -72,7 +72,7 @@ Sets whether to enable binary vacancy filling.
 | ---------- | ----------- | ------------- |
 | *int* | [0, 1] | 1 |         
 
-- **Remarks**     
+**Remarks**         
   - 0: disable.   
   - 1: enable.
 
@@ -86,7 +86,7 @@ The index of a specific image preprocessing mode in the [ImagePreprocessingModes
 | ---------- | ----------- | ------------- |
 | *int* | [-1, 0x7fffffff] | -1 |         
 
-- **Remarks**     
+**Remarks**         
   -1: The current binarization mode is applied to all modes in parameter [ImagePreprocessingModes](ImagePreprocessingModes.md#imagepreprocessingmodes).
 
 
@@ -115,7 +115,7 @@ Sets the file name of the library to load dynamically.
 | *string* | A string value representing file name. | "" | All `BinarizationMode` items except BM_SKIP and BM_AUTO |         
 
 
-- **Remarks**     
+**Remarks**         
   The library must be in the same place with Dynamsoft Barcode Reader Library.
 
 
@@ -162,10 +162,10 @@ Sets the parameters passed to the library to load dynamically.
 | ------ | ------------------ | ---------- |
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) | [`binarizationModes`]({{ site.structs }}PublicRuntimeSettings.html#binarizationmodes) | [`BinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)[8] |
 
-**Remarks**   
+**Remarks**     
 [`GetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) and [`SetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) need to be called for getting or setting the value of [arguments](#mode-arguments).
 
 
-**See Also**    
+**See Also**      
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 - [`BinarizationMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)

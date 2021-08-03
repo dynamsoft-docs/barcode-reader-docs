@@ -16,7 +16,7 @@ needAutoGenerateSidebar: false
 | ---------- | ----------- | ------------- |
 | *string array* or *[`DPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode) array* | "DPMCRM_SKIP"<br>"DPMCRM_AUTO"<br>"DPMCRM_GENERAL" | ["DPMCRM_SKIP", "DPMCRM_SKIP", "DPMCRM_SKIP", "DPMCRM_SKIP", "DPMCRM_SKIP", "DPMCRM_SKIP", "DPMCRM_SKIP", "DPMCRM_SKIP"] |
 
-- **See also**:   
+**See Also**    :   
     [`DPMCodeReadingMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode)
     
 #### Mode Arguments
@@ -31,7 +31,7 @@ Sets the file name of the library to load dynamically.
 | *string* | A string value representing file name. | "" | All `DPMCodeReadingMode` items except DPMCRM_SKIP and DPMCRM_AUTO |         
 
 
-- **Remarks**     
+**Remarks**         
   The library must be in the same place with Dynamsoft Barcode Reader Library.
 
 
@@ -76,7 +76,7 @@ Sets the parameters passed to the library to load dynamically.
 | ------ | ------------------ | ---------- |
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html)->[`furtherModes`]({{ site.structs }}PublicRuntimeSettings.html#furthermodes) | [`dpmCodeReadingModes`]({{ site.structs }}FurtherModes.html#dpmcodereadingmodes) | [`DPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode)[8] |
 
-**See Also**    
+**See Also**      
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 - [`FurtherModes`]({{ site.structs }}FurtherModes.html)
 - [`DPMCodeReadingMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode)

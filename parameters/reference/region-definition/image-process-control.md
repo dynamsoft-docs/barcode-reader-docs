@@ -45,7 +45,7 @@ The top-most coordinate or percentage of the region.
 | ------ | ------------------ | ---------- | ----------- | ------------- |
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html)->[`region`]({{ site.structs }}PublicRuntimeSettings.html#region) | [`regionTop`]({{ site.structs }}RegionDefinition.html#regiontop) | *int* | [`regionMeasuredByPercentage`]({{ site.structs }}RegionDefinition.html#regionmeasuredbypercentage)=0: [0, 0x7fffffff]<br>[`regionMeasuredByPercentage`]({{ site.structs }}RegionDefinition.html#regionmeasuredbypercentage) = 1: [0, 100] | 0 |
 
-**See Also**   
+**See Also**     
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 - [`RegionDefinition` Struct]({{ site.structs }}RegionDefinition.html)
 
@@ -78,7 +78,7 @@ The left-most coordinate or percentage of the region.
 | ------ | ------------------ | ---------- | ----------- | ------------- |
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html)->[`region`]({{ site.structs }}PublicRuntimeSettings.html#region) | [`regionLeft`]({{ site.structs }}RegionDefinition.html#regionleft) | *int* | [`regionMeasuredByPercentage`]({{ site.structs }}RegionDefinition.html#regionmeasuredbypercentage)=0: [0, 0x7fffffff]<br>[`regionMeasuredByPercentage`]({{ site.structs }}RegionDefinition.html#regionmeasuredbypercentage) = 1: [0, 100] | 0 |
 
-**See Also**   
+**See Also**     
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 - [`RegionDefinition` Struct]({{ site.structs }}RegionDefinition.html)
 
@@ -111,7 +111,7 @@ The right-most coordinate or percentage of the region.
 | ------ | ------------------ | ---------- | ----------- | ------------- |
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html)->[`region`]({{ site.structs }}PublicRuntimeSettings.html#region) | [`regionRight`]({{ site.structs }}RegionDefinition.html#regionright) | *int* | [`regionMeasuredByPercentage`]({{ site.structs }}RegionDefinition.html#regionmeasuredbypercentage)=0: [0, 0x7fffffff]<br>[`regionMeasuredByPercentage`]({{ site.structs }}RegionDefinition.html#regionmeasuredbypercentage) = 1: [0, 100] | 0 |
 
-**See Also**   
+**See Also**     
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 - [`RegionDefinition` Struct]({{ site.structs }}RegionDefinition.html)
 
@@ -144,7 +144,7 @@ The bottom-most coordinate or percentage of the region.
 | ------ | ------------------ | ---------- | ----------- | ------------- |
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html)->[`region`]({{ site.structs }}PublicRuntimeSettings.html#region) | [`regionBottom`]({{ site.structs }}RegionDefinition.html#regionbottom) | *int* | [`regionMeasuredByPercentage`]({{ site.structs }}RegionDefinition.html#regionmeasuredbypercentage)=0: [0, 0x7fffffff]<br>[`regionMeasuredByPercentage`]({{ site.structs }}RegionDefinition.html#regionmeasuredbypercentage) = 1: [0, 100] | 0 |
 
-**See Also**   
+**See Also**     
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 - [`RegionDefinition` Struct]({{ site.structs }}RegionDefinition.html)
 
@@ -157,7 +157,7 @@ The bottom-most coordinate or percentage of the region.
 ## MeasuredByPercentage
 Sets whether or not to use percentages to measure the Region size
 
-**Remarks**   
+**Remarks**     
 When it’s set to 1, the values of [Top](#top), [Left](#left), [Right](#right), [Bottom](#bottom) indicates the percentage (from 0 to 100). Otherwise, they refer to the coordinates.   
 - 0: not by percentage
 - 1: by percentage
@@ -183,7 +183,7 @@ When it’s set to 1, the values of [Top](#top), [Left](#left), [Right](#right),
 | ------ | ------------------ | ---------- | ----------- | ------------- |
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html)->[`region`]({{ site.structs }}PublicRuntimeSettings.html#region) | [`MeasuredByPercentage`]({{ site.structs }}RegionDefinition.html#measuredbypercentage) | *int* | [0, 1] | 0 |
 
-**See Also**   
+**See Also**     
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 - [`RegionDefinition` Struct]({{ site.structs }}RegionDefinition.html)
 
