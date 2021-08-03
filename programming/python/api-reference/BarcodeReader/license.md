@@ -34,7 +34,7 @@ BarcodeReader.init_license(dbr_license)
 
 `[in]	dbr_license` <*str*> : The product keys.
 
-### Return value
+**Return Value**
 
 `error` <*tuple*> : error_code = error[0], error_message = error[1], if error_code != EnumErrorCode.DBR_OK, you can get the detailed error message by error_message.
 
@@ -51,7 +51,7 @@ BarcodeReader.init_license_from_server(license_server, license_key)
 - `[in]	license_server` <*str*> : The name/IP of the license server.  
 - `[in]	license_key` <*str*> : The license key of Barcode Reader.
 
-### Return value
+**Return Value**
 
 `error` <*tuple*> : error_code = error[0], error_message = error[1], if error_code != EnumErrorCode.DBR_OK, you can get the detailed error message by error_message.
 
@@ -68,7 +68,7 @@ BarcodeReader.init_license_from_license_content(license_key, license_content)
 `[in]	license_key` <*str*> :	The license key of Barcode Reader.   
 `[in]	license_content` <*str*> :	An encrypted string representing the license content (runtime number, expiry date, barcode type, etc.) obtained from the method output_license_to_string(). 
 
-### Return value
+**Return Value**
 
 `error` <*tuple*> : error_code = error[0], error_message = error[1], if error_code != EnumErrorCode.DBR_OK, you can get the detailed error message by error_message.
 
@@ -80,7 +80,7 @@ Outputs the license content as an encrypted string from the license server to be
 BarcodeReader.output_license_to_string()
 ```
 
-### Return value
+**Return Value**
 
 `license_string` <*str*> : An encrypted string which stores the content of license. 
 
@@ -96,7 +96,7 @@ Initializes a DMDLSConnectionParameters struct with default values.
 BarcodeReader.init_dls_connection_parameters()
 ```
 
-### Return value
+**Return Value**
 
 `DMDLSConnectionParameters` <*class DMDLSConnectionParameters*> : A DMDLSConnectionParameters struct with default values.
 
@@ -114,7 +114,7 @@ BarcodeReader.init_license_from_dls(dls_connection_parameters)
 
 - `[in]	dls_connection_parameters` <*class DMDLSConnectionParameters*> : The struct DMDLSConnectionParameters with customized settings.  
 
-### Return value
+**Return Value**
 
 `error` <*tuple*> : error_code = error[0], error_message = error[1], if error_code != EnumErrorCode.DBR_OK, you can get the detailed error message by error_message.
 
@@ -127,7 +127,7 @@ Gets available instances count when charging by concurrent instances count.
 BarcodeReader.get_idle_instances_count()
 ```   
 
-#### Return value
+**Return Value**
 count <*int*> : Returns available instances count.    
 
 ## init_lts_connection_parameters

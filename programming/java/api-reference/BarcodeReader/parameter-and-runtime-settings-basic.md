@@ -40,7 +40,7 @@ void com.dynamsoft.dbr.BarcodeReader.setModeArgument(String modesName, int index
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
 
-#### Remark
+**Remarks**
 Check follow link for available modes and arguments:
 - [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#barcodecolourmodes)
 - [`BinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#binarizationmodes)
@@ -55,7 +55,7 @@ Check follow link for available modes and arguments:
 - [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#textfiltermodes)
 - [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes) 
 
-#### Code Snippet
+**Code Snippet**
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
@@ -84,13 +84,13 @@ String com.dynamsoft.dbr.BarcodeReader.getModeArgument(String modesName, int ind
 `index` The array index of mode parameter to indicate a specific mode.  
 `argumentName` The name of the argument to get.
 
-#### Return value
+**Return Value**
 the optional argument for a specified mode in Modes parameters.
 
 #### Exceptions
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-#### Remark
+**Remarks**
 Check follow link for available modes and arguments:
 - [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#barcodecolourmodes)
 - [`BinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#binarizationmodes)
@@ -105,7 +105,7 @@ Check follow link for available modes and arguments:
 - [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#textfiltermodes)
 - [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes)    
 
-#### Code Snippet
+**Code Snippet**
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
@@ -130,13 +130,13 @@ Get current settings and save them into a [`PublicRuntimeSettings`](../class/Pub
 PublicRuntimeSettings com.dynamsoft.dbr.BarcodeReader.getRuntimeSettings() throws BarcodeReaderException	
 ```   
  
-#### Return value
+**Return Value**
 The struct of template settings.
 
 #### Exceptions
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-#### Code Snippet
+**Code Snippet**
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
@@ -163,7 +163,7 @@ void com.dynamsoft.dbr.BarcodeReader.updateRuntimeSettings(PublicRuntimeSettings
 #### Exceptions
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-#### Code Snippet
+**Code Snippet**
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
@@ -189,7 +189,7 @@ void com.dynamsoft.dbr.BarcodeReader.resetRuntimeSettings()	throws BarcodeReader
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 ```   
 
-#### Code Snippet
+**Code Snippet**
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
 PublicRuntimeSettings settings = reader.getRuntimeSettings();

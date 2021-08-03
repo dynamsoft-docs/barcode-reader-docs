@@ -26,7 +26,7 @@ Get intermediate results containing the original image, the colour clustered ima
 IntermediateResult[] com.dynamsoft.dbr.BarcodeReader.getIntermediateResults() throws BarcodeReaderException 
 ```   
 
-#### Return value
+**Return Value**
 The intermediate results returned by the SDK.
 
 
@@ -34,7 +34,7 @@ The intermediate results returned by the SDK.
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
 
-#### Code Snippet
+**Code Snippet**
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
 PublicRuntimeSettings settings = reader.getRuntimeSettings();

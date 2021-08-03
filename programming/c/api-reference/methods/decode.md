@@ -37,11 +37,11 @@ DBR_API int DBR_DecodeFile (void* barcodeReader, const char* pFileName, const ch
 `[in]	pFileName` A string defining the file name.  
 `[in]	pTemplateName` The template name.
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* barcodeReader = DBR_CreateInstance();
 DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
@@ -68,11 +68,11 @@ DBR_API int DBR_DecodeFileInMemory (void* barcodeReader, const unsigned char* pF
 `[in]	fileSize`	The length of the file bytes in memory.  
 `[in]	pTemplateName` The template name.  
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* barcodeReader = DBR_CreateInstance();
 DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
@@ -105,11 +105,11 @@ DBR_API int DBR_DecodeBuffer (void* barcodeReader, const unsigned char* pBufferB
 `[in]	format` The image pixel format used in the image byte array.  
 `[in]	pTemplateName` The template name.
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* barcodeReader = DBR_CreateInstance();
 DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
@@ -140,11 +140,11 @@ DBR_API int DBR_DecodeBase64String (void* barcodeReader, const char* pBase64Stri
 `[in]	pBase64String` A base64 encoded string that represents an image.  
 `[in]	pTemplateName` The template name.  
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* barcodeReader = DBR_CreateInstance();
 DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
@@ -175,11 +175,11 @@ DBR_API int DBR_DecodeDIB (void* barcodeReader, const HANDLE hDIB, const char* p
 `[in]	hDIB` Handle of the device-independent bitmap.  
 `[in]	pTemplateName` The template name.  
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* barcodeReader = DBR_CreateInstance();
 DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
@@ -204,11 +204,11 @@ DBR_API int DBR_InitIntermediateResult (IntermediateResultType intermediateResul
 `[in]	intermediateResultType` The type of the intermediate result to init.  
 `[in, out]	pIntermediateResult` The intermediate result struct.  
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 IntermediateResult imResult;
 DBR_InitIntermediateResult(IRT_ORIGINAL_IMAGE, &imResult);
@@ -231,11 +231,11 @@ DBR_API int DBR_DecodeIntermediateResults (void* barcodeReader, const Intermedia
 `[in]	pIntermediateResultArray` The intermediate result array for decoding.  
 `[in]	pTemplateName` The template name.
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void * handle = DBR_CreateInstance();
 char errorBuf[512];

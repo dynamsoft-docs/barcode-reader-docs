@@ -36,14 +36,14 @@ int dynamsoft::dbr::CBarcodeReader::DecodeFile (const char* pFileName, const cha
 `[in] pFileName`	A string defining the file name.   
 `[in] pTemplateName`<sub>Optional</sub> The template name.
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
-#### Remark
+**Remarks**
 If no template name is specified, current runtime settings will be used.
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
@@ -70,14 +70,14 @@ int dynamsoft::dbr::CBarcodeReader::DecodeFileInMemory (const unsigned char* pFi
 `[in]	fileSize` The length of the file bytes in memory.   
 `[in] pTemplateName`<sub>Optional</sub> The template name.
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [GetErrorString()](status-retrieval.md#geterrorstring) to get detailed error message.*   
 
-#### Remark
+**Remarks**
 If no template name is specified, current runtime settings will be used.
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
@@ -110,14 +110,14 @@ int dynamsoft::dbr::CBarcodeReader::DecodeBuffer (const unsigned char* pBufferBy
 `[in]	format` The image pixel format used in the image byte array.   
 `[in] pTemplateName`<sub>Optional</sub> The template name.
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*   
 
-#### Remark
+**Remarks**
 If no template name is specified, current runtime settings will be used.
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
@@ -149,14 +149,14 @@ int dynamsoft::dbr::CBarcodeReader::DecodeBase64String (const char* pBase64Strin
 `[in]	pBase64String`	A base64 encoded string that represents an image.   
 `[in] pTemplateName`<sub>Optional</sub> The template name.
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
-#### Remark
+**Remarks**
 If no template name is specified, current runtime settings will be used.
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
@@ -187,14 +187,14 @@ int dynamsoft::dbr::CBarcodeReader::DecodeDIB (const HANDLE hDIB, const char* ps
 `[in]	hDIB` Handle of the device-independent bitmap.    
 `[in] pTemplateName`<sub>Optional</sub> The template name.
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*   
 
-#### Remark
+**Remarks**
 If no template name is specified, current runtime settings will be used.
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
@@ -220,11 +220,11 @@ int dynamsoft::dbr::CBarcodeReader::InitIntermediateResult(IntermediateResultTyp
 `[in]	intermediateResultType` The type of the intermediate result to init.  
 `[in, out]	pIntermediateResult` The intermediate result struct.  
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 IntermediateResult imResult;
 dynamsoft::dbr::CBarcodeReader::InitIntermediateResult(IRT_ORIGINAL_IMAGE, &imResult);
@@ -246,11 +246,11 @@ int dynamsoft::dbr::CBarcodeReader::DecodeIntermediateResults(const Intermediate
 `[in]	pIntermediateResultArray` The intermediate result array for decoding.  
 `[in]	pTemplateName`<sub>Optional</sub> The template name.
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 CBarcodeReader * reader = new CBarcodeReader();
 char fileName[] = "Your barcode file";

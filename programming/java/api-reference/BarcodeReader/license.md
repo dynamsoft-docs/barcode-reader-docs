@@ -38,7 +38,7 @@ void com.dynamsoft.dbr.BarcodeReader.initLicense(String license) throws BarcodeR
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
@@ -63,7 +63,7 @@ void com.dynamsoft.dbr.BarcodeReader.initLicenseFromServer(String licenseServer,
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
@@ -88,7 +88,7 @@ void com.dynamsoft.dbr.BarcodeReader.initLicenseFromLicenseContent(String licens
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
@@ -104,7 +104,7 @@ Outputs the license content as an encrypted string from the license server for o
 String com.dynamsoft.dbr.BarcodeReader.outputLicenseToString() throws BarcodeReaderException
 ```   
    
-### Return value
+**Return Value**
 
 The output string which stores the content of the license.
 
@@ -112,12 +112,12 @@ The output string which stores the content of the license.
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-### Remark
+**Remarks**
 
 [`InitLicenseFromServer`](#initlicensefromserver) has to be successfully called before calling this method.
 
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
@@ -134,7 +134,7 @@ Initializes a `DMDLSConnectionParameters` struct with default values.
 static DMDLSConnectionParameters com.dynamsoft.dbr.BarcodeReader.initDLSConnectionParameters() throws BarcodeReaderException
 ```
    
-### Code Snippet
+**Code Snippet**
 
 ```java
 DMDLSConnectionParameters info = BarcodeReader.initDLSConnectionParameters();
@@ -156,7 +156,7 @@ static void com.dynamsoft.dbr.BarcodeReader.initLicenseFromDLS(DMDLSConnectionPa
 
 - `dlsInfo`: The struct `DMDLSConnectionParameters` with customized settings.  
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 DMDLSConnectionParameters info = BarcodeReader.initDLSConnectionParameters();
@@ -174,11 +174,11 @@ Gets the count of available instances when charging by concurrent instances coun
 static int com.dynamsoft.dbr.BarcodeReader.getIdleInstancesCount()
 ```   
 
-### Return value
+**Return Value**
 
 Returns available instances count.    
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 //...

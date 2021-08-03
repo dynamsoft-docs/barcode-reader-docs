@@ -42,11 +42,11 @@ int dynamsoft::dbr::CBarcodeReader::InitRuntimeSettingsWithFile (const char* pFi
 `[in,out]	errorMsgBuffer`<sub>Optional</sub> The buffer is allocated by caller and the recommended length is 256. The error message will be copied to the buffer.  
 `[in]	errorMsgBufferLen`<sub>Optional</sub> The length of the allocated buffer.
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
@@ -76,11 +76,11 @@ int dynamsoft::dbr::CBarcodeReader::InitRuntimeSettingsWithString (const char* c
 `[in,out]	errorMsgBuffer`<sub>Optional</sub> The buffer is allocated by caller and the recommended length is 256. The error message will be copied to the buffer.  
 `[in]	errorMsgBufferLen`<sub>Optional</sub> The length of the allocated buffer.
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
@@ -109,11 +109,11 @@ int dynamsoft::dbr::CBarcodeReader::AppendTplFileToRuntimeSettings (const char* 
 `[in,out] errorMsgBuffer`<sub>Optional</sub> The buffer is allocated by caller and the recommended length is 256. The error message will be copied to the buffer.  
 `[in]	errorMsgBufferLen`<sub>Optional</sub> The length of the allocated buffer.
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
@@ -143,11 +143,11 @@ int dynamsoft::dbr::CBarcodeReader::AppendTplStringToRuntimeSettings (const char
 `[in,out]	errorMsgBuffer`<sub>Optional</sub> The buffer is allocated by caller and the recommended length is 256. The error message will be copied to the buffer.   
 `[in]	errorMsgBufferLen`<sub>Optional</sub> The length of the allocated buffer.  
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
@@ -169,12 +169,12 @@ Gets the count of the parameter templates.
 int dynamsoft::dbr::CBarcodeReader::GetParameterTemplateCount ()	
 ```   
 
-#### Return value
+**Return Value**
 Returns the count of parameter template.
 
 ---
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
@@ -204,11 +204,11 @@ int dynamsoft::dbr::CBarcodeReader::GetParameterTemplateName (const int index, c
 `[in,out]` nameBuffer	The buffer is allocated by caller and the recommended nameBufferLen is 256. The template name will be copied to the buffer.  
 `[in]	nameBufferLen` The length of allocated buffer.  
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
@@ -242,11 +242,11 @@ int dynamsoft::dbr::CBarcodeReader::OutputSettingsToFile (const char* pFilePath,
 `[in]	pSettingsName` A unique name for declaring current runtime settings.
 
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
@@ -276,11 +276,11 @@ int dynamsoft::dbr::CBarcodeReader::OutputSettingsToString (char content[], cons
 `[in]	contentLen` The length of the output string.  
 `[in]	pSettingsName` A unique name for declaring current runtime settings.  
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
@@ -310,11 +310,11 @@ int dynamsoft::dbr::CBarcodeReader::OutputSettingsToStringPtr (char** content, c
 `[in,out]	content`	The output string which stores the contents of current settings.  
 `[in]	pSettingsName`	A unique name for declaring current runtime settings.
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
@@ -344,7 +344,7 @@ void dynamsoft::dbr::CBarcodeReader::FreeSettingsString (char** content	)
 **Parameters**
 `[in]	content`	The runtime settings string.
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");

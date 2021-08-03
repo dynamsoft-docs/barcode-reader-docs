@@ -31,10 +31,10 @@ static const char* dynamsoft::dbr::CBarcodeReader::GetErrorString (const int iEr
 **Parameters**
 `[in] iErrorCode`	Error code.
 
-#### Return value
+**Return Value**
 The error message.
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
@@ -57,10 +57,10 @@ Get version information of SDK.
 static const char* dynamsoft::dbr::CBarcodeReader::GetVersion ()
 ```
 
-#### Return value
+**Return Value**
 The version information string.
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 const char* versionInfo = dynamsoft::dbr::CBarcodeReader::GetVersion();
 ```

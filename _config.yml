@@ -103,3 +103,10 @@ defaults:
       path: "programming/objectivec-swift"
     values:
       category: "mobile-repo"
+  - scope:
+      path: ""
+    values:
+      layout: "default-layout"
+      noTitleIndex: true
+      needAutoGenerateSidebar: true
+      needGenerateH3Content: true

@@ -18,7 +18,6 @@ needGenerateH3Content: false
   | [`ResultType`](#resulttype) | Describes the extended result type. |
   | [`TextResultOrderMode`](#textresultordermode) | Describes the text result order mode. |
   
----
 
 
 ## IMResultDataType
@@ -48,10 +47,6 @@ Describes the intermediate result data type.
 | IMRDT_REGIONOFINTEREST  | EnumIMResultDataTypeRegionOfInterest | 0x10 | Specifies the `RegionOfInterest`. |
 | IMRDT_QUADRILATERAL | EnumIMResultDataTypeQuadrilateral | 0x20 | Specifies the `Quadrilateral`. |  
 | IMRDT_REFERENCE | EnumIMResultDataTypeReference | 0x40 | Specifies the internal data format for using other Dynamsoft products, such as Dynamic Web TWAIN. |  
-
-**See also**
-- C / C++: [`ImageData`]({{ site.structs }}ImageData.html), [`Contour`]({{ site.structs }}Contour.html), [`LineSegment`]({{ site.structs }}LineSegment.html), [`LocalizationResult`]({{ site.structs }}LocalizationResult.html), [`RegionOfInterest`]({{ site.structs }}RegionOfInterest.html), [`Quadrilateral`]({{ site.structs }}Quadrilateral.html).   
-- .Net: 
 
 
 

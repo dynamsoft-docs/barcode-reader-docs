@@ -36,11 +36,11 @@ DBR_API int DBR_InitLicense (void* barcodeReader, const char* pLicense)
 `[in] barcodeReader` Handle of the barcode reader instance.   
 `[in]	pLicense` The product keys.
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* barcodeReader = DBR_CreateInstance();
 DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
@@ -65,7 +65,7 @@ DBR_API int DBR_InitLicenseFromServer (void* barcodeReader, const char* pLicense
 `[in]	pLicenseServer` The name/IP of the license server.  
 `[in]	pLicenseKey` The license key.
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
@@ -87,7 +87,7 @@ DBR_API int DBR_InitLicenseFromLicenseContent (void* barcodeReader, const char* 
 `[in]	pLicenseKey`	The license key.  
 `[in]	pLicenseContent`	An encrypted string representing the license content (quota, expiration date, barcode type, etc.) obtained from the function [`DBR_OutputLicenseToString`](#dbr_outputlicensetostring).
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
@@ -109,11 +109,11 @@ DBR_API int DBR_OutputLicenseToString (void* barcodeReader, char content[], int 
 `[in,out]	content` The output string which stores the content of license.  
 `[in]	contentLen` The length of output string. The recommended length is 512 per license key.
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-#### Remark
+**Remarks**
 [`DBR_InitLicenseFromServer`](#dbr_initlicensefromserver) has to be successfully called before calling this function.
 
 
@@ -134,11 +134,11 @@ DBR_API int DBR_OutputLicenseToStringPtr (void* barcodeReader, char** content)
 `[in] barcodeReader` Handle of the barcode reader instance.   
 `[in,out]	content` The output string which stores the content of license.  
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-#### Remark
+**Remarks**
 [`DBR_InitLicenseFromServer`](#dbr_initlicensefromserver) has to be successfully called before calling this function.
 
 
@@ -157,7 +157,7 @@ DBR_API void DBR_FreeLicenseString (char** content)
 **Parameters**
 `[in]	content` The output string which stores the content of license. 
 
-#### Remark
+**Remarks**
 [`DBR_OutputLicenseToStringPtr`](#dbr_outputlicensetostringptr) has to be successfully called before calling this function.
 
 
@@ -173,11 +173,11 @@ DBR_API int DBR_InitDLSConnectionParameters (DM_DLSConnectionParameters *pDLSCon
 **Parameters**
 `[in, out] pDLSConnectionParameters` The struct of [`DM_DLSConnectionParameters`]({{ site.structs }}DMLTSConnectionParameters.html).   
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 char errorBuf[512];
 DM_DLSConnectionParameters paramters;
@@ -200,11 +200,11 @@ DBR_API int DBR_InitLicenseFromDLS(DM_DLSConnectionParameters *pDLSConnectionPar
 `[in, out] errorMsgBuffer` The buffer is allocated by caller and the recommending length is 256. The error message will be copied to the buffer.  
 `[in]	errorMsgBufferLen` The length of allocated buffer.  
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 char errorBuf[512];
 DM_DLSConnectionParameters paramters;
@@ -222,10 +222,10 @@ Gets available instances count when charging by concurrent instances count.
 DBR_API int DBR_GetIdleInstancesCount()
 ```   
 
-#### Return value
+**Return Value**
 Returns available instances count.    
 
-#### Code Snippet
+**Code Snippet**
 ```c
 //...
 int count = DBR_GetIdleInstancesCount();

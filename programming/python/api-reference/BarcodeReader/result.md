@@ -23,11 +23,11 @@ Returns intermediate results containing the original image, the colour clustered
 BarcodeReader.get_all_intermediate_results() 
 ```   
 
-### Return value
+**Return Value**
 
 `intermediate_results <*list[class IntermediateResult]*>` : All intermediate results.
 
-### Code Snippet
+**Code Snippet**
 
 ```python
 from dbr import *

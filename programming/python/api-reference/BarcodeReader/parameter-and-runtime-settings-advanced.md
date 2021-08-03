@@ -33,11 +33,11 @@ BarcodeReader.init_runtime_settings_with_file(json_file, conflict_mode=EnumConfl
 - `[in]	json_file` <*str*> : The path of the settings file.  
 - `[in]	conflict_mode` <*optional*><*class EnumConflictMode*> : The parameter setting mode, which decides to inherit parameters from previous template setting or overwrite previous settings and replace by new template.   
 
-### Return value
+**Return Value**
 
 `error` <*tuple*> : error_code = error[0], error_message = error[1], if error_code != EnumErrorCode.DBR_OK, you can get the detailed error message by error_message.
 
-### Code Snippet
+**Code Snippet**
 
 ```python
 from dbr import *
@@ -62,11 +62,11 @@ BarcodeReader.init_runtime_settings_with_string(json_string, conflict_mode=EnumC
 - `[in]	json_string` <*str*> : A JSON string that represents the content of the settings. 
 - `[in]	conflict_mode` <*optional*><*class EnumConflictMode*> : The parameter setting mode, which decides to inherit parameters from previous template setting or overwrite previous settings and replace by new template.    
 
-### Return value
+**Return Value**
 
 `error` <*tuple*> : error_code = error[0], error_message = error[1], if error_code != EnumErrorCode.DBR_OK, you can get the detailed error message by error_message.
 
-### Code Snippet
+**Code Snippet**
 
 ```python
 from dbr import *
@@ -90,10 +90,10 @@ BarcodeReader.append_template_file_to_runtime_settings(json_file, conflict_mode)
 `[in]	json_file` <*str*> : A JSON template file's path.  
 `[in]	conflict_mode` <*class EnumConflictMode*> : The parameter setting mode, which decides to inherit parameters from previous template setting or overwrite previous settings and replace by new template. 
 
-#### Return value
+**Return Value**
 `error` <*tuple*> : error_code = error[0], error_message = error[1], if error_code != EnumErrorCode.DBR_OK, you can get the detailed error message by error_message.
 
-#### Code Snippet
+**Code Snippet**
 ```python
 from dbr import *
 reader = BarcodeReader()
@@ -126,11 +126,11 @@ BarcodeReader.append_template_string_to_runtime_settings(json_string, conflict_m
 - `[in]	json_string` <*str*> : A JSON string that represents the content of the settings.   
 - `[in]	conflict_mode` <*class EnumConflictMode*> : The parameter setting mode, which decides to inherit parameters from previous template setting or overwrite previous settings and replace by new template. 
 
-### Return value
+**Return Value**
 
 `error` <*tuple*> : error_code = error[0], error_message = error[1], if error_code != EnumErrorCode.DBR_OK, you can get the detailed error message by error_message.
 
-### Code Snippet
+**Code Snippet**
 
 ```python
 from dbr import *
@@ -155,11 +155,11 @@ Gets all parameter template names.
 BarcodeReader.get_all_template_names()
 ```  
 
-### Return value
+**Return Value**
 
 `template_names` <*list[str]*> : all parameter template names
 
-### Code Snippet
+**Code Snippet**
 
 ```python
 from dbr import *
@@ -193,11 +193,11 @@ BarcodeReader.output_settings_to_json_filesave_file_path)
 
 `[in]	save_file_path` <*str*> : The path of the output file which stores current settings.   
 
-### Return value
+**Return Value**
 
 `error` <*tuple*> : error_code = error[0], error_message = error[1], if error_code != EnumErrorCode.DBR_OK, you can get the detailed error message by error_message.
 
-### Code Snippet
+**Code Snippet**
 
 ```python
 from dbr import *
@@ -219,11 +219,11 @@ Output runtime settings to a string.
 BarcodeReader.output_settings_to_json_string()
 ```
 
-### Return value
+**Return Value**
 
 `settings_string` <*str*> : The output string which stores the contents of current settings.
 
-### Code Snippet
+**Code Snippet**
 
 ```python
 from dbr import *

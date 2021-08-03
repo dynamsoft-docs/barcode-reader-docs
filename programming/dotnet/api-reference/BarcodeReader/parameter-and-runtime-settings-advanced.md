@@ -33,10 +33,10 @@ EnumErrorCode Dynamsoft.DBR.BarcodeReader.InitRuntimeSettingsWithFile(string jso
 `[in]	conflictMode` <*EnumConflictMode*> : The parameter setting mode, which decides to inherit parameters from previous template setting or overwrite previous settings and replace by new template.   
 `[in,out]	errorMessage` <*string*> : Output parameter storing detailed error message. 
 
-#### Return value
+**Return Value**
 Returns error code.
 
-#### Code Snippet
+**Code Snippet**
 
 ```csharp
 BarcodeReader reader = new BarcodeReader();
@@ -63,10 +63,10 @@ EnumErrorCode Dynamsoft.DBR.BarcodeReader.InitRuntimeSettingsWithString(string j
 `[in]	conflictMode` <*EnumConflictMode*> : The parameter setting mode, which decides to inherit parameters from previous template setting or overwrite previous settings and replace by new template.   
 `[in,out]	errorMessage` <*string*> : Output parameter storing detailed error message. 
 
-#### Return value
+**Return Value**
 Returns error code.
 
-#### Code Snippet
+**Code Snippet**
 
 ```csharp
 BarcodeReader reader = new BarcodeReader();
@@ -93,10 +93,10 @@ EnumErrorCode Dynamsoft.DBR.BarcodeReader.AppendTplFileToRuntimeSettings(string 
 `[in]	conflictMode` <*EnumConflictMode*> : The parameter setting mode, which decides to inherit parameters from previous template setting or overwrite previous settings and replace by new template.   
 `[in,out]	errorMessage` <*string*> : Output parameter storing detailed error message. 
 
-#### Return value
+**Return Value**
 Returns error code.
 
-#### Code Snippet
+**Code Snippet**
 ```csharp
 BarcodeReader reader = new BarcodeReader();
 reader.ProductKeys = "t0260NwAAAHV***************";
@@ -122,10 +122,10 @@ EnumErrorCode Dynamsoft.DBR.BarcodeReader.AppendTplStringToRuntimeSettings(strin
 `[in]	conflictMode` <*EnumConflictMode*> : The parameter setting mode, which decides to inherit parameters from previous template setting or overwrite previous settings and replace by new template.   
 `[in,out]	errorMessage` <*string*> : Output parameter storing detailed error message.
 
-#### Return value
+**Return Value**
 Returns error code.
 
-#### Code Snippet
+**Code Snippet**
 ```csharp
 BarcodeReader reader = new BarcodeReader();
 reader.ProductKeys = "t0260NwAAAHV***************";
@@ -146,10 +146,10 @@ string[] Dynamsoft.DBR.BarcodeReader.GetAllParameterTemplateNames()
 ```  
    
 
-#### Return value
+**Return Value**
 The template name array. 
 
-#### Code Snippet
+**Code Snippet**
 ```csharp
 BarcodeReader reader = new BarcodeReader();
 reader.ProductKeys = "t0260NwAAAHV***************";
@@ -178,7 +178,7 @@ void Dynamsoft.DBR.BarcodeReader.OutputSettingsToFile(string outputFilePath, str
 #### Exceptions
 [`BarcodeReaderException`](../class/BarcodeReaderException.md) The exception thrown by Dynamsoft Barcode Reader. 
 
-#### Code Snippet
+**Code Snippet**
 ```csharp
 BarcodeReader reader = new BarcodeReader();
 reader.ProductKeys = "t0260NwAAAHV***************";
@@ -203,13 +203,13 @@ string Dynamsoft.DBR.BarcodeReader.OutputSettingsToString(string settingsName)
 **Parameters**
 `[in]	settingsName` <*string*> : A unique name for declaring current runtime settings.  
 
-#### Return value
+**Return Value**
 The output string which stores the contents of current settings. 
 
 #### Exceptions
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)The exception thrown by Dynamsoft Barcode Reader. 
 
-#### Code Snippet
+**Code Snippet**
 ```csharp
 BarcodeReader reader = new BarcodeReader();
 reader.ProductKeys = "t0260NwAAAHV***************";

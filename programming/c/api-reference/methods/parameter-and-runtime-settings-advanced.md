@@ -42,11 +42,11 @@ DBR_API int DBR_InitRuntimeSettingsWithFile (void* barcodeReader, const char* pF
 `[in]	errorMsgBufferLen` The length of allocated buffer.  
  
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* barcodeReader = DBR_CreateInstance();
 DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
@@ -76,11 +76,11 @@ DBR_API int DBR_InitRuntimeSettingsWithString (void* barcodeReader, const char* 
 `[in]	errorMsgBufferLen` The length of allocated buffer.
 
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* barcodeReader = DBR_CreateInstance();
 DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
@@ -110,11 +110,11 @@ DBR_API int DBR_AppendTplFileToRuntimeSettings (void* barcodeReader, const char*
 `[in] errorMsgBufferLen` The length of allocated buffer.
 
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* barcodeReader = DBR_CreateInstance();
 DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
@@ -144,11 +144,11 @@ DBR_API int DBR_AppendTplStringToRuntimeSettings (void* barcodeReader, const cha
 `[in] errorMsgBufferLen` The length of allocated buffer.
 
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* barcodeReader = DBR_CreateInstance();
 DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
@@ -174,10 +174,10 @@ DBR_API int DBR_GetParameterTemplateCount (void* barcodeReader)
 `[in] barcodeReader` Handle of the barcode reader instance.  
 
 
-#### Return value
+**Return Value**
 Returns the count of parameter templates. Returns -1 if DBRERR_NULL_POINTER happens.   
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* barcodeReader = DBR_CreateInstance();
 DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
@@ -209,11 +209,11 @@ DBR_API int DBR_GetParameterTemplateName (void* barcodeReader, const int index, 
 `[in]	nameBufferLen` The length of allocated buffer.
 
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* barcodeReader = DBR_CreateInstance();
 DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
@@ -248,11 +248,11 @@ DBR_API int DBR_OutputSettingsToFile (void* barcodeReader, const char* pFilePath
 `[in]	pSettingsName` A unique name for declaring current runtime settings.  
 
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* barcodeReader = DBR_CreateInstance();
 DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
@@ -284,11 +284,11 @@ DBR_API int DBR_OutputSettingsToString (void* barcodeReader, char content[], con
 `[in]	pSettingsName` A unique name for declaring current runtime settings.  
 
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* barcodeReader = DBR_CreateInstance();
 DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
@@ -320,11 +320,11 @@ DBR_API int DBR_OutputSettingsToStringPtr (void* barcodeReader, char** content, 
 `[in]	pSettingsName` A unique name for declaring current runtime settings.   
 
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* barcodeReader = DBR_CreateInstance();
 DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
@@ -355,7 +355,7 @@ DBR_API void DBR_FreeSettingsString (char** content)
 **Parameters**
 `[in]	content` The runtime settings string.  
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* barcodeReader = DBR_CreateInstance();
 DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");

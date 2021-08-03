@@ -33,10 +33,10 @@ int Dynamsoft.DBR.BarcodeReader.InitLicenseFromServer(string licenseServer, stri
 `[in]	licenseServer` <*string*> : The name/IP of the license server.  
 `[in]	licenseKey` <*string*> : The license key of Barcode Reader.
 
-#### Return value
+**Return Value**
 Returns error code.
 
-#### Code Snippet
+**Code Snippet**
 ```csharp
 int iLicMsg = -1;
 BarcodeReader _br = new BarcodeReader();
@@ -67,11 +67,11 @@ int Dynamsoft.DBR.BarcodeReader.InitLicenseFromLicenseContent(string licenseKey,
 `[in]	pLicenseContent` <*string*> : An encrypted string representing the license content (runtime number, expiry date, barcode type, etc.) obtained from the method [`OutputLicenseToString()`](#outputlicensetostring). 
 
 
-#### Return value
+**Return Value**
 Returns error code.
 
 
-#### Code Snippet
+**Code Snippet**
 ```csharp
 int iLicMsg = -1;
 BarcodeReader _br = new BarcodeReader();
@@ -99,10 +99,10 @@ string Dynamsoft.DBR.BarcodeReader.OutputLicenseToString()
 ```
    
 
-#### Return value
+**Return Value**
 The output string which stores the contents of license. 
 
-#### Code Snippet
+**Code Snippet**
 ```csharp
 int iLicMsg = -1;
 string path = @"Put your file path here";
@@ -145,7 +145,7 @@ Initializes a DMDLSConnectionParameters struct with default values.
 static DMDLSConnectionParameters Dynamsoft.DBR.BarcodeReader.InitDLSConnectionParameters()
 ```   
 
-#### Code Snippet
+**Code Snippet**
 ```csharp
 DMDLSConnectionParameters dlsInfo = BarcodeReader.InitDLSConnectionParameters();
 dlsInfo.HandShake = "*****-hs-****";
@@ -169,10 +169,10 @@ static EnumErrorCode Dynamsoft.DBR.BarcodeReader.InitLicenseFromDLS(DMDLSConnect
 `[in]	dlsConnectionParameters` <*string*> : The struct DMDLSConnectionParameters with customized settings.  
 `[in, out]	errorMsg` <*string*> : The detailed error message.
 
-#### Return value
+**Return Value**
 Returns error code.
 
-#### Code Snippet
+**Code Snippet**
 ```csharp
 DMDLSConnectionParameters dlsInfo = BarcodeReader.InitDLSConnectionParameters();
 dlsInfo.HandShake = "*****-hs-****";
@@ -191,10 +191,10 @@ Gets available instances count when charging by concurrent instances count.
 static int Dynamsoft.DBR.BarcodeReader.GetIdleInstancesCount()
 ```   
 
-#### Return value
+**Return Value**
 Returns available instances count.    
 
-#### Code Snippet
+**Code Snippet**
 ```csharp
 //...
 int count = BarcodeReader.GetIdleInstancesCount();

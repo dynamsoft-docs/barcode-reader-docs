@@ -35,12 +35,12 @@ int dynamsoft::dbr::CBarcodeReader::InitLicense (const char* pLicense)
 `[in]	pLicense` The product keys.
 
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
@@ -64,7 +64,7 @@ int dynamsoft::dbr::CBarcodeReader::InitLicenseFromServer (const char* pLicenseS
 `[in]	pLicenseServer` The URL of the license server.  
 `[in]	pLicenseKey`The license key.
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
@@ -87,7 +87,7 @@ int dynamsoft::dbr::CBarcodeReader::InitLicenseFromLicenseContent (const char* p
 `[in]	pLicenseContent`	An encrypted string representing the license content (quota, expiration date, barcode type, etc.) obtained from the method [`OutputLicenseToString`](#outputlicensetostring).
 
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
@@ -109,11 +109,11 @@ int dynamsoft::dbr::CBarcodeReader::OutputLicenseToString (char content[], const
 `[in,out]	content` The output string which stores the content of license.  
 `[in]	contentLen` The length of output string. The recommended length is 512 per license key.
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
-#### Remark
+**Remarks**
 [`InitLicenseFromServer`](#initlicensefromserver) has to be successfully called before calling this method.
 
 
@@ -133,11 +133,11 @@ int dynamsoft::dbr::CBarcodeReader::OutputLicenseToStringPtr (char** content)
 **Parameters**
 `[in,out]	content` The output string which stores the content of license.
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
-#### Remarks
+**Remarks**
 [`InitLicenseFromServer`](#initlicensefromserver) has to be successfully called before calling this method.
 
 
@@ -159,7 +159,7 @@ void dynamsoft::dbr::CBarcodeReader::FreeLicenseString (char** content)
 `[in]	content` The output string which stores the content of license.
 
 
-#### Remark
+**Remarks**
 [`OutputLicenseToStringPtr`](#outputlicensetostringptr) has to be successfully called before calling this method.
 
 
@@ -174,11 +174,11 @@ static int dynamsoft::dbr::CBarcodeReader::InitDLSConnectionParameters(DM_DLSCon
 **Parameters**
 `[in, out] pDLSConnectionParameters` The struct of [`DM_DLSConnectionParameters`]({{ site.structs }}DMLTSConnectionParameters.html).   
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 DM_DLSConnectionParameters paramters;
 dynamsoft::dbr::CBarcodeReader::InitDLSConnectionParameters(&paramters);
@@ -200,12 +200,12 @@ static int dynamsoft::dbr::CBarcodeReader::InitLicenseFromDLS(DM_DLSConnectionPa
 `[in, out] errorMsgBuffer`<sub>Optional</sub> The buffer is allocated by the caller and the recommended length is 256. The error message will be copied to the buffer.  
 `[in]	errorMsgBufferLen`<sub>Optional</sub> The length of the allocated buffer.  
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 DM_DLSConnectionParameters paramters;
 dynamsoft::dbr::CBarcodeReader::InitDLSConnectionParameters(&paramters);
@@ -222,10 +222,10 @@ Gets available instances count when charging by concurrent instances count.
 static int dynamsoft::dbr::CBarcodeReader::GetIdleInstancesCount()
 ```   
 
-#### Return value
+**Return Value**
 Returns available instances count.    
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 //...
 int count = dynamsoft::dbr::CBarcodeReader::GetIdleInstancesCount();

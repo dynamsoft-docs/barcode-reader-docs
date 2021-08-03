@@ -49,7 +49,7 @@ void com.dynamsoft.dbr.IntermediateResultCallback.intermediateResultCallback(int
 `results` The intermediate results of the frame.   
 `userData` Arguments passed to your function.   
 
-#### See Also
+**See Also**
 [IntermediateResult](class/IntermediateResult.md)
 
 
@@ -70,7 +70,7 @@ void textResultCallback(int frameId, TextResult[] results, Object userData)
 `results` Recognized barcode results of the frame.   
 `userData` Arguments passed to your function.
 
-#### See Also
+**See Also**
 [TextResult](class/TextResult.md)
 
 

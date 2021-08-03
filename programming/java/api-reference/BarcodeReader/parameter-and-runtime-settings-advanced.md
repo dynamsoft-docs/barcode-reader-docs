@@ -40,7 +40,7 @@ void com.dynamsoft.dbr.BarcodeReader.initRuntimeSettingsWithFile(String filePath
 #### Exceptions
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-#### Code Snippet
+**Code Snippet**
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
 reader.initRuntimeSettingsWithFile("your template file path", EnumConflictMode.CM_OVERWRITE);
@@ -69,7 +69,7 @@ void com.dynamsoft.dbr.BarcodeReader.initRuntimeSettingsWithString(String conten
 #### Exceptions
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-#### Code Snippet
+**Code Snippet**
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
 reader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", EnumConflictMode.CM_OVERWRITE);
@@ -97,7 +97,7 @@ void com.dynamsoft.dbr.BarcodeReader.appendTplFileToRuntimeSettings(String fileP
 #### Exceptions
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-#### Code Snippet
+**Code Snippet**
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
 reader.appendTplFileToRuntimeSettings("your template file path", EnumConflictMode.CM_IGNORE);
@@ -126,7 +126,7 @@ void com.dynamsoft.dbr.BarcodeReader.appendTplStringToRuntimeSettings(String con
 #### Exceptions
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-#### Code Snippet
+**Code Snippet**
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
 reader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", EnumConflictMode.CM_OVERWRITE);
@@ -147,13 +147,13 @@ Gets the parameter templates name array.
 String [] com.dynamsoft.dbr.BarcodeReader.getAllParameterTemplateNames()		
 ```   
 
-#### Return value
+**Return Value**
 The template name array.
 
 #### Exceptions
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-#### Code Snippet
+**Code Snippet**
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
 String[] templateNames = reader.getAllParameterTemplateNames();
@@ -181,7 +181,7 @@ void com.dynamsoft.dbr.BarcodeReader.outputSettingsToFile(String filePath, Strin
 #### Exceptions
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-#### Code Snippet
+**Code Snippet**
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
 reader.outputSettingsToFile("your saving file path", "currentRuntimeSettings");
@@ -204,10 +204,10 @@ String com.dynamsoft.dbr.BarcodeReader.outputSettingsToString(String settingsNam
 **Parameters** 
 `settingsName` A unique name for declaring current runtime settings.  
 
-#### Return value
+**Return Value**
 The output string which stores the contents of current settings.
 
-#### Code Snippet
+**Code Snippet**
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
 String settingStr = reader.outputSettingsToString("currentRuntimeSettings");

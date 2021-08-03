@@ -24,15 +24,15 @@ Creates an instance of Dynamsoft Barcode Reader.
 DBR_API void* DBR_CreateInstance ()	
 ```   
 
-### Return value
+**Return Value**
 
 Returns an instance of Dynamsoft Barcode Reader. If failed, returns `NULL`.
 
-### Remark
+**Remarks**
 
 Partial of the decoding result will be masked with "\*" without a valid license key.
 
-### Code Snippet
+**Code Snippet**
 
 ```c
 void* barcodeReader = DBR_CreateInstance();
@@ -52,7 +52,7 @@ DBR_API void DBR_DestroyInstance (void* barcodeReader)
 
 `[in]	barcodeReader` Handle of the barcode reader instance.
 
-### Code Snippet
+**Code Snippet**
 
 ```c
 void* barcodeReader = DBR_CreateInstance();

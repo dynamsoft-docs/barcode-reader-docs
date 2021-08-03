@@ -34,11 +34,11 @@ int dynamsoft::dbr::CBarcodeReader::GetAllTextResults (TextResultArray** pResult
 **Parameters**
 `[out] pResults` Barcode text results returned by the last called function [`DecodeFile`](decode.md#decodefile) / [`DecodeFileInMemory`](decode.md#decodefileinmemory) / [`DecodeBuffer`](decode.md#decodebuffer) / [`DecodeBase64String`](decode.md#decodebase64string) / [`DecodeDIB`](decode.md#decodedib). The `pResults` is allocated by the SDK and should be freed by calling the function [`FreeTextResults`](#freetextresults).
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
@@ -65,7 +65,7 @@ static void dynamsoft::dbr::CBarcodeReader::FreeTextResults (TextResultArray** p
 **Parameters**
 `[in]	pResults` Text results.
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
@@ -92,11 +92,11 @@ int dynamsoft::dbr::CBarcodeReader::GetIntermediateResults (IntermediateResultAr
 **Parameters**
 `[out] pResults` The intermediate results returned by the SDK.
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
@@ -130,7 +130,7 @@ static void dynamsoft::dbr::CBarcodeReader::FreeIntermediateResults (Intermediat
 **Parameters**
 `[in]	pResults` The intermediate results.
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
