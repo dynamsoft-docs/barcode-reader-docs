@@ -20,7 +20,7 @@ needGenerateH3Content: false
 ## ExpectedBarcodesCount
 Sets the expected number of barcodes to be decoded for the current region.
 
-**Remarks**   
+**Remarks**     
 0: means Unknown and it will find at least one barcode.   
 1: try to find one barcode. If one barcode is found, the library will stop the localization process and perform barcode decoding.   
 n: try to find n barcodes. If the library only finds m (m < n) barcode, it will try different algorithms till n barcodes are found or all algorithms are used.   

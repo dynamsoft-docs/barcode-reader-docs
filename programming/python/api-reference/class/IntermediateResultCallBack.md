@@ -13,9 +13,7 @@ An abstract class that contains an abstract method `intermediate_results_callbac
 ```python
 class IntermediateResultCallBack(ABC)
 ```  
-  
----
-  
+    
 
 ## Abstract Method
   
@@ -23,6 +21,7 @@ class IntermediateResultCallBack(ABC)
 
 Sets callback function to process intermediate results during frame decoding. You need to implement it in the subclass. 
 
+**Parameters**  
 `[in] frame_id <int>` : The ID of the frame.
   
 `[in] results <list[dict]>` : The intermediate results of the frame. You can convert every item of the results to `IntermediateResult` Object by using IntermediateResult's constructor.  

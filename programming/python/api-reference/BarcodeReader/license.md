@@ -30,11 +30,11 @@ Reads product key and activates the SDK.
 BarcodeReader.init_license(dbr_license)
 ```
 
-**Parameters**
+**Parameters**  
 
 `[in]	dbr_license` <*str*> : The product keys.
 
-**Return Value**
+**Return Value**  
 
 `error` <*tuple*> : error_code = error[0], error_message = error[1], if error_code != EnumErrorCode.DBR_OK, you can get the detailed error message by error_message.
 
@@ -46,12 +46,12 @@ Initialize the license and connect to the specified server for online verificati
 BarcodeReader.init_license_from_server(license_server, license_key)
 ```
 
-**Parameters**
+**Parameters**  
 
-- `[in]	license_server` <*str*> : The name/IP of the license server.  
-- `[in]	license_key` <*str*> : The license key of Barcode Reader.
+`[in]	license_server` <*str*> : The name/IP of the license server.  
+`[in]	license_key` <*str*> : The license key of Barcode Reader.
 
-**Return Value**
+**Return Value**  
 
 `error` <*tuple*> : error_code = error[0], error_message = error[1], if error_code != EnumErrorCode.DBR_OK, you can get the detailed error message by error_message.
 
@@ -63,12 +63,12 @@ Initializes barcode reader license from the license content on the client machin
 BarcodeReader.init_license_from_license_content(license_key, license_content)
 ```
 
-**Parameters**
+**Parameters**  
 
 `[in]	license_key` <*str*> :	The license key of Barcode Reader.   
 `[in]	license_content` <*str*> :	An encrypted string representing the license content (runtime number, expiry date, barcode type, etc.) obtained from the method output_license_to_string(). 
 
-**Return Value**
+**Return Value**  
 
 `error` <*tuple*> : error_code = error[0], error_message = error[1], if error_code != EnumErrorCode.DBR_OK, you can get the detailed error message by error_message.
 
@@ -80,11 +80,11 @@ Outputs the license content as an encrypted string from the license server to be
 BarcodeReader.output_license_to_string()
 ```
 
-**Return Value**
+**Return Value**  
 
 `license_string` <*str*> : An encrypted string which stores the content of license. 
 
-### Exception
+**Exception**  
 
 [`BarcodeReaderError`](../class/BarcodeReaderError.md) : If error happens, this function will throw a BarcodeReaderError exception that can report the detailed error message.
 
@@ -96,7 +96,7 @@ Initializes a DMDLSConnectionParameters struct with default values.
 BarcodeReader.init_dls_connection_parameters()
 ```
 
-**Return Value**
+**Return Value**  
 
 `DMDLSConnectionParameters` <*class DMDLSConnectionParameters*> : A DMDLSConnectionParameters struct with default values.
 
@@ -110,11 +110,11 @@ Initializes the barcode reader license and connects to the specified server for 
 BarcodeReader.init_license_from_dls(dls_connection_parameters)
 ```
 
-**Parameters**
+**Parameters**  
 
 - `[in]	dls_connection_parameters` <*class DMDLSConnectionParameters*> : The struct DMDLSConnectionParameters with customized settings.  
 
-**Return Value**
+**Return Value**  
 
 `error` <*tuple*> : error_code = error[0], error_message = error[1], if error_code != EnumErrorCode.DBR_OK, you can get the detailed error message by error_message.
 
@@ -127,7 +127,7 @@ Gets available instances count when charging by concurrent instances count.
 BarcodeReader.get_idle_instances_count()
 ```   
 
-**Return Value**
+**Return Value**  
 count <*int*> : Returns available instances count.    
 
 ## init_lts_connection_parameters

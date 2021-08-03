@@ -20,7 +20,7 @@ needGenerateH3Content: false
 ## MinResultConfidence
 The minimum confidence of the result.   
 
-**Remarks**   
+**Remarks**     
 0: means no limitation on the confidence. 
 
 ### As Json Parameter
@@ -43,7 +43,7 @@ The minimum confidence of the result.
 | ------ | ------------------ | ---------- | ----------- | ------------- |
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) | [`minResultConfidence`]({{ site.structs }}PublicRuntimeSettings.html#minresultconfidence) | *int* | [0, 100] | 0 |
 
-**See Also**   
+**See Also**     
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 
 
@@ -57,7 +57,7 @@ Sets whether or not to return partial barcode value(s).
 **Not supported yet.**    
 &nbsp;
 
-**Remarks**   
+**Remarks**     
 0: do not return partial barcode value(s).   
 1: return partial barcode value(s).
 

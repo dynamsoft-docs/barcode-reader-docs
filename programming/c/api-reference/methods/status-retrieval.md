@@ -27,16 +27,16 @@ Get error message by error code.
 DBR_API const char* DBR_GetErrorString (int errorCode)	
 ```   
    
-**Parameters**
+**Parameters**  
 
 `[in]	errorCode` The error code.
  
 
-**Return Value**
+**Return Value**  
 
 The error message.
 
-**Code Snippet**
+**Code Snippet**  
 
 ```c
 void* barcodeReader = DBR_CreateInstance();
@@ -56,10 +56,10 @@ Get version information of SDK.
 DBR_API const char* DBR_GetVersion ()
 ```   
 
-**Return Value**
+**Return Value**  
 The version information string.
 
-**Code Snippet**
+**Code Snippet**  
 
 ```c
 const char* versionInfo = DBR_GetVersion();

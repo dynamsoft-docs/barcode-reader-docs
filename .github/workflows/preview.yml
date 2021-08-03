@@ -36,6 +36,6 @@ jobs:
           cd barcode-reader-docs-mobile-preview && git pull && cd .. && cp -rfp ./barcode-reader-docs-mobile-preview/* ./DBRDocPreview/
           cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DBRDocPreview/
           cd DBRDocPreview && bundle exec jekyll build --incremental
-          python3 /home/ubuntu/ftp.py /home/ubuntu/DBRDocPreview/_site/ ./www.dynamsoft.com/barcode-reader/ test
+          #python3 /home/ubuntu/ftp.py /home/ubuntu/DBRDocPreview/_site/ ./www.dynamsoft.com/barcode-reader/ test
 
           

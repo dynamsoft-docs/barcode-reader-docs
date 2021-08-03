@@ -39,13 +39,13 @@ The URL of the license server.
 String com.dynamsoft.dbr.DMLTSConnectionParameters.mainServerURL
 ```
 
-- **Value range**   
+**Value Range**     
     Any string value   
       
-- **Default value**   
+**Default Value**     
     null
 
-- **Remarks**   
+**Remarks**       
     If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license servers for online verification.   
 
 
@@ -57,13 +57,13 @@ The URL of the standby license server.
 String com.dynamsoft.dbr.DMLTSConnectionParameters.standbyServerURL
 ```
 
-- **Value range**   
+**Value Range**     
     Any string value   
       
-- **Default value**   
+**Default Value**     
     null
 
-- **Remarks**   
+**Remarks**       
     If you choose "Dynamsoft-hosting", then no need to change the value of MainServerURL and StandbyServerURL. When both are set to null (default value), it will connect to Dynamsoft's license servers for online verification.   
 
 
@@ -75,10 +75,10 @@ The handshake code.
 String com.dynamsoft.dbr.DMLTSConnectionParameters.handshakeCode
 ```
 
-- **Value range**   
+**Value Range**     
     Any string value   
       
-- **Default value**   
+**Default Value**     
     null
 
 ### sessionPassword
@@ -89,10 +89,10 @@ The session password of the handshake code set in license server.
 String com.dynamsoft.dbr.DMLTSConnectionParameters.sessionPassword
 ```
 
-- **Value range**   
+**Value Range**     
     Any string value   
       
-- **Default value**   
+**Default Value**     
     null
 
 
@@ -104,13 +104,13 @@ Sets the deployment type.
 int com.dynamsoft.dbr.DMLTSConnectionParameters.deploymentType
 ```
 
-- **Value range**   
+**Value Range**     
     Any one of the [`EnumDMDeploymentType`]({{ site.enumerations }}other-enums.html#dm_deploymenttype) Enumeration items.   
       
-- **Default value**   
+**Default Value**     
     DM_DT_DESKTOP   
     
-- **See also**  
+**See Also**      
     [`EnumDMDeploymentType`]({{ site.enumerations }}other-enums.html#dm_deploymenttype)    
 
 ### chargeWay
@@ -121,13 +121,13 @@ Sets the charge way.
 int com.dynamsoft.dbr.DMLTSConnectionParameters.chargeWay
 ```
 
-- **Value range**   
+**Value Range**     
     Any one of the [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeWay) Enumeration items.   
       
-- **Default value**   
+**Default Value**     
     DM_CW_AUTO   
     
-- **See also**  
+**See Also**      
     [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeWay)    
 
 
@@ -139,13 +139,13 @@ Sets the method to generate UUID.
 int com.dynamsoft.dbr.DMLTSConnectionParameters.uuidGenerationMethod
 ```
 
-- **Value range**   
+**Value Range**     
     Any one of the [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod) Enumeration items.   
       
-- **Default value**   
+**Default Value**     
     DM_UUIDGM_RANDOM   
     
-- **See also**  
+**See Also**      
     [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)    
 
 ### maxBufferDays
@@ -156,10 +156,10 @@ Sets the max days to buffer the license info.
 int com.dynamsoft.dbr.DMLTSConnectionParameters.maxBufferDays
 ```
 
-- **Value range**   
+**Value Range**     
     [7,0x7fffffff]  
       
-- **Default value**   
+**Default Value**     
     7   
     
 
@@ -171,13 +171,13 @@ Sets the license modules to use.
 int[] com.dynamsoft.dbr.DMLTSConnectionParameters.limitedLicenseModules
 ```
 
-- **Value range**   
+**Value Range**     
     Each array item can be any one of the [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule) Enumeration items.   
       
-- **Default value**   
+**Default Value**     
     null   
     
-- **See also**  
+**See Also**      
     [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)    
 
 
@@ -186,12 +186,12 @@ Sets the max concurrent instance count.
 ```java
 int com.dynamsoft.dbr.DMLTSConnectionParameters.maxConcurrentInstanceCount
 ```
-- **Value range**   
+**Value Range**     
     [1,0x7fffffff]   
       
-- **Default value**   
+**Default Value**     
     1
-- **Remarks**   
+**Remarks**       
     It works only when [chargeWay](#chargeway) is setting to DM_CW_CONCURRENT_INSTANCE_COUNT
     It is the total number of instances used by multiple processes. For example, if there are two .EXE are running on the server and each .EXE may have 10 instances at most, then you should set maxConcurrentInstanceCount to 20.
 
@@ -201,10 +201,10 @@ The organization ID got from Dynamsoft.
 ```java
 String com.dynamsoft.dbr.DMLTSConnectionParameters.organizationID
 ```
-- **Value range**   
+**Value Range**     
     Any string value   
       
-- **Default value**   
+**Default Value**     
     ""
 
 ### products
@@ -212,10 +212,10 @@ Sets the products to get the license for. Product values can be combined.
 ```java
 int com.dynamsoft.dbr.DMLTSConnectionParameters.products
 ```
-- **Value range**   
+**Value Range**     
     A combined value of [`Product`]({{ site.enumerations }}other-enums.html#product) Enumeration items
       
-- **Default value**   
+**Default Value**     
     `PROD_ALL`
     
 

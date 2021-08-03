@@ -19,7 +19,7 @@ needAutoGenerateSidebar: false
 | ---------- | ----------- | ------------- |
 | *string array* or *[`LocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode) array* | "LM_SKIP"<br>"LM_AUTO"<br>"LM_CONNECTED_BLOCKS"<br>"LM_STATISTICS"<br>"LM_LINES"<br>"LM_SCAN_DIRECTLY"<br>"LM_STATISTICS_MARKS"<br>"LM_STATISTICS_POSTAL_CODE" | ["LM_CONNECTED_BLOCKS", "LM_SCAN_DIRECTLY", "LM_STATISTICS", "LM_LINES", "LM_SKIP", "LM_SKIP", "LM_SKIP", "LM_SKIP"] |
 
-- **See also**:   
+**See Also**    :   
     [`LocalizationMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#localizationmode)
     
 #### Mode Arguments
@@ -35,7 +35,7 @@ Sets the stride in pixels between scans when searching for barcodes.
 | ---------- | ----------- | ------------- |
 | *int* | [0, 0x7fffffff] | 0 |         
 
-- **Remarks**     
+**Remarks**         
   - 0: automatically set by the library.   
   - When the set value is greater than half the width or height of the current image, the actual processing is 0.  
 
@@ -47,7 +47,7 @@ Sets the scan direction when searching barcode.
 | ---------- | ----------- | ------------- |
 | *int* | [0, 2] | 0 |             
 
-- **Remarks**     
+**Remarks**         
   - 0: Both vertical and horizontal direction.   
   - 1: Vertical direction.   
   - 2: Horizontal direction. 
@@ -61,7 +61,7 @@ Sets the file name of the library to load dynamically.
 | *string* | A string value representing file name. | "" | All `LocalizationMode` items except LM_SKIP and LM_AUTO |         
 
 
-- **Remarks**     
+**Remarks**         
   The library must be in the same place with Dynamsoft Barcode Reader Library.
 
 
@@ -109,10 +109,10 @@ Sets the parameters passed to the library to load dynamically.
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) | [`localizationModes`]({{ site.structs }}PublicRuntimeSettings.html#localizationmodes) | [`LocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode)[8] |
 
 
-**Remarks**   
+**Remarks**     
 [`GetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) and [`SetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) need to be called for getting or setting the value of [arguments](#mode-arguments).
 
 
-**See Also**    
+**See Also**      
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 - [`LocalizationMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#localizationmode)

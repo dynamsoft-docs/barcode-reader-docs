@@ -41,10 +41,10 @@ The maximum number of frames waiting for decoding.
 int Dynamsoft.DBR.FrameDecodingParameters.MaxQueueLength
 ```
 
-- **Value range**   
+**Value Range**     
     [0,0x7fffffff]   
       
-- **Default value**   
+**Default Value**     
     3
 
 ### MaxResultQueueLength
@@ -54,10 +54,10 @@ The maximum number of frames waiting results (text result/localization result) w
 int Dynamsoft.DBR.FrameDecodingParameters.MaxResultQueueLength
 ```
 
-- **Value range**   
+**Value Range**     
     [0,0x7fffffff]   
       
-- **Default value**   
+**Default Value**     
     10  
 
 ### Width
@@ -67,10 +67,10 @@ The width of the frame image in pixels.
 int Dynamsoft.DBR.FrameDecodingParameters.Width
 ```
 
-- **Value range**   
+**Value Range**     
     [0,0x7fffffff]   
       
-- **Default value**   
+**Default Value**     
     0  
 
 ### Height
@@ -80,10 +80,10 @@ The height of the frame image in pixels.
 int Dynamsoft.DBR.FrameDecodingParameters.Height
 ```
 
-- **Value range**   
+**Value Range**     
     [0,0x7fffffff]   
       
-- **Default value**   
+**Default Value**     
     0  
 
 ### Stride
@@ -93,10 +93,10 @@ The stride (or scan width) of the frame image.
 int Dynamsoft.DBR.FrameDecodingParameters.Stride
 ```
 
-- **Value range**   
+**Value Range**     
     [0,0x7fffffff]   
       
-- **Default value**   
+**Default Value**     
     0 
       
 ### ImagePixelFormat
@@ -106,10 +106,10 @@ The image pixel format used in the image byte array.
 EnumImagePixelFormat Dynamsoft.DBR.FrameDecodingParameters.ImagePixelFormat
 ```
 
-- **Value range**   
+**Value Range**     
     Any one value of [`ImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) Enumeration items.
       
-- **Default value**   
+**Default Value**     
     `EnumImagePixelFormat.IPF_GRAYSCALED`
       
 ### Region
@@ -119,10 +119,10 @@ The region definition of the frame to calculate the internal indicator.
 RegionDefinition Dynamsoft.DBR.FrameDecodingParameters.Region
 ```
 
-- **Default value**  
+**Default Value**    
     `{ RegionLeft = 0, RegionRight = 100, RegionTop = 0, RegionBottom = 100, RegionMeasuredByPercentage = 1 }`
       
-- **See also**   
+**See Also**       
     [`RegionDefinition`](../struct/RegionDefinition.md)
      
 ### Threshold
@@ -132,13 +132,13 @@ The threshold used for filtering frames.
 float Dynamsoft.DBR.FrameDecodingParameters.Threshold
 ```
 
-- **Value range**   
+**Value Range**     
     [0, 1]
       
-- **Default value**   
+**Default Value**     
     0.1
     
-- **Remarks**  
+**Remarks**      
     The SDK will calculate an inner indicator for each frame from [`AppendFrame`](../BarcodeReader/video.md#appendframe), if the change rate of the indicators between the current frame and the history frames is larger than the given threshold, the current frame will not be added to the inner frame queue waiting for decoding.
 
 ### FPS
@@ -148,13 +148,13 @@ The frequency of calling [`AppendFrame`](../BarcodeReader/video.md#appendframe) 
 int Dynamsoft.DBR.FrameDecodingParameters.FPS
 ```
 
-- **Value range**   
+**Value Range**     
     [0,0x7fffffff]
       
-- **Default value**   
+**Default Value**     
     0  
     
-- **Remarks**  
+**Remarks**      
     0 means the frequency will be calculated automatically by the SDK.
 
 ### AutoFilter
@@ -164,13 +164,13 @@ Sets whether to filter frames automatically.
 int Dynamsoft.DBR.FrameDecodingParameters.AutoFilter
 ```
 
-- **Value range**   
+**Value Range**     
     [0,1]
       
-- **Default value**   
+**Default Value**     
     1  
     
-- **Remarks**  
+**Remarks**      
     0: Diable filtering frames automatically.  
     1: Enable filtering frames automatically. 
     
@@ -182,10 +182,10 @@ Sets the method used for calculating the clarity of the frames.
 EnumClarityCalculationMethod Dynamsoft.DBR.FrameDecodingParameters.ClarityCalculationMethod
 ```
 
-- **Value range**   
+**Value Range**     
     Any one of the [`ClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod) Enumeration items.   
       
-- **Default value**   
+**Default Value**     
     EnumClarityCalculationMethod.ECCM_CONTRAST       
 
 ### ClarityFilterMode
@@ -195,8 +195,8 @@ Sets the mode used for filtering frames by calculated clarity.
 EnumClarityFilterMode Dynamsoft.DBR.FrameDecodingParameters.ClarityFilterMode
 ```
 
-- **Value range**   
+**Value Range**     
     Any one of the [`ClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode) Enumeration items.   
       
-- **Default value**   
+**Default Value**     
     EnumClarityFilterMode.CFM_GENERAL   

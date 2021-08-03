@@ -19,7 +19,7 @@ needGenerateH3Content: false
 ## Name
 The name of the FormatSpecification object
 
-**Remarks**    
+**Remarks**      
 It must be a unique name.
 
 ### As Json Parameter

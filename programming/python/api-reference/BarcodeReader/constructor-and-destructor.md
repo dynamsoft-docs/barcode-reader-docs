@@ -13,7 +13,6 @@ needAutoGenerateSidebar: true
   | [`BarcodeReader`](#barcodereader) | The default constructor of `BarcodeReader` object.|
   | [`__del__`](#__del__) | The default destructor of `BarcodeReader` object.|
 
----
 
 ## BarcodeReader
 
@@ -24,7 +23,7 @@ The default constructor of a `BarcodeReader` object.
 BarcodeReader BarcodeReader()
 ```
 
-### __del__()
+### \_\_del\_\_()
 
 The default destructor of a `BarcodeReader` object.
 

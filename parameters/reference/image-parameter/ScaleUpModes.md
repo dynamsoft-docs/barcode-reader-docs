@@ -18,7 +18,7 @@ needAutoGenerateSidebar: false
 | ---------- | ----------- | ------------- |
 | *string array* or *[`ScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode) array* | "SUM_SKIP"<br>"SUM_AUTO"<br>"SUM_LINEAR_INTERPOLATION"<br>"SUM_NEAREST_NEIGHBOUR_INTERPOLATION" | ["SUM_AUTO", "SUM_SKIP", "SUM_SKIP", "SUM_SKIP", "SUM_SKIP", "SUM_SKIP", "SUM_SKIP", "SUM_SKIP"] |
 
-- **See also**:   
+**See Also**    :   
     [`ScaleUpMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode)
     
 #### Mode Arguments
@@ -38,7 +38,7 @@ Sets the minimum acute angle threshold for scale-up
 | ---------- | ----------- | ------------- |
 | *int* | [-1, 90] | -1 |         
 
-- **Remarks**     
+**Remarks**         
   -1: means automatically set by the library.
 
 
@@ -51,7 +51,7 @@ Sets the minimum module size threshold for scale-up
 | ---------- | ----------- | ------------- |
 | *int* | [0, 0x7fffffff] | 0 |         
 
-- **Remarks**     
+**Remarks**         
   0: means automatically set by the library.
 
 
@@ -63,7 +63,7 @@ Sets the target module size for scale-up
 | ---------- | ----------- | ------------- |
 | *int* | [0, 0x7fffffff] | 0 |         
 
-- **Remarks**     
+**Remarks**         
   0: means automatically set by the library.
 
 ##### LibraryFileName 
@@ -74,7 +74,7 @@ Sets the file name of the library to load dynamically.
 | *string* | A string value representing file name. | "" | All `ScaleUpMode` items except SUM_SKIP and SUM_AUTO |         
 
 
-- **Remarks**     
+**Remarks**         
   The library must be in the same place as Dynamsoft Barcode Reader Library.
 
 
@@ -125,11 +125,11 @@ Sets the parameters passed to the library to load dynamically.
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) | [`scaleUpModes`]({{ site.structs }}PublicRuntimeSettings.html#scaleupmodes) | [`ScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode)[8] |
 
 
-**Remarks**   
+**Remarks**     
 [`GetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) and [`SetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) need to be called for getting or setting the value of [arguments](#mode-arguments).
 
 
-**See Also**    
+**See Also**      
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 - [`ScaleUpMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode)
 

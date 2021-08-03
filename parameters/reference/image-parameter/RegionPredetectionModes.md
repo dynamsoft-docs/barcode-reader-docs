@@ -10,7 +10,7 @@ needAutoGenerateSidebar: false
 
 ## RegionPredetectionModes
 
-**Remarks**   
+**Remarks**     
 If the image is large and the barcode on the image is very small, it is recommended to enable region predetection to speed up the localization process and recognition accuracy.   
 
 ### Mode Properties
@@ -20,7 +20,7 @@ If the image is large and the barcode on the image is very small, it is recommen
 | ---------- | ----------- | ------------- |
 | *string array* or *[`RegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode) array* | "RPM_SKIP"<br>"RPM_AUTO"<br>"RPM_GENERAL"<br>"RPM_GENERAL_RGB_CONTRAST"<br>"RPM_GENERAL_GRAY_CONTRAST"<br>"RPM_GENERAL_HSV_CONTRAST" | ["RPM_GENERAL", "RPM_SKIP", "RPM_SKIP", "RPM_SKIP", "RPM_SKIP", "RPM_SKIP", "RPM_SKIP", "RPM_SKIP"] |
 
-- **See also**:   
+**See Also**    :   
     [`RegionPredetectionMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode)
     
 #### Mode Arguments
@@ -43,7 +43,7 @@ Sets the minimum image dimension (in pixels) to pre-detect barcode regions.
 | ---------- | ----------- | ------------- |
 | *int* | [16384, 0x7fffffff] | 262144 |         
 
-- **Remarks**     
+**Remarks**         
   If the image dimension is larger than the given value, the library will enable the feature of pre-detecting barcode regions. Otherwise, it will skip this step when searching for barcodes.  
 
 
@@ -54,7 +54,7 @@ Sets the sensitivity used for region predetection algorithm.
 | ---------- | ----------- | ------------- |
 | *int* | [1, 9] | 1 |         
 
-- **Remarks**     
+**Remarks**         
   A larger value means the library will take more effort to detect regions.  
 
 
@@ -66,7 +66,7 @@ Sets the sensitivity used for region predetection algorithm.
 | *string* | A string value representing one or more regions. | "" |         
 
 
-- **Remarks**     
+**Remarks**         
   - Each region need to be defined as [`Left`, `Top`, `Right`, `Bottom`, `Index`]. If you want to define multiple regions, you can use a "";"" to separate them. If there is no region defined, the library will consider the predetected regions as barcode regions.    
   - `Left`, `Top`, `Right`, `Bottom` are four percentage values relative to top-left corner of the predetected region. 
   - `Index` means the index of a specific colour set in [`ForeAndBackgroundColours`](#foreandbackgroundcolours) which the current region is applied to. If the value of `index` is set to -1, the current region will be applied to all colour sets in [`ForeAndBackgroundColours`](#foreandbackgroundcolours).
@@ -82,7 +82,7 @@ Specifies a set (or multiple sets) of the foreground and background colours used
 | *string* | A string value representing one or more colour sets. | "" |         
 
 
-- **Remarks**     
+**Remarks**         
   - Each set of the foreground and background colours need to be defined as [`ForegroundColour`, `BackgroundColour`, `Tolerance`]. If you want to define multiple sets, you can use a "";"" to separate them. This argument is **mandatory**. If there is no manual setting, no region can be detected.
   - `ForegroundColour`and `BackgroundColour` are the Hue values in the HSV colour space for defining the foreground and background colours of the regions you want to predetect. The value -1 means black, gray, white.
   - `Tolerance` is the allowable deviation of the Hue value defined by `ForegroundColour`. 
@@ -99,7 +99,7 @@ Sets the aspect ratio range of the bounding rectangle of the predetected region.
 | *string* | A string value representing aspect ratio range. | "" |         
 
 
-- **Remarks**     
+**Remarks**         
   - The aspect ratio range need to be defined as [`MinAspectRatio`, `MaxAspectRatio`]. There will be no limitation without manual setting.
   - Aspect ratio equals to *height/width\*100*. `MinAspectRatio` and `MaxAspectRatio` are used for limiting the aspect ratio range of the predetected region.
   - Value range of `MinAspectRatio`, `MaxAspectRatio`: [1,10000]
@@ -114,7 +114,7 @@ Sets the height range of the bounding rectangle of the predetected region.
 | *string* | A string value representing height range. | "" |         
 
 
-- **Remarks**     
+**Remarks**         
   - The height range need to be defined as [`MinHeight`, `MaxHeight`]. There will be no limitation without manual setting.
   - Value range of `MinHeight`, `MaxHeight`: [1,0x7fffffff]
 
@@ -127,7 +127,7 @@ Sets the width range of the bounding rectangle of the predetected region.
 | *string* | A string value representing width range. | "" |         
 
 
-- **Remarks**     
+**Remarks**         
   - The width range need to be defined as [`MinWidth`, `MaxWidth`]. There will be no limitation without manual setting.
   - Value range of `MinWidth`, `MaxWidth`: [1,0x7fffffff]
 
@@ -139,7 +139,7 @@ Sets the spatial index block size used for region predetection algorithm.
 | ---------- | ----------- | ------------- |
 | *int* | [1, 32] | 5 |         
 
-- **Remarks**     
+**Remarks**         
   The block size used for region predetection would be 2 to the power of N. The allowed values of SpatialIndexBlockSize is the power number (N=1,2,3...).
 
 
@@ -151,7 +151,7 @@ Sets the file name of the library to load dynamically.
 | *string* | A string value representing file name. | "" | All `RegionPredetectionMode` items except RPM_SKIP and RPM_AUTO |         
 
 
-- **Remarks**     
+**Remarks**         
   The library must be in the same place with Dynamsoft Barcode Reader Library.
 
 
@@ -170,7 +170,7 @@ Sets whether to enable finding accurate boundary.
 | ---------- | ----------- | ------------- |
 | *int* | [0, 1] | 0 |         
 
-- **Remarks**     
+**Remarks**         
   - 0: disable.
   - 1: enable.
 
@@ -211,11 +211,11 @@ Sets whether to enable finding accurate boundary.
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html)->[`furtherModes`]({{ site.structs }}PublicRuntimeSettings.html#furthermodes) | [`regionPredetectionModes`]({{ site.structs }}FurtherModes.html#regionpredetectionmodes) | [`RegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode)[8] |
 
 
-**Remarks**   
+**Remarks**     
 [`GetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) and [`SetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) need to be called for getting or setting the value of [arguments](#mode-arguments).
 
 
-**See Also**    
+**See Also**      
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 - [`FurtherModes` Struct]({{ site.structs }}FurtherModes.html)
 - [`RegionPredetectionMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode)

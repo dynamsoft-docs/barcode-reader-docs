@@ -16,7 +16,7 @@ needAutoGenerateSidebar: false
 | ---------- | ----------- | ------------- |
 | *string array* or *[`DeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode) array* | "DRM_SKIP"<br>"DRM_AUTO"<br>"DRM_GENERAL" | ["DRM_SKIP", "DRM_SKIP", "DRM_SKIP", "DRM_SKIP", "DRM_SKIP", "DRM_SKIP", "DRM_SKIP", "DRM_SKIP"] |
 
-- **See also**:   
+**See Also**    :   
     [`DeformationResistingMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode)
     
 #### Mode Arguments
@@ -32,7 +32,7 @@ Sets the effort level used for deformation resisting. **Not supported yet.**
 | ---------- | ----------- | ------------- |
 | *int* | [1, 9] | 5 |         
 
-- **Remarks**     
+**Remarks**         
   A larger value means the library will take more effort to resist deformation.
 
 
@@ -44,7 +44,7 @@ Sets the file name of the library to load dynamically.
 | *string* | A string value representing file name. | "" | All `DeformationResistingMode` items except DRM_SKIP and DRM_AUTO |         
 
 
-- **Remarks**     
+**Remarks**         
   The library must be in the same place with Dynamsoft Barcode Reader Library.
 
 
@@ -90,10 +90,10 @@ Sets the parameters passed to the library to load dynamically.
 | ------ | ------------------ | ---------- |
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html)->[`furtherModes`]({{ site.structs }}PublicRuntimeSettings.html#furthermodes) | [`deformationResistingModes`]({{ site.structs }}FurtherModes.html#deformationresistingmodes) | [`DeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode)[8] |
 
-**Remarks**   
+**Remarks**     
 [`GetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) and [`SetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) need to be called for getting or setting the value of [arguments](#mode-arguments).
 
-**See Also**    
+**See Also**      
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 - [`FurtherModes` Struct]({{ site.structs }}FurtherModes.html)
 - [`DeformationResistingMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode)

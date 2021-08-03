@@ -41,13 +41,13 @@ Sets the mode and priority for colour categorization. Not supported yet.
 EnumColourClusteringMode[] Dynamsoft.DBR.FurtherModes.ColourClusteringModes
 ```
 
-- **Value range**  
+**Value Range**    
    Each array item can be any one of the [`ColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode) Enumeration items.  
      
-- **Default value**  
+**Default Value**    
    `[EnumColourClusteringMode.CCM_SKIP, EnumColourClusteringMode.CCM_SKIP, EnumColourClusteringMode.CCM_SKIP, EnumColourClusteringMode.CCM_SKIP, EnumColourClusteringMode.CCM_SKIP, EnumColourClusteringMode.CCM_SKIP, EnumColourClusteringMode.CCM_SKIP, EnumColourClusteringMode.CCM_SKIP]`  
      
-- **Remarks**  
+**Remarks**      
    The array index represents the priority of the item. The smaller index is, the higher priority is. 
 
 ### ColourConversionModes
@@ -57,13 +57,13 @@ Sets the mode and priority for converting a colour image to a grayscale image.
 EnumColourConversionMode[] Dynamsoft.DBR.FurtherModes.ColourConversionModes
 ```
 
-- **Value range**  
+**Value Range**    
    Each array item can be any one of the [`ColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode) Enumeration items. 
      
-- **Default value**  
+**Default Value**    
    `[EnumColourConversionMode.CICM_GENERAL, EnumColourConversionMode.CICM_SKIP, EnumColourConversionMode.CICM_SKIP, EnumColourConversionMode.CICM_SKIP, EnumColourConversionMode.CICM_SKIP, EnumColourConversionMode.CICM_SKIP, EnumColourConversionMode.CICM_SKIP, EnumColourConversionMode.CICM_SKIP]`  
      
-- **Remarks**  
+**Remarks**      
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
 
 ### GrayscaleTransformationModes
@@ -73,13 +73,13 @@ Sets the mode and priority for the grayscale image conversion.
 EnumGrayscaleTransformationMode[] Dynamsoft.DBR.FurtherModes.GrayscaleTransformationModes
 ```
 
-- **Value range**  
+**Value Range**    
    Each array item can be any one of the [`GrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode) Enumeration items. 
      
-- **Default value**  
+**Default Value**    
    `[EnumGrayscaleTransformationMode.GTM_ORIGINAL, EnumGrayscaleTransformationMode.GTM_SKIP, EnumGrayscaleTransformationMode.GTM_SKIP, EnumGrayscaleTransformationMode.GTM_SKIP, EnumGrayscaleTransformationMode.GTM_SKIP, EnumGrayscaleTransformationMode.GTM_SKIP, EnumGrayscaleTransformationMode.GTM_SKIP, EnumGrayscaleTransformationMode.GTM_SKIP]`  
      
-- **Remarks**  
+**Remarks**      
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
 
 ### RegionPredetectionModes
@@ -89,13 +89,13 @@ Sets the region pre-detection mode for barcodes search.
 EnumRegionPredetectionMode[] Dynamsoft.DBR.FurtherModes.RegionPredetectionModes
 ```
 
-- **Value range**  
+**Value Range**    
    Each array item can be any one of the [`RegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode) Enumeration items.  
      
-- **Default value**  
+**Default Value**    
    `[EnumRegionPredetectionMode.RPM_GENERAL, EnumRegionPredetectionMode.RPM_SKIP, EnumRegionPredetectionMode.RPM_SKIP, EnumRegionPredetectionMode.RPM_SKIP, EnumRegionPredetectionMode.RPM_SKIP, EnumRegionPredetectionMode.RPM_SKIP, EnumRegionPredetectionMode.RPM_SKIP, EnumRegionPredetectionMode.RPM_SKIP]`  
      
-- **Remarks**  
+**Remarks**      
    The array index represents the priority of the item. The smaller index is, the higher priority is. If the image is large and the barcode on the image is very small, it is recommended to enable region predetection to speed up the localization process and recognition accuracy.
 
 ### ImagePreprocessingModes
@@ -105,13 +105,13 @@ Sets the mode and priority for image preprocessing algorithms.
 EnumImagePreprocessingMode[] Dynamsoft.DBR.FurtherModes.ImagePreprocessingModes
 ```
 
-- **Value range**  
+**Value Range**    
    Each array item can be any one of the [`ImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode) Enumeration items.  
      
-- **Default value**  
+**Default Value**    
    `[EnumImagePreprocessingMode.IPM_GENERAL, EnumImagePreprocessingMode.IPM_SKIP, EnumImagePreprocessingMode.IPM_SKIP, EnumImagePreprocessingMode.IPM_SKIP, EnumImagePreprocessingMode.IPM_SKIP, EnumImagePreprocessingMode.IPM_SKIP, EnumImagePreprocessingMode.IPM_SKIP, EnumImagePreprocessingMode.IPM_SKIP]`  
      
-- **Remarks**  
+**Remarks**      
    The array index represents the priority of the item. The smaller index is, the higher priority is.
 
 ### TextureDetectionModes
@@ -121,13 +121,13 @@ Sets the mode and priority for texture detection.
 EnumTextureDetectionMode[] Dynamsoft.DBR.FurtherModes.TextureDetectionModes
 ```
 
-- **Value range**  
+**Value Range**    
    Each array item can be any one of the [`TextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode) Enumeration items.  
      
-- **Default value**  
+**Default Value**    
    `[EnumTextureDetectionMode.TDM_GENERAL_WIDTH_CONCENTRATION, EnumTextureDetectionMode.TDM_SKIP, EnumTextureDetectionMode.TDM_SKIP, EnumTextureDetectionMode.TDM_SKIP, EnumTextureDetectionMode.TDM_SKIP, EnumTextureDetectionMode.TDM_SKIP, EnumTextureDetectionMode.TDM_SKIP, EnumTextureDetectionMode.TDM_SKIP]`  
      
-- **Remarks**  
+**Remarks**      
    The array index represents the priority of the item. The smaller index is, the higher priority is.
 
 ### TextFilterModes
@@ -137,13 +137,13 @@ Sets the mode and priority for text filter.
 EnumTextFilterMode[] Dynamsoft.DBR.FurtherModes.TextFilterModes
 ```
 
-- **Value range**  
+**Value Range**    
    Each array item can be any one of the [`TextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode) Enumeration items.  
      
-- **Default value**  
+**Default Value**    
    `[EnumTextFilterMode.TFM_GENERAL_CONTOUR, EnumTextFilterMode.TFM_SKIP, EnumTextFilterMode.TFM_SKIP, EnumTextFilterMode.TFM_SKIP, EnumTextFilterMode.TFM_SKIP, EnumTextFilterMode.TFM_SKIP, EnumTextFilterMode.TFM_SKIP, EnumTextFilterMode.TFM_SKIP]`  
      
-- **Remarks**  
+**Remarks**      
    The array index represents the priority of the item. The smaller index is, the higher priority is. If the image contains a lot of text, you can enable text filter to speed up the localization process.
 
 
@@ -154,13 +154,13 @@ Sets the mode and priority for DPM code reading.
 EnumDPMCodeReadingMode[] Dynamsoft.DBR.FurtherModes.DPMCodeReadingModes
 ```
 
-- **Value range**  
+**Value Range**    
    Each array item can be any one of the [`DPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode) Enumeration items.  
      
-- **Default value**  
+**Default Value**    
    `[EnumDPMCodeReadingMode.DPMCRM_SKIP, EnumDPMCodeReadingMode.DPMCRM_SKIP, EnumDPMCodeReadingMode.DPMCRM_SKIP, EnumDPMCodeReadingMode.DPMCRM_SKIP, EnumDPMCodeReadingMode.DPMCRM_SKIP, EnumDPMCodeReadingMode.DPMCRM_SKIP, EnumDPMCodeReadingMode.DPMCRM_SKIP, EnumDPMCodeReadingMode.DPMCRM_SKIP]`  
      
-- **Remarks**  
+**Remarks**      
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
 
 ### DeformationResistingModes
@@ -170,13 +170,13 @@ Sets the mode and priority for deformation resisting.
 EnumDeformationResistingMode[] Dynamsoft.DBR.FurtherModes.DeformationResistingModes
 ```
 
-- **Value range**  
+**Value Range**    
    Each array item can be any one of the [`DeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode) Enumeration items.  
      
-- **Default value**  
+**Default Value**    
    `[EnumDeformationResistingMode.DRM_SKIP, EnumDeformationResistingMode.DRM_SKIP, EnumDeformationResistingMode.DRM_SKIP, EnumDeformationResistingMode.DRM_SKIP, EnumDeformationResistingMode.DRM_SKIP, EnumDeformationResistingMode.DRM_SKIP, EnumDeformationResistingMode.DRM_SKIP, EnumDeformationResistingMode.DRM_SKIP]`  
      
-- **Remarks**  
+**Remarks**      
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
 
 ### BarcodeComplementModes
@@ -186,13 +186,13 @@ Sets the mode and priority to complement the missing parts in the barcode.
 EnumColourConversionMode[] Dynamsoft.DBR.FurtherModes.ColourConversionModes
 ```
 
-- **Value range**  
+**Value Range**    
    Each array item can be any one of the [`BarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode) Enumeration items.  
      
-- **Default value**  
+**Default Value**    
    `[EnumColourConversionMode.BCM_SKIP, EnumColourConversionMode.BCM_SKIP, EnumColourConversionMode.BCM_SKIP, EnumColourConversionMode.BCM_SKIP, EnumColourConversionMode.BCM_SKIP, EnumColourConversionMode.BCM_SKIP, EnumColourConversionMode.BCM_SKIP, EnumColourConversionMode.BCM_SKIP]`  
      
-- **Remarks**  
+**Remarks**      
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
 
 ### BarcodeColourModes
@@ -202,13 +202,13 @@ Sets the mode and priority for the barcode colour mode used to process the barco
 EnumBarcodeColourMode[] Dynamsoft.DBR.FurtherModes.BarcodeColourModes
 ```
 
-- **Value range**  
+**Value Range**    
    Each array item can be any one of the [`BarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode) Enumeration items.  
      
-- **Default value**  
+**Default Value**    
    `[EnumBarcodeColourMode.BICM_DARK_ON_LIGHT, EnumBarcodeColourMode.BICM_SKIP, EnumBarcodeColourMode.BICM_SKIP, EnumBarcodeColourMode.BICM_SKIP, EnumBarcodeColourMode.BICM_SKIP, EnumBarcodeColourMode.BICM_SKIP, EnumBarcodeColourMode.BICM_SKIP, EnumBarcodeColourMode.BICM_SKIP]`  
      
-- **Remarks**  
+**Remarks**      
    The array index represents the priority of the item. The smaller index is, the higher priority is.  
 
 ### AccompanyingTextRecognitionModes
@@ -218,11 +218,11 @@ EnumBarcodeColourMode[] Dynamsoft.DBR.FurtherModes.BarcodeColourModes
 EnumAccompanyingTextRecognitionMode[] Dynamsoft.DBR.FurtherModes.AccompanyingTextRecognitionModes
 ```
 
-- **Value range**  
+**Value Range**    
    Each array item can be any one of the [`AccompanyingTextRecognitionMode`]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode) Enumeration items.  
      
-- **Default value**  
+**Default Value**    
    `[EnumAccompanyingTextRecognitionMode.ATRM_SKIP, EnumAccompanyingTextRecognitionMode.ATRM_SKIP, EnumAccompanyingTextRecognitionMode.ATRM_SKIP, EnumAccompanyingTextRecognitionMode.ATRM_SKIP, EnumAccompanyingTextRecognitionMode.ATRM_SKIP, EnumAccompanyingTextRecognitionMode.ATRM_SKIP, EnumAccompanyingTextRecognitionMode.ATRM_SKIP, EnumAccompanyingTextRecognitionMode.ATRM_SKIP]`  
      
-- **Remarks**  
+**Remarks**      
    The array index represents the priority of the item. The smaller index is, the higher priority is.  

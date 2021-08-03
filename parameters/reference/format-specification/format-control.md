@@ -45,7 +45,7 @@ needGenerateH3Content: false
 ## AllModuleDeviation
 Set the module size deviation from the standard barcode module size.   
 
-**Remarks**   
+**Remarks**     
 The unit is barcode module. For example, if the standard barcode module is 2px and AllModuleDeviation is 1, then the non-standard barcode module size is 4px.
     
 ### As Json Parameter
@@ -173,7 +173,7 @@ Specifies the regular express pattern of barcode byte characters.
 ## BarcodeFormatIds
 Sets which barcode format the current FormatSpecification configuration is applied to. 
 
-**Remarks**   
+**Remarks**     
 If you already know the barcode type(s) before performing barcode reading, specifying the barcode type(s) to be read will speed up the recognition process.
 
 ### As Json Parameter
@@ -198,7 +198,7 @@ If you already know the barcode type(s) before performing barcode reading, speci
 Sets which barcode format in BarcodeFormat group 2 the current FormatSpecification configuration is applied to.   
 
 
-**Remarks**   
+**Remarks**     
 If the barcode type(s) are certain, specifying the barcode type(s) to be read will speed up the recognition process.    
 The barcode format our library will search for is composed of BarcodeFormat group 1 and BarcodeFormat group 2, so you need to specify the barcode format in group 1 and group 2 individually.
 
@@ -279,10 +279,10 @@ Sets the range of barcode text length for barcodes search.
 | ------ | ------------------- | ---------- | ------------ | ------------- |
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html | [`minBarcodeTextLength`]({{ site.structs }}PublicRuntimeSettings.html#minbarcodetextlength)) | [0,0x7fffffff] | 0 |
 
-**Remarks**   
+**Remarks**     
 0: means no limitation on the barcode text length.
 
-**See Also**    
+**See Also**      
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 
 
@@ -350,7 +350,7 @@ Sets the range of bar count of the barcode zone for barcodes search.
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
 | FormatSpecification | BarcodeZoneBarCountRangeArray | *JSON Object Array* | `MinValue`: [1, 0x7fffffff]<br>`MaxValue`: [1, 0x7fffffff]<br>**MaxValue >= MinValue** | `null` |
 
-**Remarks**   
+**Remarks**     
 - Default value for MinValue: 1
 - Default value for MaxValue: 128
 
@@ -428,7 +428,7 @@ Specifies whether to find barcodes with uneven barcode modules.
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
 | FormatSpecification | FindUnevenModuleBarcode | *int* | [0, 1] | 1 |
 
-**Remarks**   
+**Remarks**     
 - 0: do not find barcodes with uneven barcode modules.
 - 1: find barcodes with uneven barcode modules.
 
@@ -471,7 +471,7 @@ Sets the module count and module size ratio of the barcode head part.
 ## MinQuietZoneWidth
 The minimum width of the barcode quiet zone.
 
-**Remarks**   
+**Remarks**     
 The unit is barcode module. For example, if barcode module is 2px and MinQuietZoneWidth is 4, then the width of quiet zone is 8px.
    
     
@@ -515,7 +515,7 @@ Sets the minimum ratio (width/height) of the barcode zone.
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
 | FormatSpecification | MinRatioOfBarcodeZoneWidthToHeight | *int* | [0, 10000] | 0 |
 
-**Remarks**   
+**Remarks**     
 - 0: means no limitation.
 
 **Json Parameter Example**   
@@ -542,7 +542,7 @@ Sets whether to decode mirrored barcodes.
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
 | FormatSpecification | MirrorMode | *string* | "MM_NORMAL"<br>"MM_MIRROR"<br>"MM_BOTH" | `null` |
 
-**Remarks**   
+**Remarks**     
 - "MM_NORMAL": Doesn't decode mirror barcodes.
 - "MM_MIRROR": Decodes mirror barcodes only.
 - "MM_BOTH": Decodes both normal and mirror barcodes.
@@ -595,7 +595,7 @@ Sets the scheme used for calculating a check digit of an MSI barcode.
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
 | FormatSpecification | MSICodeCheckDigitCalculation | *string* | "MSICCDC_NO_CHECK_DIGIT"<br>"MSICCDC_MOD_10"<br>"MSICCDC_MOD_11"<br>"MSICCDC_MOD_1110"<br>"MSICCDC_MOD_1010" | `null` |
 
-**Remarks**   
+**Remarks**     
 If this parameter is not set, MSICCDC_MOD_10 will be used by default.
 
 **Json Parameter Example**   
@@ -620,7 +620,7 @@ Sets whether the start and stop characters are required when searching for Code 
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
 | FormatSpecification | RequireStartStopChars | *int* | [0, 1] | 1 |
 
-**Remarks**   
+**Remarks**     
 - 0: start and stop characters are not required.
 - 1: start and stop characters are required.
 

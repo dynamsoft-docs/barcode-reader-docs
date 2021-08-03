@@ -21,7 +21,7 @@ needGenerateH3Content: false
 ## DeblurLevel
 Sets the degree of blurriness of the barcode for the current specified barcode format.
 
-**Remarks**   
+**Remarks**     
 If you have a blurry image, you can set this property to a larger value. The higher value set, the more effort the library will spend to decode images, but it may also slow down the recognition process.
 
 ### As Json Parameter
@@ -52,7 +52,7 @@ If you have a blurry image, you can set this property to a larger value. The hig
 | ---------- | ----------- | ------------- |
 | *string array* or *[`DeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode) array* | "DRM_SKIP"<br>"DRM_AUTO"<br>"DRM_GENERAL" | ["DRM_SKIP", "DRM_SKIP", "DRM_SKIP", "DRM_SKIP", "DRM_SKIP", "DRM_SKIP", "DRM_SKIP", "DRM_SKIP"] |
 
-- **See also**:   
+**See Also**    :   
     [`DeformationResistingMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode)
     
 #### Mode Arguments
@@ -66,7 +66,7 @@ Sets the effort level used for deformation resisting. **Not supported yet.**
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [1, 9] | 5 | "DRM_GENERAL" |         
 
-- **Remarks**     
+**Remarks**         
   A larger value means the library will take more effort to resist deformation.
 
 
@@ -106,7 +106,7 @@ Sets the effort level used for deformation resisting. **Not supported yet.**
 | ---------- | ----------- | ------------- |
 | *string array* or *[`BarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode) array* | "BCM_SKIP"<br>"BCM_AUTO"<br>"BCM_GENERAL" | ["BCM_SKIP", "BCM_SKIP", "BCM_SKIP", "BCM_SKIP", "BCM_SKIP", "BCM_SKIP", "BCM_SKIP", "BCM_SKIP"] |
 
-- **See also**:   
+**See Also**    :   
     [`BarcodeComplementMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode)
     
 

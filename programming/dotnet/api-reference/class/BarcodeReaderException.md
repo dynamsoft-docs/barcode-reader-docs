@@ -14,7 +14,6 @@ The exception class of Dynamsoft.BarcodeReader.
 public class BarcodeReaderException : Exception
 ```  
 
----
 
 ## Attributes
   
@@ -31,7 +30,7 @@ Gets or sets the error code.
 ```csharp
 EnumErrorCode Dynamsoft.DBR.BarcodeReaderException.Code
 ```  
-**See also**
+**See Also**  
 - [EnumErrorCode]({{site.enumerations}}error-code.html)
 
 ### Message

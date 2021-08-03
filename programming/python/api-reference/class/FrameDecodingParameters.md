@@ -45,10 +45,10 @@ The maximum number of frames waiting for decoding.
 FrameDecodingParameters.max_queue_length
 ```
 
-- **Value range**   
+**Value Range**     
     [0,0x7fffffff]   
       
-- **Default value**   
+**Default Value**     
     3
 
 ### max_result_queue_length
@@ -58,10 +58,10 @@ The maximum number of frames waiting results (text result/localization result) w
 FrameDecodingParameters.max_result_queue_length
 ```
 
-- **Value range**   
+**Value Range**     
     [0,0x7fffffff]   
       
-- **Default value**   
+**Default Value**     
     10  
 
 ### width
@@ -71,10 +71,10 @@ The width of the frame image in pixels.
 FrameDecodingParameters.width
 ```
 
-- **Value range**   
+**Value Range**     
     [0,0x7fffffff]   
       
-- **Default value**   
+**Default Value**     
     0  
 
 ### height
@@ -84,10 +84,10 @@ The height of the frame image in pixels.
 FrameDecodingParameters.height
 ```
 
-- **Value range**   
+**Value Range**     
     [0,0x7fffffff]   
       
-- **Default value**   
+**Default Value**     
     0  
 
 ### stride
@@ -97,10 +97,10 @@ The stride (or scan width) of the frame image.
 FrameDecodingParameters.stride
 ```
 
-- **Value range**   
+**Value Range**     
     [0,0x7fffffff]   
       
-- **Default value**   
+**Default Value**     
     0 
       
 ### image_pixel_format
@@ -110,13 +110,13 @@ The image pixel format used in the image byte array.
 FrameDecodingParameters.image_pixel_format
 ```
 
-- **Value range**   
+**Value Range**     
     A value of [`ImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) Enumeration items.
       
-- **Default value**   
+**Default Value**     
     `IPF_GRAYSCALED`
     
-- **See also**  
+**See Also**      
     [`ImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat)
       
 ### region_top
@@ -129,7 +129,7 @@ FrameDecodingParameters.region_top
 - **Default Value**  
     0
 
-- **Value Range**
+**Value Range**  
     - if region_measured_by_percentage = 0, [0,0x7fffffff] 
     - if region_measured_by_percentage = 1, [0,100] 
 
@@ -143,7 +143,7 @@ FrameDecodingParameters.region_left
 - **Default Value**  
     0
 
-- **Value Range**
+**Value Range**  
     - if region_measured_by_percentage = 0, [0,0x7fffffff] 
     - if region_measured_by_percentage = 1, [0,100]
 
@@ -157,7 +157,7 @@ FrameDecodingParameters.region_right
 - **Default Value**  
     0
 
-- **Value Range**
+**Value Range**  
     - if region_measured_by_percentage = 0, [0,0x7fffffff] 
     - if region_measured_by_percentage = 1, [0,100]
 
@@ -171,7 +171,7 @@ FrameDecodingParameters.region_bottom
 - **Default Value**  
     0
 
-- **Value Range**
+**Value Range**  
     - if region_measured_by_percentage = 0, [0,0x7fffffff] 
     - if region_measured_by_percentage = 1, [0,100]
 
@@ -185,7 +185,7 @@ FrameDecodingParameters.region_measured_by_percentage
 - **Default Value**  
     0
 
-- **Value Range**
+**Value Range**  
     [0,1]
 
 ### region_top
@@ -198,7 +198,7 @@ FrameDecodingParameters.region_top
 - **Default Value**  
     0
 
-- **Value Range**
+**Value Range**  
     - if region_measured_by_percentage = 0, [0,0x7fffffff] 
     - if region_measured_by_percentage = 1, [0,100]
 
@@ -209,13 +209,13 @@ The threshold used for filtering frames.
 FrameDecodingParameters.threshold
 ```
 
-- **Value range**   
+**Value Range**     
     [0, 1]
       
-- **Default value**   
+**Default Value**     
     0.1
     
-- **Remarks**  
+**Remarks**      
     The SDK will calculate an inner indicator for each frame from [`append_video_frame`](../BarcodeReader/video.md#append_video_frame), if the change rate of the indicators between the current frame and the history frames is larger than the given threshold, the current frame will not be added to the inner frame queue waiting for decoding.
 
 ### fps
@@ -225,13 +225,13 @@ The frequency of calling [`append_video_frame`](../BarcodeReader/video.md#append
 FrameDecodingParameters.fps
 ```
 
-- **Value range**   
+**Value Range**     
     [0,0x7fffffff]
       
-- **Default value**   
+**Default Value**     
     0  
     
-- **Remarks**  
+**Remarks**      
     0 means the frequency will be calculated automatically by the SDK.
 
 ### auto_filter
@@ -241,13 +241,13 @@ Sets whether to filter frames automatically.
 FrameDecodingParameters.auto_filter
 ```
 
-- **Value range**   
+**Value Range**     
     [0,1]
       
-- **Default value**   
+**Default Value**     
     1  
     
-- **Remarks**  
+**Remarks**      
     0: Diable filtering frames automatically.  
     1: Enable filtering frames automatically. 
     
@@ -259,13 +259,13 @@ Sets the method used for calculating the clarity of the frames.
 FrameDecodingParameters.clarity_calculation_method
 ```
 
-- **Value range**   
+**Value Range**     
     Any one of the [`ClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod) Enumeration items.   
       
-- **Default value**   
+**Default Value**     
     ECCM_CONTRAST   
     
-- **See also**  
+**See Also**      
     [`ClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod)    
     
 
@@ -276,12 +276,12 @@ Sets the mode used for filtering frames by calculated clarity.
 FrameDecodingParameters.clarity_filter_mode
 ```
 
-- **Value range**   
+**Value Range**     
     Any one of the [`ClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode) Enumeration items.   
       
-- **Default value**   
+**Default Value**     
     CFM_GENERAL   
     
-- **See also**  
+**See Also**      
     [`ClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode)    
 

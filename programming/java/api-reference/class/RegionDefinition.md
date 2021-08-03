@@ -27,11 +27,11 @@ The top-most coordinate or percentage of the region.
 ```java
 int com.dynamsoft.dbr.RegionDefinition.regionTop
 ```
-- **Value range**   
+**Value Range**     
     regionMeasuredByPercentage = 0: [0, 0x7fffffff]  
     regionMeasuredByPercentage = 1: [0, 100]  
       
-- **Default value**   
+**Default Value**     
     0
 
 ### regionLeft
@@ -39,11 +39,11 @@ The left-most coordinate or percentage of the region.
 ```java
 int com.dynamsoft.dbr.RegionDefinition.regionLeft
 ```
-- **Value range**   
+**Value Range**     
     regionMeasuredByPercentage = 0: [0, 0x7fffffff]  
     regionMeasuredByPercentage = 1: [0, 100]  
       
-- **Default value**   
+**Default Value**     
     0
 
 ### regionRight
@@ -51,11 +51,11 @@ The right-most coordinate or percentage of the region.
 ```java
 int com.dynamsoft.dbr.RegionDefinition.regionRight
 ```
-- **Value range**   
+**Value Range**     
     regionMeasuredByPercentage = 0: [0, 0x7fffffff]  
     regionMeasuredByPercentage = 1: [0, 100]  
       
-- **Default value**   
+**Default Value**     
     0
 
 ### regionBottom
@@ -63,11 +63,11 @@ The bottom-most coordinate or percentage of the region.
 ```java
 int com.dynamsoft.dbr.RegionDefinition.regionBottom
 ```
-- **Value range**   
+**Value Range**     
     regionMeasuredByPercentage = 0: [0, 0x7fffffff]  
     regionMeasuredByPercentage = 1: [0, 100]  
       
-- **Default value**   
+**Default Value**     
     0
     
 ### regionMeasuredByPercentage
@@ -75,11 +75,11 @@ Sets whether or not to use percentage to measure the region size.
 ```java
 int com.dynamsoft.dbr.RegionDefinition.regionMeasuredByPercentage
 ```
-- **Value range**   
+**Value Range**     
     [0, 1]
       
-- **Default value**   
+**Default Value**     
     0
     
-- **Remarks**   
+**Remarks**       
     When it's set to 1, the values of Top, Left, Right, Bottom indicate percentage (from 0 to 100); Otherwise, they indicate coordinates. 0: not by percentage 1: by percentage.

@@ -20,7 +20,7 @@ needGenerateH3Content: false
 ## DeblurLevel
 Sets the degree of blurriness of the barcode.
 
-**Remarks**   
+**Remarks**     
 If you have a blurry image, you can set this property to a larger value. The higher value set, the more effort the library will spend to decode images, but it may also slow down the recognition process.<br>
 DeblurLevel is now deprecated. It still works in this version but could be removed in the near future. We recommend using [`DeblurModes`](DeblurModes.md#deblurmodes) instead.
 
@@ -45,7 +45,7 @@ DeblurLevel is now deprecated. It still works in this version but could be remov
 | ------ | ------------------ | ---------- | ----------- | ------------- |
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) | [`deblurLevel`]({{ site.structs }}PublicRuntimeSettings.html#deblurlevel) | *int* | [0, 9] | 9 |
 
-**See Also**   
+**See Also**     
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 
 
@@ -58,7 +58,7 @@ DeblurLevel is now deprecated. It still works in this version but could be remov
 ## Pages
 Sets the specific pages or the range of pages of a file (.tiff or .pdf) for barcode searching.
 
-**Remarks**   
+**Remarks**     
 1. The value is 0-based;
 2. "" represents all pages.
 
@@ -87,7 +87,7 @@ Sets the specific pages or the range of pages of a file (.tiff or .pdf) for barc
 ## PDFRasterDPI
 Sets the output image resolution.
 
-**Remarks**   
+**Remarks**     
 When you are trying to decode a PDF file using `DecodeFile` method, the library will convert the pdf file to image(s) first, then perform barcode recognition.    
 To ensure your barcodes in the PDF files are readable, please set the resolution to at least 300 dpi.    
 
@@ -113,7 +113,7 @@ To ensure your barcodes in the PDF files are readable, please set the resolution
 | ------ | ------------------ | ---------- | ----------- | ------------- |
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) | [`pdfRasterDPI`]({{ site.structs }}PublicRuntimeSettings.html#pdfrasterdpi) | *int* | [100, 600] | 300 |
 
-**See Also**   
+**See Also**     
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 
 
@@ -146,7 +146,7 @@ Sets how to detect barcodes from a PDF file when using DecodeFile method.
 | ------ | ------------------ | ---------- | ----------- | ------------- |
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) | [`pdfReadingMode`]({{ site.structs }}PublicRuntimeSettings.html#pdfreadingmode) | *int* | Any one of the [`PDFReadingMode` Enumeration]({{ site.enumerations }}result-enums.html#pdfreadingmode) items. | `PDFRM_AUTO` |
 
-**See Also**   
+**See Also**     
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 - [`PDFReadingMode` Enumeration]({{ site.enumerations }}result-enums.html#pdfreadingmode)
 
@@ -159,7 +159,7 @@ Sets how to detect barcodes from a PDF file when using DecodeFile method.
 ## ScaleDownThreshold
 Sets the threshold for the image shrinking. 
 
-**Remarks**   
+**Remarks**     
 If the shorter edge size is larger than the given value, the library will calculate the required height and width of the barcode image and shrink the image to that size before localization. Otherwise, it will perform barcode localization on the original image.   
 If you have an image whose shorter edge size is larger than the given value and the barcode is a small part on it, you can set this value to be larger than the shorter edge of this image.   
 If you have an image whose shorter edge size is larger than the given value and the barcode is clear and big, you can set this value to a smaller one than the default value.
@@ -185,7 +185,7 @@ If you have an image whose shorter edge size is larger than the given value and 
 | ------ | ------------------ | ---------- | ----------- | ------------- |
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) | [`scaleDownThreshold`]({{ site.structs }}PublicRuntimeSettings.html#scaledownthreshold) | *int* | [512, 0x7fffffff] | 2300 |
 
-**See Also**   
+**See Also**     
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 
 

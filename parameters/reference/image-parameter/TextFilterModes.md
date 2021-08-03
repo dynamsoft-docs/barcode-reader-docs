@@ -16,7 +16,7 @@ needAutoGenerateSidebar: false
 | ---------- | ----------- | ------------- |
 | *string array* or *[`TextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode) array* | "TFM_SKIP"<br>"TFM_AUTO"<br>"TFM_GENERAL_CONTOUR" | ["TFM_GENERAL_CONTOUR", "TFM_SKIP", "TFM_SKIP", "TFM_SKIP", "TFM_SKIP", "TFM_SKIP", "TFM_SKIP", "TFM_SKIP"] |
 
-- **See also**:   
+**See Also**    :   
     [`TextFilterMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode)
     
 #### Mode Arguments
@@ -33,7 +33,7 @@ Sets the minimum image dimension (in pixels) to filter the text.
 | ---------- | ----------- | ------------- |
 | *int* | [65536, 0x7fffffff] | 65536 |         
 
-- **Remarks**     
+**Remarks**         
   If the image dimension is larger than the given value, the library will enable the text filtering feature. Otherwise, it will skip this step when doing barcode recognition. The feature can speed up the recognition process.
 
 ##### Sensitivity 
@@ -43,7 +43,7 @@ Sets the sensitivity used for text filtering.
 | ---------- | ----------- | ------------- |
 | *int* | [0, 9] | 0 |         
 
-- **Remarks**     
+**Remarks**         
   - 0: automatically set by the library.   
   - A larger value means the library will take more effort to filter text.
 
@@ -56,7 +56,7 @@ Sets the file name of the library to load dynamically.
 | *string* | A string value representing file name. | "" | All `TextFilterMode` items except TFM_SKIP and TFM_AUTO |         
 
 
-- **Remarks**     
+**Remarks**         
   The library must be in the same place with Dynamsoft Barcode Reader Library.
 
 
@@ -104,11 +104,11 @@ Sets the parameters passed to the library to load dynamically.
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html)->[`furtherModes`]({{ site.structs }}PublicRuntimeSettings.html#furthermodes) | [`textFilterModes`]({{ site.structs }}FurtherModes.html#textfiltermodes) | [`TextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode)[8] |
 
 
-**Remarks**   
+**Remarks**     
 [`GetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) and [`SetModeArgument`]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) need to be called for getting or setting the value of [arguments](#mode-arguments).
 
 
-**See Also**    
+**See Also**      
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 - [`FurtherModes` Struct]({{ site.structs }}FurtherModes.html)
 - [`TextFilterMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode)

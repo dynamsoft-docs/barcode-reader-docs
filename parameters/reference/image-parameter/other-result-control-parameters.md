@@ -42,7 +42,7 @@ Sets which types of intermediate result to be kept for further reference. Interm
 | ------ | ------------------ | ---------- | ----------- | ------------- |
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) | [`intermediateResultTypes`]({{ site.structs }}PublicRuntimeSettings.html#intermediateresulttypes) | *int* | A combined value of [`IntermediateResultType` Enumeration]({{ site.enumerations }}result-enums.html#intermediateresulttype) items. | `IRT_NO_RESULT` (0) |
 
-**See Also**   
+**See Also**     
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 - [`IntermediateResultType` Enumeration]({{ site.enumerations }}result-enums.html#intermediateresulttype)
 
@@ -75,7 +75,7 @@ Specifies the format for the coordinates returned.
 | ------ | ------------------ | ---------- | ----------- | ------------- |
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) | [`resultCoordinateType`]({{ site.structs }}PublicRuntimeSettings.html#resultcoordinatetype) | [`ResultCoordinateType`]({{ site.enumerations }}result-enums.html#resultcoordinatetype) | Any one of the [`ResultCoordinateType` Enumeration]({{ site.enumerations }}result-enums.html#resultcoordinatetype) items.| `IRSM_MEMORY`|
 
-**See Also**   
+**See Also**     
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 - [`ResultCoordinateType` Enumeration]({{ site.enumerations }}result-enums.html#resultcoordinatetype)
 
@@ -107,5 +107,5 @@ Sets whether or not to return the clarity of the barcode zone.
 | ------ | ------------------ | ---------- | ----------- | ------------- |
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) | [`returnBarcodeZoneClarity`]({{ site.structs }}PublicRuntimeSettings.html#returnbarcodezoneclarity) | *int* | [0, 1] | 0 |
 
-**See Also**   
+**See Also**     
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)

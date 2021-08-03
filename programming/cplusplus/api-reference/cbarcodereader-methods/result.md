@@ -16,7 +16,6 @@ needAutoGenerateSidebar: true
   | [`GetIntermediateResults`](#getintermediateresults) | Get intermediate results. |
   | [`FreeIntermediateResults`](#freeintermediateresults) | Free memory allocated for the intermediate results. |
 
-  ---
 
 
 
@@ -31,14 +30,14 @@ Get all recognized barcode results.
 int dynamsoft::dbr::CBarcodeReader::GetAllTextResults (TextResultArray** pResults)	
 ```   
    
-**Parameters**
+**Parameters**  
 `[out] pResults` Barcode text results returned by the last called function [`DecodeFile`](decode.md#decodefile) / [`DecodeFileInMemory`](decode.md#decodefileinmemory) / [`DecodeBuffer`](decode.md#decodebuffer) / [`DecodeBase64String`](decode.md#decodebase64string) / [`DecodeDIB`](decode.md#decodedib). The `pResults` is allocated by the SDK and should be freed by calling the function [`FreeTextResults`](#freetextresults).
 
-**Return Value**
+**Return Value**  
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
-**Code Snippet**
+**Code Snippet**  
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
@@ -62,10 +61,10 @@ Free memory allocated for text results.
 static void dynamsoft::dbr::CBarcodeReader::FreeTextResults (TextResultArray** pResults)
 ```   
    
-**Parameters**
+**Parameters**  
 `[in]	pResults` Text results.
 
-**Code Snippet**
+**Code Snippet**  
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
@@ -89,14 +88,14 @@ Get intermediate results containing the original image, the colour clustered ima
 int dynamsoft::dbr::CBarcodeReader::GetIntermediateResults (IntermediateResultArray** pResults) 
 ```   
    
-**Parameters**
+**Parameters**  
 `[out] pResults` The intermediate results returned by the SDK.
 
-**Return Value**
+**Return Value**  
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
-**Code Snippet**
+**Code Snippet**  
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
@@ -127,10 +126,10 @@ Free memory allocated for the intermediate results.
 static void dynamsoft::dbr::CBarcodeReader::FreeIntermediateResults (IntermediateResultArray** pResults)
 ```   
    
-**Parameters**
+**Parameters**  
 `[in]	pResults` The intermediate results.
 
-**Code Snippet**
+**Code Snippet**  
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
