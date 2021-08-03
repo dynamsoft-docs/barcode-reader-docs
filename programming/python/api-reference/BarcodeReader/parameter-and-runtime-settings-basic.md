@@ -27,18 +27,18 @@ Sets the optional argument for a specified mode in `Modes` parameters.
 BarcodeReader.set_mode_argument(modes_name, index, argument_name, argument_value)
 ```
 
-### Parameters
+**Parameters**
 
 - `[in]	modes_name <*str*>` : The mode(s) parameter name to set argument.  
 - `[in]	index <*int*>` : The array index of modes parameter to indicate a specific mode.   
 - `[in]	argument_name <*str*>` : The name of the argument to set.  
 - `[in]	argument_value <*str*>` : The value of the argument to set.  
 
-### Return value
+**Return Value**
 
 `error <*tuple*>` : `error_code = error[0]`, `error_message = error[1]`, if `error_code != EnumErrorCode.DBR_OK`, you can get the detailed error message by `error_message`.
 
-### Remark
+**Remarks**
 
 Check the available modes and arguments below:
 
@@ -55,7 +55,7 @@ Check the available modes and arguments below:
 - [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#textfiltermodes)
 - [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes) 
 
-### Code Snippet
+**Code Snippet**
 
 ```python
 from dbr import *
@@ -81,13 +81,13 @@ Gets argument value for the specified mode parameter.
 BarcodeReader.get_mode_argument(modes_name, index, argument_name)
 ```
 
-### Parameters  
+**Parameters**  
 
 - `[in]	modes_name <*str*>` : The mode(s) parameter name to get argument.  
 - `[in]	index <*int*>` : The array index of modes parameter to indicate a specific mode.   
 - `[in]	argument_name <*str*>` : The name of the argument to get.  
 
-### Return value
+**Return Value**
 
 `argument_value <*str*>` : The value of the argument to get.
 
@@ -95,7 +95,7 @@ BarcodeReader.get_mode_argument(modes_name, index, argument_name)
 
 [`BarcodeReaderError`](../class/BarcodeReaderError.md) : If error happens, this function will throw a BarcodeReaderError exception that can report the detailed error message.
 
-### Remark
+**Remarks**
 
 Check the available modes and arguments below:
 
@@ -112,7 +112,7 @@ Check the available modes and arguments below:
 - [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#textfiltermodes)
 - [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes)
 
-### Code Snippet
+**Code Snippet**
 
 ```python
 from dbr import *
@@ -138,11 +138,11 @@ Gets current settings and saves them into a `PublicRuntimeSetting` object.
 BarcodeReader.get_runtime_settings()
 ```
 
-### Return value
+**Return Value**
 
 `runtime_settings <*class PublicRuntimeSetting*>` : The `PublicRuntimeSetting` object of current runtime settings.
 
-### Code Snippet
+**Code Snippet**
 
 ```python
 from dbr import *
@@ -161,7 +161,7 @@ Updates runtime settings with a given `PublicRuntimeSetting` object.
 BarcodeReader.update_runtime_settings(settings)
 ```
 
-### Parameters
+**Parameters**
 
 `[in]	settings <*class PublicRuntimeSetting*>` : a `PublicRuntimeSetting` object.    
  
@@ -169,7 +169,7 @@ BarcodeReader.update_runtime_settings(settings)
 
 [`BarcodeReaderError`](../class/BarcodeReaderError.md) : If error happens, this function will throw a `BarcodeReaderError` exception that can report the detailed error message.
 
-### Code Snippet
+**Code Snippet**
 
 ```python
 from dbr import *
@@ -195,7 +195,7 @@ Resets all parameters to default values.
 BarcodeReader.reset_runtime_settings() 
 ```
 
-### Code Snippet
+**Code Snippet**
 
 ```python
 from dbr import *

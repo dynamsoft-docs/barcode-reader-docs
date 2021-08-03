@@ -32,18 +32,18 @@ Decode barcodes from a specified image file.
 int dynamsoft::dbr::CBarcodeReader::DecodeFile (const char* pFileName, const char* pTemplateName = "")	
 ```   
    
-#### Parameters
+**Parameters**
 `[in] pFileName`	A string defining the file name.   
 `[in] pTemplateName`<sub>Optional</sub> The template name.
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
-#### Remark
+**Remarks**
 If no template name is specified, current runtime settings will be used.
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
@@ -65,19 +65,19 @@ Decode barcodes from an image file in memory.
 int dynamsoft::dbr::CBarcodeReader::DecodeFileInMemory (const unsigned char* pFileBytes, int fileSize, const char* pTemplateName = "")	
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	pFileBytes` The image file bytes in memory.   
 `[in]	fileSize` The length of the file bytes in memory.   
 `[in] pTemplateName`<sub>Optional</sub> The template name.
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [GetErrorString()](status-retrieval.md#geterrorstring) to get detailed error message.*   
 
-#### Remark
+**Remarks**
 If no template name is specified, current runtime settings will be used.
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
@@ -102,7 +102,7 @@ Decode barcodes from the memory buffer containing image pixels in defined format
 int dynamsoft::dbr::CBarcodeReader::DecodeBuffer (const unsigned char* pBufferBytes, const int iWidth, const int iHeight, const int iStride, const ImagePixelFormat format, const char* pszTemplateName = "")		
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	pBufferBytes` The array of bytes which contain the image data.   
 `[in]	iWidth` The width of the image in pixels.   
 `[in]	iHeight` The height of the image in pixels.   
@@ -110,14 +110,14 @@ int dynamsoft::dbr::CBarcodeReader::DecodeBuffer (const unsigned char* pBufferBy
 `[in]	format` The image pixel format used in the image byte array.   
 `[in] pTemplateName`<sub>Optional</sub> The template name.
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*   
 
-#### Remark
+**Remarks**
 If no template name is specified, current runtime settings will be used.
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
@@ -145,18 +145,18 @@ Decode barcode from an image file encoded as a base64 string.
 int dynamsoft::dbr::CBarcodeReader::DecodeBase64String (const char* pBase64String, const char* pTemplateName = "")	
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	pBase64String`	A base64 encoded string that represents an image.   
 `[in] pTemplateName`<sub>Optional</sub> The template name.
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
-#### Remark
+**Remarks**
 If no template name is specified, current runtime settings will be used.
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
@@ -183,18 +183,18 @@ Decode barcode from a handle of device-independent bitmap (DIB).
 int dynamsoft::dbr::CBarcodeReader::DecodeDIB (const HANDLE hDIB, const char* pszTemplateName = "")	
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	hDIB` Handle of the device-independent bitmap.    
 `[in] pTemplateName`<sub>Optional</sub> The template name.
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*   
 
-#### Remark
+**Remarks**
 If no template name is specified, current runtime settings will be used.
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
@@ -216,15 +216,15 @@ Inits an intermediateResult struct with default values.
 int dynamsoft::dbr::CBarcodeReader::InitIntermediateResult(IntermediateResultType intermediateResultType, IntermediateResult* pIntermediateResult)	
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	intermediateResultType` The type of the intermediate result to init.  
 `[in, out]	pIntermediateResult` The intermediate result struct.  
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 IntermediateResult imResult;
 dynamsoft::dbr::CBarcodeReader::InitIntermediateResult(IRT_ORIGINAL_IMAGE, &imResult);
@@ -242,15 +242,15 @@ Decodes barcode from intermediate results.
 int dynamsoft::dbr::CBarcodeReader::DecodeIntermediateResults(const IntermediateResultArray *pIntermediateResultArray, const char* pTemplateName = "")	
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	pIntermediateResultArray` The intermediate result array for decoding.  
 `[in]	pTemplateName`<sub>Optional</sub> The template name.
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 CBarcodeReader * reader = new CBarcodeReader();
 char fileName[] = "Your barcode file";

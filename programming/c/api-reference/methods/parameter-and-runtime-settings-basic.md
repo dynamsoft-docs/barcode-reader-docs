@@ -31,7 +31,7 @@ Set argument value for the specified mode parameter.
 DBR_API int DBR_SetModeArgument (void* barcodeReader, const char* pModesName, const int index, const char* pArgumentName, const char* pArgumentValue, char errorMsgBuffer[], const int errorMsgBufferLen)
 ```   
    
-#### Parameters
+**Parameters**
 `[in] barcodeReader` Handle of the barcode reader instance.   
 `[in]	pModesName` The mode parameter name to set argument.  
 `[in]	index` The array index of mode parameter to indicate a specific mode.  
@@ -40,11 +40,11 @@ DBR_API int DBR_SetModeArgument (void* barcodeReader, const char* pModesName, co
 `[in,out]` errorMsgBuffer	The buffer is allocated by the caller and the recommended length is 256. The error message will be copied to the buffer.  
 `[in] errorMsgBufferLen` The length of the allocated buffer.
 
-#### Return value
+**Return Value**
 Returns error code. Possible return(s): DBR_OK; DBRERR_SET_MODE_ARGUMENT_ERROR.   
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
   
-#### Remark
+**Remarks**
 Check follow link for available modes and arguments:
 - [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#mode-arguments)
 - [`BinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#mode-arguments)
@@ -59,7 +59,7 @@ Check follow link for available modes and arguments:
 - [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#mode-arguments)
 - [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#mode-arguments) 
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* barcodeReader = DBR_CreateInstance();
 DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
@@ -85,7 +85,7 @@ Get argument value for the specified mode parameter.
 DBR_API int DBR_GetModeArgument (void* barcodeReader, const char* pModesName, const int index, const char* pArgumentName, char valueBuffer[], const int valueBufferLen, char errorMsgBuffer[], const int errorMsgBufferLen)
 ```   
    
-#### Parameters
+**Parameters**
 `[in] barcodeReader` Handle of the barcode reader instance.   
 `[in]	pModesName` The mode parameter name to get argument.  
 `[in]	index` The array index of mode parameter to indicate a specific mode.  
@@ -95,11 +95,11 @@ DBR_API int DBR_GetModeArgument (void* barcodeReader, const char* pModesName, co
 `[in,out]	errorMsgBuffer` The buffer is allocated by the caller and the recommended length is 256. The error message will be copied to the buffer.  
 `[in]	errorMsgBufferLen` The length of the allocated buffer.  
 
-#### Return value
+**Return Value**
 Returns error code. Possible return(s): DBR_OK; DBRERR_GET_MODE_ARGUMENT_ERROR.  
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-#### Remark
+**Remarks**
 Check follow link for available modes and arguments:
 - [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#mode-arguments)
 - [`BinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#mode-arguments)
@@ -114,7 +114,7 @@ Check follow link for available modes and arguments:
 - [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#mode-arguments)
 - [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#mode-arguments)  
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* barcodeReader = DBR_CreateInstance();
 DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
@@ -142,15 +142,15 @@ Get current settings and save them into a [`PublicRuntimeSettings`]({{ site.stru
 DBR_API int DBR_GetRuntimeSettings (void* barcodeReader, PublicRuntimeSettings* pSettings)
 ```   
    
-#### Parameters
+**Parameters**
 `[in] barcodeReader` Handle of the barcode reader instance.  
 `[in,out]	pSettings` The struct of template settings.  
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* barcodeReader = DBR_CreateInstance();
 DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
@@ -172,17 +172,17 @@ Update runtime settings with a given [`PublicRuntimeSettings`]({{ site.structs }
 DBR_API int DBR_UpdateRuntimeSettings (void* barcodeReader, PublicRuntimeSettings* pSettings, char errorMsgBuffer[], const int errorMsgBufferLen)
 ```   
    
-#### Parameters
+**Parameters**
 `[in] barcodeReader` Handle of the barcode reader instance.  
 `[in]	pSettings` The struct of template settings.  
 `[in,out]	errorMsgBuffer` The buffer is allocated by caller and the recommended length is 256.The error message will be copied to the buffer.  
 `[in]	errorMsgBufferLen` The length of the allocated buffer.  
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* barcodeReader = DBR_CreateInstance();
 DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
@@ -208,14 +208,14 @@ Reset all parameters to default values.
 DBR_API int DBR_ResetRuntimeSettings (void* barcodeReader)
 ```   
    
-#### Parameters
+**Parameters**
 `[in] barcodeReader` Handle of the barcode reader instance.  
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* barcodeReader = DBR_CreateInstance();
 DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");

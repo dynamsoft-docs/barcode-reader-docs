@@ -27,10 +27,10 @@ Get version information of SDK.
 String com.dynamsoft.dbr.BarcodeReader.getVersion()	
 ```
 
-#### Return value
+**Return Value**
 The version information string.
 
-#### Code Snippet
+**Code Snippet**
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
 String versionInfo = reader.getVersion();

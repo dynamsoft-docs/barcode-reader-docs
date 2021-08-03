@@ -1,6 +1,5 @@
 <li><a href="{{ site.cpp }}" class="otherLinkColour">C++</a>
     <ul>
-        {%- if page.url contains '/cplusplus/' or page.url contains '/cplusplus-v' or page.url contains '/c-cplusplus/' or page.url contains '/c-cplusplus-v'-%}
         <li><a href="{{ site.cpp }}user-guide.html" class="otherLinkColour">User Guide</a></li>
         <li><a href="{{ site.cpp_api }}" class="otherLinkColour">API Reference</a>
             <ul>
@@ -16,17 +15,17 @@
                             <li><a href="{{ site.cpp_methods }}video.html" class="otherLinkColour">Video Methods</a></li>
                     </ul>
                 </li>
-                <li><a href="{{ site.cpp_api }}structs/index.html" class="otherLinkColour">Structs</a>
+                <li><a href="{{ site.structs }}?src=cpp" class="otherLinkColour">Structs</a>
                     <ul>
                         <li><a href="{{ site.structs }}AztecDetails.html?src=cpp" class="otherLinkColour">AztecDetails</a></li>
                         <li><a href="{{ site.structs }}Contour.html?src=cpp" class="otherLinkColour">Contour</a></li>
                         <li><a href="{{ site.structs }}DBRPoint.html?src=cpp" class="otherLinkColour">DBRPoint</a></li>
                         <li><a href="{{ site.structs }}DataMatrixDetails.html?src=cpp" class="otherLinkColour">DataMatrixDetails</a></li>
                         <li><a href="{{ site.structs }}DMDLSConnectionParameters.html?src=cpp" class="otherLinkColour">DM_DLSConnectionParameters</a></li>
-                        <li><a href="{{ site.structs }}ExtendedResult.html?src=cpp" class="otherLinkColour">ExtendedResult</code></a></li>
+                        <li><a href="{{ site.structs }}ExtendedResult.html?src=cpp" class="otherLinkColour">ExtendedResult</a></li>
                         <li><a href="{{ site.structs }}FrameDecodingParameters.html?src=cpp" class="otherLinkColour">FrameDecodingParameters</a></li>
-                        <li><a href="{{ site.structs }}FurtherModes.html?src=cpp" class="otherLinkColour">FurtherModes</code></a></li>
-                        <li><a href="{{ site.structs }}ImageData.html?src=cpp" class="otherLinkColour">ImageData</code></a></li>
+                        <li><a href="{{ site.structs }}FurtherModes.html?src=cpp" class="otherLinkColour">FurtherModes</a></li>
+                        <li><a href="{{ site.structs }}ImageData.html?src=cpp" class="otherLinkColour">ImageData</a></li>
                         <li><a href="{{ site.structs }}IntermediateResult.html?src=cpp" class="otherLinkColour">IntermediateResult</a></li>
                         <li><a href="{{ site.structs }}IntermediateResultArray.html?src=cpp" class="otherLinkColour">IntermediateResultArray</a></li>
                         <li><a href="{{ site.structs }}LineSegment.html?src=cpp" class="otherLinkColour">LineSegment</a></li>
@@ -43,7 +42,7 @@
                         <li><a href="{{ site.structs }}TextResultArray.html?src=cpp" class="otherLinkColour">TextResultArray</a></li>
                     </ul>
                 </li>
-                <li><a href="{{ site.enumerations }}" class="otherLinkColour">Enumerations</a></li>
+                <li><a href="{{ site.enumerations }}?src=cpp" class="otherLinkColour">Enumerations</a></li>
                 <li><a href="{{ site.cpp_api }}function-pointer.html" class="otherLinkColour">Callbacks</a></li>
             </ul>
         </li>
@@ -55,6 +54,5 @@
             </ul>
         </li>
         <li><a href="{{ site.cpp }}upgrade-instruction.html" class="otherLinkColour">Upgrade Instructions</a></li>
-        {%- endif -%}
     </ul>
 </li>

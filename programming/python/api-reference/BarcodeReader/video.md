@@ -38,7 +38,7 @@ Starts a new thread to decode barcodes from the inner frame queue.
 BarcodeReader.start_video_mode(frame_decoding_parameters, call_back_func, template_name="")
 ```
 
-### Parameters
+**Parameters**
 
 `[in] frame_decoding_parameters` <*class FrameDecodingParameters*> : The frame decoding parameters. You can get it by using init_frame_decoding_parameters() then modifying its parameters' value.  
 `[in] text_result_callback_func` <*function pointer*> : Sets callback function to process text results during frame decoding.  
@@ -63,7 +63,7 @@ BarcodeReader.start_video_mode(frame_decoding_parameters, call_back_func, templa
 
 [`BarcodeReaderError`](../class/BarcodeReaderError.md) : If error happens, this function will throw a BarcodeReaderError exception that can report the detailed error message.
 
-### Code Snippet
+**Code Snippet**
 
 ```python
 import cv2
@@ -165,11 +165,11 @@ Appends a frame image buffer to the inner frame queue.
 BarcodeReader.append_video_frame(video_frame)
 ```
 
-### Parameters
+**Parameters**
 
 `[in] video_frame` : Gets video frame by opencv.
 
-### Return value
+**Return Value**
 
 The current frame ID.
 
@@ -195,7 +195,7 @@ Initializes frame decoding parameters with default values.
 BarcodeReader.init_frame_decoding_parameters()
 ```
 
-### Return value
+**Return Value**
 
 `frame_decoding_parameters` <*class FrameDecodingParameters*> : The frame decoding parameters.
 
@@ -207,6 +207,6 @@ Gets the current length of the inner frame queue.
 BarcodeReader.get_length_of_frame_queue()	
 ```
 
-### Return value
+**Return Value**
 
 Returns the length of the inner frame queue.

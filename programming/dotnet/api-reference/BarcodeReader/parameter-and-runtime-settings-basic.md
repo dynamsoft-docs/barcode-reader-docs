@@ -28,17 +28,17 @@ Sets the optional argument for a specified mode in Modes parameters.
 ```csharp
 EnumErrorCode Dynamsoft.DBR.BarcodeReader.SetModeArgument(string modesName, int index, string argumentName, string argumentValue, out string errorMessage)
 ```   
-#### Parameters
+**Parameters**
 `[in]	modesName` <*string*> : The mode parameter name to set argument.  
 `[in]	index` <*int*> : The array index of mode parameter to indicate a specific mode.  
 `[in]	argumentName` <*string*> : The name of the argument to set.  
 `[in]	argumentValue` <*string*> : The value of the argument to set.  
 `[in,out]	errorMessage` <*string*> : The error message.
 
-#### Return value
+**Return Value**
 Returns error code.
 
-#### Remark
+**Remarks**
 Check follow link for available modes and arguments:
 - [`EnumBarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#barcodecolourmodes)
 - [`EnumBinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#binarizationmodes)
@@ -53,7 +53,7 @@ Check follow link for available modes and arguments:
 - [`EnumTextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#textfiltermodes)
 - [`EnumTextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes) 
 
-#### Code Snippet
+**Code Snippet**
 ```csharp
 BarcodeReader reader = new BarcodeReader();
 reader.ProductKeys = "t0260NwAAAHV***************";
@@ -77,17 +77,17 @@ Get argument value for the specified mode parameter.
 EnumErrorCode Dynamsoft.DBR.BarcodeReader.GetModeArgument(string modesName, int index, string argumentName, out string argumentValue, out string errorMessage)
 ```   
    
-#### Parameters  
+**Parameters**  
 `[in]	modesName` <*string*> : The mode parameter name to get argument.  
 `[in]	index` <*int*> : The array index of mode parameter to indicate a specific mode.  
 `[in]	argumentName` <*string*> : The name of the argument to get.  
 `[in,out]	argumentValue` <*string*> : The value of the argument to get.  
 `[in,out]	errorMessage` <*Optional*><*string*> : The error message.
 
-#### Return value
+**Return Value**
 Returns error code.
 
-#### Remark
+**Remarks**
 Check follow link for available modes and arguments:
 - [`EnumBarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#barcodecolourmodes)
 - [`EnumBinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#binarizationmodes)
@@ -103,7 +103,7 @@ Check follow link for available modes and arguments:
 - [`EnumTextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes)  
 
 
-#### Code Snippet
+**Code Snippet**
 ```csharp
 BarcodeReader reader = new BarcodeReader();
 reader.ProductKeys = "t0260NwAAAHV***************";
@@ -130,14 +130,14 @@ PublicRuntimeSettings Dynamsoft.DBR.BarcodeReader.GetRuntimeSettings()
 ```
 
 
-#### Return value
+**Return Value**
 The struct of template settings.
 
 
 #### Exceptions
 [`BarcodeReaderException`](../class/BarcodeReaderException.md) The exception thrown by Dynamsoft Barcode Reader.  
 
-#### Code Snippet
+**Code Snippet**
 ```csharp
 BarcodeReader reader = new BarcodeReader();
 reader.ProductKeys = "t0260NwAAAHV***************";
@@ -145,7 +145,7 @@ PublicRuntimeSettings settings =  reader.GetRuntimeSettings();
 reader.Dispose();
 ```
 
-#### See Also
+**See Also**
 [`PublicRuntimeSettings`](../struct/PublicRuntimeSettings.md)
 
 
@@ -160,13 +160,13 @@ Update runtime settings with a given struct.
 void Dynamsoft.DBR.BarcodeReader.UpdateRuntimeSettings(PublicRuntimeSettings settings)
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	settings` <*[PublicRuntimeSettings](../struct/PublicRuntimeSettings.md)*> : The struct of template settings.    
  
 #### Exceptions
 [`BarcodeReaderException`](../class/BarcodeReaderException.md) The exception thrown by Dynamsoft Barcode Reader.  
 
-#### Code Snippet
+**Code Snippet**
 ```csharp
 BarcodeReader reader = new BarcodeReader();
 reader.ProductKeys = "t0260NwAAAHV***************";
@@ -177,7 +177,7 @@ reader.UpdateRuntimeSettings(settings);
 reader.Dispose();
 ```
 
-#### See Also
+**See Also**
 [`PublicRuntimeSettings`](../struct/PublicRuntimeSettings.md)
 
 
@@ -192,7 +192,7 @@ Reset all parameters to default values.
 void Dynamsoft.DBR.BarcodeReader.ResetRuntimeSettings() 
 ```   
 
-#### Code Snippet
+**Code Snippet**
 ```csharp
 BarcodeReader reader = new BarcodeReader();
 reader.ProductKeys = "t0260NwAAAHV***************";

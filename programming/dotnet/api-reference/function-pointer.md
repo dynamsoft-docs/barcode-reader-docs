@@ -24,7 +24,7 @@ Represents the method that will handle the error code returned by the SDK.
 delegate void Dynamsoft.DBR.CB_Error(int frameId, int errorCode, IntPtr pUser)
 ```   
    
-#### Parameters
+**Parameters**
 `[in, out] frameId` The id of the frame.  
 `[in, out] errorCode` Error Code generated when decoding the frame.  
 `[in, out] pUser` Arguments pass to your function.  
@@ -40,7 +40,7 @@ Represents the method that will handle the intermediate result array returned by
 delegate void Dynamsoft.DBR.CB_IntermediateResult(int frameId, IntermediateResult[] intermediateResults, IntPtr pUser)
 ```   
    
-#### Parameters
+**Parameters**
 `[in, out] frameId` The id of the frame.  
 `[in, out] intermediateResults` The intermediate results of the frame. 
 `[in, out] pUser` Arguments pass to your function.  
@@ -56,7 +56,7 @@ Represents the method that will handle the text result array returned by the SDK
 delegate void Dynamsoft.DBR.CB_TextResult(int frameId, TextResult[]  textResults, IntPtr pUser) 
 ```   
    
-#### Parameters
+**Parameters**
 `[in, out] frameId` The id of the frame.  
 `[in, out] intermediateResults` The intermediate results of the frame. 
 `[in, out] pUser` Arguments pass to your function. 

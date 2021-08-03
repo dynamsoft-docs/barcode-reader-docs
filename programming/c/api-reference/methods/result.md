@@ -28,15 +28,15 @@ Get all recognized barcode results.
 DBR_API int DBR_GetAllTextResults (void* barcodeReader, TextResultArray** pResults)	
 ```   
    
-#### Parameters
+**Parameters**
 `[in] barcodeReader` Handle of the barcode reader instance.  
 `[out] pResults`	Barcode text results returned by last calling function [`DBR_DecodeFile`](decode.md#dbr_decodefile) / [`DBR_DecodeFileInMemory`](decode.md#dbr_decodefileinmemory) / [`DBR_DecodeBuffer`](decode.md#dbr_decodebuffer) / [`DBR_DecodeBase64String`](decode.md#dbr_decodebase64string) / [`DBR_DecodeDIB`](decode.md#dbr_decodedib). The results is allocated by SDK and should be freed by calling function [`DBR_FreeTextResults`](#dbr_freetextresults).
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* barcodeReader = DBR_CreateInstance();
 DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
@@ -60,10 +60,10 @@ Free memory allocated for text results.
 DBR_API void DBR_FreeTextResults (TextResultArray** pResults)	
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	pResults` Text results.
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* barcodeReader = DBR_CreateInstance();
 DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
@@ -88,16 +88,16 @@ DBR_API int DBR_GetIntermediateResults (void* barcodeReader, IntermediateResultA
 ```   
 
    
-#### Parameters
+**Parameters**
 `[in] barcodeReader` Handle of the barcode reader instance.  
 `[out]	pResult` The intermediate results returned by the SDK.
 
-#### Return value
+**Return Value**
 Returns error code. Possible return(s): DBR_OK.     
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* barcodeReader = DBR_CreateInstance();
 DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
@@ -127,10 +127,10 @@ Frees memory allocated for the intermediate results.
 DBR_API void DBR_FreeIntermediateResults (IntermediateResultArray** pResults)
 ```   
    
-#### Parameters
+**Parameters**
 `[in] pResults` The intermediate results.
 
-#### Code Snippet
+**Code Snippet**
 ```c
 void* barcodeReader = DBR_CreateInstance();
 DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");

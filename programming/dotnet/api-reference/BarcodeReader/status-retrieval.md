@@ -23,10 +23,10 @@ Get version information of SDK.
 string Dynamsoft.DBR.BarcodeReader.GetVersion()
 ```
 
-#### Return value
+**Return Value**
 The version info string. 
 
-#### Code Snippet
+**Code Snippet**
 ```csharp
 BarcodeReader reader = new BarcodeReader();
 string version = reader.GetVersion();

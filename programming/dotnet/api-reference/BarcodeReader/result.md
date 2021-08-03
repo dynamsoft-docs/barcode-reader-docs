@@ -26,10 +26,10 @@ Returns intermediate results containing the original image, the colour clustered
 IntermediateResult[] Dynamsoft.DBR.BarcodeReader.GetIntermediateResults() 
 ```   
 
-#### Return value
+**Return Value**
 Intermediate results. 
 
-#### Code Snippet
+**Code Snippet**
 ```csharp
 BarcodeReader reader = new BarcodeReader();
 reader.ProductKeys = "t0260NwAAAHV***************";
@@ -43,5 +43,5 @@ IntermediateResult[] intermediateResults = reader.GetIntermediateResults();
 reader.Dispose();
 ```
 
-#### See Also
+**See Also**
 [`IntermediateResult`](../class/IntermediateResult.md)

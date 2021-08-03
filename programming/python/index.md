@@ -7,7 +7,7 @@ needAutoGenerateSidebar: false
 ---
 
 
-# Python Documentation
+# Documentation - Python
 This is the main page of Dynamsoft Barcode Reader SDK documentation for Python Language. Go to [User Guide](#getting-started) which provides a brief guide for how to integrate the Dynamsoft Barcode Reader to your application or run the samples. Go to [API Reference](#api-reference) which offers the manual of interfaces used for reading barcodes.
 
 ## Getting Started

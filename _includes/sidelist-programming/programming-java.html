@@ -1,6 +1,5 @@
 <li><a href="{{ site.java }}" class="otherLinkColour">Java</a>
     <ul>
-        {%- if page.url contains '/java/' or page.url contains '/java-v' -%}
         <li><a href="{{ site.java }}user-guide.html" class="otherLinkColour">User Guide</a></li>
         <li><a href="{{ site.java_api }}" class="otherLinkColour">API Reference</a>
             <ul>
@@ -41,7 +40,7 @@
                         <li><a href="{{ site.java_api }}class/TextResult.html" class="otherLinkColour">TextResult</a></li>
                     </ul>
                 </li>
-                <li><a href="{{ site.enumerations }}" class="otherLinkColour">Enumerations</a></li>
+                <li><a href="{{ site.enumerations }}?src=java" class="otherLinkColour">Enumerations</a></li>
                 <li><a href="{{ site.java_api }}interface.html" class="otherLinkColour">Interfaces</a></li>
             </ul>
         </li>
@@ -53,6 +52,5 @@
             </ul>
         </li>
         <li><a href="{{ site.java }}upgrade-instruction.html" class="otherLinkColour">Upgrade Instructions</a></li>
-        {%- endif -%}
     </ul>
 </li>

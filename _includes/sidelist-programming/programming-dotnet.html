@@ -1,6 +1,5 @@
 <li><a href="{{ site.dotnet }}" class="otherLinkColour">.NET</a>
     <ul>
-        {%- if page.url contains '/dotnet/' or page.url contains '/dotnet-v' -%}
         <li><a href="{{ site.dotnet }}user-guide.html" class="otherLinkColour">User Guide</a></li>
         <li><a href="{{ site.dotnet_api }}" class="otherLinkColour">API Reference</a>
             <ul>
@@ -34,7 +33,7 @@
                             <li><a href="{{ site.dotnet_api }}class/QRCodeDetails.html" class="otherLinkColour">QRCodeDetails</a></li>
                             <li><a href="{{ site.dotnet_api }}class/Quadrilateral.html" class="otherLinkColour">Quadrilateral</a></li>
                             <li><a href="{{ site.dotnet_api }}class/RegionOfInterest.html" class="otherLinkColour">RegionOfInterest</a></li>
-                            <li><a href="{{ site.dotnet_api }}class/SamplingImageData.html"class="otherLinkColour">SamplingImageData</a></li>
+                            <li><a href="{{ site.dotnet_api }}class/SamplingImageData.html" class="otherLinkColour">SamplingImageData</a></li>
                             <li><a href="{{ site.dotnet_api }}class/TextResult.html" class="otherLinkColour">TextResult</a></li>
                     </ul>
                 </li>
@@ -45,7 +44,7 @@
                             <li><a href="{{ site.dotnet_api }}struct/RegionDefinition.html" class="otherLinkColour">RegionDefinition</a></li>
                     </ul>
                 </li>
-                <li><a href="{{ site.enumerations }}" class="otherLinkColour">Enumerations</a></li>
+                <li><a href="{{ site.enumerations }}?src=dotnet" class="otherLinkColour">Enumerations</a></li>
                 <li><a href="{{ site.dotnet_api }}function-pointer.html" class="otherLinkColour">Delegates</a></li>
             </ul>
         </li>
@@ -57,6 +56,5 @@
             </ul>
         </li>
         <li><a href="{{ site.dotnet }}upgrade-instruction.html" class="otherLinkColour">Upgrade Instructions</a></li>
-        {%- endif -%}
     </ul>
 </li>

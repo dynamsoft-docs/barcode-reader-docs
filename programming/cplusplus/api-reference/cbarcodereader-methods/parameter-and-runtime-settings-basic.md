@@ -29,7 +29,7 @@ Set argument value for the specified mode parameter.
 ```cpp
 int dynamsoft::dbr::CBarcodeReader::SetModeArgument (const char* pModesName, const int index, const char* pArgumentName, const char* pArgumentValue, char errorMsgBuffer[] = NULL,  onst int errorMsgBufferLen = 0)	
 ```   
-#### Parameters
+**Parameters**
 `[in]	pModesName` The mode parameter name to set argument.  
 `[in]	index` The array index of mode parameter to indicate a specific mode.  
 `[in]	pArgumentName` The name of the argument to set.  
@@ -37,11 +37,11 @@ int dynamsoft::dbr::CBarcodeReader::SetModeArgument (const char* pModesName, con
 `[in,out]	errorMsgBuffer`<sub>Optional</sub> The buffer is allocated by the caller and the recommended length is 256. The error message will be copied to the buffer.  
 `[in]	errorMsgBufferLen`<sub>Optional</sub> The length of the allocated buffer.  
 
-#### Return value
+**Return Value**
 Returns error code. Possible return(s): DBR_OK; DBRERR_SET_MODE_ARGUMENT_ERROR.  
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
-#### Remark
+**Remarks**
 Check follow link for available modes and arguments:
 - [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#mode-arguments)
 - [`BinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#mode-arguments)
@@ -56,7 +56,7 @@ Check follow link for available modes and arguments:
 - [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#mode-arguments)
 - [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#mode-arguments) 
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
@@ -84,7 +84,7 @@ Get argument value for the specified mode parameter.
 int dynamsoft::dbr::CBarcodeReader::GetModeArgument (const char* pModesName, const int index, const char* pArgumentName, char valueBuffer[], const int valueBufferLen, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)	
 ```   
    
-#### Parameters  
+**Parameters**  
 `[in]	pModesName` The mode parameter name to get argument.  
 `[in]	index` The array index of mode parameter to indicate a specific mode.  
 `[in]	pArgumentName` The name of the argument to get.  
@@ -93,11 +93,11 @@ int dynamsoft::dbr::CBarcodeReader::GetModeArgument (const char* pModesName, con
 `[in,out]	errorMsgBuffer`<sub>Optional</sub> The buffer is allocated by the caller and the recommended length is 256. The error message will be copied to the buffer.  
 `[in]	errorMsgBufferLen`<sub>Optional</sub> The length of the allocated buffer.  
 
-#### Return value
+**Return Value**
 Returns error code. Possible return(s): DBR_OK; DBRERR_GET_MODE_ARGUMENT_ERROR.  
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
-#### Remark
+**Remarks**
 Check follow link for available modes and arguments:
 - [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#mode-arguments)
 - [`BinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#mode-arguments)
@@ -112,7 +112,7 @@ Check follow link for available modes and arguments:
 - [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#mode-arguments)
 - [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#mode-arguments)   
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
@@ -142,14 +142,14 @@ Get current settings and save them into a [`PublicRuntimeSettings`]({{ site.stru
 int dynamsoft::dbr::CBarcodeReader::GetRuntimeSettings (PublicRuntimeSettings* psettings)	
 ```   
 
-#### Parameters
+**Parameters**
 `[in,out]	psettings`	The struct of template settings.
  
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).  
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
@@ -173,16 +173,16 @@ Update runtime settings with a given [`PublicRuntimeSettings`]({{ site.structs }
 int dynamsoft::dbr::CBarcodeReader::UpdateRuntimeSettings (PublicRuntimeSettings* pSettings, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	pSettings`	The struct of template settings.  
 `[in,out]	errorMsgBuffer`<sub>Optional</sub> The buffer is allocated by caller and the recommended length is 256. The error message will be copied to the buffer.  
 `[in]	errorMsgBufferLen`<sub>Optional</sub> The length of the allocated buffer.  
  
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).  
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
@@ -209,11 +209,11 @@ Reset all parameters to default values.
 int dynamsoft::dbr::CBarcodeReader::ResetRuntimeSettings ()
 ```   
 
-#### Return value
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).  
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");

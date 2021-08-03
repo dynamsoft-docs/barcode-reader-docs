@@ -30,7 +30,7 @@ Reads product key and activates the SDK.
 void com.dynamsoft.dbr.BarcodeReader.initLicense(String license) throws BarcodeReaderException
 ```   
    
-### Parameters
+**Parameters**
 
 - `license` The product keys.
 
@@ -38,7 +38,7 @@ void com.dynamsoft.dbr.BarcodeReader.initLicense(String license) throws BarcodeR
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader();
@@ -54,7 +54,7 @@ Initializes the license and connects to the specified server for online verifica
 void com.dynamsoft.dbr.BarcodeReader.initLicenseFromServer(String licenseServer, String licenseKey)	throws BarcodeReaderException
 ```   
    
-### Parameters
+**Parameters**
 
 - `licenseServer` The URL of the license server.  
 - `licenseKey` The license key.
@@ -63,7 +63,7 @@ void com.dynamsoft.dbr.BarcodeReader.initLicenseFromServer(String licenseServer,
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
@@ -79,7 +79,7 @@ Initializes barcode reader license from the license content on the client machin
 void com.dynamsoft.dbr.BarcodeReader.initLicenseFromLicenseContent(String licenseKey, String licenseContent) throws BarcodeReaderException
 ```   
 
-### Parameters
+**Parameters**
 
 - `licenseKey` The license key.  
 - `licenseContent` An encrypted string representing the license content (quota, expiration date, barcode type, etc.) obtained from the method [`OutputLicenseToString`](#outputlicensetostring).
@@ -88,7 +88,7 @@ void com.dynamsoft.dbr.BarcodeReader.initLicenseFromLicenseContent(String licens
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
@@ -104,7 +104,7 @@ Outputs the license content as an encrypted string from the license server for o
 String com.dynamsoft.dbr.BarcodeReader.outputLicenseToString() throws BarcodeReaderException
 ```   
    
-### Return value
+**Return Value**
 
 The output string which stores the content of the license.
 
@@ -112,12 +112,12 @@ The output string which stores the content of the license.
 
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
-### Remark
+**Remarks**
 
 [`InitLicenseFromServer`](#initlicensefromserver) has to be successfully called before calling this method.
 
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
@@ -134,7 +134,7 @@ Initializes a `DMDLSConnectionParameters` struct with default values.
 static DMDLSConnectionParameters com.dynamsoft.dbr.BarcodeReader.initDLSConnectionParameters() throws BarcodeReaderException
 ```
    
-### Code Snippet
+**Code Snippet**
 
 ```java
 DMDLSConnectionParameters info = BarcodeReader.initDLSConnectionParameters();
@@ -152,11 +152,11 @@ Initializes the barcode reader license and connects to the specified server for 
 static void com.dynamsoft.dbr.BarcodeReader.initLicenseFromDLS(DMDLSConnectionParameters dlsInfo) throws BarcodeReaderException
 ```
 
-### Parameters
+**Parameters**
 
 - `dlsInfo`: The struct `DMDLSConnectionParameters` with customized settings.  
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 DMDLSConnectionParameters info = BarcodeReader.initDLSConnectionParameters();
@@ -174,11 +174,11 @@ Gets the count of available instances when charging by concurrent instances coun
 static int com.dynamsoft.dbr.BarcodeReader.getIdleInstancesCount()
 ```   
 
-### Return value
+**Return Value**
 
 Returns available instances count.    
 
-### Code Snippet
+**Code Snippet**
 
 ```java
 //...

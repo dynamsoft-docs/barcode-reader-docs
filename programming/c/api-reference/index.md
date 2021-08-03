@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
-# C API Reference
+# API Reference - C Language
 		
 ## Global Functions
 

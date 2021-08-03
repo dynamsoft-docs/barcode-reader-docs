@@ -17,11 +17,6 @@
                         <input id="txtSearch" class="search" type="text">
                     </div>
                     <ul class="mainPage" id="fullTreeMenuListContainer" name="listLevel1">
-                        {%- include sidelist-introduction.html -%}
-                        {%- include sidelist-programming.html -%}
-                        {%- include sidelist-parameters.html -%}
-                        {%- include sidelist-enhancement.html -%}
-                        {%- include sidelist-license_activation.html -%}
                     </ul>
                 </div>
             </div>
@@ -62,7 +57,7 @@
         <div class="container">
             <div class="col-xs-12">
                 {%- include liquid_autoGenerateHistoryList.html -%}
-                {%- include version-list.html -%}
+                {%- include auto-version-list.html -%}
             </div>
         </div>
     </div>
@@ -70,6 +65,7 @@
         {%- include page_footer.html -%}
     </div>
 
+    <iframe id="sideBarIframe" src="{{site.firstLevelUrl}}/Hide_Tree_Page.html" allow="" height="0" frameborder="0"></iframe>
     <script type="text/javascript">anchors.add();</script>
 
 
@@ -77,21 +73,9 @@
         UrlReplace();
     </script>
     
-    {%- if page.needAutoGenerateSidebar -%}
-    {%- unless page.needGenerateH3Content -%}
     <script type="text/javascript">
-        FullTreeMenuList(true, false);
+        FullTreeMenuList('{{page.needAutoGenerateSidebar}}', '{{page.needGenerateH3Content}}','{{page.pageStartVer}}','{{site.useVersionTree}}');
     </script>
-    {%- else -%}
-    <script type="text/javascript">
-        FullTreeMenuList(true);
-    </script>
-    {%- endunless -%}
-    {%- else -%}
-    <script type="text/javascript">
-        FullTreeMenuList(false);
-    </script>
-    {%- endif -%}
 
     {%- include livehelp.html -%}
 

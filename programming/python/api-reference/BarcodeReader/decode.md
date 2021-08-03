@@ -28,12 +28,12 @@ Decode barcodes from a specified image file.
 BarcodeReader.decode_file(image_file_name, template_name="")
 ```
 
-### Parameters
+**Parameters**
 
 - `[in] image_file_name` <*str*> :	A string defining the file name.   
 - `[in] template_name` <*optional*><*str*> : The template name.
 
-### Return value
+**Return Value**
 
 `text_results <*list[class TextResult]*>` : All text results.
 
@@ -41,7 +41,7 @@ BarcodeReader.decode_file(image_file_name, template_name="")
 
 [`BarcodeReaderError`](../class/BarcodeReaderError.md) The exception thrown by Dynamsoft Barcode Reader.  
 
-### Code Snippet
+**Code Snippet**
 
 ```python
 from dbr import *
@@ -73,13 +73,13 @@ Decodes barcodes from the memory buffer containing image pixels in defined forma
 BarcodeReader.decode_buffer(image, image_pixel_format=EnumImagePixelFormat.IPF_RGB_888, template_name="")
 ```   
    
-### Parameters
+**Parameters**
 `[in] image` <*class numpy.ndarray*> : The image which is processed by opencv.  
 `[in] image_pixel_format` <*class EnumImagePixelFormat*> : The image pixel format used in the image byte array.  
 `[in] template_name` <*optional*><*str*> : The template name.
 
 
-### Return value
+**Return Value**
 
 `text_results <*list[class TextResult]*>` : All text results.
 
@@ -87,7 +87,7 @@ BarcodeReader.decode_buffer(image, image_pixel_format=EnumImagePixelFormat.IPF_R
 
 [`BarcodeReaderError`](../class/BarcodeReaderError.md) : If error happens, this function will throw a BarcodeReaderError exception that can report the detailed error message.  
 
-### Code Snippet
+**Code Snippet**
 
 ```python
 import cv2
@@ -122,12 +122,12 @@ Decodes barcodes from an image file in memory.
 BarcodeReader.decode_file_stream(file_stream, template_name="")
 ```
 
-### Parameters
+**Parameters**
 
 - `[in]	file_stream` <*bytearray*>  : The image file bytes in memory.  
 - `[in] templateName` <*optional*><*str*>: The template name.
 
-### Return value
+**Return Value**
 
 All barcode text results decoded successfully. 
 
@@ -135,7 +135,7 @@ All barcode text results decoded successfully.
 
 [`BarcodeReaderError`](../class/BarcodeReaderError.md) The exception thrown by Dynamsoft Barcode Reader.  
 
-### Code Snippet
+**Code Snippet**
 
 ```python
 from dbr import *
@@ -171,7 +171,7 @@ Decodes barcodes from the memory buffer containing image pixels in defined forma
 BarcodeReader.decode_buffer_manually(self, buffer, width, height, stride, image_pixel_format, template_name="")
 ```   
    
-### Parameters
+**Parameters**
 `[in] buffer` <*bytes or bytearray*> : The array of bytes which contain the image data.  
 `[in] width` <*int*> : The width of the image in pixels.  
 `[in] height` <*int*> : The height of the image in pixels.  
@@ -180,7 +180,7 @@ BarcodeReader.decode_buffer_manually(self, buffer, width, height, stride, image_
 `[in] template_name` <*optional*><*str*> : The template name.
 
 
-### Return value
+**Return Value**
 text_results <*list[class TextResult]*> : All text results.
 
 ### Exception
@@ -194,11 +194,11 @@ Inits an intermediateResult struct with default values.
 BarcodeReader.init_intermediate_result(intermediate_result_type)
 ```
 
-### Parameters
+**Parameters**
 
 - `[in] intermediate_result_type` <*class EnumImagePixelFormat*> :	The type of the intermediate result to init.   
 
-### Return value
+**Return Value**
 
 `intermediate_result <*class IntermediateResult*>` : An intermediateResult struct with default values.
 
@@ -206,7 +206,7 @@ BarcodeReader.init_intermediate_result(intermediate_result_type)
 
 [`BarcodeReaderError`](../class/BarcodeReaderError.md) The exception thrown by Dynamsoft Barcode Reader.  
 
-### Code Snippet
+**Code Snippet**
 
 ```python
 from dbr import *
@@ -238,12 +238,12 @@ Decodes barcode from intermediate results.
 BarcodeReader.decode_intermediate_results(intermediate_results, template_name="")
 ```
 
-### Parameters
+**Parameters**
 
 - `[in] intermediate_results` <*list[class IntermediateResults]*> :	The intermediate result array for decoding.   
 - `[in] template_name` <*optional*><*str*> : The template name.
 
-### Return value
+**Return Value**
 
 `text_results <*list[class TextResult]*>` : All text results.
 
@@ -251,7 +251,7 @@ BarcodeReader.decode_intermediate_results(intermediate_results, template_name=""
 
 [`BarcodeReaderError`](../class/BarcodeReaderError.md) The exception thrown by Dynamsoft Barcode Reader.  
 
-### Code Snippet
+**Code Snippet**
 
 ```python
 from dbr import *

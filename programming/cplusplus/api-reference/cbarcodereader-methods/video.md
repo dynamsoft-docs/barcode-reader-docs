@@ -53,7 +53,7 @@ Start a new thread to decode barcodes from the inner frame queue with specific f
 int dynamsoft::dbr::CBarcodeReader::StartFrameDecoding (const int maxQueueLength, const int maxResultQueueLength, const int width, const int height, const int stride, const ImagePixelFormat format, const char* pTemplateName = "") 
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	maxQueueLength` The max number of frames waiting for decoding.  
 `[in]	maxResultQueueLength` The max number of frames whose results (text result/localization result) will be kept.  
 `[in]	width` The width of the frame image in pixels.  
@@ -62,14 +62,14 @@ int dynamsoft::dbr::CBarcodeReader::StartFrameDecoding (const int maxQueueLength
 `[in]	format` The image pixel format used in the image byte array.  
 `[in] pTemplateName`<sub>Optional</sub> The template name.  
 
-#### Return value
+**Return Value**
 Returns error code. Possible return(s): DBR_OK; DBRERR_FRAME_DECODING_THREAD_EXISTS; DBRERR_PARAMETER_VALUE_INVALID.   
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
-#### Remark
+**Remarks**
 If no template name is specified, current runtime settings will be used.
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
@@ -91,18 +91,18 @@ Start a new thread to decode barcodes from the inner frame queue with specific f
 int dynamsoft::dbr::CBarcodeReader::StartFrameDecodingEx (FrameDecodingParameters parameters, const char* pTemplateName = "")	
 ```   
    
-#### Parameters
+**Parameters**
 `[in] parameters` The frame decoding parameters.   
 `[in] pTemplateName`<sub>Optional</sub> The template name.
 
-#### Return value
+**Return Value**
 Returns error code. Possible return(s): DBR_OK; DBRERR_FRAME_DECODING_THREAD_EXISTS; DBRERR_PARAMETER_VALUE_INVALID.   
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*  
    
-#### Remark
+**Remarks**
 If no template name is specified, current runtime settings will be used.
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
@@ -142,13 +142,13 @@ Append a frame image buffer to the inner frame queue.
 int dynamsoft::dbr::CBarcodeReader::AppendFrame (unsigned char* pBufferBytes) 
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	pBufferBytes` The array of bytes which contain the image data.
 
-#### Return value
+**Return Value**
 Returns the ID of the appended frame.
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
@@ -171,14 +171,14 @@ Stop the frame decoding thread created by [`StartFrameDecoding`](#startframedeco
 int dynamsoft::dbr::CBarcodeReader::AppendFrame (unsigned char* pBufferBytes) 
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	pBufferBytes` The array of bytes which contain the image data.
 
-#### Return value
+**Return Value**
 Returns error code. Possible return(s): DBR_OK; DBRERR_FRAME_DECODING_THREAD_EXISTS; DBRERR_PARAMETER_VALUE_INVALID.   
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
@@ -202,15 +202,15 @@ Initialize frame decoding parameters with default values.
 int dynamsoft::dbr::CBarcodeReader::InitFrameDecodingParameters (FrameDecodingParameters* pParameters)
 ```   
    
-#### Parameters
+**Parameters**
 `[in,out] pParameters` The frame decoding parameters.
 
-#### Return value
+**Return Value**
 Returns error code. Possible return(s): DBR_OK.   
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
@@ -250,16 +250,16 @@ Set callback function to process errors generated during frame decoding.
 int dynamsoft::dbr::CBarcodeReader::SetErrorCallback (CB_Error cbFunction, void* pUser)	
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	cbFunction`	Callback function.   
 `[in]	pUser` Customized arguments passed to your function.
 
 
-#### Return value
+**Return Value**
 Returns error code. Possible return(s): DBR_OK; DBRERR_FRAME_DECODING_THREAD_EXISTS.     
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 void ErrorFunction(int frameId, int errorCode, void * pUser)
 {
@@ -284,16 +284,16 @@ Set callback function to process text results generated during frame decoding.
 int dynamsoft::dbr::CBarcodeReader::SetTextResultCallback (CB_TextResult cbFunction, void* pUser)	
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	cbFunction`	Callback function.   
 `[in]	pUser` Customized arguments passed to your function.
 
 
-#### Return value
+**Return Value**
 Returns error code. Possible return(s): DBR_OK; DBRERR_FRAME_DECODING_THREAD_EXISTS.     
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 void TextResultFunction(int frameId, TextResultArray *pResults, void * pUser)
 {
@@ -318,17 +318,17 @@ Set callback function to process intermediate results generated during frame dec
 int dynamsoft::dbr::CBarcodeReader::SetIntermediateResultCallback (CB_IntermediateResult cbFunction, void* pUser)		
 ```   
    
-#### Parameters
+**Parameters**
 `[in]	cbFunction`	Callback function.   
 `[in]	pUser` Customized arguments passed to your function.
 
 
-#### Return value
+**Return Value**
 Returns error code. Possible return(s): DBR_OK; DBRERR_FRAME_DECODING_THREAD_EXISTS.     
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 void IntermediateResultFunction(int frameId, IntermediateResultArray *pResults, void * pUser)
 {
@@ -359,10 +359,10 @@ Get length of current inner frame queue.
 int dynamsoft::dbr::CBarcodeReader::GetLengthOfFrameQueue ()	
 ```
 
-#### Return value
+**Return Value**
 Returns length of current inner frame queue.
 
-#### Code Snippet
+**Code Snippet**
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
