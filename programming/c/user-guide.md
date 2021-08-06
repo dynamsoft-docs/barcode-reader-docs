@@ -30,7 +30,7 @@ If you haven't downloaded the SDK yet, download the `C/C++ Package` now from <a 
 
 ## Build Your First Application
 Let's start by creating a console application which demonstrates how to use the minimum code to read barcodes from an image file.  
->You can download the entire source code and compiled program from [Here](assets/user-guide/dbr-c-sample.zip).
+>You can download the entire source code and compiled program from [Here](https://download2.dynamsoft.com/samples/dbr/user-guide/dbr-c-sample.zip).
 
 ### Create a New Project 
 
@@ -194,7 +194,7 @@ Please change all `[INSTALLATION FOLDER]` in above code snippet to your unpackin
     ./DBRCSample
     ```
 
->You can download the entire source code and compiled program from [Here](assets/user-guide/dbr-c-sample.zip).
+>You can download the entire source code and compiled program from [Here](https://download2.dynamsoft.com/samples/dbr/user-guide/dbr-c-sample.zip).
 
 ## Related Articles
 - [How to select the appropriate DBR parameter configuration]({{ site.scenario_settings }})

@@ -33,7 +33,7 @@ After you unzip the file, you can find samples for supported platforms in the **
 
 ## Build Your First Application
 Let's start by creating a console application which demonstrates how to use the minimum code to read barcodes from an image file.  
->You can download the entire source code and compiled program from [Here](assets/user-guide/dbr-csharp-sample.zip).
+>You can download the entire source code and compiled program from [Here](https://download2.dynamsoft.com/samples/dbr/user-guide/dbr-csharp-sample.zip).
 
 ### Create a New Project 
 
@@ -132,7 +132,7 @@ Please change all `[INSTALLATION FOLDER]` in above code snippet to your unpackin
  >If you got the exception "Failed to create compression directory" or "Failed to load module dll", please copy `x64` and `x86` folders to the folder where `Dynamsoft.BarcodeReader.dll` and `DynamsoftCommon.dll` resides and try again. The `x64` and `x86` folders can be found under `[INSTALLATION FOLDER]\Lib\2.0` or `[INSTALLATION FOLDER]\Lib\4.0`.
 
 
->You can download the entire source code and compiled program from [Here](assets/user-guide/dbr-csharp-sample.zip).
+>You can download the entire source code and compiled program from [Here](https://download2.dynamsoft.com/samples/dbr/user-guide/dbr-csharp-sample.zip).
 
 ## Related Articles
 - [How to select the appropriate DBR parameter configuration]({{ site.scenario_settings }})

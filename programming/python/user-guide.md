@@ -35,7 +35,7 @@ pip install dbr
 
 ## Build Your First Application
 Let's start by creating a console application which demonstrates how to use the minimum code to read barcodes from an image file.  
->You can download the entire source code from [Here](assets/user-guide/dbr-python-sample.zip).
+>You can download the entire source code from [Here](https://download2.dynamsoft.com/samples/dbr/user-guide/dbr-python-sample.zip).
 
 ### Create a New Project 
 Create a new source file named `DBRPythonSample.py`.
@@ -116,7 +116,7 @@ del reader
 python DBRPythonSample.py
 ```
 
->You can download the entire source code from [Here](assets/user-guide/dbr-python-sample.zip).
+>You can download the entire source code from [Here](https://download2.dynamsoft.com/samples/dbr/user-guide/dbr-python-sample.zip).
 
 ## Related Articles
 - [How to select the appropriate DBR parameter configuration]({{ site.scenario_settings }})
