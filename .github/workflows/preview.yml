@@ -37,7 +37,8 @@ jobs:
           cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DBRDocPreview/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
           -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DBRDocPreview/_config.yml
-          cd DBRDocPreview && bundle exec jekyll build --incremental
+          cd DBRDocPreview && bundle exec jekyll build
+          #--incremental
           #python3 /home/ubuntu/ftp.py /home/ubuntu/DBRDocPreview/_site/ ./www.dynamsoft.com/barcode-reader/ test
 
           
