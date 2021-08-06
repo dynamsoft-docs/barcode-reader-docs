@@ -22,7 +22,38 @@ Sets the degree of blurriness of the barcode.
 
 **Remarks**     
 If you have a blurry image, you can set this property to a larger value. The higher value set, the more effort the library will spend to decode images, but it may also slow down the recognition process.<br>
-DeblurLevel is now deprecated. It still works in this version but could be removed in the near future. We recommend using [`DeblurModes`](DeblurModes.md#deblurmodes) instead.
+DeblurLevel is now deprecated. It still works in this version but could be removed in the near future. We recommend using [`DeblurModes`](DeblurModes.md#deblurmodes) instead. Migrating mapping:
+
+- For Barcode Format PDF417  
+
+| DeblurLevel |	DeblurModes |  
+| ----------- | ------------------- |  
+| 0 | [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION] |
+| 1-3 | [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION] |
+| 4-6 | [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION,DM_SMOOTHING] |
+| 7-8 | [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION,DM_SMOOTHING，DM_GRAY_EQUALIZATION] |
+| 9 | [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION,DM_SMOOTHING，DM_GRAY_EQUALIZATION,DM_MORPHING,DM_DEEP_ANALYSIS] |
+
+- For Barcode Format OneD  
+
+| DeblurLevel |	DeblurModes |
+| ----------- | ------------------- |
+| 0 | [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_THRESHOLD_BINARIZATION] |
+| 1-3 | [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION] |
+| 4-6 | [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION,DM_SMOOTHING] |
+| 7-8 | [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION,DM_SMOOTHING，DM_GRAY_EQUALIZATION] |
+| 9 | [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION,DM_DEEP_ANALYSIS,DM_SMOOTHING，DM_GRAY_EQUALIZATION,DM_MORPHING] |
+
+- For other formats
+
+| DeblurLevel |	DeblurModes |
+| ----------- | ------------------- |
+| 0 | [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION] |
+| 1-3 | [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION] |
+| 4-6 | [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION,DM_SMOOTHING] |
+| 7-8 | [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION,DM_SMOOTHING，DM_GRAY_EQUALIZATION] |
+| 9 | [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION,DM_DEEP_ANALYSIS,DM_SMOOTHING，DM_GRAY_EQUALIZATION,DM_MORPHING] |
+
 
 
 ### As Json Parameter
