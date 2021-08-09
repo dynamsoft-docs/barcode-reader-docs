@@ -30,7 +30,8 @@ jobs:
           [ ! -d barcode-reader-docs-preview ] && git clone --depth 1 --branch preview https://github.com/Dynamsoft/barcode-reader-docs.git barcode-reader-docs-preview
           [ ! -d barcode-reader-docs-js-preview ] && git clone --depth 1 --branch preview https://github.com/Dynamsoft/barcode-reader-docs-js.git barcode-reader-docs-js-preview
           [ ! -d barcode-reader-docs-mobile-preview ] && git clone --depth 1 --branch preview https://github.com/Dynamsoft/barcode-reader-docs-mobile.git barcode-reader-docs-mobile-preview
-          [ ! -d DBRDocPreview ] && mkdir -p DBRDocPreview
+          [ -d DBRDocPreview ] && rm -rf DBRDocPreview
+          mkdir -p DBRDocPreview
           cd barcode-reader-docs-preview && git pull && cd .. && cp -rfp ./barcode-reader-docs-preview/* ./DBRDocPreview/
           cd barcode-reader-docs-js-preview && git pull && cd .. && cp -rfp ./barcode-reader-docs-js-preview/* ./DBRDocPreview/
           cd barcode-reader-docs-mobile-preview && git pull && cd .. && cp -rfp ./barcode-reader-docs-mobile-preview/* ./DBRDocPreview/
@@ -41,4 +42,12 @@ jobs:
           #--incremental
           #python3 /home/ubuntu/ftp.py /home/ubuntu/DBRDocPreview/_site/ ./www.dynamsoft.com/barcode-reader/ test
 
-          
+      - name: Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        with:
+          server: ${{ secrets.FTP_DYNAMSOFT_LOCAL_SERVER }}
+          username: ${{ secrets.FTP_DYNAMSOFT_LOCAL_USER }}
+          password: ${{ secrets.FTP_DYNAMSOFT_LOCAL_PASSWORD }}
+          port: 7500 
+          local-dir: /home/ubuntu/DBRDocPreview/_site/
+          server-dir: /www.dynamsoft.com/barcode-reade/tmp/          
