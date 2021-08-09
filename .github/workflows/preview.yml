@@ -23,24 +23,21 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       #- uses: actions/checkout@v2
 
-#      # Runs a set of commands using the runners shell
-#      - name: Run a multi-line script
-#        run: |
-#          cd /home/ubuntu
-#          [ ! -d barcode-reader-docs-preview ] && git clone --depth 1 --branch preview https://github.com/Dynamsoft/barcode-reader-docs.git barcode-reader-docs-preview
-#          [ ! -d barcode-reader-docs-js-preview ] && git clone --depth 1 --branch preview https://github.com/Dynamsoft/barcode-reader-docs-js.git barcode-reader-docs-js-preview
-#          [ ! -d barcode-reader-docs-mobile-preview ] && git clone --depth 1 --branch preview https://github.com/Dynamsoft/barcode-reader-docs-mobile.git barcode-reader-docs-mobile-preview
-#          [ -d DBRDocPreview ] && rm -rf DBRDocPreview
-#          mkdir -p DBRDocPreview
-#          cd barcode-reader-docs-preview && git pull && cd .. && cp -rfp ./barcode-reader-docs-preview/* ./DBRDocPreview/
-#          cd barcode-reader-docs-js-preview && git pull && cd .. && cp -rfp ./barcode-reader-docs-js-preview/* ./DBRDocPreview/
-#          cd barcode-reader-docs-mobile-preview && git pull && cd .. && cp -rfp ./barcode-reader-docs-mobile-preview/* ./DBRDocPreview/
-#          cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DBRDocPreview/
-#          sed -i -e "1,3s/blob\/master$/blob\/preview/" \
-#          -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DBRDocPreview/_config.yml
-#          cd DBRDocPreview && bundle exec jekyll build
-#          #--incremental
-#          #python3 /home/ubuntu/ftp.py /home/ubuntu/DBRDocPreview/_site/ ./www.dynamsoft.com/barcode-reader/ test
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          cd /home/ubuntu
+          [ ! -d barcode-reader-docs-preview ] && git clone --depth 1 --branch preview https://github.com/Dynamsoft/barcode-reader-docs.git barcode-reader-docs-preview
+          [ ! -d barcode-reader-docs-js-preview ] && git clone --depth 1 --branch preview https://github.com/Dynamsoft/barcode-reader-docs-js.git barcode-reader-docs-js-preview
+          [ ! -d barcode-reader-docs-mobile-preview ] && git clone --depth 1 --branch preview https://github.com/Dynamsoft/barcode-reader-docs-mobile.git barcode-reader-docs-mobile-preview
+          [ ! -d DBRDocPreview ] && mkdir -p DBRDocPreview
+          cd barcode-reader-docs-preview && git pull && cd .. && cp -rfp ./barcode-reader-docs-preview/* ./DBRDocPreview/
+          cd barcode-reader-docs-js-preview && git pull && cd .. && cp -rfp ./barcode-reader-docs-js-preview/* ./DBRDocPreview/
+          cd barcode-reader-docs-mobile-preview && git pull && cd .. && cp -rfp ./barcode-reader-docs-mobile-preview/* ./DBRDocPreview/
+          cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DBRDocPreview/
+          sed -i -e "1,3s/blob\/master$/blob\/preview/" \
+          -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DBRDocPreview/_config.yml
+          cd DBRDocPreview && bundle exec jekyll build --incremental
 
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
