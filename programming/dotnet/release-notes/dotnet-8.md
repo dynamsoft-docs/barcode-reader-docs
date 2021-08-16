@@ -28,7 +28,8 @@ noTitleIndex: true
 
 - Added a new method [`GetIdleInstancesCount`]({{site.dotnet_methods}}license.html#getidleinstancescount) to return the number of available instances when using the 'per concurrent instance' licensing model.
 - Added the [`organizationID`]({{site.dotnet_class}}DMLTSConnectionParameters.html#organizationid) property for license authentication.
-- Added new attributes [`isMirrored`]({{site.dotnet_class}}TextResult.html#ismirrored) to the `TextResult` class. `IsMirrored` returns whether the barcode is mirrored.
+- Added a new attribute [`isMirrored`]({{site.dotnet_class}}TextResult.html#ismirrored) to the `TextResult` class. `isMirrored` returns whether the barcode is mirrored.
+- Added a new attribute [`isDPM`]({{site.dotnet_class}}TextResult.html#isdpm) to the `TextResult` class. `isDPM` returns whether the barcode is recognized by the DPM mode.
 - Added a new argument, `ThresholdCompensation`, to the `BinarizationModes` mode arguments.
 
 ### Improved
