@@ -28,7 +28,8 @@ noTitleIndex: true
 
 - Added a new method [`GetIdleInstancesCount`]({{site.cpp_methods}}license.html#getidleinstancescount) to return the number of available instances when using the 'per concurrent instance' licensing model.
 - Added the [`organizationID`]({{site.structs}}DMLTSConnectionParameters.html?src=cpp#organizationid) property for license authentication.
-- Added new attributes [`isMirrored`]({{site.structs}}TextResult.html?src=cpp#ismirrored) to the `TextResult` class. `IsMirrored` returns whether the barcode is mirrored.
+- Added a new attribute [`isMirrored`]({{site.structs}}TextResult.html?src=cpp#ismirrored) to the `TextResult` class. `isMirrored` returns whether the barcode is mirrored.
+- Added a new attribute [`isDPM`]({{site.structs}}TextResult.html?src=cpp#isdpm) to the `TextResult` class. `isDPM` returns whether the barcode is recognized by the DPM mode.
 - Added a new argument, `ThresholdCompensation`, to the `BinarizationModes` mode arguments.
 
 ### Improved
