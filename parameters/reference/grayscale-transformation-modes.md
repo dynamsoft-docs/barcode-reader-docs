@@ -31,32 +31,6 @@ Transforms the image to inverted grayscale. This mode has the following argument
     
 ## Setting Methods
 
-### As JSON Parameter
-`GrayscaleTransformationModes` as a JSON parameter is a JSON Object array. Each JSON object is defined as below.   
-
-| Key Name | Key Value | Description |
-| -------- | --------- | ----------- |
-| Mode | Any one in Candidate Mode List as string | (Required) Specifies a mode for grayscale transformation.  |
-| LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
-| LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
-
-
-
-**JSON Parameter Example**   
-```
-{
-    "GrayscaleTransformationModes": [
-        {
-            "Mode": "GTM_ORIGINAL"
-        },
-        {
-            "Mode": "GTM_INVERTED" 
-        }
-    ]
-}
-```
-
-
 ### As `PublicRuntimeSettings` Member
 `GrayscaleTransformationModes` can be set dynamicaly during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 [`GrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode) Enumeration items.
 
@@ -83,6 +57,32 @@ delete pSettings;
 - [`GrayscaleTransformationMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)
 - `GetModeArgument:` [JavaScript]({{ site.cpp_methods }}BarcodeReader.html#getmodeargument) [C]({{ site.c_methods }}parameter-and-runtime-settings-basic.html#dbr_getmodeargument) [C++]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) [.NET]({{ site.dotnet_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#getmodeargument) [Python]({{ site.python_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#get_mode_argument) [Java]({{ site.java_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#getmodeargument) [Java-Android]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#getmodeargument) [Objective-C & Swift]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#getmodeargument)
 - `SetModeArgument:` [JavaScript]({{ site.cpp_methods }}BarcodeReader.html#setmodeargument) [C]({{ site.c_methods }}parameter-and-runtime-settings-basic.html#dbr_setmodeargument) [C++]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) [.NET]({{ site.dotnet_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#setmodeargument) [Python]({{ site.python_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#set_mode_argument) [Java]({{ site.java_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#setmodeargument) [Java-Android]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#setmodeargument) [Objective-C & Swift]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#setmodeargument)
+
+
+### As JSON Parameter
+`GrayscaleTransformationModes` as a JSON parameter is a JSON Object array. Each JSON object is defined as below.   
+
+| Key Name | Key Value | Description |
+| -------- | --------- | ----------- |
+| Mode | Any one in Candidate Mode List as string | (Required) Specifies a mode for grayscale transformation.  |
+| LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
+| LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
+
+
+
+**JSON Parameter Example**   
+```
+{
+    "GrayscaleTransformationModes": [
+        {
+            "Mode": "GTM_ORIGINAL"
+        },
+        {
+            "Mode": "GTM_INVERTED" 
+        }
+    ]
+}
+```
 
 
 ## Performance Adaptability

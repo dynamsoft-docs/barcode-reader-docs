@@ -39,6 +39,36 @@ Binarizes the image for each pixel based on a unified threshold. If the gray val
     
 ## Setting Methods
 
+### As `PublicRuntimeSettings` Member
+`BinarizationModes` can be set dynamicaly during runtime as a member of `PublicRuntimeSettings` struct, it is an array with 8 [`BinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) Enumeration items.
+
+
+**Code Snippet in C++**
+```cpp
+//...other codes
+PublicRuntimeSettings* pSettings = new PublicRuntimeSettings;
+int errorCode = reader->GetRuntimeSettings(pSettings);
+pSettings->binarizationModes[0] = BM_LOCAL_BLOCK;
+pSettings->binarizationModes[1] = BM_THRESHOLD;
+reader->UpdateRuntimeSettings(pSettings);
+reader->SetModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "0");
+reader->SetModeArgument("BinarizationModes", 1, "BinarizationThreshold", "125");
+delete pSettings;
+//...other codes
+```
+
+
+**Remarks**     
+`GetModeArgument` and `SetModeArgument` need to be called for getting and setting [`Arguments`](#candidate-argument-list).
+
+
+**See Also**      
+- `PublicRuntimeSettings:` [JavaScript]({{ site.js_api }}interface/RuntimeSettings.html) [C]({{ site.structs }}PublicRuntimeSettings.html?src=c) [C++]({{ site.structs }}PublicRuntimeSettings.html?src=cpp) [.NET]({{ site.dotnet_api }}struct/PublicRuntimeSettings.html) [Python]({{ site.python_api }}class/PublicRuntimeSettings.html) [Java]({{ site.java_api }}class/PublicRuntimeSettings.html) [Java-Android]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) [Objective-C & Swift]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html)
+- [`BinarizationMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)
+- `GetModeArgument:` [JavaScript]({{ site.cpp_methods }}BarcodeReader.html#getmodeargument) [C]({{ site.c_methods }}parameter-and-runtime-settings-basic.html#dbr_getmodeargument) [C++]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) [.NET]({{ site.dotnet_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#getmodeargument) [Python]({{ site.python_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#get_mode_argument) [Java]({{ site.java_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#getmodeargument) [Java-Android]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#getmodeargument) [Objective-C & Swift]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#getmodeargument)
+- `SetModeArgument:` [JavaScript]({{ site.cpp_methods }}BarcodeReader.html#setmodeargument) [C]({{ site.c_methods }}parameter-and-runtime-settings-basic.html#dbr_setmodeargument) [C++]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) [.NET]({{ site.dotnet_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#setmodeargument) [Python]({{ site.python_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#set_mode_argument) [Java]({{ site.java_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#setmodeargument) [Java-Android]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#setmodeargument) [Objective-C & Swift]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#setmodeargument)
+
+
 ### As JSON Parameter
 `BinarizationModes` as a JSON parameter is a JSON Object array. Each JSON object is defined as below.   
 
@@ -75,36 +105,6 @@ Binarizes the image for each pixel based on a unified threshold. If the gray val
 
 
 
-
-
-### As `PublicRuntimeSettings` Member
-`BinarizationModes` can be set dynamicaly during runtime as a member of `PublicRuntimeSettings` struct, it is an array with 8 [`BinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) Enumeration items.
-
-
-**Code Snippet in C++**
-```cpp
-//...other codes
-PublicRuntimeSettings* pSettings = new PublicRuntimeSettings;
-int errorCode = reader->GetRuntimeSettings(pSettings);
-pSettings->binarizationModes[0] = BM_LOCAL_BLOCK;
-pSettings->binarizationModes[1] = BM_THRESHOLD;
-reader->UpdateRuntimeSettings(pSettings);
-reader->SetModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "0");
-reader->SetModeArgument("BinarizationModes", 1, "BinarizationThreshold", "125");
-delete pSettings;
-//...other codes
-```
-
-
-**Remarks**     
-`GetModeArgument` and `SetModeArgument` need to be called for getting and setting [`Arguments`](#candidate-argument-list).
-
-
-**See Also**      
-- `PublicRuntimeSettings:` [JavaScript]({{ site.js_api }}interface/RuntimeSettings.html) [C]({{ site.structs }}PublicRuntimeSettings.html?src=c) [C++]({{ site.structs }}PublicRuntimeSettings.html?src=cpp) [.NET]({{ site.dotnet_api }}struct/PublicRuntimeSettings.html) [Python]({{ site.python_api }}class/PublicRuntimeSettings.html) [Java]({{ site.java_api }}class/PublicRuntimeSettings.html) [Java-Android]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) [Objective-C & Swift]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html)
-- [`BinarizationMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)
-- `GetModeArgument:` [JavaScript]({{ site.cpp_methods }}BarcodeReader.html#getmodeargument) [C]({{ site.c_methods }}parameter-and-runtime-settings-basic.html#dbr_getmodeargument) [C++]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) [.NET]({{ site.dotnet_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#getmodeargument) [Python]({{ site.python_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#get_mode_argument) [Java]({{ site.java_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#getmodeargument) [Java-Android]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#getmodeargument) [Objective-C & Swift]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#getmodeargument)
-- `SetModeArgument:` [JavaScript]({{ site.cpp_methods }}BarcodeReader.html#setmodeargument) [C]({{ site.c_methods }}parameter-and-runtime-settings-basic.html#dbr_setmodeargument) [C++]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) [.NET]({{ site.dotnet_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#setmodeargument) [Python]({{ site.python_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#set_mode_argument) [Java]({{ site.java_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#setmodeargument) [Java-Android]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#setmodeargument) [Objective-C & Swift]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#setmodeargument)
 
 
 ## Performance Adaptability

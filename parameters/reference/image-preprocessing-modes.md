@@ -59,6 +59,35 @@ Preprocesses the image using the morphology algorithm. It can be used for images
     
 ## Setting Methods
 
+### As `PublicRuntimeSettings` Member
+`ImagePreprocessingModes` can be set dynamicaly during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 [`ImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode) Enumeration items.
+
+
+**Code Snippet in C++**
+```cpp
+//...other codes
+PublicRuntimeSettings* pSettings = new PublicRuntimeSettings;
+int errorCode = reader->GetRuntimeSettings(pSettings);
+pSettings->imagePreprocessingModes[0] = IPM_GRAY_SMOOTH;
+pSettings->imagePreprocessingModes[1] = IPM_GRAY_EQUALIZE;
+reader->UpdateRuntimeSettings(pSettings);
+reader->SetModeArgument("ImagePreprocessingModes", 1, "Sensitivity", "1");
+delete pSettings;
+//...other codes
+```
+
+
+**Remarks**     
+`GetModeArgument` and `SetModeArgument` need to be called for getting and setting [`Arguments`](#candidate-argument-list).
+
+
+**See Also**      
+- `PublicRuntimeSettings:` [JavaScript]({{ site.js_api }}interface/RuntimeSettings.html) [C]({{ site.structs }}PublicRuntimeSettings.html?src=c) [C++]({{ site.structs }}PublicRuntimeSettings.html?src=cpp) [.NET]({{ site.dotnet_api }}struct/PublicRuntimeSettings.html) [Python]({{ site.python_api }}class/PublicRuntimeSettings.html) [Java]({{ site.java_api }}class/PublicRuntimeSettings.html) [Java-Android]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) [Objective-C & Swift]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html)
+- [`ImagePreprocessingMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode)
+- `GetModeArgument:` [JavaScript]({{ site.cpp_methods }}BarcodeReader.html#getmodeargument) [C]({{ site.c_methods }}parameter-and-runtime-settings-basic.html#dbr_getmodeargument) [C++]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) [.NET]({{ site.dotnet_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#getmodeargument) [Python]({{ site.python_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#get_mode_argument) [Java]({{ site.java_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#getmodeargument) [Java-Android]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#getmodeargument) [Objective-C & Swift]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#getmodeargument)
+- `SetModeArgument:` [JavaScript]({{ site.cpp_methods }}BarcodeReader.html#setmodeargument) [C]({{ site.c_methods }}parameter-and-runtime-settings-basic.html#dbr_setmodeargument) [C++]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) [.NET]({{ site.dotnet_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#setmodeargument) [Python]({{ site.python_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#set_mode_argument) [Java]({{ site.java_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#setmodeargument) [Java-Android]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#setmodeargument) [Objective-C & Swift]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#setmodeargument)
+
+
 ### As JSON Parameter
 `ImagePreprocessingModes` as a JSON parameter is a JSON Object array. Each JSON object is defined as below.   
 
@@ -98,35 +127,6 @@ Preprocesses the image using the morphology algorithm. It can be used for images
 
 
 
-
-
-### As `PublicRuntimeSettings` Member
-`ImagePreprocessingModes` can be set dynamicaly during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 [`ImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode) Enumeration items.
-
-
-**Code Snippet in C++**
-```cpp
-//...other codes
-PublicRuntimeSettings* pSettings = new PublicRuntimeSettings;
-int errorCode = reader->GetRuntimeSettings(pSettings);
-pSettings->imagePreprocessingModes[0] = IPM_GRAY_SMOOTH;
-pSettings->imagePreprocessingModes[1] = IPM_GRAY_EQUALIZE;
-reader->UpdateRuntimeSettings(pSettings);
-reader->SetModeArgument("ImagePreprocessingModes", 1, "Sensitivity", "1");
-delete pSettings;
-//...other codes
-```
-
-
-**Remarks**     
-`GetModeArgument` and `SetModeArgument` need to be called for getting and setting [`Arguments`](#candidate-argument-list).
-
-
-**See Also**      
-- `PublicRuntimeSettings:` [JavaScript]({{ site.js_api }}interface/RuntimeSettings.html) [C]({{ site.structs }}PublicRuntimeSettings.html?src=c) [C++]({{ site.structs }}PublicRuntimeSettings.html?src=cpp) [.NET]({{ site.dotnet_api }}struct/PublicRuntimeSettings.html) [Python]({{ site.python_api }}class/PublicRuntimeSettings.html) [Java]({{ site.java_api }}class/PublicRuntimeSettings.html) [Java-Android]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) [Objective-C & Swift]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html)
-- [`ImagePreprocessingMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode)
-- `GetModeArgument:` [JavaScript]({{ site.cpp_methods }}BarcodeReader.html#getmodeargument) [C]({{ site.c_methods }}parameter-and-runtime-settings-basic.html#dbr_getmodeargument) [C++]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) [.NET]({{ site.dotnet_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#getmodeargument) [Python]({{ site.python_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#get_mode_argument) [Java]({{ site.java_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#getmodeargument) [Java-Android]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#getmodeargument) [Objective-C & Swift]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#getmodeargument)
-- `SetModeArgument:` [JavaScript]({{ site.cpp_methods }}BarcodeReader.html#setmodeargument) [C]({{ site.c_methods }}parameter-and-runtime-settings-basic.html#dbr_setmodeargument) [C++]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) [.NET]({{ site.dotnet_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#setmodeargument) [Python]({{ site.python_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#set_mode_argument) [Java]({{ site.java_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#setmodeargument) [Java-Android]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#setmodeargument) [Objective-C & Swift]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#setmodeargument)
 
 
 ## Performance Adaptability

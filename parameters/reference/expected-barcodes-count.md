@@ -27,22 +27,6 @@ needAutoGenerateSidebar: false
 ## Setting Methods
 `ExpectedBarcodesCount` is supported to be set through JSON template or `RuntimeSetting`.
 
-### As JSON Parameter
-`ExpectedBarcodesCount` as a JSON parameter is a number value defined as below.   
-
-| Key Name | Key Value |
-| -------- | --------- |
-| ExpectedBarcodesCount | A number from [0, 0x7fffffff] |
-
-
-**JSON Example**   
-```
-{
-    "ExpectedBarcodesCount": 0
-}
-```
-
-
 ### As `PublicRuntimeSettings` Member
 `ExpectedBarcodesCount` can be set dynamicaly during runtime as a member of `PublicRuntimeSettings` struct.
 
@@ -62,6 +46,22 @@ delete pSettings;
 
 **See Also**      
 - `PublicRuntimeSettings:` [JavaScript]({{ site.js_api }}interface/RuntimeSettings.html) [C]({{ site.structs }}PublicRuntimeSettings.html?src=c) [C++]({{ site.structs }}PublicRuntimeSettings.html?src=cpp) [.NET]({{ site.dotnet_api }}struct/PublicRuntimeSettings.html) [Python]({{ site.python_api }}class/PublicRuntimeSettings.html) [Java]({{ site.java_api }}class/PublicRuntimeSettings.html) [Java-Android]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) [Objective-C & Swift]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html)
+
+
+### As JSON Parameter
+`ExpectedBarcodesCount` as a JSON parameter is a number value defined as below.   
+
+| Key Name | Key Value |
+| -------- | --------- |
+| ExpectedBarcodesCount | A number from [0, 0x7fffffff] |
+
+
+**JSON Example**   
+```
+{
+    "ExpectedBarcodesCount": 0
+}
+```
 
 
 ## Performance Adaptability

@@ -16,10 +16,30 @@ Descriptions for ModesParameterName;
 
 ### Mode1
 Description for Mode1; 
-This mode can be used for ...(image scenario)   一两句话简单描述适用场景
+This mode can be used for ...(image scenario)   
 This mode has the following arguments for further customizing: [Argument](), ...
 
 ## Setting Methods
+
+### As `PublicRuntimeSettings` Member
+Description.
+P.S. C++ language as example.
+
+| Struct |	Struct Member Name | Value Type | Value Range | Default Value |
+| ------ | ------------------- | ---------- | ---------- | ---------- |
+|  |  |  | | |
+
+**Code Snippet**
+
+**Remarks**     
+
+
+**See Also**      
+- [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
+- [`ModesParameterName` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#)
+- [`SetModeArgument`]()
+- [`GetModeArgument`]()
+
 
 ### As JSON Parameter
 `BinarizationModes` as a JSON parameter is a JSON Object array. Each JSON Object has several keys for setting the mode and the value of arguments. The array index decides the priority the mode  for binarization. Default values will be used if there is no manual setting.   
@@ -46,26 +66,7 @@ This mode has the following arguments for further customizing: [Argument](), ...
 
 
 
-### As `PublicRuntimeSettings` Member
-Description.
-P.S. C++ language as example.
-
-| Struct |	Struct Member Name | Value Type | Value Range | Default Value |
-| ------ | ------------------- | ---------- | ---------- | ---------- |
-|  |  |  | | |
-
-**Code Snippet**
-
-**Remarks**     
-
-
-**See Also**      
-- [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
-- [`ModesParameterName` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#)
-- [`SetModeArgument`]()
-- [`GetModeArgument`]()
-
-## Impacts on Performance     此处采用的是比较笼统的描述
+## Impacts on Performance     
 ### Speed
 The SDK will loop the setting modes one by one until find as many barcodes as `ExpectedBarcodesCount` specified or timeout. The more modes you set, the more time the process may take. Setting an appropriate mode first in order or setting only necessary modes may speed up the process.
 
@@ -87,5 +88,5 @@ Description for Argument1.
 |  |  |  |  |         
 
 ## Related Articles
-- [How to configure the ModesParameterName parameters]({{ site.scenario_settings }}how-to-set-xxx-modes.html)  对应一篇how-to介绍，配图说明
+- [How to configure the ModesParameterName parameters]({{ site.scenario_settings }}how-to-set-xxx-modes.html)  
 - [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)

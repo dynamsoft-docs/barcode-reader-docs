@@ -16,18 +16,18 @@ breadcrumbText: Reference
  
  | [`AllModuleDeviation`](.md) | Set the module size deviation from the standard barcode module size. |
  | [`AustralianPostEncodingTable`](.md) | Set the encoding table used to code the Customer Information Field of Australian Post Customer Barcode. | 
- | [`BarcodeAngleRangeArray`](.md) | Sets the range of angles (in degrees) for barcodes search. | 
- | [`BarcodeBytesLengthRangeArray`](.md) | Sets the range of barcode bytes length for barcodes search. | 
+ | [`BarcodeAngleRangeArray`](.md) | Sets the range of angles (in degrees) for barcodes searching. | 
+ | [`BarcodeBytesLengthRangeArray`](.md) | Sets the range of barcode bytes length for barcodes searching. | 
  | [`BarcodeBytesRegExPattern`](.md) | Specifies the regular express pattern of barcode byte characters. | 
  | [`BarcodeColourModes`](barcode-colour-modes.md) | Sets the mode and priority for the barcode colour mode used to process the barcode zone. |
  | [`BarcodeComplementModes`](barcode-complement-modes.md) | Sets the mode and priority to complement the missing parts in the barcode. |
  | [`BarcodeFormatIds`](.md) | Sets the formats of the barcode to be read. Barcode formats can be combined. |
  | [`BarcodeFormatIds_2`](.md) | Sets the formats of the barcode in BarcodeFormat group 2 to be read. Barcode formats in BarcodeFormat group 2 can be combined. |
- | [`BarcodeHeightRangeArray`](.md) | Sets the range of barcode heights (in pixels) to for barcodes search. | 
- | [`BarcodeTextLengthRangeArray`](.md) |	Sets the range of barcode text length for barcodes search. | 
+ | [`BarcodeHeightRangeArray`](.md) | Sets the range of barcode heights (in pixels) to for barcodes searching. | 
+ | [`BarcodeTextLengthRangeArray`](.md) |	Sets the range of barcode text length for barcodes searching. | 
  | [`BarcodeTextRegExPattern`](.md) | Specifies the regular express pattern of barcode characters. | 
- | [`BarcodeWidthRangeArray`](.md) | Sets the range of barcode widths (in pixels) for barcodes search.(Hint). | 
- | [`BarcodeZoneBarCountRangeArray`](.md) |	Sets the range of bar count of the barcode zone for barcodes search. | 
+ | [`BarcodeWidthRangeArray`](.md) | Sets the range of barcode widths (in pixels) for barcodes searching.(Hint). | 
+ | [`BarcodeZoneBarCountRangeArray`](.md) |	Sets the range of bar count of the barcode zone for barcodes searching. | 
  | [`BarcodeZoneMinDistanceToImageBorders`](.md) |	Sets the minimum distance (in pixels) between barcode zone and image borders. | 
  | [`BinarizationModes`](binarization-modes.md) | 	Sets the mode and priority for binarization. |
  | [`Code128Subset`](.md) | Set the code 128 subset. | 
@@ -50,12 +50,13 @@ breadcrumbText: Reference
  | [`MinRatioOfBarcodeZoneWidthToHeight`](.md) |	Sets the minimum ratio (width/height) of the barcode zone. | 
  | [`MinResultConfidence`](.md) | The minimum confidence of the result. | 
  | [`MirrorMode`](.md) | Sets whether to decode mirrored barcodes. | 
- | [`ModuleSizeRangeArray`](.md) | Sets the range of module size (in pixels) for barcodes search. (Hint). |
+ | [`ModuleSizeRangeArray`](.md) | Sets the range of module size (in pixels) for barcodes searching. (Hint). |
  | [`MSICodeCheckDigitCalculation`](.md) | Sets the scheme used for calculating a check digit of an MSI barcode. |
  | [`Pages`](.md) | Sets the specific pages or the range of pages of a file (.tiff or .pdf) for barcode searching. |
  | [`PDFRasterDPI`](.md) | Sets the output image resolution. |
  | [`PDFReadingMode`](.md) | Sets the way to detect barcodes from a PDF file when using the DecodeFile method. |
- | [`RegionPredetectionModes`](.md) | Sets the region pre-detection mode for barcodes search. |
+ | [`Region`](.md) | Sets the region for barcodes searching. |
+ | [`RegionPredetectionModes`](.md) | Sets the region pre-detection mode for barcodes searching. |
  | [`RequireStartStopChars`](.md) |	Sets whether the start and stop characters are required when searching for Code 39 barcodes. |
  | [`ResultCoordinateType`](.md) | Specifies the format for the coordinates returned | 
  | [`ReturnBarcodeZoneClarity`](.md) | Sets whether or not to return the clarity of the barcode zone. | 
@@ -69,13 +70,6 @@ breadcrumbText: Reference
  | [`TextureDetectionModes`](.md) | 	Sets the mode and priority for texture detection. |
  | [`TextResultOrderModes`](.md) | Sets the mode and priority for the order of the text results returned. | 
  | [`Timeout`](.md) | Sets the maximum amount of time (in milliseconds) that should be spent searching for a barcode per page. |
-
-
- | [`Top`](.md) | 	The top-most coordinate or percentage of the region. | 
- | [`Left`](.md) | 	The left-most coordinate or percentage of the region. | 
- | [`Right`](.md) | 	The right-most coordinate or percentage of the region. | 
- | [`Bottom`](.md) | 	The bottom-most coordinate or percentage of the region. | 
- | [`MeasuredByPercentage`](.md) | 	Sets whether or not to use percentages to measure the Region size. | 
 
 
 
