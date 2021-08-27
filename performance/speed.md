@@ -1,10 +1,19 @@
-# How Dynamsoft Barcode Reader achieves the best speed in barcode reading
+---
+layout: default-layout
+title: Dynamsoft Barcode Reader Performance - Speed
+description: This page shows how to adjust the settings to achieve best speed in barcode reading
+keywords: speed
+needAutoGenerateSidebar: true
+breadcrumbText: Speed
+---
+
+# Fundamental measurement of features: Speed
 
 This article describes how the Dynamsoft Barcode Reader SDK (hereafter referred to as "the library") is designed for best speed and how to adjust its many settings to make the barcode reading even faster.
 
 ## Designed for speed
 
-### Find all types of barcodes with one-time scan
+### Find all types of barcodes with one scan
 
 The process to find barcodes on an image is called "localization". The library comes with a few different localization modes. Each mode stands for a unique algorithm, but they all share the same design: scan the image once to find all types of barcodes.
 
@@ -12,7 +21,7 @@ Because the library scans for the characteristics of all types of barcodes at on
 
 //LocalizationModes
 
-### Special design for limited barcode type(s)
+### Find certain types of barcodes faster with designated algorithms
 
 In most cases, an application only needs to handle one or a few types of barcodes. By using a specific localization mode, the library can focus better and become faster, because when the characteristics of some "regions of interest" do not match the type(s) it is looking for, it can quickly skip them.
 
@@ -20,7 +29,7 @@ For example, use "OneD_FAST_MODE" if you are only interested in linear barcodes 
 
 //LocalizationModes
 
-### Automatically distinguish and exclude regions with no barcode
+### Distinguish and exclude regions with no barcode instantly
 
 In order to quickly focus on the actual region where the barcode is located, the library will do a fast scan of the image to identify irrelevant characters and exclude the areas surroudnging these characters for the following steps.
 
@@ -29,23 +38,7 @@ This is particularly useful for scanning barcodes on documents filled with text.
 //TextFilterModes
 //https://www.dynamsoft.com/barcode-reader/parameters/scenario-settings/text-filter.html?ver=latest
 
-### Scalable-effort workflow design
-
-The process to scan an image and read the barcode(s) from it consists of many steps. The library offers different approaches / algorithms in the form of modes for quite a few of these steps. Different modes are specified in the form of an array and the library will go through the array and try every single mode until the expected number and types of barcode(s) are found.
-
-This design allows the user to adjust the workflow according to a specific use case to achieve best possible speed.
-
-For example, as mentioned above, you can specify only the localization mode of "OneD_FAST_MODE" if all the barcodes to read are linear. Of course, the actual use case may not be so ideal. Assume most barcodes are linear but a few might be DataMatrix, we can allocate two modes "OneD_FAST_MODE" and "Statistics_MODE" but put "OneD_FAST_MODE".
-
-Furthermore, for each mode, there could be adjustable arguments. For example, for each localization mode, you can set the `ScanStride` and `ScanDirection` which determines the step and direction on how the library scans an image.
-
-To sum up, for a particular step in the workflow, if there are multiple modes available, there are three things to adjust for best speed:
-
-* Which modes to use;
-* The order of the modes;
-* The configuration of a particular mode.
-
-### Optimized for video frame decoding
+### Read barcodes from video frames with a process optimized for speed
 
 For a mobile or web application, the use case is usually to pick barcodes out of continuous video frames. There are four major factors that may have a big impact in speed
 
@@ -70,7 +63,23 @@ DCE speeds up video frame decoding by the following features:
 * It also has a lightspeed algorithm to detect whether a frame is blurry, once confirmed, the frame is discarded so it doesn't waste any decoding time. At the same time, it will tell the camera to adjust its focus;
 * With the help of the localization algorithm of the main library, it can even tell the camera to zoom in on the intended barcode(s).
 
-## How to adjust the library's many settings to make it faster
+### Speed up every step for significant improvement with scalable-effort workflow design
+
+The process to scan an image and read the barcode(s) from it consists of many steps. The library offers different approaches / algorithms in the form of modes for quite a few of these steps. Different modes are specified in the form of an array and the library will go through the array and try every single mode until the expected number and types of barcode(s) are found.
+
+This design allows the user to adjust the workflow according to a specific use case to achieve best possible speed.
+
+For example, as mentioned above, you can specify only the localization mode of "OneD_FAST_MODE" if all the barcodes to read are linear. Of course, the actual use case may not be so ideal. Assume most barcodes are linear but a few might be DataMatrix, we can allocate two modes "OneD_FAST_MODE" and "Statistics_MODE" but put "OneD_FAST_MODE".
+
+Furthermore, for each mode, there could be adjustable arguments. For example, for each localization mode, you can set the `ScanStride` and `ScanDirection` which determines the step and direction on how the library scans an image.
+
+To sum up, for a particular step in the workflow, if there are multiple modes available, there are three things to adjust for best speed:
+
+* Which modes to use;
+* The order of the modes;
+* The configuration of a particular mode.
+
+## Adjustable settings to speed up reading
 
 ### Specify the barcode types
 
