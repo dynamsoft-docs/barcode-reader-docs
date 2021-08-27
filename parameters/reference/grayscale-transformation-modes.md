@@ -9,7 +9,9 @@ needAutoGenerateSidebar: false
 
 # GrayscaleTransformationModes 
 
-`GrayscaleTransformationModes` is a parameter to control how to transform the grayscale image converted from a colour image. It consisits of one or more modes, each mode represents a way to transform the grayscale image.
+This parameter helps control the colour mode of the grayscale image. By default, the library can only locate the dark barcodes that stand on a light background. Assume your image has different features to default, this parameter may help configure the appropriate settings for your case.  
+
+It consisits of one or more modes, each mode represents a way to transform the grayscale image.
 
 
 ## Candidate Mode List
