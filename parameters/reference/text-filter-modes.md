@@ -1,38 +1,34 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for ColourClusteringModes
-description: This page shows Dynamsoft Barcode Reader Parameter Reference for ColourClusteringModes.
-keywords: ColourClusteringModes, parameter reference, parameter
+title: Dynamsoft Barcode Reader Parameter Reference for TextFilterModes
+description: This page shows Dynamsoft Barcode Reader Parameter Reference for TextFilterModes.
+keywords: TextFilterModes, parameter reference, parameter
 needAutoGenerateSidebar: false
 ---
 
 
-# ColourClusteringModes 
+# TextFilterModes 
 
-`ColourClusteringModes` is a parameter to control the process for colour categorization. It consisits of one or more modes, each mode represents a way to implement the categorization.
+`TextFilterModes` is a parameter to control how to filter texts on an image. It consisits of one or more modes, each mode represents a way to implement the filtering.
 
 
 ## Candidate Mode List
-- CCM_GENERAL_HSV
-- CCM_AUTO
+- TFM_GENERAL_CONTOUR
 
-### CCM_GENERAL_HSV
-Clusters colours using the general algorithm based on HSV. This mode has the following arguments for further customizing.
+### TFM_GENERAL_CONTOUR
+Filters text using the general algorithm based on contour. This mode has the following arguments for further customizing.
 
+- [MinImageDimension](#minimagedimension)
 - [Sensitivity](#sensitivity)
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)
-
-
-### CCM_AUTO
-Lets the library choose a mode automatically. Not supported yet.
 
 
     
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
-`ColourClusteringModes` can be set dynamicaly during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 [`ColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode) Enumeration items.
+`TextFilterModes` can be set dynamicaly during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 [`TextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode) Enumeration items.
 
 
 **Code Snippet in C++**
@@ -40,9 +36,9 @@ Lets the library choose a mode automatically. Not supported yet.
 //...other codes
 PublicRuntimeSettings* pSettings = new PublicRuntimeSettings;
 int errorCode = reader->GetRuntimeSettings(pSettings);
-pSettings->colourClusteringModes[0] = CCM_GENERAL_HSV;
+pSettings->textFilterModes[0] = TFM_GENERAL_CONTOUR;
 reader->UpdateRuntimeSettings(pSettings);
-reader->SetModeArgument("ColourClusteringModes", 0, "Sensitivity", "1");
+reader->SetModeArgument("TextFilterModes", 0, "Sensitivity", "5");
 delete pSettings;
 //...other codes
 ```
@@ -55,17 +51,18 @@ delete pSettings;
 **See Also**      
 - `FurtherModes:` [C]({{ site.structs }}FurtherModes.html?src=c) [C++]({{ site.structs }}FurtherModes.html?src=cpp) [.NET]({{ site.dotnet_api }}struct/FurtherModes.html) [Java]({{ site.java_api }}class/FurtherModes.html) [Java-Android]({{ site.android_api }}auxiliary-FurtherModes.html) [Objective-C & Swift]({{ site.oc_api }}auxiliary-iFurtherModes.html)
 - `PublicRuntimeSettings:` [JavaScript]({{ site.js_api }}interface/RuntimeSettings.html) [C]({{ site.structs }}PublicRuntimeSettings.html?src=c) [C++]({{ site.structs }}PublicRuntimeSettings.html?src=cpp) [.NET]({{ site.dotnet_api }}struct/PublicRuntimeSettings.html) [Python]({{ site.python_api }}class/PublicRuntimeSettings.html) [Java]({{ site.java_api }}class/PublicRuntimeSettings.html) [Java-Android]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) [Objective-C & Swift]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html)
-- [`ColourClusteringMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode)
+- [`TextFilterMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode)
 - `GetModeArgument:` [JavaScript]({{ site.cpp_methods }}BarcodeReader.html#getmodeargument) [C]({{ site.c_methods }}parameter-and-runtime-settings-basic.html#dbr_getmodeargument) [C++]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) [.NET]({{ site.dotnet_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#getmodeargument) [Python]({{ site.python_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#get_mode_argument) [Java]({{ site.java_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#getmodeargument) [Java-Android]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#getmodeargument) [Objective-C & Swift]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#getmodeargument)
 - `SetModeArgument:` [JavaScript]({{ site.cpp_methods }}BarcodeReader.html#setmodeargument) [C]({{ site.c_methods }}parameter-and-runtime-settings-basic.html#dbr_setmodeargument) [C++]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) [.NET]({{ site.dotnet_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#setmodeargument) [Python]({{ site.python_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#set_mode_argument) [Java]({{ site.java_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#setmodeargument) [Java-Android]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#setmodeargument) [Objective-C & Swift]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#setmodeargument)
 
 
 ### As JSON Parameter
-`ColourClusteringModes` as a JSON parameter is a JSON Object array. Each JSON object is defined as below.   
+`TextFilterModes` as a JSON parameter is a JSON Object array. Each JSON object is defined as below.   
 
 | Key Name | Key Value | Description |
 | -------- | --------- | ----------- |
-| Mode | Any one in Candidate Mode List as string | (Required) Specifies a mode for colour categorization.  |
+| Mode | Any one in Candidate Mode List as string | (Required) Specifies a mode for text filtering.  |
+| MinImageDimension | A number from value range of MinImageDimension | (Optional) Sets the Argument [MinImageDimension](#minimagedimension). |
 | Sensitivity | A number from value range of Sensitivity | (Optional) Sets the Argument [Sensitivity](#sensitivity). |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
 | LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
@@ -75,46 +72,54 @@ delete pSettings;
 **JSON Parameter Example**   
 ```
 {
-    "ColourClusteringModes": [
+    "TextFilterModes": [
         {
-            "Mode": "CCM_GENERAL_HSV", 
-            "Sensitivity": 1
-        },
-        {
-            "Mode": "CCM_GENERAL_HSV", 
-            "Sensitivity": 9
+            "Mode": "TFM_GENERAL_CONTOUR", 
+            "Sensitivity": 5
         }
     ]
 }
 ```
 
 
-
-
-
 ## Impacts on Performance
 ### Speed
-The SDK will loop the setting modes one by one until find as many barcodes as `ExpectedBarcodesCount` specified or timeout. The more modes you set, the more time the process may take. Setting an appropriate mode first in order or setting only necessary modes may speed up the process.
+To detect barcodes surrounded by a large number of irrelevant characters, enabling text filtering may improve the Speed. However, enabling text filtering may slow down the Speed when barcodes are the only content of the image.
 
 ### Read Rate
-Setting more modes along with different arguments may improve the Read Rate. 
+`TextFilterModes` has no influence on the Read Rate.
 
 ### Accuracy
-`ColourClusteringModes` has no influence on the Accuracy.
+For barcodes surrounded by a large number of irrelevant characters, enabling text filtering may improve the Accuracy.
 
 ## Candidate Argument List
+- [MinImageDimension](#minimagedimension)
 - [Sensitivity](#sensitivity)
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)
  
-### Sensitivity 
-Sets the sensitivity used for colour categorization. A bigger value means less colours will be clustered as the same colour.
+### MinImageDimension 
+Sets the minimum image dimension (in pixels) to enable text filtering.
 
 | Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | --------- |
-| *int* | [1, 9] | 5 | CCM_GENERAL_HSV |         
+| *int* | [65536, 0x7fffffff] | 65536 | TFM_GENERAL_CONTOUR |         
 
-     
+**Remarks**         
+The library will enable the region pre-detection feature only when the image dimension is larger than the given value.  
+
+### Sensitivity 
+Sets the sensitivity used for text filtering.
+
+| Value Type | Value Range | Default Value | Valid For | 
+| ---------- | ----------- | ------------- | --------- |
+| *int* | [0, 9] | 0 | TFM_GENERAL_CONTOUR |         
+
+**Remarks**         
+  - 0: automatically set by the library.   
+  - A larger value means the library will take more effort to filter text.
+
+
 
 ### LibraryFileName 
 Sets the file name of the library to load dynamically.
@@ -138,3 +143,4 @@ Sets the parameters passed to the library to load dynamically.
 
 ## Related Articles
 - [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [How to configure TextFilterModes]({{ site.scenario_settings }}text-filter.html#)

@@ -107,15 +107,15 @@ delete pSettings;
 
 
 
-## Performance Adaptability
+## Impacts on Performance
 ### Speed
 The SDK will loop the setting modes one by one until find as many barcodes as `ExpectedBarcodesCount` specified or timeout. The more modes you set, the more time the process may take. Setting an appropriate mode first in order or setting only necessary modes may speed up the process.
 
-### Completeness
-Setting more binarization modes along with different arguments may improve the Completeness. 
+### Read Rate
+Setting more binarization modes along with different arguments may improve the Read Rate. 
 
-### Correctness
-`BinarizationModes` has no influence on the Correctness.
+### Accuracy
+`BinarizationModes` has no influence on the Accuracy.
 
 ## Candidate Argument List
 - [BlockSizeX](#blocksizex)
@@ -144,7 +144,7 @@ Sets the horizontal block size for the binarization process.
      - N > 3: the block size used for binarization will be set to N.
      
 **Performance Adaptability**        
-Setting this to an appropriate value ( 5 - 8 times module size is recommended ) may improve the Completeness.
+Setting this to an appropriate value ( 5 - 8 times module size is recommended ) may improve the Read Rate.
 
 
 ### BlockSizeY 
@@ -163,7 +163,7 @@ Sets the vertical block size for the binarization process.
      - N > 3: the block size used for binarization will be set to N.
 
 **Performance Adaptability**        
-Setting this to an appropriate value ( 5 - 8 times module size is recommended ) may improve the Completeness.
+Setting this to an appropriate value ( 5 - 8 times module size is recommended ) may improve the Read Rate.
 
 
 ### EnableFillBinaryVacancy 
@@ -180,7 +180,7 @@ Sets whether to enable binary vacancy filling.
   For barcodes with a large module size, there might be a vacant area in the position detection pattern after binarization. The vacant area may result in decoding failure. Setting this to True will fill in the vacant area with black and may help improve the decoding success rate. 
 
 **Performance Adaptability**        
-Enabling this may improve the Completeness but slowdown the Speed. 
+Enabling this may improve the Read Rate but slowdown the Speed. 
   
 
 ### ImagePreprocessingModesIndex 

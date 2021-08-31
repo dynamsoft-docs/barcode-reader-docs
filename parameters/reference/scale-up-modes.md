@@ -1,35 +1,48 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for ColourConversionModes
-description: This page shows Dynamsoft Barcode Reader Parameter Reference for ColourConversionModes.
-keywords: ColourConversionModes, parameter reference, parameter
+title: Dynamsoft Barcode Reader Parameter Reference for ScaleUpModes
+description: This page shows Dynamsoft Barcode Reader Parameter Reference for ScaleUpModes.
+keywords: ScaleUpModes, parameter reference, parameter
 needAutoGenerateSidebar: false
 ---
 
 
-# ColourConversionModes 
+# ScaleUpModes 
 
-`ColourConversionModes` is a parameter to control the process for converting a colour image to a grayscale image. It consisits of one or more modes, each mode represents a way to implement the convertion.
+`ScaleUpModes` is a parameter to control the process for scaling up an image used for detecting barcodes with small module size. It consisits of one or more modes, each mode represents a way to implement the scale-up.
 
 
 ## Candidate Mode List
-- CICM_GENERAL
+- SUM_AUTO
+- SUM_LINEAR_INTERPOLATION
+- SUM_NEAREST_NEIGHBOUR_INTERPOLATION
 
-### CICM_GENERAL
-Converts a colour image to a grayscale image using the general algorithm. This mode has the following arguments for further customizing.
+### CCM_AUTO
+Lets the library choose a mode automatically.
 
-- [BlueChannelWeight](#bluechannelweight)
-- [GreenChannelWeight](#greenchannelweight)
-- [RedChannelWeight](#redchannelweight)
+### SUM_LINEAR_INTERPOLATION
+Scales up using the linear interpolation method. This mode has the following arguments for further customizing.
+
+- [AcuteAngleWithXThreshold](#acuteanglewithxthreshold)
+- [ModuleSizeThreshold](#modulesizethreshold)
+- [TargetModuleSize](#targetmodulesize)
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)
 
+### SUM_NEAREST_NEIGHBOUR_INTERPOLATION
+Scales up using the linear interpolation method. This mode has the following arguments for further customizing.
+
+- [AcuteAngleWithXThreshold](#acuteanglewithxthreshold)
+- [ModuleSizeThreshold](#modulesizethreshold)
+- [TargetModuleSize](#targetmodulesize)
+- [LibraryFileName](#libraryfilename)
+- [LibraryParameters](#libraryparameters)
 
     
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
-`ColourConversionModes` can be set dynamicaly during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 [`ColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode) Enumeration items.
+`ScaleUpModes` can be set dynamicaly during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 [`ScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode) Enumeration items.
 
 
 **Code Snippet in C++**
@@ -37,9 +50,9 @@ Converts a colour image to a grayscale image using the general algorithm. This m
 //...other codes
 PublicRuntimeSettings* pSettings = new PublicRuntimeSettings;
 int errorCode = reader->GetRuntimeSettings(pSettings);
-pSettings->colourConversionModes[0] = CICM_GENERAL;
+pSettings->scaleUpModes[0] = SUM_LINEAR_INTERPOLATION;
 reader->UpdateRuntimeSettings(pSettings);
-reader->SetModeArgument("ColourConversionModes", 0, "BlueChannelWeight", "1000");
+reader->SetModeArgument("ScaleUpModes", 0, "ModuleSizeThreshold", "4");
 delete pSettings;
 //...other codes
 ```
@@ -52,20 +65,20 @@ delete pSettings;
 **See Also**      
 - `FurtherModes:` [C]({{ site.structs }}FurtherModes.html?src=c) [C++]({{ site.structs }}FurtherModes.html?src=cpp) [.NET]({{ site.dotnet_api }}struct/FurtherModes.html) [Java]({{ site.java_api }}class/FurtherModes.html) [Java-Android]({{ site.android_api }}auxiliary-FurtherModes.html) [Objective-C & Swift]({{ site.oc_api }}auxiliary-iFurtherModes.html)
 - `PublicRuntimeSettings:` [JavaScript]({{ site.js_api }}interface/RuntimeSettings.html) [C]({{ site.structs }}PublicRuntimeSettings.html?src=c) [C++]({{ site.structs }}PublicRuntimeSettings.html?src=cpp) [.NET]({{ site.dotnet_api }}struct/PublicRuntimeSettings.html) [Python]({{ site.python_api }}class/PublicRuntimeSettings.html) [Java]({{ site.java_api }}class/PublicRuntimeSettings.html) [Java-Android]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) [Objective-C & Swift]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html)
-- [`ColourConversionMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode)
+- [`ScaleUpMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode)
 - `GetModeArgument:` [JavaScript]({{ site.cpp_methods }}BarcodeReader.html#getmodeargument) [C]({{ site.c_methods }}parameter-and-runtime-settings-basic.html#dbr_getmodeargument) [C++]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) [.NET]({{ site.dotnet_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#getmodeargument) [Python]({{ site.python_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#get_mode_argument) [Java]({{ site.java_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#getmodeargument) [Java-Android]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#getmodeargument) [Objective-C & Swift]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#getmodeargument)
 - `SetModeArgument:` [JavaScript]({{ site.cpp_methods }}BarcodeReader.html#setmodeargument) [C]({{ site.c_methods }}parameter-and-runtime-settings-basic.html#dbr_setmodeargument) [C++]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) [.NET]({{ site.dotnet_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#setmodeargument) [Python]({{ site.python_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#set_mode_argument) [Java]({{ site.java_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#setmodeargument) [Java-Android]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#setmodeargument) [Objective-C & Swift]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#setmodeargument)
 
 
 ### As JSON Parameter
-`ColourConversionModes` as a JSON parameter is a JSON Object array. Each JSON object is defined as below.   
+`ScaleUpModes` as a JSON parameter is a JSON Object array. Each JSON object is defined as below.   
 
 | Key Name | Key Value | Description |
 | -------- | --------- | ----------- |
-| Mode | Any one in Candidate Mode List as string | (Required) Specifies a mode for colour convertion.  |
-| BlueChannelWeight | A number from value range of BlueChannelWeight | (Optional) Sets the Argument [BlueChannelWeight](#bluechannelweight). |
-| GreenChannelWeight | A number from value range of GreenChannelWeight | (Optional) Sets the Argument [GreenChannelWeight](#greenchannelweight). |
-| RedChannelWeight | A number from value range of RedChannelWeight | (Optional) Sets the Argument [RedChannelWeight](#redchannelweight). |
+| Mode | Any one in Candidate Mode List as string | (Required) Specifies a mode for scaling up an image.  |
+| AcuteAngleWithXThreshold | A number from value range of AcuteAngleWithXThreshold | (Optional) Sets the Argument [AcuteAngleWithXThreshold](#acuteanglewithxthreshold). |
+| ModuleSizeThreshold | A number from value range of ModuleSizeThreshold | (Optional) Sets the Argument [modulesizethreshold](#greenchannelweight). |
+| TargetModuleSize | A number from value range of TargetModuleSize | (Optional) Sets the Argument [TargetModuleSize](#targetmodulesize). |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
 | LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
 
@@ -74,18 +87,16 @@ delete pSettings;
 **JSON Parameter Example**   
 ```
 {
-    "ColourConversionModes": [
+    "ScaleUpModes": [
         {
-            "Mode": "CICM_GENERAL", 
-            "BlueChannelWeight": 1000,
-            "GreenChannelWeight": 0,
-            "RedChannelWeight": 0
+            "Mode": "SUM_LINEAR_INTERPOLATION", 
+            "ModuleSizeThreshold": 4,
+            "TargetModuleSize": 8
         },
         {
-            "Mode": "CICM_GENERAL", 
-            "BlueChannelWeight": 0,
-            "GreenChannelWeight": 500,
-            "RedChannelWeight": 500
+            "Mode": "SUM_NEAREST_NEIGHBOUR_INTERPOLATION", 
+            "ModuleSizeThreshold": 4,
+            "TargetModuleSize": 6
         }
     ]
 }
@@ -97,51 +108,52 @@ delete pSettings;
 The SDK will loop the setting modes one by one until find as many barcodes as `ExpectedBarcodesCount` specified or timeout. The more modes you set, the more time the process may take. Setting an appropriate mode first in order or setting only necessary modes may speed up the process.
 
 ### Read Rate
-Setting more modes along with different arguments may improve the Read Rate. 
+Setting more modes along with different arguments may improve the Read Rate. For barcodes with small module size, setting this parameter may improve the Read Rate.
 
 ### Accuracy
-`ColourConversionModes` has no influence on the Accuracy.
+`ScaleUpModes` has no influence on the Accuracy.
 
 ## Candidate Argument List
-- [BlueChannelWeight](#bluechannelweight)
-- [GreenChannelWeight](#greenchannelweight)
-- [RedChannelWeight](#redchannelweight)
+- [AcuteAngleWithXThreshold](#acuteanglewithxthreshold)
+- [ModuleSizeThreshold](#modulesizethreshold)
+- [TargetModuleSize](#targetmodulesize)
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)
  
-### BlueChannelWeight 
-Sets the weight value of Blue Colour Channel used for converting a colour image to a grayscale image.
+### AcuteAngleWithXThreshold 
+Sets the acute angle threshold for scale-up.
 
 | Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | --------- |
-| *int* | [-1, 1000] | -1 | CICM_GENERAL |         
+| *int* | [-1, 90] | -1 | SUM_LINEAR_INTERPOLATION<br>SUM_NEAREST_NEIGHBOUR_INTERPOLATION |         
 
 **Remarks**         
-- -1: The weight value will be set automatically by the SDK. 
-- -1 will be used if the sum of BlueChannelWeight, GreenChannelWeight and RedChannelWeight is not 1000.
+- -1: means automatically set by the library.
+- If the module size of the barcode is smaller than the [ModuleSizeThreshold](#modulesizethreshold) and the acute angle with X of the barcode is larger than the [AcuteAngleWithXThreshold](#acuteanglewithxthreshold), the barcode will be enlarged by a scale factor of N (N=1,2,3…) till N * modulesize >= [TargetModuleSize](#targetmodulesize).
 
-### GreenChannelWeight 
-Sets the weight value of Green Colour Channel used for converting a colour image to a grayscale image.
+### ModuleSizeThreshold 
+Sets the module size threshold for scale-up.
 
 | Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | --------- |
-| *int* | [-1, 1000] | -1 | CICM_GENERAL |         
+| *int* | [0, 0x7fffffff] | 0 | SUM_LINEAR_INTERPOLATION<br>SUM_NEAREST_NEIGHBOUR_INTERPOLATION |         
 
 **Remarks**         
-- -1: The weight value will be set automatically by the SDK. 
-- -1 will be used if the sum of BlueChannelWeight, GreenChannelWeight and RedChannelWeight is not 1000.
+- 0: means automatically set by the library.
+- If the module size of the barcode is smaller than the [ModuleSizeThreshold](#modulesizethreshold) and the acute angle with X of the barcode is larger than the [AcuteAngleWithXThreshold](#acuteanglewithxthreshold), the barcode will be enlarged by a scale factor of N (N=1,2,3…) till N * modulesize >= [TargetModuleSize](#targetmodulesize).
 
 
-### RedChannelWeight 
-Sets the weight value of Red Colour Channel used for converting a colour image to a grayscale image.
+
+### TargetModuleSize 
+Sets the target module size for scale-up.
 
 | Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | --------- |
-| *int* | [-1, 1000] | -1 | CICM_GENERAL |         
+| *int* | [0, 0x7fffffff] | 0 | SUM_LINEAR_INTERPOLATION<br>SUM_NEAREST_NEIGHBOUR_INTERPOLATION |         
 
 **Remarks**         
-- -1: The weight value will be set automatically by the SDK. 
-- -1 will be used if the sum of BlueChannelWeight, GreenChannelWeight and RedChannelWeight is not 1000.
+- 0: means automatically set by the library.
+- If the module size of the barcode is smaller than the [ModuleSizeThreshold](#modulesizethreshold) and the acute angle with X of the barcode is larger than the [AcuteAngleWithXThreshold](#acuteanglewithxthreshold), the barcode will be enlarged by a scale factor of N (N=1,2,3…) till N * modulesize >= [TargetModuleSize](#targetmodulesize).
 
 
 ### LibraryFileName 
@@ -166,4 +178,4 @@ Sets the parameters passed to the library to load dynamically.
 
 ## Related Articles
 - [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
-- [How to configure ColourConversionModes]({{ site.scenario_settings }}image-scale-and-colour-conversion.html#convert-colour-image-to-grayscale)
+- [How to configure ScaleUpModes]({{ site.scenario_settings }}how-to-set-scaleup-modes.html)

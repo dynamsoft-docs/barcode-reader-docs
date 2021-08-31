@@ -89,15 +89,15 @@ delete pSettings;
 ```
 
 
-## Performance Adaptability
+## Impacts on Performance
 ### Speed
-The SDK will loop the setting modes one by one until find as many barcodes as `ExpectedBarcodesCount` specified or timeout. The more modes you set, the more time the process may take. Setting an appropriate mode first in order may speed up the process.
+The SDK will loop the setting modes one by one until find as many barcodes as `ExpectedBarcodesCount` specified or timeout. The more modes you set, the more time the process may take. Setting an appropriate mode first in order or setting only necessary modes may speed up the process.
 
-### Completeness
-Setting more modes along with different arguments may improve the Completeness. 
+### Read Rate
+Setting more modes along with different arguments may improve the Read Rate. 
 
-### Correctness
-`DeformationResistingModes` has no influence on the Correctness.
+### Accuracy
+`DeformationResistingModes` has no influence on the Accuracy.
 
 ## Candidate Argument List
 - [Level](#level)
@@ -112,7 +112,7 @@ Sets the effort level used for deformation resisting. Not supported yet.
 | *int* | [1, 9] | 5 | DRM_GENERAL |         
 
 **Performance Adaptability**        
-A larger value may improve the Completeness but slowdown the Speed. 
+A larger value may improve the Read Rate but slowdown the Speed. 
     
 
 ### LibraryFileName 

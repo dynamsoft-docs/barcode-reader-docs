@@ -129,15 +129,15 @@ delete pSettings;
 
 
 
-## Performance Adaptability
+## Impacts on Performance
 ### Speed
 The SDK will loop the setting modes one by one until find as many barcodes as `ExpectedBarcodesCount` specified or timeout. The more modes you set, the more time the process may take. Setting an appropriate mode first in order or setting only necessary modes may speed up the process.
 
-### Completeness
-Setting more image preprocessing modes along with different arguments may improve the Completeness. 
+### Read Rate
+Setting more image preprocessing modes along with different arguments may improve the Read Rate. 
 
-### Correctness
-`ImagePreprocessingModes` has no influence on the Correctness.
+### Accuracy
+`ImagePreprocessingModes` has no influence on the Accuracy.
 
 ## Candidate Argument List
 - [Sensitivity](#sensitivity)
@@ -161,7 +161,7 @@ Sets the sensitivity to perform the equalization process. A larger value means a
 | *int* | [1, 9] | 5 | IPM_GRAY_EQUALIZE |         
 
 **Performance Adaptability**        
-A larger value may cause adverse effect on Speed and Completeness on images with a high level of contrast.
+A larger value may cause adverse effect on Speed and Read Rate on images with a high level of contrast.
 
 ### SmoothBlockSizeX 
 Sets the horizontal block size for the smoothing process.
@@ -175,7 +175,7 @@ Block size refers to the size of a pixel neighborhood used to calculate a thresh
 
      
 **Performance Adaptability**        
-Setting this to an appropriate value ( 5 - 8 times module size is recommended ) may improve the Completeness.
+Setting this to an appropriate value ( 5 - 8 times module size is recommended ) may improve the Read Rate.
 
 
 ### SmoothBlockSizeY 
@@ -189,7 +189,7 @@ Sets the vertical block size for the smoothing process.
 Block size refers to the size of a pixel neighborhood used to calculate a threshold value for the pixel.    
 
 **Performance Adaptability**        
-Setting this to an appropriate value ( 5 - 8 times module size is recommended ) may improve the Completeness.
+Setting this to an appropriate value ( 5 - 8 times module size is recommended ) may improve the Read Rate.
 
 ### SharpenBlockSizeX 
 Sets the horizontal block size for the sharpening process.
