@@ -9,7 +9,9 @@ needAutoGenerateSidebar: false
 
 # ImagePreprocessingModes 
 
-`ImagePreprocessingModes` is a parameter to control how to preprocess the grayscale image. It consisits of one or more modes, each mode is a way to implement the preprocessing algorithm.
+This parameter provides some image processing methods to enhance the quality of the grayscale image before reading barcodes. By default, the library does no preprocessing method. Assume your image has distorted features that can be solved by common image processing methods, this parameter may help set the processing mode(s) for getting a higher quality grayscale image.  
+
+It consisits of one or more modes, each mode is a way to implement the preprocessing algorithm.
 
 
 ## Candidate Mode List
