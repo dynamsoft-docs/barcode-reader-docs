@@ -349,7 +349,7 @@ except BarcodeReaderError as bre:
 
 If your machine is not allowed to access Internet, you can follow the steps below to manually register the device and get the license content.
 
-1. Log in <a href ="https://www.dynamsoft.com/customer/license/fullLicensex" target="_blank">Customer Portal</a> and click **License Id**.
+1. Log in <a href ="https://www.dynamsoft.com/customer/license/fullLicense" target="_blank">Customer Portal</a> and click **License Id**.
 
 ![ActivatedKey_Used2][5]
 
@@ -475,7 +475,7 @@ Please use a development/runtime license by following the steps below:
 
 ### Activate a development/runtime license {#activate}
 
- Once you obtain a Development License, you can find your license information at <a href ="https://www.dynamsoft.com/customer/license/fullLicensex" target="_blank">Customer Portal</a>. 
+ Once you obtain a Development License, you can find your license information at <a href ="https://www.dynamsoft.com/customer/license/fullLicense" target="_blank">Customer Portal</a>. 
 
  To activate a development license (8-digit key), select **Unactivated** license, click the **Activate Now** link beside it.
 
