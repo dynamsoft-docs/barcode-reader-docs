@@ -30,6 +30,11 @@ jobs:
           [ ! -d barcode-reader-docs-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/barcode-reader-docs.git barcode-reader-docs-preview
           [ ! -d barcode-reader-docs-js-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/barcode-reader-docs-js.git barcode-reader-docs-js-preview
           [ ! -d barcode-reader-docs-mobile-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/barcode-reader-docs-mobile.git barcode-reader-docs-mobile-preview
+          BuildType=--incremental
+          if [ "${{ secrets.INCREMENTAL_BUILD }}" == "0" ]; then
+            BuildType=""
+            [ -d DBRDocPreview ] && rm -rf DBRDocPreview
+          fi          
           [ ! -d DBRDocPreview ] && mkdir -p DBRDocPreview
           cd barcode-reader-docs-preview && git pull && cd .. && cp -rfp ./barcode-reader-docs-preview/* ./DBRDocPreview/
           cd barcode-reader-docs-js-preview && git pull && cd .. && cp -rfp ./barcode-reader-docs-js-preview/* ./DBRDocPreview/
@@ -37,7 +42,7 @@ jobs:
           cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DBRDocPreview/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
           -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DBRDocPreview/_config.yml
-          cd DBRDocPreview && bundle exec jekyll build --incremental
+          cd DBRDocPreview && bundle exec jekyll build $BuildType
 
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
