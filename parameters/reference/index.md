@@ -16,13 +16,13 @@ breadcrumbText: Reference
  
  | [`AllModuleDeviation`](all-module-deviation.md) | Set the module size deviation from the standard barcode module size. |
  | [`AustralianPostEncodingTable`](australian-post-encoding-table.md) | Set the encoding table used to code the Customer Information Field of Australian Post Customer Barcode. | 
- | [`BarcodeAngleRangeArray`](.md) | Sets the range of angles (in degrees) for barcodes searching. | 
- | [`BarcodeBytesLengthRangeArray`](.md) | Sets the range of barcode bytes length for barcodes searching. | 
- | [`BarcodeBytesRegExPattern`](.md) | Specifies the regular express pattern of barcode byte characters. | 
+ | [`BarcodeAngleRangeArray`](barcode-angle-range-array.md) | Sets the range of angles (in degrees) for barcodes searching. | 
+ | [`BarcodeBytesLengthRangeArray`](barcode-bytes-length-range-array.md) | Sets the range of barcode bytes length for barcodes searching. | 
+ | [`BarcodeBytesRegExPattern`](barcode-bytes-regex-pattern.md) | Specifies the regular express pattern of barcode byte characters. | 
  | [`BarcodeColourModes`](barcode-colour-modes.md) | Sets the mode and priority for the barcode colour mode used to process the barcode zone. |
  | [`BarcodeComplementModes`](barcode-complement-modes.md) | Sets the mode and priority to complement the missing parts in the barcode. |
- | [`BarcodeFormatIds`](.md) | Sets the formats of the barcode to be read. Barcode formats can be combined. |
- | [`BarcodeFormatIds_2`](.md) | Sets the formats of the barcode in BarcodeFormat group 2 to be read. Barcode formats in BarcodeFormat group 2 can be combined. |
+ | [`BarcodeFormatIds`](barcode-format-ids.md) | Sets the formats of the barcode to be read. Barcode formats can be combined. |
+ | [`BarcodeFormatIds_2`](barcode-format-ids-2.md) | Sets the formats of the barcode in BarcodeFormat group 2 to be read. Barcode formats in BarcodeFormat group 2 can be combined. |
  | [`BarcodeHeightRangeArray`](.md) | Sets the range of barcode heights (in pixels) to for barcodes searching. | 
  | [`BarcodeTextLengthRangeArray`](.md) |	Sets the range of barcode text length for barcodes searching. | 
  | [`BarcodeTextRegExPattern`](.md) | Specifies the regular express pattern of barcode characters. | 

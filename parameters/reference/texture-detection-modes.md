@@ -83,10 +83,10 @@ delete pSettings;
 
 ## Impacts on Performance
 ### Speed
-To detect barcodes surrounded by a textured background, enabling texture detection may improve the Speed. However, enabling texture detection may slow down the Speed when the image has clean background.
+Enabling texture detection may slow down the Speed when the image has clean background.
 
 ### Read Rate
-`TextureDetectionModes` has no influence on the Read Rate.
+For barcodes surrounded by a textured background, enabling texture detection may improve the Accuracy.
 
 ### Accuracy
 For barcodes surrounded by a textured background, enabling texture detection may improve the Accuracy.

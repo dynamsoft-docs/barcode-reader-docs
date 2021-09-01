@@ -25,7 +25,7 @@ needAutoGenerateSidebar: false
 
     
 ## Setting Methods
-`ExpectedBarcodesCount` is supported to be set through JSON template or `RuntimeSetting`.
+`ExpectedBarcodesCount` is supported to be set through `RuntimeSetting` or JSON template.
 
 ### As `PublicRuntimeSettings` Member
 `ExpectedBarcodesCount` can be set dynamicaly during runtime as a member of `PublicRuntimeSettings` struct.
