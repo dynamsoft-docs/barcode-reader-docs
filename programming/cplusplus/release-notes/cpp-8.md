@@ -10,8 +10,7 @@ noTitleIndex: true
 
 # Release Notes for C++ SDK - 8.x
 
-## 8.6 (07/15/2021)
-### Highlights
+## 8.6.0 (07/15/2021)
 
 {%- include release-notes/product-highlight-8.6.0.md -%}
 
@@ -27,7 +26,7 @@ noTitleIndex: true
 
 - Improved the [`confidence`]({{site.structs}}ExtendedResult.html?src=cpp#confidence) algorithm for 1D barcode results. Users can get even more accurate results by configuring the `confidence` filter.
 
-## 8.4 (06/08/2021)
+## 8.4.0 (06/08/2021)
 
 ### New
 
@@ -49,7 +48,7 @@ noTitleIndex: true
 
 - Fixed an issue that happens when calling initLicenseFromLTS if [`handShakeCode`]({{site.structs}}DMLTSConnectionParameters.html?src=cpp#handshakecode) is not set.
 
-## 8.2 (03/17/2021)
+## 8.2.0 (03/17/2021)
 
 ### New
 
@@ -79,7 +78,7 @@ noTitleIndex: true
 
 - Fixed a bug where `barcodeFormatString`, `barcodeFormatString_2`, `regionName` and `documentName` don't have value in the `IRT_TYPED_BARCODE_ZONE` intermediate result.
 
-## 8.1 (01/12/2021)
+## 8.1.0(01/12/2021)
 
 ### New
 
@@ -99,7 +98,7 @@ noTitleIndex: true
 - Fixed a bug where Micro PDF417 may not be localized in multiple-barcode scenarios.
 - Fixed a bug where the `ExpectedBarcodesCount` and `BarcodeFormat` parameters do not work in the `RegionDefinition`.
 
-## 8.0 (11/17/2020)
+## 8.0.0 (11/17/2020)
 
 ### New
 

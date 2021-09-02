@@ -1,16 +1,16 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for Java SDK - Release Notes v7.6 and below
-description: This is the release notes page of Dynamsoft Barcode Reader for Java SDK v7.6 and below.
+title: Dynamsoft Barcode Reader for Java SDK - Release Notes v7.6.0 and below
+description: This is the release notes page of Dynamsoft Barcode Reader for Java SDK v7.6.0 and below.
 keywords: release notes, java
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
 ---
 
-# Release Notes for Java SDK - 7.6 and below
+# Release Notes for Java SDK - 7.6.0 and below
 
-## 7.6 (09/01/2020)
+## 7.6.0 (09/01/2020)
 
 ### NEW
 
@@ -28,7 +28,7 @@ noTitleIndex: true
 - Fixed a bug where the coordinates of barcodes are calculated incorrectly under some situations.
 - Fixed a crash issue which occurs under some situations.
 
-## 7.5 (07/22/2020)
+## 7.5.0(07/22/2020)
 
 ### NEW
 

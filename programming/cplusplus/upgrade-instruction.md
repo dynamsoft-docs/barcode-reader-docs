@@ -9,9 +9,9 @@ needAutoGenerateSidebar: false
 
 # How-to Guides - Upgrade to Latest Version     
 
-## From version 8.0 to 8.x
+## From version 8.0.0 to 8.x
 
-Just replace the old assembly files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx). Your existing license for 8.0 is compatible with 8.x.
+Just replace the old assembly files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx). Your existing license for 8.0.0 is compatible with 8.x.
 
 ## From version 7.x
 
@@ -19,7 +19,7 @@ You need to replace the old assembly files with the ones in the latest version. 
 
 Your previous SDK license for version 7.x is not compatible with the version 8.x. Please [contact us](https://www.dynamsoft.com/Company/Contact.aspx) to upgrade your license.
 
-In v8.0, we introduced a new license tracking mechanism, <a href="https://www.dynamsoft.com/license-server/docs/about/index.html" target="_blank">License 2.0</a>. 
+In v8.0.0, we introduced a new license tracking mechanism, <a href="https://www.dynamsoft.com/license-server/docs/about/index.html" target="_blank">License 2.0</a>. 
 
 If you wish to use License 2.0, please refer to [this article](../../license-activation/set-full-license.md) to set the license.
 

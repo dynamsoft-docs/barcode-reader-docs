@@ -27,7 +27,7 @@ This is the main page of Dynamsoft Barcode Reader SDK documentation for .Net Lan
 
 ## Release Notes
 - [Version 8.x](release-notes/dotnet-8.md)
-- [Version 7.6 and below](release-notes/dotnet-7.md)
+- [Version 7.6.0 and below](release-notes/dotnet-7.md)
 
 ## Upgrade Instructions
 - [How to upgrade to latest version](upgrade-instruction.md)

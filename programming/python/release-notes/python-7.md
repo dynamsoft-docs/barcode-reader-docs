@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # Release Notes for Python SDK - 7.x
 
-## 7.6 (09/01/2020)
+## 7.6.0 (09/01/2020)
 
 ### NEW
 
@@ -27,7 +27,7 @@ noTitleIndex: true
 - Fixed a bug where the coordinates of barcodes are calculated incorrectly under some situations.
 - Fixed a crash issue which occurs under some situations.
 
-## 7.5 (07/22/2020)
+## 7.5.0(07/22/2020)
 
 ### NEW
 
