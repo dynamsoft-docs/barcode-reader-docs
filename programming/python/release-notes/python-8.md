@@ -12,13 +12,19 @@ noTitleIndex: true
 
 ## 8.6 (07/20/2021)
 
-### New
+### Highlights
+
+{%- include release-notes/product-highlight-8.6.0.md -%}
+
+### Changelog
+
+#### New
 
 - Added two DeblurMode Enumerations, `DM_BASED_ON_LOC_BIN` and `DM_SHARPENING_SMOOTHING`, to support more usage scenarios.
 - Added methods `init_license_from_dls` and `init_dls_connection_parameters` in `BarcodeReader` class to replace `init_license_from_lts` and `init_lts_connection_parameters`.
 - Added class `DMDLSConnectionParameters` to replace class `DMLTSConnectionParameters`.
 
-### Improved
+#### Improved
 
 - Improved the [`confidence`]({{site.python_class}}ExtendedResult.html#confidence) algorithm for 1D barcode results. Users can get even more accurate results by configuring the `confidence` filter.
 
