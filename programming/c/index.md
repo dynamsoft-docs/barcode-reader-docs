@@ -25,7 +25,7 @@ This is the main page of Dynamsoft Barcode Reader SDK documentation for C Langua
 
 ## Release Notes
 - [Version 8.x](release-notes/c-8.md)
-- [Version 7.6 and below](release-notes/c-7.md)
+- [Version 7.6.0 and below](release-notes/c-7.md)
 
 ## Upgrade Instructions
 - [How to upgrade to latest version](upgrade-instruction.md)

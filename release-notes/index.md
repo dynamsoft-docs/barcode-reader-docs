@@ -13,7 +13,7 @@ breadcrumbText: Release Notes
 ## [8.6](v8.md#86-07152021)
 ### Highlights
 
-{%- include release-notes/product-highlight-8.6.md -%}
+{%- include release-notes/product-highlight-8.6.0.md -%}
 
 ### Editions
 - [JavaScript](../programming/javascript/release-notes/js-8.md#860-08312021)
@@ -25,13 +25,13 @@ breadcrumbText: Release Notes
 - [Android](../programming/android/release-notes/android-8.md#86-07152021)
 - [iOS](../programming/objectivec-swift/release-notes/ios-8.md#86-07152021)
 
-## [8.4 (06/08/2021)](v8.md#84-06082021)
-## [8.2 (03/17/2021)](v8.md#82-03172021)
+## [8.4.0 (06/08/2021)](v8.md#84-06082021)
+## [8.2.0 (03/17/2021)](v8.md#82-03172021)
 ## [8.1.2 (01/22/2021)](v8.md#812-01222021)
-## [8.1 (01/12/2021)](v8.md#81-01122021)
-## [8.0 (11/17/2020)](v8.md#80-11172020)
-## [7.6   (09/01/2020)](v7.md#76-09012020)
-## [7.5   (07/22/2020)](v7.md#75-07222020)  
+## [8.1.0(01/12/2021)](v8.md#81-01122021)
+## [8.0.0 (11/17/2020)](v8.md#80-11172020)
+## [7.6.0   (09/01/2020)](v7.md#76-09012020)
+## [7.5.0  (07/22/2020)](v7.md#75-07222020)  
 ## [7.4   (04/16/2020)](v7.md#74-04162020)
 ## [7.3   (01/02/2020)](v7.md#73-01022020)
 ## [7.2.2 (11/13/2019)](v7.md#722-11132019)  

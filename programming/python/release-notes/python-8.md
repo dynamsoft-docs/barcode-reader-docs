@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # Release Notes for Python SDK - 8.x
 
-## 8.6 (07/20/2021)
+## 8.6.0 (07/20/2021)
 
 ### New
 
@@ -22,7 +22,7 @@ noTitleIndex: true
 
 - Improved the [`confidence`]({{site.python_class}}ExtendedResult.html#confidence) algorithm for 1D barcode results. Users can get even more accurate results by configuring the `confidence` filter.
 
-## 8.4 (06/10/2021)
+## 8.4.0 (06/10/2021)
 
 ### New
 
@@ -44,7 +44,7 @@ noTitleIndex: true
 
 - Fixed an issue that happens when calling initLicenseFromLTS if `handshake_code` is not set.
 
-## 8.2 (03/17/2021)
+## 8.2.0 (03/17/2021)
 
 ### New
 
@@ -75,7 +75,7 @@ noTitleIndex: true
 
 - Fixed a bug where `barcodeFormatString`, `barcodeFormatString_2`, `regionName` and `documentName` don't have value in the `IRT_TYPED_BARCODE_ZONE` intermediate result.
 
-## 8.1 (01/19/2021)
+## 8.1.0(01/19/2021)
 
 ### NEW
 
@@ -101,13 +101,13 @@ noTitleIndex: true
 - Fixed a bug where Micro PDF417 may not be localized in multiple-barcode scenarios.
 - Fixed a bug where the `ExpectedBarcodesCount` and `BarcodeFormat` parameters do not work in the `RegionDefinition`.
 
-## 8.0.1 (01/06/2021)
+## 8.0.0.1 (01/06/2021)
 
 ### FIXED
 
 - Fixed a typo in `init_license_from_lts`.
 
-## 8.0 (11/26/2020)
+## 8.0.0 (11/26/2020)
 
 ### NEW
 
