@@ -85,7 +85,7 @@ You can set the license by following the steps below:
 
  Code snippet in C#:
  ```csharp
-   DMLTSConnectionParameters ltspar = BarcodeReader.InitLTSConnectionParamters();           
+   DMLTSConnectionParameters ltspar = BarcodeReader.InitLTSConnectionParameters();           
    ltspar.HandshakeCode = "200***001-1000*****"; // Please replace the handshakeCode with your own
    EnumErrorCode iRet = BarcodeReader.InitLicenseFromLTS(ltspar, out strErrorMSG);
  ```

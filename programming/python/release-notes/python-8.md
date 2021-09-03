@@ -34,7 +34,8 @@ noTitleIndex: true
 
 - Added a new method [`get_idle_instances_count`]({{site.python_methods}}license.html#get_idle_instances_count) to return the number of available instances when using the 'per concurrent instance' licensing model.
 - Added the [`organizationID`]({{site.python_class}}DMLTSConnectionParameters.html#organization_id) property for license authentication.
-- Added new attributes [`is_mirrored`]({{site.python_class}}TextResult.html#is_mirrored) and [`is_dpm`]({{site.python_class}}TextResult.html#is_dpm) to the `TextResult` class. `is_mirrored` returns whether the barcode is mirrored and `is_dpm` returns whether the result is recognized as a `DPM` code.
+- Added a new attribute [`is_mirrored`]({{site.python_class}}TextResult.html#is_mirrored) to the `TextResult` class. `is_mirrored` returns whether the barcode is mirrored.
+- Added a new attribute [`is_dpm`]({{site.python_class}}TextResult.html#is_dpm) to the `TextResult` class. `is_dpm` returns whether the barcode is recognized by the DPM mode.
 - Added a new argument, [`ThresholdCompensation`]({{site.image_parameters}}BinarizationModes.html#thresholdcompensation), to the `BinarizationModes` mode arguments.
 
 ### Improved
