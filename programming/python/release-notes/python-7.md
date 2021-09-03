@@ -27,7 +27,7 @@ noTitleIndex: true
 - Fixed a bug where the coordinates of barcodes are calculated incorrectly under some situations.
 - Fixed a crash issue which occurs under some situations.
 
-## 7.5.0(07/22/2020)
+## 7.5.0 (07/22/2020)
 
 ### NEW
 
@@ -53,7 +53,7 @@ noTitleIndex: true
 
 - Fixed a bug where the coordinates of barcodes are calculated incorrectly under some situations.
 
-## 7.4 (04/16/2020)
+## 7.4.0 (04/16/2020)
 
 Version 7.4 marks the initial release of Dynamsoft Barcode Reader Python SDK. 
 

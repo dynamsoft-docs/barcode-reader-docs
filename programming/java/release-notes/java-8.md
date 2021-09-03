@@ -80,7 +80,7 @@ noTitleIndex: true
 
 - Fixed a bug where `barcodeFormatString`, `barcodeFormatString_2`, `regionName` and `documentName` don't have value in the `IRT_TYPED_BARCODE_ZONE` intermediate result.
 
-## 8.1.0(01/12/2021)
+## 8.1.0 (01/12/2021)
 
 ### New
 

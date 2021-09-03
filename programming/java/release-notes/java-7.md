@@ -54,7 +54,7 @@ noTitleIndex: true
 
 - Fixed a bug where the coordinates of barcodes are calculated incorrectly under some situations.
 
-## 7.4 (04/16/2020)
+## 7.4.0 (04/16/2020)
 
 ### NEW
 
@@ -86,7 +86,7 @@ noTitleIndex: true
 - Fixed a bug where the ColourConversionModes RGB weights setting does not work when CICM_GENERAL is enabled.
 - Other small fixes and tweaks.
 
-## 7.3 (01/02/2020)
+## 7.3.0 (01/02/2020)
 
 ### NEW
 
@@ -133,7 +133,7 @@ noTitleIndex: true
 - Fixed minor bugs in result outputs.
 - Fixed a bug where OneDCodeDetails doesn't work.
 
-## 7.2 (09/24/2019)
+## 7.2.0 (09/24/2019)
 
 ### NEW
 
@@ -159,7 +159,7 @@ noTitleIndex: true
 
 - Fixed minor bugs
 
-## 7.1 (08/15/2019)
+## 7.1.0 (08/15/2019)
 
 ### NEW
 
@@ -178,7 +178,7 @@ noTitleIndex: true
 - Fixed a bug that the parameter, RequireStartStopChars, might malfunction in some rare cases.
 - Fixed a bug that the angle of barcodes might not be calculated correctly sometimes.
 
-## 7.0 (07/11/2019)
+## 7.0.0 (07/11/2019)
 
 ### NEW
 
@@ -230,7 +230,7 @@ noTitleIndex: true
 
 - Small fixes and tweaks.
 
-## 6.5 (02/26/2019)
+## 6.5.0 (02/26/2019)
 
 ### IMPROVED
 
@@ -255,7 +255,7 @@ noTitleIndex: true
 
 - Small fixes and tweaks.
 
-## 6.4 (10/15/2018)
+## 6.4.0 (10/15/2018)
 
 ### NEW
 
@@ -272,7 +272,7 @@ noTitleIndex: true
 
 - Small fixes and tweaks.
 
-## 6.3 (08/16/2018)
+## 6.3.0 (08/16/2018)
 
 ### NEW
 
@@ -293,7 +293,7 @@ noTitleIndex: true
 
 - Small fixes and tweaks.
 
-## 6.2 (06/28/2018)
+## 6.2.0 (06/28/2018)
 
 ### IMPROVED
 
@@ -311,7 +311,7 @@ noTitleIndex: true
 
 - Small fixes and tweaks.
 
-## 6.1 (05/14/2018)
+## 6.1.0 (05/14/2018)
 
 ### NEW
 
@@ -322,7 +322,7 @@ noTitleIndex: true
 - Improved localization algorithm for barcodes rotated in a degree or with poor perspective.
 - Faster read speed for QR, Data Matrix and PDF417 barcodes.
 
-## 6.0 (03/30/2018)
+## 6.0.0 (03/30/2018)
 
 ### NEW
 
@@ -339,7 +339,7 @@ noTitleIndex: true
 
 - Small fixes and tweaks.
 
-## 5.2 (09/08/2017)
+## 5.2.0 (09/08/2017)
 
 ### IMPROVED
 
@@ -352,14 +352,14 @@ noTitleIndex: true
 
 - Small fixes and tweaks.
 
-## 5.1 (05/25/2017)
+## 5.1.0 (05/25/2017)
 
 ### FIXED
 
 - Fixed a bug that caused incorrect result points if de-blur algorithm is used when reading 1D barcodes.
 - Other small fixes and tweaks.
 
-## 5.0 (03/07/2017)
+## 5.0.0 (03/07/2017)
 
 ### NEW
 
@@ -380,7 +380,7 @@ noTitleIndex: true
 - Fixed an issue where the DLL crashes when reading DataMatrix in multiple threads.
 - Other small fixes and tweaks.
 
-## 4.3 (10/13/2016)
+## 4.3.0 (10/13/2016)
 
 ### NEW
 
@@ -401,7 +401,7 @@ noTitleIndex: true
  - HelloWorld - reads barcodes from a sample image in a Java web application.
  - Read barcode from mobile webcam - reads barcodes from photos captured from mobile webcam in Java on the mobile phones or tablets.
 
-## 4.2 (04/08/2016)
+## 4.2.0 (04/08/2016)
 
 ### IMPROVED
 
@@ -409,7 +409,7 @@ noTitleIndex: true
 - Improved ResultPoints Property to adjust the sequence of barcode corner points. Now the top-left corner of the barcode is the starting point (x1, y1). The results are returned in the clockwise direction.
 - Improved ResultPoints Property to adjust the sequence of barcode corner points.
 
-## 4.1 (01/21/2016)
+## 4.1.0 (01/21/2016)
 
 ### NEW
 
@@ -419,14 +419,14 @@ noTitleIndex: true
 
 - Improved positioning algorithm to better identify and localize DataMatrix barcodes.
 
-## 4.0 (11/03/2015)
+## 4.0.0 (11/03/2015)
 
 ### NEW
 
 - Added support for reading PDF417 and DataMatrix.
 - Added reading barcode from all types of PDF file.
 
-## 3.0 (08/13/2015)
+## 3.0.0 (08/13/2015)
 
 ### NEW
 
@@ -436,7 +436,7 @@ noTitleIndex: true
 
 - Improved 1D Barcode Reader to support reading Industrial 2 of 5.
 
-## 2.1 (06/23/2015)
+## 2.1.0 (06/23/2015)
 
 ### NEW
 
@@ -447,7 +447,7 @@ noTitleIndex: true
 - Improved CODE128 decoding
 - Improved recognition of CODE39, CODE93, etc.
 
-## 2.0 (05/12/2015)
+## 2.0.0 (05/12/2015)
 
 ### NEW
 
@@ -458,7 +458,7 @@ noTitleIndex: true
 - Supported image formats include BMP, JPG, PNG, (single or multi-page) TIFF, Windows DIB and .NET Bitmap.
 - Various code samples (in C/C++/C#/Java/VB/VB.NET) available. 
 
-## 1.0 (01/20/2015)
+## 1.0.0 (01/20/2015)
 
 ### NEW
 
