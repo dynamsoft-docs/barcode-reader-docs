@@ -16,7 +16,7 @@ Starting from Dynamsoft Barcode Reader version 6, it is recommended to set all b
 1. Open our [Online Demo](https://demo.dynamsoft.com/barcode-reader/):    
     ![Online Demo Example Image][1]     
 
-2. Modify the settings on the right panel:     
+2. Modify the settings on the left panel:     
     ![Setting Panel Example Image][2]     
 
 3. At the bottom of the panel, switch to JSON tab and click the copy button:    
