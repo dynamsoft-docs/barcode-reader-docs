@@ -9,7 +9,7 @@ needAutoGenerateSidebar: false
 
 # AustralianPostEncodingTable 
 
-`AustralianPostEncodingTable` is a parameter to specifies the encoding table used to code the Customer Information Field of Australian Post Customer Barcode. It is defined as below:
+`AustralianPostEncodingTable` is a parameter to specify the encoding table used to code the Customer Information Field of Australian Post Customer Barcode. It is defined as below:
 
 | Value Type | Value Range | Default Value |
 | ---------- | ----------- | ------------- |
@@ -48,4 +48,4 @@ Setting `AustralianPostEncodingTable` to an appropriate value when detecting Aus
 
 ## Related Articles
 - [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
-- [How to configure AustralianPostEncodingTable]({{ site.scenario_settings }}format-specification.html#australianpostencodingtable)
+- [Configure parameters for a certain barcode format]({{ site.scenario_settings }}format-specification.html#australianpostencodingtable)

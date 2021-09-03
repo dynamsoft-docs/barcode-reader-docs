@@ -9,7 +9,7 @@ needAutoGenerateSidebar: false
 
 # BarcodeAngleRangeArray 
 
-`BarcodeAngleRangeArray` is a parameter to specifies the range of angles (in degrees) for barcodes searching and result filtering. It is not set by default which means there is no limitation on the barcode angles.
+`BarcodeAngleRangeArray` is a parameter to specify the range of angles (in degrees) for barcodes searching and result filtering. It is not set by default which means there is no limitation on the barcode angles.
 
     
 ## Setting Methods

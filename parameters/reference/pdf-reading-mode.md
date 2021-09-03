@@ -24,7 +24,7 @@ Lets the library choose a mode automatically. Not supported yet.
 Detects barcode from vector data in PDF file.
 
 ### PDFRM_RASTER
-Converts the PDF file to image(s) first, then detects barcode .
+Converts the PDF file to image(s) first, then detects barcode.
 
 
 ## Setting Methods

@@ -9,7 +9,7 @@ needAutoGenerateSidebar: false
 
 # AllModuleDeviation 
 
-`AllModuleDeviation` is a parameter to specifies the width deviation value (in moduleSize) of a non-standard 1D barcode type relative to the standard barcode width. It is defined as below:
+`AllModuleDeviation` is a parameter to specify the width deviation value (in moduleSize) of a non-standard 1D barcode type relative to the standard barcode width. It is defined as below:
 
 | Value Type | Value Range | Default Value |
 | ---------- | ----------- | ------------- |
@@ -52,4 +52,4 @@ Setting `AllModuleDeviation` to an appropriate value when detecting non-standard
 
 ## Related Articles
 - [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
-- [How to configure AllModuleDeviation]({{ site.scenario_settings }}format-specification.html#allmoduledeviation)
+- [Configure parameters for a certain barcode format]({{ site.scenario_settings }}format-specification.html#allmoduledeviation)

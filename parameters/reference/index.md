@@ -23,35 +23,35 @@ breadcrumbText: Reference
  | [`BarcodeComplementModes`](barcode-complement-modes.md) | Sets the mode and priority to complement the missing parts in the barcode. |
  | [`BarcodeFormatIds`](barcode-format-ids.md) | Sets the formats of the barcode to be read. Barcode formats can be combined. |
  | [`BarcodeFormatIds_2`](barcode-format-ids-2.md) | Sets the formats of the barcode in BarcodeFormat group 2 to be read. Barcode formats in BarcodeFormat group 2 can be combined. |
- | [`BarcodeHeightRangeArray`](.md) | Sets the range of barcode heights (in pixels) to for barcodes searching. | 
- | [`BarcodeTextLengthRangeArray`](.md) |	Sets the range of barcode text length for barcodes searching. | 
- | [`BarcodeTextRegExPattern`](.md) | Specifies the regular express pattern of barcode characters. | 
- | [`BarcodeWidthRangeArray`](.md) | Sets the range of barcode widths (in pixels) for barcodes searching.(Hint). | 
- | [`BarcodeZoneBarCountRangeArray`](.md) |	Sets the range of bar count of the barcode zone for barcodes searching. | 
- | [`BarcodeZoneMinDistanceToImageBorders`](.md) |	Sets the minimum distance (in pixels) between barcode zone and image borders. | 
+ | [`BarcodeHeightRangeArray`](barcode-height-range-array.md) | Sets the range of barcode heights (in pixels) to for barcodes searching. | 
+ | [`BarcodeTextLengthRangeArray`](barcode-text-length-range-array.md) |	Sets the range of barcode text length for barcodes searching. | 
+ | [`BarcodeTextRegExPattern`](barcode-text-regex-pattern.md) | Specifies the regular express pattern of barcode characters. | 
+ | [`BarcodeWidthRangeArray`](barcode-width-range-array.md) | Sets the range of barcode widths (in pixels) for barcodes searching.(Hint). | 
+ | [`BarcodeZoneBarCountRangeArray`](barcode-zone-bar-count-range-array.md) |	Sets the range of bar count of the barcode zone for barcodes searching. | 
+ | [`BarcodeZoneMinDistanceToImageBorders`](barcode-zone-min-distance-to-image-borders.md) | Sets the minimum distance (in pixels) between barcode zone and image borders. | 
  | [`BinarizationModes`](binarization-modes.md) | 	Sets the mode and priority for binarization. |
- | [`Code128Subset`](.md) | Set the code 128 subset. | 
+ | [`Code128Subset`](code128-subset.md) | Set the code 128 subset. | 
  | [`ColourClusteringModes`](colour-clustering-modes.md) | Sets the mode and priority for colour categorization. Not supported yet. |
  | [`ColourConversionModes`](colour-conversion-modes.md) | Sets the mode and priority for converting a colour image to a grayscale image. |
- | [`DeblurLevel`](.md) | Sets the degree of blurriness of the barcode. |
- | [`DeblurModes`](.md) | Sets the mode and priority for deblurring. |
+ | [`DeblurLevel`](deblur-level.md) | Sets the degree of blurriness of the barcode. |
+ | [`DeblurModes`](deblur-modes.md) | Sets the mode and priority for deblurring. |
  | [`DeformationResistingModes`](deformation-resisting-modes.md) | Sets the mode and priority for deformation resisting. |
- | [`DPMCodeReadingModes`](dpm-code-reading-modes.md) | Sets the mode and priority for DPM code reading. Not support yet. |
+ | [`DPMCodeReadingModes`](dpm-code-reading-modes.md) | Sets the mode and priority for DPM code reading. |
  | [`ExpectedBarcodesCount`](expected-barcodes-count.md) | Sets the number of barcodes expected to be detected for each image. |
- | [`FindUnevenModuleBarcode`](.md) | Specifies whether to find barcodes with uneven barcode modules. Not support yet. | 
+ | [`FindUnevenModuleBarcode`](find-uneven-module-barcode.md) | Specifies whether to find barcodes with uneven barcode modules. Not support yet. | 
  | [`GrayscaleTransformationModes`](grayscale-transformation-modes.md) | Sets the mode and priority for the grayscale image conversion. |
- | [`HeadModuleRatio`](.md) | Set the module count and module size ratio of the barcode head part. | 
+ | [`HeadModuleRatio`](head-module-ratio.md) | Set the module count and module size ratio of the barcode head part. | 
  | [`ImagePreprocessingModes`](image-preprocessing-modes.md) | Sets the mode and priority for image preprocessing algorithms. |
- | [`IntermediateResultSavingMode`](.md) | Sets the mode for saving the intermediate result. | 
- | [`IntermediateResultTypes`](.md) | Sets which types of intermediate result to be kept for further reference. Intermediate result types can be combined. | 
+ | [`IntermediateResultSavingMode`](intermediate-result-saving-mode.md) | Sets the mode for saving the intermediate result. | 
+ | [`IntermediateResultTypes`](intermediate-result-types.md) | Sets which types of intermediate result to be kept for further reference. Intermediate result types can be combined. | 
  | [`LocalizationModes`](localization-modes.md) | 	Sets the mode and priority for localization algorithms. |
- | [`MaxAlgorithmThreadCount`](.md) | Sets the number of threads the image processing algorithm will use to decode barcodes. |
- | [`MinQuietZoneWidth`](.md) | The minimum width of the barcode quiet zone. | 
- | [`MinRatioOfBarcodeZoneWidthToHeight`](.md) |	Sets the minimum ratio (width/height) of the barcode zone. | 
- | [`MinResultConfidence`](.md) | The minimum confidence of the result. | 
- | [`MirrorMode`](.md) | Sets whether to decode mirrored barcodes. | 
- | [`ModuleSizeRangeArray`](.md) | Sets the range of module size (in pixels) for barcodes searching. (Hint). |
- | [`MSICodeCheckDigitCalculation`](.md) | Sets the scheme used for calculating a check digit of an MSI barcode. |
+ | [`MaxAlgorithmThreadCount`](max-algorithm-thread-count.md) | Sets the number of threads the image processing algorithm will use to decode barcodes. |
+ | [`MinQuietZoneWidth`](min-quiet-zone-width.md) | The minimum width of the barcode quiet zone. | 
+ | [`MinRatioOfBarcodeZoneWidthToHeight`](min-ratio-of-barcode-zone-width-to-height.md) | Sets the minimum ratio (width/height) of the barcode zone. | 
+ | [`MinResultConfidence`](min-result-confidence.md) | The minimum confidence of the result. | 
+ | [`MirrorMode`](mirror-mode.md) | Sets whether to decode mirrored barcodes. | 
+ | [`ModuleSizeRangeArray`](module-size-range-array.md) | Sets the range of module size (in pixels) for barcodes searching. (Hint). |
+ | [`MSICodeCheckDigitCalculation`](msi-code-check-digit-calculation.md) | Sets the scheme used for calculating a check digit of an MSI barcode. |
  | [`Pages`](.md) | Sets the specific pages or the range of pages of a file (.tiff or .pdf) for barcode searching. |
  | [`PDFRasterDPI`](.md) | Sets the output image resolution. |
  | [`PDFReadingMode`](pdf-reading-mode.md) | Sets the way to detect barcodes from a PDF file when using the DecodeFile method. |

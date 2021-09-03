@@ -9,7 +9,7 @@ needAutoGenerateSidebar: false
 
 # BarcodeBytesRegExPattern 
 
-`BarcodeBytesRegExPattern` is a parameter to specifies the regular express pattern of barcode byte characters for barcodes searching and result filtering. It is not set by default which means there is no limitation on the barcode byte characters.
+`BarcodeBytesRegExPattern` is a parameter to specify the regular express pattern of barcode byte characters for barcodes searching and result filtering. It is not set by default which means there is no limitation on the barcode byte characters.
 
     
 ## Setting Methods
@@ -21,11 +21,6 @@ needAutoGenerateSidebar: false
 | Key Name | Key Value |
 | -------- | --------- |
 | BarcodeBytesRegExPattern | a string representing regular express pattern |
-
-| Key Name | Key Value | Description |
-| -------- | --------- | ----------- |
-| MinValue | A number from [0, 0x7fffffff] | Sets the minimum barcode bytes length.  |
-| MaxValue | A number from [0, 0x7fffffff] | Sets the maximum barcode bytes length. |
 
 
 **JSON Example**   

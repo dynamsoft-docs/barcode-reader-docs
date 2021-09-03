@@ -9,7 +9,7 @@ needAutoGenerateSidebar: false
 
 # BarcodeBytesLengthRangeArray 
 
-`BarcodeBytesLengthRangeArray` is a parameter to specifies the range of barcode bytes length for barcodes searching and result filtering. It is not set by default which means there is no limitation on the barcode byte length.
+`BarcodeBytesLengthRangeArray` is a parameter to specify the range of barcode bytes length for barcodes searching and result filtering. It is not set by default which means there is no limitation on the barcode byte length.
 
     
 ## Setting Methods
