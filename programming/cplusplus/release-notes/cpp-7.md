@@ -1,16 +1,16 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for C++ - Release Notes v7.6 and below
-description: This is the release notes page of Dynamsoft Barcode Reader for C++ v7.6 and below.
+title: Dynamsoft Barcode Reader for C++ - Release Notes v7.6.0 and below
+description: This is the release notes page of Dynamsoft Barcode Reader for C++ v7.6.0 and below.
 keywords: release notes, cpp
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
 ---
 
-# Release Notes for C++ - 7.6 and below
+# Release Notes for C++ - 7.6.0 and below
 
-## 7.6 (09/01/2020)
+## 7.6.0 (09/01/2020)
 
 ### NEW
 
@@ -27,7 +27,7 @@ noTitleIndex: true
 - Fixed a bug where the coordinates of barcodes are calculated incorrectly under some situations.
 - Fixed a crash issue which occurs under some situations.
 
-## 7.5 (07/22/2020)
+## 7.5.0 (07/22/2020)
 
 ### NEW
 
@@ -53,7 +53,7 @@ noTitleIndex: true
 
 - Fixed a bug where the coordinates of barcodes are calculated incorrectly under some situations.
 
-## 7.4 (04/16/2020)
+## 7.4.0 (04/16/2020)
 
 ### NEW
 
@@ -84,7 +84,7 @@ noTitleIndex: true
 - Fixed a bug where the ColourConversionModes RGB weights setting does not work when CICM_GENERAL is enabled.
 - Other small fixes and tweaks.
 
-## 7.3 (01/02/2020)
+## 7.3.0 (01/02/2020)
 
 ### NEW
 
@@ -130,7 +130,7 @@ noTitleIndex: true
 - Fixed minor bugs in result outputs.
 - Fixed a bug where OneDCodeDetails doesn't work.
 
-## 7.2 (09/24/2019)
+## 7.2.0 (09/24/2019)
 
 ### NEW
 
@@ -155,7 +155,7 @@ noTitleIndex: true
 ### FIXED
 - Fixed minor bugs
 
-## 7.1 (08/15/2019)
+## 7.1.0 (08/15/2019)
 
 ### NEW
 
@@ -175,7 +175,7 @@ noTitleIndex: true
 - Fixed a bug that the parameter, RequireStartStopChars, might malfunction in some rare cases.
 - Fixed a bug that the angle of barcodes might not be calculated correctly sometimes.
 
-## 7.0 (07/11/2019)
+## 7.0.0 (07/11/2019)
 
 ### NEW
 
@@ -227,7 +227,7 @@ noTitleIndex: true
 
 - Small fixes and tweaks.
 
-## 6.5 (02/26/2019)
+## 6.5.0 (02/26/2019)
 
 ### IMPROVED
 
@@ -252,7 +252,7 @@ noTitleIndex: true
 
 - Small fixes and tweaks.
 
-## 6.4 (10/15/2018)
+## 6.4.0 (10/15/2018)
 
 ### NEW
 
@@ -269,7 +269,7 @@ noTitleIndex: true
 
 - Small fixes and tweaks.
 
-## 6.3 (08/16/2018)
+## 6.3.0 (08/16/2018)
 
 ### NEW
 
@@ -290,7 +290,7 @@ noTitleIndex: true
 
 - Small fixes and tweaks.
 
-## 6.2 (06/28/2018)
+## 6.2.0 (06/28/2018)
 
 ### IMPROVED
 
@@ -308,7 +308,7 @@ noTitleIndex: true
 
 - Small fixes and tweaks.
 
-## 6.1 (05/14/2018)
+## 6.1.0 (05/14/2018)
 
 ### NEW
 
@@ -319,7 +319,7 @@ noTitleIndex: true
 - Improved localization algorithm for barcodes rotated in a degree or with poor perspective.
 - Faster read speed for QR, Data Matrix and PDF417 barcodes.
 
-## 6.0 (03/30/2018)
+## 6.0.0 (03/30/2018)
 
 ### NEW
 
@@ -336,7 +336,7 @@ noTitleIndex: true
 
 - Small fixes and tweaks.
 
-## 5.2 (09/08/2017)
+## 5.2.0 (09/08/2017)
 
 ### IMPROVED
 
@@ -349,14 +349,14 @@ noTitleIndex: true
 
 - Small fixes and tweaks.
 
-## 5.1 (05/25/2017)
+## 5.1.0 (05/25/2017)
 
 ### FIXED
 
 - Fixed a bug that caused incorrect result points if de-blur algorithm is used when reading 1D barcodes.
 - Other small fixes and tweaks.
 
-## 5.0 (03/07/2017)
+## 5.0.0 (03/07/2017)
 
 ### NEW
 
@@ -381,7 +381,7 @@ noTitleIndex: true
 - Fixed an issue where the DLL crashes when reading DataMatrix in multiple threads.
 - Other small fixes and tweaks.
 
-## 4.3 (10/13/2016)
+## 4.3.0 (10/13/2016)
 
 ### NEW
 
@@ -400,7 +400,7 @@ noTitleIndex: true
 - New samples are now available in the Code Gallery:
 - RESTful Web Service - implements server-side RESTful web service in C# for barcode reading.
 
-## 4.2 (04/08/2016)
+## 4.2.0 (04/08/2016)
 
 ### IMPROVED
 
@@ -408,7 +408,7 @@ noTitleIndex: true
 - Improved ResultPoints Property to adjust the sequence of barcode corner points. Now the top-left corner of the barcode is the starting point (x1, y1). The results are returned in the clockwise direction.
 - Improved ResultPoints Property to adjust the sequence of barcode corner points.
 
-## 4.1 (01/21/2016)
+## 4.1.0 (01/21/2016)
 
 ### NEW
 
@@ -419,7 +419,7 @@ noTitleIndex: true
 
 - Improved positioning algorithm to better identify and localize DataMatrix barcodes.
 
-## 4.0 (11/03/2015)
+## 4.0.0 (11/03/2015)
 
 ### NEW
 
@@ -428,7 +428,7 @@ noTitleIndex: true
 - A user-friendly demo guide program – "Dynamsoft Barcode Reader SDK" - is now available. You can run it from the shortcut icon on the desktop and have an overall view of all demos & sample code.
 - An out-of-box application - "Process documents with barcode" - is now available. It can rename, split or classify documents via barcodes on images and we provide overall view of all demos & sample code.
 
-## 3.0 (08/13/2015)
+## 3.0.0 (08/13/2015)
 
 ### NEW
 
@@ -439,7 +439,7 @@ noTitleIndex: true
 
 - Improved 1D Barcode Reader to support reading Industrial 2 of 5.
 
-## 2.1 (06/23/2015)
+## 2.1.0 (06/23/2015)
 
 ### NEW
 
@@ -451,7 +451,7 @@ noTitleIndex: true
 - Improved recognition of CODE39, CODE93, etc.
 - Improved the ASP.NET sample's user interface.
 
-## 2.0 (05/12/2015)
+## 2.0.0 (05/12/2015)
 
 ### NEW
 
@@ -462,7 +462,7 @@ noTitleIndex: true
 - Supported image formats include BMP, JPG, PNG, (single or multi-page) TIFF, Windows DIB and .NET Bitmap
 - Various code samples (in C/C++/C#/Java/VB/VB.NET) available. 
 
-## 1.0 (01/20/2015)
+## 1.0.0 (01/20/2015)
 
 ### NEW
 
