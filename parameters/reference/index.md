@@ -52,24 +52,24 @@ breadcrumbText: Reference
  | [`MirrorMode`](mirror-mode.md) | Sets whether to decode mirrored barcodes. | 
  | [`ModuleSizeRangeArray`](module-size-range-array.md) | Sets the range of module size (in pixels) for barcodes searching. (Hint). |
  | [`MSICodeCheckDigitCalculation`](msi-code-check-digit-calculation.md) | Sets the scheme used for calculating a check digit of an MSI barcode. |
- | [`Pages`](.md) | Sets the specific pages or the range of pages of a file (.tiff or .pdf) for barcode searching. |
- | [`PDFRasterDPI`](.md) | Sets the output image resolution. |
+ | [`Pages`](pages.md) | Sets the specific pages or the range of pages of a file (.tiff or .pdf) for barcode searching. |
+ | [`PDFRasterDPI`](pdf-raster-dpi.md) | Sets the output image resolution. |
  | [`PDFReadingMode`](pdf-reading-mode.md) | Sets the way to detect barcodes from a PDF file when using the DecodeFile method. |
- | [`Region`](.md) | Sets the region for barcodes searching. |
+ | [`Region`](region.md) | Sets the region for barcodes searching. |
  | [`RegionPredetectionModes`](region-predetection-modes.md) | Sets the region pre-detection mode for barcodes searching. |
- | [`RequireStartStopChars`](.md) |	Sets whether the start and stop characters are required when searching for Code 39 barcodes. |
- | [`ResultCoordinateType`](.md) | Specifies the format for the coordinates returned | 
- | [`ReturnBarcodeZoneClarity`](.md) | Sets whether or not to return the clarity of the barcode zone. | 
- | [`ReturnPartialBarcodeValue`](.md) | Sets whether or not to return partial barcode value(s). Not support yet. | 
- | [`ScaleDownThreshold`](.md) | Sets the threshold for the image shrinking. |
+ | [`RequireStartStopChars`](require-start-stop-chars.md) |	Sets whether the start and stop characters are required when searching for Code 39 barcodes. |
+ | [`ResultCoordinateType`](result-coordinate-type.md) | Specifies the format for the coordinates returned | 
+ | [`ReturnBarcodeZoneClarity`](return-barcode-zone-clarity.md) | Sets whether or not to return the clarity of the barcode zone. | 
+ | [`ReturnPartialBarcodeValue`](return-partial-barcode-value.md) | Sets whether or not to return partial barcode value(s). Not support yet. | 
+ | [`ScaleDownThreshold`](scale-down-threshold.md) | Sets the threshold for the image shrinking. |
  | [`ScaleUpModes`](scale-up-modes.md) | Sets the mode and priority to control the sampling methods of scale-up for linear barcodes with small module sizes. | 
- | [`StandardFormat`](.md) | Set the standard barcode format. | 
- | [`TailModuleRatio`](.md) |	Set the module count and module size ratio of the barcode tail part. | 
- | [`TerminatePhase`](.md) | Sets the phase where the algorithm stops. |
+ | [`StandardFormat`](standard-format.md) | Set the standard barcode format. | 
+ | [`TailModuleRatio`](tail-module-ratio.md) |	Set the module count and module size ratio of the barcode tail part. | 
+ | [`TerminatePhase`](terminate-phase.md) | Sets the phase where the algorithm stops. |
  | [`TextFilterModes`](text-filter-modes.md) | 	Sets the mode and priority for text filter. |
  | [`TextureDetectionModes`](texture-detection-modes.md) | 	Sets the mode and priority for texture detection. |
- | [`TextResultOrderModes`](.md) | Sets the mode and priority for the order of the text results returned. | 
- | [`Timeout`](.md) | Sets the maximum amount of time (in milliseconds) that should be spent searching for a barcode per page. |
+ | [`TextResultOrderModes`](text-result-order-modes.md) | Sets the mode and priority for the order of the text results returned. | 
+ | [`Timeout`](time-out.md) | Sets the maximum amount of time (in milliseconds) that should be spent searching for a barcode per page. |
 
 
 
