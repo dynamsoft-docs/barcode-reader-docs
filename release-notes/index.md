@@ -3,6 +3,7 @@ layout: default-layout
 title: Dynamsoft Barcode Reader SDK - Release Notes
 description: This is the release notes page of Dynamsoft Barcode Reader.
 keywords: release notes
+needGenerateH3Content: false
 ---
 
 # Release Notes
