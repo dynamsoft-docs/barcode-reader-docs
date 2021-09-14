@@ -12,8 +12,7 @@ breadcrumbText: Reference
 # Parameter Reference
 
  | Parameter Name | Description |
- | -------------- | ----------- | 
- 
+ | -------------- | ----------- |  
  | [`AllModuleDeviation`](all-module-deviation.md) | Set the module size deviation from the standard barcode module size. |
  | [`AustralianPostEncodingTable`](australian-post-encoding-table.md) | Set the encoding table used to code the Customer Information Field of Australian Post Customer Barcode. | 
  | [`BarcodeAngleRangeArray`](barcode-angle-range-array.md) | Sets the range of angles (in degrees) for barcodes searching. | 
