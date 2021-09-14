@@ -5,6 +5,7 @@ description: This page shows how the Dynamsoft Barcode Reader SDK is designed to
 keywords: Read Rate
 ---
 
+
 # Achieve a High Barcode Reading Rate
 
 This article describes how the Dynamsoft Barcode Reader SDK (hereafter referred to as "DBR") is designed and how to adjust parameters to achieve a high barcode reading rate.
@@ -52,6 +53,7 @@ Along with all parameters introduced above, DBR also provide many parameters for
 - IPM_MORPHOLOGY. This mode can be used for images where the barcode area is polluted or destroyed.
 
 `BinarizationModes` is a parameter to control the process of binarization. By default, DBR uses `BM_LOCAL_BLOCK` mode for binarization which will binarize the image for each pixel based on a threshold which is calculated based on a small region around it. It works well when the image has different lighting conditions in different areas. If the read rate is not good, you can try adjusting arguments `BlockSizeX` and `BlockSizeX` to an appropriate value ( 5 - 8 times module size is recommended ). You can also try another binarization mode `BM_THRESHOLD` which will binarize the image for each pixel based on a global unified threshold. It works well when the image has obvious contrast between the barcode and the background.
+
 
 
 ### Support Non-standard Format
