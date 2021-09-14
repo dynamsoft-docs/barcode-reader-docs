@@ -20,6 +20,9 @@ As one of the 5 top level stages, localizing barcode zones is quite a base proce
 - LM_STATISTICS. If the above modes can not detect all your barcodes, adding this mode may help for QRCode and DataMatrix.
 - LM_STATISTICS_MARKS. This is optimized for Direct Part Marking (DPM) codes and DotCode.
 - LM_STATISTICS_POSTAL_CODE. For postal codes, adding this mode may help for some scenarios.
+- LM_CENTRE. Localizes barcodes from the centre of the image.
+
+By default, `LM_SCAN_DIRECTLY`, `LM_CONNECTED_BLOCKS`, `LM_LINES`, `LM_STATISTICS` have been set and this can localize most of regular barcode formats. If not, add the left modes according to particular barcode features.
 
 ### Adjust Parameters to Decode a Barcode Zone
 
