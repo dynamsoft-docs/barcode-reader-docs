@@ -29,7 +29,7 @@ jobs:
           cd /home/ubuntu
           [ ! -d barcode-reader-docs-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/barcode-reader-docs.git barcode-reader-docs-preview
           [ ! -d barcode-reader-docs-js-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/barcode-reader-docs-js.git barcode-reader-docs-js-preview
-          [ ! -d barcode-reader-docs-mobile-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/barcode-reader-docs-mobile.git barcode-reader-docs-mobile-preview
+          [ ! -d barcode-reader-docs-mobile-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/barcode-reader-docs-mobile.git barcode-reader-docs-mobile-preview          
           [ ! -d DBRDocPreview ] && mkdir -p DBRDocPreview
           cd barcode-reader-docs-preview && git pull && cd .. && cp -rfp ./barcode-reader-docs-preview/* ./DBRDocPreview/
           cd barcode-reader-docs-js-preview && git pull && cd .. && cp -rfp ./barcode-reader-docs-js-preview/* ./DBRDocPreview/

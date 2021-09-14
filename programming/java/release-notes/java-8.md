@@ -10,25 +10,32 @@ noTitleIndex: true
 
 # Release Notes for Java SDK - 8.x
 
-## 8.6 (07/15/2021)
+## 8.6.0 (07/15/2021)
 
-### New
+### Highlights
+
+{%- include release-notes/product-highlight-8.6.0.md -%}
+
+### Changelog
+
+#### New
 
 - Added two DeblurMode Enumerations, `DM_BASED_ON_LOC_BIN` and `DM_SHARPENING_SMOOTHING`, to support more usage scenarios.
 - Added `initLicenseFromDLS` and `initDLSConnectionParameters` in `BarcodeReader` class to replace `initLicenseFromLTS` and `initLTSConnectionParameters`.
 - Added class `DMDLSConnectionParameters` to replace class `DMLTSConnectionParameters`.
 
-### Improved
+#### Improved
 
 - Improved the [`confidence`]({{site.java_class}}ExtendedResult.html#confidence) algorithm for 1D barcode results. Users can get even more accurate results by configuring the `confidence` filter.
 
-## 8.4 (06/08/2021)
+## 8.4.0 (06/08/2021)
 
 ### New
 
 - Added a new method [`GetIdleInstancesCount`]({{site.java_methods}}license.html#getidleinstancescount) to return the number of available instances when using the 'per concurrent instance' licensing model.
 - Added the [`organizationID`]({{site.java_class}}DMLTSConnectionParameters.html#organizationid) property for license authentication.
-- Added new attributes [`isMirrored`]({{site.java_class}}TextResult.html#ismirrored) to the `TextResult` class. `IsMirrored` returns whether the barcode is mirrored.
+- Added a new attribute [`isMirrored`]({{site.java_class}}TextResult.html#ismirrored) to the `TextResult` class. `isMirrored` returns whether the barcode is mirrored.
+- Added a new attribute [`isDPM`]({{site.java_class}}TextResult.html#isdpm) to the `TextResult` class. `isDPM` returns whether the barcode is recognized by the DPM mode.
 - Added a new argument, `ThresholdCompensation`, to the `BinarizationModes` mode arguments.
 
 ### Improved
@@ -44,7 +51,7 @@ noTitleIndex: true
 
 - Fixed an issue that happens when calling initLicenseFromLTS if [`handShakeCode`]({{site.java_class}}DMLTSConnectionParameters.html#handshakecode) is not set.
 
-## 8.2 (03/17/2021)
+## 8.2.0 (03/17/2021)
 
 ### New
 
@@ -74,7 +81,7 @@ noTitleIndex: true
 
 - Fixed a bug where `barcodeFormatString`, `barcodeFormatString_2`, `regionName` and `documentName` don't have value in the `IRT_TYPED_BARCODE_ZONE` intermediate result.
 
-## 8.1 (01/12/2021)
+## 8.1.0 (01/12/2021)
 
 ### New
 
@@ -94,7 +101,7 @@ noTitleIndex: true
 - Fixed a bug where Micro PDF417 may not be localized in multiple-barcode scenarios.
 - Fixed a bug where the `ExpectedBarcodesCount` and `BarcodeFormat` parameters do not work in the `RegionDefinition`.
 
-## 8.0 (11/17/2020)
+## 8.0.0 (11/17/2020)
 
 ### New
 

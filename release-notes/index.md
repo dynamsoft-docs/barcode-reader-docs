@@ -1,16 +1,129 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for .NET SDK - Release Notes v7.6.0 and below
-description: This is the release notes page of Dynamsoft Barcode Reader for .NET SDK v7.6.0 and below.
-keywords: release notes, .net
-needAutoGenerateSidebar: true
+title: Dynamsoft Barcode Reader SDK - Release Notes
+description: This is the release notes page of Dynamsoft Barcode Reader.
+keywords: release notes
 needGenerateH3Content: false
-noTitleIndex: true
 ---
 
-# Release Notes for .NET SDK - 7.6.0 and below
+# Release Notes
 
-## 7.6.0 (09/01/2020)
+## 8.6.0 
+
+### Highlights
+
+{%- include release-notes/product-highlight-8.6.0.md -%}
+
+### Editions
+- [JavaScript](../programming/javascript/release-notes/js-8.md#860-08312021)
+- [C](../programming/c/release-notes/c-8.md#860-07152021)
+- [C++](../programming/cplusplus/release-notes/cpp-8.md#860-07152021)
+- [DotNet](../programming/dotnet/release-notes/dotnet-8.md#860-07152021)
+- [Python](../programming/python/release-notes/python-8.md#860-07152021)
+- [Java](../programming/java/release-notes/java-8.md#860-07152021)
+- [Android](../programming/android/release-notes/android-8.md#860-07152021)
+- [iOS](../programming/objectivec-swift/release-notes/ios-8.md#860-07152021)
+
+## 8.4.0
+
+### New
+
+- Added a new method [`GetIdleInstancesCount`]({{site.c_methods}}license.html#dbr_getidleinstancescount) to return the number of available instances when using the 'per concurrent instance' licensing model.
+- Added the [`organizationID`]({{site.structs}}DMLTSConnectionParameters.html#organizationid) property for license authentication.
+- Added new attributes [`isMirrored`]({{site.structs}}TextResult.html#ismirrored) to the `TextResult` class. `IsMirrored` returns whether the barcode is mirrored.
+- Added a new argument, `ThresholdCompensation`, to the `BinarizationModes` mode arguments.
+
+### Improved
+
+- Faster recognition speeds when detecting dense QR Codes.
+- Improved the performance of boundary identification for DataMatrix codes.
+
+### Deprecated
+
+- `ThreshValueCoefficient` is now deprecated. It still works in this version but could be removed in the near future. We recommend using ThresholdCompensation instead.
+
+### Fixed
+
+- Fixed an issue that happens when calling initLicenseFromLTS if [`handShakeCode`]({{site.structs}}DMLTSConnectionParameters.html#handshakecode) is not set.
+
+## 8.2.0
+
+### New
+
+- Added a new mode argument, `FindAccurateBoundary`, to [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes) that determines if the SDK attempts to find an accurate boundary when RegionPredetectionModes is set to `RPM_GENERAL_HSV_CONTRAST`.
+
+### Improved
+
+- Improved both the localization and decoding algorithms for Postal Codes. 
+- LocalizationMode `LM_STATISTICS_POSTAL_CODE` will not be added automatically when enabling Postal Code in your runtime settings. Instead, users must manually add it to the LocalizationMode array if it is required.
+
+### Fixed
+
+- Resolved a bug that infrequently causes the application to crash when decoding a MicroPDF417 barcode.
+
+## 8.1.2
+
+### New
+
+- Added `mode`, `page`, `totalPage` and `parityData` in the `QRCodeDetails` Struct.
+
+### Improved
+
+- Improved the recognition accuracy for GS1 Databar.
+- Removed the exception code from `barcodeText` when using a valid trial license.
+
+### Fixed
+
+- Fixed a bug where `barcodeFormatString`, `barcodeFormatString_2`, `regionName` and `documentName` don't have value in the `IRT_TYPED_BARCODE_ZONE` intermediate result.
+
+## 8.1.0
+
+### New
+
+- Added support for MSI Code (Modified Plessey).
+- Added a new member `barcodeZoneMinDistanceToImageBorders` in the `PublicRuntimeSettings` struct to set the minimum distance (in pixels) between barcode zone and image borders. Previously, it is only available in the JSON template. It can be now configured by setting the struct `PublicRuntimeSettings` -> `barcodeZoneMinDistanceToImageBorders`.
+- Added exception error message to `TextResult` when license initialization fails or decoding authorization fails.
+
+### Improved
+
+- Improved the localization robustness for QR Code.
+- Improved the localization for low quality 1D barcodes.
+- Improved the deblurring performance and recognition rate for DataMatrix. 
+- Improved the recognition rate for Aztec.
+
+### Fixed
+
+- Fixed a bug where Micro PDF417 may not be localized in multiple-barcode scenarios.
+- Fixed a bug where the `ExpectedBarcodesCount` and `BarcodeFormat` parameters do not work in the `RegionDefinition`.
+
+## 8.0.0
+
+### New
+
+- Implemented the mechanism of loading libraries dynamically at runtime when [Parameter Mode Enumerations]({{ site.enumerations }}parameter-mode-enums.html) are used (except *_AUTO and *_SKIP). Use LibraryFileName and LibraryParameters to configure.
+- (For IntermediateResult Advanced Module) Added support for decoding IntermediateResult. For example, users with a binarized image could use this function to skip some image preprocessing steps.
+- Implemented a new licensing tracking mechanism, License 2.0, which makes it easier for users to track license usage. 
+- Added a new format control parameter, BarcodeZoneMinDistanceToImageBorders, to set the minimum distance (in pixels) between the barcode zone and image borders.
+- Added a new format control parameter, MinRatioOfBarcodeZoneWidthToHeight, to set the minimum ratio (width/height) of the barcode zone.
+- Added a new format control parameter, BarcodeZoneBarCountRangeArray, to set the barcode zone’s range of bar count for barcode search.
+- Added a new argument, SpatialIndexBlockSize, for RPM_GENERAL_RGB_CONTRAST, RPM_GENERAL_GRAY_CONTRAST and RPM_GENERAL_HSV_CONTRAST.
+- Added a new parameter, DeblurModes, so users can use different deblur algorithms for different scenarios. DeblurModes has the following enum types: DirectBinarization, ThresholdBinarization, GrayEqulization, Smoothing, Morphing, DeepAnalysis and Sharpening.
+
+### Improved
+
+- Improved the localization speed for the ScanDirectly mode.
+- Improved the localization accuracy for DataMatrix codes with a narrow quiet zone.
+
+### Fixed
+
+- Fixed a crash issue that could happen when conflicts occur on Linux.
+
+### Feature Deprecated
+
+- DeblurLevel is now deprecated. It still works in this version but could be removed in the near future. We recommend using DeblurModes instead.
+
+
+## 7.6.0 
 
 ### NEW
 
@@ -27,7 +140,7 @@ noTitleIndex: true
 - Fixed a bug where the coordinates of barcodes are calculated incorrectly under some situations.
 - Fixed a crash issue which occurs under some situations.
 
-## 7.5.0 (07/22/2020)
+## 7.5.0
 
 ### NEW
 
@@ -53,7 +166,7 @@ noTitleIndex: true
 
 - Fixed a bug where the coordinates of barcodes are calculated incorrectly under some situations.
 
-## 7.4.0 (04/16/2020)
+## 7.4.0 
 
 ### NEW
 
@@ -84,7 +197,7 @@ noTitleIndex: true
 - Fixed a bug where the ColourConversionModes RGB weights setting does not work when CICM_GENERAL is enabled.
 - Other small fixes and tweaks.
 
-## 7.3.0 (01/02/2020)
+## 7.3.0 
 
 ### NEW
 
@@ -101,14 +214,13 @@ noTitleIndex: true
 - Improved the decoding accuracy for DataMatrix that has a narrow quiet zone.
 - Improved the decoding accuracy for 1D barcode that has a small module size.
 
-## 7.2.2 (11/13/2019)
+## 7.2.2 
 
 ### FIXED
 
 - Fixed a bug where BarcodeBytes was null when DPM mode was enabled.
-- Fixed a bug where the use of barcodeText and barcodeBytes was reversed, resulting in an incorrect value.
 
-## 7.2.1 (11/12/2019)
+## 7.2.1 
 
 ### NEW
 
@@ -131,7 +243,7 @@ noTitleIndex: true
 - Fixed minor bugs in result outputs.
 - Fixed a bug where OneDCodeDetails doesn't work.
 
-## 7.2.0 (09/24/2019)
+## 7.2.0 
 
 ### NEW
 
@@ -156,13 +268,13 @@ noTitleIndex: true
 ### FIXED
 - Fixed minor bugs
 
-## 7.1.0 (08/15/2019)
+## 7.1.0 
 
 ### NEW
 
 - Added automatic blurry frame filtering for the video frame decoding, reducing incorrect barcode recognition.
 - Added three arguments for the CICM_GENERAL of ColourConversionModes to set the weights for the color conversion, providing more flexibility to deal with various kinds of backgrounds by using different weights of three colors: red, green and blue.
-- Added a new struct FrameDecodingParameters, added methods InitFrameDecodingParameters(), and StartFrameDecodingEx() to start a new thread to decode barcodes.
+- Added a new struct FrameDecodingParameters, added methods DBR_InitFrameDecodingParameters()/InitFrameDecodingParameters(), and DBR_StartFrameDecodingEx()/StartFrameDecodingEx() to start a new thread to decode barcodes.
 
 ### IMPROVED
 
@@ -175,10 +287,8 @@ noTitleIndex: true
 - Fixed a bug that the coordinates of barcodes may be calculated incorrectly under some situations.
 - Fixed a bug that the parameter, RequireStartStopChars, might malfunction in some rare cases.
 - Fixed a bug that the angle of barcodes might not be calculated correctly sometimes.
-- Fixed a bug that GetIntermediateResults would throw exception "Value cannot be null.\r\nParameter name: destination".
-- Fixed a misspelling on Dynamsoft.Barcode.EnumBinarizationMode.BM_LOCAL_BLCOK.
 
-## 7.0.0 (07/11/2019)
+## 7.0.0 
 
 ### NEW
 
@@ -198,14 +308,14 @@ noTitleIndex: true
 
 - Fixed an issue where the barcode could be calculated incorrectly in some occasions.
 
-## 6.5.3 (07/03/2019)
+## 6.5.3 
 
 ### FIXED
 
 - Updated the license verification process for development license and desktop runtime license. The old license verification process may lead to license error on some computers.
 - Small fixes and tweaks.
 
-## 6.5.2 (05/28/2019)
+## 6.5.2 
 
 ### IMPROVED
 
@@ -214,10 +324,10 @@ noTitleIndex: true
 - Reduced the possibility of conflicts with neighbour barcodes. This improved the precision of the zone to be deleted when a barcode is recognized successfully.
 
 ### FIXED
-- Added a new Dispose method to help release resources in time in the BarcodeReader Class.
+
 - Enhanced the robustness of the image processing algorithm. This resolved segmentation faults when a 0-size image is passed to our SDK or there are a few small-size barcode zones which need to do spatial transformation.
 
-## 6.5.1 (04/16/2019)
+## 6.5.1 
 
 ### IMPROVED
 
@@ -230,7 +340,7 @@ noTitleIndex: true
 
 - Small fixes and tweaks.
 
-## 6.5.0 (02/26/2019)
+## 6.5.0 
 
 ### IMPROVED
 
@@ -243,7 +353,7 @@ noTitleIndex: true
 
 - Small fixes and tweaks.
 
-## 6.4.1 (11/22/2018)
+## 6.4.1 
 
 ### IMPROVED
 
@@ -255,7 +365,7 @@ noTitleIndex: true
 
 - Small fixes and tweaks.
 
-## 6.4.0 (10/15/2018)
+## 6.4.0 
 
 ### NEW
 
@@ -272,7 +382,7 @@ noTitleIndex: true
 
 - Small fixes and tweaks.
 
-## 6.3.0 (08/16/2018)
+## 6.3.0 
 
 ### NEW
 
@@ -293,7 +403,7 @@ noTitleIndex: true
 
 - Small fixes and tweaks.
 
-## 6.2.0 (06/28/2018)
+## 6.2.0 
 
 ### IMPROVED
 
@@ -311,7 +421,7 @@ noTitleIndex: true
 
 - Small fixes and tweaks.
 
-## 6.1.0 (05/14/2018)
+## 6.1.0 
 
 ### NEW
 
@@ -322,7 +432,7 @@ noTitleIndex: true
 - Improved localization algorithm for barcodes rotated in a degree or with poor perspective.
 - Faster read speed for QR, Data Matrix and PDF417 barcodes.
 
-## 6.0.0 (03/30/2018)
+## 6.0.0 
 
 ### NEW
 
@@ -339,7 +449,7 @@ noTitleIndex: true
 
 - Small fixes and tweaks.
 
-## 5.2.0 (09/08/2017)
+## 5.2.0 
 
 ### IMPROVED
 
@@ -352,14 +462,14 @@ noTitleIndex: true
 
 - Small fixes and tweaks.
 
-## 5.1.0 (05/25/2017)
+## 5.1.0 
 
 ### FIXED
 
 - Fixed a bug that caused incorrect result points if de-blur algorithm is used when reading 1D barcodes.
 - Other small fixes and tweaks.
 
-## 5.0.0 (03/07/2017)
+## 5.0.0 
 
 ### NEW
 
@@ -375,12 +485,16 @@ noTitleIndex: true
 - Added Angle API to set the angle ranges of barcodes for scanning.
 - Added Angle property to return the rotation angle of a detected barcode.
 
+### IMPROVED
+
+- Combined C and C++ header files into one to simplify the reference of the header file.
+
 ### FIXED
 
 - Fixed an issue where the DLL crashes when reading DataMatrix in multiple threads.
 - Other small fixes and tweaks.
 
-## 4.3.0 (10/13/2016)
+## 4.3.0 
 
 ### NEW
 
@@ -397,9 +511,9 @@ noTitleIndex: true
 ### NEW RESOURCES
 
 - New samples are now available in the Code Gallery:
- RESTful Web Service - implements server-side RESTful web service in C# for barcode reading.
+- RESTful Web Service - implements server-side RESTful web service in C# for barcode reading.
 
-## 4.2.0 (04/08/2016)
+## 4.2.0 
 
 ### IMPROVED
 
@@ -407,19 +521,18 @@ noTitleIndex: true
 - Improved ResultPoints Property to adjust the sequence of barcode corner points. Now the top-left corner of the barcode is the starting point (x1, y1). The results are returned in the clockwise direction.
 - Improved ResultPoints Property to adjust the sequence of barcode corner points.
 
-## 4.1.0 (01/21/2016)
+## 4.1.0 
 
 ### NEW
 
-- Added new APIs DecodeStream, DecodeStreamRect, DecodeBase64String and DecodeBase64StringRect for ActiveX/COM, .Net DLL.
-- Added a new C# sample to demonstrate barcode reading from scanned document, captured photos and imported local image file.
+- Added new APIs DecodeStream, DecodeStreamRect, DecodeBase64String and DecodeBase64StringRect for C, C++ DLL.
 - Added Error Code -10022: "PDF Rasterizer DLL Missing".
 
 ### IMPROVED
 
 - Improved positioning algorithm to better identify and localize DataMatrix barcodes.
 
-## 4.0.0 (11/03/2015)
+## 4.0.0 
 
 ### NEW
 
@@ -428,21 +541,18 @@ noTitleIndex: true
 - A user-friendly demo guide program – "Dynamsoft Barcode Reader SDK" - is now available. You can run it from the shortcut icon on the desktop and have an overall view of all demos & sample code.
 - An out-of-box application - "Process documents with barcode" - is now available. It can rename, split or classify documents via barcodes on images and we provide overall view of all demos & sample code.
 
-### IMPROVED
-
-- Improved the .NET DLL to support AnyCPU for enhanced platform integration.
-
-## 3.0.0 (08/13/2015)
+## 3.0.0 
 
 ### NEW
 
 - Added 2D Barcode Reader to support reading QR Code.
+- Added new APIs DBR_GetVersion and DBR_GetErrorString for the Windows Edition's C/C++ DLL.
 
 ### IMPROVED
 
 - Improved 1D Barcode Reader to support reading Industrial 2 of 5.
 
-## 2.1.0 (06/23/2015)
+## 2.1.0 
 
 ### NEW
 
@@ -450,11 +560,11 @@ noTitleIndex: true
 
 ### IMPROVED
 
-- Improved CODE128 decoding.
+- Improved CODE128 decoding
 - Improved recognition of CODE39, CODE93, etc.
 - Improved the ASP.NET sample's user interface.
 
-## 2.0.0 (05/12/2015)
+## 2.0.0 
 
 ### NEW
 
@@ -462,10 +572,10 @@ noTitleIndex: true
 - Windows Edition: provides C, C++, ActiveX / COM and .NET APIs
 - Supported barcode types now include:
  Code39, Code128, Code93, Codabar, ITF, EAN13, EAN8, UPCA and UPCE
-- Supported image formats include BMP, JPG, PNG, (single or multi-page) TIFF, Windows DIB and .NET Bitmap.
+- Supported image formats include BMP, JPG, PNG, (single or multi-page) TIFF, Windows DIB and .NET Bitmap
 - Various code samples (in C/C++/C#/Java/VB/VB.NET) available. 
 
-## 1.0.0 (01/20/2015)
+## 1.0.0 
 
 ### NEW
 

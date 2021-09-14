@@ -10,25 +10,32 @@ noTitleIndex: true
 
 # Release Notes for Python SDK - 8.x
 
-## 8.6 (07/20/2021)
+## 8.6.0 (07/20/2021)
 
-### New
+### Highlights
+
+{%- include release-notes/product-highlight-8.6.0.md -%}
+
+### Changelog
+
+#### New
 
 - Added two DeblurMode Enumerations, `DM_BASED_ON_LOC_BIN` and `DM_SHARPENING_SMOOTHING`, to support more usage scenarios.
 - Added methods `init_license_from_dls` and `init_dls_connection_parameters` in `BarcodeReader` class to replace `init_license_from_lts` and `init_lts_connection_parameters`.
 - Added class `DMDLSConnectionParameters` to replace class `DMLTSConnectionParameters`.
 
-### Improved
+#### Improved
 
 - Improved the [`confidence`]({{site.python_class}}ExtendedResult.html#confidence) algorithm for 1D barcode results. Users can get even more accurate results by configuring the `confidence` filter.
 
-## 8.4 (06/10/2021)
+## 8.4.0 (06/10/2021)
 
 ### New
 
 - Added a new method [`get_idle_instances_count`]({{site.python_methods}}license.html#get_idle_instances_count) to return the number of available instances when using the 'per concurrent instance' licensing model.
 - Added the [`organizationID`]({{site.python_class}}DMLTSConnectionParameters.html#organization_id) property for license authentication.
-- Added new attributes [`is_mirrored`]({{site.python_class}}TextResult.html#is_mirrored) and [`is_dpm`]({{site.python_class}}TextResult.html#is_dpm) to the `TextResult` class. `is_mirrored` returns whether the barcode is mirrored and `is_dpm` returns whether the result is recognized as a `DPM` code.
+- Added a new attribute [`is_mirrored`]({{site.python_class}}TextResult.html#is_mirrored) to the `TextResult` class. `is_mirrored` returns whether the barcode is mirrored.
+- Added a new attribute [`is_dpm`]({{site.python_class}}TextResult.html#is_dpm) to the `TextResult` class. `is_dpm` returns whether the barcode is recognized by the DPM mode.
 - Added a new argument, [`ThresholdCompensation`]({{site.image_parameters}}BinarizationModes.html#thresholdcompensation), to the `BinarizationModes` mode arguments.
 
 ### Improved
@@ -44,7 +51,7 @@ noTitleIndex: true
 
 - Fixed an issue that happens when calling initLicenseFromLTS if `handshake_code` is not set.
 
-## 8.2 (03/17/2021)
+## 8.2.0 (03/17/2021)
 
 ### New
 
@@ -75,7 +82,7 @@ noTitleIndex: true
 
 - Fixed a bug where `barcodeFormatString`, `barcodeFormatString_2`, `regionName` and `documentName` don't have value in the `IRT_TYPED_BARCODE_ZONE` intermediate result.
 
-## 8.1 (01/19/2021)
+## 8.1.0 (01/19/2021)
 
 ### NEW
 
@@ -101,13 +108,13 @@ noTitleIndex: true
 - Fixed a bug where Micro PDF417 may not be localized in multiple-barcode scenarios.
 - Fixed a bug where the `ExpectedBarcodesCount` and `BarcodeFormat` parameters do not work in the `RegionDefinition`.
 
-## 8.0.1 (01/06/2021)
+## 8.0.0.1 (01/06/2021)
 
 ### FIXED
 
 - Fixed a typo in `init_license_from_lts`.
 
-## 8.0 (11/26/2020)
+## 8.0.0 (11/26/2020)
 
 ### NEW
 

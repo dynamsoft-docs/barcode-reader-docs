@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 ---
 
 
-# Structure and Interfaces of Parameters
+# Parameter Template Structure
 This article introduces the parameter definitions, organization structure, usage rules, and related interfaces involved in Dynamsoft Barcode Reader.
 
 ## Definitions

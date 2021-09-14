@@ -13,7 +13,7 @@ Dynamsoft Barcode Reader provides rich template parameters that you can customiz
 
 ## Getting Started
 
-- [Hierarchy and Work Domain of Parameters](structure-and-interfaces-of-parameters.md)
+- [Parameter Template Structure](structure-and-interfaces-of-parameters.md)
 
 ## Reference
 

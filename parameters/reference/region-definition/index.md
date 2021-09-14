@@ -32,7 +32,7 @@ breadcrumbText: Reference
 
  | Parameter Name | Description |
  | -------------- | ----------- | 
- | [`RegionDefinition..BarcodeFormatIds`](format-control.md#barcodeformatids) | Sets which types of barcode(s) in BarcodeFormat group 1 to be read in this region. |
+ | [`RegionDefinition.BarcodeFormatIds`](format-control.md#barcodeformatids) | Sets which types of barcode(s) in BarcodeFormat group 1 to be read in this region. |
  | [`RegionDefinition.BarcodeFormatIds_2`](format-control.md#barcodeformatids_2) | Sets which types of barcode(s) in BarcodeFormat group 2 to be read in this region. |
  
  

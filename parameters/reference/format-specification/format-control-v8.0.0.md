@@ -2,7 +2,7 @@
 layout: default-layout
 title: Dynamsoft Barcode Reader Parameter Reference for FormatSpecification Object - Format Control Parameters
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for FormatSpecification Object - Format Control Parameters.
-keywords: AllModuleDeviation, AustralianPostEncodingTable, BarcodeAngleRangeArray, BarcodeBytesLengthRangeArray, BarcodeBytesRegExPattern, BarcodeFormatIds, BarcodeFormatIds_2, BarcodeHeightRangeArray, BarcodeTextLengthRangeArray, BarcodeTextRegExPattern, BarcodeWidthRangeArray, BarcodeZoneBarCountRangeArray, BarcodeZoneMinDistanceToImageBorders, Code128Subset, FindUnevenModuleBarcode, HeadModuleRatio, MinQuietZoneWidth, MinRatioOfBarcodeZoneWidthToHeight, MirrorMode, ModuleSizeRangeArray, MSICodeCheckDigitCalculation, RequireStartStopChars, StandardFormat, TailModuleRatio, FormatSpecification, format control parameters, parameter reference, parameter
+keywords: AllModuleDeviation, AustralianPostEncodingTable, BarcodeAngleRangeArray, BarcodeBytesLengthRangeArray, BarcodeBytesRegExPattern, BarcodeFormatIds, BarcodeFormatIds_2, BarcodeHeightRangeArray, BarcodeTextLengthRangeArray, BarcodeTextRegExPattern, BarcodeWidthRangeArray, BarcodeZoneBarCountRangeArray, BarcodeZoneMinDistanceToImageBorders, Code128Subset, FindUnevenModuleBarcode, HeadModuleRatio, MinQuietZoneWidth, MinRatioOfBarcodeZoneWidthToHeight, MirrorMode, ModuleSizeRangeArray, RequireStartStopChars, StandardFormat, TailModuleRatio, FormatSpecification, format control parameters, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 ---
@@ -31,7 +31,6 @@ needGenerateH3Content: false
  | [`FormatSpecification.MinRatioOfBarcodeZoneWidthToHeight`](format-control.md#minratioofbarcodezonewidthtoheight) |	Sets the minimum ratio (width/height) of the barcode zone. | 
  | [`FormatSpecification.MirrorMode`](format-control.md#mirrormode) | Sets whether to decode mirrored barcodes. | 
  | [`FormatSpecification.ModuleSizeRangeArray`](format-control.md#modulesizerangearray) | Sets the range of module size (in pixels) for barcodes search. (Hint). |
- | [`FormatSpecification.MSICodeCheckDigitCalculation`](format-control.md#msicodecheckdigitcalculation) | Sets the scheme used for calculating a check digit of an MSI barcode. | 
  | [`FormatSpecification.RequireStartStopChars`](format-control.md#requirestartstopchars) |	Sets whether the start and stop characters are required when searching for Code 39 barcodes. |
  | [`FormatSpecification.StandardFormat`](format-control.md#standardformat) | Sets the standard barcode format. | 
  | [`FormatSpecification.TailModuleRatio`](format-control.md#tailmoduleratio) |	Sets the module count and module size ratio of the barcode tail part. | 
@@ -45,7 +44,7 @@ needGenerateH3Content: false
 ## AllModuleDeviation
 Set the module size deviation from the standard barcode module size.   
 
-**Remarks**     
+**Remarks**   
 The unit is barcode module. For example, if the standard barcode module is 2px and AllModuleDeviation is 1, then the non-standard barcode module size is 4px.
     
 ### As Json Parameter
@@ -173,7 +172,7 @@ Specifies the regular express pattern of barcode byte characters.
 ## BarcodeFormatIds
 Sets which barcode format the current FormatSpecification configuration is applied to. 
 
-**Remarks**     
+**Remarks**   
 If you already know the barcode type(s) before performing barcode reading, specifying the barcode type(s) to be read will speed up the recognition process.
 
 ### As Json Parameter
@@ -198,7 +197,7 @@ If you already know the barcode type(s) before performing barcode reading, speci
 Sets which barcode format in BarcodeFormat group 2 the current FormatSpecification configuration is applied to.   
 
 
-**Remarks**     
+**Remarks**   
 If the barcode type(s) are certain, specifying the barcode type(s) to be read will speed up the recognition process.    
 The barcode format our library will search for is composed of BarcodeFormat group 1 and BarcodeFormat group 2, so you need to specify the barcode format in group 1 and group 2 individually.
 
@@ -225,7 +224,7 @@ Sets the range of barcode heights (in pixels) to for barcodes search.
 
 
 ### As Json Parameter
-`BarcodeHeightRangeArray` as a JSON parameter is a JSON Object array. Each JSON Object has two keys `MinValue` and `MaxValue` for setting the range of barcode height for barcodes search. Default values will be used if there is no manual setting. 
+`BarcodeHeightRangeArray` as a JSON parameter is a JSON Object array. Each JSON Object has two keys `MinValue` and `MaxValue` for setting the range of barcode bytes length for barcodes search. Default values will be used if there is no manual setting. 
 
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
@@ -279,10 +278,10 @@ Sets the range of barcode text length for barcodes search.
 | ------ | ------------------- | ---------- | ------------ | ------------- |
 | [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) | [`minBarcodeTextLength`]({{ site.structs }}PublicRuntimeSettings.html#minbarcodetextlength) | [0,0x7fffffff] | 0 |
 
-**Remarks**     
+**Remarks**   
 0: means no limitation on the barcode text length.
 
-**See Also**      
+**See Also**    
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
 
 
@@ -315,7 +314,7 @@ Sets the range of barcode widths (in pixels) for barcodes search.
 
 
 ### As Json Parameter
-`BarcodeWidthRangeArray` as a JSON parameter is a JSON Object array. Each JSON Object has two keys `MinValue` and `MaxValue` for setting the range of barcode width for barcodes search. Default values will be used if there is no manual setting. 
+`BarcodeWidthRangeArray` as a JSON parameter is a JSON Object array. Each JSON Object has two keys `MinValue` and `MaxValue` for setting the range of barcode bytes length for barcodes search. Default values will be used if there is no manual setting. 
 
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
@@ -350,7 +349,7 @@ Sets the range of bar count of the barcode zone for barcodes search.
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
 | FormatSpecification | BarcodeZoneBarCountRangeArray | *JSON Object Array* | `MinValue`: [1, 0x7fffffff]<br>`MaxValue`: [1, 0x7fffffff]<br>**MaxValue >= MinValue** | `null` |
 
-**Remarks**     
+**Remarks**   
 - Default value for MinValue: 1
 - Default value for MaxValue: 128
 
@@ -428,7 +427,7 @@ Specifies whether to find barcodes with uneven barcode modules.
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
 | FormatSpecification | FindUnevenModuleBarcode | *int* | [0, 1] | 1 |
 
-**Remarks**     
+**Remarks**   
 - 0: do not find barcodes with uneven barcode modules.
 - 1: find barcodes with uneven barcode modules.
 
@@ -471,7 +470,7 @@ Sets the module count and module size ratio of the barcode head part.
 ## MinQuietZoneWidth
 The minimum width of the barcode quiet zone.
 
-**Remarks**     
+**Remarks**   
 The unit is barcode module. For example, if barcode module is 2px and MinQuietZoneWidth is 4, then the width of quiet zone is 8px.
    
     
@@ -484,18 +483,7 @@ The unit is barcode module. For example, if barcode module is 2px and MinQuietZo
 **Json Parameter Example**   
 ```
 {
-  "ImageParameter": {
-    "Name": "ImageParameter1",
-    "FormatSpecificationNameArray": [ "FormatSpecification1" ]
-  },
-  "FormatSpecification": {
-    "BarcodeFormatIds": [
-      "BF_QR_CODE"
-    ],
-    "MinQuietZoneWidth": 2,
-    "Name": "FormatSpecification1"
-  },
-  "Version": "3.0"
+    "MinQuietZoneWidth": 10
 }
 ```
 
@@ -515,7 +503,7 @@ Sets the minimum ratio (width/height) of the barcode zone.
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
 | FormatSpecification | MinRatioOfBarcodeZoneWidthToHeight | *int* | [0, 10000] | 0 |
 
-**Remarks**     
+**Remarks**   
 - 0: means no limitation.
 
 **Json Parameter Example**   
@@ -542,7 +530,7 @@ Sets whether to decode mirrored barcodes.
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
 | FormatSpecification | MirrorMode | *string* | "MM_NORMAL"<br>"MM_MIRROR"<br>"MM_BOTH" | `null` |
 
-**Remarks**     
+**Remarks**   
 - "MM_NORMAL": Doesn't decode mirror barcodes.
 - "MM_MIRROR": Decodes mirror barcodes only.
 - "MM_BOTH": Decodes both normal and mirror barcodes.
@@ -584,30 +572,6 @@ Sets the range of module size (in pixels) for barcodes search.
 
 &nbsp;
 
-## MSICodeCheckDigitCalculation
-Sets the scheme used for calculating a check digit of an MSI barcode.
-
-    
-### As Json Parameter
-
-
-| Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
-| ----------- | ------------------- | ---------- | ----------- | ------------- |
-| FormatSpecification | MSICodeCheckDigitCalculation | *string* | "MSICCDC_NO_CHECK_DIGIT"<br>"MSICCDC_MOD_10"<br>"MSICCDC_MOD_11"<br>"MSICCDC_MOD_1110"<br>"MSICCDC_MOD_1010" | `null` |
-
-**Remarks**     
-If this parameter is not set, MSICCDC_MOD_10 will be used by default.
-
-**Json Parameter Example**   
-```
-{
-    "MSICodeCheckDigitCalculation": "MSICCDC_MOD_10"
-}
-```
-
-
-&nbsp;
-
 
 ## RequireStartStopChars
 Sets whether the start and stop characters are required when searching for Code 39 barcodes.
@@ -620,7 +584,7 @@ Sets whether the start and stop characters are required when searching for Code 
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
 | FormatSpecification | RequireStartStopChars | *int* | [0, 1] | 1 |
 
-**Remarks**     
+**Remarks**   
 - 0: start and stop characters are not required.
 - 1: start and stop characters are required.
 

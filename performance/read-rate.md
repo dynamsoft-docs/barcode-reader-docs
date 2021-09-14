@@ -5,14 +5,15 @@ description: This page shows how the Dynamsoft Barcode Reader SDK is designed to
 keywords: Read Rate
 ---
 
-# Fundamental measurement of features: Read Rate
+
+# Achieve a High Barcode Reading Rate
 
 This article describes how the Dynamsoft Barcode Reader SDK (hereafter referred to as "DBR") is designed and how to adjust parameters to achieve a high barcode reading rate.
 
-### ExpectedBarcodesCount
+### Set How Many Barcodes to Read
 By default, DBR sets `ExpectedBarcodesCount` to 0 which means find at least one barcode. When not all barcodes are returned, this is the first option for you to set `ExpectedBarcodesCount` to a larger value or the actual barcode count if you know exactly.
 
-### Many Modes to Localize Barcode Zones
+### Adjust Parameters to Localize Barcode Zones
 As one of the 5 top level stages, localizing barcode zones is quite a base process. DBR provides parameter `LocalizationModes` which consists of following localization algorithms to take advantage of different features of barcode and image.
 - LM_SCAN_DIRECTLY. It is recommended when the barcode is large relative to the image size. For example, when detecting barcodes from live video in interactive scenario, users will help focus the barcode so the barcode in the screen would be large enough to use LM_SCAN_DIRECTLY
 - LM_CONNECTED_BLOCKS. It offers the right balance between reading speed and rate for most scenarios.
@@ -20,8 +21,11 @@ As one of the 5 top level stages, localizing barcode zones is quite a base proce
 - LM_STATISTICS. If the above modes can not detect all your barcodes, adding this mode may help for QRCode and DataMatrix.
 - LM_STATISTICS_MARKS. This is optimized for Direct Part Marking (DPM) codes and DotCode.
 - LM_STATISTICS_POSTAL_CODE. For postal codes, adding this mode may help for some scenarios.
+- LM_CENTRE. Localizes barcodes from the centre of the image.
 
-### Many Modes to Decode a Barcode Zone
+By default, `LM_SCAN_DIRECTLY`, `LM_CONNECTED_BLOCKS`, `LM_LINES`, `LM_STATISTICS` have been set and this can localize most of regular barcode formats. If not, add the left modes according to particular barcode features.
+
+### Adjust Parameters to Decode a Barcode Zone
 
 For a localized barcode zone, DBR applies a variety of image processing methods to decode the barcode. There are many parameters can be used in this procedure to insure the read rate.
 
@@ -37,7 +41,7 @@ For a localized barcode zone, DBR applies a variety of image processing methods 
 
 `MirrorMode` is one of the parameters to deal with mirrored barcodes. Setting it to `MM_BOTH` will cover both normal and mirrored barcodes and it is the recommanded setting for better read rate when the barcode mirror state is uncertain.
 
-### Many Modes for Image Processing
+### Adjust Parameters for Image Processing
 Along with all parameters introduced above, DBR also provide many parameters for image processing. Adjusting the following parameters may help improve the read rate.
 
 `GrayscaleTransformationModes` is a parameter to emphasize the features of the processing grayscale image. The barcode on a image usually have two types, dark barcode on light image and light barcode on dark image. Correspondly, setting `GrayscaleTransformationModes` to `GTM_ORIGINAL` and/or `GTM_INVERTED` for barcodes you are detecting will help the read rate.
@@ -51,7 +55,8 @@ Along with all parameters introduced above, DBR also provide many parameters for
 `BinarizationModes` is a parameter to control the process of binarization. By default, DBR uses `BM_LOCAL_BLOCK` mode for binarization which will binarize the image for each pixel based on a threshold which is calculated based on a small region around it. It works well when the image has different lighting conditions in different areas. If the read rate is not good, you can try adjusting arguments `BlockSizeX` and `BlockSizeX` to an appropriate value ( 5 - 8 times module size is recommended ). You can also try another binarization mode `BM_THRESHOLD` which will binarize the image for each pixel based on a global unified threshold. It works well when the image has obvious contrast between the barcode and the background.
 
 
-### Non-standard Format Supporting
+
+### Support Non-standard Format
 DBR provides a group of parameters to support non-standard barcode formats. If the barcodes you are decoding is non-standard, setting following parameters may help the read rate.
 
 - `StandardFormat` to specify the standard barcode format.
