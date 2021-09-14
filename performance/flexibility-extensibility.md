@@ -117,7 +117,7 @@ The followings show the grayscaled images respectively using the default mode, t
 
 ## Arguments of a mode to combine chains to reduce computation amount.
 
-There may be dependencies between different modes in DBR. For example, the `BinarizationModes` depend on the processing results of `ImagePreprocessModes`. Assuming that there are both 3 elements defined in the `GrayscaleEnhancementModes` and `BinarizationModes` parameters, the SDK will loop 9 cycles by default. 
+There may be dependencies between different modes in DBR. For example, the `BinarizationModes` depend on the processing results of `ImagePreprocessModes`. Assuming that there are both 3 elements defined in the `ImagePreprocessModes` and `BinarizationModes` parameters, the SDK will loop 9 cycles by default. 
 However, when the `ImagePreprocessModesIndex` argument in `BinarizationModes` is specified as the corresponding `ImagePreprocessModes` index (assuming one-to-one), only 3 cycles are required, which greatly reduces the computational cost.
 
 On the other aspect, the localization and decoding phases are strictly separated in DBR generally. Sometimes, in order to speed up, we can directly use the intermediate results of the localization stage. For example, the mode `DM_BASED_ON_LOC_BIN` in `DeblurModes` will adopt the localization binary image directly in the decoding stage, which omits the binarization step.
