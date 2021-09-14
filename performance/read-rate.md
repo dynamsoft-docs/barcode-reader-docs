@@ -54,6 +54,10 @@ Along with all parameters introduced above, DBR also provide many parameters for
 ### Non-standard Format Supporting
 DBR provides a group of parameters to support non-standard barcode formats. If the barcodes you are decoding is non-standard, setting following parameters may help the read rate.
 
+- `StandardFormat` to specify the standard barcode format.
 - `AllModuleDeviation` to specify the barcode module size deviation value.
 - `HeadModuleRatio` to specify the module count and module size ratio of the barcode head part.
 - `TailModuleRatio` to specify the module count and module size ratio of the barcode tail part.
+- `FindUnevenModuleBarcode` to specify whether to find barcodes with uneven barcode modules.
+- `Code128Subset` to specify the subset of Code 128.
+- `RequireStartStopChars` to specify whether the start and end characters need to be found during 1D decoding.
