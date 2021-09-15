@@ -5,7 +5,6 @@ description: This article shows RegionDefinition Object of Dynamsoft Barcode Rea
 keywords: parameter reference, parameters, RegionDefinition
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-breadcrumbText: Reference
 ---
 
 
@@ -19,6 +18,50 @@ breadcrumbText: Reference
  | -------------- | ----------- | 
  | [`RegionDefinition.Name`](content-organization-control.md#name) | The name of the RegionDefinition object. |
  | [`RegionDefinition.FormatSpecificationNameArray`](content-organization-control.md#formatspecificationnamearray) | The names of the referenced FormatSpecification object(s). |
+
+### Name
+The name of the RegionDefinition object. 
+
+**Remarks**      
+It must be a unique name.
+
+**JSON Definition**
+
+| Parent Object | Key Name | Key Value Type | Default Value |
+| ------------- | -------- | -------------- | ------------- |
+| RegionDefinition | Name | *string* | It must be a mandatory setting value. |
+
+**JSON Example**   
+```
+{
+    "Name":"Region1"
+}
+```
+
+
+## FormatSpecificationNameArray
+The names of the referenced FormatSpecification object(s).
+
+**Remarks**     
+An array item is a name of any available `FormatSpecifications`.   
+
+**JSON Definition**
+
+| Parent Object | Key Name | Key Value Type | Default Value |
+| ----------- | ------------------- | ---------- | ------------- |
+| RegionDefinition | FormatSpecificationNameArray | *string Array* | `null` |
+
+   
+**JSON Example**   
+```
+{
+    "FormatSpecificationNameArray":[
+        "FormatSpecification1",
+        "FormatSpecification2"
+    ]
+}
+```
+
 
 
 ## Cost Control

@@ -3,9 +3,8 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Parameter Reference - FormatSpecification Object
 description: This page shows Dynamsoft Barcode Reader Parameter Reference - FormatSpecification Object.
 keywords: parameter reference, parameters, FormatSpecification
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 needGenerateH3Content: false
-breadcrumbText: FormatSpecification
 ---
 
 
@@ -17,6 +16,24 @@ breadcrumbText: FormatSpecification
  | -------------- | ----------- | 
  | [`FormatSpecification.Name`](content-organization-control.md#name) | The name of the FormatSpecification object. |
 
+### Name
+The name of the FormatSpecification object.
+
+**Remarks**      
+It must be a unique name.
+
+**JSON Definition**
+
+| Parent Object | Key Name | Key Value Type | Default Value |
+| ------------- | -------- | -------------- | ------------- |
+| FormatSpecification | Name | *string* | It must be a mandatory setting value. |
+
+**JSON Example**   
+```
+{
+    "Name":"FormatSpecification1"
+}
+```
 
 ## Format Control
 
