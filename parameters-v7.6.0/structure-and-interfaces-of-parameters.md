@@ -3,7 +3,7 @@ description: Introduce the parameter definitions, organization structure, usage 
 title: Dynamsoft Barcode Reader Parameters - Structure and Interfaces of Parameters
 keywords: Parameter,Interface,Hierarchy
 layout: default-layout
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 ---
 
 
@@ -28,7 +28,7 @@ Dynamsoft Barcode Reader uses a template to set parameters. A template contains 
     "ImageParameterContentArray": [
       {
         "Name": "ImageParameter1", 
-        "BarcodeFormatIds": "BF_ONED"
+        "BarcodeFormatIds": ["BF_ONED"]
       },
       {
         "Name": "ImageParameter2", 
@@ -136,7 +136,7 @@ Template you set
 {
     "ImageParameter":{
         "Name": "ImageParameter1", 
-        "BarcodeFormatIds": "BF_ONED",    
+        "BarcodeFormatIds": ["BF_ONED"],    
         "FormatSpecificationNameArray": [
           "FormatSpecification1"
         ]
@@ -155,7 +155,7 @@ Template used by DBR
 {
     "ImageParameter":{
         "Name": "ImageParameter1", 
-        "BarcodeFormatIds": "BF_ONED",    
+        "BarcodeFormatIds": ["BF_ONED"],    
         "FormatSpecificationNameArray": [
           "FormatSpecification1_BF_CODE_39",
           "FormatSpecification1_BF_CODE_128"

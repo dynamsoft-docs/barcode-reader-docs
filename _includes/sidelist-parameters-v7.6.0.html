@@ -1,0 +1,11 @@
+<li><a href="{{ site.parameters }}" class="otherLinkColour">Parameters</a>
+    <ul>
+        <li><a href="{{ site.parameters }}structure-and-interfaces-of-parameters.html" class="otherLinkColour">Structure and Interfaces of Parameters</a></li>
+        {%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath targetRelativePath="sidelist-parameters/parameters-references.html" -%}
+        {%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath targetRelativePath="sidelist-parameters/parameters-enumerations.html" -%}
+        {%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath targetRelativePath="sidelist-parameters/parameters-scenario-settings.html" -%}
+        {%- comment -%}
+        <li class="unavailableLink">Example Image Settings</li>
+        {%- endcomment -%}
+    </ul>
+</li>
