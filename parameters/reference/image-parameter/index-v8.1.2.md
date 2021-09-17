@@ -3,9 +3,8 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Parameter Reference - ImageParameter Object
 description: This page shows Dynamsoft Barcode Reader Parameter Reference - ImageParameter Object.
 keywords: parameter reference, parameters, ImageParameter
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 needGenerateH3Content: false
-breadcrumbText: ImageParameter
 ---
 
 
@@ -19,6 +18,90 @@ breadcrumbText: ImageParameter
  | [`ImageParameter.Description`](content-organization-control.md#description) | The description of the ImageParameter object. |
  | [`ImageParameter.FormatSpecificationNameArray`](content-organization-control.md#formatspecificationnamearray) | The names of the referenced FormatSpecification object(s). |
  | [`ImageParameter.RegionDefinitionNameArray`](content-organization-control.md#regiondefinitionnamearray) | The names of the referenced RegionDefinition object(s). |
+
+### Name
+The name of the ImageParameter object.  
+
+**Remarks**      
+It must be a unique name.
+
+**JSON Definition**
+
+| Parent Object | Key Name | Key Value Type | Description |
+| ------------- | -------- | -------------- | ----------- |
+| ImageParameter | Name | *string* | It must be a mandatory setting value. |
+
+**JSON Example**   
+```
+{
+    "Name":"ImageParameter1"
+}
+```
+
+
+### Description
+The description of the ImageParameter object.
+
+**JSON Definition**
+
+| Parent Object | Key Name | Key Value Type | Default Value |
+| ------------- | -------- | -------------- | ------------- |
+| ImageParameter | Description | *string* | "" |
+
+**JSON Example**   
+```
+{
+    "Description":"This template demonstrate..."
+}
+```
+  
+
+### FormatSpecificationNameArray
+The names of the referenced FormatSpecification object(s). 
+
+**Remarks**     
+An array item is a name of any available `FormatSpecifications`.   
+
+**JSON Definition**
+
+| Parent Object | Key Name | Key Value Type | Default Value |
+| ------------- | -------- | -------------- | ------------- |
+| ImageParameter | FormatSpecificationNameArray | *string Array* | `null` |
+
+   
+**JSON Example**   
+```
+{
+    "FormatSpecificationNameArray":[
+        "FormatSpecification1",
+        "FormatSpecification2"
+    ]
+}
+```
+
+
+### RegionDefinitionNameArray
+The names of the referenced RegionDefinition object(s). 
+
+**Remarks**     
+An array item is a name of any available `RegionDefinitions`.    
+
+**JSON Definition**
+
+| Parent Object | Key Name | Key Value Type | Default Value |
+| ------------- | -------- | -------------- | ------------- |
+| ImageParameter | RegionDefinitionNameArray | *string Array* | `null` |
+
+
+**JSON Example**   
+```
+{
+    "RegionDefinitionNameArray":[
+        "RegionDefinition1",
+        "RegionDefinition2"
+    ]
+}
+```
 
 
 ## Cost Control

@@ -2,10 +2,7 @@
 layout: default-layout
 title: Dynamsoft Barcode Reader Parameter Reference - Main Page
 description: Dynamsoft Barcode Reader Parameter Reference - Main Page
-keywords: parameter reference, parameters, ImageParameter, RegionDefinition, FormatSpecification
-needAutoGenerateSidebar: true
-needGenerateH3Content: true
-breadcrumbText: Reference
+keywords: parameter reference, parameters
 ---
 
 
@@ -70,10 +67,3 @@ breadcrumbText: Reference
  | [`TextResultOrderModes`](text-result-order-modes.md) | Sets the mode and priority for the order of the text results returned. | 
  | [`Timeout`](time-out.md) | Sets the maximum amount of time (in milliseconds) that should be spent searching for a barcode per page. |
 
-
-
- 
-
-
- 
- 

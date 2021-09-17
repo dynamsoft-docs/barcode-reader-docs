@@ -5,6 +5,8 @@ tree_file_list:
   - sidelist-parameters/parameters-enumerations.html
   - sidelist-parameters/parameters-references.html
   - sidelist-parameters/parameters-references-v7.6.0.html
+  - sidelist-parameters/parameters-references-v8.0.0.html
+  - sidelist-parameters/parameters-references-v8.1.2.html
   - sidelist-parameters/parameters-scenario-settings.html
   - sidelist-parameters/parameters-template-structure.html
   - sidelist-programming/programming-javascript-v7.5.0.html
@@ -54,6 +56,5 @@ tree_file_list:
   - sidelist-introduction.html
   - sidelist-license-activation.html
   - sidelist-parameters.html
-  - sidelist-parameters-v7.6.0.html
   - sidelist-programming.html
   - sidelist-release-notes.html

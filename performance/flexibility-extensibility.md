@@ -30,19 +30,19 @@ In order to cope with various scenarios, DBR provides a variety of build-in proc
 
 | **Parameter Name** | **Functionality** | **Status** |
 | ------------------ | ---------------------------- | ---------- |
-| [`ColourClusteringModes`]({{ site.parameters_reference }}image-parameter/ColourClusteringModes.html#colourclusteringmodes) | To categorize colours into a few colours representing background or foreground. | Available, Extensible |
-| [`ColourConversionModes`]({{ site.parameters_reference }}image-parameter/ColourConversionModes.html#colourconversionmodes) | To set the conversion from colour to grayscale, which keeps or enhances the features of the region of interest. | Available, Extensible |
-| [`GrayscaleTransformationModes`]({{ site.parameters_reference }}image-parameter/GrayscaleTransformationModes.html#grayscaletransformationmodes) | To emphasize the features of regions of interest with processing of the grayscale image. | Available, Extensible |
-| [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes) | To limit the subsequent stages in special areas to speed up by detecting the regions of interest automatically. Pre-detection is based on the colour/grayscale distribution of each area. | Available, Extensible |
-| [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#imagepreprocessingmodes) | To enhance/keep features of barcode zones by processing grayscale images. | Available, Extensible |
-| [`BinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#binarizationmodes) | To enhance/keep features of barcode zones by applying different binarization methods and arguments. | Available, Extensible |
-| [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#texturedetectionmodes) | To reduce the time cost and error probability caused by textures that resemble 1D barcodes. | Available, Extensible |
-| [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#textfiltermodes) | To exclude the text from barcodes and reduce time cost. | Available, Extensible |
-| [`BarcodeComplementModes`]({{ site.parameters_reference }}image-parameter/BarcodeComplementModes.html#barcodecomplementmodes) | To detect and complete a barcode with missing border modules. | Available for QRCode and DataMatrix |
-| [`DeformationResistingModes`]({{ site.parameters_reference }}image-parameter/DeformationResistingModes.html#deformationresistingmodes) | To detect and restore a two-dimensional barcode from deformation. | Available for QRCode and DataMatrix |
-| [`DPMCodeReadingModes`]({{ site.parameters_reference }}image-parameter/DPMCodeReadingModes.html#dpmcodereadingmodes) | To separate and identify modules of a DPM barcode. | Available for DataMatrix |
-| [`DeblurModes`]({{ site.parameters_reference }}image-parameter/DeblurModes.html#deblurmodes) | To apply a variety of image processing methods to sample modules. The smaller index is, the higher priority is. | Available |
-| [`TextResultOrderModes`]({{ site.parameters_reference }}image-parameter/textresultordermodes.html#textresultordermodes) | To sort the results according to certain factors. | Available |
+| [`ColourClusteringModes`]({{ site.parameters_reference }}colour-clustering-modes.html#colourclusteringmodes) | To categorize colours into a few colours representing background or foreground. | Available, Extensible |
+| [`ColourConversionModes`]({{ site.parameters_reference }}colour-conversion-modes.html#colourconversionmodes) | To set the conversion from colour to grayscale, which keeps or enhances the features of the region of interest. | Available, Extensible |
+| [`GrayscaleTransformationModes`]({{ site.parameters_reference }}grayscale-transformation-modes.html#grayscaletransformationmodes) | To emphasize the features of regions of interest with processing of the grayscale image. | Available, Extensible |
+| [`RegionPredetectionModes`]({{ site.parameters_reference }}region-predetection-modes.html#regionpredetectionmodes) | To limit the subsequent stages in special areas to speed up by detecting the regions of interest automatically. Pre-detection is based on the colour/grayscale distribution of each area. | Available, Extensible |
+| [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-preprocessing-modes.html#imagepreprocessingmodes) | To enhance/keep features of barcode zones by processing grayscale images. | Available, Extensible |
+| [`BinarizationModes`]({{ site.parameters_reference }}binarization-modes.html#binarizationmodes) | To enhance/keep features of barcode zones by applying different binarization methods and arguments. | Available, Extensible |
+| [`TextureDetectionModes`]({{ site.parameters_reference }}texture-detection-modes.html#texturedetectionmodes) | To reduce the time cost and error probability caused by textures that resemble 1D barcodes. | Available, Extensible |
+| [`TextFilterModes`]({{ site.parameters_reference }}text-filter-modes.html#textfiltermodes) | To exclude the text from barcodes and reduce time cost. | Available, Extensible |
+| [`BarcodeComplementModes`]({{ site.parameters_reference }}barcode-complement-modes.html#barcodecomplementmodes) | To detect and complete a barcode with missing border modules. | Available for QRCode and DataMatrix |
+| [`DeformationResistingModes`]({{ site.parameters_reference }}deformation-resisting-modes.html#deformationresistingmodes) | To detect and restore a two-dimensional barcode from deformation. | Available for QRCode and DataMatrix |
+| [`DPMCodeReadingModes`]({{ site.parameters_reference }}dpm-code-reading-modes.html#dpmcodereadingmodes) | To separate and identify modules of a DPM barcode. | Available for DataMatrix |
+| [`DeblurModes`]({{ site.parameters_reference }}deblur-modes.html#deblurmodes) | To apply a variety of image processing methods to sample modules. The smaller index is, the higher priority is. | Available |
+| [`TextResultOrderModes`]({{ site.parameters_reference }}text-result-order-modes.html#textresultordermodes) | To sort the results according to certain factors. | Available |
 
 ## Load/Unload mode dynamically
 
@@ -51,7 +51,7 @@ Secondly, the `LibraryFileName` argument of the custom mode should be specified 
 
 ## Arguments of a mode to fine-tune the effect
 
-Generally, each mode has some arguments which can well control the processing effect. For example, [`ColourConversionModes`]({{ site.parameters_reference }}image-parameter/ColourConversionModes.html#colourconversionmodes) is designed for converting colour images to grayscale images.  The [`ColourConversionModes`]({{ site.parameters_reference }}image-parameter/ColourConversionModes.html#colourconversionmodes) has three arguments: 
+Generally, each mode has some arguments which can well control the processing effect. For example, [`ColourConversionModes`]({{ site.parameters_reference }}colour-conversion-modes.html#colourconversionmodes) is designed for converting colour images to grayscale images.  The [`ColourConversionModes`]({{ site.parameters_reference }}colour-conversion-modes.html#colourconversionmodes) has three arguments: 
 
 **BlueChannelWeight**: Sets the weight value of Blue Colour Channel used for converting a colour image to a grayscale image.
 **GreenChannelWeight**: Sets the weight value of Green Colour Channel used for converting a colour image to a grayscale image.

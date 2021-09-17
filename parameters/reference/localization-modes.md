@@ -20,6 +20,7 @@ needAutoGenerateSidebar: false
 - LM_STATISTICS_MARKS
 - LM_STATISTICS_POSTAL_CODE
 - LM_CENTRE
+- LM_ONED_FAST_SCAN
 
 ### LM_CONNECTED_BLOCKS
 Localizes barcodes by searching for connected blocks. This algorithm usually gives best result and it is recommended to set ConnectedBlocks to the highest priority. This mode has the following arguments for further customizing.
@@ -65,6 +66,13 @@ Localizes barcodes from the centre of the image. This mode has the following arg
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)
 
+### LM_ONED_FAST_SCAN
+Localizes 1D barcodes in a fast mode. This mode is designed for reading 1D barcodes in a very fast mode. This mode has the following arguments for further customizing.
+
+- [ScanStride](#scanstride)
+- [ScanDirection](#scandirection)
+- [LibraryFileName](#libraryfilename)
+- [LibraryParameters](#libraryparameters)
     
 ## Setting Methods
 
