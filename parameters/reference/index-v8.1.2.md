@@ -3,6 +3,7 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Parameter Reference - Main Page
 description: Dynamsoft Barcode Reader Parameter Reference - Main Page
 keywords: parameter reference, parameters
+needAutoGenerateSidebar: false
 ---
 
 

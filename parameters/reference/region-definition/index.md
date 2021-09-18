@@ -4,7 +4,7 @@ title: Dynamsoft Barcode Reader Parameter Reference - RegionDefinition Object
 description: This article shows RegionDefinition Object of Dynamsoft Barcode Reader.
 keywords: parameter reference, parameters, RegionDefinition
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
+needGenerateH3Content: false
 ---
 
 
@@ -39,7 +39,7 @@ It must be a unique name.
 ```
 
 
-## FormatSpecificationNameArray
+### FormatSpecificationNameArray
 The names of the referenced FormatSpecification object(s).
 
 **Remarks**     
