@@ -16,8 +16,8 @@ needGenerateH3Content: true
 
  | Parameter Name | Description |
  | -------------- | ----------- | 
- | [`RegionDefinition.Name`](content-organization-control.md#name) | The name of the RegionDefinition object. |
- | [`RegionDefinition.FormatSpecificationNameArray`](content-organization-control.md#formatspecificationnamearray) | The names of the referenced FormatSpecification object(s). |
+ | [`RegionDefinition.Name`](#name) | The name of the RegionDefinition object. |
+ | [`RegionDefinition.FormatSpecificationNameArray`](#formatspecificationnamearray) | The names of the referenced FormatSpecification object(s). |
 
 ### Name
 The name of the RegionDefinition object. 

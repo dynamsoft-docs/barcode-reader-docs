@@ -14,10 +14,10 @@ needGenerateH3Content: false
 
  | Parameter Name | Description |
  | -------------- | ----------- | 
- | [`ImageParameter.Name`](content-organization-control.md#name) | The name of the ImageParameter object. |
- | [`ImageParameter.Description`](content-organization-control.md#description) | The description of the ImageParameter object. |
- | [`ImageParameter.FormatSpecificationNameArray`](content-organization-control.md#formatspecificationnamearray) | The names of the referenced FormatSpecification object(s). |
- | [`ImageParameter.RegionDefinitionNameArray`](content-organization-control.md#regiondefinitionnamearray) | The names of the referenced RegionDefinition object(s). |
+ | [`ImageParameter.Name`](#name) | The name of the ImageParameter object. |
+ | [`ImageParameter.Description`](#description) | The description of the ImageParameter object. |
+ | [`ImageParameter.FormatSpecificationNameArray`](#formatspecificationnamearray) | The names of the referenced FormatSpecification object(s). |
+ | [`ImageParameter.RegionDefinitionNameArray`](#regiondefinitionnamearray) | The names of the referenced RegionDefinition object(s). |
 
 ### Name
 The name of the ImageParameter object.  

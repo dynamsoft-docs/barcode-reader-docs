@@ -14,10 +14,10 @@ needGenerateH3Content: false
 
  | Parameter Name | Description |
  | -------------- | ----------- | 
- | [`ImageParameter.Name`](content-organization-control.md#name) | The name of the ImageParameter object. |
- | [`ImageParameter.Description`](content-organization-control.md#description) | The description of the ImageParameter object. |
- | [`ImageParameter.FormatSpecificationNameArray`](content-organization-control.md#formatspecificationnamearray) | The names of the referenced FormatSpecification object(s). |
- | [`ImageParameter.RegionDefinitionNameArray`](content-organization-control.md#regiondefinitionnamearray) | The names of the referenced RegionDefinition object(s). |
+ | [`ImageParameter.Name`](#name) | The name of the ImageParameter object. |
+ | [`ImageParameter.Description`](#description) | The description of the ImageParameter object. |
+ | [`ImageParameter.FormatSpecificationNameArray`](#formatspecificationnamearray) | The names of the referenced FormatSpecification object(s). |
+ | [`ImageParameter.RegionDefinitionNameArray`](#regiondefinitionnamearray) | The names of the referenced RegionDefinition object(s). |
 
 ### Name
 The name of the ImageParameter object.  
@@ -126,9 +126,10 @@ An array item is a name of any available `RegionDefinitions`.
 
  | Parameter Name | Description |
  | -------------- | ----------- | 
+ | [`ImageParameter.AccompanyingTextRecognitionModes`](../accompanying-text-recognition-modes.md) | Sets the mode and priority to recognize accompanying text. |
  | [`ImageParameter.BarcodeColourModes`](../barcode-colour-modes.md) | Sets the mode and priority for the barcode colour mode used to process the barcode zone. |
  | [`ImageParameter.BarcodeComplementModes`](../barcode-complement-modes.md) | Sets the mode and priority to complement the missing parts in the barcode. |
- | [`ImageParameter.BinarizationModes`](../binarization-modes.md) | 	Sets the mode and priority for binarization. |
+ | [`ImageParameter.BinarizationModes`](../binarization-modes.md) | Sets the mode and priority for binarization. |
  | [`ImageParameter.ColourClusteringModes`](../colour-clustering-modes.md) | Sets the mode and priority for colour categorization. Not supported yet. |
  | [`ImageParameter.ColourConversionModes`](../colour-conversion-modes.md) | Sets the mode and priority for converting a colour image to a grayscale image. |
  | [`ImageParameter.DeblurLevel`](../deblur-level.md) | Sets the degree of blurriness of the barcode. |
@@ -143,7 +144,7 @@ An array item is a name of any available `RegionDefinitions`.
  | [`ImageParameter.RegionPredetectionModes`](../region-predetection-modes.md) | Sets the region pre-detection mode for barcodes search. |
  | [`ImageParameter.ScaleDownThreshold`](../scale-down-threshold.md) | Sets the threshold for the image shrinking. |
  | [`ImageParameter.ScaleUpModes`](../scale-up-modes.md) | Sets the mode and priority to control the sampling methods of scale-up for linear barcodes with small module sizes. | 
- | [`ImageParameter.TextAssistedCorrectionMode`](TextAssistedCorrectionMode.md#textassistedcorrectionmode) | Sets the mode of text assisted correction for barcode decoding. Not support yet. |
+ | [`ImageParameter.TextAssistedCorrectionMode`](../text-assisted-correction-mode.md) | Sets the mode of text assisted correction for barcode decoding. Not support yet. |
  | [`ImageParameter.TextFilterModes`](../text-filter-modes.md) | 	Sets the mode and priority for text filter. |
  | [`ImageParameter.TextureDetectionModes`](../texture-detection-modes.md) | 	Sets the mode and priority for texture detection. |
 

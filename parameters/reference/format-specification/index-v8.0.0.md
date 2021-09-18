@@ -14,7 +14,7 @@ needGenerateH3Content: false
 
  | Parameter Name | Description |
  | -------------- | ----------- | 
- | [`FormatSpecification.Name`](content-organization-control.md#name) | The name of the FormatSpecification object. |
+ | [`FormatSpecification.Name`](#name) | The name of the FormatSpecification object. |
 
 ### Name
 The name of the FormatSpecification object.
@@ -40,7 +40,7 @@ It must be a unique name.
  | Parameter Name | Description |
  | -------------- | ----------- | 
  | [`FormatSpecification.AllModuleDeviation`](../all-module-deviation.md) | Set the module size deviation from the standard barcode module size. |
- | [`FormatSpecification.AustralianPostEncodingTable`](../) | Set the encoding table used to code the Customer Information Field of Australian Post Customer Barcode. | 
+ | [`FormatSpecification.AustralianPostEncodingTable`](../australian-post-encoding-table.md) | Set the encoding table used to code the Customer Information Field of Australian Post Customer Barcode. | 
  | [`FormatSpecification.BarcodeAngleRangeArray`](../barcode-angle-range-array.md) | Sets the range of angles (in degrees) for barcodes search. | 
  | [`FormatSpecification.BarcodeBytesLengthRangeArray`](../barcode-bytes-length-range-array.md) | Sets the range of barcode bytes length for barcodes search. | 
  | [`FormatSpecification.BarcodeBytesRegExPattern`](../barcode-bytes-regex-pattern.md) | Specifies the regular express pattern of barcode byte characters. | 

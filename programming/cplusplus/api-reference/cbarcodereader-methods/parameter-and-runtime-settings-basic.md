@@ -136,7 +136,7 @@ Check follow link for available modes and arguments:
 
 ## GetRuntimeSettings
 
-Get current settings and save them into a [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) struct.
+Get current settings and save them into a [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html?src=cpp) struct.
 
 ```cpp
 int dynamsoft::dbr::CBarcodeReader::GetRuntimeSettings (PublicRuntimeSettings* psettings)	
@@ -167,7 +167,7 @@ delete reader;
 
 ## UpdateRuntimeSettings
 
-Update runtime settings with a given [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) struct.
+Update runtime settings with a given [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html?src=cpp) struct.
 
 ```cpp
 int dynamsoft::dbr::CBarcodeReader::UpdateRuntimeSettings (PublicRuntimeSettings* pSettings, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)
