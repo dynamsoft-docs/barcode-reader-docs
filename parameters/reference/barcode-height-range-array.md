@@ -3,7 +3,8 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Parameter Reference for BarcodeHeightRangeArray
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for BarcodeHeightRangeArray.
 keywords: BarcodeHeightRangeArray, parameter reference, parameter
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 

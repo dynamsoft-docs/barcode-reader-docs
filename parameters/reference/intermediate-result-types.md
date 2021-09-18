@@ -3,7 +3,8 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Parameter Reference for IntermediateResultTypes
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for IntermediateResultTypes.
 keywords: IntermediateResultTypes, parameter reference, parameter
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 

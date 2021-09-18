@@ -3,7 +3,8 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Parameter Reference for ModuleSizeRangeArray
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for ModuleSizeRangeArray.
 keywords: ModuleSizeRangeArray, parameter reference, parameter
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 

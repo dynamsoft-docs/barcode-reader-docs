@@ -3,7 +3,8 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Parameter Reference for MinResultConfidence
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for MinResultConfidence.
 keywords: MinResultConfidence, parameter reference, parameter
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 

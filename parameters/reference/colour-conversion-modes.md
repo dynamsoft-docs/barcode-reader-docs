@@ -3,7 +3,8 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Parameter Reference for ColourConversionModes
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for ColourConversionModes.
 keywords: ColourConversionModes, parameter reference, parameter
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 

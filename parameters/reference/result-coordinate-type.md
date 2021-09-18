@@ -3,7 +3,8 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Parameter Reference for ResultCoordinateType
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for ResultCoordinateType.
 keywords: ResultCoordinateType, parameter reference, parameter
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 

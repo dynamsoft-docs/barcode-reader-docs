@@ -3,7 +3,8 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Parameter Reference for LocalizationModes
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for LocalizationModes.
 keywords: LocalizationModes, parameter reference, parameter
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 

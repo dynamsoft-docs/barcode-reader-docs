@@ -3,7 +3,8 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Parameter Reference for StandardFormat
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for StandardFormat.
 keywords: StandardFormat, parameter reference, parameter
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 
