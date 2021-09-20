@@ -16,13 +16,13 @@ needGenerateH3Content: false
 
 ### Editions
 - [JavaScript](../programming/javascript/release-notes/js-8.md#860-08312021)
-- [C](../programming/c/release-notes/c-8.md#86-07152021)
-- [C++](../programming/cplusplus/release-notes/cpp-8.md#86-07152021)
-- [DotNet](../programming/dotnet/release-notes/dotnet-8.md#86-07152021)
-- [Python](../programming/python/release-notes/python-8.md#86-07152021)
-- [Java](../programming/java/release-notes/java-8.md#86-07152021)
-- [Android](../programming/android/release-notes/android-8.md#86-07152021)
-- [iOS](../programming/objectivec-swift/release-notes/ios-8.md#86-07152021)
+- [C](../programming/c/release-notes/c-8.md#860-07152021)
+- [C++](../programming/cplusplus/release-notes/cpp-8.md#860-07152021)
+- [DotNet](../programming/dotnet/release-notes/dotnet-8.md#860-07152021)
+- [Python](../programming/python/release-notes/python-8.md#860-07152021)
+- [Java](../programming/java/release-notes/java-8.md#860-07152021)
+- [Android](../programming/android/release-notes/android-8.md#860-07152021)
+- [iOS](../programming/objectivec-swift/release-notes/ios-8.md#860-07152021)
 
 ## 8.4.0
 
@@ -50,7 +50,7 @@ needGenerateH3Content: false
 
 ### New
 
-- Added a new mode argument, `FindAccurateBoundary`, to [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes) that determines if the SDK attempts to find an accurate boundary when RegionPredetectionModes is set to `RPM_GENERAL_HSV_CONTRAST`.
+- Added a new mode argument, `FindAccurateBoundary`, to [`RegionPredetectionModes`]({{ site.parameters_reference }}region-predetection-modes.html#regionpredetectionmodes) that determines if the SDK attempts to find an accurate boundary when RegionPredetectionModes is set to `RPM_GENERAL_HSV_CONTRAST`.
 
 ### Improved
 

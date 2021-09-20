@@ -50,8 +50,6 @@ Describes the intermediate result data type.
 
 
 
-&nbsp;
-
 
 
 ## IntermediateResultSavingMode
@@ -74,13 +72,11 @@ Describes the intermediate result saving mode.
 | Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description | Valid Argument(s) |
 | -------------------------- | ------------------- | ----- | ----------- | ----------------- |
 | IRSM_MEMORY | EnumIntermediateResultSavingModeMemory | 0x01 | Saves intermediate results in memory with public data format. | `N/A` |
-| IRSM_FILESYSTEM | EnumIntermediateResultSavingModeFileSystem | 0x02 | Saves intermediate results in file system. | [`FolderPath`]({{ site.parameters_reference }}image-parameter/IntermediateResultSavingMode.html#folderpath)<br>[`RecordsetSizeOfLatestImages`]({{ site.parameters_reference }}image-parameter/IntermediateResultSavingMode.html#recordsetsizeoflatestimages) |
-| IRSM_BOTH | EnumIntermediateResultSavingModeBoth | 0x04 | Saves intermediate results using IRSM_MEMORY and IRSM_FILESYSTEM. | [`FolderPath`]({{ site.parameters_reference }}image-parameter/IntermediateResultSavingMode.html#folderpath) |
-| IRSM_REFERENCE_MEMORY | EnumIntermediateResultSavingModeReferenceMemory | 0x08 | Saves intermediate results in memory with internal data format. | [`FolderPath`]({{ site.parameters_reference }}image-parameter/IntermediateResultSavingMode.html#folderpath)<br>[`RecordsetSizeOfLatestImages`]({{ site.parameters_reference }}image-parameter/IntermediateResultSavingMode.html#recordsetsizeoflatestimages) |
+| IRSM_FILESYSTEM | EnumIntermediateResultSavingModeFileSystem | 0x02 | Saves intermediate results in file system. | [`FolderPath`]({{ site.parameters_reference }}intermediate-result-saving-mode.html#folderpath)<br>[`RecordsetSizeOfLatestImages`]({{ site.parameters_reference }}intermediate-result-saving-mode.html#recordsetsizeoflatestimages) |
+| IRSM_BOTH | EnumIntermediateResultSavingModeBoth | 0x04 | Saves intermediate results using IRSM_MEMORY and IRSM_FILESYSTEM. | [`FolderPath`]({{ site.parameters_reference }}intermediate-result-saving-mode.html#folderpath) |
+| IRSM_REFERENCE_MEMORY | EnumIntermediateResultSavingModeReferenceMemory | 0x08 | Saves intermediate results in memory with internal data format. | [`FolderPath`]({{ site.parameters_reference }}intermediate-result-saving-mode.html#folderpath)<br>[`RecordsetSizeOfLatestImages`]({{ site.parameters_reference }}intermediate-result-saving-mode.html#recordsetsizeoflatestimages) |
 
 
-
-&nbsp;
 
 
 
@@ -121,7 +117,6 @@ Describes the intermediate result type.
 | IRT_PREDETECTED_QUADRILATERAL | EnumIntermediateResultTypePredetectedQuadrilateral | 0x2000  | Predetected quadrilateral |
 
 
-&nbsp;
 
 
 
@@ -150,7 +145,6 @@ Describes the result coordinate type.
 
 
 
-&nbsp;
 
 
 
@@ -180,8 +174,6 @@ Describes the extended result type.
 | RT_PARTIAL_TEXT | EnumResultTypePartialText | 3 | Specifies the partial text. This means part of the text result decoded from the barcode. |
 
 
-
-&nbsp;
 
 
 

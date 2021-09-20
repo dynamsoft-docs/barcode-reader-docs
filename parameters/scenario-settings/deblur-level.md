@@ -8,7 +8,7 @@ needAutoGenerateSidebar: false
 
 # How to configure DeblurLevel
 
-In this part, we will introduce the parameter that specifies the attempt level of sampling decoding - [`DeblurLevel`]({{ site.parameters_reference }}image-parameter/image-process-control.html#deblurlevel). There are a variety of approaches in DBR algorithm for sample decoding. The DeblurLevel can be set to a range of 0 to 9. The larger the value, the more preprocessing modes the DBR algorithm can apply for decoding, the more likely it is to extract the barcode value, and the slower it will be if the decoding fails. Users could adjust the value based on their actual situation. 
+In this part, we will introduce the parameter that specifies the attempt level of sampling decoding - [`DeblurLevel`]({{ site.parameters_reference }}deblur-level.html). There are a variety of approaches in DBR algorithm for sample decoding. The DeblurLevel can be set to a range of 0 to 9. The larger the value, the more preprocessing modes the DBR algorithm can apply for decoding, the more likely it is to extract the barcode value, and the slower it will be if the decoding fails. Users could adjust the value based on their actual situation. 
 
 You could configure the DeblurLevel in RuntimeSetting:
 

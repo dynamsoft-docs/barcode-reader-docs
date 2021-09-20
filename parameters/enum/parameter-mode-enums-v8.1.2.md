@@ -56,12 +56,12 @@ Describes the barcode colour mode.
 | Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
 | -------------------------- | ------------------- | ----- | ----------- |
 | BICM_SKIP | EnumBarcodeColourModeSkip | 0x00 | Skips the barcode colour operation. |
-| BICM_DARK_ON_LIGHT | EnumBarcodeColourModeDarkOnLight | 0x01 | Dark items on a light background. Check arguments of [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#mode-arguments) for available argument settings. |
-| BICM_LIGHT_ON_DARK  | EnumBarcodeColourModeLightOnDark | 0x02 | Light items on a dark background. **Not supported yet**. Check arguments of [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#mode-arguments) for available argument settings. |
-| BICM_DARK_ON_DARK  | EnumBarcodeColourModeDarkOnDark | 0x04 | Dark items on a dark background. **Not supported yet**. Check arguments of [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#mode-arguments) for available argument settings. |
-| BICM_LIGHT_ON_LIGHT  | EnumBarcodeColourModeLightOnLight | 0x08 | Light items on a light background. **Not supported yet**. Check arguments of [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#mode-arguments) for available argument settings. |
-| BICM_DARK_LIGHT_MIXED  | EnumBarcodeColourModeDarkLightMixed | 0x10 | The background is mixed by dark and light. **Not supported yet**. Check arguments of [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#mode-arguments) for available argument settings. |
-| BICM_DARK_ON_LIGHT_DARK_SURROUNDING  | EnumBarcodeColourModeDarkOnLightDarkSurrounding | 0x20 | Dark item on a light background surrounded by dark. Check arguments of [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#mode-arguments) for available argument settings. |
+| BICM_DARK_ON_LIGHT | EnumBarcodeColourModeDarkOnLight | 0x01 | Dark items on a light background. Check arguments of [`BarcodeColourModes`]({{ site.parameters_reference }}barcode-colour-modes.html) for available argument settings. |
+| BICM_LIGHT_ON_DARK  | EnumBarcodeColourModeLightOnDark | 0x02 | Light items on a dark background. **Not supported yet**. Check arguments of [`BarcodeColourModes`]({{ site.parameters_reference }}barcode-colour-modes.html) for available argument settings. |
+| BICM_DARK_ON_DARK  | EnumBarcodeColourModeDarkOnDark | 0x04 | Dark items on a dark background. **Not supported yet**. Check arguments of [`BarcodeColourModes`]({{ site.parameters_reference }}barcode-colour-modes.html) for available argument settings. |
+| BICM_LIGHT_ON_LIGHT  | EnumBarcodeColourModeLightOnLight | 0x08 | Light items on a light background. **Not supported yet**. Check arguments of [`BarcodeColourModes`]({{ site.parameters_reference }}barcode-colour-modes.html) for available argument settings. |
+| BICM_DARK_LIGHT_MIXED  | EnumBarcodeColourModeDarkLightMixed | 0x10 | The background is mixed by dark and light. **Not supported yet**. Check arguments of [`BarcodeColourModes`]({{ site.parameters_reference }}barcode-colour-modes.html) for available argument settings. |
+| BICM_DARK_ON_LIGHT_DARK_SURROUNDING  | EnumBarcodeColourModeDarkOnLightDarkSurrounding | 0x20 | Dark item on a light background surrounded by dark. Check arguments of [`BarcodeColourModes`]({{ site.parameters_reference }}barcode-colour-modes.html) for available argument settings. |
 
 
 
@@ -121,8 +121,8 @@ Describes the binarization mode.
 | -------------------------- | ------------------- | ----- | ----------- |
 | BM_SKIP | EnumBinarizationModeSkip | 0x00 | Skips the binarization. |
 | BM_AUTO | EnumBinarizationModeAuto | 0x01 | **Not supported yet.** |
-| BM_LOCAL_BLOCK | EnumBinarizationModeLocalBlock | 0x02 | Binarizes the image based on the local block. Check arguments of [`BinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#mode-arguments) for available argument settings. |
-| BM_THRESHOLD | EnumBinarizationModeThreshold | 0x04 | Performs image binarization based on the given threshold. Check arguments of [`BinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#mode-arguments) for available argument settings. |
+| BM_LOCAL_BLOCK | EnumBinarizationModeLocalBlock | 0x02 | Binarizes the image based on the local block. Check arguments of [`BinarizationModes`]({{ site.parameters_reference }}binarization-modes.html) for available argument settings. |
+| BM_THRESHOLD | EnumBinarizationModeThreshold | 0x04 | Performs image binarization based on the given threshold. Check arguments of [`BinarizationModes`]({{ site.parameters_reference }}binarization-modes.html) for available argument settings. |
 
 
 
@@ -152,7 +152,7 @@ Describes the colour clustering mode.
 | -------------------------- | ------------------- | ----- | ----------- |
 | CCM_SKIP | EnumColourClusteringModeSkip | 0x00 | Skips the colour clustering. |
 | CCM_AUTO | EnumColourClusteringModeAuto | 0x01 | **Not supported yet.** |
-| CCM_GENERAL_HSV | EnumColourClusteringModeGeneralHSV | 0x02 | Clusters colours using the general algorithm based on HSV. Check arguments of [`ColourClusteringModes`]({{ site.parameters_reference }}image-parameter/ColourClusteringModes.html#mode-arguments) for available argument settings. |
+| CCM_GENERAL_HSV | EnumColourClusteringModeGeneralHSV | 0x02 | Clusters colours using the general algorithm based on HSV. Check arguments of [`ColourClusteringModes`]({{ site.parameters_reference }}colour-clustering-modes.html) for available argument settings. |
 
 
 
@@ -181,7 +181,7 @@ Describes the colour conversion mode.
 | Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
 | -------------------------- | ------------------- | ----- | ----------- |
 | CICM_SKIP | EnumColourConversionModeSkip | 0x00 | Skip the colour conversion. |
-| CICM_GENERAL | EnumColourConversionModeGeneral | 0x01 | Converts a colour image to a grayscale image using the general algorithm. Check arguments of [`ColourConversionModes`]({{ site.parameters_reference }}image-parameter/ColourConversionModes.html#mode-arguments) for available argument settings. |
+| CICM_GENERAL | EnumColourConversionModeGeneral | 0x01 | Converts a colour image to a grayscale image using the general algorithm. Check arguments of [`ColourConversionModes`]({{ site.parameters_reference }}colour-conversion-modes.html) for available argument settings. |
 
 
 
@@ -275,7 +275,7 @@ Describes the deformation resisting mode.
 | -------------------------- | ------------------- | ----- | ----------- |
 | DRM_SKIP | EnumDeformationResistingModeSkip | 0x00 | Skip the deformation resisting. |
 | DRM_AUTO | EnumDeformationResistingModeAuto | 0x01 | **Not supported yet.** |
-| DRM_GENERAL | EnumDeformationResistingModeGeneral | 0x02 | Resists deformation using the general algorithm. Check arguments of [`DeformationResistingModes`]({{ site.parameters_reference }}image-parameter/DeformationResistingModes.html#mode-arguments) for available argument settings.|
+| DRM_GENERAL | EnumDeformationResistingModeGeneral | 0x02 | Resists deformation using the general algorithm. Check arguments of [`DeformationResistingModes`]({{ site.parameters_reference }}deformation-resisting-modes.html) for available argument settings.|
 
 
 
@@ -364,10 +364,10 @@ Describes the image preprocessing mode.
 | IPM_SKIP | EnumImagePreprocessingModeSkip | 0x00 | Skips image preprocessing. |
 | IPM_AUTO | EnumImagePreprocessingModeAuto | 0x01 | **Not supported yet.** |
 | IPM_GENERAL | EnumImagePreprocessingModeGeneral | 0x02 | Takes the unpreprocessed image for following operations. |
-| IPM_GRAY_EQUALIZE | EnumImagePreprocessingModeGrayEqualize | 0x04 | Preprocesses the image using the gray equalization algorithm. Check arguments of [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#mode-arguments) for available argument settings. |
-| IPM_GRAY_SMOOTH | EnumImagePreprocessingModeGraySmooth | 0x08 | Preprocesses the image using the gray smoothing algorithm. Check arguments of [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#mode-arguments) for available argument settings. |
-| IPM_SHARPEN_SMOOTH | EnumImagePreprocessingModeSharpenSmooth | 0x10 | Preprocesses the image using the sharpening and smoothing algorithm. Check arguments of [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#mode-arguments) for available argument settings. |
-| IPM_MORPHOLOGY  | EnumImagePreprocessingModeMorphology | 0x20 | Preprocesses the image using the morphology algorithm. Check arguments of [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#mode-arguments) for available argument settings. |
+| IPM_GRAY_EQUALIZE | EnumImagePreprocessingModeGrayEqualize | 0x04 | Preprocesses the image using the gray equalization algorithm. Check arguments of [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-preprocessing-modes.html) for available argument settings. |
+| IPM_GRAY_SMOOTH | EnumImagePreprocessingModeGraySmooth | 0x08 | Preprocesses the image using the gray smoothing algorithm. Check arguments of [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-preprocessing-modes.html) for available argument settings. |
+| IPM_SHARPEN_SMOOTH | EnumImagePreprocessingModeSharpenSmooth | 0x10 | Preprocesses the image using the sharpening and smoothing algorithm. Check arguments of [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-preprocessing-modes.html) for available argument settings. |
+| IPM_MORPHOLOGY  | EnumImagePreprocessingModeMorphology | 0x20 | Preprocesses the image using the morphology algorithm. Check arguments of [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-preprocessing-modes.html) for available argument settings. |
 
 
 
@@ -400,7 +400,7 @@ Describes the localization mode.
 | LM_CONNECTED_BLOCKS | EnumLocalizationModeConnectedBlocks | 0x02 | Localizes barcodes by searching for connected blocks. This algorithm usually gives best result and it is recommended to set ConnectedBlocks to the highest priority. |
 | LM_STATISTICS | EnumLocalizationModeStatistics | 0x04 | Localizes barcodes by groups of contiguous black-white regions. This is optimized for QRCode and DataMatrix. |
 | LM_LINES | EnumLocalizationModeLines | 0x08 | Localizes barcodes by searching for groups of lines. This is optimized for 1D and PDF417 barcodes. |
-| LM_SCAN_DIRECTLY | EnumLocalizationModeScanDirectly | 0x10 |  Localizes barcodes quickly. This mode is recommended in interactive scenario. Check arguments of [`LocalizationModes`]({{ site.parameters_reference }}image-parameter/LocalizationModes.html#mode-arguments) for available argument settings. |
+| LM_SCAN_DIRECTLY | EnumLocalizationModeScanDirectly | 0x10 |  Localizes barcodes quickly. This mode is recommended in interactive scenario. Check arguments of [`LocalizationModes`]({{ site.parameters_reference }}localization-modes.html) for available argument settings. |
 | LM_STATISTICS_MARKS | EnumLocalizationModeStatisticsMarks | 0x20 | Localizes barcodes by groups of marks.This is optimized for DPM codes. |
 | LM_STATISTICS_POSTAL_CODE | EnumLocalizationModeStatisticsPostalCode | 0x40 | Localizes barcodes by groups of connected blocks and lines.This is optimized for postal codes. |
 
@@ -463,9 +463,9 @@ Describes the region predetection mode.
 | RPM_SKIP | EnumRegionPredetectionModeSkip | 0x00 | Skips region detection. |
 | RPM_AUTO | EnumRegionPredetectionModeAuto | 0x01 | Lets the library choose an algorithm automatically to detect region. |
 | RPM_GENERAL | EnumRegionPredetectionModeGeneral | 0x02 | Takes the whole image as a region. |
-| RPM_GENERAL_RGB_CONTRAST | EnumRegionPredetectionModeGeneralRGBContrast | 0x04 | Detects region using the general algorithm based on RGB colour contrast. Check arguments of [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#mode-arguments) for available argument settings. |
-| RPM_GENERAL_GRAY_CONTRAST | EnumRegionPredetectionModeGeneralGrayContrast | 0x08 | Detects region using the general algorithm based on gray contrast. Check arguments of [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#mode-arguments) for available argument settings. |
-| RPM_GENERAL_HSV_CONTRAST | EnumRegionPredetectionModeGeneralHSVContrast | 0x10 | Detects region using the general algorithm based on HSV colour contrast. Check arguments of [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#mode-arguments) for available argument settings. |
+| RPM_GENERAL_RGB_CONTRAST | EnumRegionPredetectionModeGeneralRGBContrast | 0x04 | Detects region using the general algorithm based on RGB colour contrast. Check arguments of [`RegionPredetectionModes`]({{ site.parameters_reference }}region-predetection-modes.html) for available argument settings. |
+| RPM_GENERAL_GRAY_CONTRAST | EnumRegionPredetectionModeGeneralGrayContrast | 0x08 | Detects region using the general algorithm based on gray contrast. Check arguments of [`RegionPredetectionModes`]({{ site.parameters_reference }}region-predetection-modes.html) for available argument settings. |
+| RPM_GENERAL_HSV_CONTRAST | EnumRegionPredetectionModeGeneralHSVContrast | 0x10 | Detects region using the general algorithm based on HSV colour contrast. Check arguments of [`RegionPredetectionModes`]({{ site.parameters_reference }}region-predetection-modes.html) for available argument settings. |
 
 
 
@@ -495,8 +495,8 @@ Describes the scale up mode.
 | -------------------------- | ------------------- | ----- | ----------- |
 | SUM_SKIP | EnumScaleUpModeSkip | 0x00 | Skip the scale-up process. |
 | SUM_AUTO | EnumScaleUpModeAuto | 0x01 | The library chooses an interpolation method automatically to scale up. |
-| SUM_LINEAR_INTERPOLATION | EnumScaleUpModeLinearInterpolation | 0x02 | Scales up using the linear interpolation method. Check arguments of [`ScaleUpModes`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#mode-arguments) for available argument settings. |
-| SUM_NEAREST_NEIGHBOUR_INTERPOLATION | EnumScaleUpModeNearestNeighbourInterpolation | 0x04 | Scales up using the nearest-neighbour interpolation method. Check arguments of [`ScaleUpModes`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#mode-arguments) for available argument settings. |
+| SUM_LINEAR_INTERPOLATION | EnumScaleUpModeLinearInterpolation | 0x02 | Scales up using the linear interpolation method. Check arguments of [`ScaleUpModes`]({{ site.parameters_reference }}scale-up-modes.html) for available argument settings. |
+| SUM_NEAREST_NEIGHBOUR_INTERPOLATION | EnumScaleUpModeNearestNeighbourInterpolation | 0x04 | Scales up using the nearest-neighbour interpolation method. Check arguments of [`ScaleUpModes`]({{ site.parameters_reference }}scale-up-modes.html) for available argument settings. |
 
 
 
@@ -558,8 +558,8 @@ Describes the text assisted correction mode.
 | -------------------------- | ------------------- | ----- | ----------- |
 | TACM_SKIP | EnumTextAssistedCorrectionModeSkip | 0x00 | Skips the text assisted correction. |
 | TACM_AUTO | EnumTextAssistedCorrectionModeAuto | 0x01 | **Not supported yet.** |
-| TACM_VERIFYING | EnumTextAssistedCorrectionModeVerifying | 0x02 | Uses the accompanying text to verify the decoded barcode result. Check arguments of [`TextAssistedCorrectionMode`]({{ site.parameters_reference }}image-parameter/TextAssistedCorrectionMode.html#mode-arguments) for available argument settings. |
-| TACM_VERIFYING_PATCHING | EnumTextAssistedCorrectionModeVerifyingPatching | 0x04 | Uses the accompanying text to verify and patch the decoded barcode result. Check arguments of [`TextAssistedCorrectionMode`]({{ site.parameters_reference }}image-parameter/TextAssistedCorrectionMode.html#mode-arguments) for available argument settings. |
+| TACM_VERIFYING | EnumTextAssistedCorrectionModeVerifying | 0x02 | Uses the accompanying text to verify the decoded barcode result. Check arguments of [`TextAssistedCorrectionMode`]({{ site.parameters_reference }}text-assisted-correction-mode.html) for available argument settings. |
+| TACM_VERIFYING_PATCHING | EnumTextAssistedCorrectionModeVerifyingPatching | 0x04 | Uses the accompanying text to verify and patch the decoded barcode result. Check arguments of [`TextAssistedCorrectionMode`]({{ site.parameters_reference }}text-assisted-correction-mode.html) for available argument settings. |
 
 
 
@@ -588,7 +588,7 @@ Describes the text filter mode.
 | -------------------------- | ------------------- | ----- | ----------- |
 | TFM_SKIP | EnumTextFilterModeSkip | 0x00 | Skip the text filtering. |
 | TFM_AUTO | EnumTextFilterModeAuto | 0x01 | **Not supported yet.** |
-| TFM_GENERAL_CONTOUR | EnumTextFilterModeGeneralContour | 0x02 | Filters text using the general algorithm based on contour. Check arguments of [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#mode-arguments) for available argument settings. |
+| TFM_GENERAL_CONTOUR | EnumTextFilterModeGeneralContour | 0x02 | Filters text using the general algorithm based on contour. Check arguments of [`TextFilterModes`]({{ site.parameters_reference }}text-filter-modes.html) for available argument settings. |
 
 
 
@@ -618,6 +618,6 @@ Describes the texture detection mode.
 | -------------------------- | ------------------- | ----- | ----------- |
 | TDM_SKIP  | EnumTextureDetectionModeSkip | 0x00 | Skips texture detection. |
 | TDM_AUTO  | EnumTextureDetectionModeAuto | 0x01 | Not supported yet. |
-| TDM_GENERAL_WIDTH_CONCENTRATION  | EnumTextureDetectionModeGeneralWidthConcentration | 0x02 | Detects texture using the general algorithm. Check arguments of [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#mode-arguments) for available argument settings. |
+| TDM_GENERAL_WIDTH_CONCENTRATION  | EnumTextureDetectionModeGeneralWidthConcentration | 0x02 | Detects texture using the general algorithm. Check arguments of [`TextureDetectionModes`]({{ site.parameters_reference }}texture-detection-modes.html) for available argument settings. |
 
 

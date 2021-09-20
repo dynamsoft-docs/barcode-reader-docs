@@ -36,7 +36,7 @@ noTitleIndex: true
 - Added the [`organizationID`]({{site.python_class}}DMLTSConnectionParameters.html#organization_id) property for license authentication.
 - Added a new attribute [`is_mirrored`]({{site.python_class}}TextResult.html#is_mirrored) to the `TextResult` class. `is_mirrored` returns whether the barcode is mirrored.
 - Added a new attribute [`is_dpm`]({{site.python_class}}TextResult.html#is_dpm) to the `TextResult` class. `is_dpm` returns whether the barcode is recognized by the DPM mode.
-- Added a new argument, [`ThresholdCompensation`]({{site.image_parameters}}BinarizationModes.html#thresholdcompensation), to the `BinarizationModes` mode arguments.
+- Added a new argument, [`ThresholdCompensation`]({{site.parameters_reference}}binarization-modes.html#thresholdcompensation), to the `BinarizationModes` mode arguments.
 
 ### Improved
 
@@ -55,7 +55,7 @@ noTitleIndex: true
 
 ### New
 
-- Added a new mode argument, `FindAccurateBoundary`, to [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes) that determines if the SDK attempts to find an accurate boundary when RegionPredetectionModes is set to `RPM_GENERAL_HSV_CONTRAST`.
+- Added a new mode argument, `FindAccurateBoundary`, to [`RegionPredetectionModes`]({{ site.parameters_reference }}region-predetection-modes.html#regionpredetectionmodes) that determines if the SDK attempts to find an accurate boundary when RegionPredetectionModes is set to `RPM_GENERAL_HSV_CONTRAST`.
 
 ### Improved
 
