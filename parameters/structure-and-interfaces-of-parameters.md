@@ -253,3 +253,20 @@ JSON templates supports all Dynamsoft Barcode Reader parameters. The related par
 - `InitRuntimeSettingsWithString`: The effect after calling this interface is the same as `InitRuntimeSettingsWithFile`. The only difference is the template definition of `InitRuntimeSettingsWithString` is saved as a string;
 - `AppendTplFileToRuntimeSettings`: After calling this interface, the template definition in the file will be processed according to the merging rules stated in the "Multiple parameter template files" section . Each independent template is stored in the Dynamsoft Barcode Reader object. All templates, including Dynamsoft Barcode Reader's built-in template, are merged into one template to replace the built-in template of Dynamsoft Barcode Reader;
 - `AppendTplStringToRuntimeSettings`: The effect after calling this interface is the same as `AppendTplFileToRuntimeSettings`. The only difference is the template definition of `AppendTplStringToRuntimeSettings` is saved as a string.
+
+## RegionDefinition and How It Works
+Limiting the reading area of the barcode reader instance can help provide a better scanning UI as well optimize the performance of the SDK. It is important to understand how the RegionDefinition interface works, and what exactly you need to consider when coming up with the region percentage values.
+
+By definition, the `top` parameter of the RegionDefinition is used to represent the top-most coordinate of the region, while `bottom` represents the bottom-most coordinate of the region. But how do you figure out the appropriate values to set them?
+
+In order to set these values, we highly recommend setting `MeasuredByPercentage` to 1 to make this process as easy as possible. The next section assumes that this parameter is set to true.
+
+For `top` and `bottom`, think of the height of the image or frame as a vertical axis that goes from 0 to 100:
+- 0 represents the top-most point of the image or frame
+- 100 represents the bottom-most point of the image or frame.
+
+Please follow this diagram for a visual representation of different regions with various `top` and `bottom` values:
+--------------------
+Please note that the above diagram is not limiting the horizontal view at all.
+
+After determining where you want the top-most point of the region to be
