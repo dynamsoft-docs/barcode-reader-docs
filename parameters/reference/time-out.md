@@ -21,7 +21,7 @@ needGenerateH3Content: true
 `Timeout` is supported to be set through `RuntimeSetting` or JSON template.
 
 ### As `PublicRuntimeSettings` Member
-`Timeout` can be set dynamicaly during runtime as a member of `PublicRuntimeSettings` struct.
+`Timeout` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct.
 
 
 **Code Snippet in C++**

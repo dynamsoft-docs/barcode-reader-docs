@@ -32,7 +32,7 @@ Lets the library choose a mode automatically. Not supported yet.
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
-`BarcodeComplementModes` can be set dynamicaly during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 [`BarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode) Enumeration items.
+`BarcodeComplementModes` can be set dynamically during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 [`BarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode) Enumeration items.
 
 
 **Code Snippet in C++**

@@ -21,7 +21,7 @@ needGenerateH3Content: true
 `MinResultConfidence` is supported to be set through `RuntimeSetting` or JSON template.
 
 ### As `PublicRuntimeSettings` Member
-`MinResultConfidence` can be set dynamicaly during runtime as a member of `PublicRuntimeSettings` struct.
+`MinResultConfidence` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct.
 
 
 **Code Snippet in C++**

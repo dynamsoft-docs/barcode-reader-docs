@@ -43,7 +43,7 @@ Binarizes the image for each pixel based on a unified threshold. If the gray val
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
-`BinarizationModes` can be set dynamicaly during runtime as a member of `PublicRuntimeSettings` struct, it is an array with 8 [`BinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) Enumeration items.
+`BinarizationModes` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct, it is an array with 8 [`BinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) Enumeration items.
 
 
 **Code Snippet in C++**

@@ -26,7 +26,7 @@ When decoding a PDF file using `DecodeFile` method, the library will convert the
 `PDFRasterDPI` is supported to be set through `RuntimeSetting` or JSON template.
 
 ### As `PublicRuntimeSettings` Member
-`PDFRasterDPI` can be set dynamicaly during runtime as a member of `PublicRuntimeSettings` struct.
+`PDFRasterDPI` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct.
 
 
 **Code Snippet in C++**

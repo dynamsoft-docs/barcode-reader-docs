@@ -22,7 +22,7 @@ needGenerateH3Content: true
 `BarcodeFormatIds_2` is supported to be set through `RuntimeSetting` or JSON template.
 
 ### As `PublicRuntimeSettings` Member
-`BarcodeFormatIds_2` can be set dynamicaly during runtime as a member of `PublicRuntimeSettings` struct.
+`BarcodeFormatIds_2` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct.
 
 
 **Code Snippet in C++**
@@ -66,7 +66,7 @@ delete pSettings;
 Setting `BarcodeFormatIds_2` to a specific value when barcode formats are certain may speed up the process.
 
 ### Read Rate
-Setting `BarcodeFormatIds_2` to all formats when barcode formats is uncertain may improve the Read Rate. 
+Setting `BarcodeFormatIds_2` to all formats when barcode formats are uncertain may improve the Read Rate. 
 
 ### Accuracy
 Setting `BarcodeFormatIds_2` to a specific value when barcode formats are certain may improve the Accuracy.

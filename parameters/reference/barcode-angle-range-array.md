@@ -17,11 +17,11 @@ needGenerateH3Content: true
 `BarcodeAngleRangeArray` is supported to be set through JSON template.
 
 ### As JSON Parameter
-`BarcodeAngleRangeArray` as a JSON parameter is a JSON Object array defined as below.   
+`BarcodeAngleRangeArray` as a JSON parameter is defined as below.   
 
 | Key Name | Key Value |
 | -------- | --------- |
-| BarcodeAngleRangeArray | a JSON Object defined as below |
+| BarcodeAngleRangeArray | A JSON Object array while each Object is defined as below. |
 
 | Key Name | Key Value | Description |
 | -------- | --------- | ----------- |

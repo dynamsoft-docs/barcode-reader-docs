@@ -26,7 +26,7 @@ needGenerateH3Content: true
 `BarcodeZoneMinDistanceToImageBorders` is supported to be set through `RuntimeSetting` or JSON template.
 
 ### As `PublicRuntimeSettings` Member
-`BarcodeZoneMinDistanceToImageBorders` can be set dynamicaly during runtime as a member of `PublicRuntimeSettings` struct.
+`BarcodeZoneMinDistanceToImageBorders` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct.
 
 
 **Code Snippet in C++**

@@ -29,7 +29,7 @@ needGenerateH3Content: true
 `ExpectedBarcodesCount` is supported to be set through `RuntimeSetting` or JSON template.
 
 ### As `PublicRuntimeSettings` Member
-`ExpectedBarcodesCount` can be set dynamicaly during runtime as a member of `PublicRuntimeSettings` struct.
+`ExpectedBarcodesCount` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct.
 
 
 **Code Snippet in C++**

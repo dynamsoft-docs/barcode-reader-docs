@@ -39,7 +39,7 @@ Saves intermediate results in memory with internal data format. This mode has th
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
-`IntermediateResultSavingMode` can be set dynamicaly during runtime as a member of `PublicRuntimeSettings` struct, it is one of the [`IntermediateResultSavingMode`]({{ site.enumerations }}parameter-mode-enums.html#intermediateresultsavingmode) Enumeration items.
+`IntermediateResultSavingMode` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct, it is one of the [`IntermediateResultSavingMode`]({{ site.enumerations }}parameter-mode-enums.html#intermediateresultsavingmode) Enumeration items.
 
 
 **Code Snippet in C++**
