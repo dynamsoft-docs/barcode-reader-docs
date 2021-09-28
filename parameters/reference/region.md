@@ -17,7 +17,7 @@ needGenerateH3Content: true
 `Region` is supported to be set through `RuntimeSetting` or JSON template.
 
 ### As `PublicRuntimeSettings` Member
-`Region` can be set dynamicaly during runtime as a member of `PublicRuntimeSettings` struct.
+`Region` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct.
 
 
 **Code Snippet in C++**

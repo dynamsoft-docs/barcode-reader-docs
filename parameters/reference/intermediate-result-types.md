@@ -16,7 +16,7 @@ needGenerateH3Content: true
 `IntermediateResultTypes` is supported to be set through `RuntimeSetting` or JSON template.
 
 ### As `PublicRuntimeSettings` Member
-`IntermediateResultTypes` can be set dynamicaly during runtime as a member of `PublicRuntimeSettings` struct.
+`IntermediateResultTypes` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct.
 
 
 **Code Snippet in C++**

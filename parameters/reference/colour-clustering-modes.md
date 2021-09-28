@@ -33,7 +33,7 @@ Lets the library choose a mode automatically. Not supported yet.
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
-`ColourClusteringModes` can be set dynamicaly during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 [`ColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode) Enumeration items.
+`ColourClusteringModes` can be set dynamically during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 [`ColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode) Enumeration items.
 
 
 **Code Snippet in C++**

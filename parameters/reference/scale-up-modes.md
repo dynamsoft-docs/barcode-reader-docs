@@ -43,7 +43,7 @@ Scales up using the linear interpolation method. This mode has the following arg
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
-`ScaleUpModes` can be set dynamicaly during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 [`ScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode) Enumeration items.
+`ScaleUpModes` can be set dynamically during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 [`ScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode) Enumeration items.
 
 
 **Code Snippet in C++**
@@ -130,7 +130,7 @@ Sets the acute angle threshold for scale-up.
 
 **Remarks**         
 - -1: means automatically set by the library.
-- If the module size of the barcode is smaller than the [ModuleSizeThreshold](#modulesizethreshold) and the acute angle with X of the barcode is larger than the [AcuteAngleWithXThreshold](#acuteanglewithxthreshold), the barcode will be enlarged by a scale factor of N (N=1,2,3…) till N * modulesize >= [TargetModuleSize](#targetmodulesize).
+- If the module size of the barcode is smaller than the [ModuleSizeThreshold](#modulesizethreshold) and the acute angle with X of the barcode is larger than the [AcuteAngleWithXThreshold](#acuteanglewithxthreshold), the barcode will be enlarged by a scale factor of N (the value of N is a power of 2) till N * modulesize >= [TargetModuleSize](#targetmodulesize).
 
 ### ModuleSizeThreshold 
 Sets the module size threshold for scale-up.
@@ -141,7 +141,7 @@ Sets the module size threshold for scale-up.
 
 **Remarks**         
 - 0: means automatically set by the library.
-- If the module size of the barcode is smaller than the [ModuleSizeThreshold](#modulesizethreshold) and the acute angle with X of the barcode is larger than the [AcuteAngleWithXThreshold](#acuteanglewithxthreshold), the barcode will be enlarged by a scale factor of N (N=1,2,3…) till N * modulesize >= [TargetModuleSize](#targetmodulesize).
+- If the module size of the barcode is smaller than the [ModuleSizeThreshold](#modulesizethreshold) and the acute angle with X of the barcode is larger than the [AcuteAngleWithXThreshold](#acuteanglewithxthreshold), the barcode will be enlarged by a scale factor of N (the value of N is a power of 2) till N * modulesize >= [TargetModuleSize](#targetmodulesize).
 
 
 
@@ -154,7 +154,7 @@ Sets the target module size for scale-up.
 
 **Remarks**         
 - 0: means automatically set by the library.
-- If the module size of the barcode is smaller than the [ModuleSizeThreshold](#modulesizethreshold) and the acute angle with X of the barcode is larger than the [AcuteAngleWithXThreshold](#acuteanglewithxthreshold), the barcode will be enlarged by a scale factor of N (N=1,2,3…) till N * modulesize >= [TargetModuleSize](#targetmodulesize).
+- If the module size of the barcode is smaller than the [ModuleSizeThreshold](#modulesizethreshold) and the acute angle with X of the barcode is larger than the [AcuteAngleWithXThreshold](#acuteanglewithxthreshold), the barcode will be enlarged by a scale factor of N (the value of N is a power of 2) till N * modulesize >= [TargetModuleSize](#targetmodulesize).
 
 
 ### LibraryFileName 

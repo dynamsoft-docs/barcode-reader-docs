@@ -17,11 +17,11 @@ needGenerateH3Content: true
 `BarcodeWidthRangeArray` is supported to be set through JSON template.
 
 ### As JSON Parameter
-`BarcodeWidthRangeArray` as a JSON parameter is a JSON Object array defined as below.   
+`BarcodeWidthRangeArray` as a JSON parameter is defined as below.   
 
 | Key Name | Key Value |
 | -------- | --------- |
-| BarcodeWidthRangeArray | a JSON Object defined as below |
+| BarcodeWidthRangeArray | A JSON Object array while each Object is defined as below. |
 
 | Key Name | Key Value | Description |
 | -------- | --------- | ----------- |

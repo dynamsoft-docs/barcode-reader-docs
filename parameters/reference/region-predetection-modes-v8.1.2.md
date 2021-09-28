@@ -67,7 +67,7 @@ This mode has the following arguments for further customizing.
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
-`RegionPredetectionModes` can be set dynamicaly during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 [`RegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode) Enumeration items.
+`RegionPredetectionModes` can be set dynamically during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 [`RegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode) Enumeration items.
 
 
 **Code Snippet in C++**

@@ -27,7 +27,7 @@ needGenerateH3Content: true
 `ReturnBarcodeZoneClarity` is supported to be set through `RuntimeSetting` or JSON template.
 
 ### As `PublicRuntimeSettings` Member
-`ReturnBarcodeZoneClarity` can be set dynamicaly during runtime as a member of `PublicRuntimeSettings` struct.
+`ReturnBarcodeZoneClarity` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct.
 
 
 **Code Snippet in C++**

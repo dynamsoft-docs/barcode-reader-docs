@@ -84,7 +84,7 @@ Performs deblur process using the sharpening and smoothing algorithm. This mode 
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
-`DeblurModes` can be set dynamicaly during runtime as a member of `PublicRuntimeSettings` struct, it is an array with 10 [`DeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode) Enumeration items.
+`DeblurModes` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct, it is an array with 10 [`DeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode) Enumeration items.
 
 
 **Code Snippet in C++**

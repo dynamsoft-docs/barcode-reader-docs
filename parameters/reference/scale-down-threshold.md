@@ -26,7 +26,7 @@ If the shorter edge size is larger than the given value, the library will calcul
 `ScaleDownThreshold` is supported to be set through `RuntimeSetting` or JSON template.
 
 ### As `PublicRuntimeSettings` Member
-`ScaleDownThreshold` can be set dynamicaly during runtime as a member of `PublicRuntimeSettings` struct.
+`ScaleDownThreshold` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct.
 
 
 **Code Snippet in C++**

@@ -21,7 +21,7 @@ needGenerateH3Content: true
 `MaxAlgorithmThreadCount` is supported to be set through `RuntimeSetting` or JSON template.
 
 ### As `PublicRuntimeSettings` Member
-`MaxAlgorithmThreadCount` can be set dynamicaly during runtime as a member of `PublicRuntimeSettings` struct.
+`MaxAlgorithmThreadCount` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct.
 
 
 **Code Snippet in C++**

@@ -78,7 +78,7 @@ Localizes 1D barcodes in a fast mode. This mode is designed for reading 1D barco
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
-`LocalizationModes` can be set dynamicaly during runtime as a member of `PublicRuntimeSettings` struct, it is an array with 8 [`LocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode) Enumeration items.
+`LocalizationModes` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct, it is an array with 8 [`LocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode) Enumeration items.
 
 
 **Code Snippet in C++**

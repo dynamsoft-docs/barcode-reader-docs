@@ -57,7 +57,7 @@ DeblurLevel is now deprecated. It still works in this version but could be remov
 `DeblurLevel` is supported to be set through `RuntimeSetting` or JSON template.
 
 ### As `PublicRuntimeSettings` Member
-`DeblurLevel` can be set dynamicaly during runtime as a member of `PublicRuntimeSettings` struct.
+`DeblurLevel` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct.
 
 
 **Code Snippet in C++**
