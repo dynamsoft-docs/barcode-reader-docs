@@ -292,3 +292,23 @@ Now let's group them all together to demonstrate various scanerios and their cor
 </div>
 
 And that is pretty much a gist of how the RegionDefinition works. If anything is unclear, please contact support.
+
+## Settings Templates
+When getting started with the runtime settings, it could be a bit overwhelming given how many settings there are and the different scenarios in which they apply.
+
+To make things easier, we introduced three general modes to represent the `RuntimeSettings`:
+- `speed`: configures the SDK to read the image or frame as fast as possible, diregarding accuracy. This mode is not recommended for 2D codes in general, but specifically PDF417 codes.
+- `coverage`: opposite to `speed`, this mode pioritizes accuracy by sacrificing speed.
+- `balance`: As the name suggests, this mode offers the best of the two modes, achieving a good combination of the two extremes.
+
+Please refer to the following table that compares the `RuntimeSettings` between the three modes, as well as the default settings
+
+| Parameter | `speed` | `balance` | `coverage` | `default` |
+| :-: | :-: | :-: | :-: | :-: |
+| `DeblurModes` |  `[DM_BASED_ON_LOC_BIN, DM_THRESHOLD_BINARIZATION, DM_DIRECT_BINARIZATION]` |  `[DM_BASED_ON_LOC_BIN, DM_THRESHOLD_BINARIZATION, DM_DIRECT_BINARIZATION, DM_SMOOTHING]` 	|  `[DM_BASED_ON_LOC_BIN, DM_THRESHOLD_BINARIZATION, DM_DIRECT_BINARIZATION, DM_SMOOTHING，DM_GRAY_EQUALIZATION, DM_MORPHING, DM_DEEP_ANALYSIS]` | `[DM_BASED_ON_LOC_BIN, DM_THRESHOLD_BINARIZATION, DM_DIRECT_BINARIZATION, DM_SMOOTHING，DM_GRAY_EQUALIZATION, DM_MORPHING, DM_DEEP_ANALYSIS]` |
+| `BarcodeFormatIds_2` |  `BF2_POSTALCODE` 	|  `BF2_POSTALCODE` 	|  `BF2_POSTALCODE` | `BF2_NULL` |
+| `ExpectedBarcodesCount` |  `512` 	|  `512` 	|  `512` | `0` |
+| `GrayscaleTransformationModes` | `[GTM_ORIGINAL, 0, 0, 0, 0, 0, 0, 0]` 	| `[GTM_ORIGINAL, 0, 0, 0, 0, 0, 0, 0]` 	 | `[GTM_ORIGINAL, GTM_INVERTED, 0, 0, 0, 0, 0, 0]` | `[GTM_ORIGINAL, 0, 0, 0, 0, 0, 0, 0]` |
+| `TextFilterModes` | `[0, 0, 0, 0, 0, 0, 0, 0]` 	 | `[TFM_GENERAL_CONTOUR, 0, 0, 0, 0, 0, 0, 0]` 	 | `[TFM_GENERAL_CONTOUR, 0, 0, 0, 0, 0, 0, 0]` | `[TFM_GENERAL_CONTOUR, 0, 0, 0, 0, 0, 0, 0]` |
+| `LocalizationModes` | `[LM_CONNECTED_BLOCKS, LM_STATISTICS_MARKS, LM_STATISTICS_POSTAL_CODE, 0, 0, 0, 0, 0]` 	 | `[LM_CONNECTED_BLOCKS, LM_STATISTICS, LM_STATISTICS_MARKS, LM_STATISTICS_POSTAL_CODE, 0, 0, 0, 0]` | `[LM_CONNECTED_BLOCKS, LM_SCAN_DIRECTLY, LM_STATISTICS, LM_LINES, LM_STATISTICS_MARKS, LM_STATISTICS_POSTAL_CODE, 0, 0]` | `[LM_CONNECTED_BLOCKS, LM_SCAN_DIRECTLY, LM_STATISTICS, LM_LINES, 0, 0, 0, 0]` |
+| `ScaleDownThreshold` | `2300` 	| `2300` 	| `214748347` | `2300` |
