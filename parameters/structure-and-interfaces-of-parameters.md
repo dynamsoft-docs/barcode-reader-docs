@@ -226,7 +226,7 @@ Template used by DBR
     - RegionDefinitionNameArray: Take the last RegionDefinitionName in the last RegionDefinitionNameArray
     - FormatSpecificationNameArray: Take the combined value of the two settings, but if the FormatSpecification is set for the same barcode format, FormatSpecificationNameArray will only keep the name of the last FormatSpecification
 
-## Modes and Mode Arguments 
+## Modes, Mode and Arguments 
 The entire decoding process of Dynamsoft Barcode Reader consists of many subdivided functions, among which the control parameters of some function blocks are designed in accordance with the format of Modes-Mode-Argument. That is, a function is controlled by a Modes parameter. There are many ways to implement this function, each method (Mode) has multiple unique settings, and each setting is an Argument. 
 
 <div align="center">
