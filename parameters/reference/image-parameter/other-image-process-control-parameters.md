@@ -162,7 +162,7 @@ Sets how to detect barcodes from a PDF file when using DecodeFile method.
 
 | Json Object |	Json Parameter Name | Value Type | Value Range | Default Value |
 | ----------- | ------------------- | ---------- | ----------- | ------------- |
-| ImageParameter | PDFReadingMode | *string* | Any one of the [`PDFReadingMode` Enumeration]({{ site.enumerations }}result-enums.html#pdfreadingmode) items. | "PDFRM_AUTO" |
+| ImageParameter | PDFReadingMode | *string* | Any one of the [`PDFReadingMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#pdfreadingmode) items. | "PDFRM_AUTO" |
 
 **Json Parameter Example**   
 ```
@@ -175,11 +175,11 @@ Sets how to detect barcodes from a PDF file when using DecodeFile method.
 
 | Struct |	Struct Member Name | Value Type | Value Range | Default Value |
 | ------ | ------------------ | ---------- | ----------- | ------------- |
-| [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) | [`pdfReadingMode`]({{ site.structs }}PublicRuntimeSettings.html#pdfreadingmode) | *int* | Any one of the [`PDFReadingMode` Enumeration]({{ site.enumerations }}result-enums.html#pdfreadingmode) items. | `PDFRM_AUTO` |
+| [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) | [`pdfReadingMode`]({{ site.structs }}PublicRuntimeSettings.html#pdfreadingmode) | *int* | Any one of the [`PDFReadingMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#pdfreadingmode) items. | `PDFRM_AUTO` |
 
 **See Also**     
 - [`PublicRuntimeSettings` Struct]({{ site.structs }}PublicRuntimeSettings.html)
-- [`PDFReadingMode` Enumeration]({{ site.enumerations }}result-enums.html#pdfreadingmode)
+- [`PDFReadingMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#pdfreadingmode)
 
 
 
