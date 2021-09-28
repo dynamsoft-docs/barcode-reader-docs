@@ -86,6 +86,14 @@ camera: /camera-enhancer/docs/introduction/
 baseurl: "/barcode-reader"
 plugins:
   - jemoji
+  - jekyll-sitemap
+
+- scope:
+    path: "Hide_Tree_Page.html"
+  values:
+    sitemap: false
+      
+url: "https://www.dynamsoft.com" # sitemap root
 
 defaults:
   - scope:
