@@ -10,14 +10,23 @@ needGenerateH3Content: false
 
 ## 8.8.0
 
-### Highlight
+### Highlights
 
 {%- include release-notes/product-highlight-8.8.0.md -%}
 
 ### Editions
 
-| [JavaScript](../programming/javascript/release-notes/js-8.md#880-10142021) | [C](../programming/c/release-notes/c-8.md#880-10122021) | [C++](../programming/cplusplus/release-notes/cpp-8.md#880-10122021) | [DotNet](../programming/dotnet/release-notes/dotnet-8.md#880-10122021) | [Python](../programming/python/release-notes/python-8.md#880-10122021) | [Java](../programming/java/release-notes/java-8.md#880-10122021) | [Android](../programming/android/release-notes/android-8.md#880-10122021) | [iOS](../programming/objectivec-swift/release-notes/ios-8.md#880-10122021) |
 | -- | -- | -- | -- | -- | -- | -- | -- |
+| [JavaScript](../programming/javascript/release-notes/js-8.md#880-10142021) | [C](../programming/c/release-notes/c-8.md#880-10122021) | [C++](../programming/cplusplus/release-notes/cpp-8.md#880-10122021) | [DotNet](../programming/dotnet/release-notes/dotnet-8.md#880-10122021) | [Python](../programming/python/release-notes/python-8.md#880-10122021) | [Java](../programming/java/release-notes/java-8.md#880-10122021) | [Android](../programming/android/release-notes/android-8.md#880-10122021) | [iOS](../programming/objectivec-swift/release-notes/ios-8.md#880-10122021) |
+
+- [JavaScript](../programming/javascript/release-notes/js-8.md#880-10142021)
+- [C](../programming/c/release-notes/c-8.md#880-10122021)
+- [C++](../programming/cplusplus/release-notes/cpp-8.md#880-10122021)
+- [DotNet](../programming/dotnet/release-notes/dotnet-8.md#880-10122021)
+- [Python](../programming/python/release-notes/python-8.md#880-10122021)
+- [Java](../programming/java/release-notes/java-8.md#880-10122021)
+- [Android](../programming/android/release-notes/android-8.md#880-10122021)
+- [iOS](../programming/objectivec-swift/release-notes/ios-8.md#880-10122021)
 
 ## 8.6.0
 
