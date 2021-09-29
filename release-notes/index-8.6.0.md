@@ -8,35 +8,22 @@ needGenerateH3Content: false
 
 # Release Notes
 
-## 8.8.0
+## 8.6.0
 
-### Highlight
+### Highlights
 
 {%- include release-notes/product-highlight-8.6.0.md -%}
 
 ### Editions
 
-- [JavaScript](../programming/javascript/release-notes/js-8.md#880-10142021)
-- [C](../programming/c/release-notes/c-8.md#880-10122021)
-- [C++](../programming/cplusplus/release-notes/cpp-8.md#880-10122021)
-- [DotNet](../programming/dotnet/release-notes/dotnet-8.md#880-10122021)
-- [Python](../programming/python/release-notes/python-8.md#880-10122021)
-- [Java](../programming/java/release-notes/java-8.md#880-10122021)
-- [Android](../programming/android/release-notes/android-8.md#880-10122021)
-- [iOS](../programming/objectivec-swift/release-notes/ios-8.md#880-10122021)
-
-## 8.6.0
-
-### New
-
-- Added two DeblurMode Enumerations, `DM_BASED_ON_LOC_BIN` and `DM_SHARPENING_SMOOTHING`, to support more usage scenarios.
-- Added method `DBR_InitDLSConnectionParameters` to replace `DBR_InitLTSConnectionParameters`.
-- Added method `DBR_InitLicenseFromDLS` to replace `DBR_InitLicenseFromLTS`.
-- Added struct `DM_DLSConnectionParameters` to replace struct `DM_LTSConnectionParameters`.
-
-### Improved
-
-- Improved the [`confidence`]({{site.structs}}ExtendedResult.html#confidence) algorithm for 1D barcode results. Users can get even more accurate results by configuring the `confidence` filter.
+- [JavaScript](../programming/javascript/release-notes/js-8.md#860-08312021)
+- [C](../programming/c/release-notes/c-8.md#860-07152021)
+- [C++](../programming/cplusplus/release-notes/cpp-8.md#860-07152021)
+- [DotNet](../programming/dotnet/release-notes/dotnet-8.md#860-07152021)
+- [Python](../programming/python/release-notes/python-8.md#860-07152021)
+- [Java](../programming/java/release-notes/java-8.md#860-07152021)
+- [Android](../programming/android/release-notes/android-8.md#860-07152021)
+- [iOS](../programming/objectivec-swift/release-notes/ios-8.md#860-07152021)
 
 ## 8.4.0
 
