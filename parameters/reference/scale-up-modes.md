@@ -78,7 +78,7 @@ delete pSettings;
 | -------- | --------- | ----------- |
 | Mode | Any one in Candidate Mode List as string | (Required) Specifies a mode for scaling up an image.  |
 | AcuteAngleWithXThreshold | A number from value range of AcuteAngleWithXThreshold | (Optional) Sets the Argument [AcuteAngleWithXThreshold](#acuteanglewithxthreshold). |
-| ModuleSizeThreshold | A number from value range of ModuleSizeThreshold | (Optional) Sets the Argument [modulesizethreshold](#greenchannelweight). |
+| ModuleSizeThreshold | A number from value range of ModuleSizeThreshold | (Optional) Sets the Argument [modulesizethreshold](#modulesizethreshold). |
 | TargetModuleSize | A number from value range of TargetModuleSize | (Optional) Sets the Argument [TargetModuleSize](#targetmodulesize). |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
 | LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
