@@ -17,7 +17,7 @@ In this guide, you will learn step by step on how to build a barcode reading app
     - Windows 7, 8, 10, 2003, 2008, 2008 R2, 2012, 2016
     - Linux x64: Ubuntu 14.04.4+ LTS, Debian 8+, etc
     - Linux arm 32bit
-    - Linux arm 64bit
+    - Linux arm 64bit (not included in the trial package,  click <a href="https://tst.dynamsoft.com/public/download/dbr/8.6/dbr-c_cpp-8.6-(include-ARM64).zip" target="_blank">here</a> to download the SDK)
     - MacOS 64bit: 10.12+ (not included in the trial package, contact us to get the SDK)
 
 - Developing Tool
