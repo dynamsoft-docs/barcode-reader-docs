@@ -226,7 +226,7 @@ Template used by DBR
     - RegionDefinitionNameArray: Take the last RegionDefinitionName in the last RegionDefinitionNameArray
     - FormatSpecificationNameArray: Take the combined value of the two settings, but if the FormatSpecification is set for the same barcode format, FormatSpecificationNameArray will only keep the name of the last FormatSpecification
 
-## Modes, Mode, Arguments 
+## Modes, Mode and Arguments 
 The entire decoding process of Dynamsoft Barcode Reader consists of many subdivided functions, among which the control parameters of some function blocks are designed in accordance with the format of Modes-Mode-Argument. That is, a function is controlled by a Modes parameter. There are many ways to implement this function, each method (Mode) has multiple unique settings, and each setting is an Argument. 
 
 <div align="center">
@@ -253,3 +253,42 @@ JSON templates supports all Dynamsoft Barcode Reader parameters. The related par
 - `InitRuntimeSettingsWithString`: The effect after calling this interface is the same as `InitRuntimeSettingsWithFile`. The only difference is the template definition of `InitRuntimeSettingsWithString` is saved as a string;
 - `AppendTplFileToRuntimeSettings`: After calling this interface, the template definition in the file will be processed according to the merging rules stated in the "Multiple parameter template files" section . Each independent template is stored in the Dynamsoft Barcode Reader object. All templates, including Dynamsoft Barcode Reader's built-in template, are merged into one template to replace the built-in template of Dynamsoft Barcode Reader;
 - `AppendTplStringToRuntimeSettings`: The effect after calling this interface is the same as `AppendTplFileToRuntimeSettings`. The only difference is the template definition of `AppendTplStringToRuntimeSettings` is saved as a string.
+
+## RegionDefinition and How It Works
+Limiting the reading area of the barcode reader instance can help provide a better scanning UI as well optimize the performance of the SDK. It is important to understand how the RegionDefinition interface works, and what exactly you need to consider when coming up with the region percentage values.
+
+By definition, the `top` parameter of the RegionDefinition is used to represent the top-most coordinate of the region, while `bottom` represents the bottom-most coordinate of the region. But how do you figure out the appropriate values to set them?
+
+In order to set these values, we highly recommend setting `MeasuredByPercentage` to 1 to make this process as easy as possible. The next section assumes that this parameter is set to true.
+
+For `top` and `bottom`, think of the height of the image or frame as a **vertical axis** that goes from 0 to 100:
+- 0 represents the top-most point of the image or frame
+- 100 represents the bottom-most point of the image or frame.
+
+Please follow this diagram for a visual representation of different regions with various `top` and `bottom` values:
+
+<div align="center">
+  <img src="assets/topBottomRegions.png" alt="Top Bottom Region Percentages" width="100%" />
+</div>
+
+Please note that the above diagram is not limiting the horizontal view at all.
+
+After determining where you want the top-most and bottom-most points of the reading region, you can find its corresponding percentage value either by trial and error (and using the naked eye) or you can take exact measurements and use those to calculate the exact percentage values.
+
+Now for `left` and `right`, think of the width of the image or frame as a **horizontal axis** that goes from 0 to 100:
+- 0 represents the left-most point of the image of frame
+- 100 represents the right-most point of the image of frame
+
+<div align="center">
+  <img src="assets/leftRightRegions.png" alt="Left Right Region Percentages" width="100%" />
+</div>
+
+The above diagram represents various percentages and their visual representation. This assumes that you are not restricting the vertical area and leaving `top` and `bottom` unaffected.
+
+Now let's group them all together to demonstrate various scanerios and their corresponding values
+
+<div align="center">
+  <img src="assets/regionPercentagesTotal.png" alt="Region Percentages" width="100%" />
+</div>
+
+And that is pretty much a gist of how the RegionDefinition works. If anything is unclear, please contact support.
