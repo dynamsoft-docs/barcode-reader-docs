@@ -12,17 +12,15 @@ noTitleIndex: true
 
 ## 8.8.0 (10/12/2021)
 
-<div class="fold-panel-prefix"></div>
-
-### Version Highlights <i class="fa fa-caret-down"></i>
-
-<div class="fold-panel-start"></div>
+### Highlights
 
 {%- include release-notes/product-highlight-8.8.0.md -%}
 
-<div class="fold-panel-end"></div>
-
 ### Changelog
+
+#### Breaking Change(s)
+
+- The default value of the parameter [`minResultConfidence`]({{site.parameters_reference}}min-result-confidence.html) is set to 30.
 
 #### New
 
@@ -33,7 +31,6 @@ noTitleIndex: true
 - Improved the confidence calculation algorithm for 2D barcode results. Users can get even more accurate results by configuring the confidence filter.
 - Improved the barcode reading speed by applying the localized barcodes filter. The barcodes will be filtered according to the parameters [`BarcodeHeightRangeArray`]({{site.parameters_reference}}barcode-height-range-array.html), [`BarcodeWidthRangeArray`]({{site.parameters_reference}}barcode-width-range-array.html), [`BarcodeAngleRangeArray`]({{site.parameters_reference}}barcode-angle-range-array.html) and [`MinRatioOfBarcodeZoneWidthToHeight`]({{site.parameters_reference}}min-ratio-of-barcode-zone-width-to-height.html).
 - Updated the exception message when the full license is invalid or has expired.
-- The default value of the parameter [`minResultConfidence`]({{site.parameters_reference}}min-result-confidence.html) is set to 30 to improve the barcode decoding accuracy.
 
 ## 8.6.0 (07/15/2021)
 

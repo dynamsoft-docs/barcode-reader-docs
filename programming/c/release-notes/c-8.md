@@ -28,6 +28,10 @@ noTitleIndex: true
 
 ### Changelog
 
+#### Breaking Change(s)
+
+- The default value of the parameter [`minResultConfidence`]({{site.parameters_reference}}min-result-confidence.html) is set to 30.
+
 #### New
 
 - Added ARM64 components to the SDK.
@@ -38,7 +42,6 @@ noTitleIndex: true
 - Improved the confidence calculation algorithm for 2D barcode results. Users can get even more accurate results by configuring the confidence filter.
 - Improved the barcode reading speed by applying the localized barcodes filter. The barcodes will be filtered according to the parameters [`BarcodeHeightRangeArray`]({{site.parameters_reference}}barcode-height-range-array.html), [`BarcodeWidthRangeArray`]({{site.parameters_reference}}barcode-width-range-array.html), [`BarcodeAngleRangeArray`]({{site.parameters_reference}}barcode-angle-range-array.html) and [`MinRatioOfBarcodeZoneWidthToHeight`]({{site.parameters_reference}}min-ratio-of-barcode-zone-width-to-height.html).
 - Updated the exception message when the full license is invalid or has expired.
-- The default value of the parameter [`minResultConfidence`]({{site.parameters_reference}}min-result-confidence.html) is set to 30 to improve the barcode decoding accuracy.
 
 ## 8.6.0 (07/15/2021)
 
