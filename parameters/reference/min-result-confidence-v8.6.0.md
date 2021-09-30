@@ -14,7 +14,7 @@ needGenerateH3Content: true
 
 | Value Type | Value Range | Default Value |
 | ---------- | ----------- | ------------- |
-| *int* | [0, 100] | 30 |
+| *int* | [0, 100] | 0 |
 
     
 ## Setting Methods

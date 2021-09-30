@@ -32,7 +32,7 @@ TextResult[] Dynamsoft.DBR.BarcodeReader.DecodeFile(string fileName, string temp
 ```
 
 **Parameters**  
-`[in] fileName` <*string*> : A string defining the file name.   
+`[in] fileName` <*string*> : A string defining the file name. It supports BMP, JPEG, PNG, TIFF and PDF files.  
 `[in] templateName` <*string*> : The template name.
 
 **Return Value**  
