@@ -297,11 +297,11 @@ And that is pretty much a gist of how the RegionDefinition works. If anything is
 When getting started with the runtime settings, it could be a bit overwhelming given how many settings there are and the different scenarios in which they apply.
 
 To make things easier, we introduced three general modes to represent the `RuntimeSettings`:
-- `speed`: configures the SDK to read the image or frame as fast as possible, diregarding accuracy. This mode is not recommended for 2D codes in general, but specifically PDF417 codes.
-- `coverage`: opposite to `speed`, this mode pioritizes accuracy by sacrificing speed.
+- `speed`: configures the SDK to read the image or frame as fast as possible, disregarding accuracy. This mode is not recommended for 2D codes in general, but specifically PDF417 codes.
+- `coverage`: opposite to `speed`, this mode prioritizes accuracy by sacrificing speed.
 - `balance`: As the name suggests, this mode offers the best of the two modes, achieving a good combination of the two extremes.
 
-Please refer to the following table that compares the `RuntimeSettings` between the three modes, as well as the default settings
+Please refer to the following breakdown the difference in the individual `RuntimeSettings` between the three modes, as well as the default settings
 
 | Parameter | `speed` | `balance` | `coverage` | `default` |
 | :-: | :-: | :-: | :-: | :-: |
@@ -312,3 +312,5 @@ Please refer to the following table that compares the `RuntimeSettings` between 
 | `TextFilterModes` | `[0, 0, 0, 0, 0, 0, 0, 0]` 	 | `[TFM_GENERAL_CONTOUR, 0, 0, 0, 0, 0, 0, 0]` 	 | `[TFM_GENERAL_CONTOUR, 0, 0, 0, 0, 0, 0, 0]` | `[TFM_GENERAL_CONTOUR, 0, 0, 0, 0, 0, 0, 0]` |
 | `LocalizationModes` | `[LM_CONNECTED_BLOCKS, LM_STATISTICS_MARKS, LM_STATISTICS_POSTAL_CODE, 0, 0, 0, 0, 0]` 	 | `[LM_CONNECTED_BLOCKS, LM_STATISTICS, LM_STATISTICS_MARKS,`<br />` LM_STATISTICS_POSTAL_CODE, 0, 0, 0, 0]` | `[LM_CONNECTED_BLOCKS, LM_SCAN_DIRECTLY,`<br />` LM_STATISTICS, LM_LINES,`<br />` LM_STATISTICS_MARKS, LM_STATISTICS_POSTAL_CODE, 0, 0]` | `[LM_CONNECTED_BLOCKS, LM_SCAN_DIRECTLY,`<br />` LM_STATISTICS, LM_LINES, 0, 0, 0, 0]` |
 | `ScaleDownThreshold` | `2300` 	| `2300` 	| `214748347` | `2300` |
+
+When using the [JavaScript edition](https://www.dynamsoft.com/barcode-reader/programming/javascript/), the `RuntimeSettings` can be updated to any one of the three templates directly instead of having to update each `RuntimeSetting` individually. Please check out the corresponding [documentation](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeReader.html?ver=latest#updateruntimesettings) for more info. *Please note  that updating the runtime settings using a preset template like this is currently only supported by the JavaScript edition.*
