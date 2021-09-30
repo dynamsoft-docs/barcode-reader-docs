@@ -301,6 +301,8 @@ To make things easier, we introduced three general modes to represent the `Runti
 - `coverage`: opposite to `speed`, this mode prioritizes accuracy by sacrificing speed.
 - `balance`: As the name suggests, this mode offers the best of the two modes, achieving a good combination of the two extremes.
 
+When using the [JavaScript edition](https://www.dynamsoft.com/barcode-reader/programming/javascript/), the `RuntimeSettings` can be updated to any one of the three templates directly instead of having to update each `RuntimeSetting` individually. Please check out the corresponding [documentation](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeReader.html?ver=latest#updateruntimesettings) for more info. *Please note  that updating the runtime settings using a preset template like this is currently only supported by the JavaScript edition.*
+
 Please refer to the following breakdown the difference in the individual `RuntimeSettings` between the three modes, as well as the default settings
 
 | Parameter | `speed` | `balance` | `coverage` | `default` |
@@ -312,5 +314,3 @@ Please refer to the following breakdown the difference in the individual `Runtim
 | `TextFilterModes` | `[0, 0, 0, 0, 0, 0, 0, 0]` 	 | `[TFM_GENERAL_CONTOUR, 0, 0, 0, 0, 0, 0, 0]` 	 | `[TFM_GENERAL_CONTOUR, 0, 0, 0, 0, 0, 0, 0]` | `[TFM_GENERAL_CONTOUR, 0, 0, 0, 0, 0, 0, 0]` |
 | `LocalizationModes` | `[LM_CONNECTED_BLOCKS, LM_STATISTICS_MARKS, LM_STATISTICS_POSTAL_CODE, 0, 0, 0, 0, 0]` 	 | `[LM_CONNECTED_BLOCKS, LM_STATISTICS, LM_STATISTICS_MARKS,`<br />` LM_STATISTICS_POSTAL_CODE, 0, 0, 0, 0]` | `[LM_CONNECTED_BLOCKS, LM_SCAN_DIRECTLY,`<br />` LM_STATISTICS, LM_LINES,`<br />` LM_STATISTICS_MARKS, LM_STATISTICS_POSTAL_CODE, 0, 0]` | `[LM_CONNECTED_BLOCKS, LM_SCAN_DIRECTLY,`<br />` LM_STATISTICS, LM_LINES, 0, 0, 0, 0]` |
 | `ScaleDownThreshold` | `2300` 	| `2300` 	| `214748347` | `2300` |
-
-When using the [JavaScript edition](https://www.dynamsoft.com/barcode-reader/programming/javascript/), the `RuntimeSettings` can be updated to any one of the three templates directly instead of having to update each `RuntimeSetting` individually. Please check out the corresponding [documentation](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeReader.html?ver=latest#updateruntimesettings) for more info. *Please note  that updating the runtime settings using a preset template like this is currently only supported by the JavaScript edition.*
