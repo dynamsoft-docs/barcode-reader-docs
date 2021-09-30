@@ -10,6 +10,7 @@ breadcrumbText: Release Notes
 # Release Notes for Python SDK
 
 
+- [8.8.0 (10/12/2021)](python-8.md#880-10122021)
 - [8.6.0 (07/20/2021)](python-8.md#860-07202021)
 - [8.4.0 (06/10/2021)](python-8.md#840-06102021)
 - [8.2.0 (03/17/2021)](python-8.md#820-03172021)
