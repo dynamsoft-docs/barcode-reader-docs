@@ -70,10 +70,10 @@ delete pSettings;
 
 ## Impacts on Performance
 ### Speed
-The SDK will loop the setting modes one by one until find as many barcodes as `ExpectedBarcodesCount` specified or timeout. The more modes you set, the more time the process may take. Setting an appropriate mode first in order or setting only necessary modes may speed up the process. If the barcodes is vector data in PDF file, using PDFRM_VECTOR will speed up the process.
+Setting `PDFReadingMode` to PDFRM_VECTOR or PDFRM_RASTER when barcode type (image or vector) in PDF file is certain may speed up the process. 
 
 ### Read Rate
-Setting more modes along with different arguments may improve the Read Rate. 
+Setting `PDFReadingMode` to PDFRM_AUTO when barcode type (image or vector) in PDF file is uncertain may improve the Read Rate. 
 
 ### Accuracy
 `PDFReadingMode` has no influence on the Accuracy.
