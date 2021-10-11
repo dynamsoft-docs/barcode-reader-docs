@@ -18,7 +18,7 @@ needGenerateH3Content: true
 - PDFRM_RASTER
 
 ### PDFRM_AUTO
-Lets the library choose a mode automatically. Not supported yet.
+Lets the library choose a mode automatically.
 
 
 ### PDFRM_VECTOR
