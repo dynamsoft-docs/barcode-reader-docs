@@ -1,21 +1,21 @@
 ---   
 layout: default-layout
-title: How to process multi-page TIF & PDF
-description: This article describes how DBR processes multi-page images, such as TIF and PDF.
-keywords: tif pdf multipage
+title: Scan Barcodes from PDF & multi-page TIF
+description: This article describes how Dynamsoft's barcode SDK processes multi-page images, such as TIF and PDF.
+keywords: tif, pdf, multi-page
 needAutoGenerateSidebar: false
 ---
 
-# How to process multi-page TIF & PDF
+# Scan Barcodes from PDF & multi-page TIF
 
-For multi-page TIF and PDF files, DBR provides the parameter [`Pages`]({{ site.parameters_reference }}image-parameter/image-process-control.html#pages) to process them, [`PDFReadingMode`]({{ site.parameters_reference }}image-parameter/image-process-control.html#pdfreadingmode)和[`PDFRasterDPI`]({{ site.parameters_reference }}image-parameter/image-process-control.html#pdfrasterdpi) are used to handle PDF file specifically. 
+For multi-page TIF and PDF files, DBR provides the parameter [`Pages`]({{ site.parameters_reference }}image-parameter/image-process-control.html#pages) to process them, [`PDFReadingMode`]({{ site.parameters_reference }}image-parameter/image-process-control.html#pdfreadingmode) and [`PDFRasterDPI`]({{ site.parameters_reference }}image-parameter/image-process-control.html#pdfrasterdpi) are used to handle PDF file specifically. 
 
 ## Specify the page number to be processed
 
 When DBR is processing multi-page files (TIF or PDF), you can use the parameter [`Pages`]({{ site.parameters_reference }}image-parameter/image-process-control.html#pages) to specify the specific page or range of pages to be processed. This parameter can be used to specify one or more page index values, starting from 0. The default value is "", which means all pages.
 
 [`Pages`]({{ site.parameters_reference }}image-parameter/image-process-control.html#pages)can be set by one or more of the following data, separated by commas:
-- An integer index values, representing a specific page;
+- An integer index value, representing a specific page;
 - Two integer index values, connected by "-" in the middle, representing a certain range of page numbers.
 
 [`Pages`]({{ site.parameters_reference }}image-parameter/image-process-control.html#pages) can only be configured in Json, for example, `{"Pages": "0,3,5,7-10"}`.
