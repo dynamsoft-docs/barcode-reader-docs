@@ -156,7 +156,7 @@ Sets the stride in pixels between scans when searching for barcodes.
 
 | Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | --------- |
-| *int* | [0, 0x7fffffff] | 0 | LM_SCAN_DIRECTLY |         
+| *int* | [0, 0x7fffffff] | 0 | LM_SCAN_DIRECTLY<br>LM_ONED_FAST_SCAN |         
 
 **Remarks**         
   - 0: automatically set by the library.   
@@ -170,7 +170,7 @@ Sets the scan direction when searching barcode.
 
 | Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | --------- |
-| *int* | [0, 2] | 0 | LM_SCAN_DIRECTLY |            
+| *int* | [0, 2] | 0 | LM_SCAN_DIRECTLY<br>LM_ONED_FAST_SCAN |            
 
 **Remarks**         
   - 0: Both vertical and horizontal direction.   
