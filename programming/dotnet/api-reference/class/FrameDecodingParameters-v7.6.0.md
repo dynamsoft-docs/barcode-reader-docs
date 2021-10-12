@@ -136,7 +136,7 @@ float Dynamsoft.Barcode.FrameDecodingParameters.Threshold
     [0, 1]
       
 - **Default value**   
-    0.1
+    0.01
     
 - **Remark**  
     The SDK will calculate an inner indicator for each frame from [`AppendFrame`](../BarcodeReader/video.md#appendframe), if the change rate of the indicators between the current frame and the history frames is larger than the given threshold, the current frame will not be added to the inner frame queue waiting for decoding.
