@@ -30,7 +30,7 @@ noTitleIndex: true
 
 #### Breaking Change(s)
 
-- The default value of the parameter [`minResultConfidence`]({{site.parameters_reference}}min-result-confidence.html) is set to 30.
+- The low confidence barcode results will no longer be returned by default. The default value of parameter [`minResultConfidence`]({{site.parameters_reference}}min-result-confidence.html) is preset to 30, which can filter out the majority of misreading results and keep as many correct results as possible.
 
 ## 8.6.0 (07/20/2021)
 
