@@ -21,7 +21,6 @@ needGenerateH3Content: true
 - LM_STATISTICS_MARKS
 - LM_STATISTICS_POSTAL_CODE
 - LM_CENTRE
-- LM_ONED_FAST_SCAN
 
 ### LM_CONNECTED_BLOCKS
 Localizes barcodes by searching for connected blocks. This algorithm usually gives best result and it is recommended to set ConnectedBlocks to the highest priority. This mode has the following arguments for further customizing.
@@ -64,14 +63,6 @@ Localizes barcodes by groups of connected blocks and lines.This is optimized for
 ### LM_CENTRE
 Localizes barcodes from the centre of the image. This mode has the following arguments for further customizing.
 
-- [LibraryFileName](#libraryfilename)
-- [LibraryParameters](#libraryparameters)
-
-### LM_ONED_FAST_SCAN
-Localizes 1D barcodes in a fast mode. This mode is designed for reading 1D barcodes in a very fast mode. This mode has the following arguments for further customizing.
-
-- [ScanStride](#scanstride)
-- [ScanDirection](#scandirection)
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)
     
@@ -156,7 +147,7 @@ Sets the stride in pixels between scans when searching for barcodes.
 
 | Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | --------- |
-| *int* | [0, 0x7fffffff] | 0 | LM_SCAN_DIRECTLY<br>LM_ONED_FAST_SCAN |         
+| *int* | [0, 0x7fffffff] | 0 | LM_SCAN_DIRECTLY |         
 
 **Remarks**         
   - 0: automatically set by the library.   
@@ -170,7 +161,7 @@ Sets the scan direction when searching barcode.
 
 | Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | --------- |
-| *int* | [0, 2] | 0 | LM_SCAN_DIRECTLY<br>LM_ONED_FAST_SCAN |            
+| *int* | [0, 2] | 0 | LM_SCAN_DIRECTLY |            
 
 **Remarks**         
   - 0: Both vertical and horizontal direction.   

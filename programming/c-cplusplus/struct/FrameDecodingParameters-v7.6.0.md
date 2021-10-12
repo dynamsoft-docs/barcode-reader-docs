@@ -126,7 +126,7 @@ float tagFrameDecodingParameters::threshold
     [0, 1]
       
 - **Default value**   
-    0.1
+    0.01
     
 - **Remark**  
     The SDK will calculate an inner indicator for each frame from [`AppendFrame`]({{ site.cpp_methods }}video.html#appendframe) or  [`DBR_AppendFrame`]({{ site.c_methods }}video.html#dbr_appendframe), if the change rate of the indicators between the current frame and the history frames is larger than the given threshold, the current frame will not be added to the inner frame queue waiting for decoding.
