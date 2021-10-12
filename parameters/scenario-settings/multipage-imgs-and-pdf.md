@@ -8,7 +8,7 @@ needAutoGenerateSidebar: false
 
 # Scan Barcodes from PDF & multi-page TIF
 
-For multi-page TIF and PDF files, DBR provides the parameter [`Pages`]({{ site.parameters_reference }}pages.html) to process them, [`PDFReadingMode`]({{ site.parameters_reference }}pdf-reading-mode.html)和[`PDFRasterDPI`]({{ site.parameters_reference }}pdf-raster-dpi.html) are used to handle PDF file specifically. 
+For multi-page TIF and PDF files, DBR provides the parameter [`Pages`]({{ site.parameters_reference }}pages.html) to process them, [`PDFReadingMode`]({{ site.parameters_reference }}pdf-reading-mode.html) and [`PDFRasterDPI`]({{ site.parameters_reference }}pdf-raster-dpi.html) are used to handle PDF file specifically. 
 
 ## Specify the page number to be processed
 
