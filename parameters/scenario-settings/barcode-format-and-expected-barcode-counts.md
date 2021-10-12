@@ -8,11 +8,11 @@ needAutoGenerateSidebar: false
 
 # How to set the barcode format and the number of barcodes expected to be detected 
 
-DBR can handle various common barcode formats on the market and is well suited to supporting multi-code scenes on an image. In order to support all barcode formats and solve all codes appearing in the figure, it will consume a certain amount of time. If you don't want to consume extra time, you can set the required barcode format through [`BarcodeFormatIds`]({{ site.parameters_reference }}image-parameter/format-control.html#barcodeformatids), [`BarcodeFormatIds_2`]({{ site.parameters_reference }}image-parameter/format-control.html#barcodeformatids_2), and set the number of barcodes expected to be detected through  [`ExpectedBarcodesCount`]({{ site.parameters_reference }}image-parameter/cost-control.html#expectedbarcodescount). 
+DBR can handle various common barcode formats on the market and is well suited to supporting multi-code scenes on an image. In order to support all barcode formats and solve all codes appearing in the figure, it will consume a certain amount of time. If you don't want to consume extra time, you can set the required barcode format through [`BarcodeFormatIds`]({{ site.parameters_reference }}barcode-format-ids.html), [`BarcodeFormatIds_2`]({{ site.parameters_reference }}barcode-format-ids-2.html), and set the number of barcodes expected to be detected through  [`ExpectedBarcodesCount`]({{ site.parameters_reference }}expected-barcodes-count.html). 
 
 ## `BarcodeFormatIds`,`BarcodeFormatIds_2`
 
-These two parameters are used to set the required barcode format to be decoded. Barcode formats not specified will not be processed. You can speed up DBR processing by eliminating barcode formats that you don't care about. For specific enumeration values for the parameters, please refer to our API documents [`BarcodeFormatIds`]({{ site.parameters_reference }}image-parameter/format-control.html#barcodeformatids), [`BarcodeFormatIds_2`]({{ site.parameters_reference }}image-parameter/format-control.html#barcodeformatids_2).
+These two parameters are used to set the required barcode format to be decoded. Barcode formats not specified will not be processed. You can speed up DBR processing by eliminating barcode formats that you don't care about. For specific enumeration values for the parameters, please refer to our API documents [`BarcodeFormatIds`]({{ site.parameters_reference }}barcode-format-ids.html), [`BarcodeFormatIds_2`]({{ site.parameters_reference }}barcode-format-ids-2.html).
 
 
 ## `ExpectedBarcodesCount`

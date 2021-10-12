@@ -32,7 +32,7 @@ public class LocalizationResult
 | [`PageNumber`](#pagenumber) | *int* |
 | [`RegionName`](#regionname) | *string* |
 | [`DocumentName`](#documentname)| *string* |
-| [`ResultCoordinateType`](#resultcoordinatetype) | [`EnumResultCoordinateType`]({{ site.parameters_reference }}image-parameter/result-control.html#resultcoordinatetype) |
+| [`ResultCoordinateType`](#resultcoordinatetype) | [`EnumResultCoordinateType`]({{ site.parameters_reference }}result-coordinate-type.html) |
 | [`AccompanyingTextBytes`](#accompanyingtextbytes) | *byte[ ]* |
 | [`Confidence`](#confidence) | *int* |
 

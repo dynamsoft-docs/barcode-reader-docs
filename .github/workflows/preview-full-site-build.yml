@@ -35,7 +35,6 @@ jobs:
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
           -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DBRDocPreview/_config.yml
           cd DBRDocPreview && bundle exec jekyll build
-
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:

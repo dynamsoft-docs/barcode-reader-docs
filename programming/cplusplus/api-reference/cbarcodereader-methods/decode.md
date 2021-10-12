@@ -32,7 +32,7 @@ int dynamsoft::dbr::CBarcodeReader::DecodeFile (const char* pFileName, const cha
 ```   
    
 **Parameters**  
-`[in] pFileName`	A string defining the file name.   
+`[in] pFileName`	A string defining the file name. It supports BMP, JPEG, PNG, TIFF and PDF files.  
 `[in] pTemplateName`<sub>Optional</sub> The template name.
 
 **Return Value**  

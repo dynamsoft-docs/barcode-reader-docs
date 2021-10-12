@@ -10,7 +10,7 @@ needAutoGenerateSidebar: false
 
 ## What is DPM (Direct Part Marking)?
 
-It is the process of creating permanent markings on the surface of a part to help identify it. DPM Codes are used widely in industrial part tracking, from electronics manufacturing to automotive assembly. Atypical from general scenarios, DPM Codes present more challenges, including light reflection interference from the surface the code is printed on, low contrast, and complex background texture. DBR may not be able to handle these problems well by default, so this is where the parameter [`DPMCodeReadingModes`]({{ site.parameters_reference }}image-parameter/DPMCodeReadingModes.html#dpmcodereadingmodes) comes handy. 
+It is the process of creating permanent markings on the surface of a part to help identify it. DPM Codes are used widely in industrial part tracking, from electronics manufacturing to automotive assembly. Atypical from general scenarios, DPM Codes present more challenges, including light reflection interference from the surface the code is printed on, low contrast, and complex background texture. DBR may not be able to handle these problems well by default, so this is where the parameter [`DPMCodeReadingModes`]({{ site.parameters_reference }}dpm-code-reading-modes.html#dpmcodereadingmodes) comes handy. 
 
 For reference, here are two sample images of DPM codes:
 
@@ -19,9 +19,9 @@ For reference, here are two sample images of DPM codes:
 
 ## How to configure the barcode reader to read DPM codes
 
-To enable the DPM feature, simply add `DPMCRM_GENERAL` to the array of [`DPMCodeReadingModes`]({{ site.parameters_reference }}image-parameter/DPMCodeReadingModes.html#dpmcodereadingmodes). 
+To enable the DPM feature, simply add `DPMCRM_GENERAL` to the array of [`DPMCodeReadingModes`]({{ site.parameters_reference }}dpm-code-reading-modes.html#dpmcodereadingmodes). 
 
->Note: Adding `DPMCRM_GENERAL` to [`DPMCodeReadingModes`]({{ site.parameters_reference }}image-parameter/DPMCodeReadingModes.html#dpmcodereadingmodes) will change the default value of LocalizationModes. It automatically adds a new mode `LM_STATISTICS_MARKS` to LocalizationModes.    
+>Note: Adding `DPMCRM_GENERAL` to [`DPMCodeReadingModes`]({{ site.parameters_reference }}dpm-code-reading-modes.html#dpmcodereadingmodes) will change the default value of LocalizationModes. It automatically adds a new mode `LM_STATISTICS_MARKS` to LocalizationModes.    
 `LM_STATISTICS_MARKS` is a dot matrix-based localization method specifically for DPM code and DotCode. 
 
 ## Example
