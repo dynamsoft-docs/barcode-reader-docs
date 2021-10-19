@@ -2,12 +2,14 @@ tree_file_list:
   - sidelist-full-tree.html
   - sidelist-introduction/introduction-comparison-tools.html
   - sidelist-introduction/introduction-how-to-guides.html
+  - sidelist-introduction/introduction-how-to-guides-v7.6.0.html
   - sidelist-parameters/parameters-enumerations.html
   - sidelist-parameters/parameters-references.html
   - sidelist-parameters/parameters-references-v7.6.0.html
   - sidelist-parameters/parameters-references-v8.0.0.html
   - sidelist-parameters/parameters-references-v8.1.2.html
   - sidelist-parameters/parameters-scenario-settings.html
+  - sidelist-parameters/parameters-scenario-settings-v7.6.0.html
   - sidelist-parameters/parameters-template-structure.html
   - sidelist-programming/programming-javascript-v7.5.0.html
   - sidelist-programming/programming-javascript-v7.6.0.html
