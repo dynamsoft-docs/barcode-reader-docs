@@ -65,7 +65,7 @@ for (TextResult result : results) {
 More useful information about Accompanying Texts can be found:
 - Parameter [`AccompanyingTextRecognitionModes`]({{ site.parameters_reference }}accompanying-text-recognition-modes.html#accompanyingtextrecognitionmodes)
 - Enumeration [`AccompanyingTextRecognitionMode`]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode)
-- [Recognise Accompanying Text]({{ site.scenario_settings }}recognise-accompanying-text-v7.6.0.html)
+- [Recognise Accompanying Text]({{ site.scenario_settings }}recognise-accompanying-text.html)
 
 
 
