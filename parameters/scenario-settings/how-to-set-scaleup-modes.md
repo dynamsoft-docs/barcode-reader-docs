@@ -8,9 +8,9 @@ needAutoGenerateSidebar: false
 
 # How to read barcodes with small module sizes
 
-In some scenarios, the barcode is relatively small to the entire image and the barcode module size is also very small, making it difficult for our library to read the barcode. In this case, we can enlarge the barcode area through the [`ScaleUpModes`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#scaleupmodes) parameter to a proper size before starting the recognition process.
+In some scenarios, the barcode is relatively small to the entire image and the barcode module size is also very small, making it difficult for our library to read the barcode. In this case, we can enlarge the barcode area through the [`ScaleUpModes`]({{ site.parameters_reference }}scale-up-modes.html#scaleupmodes) parameter to a proper size before starting the recognition process.
 
-Here is an overview of the enumerations for [`ScaleUpModes`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#scaleupmodes):
+Here is an overview of the enumerations for [`ScaleUpModes`]({{ site.parameters_reference }}scale-up-modes.html#scaleupmodes):
 
 |Enumeration |Description|
 |----|---|
@@ -19,7 +19,7 @@ Here is an overview of the enumerations for [`ScaleUpModes`]({{ site.parameters_
 |SUM_NEAREST_NEIGHBOUR_INTERPOLATION|Enlarge the code area with nearest neighbor interpolation method|
 |SUM_AUTO|Auto detect whether to enlarge the barcode area or not|
 
-The default value for [`ScaleUpModes`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#scaleupmodes) is SUM_AUTO, which automatically detects whether to enlarge the code area before decoding. 
+The default value for [`ScaleUpModes`]({{ site.parameters_reference }}scale-up-modes.html#scaleupmodes) is SUM_AUTO, which automatically detects whether to enlarge the code area before decoding. 
 
 To control the enlarging process manually, you can choose one or all of the other available modes ( SUM_LINEAR_INTERPOLATION, SUM_NEAREST_NEIGHBOUR_INTERPOLATION) at the same time. 
 
@@ -46,7 +46,7 @@ Below is a sample image in real scenario:
 
 ![scale up sample image][1]  
 
-The barcode image is a bit blurry and the module size of the barcode is only 2px. By using the default barcode reading settings, the barcode may not be readable. In this case, we can use the [`ScaleUpModes`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#scaleupmodes) parameter in the following way:
+The barcode image is a bit blurry and the module size of the barcode is only 2px. By using the default barcode reading settings, the barcode may not be readable. In this case, we can use the [`ScaleUpModes`]({{ site.parameters_reference }}scale-up-modes.html#scaleupmodes) parameter in the following way:
 
 ``` C++
 CBarcodeReader* reader = new CBarcodeReader();
@@ -76,7 +76,7 @@ delete runtimeSettings;
 delete reader;
 ```
  
-You can also set the runtime settings (and the [`ScaleUpModes`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#scaleupmodes)) via a JSON template or string. The first snippet is the JSON template and the second demonstrates how to use that template for the runtime settings:
+You can also set the runtime settings (and the [`ScaleUpModes`]({{ site.parameters_reference }}scale-up-modes.html#scaleupmodes)) via a JSON template or string. The first snippet is the JSON template and the second demonstrates how to use that template for the runtime settings:
 
 ``` Json
 {

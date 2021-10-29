@@ -29,7 +29,7 @@ BarcodeReader.decode_file(image_file_name, template_name="")
 
 **Parameters**  
 
-- `[in] image_file_name` <*str*> :	A string defining the file name.   
+- `[in] image_file_name` <*str*> :	A string defining the file name. It supports BMP, JPEG, PNG, TIFF and PDF files.  
 - `[in] template_name` <*optional*><*str*> : The template name.
 
 **Return Value**  

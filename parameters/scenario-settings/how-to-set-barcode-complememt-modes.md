@@ -7,7 +7,7 @@ keywords: BarcodeComplementModes, damaged image
 
 # How to decode incomplete barcodes 
 
-In some case, due to misprinting, barcodes may have incomplete parts. For example, a QR code that is missing the position detection pattern (See the sample image below). In this case, you can enable the barcode completion logic in Dynamsoft Barcode Reader(DBR) by turning on [`BarcodeComplementModes`]({{ site.parameters_reference }}image-parameter/BarcodeComplementModes.html#barcodecomplementmodes). DBR will then automatically attempt to complete and correct the location information that is incorrect or lost due to misprinting according to the structure characteristics of the corresponding barcode type. The barcode completion logic only supports QR code and Data Matrix at present. BarcodeComplementModes is disabled by default, you can enable it based on your requirements.
+In some case, due to misprinting, barcodes may have incomplete parts. For example, a QR code that is missing the position detection pattern (See the sample image below). In this case, you can enable the barcode completion logic in Dynamsoft Barcode Reader(DBR) by turning on [`BarcodeComplementModes`]({{ site.parameters_reference }}barcode-complement-modes.html#barcodecomplementmodes). DBR will then automatically attempt to complete and correct the location information that is incorrect or lost due to misprinting according to the structure characteristics of the corresponding barcode type. The barcode completion logic only supports QR code and Data Matrix at present. BarcodeComplementModes is disabled by default, you can enable it based on your requirements.
 
 Here are two examples with imcomplete barcodes 
 ![barcode-complememt-modes-sample-image-dm][1]

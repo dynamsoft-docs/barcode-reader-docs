@@ -13,7 +13,7 @@ In some cases, the image may be filled with a lot of characters and numbers. Thi
 
 The text filter is on by default.    
 
-The following code snippet shows how to set text filter function by changing the [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#textfiltermodes) parameter:    
+The following code snippet shows how to set text filter function by changing the [`TextFilterModes`]({{ site.parameters_reference }}text-filter-modes.html#textfiltermodes) parameter:    
 
 
 ```cpp

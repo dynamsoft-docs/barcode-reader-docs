@@ -12,15 +12,15 @@ Before DBR processes the image, you can set the image scaling, convert colour im
 
 ## Image scaling
 
-DBR may take a while to process the image if it is very large. The parameter [`ScaleDownThreshold`]({{ site.parameters_reference }}image-parameter/image-process-control.html#scaledownthreshold) is used to set the threshold for shrinking the image. The default value is 2300. 
+DBR may take a while to process the image if it is very large. The parameter [`ScaleDownThreshold`]({{ site.parameters_reference }}scale-down-threshold.html) is used to set the threshold for shrinking the image. The default value is 2300. 
 
-If the shorter side length of the image is larger than [`ScaleDownThreshold`]({{ site.parameters_reference }}image-parameter/image-process-control.html#scaledownthreshold), the library will shrink the image by half until the shorter side is less than the threshold.
+If the shorter side length of the image is larger than [`ScaleDownThreshold`]({{ site.parameters_reference }}scale-down-threshold.html), the library will shrink the image by half until the shorter side is less than the threshold.
 
 You can speed up the barcode localization process by setting this parameter to shrink the image size. It makes a difference for large images, but not applicable for small-size images. 
 
 ## Convert colour image to grayscale
 
-If the image is a colour image, DBR will convert it to grayscale first for further process. You can use [`ColourConversionModes`]({{ site.parameters_reference }}image-parameter/ColourConversionModes.html#colourconversionmodes) to set the grayscale mode. [`ColourConversionModes`]({{ site.parameters_reference }}image-parameter/ColourConversionModes.html#colourconversionmodes) has three arguments: 
+If the image is a colour image, DBR will convert it to grayscale first for further process. You can use [`ColourConversionModes`]({{ site.parameters_reference }}colour-conversion-modes.html#colourconversionmodes) to set the grayscale mode. [`ColourConversionModes`]({{ site.parameters_reference }}colour-conversion-modes.html#colourconversionmodes) has three arguments: 
 
 **BlueChannelWeight**: Sets the weight value of Blue Colour Channel used for converting a colour image to a grayscale image.
 **GreenChannelWeight**: Sets the weight value of Green Colour Channel used for converting a colour image to a grayscale image.
@@ -29,7 +29,7 @@ If the image is a colour image, DBR will convert it to grayscale first for furth
 The value range of the above arguments is [-1, 1000]. The default value is -1, which means the weight value will be set automatically by the SDK. You can use the intermediate result IRT_COLOUR_CONVERTED_GRAYSCALE_IMAGE to obtain the grayscaled image.
 
 In the following JSON template, we configured 4
-[`ColourConversionModes`]({{ site.parameters_reference }}image-parameter/ColourConversionModes.html#colourconversionmodes) to convert colour images to grayscale images. The DBR algorithm will cycle these 4 modes in turn until the number of barcode areas >= ExpectedBarcodesCount.
+[`ColourConversionModes`]({{ site.parameters_reference }}colour-conversion-modes.html#colourconversionmodes) to convert colour images to grayscale images. The DBR algorithm will cycle these 4 modes in turn until the number of barcode areas >= ExpectedBarcodesCount.
 
 ```json
 {
@@ -78,20 +78,20 @@ The followings show the grayscaled images respectively using the default mode, t
 
 ## Grayscale colour inversion transformation
 
-[`GrayscaleTransformationModes`]({{ site.parameters_reference }}image-parameter/GrayscaleTransformationModes.html#grayscaletransformationmodes) is used to set colour inversion transformation of the grayscale image. 
+[`GrayscaleTransformationModes`]({{ site.parameters_reference }}grayscale-transformation-modes.html#grayscaletransformationmodes) is used to set colour inversion transformation of the grayscale image. 
 
 Generally, the barcode is dark on a light background. But in some situations, the barcodes are inverted - light barcodes on a dark background, as shown below. In this case, you need to set GrayscaleTransformationMode to GTM_INVERTED in order to read the barcode.
 
 ![inverted gray image][6]
 
-If there are different barcode colours and backgrounds in the image(s), you can set multiple modes in the [`GrayscaleTransformationModes`]({{ site.parameters_reference }}image-parameter/GrayscaleTransformationModes.html#grayscaletransformationmodes). If the parameter is configured as
+If there are different barcode colours and backgrounds in the image(s), you can set multiple modes in the [`GrayscaleTransformationModes`]({{ site.parameters_reference }}grayscale-transformation-modes.html#grayscaletransformationmodes). If the parameter is configured as
 `["GTM_ORIGINAL", "GTM_INVERTED"]`, DBR will try two modes in turn to read both normal barcodes and inverted barcodes.
 
-But if most of the barcodes are inverted in the images, then it would be better to set `["GTM_INVERTED", "GTM_ORIGINAL"]` in the [`GrayscaleTransformationModes`]({{ site.parameters_reference }}image-parameter/GrayscaleTransformationModes.html#grayscaletransformationmodes).
+But if most of the barcodes are inverted in the images, then it would be better to set `["GTM_INVERTED", "GTM_ORIGINAL"]` in the [`GrayscaleTransformationModes`]({{ site.parameters_reference }}grayscale-transformation-modes.html#grayscaletransformationmodes).
 
 ## Example
 
-The following code snippets respectively demonstrate how to set [`ScaleDownThreshold`]({{ site.parameters_reference }}image-parameter/image-process-control.html#scaledownthreshold), [`ColourConversionModes`]({{ site.parameters_reference }}image-parameter/ColourConversionModes.html#colourconversionmodes) and [`GrayscaleTransformationModes`]({{ site.parameters_reference }}image-parameter/GrayscaleTransformationModes.html#grayscaletransformationmodes) via RuntimeSettings and via JSON template.
+The following code snippets respectively demonstrate how to set [`ScaleDownThreshold`]({{ site.parameters_reference }}scale-down-threshold.html), [`ColourConversionModes`]({{ site.parameters_reference }}colour-conversion-modes.html#colourconversionmodes) and [`GrayscaleTransformationModes`]({{ site.parameters_reference }}grayscale-transformation-modes.html#grayscaletransformationmodes) via RuntimeSettings and via JSON template.
 
 ```cpp
 CBarcodeReader* reader = new CBarcodeReader();       

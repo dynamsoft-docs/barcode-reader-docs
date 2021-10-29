@@ -11,7 +11,7 @@ needGenerateH3Content: true
 
 Different methods are used for setting trial and full license keys. In our demo or sample applications, we use `.InitLicense()` or `.ProductKeys` to set trial license keys. 
 
-For the purchased version, you need to use `initLicenseFromLTS()` to set the Handshake Codes for your licenses.
+For the purchased version, you need to use `initLicenseFromDLS()` to set the Handshake Codes for your licenses.
 
 You can set the license by following the steps below:
 
@@ -157,6 +157,16 @@ You can set the license by following the steps below:
 
  If you run into any issues, please [contact Dynamsoft Support](https://www.dynamsoft.com/Company/Contact.aspx).
 
+**Notes:**
+
+All license usage data is submitted to the Dynamsoft License Server (`DLS`) hosted by Dynamsoft. You can
+
+* <a href="https://www.dynamsoft.com/license-tracking/docs/common/licenseitems.html" target="_blank">View activated license items</a>
+* <a href="https://www.dynamsoft.com/license-tracking/docs/common/statistics.html" target="_blank">View the license usage statistics</a>
+* <a href="https://www.dynamsoft.com/license-tracking/docs/common/usagealerts.html" target="_blank">Get notified about license status</a> 
+
+> Read more about <a href="https://www.dynamsoft.com/license-tracking/docs/common/mechanism.html" target="_blank">the mechanism</a> behind license tracking.
+> 
 [1]:assets\set-full-license-2\FullLicenseList.png
 [2]:assets\set-full-license-2\SetAlias8.6.png
 [3]:assets\set-full-license-2\ActivationContinue.png

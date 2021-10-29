@@ -86,7 +86,7 @@ int tagPublicRuntimeSettings::timeout
 ### maxAlgorithmThreadCount
 Sets the number of threads the image processing algorithm will use to decode barcodes.
 ```cpp
-int tagPublicRuntimeSettings::timeout
+int tagPublicRuntimeSettings::maxAlgorithmThreadCount
 ```
 **Value Range**     
     [1, 4]

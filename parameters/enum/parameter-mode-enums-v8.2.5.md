@@ -55,12 +55,12 @@ Describes the barcode colour mode.
 | Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description | Valid Argument(s) |
 | -------------------------- | ------------------- | ----- | ----------- | ----------------- |
 | BICM_SKIP | EnumBarcodeColourModeSkip | 0x00 | Skips the barcode colour operation. | `N/A` |
-| BICM_DARK_ON_LIGHT | EnumBarcodeColourModeDarkOnLight | 0x01 | Dark items on a light background. | [`LightReflection`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#lightreflection) |
+| BICM_DARK_ON_LIGHT | EnumBarcodeColourModeDarkOnLight | 0x01 | Dark items on a light background. | [`LightReflection`]({{ site.parameters_reference }}barcode-colour-modes.html#lightreflection) |
 | BICM_LIGHT_ON_DARK  | EnumBarcodeColourModeLightOnDark | 0x02 | Light items on a dark background. **Not supported yet**.  | `N/A` |
 | BICM_DARK_ON_DARK  | EnumBarcodeColourModeDarkOnDark | 0x04 | Dark items on a dark background. **Not supported yet**.  | `N/A` |
 | BICM_LIGHT_ON_LIGHT  | EnumBarcodeColourModeLightOnLight | 0x08 | Light items on a light background. **Not supported yet**.  | `N/A` |
 | BICM_DARK_LIGHT_MIXED  | EnumBarcodeColourModeDarkLightMixed | 0x10 | The background is mixed by dark and light. **Not supported yet**.  | `N/A` |
-| BICM_DARK_ON_LIGHT_DARK_SURROUNDING  | EnumBarcodeColourModeDarkOnLightDarkSurrounding | 0x20 | Dark item on a light background surrounded by dark.  | [`LightReflection`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#lightreflection) |
+| BICM_DARK_ON_LIGHT_DARK_SURROUNDING  | EnumBarcodeColourModeDarkOnLightDarkSurrounding | 0x20 | Dark item on a light background surrounded by dark.  | [`LightReflection`]({{ site.parameters_reference }}barcode-colour-modes.html#lightreflection) |
 
 
 
@@ -120,8 +120,8 @@ Describes the binarization mode.
 | -------------------------- | ------------------- | ----- | ----------- | ----------------- |
 | BM_SKIP | EnumBinarizationModeSkip | 0x00 | Skips the binarization. | `N/A` |
 | BM_AUTO | EnumBinarizationModeAuto | 0x01 | **Not supported yet.** | `N/A` |
-| BM_LOCAL_BLOCK | EnumBinarizationModeLocalBlock | 0x02 | Binarizes the image based on the local block. | [`BlockSizeX`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#blocksizex)<br>[`BlockSizeY`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#blocksizey)<br>[`EnableFillBinaryVacancy`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#enablefillbinaryvacancy)<br>[`ImagePreprocessingModesIndex`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#imagepreprocessingmodesindex)<br>[`ThreshValueCoefficient`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#threshvaluecoefficient)<br> |
-| BM_THRESHOLD | EnumBinarizationModeThreshold | 0x04 | Performs image binarization based on the given threshold. | [`BinarizationThreshold`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#binarizationThreshold)<br>[`ImagePreprocessingModesIndex`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#imagepreprocessingmodesindex) |
+| BM_LOCAL_BLOCK | EnumBinarizationModeLocalBlock | 0x02 | Binarizes the image based on the local block. | [`BlockSizeX`]({{ site.parameters_reference }}binarization-modes.html#blocksizex)<br>[`BlockSizeY`]({{ site.parameters_reference }}binarization-modes.html#blocksizey)<br>[`EnableFillBinaryVacancy`]({{ site.parameters_reference }}binarization-modes.html#enablefillbinaryvacancy)<br>[`ImagePreprocessingModesIndex`]({{ site.parameters_reference }}binarization-modes.html#imagepreprocessingmodesindex)<br>[`ThreshValueCoefficient`]({{ site.parameters_reference }}binarization-modes.html#threshvaluecoefficient)<br> |
+| BM_THRESHOLD | EnumBinarizationModeThreshold | 0x04 | Performs image binarization based on the given threshold. | [`BinarizationThreshold`]({{ site.parameters_reference }}binarization-modes.html#binarizationThreshold)<br>[`ImagePreprocessingModesIndex`]({{ site.parameters_reference }}binarization-modes.html#imagepreprocessingmodesindex) |
 
 
 
@@ -151,7 +151,7 @@ Describes the colour clustering mode.
 | -------------------------- | ------------------- | ----- | ----------- | ----------------- |
 | CCM_SKIP | EnumColourClusteringModeSkip | 0x00 | Skips the colour clustering. | `N/A` |
 | CCM_AUTO | EnumColourClusteringModeAuto | 0x01 | **Not supported yet.** | `N/A` |
-| CCM_GENERAL_HSV | EnumColourClusteringModeGeneralHSV | 0x02 | Clusters colours using the general algorithm based on HSV. | [`Sensitivity`]({{ site.parameters_reference }}image-parameter/ColourClusteringModes.html#sensitivity) |
+| CCM_GENERAL_HSV | EnumColourClusteringModeGeneralHSV | 0x02 | Clusters colours using the general algorithm based on HSV. | [`Sensitivity`]({{ site.parameters_reference }}colour-clustering-modes.html#sensitivity) |
 
 
 
@@ -180,7 +180,7 @@ Describes the colour conversion mode.
 | Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description | Valid Argument(s) |
 | -------------------------- | ------------------- | ----- | ----------- | ----------------- |
 | CICM_SKIP | EnumColourConversionModeSkip | 0x00 | Skip the colour conversion. | `N/A` |
-| CICM_GENERAL | EnumColourConversionModeGeneral | 0x01 | Converts a colour image to a grayscale image using the general algorithm. | [`BlueChannelWeight`]({{ site.parameters_reference }}image-parameter/ColourConversionModes.html#bluechannelweight)<br>[`GreenChannelWeight`]({{ site.parameters_reference }}image-parameter/ColourConversionModes.html#greenchannelweight)<br>[`RedChannelWeight`]({{ site.parameters_reference }}image-parameter/ColourConversionModes.html#redchannelweight) |
+| CICM_GENERAL | EnumColourConversionModeGeneral | 0x01 | Converts a colour image to a grayscale image using the general algorithm. | [`BlueChannelWeight`]({{ site.parameters_reference }}colour-conversion-modes.html#bluechannelweight)<br>[`GreenChannelWeight`]({{ site.parameters_reference }}colour-conversion-modes.html#greenchannelweight)<br>[`RedChannelWeight`]({{ site.parameters_reference }}colour-conversion-modes.html#redchannelweight) |
 
 
 
@@ -274,7 +274,7 @@ Describes the deformation resisting mode.
 | -------------------------- | ------------------- | ----- | ----------- | ----------------- |
 | DRM_SKIP | EnumDeformationResistingModeSkip | 0x00 | Skip the deformation resisting. | `N/A` |
 | DRM_AUTO | EnumDeformationResistingModeAuto | 0x01 | **Not supported yet.** | `N/A` |
-| DRM_GENERAL | EnumDeformationResistingModeGeneral | 0x02 | Resists deformation using the general algorithm. | [`Level`]({{ site.parameters_reference }}image-parameter/DeformationResistingModes.html#level) |
+| DRM_GENERAL | EnumDeformationResistingModeGeneral | 0x02 | Resists deformation using the general algorithm. | [`Level`]({{ site.parameters_reference }}deformation-resisting-modes.html#level) |
 
 
 
@@ -363,10 +363,10 @@ Describes the image preprocessing mode.
 | IPM_SKIP | EnumImagePreprocessingModeSkip | 0x00 | Skips image preprocessing. | `N/A` |
 | IPM_AUTO | EnumImagePreprocessingModeAuto | 0x01 | **Not supported yet.** | `N/A` |
 | IPM_GENERAL | EnumImagePreprocessingModeGeneral | 0x02 | Takes the unpreprocessed image for following operations. | `N/A` |
-| IPM_GRAY_EQUALIZE | EnumImagePreprocessingModeGrayEqualize | 0x04 | Preprocesses the image using the gray equalization algorithm. | [`Sensitivity`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#sensitivity) |
-| IPM_GRAY_SMOOTH | EnumImagePreprocessingModeGraySmooth | 0x08 | Preprocesses the image using the gray smoothing algorithm. | [`SmoothBlockSizeX`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#smoothblocksizex)<br>[`SmoothBlockSizeY`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#smoothblocksizey) |
-| IPM_SHARPEN_SMOOTH | EnumImagePreprocessingModeSharpenSmooth | 0x10 | Preprocesses the image using the sharpening and smoothing algorithm. | [`SmoothBlockSizeX`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#smoothblocksizex)<br>[`SmoothBlockSizeY`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#smoothblocksizey)<br>[`SharpenBlockSizeX`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#sharpenblocksizex)<br>[`SharpenBlockSizeY`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#sharpenblocksizey) |
-| IPM_MORPHOLOGY  | EnumImagePreprocessingModeMorphology | 0x20 | Preprocesses the image using the morphology algorithm. | [`MorphOperation`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#morphoperation)<br>[`MorphShape`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#morphshape)<br>[`MorphOperationKernelSizeX`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#morphoperationkernelsizex)<br>[`MorphOperationKernelSizeY`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#morphoperationkernelsizey) |
+| IPM_GRAY_EQUALIZE | EnumImagePreprocessingModeGrayEqualize | 0x04 | Preprocesses the image using the gray equalization algorithm. | [`Sensitivity`]({{ site.parameters_reference }}image-preprocessing-modes.html#sensitivity) |
+| IPM_GRAY_SMOOTH | EnumImagePreprocessingModeGraySmooth | 0x08 | Preprocesses the image using the gray smoothing algorithm. | [`SmoothBlockSizeX`]({{ site.parameters_reference }}image-preprocessing-modes.html#smoothblocksizex)<br>[`SmoothBlockSizeY`]({{ site.parameters_reference }}image-preprocessing-modes.html#smoothblocksizey) |
+| IPM_SHARPEN_SMOOTH | EnumImagePreprocessingModeSharpenSmooth | 0x10 | Preprocesses the image using the sharpening and smoothing algorithm. | [`SmoothBlockSizeX`]({{ site.parameters_reference }}image-preprocessing-modes.html#smoothblocksizex)<br>[`SmoothBlockSizeY`]({{ site.parameters_reference }}image-preprocessing-modes.html#smoothblocksizey)<br>[`SharpenBlockSizeX`]({{ site.parameters_reference }}image-preprocessing-modes.html#sharpenblocksizex)<br>[`SharpenBlockSizeY`]({{ site.parameters_reference }}image-preprocessing-modes.html#sharpenblocksizey) |
+| IPM_MORPHOLOGY  | EnumImagePreprocessingModeMorphology | 0x20 | Preprocesses the image using the morphology algorithm. | [`MorphOperation`]({{ site.parameters_reference }}image-preprocessing-modes.html#morphoperation)<br>[`MorphShape`]({{ site.parameters_reference }}image-preprocessing-modes.html#morphshape)<br>[`MorphOperationKernelSizeX`]({{ site.parameters_reference }}image-preprocessing-modes.html#morphoperationkernelsizex)<br>[`MorphOperationKernelSizeY`]({{ site.parameters_reference }}image-preprocessing-modes.html#morphoperationkernelsizey) |
 
 
 
@@ -399,7 +399,7 @@ Describes the localization mode.
 | LM_CONNECTED_BLOCKS | EnumLocalizationModeConnectedBlocks | 0x02 | Localizes barcodes by searching for connected blocks. This algorithm usually gives best result and it is recommended to set ConnectedBlocks to the highest priority. | `N/A` |
 | LM_STATISTICS | EnumLocalizationModeStatistics | 0x04 | Localizes barcodes by groups of contiguous black-white regions. This is optimized for QRCode and DataMatrix. | `N/A` |
 | LM_LINES | EnumLocalizationModeLines | 0x08 | Localizes barcodes by searching for groups of lines. This is optimized for 1D and PDF417 barcodes. | `N/A` |
-| LM_SCAN_DIRECTLY | EnumLocalizationModeScanDirectly | 0x10 |  Localizes barcodes quickly. This mode is recommended in interactive scenario. | [`ScanStride`]({{ site.parameters_reference }}image-parameter/LocalizationModes.html#scanstride)<br>[`ScanDirection`]({{ site.parameters_reference }}image-parameter/LocalizationModes.html#scandirection) |
+| LM_SCAN_DIRECTLY | EnumLocalizationModeScanDirectly | 0x10 |  Localizes barcodes quickly. This mode is recommended in interactive scenario. | [`ScanStride`]({{ site.parameters_reference }}localization-modes.html#scanstride)<br>[`ScanDirection`]({{ site.parameters_reference }}localization-modes.html#scandirection) |
 | LM_STATISTICS_MARKS | EnumLocalizationModeStatisticsMarks | 0x20 | Localizes barcodes by groups of marks.This is optimized for DPM codes. | `N/A` |
 | LM_STATISTICS_POSTAL_CODE | EnumLocalizationModeStatisticsPostalCode | 0x40 | Localizes barcodes by groups of connected blocks and lines.This is optimized for postal codes. | `N/A` |
 
@@ -462,9 +462,9 @@ Describes the region predetection mode.
 | RPM_SKIP | EnumRegionPredetectionModeSkip | 0x00 | Skips region detection. | `N/A` |
 | RPM_AUTO | EnumRegionPredetectionModeAuto | 0x01 | Lets the library choose an algorithm automatically to detect region. | `N/A` |
 | RPM_GENERAL | EnumRegionPredetectionModeGeneral | 0x02 | Takes the whole image as a region. | `N/A` |
-| RPM_GENERAL_RGB_CONTRAST | EnumRegionPredetectionModeGeneralRGBContrast | 0x04 | Detects region using the general algorithm based on RGB colour contrast. | [`MinImageDimension`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#minimagedimension)<br>[`Sensitivity`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#sensitivity)<br>[`SpatialIndexBlockSize`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#spatialindexblocksize) |
-| RPM_GENERAL_GRAY_CONTRAST | EnumRegionPredetectionModeGeneralGrayContrast | 0x08 | Detects region using the general algorithm based on gray contrast. | [`MinImageDimension`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#minimagedimension)<br>[`Sensitivity`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#sensitivity)<br>[`SpatialIndexBlockSize`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#spatialindexblocksize) |
-| RPM_GENERAL_HSV_CONTRAST | EnumRegionPredetectionModeGeneralHSVContrast | 0x10 | Detects region using the general algorithm based on HSV colour contrast. | [`AspectRatioRange`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#aspectratiorange)<br>[`FindAccurateBoundary`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#findaccurateboundary)<br>[`ForeAndBackgroundColours`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#foreandbackgroundcolours)<br>[`HeightRange`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#heightrange)<br>[`MinImageDimension`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#minimagedimension)<br>[`RelativeBarcodeRegions`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#relativebarcoderegions)<br>[`Sensitivity`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#sensitivity)<br>[`SpatialIndexBlockSize`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#spatialindexblocksize)<br>[`WidthRange`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#widthrange) |
+| RPM_GENERAL_RGB_CONTRAST | EnumRegionPredetectionModeGeneralRGBContrast | 0x04 | Detects region using the general algorithm based on RGB colour contrast. | [`MinImageDimension`]({{ site.parameters_reference }}region-predetection-modes.html#minimagedimension)<br>[`Sensitivity`]({{ site.parameters_reference }}region-predetection-modes.html#sensitivity)<br>[`SpatialIndexBlockSize`]({{ site.parameters_reference }}region-predetection-modes.html#spatialindexblocksize) |
+| RPM_GENERAL_GRAY_CONTRAST | EnumRegionPredetectionModeGeneralGrayContrast | 0x08 | Detects region using the general algorithm based on gray contrast. | [`MinImageDimension`]({{ site.parameters_reference }}region-predetection-modes.html#minimagedimension)<br>[`Sensitivity`]({{ site.parameters_reference }}region-predetection-modes.html#sensitivity)<br>[`SpatialIndexBlockSize`]({{ site.parameters_reference }}region-predetection-modes.html#spatialindexblocksize) |
+| RPM_GENERAL_HSV_CONTRAST | EnumRegionPredetectionModeGeneralHSVContrast | 0x10 | Detects region using the general algorithm based on HSV colour contrast. | [`AspectRatioRange`]({{ site.parameters_reference }}region-predetection-modes.html#aspectratiorange)<br>[`FindAccurateBoundary`]({{ site.parameters_reference }}region-predetection-modes.html#findaccurateboundary)<br>[`ForeAndBackgroundColours`]({{ site.parameters_reference }}region-predetection-modes.html#foreandbackgroundcolours)<br>[`HeightRange`]({{ site.parameters_reference }}region-predetection-modes.html#heightrange)<br>[`MinImageDimension`]({{ site.parameters_reference }}region-predetection-modes.html#minimagedimension)<br>[`RelativeBarcodeRegions`]({{ site.parameters_reference }}region-predetection-modes.html#relativebarcoderegions)<br>[`Sensitivity`]({{ site.parameters_reference }}region-predetection-modes.html#sensitivity)<br>[`SpatialIndexBlockSize`]({{ site.parameters_reference }}region-predetection-modes.html#spatialindexblocksize)<br>[`WidthRange`]({{ site.parameters_reference }}region-predetection-modes.html#widthrange) |
 
 
 
@@ -494,8 +494,8 @@ Describes the scale up mode.
 | -------------------------- | ------------------- | ----- | ----------- | ----------------- |
 | SUM_SKIP | EnumScaleUpModeSkip | 0x00 | Skip the scale-up process. | `N/A` |
 | SUM_AUTO | EnumScaleUpModeAuto | 0x01 | The library chooses an interpolation method automatically to scale up. | `N/A` |
-| SUM_LINEAR_INTERPOLATION | EnumScaleUpModeLinearInterpolation | 0x02 | Scales up using the linear interpolation method. | [`AcuteAngleWithXThreshold`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#acuteanglewithxthreshold)<br>[`ModuleSizeThreshold`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#modulesizethreshold)<br>[`TargetModuleSize`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#targetmodulesize) |
-| SUM_NEAREST_NEIGHBOUR_INTERPOLATION | EnumScaleUpModeNearestNeighbourInterpolation | 0x04 | Scales up using the nearest-neighbour interpolation method. | [`AcuteAngleWithXThreshold`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#acuteanglewithxthreshold)<br>[`ModuleSizeThreshold`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#modulesizethreshold)<br>[`TargetModuleSize`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#targetmodulesize) |
+| SUM_LINEAR_INTERPOLATION | EnumScaleUpModeLinearInterpolation | 0x02 | Scales up using the linear interpolation method. | [`AcuteAngleWithXThreshold`]({{ site.parameters_reference }}scale-up-modes.html#acuteanglewithxthreshold)<br>[`ModuleSizeThreshold`]({{ site.parameters_reference }}scale-up-modes.html#modulesizethreshold)<br>[`TargetModuleSize`]({{ site.parameters_reference }}scale-up-modes.html#targetmodulesize) |
+| SUM_NEAREST_NEIGHBOUR_INTERPOLATION | EnumScaleUpModeNearestNeighbourInterpolation | 0x04 | Scales up using the nearest-neighbour interpolation method. | [`AcuteAngleWithXThreshold`]({{ site.parameters_reference }}scale-up-modes.html#acuteanglewithxthreshold)<br>[`ModuleSizeThreshold`]({{ site.parameters_reference }}scale-up-modes.html#modulesizethreshold)<br>[`TargetModuleSize`]({{ site.parameters_reference }}scale-up-modes.html#targetmodulesize) |
 
 
 
@@ -558,7 +558,7 @@ Describes the text filter mode.
 | -------------------------- | ------------------- | ----- | ----------- | ----------------- |
 | TFM_SKIP | EnumTextFilterModeSkip | 0x00 | Skip the text filtering. | `N/A` |
 | TFM_AUTO | EnumTextFilterModeAuto | 0x01 | **Not supported yet.** | `N/A` |
-| TFM_GENERAL_CONTOUR | EnumTextFilterModeGeneralContour | 0x02 | Filters text using the general algorithm based on contour. | [`MinImageDimension`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#minimagedimension)<br>[`Sensitivity`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#sensitivity) |
+| TFM_GENERAL_CONTOUR | EnumTextFilterModeGeneralContour | 0x02 | Filters text using the general algorithm based on contour. | [`MinImageDimension`]({{ site.parameters_reference }}text-filter-modes.html#minimagedimension)<br>[`Sensitivity`]({{ site.parameters_reference }}text-filter-modes.html#sensitivity) |
 
 
 
@@ -588,6 +588,6 @@ Describes the texture detection mode.
 | -------------------------- | ------------------- | ----- | ----------- | ----------------- |
 | TDM_SKIP  | EnumTextureDetectionModeSkip | 0x00 | Skips texture detection. | `N/A` |
 | TDM_AUTO  | EnumTextureDetectionModeAuto | 0x01 | Not supported yet. | `N/A` |
-| TDM_GENERAL_WIDTH_CONCENTRATION  | EnumTextureDetectionModeGeneralWidthConcentration | 0x02 | Detects texture using the general algorithm. | [`Sensitivity`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#sensitivity) |
+| TDM_GENERAL_WIDTH_CONCENTRATION  | EnumTextureDetectionModeGeneralWidthConcentration | 0x02 | Detects texture using the general algorithm. | [`Sensitivity`]({{ site.parameters_reference }}texture-detection-modes.html#sensitivity) |
 
 

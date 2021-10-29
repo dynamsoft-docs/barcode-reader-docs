@@ -44,20 +44,20 @@ Returns error code. Possible return(s): DBR_OK; DBRERR_SET_MODE_ARGUMENT_ERROR.
 
 #### Remark
 Check follow link for available modes and arguments:
-- [`AccompanyingTextRecognitionModes`]({{ site.parameters_reference }}image-parameter/AccompanyingTextRecognitionModes.html#mode-arguments)
-- [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#mode-arguments)
-- [`BinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#mode-arguments)
-- [`ColourClusteringModes`]({{ site.parameters_reference }}image-parameter/ColourClusteringModes.html#mode-arguments)
-- [`ColourConversionModes`]({{ site.parameters_reference }}image-parameter/ColourConversionModes.html#mode-arguments)
-- [`DeformationResistingModes`]({{ site.parameters_reference }}image-parameter/DeformationResistingModes.html#mode-arguments)
-- [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#mode-arguments)
-- [`IntermediateResultSavingMode`]({{ site.parameters_reference }}image-parameter/IntermediateResultSavingMode.html#mode-arguments)
-- [`LocalizationModes`]({{ site.parameters_reference }}image-parameter/LocalizationModes.html#mode-arguments)
-- [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#mode-arguments)
-- [`ScaleUpModes`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#mode-arguments)
-- [`TextAssistedCorrectionMode`]({{ site.parameters_reference }}image-parameter/TextAssistedCorrectionMode.html#mode-arguments)
-- [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#mode-arguments)
-- [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#mode-arguments) 
+- [`AccompanyingTextRecognitionModes`]({{ site.parameters_reference }}accompanying-text-recognition-modes.html)
+- [`BarcodeColourModes`]({{ site.parameters_reference }}barcode-colour-modes.html)
+- [`BinarizationModes`]({{ site.parameters_reference }}binarization-modes.html)
+- [`ColourClusteringModes`]({{ site.parameters_reference }}colour-clustering-modes.html)
+- [`ColourConversionModes`]({{ site.parameters_reference }}colour-conversion-modes.html)
+- [`DeformationResistingModes`]({{ site.parameters_reference }}deformation-resisting-modes.html)
+- [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-preprocessing-modes.html)
+- [`IntermediateResultSavingMode`]({{ site.parameters_reference }}intermediate-result-saving-mode.html)
+- [`LocalizationModes`]({{ site.parameters_reference }}localization-modes.html)
+- [`RegionPredetectionModes`]({{ site.parameters_reference }}region-predetection-modes.html)
+- [`ScaleUpModes`]({{ site.parameters_reference }}scale-up-modes.html)
+- [`TextAssistedCorrectionMode`]({{ site.parameters_reference }}text-assisted-correction-mode.html)
+- [`TextFilterModes`]({{ site.parameters_reference }}text-filter-modes.html)
+- [`TextureDetectionModes`]({{ site.parameters_reference }}texture-detection-modes.html) 
 
 #### Code Snippet
 ```cpp
@@ -102,20 +102,20 @@ Returns error code. Possible return(s): DBR_OK; DBRERR_GET_MODE_ARGUMENT_ERROR.
 
 #### Remark
 Check follow link for available modes and arguments:
-- [`AccompanyingTextRecognitionModes`]({{ site.parameters_reference }}image-parameter/AccompanyingTextRecognitionModes.html#mode-arguments)
-- [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#mode-arguments)
-- [`BinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#mode-arguments)
-- [`ColourClusteringModes`]({{ site.parameters_reference }}image-parameter/ColourClusteringModes.html#mode-arguments)
-- [`ColourConversionModes`]({{ site.parameters_reference }}image-parameter/ColourConversionModes.html#mode-arguments)
-- [`DeformationResistingModes`]({{ site.parameters_reference }}image-parameter/DeformationResistingModes.html#mode-arguments)
-- [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#mode-arguments)
-- [`IntermediateResultSavingMode`]({{ site.parameters_reference }}image-parameter/IntermediateResultSavingMode.html#mode-arguments)
-- [`LocalizationModes`]({{ site.parameters_reference }}image-parameter/LocalizationModes.html#mode-arguments)
-- [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#mode-arguments)
-- [`ScaleUpModes`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#mode-arguments)
-- [`TextAssistedCorrectionMode`]({{ site.parameters_reference }}image-parameter/TextAssistedCorrectionMode.html#mode-arguments)
-- [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#mode-arguments)
-- [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#mode-arguments)   
+- [`AccompanyingTextRecognitionModes`]({{ site.parameters_reference }}accompanying-text-recognition-modes.html)
+- [`BarcodeColourModes`]({{ site.parameters_reference }}barcode-colour-modes.html)
+- [`BinarizationModes`]({{ site.parameters_reference }}binarization-modes.html)
+- [`ColourClusteringModes`]({{ site.parameters_reference }}colour-clustering-modes.html)
+- [`ColourConversionModes`]({{ site.parameters_reference }}colour-conversion-modes.html)
+- [`DeformationResistingModes`]({{ site.parameters_reference }}deformation-resisting-modes.html)
+- [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-preprocessing-modes.html)
+- [`IntermediateResultSavingMode`]({{ site.parameters_reference }}intermediate-result-saving-mode.html)
+- [`LocalizationModes`]({{ site.parameters_reference }}localization-modes.html)
+- [`RegionPredetectionModes`]({{ site.parameters_reference }}region-predetection-modes.html)
+- [`ScaleUpModes`]({{ site.parameters_reference }}scale-up-modes.html)
+- [`TextAssistedCorrectionMode`]({{ site.parameters_reference }}text-assisted-correction-mode.html)
+- [`TextFilterModes`]({{ site.parameters_reference }}text-filter-modes.html)
+- [`TextureDetectionModes`]({{ site.parameters_reference }}texture-detection-modes.html)   
 
 #### Code Snippet
 ```cpp

@@ -33,7 +33,7 @@ DBR_API int DBR_DecodeFile (void* barcodeReader, const char* pFileName, const ch
    
 **Parameters**  
 `[in] barcodeReader` Handle of the barcode reader instance.  
-`[in]	pFileName` A string defining the file name.  
+`[in]	pFileName` A string defining the file name. It supports BMP, JPEG, PNG, TIFF and PDF files.
 `[in]	pTemplateName` The template name.
 
 **Return Value**  

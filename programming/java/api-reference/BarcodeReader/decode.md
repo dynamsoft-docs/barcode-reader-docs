@@ -29,7 +29,7 @@ TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeFile(String fileFullPath, Str
 ```   
    
 **Parameters**  
-`fileFullPath`	A string defining the file path.   
+`fileFullPath`	A string defining the file path. It supports BMP, TIFF, JPG, PNG and PDF files.
 `templateName`  The template name.
 
 **Return Value**  

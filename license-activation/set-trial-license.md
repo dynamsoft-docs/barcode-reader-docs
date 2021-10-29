@@ -12,13 +12,13 @@ needGenerateH3Content: false
 If you are using the mobile edition (8.2+) or the JavaScript edition (8.2.5+), please check [how to apply for a private trial license](#how-to-apply-for-a-private-trial-license). For other editions, please follow the steps below:
   
 
-## Get a trial license key.
+## Get a trial license key
 
 You can log in the customer portal and [request for a trial extension online](https://www.dynamsoft.com/customer/license/trialLicense).
 
 **Note**: If the trial license expires or it is missing, you can still get barcode reading results but partial of the result will be masked with "*".
 
-## Update the license key in source code. 
+## Update the license key in C/C++/C#/Java/PHP/Python/VB.NET
 
 You can use `initLicense()` or `ProductKeys` to set the license.
  
@@ -86,6 +86,8 @@ For mobile edition (8.2+) and the JavaScript edition (8.2.5+), a 7-day free tria
 >  
 > In case a private trial license fails to be generated, Dynamsoft Support team will get in touch with you. Or you can [contact us](https://www.dynamsoft.com/company/contact/).
 
+## Update the license key in JavaScript
+
 **Code Snippet**  
 
 * JavaScript
@@ -94,6 +96,8 @@ For mobile edition (8.2+) and the JavaScript edition (8.2.5+), a 7-day free tria
 Dynamsoft.DBR.BarcodeReader.organizationID = "123456"; // replace the number 123456 with YOUR-ORGANIZATION-ID
 var reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 ```
+
+## Update the license key in Java for Android, Objective-C, and Swift
 
 * Java for Android
 
