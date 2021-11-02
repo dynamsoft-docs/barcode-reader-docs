@@ -257,6 +257,8 @@ JSON templates supports all Dynamsoft Barcode Reader parameters. The related par
 ## RegionDefinition and How It Works
 Limiting the reading area of the barcode reader instance can help provide a better scanning UI as well optimize the performance of the SDK. It is important to understand how the RegionDefinition interface works, and what exactly you need to consider when coming up with the region percentage values.
 
+Before proceeding, please note that the `RegionDefinition` parameters work a bit differently when using the mobile edition (iOS or Android) of the SDK compared to other editions. If you are working with the mobile edition, please refer to the [RegionDefinition on Mobile](#regiondefinition-on-mobile) section.
+
 By definition, the `top` parameter of the RegionDefinition is used to represent the top-most coordinate of the region, while `bottom` represents the bottom-most coordinate of the region. But how do you figure out the appropriate values to set them?
 
 In order to set these values, we highly recommend setting `MeasuredByPercentage` to 1 to make this process as easy as possible. The next section assumes that this parameter is set to true.
@@ -292,3 +294,36 @@ Now let's group them all together to demonstrate various scanerios and their cor
 </div>
 
 And that is pretty much a gist of how the RegionDefinition works. If anything is unclear, please contact support.
+
+### RegionDefinition on Mobile
+When it comes to the [mobile edition](https://www.dynamsoft.com/barcode-reader/sdk-mobile/) of the SDK, knowing how RegionDefinition works is a major factor in unlocking the full potential of the Barcode Reader in your mobile application.
+
+Put simply, the `RegionDefinition` parameter values in code (`top`, `bottom`, `left`, `right`) must be **rotated 90 degrees counter-clockwise to what they visually should be**. Let's say that we want to implement a RegionDefinition (in mobile) with the following values `top = 15; bottom = 75; left = 15; right = 85`. Visually, this would equate to the following
+
+<div align="center">
+  <img src="assets/regionDefinition_Mobile.png" alt="Mobile Region Percentages" width="100%" />
+</div>
+
+Please note that on mobile, the region is *visually* the same as the normal, it is just the values that are rotated counter-clockwise by 90 degrees. Essentially, in order to determine the `RegionDefinition` values on mobile, you must first determine what the 'normal' values are, and then rotate those values to get the mobile values.
+
+## Using Runtime Settings Templates
+When getting started with the runtime settings, it could be a bit overwhelming given how many settings there are and the different scenarios in which they apply.
+
+To make things easier, we introduced three general modes to represent the `RuntimeSettings`:
+- `speed`: configures the SDK to read the image or frame as fast as possible, disregarding accuracy. This mode is not recommended for 2D codes in general, but specifically PDF417 codes.
+- `coverage`: opposite to `speed`, this mode prioritizes accuracy by sacrificing speed.
+- `balance`: As the name suggests, this mode offers the best of the two modes, achieving a good combination of the two extremes.
+
+When using the [JavaScript edition](https://www.dynamsoft.com/barcode-reader/programming/javascript/), the `RuntimeSettings` can be updated to any one of the three templates directly instead of having to update each `RuntimeSetting` individually. Please check out the corresponding [documentation](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeReader.html?ver=latest#updateruntimesettings) for more info. *Please note  that updating the runtime settings using a preset template is currently only supported by the JavaScript edition.*
+
+Please refer to the following breakdown the difference in the individual `RuntimeSettings` between the three modes, as well as the default settings
+
+| Parameter | `speed` | `balance` | `coverage` | `default` |
+| :-: | :-: | :-: | :-: | :-: |
+| `DeblurModes` |  `[DM_BASED_ON_LOC_BIN, DM_THRESHOLD_BINARIZATION, DM_DIRECT_BINARIZATION]` |  `[DM_BASED_ON_LOC_BIN, DM_THRESHOLD_BINARIZATION,` <br /> `DM_DIRECT_BINARIZATION, DM_SMOOTHING]`|  `[DM_BASED_ON_LOC_BIN, DM_THRESHOLD_BINARIZATION,`<br />` DM_DIRECT_BINARIZATION, DM_SMOOTHING,`<br />` DM_GRAY_EQUALIZATION, DM_MORPHING, DM_DEEP_ANALYSIS]` | `[DM_BASED_ON_LOC_BIN, DM_THRESHOLD_BINARIZATION,`<br />` DM_DIRECT_BINARIZATION, DM_SMOOTHING,` <br />`DM_GRAY_EQUALIZATION, DM_MORPHING, DM_DEEP_ANALYSIS]` |
+| `BarcodeFormatIds_2` |  `BF2_POSTALCODE` 	|  `BF2_POSTALCODE` 	|  `BF2_POSTALCODE` | `BF2_NULL` |
+| `ExpectedBarcodesCount` |  `512` 	|  `512` 	|  `512` | `0` |
+| `GrayscaleTransformationModes` | `[GTM_ORIGINAL, 0, 0, 0, 0, 0, 0, 0]` 	| `[GTM_ORIGINAL, 0, 0, 0, 0, 0, 0, 0]` 	 | `[GTM_ORIGINAL, GTM_INVERTED, 0, 0, 0, 0, 0, 0]` | `[GTM_ORIGINAL, 0, 0, 0, 0, 0, 0, 0]` |
+| `TextFilterModes` | `[0, 0, 0, 0, 0, 0, 0, 0]` 	 | `[TFM_GENERAL_CONTOUR, 0, 0, 0, 0, 0, 0, 0]` 	 | `[TFM_GENERAL_CONTOUR, 0, 0, 0, 0, 0, 0, 0]` | `[TFM_GENERAL_CONTOUR, 0, 0, 0, 0, 0, 0, 0]` |
+| `LocalizationModes` | `[LM_CONNECTED_BLOCKS, LM_STATISTICS_MARKS, LM_STATISTICS_POSTAL_CODE, 0, 0, 0, 0, 0]` 	 | `[LM_CONNECTED_BLOCKS, LM_STATISTICS, LM_STATISTICS_MARKS,`<br />` LM_STATISTICS_POSTAL_CODE, 0, 0, 0, 0]` | `[LM_CONNECTED_BLOCKS, LM_SCAN_DIRECTLY,`<br />` LM_STATISTICS, LM_LINES,`<br />` LM_STATISTICS_MARKS, LM_STATISTICS_POSTAL_CODE, 0, 0]` | `[LM_CONNECTED_BLOCKS, LM_SCAN_DIRECTLY,`<br />` LM_STATISTICS, LM_LINES, 0, 0, 0, 0]` |
+| `ScaleDownThreshold` | `2300` 	| `2300` 	| `214748347` | `2300` |
