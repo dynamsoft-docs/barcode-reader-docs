@@ -21,7 +21,7 @@
                 </div>
             </div>
             <div class="docContainer col-xs-12 col-md-9">
-                <div id="docHead" class = "head row hide-xs hide-sm">
+                <div id="docHead" class="head row hide-xs hide-sm">
                     {%- include main-page-head.html -%}
                 </div>
                 <div class="main row">
@@ -31,7 +31,7 @@
                             <p style="margin-bottom: 0;">Your download will start shortly. If your download does not begin, <a class="bluelink downloadlink" href="">click here to retry</a>.</p>
                         </div>
                         {{ content }}
-                        
+
                     </div>
                     <div class="rightSideMenu col-xs-12 col-md-12 col-lg-3 col-xl-2  hide-md hide-sm hide-xs">
                         <div id="compatibleInfo">
@@ -43,8 +43,7 @@
                             <a href="javascript:void(0)" style="color: #306877;" class="recordLink smileLink" onclick="UsefulRecord(true)"><img class="icon-smile" src="{{ site.smile_icon }}" alt="Yes" />Yes</a>
                             <a href="javascript:void(0)" style="color: #306877;" class="recordLink sadLink" onclick="UsefulRecord(false)"><img class="icon-sad" src="{{ site.sad_icon }}" alt="No" />No</a>
                         </div>
-                        <hr />
-                        {%- if page.needAutoGenerateSidebar -%}
+                        <hr /> {%- if page.needAutoGenerateSidebar -%}
                         <p class="fontOswald" style="color: #306877;"> In this article: </p>
                         <div id="AutoGenerateSidebar"></div>
                         {%- endif -%}
@@ -56,8 +55,7 @@
     <div class="history list">
         <div class="container">
             <div class="col-xs-12">
-                {%- include liquid_autoGenerateHistoryList.html -%}
-                {%- include auto-version-list.html -%}
+                {%- include liquid_autoGenerateHistoryList.html -%} {%- include auto-version-list.html -%}
             </div>
         </div>
     </div>
@@ -66,15 +64,17 @@
     </div>
 
     <iframe id="sideBarIframe" src="{{site.firstLevelUrl}}/Hide_Tree_Page.html" allow="" height="0" frameborder="0"></iframe>
-    <script type="text/javascript">anchors.add();</script>
+    <script type="text/javascript">
+        anchors.add();
+    </script>
 
 
     <script type="text/javascript">
         UrlReplace();
     </script>
-    
+
     <script type="text/javascript">
-        FullTreeMenuList('{{page.needAutoGenerateSidebar}}', '{{page.needGenerateH3Content}}','{{page.pageStartVer}}','{{site.useVersionTree}}');
+        FullTreeMenuList('{{page.needAutoGenerateSidebar}}', '{{page.needGenerateH3Content}}', '{{page.pageStartVer}}', '{{site.useVersionTree}}');
     </script>
 
     {%- include livehelp.html -%}
@@ -88,9 +88,9 @@
         }
 
 
-        $(document).ready(function(){
+        $(document).ready(function() {
             var download = getUrlParam('download');
-            if(download == 'true' && (getCookie('DynamsoftEmail') || getCookie('SourceServer') == '1')) {
+            if (download == 'true' && (getCookie('DynamsoftEmail') || getCookie('SourceServer') == '1')) {
                 var curHref = window.location.href.toLowerCase()
                 if (curHref.indexOf('/c/') > -1 || curHref.indexOf('/cplusplus/') > -1) {
                     $('.editionName').html('C/C++');
@@ -109,7 +109,7 @@
                     $('.downloadlink')[0].click();
                 } else if (curHref.indexOf('/javascript/') > -1) {
                     $('.editionName').html('Javascript');
-                    $('.downloadlink').attr('href', 'https://download2.dynamsoft.com/dbr/DBR-JS-8.6.3.zip');
+                    $('.downloadlink').attr('href', 'https://download2.dynamsoft.com/dbr/dbr-js-8.8.3.zip');
                     $('.dbrThanksDownloading').show();
                     $('.downloadlink')[0].click();
                 } else if (curHref.indexOf('/android/') > -1) {
@@ -125,14 +125,14 @@
                 }
             }
 
-            $('#txtSearch').keydown(function(e) { 
+            $('#txtSearch').keydown(function(e) {
                 if (e.keyCode == 13) {
                     window.location.href = '/barcode-reader/search.html?q=' + $('#txtSearch').val();
                 }
             })
         })
     </script>
-
+    
     <!-- Google Tag Manager -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-538F83"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
