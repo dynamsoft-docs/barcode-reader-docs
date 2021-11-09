@@ -257,8 +257,6 @@ JSON templates supports all Dynamsoft Barcode Reader parameters. The related par
 ## RegionDefinition and How It Works
 Limiting the reading area of the barcode reader instance can help provide a better scanning UI as well optimize the performance of the SDK. It is important to understand how the RegionDefinition interface works, and what exactly you need to consider when coming up with the region percentage values.
 
-Before proceeding, please note that the `RegionDefinition` parameters work a bit differently when using the mobile edition (iOS or Android) of the SDK compared to other editions. If you are working with the mobile edition, please refer to the [RegionDefinition on Mobile](#regiondefinition-on-mobile) section.
-
 By definition, the `top` parameter of the RegionDefinition is used to represent the top-most coordinate of the region, while `bottom` represents the bottom-most coordinate of the region. But how do you figure out the appropriate values to set them?
 
 In order to set these values, we highly recommend setting `MeasuredByPercentage` to 1 to make this process as easy as possible. The next section assumes that this parameter is set to true.
@@ -294,17 +292,6 @@ Now let's group them all together to demonstrate various scanerios and their cor
 </div>
 
 And that is pretty much a gist of how the RegionDefinition works. If anything is unclear, please contact support.
-
-### RegionDefinition on Mobile
-When it comes to the <a href="https://www.dynamsoft.com/barcode-reader/sdk-mobile/" target="_blank">mobile edition</a> of the SDK, knowing how RegionDefinition works is a major factor in unlocking the full potential of the Barcode Reader in your mobile application.
-
-Put simply, the `RegionDefinition` parameter values in code (`top`, `bottom`, `left`, `right`) must be **rotated 90 degrees counter-clockwise to what they visually should be**. Let's say that we want to implement a RegionDefinition (in mobile) with the following values `top = 15; bottom = 75; left = 15; right = 85`. Visually, this would equate to the following
-
-<div align="center">
-  <img src="assets/regionDefinition_Mobile.png" alt="Mobile Region Percentages" width="100%" />
-</div>
-
-Please note that on mobile, the region is *visually* the same as the normal, it is just the values that are rotated counter-clockwise by 90 degrees. Essentially, in order to determine the `RegionDefinition` values on mobile, you must first determine what the 'normal' values are, and then rotate those values to get the mobile values.
 
 ## Using Runtime Settings Templates
 When getting started with the runtime settings, it could be a bit overwhelming given how many settings there are and the different scenarios in which they apply.
