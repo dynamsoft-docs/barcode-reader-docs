@@ -74,7 +74,7 @@ delete pSettings;
 ```
 {
     "IntermediateResultSavingMode": {
-            "Mode"": ""IRSM_FILESYSTEM",
+            "Mode": "IRSM_FILESYSTEM",
             "FolderPath": "C:\",
             "RecordsetSizeOfLatestImages": 0
         }
