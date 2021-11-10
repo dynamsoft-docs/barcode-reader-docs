@@ -150,14 +150,11 @@ delete reader;
 Stop the frame decoding thread created by [`StartFrameDecoding`](#startframedecoding) or [`StartFrameDecodingEx`](#startframedecodingex).
 
 ```cpp
-int dynamsoft::dbr::CBarcodeReader::AppendFrame (unsigned char* pBufferBytes) 
+int dynamsoft::dbr::CBarcodeReader::StopFrameDecoding() 
 ```   
-   
-**Parameters**  
-`[in]	pBufferBytes` The array of bytes which contain the image data.
 
 **Return Value**  
-Returns error code. Possible return(s): DBR_OK; DBRERR_FRAME_DECODING_THREAD_EXISTS; DBRERR_PARAMETER_VALUE_INVALID.   
+Returns error code. Possible return(s): DBR_OK; DBRERR_STOP_DECODING_THREAD_FAILED.   
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
 **Code Snippet**  
