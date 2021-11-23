@@ -19,6 +19,7 @@ needGenerateH3Content: false
   | [`ImagePixelFormat`](#imagepixelformat) | Describes the image pixel format. |
   | [`QRCodeErrorCorrectionLevel`](#qrcodeerrorcorrectionlevel) | Describes the QR Code error correction level.   |
   | [`Product`](#product) | Describes Dynamsoft products.   |
+  | [`EnumPresetTemplate`](#enumpresettemplate) | Describes the preset parameter setting templates. |
   
 ---
 
@@ -247,3 +248,24 @@ Describes Dynamsoft products.
 | PROD_DPS | EnumProductDPS | 0x0010 | Dynamsoft Panorama |
 | PROD_ALL | EnumProductALL | 0xFFFF | All Dynamsoft products |
 
+## EnumPresetTemplate
+
+Describes the preset parameter setting templates.
+
+### Declaration
+
+| Language | Declaration |
+| -------- | ----------- |
+| Android | `class EnumPresetTemplate` |
+| Objc / Swift | `enum EnumPresetTemplate` |
+
+### Members
+
+| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
+| -------------------------- | ------------------- | ----- | ----------- |
+| `DEFAULT` | `EnumPresetTemplateDefault` | 0 | The default parameter configuration. |
+| `VIDEO_SINGLE_BARCODE` | `EnumPresetTemplateVideoSingleBarcode` | 1 | The template for decoding a single barcode from the video. |
+| `VIDEO_SPEED_FIRST` | `EnumPresetTemplateVideoSpeedFirst` | 2 | The speed optimized template for video barcode decoding. |
+| `VIDEO_READ_RATE_FIRST` | `EnumPresetTemplateVideoReadRateFirst` | 3 | The read rate optimized template for video barcode decoding. |
+| `IMAGE_SPEED_FIRST` | `EnumPresetTemplateImageSpeedFirst` | 4 | The speed optimized template for image barcode decoding. |
+| `IMAGE_READ_RATE_FIRST` | `EnumPresetTemplateImageReadRateFirst` | 5 | The read rate optimized template for image barcode decoding. |
