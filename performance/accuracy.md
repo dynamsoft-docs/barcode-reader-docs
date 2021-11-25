@@ -44,7 +44,7 @@ Sometimes, misreading on an OneD barcode is caused by misrecognizing the barcode
 
 ### Skip Small-Size Barcodes
 
-It is always a harsh task for a generally configured barcode reader to recognize a small-size barcode. DBR has `scaleupMode` which is specially designed for improving the read rate of small-size barcodes but contributes little to the accuracy. As a result, if your decoding program is designed for general usage, it is suggested to skip decoding on these small-size barcodes. You can configure the `FormatSpecification` parameters `BarcodeHeightRangeArray` and `BarcodeWidthRangeArray` to define the smallest acceptable barcode size of your barcode reading program. In addition, by configuring the range of barcode height and width, you can also filter out some incompatible shaped barcodes before decoding.
+When the barcode is badly printed or the input image is blurry, you might still get results from these error-prone barcodes but the correctness of the barcode result is hard to guarantee. On this occasion, you would better skip decoding on the error-prone barcodes to ensure the result accuracy even if the read rate is declined. To skip small-sized barcodes, you can use the format-specification parameters like barcodeHeightRangeArray and barcodeWidthRangeArray to specify the minimum acceptable width and height of the barcodes. To skip the blurry frame, you can skip the deblur modes by configuring the parameter DeblurModes or DeblurLevel. In addition to the parameter configuration, is it also possible to skip the error-prone barcodes by optimizing the video input when using video barcode decoding (see below).
 
 **Related APIs**
 
