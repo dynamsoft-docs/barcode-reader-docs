@@ -54,7 +54,11 @@ It is always a harsh task for a generally configured barcode reader to recognize
 
 ### Confidence
 
-For every barcode result returned by DBR, it has a confidence value. The higher the confidence is, the more possible it is to be correct. Currently, the barcode reader will always return the barcode result with the highest confidence and the confidence filter is enabled as well. The default value of the confidence filter is 30，which means the result with lower confidence will not be returned.
+The confidence attribute of the barcode results is determined by the reliability of that result. Users can set the `minResultConfidence` to make a filter on the barcode results by the confidence value.  For Dynamsoft Barcode Reader v8.8 or higher version, the default value of the confidence is 30, which can filter the majority of misreading barcode results.
+
+**Related API(s)**
+
+- minResultConfidence
 
 ### Multi-frame Confirmation
 
