@@ -34,7 +34,7 @@ Generally, the quality of input video streaming is determined by the performance
 
 ### Specify the Barcode Format
 
-Barcode format is one of the most typical settings of a barcode reader. This will help you to improve the speed and accuracy of your barcode reading program by excluding the uninterested formats. You can update the barcode format settings in the struct/class `PublicRuntimeSettings` via API `updateRuntimeSettings`.
+Sometimes, misreading on an OneD barcode is caused by misrecognizing the barcode to another type. If your program is not going to process all kinds of barcodes, please be sure that you have specified the barcode formats to avoid misrecognizing. In addition, specifying the required barcode formats will also benefit the barcode reading speed.
 
 **Related APIs**
 
@@ -56,13 +56,13 @@ It is always a harsh task for a generally configured barcode reader to recognize
 
 The confidence attribute of the barcode results is determined by the reliability of that result. Users can set the `minResultConfidence` to make a filter on the barcode results by the confidence value.  For Dynamsoft Barcode Reader v8.8 or higher version, the default value of the confidence is 30, which can filter the majority of misreading barcode results.
 
-**Related API(s)**
+**Related API(s)/Parameter(s)**
 
 - minResultConfidence
 
 ### Multi-frame Confirmation
 
-The multi-frame confirmation is a solution that eliminates misreading on oneD barcodes by double-checking the barcode results between multiple video frames before the results are returned. Since this feature will halve the average reading speed, please enable this feature when the misreading is intolerable.
+When decoding on video streaming, there are always duplicated results decoded from multiple frames for each barcode. The duplicated results can be devoted to verifying the correctness of the barcode results. Since the misreading is not frequent, when duplicated results are output in multiple frames, we can confirm the results are correct. However, if a result has never been output for a second time in a period, the result must be incorrect and we will discard it.
 
 **Available Editions**
 
