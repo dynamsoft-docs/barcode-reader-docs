@@ -12,10 +12,10 @@ needGenerateH3Content: false
 
 ### Highlights
 
-{%- include release-notes/product-highlight-8.8.0.md -%}
+{%- include release-notes/product-highlight-8.9.0.md -%}
 
-| -- | -- | -- |
-| [JavaScript](../programming/javascript/release-notes/js-8.md#880-10282021) | [Android](../programming/android/release-notes/android-8.md#880-10192021) | [iOS](../programming/objectivec-swift/release-notes/ios-8.md#880-10192021) |
+| -- | -- |
+| [Android](../programming/android/release-notes/android-8.md#890-12xx2021) | [iOS](../programming/objectivec-swift/release-notes/ios-8.md#890-12xx2021) |
 
 ## 8.8.0
 
