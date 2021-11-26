@@ -14,6 +14,8 @@ needGenerateH3Content: false
 
 {%- include release-notes/product-highlight-8.9.0.md -%}
 
+### Editions
+
 | -- | -- |
 | [Android](../programming/android/release-notes/android-8.md#890-12xx2021) | [iOS](../programming/objectivec-swift/release-notes/ios-8.md#890-12xx2021) |
 
