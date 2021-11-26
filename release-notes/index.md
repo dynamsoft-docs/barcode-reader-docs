@@ -14,6 +14,7 @@ needGenerateH3Content: false
 
 {%- include release-notes/product-highlight-8.9.0.md -%}
 
+
 ### Editions
 
 | -- | -- |
