@@ -26,7 +26,7 @@ For some cases, the barcode features may not obvious or good enough for localiza
 ### Enhance the Grayscale Image Quality
 [ImagePreprocessingModes]({{ site.parameters_reference }}image-preprocessing-modes.html) is a parameter to provide some image processing methods to enhance the quality of the grayscale image, for example, removing the noise, improving the contrast. By default, it is set to `IPM_GENERAL` which means no image processing. Follow the table to identify the circumstance of your barcode image and set the appropriate image preprocessing mode.
 | Image Circumstance | Recommended Setting |
-|--|--|
+| --- | --- |
 | With low contrast on barcode and background | IPM_GRAY_EQUALIZE | 
 | With intensive noise or texture | IPM_GRAY_SMOOTH |
 | With blurred boundaries around the barcode module | IPM_SHARPEN_SMOOTH |
