@@ -26,7 +26,7 @@ The confidence attribute of the barcode results is determined by the reliability
 
 **Related API(s)/Parameter(s)**
 
-- `minResultConfidence`
+- [`minResultConfidence`]({{site.parameters_reference}}min-result-confidence.html)
 
 ### Video Multi-frame Confirmation
 
@@ -49,12 +49,12 @@ Sometimes, misreading on an OneD barcode is caused by misrecognizing the OneD ba
 
 **Related API(s)/Parameter(s)**
 
-- `BarcodeFormatIds`
-- `BarcodeFormatIds_2`
+- [`BarcodeFormatIds`]({{site.parameters_reference}}barcode-format-ids.html)
+- [`BarcodeFormatIds_2`]({{site.parameters_reference}}barcode-format-ids-2.html)
 
 ### Advanced Result Filter Methods
 
-When the target barcodes are confirmed, the barcode texts might have common features that help you implement a result filter on the results text. Via `FormatSpecification` parameters, you can add barcode result text restrictions like regular expression requirements and text length range.
+When the target barcodes are confirmed, the barcode texts might have common features that help you implement a result filter on the results text. Via `FormatSpecification` parameters, you can add barcode result text restrictions like [`regular expression`]({{site.parameters_reference}}barcode-text-regex-pattern.html) requirements and [`text length`]({{site.parameters_reference}}barcode-text-length-range-array.html) range.
 
 **Related API(s)/Parameter(s)**
 
@@ -75,10 +75,10 @@ The blurry barcodes are another reason for the misreading and you can skip proce
 
 **Related API(s)/Parameter(s)**
 
-- [`ModuleSizeRangeArray`]({{site.parameters_reference}})
-- [`scaleDownThreshold`]({{site.parameters_reference}})
+- [`ModuleSizeRangeArray`]({{site.parameters_reference}}module-size-range-array.html)
+- [`scaleDownThreshold`]({{site.parameters_reference}}scale-down-threshold.html)
 - [`DeblurModes`]({{site.parameters_reference}}deblur-modes.html)
-- [`DeblurLevel`]({{site.parameters_reference}})
+- [`DeblurLevel`]({{site.parameters_reference}}deblur-level.html)
 
 ## External Settings – Camera Enhancer Settings
 
