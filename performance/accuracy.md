@@ -10,9 +10,15 @@ breadcrumbText: Accuracy
 
 # How to create a High-Accuracy barcode reader
 
+This article describes how the Dynamsoft Barcode Reader SDK (hereafter referred to as "the library") is designed for best accuracy and how to adjust its many settings to make the barcode reading even more accurate.
+
+<!--
+The default parameter of Dynamsoft Barcode Reader is accurate enough for general usage scenarios. However, if you are using DBR for some specified scenarios, you can still add the following configurations to further improve the accuracy of your barcode reading program.
+-->
+
 ## Confidence
 
-The confidence attribute of the barcode results is determined by the reliability of that result. Users can set the `minResultConfidence` to make a filter on the barcode results by the confidence value.  For Dynamsoft Barcode Reader v8.8 or higher version, the default value of the confidence is 30, which can filter the majority of misreading barcode results.
+The confidence attribute of the barcode results is determined by the reliability of that result. Users can set the `minResultConfidence` to make a filter on the barcode results by the confidence value. For Dynamsoft Barcode Reader v8.8 or higher version, the default value of the confidence is 30, which can filter the majority of misreading barcode results. A higher `minResultConfidence` setting will definitely improve the accuracy of the barcode results but reduce the read rate and speed at the same time. Therefore, please set the `minResultConfidence` according to you actual usage scenario to balance the accuracy and speed.
 
 **Related API(s)/Parameter(s)**
 
@@ -22,23 +28,21 @@ The confidence attribute of the barcode results is determined by the reliability
 
 When decoding on video streaming, there are always duplicated results decoded from multiple frames for each barcode. The duplicated results can be devoted to verifying the correctness of the barcode results. Since the misreading is not frequent, when duplicated results are output in multiple frames, we can confirm the results are correct. However, if a result has never been output for a second time in a period, the result must be incorrect and we will discard it.
 
-**Available Editions**
-
-- Mobile
-  - For mobile efitions, please use `BarcodeReader.enableResultVerification` to enable/disable the Muti-frame confirmation.
-- JavaScript
-  - For the JavaScript edition, the multi-frame confirmation is enabled by default.
-
 **Related API(s)/Parameter(s)**
+
+For JavaScript edition, the multi-frame confirmation is a default setting of video barcode scanning. For Android and iOS editions, you can use the following APIs to control the status of the multi-frame confirmation:
+
+- [`enableResultVerification`]({{site.android_api}}primary-result.html#enableresultverification) (Android)
+- [`enableResultVerification`]({{site.oc_api}}primary-result.html#enableresultverification) (iOS)
 
 ## Other Result Filter Methods
 
-When the barcodes to be processed are confirmed, the barcode texts might have common features that can help you on filtering the incorrect results. Via `FormatSpecification` parameters, you can add barcode result text restrictions like regular expression requirements and text length range. ()
+When the barcodes to be processed are confirmed, the barcode texts might have common features that can help you on filtering the incorrect results. Via `FormatSpecification` parameters, you can add barcode result text restrictions like regular expression requirements and text length range.
 
 **Related API(s)/Parameter(s)**
 
-- `BarcodeTextRegExPattern`
-- `BarcodeTextLengthRangeArray`
+- [`BarcodeTextRegExPattern`]({{site.parameters_reference}}barcode-text-regex-pattern.html)
+- [`BarcodeTextLengthRangeArray`]({{site.parameters_reference}}barcode-text-length-range-array.html)
 
 ## Format Specification
 
