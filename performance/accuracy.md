@@ -98,5 +98,5 @@ A higher resolution will promote the sharpness of the video frames and also enla
 
 **Related API(s)/Parameter(s)**
 
-- `CameraEnhancer.enableFeatures`
-- `CameraEnhancer.setResolution`
+- <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/android/primary-api/camera-enhancer.html?ver=latest#enablefeatures" target="_blank">`CameraEnhancer.enableFeatures`</a>
+- <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/android/primary-api/camera-enhancer.html?ver=latest#setresolution" target="_blank">`CameraEnhancer.setResolution`</a>
