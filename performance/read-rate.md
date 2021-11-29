@@ -20,10 +20,10 @@ If not, check out parameter [LocalizationModes]({{ site.parameters_reference }}l
 
 For some cases, the barcode features may not obvious or good enough for localization and addtional processing need to be taken to enhance barcode zone features. Check out and adjust the following parameters designed for these cases to improve the read rate.
 
-### Identify the Barcode Colour Mode
+### Identify the Grayscale Transformation
 [GrayscaleTransformationModes]({{ site.parameters_reference }}grayscale-transformation-modes.html) is a parameter to control the colour mode of the grayscale image. The barcode on an image usually have two types, dark barcode on light image and light barcode on dark image. Correspondly, identify the types of barcodes you are reading and set `GrayscaleTransformationModes` to `GTM_ORIGINAL` and/or `GTM_INVERTED`.
 
-### Enhance the Grayscale
+### Enhance the Grayscale Image Quality
 [ImagePreprocessingModes]({{ site.parameters_reference }}image-preprocessing-modes.html) is a parameter to provide some image processing methods to enhance the quality of the grayscale image, for example, removing the noise, improving the contrast. By default, it is set to `IPM_GENERAL` which means no image processing. Follow the table to identify the circumstance of your barcode image and set the appropriate image preprocessing mode.
 | Image Circumstance | Recommended Setting |
 |--|--|
