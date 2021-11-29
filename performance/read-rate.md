@@ -20,8 +20,10 @@ If not, check out parameter [LocalizationModes]({{ site.parameters_reference }}l
 
 For some cases, the barcode features may not obvious or good enough for localization and addtional processing need to be taken to enhance barcode zone features. Check out and adjust the following parameters designed for these cases to improve the read rate.
 
+### Identify the Barcode Colour Mode
 [GrayscaleTransformationModes]({{ site.parameters_reference }}grayscale-transformation-modes.html) is a parameter to control the colour mode of the grayscale image. The barcode on an image usually have two types, dark barcode on light image and light barcode on dark image. Correspondly, identify the types of barcodes you are reading and set `GrayscaleTransformationModes` to `GTM_ORIGINAL` and/or `GTM_INVERTED`.
 
+### Enhance the Grayscale
 [ImagePreprocessingModes]({{ site.parameters_reference }}image-preprocessing-modes.html) is a parameter to provide some image processing methods to enhance the quality of the grayscale image, for example, removing the noise, improving the contrast. By default, it is set to `IPM_GENERAL` which means no image processing. Follow the table to identify the circumstance of your barcode image and set the appropriate image preprocessing mode.
 | Image Circumstance | Recommended Setting |
 |--|--|
@@ -30,6 +32,7 @@ For some cases, the barcode features may not obvious or good enough for localiza
 | With blurred boundaries around the barcode module | IPM_SHARPEN_SMOOTH |
 | With barcode area polluted or destroyed | IPM_MORPHOLOGY |
 
+### Enhance the Binarization
 [BinarizationModes]({{ site.parameters_reference }}binarization-modes.html) is a parameter to provide some binarization methods to generate a high quality binary image. Setting it to `BM_LOCAL_BLOCK` will binarize the image for each pixel based on a threshold which is calculated based on a small region around it. It works well on image with varying illumination. When using this mode, there are two arguments can be used to further improve the read rate. Setting `BlockSizeX` and `BlockSizeY` to 5 - 8 times module size if you are aware of the module size and `EnableFillBinaryVacancy` to 1 if you are reading barcodes with a large module size.
 Another mode, `BM_THRESHOLD`, binarizes the image for each pixel based on a global unified threshold. It works well when the image has obvious contrast between the barcode and the background. You can adjust the threshold by setting argument `BinarizationThreshold` to find a best value for your image.
 
