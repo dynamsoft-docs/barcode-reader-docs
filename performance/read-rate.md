@@ -56,8 +56,7 @@ After getting a high quality barcode zone, DBR applies a variety of further proc
 [DPMCodeReadingModes]({{ site.parameters_reference }}mirror-mode.html) is a parameter to deal with DPM (Direct Part Marking) codes. DPM Codes, DataMatrix typically, are used widely in industrial part tracking, from electronics manufacturing to automotive assembly. They always come with light reflection, low contrast, complex background texture, and other distorted features. If you are reading these barcodes, please set a `DPMCRM_GENERAL` mode. 
 
 ### Support Mirror State
-[MirrorMode]({{ site.parameters_reference }}image.html) is a parameter to deal with mirrored barcodes. Setting it to `MM_BOTH` will cover both normal and mirrored barcodes and it is the recommanded setting for better read rate when the barcode mirror state is uncertain.
-The barcode on an image usually have two types, normal and mirrored. Correspondly, identify the types of barcodes you are reading and set `MirrorMode` to `MM_NORMAL`, `MM_MIRROR` or `MM_BOTH`.
+[MirrorMode]({{ site.parameters_reference }}image.html) is a parameter to deal with mirrored barcodes. The barcode on an image usually have two types, normal and mirrored. Correspondly, identify the types of barcodes you are reading and set `MirrorMode` to `MM_NORMAL`, `MM_MIRROR` or `MM_BOTH`. Setting it to `MM_BOTH` will cover both normal and mirrored barcodes and it is the recommanded setting for better read rate when the barcode mirror state is uncertain.
 
 
 ### Support Non-standard Format
