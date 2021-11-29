@@ -6,9 +6,9 @@ keywords: Read Rate
 ---
 
 
-# Achieve a High Barcode Reading Rate
+# Achieve a High Barcode Read Rate
 
-This article describes how the Dynamsoft Barcode Reader SDK (hereafter referred to as "DBR") is designed and how to adjust parameters to achieve a high barcode reading rate.
+This article describes how the Dynamsoft Barcode Reader SDK (hereafter referred to as "DBR") is designed and how to adjust parameters to achieve a high barcode read rate.
 >Note: A read rate is the number of barcodes decoded divided by the number expected.
 
 ## Adjust Parameters to Localize Barcode Zones
