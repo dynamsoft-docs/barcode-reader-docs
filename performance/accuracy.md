@@ -10,7 +10,15 @@ breadcrumbText: Accuracy
 
 # How to create a High-Accuracy barcode reader
 
-This article describes how the Dynamsoft Barcode Reader SDK (hereafter referred to as "DBR") is designed for best accuracy and how to adjust its many settings to make the barcode reading even more accurate.
+Basic Concept:
+
+$ Speed = \frac{Total~Time~Consumption}{All~decoded~Barcode~Results} $
+
+$ Read~Rate = \frac{All~Decoded~Barcodes}{All~Target~Barcodes} $
+
+$ Accuracy = \frac{Correctly~Decoded~Barcodes}{All~Decoded~Barcodes} $
+
+The default parameter of Dynamsoft Barcode Reader is accurate enough for general usage scenarios. However, if you are using DBR for some specified scenarios like auto processing without manual verification, you must expect the accuracy of the barcode reader to reach a high extent.
 
 <!--
 The default parameter of Dynamsoft Barcode Reader is accurate enough for general usage scenarios. However, if you are using DBR for some specified scenarios, you can still add the following configurations to further improve the accuracy of your barcode reading program.
