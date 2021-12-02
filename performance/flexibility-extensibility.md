@@ -20,13 +20,39 @@ Barcodes are widely used in many industries such as commodity management, postal
 Therefore, Dynamsoft Barcode Reader(DBR) was designed to be a more flexible and extensible barcode reader SDK from the beginning. This article will introduce how DBR can achieve flexibility and scalability from the following aspects:
 
 - Various build-in processing modes
-- Load/Unload mode dynamically
 - Arguments of a mode to fine-tune the effect
 - Arguments of a mode to combine chains to reduce computation amount
+- Load/Unload custom mode dynamically
 
 ## Various build-in processing modes
 
-In order to cope with various scenarios, DBR provides a variety of build-in processing modes at each stage of the algorithm to maintain great scalability. 
+In order to cope with various scenarios, DBR provides a variety of build-in processing modes at each stage of the algorithm to maintain great flexibility. 
+
+Let’s take [`BinarizationModes`]({{ site.parameters_reference }}binarization-modes.html#binarizationmodes) as an example to illustrate. This parameter helps control the process of converting grayscale image into binary image. A better binary image helps a lot for barcode reading. DBR provides two  binarization modes: BM_THRESHOLD and BM_LOCAL_BLOCK.
+<!--[`BM_THRESHOLD`]({{ site.parameters_reference }}binarization-modes.html#bm_threshold) and [`BM_LOCAL_BLOCK`]({{ site.parameters_reference }}binarization-modes.html#bm_local_block).-->
+
+**BM_THRESHOLD** 
+
+`BM_THRESHOLD` uses a global threshold to binarize the image. If the gray value of the pixel is less than the threshold, it will be black in the binary image, otherwise it will be white.
+
+**BM_LOCAL_BLOCK**
+
+As mentioned above, we use a unified threshold for binarization, but this might not be good in all cases. If an image has different lighting conditions in different areas, `BM_LOCAL_BLOCK` can help. In this case, our algorithm determines the threshold for a pixel based on a small region around it, which makes it more adaptive and gives better results.
+
+
+For example, the picture below has different lighting conditions in different areas. If we use BM_THRESHOLD to set a global value as a threshold, it will be difficult to yield good results. In this case, it is more suitable to use BM_LOCAL_BLOCK to set an adaptive binarization threshold. 
+
+![uneven-illumination][7]
+
+The following images show the effects of BM_THRESHOLD (global thresholding) and BM_LOCAL_BLOCK (adaptive thresholding) individually for an image with varying illumination:
+
+![dm-threshold][8]
+
+
+![dm-local-block][9]
+
+
+**Full build-in processing modes**
 
 | **Parameter Name** | **Functionality** | **Status** |
 | ------------------ | ---------------------------- | ---------- |
@@ -44,10 +70,7 @@ In order to cope with various scenarios, DBR provides a variety of build-in proc
 | [`DeblurModes`]({{ site.parameters_reference }}deblur-modes.html#deblurmodes) | To apply a variety of image processing methods to sample modules. The smaller index is, the higher priority is. | Available |
 | [`TextResultOrderModes`]({{ site.parameters_reference }}text-result-order-modes.html#textresultordermodes) | To sort the results according to certain factors. | Available |
 
-## Load/Unload mode dynamically
 
-In addition to built-in modes, DBR also supports user-defined mode for some special scenarios. First, you need to develop a DLL whose interface conforms to the DBR specification. 
-Secondly, the `LibraryFileName` argument of the custom mode should be specified as the path of the DLL file. Third, if you want to pass extra arguments to the DLL, the `LibraryParameters` argument should be specified. Therefore, when the algorithm flow enters the stage of processing the custom mode, DBR will dynamically load the DLL and execute the corresponding logic.
 
 ## Arguments of a mode to fine-tune the effect
 
@@ -122,6 +145,9 @@ However, when the `ImagePreprocessModesIndex` argument in `BinarizationModes` is
 
 On the other aspect, the localization and decoding phases are strictly separated in DBR generally. Sometimes, in order to speed up, we can directly use the intermediate results of the localization stage. For example, the mode `DM_BASED_ON_LOC_BIN` in `DeblurModes` will adopt the localization binary image directly in the decoding stage, which omits the binarization step.
 
+## Load/Unload custom mode dynamically
+
+In addition to the built-in modes, DBR also supports user-defined modes to suit your special scenarios. First, you need to develop a dynamic link library(.dll file under windows/.so file under linux) whose interface conforms to the DBR specification. Second, you need to configure the custom mode in the parameter template file. The `LibraryFileName` argument of the custom mode should be specified as the path of the dynamic link library file, and if extra arguments are to be passed, the `LibraryParameters` parameter should be specified. Therefore, when the algorithm flow enters the stage of processing the custom mode, DBR will dynamically load the file and execute the corresponding logic.
 
 [1]: ../parameters/scenario-settings/assets/image-scale-and-colour-conversion/colour-conversion-original-image.png
 
@@ -134,3 +160,9 @@ On the other aspect, the localization and decoding phases are strictly separated
 [5]: ../parameters/scenario-settings/assets/image-scale-and-colour-conversion/gray-img-only-green.png
 
 [6]: ../parameters/scenario-settings/assets/image-scale-and-colour-conversion/inverted-gray-img.png
+
+[7]: ../parameters/scenario-settings/assets/how-to-set-binarization-modes/uneven-illumination.png
+
+[8]: ../parameters/scenario-settings/assets/how-to-set-binarization-modes/dm-threshold.png
+
+[9]: ../parameters/scenario-settings/assets/how-to-set-binarization-modes/dm-local-block.png
