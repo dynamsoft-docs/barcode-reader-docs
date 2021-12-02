@@ -19,12 +19,12 @@ Barcodes are widely used in many industries such as commodity management, postal
 
 Therefore, Dynamsoft Barcode Reader(DBR) was designed to be a more flexible and extensible barcode reader SDK from the beginning. This article will introduce how DBR can achieve flexibility and scalability from the following aspects:
 
-- Various build-in processing modes
-- Arguments of a mode to fine-tune the effect
-- Arguments of a mode to combine chains to reduce computation amount
-- Load/Unload custom mode dynamically
+- Flexible build-in processing modes
+- Flexible mode arguments to fine-tune the effect
+- Flexible mode arguments of combining chains to reduce computation amount
+- Extensible user-defined modes
 
-## Various build-in processing modes
+## Flexible build-in processing modes
 
 In order to cope with various scenarios, DBR provides a variety of build-in processing modes at each stage of the algorithm to maintain great flexibility. 
 
@@ -43,16 +43,23 @@ As mentioned above, we use a unified threshold for binarization, but this might 
 For example, the picture below has different lighting conditions in different areas. If we use BM_THRESHOLD to set a global value as a threshold, it will be difficult to yield good results. In this case, it is more suitable to use BM_LOCAL_BLOCK to set an adaptive binarization threshold. 
 
 ![uneven-illumination][7]
+<div>
+<p>Figure 1 – original image</p>
+</div>
 
 The following images show the effects of BM_THRESHOLD (global thresholding) and BM_LOCAL_BLOCK (adaptive thresholding) individually for an image with varying illumination:
 
 ![dm-threshold][8]
-
+<div>
+<p>Figure 2 – binarization result of BM_THRESHOLD</p>
+</div>
 
 ![dm-local-block][9]
+<div>
+<p>Figure 3 – binarization result of BM_LOCAL_BLOCK</p>
+</div>
 
-
-**Full build-in processing modes**
+We have listed the complete built-in processing modes as follows:
 
 | **Parameter Name** | **Functionality** | **Status** |
 | ------------------ | ---------------------------- | ---------- |
@@ -71,8 +78,7 @@ The following images show the effects of BM_THRESHOLD (global thresholding) and 
 | [`TextResultOrderModes`]({{ site.parameters_reference }}text-result-order-modes.html#textresultordermodes) | To sort the results according to certain factors. | Available |
 
 
-
-## Arguments of a mode to fine-tune the effect
+## Flexible mode arguments to fine-tune the effect
 
 Generally, each mode has some arguments which can well control the processing effect. For example, [`ColourConversionModes`]({{ site.parameters_reference }}colour-conversion-modes.html#colourconversionmodes) is designed for converting colour images to grayscale images.  The [`ColourConversionModes`]({{ site.parameters_reference }}colour-conversion-modes.html#colourconversionmodes) has three arguments: 
 
@@ -122,32 +128,34 @@ In the following JSON template, we configured four different colour conversion m
 The following is an original colour image. We will use the above settings in the template to do the grayscale process.
 
 ![original image before colour conversion][1]
-<p>figure 1 – original colour image</p>
+<p>Figure 4 – original colour image</p>
 
 The followings show the grayscaled images respectively using the default mode, the red channel only, the blue channel only, and the green channel only. We can see that using the red channel only produces the best grayscaled image. So for this kind of scenario, it is recommended to use the Red channel only for grayscale process.
 
 ![default grayscale image][2] 
-<p>figure 2 – default grayscale image</p>
+<p>Figure 5 – default grayscale image</p>
 
 ![gray image only by red channel][3]
-<p>figure 3 – grayscale image only by red channel</p>
+<p>Figure 6 – grayscale image only by red channel</p>
 
 ![gray image only by blue channel][4]
-<p>figure 4 – grayscale image only by blue channel</p>
+<p>Figure 7 – grayscale image only by blue channel</p>
 
 ![gray image only by green channel][5]
-<p>figure 5 – grayscale image only by green channel</p>
+<p>Figure 8 – grayscale image only by green channel</p>
 
-## Arguments of a mode to combine chains to reduce computation amount.
+## Flexible mode arguments of combining chains to reduce computation amount
 
 There may be dependencies between different modes in DBR. For example, the `BinarizationModes` depend on the processing results of `ImagePreprocessModes`. Assuming that there are both 3 elements defined in the `ImagePreprocessModes` and `BinarizationModes` parameters, the SDK will loop 9 cycles by default. 
+
 However, when the `ImagePreprocessModesIndex` argument in `BinarizationModes` is specified as the corresponding `ImagePreprocessModes` index (assuming one-to-one), only 3 cycles are required, which greatly reduces the computational cost.
 
 On the other aspect, the localization and decoding phases are strictly separated in DBR generally. Sometimes, in order to speed up, we can directly use the intermediate results of the localization stage. For example, the mode `DM_BASED_ON_LOC_BIN` in `DeblurModes` will adopt the localization binary image directly in the decoding stage, which omits the binarization step.
 
-## Load/Unload custom mode dynamically
+## Extensible user-defined modes
 
-In addition to the built-in modes, DBR also supports user-defined modes to suit your special scenarios. First, you need to develop a dynamic link library(.dll file under windows/.so file under linux) whose interface conforms to the DBR specification. Second, you need to configure the custom mode in the parameter template file. The `LibraryFileName` argument of the custom mode should be specified as the path of the dynamic link library file, and if extra arguments are to be passed, the `LibraryParameters` parameter should be specified. Therefore, when the algorithm flow enters the stage of processing the custom mode, DBR will dynamically load the file and execute the corresponding logic.
+In addition to the built-in modes, DBR also supports user-defined modes to suit your special scenarios. First, you need to develop a dynamic link library(.dll file under windows/.so file under linux) whose interface conforms to the DBR specification. Second, you need to configure the custom mode in the parameter template file. The `LibraryFileName` argument of the custom mode should be specified as the path of the dynamic link library file, and if extra arguments are to be passed, the `LibraryParameters` parameter should be specified. Therefore, when the algorithm flow enters the stage of processing the custom mode, DBR will dynamically load the library and execute the corresponding logic.
+
 
 [1]: ../parameters/scenario-settings/assets/image-scale-and-colour-conversion/colour-conversion-original-image.png
 
