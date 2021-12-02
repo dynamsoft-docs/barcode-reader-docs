@@ -10,73 +10,103 @@ breadcrumbText: Accuracy
 
 # How to create a High-Accuracy barcode reader
 
-This article describes how the Dynamsoft Barcode Reader SDK (hereafter referred to as "the library") is designed for best accuracy and how to adjust its many settings to make the barcode reading even more accurate.
+Basic Concept:
+
+$ Speed = \frac{Total~Time~Consumption}{All~decoded~Barcode~Results} $
+
+$ Read~Rate = \frac{All~Decoded~Barcodes}{All~Target~Barcodes} $
+
+$ Accuracy = \frac{Correctly~Decoded~Barcodes}{All~Decoded~Barcodes} $
+
+The default parameter of Dynamsoft Barcode Reader is accurate enough for general usage scenarios. However, if you are using DBR for some specified scenarios like auto processing without manual verification, you must expect the accuracy of the barcode reader to reach a high extent.
 
 <!--
 The default parameter of Dynamsoft Barcode Reader is accurate enough for general usage scenarios. However, if you are using DBR for some specified scenarios, you can still add the following configurations to further improve the accuracy of your barcode reading program.
 -->
 
-## Confidence
+## General Settings
 
-The confidence attribute of the barcode results is determined by the reliability of that result. Users can set the `minResultConfidence` to make a filter on the barcode results by the confidence value. For Dynamsoft Barcode Reader v8.8 or higher version, the default value of the confidence is 30, which can filter the majority of misreading barcode results. A higher `minResultConfidence` setting will definitely improve the accuracy of the barcode results but reduce the read rate and speed at the same time. Therefore, please set the `minResultConfidence` according to you actual usage scenario to balance the accuracy and speed.
+The following settings can be applied to nearly all usage scenarios to improve the barcode reading accuracy. They might sacrifice a bit of speed but hardly influence the read rate.
 
-**Related API(s)/Parameter(s)**
+### Result Confidence Filter
 
-- minResultConfidence
-
-## Multi-frame Confirmation
-
-When decoding on video streaming, there are always duplicated results decoded from multiple frames for each barcode. The duplicated results can be devoted to verifying the correctness of the barcode results. Since the misreading is not frequent, when duplicated results are output in multiple frames, we can confirm the results are correct. However, if a result has never been output for a second time in a period, the result must be incorrect and we will discard it.
+The confidence attribute of the barcode results is determined by the reliability of that result. Users can set the `minResultConfidence` to make a filter on the barcode results by the confidence value. For Dynamsoft Barcode Reader v8.8 or higher version, the default value of the confidence is 30, which can filter the majority of misreading barcode results. A higher `minResultConfidence` setting will definitely improve the accuracy of the barcode results but reduce the read rate and speed at the same time. Therefore, please set the `minResultConfidence` according to your actual usage scenario to balance the accuracy and speed.
 
 **Related API(s)/Parameter(s)**
 
-For JavaScript edition, the multi-frame confirmation is a default setting of video barcode scanning. For Android and iOS editions, you can use the following APIs to control the status of the multi-frame confirmation:
+- [`minResultConfidence`]({{site.parameters_reference}}min-result-confidence.html)
+
+### Multi-frame Verification
+
+When using video barcode decoding, a barcode can be processed multiple times in consecutive video frames, which produces duplicate results. These duplicate results can be applied to verify the result's correctness. When a barcode result has been decoded more than once within a short period of time, we can confirm it is a correct result and output it. However, if a barcode result has never been decoded a second time within a period of time, we consider it a misread result and discard it.
+
+**Related API(s)/Parameter(s)**
+
+For JavaScript edition, multi-frame verification is enabled when using video barcode scanning. For Android and iOS editions, you have to use the following APIs to control the status of the multi-frame verification:
 
 - [`enableResultVerification`]({{site.android_api}}primary-result.html#enableresultverification) (Android)
 - [`enableResultVerification`]({{site.oc_api}}primary-result.html#enableresultverification) (iOS)
 
-## Other Result Filter Methods
+## Specific Settings
 
-When the barcodes to be processed are confirmed, the barcode texts might have common features that can help you on filtering the incorrect results. Via `FormatSpecification` parameters, you can add barcode result text restrictions like regular expression requirements and text length range.
+The following settings will benefit the barcode reading accuracy but also limit the read rate. When you know exactly what your usage scenario is, you can apply the following settings to improve the barcode reading accuracy on that scenario. The read rate of your program will be extremely declined and be sure to change the settings if you want to use the program to other usage scenarios.
+
+### Format Specification
+
+Sometimes, misreading on an OneD barcode is caused by misrecognizing the OneD barcode to another OneD type. When you have a basic understanding on the barcode formats and know exactly which formats are the targets in your usage scenario. You can let your barcode reading program focus on the target formats only and reject all the noninterest barcodes. Please be sure to change the format settings when you want to extend your usage scenarios. In addition, specifying the required barcode formats will also benefit the barcode reading speed.
+
+**Related API(s)/Parameter(s)**
+
+- [`BarcodeFormatIds`]({{site.parameters_reference}}barcode-format-ids.html)
+- [`BarcodeFormatIds_2`]({{site.parameters_reference}}barcode-format-ids-2.html)
+
+### Result Text Filter Methods
+
+When the target barcodes are confirmed, the barcode texts might have common features that help you implement a result filter on the results text. Via `FormatSpecification` parameters, you can add barcode result text restrictions like [`regular expression`]({{site.parameters_reference}}barcode-text-regex-pattern.html) requirements and [`text length`]({{site.parameters_reference}}barcode-text-length-range-array.html) range.
 
 **Related API(s)/Parameter(s)**
 
 - [`BarcodeTextRegExPattern`]({{site.parameters_reference}}barcode-text-regex-pattern.html)
 - [`BarcodeTextLengthRangeArray`]({{site.parameters_reference}}barcode-text-length-range-array.html)
 
-## Format Specification
+### Skip Error-Prone Barcode
 
-Sometimes, misreading on an OneD barcode is caused by misrecognizing the barcode to another type. If your program is not going to process all kinds of barcodes, please be sure that you have specified the barcode formats to avoid misrecognizing. In addition, specifying the required barcode formats will also benefit the barcode reading speed.
+You might still get results from badly printed barcodes or blurry images. If accuracy is on the first priority, you make the following parameter configurations to skip the error-prone barcodes.
 
-## Skip Error-Prone Barcode
+**Skip Small-Module Barcodes**
 
-When the barcode is badly printed or the input image is blurry, you might still get results from these error-prone barcodes but the correctness of the barcode result is hard to guarantee. On this occasion, you would better skip decoding on the error-prone barcodes to ensure the result accuracy even if the read rate is declined. For small-module barcodes, you can use the `FormatSpecificant` parameter `ModuleSizeRangeArray` to specify the minimum acceptable module size of the barcodes. You can also increase the `scaleDownThreshold` value to ensure the barcodes are not shrunk too small. The blurry barcodes are another reason for the misreading and you can skip processing the blurry barcodes by configuring the `DeblurModes` or `DeblurLevel` parameters.
+The smaller the module size of the barcodes, the lower accuracy of the results. You can use the `FormatSpecificant` parameter `ModuleSizeRangeArray` to specify the minimum acceptable module size of the barcodes. You can also increase the `scaleDownThreshold` value to ensure the barcodes are not shrunk too small.
+
+**Skip Blurry Barcodes**
+
+DeblurModes is the parameter that controls the ability to decode blurry barcodes. When processing the barcodes, DBR will try all available deblur modes until the barcodes are decoded successfully. Therefore, the more deblur modes you set, the more opportunity you have to decode a blurry image.
+
+However, the blurry images are error-prone. When it is unnecessary to decode the blurry barcode in the usage scenario, you can reduce the DeblurModes settings to ensure the barcode decoding accuracy instead of the read rate.
 
 **Related API(s)/Parameter(s)**
 
-- `ModuleSizeRangeArray`
-- `scaleDownThreshold`
-- `DeblurModes`
-- `DeblurLevel`
+- [`ModuleSizeRangeArray`]({{site.parameters_reference}}module-size-range-array.html)
+- [`scaleDownThreshold`]({{site.parameters_reference}}scale-down-threshold.html)
+- [`DeblurModes`]({{site.parameters_reference}}deblur-modes.html)
+<!--  - [`DeblurLevel`]({{site.parameters_reference}}deblur-level.html)-->
 
-## External settings – DCE Settings
+## External Settings – Camera Enhancer Settings
 
 Users can optimize the parameter settings to prevent misreading but this is not the only way to improve the accuracy. For the video barcode decoding scenarios, promoting the quality of the video will definitely improve the barcode decoding accuracy. Although there are no camera control APIs in Dynamsoft Barcode Reader, you can still use Dynamsoft Camera Enhancer (DCE) APIs to take control of the input video streaming. DCE is an SDK that integrates the camera control APIs and video frame pre-processing features. It can be easily bound to the Barcode Reader and enable users to optimize the input video streaming when using the Barcode Reader. You can make the following setting to improve the accuracy of barcode decoding.
 
-**Enable the Frame Filter Feature of DCE**
+### Frame Filter
 
 When the frame filter feature DCE is enabled, a quick sharpness evaluation will be implemented on each video frame and the low sharpness frame will be discarded to ensure the barcode reader will process on high-quality frames only. Since the Barcode Reader doesn't need to process the blurry video frames, the accuracy will be highly improved.
 
-**Enable Enhanced focus**
+### Enhanced focus
 
 This feature is highly recommended to be implemented on low-end devices. Enhancing the camera focus ability will reduce the blurry frames in the video streaming, which benefits the barcode reading accuracy.
 
-**Set Higher Resolution**
+### Set Higher Resolution
 
 A higher resolution will promote the sharpness of the video frames and also enlarge the module size of barcodes. Setting the resolution higher will definitely benefit the barcode reading accuracy but sacrifice a bit of speed. In addition, please remember to set the `scaleDownThreshold` to a higher value. When the `scaleDownThershold` is not big enough, the barcode reader will still process on the shrunken images.
 
 **Related API(s)/Parameter(s)**
 
-- `CameraEnhancer.enableFeatures`
-- `CameraEnhancer.setResolution`
-- `scaleDownThreshold`
+- <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/android/primary-api/camera-enhancer.html?ver=latest#enablefeatures" target="_blank">`CameraEnhancer.enableFeatures`</a>
+- <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/android/primary-api/camera-enhancer.html?ver=latest#setresolution" target="_blank">`CameraEnhancer.setResolution`</a>
