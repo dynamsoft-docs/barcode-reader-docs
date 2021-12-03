@@ -42,22 +42,19 @@ As mentioned above, we use a unified threshold for binarization, but this might 
 For example, the picture below has different lighting conditions in different areas. If we use BM_THRESHOLD to set a global value as a threshold, it will be difficult to yield good results. In this case, it is more suitable to use BM_LOCAL_BLOCK to set an adaptive binarization threshold. 
     
 <div align="center">
-
-![uneven-illumination][7]
+<img src="../parameters/scenario-settings/assets/how-to-set-binarization-modes/uneven-illumination.png" alt="uneven-illumination"/>
 <p>Figure 1 – original image</p>
 </div>
 
 The following images show the effects of BM_THRESHOLD (global thresholding) and BM_LOCAL_BLOCK (adaptive thresholding) individually for an image with varying illumination:
 
 <div align="center">
-
-![dm-threshold][8]
+<img src="../parameters/scenario-settings/assets/how-to-set-binarization-modes/dm-threshold.png" alt="dm-threshold"/>
 <p>Figure 2 – binarization result of BM_THRESHOLD</p>
 </div>
 
 <div align="center">
-
-![dm-local-block][9]
+<img src="../parameters/scenario-settings/assets/how-to-set-binarization-modes/dm-local-block.png" alt="dm-local-block"/>
 <p>Figure 3 – binarization result of BM_LOCAL_BLOCK</p>
 </div>
 
@@ -135,34 +132,29 @@ In the following JSON template, we configured four different colour conversion m
 The following is an original colour image. We will use the above settings in the template to do the grayscale process.
 
 <div align="center">
-
-![original image before colour conversion][1]
+<img src="../parameters/scenario-settings/assets/image-scale-and-colour-conversion/colour-conversion-original-image.png" alt="original image before colour conversion"/>
 <p>Figure 4 – original colour image</p>
 </div>
 
 The followings show the grayscaled images respectively using the default mode, the red channel only, the blue channel only, and the green channel only. We can see that using the red channel only produces the best grayscaled image. So for this kind of scenario, it is recommended to use the Red channel only for grayscale process.
 
 <div align="center">
-
-![default grayscale image][2] 
+<img src="../parameters/scenario-settings/assets/image-scale-and-colour-conversion/default-gray-img.png" alt="default grayscale image"/>
 <p>Figure 5 – default grayscale image</p>
 </div>
 
 <div align="center">
-
-![gray image only by red channel][3]
+<img src="../parameters/scenario-settings/assets/image-scale-and-colour-conversion/gray-img-only-red.png" alt="gray image only by red channel"/>
 <p>Figure 6 – grayscale image only by red channel</p>
 </div>
 
 <div align="center">
-
-![gray image only by blue channel][4]
+<img src="../parameters/scenario-settings/assets/image-scale-and-colour-conversion/gray-img-only-blue.png" alt="gray image only by blue channel"/>
 <p>Figure 7 – grayscale image only by blue channel</p>
 </div>
 
 <div align="center">
-
-![gray image only by green channel][5]
+<img src="../parameters/scenario-settings/assets/image-scale-and-colour-conversion/gray-img-only-green.png" alt="gray image only by green channel"/>
 <p>Figure 8 – grayscale image only by green channel</p>
 </div>
 
