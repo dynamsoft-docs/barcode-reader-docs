@@ -17,7 +17,7 @@ Barcodes are widely used in many industries such as commodity management, postal
 - Unbalanced lighting
 - Damaged
 
-Therefore, Dynamsoft Barcode Reader(DBR) was designed to be a more flexible and extensible barcode reader SDK from the beginning. This article will introduce how DBR can achieve flexibility and scalability from the following aspects:
+Therefore, Dynamsoft Barcode Reader(DBR) was designed to be a more flexible and extensible barcode reader SDK from the beginning. This article will introduce from the following aspects what makes DBR flexible and extensible:
 
 - Flexible build-in processing modes
 - Flexible mode arguments to fine-tune the effect
@@ -25,8 +25,7 @@ Therefore, Dynamsoft Barcode Reader(DBR) was designed to be a more flexible and 
 - Extensible user-defined modes
 
 ## Flexible build-in processing modes
-
-In order to cope with various scenarios, DBR provides a variety of build-in processing modes at each stage of the algorithm to maintain great flexibility. 
+Modes are a series of special parameters, which are used to complete a specific image processing task, such as image grayscale, binarization, text removal, barcode localization, barcode deblur, etc. In order to cope with various scenarios, DBR provides a variety of build-in processing modes at each stage of the algorithm to maintain great flexibility. 
 
 Let’s take [`BinarizationModes`]({{ site.parameters_reference }}binarization-modes.html#binarizationmodes) as an example to illustrate. This parameter helps control the process of converting grayscale image into binary image. A better binary image helps a lot for barcode reading. DBR provides two  binarization modes: BM_THRESHOLD and BM_LOCAL_BLOCK.
 <!--[`BM_THRESHOLD`]({{ site.parameters_reference }}binarization-modes.html#bm_threshold) and [`BM_LOCAL_BLOCK`]({{ site.parameters_reference }}binarization-modes.html#bm_local_block).-->
@@ -41,25 +40,28 @@ As mentioned above, we use a unified threshold for binarization, but this might 
 
 
 For example, the picture below has different lighting conditions in different areas. If we use BM_THRESHOLD to set a global value as a threshold, it will be difficult to yield good results. In this case, it is more suitable to use BM_LOCAL_BLOCK to set an adaptive binarization threshold. 
-
-![uneven-illumination][7]
-<div>
+    
+<div align="center">
+<img src="../parameters/scenario-settings/assets/how-to-set-binarization-modes/uneven-illumination.png" alt="uneven-illumination"/>
 <p>Figure 1 – original image</p>
 </div>
 
 The following images show the effects of BM_THRESHOLD (global thresholding) and BM_LOCAL_BLOCK (adaptive thresholding) individually for an image with varying illumination:
 
-![dm-threshold][8]
-<div>
+<div align="center">
+<img src="../parameters/scenario-settings/assets/how-to-set-binarization-modes/dm-threshold.png" alt="dm-threshold"/>
 <p>Figure 2 – binarization result of BM_THRESHOLD</p>
 </div>
 
-![dm-local-block][9]
-<div>
+<div align="center">
+<img src="../parameters/scenario-settings/assets/how-to-set-binarization-modes/dm-local-block.png" alt="dm-local-block"/>
 <p>Figure 3 – binarization result of BM_LOCAL_BLOCK</p>
 </div>
 
-We have listed the complete built-in processing modes as follows:
+It can be seen that different binarazation mode can handle different scenarios. `BM_THRESHOLD` is simpler and faster, but it is less universal; on the contrary, `BM_LOCAL_BLOCK` is a bit slower but more universal.
+
+
+The complete built-in processing modes is as follows. If you are interested , please refer to it.
 
 | **Parameter Name** | **Functionality** | **Status** |
 | ------------------ | ---------------------------- | ---------- |
@@ -80,7 +82,9 @@ We have listed the complete built-in processing modes as follows:
 
 ## Flexible mode arguments to fine-tune the effect
 
-Generally, each mode has some arguments which can well control the processing effect. For example, [`ColourConversionModes`]({{ site.parameters_reference }}colour-conversion-modes.html#colourconversionmodes) is designed for converting colour images to grayscale images.  The [`ColourConversionModes`]({{ site.parameters_reference }}colour-conversion-modes.html#colourconversionmodes) has three arguments: 
+Generally, each mode has some arguments which can well control the processing effect. 
+
+For example, [`ColourConversionModes`]({{ site.parameters_reference }}colour-conversion-modes.html#colourconversionmodes) is designed for converting colour images to grayscale images.  The [`ColourConversionModes`]({{ site.parameters_reference }}colour-conversion-modes.html#colourconversionmodes) has three arguments: 
 
 **BlueChannelWeight**: Sets the weight value of Blue Colour Channel used for converting a colour image to a grayscale image.
 **GreenChannelWeight**: Sets the weight value of Green Colour Channel used for converting a colour image to a grayscale image.
@@ -127,34 +131,61 @@ In the following JSON template, we configured four different colour conversion m
 
 The following is an original colour image. We will use the above settings in the template to do the grayscale process.
 
-![original image before colour conversion][1]
+<div align="center">
+<img src="../parameters/scenario-settings/assets/image-scale-and-colour-conversion/colour-conversion-original-image.png" alt="original image before colour conversion"/>
 <p>Figure 4 – original colour image</p>
+</div>
 
 The followings show the grayscaled images respectively using the default mode, the red channel only, the blue channel only, and the green channel only. We can see that using the red channel only produces the best grayscaled image. So for this kind of scenario, it is recommended to use the Red channel only for grayscale process.
 
-![default grayscale image][2] 
+<div align="center">
+<img src="../parameters/scenario-settings/assets/image-scale-and-colour-conversion/default-gray-img.png" alt="default grayscale image"/>
 <p>Figure 5 – default grayscale image</p>
+</div>
 
-![gray image only by red channel][3]
+<div align="center">
+<img src="../parameters/scenario-settings/assets/image-scale-and-colour-conversion/gray-img-only-red.png" alt="gray image only by red channel"/>
 <p>Figure 6 – grayscale image only by red channel</p>
+</div>
 
-![gray image only by blue channel][4]
+<div align="center">
+<img src="../parameters/scenario-settings/assets/image-scale-and-colour-conversion/gray-img-only-blue.png" alt="gray image only by blue channel"/>
 <p>Figure 7 – grayscale image only by blue channel</p>
+</div>
 
-![gray image only by green channel][5]
+<div align="center">
+<img src="../parameters/scenario-settings/assets/image-scale-and-colour-conversion/gray-img-only-green.png" alt="gray image only by green channel"/>
 <p>Figure 8 – grayscale image only by green channel</p>
+</div>
+
+Therefore, in the same mode, you can configure different mode arguments to produce the results as you need.
 
 ## Flexible mode arguments of combining chains to reduce computation amount
 
 There may be dependencies between different modes in DBR. For example, the `BinarizationModes` depend on the processing results of `ImagePreprocessModes`. Assuming that there are both 3 elements defined in the `ImagePreprocessModes` and `BinarizationModes` parameters, the SDK will loop 9 cycles by default. 
 
-However, when the `ImagePreprocessModesIndex` argument in `BinarizationModes` is specified as the corresponding `ImagePreprocessModes` index (assuming one-to-one), only 3 cycles are required, which greatly reduces the computational cost.
+However, when the `ImagePreprocessModesIndex` argument in `BinarizationModes` is specified as the corresponding `ImagePreprocessModes` index, assuming one-to-one here, only 3 cycles are required, which greatly reduces the computational cost.
 
-On the other aspect, the localization and decoding phases are strictly separated in DBR generally. Sometimes, in order to speed up, we can directly use the intermediate results of the localization stage. For example, the mode `DM_BASED_ON_LOC_BIN` in `DeblurModes` will adopt the localization binary image directly in the decoding stage, which omits the binarization step.
+On the other aspect, the localization and decoding phases are strictly separated in DBR generally. Sometimes, in order to speed up, we can directly use the processing results of the localization stage. For example, the mode `DM_BASED_ON_LOC_BIN` in `DeblurModes` will adopt the localization binary image directly in the decoding stage, which omits the new binarization step.
 
 ## Extensible user-defined modes
 
-In addition to the built-in modes, DBR also supports user-defined modes to suit your special scenarios. First, you need to develop a dynamic link library(.dll file under windows/.so file under linux) whose interface conforms to the DBR specification. Second, you need to configure the custom mode in the parameter template file. The `LibraryFileName` argument of the custom mode should be specified as the path of the dynamic link library file, and if extra arguments are to be passed, the `LibraryParameters` parameter should be specified. Therefore, when the algorithm flow enters the stage of processing the custom mode, DBR will dynamically load the library and execute the corresponding logic.
+In addition to the built-in modes, DBR also supports user-defined modes to suit your special scenarios. First, you need to develop a dynamic link library(.dll under windows or .so under linux) whose interface conforms to the DBR specification. Second, you need to configure the custom mode in your parameter template file. The `LibraryFileName` argument of the custom mode should be specified as the path of the dynamic link library file, and if extra arguments are to be passed, the `LibraryParameters` parameter should be specified. Therefore, when the algorithm flow enters the stage of processing the custom mode, DBR will dynamically load the library and execute the corresponding logic.
+
+## Summary
+
+In this article, we introduce from the following aspects what makes DBR flexible and extensible:
+
+- Flexible build-in processing modes
+- Flexible mode arguments to fine-tune the effect
+- Flexible mode arguments of combining chains to reduce computation amount
+- Extensible user-defined modes
+
+In reality, speed, read rate and accuracy are the three most important performance indicators. Read our other documents dedicated to these three topics:
+
+* [How to boost Speed](https://www.dynamsoft.com/barcode-reader/performance/speed.html)
+* [How to boost Read Rate](https://www.dynamsoft.com/barcode-reader/performance/read-rate.html)
+* [How to boost Accuracy](https://www.dynamsoft.com/barcode-reader/performance/accuracy.html)
 
 
 [1]: ../parameters/scenario-settings/assets/image-scale-and-colour-conversion/colour-conversion-original-image.png
