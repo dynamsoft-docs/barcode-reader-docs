@@ -27,15 +27,19 @@ breadcrumbText: Accuracy
 
 # How to create a High-Accuracy barcode reader
 
-This is how we define the performance from 3 dimensions:
+**Speed** is the ability to decode successfully on a barcode as fast as possible. The **Speed** performance of DBR is defined as follows:
 
 $ Speed = \frac{Total~Time~Consumption}{All~decoded~Barcode~Results} $
 
+**Read Rate** is the ability to decode as many barcodes as possible from a single image. The **Read Rate** performance of DBR is defined as follows:
+
 $ Read~Rate = \frac{All~Decoded~Barcodes}{All~Target~Barcodes} $
+
+**Accuracy** is the ability to ensure the correctness of output results. The **Accuracy** performance of DBR is defined as follows:
 
 $ Accuracy = \frac{Correctly~Decoded~Barcodes}{All~Decoded~Barcodes} $
 
-This article illustrates how Dynamsoft Barcode Reader (hereafter referred to as "DBR") is designed to ensure the accuracy of barcode results and how you can add settings to futther improve the accuracy. For general usage, the accuracy is high enough even if you don't add any further settings. However, if you are using DBR for some specified scenarios like auto processing without manual verification, you must expect the accuracy of the barcode reader to reach a high extent.
+This article illustrates how Dynamsoft Barcode Reader (hereafter referred to as "DBR") is designed to ensure the accuracy of barcode results and how you can add settings to further improve the accuracy. For general usage, the accuracy is high enough even if you don't add any further settings. However, if you are using DBR for some specified scenarios like auto processing without manual verification, you must expect the accuracy of the barcode reader to reach a high extent.
 
 <!--
 The default parameter of Dynamsoft Barcode Reader is accurate enough for general usage scenarios. However, if you are using DBR for some specified scenarios, you can still add the following configurations to further improve the accuracy of your barcode reading program.
@@ -86,6 +90,8 @@ When the target barcodes are confirmed, the barcode texts might have common feat
 - [`BarcodeTextRegExPattern`]({{site.parameters_reference}}barcode-text-regex-pattern.html)
 - [`BarcodeTextLengthRangeArray`]({{site.parameters_reference}}barcode-text-length-range-array.html)
 
+### Skip Noninterest
+
 ### Skip Error-Prone Barcode
 
 You might still get results from badly printed barcodes or blurry images. If accuracy is on the first priority, you make the following parameter configurations to skip the error-prone barcodes.
@@ -107,6 +113,10 @@ However, the blurry images are error-prone. When it is unnecessary to decode the
 - [`DeblurModes`]({{site.parameters_reference}}deblur-modes.html)
 <!--  - [`DeblurLevel`]({{site.parameters_reference}}deblur-level.html)-->
 
+### Remove the Noise
+
+
+
 ## External Settings – Camera Enhancer Settings
 
 Users can optimize the parameter settings to prevent misreading but this is not the only way to improve the accuracy. For the video barcode decoding scenarios, promoting the quality of the video will definitely improve the barcode decoding accuracy. Although there are no camera control APIs in Dynamsoft Barcode Reader, you can still use Dynamsoft Camera Enhancer (DCE) APIs to take control of the input video streaming. DCE is an SDK that integrates the camera control APIs and video frame pre-processing features. It can be easily bound to the Barcode Reader and enable users to optimize the input video streaming when using the Barcode Reader. You can make the following setting to improve the accuracy of barcode decoding.
@@ -127,3 +137,5 @@ A higher resolution will promote the sharpness of the video frames and also enla
 
 - <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/android/primary-api/camera-enhancer.html?ver=latest#enablefeatures" target="_blank">`CameraEnhancer.enableFeatures`</a>
 - <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/android/primary-api/camera-enhancer.html?ver=latest#setresolution" target="_blank">`CameraEnhancer.setResolution`</a>
+
+### Set the Scan Region
