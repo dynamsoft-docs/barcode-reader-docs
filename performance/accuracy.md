@@ -7,10 +7,27 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: Accuracy
 ---
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+<script type="text/x-mathjax-config">
+
+    MathJax.Hub.Config({
+
+        tex2jax: {
+
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+
+        inlineMath: [['$','$']]
+
+        }
+
+    });
+
+</script>
 
 # How to create a High-Accuracy barcode reader
 
-Basic Concept:
+This is how we define the performance from 3 dimensions:
 
 $ Speed = \frac{Total~Time~Consumption}{All~decoded~Barcode~Results} $
 
@@ -18,7 +35,7 @@ $ Read~Rate = \frac{All~Decoded~Barcodes}{All~Target~Barcodes} $
 
 $ Accuracy = \frac{Correctly~Decoded~Barcodes}{All~Decoded~Barcodes} $
 
-The default parameter of Dynamsoft Barcode Reader is accurate enough for general usage scenarios. However, if you are using DBR for some specified scenarios like auto processing without manual verification, you must expect the accuracy of the barcode reader to reach a high extent.
+This article illustrates how Dynamsoft Barcode Reader (hereafter referred to as "DBR") is designed to ensure the accuracy of barcode results and how you can add settings to futther improve the accuracy. For general usage, the accuracy is high enough even if you don't add any further settings. However, if you are using DBR for some specified scenarios like auto processing without manual verification, you must expect the accuracy of the barcode reader to reach a high extent.
 
 <!--
 The default parameter of Dynamsoft Barcode Reader is accurate enough for general usage scenarios. However, if you are using DBR for some specified scenarios, you can still add the following configurations to further improve the accuracy of your barcode reading program.
