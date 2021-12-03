@@ -29,15 +29,15 @@ breadcrumbText: Accuracy
 
 **Speed** is the ability to decode successfully on a barcode as fast as possible. The **Speed** performance of DBR is defined as follows:
 
-$ Speed = \frac{Total~Time~Consumption}{All~decoded~Barcode~Results} $
+$ Speed = \frac{Total~Time~Consumption}{Number~of~All~decoded~Barcode~Results} $
 
 **Read Rate** is the ability to decode as many barcodes as possible from a single image. The **Read Rate** performance of DBR is defined as follows:
 
-$ Read~Rate = \frac{All~Decoded~Barcodes}{All~Target~Barcodes} $
+$ Read~Rate = \frac{Number~of~All~Decoded~Barcodes}{Number~of~All~Target~Barcodes} $
 
 **Accuracy** is the ability to ensure the correctness of output results. The **Accuracy** performance of DBR is defined as follows:
 
-$ Accuracy = \frac{Correctly~Decoded~Barcodes}{All~Decoded~Barcodes} $
+$ Accuracy = \frac{Number~of~Correctly~Decoded~Barcodes}{Number~of~All~Decoded~Barcodes} $
 
 This article illustrates how Dynamsoft Barcode Reader (hereafter referred to as "DBR") is designed to ensure the accuracy of barcode results and how you can add settings to further improve the accuracy. For general usage, the accuracy is high enough even if you don't add any further settings. However, if you are using DBR for some specified scenarios like auto processing without manual verification, you must expect the accuracy of the barcode reader to reach a high extent.
 
