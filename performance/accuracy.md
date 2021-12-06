@@ -90,8 +90,6 @@ When the target barcodes are confirmed, the barcode texts might have common feat
 - [`BarcodeTextRegExPattern`]({{site.parameters_reference}}barcode-text-regex-pattern.html)
 - [`BarcodeTextLengthRangeArray`]({{site.parameters_reference}}barcode-text-length-range-array.html)
 
-### Skip Noninterest
-
 ### Skip Error-Prone Barcode
 
 You might still get results from badly printed barcodes or blurry images. If accuracy is on the first priority, you make the following parameter configurations to skip the error-prone barcodes.
@@ -113,17 +111,17 @@ However, the blurry images are error-prone. When it is unnecessary to decode the
 - [`DeblurModes`]({{site.parameters_reference}}deblur-modes.html)
 <!--  - [`DeblurLevel`]({{site.parameters_reference}}deblur-level.html)-->
 
-### Remove the Noise
+## Optional Settings
 
-The texture or text in the background might disturb the barcode processing and sometimes be misrecognized as barcodes. When dealing with barcodes on the screen or close to the text, you can use `TextureDetectionMode` and `TextFilterModes` to remove them before procressing on the barcodes.
+The following parameter settings do not have obvious effects but still benefits the barcode decoding accuracy.
 
-**Remove Texture**
+### Remove the Texture
 
-When `TextureDetecttionModes` is set to `TDM_GENERAL_WIDTH_CONCENTRATION`, you can set the sensitivity level of texture detection. The value range is between 1 to 9 and the larger the value of this parameter, the more obvious the texture detection effect is.
+`TextureDetectionModes` is designed for detecting and removing the texture on the image. When `TextureDetecttionModes` is set to `TDM_GENERAL_WIDTH_CONCENTRATION`, you can set the sensitivity level of texture detection. The value range is between 1 to 9 and the larger the value of this parameter, the more obvious the texture detection effect is.
 
-**Text Filter**
+### Filter out the Text
 
-Set the `TextFilterModes` to `TFM_GENERAL_CONTOUR` to make the text filter. The text filter is also available for sensitivity level setting from 1 to 9. Please note, the text filter will have no effects when you are using localization modes `LM_CONNECTED_BLOCKS` and `LM_SCAN_DIRECTLY`.
+`TextFilterModes` is designed for filtering the text on the image. Set the `TextFilterModes` to `TFM_GENERAL_CONTOUR` to make the text filter. The text filter is also available for sensitivity level setting from 1 to 9. Please note, the text filter will have no effects when you are using localization modes `LM_CONNECTED_BLOCKS` and `LM_SCAN_DIRECTLY`.
 
 ## External Settings – Camera Enhancer Settings
 
