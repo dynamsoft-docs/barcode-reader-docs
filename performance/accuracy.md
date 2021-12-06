@@ -109,7 +109,8 @@ However, the blurry images are error-prone. When it is unnecessary to decode the
 - [`ModuleSizeRangeArray`]({{site.parameters_reference}}module-size-range-array.html)
 - [`scaleDownThreshold`]({{site.parameters_reference}}scale-down-threshold.html)
 - [`DeblurModes`]({{site.parameters_reference}}deblur-modes.html)
-<!--  - [`DeblurLevel`]({{site.parameters_reference}}deblur-level.html)-->
+
+<!--  - [`DeblurLevel`]({{site.parameters_reference}}deblur-level.html)
 
 ## Optional Settings
 
@@ -122,6 +123,7 @@ The following parameter settings do not have obvious effects but still benefits 
 ### Filter out the Text
 
 `TextFilterModes` is designed for filtering the text on the image. Set the `TextFilterModes` to `TFM_GENERAL_CONTOUR` to make the text filter. The text filter is also available for sensitivity level setting from 1 to 9. Please note, the text filter will have no effects when you are using localization modes `LM_CONNECTED_BLOCKS` and `LM_SCAN_DIRECTLY`.
+-->
 
 ## External Settings – Camera Enhancer Settings
 
