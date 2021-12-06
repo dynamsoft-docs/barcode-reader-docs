@@ -100,9 +100,15 @@ The smaller the module size of the barcodes, the lower accuracy of the results. 
 
 **Skip Blurry Barcodes**
 
-DeblurModes is the parameter that controls the ability to decode blurry barcodes. When processing the barcodes, DBR will try all available deblur modes until the barcodes are decoded successfully. Therefore, the more deblur modes you set, the more opportunity you have to decode a blurry image.
+`DeblurModes` is the parameter that controls the ability to decode blurry barcodes. There are multiple modes available under the index of `DeblurModes`. The more modes you enable, the more effort the library will spend to decode images. However, the blurry images are error-prone. Therefore, the risk of misreading is increased at the same time when the read rate on blurry images is improved.
 
-However, the blurry images are error-prone. When it is unnecessary to decode the blurry barcode in the usage scenario, you can reduce the DeblurModes settings to ensure the barcode decoding accuracy instead of the read rate.
+When decoding on image:
+
+- enable high-level accuracy settings via other parameters when the deblur level is high.
+
+When decoding on video streaming:
+
+- enable low-level `DeblurModes` and let the barcode reader processing on high-quality frames only.
 
 **Related API(s)/Parameter(s)**
 
@@ -114,15 +120,20 @@ However, the blurry images are error-prone. When it is unnecessary to decode the
 
 ## Optional Settings
 
-The following parameter settings do not have obvious effects but still benefits the barcode decoding accuracy.
+The following parameter settings do not have obvious effects but still benefit the barcode decoding accuracy.
 
 ### Remove the Texture
 
 `TextureDetectionModes` is designed for detecting and removing the texture on the image. When `TextureDetecttionModes` is set to `TDM_GENERAL_WIDTH_CONCENTRATION`, you can set the sensitivity level of texture detection. The value range is between 1 to 9 and the larger the value of this parameter, the more obvious the texture detection effect is.
 
+If there exists texture area on the image, the `TextureDetectionModes` will definitately improve both the barcode decoding speed and accuracy. However, if there doesn't exist texture area, the barcode decoding speed will be declined.
+
 ### Filter out the Text
 
-`TextFilterModes` is designed for filtering the text on the image. Set the `TextFilterModes` to `TFM_GENERAL_CONTOUR` to make the text filter. The text filter is also available for sensitivity level setting from 1 to 9. Please note, the text filter will have no effects when you are using localization modes `LM_CONNECTED_BLOCKS` and `LM_SCAN_DIRECTLY`.
+`TextFilterModes` is designed for filtering the text on the image. Set the `TextFilterModes` to `TFM_GENERAL_CONTOUR` to make the text filter. The text filter is also available for sensitivity level settings from 1 to 9. Please note, the text filter will have no effects when you are using localization modes `LM_CONNECTED_BLOCKS` and `LM_SCAN_DIRECTLY`.
+
+If there exists text area on the image, the `TextFilterModes` will definitately improve both the barcode decoding speed and accuracy. However, if there doesn't exist text area, the barcode decoding speed will be declined.
+
 -->
 
 ## External Settings – Camera Enhancer Settings
