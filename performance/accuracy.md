@@ -44,6 +44,7 @@ Accuracy is the ability to ensure the correctness of output results. Some accura
 The speed and the read rate are the other two dimensions of performance and they are defined as follows. They might be sacrificed if you are trying to improve the accuracy.
 
 $ Speed = \frac{Total~Time~Consumption}{Number~of~All~decoded~Barcode~Results} $
+
 $ Read~Rate = \frac{Number~of~All~Decoded~Barcode~Results}{Number~of~All~Target~Barcodes} $
 
 ## General Settings
