@@ -16,6 +16,8 @@ Barcode zones are detectable by taking advantage of features of different barcod
 of several parallel lines, finding such an area with group of lines, a liner barcode zone is detected. But in some cases, the barcode features may not obvious or good enough, so processings need to be taken to enhance barcode zone features before localization. Check out and adjust the following parameters designed for these cases to improve the read rate.
 
 ### Transform to Grayscale 
+[ColourConversionModes]({{ site.parameters_reference }}colour-conversion-modes.html) is a parameter to control the process of converting colour image to grayscale image. By default, the conversion will base on the RGB channels with the default weights of three channels. This parameter allows you to specify the referred colour channel (RGB or HSV) and the weight of each channel during the colour conversion. Assume your image has a disgusting contrast of one colour channel between the barcode area and background, this parameter may help specify the appropriate settings for getting a higher quality grayscale image
+
 [GrayscaleTransformationModes]({{ site.parameters_reference }}grayscale-transformation-modes.html) is a parameter to control the colour mode of the barcode on grayscale image. The barcode on an image usually have two types, dark barcode on light background and light barcode on dark background. Correspondly, identify the types of barcodes you are reading and set `GrayscaleTransformationModes` to `GTM_ORIGINAL` and/or `GTM_INVERTED`.
 
 ### Enhance the Grayscale Image Quality
