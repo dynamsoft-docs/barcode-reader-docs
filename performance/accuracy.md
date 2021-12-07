@@ -27,17 +27,35 @@ breadcrumbText: Accuracy
 
 # How to create a High-Accuracy barcode reader
 
-**Speed** is the ability to decode successfully on a barcode as fast as possible. The **Speed** performance of DBR is defined as follows:
+<div class="fold-panel-prefix"></div>
+
+**Speed** <i class="fa fa-caret-down"></i>
+
+<div class="fold-panel-start"></div>
 
 $ Speed = \frac{Total~Time~Consumption}{Number~of~All~decoded~Barcode~Results} $
 
-**Read Rate** is the ability to decode as many barcodes as possible from a single image. The **Read Rate** performance of DBR is defined as follows:
+**Speed** is the ability to decode successfully on a barcode as fast as possible. The **Speed** performance of DBR is defined as follows:
+
+<div class="fold-panel-end"></div>
+
+<div class="fold-panel-prefix"></div>
+
+**Read Rate** <i class="fa fa-caret-down"></i>
+
+<div class="fold-panel-start"></div>
 
 $ Read~Rate = \frac{Number~of~All~Decoded~Barcode~Results}{Number~of~All~Target~Barcodes} $
 
-**Accuracy** is the ability to ensure the correctness of output results. The **Accuracy** performance of DBR is defined as follows:
+**Read Rate** is the ability to decode as many barcodes as possible from a single image. The **Read Rate** performance of DBR is defined as follows:
+
+<div class="fold-panel-end"></div>
+
+**Accuracy**
 
 $ Accuracy = \frac{Number~of~Correctly~Decoded~Barcode~Results}{Number~of~All~Decoded~Barcode~Results} $
+
+**Accuracy** is the ability to ensure the correctness of output results. The **Accuracy** performance of DBR is defined as follows:
 
 This article illustrates how Dynamsoft Barcode Reader (hereafter referred to as "DBR") is designed to ensure the accuracy of barcode results and how you can add settings to further improve the accuracy. For general usage, the accuracy is high enough even if you don't add any further settings. However, if you are using DBR for some specified scenarios like auto processing without manual verification, you must expect the accuracy of the barcode reader to reach a high extent.
 
