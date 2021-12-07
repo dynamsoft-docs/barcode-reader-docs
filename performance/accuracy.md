@@ -1,12 +1,13 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader Performance - Accuracy
-description: This page illustrates how to maximize the accuracy of Dynamsoft Barcode Reader
-Keywords: accuracy
+description: This page illustrates how to maximize the **Accuracy** of Dynamsoft Barcode Reader
+Keywords: **Accuracy**
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: Accuracy
 ---
+
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
 <script type="text/x-mathjax-config">
@@ -29,7 +30,7 @@ breadcrumbText: Accuracy
 
 <div class="fold-panel-prefix"></div>
 
-**Speed** <i class="fa fa-caret-down"></i>
+## Speed <i class="fa fa-caret-down"></i>
 
 <div class="fold-panel-start"></div>
 
@@ -39,9 +40,11 @@ $ Speed = \frac{Total~Time~Consumption}{Number~of~All~decoded~Barcode~Results} $
 
 <div class="fold-panel-end"></div>
 
+- [How to boost **Speed**](#speed.md)
+
 <div class="fold-panel-prefix"></div>
 
-**Read Rate** <i class="fa fa-caret-down"></i>
+## Read Rate <i class="fa fa-caret-down"></i>
 
 <div class="fold-panel-start"></div>
 
@@ -51,25 +54,27 @@ $ Read~Rate = \frac{Number~of~All~Decoded~Barcode~Results}{Number~of~All~Target~
 
 <div class="fold-panel-end"></div>
 
-**Accuracy**
+- [How to boost **Read Rate**](#read-rate.md)
+
+## Accuracy
 
 $ Accuracy = \frac{Number~of~Correctly~Decoded~Barcode~Results}{Number~of~All~Decoded~Barcode~Results} $
 
 **Accuracy** is the ability to ensure the correctness of output results. The **Accuracy** performance of DBR is defined as follows:
 
-This article illustrates how Dynamsoft Barcode Reader (hereafter referred to as "DBR") is designed to ensure the accuracy of barcode results and how you can add settings to further improve the accuracy. For general usage, the accuracy is high enough even if you don't add any further settings. However, if you are using DBR for some specified scenarios like auto processing without manual verification, you must expect the accuracy of the barcode reader to reach a high extent.
+This article illustrates how Dynamsoft Barcode Reader (hereafter referred to as "DBR") is designed to ensure the **Accuracy** of barcode results and how you can add settings to further improve the **Accuracy**. For general usage, the **Accuracy** is high enough even if you don't add any further settings. However, if you are using DBR for some specified scenarios like auto processing without manual verification, you must expect the **Accuracy** of the barcode reader to reach a high extent.
 
 <!--
-The default parameter of Dynamsoft Barcode Reader is accurate enough for general usage scenarios. However, if you are using DBR for some specified scenarios, you can still add the following configurations to further improve the accuracy of your barcode reading program.
+The default parameter of Dynamsoft Barcode Reader is accurate enough for general usage scenarios. However, if you are using DBR for some specified scenarios, you can still add the following configurations to further improve the **Accuracy** of your barcode reading program.
 -->
 
 ## General Settings
 
-The following settings can be applied to nearly all usage scenarios to improve the barcode reading accuracy. They might sacrifice a bit of speed but hardly influence the read rate.
+The following settings can be applied to nearly all usage scenarios to improve the barcode reading **Accuracy**. They might sacrifice a bit of **Speed** but hardly influence the **Read Rate**.
 
 ### Result Confidence Filter
 
-The confidence attribute of the barcode results is determined by the reliability of that result. Users can set the `minResultConfidence` to make a filter on the barcode results by the confidence value. For Dynamsoft Barcode Reader v8.8 or higher version, the default value of the confidence is 30, which can filter the majority of misreading barcode results. A higher `minResultConfidence` setting will definitely improve the accuracy of the barcode results but reduce the read rate and speed at the same time. Therefore, please set the `minResultConfidence` according to your actual usage scenario to balance the accuracy and speed.
+The confidence attribute of the barcode results is determined by the reliability of that result. Users can set the `minResultConfidence` to make a filter on the barcode results by the confidence value. For Dynamsoft Barcode Reader v8.8 or higher version, the default value of the confidence is 30, which can filter the majority of misreading barcode results. A higher `minResultConfidence` setting will definitely improve the **Accuracy** of the barcode results but reduce the **Read Rate** and **Speed** at the same time. Therefore, please set the `minResultConfidence` according to your actual usage scenario to balance the **Accuracy** and **Speed**.
 
 **Related API(s)/Parameter(s)**
 
@@ -88,11 +93,11 @@ For JavaScript edition, multi-frame verification is enabled when using video bar
 
 ## Specific Settings
 
-The following settings will benefit the barcode reading accuracy but also limit the read rate. When you know exactly what your usage scenario is, you can apply the following settings to improve the barcode reading accuracy on that scenario. The read rate of your program will be extremely declined and be sure to change the settings if you want to use the program to other usage scenarios.
+The following settings will benefit the barcode reading **Accuracy** but also limit the **Read Rate**. When you know exactly what your usage scenario is, you can apply the following settings to improve the barcode reading **Accuracy** on that scenario. The **Read Rate** of your program will be extremely declined and be sure to change the settings if you want to use the program to other usage scenarios.
 
 ### Format Specification
 
-Sometimes, misreading on an OneD barcode is caused by misrecognizing the OneD barcode to another OneD type. When you have a basic understanding on the barcode formats and know exactly which formats are the targets in your usage scenario. You can let your barcode reading program focus on the target formats only and reject all the noninterest barcodes. Please be sure to change the format settings when you want to extend your usage scenarios. In addition, specifying the required barcode formats will also benefit the barcode reading speed.
+Sometimes, misreading on an OneD barcode is caused by misrecognizing the OneD barcode to another OneD type. When you have a basic understanding on the barcode formats and know exactly which formats are the targets in your usage scenario. You can let your barcode reading program focus on the target formats only and reject all the noninterest barcodes. Please be sure to change the format settings when you want to extend your usage scenarios. In addition, specifying the required barcode formats will also benefit the barcode reading **Speed**.
 
 **Related API(s)/Parameter(s)**
 
@@ -110,19 +115,19 @@ When the target barcodes are confirmed, the barcode texts might have common feat
 
 ### Skip Error-Prone Barcode
 
-You might still get results from badly printed barcodes or blurry images. If accuracy is on the first priority, you make the following parameter configurations to skip the error-prone barcodes.
+You might still get results from badly printed barcodes or blurry images. If **Accuracy** is on the first priority, you make the following parameter configurations to skip the error-prone barcodes.
 
 **Skip Small-Module Barcodes**
 
-The smaller the module size of the barcodes, the lower accuracy of the results. You can use the `FormatSpecificant` parameter `ModuleSizeRangeArray` to specify the minimum acceptable module size of the barcodes. You can also increase the `scaleDownThreshold` value to ensure the barcodes are not shrunk too small.
+The smaller the module size of the barcodes, the lower **Accuracy** of the results. You can use the `FormatSpecificant` parameter `ModuleSizeRangeArray` to specify the minimum acceptable module size of the barcodes. You can also increase the `scaleDownThreshold` value to ensure the barcodes are not shrunk too small.
 
 **Skip Blurry Barcodes**
 
-`DeblurModes` is the parameter that controls the ability to decode blurry barcodes. There are multiple modes available under the index of `DeblurModes`. The more modes you enable, the more effort the library will spend to decode images. However, the blurry images are error-prone. Therefore, the risk of misreading is increased at the same time when the read rate on blurry images is improved.
+`DeblurModes` is the parameter that controls the ability to decode blurry barcodes. There are multiple modes available under the index of `DeblurModes`. The more modes you enable, the more effort the library will spend to decode images. However, the blurry images are error-prone. Therefore, the risk of misreading is increased at the same time when the **Read Rate** on blurry images is improved.
 
 When decoding on image:
 
-- enable high-level accuracy settings via other parameters when the deblur level is high.
+- enable high-level **Accuracy** settings via other parameters when the deblur level is high.
 
 When decoding on video streaming:
 
@@ -138,37 +143,37 @@ When decoding on video streaming:
 
 ## Optional Settings
 
-The following parameter settings do not have obvious effects but still benefit the barcode decoding accuracy.
+The following parameter settings do not have obvious effects but still benefit the barcode decoding **Accuracy**.
 
 ### Remove the Texture
 
 `TextureDetectionModes` is designed for detecting and removing the texture on the image. When `TextureDetecttionModes` is set to `TDM_GENERAL_WIDTH_CONCENTRATION`, you can set the sensitivity level of texture detection. The value range is between 1 to 9 and the larger the value of this parameter, the more obvious the texture detection effect is.
 
-If there exists texture area on the image, the `TextureDetectionModes` will definitely improve both the barcode decoding speed and accuracy. However, if there doesn't exist a texture area, the barcode decoding speed will be declined.
+If there exists texture area on the image, the `TextureDetectionModes` will definitely improve both the barcode decoding **Speed** and **Accuracy**. However, if there doesn't exist a texture area, the barcode decoding **Speed** will be declined.
 
 ### Filter out the Text
 
 `TextFilterModes` is designed for filtering the text on the image. Set the `TextFilterModes` to `TFM_GENERAL_CONTOUR` to make the text filter. The text filter is also available for sensitivity level settings from 1 to 9. Please note, the text filter will have no effects when you are using localization modes `LM_CONNECTED_BLOCKS` and `LM_SCAN_DIRECTLY`.
 
-If there exists a text area on the image, the `TextFilterModes` will definitely improve both the barcode decoding speed and accuracy. However, if there doesn't exist a text area, the barcode decoding speed will be declined.
+If there exists a text area on the image, the `TextFilterModes` will definitely improve both the barcode decoding **Speed** and **Accuracy**. However, if there doesn't exist a text area, the barcode decoding **Speed** will be declined.
 
 -->
 
 ## External Settings – Camera Enhancer Settings
 
-Users can optimize the parameter settings to prevent misreading but this is not the only way to improve the accuracy. For the video barcode decoding scenarios, promoting the quality of the video will definitely improve the barcode decoding accuracy. Although there are no camera control APIs in Dynamsoft Barcode Reader, you can still use Dynamsoft Camera Enhancer (DCE) APIs to take control of the input video streaming. DCE is an SDK that integrates the camera control APIs and video frame pre-processing features. It can be easily bound to the Barcode Reader and enable users to optimize the input video streaming when using the Barcode Reader. You can make the following setting to improve the accuracy of barcode decoding.
+Users can optimize the parameter settings to prevent misreading but this is not the only way to improve the **Accuracy**. For the video barcode decoding scenarios, promoting the quality of the video will definitely improve the barcode decoding **Accuracy**. Although there are no camera control APIs in Dynamsoft Barcode Reader, you can still use Dynamsoft Camera Enhancer (DCE) APIs to take control of the input video streaming. DCE is an SDK that integrates the camera control APIs and video frame pre-processing features. It can be easily bound to the Barcode Reader and enable users to optimize the input video streaming when using the Barcode Reader. You can make the following setting to improve the **Accuracy** of barcode decoding.
 
 ### Frame Filter
 
-When the frame filter feature DCE is enabled, a quick sharpness evaluation will be implemented on each video frame and the low sharpness frame will be discarded to ensure the barcode reader will process on high-quality frames only. Since the Barcode Reader doesn't need to process the blurry video frames, the accuracy will be highly improved.
+When the frame filter feature DCE is enabled, a quick sharpness evaluation will be implemented on each video frame and the low sharpness frame will be discarded to ensure the barcode reader will process on high-quality frames only. Since the Barcode Reader doesn't need to process the blurry video frames, the **Accuracy** will be highly improved.
 
 ### Enhanced focus
 
-This feature is highly recommended to be implemented on low-end devices. Enhancing the camera focus ability will reduce the blurry frames in the video streaming, which benefits the barcode reading accuracy.
+This feature is highly recommended to be implemented on low-end devices. Enhancing the camera focus ability will reduce the blurry frames in the video streaming, which benefits the barcode reading **Accuracy**.
 
 ### Set Higher Resolution
 
-A higher resolution will promote the sharpness of the video frames and also enlarge the module size of barcodes. Setting the resolution higher will definitely benefit the barcode reading accuracy but sacrifice a bit of speed. In addition, please remember to set the `scaleDownThreshold` to a higher value. When the `scaleDownThershold` is not big enough, the barcode reader will still process on the shrunken images.
+A higher resolution will promote the sharpness of the video frames and also enlarge the module size of barcodes. Setting the resolution higher will definitely benefit the barcode reading **Accuracy** but sacrifice a bit of **Speed**. In addition, please remember to set the `scaleDownThreshold` to a higher value. When the `scaleDownThershold` is not big enough, the barcode reader will still process on the shrunken images.
 
 **Related API(s)/Parameter(s)**
 
