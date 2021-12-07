@@ -39,27 +39,35 @@ Another mode, `BM_THRESHOLD`, binarizes the image for each pixel based on a glob
 After the above processing, we have got an high quality binary image for barcode zone localization. [LocalizationModes]({{ site.parameters_reference }}localization-modes.html) is a parameter which contains several modes to localize a barcode zone considering the different features of barcodes. Here we will go through these modes and the using scenarios.
 
 - LM_CONNECTED_BLOCKS
+
 This mode localizes barcodes by searching for connected blocks. It gives great result on most of the circumstances and is recommended to be always set.
 
 - LM_STATISTICS
+
 This mode localizes barcodes by searching for groups of contiguous black-white regions. It works well for QRCode and DataMatrix.
 
 - LM_LINES
+
 This mode localizes barcodes by searching for groups of lines. It works well for linear barcodes and PDF417.
 
 - LM_STATISTICS_MARKS
+
 This mode localizes barcodes by searching for groups of marks. It works well for DPM barcodes and DotCode.
 
 - LM_STATISTICS_POSTAL_CODE
+
 This mode localizes barcodes by searching for bars of postal codes in terms of bars’ distribution. It works well for postal codes.
 
 - LM_SCAN_DIRECTLY 
+
 This mode scans the whole image, vertically and horizontally, to find barcode areas. The read rate is good if the barcodes on image are vertical or horizontal, but not for inclined barcodes.
 
 - LM_ONED_FAST_SCAN
+
 This mode is designed to localize OneD barcodes very fast, but the read rate is not guaranteed.
 
 - LM_CENTRE
+
 This mode works just like LM_STATISTICS but only searchs barcodes from the centre of the image. When the barcodes are in the centre of the image, using this mode ohter than LM_STATISTICS may save some time but get the same read rate.
 
 Each above mode can work individually to find particular barcodes, if not all barcodes are localized, they can also be combined to cover more cases.
@@ -70,30 +78,39 @@ By default, 4 modes, `LM_SCAN_DIRECTLY`, `LM_CONNECTED_BLOCKS`, `LM_LINES`, `LM_
 After getting a barcode zone, DBR applies a variety of further process before decoding the barcode. [DeblurModes]({{ site.parameters_reference }}deblur-modes.html) is a parameter to deal with varying image blurness situations. It provides several modes to perform a round of image processing on the barcode zone, aiming to remove the blurness features. Here we will go through these modes and the using scenarios.
 
 - DM_BASED_ON_LOC_BIN
+
 This mode crops the barcode area from the binary image generated during the localization process. It is designed to improve reading speed for high-quality images.
 
 - DM_DIRECT_BINARIZATION
+
 This mode binarizes the barcode area for each pixel based on a threshold which is calculated based on a small region around it. If the barcode area is clear and clean, this mode is appropriate for both reading speed and rate.
 
 - DM_THRESHOLD_BINARIZATION
+
 This mode binarizes the barcode area with a global threshold. It is designed to get a better binary barcode image when the barcode content modules have distinct colour contrast with the background.
 
 - DM_GRAY_EQUALIZATION
+
 This mode applies histogram equalization to improve the contrast and then binarizes the barcode area. It is designed to get a better binary barcode image when the barcode content modules have low colour contrast with the background.
 
 - DM_SMOOTHING
+
 This mode applies smoothing operation to reduce the noise or texture and then binarizes the barcode area. It is designed to get a better binary barcode image when the barcode area have intensive noise or texture.
 
 - DM_SHARPENING
+
 This mode applies sharpening operation to make the boundaries of the barcode module clearer and reduce blur and then binarizes the barcode area. It is designed to get a better binary barcode image when the barcode content modules have blurred boundaries with a clear background.
 
 - DM_SHARPENING_SMOOTHING
+
 This mode applies sharpening operation first to make the boundaries of the barcode module clearer and reduce blur, smoothing then to reduce unwanted noise or texture, and then binarizes the barcode area. It is designed to get a better binary barcode image when the barcode content modules have blurred boundaries with unclear backgrounds.
 
 - DM_MORPHING
+
 This mode applies morphology algorithm to make the barcode module clearer and then binarizes the barcode area. It is designed to get a better binary barcode image when the barcode area is polluted or destroyed.
 
 - DM_DEEP_ANALYSIS
+
 This mode analyzes every pixel of the image and gather info to find out the barcode modules. It is desinged to get barcode modules when the barcode content modules have blurred boundaries and complex backgrounds which cannot be solved by other image processing methods. This is relatively time-consuming but is the best way to deal with blur images to archive a good read rate.
 
 
