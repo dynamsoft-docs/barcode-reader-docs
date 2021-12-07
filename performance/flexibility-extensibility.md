@@ -9,9 +9,9 @@ noTitleIndex: false
 
 # What makes Dynamsoft Barcode Reader flexible and extensible
 
-Dynamsoft Barcode Reader (Abbreviated as "DBR") was designed to be a more flexible and extensible barcode reader SDK from the beginning. The most critical design is the parameter template. This article will explain in detail how the parameter template makes DBR flexible and extensible.
+In this article, we will explain in detail what makes Dynamsoft Barcode Reader (Abbreviated as "DBR") flexible and extensible. The most critical design is the **parameter template**.
 
-## Overview Of Parameter Template
+## Parameter Template
 
 DBR classifies and organizes a series of algorithm/result control parameters to form a flexible and extensible **parameter template**. The **top-level objects**, as a set of **detailed parameters**, are organized as three parts: `ImageParameter`, `RegionDefinition`, and `FormatSpecification`.
 - `ImageParameter` is used to specify the preprocessing/localization/decoding/postprocessing parameters on the target image. The value of the `ImageParameter.Name` field is the unique identifier of the `ImageParameter`.
