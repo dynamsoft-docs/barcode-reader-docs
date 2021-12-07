@@ -9,11 +9,11 @@ noTitleIndex: false
 
 # What makes Dynamsoft Barcode Reader flexible and extensible
 
-In this article, we will explain in detail what makes Dynamsoft Barcode Reader (Abbreviated as "DBR") flexible and extensible. The most critical design is the **parameter template**.
+In this article, we will explain in detail what makes Dynamsoft Barcode Reader (Abbreviated as "DBR") flexible and extensible. The most critical design is the **parameters template**.
 
-## Parameter Template
+## Parameters Template
 
-DBR classifies and organizes a series of algorithm/result control parameters to form a flexible and extensible **parameter template**. The **top-level objects**, as a set of **detailed parameters**, are organized as three parts: `ImageParameter`, `RegionDefinition`, and `FormatSpecification`.
+DBR classifies and organizes a series of algorithm/result control parameters to form a flexible and extensible **parameters template**. The **top-level objects**, as a set of **detailed parameters**, are organized as three parts: `ImageParameter`, `RegionDefinition`, and `FormatSpecification`.
 - `ImageParameter` is used to specify the preprocessing/localization/decoding/postprocessing parameters on the target image. The value of the `ImageParameter.Name` field is the unique identifier of the `ImageParameter`.
 - `RegionDefinition` is used to specify a decoding region. It is also used to specify the decoding parameters in this area. The value of the `RegionDefinition.Name` field is the unique identifier of `RegionDefinition`.
 - `FormatSpecification` is used to specify a barcode format. It is also used to specify the decoding parameters of this barcode format. The value of the `FormatSpecification.Name` field is the unique identifier of `FormatSpecification`.
@@ -43,7 +43,7 @@ The following simple example reflects the relationship between top-level objects
 }
 ```
 
-The **detailed parameters** of DBR parameter template are mainly divided into two types: **General Parameters** and **Special Parameters(Modes)**.
+The **detailed parameters** of DBR parameters template are mainly divided into two types: **General Parameters** and **Special Parameters(Modes)**.
 
 ## General Parameters
 
@@ -227,13 +227,13 @@ Assuming that there are both 3 elements defined in the `ImagePreprocessModes` an
 
 ### Extensible user-defined modes
 
-In addition to the built-in modes, DBR also supports user-defined modes to suit your special scenarios. First, you need to develop a dynamic link library(.dll under windows or .so under linux) whose interface conforms to the DBR specification. Second, you need to configure the custom mode in your parameter template file. The `LibraryFileName` argument of the custom mode should be specified as the path of the dynamic link library file, and if extra arguments are to be passed, the `LibraryParameters` parameter should be specified. Therefore, when the algorithm flow enters the stage of processing the custom mode, DBR will dynamically load the library and execute the corresponding logic.
+In addition to the built-in modes, DBR also supports user-defined modes to suit your special scenarios. First, you need to develop a dynamic link library(.dll under windows or .so under linux) whose interface conforms to the DBR specification. Second, you need to configure the custom mode in your parameters template file. The `LibraryFileName` argument of the custom mode should be specified as the path of the dynamic link library file, and if extra arguments are to be passed, the `LibraryParameters` parameter should be specified. Therefore, when the algorithm flow enters the stage of processing the custom mode, DBR will dynamically load the library and execute the corresponding logic.
 
 ## Summary
 
 In this article, we introduce from the following aspects what makes DBR flexible and extensible:
 
-- Overview of paramter template
+- Paramters template
 - General Parameters
 - Special Parameters (Modes)
 
