@@ -43,7 +43,7 @@ Accuracy is the ability to ensure the correctness of output results. Some accura
 
 The speed and the read rate are the other two dimensions of performance and they are defined as follows. They might be sacrificed if you are trying to improve the accuracy.
 
-$ Speed = \frac{Total~Time~Consumption}{Number~of~All~decoded~Barcode~Results} $
+$ Speed = \frac{Number~of~All~decoded~Barcode~Results}{Total~Time~Consumption} $
 
 $ Read~Rate = \frac{Number~of~All~Decoded~Barcode~Results}{Number~of~All~Target~Barcodes} $
 
@@ -92,23 +92,19 @@ When the target barcodes are confirmed, the barcode texts might have common feat
 - [`BarcodeTextRegExPattern`]({{site.parameters_reference}}barcode-text-regex-pattern.html)
 - [`BarcodeTextLengthRangeArray`]({{site.parameters_reference}}barcode-text-length-range-array.html)
 
-### Balance the Accuracy and Read Rate on Error Prone Barcodes
-
-**Skip Small-Module Barcodes**
+### Exclude Small-Module Barcodes
 
 The smaller the module size of the barcodes, the lower accuracy of the results. You can use the `FormatSpecificant` parameter `ModuleSizeRangeArray` to specify the minimum acceptable module size of the barcodes. You can also increase the `scaleDownThreshold` value to ensure the barcodes are not shrunk too small.
 
-**Strategies on Blurry Barcodes**
+### Strategies on Blurry Barcodes
 
 `DeblurModes` is the parameter that controls the ability to decode blurry barcodes. There are multiple modes available under the index of `DeblurModes`. The more modes you enable, the more effort the library will spend to decode images. However, the blurry images are error-prone. Therefore, the risk of misreading is increased at the same time when the read rate on blurry images is improved.
 
-- Simplify `DeblurModes` settings for video barcode scanning
+- IF accuracy is the first priority
 
-Since there are multiple video frames for the barcode reader to process, it is not such important to decode successfully on a blurry barcode. Generally, you can reduce the enabled `DeblurModes` to improve both the speed and accuracy of the barcode decoding. However, if the target barcodes are badly printed or the working environment is terrible, a low-level `DeblurModes` setting might unable to read the barcodes. On this occasion, to keep the read rate at an acceptable level, it is recommended to enable more `DeblurModes` and configure the other settings like confidence and multi-frame verification to ensure accuracy.
+- IF accuracy can be balanced
 
-- Keep high-level `DeblurModes` settings for image barcode decoding
-
-For image barcode decoding, it is necessary to keep both the accuracy and the read rate at a high level to ensure that you can get the correct barcode result from the image. As a result, the lowest level of `DeblurModes` might not cover the usage scenarios. It is recommended to enhance the other accuracy-friendly parameter settings and enable a high-level `DeblurModes` setting.
+- IF read rate should be kept at high-level
 
 **Related API(s)/Parameter(s)**
 
