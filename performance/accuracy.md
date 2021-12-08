@@ -26,7 +26,7 @@ breadcrumbText: Accuracy
 
 </script>
 
-# How to create a High-Accuracy barcode reader
+# How to boost barcode reading Accuracy
 
 This article illustrates how Dynamsoft Barcode Reader (hereafter referred to as "DBR") is designed to ensure the accuracy of barcode results and how you can add settings to further improve the accuracy.
 
