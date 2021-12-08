@@ -8,21 +8,44 @@ noTitleIndex: true
 breadcrumbText: Accuracy
 ---
 
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+<script type="text/x-mathjax-config">
+
+    MathJax.Hub.Config({
+
+        tex2jax: {
+
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+
+        inlineMath: [['$','$']]
+
+        }
+
+    });
+
+</script>
+
 # How to create a High-Accuracy barcode reader
 
-Basic Concept:
+This article illustrates how Dynamsoft Barcode Reader (hereafter referred to as "DBR") is designed to ensure the accuracy of barcode results and how you can add settings to further improve the accuracy.
 
-$ Speed = \frac{Total~Time~Consumption}{All~decoded~Barcode~Results} $
+## Definitions
 
-$ Read~Rate = \frac{All~Decoded~Barcodes}{All~Target~Barcodes} $
+The accuracy of the barcode reader is defined as follow:
 
-$ Accuracy = \frac{Correctly~Decoded~Barcodes}{All~Decoded~Barcodes} $
+$ Accuracy = \frac{Number~of~Correctly~Decoded~Barcode~Results}{Number~of~All~Decoded~Barcode~Results} $
 
-The default parameter of Dynamsoft Barcode Reader is accurate enough for general usage scenarios. However, if you are using DBR for some specified scenarios like auto processing without manual verification, you must expect the accuracy of the barcode reader to reach a high extent.
+Accuracy is the ability to ensure the correctness of output results. Some accuracy protections are enabled as the default settings of DBR. However, you can further improve the accuracy when the usage scenario has the following features:
 
-<!--
-The default parameter of Dynamsoft Barcode Reader is accurate enough for general usage scenarios. However, if you are using DBR for some specified scenarios, you can still add the following configurations to further improve the accuracy of your barcode reading program.
--->
+- Highly automated barcode processing without manual verification.
+- Most of the target barcodes are badly printed.
+
+The speed and the read rate are the other two dimensions of performance and they are defined as follows. They might be sacrificed if you are trying to improve the accuracy.
+
+$ Speed = \frac{Total~Time~Consumption}{Number~of~All~decoded~Barcode~Results} $
+
+$ Read~Rate = \frac{Number~of~All~Decoded~Barcode~Results}{Number~of~All~Target~Barcodes} $
 
 ## General Settings
 
@@ -79,16 +102,41 @@ The smaller the module size of the barcodes, the lower accuracy of the results. 
 
 **Skip Blurry Barcodes**
 
-DeblurModes is the parameter that controls the ability to decode blurry barcodes. When processing the barcodes, DBR will try all available deblur modes until the barcodes are decoded successfully. Therefore, the more deblur modes you set, the more opportunity you have to decode a blurry image.
+`DeblurModes` is the parameter that controls the ability to decode blurry barcodes. There are multiple modes available under the index of `DeblurModes`. The more modes you enable, the more effort the library will spend to decode images. However, the blurry images are error-prone. Therefore, the risk of misreading is increased at the same time when the read rate on blurry images is improved.
 
-However, the blurry images are error-prone. When it is unnecessary to decode the blurry barcode in the usage scenario, you can reduce the DeblurModes settings to ensure the barcode decoding accuracy instead of the read rate.
+- Video Barcode Scanning
+
+Since there are multiple video frames for the barcode reader to process, it is not such important to decode successfully on a blurry barcode. Generally, you can reduce the enabled `DeblurModes` to improve both the speed and accuracy of the barcode decoding. However, if the target barcodes are badly printed or the working environment is terrible, a low-level `DeblurModes` setting might unable to read the barcodes. In this occassion, to keep the read rate at an acceptable level, it is recommended to enable more `DeblurModes` and configure the other settings like confidence and multi-frame verification to ensure the accuracy.
+
+- Image barcode decoding
+
+For image barcode decoding, it is necessary to keep both the accuracy and the read rate at high-level to ensure that you can get a correct barcode result from the image. As a result, the lowest level of `DeblurModes` might not cover the usage scenarios. It is recommended to enhance the other accuracy-friendly parameter settings and enable a high-level `DeblurModes` setting.
 
 **Related API(s)/Parameter(s)**
 
 - [`ModuleSizeRangeArray`]({{site.parameters_reference}}module-size-range-array.html)
 - [`scaleDownThreshold`]({{site.parameters_reference}}scale-down-threshold.html)
 - [`DeblurModes`]({{site.parameters_reference}}deblur-modes.html)
-<!--  - [`DeblurLevel`]({{site.parameters_reference}}deblur-level.html)-->
+
+<!--
+
+## Optional Settings
+
+The following parameter settings do not have obvious effects but still benefit the barcode decoding accuracy.
+
+### Remove the Texture
+
+`TextureDetectionModes` is designed for detecting and removing the texture on the image. When `TextureDetecttionModes` is set to `TDM_GENERAL_WIDTH_CONCENTRATION`, you can set the sensitivity level of texture detection. The value range is between 1 to 9 and the larger the value of this parameter, the more obvious the texture detection effect is.
+
+If there exists texture area on the image, the `TextureDetectionModes` will definitely improve both the barcode decoding speed and accuracy. However, if there doesn't exist a texture area, the barcode decoding speed will be declined.
+
+### Filter out the Text
+
+`TextFilterModes` is designed for filtering the text on the image. Set the `TextFilterModes` to `TFM_GENERAL_CONTOUR` to make the text filter. The text filter is also available for sensitivity level settings from 1 to 9. Please note, the text filter will have no effects when you are using localization modes `LM_CONNECTED_BLOCKS` and `LM_SCAN_DIRECTLY`.
+
+If there exists a text area on the image, the `TextFilterModes` will definitely improve both the barcode decoding speed and accuracy. However, if there doesn't exist a text area, the barcode decoding speed will be declined.
+
+-->
 
 ## External Settings – Camera Enhancer Settings
 
@@ -110,3 +158,7 @@ A higher resolution will promote the sharpness of the video frames and also enla
 
 - <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/android/primary-api/camera-enhancer.html?ver=latest#enablefeatures" target="_blank">`CameraEnhancer.enableFeatures`</a>
 - <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/android/primary-api/camera-enhancer.html?ver=latest#setresolution" target="_blank">`CameraEnhancer.setResolution`</a>
+
+### Set the Scan Region
+
+You can specify the scan region via DCE to remove the noninterest areas. The video frames will be cropped before barcode decoding so that the barcode reader will not be disturbed by the noninterest information and process even more fast and accurate.
