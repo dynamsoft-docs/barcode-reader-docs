@@ -92,7 +92,7 @@ When the target barcodes are confirmed, the barcode texts might have common feat
 - [`BarcodeTextRegExPattern`]({{site.parameters_reference}}barcode-text-regex-pattern.html)
 - [`BarcodeTextLengthRangeArray`]({{site.parameters_reference}}barcode-text-length-range-array.html)
 
-### Skip Error-Prone Barcode
+### Skip Error-Prone Areas
 
 You might still get results from badly printed barcodes or blurry images. If accuracy is on the first priority, you make the following parameter configurations to skip the error-prone barcodes.
 
