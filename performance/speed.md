@@ -8,13 +8,41 @@ noTitleIndex: true
 breadcrumbText: Speed
 ---
 
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+<script type="text/x-mathjax-config">
+
+    MathJax.Hub.Config({
+
+        tex2jax: {
+
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+
+        inlineMath: [['$','$']]
+
+        }
+
+    });
+
+</script>
+
 # How to boost barcode reading speed
 
-Barcodes are meant for fast exchange of information. Speed is a key metric in barcode reading. In this article, we try to look at all the possible measures you can take to let the Dynamsoft Barcode Reader SDK (hereafter referred to as "DBR") focus on speed, which means returning results as quickly as possible. 
+Speed is a key metric in barcode reading. The definition of "speed" is:
 
-Before we dig deep into the algorithm of DBR, let's first look at some obvious measures.
+$ Speed = \frac{Number~of~All~Decoded~Barcode~Results}{Total~Time~Consumed} $
 
-## Obvious TIPs for better speed
+Barcodes are meant for fast exchange of information, therefore, speed is very important. However, when focusing on speed, the other metrics on performance may be affected. These metrics are "accuracy" and "read rate":
+
+$ Accuracy = \frac{Number~of~Correctly~Decoded~Barcode~Results}{Number~of~All~Decoded~Barcode~Results} $
+
+$ Read~Rate = \frac{Number~of~All~Decoded~Barcode~Results}{Number~of~All~Target~Barcodes} $
+
+In this article, we try to look at all the possible measures you can take to let the Dynamsoft Barcode Reader SDK (hereafter referred to as "DBR") focus on speed. Do bear in mind that "accuracy" and "read rate" may not be ideal when speed is the first priority.
+
+Now, before we dig deep into the algorithm of DBR, let's first look at some obvious measures.
+
+## Try obvious TIPs for better speed
 
 ### Focus on the barcode types of interest
 
@@ -26,7 +54,7 @@ The related parameters are `BarcodeFormatIds` and `BarcodeFormatIds_2` .
 
 By default, DBR tries to find as many barcodes as possible. Assume an image is very big but has only one barcode at the top, DBR finds the barcode instantly but will spend more time scanning the rest of the image or even try more steps to find more barcodes. By telling DBR that we are only expecting one barcode, it will stop reading the image as soon as that barcode is found.
 
-The related parameter is `ExpectedBarcodesCount` .
+The related parameter is `ExpectedBarcodesCount` . Note that it can be set to 0 or any natural number. Try not to set it higher than the actual number of barcodes on the image, otherwise the algorithm will exhaust all possible methods to find barcodes, which can be very time-consuming. If you are not sure how many barcodes there might be, set it to 0 is recommended.
 
 ### Delimit the ROI (region of interest)
 
@@ -62,7 +90,7 @@ The related parameters are `TerminatePhase` , `IntermediateResultTypes` and `Int
 
 Writing the disk can be a time-consuming process. With DBR, disk writing happens when outputting logs, intermediate results, etc.. In most cases, keeping a log or saving intermediate results to the disk is only required during development or debugging and should be avoided for production.
 
-If the above still isn't enough, read on to find more ways to boost the speed.
+The above 7 measures usually show great improvement in speed already, but if it is still not fast enough, read on to find more inconspicuous ways to boost the speed while we go through the algorithm in the barcode reading process.
 
 ## Get even faster in every stage
 
@@ -99,20 +127,20 @@ Besides the above, DCE also does the following
 
 To sum up, with the help of DCE, DBR can focus on images with clear barcodes to read.
 
-> TIPs:
->  
-> * Try not to use very high resolutions unless absolutely necessary. 720P (1280 * 720) usually works fine.
-> * Set a scan region with DCE can significantly speed things up.
-> * DCE and DBR run in parallel, so it's ok to enable more DCE features without affecting the overall speed.
+TIPs:
+ 
+* Try not to use very high resolutions unless absolutely necessary. 720P (1280 * 720) usually works fine.
+* Set a scan region with DCE can significantly speed things up.
+* DCE and DBR run in parallel, so it's ok to enable more DCE features without affecting the overall speed.
 
 #### Scale down a monstrous image
 
 <!--scaleDownThreshold-->
 When locating barcodes, DBR scans the whole image, so the larger the size of the image, the more time it takes. However, a barcode usually keeps its shape and can be read correctly even when the image gets scaled down. Therefore, DBR shrinks very large images before reading them. The parameter [ScaleDownThreshold](https://www.dynamsoft.com/barcode-reader/parameters/reference/scale-down-threshold.html) can be used to determine the thredshold beyond which the scaling down happens.
 
-> TIP:
->  
-> Try not to set the threshold too low which might make the barcode too dense to be read.
+TIP:
+ 
+Try not to set the threshold too low which might make the barcode too dense to be read.
 
 <!--colourClusteringModes seems to have no effect?
 
@@ -129,9 +157,9 @@ If the original image is not a grayscale image, DBR will convert it to a graysca
 
 When locating barcodes, DBR expects the barcodes to be normal. Therefore, if an image in fact has inverted barcodes, DBR needs to invert the color of the image in advance. This process is called grayscale transformation and is controlled by the parameter [GrayscaleTransformationModes](https://www.dynamsoft.com/barcode-reader/parameters/reference/grayscale-transformation-modes.html?ver=latest).
 
-> TIP:
->  
-> DBR goes through grayscale transformation mode one by one and all subsequent steps will be applied to the resulting image of each mode. Therefore, for better speed, set only one grayscale transformation mode according to the images to read.
+TIP:
+ 
+DBR goes through grayscale transformation mode one by one and all subsequent steps will be applied to the resulting image of each mode. Therefore, for better speed, set only one grayscale transformation mode according to the images to read.
 
 #### Detect or define the ROI
 
@@ -142,10 +170,10 @@ There are two ways to specify the region:
 * as already mentioned previously in [Delimit the ROI](#delimit-the-roi-region-of-interest), you can manually define a region by providing the coordinates of its contours. Each region is defined by a [RegionDefinitions](https://www.dynamsoft.com/barcode-reader/parameters/reference/region-definition/) and then specified by [RegionDefinitionNameArray](https://www.dynamsoft.com/barcode-reader/parameters/reference/image-parameter/index.html#regiondefinitionnamearray); 
 * let DBR find the region based on the colour/grayscale distribution of different parts of the image, this is controlled by the parameter [RegionPredetectionModes](https://www.dynamsoft.com/barcode-reader/parameters/reference/region-predetection-modes.html#regionpredetectionmodes).
 
-> TIPs:
->  
-> * For a very large image, region predetection helps.
-> * If the region is certain and can be defined manually, using the first way can save more time than the second because region predetection usually invovles processing of multiple zones and chances are only only one of these zones has the intended barcode.
+TIPs:
+ 
+* For a very large image, region predetection helps.
+* If the region is certain and can be defined manually, using the first way can save more time than the second because region predetection usually invovles processing of multiple zones and chances are only only one of these zones has the intended barcode.
 
 <!--NOTE
 
@@ -163,27 +191,28 @@ In this stage, we first turn the grayscal image into a binary image and then loc
 
 The grayscale image is the basis for the following steps. The better the quality, the faster the later steps can be. Use the parameter [ImagePreprocessingModes](https://www.dynamsoft.com/barcode-reader/parameters/reference/image-preprocessing-modes.html#imagepreprocessingmodes) to specify how the quality is enhanced.
 
-> TIP:
->  
-> DBR goes through all specified image preprocessing modes. Therefore, try to limit the mode to just one which is best suited to the target images or simply skip the grayscale enhancing.
-
-#### Remove texture and filter text
-
-The less the noise, the faster the localization. Use the parameters [TextureDetectionModes](https://www.dynamsoft.com/barcode-reader/parameters/reference/texture-detection-modes.html#texturedetectionmodes) and [TextFilterModes](https://www.dynamsoft.com/barcode-reader/parameters/reference/text-filter-modes.html#textfiltermodes) to remove texture and filter the text in the resulting binary image.
-
-> TIPs:
->  
-> * To speed things up, skip these two operations for images which don't show much texture nor text.
-> * If the images to read do come with texture or text, enable one of the two operations can help.
+TIP:
+ 
+DBR goes through all specified image preprocessing modes. Therefore, try to limit the mode to just one which is best suited to the target images or simply skip the grayscale enhancing.
 
 #### Generate a good binary image
 
 The binary image is the basis for the localization of barcodes. Depending on the lighting conditions, we can choose either the mode [BM_THRESHOLD](https://www.dynamsoft.com/barcode-reader/parameters/scenario-settings/how-to-set-binarization-modes.html?ver=latest#bm_threshold) or [BM_LOCAL_BLOCK](https://www.dynamsoft.com/barcode-reader/parameters/scenario-settings/how-to-set-binarization-modes.html?ver=latest#bm_local_block) for the parameter [BinarizationModes](https://www.dynamsoft.com/barcode-reader/parameters/reference/binarization-modes.html#binarizationmodes).
 
-> TIPs:
->  
-> * `BM_THRESHOLD` is meant for images acquired with high quality like scanned documents, etc. while `BM_LOCAL_BLOCK` handles more complicated images like the ones acquired from a video input. Try not to set both modes since DBR will try both and it slows things down.
-> * For `BM_LOCAL_BLOCK` , specifying the block size ( `BlockSizeX` & `BlockSizeX` ) to an appropriate value (5 ~ 8 times the module size) can speed things up.
+TIPs:
+ 
+* `BM_THRESHOLD` is meant for images acquired with high quality like scanned documents, etc. while `BM_LOCAL_BLOCK` handles more complicated images like the ones acquired from a video input. Using `BM_THRESHOLD` alone can significantly improve speed but the read rate might not be good if the images are not clear enough.
+* For `BM_LOCAL_BLOCK` , specifying the block size ( `BlockSizeX` & `BlockSizeX` ) to an appropriate value (5 ~ 8 times the module size) can speed things up. However, if `BlockSizeX` & `BlockSizeX` are not set manually, DBR will determine their default values based on the size of the image, therefore if a barcode takes much of the image, it's very likely that vacancies will appear in the barcode lines in the binarized image. The argument `EnableFillBinaryVacancy` can be set to tell DBR to fill these vacancies but it is a time-consuming operation. Therefore, set `EnableFillBinaryVacancy` to `false` can also speed things up where `BlockSizeX` & `BlockSizeX` are already set properly.
+* Try not to set both modes since DBR will try both and it slows things down. If you must set both, set `BM_THRESHOLD` as the first option.
+
+#### Remove texture and filter text
+
+The less the noise, the faster the localization. Use the parameters [TextureDetectionModes](https://www.dynamsoft.com/barcode-reader/parameters/reference/texture-detection-modes.html#texturedetectionmodes) and [TextFilterModes](https://www.dynamsoft.com/barcode-reader/parameters/reference/text-filter-modes.html#textfiltermodes) to remove texture and filter the text in the resulting binary image.
+
+TIPs:
+ 
+* To speed things up, skip these two operations for images which don't show much texture nor text.
+* If the images to read do come with texture or text, enable one of the two operations can help.
 
 #### Optimize the barcode zone localization
 
@@ -191,41 +220,55 @@ Now that we have a binary image, we can start locating the barcode zones. There 
 
 The parameter to configure the localization is callded [LocalizationModes](https://www.dynamsoft.com/barcode-reader/parameters/reference/localization-modes.html#localizationmodes). Each mode is either optmized for one or a few types of barcodes or optimized for a certain usage scenario.
 
-> TIPs:
->  
-> * If the barcodes to read are of a certain type or types or the usage scenario is certain, limit the localization modes to one or two.
-> * `LM_CONNECTED_BLOCKS` is recommended as a back-up mode in all cases.
-> If the barcodes to scan have certain characteristics, a localization mode can be further adjusted for better speed. For example, for the mode `LM_ONED_FAST_SCAN` , you can set a bigger `ScanStride` and set a fixed `ScanDirection` to speed things up.
+TIPs:
+ 
+* If the barcodes to read are of a certain type or types or the usage scenario is certain, limit the localization modes to one or two. 
+  + If the barcodes to read are all linear ones and are clear, use `LM_ONED_FAST_SCAN` .
+  + If the barcodes to read are QR or DataMatrix codes, use `LM_STATISTICS` .
+  + If the barcodes to read are linear or PDF417 codes, use `LM_LINES` .
+  + If the barcodes to read are DPM codes, use `LM_STATISTICS_MARKS` .
+  + If the barcodes to read are postal codes, use `LM_STATISTICS_POSTAL_CODE` .
+* For interactive scenarios, use `LM_SCAN_DIRECTLY` to improve speed.
+* If barcodes are located at the center of the image, use `LM_CENTRE` for better speed.
+* The above 7 modes can be used alone but it's recommended to always add `LM_CONNECTED_BLOCKS` as a back-up mode or even as the prioritized mode in all cases.
+If the barcodes to scan have certain characteristics, a localization mode can be further adjusted for better speed. For example, for the mode `LM_ONED_FAST_SCAN` , you can set a bigger `ScanStride` and set a fixed `ScanDirection` to speed things up.
 
 > NOTE: The internal design for speed
 >  
-> Although each localization mode stands for a unique algorithm, they all share the same design: scan the image once to find all types of barcodes. And because DBR scans for the characteristics of all types of barcodes at once, it doesn't need to process the same image twice or more times when different types of barcodes are required. In other words, whether you just need to scan barcodes of a particular type or multiple types, the time cost is almost the same.
+> Although each localization mode stands for a unique algorithm, most of them ( `LM_CONNECTED_BLOCKS` and `LM_LINES` in particular) share the same design: scan the image once to find all types of barcodes. And because DBR scans for the characteristics of all types of barcodes at once, it doesn't need to process the same image twice or more times when different types of barcodes are required. In other words, whether you just need to scan barcodes of a particular type or multiple types, the time cost is almost the same.
 
 ### Stage 3 Partition the barcode zones
 
 Entering this stage, we have barcode zones located on an image. We can cut these particular zones from the image and try decoding the barcode symbols in stage 4. To speed things up, in this stage we make sure each barcode zone is cut precisely on its boundaries and that its format is correctly determined to pass along.
 
-> TIPs:
->  
-> * Change the colour mode with [BarcodeColourModes](https://www.dynamsoft.com/barcode-reader/parameters/reference/barcode-colour-modes.html#barcodecolourmodes) if the intended barcodes are not in the more natural form of "dark symbol on light background".
-> * Try not to specify more than one colour modes.
+TIPs:
+ 
+* Change the colour mode with [BarcodeColourModes](https://www.dynamsoft.com/barcode-reader/parameters/reference/barcode-colour-modes.html#barcodecolourmodes) if the intended barcodes are not in the more natural form of "dark symbol on light background".
+* Try not to specify more than one colour modes.
 
 <!-- relation with inverted transformation?-->
 
 ### Stage 4 Decode a barcode zone
 
-Entering this stage, we have well partitioned barcode zone images that await decoding. We know the type of the barcode on each image but the image itself could be blurry, incomplete or deformed. DBR has algorithms to handle all these situations with the parameters [DeblurModes](https://www.dynamsoft.com/barcode-reader/parameters/reference/deblur-modes.html#deblurmodes) or [DeblurLevel](https://www.dynamsoft.com/barcode-reader/parameters/reference/deblur-level.html), [BarcodeComplementModes](https://www.dynamsoft.com/barcode-reader/parameters/reference/barcode-complement-modes.html#barcodecomplementmodes) and [DeformationResistingModes](https://www.dynamsoft.com/barcode-reader/parameters/reference/deformation-resisting-modes.html#deformationresistingmodes), etc.
+Entering this stage, we have well partitioned barcode zone images that await decoding. We know the type of the barcode on each image but the image itself could be blurry, incomplete or deformed. DBR has algorithms to handle all these situations with the parameters [DeblurModes](https://www.dynamsoft.com/barcode-reader/parameters/reference/deblur-modes.html#deblurmodes), [BarcodeComplementModes](https://www.dynamsoft.com/barcode-reader/parameters/reference/barcode-complement-modes.html#barcodecomplementmodes) and [DeformationResistingModes](https://www.dynamsoft.com/barcode-reader/parameters/reference/deformation-resisting-modes.html#deformationresistingmodes), etc.
 
-> TIPs:
->  
-> * For best speed, we usually ignore images with bad qualities, therefore we skip the steps defined by `BarcodeComplementModes` and `DeformationResistingModes` .
-> * Deblurring is usally important and by default we enable all deblurring algorithms. However, if we put speed first, we can ask DBR to try just one or two of them by setting `DeblurLevel` to 0 or specifically specify one or two modes with `DeblurModes` ; 
+TIPs:
+ 
+* For best speed, we usually ignore images with bad qualities, therefore we skip the steps defined by `BarcodeComplementModes` and `DeformationResistingModes` .
+* Deblurring is usally important and by default we enable all deblurring algorithms. However, if we put speed first, we can ask DBR to try just one or two of them by specifying one or two modes with `DeblurModes` . 
+* For best speed and especially for interactive scenarios like reading from a video input, set only `DM_BASED_ON_LOC_BIN`. 
+* If the image quality is not good enough, you can add one or a few of these modes `DM_THRESHOLD_BINARIZATION`, `DM_GRAY_EQUALIZATION`, `DM_SMOOTHING`, `DM_MORPHING`,  `DM_SHARPENING` and `DM_SHARPENING_SMOOTHING`. These modes will process the pixels in the barcoe zones again for better recognition.
+* For speed, avoid using `DM_DEEP_ANALYSIS` which is designed for desperate scenarios where read rate is prioritized.
 
 ### Stage 5 Output the results
 
 Entering this final stage, we have barcode results ready to be returned. To improve accuracy, we can tell DBR to filter and sort the results before outputing them. This process is very fast and in most cases, we don't need to adjust it for speed.
 
 The related parameters are [BarcodeTextRegExPattern](https://www.dynamsoft.com/barcode-reader/parameters/reference/barcode-text-regex-pattern.html), [BarcodeTextLengthRangeArray](https://www.dynamsoft.com/barcode-reader/parameters/reference/barcode-text-length-range-array.html), [TextResultOrderModes](https://www.dynamsoft.com/barcode-reader/parameters/reference/text-result-order-modes.html#textresultordermodes) and [MinResultConfidence](https://www.dynamsoft.com/barcode-reader/parameters/reference/min-result-confidence.html?ver=latest), etc.
+
+## Fine-tune the performance further with FormatSpecification
+
+If even better speed is desired, we can set limitations on barcode searching for each type of barcodes so that DBR can quickly skip uninterested zones. The related parameters include [BarcodeAngleRangeArray](https://www.dynamsoft.com/barcode-reader/parameters/reference/format-specification/format-control.html#barcodeanglerangearray), [BarcodeHeightRangeArray](https://www.dynamsoft.com/barcode-reader/parameters/reference/format-specification/format-control.html#barcodeheightrangearray),  [BarcodeWidthRangeArray](https://www.dynamsoft.com/barcode-reader/parameters/reference/format-specification/format-control.html#barcodewidthrangearray), [BarcodeTextLengthRangeArray](https://www.dynamsoft.com/barcode-reader/parameters/reference/format-specification/format-control.html#barcodetextlengthrangearray), [BarcodeZoneBarCountRangeArray](https://www.dynamsoft.com/barcode-reader/parameters/reference/format-specification/format-control.html#barcodezonebarcountrangearray) and [ModuleSizeRangeArray](https://www.dynamsoft.com/barcode-reader/parameters/reference/format-specification/format-control.html#modulesizerangearray), etc. Click each parameter to learn more about them and when to use them.
 
 ## Summary
 
