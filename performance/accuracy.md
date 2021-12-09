@@ -98,7 +98,7 @@ The smaller the module size of the barcodes, the lower accuracy of the results. 
 
 ### Strategies on Blurry Barcodes
 
-`DeblurModes` is the parameter that controls the ability to decode blurry barcodes. There are multiple modes available under the index of `DeblurModes`. The more modes you enable, the more effort the library will spend to decode images. However, the blurry images are error-prone. Therefore, the risk of misreading is increased at the same time when the read rate on blurry images is improved.
+`DeblurModes` is the parameter that controls the ability to decode blurry barcodes. There are multiple modes available under the index of `DeblurModes`. The more modes you enable, the more effort the library will spend to decode images. 
 
 - IF accuracy is the first priority
 
