@@ -9,7 +9,7 @@ description: Dynamsoft Barcode Reader supports the following programming languag
 
 # Programming
 
-This section covers the following programming languages:
+Learn how to use Dynamsoft Barcode Reader SDK in different programming languages:
 
 - [JavaScript]({{ site.js }})
 - [C]({{ site.c }})
