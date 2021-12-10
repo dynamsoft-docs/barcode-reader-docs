@@ -87,7 +87,6 @@ camera: /camera-enhancer/docs/introduction/
 baseurl: "/barcode-reader"
 plugins:
   - jemoji
-  - jekyll-sitemap
 
 defaults:
   - scope:
@@ -113,9 +112,5 @@ defaults:
       noTitleIndex: true
       needAutoGenerateSidebar: true
       needGenerateH3Content: true
-  - scope:
-      path: "Hide_Tree_Page.html"
-    values:
-      sitemap: false
 
 url: "https://www.dynamsoft.com" # sitemap root
