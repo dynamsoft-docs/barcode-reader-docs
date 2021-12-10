@@ -98,11 +98,15 @@ The smaller the module size of the barcodes, the lower accuracy of the results. 
 
 ### Strategies on Blurry Barcodes
 
-`DeblurModes` is the parameter that controls the ability to decode blurry barcodes. There are multiple modes available under the index of `DeblurModes`. The more modes you enable, the more effort the library will spend to decode images. However, the blurry images are error-prone. Therefore, the risk of misreading is increased at the same time when the read rate on blurry images is improved.
+`DeblurModes` is the parameter that controls how much effort DBR will spend to process the blurry images. When `DeblurModes` is set to the highest level, the barcode reader will be able to decode from highly blurred barcodes. However, the higher the blurriness of the image, the higher the processing difficulty and also the higher risk of misreading. Therefore, for different use scenarios, there are different strategies to balance the accuracy and the read rate. The following strategies might help you on optimizing the `DeblurModes` settings.
 
 - IF accuracy is the first priority
 
+It is recommended to enable the `DM_BASED_ON_LOC_BIN` and `DM_THRESHOLD_BINARIZATION` in your project even if you don't have to work on the blurry images. This setting benefits the accuracy and speed at the same time but reduce the read rate.
+
 - IF accuracy can be balanced
+
+
 
 - IF read rate should be kept at high-level
 
