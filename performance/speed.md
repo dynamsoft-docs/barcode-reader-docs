@@ -42,7 +42,7 @@ In this article, we try to look at all the possible measures you can take to let
 
 Now, before we dig deep into the algorithm of DBR, let's first look at some obvious measures.
 
-## Try obvious TIPs for better speed
+## Try obvious and effective ways for better speed
 
 ### Focus on the barcode types of interest
 
@@ -202,7 +202,7 @@ The binary image is the basis for the localization of barcodes. Depending on the
 TIPs:
  
 * `BM_THRESHOLD` is meant for images acquired with high quality like scanned documents, etc. while `BM_LOCAL_BLOCK` handles more complicated images like the ones acquired from a video input. Using `BM_THRESHOLD` alone can significantly improve speed but the read rate might not be good if the images are not clear enough.
-* For `BM_LOCAL_BLOCK` , specifying the block size ( `BlockSizeX` & `BlockSizeX` ) to an appropriate value (5 ~ 8 times the module size) can speed things up. However, if `BlockSizeX` & `BlockSizeX` are not set manually, DBR will determine their default values based on the size of the image, therefore if a barcode takes much of the image, it's very likely that vacancies will appear in the barcode lines in the binarized image. The argument `EnableFillBinaryVacancy` can be set to tell DBR to fill these vacancies but it is a time-consuming operation. Therefore, set `EnableFillBinaryVacancy` to `false` can also speed things up where `BlockSizeX` & `BlockSizeX` are already set properly.
+* For `BM_LOCAL_BLOCK` , specifying the block size ( `BlockSizeX` & `BlockSizeY` ) to an appropriate value (5 ~ 8 times the module size) can speed things up. However, if `BlockSizeX` & `BlockSizeY` are not set manually, DBR will determine their default values based on the size of the image, therefore if a barcode takes much of the image, it's very likely that vacancies will appear in the barcode lines in the binarized image. The argument `EnableFillBinaryVacancy` can be set to tell DBR to fill these vacancies but it is a time-consuming operation. Therefore, set `EnableFillBinaryVacancy` to `false` can also speed things up where `BlockSizeX` & `BlockSizeY` are already set properly.
 * Try not to set both modes since DBR will try both and it slows things down. If you must set both, set `BM_THRESHOLD` as the first option.
 
 #### Remove texture and filter text
@@ -224,14 +224,14 @@ TIPs:
  
 * If the barcodes to read are of a certain type or types or the usage scenario is certain, limit the localization modes to one or two. 
   + If the barcodes to read are all linear ones and are clear, use `LM_ONED_FAST_SCAN` .
-  + If the barcodes to read are QR or DataMatrix codes, use `LM_STATISTICS` .
   + If the barcodes to read are linear or PDF417 codes, use `LM_LINES` .
+  + If the barcodes to read are QR or DataMatrix codes, use `LM_STATISTICS` .
   + If the barcodes to read are DPM codes, use `LM_STATISTICS_MARKS` .
   + If the barcodes to read are postal codes, use `LM_STATISTICS_POSTAL_CODE` .
-* For interactive scenarios, use `LM_SCAN_DIRECTLY` to improve speed.
-* If barcodes are located at the center of the image, use `LM_CENTRE` for better speed.
+* For interactive scenarios, use `LM_SCAN_DIRECTLY` to improve speed (all formats).
+* If barcodes are located at the center of the image, use `LM_CENTRE` for better speed (mostly for QR or DataMatrix codes).
 * The above 7 modes can be used alone but it's recommended to always add `LM_CONNECTED_BLOCKS` as a back-up mode or even as the prioritized mode in all cases.
-If the barcodes to scan have certain characteristics, a localization mode can be further adjusted for better speed. For example, for the mode `LM_ONED_FAST_SCAN` , you can set a bigger `ScanStride` and set a fixed `ScanDirection` to speed things up.
+* If the barcodes to scan have certain characteristics, a localization mode can be further adjusted for better speed. For example, for the mode `LM_ONED_FAST_SCAN` , you can set a bigger `ScanStride` and set a fixed `ScanDirection` to speed things up.
 
 > NOTE: The internal design for speed
 >  
@@ -243,8 +243,7 @@ Entering this stage, we have barcode zones located on an image. We can cut these
 
 TIPs:
  
-* Change the colour mode with [BarcodeColourModes](https://www.dynamsoft.com/barcode-reader/parameters/reference/barcode-colour-modes.html#barcodecolourmodes) if the intended barcodes are not in the more natural form of "dark symbol on light background".
-* Try not to specify more than one colour modes.
+* Change the colour mode with [BarcodeColourModes](https://www.dynamsoft.com/barcode-reader/parameters/reference/barcode-colour-modes.html#barcodecolourmodes) if the intended barcodes have dark background which may get in the way of finding the boundaries of the barcodes.
 
 <!-- relation with inverted transformation?-->
 
