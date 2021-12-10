@@ -8,6 +8,17 @@ needGenerateH3Content: false
 
 # Release Notes
 
+## 8.9.0
+
+### Highlights
+
+{%- include release-notes/product-highlight-8.9.0.md -%}
+
+### Editions
+
+| -- | -- |
+| [Android](../programming/android/release-notes/android-8.md#890-12142021) | [iOS](../programming/objectivec-swift/release-notes/ios-8.md#890-12142021) |
+
 ## 8.8.0
 
 ### Highlights
