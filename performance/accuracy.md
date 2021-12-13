@@ -98,17 +98,25 @@ The smaller the module size of the barcodes, the lower accuracy of the results. 
 
 ### Strategies on Blurry Barcodes
 
-`DeblurModes` is the parameter that controls how much effort DBR will spend to process the blurry images. When `DeblurModes` is set to the highest level, the barcode reader will be able to decode from highly blurred barcodes. However, the higher the blurriness of the image, the higher the processing difficulty and also the higher risk of misreading. Therefore, for different use scenarios, there are different strategies to balance the accuracy and the read rate. The following strategies might help you on optimizing the `DeblurModes` settings.
+`DeblurModes` is the parameter that controls how much effort DBR will spend to process the blurry images. This mode is highly related to the performance of the barcode processing. `DeblurModes` is set to the highest level by default so that the barcode reader will be able to decode successfully even if the image is highly blurred. However, the risk of misreading is increased at the same time when the barcode reader is trying to process highly blurred images. Therefore, a trade-off between the read rate and accuracy is required when configuring the `DeblurModes` parameter.
 
 - IF accuracy is the first priority
 
-It is recommended to enable the `DM_BASED_ON_LOC_BIN` and `DM_THRESHOLD_BINARIZATION` in your project even if you don't have to work on the blurry images. This setting benefits the accuracy and speed at the same time but reduce the read rate.
+Simplifying the `DeblurModes` will help you ensure the accuracy of barcode results. `DM_BASED_ON_LOC_BIN` and `DM_THRESHOLD_BINARIZATION` are the most fundamental deblur modes that are required to process the barcodes for the majority of usage scenarios. In addition, you can also add `DM_DIRECT_BINARIZATION` which is another basic candidate of `DeblurModes`. These basic settings can cover the majority of scenarios and keep the accuracy at a high level.
 
-- IF accuracy can be balanced
+- IF both the accuracy and read rate should be maintained
 
+If you find the readability on blurry images doesn't reach your requirements or the barcode reader can't recognize any barcodes from video streaming when the device is moving, you can try adding the following candidates to the `DeblurModes` settings.
 
+- `DM_GRAY_EQUALIZATION`
+- `DM_SMOOTHING`
+- `DM_SHARPENING`
+- `DM_SHARPENING_SMOOTHING`
+- `DM_MORPHING`
 
 - IF read rate should be kept at high-level
+
+If the image is highly blurred and you still want to get a barcode result from it, you can add `DM_DEEP_ANALYSIS` to the `DeblurModes` settings so that you can get the barcode results ignoring the accuracy.
 
 **Related API(s)/Parameter(s)**
 
