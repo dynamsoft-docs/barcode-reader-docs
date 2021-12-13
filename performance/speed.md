@@ -28,7 +28,7 @@ breadcrumbText: Speed
 
 # How to boost barcode reading speed
 
-In this article, we try to look at all the possible measures you can take to let the Dynamsoft Barcode Reader SDK (hereafter referred to as "DBR") focus on [speed](#speed). Do bear in mind that [accuracy](#accuracy) and [read rate](#read-rate) may not be ideal when speed is the first priority.
+In this article, we try to look at all the possible measures you can take to let the Dynamsoft Barcode Reader SDK (hereinafter referred to as "DBR") focus on [speed](#speed). Do bear in mind that [accuracy](#accuracy) and [read rate](#read-rate) may not be ideal when speed is the first priority.
 
 Before we dig deep into the algorithm of DBR, let's first look at some common measures.
 
@@ -94,7 +94,7 @@ Last but not least, the following 3 modes are designed for general use:
 **Recommendation**
  
 * Do not use the first 5 modes alone.
-* For interactive scenarios (reading from video input), use `LM_SCAN_DIRECTLY` followed by `LM_CONNECTED_BLOCKS`.
+* For interactive scenarios (reading from a video input), use `LM_SCAN_DIRECTLY` followed by `LM_CONNECTED_BLOCKS`.
 * For still image reading, use a mode based on the target barcode types then add `LM_CONNECTED_BLOCKS` as the back-up mode or set `LM_CONNECTED_BLOCKS` as the first mode followed by a mode for that specific type.
 
 **Localization Mode Customization**
@@ -123,13 +123,13 @@ As described in [Principles of Dynamsoft Barcode Reader Algorithm](https://www.d
 
 ### Stage 1 Get an ROI Image
 
-An ROI (region of interest) image is a grayscale image ready for barcode localization. 
+> An ROI (region of interest) image is a grayscale image ready for barcode localization. 
 
 The purpose of this stage is to output an ROI image that originates from a variety of sources, including an existing file, the buffer of another application or the frame of a video input. The first two sources are quite static, while the last source has a lot of room for improvement.
 
-#### Optimize frames from video input
+#### Optimize frames from a video input
 
-If you are reading barcodes from video input in mobile or web applications, SDK Dynamsoft Camera Enhancer (hereinafter referred to as "DCE") can be used to optimize the frames of the video input to increase the speed.
+If you are reading barcodes from a video input in mobile or web applications, the Dynamsoft Camera Enhancer SDK (hereinafter referred to as "DCE") can be used to optimize the frames of the video input to increase the speed.
 
 When reading barcodes from a video input, you get the best speed if:
 
