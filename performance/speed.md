@@ -51,7 +51,7 @@ By default, DBR tries to find as many barcodes as possible. Assume an image is v
 The related parameter is `ExpectedBarcodesCount` . Note that it can be set to 0 or any natural number. DBR's behaviour is as follows:
 
 * `ExpectedBarcodesCount` is 0: DBR tries to localize barcodes with the first mode set in [LocalizationModes](https://www.dynamsoft.com/barcode-reader/parameters/reference/localization-modes.html#localizationmodes). If barcodes are found, the rest of the modes are skipped and the recognition starts right away.
-* `ExpectedBarcodesCount` is an natural number: DBR tries to find as many barcodes as defined by this number. If enough barcodes have been found, the rest of the pending operations will be skipped. On the other hand, if the number of found barcodes is less than expected. DBR will exhaust all defined operations to find more.
+* `ExpectedBarcodesCount` is a natural number: DBR tries to find as many barcodes as defined by this number. If enough barcodes have been found, the rest of the pending operations will be skipped. On the other hand, if the number of found barcodes is less than expected. DBR will exhaust all defined operations to find more.
 
 **Recommendation**
 
@@ -63,20 +63,19 @@ The related parameter is `ExpectedBarcodesCount` . Note that it can be set to 0 
 
 The binary image is the basis for the localization of barcodes. Depending on the lighting conditions, we can choose either the mode [BM_THRESHOLD](https://www.dynamsoft.com/barcode-reader/parameters/scenario-settings/how-to-set-binarization-modes.html?ver=latest#bm_threshold) or [BM_LOCAL_BLOCK](https://www.dynamsoft.com/barcode-reader/parameters/scenario-settings/how-to-set-binarization-modes.html?ver=latest#bm_local_block) for the parameter [BinarizationModes](https://www.dynamsoft.com/barcode-reader/parameters/reference/binarization-modes.html#binarizationmodes).
 
-`BM_THRESHOLD` is meant for , etc. while `BM_LOCAL_BLOCK` handles more complicated images like the ones acquired from a video input.
-
 **Recommendation**
  
 * If the images to read are of high quality (acquired with good lighting conditions) like scanned documents, use `BM_THRESHOLD` alone can significantly improve speed.
 * If `BM_LOCAL_BLOCK` is used, the block size ( `BlockSizeX` & `BlockSizeY` ) should be set to an appropriate value (5 ~ 8 times the module size) and `EnableFillBinaryVacancy` should be set to `false`. 
+  > * As long as the block is not too small, the smaller its size, the faster it gets.
   > * If `BlockSizeX` & `BlockSizeY` are not set manually, DBR will determine their default values based on the size of the image.
-  > * If a barcode takes much of the image, it's very likely that vacancies will appear in the barcode lines in the binarized image in which case filling up the vacancies can help with the decoding. This operation is enabled with the argument `EnableFillBinaryVacancy` . However, filling up the vacancies is a time-consuming operation and should be avoided if speed is the top priority.
+  > * If the block size is not set properly, it's likely that vacancies will appear in the barcode modules in the binarized image in which case filling up the vacancies can help with the decoding. This operation is enabled with the argument `EnableFillBinaryVacancy` . However, filling up the vacancies is a time-consuming operation and should be avoided if speed is the top priority.
 
 * Try not to set both modes since DBR might try both and it slows things down. If you must set both, set `BM_THRESHOLD` as the first option.
 
 ### Adjust the localization modes
 
-A barcode is localized before it gets decoded. The localization process takes up a large portion of the overall time spent. DBR comes with 8 [LocalizationModes](https://www.dynamsoft.com/barcode-reader/parameters/reference/localization-modes.html#localizationmodes). We can adjust the modes to speed things up.
+A barcode is localized before it gets decoded. The localization process takes up a large portion of the overall time spent. DBR comes with 8 options for the parameter [LocalizationModes](https://www.dynamsoft.com/barcode-reader/parameters/reference/localization-modes.html#localizationmodes). We can adjust the modes to speed things up.
 
 Of the 8 modes, 3 of them are optimized for one or a few types of barcodes:
 * `LM_ONED_FAST_SCAN` works best for linear or 1D barcodes that are of relatively high quality; 
@@ -94,8 +93,8 @@ Last but not least, the following 3 modes are designed for general use:
 
 **Recommendation**
  
-* Do not use the first 5 modes alone; 
-* For interactive scenarios (reading from video input), use `LM_SCAN_DIRECTLY` followed by `LM_CONNECTED_BLOCKS`; 
+* Do not use the first 5 modes alone.
+* For interactive scenarios (reading from video input), use `LM_SCAN_DIRECTLY` followed by `LM_CONNECTED_BLOCKS`.
 * For still image reading, use a mode based on the target barcode types then add `LM_CONNECTED_BLOCKS` as the back-up mode or set `LM_CONNECTED_BLOCKS` as the first mode followed by a mode for that specific type.
 
 **Localization Mode Customization**
@@ -114,7 +113,7 @@ Deblurring is the last configurable step before a barcode is decoded. DBR by def
 
 **Recommendation**
 
-* For best speed and especially for interactive scenarios like reading from a video input, set only [DM_BASED_ON_LOC_BIN, DM_THRESHOLD_BINARIZATION]. 
+* For best speed and especially for interactive scenarios like reading from a video input, set only [`DM_BASED_ON_LOC_BIN`, `DM_THRESHOLD_BINARIZATION`]. 
 * If the image quality is not good enough, you can add one or a few of these modes `DM_DIRECT_BINARIZATION`, `DM_GRAY_EQUALIZATION`, `DM_SMOOTHING`, `DM_MORPHING`,  `DM_SHARPENING` and `DM_SHARPENING_SMOOTHING`. These modes will process the pixels in the barcoe zones again for better recognition.
 * For speed, avoid using `DM_DEEP_ANALYSIS` which is designed for desperate scenarios where read rate is prioritized.
 
@@ -205,7 +204,7 @@ There are two ways to specify the region:
 
 **Recommendation**
  
-* Set a region manually if the barcode(s) to read can always be located there.h
+* Set a region manually if the barcode(s) to read can always be located there.
 
 <!--NOTE
 
