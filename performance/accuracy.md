@@ -108,11 +108,12 @@ Simplifying the `DeblurModes` will help you ensure the accuracy of barcode resul
 
 If you find the readability on blurry images doesn't reach your requirements or the barcode reader can't recognize any barcodes from video streaming when the device is moving, you can try adding the following candidates to the `DeblurModes` settings.
 
-- `DM_GRAY_EQUALIZATION`
-- `DM_SMOOTHING`
-- `DM_SHARPENING`
-- `DM_SHARPENING_SMOOTHING`
-- `DM_MORPHING`
+| ----------------------- |
+| `DM_GRAY_EQUALIZATION` |
+| `DM_SMOOTHING` |
+| `DM_SHARPENING` |
+| `DM_SHARPENING_SMOOTHING` |
+| `DM_MORPHING` |
 
 - IF read rate should be kept at high-level
 
