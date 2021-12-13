@@ -233,7 +233,7 @@ This has been discussed above in [Determine the appropriate binarization mode](#
 
 #### Remove texture and filter text
 
-The less the noise, the faster the localization. Use the parameters [TextureDetectionModes](https://www.dynamsoft.com/barcode-reader/parameters/reference/texture-detection-modes.html#texturedetectionmodes) and [TextFilterModes](https://www.dynamsoft.com/barcode-reader/parameters/reference/text-filter-modes.html#textfiltermodes) to remove texture and filter the text in the resulting binary image.
+The less the noise, the faster the localization. Use the parameters [TextureDetectionModes](https://www.dynamsoft.com/barcode-reader/parameters/reference/texture-detection-modes.html#texturedetectionmodes) and [TextFilterModes](https://www.dynamsoft.com/barcode-reader/parameters/reference/text-filter-modes.html#textfiltermodes) to remove texture and filter text in the resulting binary image.
 
 **Recommendation**
  
@@ -306,7 +306,7 @@ The above 7 measures usually show great improvement in speed already, but if it 
 
 ## Summary
 
-In this article, we first talked about some obvious and effective ways to improve speed, then we went through the complete reading procedure and looked at most of the parameters which might impact speed. Lastly, we mentioned the parameters to fine-tune the performance.
+In this article, we first talked about some obvious and effective ways to improve speed, then we went through the complete reading procedure and looked at most of the parameters which might impact speed. Lastly, we mentioned the parameters to fine-tune the performance and some uncommon ways to speed things up.
 
 Depending on the actual image you are scanning or the usage scenario you are trying to cope with, you can experiement with these parameters to find the most suitable settings for the best speed. If you have any further questions, you can get in touch with [Dynamsoft Support](https://www.dynamsoft.com/company/contact/).
 
