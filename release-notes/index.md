@@ -17,7 +17,7 @@ needGenerateH3Content: false
 ### Editions
 
 | -- | -- |
-| [Android](../programming/android/release-notes/android-8.md#890-12142021) | [iOS](../programming/objectivec-swift/release-notes/ios-8.md#890-12142021) |
+| [Android](../programming/android/release-notes/android-8.md#890-12162021) | [iOS](../programming/objectivec-swift/release-notes/ios-8.md#890-12162021) |
 
 ## 8.8.0
 
