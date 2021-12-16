@@ -187,14 +187,14 @@ Enabling this may improve the Read Rate but slowdown the Speed.
   
 
 ### ImagePreprocessingModesIndex 
-The index of a specific image preprocessing mode in the [ImagePreprocessingModes](ImagePreprocessingModes.md#imagepreprocessingmodes) parameter which the current binarization mode is applied to.
+The index of a specific image preprocessing mode in the [ImagePreprocessingModes](image-preprocessing-modes.md#imagepreprocessingmodes) parameter which the current binarization mode is applied to.
 
 | Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | --------- |
 | *int* | [-1, 0x7fffffff] | -1 | BM_LOCAL_BLOCK<br>BM_THRESHOLD |        
 
 **Remarks**         
-  -1: The current binarization mode is applied to all modes in parameter [ImagePreprocessingModes](ImagePreprocessingModes.md#imagepreprocessingmodes).
+  -1: The current binarization mode is applied to all modes in parameter [ImagePreprocessingModes](image-preprocessing-modes.md#imagepreprocessingmodes).
 
 
 ### ThreshValueCoefficient 
