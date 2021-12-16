@@ -25,7 +25,7 @@ keywords: Read Rate
 
 # How to Boost Barcode Read Rate
 
-This article describes how the Dynamsoft Barcode Reader SDK (hereafter referred to as "DBR") is designed and how to adjust parameters to achieve a high barcode [read rate](#read-rate). Do bear in mind that [accuracy](#accuracy) and [speed](#speed) may not be ideal when speed is the first priority
+This article describes how the Dynamsoft Barcode Reader SDK (hereafter referred to as "DBR") is designed and how to adjust parameters to achieve a high barcode [read rate](#read-rate). Do bear in mind that [accuracy](#accuracy) and [speed](#speed) may not be ideal when speed is the first priority.
 
 
 ## Processings before Localizing Barcode Zones
@@ -47,7 +47,7 @@ of several parallel lines, finding such an area with group of lines, a liner bar
 | With blurred boundaries around the barcode module | IPM_SHARPEN_SMOOTH |
 | With barcode area polluted or destroyed | IPM_MORPHOLOGY |
 
-### Enhance the Binarization
+### Generate a High Quality Binary Image
 [BinarizationModes]({{ site.parameters_reference }}binarization-modes.html) is a parameter to provide some binarization methods to generate a high quality binary image. Setting it to `BM_LOCAL_BLOCK` will binarize the image for each pixel based on a threshold which is calculated based on a small region around it. It works well on image with varying illumination. When using this mode, there are arguments can be used to further improve the read rate. Setting `BlockSizeX` and `BlockSizeY` to 5 - 8 times module size if you are aware of the module size and `EnableFillBinaryVacancy` to 1 if you are reading barcodes with a large module size.
 
 Another mode, `BM_THRESHOLD`, binarizes the image for each pixel based on a global unified threshold. It works well when the image has obvious contrast between the barcode and the background. You can adjust the threshold by setting argument `BinarizationThreshold` to find a best value for your image.
@@ -136,14 +136,11 @@ In some cases, the barcodes may not be generated or printed following the standa
 ## Definition of Performance Metrics
 
 ### Read Rate
-
 $ Read~Rate = \frac{Number~of~All~Decoded~Barcode~Results}{Number~of~All~Target~Barcodes} $
 
 ### Accuracy
-
 $ Accuracy = \frac{Number~of~Correctly~Decoded~Barcode~Results}{Number~of~All~Decoded~Barcode~Results} $
 
 ### Speed
-
 $ Speed = \frac{Number~of~All~Decoded~Barcode~Results}{Total~Time~Consumed} $
 
