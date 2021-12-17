@@ -25,7 +25,7 @@ keywords: Read Rate
 
 # How to Boost Barcode Read Rate
 
-This article describes how the Dynamsoft Barcode Reader SDK (hereafter referred to as "DBR") is designed and how to adjust parameters to achieve a high barcode [read rate](#read-rate). Do bear in mind that [accuracy](#accuracy) and [speed](#speed) may not be ideal when speed is the first priority.
+This article describes how the Dynamsoft Barcode Reader SDK (hereafter referred to as "DBR") is designed and how to adjust parameters to achieve a high barcode [read rate](#read-rate). Do bear in mind that [accuracy](#accuracy) and [speed](#speed) may not be ideal when read rate is the first priority.
 
 
 ## Processings before Localizing Barcode Zones
