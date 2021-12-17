@@ -70,5 +70,3 @@ breadcrumbText: Enumerations
   | [`Product`](other-enums.md#product) | Describes Dynamsoft products. |
 
 ## [Error Code](error-code.md)
-  
-
