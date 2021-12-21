@@ -106,14 +106,7 @@ Simplifying the `DeblurModes` will help you ensure the accuracy of barcode resul
 
 - IF both the accuracy and read rate should be maintained
 
-If you find the readability on blurry images doesn't reach your requirements or the barcode reader can't recognize any barcodes from video streaming when the device is moving, you can try adding the following candidates to the `DeblurModes` settings.
-
-| ----------------------- |
-| `DM_GRAY_EQUALIZATION` |
-| `DM_SMOOTHING` |
-| `DM_SHARPENING` |
-| `DM_SHARPENING_SMOOTHING` |
-| `DM_MORPHING` |
+If you find the readability on blurry images doesn't reach your requirements, you can try to add `DeblurModes` candidates `DM_GRAY_EQUALIZATION`, `DM_SMOOTHING`, `DM_SHARPENING`, `DM_SHARPENING_SMOOTHING`, `DM_MORPHING` to you `DeblurModes` settings.
 
 - IF read rate should be kept at high-level
 
@@ -147,7 +140,7 @@ If there exists a text area on the image, the `TextFilterModes` will definitely 
 
 ## External Settings – Camera Enhancer Settings
 
-Users can optimize the parameter settings to prevent misreading but this is not the only way to improve the accuracy. For the video barcode decoding scenarios, promoting the quality of the video will definitely improve the barcode decoding accuracy. Although there are no camera control APIs in Dynamsoft Barcode Reader, you can still use Dynamsoft Camera Enhancer (DCE) APIs to take control of the input video streaming. DCE is an SDK that integrates the camera control APIs and video frame pre-processing features. It can be easily bound to the Barcode Reader and enable users to optimize the input video streaming when using the Barcode Reader. You can make the following setting to improve the accuracy of barcode decoding.
+Users can optimize the parameter settings to prevent misreading but this is not the only way to improve the accuracy. For the video barcode decoding scenarios, promoting the quality of the video will definitely improve the barcode decoding accuracy. Although there is no camera control APIs in Dynamsoft Barcode Reader, you can still use Dynamsoft Camera Enhancer (DCE) APIs to take control of the input video streaming. DCE is an SDK that integrates the camera control APIs and video frame pre-processing features. It can be easily bound to the Barcode Reader and enable users to optimize the input video streaming when using the Barcode Reader. You can make the following setting to improve the accuracy of barcode decoding.
 
 ### Frame Filter
 
