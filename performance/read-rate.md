@@ -60,9 +60,9 @@ Extremely speeking, setting all localization modes will give you the highest rea
 `LM_SCAN_DIRECTLY`, `LM_CONNECTED_BLOCKS`, `LM_LINES`, `LM_STATISTICS` is the default value set in DBR and this can localize most of regular barcodes. With this setting, DBR firstly uses `LM_SCAN_DIRECTLY` to run a fast scan through the whole image, this can localize many types of barcodes, especially for liner barcodes, QR, PDF417 and postal codes, vertically or horizontally on image. As an insurance, DBR then uses `LM_CONNECTED_BLOCKS`, followed by `LM_LINES` and `LM_STATISTICS` to localize barcodes by searching for connected blocks, groups of lines and contiguous black-white regions.
 
 ### Specific Case
-If you are decoding postal codes and the read rate is in quite high priority, you can add `LM_STATISTICS_POSTAL_CODE` to the default setting, it is designed to optimize the localization for postal codes.
+- If you are decoding postal codes and the read rate is in quite high priority, you can add `LM_STATISTICS_POSTAL_CODE` to the default setting, it is designed to optimize the localization for postal codes.
 
-If you are decoding barcodes whose modules are separate, e.g., Direct Part Marking (DPM) codes, and DotCode, `LM_STATISTICS_MARKS` is the right one you should set.
+- If you are decoding barcodes whose modules are separate, e.g., Direct Part Marking (DPM) codes, and DotCode, `LM_STATISTICS_MARKS` is the right one you should set.
 
 ### Compromise on Speed 
 For some cases, the read speed may take priority over read rate, the following options may help.
@@ -71,18 +71,18 @@ For some cases, the read speed may take priority over read rate, the following o
 - `LM_CENTRE` works just like LM_STATISTICS but only searchs barcodes from the centre of the image. When the barcodes are in the centre of the image, using this mode other than LM_STATISTICS may save some time.
 
 ### Setting Tips 
-`LM_CONNECTED_BLOCKS` not only gives a great localization result, but also shares data with other localozation modes, e.g., LM_LINES, LM_STATISTICS, LM_STATISTICS_MARKS and LM_STATISTICS_POSTAL_CODE. So `LM_CONNECTED_BLOCKS` should always be placed before these modes.
+- `LM_CONNECTED_BLOCKS` not only gives a great localization result, but also shares data with other localozation modes, e.g., LM_LINES, LM_STATISTICS, LM_STATISTICS_MARKS and LM_STATISTICS_POSTAL_CODE. So `LM_CONNECTED_BLOCKS` should always be placed before these modes.
 
-`LM_SCAN_DIRECTLY` can be covered by `LM_CONNECTED_BLOCKS`, so setting `LM_SCAN_DIRECTLY` after `LM_CONNECTED_BLOCKS` will give no help on read rate but slow down the speed. And setting `LM_SCAN_DIRECTLY` before `LM_CONNECTED_BLOCKS` is usually used only when `ExpectedBarcodesCount` is setting to 0.
+- `LM_SCAN_DIRECTLY` can be covered by `LM_CONNECTED_BLOCKS`, so setting `LM_SCAN_DIRECTLY` after `LM_CONNECTED_BLOCKS` will give no help on read rate but slow down the speed. And setting `LM_SCAN_DIRECTLY` before `LM_CONNECTED_BLOCKS` is usually used only when `ExpectedBarcodesCount` is setting to 0.
 
 ## Image Processings To Remove Blurness on Barcode Zones
 After getting a barcode zone, DBR applies a variety of further process before decoding the barcode. [DeblurModes]({{ site.parameters_reference }}deblur-modes.html) is a parameter can be customized in this procedure, which provides several methods to perform a round of image processing on the barcode zone, aiming to deal with varying image blurness situations may lead to low read rate. These methods can be divided into following three groups considering the effort and time cost. You can set one or more modes according to your barcode area situation to balance read rate and speed.
 
 ### General Effort and Time Cost 
 Methods in this group focus on the process of binarizing the barcode area to handle relatively simple situations.
-Set `DM_BASED_ON_LOC_BIN` when the barcode area is clear and clean. It is the most effective method since it crop the barcode area directly from the binary image generated during the localization process. 
-Set `DM_DIRECT_BINARIZATION` when the barcode content modules have varying illumination.
-Set `DM_THRESHOLD_BINARIZATION` when the barcode content modules have distinct colour contrast with the background.
+- Set `DM_BASED_ON_LOC_BIN` when the barcode area is clear and clean. It is the most effective method since it crop the barcode area directly from the binary image generated during the localization process. 
+- Set `DM_DIRECT_BINARIZATION` when the barcode content modules have varying illumination.
+- Set `DM_THRESHOLD_BINARIZATION` when the barcode content modules have distinct colour contrast with the background.
 
 ### More Effort and Time Cost
 Methods in this group will take further process before or after binarization to handle more complicated situations.
