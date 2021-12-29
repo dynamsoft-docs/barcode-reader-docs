@@ -20,6 +20,10 @@ needGenerateH3Content: false
 | -- | -- |
 | [Android](../programming/android/release-notes/android-8.md#890-12xx2021) | [iOS](../programming/objectivec-swift/release-notes/ios-8.md#890-12xx2021) |
 
+## 8.8.3
+
+[JavaScript](../programming/javascript/release-notes/js-8.md#883-10292021)
+
 ## 8.8.0
 
 ### Highlights
@@ -30,6 +34,17 @@ needGenerateH3Content: false
 
 | -- | -- | -- | -- | -- | -- | -- | -- |
 | [JavaScript](../programming/javascript/release-notes/js-8.md#880-10282021) | [C](../programming/c/release-notes/c-8.md#880-10122021) | [C++](../programming/cplusplus/release-notes/cpp-8.md#880-10122021) | [DotNet](../programming/dotnet/release-notes/dotnet-8.md#880-10122021) | [Python](../programming/python/release-notes/python-8.md#880-10222021) | [Java](../programming/java/release-notes/java-8.md#880-10122021) | [Android](../programming/android/release-notes/android-8.md#880-10192021) | [iOS](../programming/objectivec-swift/release-notes/ios-8.md#880-10192021) |
+
+
+## 8.6.3
+
+[JavaScript](../programming/javascript/release-notes/js-8.md#863-09302021)
+
+
+## 8.6.1
+
+[JavaScript](../programming/javascript/release-notes/js-8.md#861-09012021)
+
 
 ## 8.6.0
 
@@ -64,6 +79,20 @@ needGenerateH3Content: false
 
 - Fixed an issue that happens when calling initLicenseFromLTS if [`handShakeCode`]({{site.structs}}DMLTSConnectionParameters.html#handshakecode) is not set.
 
+## 8.2.5
+
+[JavaScript](../programming/javascript/release-notes/js-8.md#825-05182021)
+
+
+## 8.2.3
+
+[JavaScript](../programming/javascript/release-notes/js-8.md#823-04152021)
+
+## 8.2.1
+
+[JavaScript](../programming/javascript/release-notes/js-8.md#821-03292021)
+
+
 ## 8.2.0
 
 ### New
@@ -78,6 +107,11 @@ needGenerateH3Content: false
 ### Fixed
 
 - Resolved a bug that infrequently causes the application to crash when decoding a MicroPDF417 barcode.
+
+## 8.1.3
+
+[JavaScript](../programming/javascript/release-notes/js-8.md#813-03042021)
+
 
 ## 8.1.2
 
@@ -184,6 +218,10 @@ needGenerateH3Content: false
 
 - Fixed a bug where the coordinates of barcodes are calculated incorrectly under some situations.
 
+## 7.4.0.1
+
+[JavaScript](../programming/javascript/release-notes/js-7.md#7401-05182020)
+
 ## 7.4.0 
 
 ### NEW
@@ -214,6 +252,19 @@ needGenerateH3Content: false
 - Fixed a bug in the calculation of deblur confidence.
 - Fixed a bug where the ColourConversionModes RGB weights setting does not work when CICM_GENERAL is enabled.
 - Other small fixes and tweaks.
+
+
+## 7.3.0.4
+
+[JavaScript](../programming/javascript/release-notes/js-7.md#730-v4-7304-04022020)
+
+## 7.3.0.2
+
+[JavaScript](../programming/javascript/release-notes/js-7.md#730-v2-7302-02142020)
+
+## 7.3.0.1
+
+[JavaScript](../programming/javascript/release-notes/js-7.md#730-v1-7301-01202020)
 
 ## 7.3.0 
 
