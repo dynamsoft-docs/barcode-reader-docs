@@ -5,20 +5,37 @@ description: This page shows how the Dynamsoft Barcode Reader SDK is designed to
 keywords: Read Rate
 ---
 
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+<script type="text/x-mathjax-config">
+
+    MathJax.Hub.Config({
+
+        tex2jax: {
+
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+
+        inlineMath: [['$','$']]
+
+        }
+
+    });
+
+</script>
 
 # How to Boost Barcode Read Rate
 
-This article describes how the Dynamsoft Barcode Reader SDK (hereafter referred to as "DBR") is designed and how to adjust parameters to achieve a high barcode read rate.
->Note: A read rate is the number of barcodes decoded divided by the number expected.
+This article describes how the Dynamsoft Barcode Reader SDK (hereafter referred to as "DBR") is designed and how to adjust parameters to achieve a high barcode [read rate](#read-rate). Do bear in mind that [accuracy](#accuracy) and [speed](#speed) may not be ideal when read rate is the first priority.
+
 
 ## Processings before Localizing Barcode Zones
 Barcode zones are detectable by taking advantage of features of different barcode formats. For example, linear barcode is consist
-of several parallel lines, finding such an area with group of lines, a liner barcode zone is detected. But in some cases, the barcode features may not obvious or good enough, so processings need to be taken to enhance barcode zone features before localization. Check out and adjust the following parameters designed for these cases to improve the read rate.
+of several parallel lines, finding such an area with group of lines, a liner barcode zone is detected. But in some cases, these features may not be obvious or good enough, so processings need to be taken to enhance barcode zone features before localization. Check out and adjust the following parameters designed for these cases to improve the read rate.
 
 ### Transform to Grayscale 
 [ColourConversionModes]({{ site.parameters_reference }}colour-conversion-modes.html) is a parameter to control the process of converting colour image to grayscale image. By default, the conversion will base on the RGB channels with the default weights of three channels. This parameter allows you to specify the referred colour channel (RGB or HSV) and the weight of each channel during the colour conversion. Assume your image has a disgusting contrast of one colour channel between the barcode area and background, this parameter may help specify the appropriate settings for getting a higher quality grayscale image
 
-[GrayscaleTransformationModes]({{ site.parameters_reference }}grayscale-transformation-modes.html) is a parameter to control the colour mode of the barcode on grayscale image. The barcode on an image usually have two types, dark barcode on light background and light barcode on dark background. Correspondly, identify the types of barcodes you are reading and set `GrayscaleTransformationModes` to `GTM_ORIGINAL` and/or `GTM_INVERTED`.
+[GrayscaleTransformationModes]({{ site.parameters_reference }}grayscale-transformation-modes.html) is a parameter to control the colour mode of the barcode on grayscale image. The barcode on an image usually have two types, dark barcode on light background and light barcode on dark background. If the barcodes you are decoding are of the same colour mode, setting this mode correspondly to `GTM_ORIGINAL` or `GTM_INVERTED` can improve the speed without affecting on read rate. If not, setting it to `GTM_ORIGINAL` and `GTM_INVERTED` will cover both types to insure the read rate.
 
 ### Enhance the Grayscale Image Quality
 [ImagePreprocessingModes]({{ site.parameters_reference }}image-preprocessing-modes.html) is a parameter to provide some image processing methods to enhance the quality of the grayscale image, for example, removing the noise, improving the contrast. By default, it is set to `IPM_GENERAL` which means no image processing. Follow the table to identify the circumstance of your barcode image and set the appropriate image preprocessing mode.
@@ -30,88 +47,54 @@ of several parallel lines, finding such an area with group of lines, a liner bar
 | With blurred boundaries around the barcode module | IPM_SHARPEN_SMOOTH |
 | With barcode area polluted or destroyed | IPM_MORPHOLOGY |
 
-### Enhance the Binarization
-[BinarizationModes]({{ site.parameters_reference }}binarization-modes.html) is a parameter to provide some binarization methods to generate a high quality binary image. Setting it to `BM_LOCAL_BLOCK` will binarize the image for each pixel based on a threshold which is calculated based on a small region around it. It works well on image with varying illumination. When using this mode, there are two arguments can be used to further improve the read rate. Setting `BlockSizeX` and `BlockSizeY` to 5 - 8 times module size if you are aware of the module size and `EnableFillBinaryVacancy` to 1 if you are reading barcodes with a large module size.
+### Generate a High Quality Binary Image
+[BinarizationModes]({{ site.parameters_reference }}binarization-modes.html) is a parameter to provide some binarization methods to generate a high quality binary image. Setting it to `BM_LOCAL_BLOCK` will binarize the image for each pixel based on a threshold which is calculated based on a small region around it. It works well on image with varying illumination. When using this mode, there are arguments can be used to further improve the read rate. Setting `BlockSizeX` and `BlockSizeY` to 5 - 8 times module size if you are aware of the module size and `EnableFillBinaryVacancy` to 1 if you are reading barcodes with a large module size.
 
 Another mode, `BM_THRESHOLD`, binarizes the image for each pixel based on a global unified threshold. It works well when the image has obvious contrast between the barcode and the background. You can adjust the threshold by setting argument `BinarizationThreshold` to find a best value for your image.
 
 ## Multiple Modes to Localize Barcode Zones
-After the above processing, we have got an high quality binary image for barcode zone localization. [LocalizationModes]({{ site.parameters_reference }}localization-modes.html) is a parameter which contains several modes to localize a barcode zone considering the different features of barcodes. Here we will go through these modes and the using scenarios.
+After the above processing, we have got an high quality binary image ready for barcode zone localization. DBR provides several methods to localize a barcode zone, which can be customized by parameter [LocalizationModes]({{ site.parameters_reference }}localization-modes.html) to improve the read rate.
+Extremely speeking, setting all localization modes will give you the highest read rate, but it can be very time-consuming. Follow the instructions bellow to get great read rate while balancing the speed. 
 
-- LM_CONNECTED_BLOCKS
+### Common Usage
+`LM_SCAN_DIRECTLY`, `LM_CONNECTED_BLOCKS`, `LM_LINES`, `LM_STATISTICS` is the default value set in DBR and this can localize most of regular barcodes. With this setting, DBR firstly uses `LM_SCAN_DIRECTLY` to run a fast scan through the whole image, this can localize many types of barcodes, especially for liner barcodes, QR, PDF417 and postal codes, vertically or horizontally on image. As an insurance, DBR then uses `LM_CONNECTED_BLOCKS`, followed by `LM_LINES` and `LM_STATISTICS` to localize barcodes by searching for connected blocks, groups of lines and contiguous black-white regions.
 
-This mode localizes barcodes by searching for connected blocks. It gives great result on most of the circumstances and is recommended to be always set.
+### Specific Case
+- If you are decoding postal codes and the read rate is in quite high priority, you can add `LM_STATISTICS_POSTAL_CODE` to the default setting, it is designed to optimize the localization for postal codes.
 
-- LM_STATISTICS
+- If you are decoding barcodes whose modules are separate, e.g., Direct Part Marking (DPM) codes, and DotCode, `LM_STATISTICS_MARKS` is the right one you should set.
 
-This mode localizes barcodes by searching for groups of contiguous black-white regions. It works well for QRCode and DataMatrix.
+### Compromise on Speed 
+For some cases, the read speed may take priority over read rate, the following options may help.
+- `LM_ONED_FAST_SCAN` is designed to localize OneD barcodes very fast but the read rate may not be good enough. If the barcode type you are decoding is OneD and the image quality is relatively high, you can set this mode instead of `LM_SCAN_DIRECTLY` to save some time.
 
-- LM_LINES
+- `LM_CENTRE` works just like LM_STATISTICS but only searchs barcodes from the centre of the image. When the barcodes are in the centre of the image, using this mode other than LM_STATISTICS may save some time.
 
-This mode localizes barcodes by searching for groups of lines. It works well for linear barcodes and PDF417.
+### Setting Tips 
+- `LM_CONNECTED_BLOCKS` not only gives a great localization result, but also shares data with other localozation modes, e.g., LM_LINES, LM_STATISTICS, LM_STATISTICS_MARKS and LM_STATISTICS_POSTAL_CODE. So `LM_CONNECTED_BLOCKS` should always be placed before these modes.
 
-- LM_STATISTICS_MARKS
-
-This mode localizes barcodes by searching for groups of marks. It works well for DPM barcodes and DotCode.
-
-- LM_STATISTICS_POSTAL_CODE
-
-This mode localizes barcodes by searching for bars of postal codes in terms of bars’ distribution. It works well for postal codes.
-
-- LM_SCAN_DIRECTLY 
-
-This mode scans the whole image, vertically and horizontally, to find barcode areas. The read rate is good if the barcodes on image are vertical or horizontal, but not for inclined barcodes.
-
-- LM_ONED_FAST_SCAN
-
-This mode is designed to localize OneD barcodes very fast, but the read rate is not guaranteed.
-
-- LM_CENTRE
-
-This mode works just like LM_STATISTICS but only searchs barcodes from the centre of the image. When the barcodes are in the centre of the image, using this mode ohter than LM_STATISTICS may save some time but get the same read rate.
-
-Each above mode can work individually to find particular barcodes, if not all barcodes are localized, they can also be combined to cover more cases.
-By default, 4 modes, `LM_SCAN_DIRECTLY`, `LM_CONNECTED_BLOCKS`, `LM_LINES`, `LM_STATISTICS`, have been set and this can localize most of regular barcodes while balance with reading speed.
-
+- `LM_SCAN_DIRECTLY` can be covered by `LM_CONNECTED_BLOCKS`, so setting `LM_SCAN_DIRECTLY` after `LM_CONNECTED_BLOCKS` will give no help on read rate but slow down the speed. And setting `LM_SCAN_DIRECTLY` before `LM_CONNECTED_BLOCKS` is usually used only when `ExpectedBarcodesCount` is setting to 0.
 
 ## Image Processings To Remove Blurness on Barcode Zones
-After getting a barcode zone, DBR applies a variety of further process before decoding the barcode. [DeblurModes]({{ site.parameters_reference }}deblur-modes.html) is a parameter to deal with varying image blurness situations. It provides several modes to perform a round of image processing on the barcode zone, aiming to remove the blurness features. Here we will go through these modes and the using scenarios.
+After getting a barcode zone, DBR applies a variety of further process before decoding the barcode. [DeblurModes]({{ site.parameters_reference }}deblur-modes.html) is a parameter can be customized in this procedure, which provides several methods to perform a round of image processing on the barcode zone, aiming to deal with varying image blurness situations may lead to low read rate. These methods can be divided into following three groups considering the effort and time cost. You can set one or more modes according to your barcode area situation to balance read rate and speed.
 
-- DM_BASED_ON_LOC_BIN
+### General Effort and Time Cost 
+Methods in this group focus on the process of binarizing the barcode area to handle relatively simple situations.
+- Set `DM_BASED_ON_LOC_BIN` when the barcode area is clear and clean. It is the most effective method since it crop the barcode area directly from the binary image generated during the localization process. 
+- Set `DM_DIRECT_BINARIZATION` when the barcode content modules have varying illumination.
+- Set `DM_THRESHOLD_BINARIZATION` when the barcode content modules have distinct colour contrast with the background.
 
-This mode crops the barcode area from the binary image generated during the localization process. It is designed to improve reading speed for high-quality images.
+### More Effort and Time Cost
+Methods in this group will take further process before or after binarization to handle more complicated situations.
 
-- DM_DIRECT_BINARIZATION
+- Set `DM_GRAY_EQUALIZATION` when the barcode content modules have low colour contrast with the background.
+- Set `DM_SMOOTHING` when the barcode area have intensive noise or texture.
+- Set `DM_SHARPENING` when the barcode content modules have blurred boundaries with a clear background.
+- Set `DM_SHARPENING_SMOOTHING` when the barcode content modules have blurred boundaries with unclear backgrounds.
+- Set `DM_MORPHING` when the barcode area is polluted or destroyed.
 
-This mode binarizes the barcode area for each pixel based on a threshold which is calculated based on a small region around it. If the barcode area is clear and clean, this mode is appropriate for both reading speed and rate.
-
-- DM_THRESHOLD_BINARIZATION
-
-This mode binarizes the barcode area with a global threshold. It is designed to get a better binary barcode image when the barcode content modules have distinct colour contrast with the background.
-
-- DM_GRAY_EQUALIZATION
-
-This mode applies histogram equalization to improve the contrast and then binarizes the barcode area. It is designed to get a better binary barcode image when the barcode content modules have low colour contrast with the background.
-
-- DM_SMOOTHING
-
-This mode applies smoothing operation to reduce the noise or texture and then binarizes the barcode area. It is designed to get a better binary barcode image when the barcode area have intensive noise or texture.
-
-- DM_SHARPENING
-
-This mode applies sharpening operation to make the boundaries of the barcode module clearer and reduce blur and then binarizes the barcode area. It is designed to get a better binary barcode image when the barcode content modules have blurred boundaries with a clear background.
-
-- DM_SHARPENING_SMOOTHING
-
-This mode applies sharpening operation first to make the boundaries of the barcode module clearer and reduce blur, smoothing then to reduce unwanted noise or texture, and then binarizes the barcode area. It is designed to get a better binary barcode image when the barcode content modules have blurred boundaries with unclear backgrounds.
-
-- DM_MORPHING
-
-This mode applies morphology algorithm to make the barcode module clearer and then binarizes the barcode area. It is designed to get a better binary barcode image when the barcode area is polluted or destroyed.
-
-- DM_DEEP_ANALYSIS
-
-This mode analyzes every pixel of the image and gather info to find out the barcode modules. It is desinged to get barcode modules when the barcode content modules have blurred boundaries and complex backgrounds which cannot be solved by other image processing methods. This is relatively time-consuming but is the best way to deal with blur images to archive a good read rate.
+### Most Effort and Time Cost
+`DM_DEEP_ANALYSIS` is the most powerful way to deal with complicated situations which cannot be solved by above processing methods. It analyzes every pixel of the image, does a lot calculation to gather characteristics to find or build relation between each pixel, and finally find out the barcode modules. The process is relatively time-consuming, so it is recommended to set `DM_DEEP_ANALYSIS` after all other modes. 
 
 
 ## Supporting Particular Circumstances During Decoding
@@ -133,14 +116,31 @@ If the barcode types you are decoding is uncertain, it is recommended to set all
 [DPMCodeReadingModes]({{ site.parameters_reference }}mirror-mode.html) is a parameter to deal with DPM (Direct Part Marking) codes. DPM Codes, DataMatrix typically, are used widely in industrial part tracking, from electronics manufacturing to automotive assembly. They always come with light reflection, low contrast, complex background texture, and other distorted features. If you are reading these barcodes, please set a `DPMCRM_GENERAL` mode. 
 
 ### Mirror State
-[MirrorMode]({{ site.parameters_reference }}image.html) is a parameter to deal with mirrored barcodes. The barcode on an image usually have two types, normal and mirrored. If you know exactly the mirror types of the barcodes you are decoding, setting this mode to `MM_NORMAL` or `MM_MIRROR` will save . If not, setting it to `MM_BOTH` will cover both normal and mirrored barcodes to insure the read rate.
+[MirrorMode]({{ site.parameters_reference }}image.html) is a parameter to deal with mirrored barcodes. The barcode on an image usually have two states, normal and mirrored. If the barcodes you are decoding are of the same mirror state, setting this mode to `MM_NORMAL` or `MM_MIRROR` can improve the speed without affect on read rate. If not, setting it to `MM_BOTH` will cover both normal and mirrored barcodes to insure the read rate.
 
 
 ### Non-standard Barcodes
-In some cased, the barcodes may not be generated or printed following the standard. DBR provides a group of parameters to support non-standard barcode formats. If the barcodes you are decoding is non-standard, setting following parameters may help the read rate.
+In some cases, the barcodes may not be generated or printed following the standard. DBR provides a group of parameters to support non-standard barcode formats. If the barcodes you are decoding is non-standard, setting following parameters may help the read rate.
 - [StandardFormat]({{ site.parameters_reference }}standard-format.html) to specify the standard barcode format.
 - [AllModuleDeviation]({{ site.parameters_reference }}all-module-deviation.html) to specify the barcode module size deviation value.
 - [HeadModuleRatio]({{ site.parameters_reference }}head-module-ratio.html) to specify the module count and module size ratio of the barcode head part.
 - [TailModuleRatio]({{ site.parameters_reference }}tail-module-ratio.html) to specify the module count and module size ratio of the barcode tail part.
 - [FindUnevenModuleBarcode]({{ site.parameters_reference }}find-uneven-module-barcode.html) to specify whether to find barcodes with uneven barcode modules.
+
+
+
+## Related Articles
+- [How to boost barcode reading Accuracy](accuracy.md)
+- [How to boost barcode reading Speed](speed.md)
+
+## Definition of Performance Metrics
+
+### Read Rate
+$ Read~Rate = \frac{Number~of~All~Decoded~Barcode~Results}{Number~of~All~Target~Barcodes} $
+
+### Accuracy
+$ Accuracy = \frac{Number~of~Correctly~Decoded~Barcode~Results}{Number~of~All~Decoded~Barcode~Results} $
+
+### Speed
+$ Speed = \frac{Number~of~All~Decoded~Barcode~Results}{Total~Time~Consumed} $
 

@@ -30,23 +30,6 @@ breadcrumbText: Accuracy
 
 This article illustrates how Dynamsoft Barcode Reader (hereafter referred to as "DBR") is designed to ensure the accuracy of barcode results and how you can add settings to further improve the accuracy.
 
-## Definitions
-
-The accuracy of the barcode reader is defined as follow:
-
-$ Accuracy = \frac{Number~of~Correctly~Decoded~Barcode~Results}{Number~of~All~Decoded~Barcode~Results} $
-
-Accuracy is the ability to ensure the correctness of output results. Some accuracy protections are enabled as the default settings of DBR. However, you can further improve the accuracy when the usage scenario has the following features:
-
-- Highly automated barcode processing without manual verification.
-- Most of the target barcodes are badly printed.
-
-The speed and the read rate are the other two dimensions of performance and they are defined as follows. They might be sacrificed if you are trying to improve the accuracy.
-
-$ Speed = \frac{Number~of~All~decoded~Barcode~Results}{Total~Time~Consumption} $
-
-$ Read~Rate = \frac{Number~of~All~Decoded~Barcode~Results}{Number~of~All~Target~Barcodes} $
-
 ## General Settings
 
 The following settings can be applied to nearly all usage scenarios to improve the barcode reading accuracy. They might sacrifice a bit of speed but hardly influence the read rate.
@@ -106,14 +89,7 @@ Simplifying the `DeblurModes` will help you ensure the accuracy of barcode resul
 
 - IF both the accuracy and read rate should be maintained
 
-If you find the readability on blurry images doesn't reach your requirements or the barcode reader can't recognize any barcodes from video streaming when the device is moving, you can try adding the following candidates to the `DeblurModes` settings.
-
-| ----------------------- |
-| `DM_GRAY_EQUALIZATION` |
-| `DM_SMOOTHING` |
-| `DM_SHARPENING` |
-| `DM_SHARPENING_SMOOTHING` |
-| `DM_MORPHING` |
+If you find the readability on blurry images doesn't reach your requirements, you can try to add `DeblurModes` candidates `DM_GRAY_EQUALIZATION`, `DM_SMOOTHING`, `DM_SHARPENING`, `DM_SHARPENING_SMOOTHING`, `DM_MORPHING` to you `DeblurModes` settings.
 
 - IF read rate should be kept at high-level
 
@@ -147,7 +123,7 @@ If there exists a text area on the image, the `TextFilterModes` will definitely 
 
 ## External Settings – Camera Enhancer Settings
 
-Users can optimize the parameter settings to prevent misreading but this is not the only way to improve the accuracy. For the video barcode decoding scenarios, promoting the quality of the video will definitely improve the barcode decoding accuracy. Although there are no camera control APIs in Dynamsoft Barcode Reader, you can still use Dynamsoft Camera Enhancer (DCE) APIs to take control of the input video streaming. DCE is an SDK that integrates the camera control APIs and video frame pre-processing features. It can be easily bound to the Barcode Reader and enable users to optimize the input video streaming when using the Barcode Reader. You can make the following setting to improve the accuracy of barcode decoding.
+Users can optimize the parameter settings to prevent misreading but this is not the only way to improve the accuracy. For the video barcode decoding scenarios, promoting the quality of the video will definitely improve the barcode decoding accuracy. Although there is no camera control APIs in Dynamsoft Barcode Reader, you can still use Dynamsoft Camera Enhancer (DCE) APIs to take control of the input video streaming. DCE is an SDK that integrates the camera control APIs and video frame pre-processing features. It can be easily bound to the Barcode Reader and enable users to optimize the input video streaming when using the Barcode Reader. You can make the following setting to improve the accuracy of barcode decoding.
 
 ### Frame Filter
 
@@ -169,3 +145,24 @@ A higher resolution will promote the sharpness of the video frames and also enla
 ### Set the Scan Region
 
 You can specify the scan region via DCE to remove the noninterest areas. The video frames will be cropped before barcode decoding so that the barcode reader will not be disturbed by the noninterest information and process even more fast and accurate.
+
+## Summary
+
+In the article, the accuracy is supposed to be the first priority and strategies that can improve the accuracy of the barcode decoding are listed. You can try these strategies in your own project to find out the best configuration for your usage scenario. You can also [contact us]() if further improvements are required in you project.
+
+- [How to boost Speed]()
+- [How to boost Read Rate]()
+
+## Definition of the Performance Metrics
+
+### Accuracy
+
+$ Accuracy = \frac{Number~of~Correctly~Decoded~Barcode~Results}{Number~of~All~Decoded~Barcode~Results} $
+
+### Speed
+
+$ Speed = \frac{Number~of~All~decoded~Barcode~Results}{Total~Time~Consumption} $
+
+### Read Rate
+
+$ Read~Rate = \frac{Number~of~All~Decoded~Barcode~Results}{Number~of~All~Target~Barcodes} $
