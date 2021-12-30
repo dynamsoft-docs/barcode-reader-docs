@@ -141,8 +141,8 @@ A higher resolution will promote the sharpness of the video frames and also enla
 
 **Related API(s)/Parameter(s)**
 
-- <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/android/primary-api/camera-enhancer.html?ver=latest#enablefeatures" target="_blank">`CameraEnhancer.enableFeatures`</a>
-- <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/android/primary-api/camera-enhancer.html?ver=latest#setresolution" target="_blank">`CameraEnhancer.setResolution`</a>
+- <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/android/primary-api/camera-enhancer.html?ver=latest#enablefeatures" target="blank">`CameraEnhancer.enableFeatures`</a>
+- <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/android/primary-api/camera-enhancer.html?ver=latest#setresolution" target="blank">`CameraEnhancer.setResolution`</a>
 
 ### Set the Scan Region
 
@@ -150,8 +150,9 @@ You can specify the scan region via DCE to remove the noninterest areas. The vid
 
 ## Summary
 
-In the article, accuracy is supposed to be the first priority and strategies that can improve the accuracy of the barcode decoding are listed. You can try these strategies in your own project to find out the best configuration for your usage scenario. You can also [contact us]() if further improvements are required in you project.
+In the article, the accuracy-friendly parameter configurations are introduced. You can try these configurations in your own project to make sure the accuracy of the barcode result reaches your requirement. You can also <a href="https://www.dynamsoft.com/company/contact/" target="blank">contact us</a> if further improvements are required in you project.
 
-- [How to boost Speed]()
-- [How to boost Read Rate]()
+Accuracy may not always be the primary goal. Sometimes you might need to find a balance between the different aspects of the performance. The following articles might help you to configure other performance settings.
 
+- [How to boost Speed](speed.md)
+- [How to boost Read Rate](read-rate.md)
