@@ -25,15 +25,9 @@ breadcrumbText: Speed
 
 There are 3 basic metrics for measuring the performance of a barcode reader application:
 
-* Speed
-
 $ Speed = \frac{Number~of~All~Decoded~Barcode~Results}{Total~Time~Consumed} $
 
-* Accuracy
-
 $ Accuracy = \frac{Number~of~Correctly~Decoded~Barcode~Results}{Number~of~All~Decoded~Barcode~Results} $
-
-* Read Rate
 
 $ Read~Rate = \frac{Number~of~All~Decoded~Barcode~Results}{Number~of~All~Target~Barcodes} $
 
