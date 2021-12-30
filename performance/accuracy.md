@@ -30,6 +30,12 @@ breadcrumbText: Accuracy
 
 This article illustrates how Dynamsoft Barcode Reader (hereafter referred to as "DBR") is designed to ensure the accuracy of barcode results and how you can add settings to further improve the accuracy.
 
+$ Accuracy = \frac{Number~of~Correctly~Decoded~Barcode~Results}{Number~of~All~Decoded~Barcode~Results} $
+
+$ Speed = \frac{Number~of~All~decoded~Barcode~Results}{Total~Time~Consumption} $
+
+$ Read~Rate = \frac{Number~of~All~Decoded~Barcode~Results}{Number~of~All~Target~Barcodes} $
+
 ## General Settings
 
 The following settings can be applied to nearly all usage scenarios to improve the barcode reading accuracy. They might sacrifice a bit of speed but hardly influence the read rate.
@@ -82,18 +88,22 @@ The smaller the module size of the barcodes, the lower accuracy of the results. 
 ### Strategies on Blurry Barcodes
 
 `DeblurModes` is the parameter that controls how much effort DBR will spend to process the blurry images. This mode is highly related to the performance of the barcode processing. `DeblurModes` is set to the highest level by default so that the barcode reader will be able to decode successfully even if the image is highly blurred. However, the risk of misreading is increased at the same time when the barcode reader is trying to process highly blurred images. Therefore, a trade-off between the read rate and accuracy is required when configuring the `DeblurModes` parameter.
-
+<!--
 - IF accuracy is the first priority
 
 Simplifying the `DeblurModes` will help you ensure the accuracy of barcode results. `DM_BASED_ON_LOC_BIN` and `DM_THRESHOLD_BINARIZATION` are the most fundamental deblur modes that are required to process the barcodes for the majority of usage scenarios. In addition, you can also add `DM_DIRECT_BINARIZATION` which is another basic candidate of `DeblurModes`. These basic settings can cover the majority of scenarios and keep the accuracy at a high level.
 
-- IF both the accuracy and read rate should be maintained
-
 If you find the readability on blurry images doesn't reach your requirements, you can try to add `DeblurModes` candidates `DM_GRAY_EQUALIZATION`, `DM_SMOOTHING`, `DM_SHARPENING`, `DM_SHARPENING_SMOOTHING`, `DM_MORPHING` to you `DeblurModes` settings.
 
-- IF read rate should be kept at high-level
-
 If the image is highly blurred and you still want to get a barcode result from it, you can add `DM_DEEP_ANALYSIS` to the `DeblurModes` settings so that you can get the barcode results ignoring the accuracy.
+
+-->
+
+- For video Streaming Barcode Decoding
+
+High-quality video frames and blurry video frames always exist at the same time when using video streaming barcode decoding. Even if the barcode reader can't process the blurry frames, it is still able to decode successfully from the high-quality video frames. As a result, the configuration of `DeblurModes` is not necessary to be set to a high level.
+
+- For Image Barcode Decoding
 
 **Related API(s)/Parameter(s)**
 
@@ -152,17 +162,3 @@ In the article, the accuracy is supposed to be the first priority and strategies
 
 - [How to boost Speed]()
 - [How to boost Read Rate]()
-
-## Definition of the Performance Metrics
-
-### Accuracy
-
-$ Accuracy = \frac{Number~of~Correctly~Decoded~Barcode~Results}{Number~of~All~Decoded~Barcode~Results} $
-
-### Speed
-
-$ Speed = \frac{Number~of~All~decoded~Barcode~Results}{Total~Time~Consumption} $
-
-### Read Rate
-
-$ Read~Rate = \frac{Number~of~All~Decoded~Barcode~Results}{Number~of~All~Target~Barcodes} $
