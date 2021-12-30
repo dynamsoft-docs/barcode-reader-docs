@@ -23,13 +23,12 @@ needGenerateH3Content: false
   
 ---
 
-
 ## DM_ChargeWay
+
 Describes charge way.
 
-
 ### Declarations
-   
+
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum DM_ChargeWay` |
@@ -39,9 +38,8 @@ Describes charge way.
 | Java / Android | `class EnumDMChargeWay` |
 | ObjC / Swift | `enum EnumDMChargeWay` |
 
-
 ### Members
-   
+
 | Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
 | -------------------------- | ------------------- | ----- | ----------- |
 | DM_CW_AUTO | EnumDMChargeWayAuto | 0 | The charge way automatically determined by the license server. |
@@ -53,17 +51,14 @@ Describes charge way.
 | DM_CW_INSTANCE_COUNT | EnumDMChargeWayInstanceCount | 9 | Charges by the count of instances. |
 | DM_CW_CONCURRENT_INSTANCE_COUNT | EnumDMChargeWayConcurrentInstanceCount | 10 | Charges by the count of concurrent instances. |
 
-
-
-
 &nbsp;
 
 ## DM_DeploymentType
+
 Describes the deployment type.
 
-
 ### Declarations
-   
+
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum DM_DeploymentType` |
@@ -74,9 +69,8 @@ Describes the deployment type.
 | Android | `N/A` |
 | ObjC / Swift | `N/A` |
 
-
 ### Members
-   
+
 | Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
 | -------------------------- | ------------------- | ----- | ----------- |
 | DM_DT_SERVER | N/A | 1 | Server deployment type |
@@ -84,16 +78,14 @@ Describes the deployment type.
 | DM_DT_EMBEDDED_DEVICE | N/A | 6 | Embedded device deployment type |
 | DM_DT_OEM | N/A | 7 | OEM deployment type |
 
-
-
 &nbsp;
 
 ## DM_LicenseModule
+
 Describes Dynamsoft license modules.
 
-
 ### Declarations
-   
+
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum DM_LicenseModule` |
@@ -103,9 +95,8 @@ Describes Dynamsoft license modules.
 | Java / Android | `class EnumDMLicenseModule` |
 | ObjC / Swift | `enum EnumDMLicenseModule` |
 
-
 ### Members
-   
+
 | Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
 | -------------------------- | ------------------- | ----- | ----------- |
 | DM_LM_ONED | EnumDMLicenseModuleONED | 1 | One-D barcodes license module |
@@ -123,15 +114,14 @@ Describes Dynamsoft license modules.
 | DM_LM_DPM | EnumDMLicenseModuleDPM | 13 |DATAMATRIX DPM (Direct Part Marking) license module |
 | DM_LM_NONSTANDARD_BARCODE | EnumDMLicenseModuleNONSTANDARDBARCODE | 16 | Nonstandard barcodes license module|
 
-
 &nbsp;
 
 ## DM_UUIDGenerationMethod
+
 Describes UUID generation method.
 
-
 ### Declarations
-   
+
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum DM_UUIDGenerationMethod` |
@@ -141,26 +131,21 @@ Describes UUID generation method.
 | Java / Android | `class EnumDMUUIDGenerationMethod` |
 | ObjC / Swift | `enum EnumDMUUIDGenerationMethod` |
 
-
 ### Members
-   
+
 | Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
 | -------------------------- | ------------------- | ----- | ----------- |
 | DM_UUIDGM_RANDOM | EnumDMUUIDGenerationMethodRandom | 1 | Generates UUID with random values. |
 | DM_UUIDGM_HARDWARE | EnumDMUUIDGenerationMethodHardware | 2 | Generates UUID based on hardware info. |
 
-
-
 &nbsp;
 
-
-
 ## ImagePixelFormat
+
 Describes the image pixel format.
 
-
 ### Declarations
-   
+
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum ImagePixelFormat` |
@@ -170,10 +155,8 @@ Describes the image pixel format.
 | Java / Android | `class EnumImagePixelFormat` |
 | ObjC / Swift | `enum EnumImagePixelFormat` |
 
-
-
 ### Members
-   
+
 | Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
 | -------------------------- | ------------------- | ----- | ----------- |
 | IPF_BINARY | EnumImagePixelFormatBinary | 0 | 0: Black, 1: White |
@@ -190,17 +173,15 @@ Describes the image pixel format.
 | IPF_ABGR_16161616 | EnumImagePixelFormatABGR_8888 | 11 | 64bit with ABGR channel order stored in memory from high to low address |
 | IPF_BGR_888 | EnumImagePixelFormatBGR_888 | 12 | 24bit with BGR channel order stored in memory from high to low address |
 
-
 &nbsp;
 
-
-
 ## QRCodeErrorCorrectionLevel
+
 Describes the QR Code error correction level.  
 
 
 ### Declarations
-   
+
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum QRCodeErrorCorrectionLevel` |
@@ -210,9 +191,8 @@ Describes the QR Code error correction level.
 | Java / Android | `class EnumQRCodeErrorCorrectionLevel` |
 | ObjC / Swift | `enum EnumQRCodeErrorCorrectionLevel` |
 
-
 ### Members
-   
+
 | Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
 | -------------------------- | ------------------- | ----- | ----------- |
 | QRECL_ERROR_CORRECTION_H | EnumQRCodeErrorCorrectionLevelErrorCorrectionH | 0 | Error Correction Level H (high) |
@@ -220,7 +200,7 @@ Describes the QR Code error correction level.
 | QRECL_ERROR_CORRECTION_M | EnumQRCodeErrorCorrectionLevelErrorCorrectionM | 2 | Error Correction Level M (medium-low) |
 | QRECL_ERROR_CORRECTION_Q | EnumQRCodeErrorCorrectionLevelErrorCorrectionQ | 3 | Error Correction Level Q (medium-high) |
 
-
+&nbsp;
 
 ## Product
 Describes Dynamsoft products.
