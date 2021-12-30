@@ -8,6 +8,11 @@ needGenerateH3Content: false
 
 # Release Notes
 
+## 8.9.1
+
+| -- | -- |
+| [Android](../programming/android/release-notes/android-8.md#891-12282021) | [iOS](../programming/objectivec-swift/release-notes/ios-8.md#891-12282021) |
+
 ## 8.9.0
 
 ### Highlights
@@ -89,7 +94,8 @@ needGenerateH3Content: false
 
 ## 8.2.1
 
-[JavaScript](../programming/javascript/release-notes/js-8.md#821-03292021)
+| -- | -- | -- |
+| [JavaScript](../programming/javascript/release-notes/js-8.md#821-03292021) | [Android](../programming/android/release-notes/android-8.md#821-05272021) | [iOS](../programming/objectivec-swift/release-notes/ios-8.md#821-05272021) |
 
 
 ## 8.2.0
