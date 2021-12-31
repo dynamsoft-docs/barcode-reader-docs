@@ -83,7 +83,7 @@ When the target barcodes are confirmed, the barcode texts might have common feat
 
 ### Exclude Small-Module Barcodes
 
-The smaller the module size of the barcodes, the higher risk of misreading. You can use the `FormatSpecificant` parameter `ModuleSizeRangeArray` to specify the minimum acceptable module size of the barcodes. You can also increase the `scaleDownThreshold` value to ensure the barcodes are not shrunk too small.
+The module size of the barcode refers to the pixel size of the barcode modules (e.g. the pixel width of a OneD barcodes lines or the smallest cell size of a QR code). The smaller the module size of the barcodes, the higher risk of misreading. If it is not nessary to decode all the small-size barcodes in the scenario (like video streaming barcode decoding), you can skip the small-module barcodes by specifying the minimum acceptable module size of the barcodes. You can also increase the `scaleDownThreshold` value to ensure the barcodes are not shrunk too small.
 
 ### Strategies on Blurry Barcodes
 
