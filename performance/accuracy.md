@@ -38,13 +38,15 @@ $ Read~Rate = \frac{Number~of~All~Decoded~Barcode~Results}{Number~of~All~Target~
 
 ## General Settings
 
-The following settings can be applied to nearly all usage scenarios to improve the barcode reading accuracy. They might sacrifice a bit of speed but hardly influence the read rate.
+The following settings can be applied to nearly all usage scenarios to improve the barcode reading accuracy.
 
 ### Result Confidence Filter
 
 The confidence attribute of the barcode results is determined by the reliability of that result. Users can set the `minResultConfidence` to make a filter on the barcode results by the confidence value. For Dynamsoft Barcode Reader v8.8 or higher version, the default value of the confidence is 30, which can filter the majority of misreading barcode results. A higher `minResultConfidence` setting will definitely improve the accuracy of the barcode results but reduce the read rate and speed at the same time. Therefore, please set the `minResultConfidence` according to your actual usage scenario to balance the accuracy and speed.
 
-**Related API(s)/Parameter(s)**
+Accuracy {\uparrow}{\uparrow}
+
+**Related Parameter(s)/API(s)**
 
 - [`minResultConfidence`]({{site.parameters_reference}}min-result-confidence.html)
 
@@ -52,7 +54,7 @@ The confidence attribute of the barcode results is determined by the reliability
 
 When using video barcode decoding, a barcode can be processed multiple times in consecutive video frames, which produces duplicate results. These duplicate results can be applied to verify the result's correctness. When a barcode result has been decoded more than once within a short period of time, we can confirm it is a correct result and output it. However, if a barcode result has never been decoded a second time within a period of time, we consider it a misread result and discard it.
 
-**Related API(s)/Parameter(s)**
+**Related Parameter(s)/API(s)**
 
 For JavaScript edition, multi-frame verification is enabled when using video barcode scanning. For Android and iOS editions, you have to use the following APIs to control the status of the multi-frame verification:
 
@@ -67,7 +69,7 @@ The following settings will benefit the barcode reading accuracy but also limit 
 
 Sometimes, misreading on an OneD barcode is caused by misrecognizing the OneD barcode to another OneD type. When you have a basic understanding on the barcode formats and know exactly which formats are the targets in your usage scenario. You can let your barcode reading program focus on the target formats only and reject all the noninterest barcodes. Please be sure to change the format settings when you want to extend your usage scenarios. In addition, specifying the required barcode formats will also benefit the barcode reading speed.
 
-**Related API(s)/Parameter(s)**
+**Related Parameter(s)/API(s)**
 
 - [`BarcodeFormatIds`]({{site.parameters_reference}}barcode-format-ids.html)
 - [`BarcodeFormatIds_2`]({{site.parameters_reference}}barcode-format-ids-2.html)
@@ -76,7 +78,7 @@ Sometimes, misreading on an OneD barcode is caused by misrecognizing the OneD ba
 
 When the target barcodes are confirmed, the barcode texts might have common features that help you implement a result filter on the results text. Via `FormatSpecification` parameters, you can add barcode result text restrictions like [`regular expression`]({{site.parameters_reference}}barcode-text-regex-pattern.html) requirements and [`text length`]({{site.parameters_reference}}barcode-text-length-range-array.html) range.
 
-**Related API(s)/Parameter(s)**
+**Related Parameter(s)/API(s)**
 
 - [`BarcodeTextRegExPattern`]({{site.parameters_reference}}barcode-text-regex-pattern.html)
 - [`BarcodeTextLengthRangeArray`]({{site.parameters_reference}}barcode-text-length-range-array.html)
@@ -97,7 +99,7 @@ For some scenarios like video barcode decoding, the speed and read rate performa
 
 In some specific scenarios, processing blurry images is inevitable. When `DeblurModes` is configured to the highest level, the risk of misreading is increased as well. On this occasion, you can enhance the other accuracy-related settings like confidence settings and Reg-Ex settings to conserve the accuracy.
 
-**Related API(s)/Parameter(s)**
+**Related Parameter(s)/API(s)**
 
 - [`ModuleSizeRangeArray`]({{site.parameters_reference}}module-size-range-array.html)
 - [`scaleDownThreshold`]({{site.parameters_reference}}scale-down-threshold.html)
@@ -119,7 +121,7 @@ This feature is highly recommended to be implemented on low-end devices. Enhanci
 
 A higher resolution will promote the sharpness of the video frames and also enlarge the module size of barcodes. Setting the resolution higher will definitely benefit the barcode reading accuracy but sacrifice a bit of speed. In addition, please remember to set the `scaleDownThreshold` to a higher value. When the `scaleDownThershold` is not big enough, the barcode reader will still process on the shrunken images.
 
-**Related API(s)/Parameter(s)**
+**Related Parameter(s)/API(s)**
 
 - <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/android/primary-api/camera-enhancer.html?ver=latest#enablefeatures" target="_blank">`CameraEnhancer.enableFeatures`</a>
 - <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/android/primary-api/camera-enhancer.html?ver=latest#setresolution" target="_blank">`CameraEnhancer.setResolution`</a>
