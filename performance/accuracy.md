@@ -146,7 +146,7 @@ The following links are the article that explaining how to make settings when sp
 - [How to boost Speed](speed.md)
 - [How to boost Read Rate](read-rate.md)
 
-If you don't have idea about which dimension of the performance should be piroritized or you are still puzzled by the parameter settings, please feel free to <a href="https://www.dynamsoft.com/company/contact/" target="_blank">contact us</a> to get support from our technical support team. Our teams can give you professional suggestions on the parameter settings to fulfill your requirements.
+If you don't have ideas about which dimension of the performance should be prioritized or you are still puzzled by the parameter settings, please feel free to <a href="https://www.dynamsoft.com/company/contact/" target="_blank">contact us</a> to get support from our technical support team. Our teams can give you professional suggestions on the parameter settings to fulfill your requirements.
 
 <!--
 
