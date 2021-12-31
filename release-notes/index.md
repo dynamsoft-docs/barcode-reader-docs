@@ -555,28 +555,28 @@ needGenerateH3Content: false
 - New samples are now available in the Code Gallery:
 - RESTful Web Service - implements server-side RESTful web service in C# for barcode reading.
 
-## 4.2.0
+### 4.2.0
 
-### IMPROVED
+#### IMPROVED
 
 - Changed 1D barcode decoding module to improve recognition accuracy.
 - Improved ResultPoints Property to adjust the sequence of barcode corner points. Now the top-left corner of the barcode is the starting point (x1, y1). The results are returned in the clockwise direction.
 - Improved ResultPoints Property to adjust the sequence of barcode corner points.
 
-## 4.1.0
+### 4.1.0
 
-### NEW
+#### NEW
 
 - Added new APIs DecodeStream, DecodeStreamRect, DecodeBase64String and DecodeBase64StringRect for C, C++ DLL.
 - Added Error Code -10022: "PDF Rasterizer DLL Missing".
 
-### IMPROVED
+#### IMPROVED
 
 - Improved positioning algorithm to better identify and localize DataMatrix barcodes.
 
-## 4.0.0
+### 4.0.0
 
-### NEW
+#### NEW
 
 - Added support for reading PDF417 and DataMatrix.
 - Added reading barcode from all types of PDF file.
