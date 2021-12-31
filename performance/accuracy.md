@@ -26,7 +26,7 @@ breadcrumbText: Accuracy
 
 </script>
 
-# How to boost barcode reading Accuracy
+# How to Boost Barcode Reading Accuracy
 
 This article illustrates how Dynamsoft Barcode Reader (hereafter referred to as "DBR") is designed to ensure the accuracy of barcode results and how you can add settings to further improve the accuracy.
 
@@ -130,12 +130,23 @@ You can specify the scan region via DCE to remove the noninterest areas. The vid
 
 ## Summary
 
-In the article, the accuracy-friendly parameter configurations are introduced. You can try these configurations in your own project to make sure the accuracy of the barcode result reaches your requirement. You can also <a href="https://www.dynamsoft.com/company/contact/" target="_blank">contact us</a> if further improvements are required in your project.
+In this article, the accuracy-friendly settings are listed and parsed. In summary, the measurements that improves the accuracy can be categorized as follow:
 
-Accuracy may not always be the primary goal. Sometimes you might need to find a balance between the different aspects of the performance. The following articles might help you to configure other performance settings.
+- Enhance the image/video source before decoding
+- Exclude the uninterest when decoding
+- Filter out the incorrect after decoding
+
+Some of the accuracy-friendly settings may benefits the speed or read rate at the same time. For example, when the uninterested barcode formats are excluded, both the processing speed and the accuracy are improved and hardly do this setting affects the read rate. However, some other accuracy-friendly settings, for example confidence filter, may decrease both the processing speed and read rate. To adjust the parameter setting to fit your usage scenario, you might need to find the balance between the 3 dimensions of the performance. Master the following information will help you to optimize the settings:
+
+- The priority of each performance metrics in your project.
+- How the settings are affecting the barcode decoding speed, read rate and accuracy.
+
+The following links are the article that explaining how to make settings when speed or read rate is prioritized. Reading the articles will help you to further understand the parameter settings and measure how to configure the setting for your own project.
 
 - [How to boost Speed](speed.md)
 - [How to boost Read Rate](read-rate.md)
+
+If you don't have idea about which dimension of the performance should be piroritized or you are still puzzled by the parameter settings, please feel free to <a href="https://www.dynamsoft.com/company/contact/" target="_blank">contact us</a> to get support from our technical support team. Our teams can give you professional suggestions on the parameter settings to fulfill your requirements.
 
 <!--
 
