@@ -25,7 +25,7 @@ breadcrumbText: Speed
 
 There are 3 basic metrics for measuring the performance of a barcode reader application: speed, accuracy and read-rate. The Dynamsoft Barcode Reader SDK (DBR) has been carefully designed to have excellent performance in all three of these metrics. In this article, we try to investigate all the possible methods you can take to let DBR focus on **speed**. 
 
-As the ultimate guide on how to configure DBR to realize its full speed potential, we will start with some common methods that are both simple and effective, and then delve into the various aspects of the barcode reading process defined by its algorithm. Lastly, we'll cover some uncommon methods which are useful in certain situations.
+As the ultimate guide on how to configure DBR to realize its full speed potential, we will start with some common methods that are both simple and effective, and then delve into the various aspects of the barcode reading process defined by its algorithm. Lastly, we'll cover some less-common methods which are useful in certain situations.
 
 > The following shows the definition of the three metrics.
 >  
@@ -312,7 +312,7 @@ If even better speed is desired, we can set limitations on barcode searching for
 
 ## Summary
 
-In this article, we first talked about some obvious and effective ways to improve speed, then we went through the complete reading procedure and looked at most of the parameters which might impact speed. Lastly, we mentioned the parameters to fine-tune the performance and some uncommon ways to speed things up.
+In this article, we first talked about some obvious and effective ways to improve speed, then we went through the complete reading procedure and looked at most of the parameters which might impact speed. Lastly, we mentioned a few less-common ways to speed things up.
 
 Depending on the actual image you are scanning or the usage scenario you are trying to cope with, you can experiement with these parameters to find the most suitable settings for the best speed. If you have any further questions, you can get in touch with [Dynamsoft Support](https://www.dynamsoft.com/company/contact/).
 
