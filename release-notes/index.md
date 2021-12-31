@@ -7,12 +7,12 @@ needGenerateH3Content: false
 ---
 
 # Release Notes
-
+<!--
 ## 8.9.1
 
 | -- | -- |
 | [Android](../programming/android/release-notes/android-8.md#891-12282021) | [iOS](../programming/objectivec-swift/release-notes/ios-8.md#891-12282021) |
-
+-->
 ## 8.9.0
 
 ### Highlights
@@ -23,6 +23,19 @@ needGenerateH3Content: false
 
 | -- | -- |
 | [Android](../programming/android/release-notes/android-8.md#890-12162021) | [iOS](../programming/objectivec-swift/release-notes/ios-8.md#890-12162021) |
+
+### Minor Versions
+
+<div class="fold-panel-prefix"></div>
+
+#### 8.9.1 <i class="fa fa-caret-down"></i>
+
+<div class="fold-panel-start"></div>
+
+| -- | -- |
+| [Android](../programming/android/release-notes/android-8.md#891-12282021) | [iOS](../programming/objectivec-swift/release-notes/ios-8.md#891-12282021) |
+
+<div class="fold-panel-end"></div>
 
 ## 8.8.3
 
