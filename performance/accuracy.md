@@ -48,8 +48,8 @@ The confidence attribute of the barcode results is determined by the reliability
 
 If you increase the `minResultConfidence`:
 
-Accuracy $\uparrow$ $\uparrow$ $\uparrow$
-Speed $\downarrow$
+Accuracy $\uparrow$ $\uparrow$ $\uparrow$  
+Speed $\downarrow$  
 Read Rate $\downarrow$
 
 **Related Parameter(s)/API(s)**
@@ -64,8 +64,8 @@ When using video barcode decoding, a barcode can be processed multiple times in 
 
 If you enable the multi-frame verification:
 
-Accuracy $\uparrow$ $\uparrow$ $\uparrow$
-Speed $\downarrow$ $\downarrow$ $\downarrow$
+Accuracy $\uparrow$ $\uparrow$ $\uparrow$  
+Speed $\downarrow$ $\downarrow$ $\downarrow$  
 Read Rate $\downarrow$
 
 **Related Parameter(s)/API(s)**
@@ -87,8 +87,8 @@ Sometimes, misreading on an OneD barcode is caused by misrecognizing the OneD ba
 
 If you simplify the barcode format settings:
 
-Accuracy $\uparrow$
-Speed $\uparrow$
+Accuracy $\uparrow$  
+Speed $\uparrow$  
 Read Rate --
 
 **Related Parameter(s)/API(s)**
@@ -104,8 +104,8 @@ When the target barcodes are confirmed, the barcode texts might have common feat
 
 If you add result text filter:
 
-Accuracy $\uparrow$ $\uparrow$
-Speed $\downarrow$
+Accuracy $\uparrow$ $\uparrow$  
+Speed $\downarrow$  
 Read Rate $\downarrow$
 
 **Related Parameter(s)/API(s)**
@@ -121,8 +121,8 @@ The smaller the module size of the barcodes, the lower accuracy of the results. 
 
 If you exclude the small-module barcodes:
 
-Accuracy $\uparrow$
-Speed --
+Accuracy $\uparrow$  
+Speed --  
 Read Rate $\downarrow$ $\downarrow$
 
 ### Strategies on Blurry Barcodes
@@ -141,8 +141,8 @@ In some specific scenarios, processing blurry images is inevitable. When `Deblur
 
 If you reduce the `DeblurModes` settings:
 
-Accuracy $\uparrow$
-Speed $\uparrow$ $\uparrow$
+Accuracy $\uparrow$  
+Speed $\uparrow$ $\uparrow$  
 Read Rate $\downarrow$ $\downarrow$ $\downarrow$
 
 **Related Parameter(s)/API(s)**
@@ -163,8 +163,8 @@ When the frame filter feature DCE is enabled, a quick sharpness evaluation will 
 
 If you enable the frame filter:
 
-Accuracy $\uparrow$
-Speed $\uparrow$
+Accuracy $\uparrow$  
+Speed $\uparrow$  
 Read Rate --
 
 ### Enhanced focus
@@ -175,8 +175,8 @@ This feature is highly recommended to be implemented on low-end devices. Enhanci
 
 If you enable enhanced focus on a low-end mobile device:
 
-Accuracy $\uparrow$
-Speed $\uparrow$
+Accuracy $\uparrow$  
+Speed $\uparrow$  
 Read Rate --
 
 ### Set Higher Resolution
@@ -187,8 +187,8 @@ A higher resolution will promote the sharpness of the video frames and also enla
 
 If you set a higher resolution:
 
-Accuracy $\uparrow$
-Speed $\downarrow$
+Accuracy $\uparrow$  
+Speed $\downarrow$  
 Read Rate $\uparrow$
 
 **Related Parameter(s)/API(s)**
@@ -204,8 +204,8 @@ You can specify the scan region via DCE to remove the noninterest areas. The vid
 
 If you specify the scan region:
 
-Accuracy $\uparrow$
-Speed $\uparrow$ $\uparrow$ $\uparrow$
+Accuracy $\uparrow$  
+Speed $\uparrow$ $\uparrow$ $\uparrow$  
 Read Rate $\downarrow$
 
 ## Summary
