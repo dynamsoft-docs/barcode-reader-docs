@@ -61,11 +61,11 @@ For JavaScript edition, multi-frame verification is enabled when using video bar
 
 ## Specific Settings
 
-The following settings will benefit the barcode reading accuracy but also limit the read rate. When you know exactly what your usage scenario is, you can apply the following settings to improve the barcode reading accuracy on that scenario. The read rate of your program will be extremely declined and be sure to change the settings if you want to use the program to other usage scenarios.
+When configuring the specific settings, you have to know some basic information about your usage scenario. The more notable features the scenario has, the more rooms for the improvements on the performance.
 
 ### Specify the Barcode Formats
 
-Sometimes, misreading on an OneD barcode is caused by misrecognizing the OneD barcode to another OneD type. When you have a basic understanding on the barcode formats and know exactly which formats are the targets in your usage scenario. You can let your barcode reading program focus on the target formats only and reject all the noninterest barcodes. Please be sure to change the format settings when you want to extend your usage scenarios. In addition, specifying the required barcode formats will also benefit the barcode reading speed.
+Sometimes, misreading on an OneD barcode is caused by misrecognizing the OneD barcode to another OneD type. When you have a basic understanding of the barcode formats and know exactly which formats are the targets in your usage scenario. You can let your barcode reading program focus on the target formats only and reject all the noninterest barcodes. Please be sure to change the format settings when you want to extend your usage scenarios. In addition, specifying the required barcode formats will also benefit the barcode reading speed.
 
 **Related Parameter(s)/API(s)**
 
@@ -83,7 +83,7 @@ When the target barcodes are confirmed, the barcode texts might have common feat
 
 ### Exclude Small-Module Barcodes
 
-The smaller the module size of the barcodes, the lower accuracy of the results. You can use the `FormatSpecificant` parameter `ModuleSizeRangeArray` to specify the minimum acceptable module size of the barcodes. You can also increase the `scaleDownThreshold` value to ensure the barcodes are not shrunk too small.
+The smaller the module size of the barcodes, the higher risk of misreading. You can use the `FormatSpecificant` parameter `ModuleSizeRangeArray` to specify the minimum acceptable module size of the barcodes. You can also increase the `scaleDownThreshold` value to ensure the barcodes are not shrunk too small.
 
 ### Strategies on Blurry Barcodes
 
