@@ -268,7 +268,7 @@ After barcode zones have been preprocessed, we have well-partitioned images awai
 **Recommendation**
  
 * For best speed, we usually ignore images with bad qualities, therefore we skip the steps defined by `BarcodeComplementModes` and `DeformationResistingModes` .
-* Also check out [Configure the last decoding process with DeblurModes](#configure-the-last-decoding-process-with-DeblurModes).
+* Also check out [Configure the last decoding process with DeblurModes](#configure-the-last-decoding-process-with-deblurmodes).
 
 <!--
 ### Output the results
