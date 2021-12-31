@@ -24,6 +24,7 @@ needGenerateH3Content: false
 ---
 
 ## DM_ChargeWay
+
 Describes charge way.
 
 ### Declarations
@@ -53,6 +54,7 @@ Describes charge way.
 &nbsp;
 
 ## DM_DeploymentType
+
 Describes the deployment type.
 
 ### Declarations
@@ -79,6 +81,7 @@ Describes the deployment type.
 &nbsp;
 
 ## DM_LicenseModule
+
 Describes Dynamsoft license modules.
 
 ### Declarations
@@ -114,6 +117,7 @@ Describes Dynamsoft license modules.
 &nbsp;
 
 ## DM_UUIDGenerationMethod
+
 Describes UUID generation method.
 
 ### Declarations
@@ -137,6 +141,7 @@ Describes UUID generation method.
 &nbsp;
 
 ## ImagePixelFormat
+
 Describes the image pixel format.
 
 ### Declarations
@@ -171,7 +176,9 @@ Describes the image pixel format.
 &nbsp;
 
 ## QRCodeErrorCorrectionLevel
+
 Describes the QR Code error correction level.  
+
 
 ### Declarations
 
@@ -193,7 +200,7 @@ Describes the QR Code error correction level.
 | QRECL_ERROR_CORRECTION_M | EnumQRCodeErrorCorrectionLevelErrorCorrectionM | 2 | Error Correction Level M (medium-low) |
 | QRECL_ERROR_CORRECTION_Q | EnumQRCodeErrorCorrectionLevelErrorCorrectionQ | 3 | Error Correction Level Q (medium-high) |
 
-
+&nbsp;
 
 ## Product
 Describes Dynamsoft products.

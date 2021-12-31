@@ -7,6 +7,7 @@ keywords: Read Rate
 
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
+
 <script type="text/x-mathjax-config">
 
     MathJax.Hub.Config({
@@ -98,7 +99,6 @@ Methods in this group will take further process before or after binarization to 
 ### Last Resort
 `DM_DEEP_ANALYSIS` is the most powerful way to deal with complicated situations which cannot be solved by above processing methods. It analyzes every pixel of the image, does a lot calculation to gather characteristics to find or build relation between each pixel, and finally find out the barcode modules. The process is relatively time-consuming, so it is recommended to set `DM_DEEP_ANALYSIS` after all other modes. 
 
-
 ## Supporting Particular Circumstances During Decoding
 After removing blurness on barcode zones, DBR starts decoding the barcode. There are many parameters can be used during this procedure to deal with following circumstances to insure the read rate.
 
@@ -118,18 +118,18 @@ If the barcode types you are decoding is uncertain, it is recommended to set all
 [DPMCodeReadingModes]({{ site.parameters_reference }}mirror-mode.html) is a parameter to deal with DPM (Direct Part Marking) codes. DPM Codes, DataMatrix typically, are used widely in industrial part tracking, from electronics manufacturing to automotive assembly. They always come with light reflection, low contrast, complex background texture, and other distorted features. If you are reading these barcodes, please set a `DPMCRM_GENERAL` mode. 
 
 ### Mirror State
+
 [MirrorMode]({{ site.parameters_reference }}image.html) is a parameter to deal with mirrored barcodes. The barcode on an image usually have two states, normal and mirrored. If the barcodes you are decoding are of the same mirror state, setting this mode to `MM_NORMAL` or `MM_MIRROR` can improve the speed without affect on read rate. If not, setting it to `MM_BOTH` will cover both normal and mirrored barcodes to insure the read rate.
 
 
 ### Non-standard Barcodes
 In some cases, the barcodes may not be generated or printed following the standard. DBR provides a group of parameters to support non-standard barcode formats. If the barcodes you are decoding is non-standard, setting following parameters may help the read rate.
+
 - [StandardFormat]({{ site.parameters_reference }}standard-format.html) to specify the standard barcode format.
 - [AllModuleDeviation]({{ site.parameters_reference }}all-module-deviation.html) to specify the barcode module size deviation value.
 - [HeadModuleRatio]({{ site.parameters_reference }}head-module-ratio.html) to specify the module count and module size ratio of the barcode head part.
 - [TailModuleRatio]({{ site.parameters_reference }}tail-module-ratio.html) to specify the module count and module size ratio of the barcode tail part.
 - [FindUnevenModuleBarcode]({{ site.parameters_reference }}find-uneven-module-barcode.html) to specify whether to find barcodes with uneven barcode modules.
-
-
 
 ## Related Articles
 - [How to boost barcode reading Accuracy](accuracy.md)
@@ -145,4 +145,3 @@ $ Accuracy = \frac{Number~of~Correctly~Decoded~Barcode~Results}{Number~of~All~De
 
 ### Speed
 $ Speed = \frac{Number~of~All~Decoded~Barcode~Results}{Total~Time~Consumed} $
-

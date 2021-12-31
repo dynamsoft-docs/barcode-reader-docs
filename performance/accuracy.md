@@ -30,18 +30,7 @@ breadcrumbText: Accuracy
 
 This article illustrates how Dynamsoft Barcode Reader (hereafter referred to as "DBR") is designed to ensure the accuracy of barcode results and how you can add settings to further improve the accuracy.
 
-## Definitions
-
-The accuracy of the barcode reader is defined as follow:
-
 $ Accuracy = \frac{Number~of~Correctly~Decoded~Barcode~Results}{Number~of~All~Decoded~Barcode~Results} $
-
-Accuracy is the ability to ensure the correctness of output results. Some accuracy protections are enabled as the default settings of DBR. However, you can further improve the accuracy when the usage scenario has the following features:
-
-- Highly automated barcode processing without manual verification.
-- Most of the target barcodes are badly printed.
-
-The speed and the read rate are the other two dimensions of performance and they are defined as follows. They might be sacrificed if you are trying to improve the accuracy.
 
 $ Speed = \frac{Number~of~All~decoded~Barcode~Results}{Total~Time~Consumption} $
 
@@ -100,17 +89,13 @@ The smaller the module size of the barcodes, the lower accuracy of the results. 
 
 `DeblurModes` is the parameter that controls how much effort DBR will spend to process the blurry images. This mode is highly related to the performance of the barcode processing. `DeblurModes` is set to the highest level by default so that the barcode reader will be able to decode successfully even if the image is highly blurred. However, the risk of misreading is increased at the same time when the barcode reader is trying to process highly blurred images. Therefore, a trade-off between the read rate and accuracy is required when configuring the `DeblurModes` parameter.
 
-- IF accuracy is the first priority
+- When accuracy is the primary goal
 
-Simplifying the `DeblurModes` will help you ensure the accuracy of barcode results. `DM_BASED_ON_LOC_BIN` and `DM_THRESHOLD_BINARIZATION` are the most fundamental deblur modes that are required to process the barcodes for the majority of usage scenarios. In addition, you can also add `DM_DIRECT_BINARIZATION` which is another basic candidate of `DeblurModes`. These basic settings can cover the majority of scenarios and keep the accuracy at a high level.
+For some scenarios like video barcode decoding, the speed and read rate performance can be maintained even if you don't enable a high-level `DeblurModes` setting. On this occasion, you can simplify the `DeblurModes` settings to ensure the accuracy of the barcode results.
 
-- IF both the accuracy and read rate should be maintained
+- To Keep the accuracy when read-rate is the maximized
 
-If you find the readability on blurry images doesn't reach your requirements, you can try to add `DeblurModes` candidates `DM_GRAY_EQUALIZATION`, `DM_SMOOTHING`, `DM_SHARPENING`, `DM_SHARPENING_SMOOTHING`, `DM_MORPHING` to you `DeblurModes` settings.
-
-- IF read rate should be kept at high-level
-
-If the image is highly blurred and you still want to get a barcode result from it, you can add `DM_DEEP_ANALYSIS` to the `DeblurModes` settings so that you can get the barcode results ignoring the accuracy.
+In some specific scenarios, processing blurry images is inevitable. When `DeblurModes` is configured to the highest level, the risk of misreading is increased as well. On this occasion, you can enhance the other accuracy-related settings like confidence settings and Reg-Ex settings to conserve the accuracy.
 
 **Related API(s)/Parameter(s)**
 
@@ -162,3 +147,12 @@ A higher resolution will promote the sharpness of the video frames and also enla
 ### Set the Scan Region
 
 You can specify the scan region via DCE to remove the noninterest areas. The video frames will be cropped before barcode decoding so that the barcode reader will not be disturbed by the noninterest information and process even more fast and accurate.
+
+## Summary
+
+In the article, the accuracy-friendly parameter configurations are introduced. You can try these configurations in your own project to make sure the accuracy of the barcode result reaches your requirement. You can also <a href="https://www.dynamsoft.com/company/contact/" target="_blank">contact us</a> if further improvements are required in you project.
+
+Accuracy may not always be the primary goal. Sometimes you might need to find a balance between the different aspects of the performance. The following articles might help you to configure other performance settings.
+
+- [How to boost Speed](speed.md)
+- [How to boost Read Rate](read-rate.md)
