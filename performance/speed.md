@@ -169,9 +169,9 @@ There are two ways to specify the region:
 -- GrayscaleTransformationModes
 -->
 
-### Preprocess the image
+### Accelerate the image conversion
 
-The ultimate goal in preprocessing the original image is to get a binarized image on which the characteristics of barcodes make them easy to be located. In most cases, the original image is in color and it first gets converted into a grayscale image before gets binarized.
+The ultimate goal in preprocessing the original image is to convert it into a binarized image on which the characteristics of barcodes make them easy to be located. In most cases, the original image is in color and it first gets converted into a grayscale image before gets binarized.
 
 There are a few things we can do to speed things up in the preprocessing.
 
@@ -205,7 +205,7 @@ The less the noise, the faster the localization. Use the parameters [TextureDete
 * For images with texture (such as images taken on the screen), enable texture detection with `TextureDetectionModes`. Read more on [How to deal with image textures](https://www.dynamsoft.com/barcode-reader/parameters/scenario-settings/texture-detection.html?ver=latest#).
 * For images with lots of text, enable text filter with `TextFilterModes`. Read more on [How to filter text in an image](https://www.dynamsoft.com/barcode-reader/parameters/scenario-settings/text-filter.html?ver=latest#)
 
-#### Accelerate the image binarization
+#### Facilitate the image binarization
 
 The image binarization is controlled by the parameter [BinarizationModes](https://www.dynamsoft.com/barcode-reader/parameters/reference/binarization-modes.html#binarizationmodes). This has been discussed briefly above in [Determine the appropriate binarization mode](#determine-the-appropriate-binarization-mode) where the recommendation is to use either `BM_THRESHOLD` or `BM_LOCAL_BLOCK`. Here we will examine some arguments that can be used to adjust the modes further.
 
