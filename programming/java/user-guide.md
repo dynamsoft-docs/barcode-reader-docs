@@ -15,7 +15,7 @@ In this guide, you will learn step by step on how to build a barcode reading app
 ## Requirements
 
 - Operating systems:
-   - Windows 7, 8, 10
+   - Windows 7, 8, 10, 11
    - Windows Server 2003, 2008, 2008 R2, 2012
    - Linux x64 (Ubuntu 14.04.4+ LTS, Debian 8+, etc.)
    - macOS x64 10.12+

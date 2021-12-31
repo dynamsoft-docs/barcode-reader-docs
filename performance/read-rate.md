@@ -29,12 +29,14 @@ keywords: Read Rate
 This article describes how the Dynamsoft Barcode Reader SDK (hereafter referred to as "DBR") is designed and how to adjust parameters to achieve a high barcode [read rate](#read-rate). Do bear in mind that [accuracy](#accuracy) and [speed](#speed) may not be ideal when read rate is the first priority.
 
 
-## Processings before Localizing Barcode Zones
+## Strengthen Image Features for Localization
 Barcode zones are detectable by taking advantage of features of different barcode formats. For example, linear barcode is consist
-of several parallel lines, finding such an area with group of lines, a liner barcode zone is detected. But in some cases, these features may not be obvious or good enough, so processings need to be taken to enhance barcode zone features before localization. Check out and adjust the following parameters designed for these cases to improve the read rate.
+of several parallel lines, finding such an area with group of lines, a liner barcode zone is detected. But in some cases, these features may not be obvious or good enough to be detectable, we can customize the following processings to enhance barcode zone features before localization. 
 
-### Transform to Grayscale 
-[ColourConversionModes]({{ site.parameters_reference }}colour-conversion-modes.html) is a parameter to control the process of converting colour image to grayscale image. By default, the conversion will base on the RGB channels with the default weights of three channels. This parameter allows you to specify the referred colour channel (RGB or HSV) and the weight of each channel during the colour conversion. Assume your image has a disgusting contrast of one colour channel between the barcode area and background, this parameter may help specify the appropriate settings for getting a higher quality grayscale image
+### Optimize the Conversion from Colour Image to Grayscale
+When converting a colour image to grayscale, the colour space and weights of each colour channel used directly affect the quality of the grayscale image. 
+By default, DBR uses RGB space and automatically calculates the weights of three channels. To get a high quality grayscale image, you can also adjust the colour space and weight of channels by parameter [ColourConversionModes]({{ site.parameters_reference }}colour-conversion-modes.html). For example, if your image has a barcode on red background, setting `BlueChannelWeight, GreenChannelWeight and RedChannelWeight` to `0, 0 and 1000` will return a better grayscale than `300, 300 and 400`.
+
 
 [GrayscaleTransformationModes]({{ site.parameters_reference }}grayscale-transformation-modes.html) is a parameter to control the colour mode of the barcode on grayscale image. The barcode on an image usually have two types, dark barcode on light background and light barcode on dark background. If the barcodes you are decoding are of the same colour mode, setting this mode correspondly to `GTM_ORIGINAL` or `GTM_INVERTED` can improve the speed without affecting on read rate. If not, setting it to `GTM_ORIGINAL` and `GTM_INVERTED` will cover both types to insure the read rate.
 
@@ -76,16 +78,16 @@ For some cases, the read speed may take priority over read rate, the following o
 
 - `LM_SCAN_DIRECTLY` can be covered by `LM_CONNECTED_BLOCKS`, so setting `LM_SCAN_DIRECTLY` after `LM_CONNECTED_BLOCKS` will give no help on read rate but slow down the speed. And setting `LM_SCAN_DIRECTLY` before `LM_CONNECTED_BLOCKS` is usually used only when `ExpectedBarcodesCount` is setting to 0.
 
-## Image Processings To Remove Blurness on Barcode Zones
+## Endeavor to Decode a Barcode Zone
 After getting a barcode zone, DBR applies a variety of further process before decoding the barcode. [DeblurModes]({{ site.parameters_reference }}deblur-modes.html) is a parameter can be customized in this procedure, which provides several methods to perform a round of image processing on the barcode zone, aiming to deal with varying image blurness situations may lead to low read rate. These methods can be divided into following three groups considering the effort and time cost. You can set one or more modes according to your barcode area situation to balance read rate and speed.
 
-### General Effort and Time Cost 
+### Efficient 
 Methods in this group focus on the process of binarizing the barcode area to handle relatively simple situations.
 - Set `DM_BASED_ON_LOC_BIN` when the barcode area is clear and clean. It is the most effective method since it crop the barcode area directly from the binary image generated during the localization process. 
 - Set `DM_DIRECT_BINARIZATION` when the barcode content modules have varying illumination.
 - Set `DM_THRESHOLD_BINARIZATION` when the barcode content modules have distinct colour contrast with the background.
 
-### More Effort and Time Cost
+### Effective
 Methods in this group will take further process before or after binarization to handle more complicated situations.
 
 - Set `DM_GRAY_EQUALIZATION` when the barcode content modules have low colour contrast with the background.
@@ -94,7 +96,7 @@ Methods in this group will take further process before or after binarization to 
 - Set `DM_SHARPENING_SMOOTHING` when the barcode content modules have blurred boundaries with unclear backgrounds.
 - Set `DM_MORPHING` when the barcode area is polluted or destroyed.
 
-### Most Effort and Time Cost
+### Last Resort
 `DM_DEEP_ANALYSIS` is the most powerful way to deal with complicated situations which cannot be solved by above processing methods. It analyzes every pixel of the image, does a lot calculation to gather characteristics to find or build relation between each pixel, and finally find out the barcode modules. The process is relatively time-consuming, so it is recommended to set `DM_DEEP_ANALYSIS` after all other modes. 
 
 ## Supporting Particular Circumstances During Decoding
