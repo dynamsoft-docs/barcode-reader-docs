@@ -24,18 +24,6 @@ needGenerateH3Content: false
 ### Highlights
 
 {%- include release-notes/product-highlight-8.8.0.md -%}
-<!--
-| Available Editions | Versions |
-| -------- | ------------------ |
-| JavaScript | [8.8](../programming/javascript/release-notes/js-8.md#880-10282021) / [8.8.3](../programming/javascript/release-notes/js-8.md#883-10292021) |
-| C | [8.8](../programming/c/release-notes/c-8.md#880-10122021) |
-| C++ | [8.8](../programming/cplusplus/release-notes/cpp-8.md#880-10122021) |
-| DotNet | [8.8](../programming/dotnet/release-notes/dotnet-8.md#880-10122021) |
-| Python | [8.8](../programming/python/release-notes/python-8.md#880-10222021) |
-| Java | [8.8](../programming/java/release-notes/java-8.md#880-10122021) |
-| Android | [8.8](../programming/android/release-notes/android-8.md#880-10192021) |
-| iOS | [8.8](../programming/objectivec-swift/release-notes/ios-8.md#880-10192021) |
--->
 
 | Versions | Available Editions |
 | -------- | ------------------ |
