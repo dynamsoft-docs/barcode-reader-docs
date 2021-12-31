@@ -14,19 +14,10 @@ needGenerateH3Content: false
 
 {%- include release-notes/product-highlight-8.9.0.md -%}
 
-### Editions
-
-- Android: [8.9](../programming/android/release-notes/android-8.md#890-12162021), [8.9.1](../programming/android/release-notes/android-8.md#891-12282021)
-- iOS: [8.9](../programming/objectivec-swift/release-notes/ios-8.md#890-12162021), [8.9.1](../programming/objectivec-swift/release-notes/ios-8.md#891-12282021)
-
-| Available Editions | Versions |
+| Versions | Available Editions |
 | -------- | ------------------ |
-| Android | [8.9](../programming/android/release-notes/android-8.md#890-12162021) / [8.9.1](../programming/android/release-notes/android-8.md#891-12282021) |
-| iOS | [8.9](../programming/objectivec-swift/release-notes/ios-8.md#890-12162021) / [8.9.1](../programming/objectivec-swift/release-notes/ios-8.md#891-12282021) |
-
-## 8.8.3
-
-[JavaScript]
+| 8.9.0 | [Android](../programming/android/release-notes/android-8.md#890-12162021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#890-12162021) |
+| 8.9.1 | [Android](../programming/android/release-notes/android-8.md#891-12282021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#891-12282021) |
 
 ## 8.8
 
@@ -47,41 +38,23 @@ needGenerateH3Content: false
 -->
 
 | Versions | Available Editions |
-| -------- | ---------- |
-| 8.8 | [JavaScript]() / [C]() / [C++]() / [DotNet]() / [Python]() / [Java]() / [Android]() / [iOS]() |
-| 8.8.3 | [JavaScript]() |
+| -------- | ------------------ |
+| 8.8.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#880-10282021) / [C](../programming/c/release-notes/c-8.md#880-10122021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#880-10122021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#880-10122021) / [Python](../programming/python/release-notes/python-8.md#880-10222021) / [Java](../programming/java/release-notes/java-8.md#880-10122021) / [Android](../programming/android/release-notes/android-8.md#880-10192021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#880-10192021) |
+| 8.8.3 | [JavaScript](../programming/javascript/release-notes/js-8.md#883-10292021) |
 
-## 8.6.3
-
-[JavaScript](../programming/javascript/release-notes/js-8.md#863-09302021)
-
-
-## 8.6.1
-
-[JavaScript](../programming/javascript/release-notes/js-8.md#861-09012021)
-
-
-## 8.6.0
+## 8.6
 
 ### Highlights
 
 {%- include release-notes/product-highlight-8.6.0.md -%}
 
-### Editions
+| Versions | Available Editions |
+| -------- | ------------------ |
+| 8.6.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#860-08312021) / [C](../programming/c/release-notes/c-8.md#860-07152021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#860-07152021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#860-07152021) / [Python](../programming/python/release-notes/python-8.md#860-07152021) / [Java](../programming/java/release-notes/java-8.md#860-07152021) / [Android](../programming/android/release-notes/android-8.md#860-07152021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#860-07152021) |
+| 8.6.1 | [JavaScript](../programming/javascript/release-notes/js-8.md#861-09012021) |
+| 8.6.3 | [JavaScript](../programming/javascript/release-notes/js-8.md#863-09302021) |
 
-| -- | -- | -- | -- | -- | -- | -- | -- |
-| [JavaScript](../programming/javascript/release-notes/js-8.md#860-08312021) | [C](../programming/c/release-notes/c-8.md#860-07152021) | [C++](../programming/cplusplus/release-notes/cpp-8.md#860-07152021) | [DotNet](../programming/dotnet/release-notes/dotnet-8.md#860-07152021) | [Python](../programming/python/release-notes/python-8.md#860-07152021) | [Java](../programming/java/release-notes/java-8.md#860-07152021) | [Android](../programming/android/release-notes/android-8.md#860-07152021) | [iOS](../programming/objectivec-swift/release-notes/ios-8.md#860-07152021) |
-
-- JavaScript:
-- C:
-- C++:
-- DotNet:
-- Python:
-- Java:
-- Android:
-- iOS:
-
-## 8.4.0
+## 8.4
 
 ### New
 
