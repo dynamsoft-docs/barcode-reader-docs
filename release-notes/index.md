@@ -75,7 +75,7 @@ needGenerateH3Content: false
 | 8.2.3 | [JavaScript](../programming/javascript/release-notes/js-8.md#823-04152021) |
 | 8.2.5 | [JavaScript](../programming/javascript/release-notes/js-8.md#825-05182021) |
 
-## 8.1.0
+## 8.1
 
 ### Highlights
 
@@ -95,7 +95,7 @@ needGenerateH3Content: false
 | 8.1.2 | [JavaScript](../programming/javascript/release-notes/js-8.md#812-01222021) / [C](../programming/c/release-notes/c-8.md#812-01222021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#812-01222021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#812-01222021) / [Python](../programming/python/release-notes/python-8.md#812-01222021) / [Java](../programming/java/release-notes/java-8.md#812-01222021) / [Android](../programming/android/release-notes/android-8.md#812-01222021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#812-01222021) |
 | 8.1.3 | [JavaScript](../programming/javascript/release-notes/js-8.md#813-03042021) |
 
-## 8.0.0
+## 8.0
 
 ### Highlights
 
