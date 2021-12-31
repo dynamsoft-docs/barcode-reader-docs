@@ -46,6 +46,8 @@ The confidence attribute of the barcode results is determined by the reliability
 
 **Performance**
 
+If you increase the `minResultConfidence`:
+
 Accuracy $\uparrow$ $\uparrow$ $\uparrow$
 Speed $\downarrow$
 Read Rate $\downarrow$
@@ -59,6 +61,8 @@ Read Rate $\downarrow$
 When using video barcode decoding, a barcode can be processed multiple times in consecutive video frames, which produces duplicate results. These duplicate results can be applied to verify the result's correctness. When a barcode result has been decoded more than once within a short period of time, we can confirm it is a correct result and output it. However, if a barcode result has never been decoded a second time within a period of time, we consider it a misread result and discard it.
 
 **Performance**
+
+If you enable the multi-frame verification:
 
 Accuracy $\uparrow$ $\uparrow$ $\uparrow$
 Speed $\downarrow$ $\downarrow$ $\downarrow$
@@ -81,6 +85,8 @@ Sometimes, misreading on an OneD barcode is caused by misrecognizing the OneD ba
 
 **Performance**
 
+If you simplify the barcode format settings:
+
 Accuracy $\uparrow$
 Speed $\uparrow$
 Read Rate --
@@ -96,6 +102,8 @@ When the target barcodes are confirmed, the barcode texts might have common feat
 
 **Performance**
 
+If you add result text filter:
+
 Accuracy $\uparrow$ $\uparrow$
 Speed $\downarrow$
 Read Rate $\downarrow$
@@ -110,6 +118,8 @@ Read Rate $\downarrow$
 The smaller the module size of the barcodes, the lower accuracy of the results. You can use the `FormatSpecificant` parameter `ModuleSizeRangeArray` to specify the minimum acceptable module size of the barcodes. You can also increase the `scaleDownThreshold` value to ensure the barcodes are not shrunk too small.
 
 **Performance**
+
+If you exclude the small-module barcodes:
 
 Accuracy $\uparrow$
 Speed --
@@ -129,7 +139,7 @@ In some specific scenarios, processing blurry images is inevitable. When `Deblur
 
 **Performance**
 
-If you reduce the `DeblurModes` setting:
+If you reduce the `DeblurModes` settings:
 
 Accuracy $\uparrow$
 Speed $\uparrow$ $\uparrow$
@@ -151,6 +161,8 @@ When the frame filter feature DCE is enabled, a quick sharpness evaluation will 
 
 **Performance**
 
+If you enable the frame filter:
+
 Accuracy $\uparrow$
 Speed $\uparrow$
 Read Rate --
@@ -161,6 +173,8 @@ This feature is highly recommended to be implemented on low-end devices. Enhanci
 
 **Performance**
 
+If you enable enhanced focus on a low-end mobile device:
+
 Accuracy $\uparrow$
 Speed $\uparrow$
 Read Rate --
@@ -170,6 +184,8 @@ Read Rate --
 A higher resolution will promote the sharpness of the video frames and also enlarge the module size of barcodes. Setting the resolution higher will definitely benefit the barcode reading accuracy but sacrifice a bit of speed. In addition, please remember to set the `scaleDownThreshold` to a higher value. When the `scaleDownThershold` is not big enough, the barcode reader will still process on the shrunken images.
 
 **Performance**
+
+If you set a higher resolution:
 
 Accuracy $\uparrow$
 Speed $\downarrow$
@@ -185,6 +201,8 @@ Read Rate $\uparrow$
 You can specify the scan region via DCE to remove the noninterest areas. The video frames will be cropped before barcode decoding so that the barcode reader will not be disturbed by the noninterest information and process even more fast and accurate.
 
 **Performance**
+
+If you specify the scan region:
 
 Accuracy $\uparrow$
 Speed $\uparrow$ $\uparrow$ $\uparrow$
