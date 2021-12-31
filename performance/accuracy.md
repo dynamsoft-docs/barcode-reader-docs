@@ -44,14 +44,6 @@ The following settings can be applied to nearly all usage scenarios to improve t
 
 The confidence attribute of the barcode results is determined by the reliability of that result. Users can set the `minResultConfidence` to make a filter on the barcode results by the confidence value. For Dynamsoft Barcode Reader v8.8 or higher version, the default value of the confidence is 30, which can filter the majority of misreading barcode results. A higher `minResultConfidence` setting will definitely improve the accuracy of the barcode results but reduce the read rate and speed at the same time. Therefore, please set the `minResultConfidence` according to your actual usage scenario to balance the accuracy and speed.
 
-**Performance**
-
-If you increase the `minResultConfidence`:
-
-Accuracy $\uparrow$ $\uparrow$ $\uparrow$  
-Speed $\downarrow$  
-Read Rate $\downarrow$
-
 **Related Parameter(s)/API(s)**
 
 - [`minResultConfidence`]({{site.parameters_reference}}min-result-confidence.html)
@@ -59,14 +51,6 @@ Read Rate $\downarrow$
 ### Multi-frame Verification
 
 When using video barcode decoding, a barcode can be processed multiple times in consecutive video frames, which produces duplicate results. These duplicate results can be applied to verify the result's correctness. When a barcode result has been decoded more than once within a short period of time, we can confirm it is a correct result and output it. However, if a barcode result has never been decoded a second time within a period of time, we consider it a misread result and discard it.
-
-**Performance**
-
-If you enable the multi-frame verification:
-
-Accuracy $\uparrow$ $\uparrow$ $\uparrow$  
-Speed $\downarrow$ $\downarrow$ $\downarrow$  
-Read Rate $\downarrow$
 
 **Related Parameter(s)/API(s)**
 
@@ -79,34 +63,18 @@ For JavaScript edition, multi-frame verification is enabled when using video bar
 
 The following settings will benefit the barcode reading accuracy but also limit the read rate. When you know exactly what your usage scenario is, you can apply the following settings to improve the barcode reading accuracy on that scenario. The read rate of your program will be extremely declined and be sure to change the settings if you want to use the program to other usage scenarios.
 
-### Format Specification
+### Specify the Barcode Formats
 
 Sometimes, misreading on an OneD barcode is caused by misrecognizing the OneD barcode to another OneD type. When you have a basic understanding on the barcode formats and know exactly which formats are the targets in your usage scenario. You can let your barcode reading program focus on the target formats only and reject all the noninterest barcodes. Please be sure to change the format settings when you want to extend your usage scenarios. In addition, specifying the required barcode formats will also benefit the barcode reading speed.
-
-**Performance**
-
-If you simplify the barcode format settings:
-
-Accuracy $\uparrow$  
-Speed $\uparrow$  
-Read Rate --
 
 **Related Parameter(s)/API(s)**
 
 - [`BarcodeFormatIds`]({{site.parameters_reference}}barcode-format-ids.html)
 - [`BarcodeFormatIds_2`]({{site.parameters_reference}}barcode-format-ids-2.html)
 
-### Result Text Filter Methods
+### Enable Result Text Filter
 
 When the target barcodes are confirmed, the barcode texts might have common features that help you implement a result filter on the results text. Via `FormatSpecification` parameters, you can add barcode result text restrictions like [`regular expression`]({{site.parameters_reference}}barcode-text-regex-pattern.html) requirements and [`text length`]({{site.parameters_reference}}barcode-text-length-range-array.html) range.
-
-**Performance**
-
-If you add result text filter:
-
-Accuracy $\uparrow$ $\uparrow$  
-Speed $\downarrow$  
-Read Rate $\downarrow$
 
 **Related Parameter(s)/API(s)**
 
@@ -117,14 +85,6 @@ Read Rate $\downarrow$
 
 The smaller the module size of the barcodes, the lower accuracy of the results. You can use the `FormatSpecificant` parameter `ModuleSizeRangeArray` to specify the minimum acceptable module size of the barcodes. You can also increase the `scaleDownThreshold` value to ensure the barcodes are not shrunk too small.
 
-**Performance**
-
-If you exclude the small-module barcodes:
-
-Accuracy $\uparrow$  
-Speed --  
-Read Rate $\downarrow$ $\downarrow$
-
 ### Strategies on Blurry Barcodes
 
 `DeblurModes` is the parameter that controls how much effort DBR will spend to process the blurry images. This mode is highly related to the performance of the barcode processing. `DeblurModes` is set to the highest level by default so that the barcode reader will be able to decode successfully even if the image is highly blurred. However, the risk of misreading is increased at the same time when the barcode reader is trying to process highly blurred images. Therefore, a trade-off between the read rate and accuracy is required when configuring the `DeblurModes` parameter.
@@ -133,17 +93,9 @@ Read Rate $\downarrow$ $\downarrow$
 
 For some scenarios like video barcode decoding, the speed and read rate performance can be maintained even if you don't enable a high-level `DeblurModes` setting. On this occasion, you can simplify the `DeblurModes` settings to ensure the accuracy of the barcode results.
 
-- To Keep the accuracy when read-rate is the maximized
+- When read rate is as important as accuracy
 
-In some specific scenarios, processing blurry images is inevitable. When `DeblurModes` is configured to the highest level, the risk of misreading is increased as well. On this occasion, you can enhance the other accuracy-related settings like confidence settings and Reg-Ex settings to conserve the accuracy.
-
-**Performance**
-
-If you reduce the `DeblurModes` settings:
-
-Accuracy $\uparrow$  
-Speed $\uparrow$ $\uparrow$  
-Read Rate $\downarrow$ $\downarrow$ $\downarrow$
+In some specific scenarios, processing blurry images are inevitable. When `DeblurModes` is configured to the highest level, the risk of misreading is increased as well. On this occasion, you can enhance the other accuracy-related settings like confidence settings and Reg-Ex settings to conserve the accuracy.
 
 **Related Parameter(s)/API(s)**
 
@@ -159,37 +111,13 @@ Users can optimize the parameter settings to prevent misreading but this is not 
 
 When the frame filter feature DCE is enabled, a quick sharpness evaluation will be implemented on each video frame and the low sharpness frame will be discarded to ensure the barcode reader will process on high-quality frames only. Since the Barcode Reader doesn't need to process the blurry video frames, the accuracy will be highly improved.
 
-**Performance**
-
-If you enable the frame filter:
-
-Accuracy $\uparrow$  
-Speed $\uparrow$  
-Read Rate --
-
 ### Enhanced focus
 
 This feature is highly recommended to be implemented on low-end devices. Enhancing the camera focus ability will reduce the blurry frames in the video streaming, which benefits the barcode reading accuracy.
 
-**Performance**
-
-If you enable enhanced focus on a low-end mobile device:
-
-Accuracy $\uparrow$  
-Speed $\uparrow$  
-Read Rate --
-
 ### Set Higher Resolution
 
 A higher resolution will promote the sharpness of the video frames and also enlarge the module size of barcodes. Setting the resolution higher will definitely benefit the barcode reading accuracy but sacrifice a bit of speed. In addition, please remember to set the `scaleDownThreshold` to a higher value. When the `scaleDownThershold` is not big enough, the barcode reader will still process on the shrunken images.
-
-**Performance**
-
-If you set a higher resolution:
-
-Accuracy $\uparrow$  
-Speed $\downarrow$  
-Read Rate $\uparrow$
 
 **Related Parameter(s)/API(s)**
 
@@ -199,14 +127,6 @@ Read Rate $\uparrow$
 ### Set the Scan Region
 
 You can specify the scan region via DCE to remove the noninterest areas. The video frames will be cropped before barcode decoding so that the barcode reader will not be disturbed by the noninterest information and process even more fast and accurate.
-
-**Performance**
-
-If you specify the scan region:
-
-Accuracy $\uparrow$  
-Speed $\uparrow$ $\uparrow$ $\uparrow$  
-Read Rate $\downarrow$
 
 ## Summary
 
