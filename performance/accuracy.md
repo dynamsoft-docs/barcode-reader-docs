@@ -40,7 +40,7 @@ $ Read~Rate = \frac{Number~of~All~Decoded~Barcode~Results}{Number~of~All~Target~
 
 The following settings can be applied to nearly all usage scenarios to improve the barcode reading accuracy.
 
-### Result Confidence Filter
+### Filter the Result by Confidence
 
 The confidence attribute of the barcode results is determined by the reliability of that result. Users can set the `minResultConfidence` to make a filter on the barcode results by the confidence value. For Dynamsoft Barcode Reader v8.8 or higher version, the default value of the confidence is 30, which can filter the majority of misreading barcode results. A higher `minResultConfidence` setting will definitely improve the accuracy of the barcode results but reduce the read rate and speed at the same time. Therefore, please set the `minResultConfidence` according to your actual usage scenario to balance the accuracy and speed.
 
@@ -48,7 +48,7 @@ The confidence attribute of the barcode results is determined by the reliability
 
 - [`minResultConfidence`]({{site.parameters_reference}}min-result-confidence.html)
 
-### Multi-frame Verification
+### Enable Multi-frame Verification
 
 When using video barcode decoding, a barcode can be processed multiple times in consecutive video frames, which produces duplicate results. These duplicate results can be applied to verify the result's correctness. When a barcode result has been decoded more than once within a short period of time, we can confirm it is a correct result and output it. However, if a barcode result has never been decoded a second time within a period of time, we consider it a misread result and discard it.
 
@@ -85,17 +85,11 @@ When the target barcodes are confirmed, the barcode texts might have common feat
 
 The module size of the barcode refers to the pixel size of the barcode modules (e.g. the pixel width of a OneD barcodes lines or the smallest cell size of a QR code). The smaller the module size of the barcodes, the higher risk of misreading. If it is not nessary to decode all the small-size barcodes in the scenario (like video streaming barcode decoding), you can skip the small-module barcodes by specifying the minimum acceptable module size of the barcodes. You can also increase the `scaleDownThreshold` value to ensure the barcodes are not shrunk too small.
 
-### Strategies on Blurry Barcodes
+### Optimize DeblurModes Settings
 
-`DeblurModes` is the parameter that controls how much effort DBR will spend to process the blurry images. This mode is highly related to the performance of the barcode processing. `DeblurModes` is set to the highest level by default so that the barcode reader will be able to decode successfully even if the image is highly blurred. However, the risk of misreading is increased at the same time when the barcode reader is trying to process highly blurred images. Therefore, a trade-off between the read rate and accuracy is required when configuring the `DeblurModes` parameter.
+`DeblurModes` is the parameter that controls how much effort DBR will spend to process the located barcodes. It is set to the highest level by default so that DBR will try its best on processing every localized barcodes even if they are highly blurred. However, the blurry level of the barcodes and the accuracy of the barcode results are inversely proportional. As a result, when the read rate is high enough for the current settings, you can try to simplify the `DeblurModes` settings to reduce the risk of misreading.
 
-- When accuracy is the primary goal
-
-For some scenarios like video barcode decoding, the speed and read rate performance can be maintained even if you don't enable a high-level `DeblurModes` setting. On this occasion, you can simplify the `DeblurModes` settings to ensure the accuracy of the barcode results.
-
-- When read rate is as important as accuracy
-
-In some specific scenarios, processing blurry images are inevitable. When `DeblurModes` is configured to the highest level, the risk of misreading is increased as well. On this occasion, you can enhance the other accuracy-related settings like confidence settings and Reg-Ex settings to conserve the accuracy.
+Generally, simpler `DeblurModes` setting result in higher accuracy. As a result the core of `DeblurModes` settings is to find the simplest `DeblurModes` configuration that covers your usage scenario. To find the simplest configuration, you are recommended to implement a constant performance test. In the performance test, you can reduce the enabled `DeblurModes` continuously from your settings until the read rate is no longer satisfying. Please notes, `DM_DEEP_ANALYSIS` is the most effective mode to process blurry barcodes and you can remove this mode first in your performance test. `DM_BASED_ON_LOC_BIN` and `DM_THRESHOLD_BINARIZATION` are the most basic `DeblurModes`, which should be kept to retain the minimum barcode decoding capability.
 
 **Related Parameter(s)/API(s)**
 
@@ -105,13 +99,13 @@ In some specific scenarios, processing blurry images are inevitable. When `Deblu
 
 ## External Settings – Camera Enhancer Settings
 
-Users can optimize the parameter settings to prevent misreading but this is not the only way to improve the accuracy. For the video barcode decoding scenarios, promoting the quality of the video will definitely improve the barcode decoding accuracy. Although there is no camera control APIs in Dynamsoft Barcode Reader, you can still use Dynamsoft Camera Enhancer (DCE) APIs to take control of the input video streaming. DCE is an SDK that integrates the camera control APIs and video frame pre-processing features. It can be easily bound to the Barcode Reader and enable users to optimize the input video streaming when using the Barcode Reader. You can make the following setting to improve the accuracy of barcode decoding.
+Users can optimize the parameter settings to prevent misreading but this is not the only way to improve the accuracy. For the video barcode decoding scenarios, promoting the quality of the video will definitely improve the barcode decoding accuracy. Although there are no camera control APIs in Dynamsoft Barcode Reader, you can still use Dynamsoft Camera Enhancer (DCE) APIs to take control of the input video streaming. DCE is an SDK that integrates the camera control APIs and video frame pre-processing features. It can be easily bound to the Barcode Reader and enable users to optimize the input video streaming when using the Barcode Reader. You can make the following setting to improve the accuracy of barcode decoding.
 
-### Frame Filter
+### Filter Out the Blurry Frames
 
 When the frame filter feature DCE is enabled, a quick sharpness evaluation will be implemented on each video frame and the low sharpness frame will be discarded to ensure the barcode reader will process on high-quality frames only. Since the Barcode Reader doesn't need to process the blurry video frames, the accuracy will be highly improved.
 
-### Enhanced focus
+### Enhance the Camera Focus
 
 This feature is highly recommended to be implemented on low-end devices. Enhancing the camera focus ability will reduce the blurry frames in the video streaming, which benefits the barcode reading accuracy.
 
@@ -124,7 +118,7 @@ A higher resolution will promote the sharpness of the video frames and also enla
 - <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/android/primary-api/camera-enhancer.html?ver=latest#enablefeatures" target="_blank">`CameraEnhancer.enableFeatures`</a>
 - <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/android/primary-api/camera-enhancer.html?ver=latest#setresolution" target="_blank">`CameraEnhancer.setResolution`</a>
 
-### Set the Scan Region
+### Specify the Scan Region
 
 You can specify the scan region via DCE to remove the noninterest areas. The video frames will be cropped before barcode decoding so that the barcode reader will not be disturbed by the noninterest information and process even more fast and accurate.
 
