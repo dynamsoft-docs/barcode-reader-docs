@@ -92,7 +92,7 @@ This feature is highly recommended to be implemented on low-end devices. Enhanci
 
 ### Set Higher Resolution
 
-A higher resolution will promote the sharpness of the video frames and also enlarge the module size of barcodes. Setting the resolution higher will definitely benefit the barcode reading accuracy but sacrifice a bit of speed. In addition, please remember to set the `scaleDownThreshold` to a higher value if you want to decode on high resolution video streaming. If the `scaleDownThershold` is smaller than the size of video frames, the video frames will be shrunk to smaller size before being decoded. You can configure resolution settings via method <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/android/primary-api/camera-enhancer.html?ver=latest#setresolution" target="_blank">`setResolution`</a>
+A higher resolution will promote the sharpness of the video frames and also enlarge the module size of barcodes. Setting the resolution higher will definitely benefit the barcode reading accuracy but sacrifice a bit of speed. In addition, please remember to set the `scaleDownThreshold` to a higher value if you want to decode on high-resolution video streaming. If the `scaleDownThershold` is smaller than the size of video frames, the video frames will be shrunk to a smaller size before being decoded. You can configure resolution settings via method <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/android/primary-api/camera-enhancer.html?ver=latest#setresolution" target="_blank">`setResolution`</a>
 
 ### Define the Scan Region
 
