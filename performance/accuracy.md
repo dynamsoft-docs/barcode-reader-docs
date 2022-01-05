@@ -41,7 +41,7 @@ The following settings can be applied to nearly all usage scenarios to improve t
 
 ### Filter the Result by Confidence
 
-The confidence attribute of the barcode results is determined by the reliability of that result. Users can set the [`minResultConfidence`]({{site.parameters_reference}}min-result-confidence.html) to make a filter on the barcode results by the confidence value. For Dynamsoft Barcode Reader v8.8 or higher version, the default value of the confidence is 30, which can filter the majority of misreading barcode results. A higher `minResultConfidence` setting will definitely improve the accuracy of the barcode results but reduce the read rate and speed at the same time. Therefore, please set the `minResultConfidence` according to your actual usage scenario to balance the accuracy and speed.
+The confidence attribute of the barcode results is determined by the reliability of that result. Users can set the [`minResultConfidence`]({{site.parameters_reference}}min-result-confidence.html) to make a filter on the barcode results by the confidence value. For Dynamsoft Barcode Reader v8.8 or higher version, the default value of the confidence is optimized to 30, which can filter out the majority of misreading barcode results. A higher `minResultConfidence` setting will definitely improve the accuracy of the barcode results but reduce the read rate and speed at the same time. Therefore, please set the `minResultConfidence` according to your actual usage scenario to balance the accuracy and speed.
 
 ### Enable Multi-frame Verification
 
@@ -49,7 +49,7 @@ When using video barcode decoding, a barcode can be processed multiple times in 
 
 **Remarks**
 
-For JavaScript edition, multi-frame verification is enabled when using video barcode scanning. For Android and iOS editions, you have to use the following APIs to control the status of the multi-frame verification:
+For **JavaScript** edition, multi-frame verification is enabled when using video barcode scanning. For **Android** and **iOS** editions, you have to use the following APIs to control the status of the multi-frame verification:
 
 - [`enableResultVerification (Android)`]({{site.android_api}}primary-result.html#enableresultverification)
 - [`enableResultVerification (iOS)`]({{site.oc_api}}primary-result.html#enableresultverification)
@@ -96,7 +96,7 @@ A higher resolution will promote the sharpness of the video frames and also enla
 
 ### Define the Scan Region
 
-You can specify the scan region via DCE to remove the noninterest areas. The video frames will be cropped before barcode decoding so that the barcode reader will not be disturbed by the noninterest information and process even more fast and accurate. You can specify the scan region via method <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/android/primary-api/camera-enhancer.html?ver=latest#setresolution" target="_blank">`setResolution`</a>
+You can specify the scan region via DCE to remove the noninterest areas. The video frames will be cropped before barcode decoding so that the barcode reader will not be disturbed by the noninterest information and process even more fast and accurate. You can specify the scan region via method <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/android/primary-api/camera-enhancer.html?ver=latest#setscanregion" target="_blank">`setScanRegion`</a>
 
 ## Summary
 
@@ -117,23 +117,3 @@ The following links are the article that explains how to make settings when spee
 - [How to boost Read Rate](read-rate.md)
 
 If you don't have ideas about which dimension of the performance should be prioritized or you are still puzzled by the parameter settings, please feel free to <a href="https://www.dynamsoft.com/company/contact/" target="_blank">contact us</a> to get support from our technical support team. Our teams can give you professional suggestions on the parameter settings to fulfill your requirements.
-
-<!--
-
-## Optional Settings
-
-The following parameter settings do not have obvious effects but still benefit the barcode decoding accuracy.
-
-### Remove the Texture
-
-`TextureDetectionModes` is designed for detecting and removing the texture on the image. When `TextureDetecttionModes` is set to `TDM_GENERAL_WIDTH_CONCENTRATION`, you can set the sensitivity level of texture detection. The value range is between 1 to 9 and the larger the value of this parameter, the more obvious the texture detection effect is.
-
-If there exists texture area on the image, the `TextureDetectionModes` will definitely improve both the barcode decoding speed and accuracy. However, if there doesn't exist a texture area, the barcode decoding speed will be declined.
-
-### Filter out the Text
-
-`TextFilterModes` is designed for filtering the text on the image. Set the `TextFilterModes` to `TFM_GENERAL_CONTOUR` to make the text filter. The text filter is also available for sensitivity level settings from 1 to 9. Please note, the text filter will have no effects when you are using localization modes `LM_CONNECTED_BLOCKS` and `LM_SCAN_DIRECTLY`.
-
-If there exists a text area on the image, the `TextFilterModes` will definitely improve both the barcode decoding speed and accuracy. However, if there doesn't exist a text area, the barcode decoding speed will be declined.
-
--->
