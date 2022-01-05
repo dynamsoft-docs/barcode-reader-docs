@@ -74,15 +74,9 @@ To speed up when processing large-size images, DBR always scales down the images
 
 ### Optimize DeblurModes Settings
 
-`DeblurModes` is the parameter that controls how much effort DBR will spend to process the located barcodes. It is set to the highest level by default so that DBR will try its best to process every localized barcode even if they are highly blurred. However, the blurry level of the barcodes and the accuracy of the barcode results are inversely proportional. As a result, when the read rate is high enough for the current settings, you can try to simplify the `DeblurModes` settings to reduce the risk of misreading.
+[`DeblurModes`]({{site.parameters_reference}}deblur-modes.html) is the parameter that controls how much effort DBR will spend to process the located barcodes. It is set to the highest level by default so that DBR will try its best to process every localized barcode even if they are highly blurred. However, the blurry level of the barcodes and the accuracy of the barcode results are inversely proportional. As a result, when the read rate is high enough for the current settings, you can try to simplify the `DeblurModes` settings to reduce the risk of misreading.
 
 Generally, the simpler `DeblurModes` setting is the higher accuracy. As a result, when accuracy is prioritized, the core of `DeblurModes` settings is to find the simplest `DeblurModes` configuration that covers the requirements. To find the simplest configuration, you are recommended to implement a constant performance test. In the performance test, you can reduce the enabled `DeblurModes` continuously from your settings until the read rate is no longer satisfying. Please note, `DM_DEEP_ANALYSIS` is the most effective mode to process blurry barcodes and you can remove this mode first in your performance test. `DM_BASED_ON_LOC_BIN` and `DM_THRESHOLD_BINARIZATION` are the most basic `DeblurModes`, which should be kept to retain the minimum barcode decoding capability.
-
-**Related Parameter(s)/API(s)**
-
-- 
-- 
-- [`DeblurModes`]({{site.parameters_reference}}deblur-modes.html)
 
 ## External Settings – Camera Enhancer Settings
 
@@ -90,24 +84,19 @@ Users can optimize the parameter settings to prevent misreading but this is not 
 
 ### Filter Out the Blurry Frames
 
-When the frame filter feature DCE is enabled, a quick sharpness evaluation will be implemented on each video frame and the low sharpness frame will be discarded to ensure the barcode reader will process on high-quality frames only. Since the Barcode Reader doesn't need to process the blurry video frames, the accuracy will be highly improved.
+When the frame filter feature DCE is enabled, a quick sharpness evaluation will be implemented on each video frame and the low sharpness frame will be discarded to ensure the barcode reader will process on high-quality frames only. Since the Barcode Reader doesn't need to process the blurry video frames, the accuracy will be highly improved. You can enable the frame-filter feature of DCE via method <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/android/primary-api/camera-enhancer.html?ver=latest#enablefeatures" target="_blank">`enableFeatures`</a>
 
 ### Enhance the Camera Focus
 
-This feature is highly recommended to be implemented on low-end devices. Enhancing the camera focus ability will reduce the blurry frames in the video streaming, which benefits the barcode reading accuracy.
+This feature is highly recommended to be implemented on low-end devices. Enhancing the camera focus ability will reduce the blurry frames in the video streaming, which benefits the barcode reading accuracy. You can enable the enhanced-focus feature of DCE via method <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/android/primary-api/camera-enhancer.html?ver=latest#enablefeatures" target="_blank">`enableFeatures`</a>
 
 ### Set Higher Resolution
 
-A higher resolution will promote the sharpness of the video frames and also enlarge the module size of barcodes. Setting the resolution higher will definitely benefit the barcode reading accuracy but sacrifice a bit of speed. In addition, please remember to set the `scaleDownThreshold` to a higher value. When the `scaleDownThershold` is not big enough, the barcode reader will still process on the shrunken images.
+A higher resolution will promote the sharpness of the video frames and also enlarge the module size of barcodes. Setting the resolution higher will definitely benefit the barcode reading accuracy but sacrifice a bit of speed. In addition, please remember to set the `scaleDownThreshold` to a higher value if you want to decode on high resolution video streaming. If the `scaleDownThershold` is smaller than the size of video frames, the video frames will be shrunk to smaller size before being decoded. You can configure resolution settings via method <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/android/primary-api/camera-enhancer.html?ver=latest#setresolution" target="_blank">`setResolution`</a>
 
-### Specify the Scan Region
+### Define the Scan Region
 
-You can specify the scan region via DCE to remove the noninterest areas. The video frames will be cropped before barcode decoding so that the barcode reader will not be disturbed by the noninterest information and process even more fast and accurate.
-
-**Related Parameter(s)/API(s)**
-
-- <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/android/primary-api/camera-enhancer.html?ver=latest#enablefeatures" target="_blank">`CameraEnhancer.enableFeatures`</a>
-- <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/android/primary-api/camera-enhancer.html?ver=latest#setresolution" target="_blank">`CameraEnhancer.setResolution`</a>
+You can specify the scan region via DCE to remove the noninterest areas. The video frames will be cropped before barcode decoding so that the barcode reader will not be disturbed by the noninterest information and process even more fast and accurate. You can specify the scan region via method <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/android/primary-api/camera-enhancer.html?ver=latest#setresolution" target="_blank">`setResolution`</a>
 
 ## Summary
 
