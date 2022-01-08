@@ -19,8 +19,6 @@ needGenerateH3Content: false
 | 8.9.1 | [Android](../programming/android/release-notes/android-8.md#891-12282021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#891-12282021) |
 | 8.9.0 | [Android](../programming/android/release-notes/android-8.md#890-12162021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#890-12162021) |
 
-&nbsp;
-
 ## 8.8
 
 ### Highlights
@@ -31,8 +29,6 @@ needGenerateH3Content: false
 | -------- | ------------------ |
 | 8.8.3 | [JavaScript](../programming/javascript/release-notes/js-8.md#883-10292021) |
 | 8.8.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#880-10282021) / [C](../programming/c/release-notes/c-8.md#880-10122021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#880-10122021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#880-10122021) / [Python](../programming/python/release-notes/python-8.md#880-10222021) / [Java](../programming/java/release-notes/java-8.md#880-10122021) / [Android](../programming/android/release-notes/android-8.md#880-10192021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#880-10192021) |
-
-&nbsp;
 
 ## 8.6
 
@@ -45,8 +41,6 @@ needGenerateH3Content: false
 | 8.6.3 | [JavaScript](../programming/javascript/release-notes/js-8.md#863-09302021) |
 | 8.6.1 | [JavaScript](../programming/javascript/release-notes/js-8.md#861-09012021) |
 | 8.6.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#860-08312021) / [C](../programming/c/release-notes/c-8.md#860-07152021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#860-07152021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#860-07152021) / [Python](../programming/python/release-notes/python-8.md#860-07202021) / [Java](../programming/java/release-notes/java-8.md#860-07152021) / [Android](../programming/android/release-notes/android-8.md#860-07152021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#860-07152021) |
-
-&nbsp;
 
 ## 8.4
 
@@ -65,8 +59,6 @@ needGenerateH3Content: false
 | -------- | ------------------ |
 | 8.4.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#840-06292021) / [C](../programming/c/release-notes/c-8.md#840-06082021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#840-06082021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#840-06082021) / [Python](../programming/python/release-notes/python-8.md#840-06102021) / [Java](../programming/java/release-notes/java-8.md#840-06082021) / [Android](../programming/android/release-notes/android-8.md#840-06082021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#840-06082021) |
 
-&nbsp;
-
 ## 8.2
 
 ### Highlights
@@ -82,8 +74,6 @@ needGenerateH3Content: false
 | 8.2.3 | [JavaScript](../programming/javascript/release-notes/js-8.md#823-04152021) |
 | 8.2.1 | [JavaScript](../programming/javascript/release-notes/js-8.md#821-03292021) / [Android](../programming/android/release-notes/android-8.md#821-05272021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#821-05272021) |
 | 8.2.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#820-03172021) / [C](../programming/c/release-notes/c-8.md#820-03172021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#820-03172021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#820-03172021) / [Python](../programming/python/release-notes/python-8.md#820-03172021) / [Java](../programming/java/release-notes/java-8.md#820-03172021) / [Android](../programming/android/release-notes/android-8.md#820-03172021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#820-03172021) |
-
-&nbsp;
 
 ## 8.1
 
@@ -104,8 +94,6 @@ needGenerateH3Content: false
 | 8.1.3 | [JavaScript](../programming/javascript/release-notes/js-8.md#813-03042021) |
 | 8.1.2 | [JavaScript](../programming/javascript/release-notes/js-8.md#812-01222021) / [C](../programming/c/release-notes/c-8.md#812-01222021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#812-01222021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#812-01222021) / [Python](../programming/python/release-notes/python-8.md#812-01222021) / [Java](../programming/java/release-notes/java-8.md#812-01222021) / [Android](../programming/android/release-notes/android-8.md#812-01222021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#812-01222021) |
 | 8.1.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#810-01192021) / [C](../programming/c/release-notes/c-8.md#810-01122021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#810-01122021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#810-01122021) / [Python](../programming/python/release-notes/python-8.md#810-01192021) / [Java](../programming/java/release-notes/java-8.md#810-01122021) / [Android](../programming/android/release-notes/android-8.md#810-01122021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#810-01122021) |
-
-&nbsp;
 
 ## 8.0
 
@@ -156,8 +144,6 @@ needGenerateH3Content: false
 - Fixed a bug where the coordinates of barcodes are calculated incorrectly under some situations.
 - Fixed a crash issue which occurs under some situations.
 
-&nbsp;
-
 ### 7.5.0
 
 #### NEW
@@ -184,13 +170,9 @@ needGenerateH3Content: false
 
 - Fixed a bug where the coordinates of barcodes are calculated incorrectly under some situations.
 
-&nbsp;
-
 ### 7.4.0.1
 
 [JavaScript](../programming/javascript/release-notes/js-7.md#7401-05182020)
-
-&nbsp;
 
 ### 7.4.0
 
@@ -223,25 +205,17 @@ needGenerateH3Content: false
 - Fixed a bug where the ColourConversionModes RGB weights setting does not work when CICM_GENERAL is enabled.
 - Other small fixes and tweaks.
 
-&nbsp;
-
 ### 7.3.0.4
 
 [JavaScript](../programming/javascript/release-notes/js-7.md#730-v4-7304-04022020)
-
-&nbsp;
 
 ### 7.3.0.2
 
 [JavaScript](../programming/javascript/release-notes/js-7.md#730-v2-7302-02142020)
 
-&nbsp;
-
 ### 7.3.0.1
 
 [JavaScript](../programming/javascript/release-notes/js-7.md#730-v1-7301-01202020)
-
-&nbsp;
 
 ### 7.3.0
 
@@ -260,15 +234,11 @@ needGenerateH3Content: false
 - Improved the decoding accuracy for DataMatrix that has a narrow quiet zone.
 - Improved the decoding accuracy for 1D barcode that has a small module size.
 
-&nbsp;
-
 ### 7.2.2
 
 #### FIXED
 
 - Fixed a bug where BarcodeBytes was null when DPM mode was enabled.
-
-&nbsp;
 
 ### 7.2.1
 
@@ -293,8 +263,6 @@ needGenerateH3Content: false
 - Fixed a bug in the barcode zone type identification during general statistical localization.
 - Fixed minor bugs in result outputs.
 - Fixed a bug where OneDCodeDetails doesn't work.
-
-&nbsp;
 
 ### 7.2.0
 
@@ -322,8 +290,6 @@ needGenerateH3Content: false
 
 - Fixed minor bugs
 
-&nbsp;
-
 ### 7.1.0
 
 #### NEW
@@ -343,8 +309,6 @@ needGenerateH3Content: false
 - Fixed a bug that the coordinates of barcodes may be calculated incorrectly under some situations.
 - Fixed a bug that the parameter, RequireStartStopChars, might malfunction in some rare cases.
 - Fixed a bug that the angle of barcodes might not be calculated correctly sometimes.
-
-&nbsp;
 
 ### 7.0.0
 
@@ -385,8 +349,6 @@ needGenerateH3Content: false
 - Updated the license verification process for development license and desktop runtime license. The old license verification process may lead to license error on some computers.
 - Small fixes and tweaks.
 
-&nbsp;
-
 ### 6.5.2
 
 #### IMPROVED
@@ -398,8 +360,6 @@ needGenerateH3Content: false
 #### FIXED
 
 - Enhanced the robustness of the image processing algorithm. This resolved segmentation faults when a 0-size image is passed to our SDK or there are a few small-size barcode zones which need to do spatial transformation.
-
-&nbsp;
 
 ### 6.5.1
 
@@ -414,8 +374,6 @@ needGenerateH3Content: false
 
 - Small fixes and tweaks.
 
-&nbsp;
-
 ### 6.5.0
 
 #### IMPROVED
@@ -429,8 +387,6 @@ needGenerateH3Content: false
 
 - Small fixes and tweaks.
 
-&nbsp;
-
 ### 6.4.1
 
 #### IMPROVED
@@ -442,8 +398,6 @@ needGenerateH3Content: false
 #### FIXED
 
 - Small fixes and tweaks.
-
-&nbsp;
 
 ### 6.4.0
 
@@ -461,8 +415,6 @@ needGenerateH3Content: false
 #### FIXED
 
 - Small fixes and tweaks.
-
-&nbsp;
 
 ### 6.3.0
 
@@ -485,8 +437,6 @@ needGenerateH3Content: false
 
 - Small fixes and tweaks.
 
-&nbsp;
-
 ### 6.2.0
 
 #### IMPROVED
@@ -505,8 +455,6 @@ needGenerateH3Content: false
 
 - Small fixes and tweaks.
 
-&nbsp;
-
 ### 6.1.0
 
 #### NEW
@@ -517,8 +465,6 @@ needGenerateH3Content: false
 
 - Improved localization algorithm for barcodes rotated in a degree or with poor perspective.
 - Faster read speed for QR, Data Matrix and PDF417 barcodes.
-
-&nbsp;
 
 ### 6.0.0
 
@@ -562,16 +508,12 @@ needGenerateH3Content: false
 
 - Small fixes and tweaks.
 
-&nbsp;
-
 ### 5.1.0
 
 #### FIXED
 
 - Fixed a bug that caused incorrect result points if de-blur algorithm is used when reading 1D barcodes.
 - Other small fixes and tweaks.
-
-&nbsp;
 
 ### 5.0.0
 
@@ -629,8 +571,6 @@ needGenerateH3Content: false
 - New samples are now available in the Code Gallery:
 - RESTful Web Service - implements server-side RESTful web service in C# for barcode reading.
 
-&nbsp;
-
 ### 4.2.0
 
 #### IMPROVED
@@ -638,8 +578,6 @@ needGenerateH3Content: false
 - Changed 1D barcode decoding module to improve recognition accuracy.
 - Improved ResultPoints Property to adjust the sequence of barcode corner points. Now the top-left corner of the barcode is the starting point (x1, y1). The results are returned in the clockwise direction.
 - Improved ResultPoints Property to adjust the sequence of barcode corner points.
-
-&nbsp;
 
 ### 4.1.0
 
@@ -651,8 +589,6 @@ needGenerateH3Content: false
 #### IMPROVED
 
 - Improved positioning algorithm to better identify and localize DataMatrix barcodes.
-
-&nbsp;
 
 ### 4.0.0
 
@@ -709,8 +645,6 @@ needGenerateH3Content: false
 - Improved CODE128 decoding
 - Improved recognition of CODE39, CODE93, etc.
 - Improved the ASP.NET sample's user interface.
-
-&nbsp;
 
 ### 2.0.0
 
