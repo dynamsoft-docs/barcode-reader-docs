@@ -16,8 +16,8 @@ needGenerateH3Content: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 8.9.0 | [Android](../programming/android/release-notes/android-8.md#890-12162021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#890-12162021) |
 | 8.9.1 | [Android](../programming/android/release-notes/android-8.md#891-12282021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#891-12282021) |
+| 8.9.0 | [Android](../programming/android/release-notes/android-8.md#890-12162021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#890-12162021) |
 
 ## 8.8
 
@@ -27,8 +27,8 @@ needGenerateH3Content: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 8.8.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#880-10282021) / [C](../programming/c/release-notes/c-8.md#880-10122021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#880-10122021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#880-10122021) / [Python](../programming/python/release-notes/python-8.md#880-10222021) / [Java](../programming/java/release-notes/java-8.md#880-10122021) / [Android](../programming/android/release-notes/android-8.md#880-10192021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#880-10192021) |
 | 8.8.3 | [JavaScript](../programming/javascript/release-notes/js-8.md#883-10292021) |
+| 8.8.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#880-10282021) / [C](../programming/c/release-notes/c-8.md#880-10122021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#880-10122021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#880-10122021) / [Python](../programming/python/release-notes/python-8.md#880-10222021) / [Java](../programming/java/release-notes/java-8.md#880-10122021) / [Android](../programming/android/release-notes/android-8.md#880-10192021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#880-10192021) |
 
 ## 8.6
 
@@ -38,9 +38,9 @@ needGenerateH3Content: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 8.6.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#860-08312021) / [C](../programming/c/release-notes/c-8.md#860-07152021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#860-07152021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#860-07152021) / [Python](../programming/python/release-notes/python-8.md#860-07202021) / [Java](../programming/java/release-notes/java-8.md#860-07152021) / [Android](../programming/android/release-notes/android-8.md#860-07152021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#860-07152021) |
-| 8.6.1 | [JavaScript](../programming/javascript/release-notes/js-8.md#861-09012021) |
 | 8.6.3 | [JavaScript](../programming/javascript/release-notes/js-8.md#863-09302021) |
+| 8.6.1 | [JavaScript](../programming/javascript/release-notes/js-8.md#861-09012021) |
+| 8.6.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#860-08312021) / [C](../programming/c/release-notes/c-8.md#860-07152021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#860-07152021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#860-07152021) / [Python](../programming/python/release-notes/python-8.md#860-07202021) / [Java](../programming/java/release-notes/java-8.md#860-07152021) / [Android](../programming/android/release-notes/android-8.md#860-07152021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#860-07152021) |
 
 ## 8.4
 
@@ -70,10 +70,10 @@ needGenerateH3Content: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 8.2.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#820-03172021) / [C](../programming/c/release-notes/c-8.md#820-03172021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#820-03172021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#820-03172021) / [Python](../programming/python/release-notes/python-8.md#820-03172021) / [Java](../programming/java/release-notes/java-8.md#820-03172021) / [Android](../programming/android/release-notes/android-8.md#820-03172021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#820-03172021) |
-| 8.2.1 | [JavaScript](../programming/javascript/release-notes/js-8.md#821-03292021) / [Android](../programming/android/release-notes/android-8.md#821-05272021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#821-05272021) |
-| 8.2.3 | [JavaScript](../programming/javascript/release-notes/js-8.md#823-04152021) |
 | 8.2.5 | [JavaScript](../programming/javascript/release-notes/js-8.md#825-05182021) |
+| 8.2.3 | [JavaScript](../programming/javascript/release-notes/js-8.md#823-04152021) |
+| 8.2.1 | [JavaScript](../programming/javascript/release-notes/js-8.md#821-03292021) / [Android](../programming/android/release-notes/android-8.md#821-05272021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#821-05272021) |
+| 8.2.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#820-03172021) / [C](../programming/c/release-notes/c-8.md#820-03172021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#820-03172021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#820-03172021) / [Python](../programming/python/release-notes/python-8.md#820-03172021) / [Java](../programming/java/release-notes/java-8.md#820-03172021) / [Android](../programming/android/release-notes/android-8.md#820-03172021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#820-03172021) |
 
 ## 8.1
 
@@ -91,9 +91,9 @@ needGenerateH3Content: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 8.1.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#810-01192021) / [C](../programming/c/release-notes/c-8.md#810-01122021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#810-01122021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#810-01122021) / [Python](../programming/python/release-notes/python-8.md#810-01192021) / [Java](../programming/java/release-notes/java-8.md#810-01122021) / [Android](../programming/android/release-notes/android-8.md#810-01122021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#810-01122021) |
-| 8.1.2 | [JavaScript](../programming/javascript/release-notes/js-8.md#812-01222021) / [C](../programming/c/release-notes/c-8.md#812-01222021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#812-01222021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#812-01222021) / [Python](../programming/python/release-notes/python-8.md#812-01222021) / [Java](../programming/java/release-notes/java-8.md#812-01222021) / [Android](../programming/android/release-notes/android-8.md#812-01222021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#812-01222021) |
 | 8.1.3 | [JavaScript](../programming/javascript/release-notes/js-8.md#813-03042021) |
+| 8.1.2 | [JavaScript](../programming/javascript/release-notes/js-8.md#812-01222021) / [C](../programming/c/release-notes/c-8.md#812-01222021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#812-01222021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#812-01222021) / [Python](../programming/python/release-notes/python-8.md#812-01222021) / [Java](../programming/java/release-notes/java-8.md#812-01222021) / [Android](../programming/android/release-notes/android-8.md#812-01222021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#812-01222021) |
+| 8.1.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#810-01192021) / [C](../programming/c/release-notes/c-8.md#810-01122021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#810-01122021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#810-01122021) / [Python](../programming/python/release-notes/python-8.md#810-01192021) / [Java](../programming/java/release-notes/java-8.md#810-01122021) / [Android](../programming/android/release-notes/android-8.md#810-01122021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#810-01122021) |
 
 ## 8.0
 
@@ -114,14 +114,18 @@ needGenerateH3Content: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 8.0.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#800-11252020) / [C](../programming/c/release-notes/c-8.md#800-11172020) / [C++](../programming/cplusplus/release-notes/cpp-8.md#800-11172020) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#800-11172020) / [Python](../programming/python/release-notes/python-8.md#800-11262020) / [Java](../programming/java/release-notes/java-8.md#800-11172020) / [Android](../programming/android/release-notes/android-8.md#800-11172020) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#800-11172020) |
 | 8.0.0.1 | [Python](../programming/python/release-notes/python-8.md#8001-01062021) |
+| 8.0.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#800-11252020) / [C](../programming/c/release-notes/c-8.md#800-11172020) / [C++](../programming/cplusplus/release-notes/cpp-8.md#800-11172020) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#800-11172020) / [Python](../programming/python/release-notes/python-8.md#800-11262020) / [Java](../programming/java/release-notes/java-8.md#800-11172020) / [Android](../programming/android/release-notes/android-8.md#800-11172020) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#800-11172020) |
+
+&nbsp;
 
 <div class="fold-panel-prefix"></div>
 
 ## 7.x Versions <i class="fa fa-caret-down"></i>
 
 <div class="fold-panel-start"></div>
+
+&nbsp;
 
 ### 7.6.0
 
@@ -326,6 +330,8 @@ needGenerateH3Content: false
 
 - Fixed an issue where the barcode could be calculated incorrectly in some occasions.
 
+&nbsp;
+
 <div class="fold-panel-end"></div>
 
 <div class="fold-panel-prefix"></div>
@@ -333,6 +339,8 @@ needGenerateH3Content: false
 ## 6.x Versions <i class="fa fa-caret-down"></i>
 
 <div class="fold-panel-start"></div>
+
+&nbsp;
 
 ### 6.5.3
 
@@ -475,6 +483,8 @@ needGenerateH3Content: false
 
 - Small fixes and tweaks.
 
+&nbsp;
+
 <div class="fold-panel-end"></div>
 
 <div class="fold-panel-prefix"></div>
@@ -482,6 +492,8 @@ needGenerateH3Content: false
 ## 5.x Versions <i class="fa fa-caret-down"></i>
 
 <div class="fold-panel-start"></div>
+
+&nbsp;
 
 ### 5.2.0
 
@@ -528,6 +540,8 @@ needGenerateH3Content: false
 - Fixed an issue where the DLL crashes when reading DataMatrix in multiple threads.
 - Other small fixes and tweaks.
 
+&nbsp;
+
 <div class="fold-panel-end"></div>
 
 <div class="fold-panel-prefix"></div>
@@ -535,6 +549,8 @@ needGenerateH3Content: false
 ## 4.x Versions <i class="fa fa-caret-down"></i>
 
 <div class="fold-panel-start"></div>
+
+&nbsp;
 
 ### 4.3.0
 
@@ -583,6 +599,8 @@ needGenerateH3Content: false
 - A user-friendly demo guide program – "Dynamsoft Barcode Reader SDK" - is now available. You can run it from the shortcut icon on the desktop and have an overall view of all demos & sample code.
 - An out-of-box application - "Process documents with barcode" - is now available. It can rename, split or classify documents via barcodes on images and we provide overall view of all demos & sample code.
 
+&nbsp;
+
 <div class="fold-panel-end"></div>
 
 <div class="fold-panel-prefix"></div>
@@ -590,6 +608,8 @@ needGenerateH3Content: false
 ## 3.x Versions <i class="fa fa-caret-down"></i>
 
 <div class="fold-panel-start"></div>
+
+&nbsp;
 
 ### 3.0.0
 
@@ -602,6 +622,8 @@ needGenerateH3Content: false
 
 - Improved 1D Barcode Reader to support reading Industrial 2 of 5.
 
+&nbsp;
+
 <div class="fold-panel-end"></div>
 
 <div class="fold-panel-prefix"></div>
@@ -609,6 +631,8 @@ needGenerateH3Content: false
 ## 2.x Versions <i class="fa fa-caret-down"></i>
 
 <div class="fold-panel-start"></div>
+
+&nbsp;
 
 ### 2.1.0
 
@@ -633,6 +657,8 @@ needGenerateH3Content: false
 - Supported image formats include BMP, JPG, PNG, (single or multi-page) TIFF, Windows DIB and .NET Bitmap
 - Various code samples (in C/C++/C#/Java/VB/VB.NET) are available.
 
+&nbsp;
+
 <div class="fold-panel-end"></div>
 
 <div class="fold-panel-prefix"></div>
@@ -640,6 +666,8 @@ needGenerateH3Content: false
 ## 1.x Versions <i class="fa fa-caret-down"></i>
 
 <div class="fold-panel-start"></div>
+
+&nbsp;
 
 ### 1.0.0
 
