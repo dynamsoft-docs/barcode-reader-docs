@@ -36,6 +36,7 @@ tree_file_list:
   - sidelist-programming/programming-python-v8.4.0.html
   - sidelist-programming/programming-android.html
   - sidelist-programming/programming-android-v8.8.0.html
+  - sidelist-programming/programming-android-v8.6.0.html
   - sidelist-programming/programming-android-v8.4.0.html
   - sidelist-programming/programming-android-v8.2.5.html
   - sidelist-programming/programming-android-v8.2.1.html
@@ -47,6 +48,7 @@ tree_file_list:
   - sidelist-programming/programming-android-v7.5.0.html
   - sidelist-programming/programming-oc.html
   - sidelist-programming/programming-oc-v8.8.0.html
+  - sidelist-programming/programming-oc-v8.6.0.html
   - sidelist-programming/programming-oc-v8.4.0.html
   - sidelist-programming/programming-oc-v8.2.5.html
   - sidelist-programming/programming-oc-v8.2.1.html
@@ -62,4 +64,3 @@ tree_file_list:
   - sidelist-parameters.html
   - sidelist-programming.html
   - sidelist-release-notes.html
-  - sidelist-performance.html
