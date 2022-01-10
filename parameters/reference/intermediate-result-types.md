@@ -10,7 +10,7 @@ needGenerateH3Content: true
 
 # IntermediateResultTypes 
 
-`IntermediateResultTypes` is a parameter to specify the types of intermediate result to be kept for further reference. It is a combined value of [`IntermediateResultType` Enumeration]({{ site.enumerations }}format-enums.html#intermediateresulttype) items. No intermediate result will be kept by default
+`IntermediateResultTypes` is a parameter to specify the types of intermediate result to be kept for further reference. It is a combined value of [`IntermediateResultType` Enumeration]({{ site.enumerations }}result-enums.html#intermediateresulttype) items. No intermediate result will be kept by default
     
 ## Setting Methods
 `IntermediateResultTypes` is supported to be set through `RuntimeSetting` or JSON template.
