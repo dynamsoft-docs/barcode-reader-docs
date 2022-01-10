@@ -40,7 +40,7 @@ needGenerateH3Content: false
 | -------- | ------------------ |
 | 8.6.3 | [JavaScript](../programming/javascript/release-notes/js-8.md#863-09302021) |
 | 8.6.1 | [JavaScript](../programming/javascript/release-notes/js-8.md#861-09012021) |
-| 8.6.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#860-08312021) / [C](../programming/c/release-notes/c-8.md#860-07152021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#860-07152021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#860-07152021) / [Python](../programming/python/release-notes/python-8.md#860-07202021) / [Java](../programming/java/release-notes/java-8.md#860-07152021) / [Android](../programming/android/release-notes/android-8.md#860-07152021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#860-07152021) |
+| 8.6.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#860-08312021) (08-31-2021)/ [C](../programming/c/release-notes/c-8.md#860-07152021) (07-15-2021)/ [C++](../programming/cplusplus/release-notes/cpp-8.md#860-07152021) (07-15-2021)/ [DotNet](../programming/dotnet/release-notes/dotnet-8.md#860-07152021) (07-15-2021)/ [Python](../programming/python/release-notes/python-8.md#860-07202021) (07-20-2021)/ [Java](../programming/java/release-notes/java-8.md#860-07152021) (07-15-2021)/ [Android](../programming/android/release-notes/android-8.md#860-07152021) (07-15-2021)/ [iOS](../programming/objectivec-swift/release-notes/ios-8.md#860-07152021) (07-15-2021)|
 
 ## 8.4
 
