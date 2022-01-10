@@ -16,7 +16,7 @@ needGenerateH3Content: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 8.9.1 | [Android (12-28-2021)](../programming/android/release-notes/android-8.md#891-12282021) / [iOS (12-28-2021)](../programming/objectivec-swift/release-notes/ios-8.md#891-12282021) |
+| 8.9.1 | [Android <br />(12-28-2021)](../programming/android/release-notes/android-8.md#891-12282021) / [iOS (12-28-2021)](../programming/objectivec-swift/release-notes/ios-8.md#891-12282021) |
 | 8.9.0 | [Android (12-16-2021)](../programming/android/release-notes/android-8.md#890-12162021) / [iOS (12-16-2021)](../programming/objectivec-swift/release-notes/ios-8.md#890-12162021) |
 
 ## 8.8
