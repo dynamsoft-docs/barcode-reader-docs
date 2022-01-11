@@ -10,16 +10,20 @@ needGenerateH3Content: false
 
 ## 8.9
 
+> First released: 12-16-2021
+
 ### Highlights
 
 {%- include release-notes/product-highlight-8.9.0.md -%}
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 8.9.1 | [Android <br />(12-28-2021)](../programming/android/release-notes/android-8.md#891-12282021) [iOS <br />(12-28-2021)](../programming/objectivec-swift/release-notes/ios-8.md#891-12282021) |
-| 8.9.0 | [Android <br />(12-16-2021)](../programming/android/release-notes/android-8.md#890-12162021) [iOS <br />(12-16-2021)](../programming/objectivec-swift/release-notes/ios-8.md#890-12162021) |
+| 8.9.1 | [Android](../programming/android/release-notes/android-8.md#891-12282021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#891-12282021) |
+| 8.9.0 | [Android](../programming/android/release-notes/android-8.md#890-12162021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#890-12162021) |
 
 ## 8.8
+
+> First released: 10-12-2021
 
 ### Highlights
 
@@ -27,10 +31,12 @@ needGenerateH3Content: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 8.8.3 | [JavaScript <br />(10-29-2021)](../programming/javascript/release-notes/js-8.md#883-10292021) |
-| 8.8.0 | [JavaScript <br />(10-28-2021)](../programming/javascript/release-notes/js-8.md#880-10282021) [C <br />(10-12-2021)](../programming/c/release-notes/c-8.md#880-10122021) [C++ <br />(10-12-2021)](../programming/cplusplus/release-notes/cpp-8.md#880-10122021) [DotNet <br />(10-12-2021)](../programming/dotnet/release-notes/dotnet-8.md#880-10122021) [Python <br />(10-22-2021)](../programming/python/release-notes/python-8.md#880-10222021) [Java <br />(10-12-2021)](../programming/java/release-notes/java-8.md#880-10122021) [Android <br />(10-19-2021)](../programming/android/release-notes/android-8.md#880-10192021) [iOS <br />(10-19-2021)](../programming/objectivec-swift/release-notes/ios-8.md#880-10192021) |
+| 8.8.3 | [JavaScript](../programming/javascript/release-notes/js-8.md#883-10292021) |
+| 8.8.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#880-10282021) / [C](../programming/c/release-notes/c-8.md#880-10122021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#880-10122021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#880-10122021) / [Python](../programming/python/release-notes/python-8.md#880-10222021) / [Java](../programming/java/release-notes/java-8.md#880-10122021) / [Android](../programming/android/release-notes/android-8.md#880-10192021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#880-10192021) |
 
 ## 8.6
+
+> First released: 07-15-2021
 
 ### Highlights
 
@@ -38,11 +44,13 @@ needGenerateH3Content: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 8.6.3 | [JavaScript <br />(09-30-2021)](../programming/javascript/release-notes/js-8.md#863-09302021) |
-| 8.6.1 | [JavaScript <br />(09-02-2021)](../programming/javascript/release-notes/js-8.md#861-09012021) |
-| 8.6.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#860-08312021) / [C](../programming/c/release-notes/c-8.md#860-07152021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#860-07152021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#860-07152021) / [Python](../programming/python/release-notes/python-8.md#860-07202021) / [Java](../programming/java/release-notes/java-8.md#860-07152021) / [Android](../programming/android/release-notes/android-8.md#860-07152021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#860-07152021) <br /> First release on 07-15-2021)|
+| 8.6.3 | [JavaScript](../programming/javascript/release-notes/js-8.md#863-09302021) |
+| 8.6.1 | [JavaScript](../programming/javascript/release-notes/js-8.md#861-09012021) |
+| 8.6.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#860-08312021) / [C](../programming/c/release-notes/c-8.md#860-07152021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#860-07152021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#860-07152021) / [Python](../programming/python/release-notes/python-8.md#860-07202021) / [Java](../programming/java/release-notes/java-8.md#860-07152021) / [Android](../programming/android/release-notes/android-8.md#860-07152021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#860-07152021) |
 
-## 8.4 
+## 8.4
+
+> First released: 06-08-2021
 
 ### Highlights
 
@@ -57,9 +65,11 @@ needGenerateH3Content: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 8.4.0 | [JavaScript <br />(06-29-2021)](../programming/javascript/release-notes/js-8.md#840-06292021) [C <br />(06-08-2021)](../programming/c/release-notes/c-8.md#840-06082021) [C++ <br />(06-08-2021)](../programming/cplusplus/release-notes/cpp-8.md#840-06082021) [DotNet <br />(06-08-2021)](../programming/dotnet/release-notes/dotnet-8.md#840-06082021) [Python <br />(06-10-2021)](../programming/python/release-notes/python-8.md#840-06102021) [Java <br />(06-08-2021)](../programming/java/release-notes/java-8.md#840-06082021) [Android <br />(06-08-2021)](../programming/android/release-notes/android-8.md#840-06082021) [iOS <br />(06-08-2021)](../programming/objectivec-swift/release-notes/ios-8.md#840-06082021) |
+| 8.4.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#840-06292021) / [C](../programming/c/release-notes/c-8.md#840-06082021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#840-06082021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#840-06082021) / [Python](../programming/python/release-notes/python-8.md#840-06102021) / [Java](../programming/java/release-notes/java-8.md#840-06082021) / [Android](../programming/android/release-notes/android-8.md#840-06082021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#840-06082021) |
 
 ## 8.2
+
+> First released: 03-17-2021
 
 ### Highlights
 
@@ -70,12 +80,14 @@ needGenerateH3Content: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 8.2.5 | [JavaScript <br />(05-18-2021)](../programming/javascript/release-notes/js-8.md#825-05182021) |
-| 8.2.3 | [JavaScript <br />(04-15-2021)](../programming/javascript/release-notes/js-8.md#823-04152021) |
-| 8.2.1 | [JavaScript <br />(03-29-2021)](../programming/javascript/release-notes/js-8.md#821-03292021) [Android <br />(05-27-2021)](../programming/android/release-notes/android-8.md#821-05272021) [iOS <br />(05-27-2021)](../programming/objectivec-swift/release-notes/ios-8.md#821-05272021) |
-| 8.2.0 | [JavaScript <br />(03-17-2021)](../programming/javascript/release-notes/js-8.md#820-03172021) [C <br />(03-17-2021)](../programming/c/release-notes/c-8.md#820-03172021) [C++ <br />(03-17-2021)](../programming/cplusplus/release-notes/cpp-8.md#820-03172021) [DotNet <br />(03-17-2021)](../programming/dotnet/release-notes/dotnet-8.md#820-03172021) [Python <br />(03-17-2021)](../programming/python/release-notes/python-8.md#820-03172021) [Java <br />(03-17-2021)](../programming/java/release-notes/java-8.md#820-03172021) [Android <br />(03-17-2021)](../programming/android/release-notes/android-8.md#820-03172021) [iOS <br />(03-17-2021)](../programming/objectivec-swift/release-notes/ios-8.md#820-03172021) |
+| 8.2.5 | [JavaScript](../programming/javascript/release-notes/js-8.md#825-05182021) |
+| 8.2.3 | [JavaScript](../programming/javascript/release-notes/js-8.md#823-04152021) |
+| 8.2.1 | [JavaScript](../programming/javascript/release-notes/js-8.md#821-03292021) / [Android](../programming/android/release-notes/android-8.md#821-05272021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#821-05272021) |
+| 8.2.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#820-03172021) / [C](../programming/c/release-notes/c-8.md#820-03172021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#820-03172021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#820-03172021) / [Python](../programming/python/release-notes/python-8.md#820-03172021) / [Java](../programming/java/release-notes/java-8.md#820-03172021) / [Android](../programming/android/release-notes/android-8.md#820-03172021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#820-03172021) |
 
 ## 8.1
+
+> First released: 01-22-2021
 
 ### Highlights
 
@@ -91,11 +103,13 @@ needGenerateH3Content: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 8.1.3 | [JavaScript <br />(03-04-2021)](../programming/javascript/release-notes/js-8.md#813-03042021) |
-| 8.1.2 | [JavaScript <br />(01-22-2021)](../programming/javascript/release-notes/js-8.md#812-01222021) [C <br />(01-22-2021)](../programming/c/release-notes/c-8.md#812-01222021) [C++ <br />(01-22-2021)](../programming/cplusplus/release-notes/cpp-8.md#812-01222021) [DotNet <br />(01-22-2021)](../programming/dotnet/release-notes/dotnet-8.md#812-01222021) [Python <br />(01-22-2021)](../programming/python/release-notes/python-8.md#812-01222021) [Java <br />(01-22-2021)](../programming/java/release-notes/java-8.md#812-01222021) [Android <br />(01-22-2021)](../programming/android/release-notes/android-8.md#812-01222021) [iOS <br />(01-22-2021)](../programming/objectivec-swift/release-notes/ios-8.md#812-01222021) |
-| 8.1.0 | [JavaScript <br />(01-19-2021)](../programming/javascript/release-notes/js-8.md#810-01192021) [C <br />(01-12-2021)](../programming/c/release-notes/c-8.md#810-01122021) [C++ <br />(01-12-2021)](../programming/cplusplus/release-notes/cpp-8.md#810-01122021) [DotNet <br />(01-12-2021)](../programming/dotnet/release-notes/dotnet-8.md#810-01122021) [Python <br />(01-19-2021)](../programming/python/release-notes/python-8.md#810-01192021) [Java <br />(01-12-2021)](../programming/java/release-notes/java-8.md#810-01122021) [Android <br />(01-12-2021)](../programming/android/release-notes/android-8.md#810-01122021) [iOS <br />(01-12-2021)](../programming/objectivec-swift/release-notes/ios-8.md#810-01122021) |
+| 8.1.3 | [JavaScript](../programming/javascript/release-notes/js-8.md#813-03042021) |
+| 8.1.2 | [JavaScript](../programming/javascript/release-notes/js-8.md#812-01222021) / [C](../programming/c/release-notes/c-8.md#812-01222021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#812-01222021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#812-01222021) / [Python](../programming/python/release-notes/python-8.md#812-01222021) / [Java](../programming/java/release-notes/java-8.md#812-01222021) / [Android](../programming/android/release-notes/android-8.md#812-01222021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#812-01222021) |
+| 8.1.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#810-01192021) / [C](../programming/c/release-notes/c-8.md#810-01122021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#810-01122021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#810-01122021) / [Python](../programming/python/release-notes/python-8.md#810-01192021) / [Java](../programming/java/release-notes/java-8.md#810-01122021) / [Android](../programming/android/release-notes/android-8.md#810-01122021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#810-01122021) |
 
 ## 8.0
+
+> First released: 11-17-2020
 
 ### Highlights
 
@@ -114,14 +128,16 @@ needGenerateH3Content: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 8.0.0.1 | [Python <br />(01-06-2021)](../programming/python/release-notes/python-8.md#8001-01062021) |
-| 8.0.0 | [JavaScript <br />(11-25-2020)](../programming/javascript/release-notes/js-8.md#800-11252020) [C <br />(11-17-2020)](../programming/c/release-notes/c-8.md#800-11172020) [C++ <br />(11-17-2020)](../programming/cplusplus/release-notes/cpp-8.md#800-11172020) [DotNet <br />(11-17-2020)](../programming/dotnet/release-notes/dotnet-8.md#800-11172020) [Python <br />(11-26-2020)](../programming/python/release-notes/python-8.md#800-11262020) [Java <br />(11-17-2020)](../programming/java/release-notes/java-8.md#800-11172020) [Android <br />(11-17-2020)](../programming/android/release-notes/android-8.md#800-11172020) [iOS <br />(11-17-2020)](../programming/objectivec-swift/release-notes/ios-8.md#800-11172020) |
+| 8.0.0.1 | [Python](../programming/python/release-notes/python-8.md#8001-01062021) |
+| 8.0.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#800-11252020) / [C](../programming/c/release-notes/c-8.md#800-11172020) / [C++](../programming/cplusplus/release-notes/cpp-8.md#800-11172020) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#800-11172020) / [Python](../programming/python/release-notes/python-8.md#800-11262020) / [Java](../programming/java/release-notes/java-8.md#800-11172020) / [Android](../programming/android/release-notes/android-8.md#800-11172020) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#800-11172020) |
 
 &nbsp;
 
 <div class="fold-panel-prefix"></div>
 
 ## 7.x Versions <i class="fa fa-caret-down"></i>
+
+> First released: 07-11-2019
 
 <div class="fold-panel-start"></div>
 
@@ -338,6 +354,8 @@ needGenerateH3Content: false
 
 ## 6.x Versions <i class="fa fa-caret-down"></i>
 
+> First released: 03-30-2018
+
 <div class="fold-panel-start"></div>
 
 &nbsp;
@@ -491,6 +509,8 @@ needGenerateH3Content: false
 
 ## 5.x Versions <i class="fa fa-caret-down"></i>
 
+> First released: 03-07-2017
+
 <div class="fold-panel-start"></div>
 
 &nbsp;
@@ -547,6 +567,8 @@ needGenerateH3Content: false
 <div class="fold-panel-prefix"></div>
 
 ## 4.x Versions <i class="fa fa-caret-down"></i>
+
+> First released: 11-03-2015
 
 <div class="fold-panel-start"></div>
 
@@ -607,6 +629,8 @@ needGenerateH3Content: false
 
 ## 3.x Versions <i class="fa fa-caret-down"></i>
 
+> First released: 08-13-2015
+
 <div class="fold-panel-start"></div>
 
 &nbsp;
@@ -629,6 +653,8 @@ needGenerateH3Content: false
 <div class="fold-panel-prefix"></div>
 
 ## 2.x Versions <i class="fa fa-caret-down"></i>
+
+> First released: 05-12-2015
 
 <div class="fold-panel-start"></div>
 
@@ -664,6 +690,8 @@ needGenerateH3Content: false
 <div class="fold-panel-prefix"></div>
 
 ## 1.x Versions <i class="fa fa-caret-down"></i>
+
+> First released: 01-20-2015
 
 <div class="fold-panel-start"></div>
 
