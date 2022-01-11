@@ -36,13 +36,13 @@ needGenerateH3Content: false
 
 {%- include release-notes/product-highlight-8.6.0.md -%}
 
-| Versions | Available Editions | | | | | | | |
-| -------- | ------------------ | | | | | | | |
-| 8.6.3 | [JavaScript <br />(09-30-2021)](../programming/javascript/release-notes/js-8.md#863-09302021) | | | | | | | |
-| 8.6.1 | [JavaScript <br />(09-02-2021)](../programming/javascript/release-notes/js-8.md#861-09012021) | | | | | | | |
-| 8.6.0 | [JavaScript <br />(08-31-2021)](../programming/javascript/release-notes/js-8.md#860-08312021) | [C <br />(07-15-2021)](../programming/c/release-notes/c-8.md#860-07152021) | [C++ <br />(07-15-2021)](../programming/cplusplus/release-notes/cpp-8.md#860-07152021) | [DotNet <br />(07-15-2021)](../programming/dotnet/release-notes/dotnet-8.md#860-07152021) | [Python <br />(07-20-2021)](../programming/python/release-notes/python-8.md#860-07202021) | [Java <br />(07-15-2021)](../programming/java/release-notes/java-8.md#860-07152021) | [Android <br />(07-15-2021)](../programming/android/release-notes/android-8.md#860-07152021) | [iOS <br />(07-15-2021)](../programming/objectivec-swift/release-notes/ios-8.md#860-07152021) |
+| Versions | Available Editions |
+| -------- | ------------------ |
+| 8.6.3 | [JavaScript <br />(09-30-2021)](../programming/javascript/release-notes/js-8.md#863-09302021) |
+| 8.6.1 | [JavaScript <br />(09-02-2021)](../programming/javascript/release-notes/js-8.md#861-09012021) |
+| 8.6.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#860-08312021) / [C](../programming/c/release-notes/c-8.md#860-07152021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#860-07152021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#860-07152021) / [Python](../programming/python/release-notes/python-8.md#860-07202021) / [Java](../programming/java/release-notes/java-8.md#860-07152021) / [Android](../programming/android/release-notes/android-8.md#860-07152021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#860-07152021) <br /> First release on 07-15-2021)|
 
-## 8.4
+## 8.4 
 
 ### Highlights
 
