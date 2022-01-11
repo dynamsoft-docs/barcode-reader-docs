@@ -10,6 +10,8 @@ needGenerateH3Content: false
 
 ## 8.9
 
+> First released: 12-16-2021
+
 ### Highlights
 
 {%- include release-notes/product-highlight-8.9.0.md -%}
@@ -20,6 +22,8 @@ needGenerateH3Content: false
 | 8.9.0 | [Android](../programming/android/release-notes/android-8.md#890-12162021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#890-12162021) |
 
 ## 8.8
+
+> First released: 10-12-2021
 
 ### Highlights
 
@@ -32,6 +36,8 @@ needGenerateH3Content: false
 
 ## 8.6
 
+> First released: 07-15-2021
+
 ### Highlights
 
 {%- include release-notes/product-highlight-8.6.0.md -%}
@@ -43,6 +49,8 @@ needGenerateH3Content: false
 | 8.6.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#860-08312021) / [C](../programming/c/release-notes/c-8.md#860-07152021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#860-07152021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#860-07152021) / [Python](../programming/python/release-notes/python-8.md#860-07202021) / [Java](../programming/java/release-notes/java-8.md#860-07152021) / [Android](../programming/android/release-notes/android-8.md#860-07152021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#860-07152021) |
 
 ## 8.4
+
+> First released: 06-08-2021
 
 ### Highlights
 
@@ -61,6 +69,8 @@ needGenerateH3Content: false
 
 ## 8.2
 
+> First released: 03-17-2021
+
 ### Highlights
 
 - Added a new mode argument, `FindAccurateBoundary`, to [`RegionPredetectionModes`]({{ site.parameters_reference }}region-predetection-modes.html#regionpredetectionmodes) that determines if the SDK attempts to find an accurate boundary when RegionPredetectionModes is set to `RPM_GENERAL_HSV_CONTRAST`.
@@ -76,6 +86,8 @@ needGenerateH3Content: false
 | 8.2.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#820-03172021) / [C](../programming/c/release-notes/c-8.md#820-03172021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#820-03172021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#820-03172021) / [Python](../programming/python/release-notes/python-8.md#820-03172021) / [Java](../programming/java/release-notes/java-8.md#820-03172021) / [Android](../programming/android/release-notes/android-8.md#820-03172021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#820-03172021) |
 
 ## 8.1
+
+> First released: 01-22-2021
 
 ### Highlights
 
@@ -96,6 +108,8 @@ needGenerateH3Content: false
 | 8.1.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#810-01192021) / [C](../programming/c/release-notes/c-8.md#810-01122021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#810-01122021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#810-01122021) / [Python](../programming/python/release-notes/python-8.md#810-01192021) / [Java](../programming/java/release-notes/java-8.md#810-01122021) / [Android](../programming/android/release-notes/android-8.md#810-01122021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#810-01122021) |
 
 ## 8.0
+
+> First released: 11-17-2020
 
 ### Highlights
 
@@ -125,7 +139,7 @@ needGenerateH3Content: false
 
 <div class="fold-panel-start"></div>
 
-&nbsp;
+> First released: 07-11-2019
 
 ### 7.6.0
 
@@ -340,7 +354,7 @@ needGenerateH3Content: false
 
 <div class="fold-panel-start"></div>
 
-&nbsp;
+> First released: 03-30-2018
 
 ### 6.5.3
 
@@ -493,7 +507,7 @@ needGenerateH3Content: false
 
 <div class="fold-panel-start"></div>
 
-&nbsp;
+> First released: 03-07-2017
 
 ### 5.2.0
 
@@ -550,7 +564,7 @@ needGenerateH3Content: false
 
 <div class="fold-panel-start"></div>
 
-&nbsp;
+> First released: 11-03-2015
 
 ### 4.3.0
 
@@ -609,7 +623,7 @@ needGenerateH3Content: false
 
 <div class="fold-panel-start"></div>
 
-&nbsp;
+> First released: 08-13-2015
 
 ### 3.0.0
 
@@ -632,7 +646,7 @@ needGenerateH3Content: false
 
 <div class="fold-panel-start"></div>
 
-&nbsp;
+> First released: 05-12-2015
 
 ### 2.1.0
 
@@ -667,7 +681,7 @@ needGenerateH3Content: false
 
 <div class="fold-panel-start"></div>
 
-&nbsp;
+> First released: 01-20-2015
 
 ### 1.0.0
 
