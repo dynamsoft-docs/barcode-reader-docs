@@ -105,8 +105,9 @@ The following 6 modes provides more adaptability to handle more complicated situ
 
 Last but not least, `DM_DEEP_ANALYSIS` is the most powerful way to deal with desperate situations which cannot be solved by above modes. It analyzes every pixel of the image, does a lot calculation to gather characteristics to find or build relation between each pixel, and finally find out the barcode modules.
 
->Note: To get the best read rate, DBR by default has all above 9 modes enabled so that it covers varying situations.
->To speed up the process, choose only one or a few optimun modes. 
+>Note:  
+>To get the best read rate, DBR by default has all above 9 modes enabled so that it covers varying situations.  
+>To speed up the process, choose only one or a few optimun modes.  
 >When using multiple modes, always set `DM_DEEP_ANALYSIS` after all other modes since it's relatively time-consuming.
 
 ### Enable Multiple Barcode Types
