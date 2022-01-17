@@ -19,7 +19,7 @@ needGenerateH3Content: true
 
 **Remarks**  
 If you have a blurry image, you can set this property to a larger value. The higher value set, the more effort the library will spend to decode images, but it may also slow down the recognition process.<br>
-DeblurLevel is now deprecated. It still works in this version but could be removed in the near future. We recommend using [`DeblurModes`](DeblurModes.md#deblurmodes) instead. Migrating mapping:
+DeblurLevel is now deprecated. It still works in this version but could be removed in the near future. We recommend using [`DeblurModes`](deblur-modes.md#deblurmodes) instead. Migrating mapping:
 
 - For Barcode Format PDF417  
 
