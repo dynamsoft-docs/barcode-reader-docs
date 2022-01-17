@@ -137,11 +137,9 @@ needGenerateH3Content: false
 
 ## 7.x Versions <i class="fa fa-caret-down"></i>
 
-> First released: 07-11-2019
-
 <div class="fold-panel-start"></div>
 
-&nbsp;
+> First released: 07-11-2019
 
 ### 7.6.0
 
@@ -354,11 +352,9 @@ needGenerateH3Content: false
 
 ## 6.x Versions <i class="fa fa-caret-down"></i>
 
-> First released: 03-30-2018
-
 <div class="fold-panel-start"></div>
 
-&nbsp;
+> First released: 03-30-2018
 
 ### 6.5.3
 
@@ -509,11 +505,9 @@ needGenerateH3Content: false
 
 ## 5.x Versions <i class="fa fa-caret-down"></i>
 
-> First released: 03-07-2017
-
 <div class="fold-panel-start"></div>
 
-&nbsp;
+> First released: 03-07-2017
 
 ### 5.2.0
 
@@ -568,11 +562,9 @@ needGenerateH3Content: false
 
 ## 4.x Versions <i class="fa fa-caret-down"></i>
 
-> First released: 11-03-2015
-
 <div class="fold-panel-start"></div>
 
-&nbsp;
+> First released: 11-03-2015
 
 ### 4.3.0
 
@@ -629,11 +621,9 @@ needGenerateH3Content: false
 
 ## 3.x Versions <i class="fa fa-caret-down"></i>
 
-> First released: 08-13-2015
-
 <div class="fold-panel-start"></div>
 
-&nbsp;
+> First released: 08-13-2015
 
 ### 3.0.0
 
@@ -654,11 +644,9 @@ needGenerateH3Content: false
 
 ## 2.x Versions <i class="fa fa-caret-down"></i>
 
-> First released: 05-12-2015
-
 <div class="fold-panel-start"></div>
 
-&nbsp;
+> First released: 05-12-2015
 
 ### 2.1.0
 
@@ -691,11 +679,9 @@ needGenerateH3Content: false
 
 ## 1.x Versions <i class="fa fa-caret-down"></i>
 
-> First released: 01-20-2015
-
 <div class="fold-panel-start"></div>
 
-&nbsp;
+> First released: 01-20-2015
 
 ### 1.0.0
 
