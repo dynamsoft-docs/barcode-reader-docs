@@ -51,7 +51,7 @@ The confidence attribute of the barcode results is determined by the reliability
 
 ### Enable Multi-frame Verification
 
-When using video barcode decoding, a barcode can be processed multiple times in consecutive video frames, which produces duplicate results. These duplicate results can be applied to verify the result's correctness. When a barcode result has been decoded more than once within a short period of time, we can confirm it is a correct result and output it. However, if a barcode result has never been decoded a second time within a period of time, we consider it a misread result and discard it.
+For video barcoding decoding scenarios, it is possible to get multiple duplicate results for a single barcode. These duplicate results can be applied to verify the result's correctness. When a barcode result has been decoded more than once within a short period of time, it can be approved and output. However, if a barcode result has never been decoded a second time within a period of time, we consider it a misread result and discard it.
 
 **Remarks**
 
