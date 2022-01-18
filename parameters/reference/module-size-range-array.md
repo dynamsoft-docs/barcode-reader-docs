@@ -42,6 +42,7 @@ needGenerateH3Content: true
 ```
 
 
+<!--
 ## Impacts on Performance
 ### Speed
 Enabling `ModuleSizeRangeArray` for filtering may speed up the process.
@@ -52,6 +53,7 @@ Enabling `ModuleSizeRangeArray` to filter out results may reduce the Read Rate.
 ### Accuracy
 Enabling `ModuleSizeRangeArray` to filter out barcodes with small module size may improve the Accuracy.
 
+-->
 ## Related Articles
 - [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
 - [Configure parameters for a certain barcode format]({{ site.scenario_settings }}format-specification.html)

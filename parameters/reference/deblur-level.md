@@ -93,6 +93,7 @@ delete pSettings;
 ```
 
 
+<!--
 ## Impacts on Performance
 ### Speed
 Setting `DeblurLevel` to a smaller number when the image is clear may speed up the process.
@@ -103,5 +104,6 @@ Setting `DeblurLevel` to a larger number when the image is blurry may improve th
 ### Accuracy
 Setting `DeblurLevel` to a larger number when the image is blurry may improve the Accuracy. 
 
+-->
 ## Related Articles
 - [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)

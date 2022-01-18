@@ -40,6 +40,7 @@ needGenerateH3Content: true
 ```
 
 
+<!--
 ## Impacts on Performance
 ### Speed
 Enabling `MinRatioOfBarcodeZoneWidthToHeight` for filtering may speed up the process.
@@ -50,6 +51,7 @@ Enabling `MinRatioOfBarcodeZoneWidthToHeight` to filter out results may reduce t
 ### Accuracy
 Enabling `MinRatioOfBarcodeZoneWidthToHeight` to filter out results may improve the Accuracy.
 
+-->
 ## Related Articles
 - [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
 - [How to filter out results]({{ site.scenario_settings }}decode-result.html)

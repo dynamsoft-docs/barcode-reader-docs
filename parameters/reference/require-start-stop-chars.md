@@ -42,6 +42,7 @@ needGenerateH3Content: true
 ```
 
 
+<!--
 ## Impacts on Performance
 ### Speed
 `RequireStartStopChars` has no influence on the Speed.
@@ -52,6 +53,7 @@ Setting `RequireStartStopChars` to an appropriate value may improve the Read Rat
 ### Accuracy
 Setting `RequireStartStopChars` to an appropriate value may improve the Accuracy.
 
+-->
 ## Related Articles
 - [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
 - [Configure parameters for a certain barcode format]({{ site.scenario_settings }}format-specification.html#requirestartstopchars)

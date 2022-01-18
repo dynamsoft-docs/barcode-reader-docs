@@ -42,6 +42,7 @@ needGenerateH3Content: true
 ```
 
 
+<!--
 ## Impacts on Performance
 ### Speed
 Enabling `BarcodeBytesLengthRangeArray` for filtering may speed up the process.
@@ -52,6 +53,7 @@ Enabling `BarcodeBytesLengthRangeArray` to filter out results may reduce the Rea
 ### Accuracy
 Enabling `BarcodeBytesLengthRangeArray` to filter out results may improve the Accuracy.
 
+-->
 ## Related Articles
 - [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
 - [How to filter out results]({{ site.scenario_settings }}decode-result.html)

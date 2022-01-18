@@ -73,6 +73,7 @@ delete pSettings;
 ```
 
 
+<!--
 ## Impacts on Performance
 ### Speed
 Setting `Region` to a appropriate value may speed up the process.
@@ -83,5 +84,6 @@ Setting `Region` to a appropriate value may speed up the process.
 ### Accuracy
 `Region` has no influence on the Accuracy.
 
+-->
 ## Related Articles
 - [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)

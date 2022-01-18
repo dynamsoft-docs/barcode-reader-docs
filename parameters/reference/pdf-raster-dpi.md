@@ -62,6 +62,7 @@ delete pSettings;
 ```
 
 
+<!--
 ## Impacts on Performance
 ### Speed
 Setting `PDFRasterDPI` to a smaller number may speed up the process.
@@ -72,6 +73,7 @@ Setting `PDFRasterDPI` to a larger number may improve the Read Rate.
 ### Accuracy
 `PDFRasterDPI` has no influence on the Accuracy.
 
+-->
 ## Related Articles
 - [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
 - [How to process multi-page TIF & PDF]({{ site.scenario_settings }}multipage-imgs-and-pdf.html)

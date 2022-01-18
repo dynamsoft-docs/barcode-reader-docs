@@ -53,6 +53,7 @@ delete pSettings;
 ```
 
 
+<!--
 ## Impacts on Performance
 ### Speed
 The more types you set, the more time the process may take.
@@ -63,6 +64,7 @@ The more types you set, the more time the process may take.
 ### Accuracy
 `IntermediateResultTypes` has no influence on the Accuracy.
 
+-->
 ## Related Articles
 - [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
 - [How to obtain and use intermediate results]({{ site.scenario_settings }}intermediate-result.html)

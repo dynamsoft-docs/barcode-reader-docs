@@ -82,6 +82,7 @@ delete pSettings;
 ```
 
 
+<!--
 ## Impacts on Performance
 ### Speed
 Saving intermediate results to file system may take more time than saving to memory.
@@ -93,6 +94,7 @@ Saving intermediate results to file system may take more time than saving to mem
 `IntermediateResultSavingMode` has no influence on the Accuracy.
 
 
+-->
 ## Candidate Argument List
 - [FolderPath](#folderpath)
 - [RecordsetSizeOfLatestImages](#recordsetsizeoflatestimages)

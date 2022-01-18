@@ -56,6 +56,7 @@ delete pSettings;
 ```
 
 
+<!--
 ## Impacts on Performance
 ### Speed
 Setting `Timeout` to a smaller value may improve the Speed.
@@ -66,6 +67,7 @@ Setting `Timeout` to a larger value may improve the Read Rate.
 ### Accuracy
 `Timeout` has no influence on the Accuracy.
 
+-->
 ## Related Articles
 - [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
 - [How to terminate the process]({{ site.scenario_settings }}terminate.html)

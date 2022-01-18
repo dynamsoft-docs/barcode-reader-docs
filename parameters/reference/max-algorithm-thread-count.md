@@ -56,6 +56,7 @@ delete pSettings;
 ```
 
 
+<!--
 ## Impacts on Performance
 ### Speed
 Setting `MaxAlgorithmThreadCount` to a appropriate number based on the CPU core number may speed up the process.
@@ -66,5 +67,6 @@ Setting `MaxAlgorithmThreadCount` to a appropriate number based on the CPU core 
 ### Accuracy
 `MaxAlgorithmThreadCount` has no influence on the Accuracy.
 
+-->
 ## Related Articles
 - [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)

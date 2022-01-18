@@ -77,6 +77,7 @@ delete pSettings;
 ```
 
 
+<!--
 ## Impacts on Performance
 ### Speed
 `TextResultOrderModes` has no influence on the Speed.
@@ -87,6 +88,7 @@ delete pSettings;
 ### Accuracy
 `TextResultOrderModes` has no influence on the Accuracy.
 
+-->
 ## Related Articles
 - [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
 - [How to filter and order results]({{ site.scenario_settings }}decode-result.html)

@@ -65,6 +65,7 @@ delete pSettings;
 ```
 
 
+<!--
 ## Impacts on Performance
 ### Speed
 Setting `ExpectedBarcodesCount` to a specific number when barcode count is certain may speed up the process.
@@ -75,5 +76,6 @@ Setting `ExpectedBarcodesCount` to a large number when barcode count is uncertai
 ### Accuracy
 `ExpectedBarcodesCount` has no influence on the Accuracy.
 
+-->
 ## Related Articles
 - [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
