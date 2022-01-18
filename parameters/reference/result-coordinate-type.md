@@ -65,6 +65,7 @@ delete pSettings;
 ```
 
 
+<!--
 ## Impacts on Performance
 ### Speed
 `ResultCoordinateType` has no influence on the Speed.
@@ -76,6 +77,7 @@ delete pSettings;
 `ResultCoordinateType` has no influence on the Accuracy.
 
 
+-->
 ## Related Articles
 - [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
 - [How to filter and sort results]({{ site.scenario_settings }}decode-result.html)

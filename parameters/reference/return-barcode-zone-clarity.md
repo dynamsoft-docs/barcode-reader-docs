@@ -62,6 +62,7 @@ delete pSettings;
 ```
 
 
+<!--
 ## Impacts on Performance
 ### Speed
 Disabling `ReturnBarcodeZoneClarity` may improve the Speed.
@@ -72,6 +73,7 @@ Disabling `ReturnBarcodeZoneClarity` may improve the Speed.
 ### Accuracy
 `ReturnBarcodeZoneClarity` has no influence on the Accuracy.
 
+-->
 ## Related Articles
 - [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
 - [How to filter and sort results]({{ site.scenario_settings }}decode-result.html)

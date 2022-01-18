@@ -43,6 +43,7 @@ needGenerateH3Content: true
 ```
 
 
+<!--
 ## Impacts on Performance
 ### Speed
 Disabling `ReturnPartialBarcodeValue` may improve the Speed.
@@ -53,5 +54,6 @@ Enabling `ReturnPartialBarcodeValue` may improve the Read Rate.
 ### Accuracy
 Disabling `ReturnPartialBarcodeValue` may improve the Accuracy.
 
+-->
 ## Related Articles
 - [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)

@@ -36,6 +36,7 @@ needGenerateH3Content: true
 ```
 
 
+<!--
 ## Impacts on Performance
 ### Speed
 `MSICodeCheckDigitCalculation` has no influence on the Speed.
@@ -46,5 +47,6 @@ needGenerateH3Content: true
 ### Accuracy
 `MSICodeCheckDigitCalculation` has no influence on the Accuracy.
 
+-->
 ## Related Articles
 - [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)

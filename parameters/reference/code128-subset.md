@@ -37,6 +37,7 @@ needGenerateH3Content: true
 ```
 
 
+<!--
 ## Impacts on Performance
 ### Speed
 `Code128Subset` has no influence on the Speed.
@@ -47,6 +48,7 @@ Setting `Code128Subset` to an appropriate value when detecting non-standard Code
 ### Accuracy
 Setting `Code128Subset` to an appropriate value when detecting non-standard Code128 may improve the Accuracy.
 
+-->
 ## Related Articles
 - [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
 - [Configure parameters for a certain barcode format]({{ site.scenario_settings }}format-specification.html)

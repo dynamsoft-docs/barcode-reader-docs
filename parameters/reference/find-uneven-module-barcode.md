@@ -42,6 +42,7 @@ needGenerateH3Content: true
 ```
 
 
+<!--
 ## Impacts on Performance
 ### Speed
 `FindUnevenModuleBarcode` has no influence on the Speed.
@@ -52,6 +53,7 @@ Setting `FindUnevenModuleBarcode` to an appropriate value when detecting non-sta
 ### Accuracy
 Setting `FindUnevenModuleBarcode` to an appropriate value when detecting non-standard barcodes may improve the Accuracy.
 
+-->
 ## Related Articles
 - [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
 - [Configure parameters for a certain barcode format]({{ site.scenario_settings }}format-specification.html)

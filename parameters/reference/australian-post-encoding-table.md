@@ -37,6 +37,7 @@ needGenerateH3Content: true
 ```
 
 
+<!--
 ## Impacts on Performance
 ### Speed
 `AustralianPostEncodingTable` has no influence on the Speed.
@@ -47,6 +48,7 @@ Setting `AustralianPostEncodingTable` to an appropriate value when detecting Aus
 ### Accuracy
 Setting `AustralianPostEncodingTable` to an appropriate value when detecting Australian Post Customer Barcode may improve the Accuracy.
 
+-->
 ## Related Articles
 - [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
 - [Configure parameters for a certain barcode format]({{ site.scenario_settings }}format-specification.html#australianpostencodingtable)

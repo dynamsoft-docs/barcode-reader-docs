@@ -32,6 +32,7 @@ needGenerateH3Content: true
 ```
 
 
+<!--
 ## Impacts on Performance
 ### Speed
 `StandardFormat` has no influence on the Speed.
@@ -42,6 +43,7 @@ Setting `StandardFormat` to an appropriate value when detecting non-standard bar
 ### Accuracy
 Setting `StandardFormat` to an appropriate value when detecting non-standard barcode may improve the Accuracy.
 
+-->
 ## Related Articles
 - [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
 - [Configure parameters for a certain barcode format]({{ site.scenario_settings }}format-specification.html)

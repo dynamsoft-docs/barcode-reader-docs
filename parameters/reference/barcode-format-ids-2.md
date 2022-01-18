@@ -61,6 +61,7 @@ delete pSettings;
 ```
 
 
+<!--
 ## Impacts on Performance
 ### Speed
 Setting `BarcodeFormatIds_2` to a specific value when barcode formats are certain may speed up the process.
@@ -71,5 +72,6 @@ Setting `BarcodeFormatIds_2` to all formats when barcode formats are uncertain m
 ### Accuracy
 Setting `BarcodeFormatIds_2` to a specific value when barcode formats are certain may improve the Accuracy.
 
+-->
 ## Related Articles
 - [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)

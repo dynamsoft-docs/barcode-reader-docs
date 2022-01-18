@@ -40,6 +40,7 @@ needGenerateH3Content: true
 ```
 
 
+<!--
 ## Impacts on Performance
 ### Speed
 `MinQuietZoneWidth` has no influence on the Speed.
@@ -50,6 +51,7 @@ Setting `MinQuietZoneWidth` to a appropriate number for barcodes with narrow qui
 ### Accuracy
 `MinQuietZoneWidth` has no influence on the Accuracy.
 
+-->
 ## Related Articles
 - [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
 - [Configure parameters for a certain barcode format]({{ site.scenario_settings }}format-specification.html#minquietzonewidth)

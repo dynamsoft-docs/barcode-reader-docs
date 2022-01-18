@@ -62,6 +62,7 @@ delete pSettings;
 ```
 
 
+<!--
 ## Impacts on Performance
 ### Speed
 Setting `BarcodeZoneMinDistanceToImageBorders` to a appropriate value may speed up the process when barcodes are partly out of the iamge border.
@@ -72,5 +73,6 @@ Setting `BarcodeZoneMinDistanceToImageBorders` to a appropriate value may speed 
 ### Accuracy
 `BarcodeZoneMinDistanceToImageBorders` has no influence on the Accuracy.
 
+-->
 ## Related Articles
 - [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)

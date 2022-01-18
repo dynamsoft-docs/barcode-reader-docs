@@ -56,6 +56,7 @@ delete pSettings;
 ```
 
 
+<!--
 ## Impacts on Performance
 ### Speed
 `MinResultConfidence` has no influence on the Speed.
@@ -66,6 +67,7 @@ Setting a smaller `MinResultConfidence` may improve the Read Rate.
 ### Accuracy
 Setting a larger `MinResultConfidence` may improve the Accuracy.
 
+-->
 ## Related Articles
 - [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
 - [How to filter out results]({{ site.scenario_settings }}decode-result.html)
