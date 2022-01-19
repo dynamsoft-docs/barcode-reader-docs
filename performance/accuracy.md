@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader Performance - Accuracy
 description: This page illustrates how to maximize the accuracy of Dynamsoft Barcode Reader
 Keywords: accuracy
 needAutoGenerateSidebar: true
+noTitleIndex: false
 breadcrumbText: Accuracy
 ---
 
@@ -51,7 +52,7 @@ The confidence attribute of the barcode results is determined by the reliability
 
 ### Enable Multi-frame Verification
 
-When using video barcode decoding, a barcode can be processed multiple times in consecutive video frames, which produces duplicate results. These duplicate results can be applied to verify the result's correctness. When a barcode result has been decoded more than once within a short period of time, we can confirm it is a correct result and output it. However, if a barcode result has never been decoded a second time within a period of time, we consider it a misread result and discard it.
+For video barcoding decoding scenarios, it is possible to get multiple duplicate results for a single barcode. These duplicate results can be applied to verify the correctness of the results. When a barcode result has been decoded more than once within a short period of time, it can be approved and output. However, if a barcode result has never been decoded a second time within a period of time, we consider it a misread result and discard it.
 
 **Remarks**
 
@@ -86,7 +87,7 @@ Generally, the simpler `DeblurModes` setting is the higher accuracy. As a result
 
 ## External Settings – Camera Enhancer Settings
 
-Users can optimize the parameter settings to prevent misreading but this is not the only way to improve the accuracy. For the video barcode decoding scenarios, promoting the quality of the video will definitely improve the barcode decoding accuracy. Although there is no camera control APIs in Dynamsoft Barcode Reader, you can still use Dynamsoft Camera Enhancer (DCE) APIs to take control of the input video streaming. DCE is an SDK that integrates the camera control APIs and video frame pre-processing features. It can be easily bound to the Barcode Reader and enable users to optimize the input video streaming when using the Barcode Reader. You can make the following setting to improve the accuracy of barcode decoding.
+Users can optimize the parameter settings to prevent misreading but this is not the only way to improve the accuracy. For the video barcode decoding scenarios, promoting the quality of the video will definitely improve the barcode decoding accuracy. Although there are no camera control APIs in Dynamsoft Barcode Reader, you can still use Dynamsoft Camera Enhancer (DCE) APIs to take control of the input video streaming. DCE is an SDK that integrates the camera control APIs and video frame pre-processing features. It can be easily bound to the Barcode Reader and enable users to optimize the input video streaming when using the Barcode Reader. You can make the following setting to improve the accuracy of barcode decoding.
 
 ### Filter Out the Blurry Frames
 
