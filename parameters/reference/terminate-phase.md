@@ -80,6 +80,7 @@ delete pSettings;
 ```
 
 
+<!--
 ## Impacts on Performance
 ### Speed
 When the recognition result is not desired, this parameter can be set to skip certain processing stages to speed up.    
@@ -91,6 +92,7 @@ Setting this parameter to TP_BARCODE_RECOGNIZED to get the final result improve 
 `TerminatePhase` has no influence on the Accuracy.
 
 
+-->
 ## Related Articles
 - [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
 - [How to terminate the process]({{ site.scenario_settings }}terminate.html)

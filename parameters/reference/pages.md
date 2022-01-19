@@ -31,6 +31,7 @@ needGenerateH3Content: true
 ```
 
 
+<!--
 ## Impacts on Performance
 ### Speed
 Searching barcodes on fewer pages may improve the Speed.
@@ -41,6 +42,7 @@ Searching barcodes on more pages may improve the Read Rate.
 ### Accuracy
 `Pages` has no influence on the Accuracy.
 
+-->
 ## Related Articles
 - [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
 - [How to process multi-page TIF & PDF]({{ site.scenario_settings }}multipage-imgs-and-pdf.html)

@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader Performance - Accuracy
 description: This page illustrates how to maximize the accuracy of Dynamsoft Barcode Reader
 Keywords: accuracy
 needAutoGenerateSidebar: true
+noTitleIndex: false
 breadcrumbText: Accuracy
 ---
 
@@ -27,13 +28,19 @@ breadcrumbText: Accuracy
 
 # How to Boost Barcode Reading Accuracy
 
-This article illustrates how Dynamsoft Barcode Reader (hereafter referred to as "DBR") is designed to ensure the accuracy of barcode results and how you can add settings to further improve the accuracy.
+There are 3 basic metrics for measuring the performance of a barcode reader application: **speed**, **accuracy** and **read-rate**. The Dynamsoft Barcode Reader SDK (DBR) has been carefully designed to have excellent performance in all three of these metrics. In this article, we try to investigate all the possible methods you can take to let DBR focus on **accuracy**.
 
-$ Accuracy = \frac{Number~of~Correctly~Decoded~Barcode~Results}{Number~of~All~Decoded~Barcode~Results} $
+As the ultimate guide on how to configure DBR to realize its full accuracy potential, we will start with some common methods that are both simple and effective, and then delve into the various aspects of the barcode reading process defined by its algorithm. Lastly, we’ll cover some less-common methods which are useful in certain situations.
 
-$ Speed = \frac{Number~of~All~decoded~Barcode~Results}{Total~Time~Consumption} $
-
-$ Read~Rate = \frac{Number~of~All~Decoded~Barcode~Results}{Number~of~All~Target~Barcodes} $
+> The following shows the definition of the three metrics.
+>
+>$ Accuracy = \frac{Number~of~Correctly~Decoded~Barcode~Results}{Number~of~All~Decoded~Barcode~Results} $
+>
+>$ Speed = \frac{Number~of~All~Decoded~Barcode~Results}{Total~Time~Consumed} $
+>
+>$ Read~Rate = \frac{Number~of~All~Decoded~Barcode~Results}{Number~of~All~Target~Barcodes} $
+>
+>Do bear in mind that, if one of these metrics is prioritized, the other two may not be ideal.
 
 ## General Settings
 
@@ -45,7 +52,7 @@ The confidence attribute of the barcode results is determined by the reliability
 
 ### Enable Multi-frame Verification
 
-When using video barcode decoding, a barcode can be processed multiple times in consecutive video frames, which produces duplicate results. These duplicate results can be applied to verify the result's correctness. When a barcode result has been decoded more than once within a short period of time, we can confirm it is a correct result and output it. However, if a barcode result has never been decoded a second time within a period of time, we consider it a misread result and discard it.
+For video barcoding decoding scenarios, it is possible to get multiple duplicate results for a single barcode. These duplicate results can be applied to verify the correctness of the results. When a barcode result has been decoded more than once within a short period of time, it can be approved and output. However, if a barcode result has never been decoded a second time within a period of time, we consider it a misread result and discard it.
 
 **Remarks**
 
@@ -80,7 +87,7 @@ Generally, the simpler `DeblurModes` setting is the higher accuracy. As a result
 
 ## External Settings – Camera Enhancer Settings
 
-Users can optimize the parameter settings to prevent misreading but this is not the only way to improve the accuracy. For the video barcode decoding scenarios, promoting the quality of the video will definitely improve the barcode decoding accuracy. Although there is no camera control APIs in Dynamsoft Barcode Reader, you can still use Dynamsoft Camera Enhancer (DCE) APIs to take control of the input video streaming. DCE is an SDK that integrates the camera control APIs and video frame pre-processing features. It can be easily bound to the Barcode Reader and enable users to optimize the input video streaming when using the Barcode Reader. You can make the following setting to improve the accuracy of barcode decoding.
+Users can optimize the parameter settings to prevent misreading but this is not the only way to improve the accuracy. For the video barcode decoding scenarios, promoting the quality of the video will definitely improve the barcode decoding accuracy. Although there are no camera control APIs in Dynamsoft Barcode Reader, you can still use Dynamsoft Camera Enhancer (DCE) APIs to take control of the input video streaming. DCE is an SDK that integrates the camera control APIs and video frame pre-processing features. It can be easily bound to the Barcode Reader and enable users to optimize the input video streaming when using the Barcode Reader. You can make the following setting to improve the accuracy of barcode decoding.
 
 ### Filter Out the Blurry Frames
 
@@ -106,10 +113,7 @@ In this article, the accuracy-friendly settings are listed and parsed. In summar
 - Exclude the uninterest when decoding
 - Filter out the incorrect after decoding
 
-Some of the accuracy-friendly settings may benefit the speed or read rate at the same time. For example, when the uninterested barcode formats are excluded, both the processing speed and the accuracy are improved and hardly do this setting affects the read rate. However, some other accuracy-friendly settings, for example, confidence filter, may decrease both the processing speed and read rate. To adjust the parameter setting to fit your usage scenario, you might need to find the balance between the 3 dimensions of the performance. Master the following information will help you to optimize the settings:
-
-- The priority of each performance metric in your project.
-- How the settings are affecting the barcode decoding speed, read rate and accuracy.
+Some of the accuracy-friendly settings may benefit the speed or read rate at the same time. For example, when the uninterested barcode formats are excluded, both the processing speed and the accuracy are improved and hardly do this setting affects the read rate. However, some other accuracy-friendly settings, for example, confidence filter, may decrease both the processing speed and read rate. To adjust the parameter setting to fit your usage scenario, you might need to find the balance between the 3 dimensions of the performance.
 
 The following links are the article that explains how to make settings when speed or read rate is prioritized. Reading the articles will help you to further understand the parameter settings and measure how to configure the setting for your own project.
 

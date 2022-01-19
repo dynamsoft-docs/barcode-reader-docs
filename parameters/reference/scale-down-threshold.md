@@ -62,6 +62,7 @@ delete pSettings;
 ```
 
 
+<!--
 ## Impacts on Performance
 ### Speed
 Setting `ScaleDownThreshold` to a smaller value than the shorter edge size of the image may speed up the process when the barcode is clear and big on the image.
@@ -72,5 +73,6 @@ Setting `ScaleDownThreshold` to a larger value than the shorter edge of the imag
 ### Accuracy
 `ScaleDownThreshold` has no influence on the Accuracy.
 
+-->
 ## Related Articles
 - [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)

@@ -42,6 +42,7 @@ needGenerateH3Content: true
 ```
 
 
+<!--
 ## Impacts on Performance
 ### Speed
 `MirrorMode` has no influence on the Speed.
@@ -52,6 +53,7 @@ Setting `MirrorMode` to an appropriate value may improve the Read Rate.
 ### Accuracy
 `MirrorMode` has no influence on the Accuracy.
 
+-->
 ## Related Articles
 - [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
 - [Configure parameters for a certain barcode format]({{ site.scenario_settings }}format-specification.html)

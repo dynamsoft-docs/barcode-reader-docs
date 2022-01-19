@@ -132,6 +132,7 @@ delete pSettings;
 
 
 
+<!--
 ## Impacts on Performance
 ### Speed
 The SDK will loop the setting modes one by one until find as many barcodes as `ExpectedBarcodesCount` specified or timeout. The more modes you set, the more time the process may take. Setting an appropriate mode first in order or setting only necessary modes may speed up the process.
@@ -142,6 +143,7 @@ Setting more image preprocessing modes along with different arguments may improv
 ### Accuracy
 `ImagePreprocessingModes` has no influence on the Accuracy.
 
+-->
 ## Candidate Argument List
 - [Sensitivity](#sensitivity)
 - [SmoothBlockSizeX](#smoothblocksizex)

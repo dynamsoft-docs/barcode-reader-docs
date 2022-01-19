@@ -68,6 +68,7 @@ delete pSettings;
 ```
 
 
+<!--
 ## Impacts on Performance
 ### Speed
 Setting `PDFReadingMode` to PDFRM_VECTOR or PDFRM_RASTER when barcode type (image or vector) in PDF file is certain may speed up the process. 
@@ -79,5 +80,6 @@ Setting `PDFReadingMode` to PDFRM_AUTO when barcode type (image or vector) in PD
 `PDFReadingMode` has no influence on the Accuracy.
 
 
+-->
 ## Related Articles
 - [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)

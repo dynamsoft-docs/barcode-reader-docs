@@ -41,6 +41,7 @@ The unit is barcode module size. For example, if the standard barcode module siz
 ```
 
 
+<!--
 ## Impacts on Performance
 ### Speed
 `AllModuleDeviation` has no influence on the Speed.
@@ -51,6 +52,7 @@ Setting `AllModuleDeviation` to an appropriate value when detecting non-standard
 ### Accuracy
 Setting `AllModuleDeviation` to an appropriate value when detecting non-standard barcodes may improve the Accuracy.
 
+-->
 ## Related Articles
 - [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
 - [Configure parameters for a certain barcode format]({{ site.scenario_settings }}format-specification.html#allmoduledeviation)

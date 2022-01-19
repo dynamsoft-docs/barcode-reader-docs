@@ -83,6 +83,7 @@ delete pSettings;
 ```
 
 
+<!--
 ## Impacts on Performance
 ### Speed
 To detect barcodes surrounded by a large number of irrelevant characters, enabling text filtering may improve the Speed. However, enabling text filtering may slow down the Speed when barcodes are the only content of the image.
@@ -93,6 +94,7 @@ To detect barcodes surrounded by a large number of irrelevant characters, enabli
 ### Accuracy
 For barcodes surrounded by a large number of irrelevant characters, enabling text filtering may improve the Accuracy.
 
+-->
 ## Candidate Argument List
 - [MinImageDimension](#minimagedimension)
 - [Sensitivity](#sensitivity)
