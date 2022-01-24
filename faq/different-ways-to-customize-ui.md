@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: What are the different ways to customize the UI?
-keywords: Dynamsoft Barcode Reader, FAQ, tech basic, HTTPS
+keywords: Dynamsoft Barcode Reader, FAQ, tech basic, customize ui
 description: What are the different ways to customize the UI?
 needAutoGenerateSidebar: false
 ---

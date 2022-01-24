@@ -36,7 +36,7 @@ Under Construction
 
 <a href="{{site.faq}}different-ways-to-customize-ui.html" target="_blank">What are the different ways to customize the UI?</a>
 
-<a href="{{site.faq}}.html" target="_blank"></a>
+<a href="{{site.faq}}get-sdk-logs.html" target="_blank">How to get the logs for the SDK?</a>
 
 <a href="{{site.faq}}.html" target="_blank"></a>
 
