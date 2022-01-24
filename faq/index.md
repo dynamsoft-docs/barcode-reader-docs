@@ -22,6 +22,32 @@ Under Construction
 
 <a href="{{site.faq}}differences-between-full-and-compact-editions.html" target="_blank">What are the differences between the compact edition and the full edition?</a>
 
+<a href="{{site.faq}}switch-compact-to-full.html" target="_blank">How do you switch from the compact edition to the full edition of the library?</a>
+
+<a href="{{site.faq}}is-https-required.html" target="_blank">Is HTTPs absolutely required?</a>
+
+<a href="{{site.faq}}use-of-onFrameRead-and-onUnduplicateRead.html" target="_blank">When to use onFrameRead and when to use onUnduplicateRead?</a>
+
+<a href="{{site.faq}}call-loadWasm-proactively.html" target="_blank">Do we have to call loadWasm proactively?</a>
+
+<a href="{{site.faq}}when-loadWasm-is-used.html" target="_blank">When and why loadWasm is used?</a>
+
+<a href="{{site.faq}}differences-between-updateScanSettings-updateVideoSettings-and-updateRuntimeSettings.html" target="_blank">What are the differences between updateScanSettings/updateVideoSettings/updateRuntimeSettings?</a>
+
+<a href="{{site.faq}}different-ways-to-customize-ui.html" target="_blank">What are the different ways to customize the UI?</a>
+
+<a href="{{site.faq}}.html" target="_blank"></a>
+
+<a href="{{site.faq}}.html" target="_blank"></a>
+
+<a href="{{site.faq}}.html" target="_blank"></a>
+
+<a href="{{site.faq}}.html" target="_blank"></a>
+
+<a href="{{site.faq}}.html" target="_blank"></a>
+
+<a href="{{site.faq}}.html" target="_blank"></a>
+
 ## General
 
 ## JavaScript
