@@ -64,7 +64,7 @@ Under Construction
 
 <a href="{{site.faq}}check-current-version.html" target="_blank">How can I check the version of the JS SDK I am currently using?</a>
 
-<a href="{{site.faq}}.html" target="_blank"></a>
+<a href="{{site.faq}}unable-to-scan-aztec-code.html" target="_blank">Why I am unable to scan an Aztec code in the helloworld sample?</a>
 
 <a href="{{site.faq}}.html" target="_blank"></a>
 
