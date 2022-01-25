@@ -38,7 +38,31 @@ Under Construction
 
 <a href="{{site.faq}}get-sdk-logs.html" target="_blank">How to get the logs for the SDK?</a>
 
+<a href="{{site.faq}}upgrade-old-to-new.html" target="_blank">How to upgrade from an old to new version?</a>
+
+<a href="{{site.faq}}change-domain-binding-of-product-key.html" target="_blank">How to change the domain binding of your product key?</a>
+
+<a href="{{site.faq}}when-singleFrameMode-is-enabled.html" target="_blank">When is singleFrameMode enabled?</a>
+
+<a href="{{site.faq}}get-intermediate-result-images.html" target="_blank">How to get intermediate result images?</a>
+
+<a href="{{site.faq}}how-to-enable-dpm.html" target="_blank">How to enable DPM?</a>
+
+<a href="{{site.faq}}read-inverted-image.html" target="_blank">How can I read an inverted image?</a>
+
+<a href="{{site.faq}}read-from-existing-files.html" target="_blank">Can I read barcodes from existing files?</a>
+
+<a href="{{site.faq}}formats-supported-for-existing-files.html" target="_blank">What file/image formats are supported while reading barcodes from the existing files?</a>
+
+<a href="{{site.faq}}read-text-from-barcode-image.html" target="_blank">How can I read the text info from a barcode image?</a>
+
+<a href="{{site.faq}}scan-US-drivers-license.html" target="_blank">Can I scan barcodes on US Driver’s Licenses and get the first name, last name, DOB, etc.?</a>
+
+<a href="{{site.faq}}add-remove-beep-sound.html" target="_blank">Can I add/remove a “beep” sound once a barcode is found?</a>
+
 <a href="{{site.faq}}.html" target="_blank"></a>
+
+<a href="{{site.faq}}check-current-version.html" target="_blank">How can I check the version of the JS SDK I am currently using?</a>
 
 <a href="{{site.faq}}.html" target="_blank"></a>
 
