@@ -62,7 +62,7 @@ DBR also supports managing parameters via JSON configuration files. This method 
 
 `ImageParameter` defines the global configurations used for the entire image. 
 
-You can define one or multiple `ImageParameter`. When defining multiple `ImageParameter`, use `ImageParameterArray` and specify a different `Name` for each `ImageParameter` object. 
+You can define one or multiple `ImageParameter`. When defining multiple `ImageParameter`, use `ImageParameterContentArray` and specify a different `Name` for each `ImageParameter` object. 
 
 To use the `ImageParameter` configuration defined in the JSON template:
 
@@ -92,7 +92,7 @@ Below is a sample JSON template. In this example, we use the parameter `pTemplat
 //Multiple ImageParameter example 
 {
     "Version": "3.0", 
-    "ImageParameterArray": [                        
+    "ImageParameterContentArray": [                        
         {
             "Name": "IP1",              
             "BarcodeFormatIds": ["BF_ALL"]
