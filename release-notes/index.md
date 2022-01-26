@@ -31,6 +31,8 @@ needGenerateH3Content: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
+| 8.8.7 | [JavaScript](../programming/javascript/release-notes/js-8.md#887-01262022) |
+| 8.8.5 | [JavaScript](../programming/javascript/release-notes/js-8.md#885-01262022) |
 | 8.8.3 | [JavaScript](../programming/javascript/release-notes/js-8.md#883-10292021) |
 | 8.8.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#880-10282021) / [C](../programming/c/release-notes/c-8.md#880-10122021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#880-10122021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#880-10122021) / [Python](../programming/python/release-notes/python-8.md#880-10222021) / [Java](../programming/java/release-notes/java-8.md#880-10122021) / [Android](../programming/android/release-notes/android-8.md#880-10192021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#880-10192021) |
 
