@@ -49,7 +49,7 @@ Let's go into more detail.
 
 - ImageParameter   
 `ImageParameter` defines the global configuration used for the entire image. One or multiple may be defined. We will introduce the specific configurable fields in the subsequent documents.  
-When defining an `ImageParameter`, it can be specified by the `ImageParameter` in Json. When defining multiple `ImageParameter`, use the `ImageParameterArray`, each `ImageParameter` object needs to specify a different `Name`. 
+When defining an `ImageParameter`, it can be specified by the `ImageParameter` in Json. When defining multiple `ImageParameter`, use the `ImageParameterContentArray`, each `ImageParameter` object needs to specify a different `Name`. 
 To use the `ImageParameter` configuration defined in the Json template, first we need to use `InitRuntimeSettingsWithFile` to load a Json file, or use `InitRuntimeSettingsWithString` to load a Json string, and then when calling the DBR decoding function, specify the configuration through `Name` of `ImageParameter`. If not specified, the default `ImageParameter` configuration object will be used. 
 The `emSettingPriority` parameters in the `InitRuntimeSettingsWithFile` and `InitRuntimeSettingsWithString` interfaces are used to specify how to operate the default configuration of the DBR when loading the Json configuration. If `CM_IGNORE` is set, the default configuration will not be changed. If set to `CM_OVERWRITE`, the `ImageParameter` configuration you just loaded will be used and the default template will be merged. 
 
@@ -69,7 +69,7 @@ The `emSettingPriority` parameters in the `InitRuntimeSettingsWithFile` and `Ini
 //Multiple ImageParameter example{ 
 {
     "Version": "3.0", 
-    "ImageParameterArray": [                        
+    "ImageParameterContentArray": [                        
         {
             "Name": "IP1",              
             "BarcodeFormatIds": ["BF_ALL"]
