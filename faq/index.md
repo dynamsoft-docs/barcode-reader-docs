@@ -60,15 +60,15 @@ Under Construction
 
 <a href="{{site.faq}}add-remove-beep-sound.html" target="_blank">Can I add/remove a “beep” sound once a barcode is found?</a>
 
-<a href="{{site.faq}}.html" target="_blank"></a>
+<a href="{{site.faq}}size-of-wasm.html" target="_blank">What is the size of the JavaScript SDK (.wasm)? What is the average time for downloading the wasm file?</a>
 
 <a href="{{site.faq}}check-current-version.html" target="_blank">How can I check the version of the JS SDK I am currently using?</a>
 
 <a href="{{site.faq}}unable-to-scan-aztec-code.html" target="_blank">Why I am unable to scan an Aztec code in the helloworld sample?</a>
 
-<a href="{{site.faq}}.html" target="_blank"></a>
+<a href="{{site.faq}}stop-camera-to-open-right-away.html" target="_blank">How to stop the camera stream to get open right after DBR JS demo is loaded? How to enable the camera after clicking 'start scanning' button?</a>
 
-<a href="{{site.faq}}.html" target="_blank"></a>
+<a href="{{site.faq}}.html" target="_blank">What is the difference between BarcodeReader class and the BarcodeScanner class? Can they be used interchangeably?</a>
 
 <a href="{{site.faq}}.html" target="_blank"></a>
 
