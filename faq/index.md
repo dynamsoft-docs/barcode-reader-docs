@@ -80,17 +80,19 @@ Under Construction
 
 ## Sales & Licensing
 
-<a href="{{site.faq}}.html" target="_blank"></a>
+<a href="{{site.faq}}how-license-tracking-works.html" target="_blank">How license tracking works with the three standard licensing options - Per Scan, Per Device, Per Concurrent Device ?</a>
+
+<a href="{{site.faq}}javascript-sdk-offline-mode-use.html" target="_blank">How can I use your JavaScript SDK in offline mode?</a>
+
+<a href="{{site.faq}}new-license-required-per-device-licensing.html" target="_blank">When is a new license required in per-device licensing model?</a>
 
 <a href="{{site.faq}}.html" target="_blank"></a>
 
 <a href="{{site.faq}}.html" target="_blank"></a>
 
-<a href="{{site.faq}}.html" target="_blank"></a>
+## Other
 
-<a href="{{site.faq}}.html" target="_blank"></a>
-
-<a href="{{site.faq}}.html" target="_blank"></a>
+<a href="{{site.faq}}competitors-comparison.html" target="_blank">How do you compare yourself with Scandit and DataSymbol SDKs? What are your advantages?</a>
 
 <a href="{{site.faq}}.html" target="_blank"></a>
 
