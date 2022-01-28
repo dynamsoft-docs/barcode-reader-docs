@@ -12,8 +12,6 @@ Under Construction
 
 ## Tech Basic
 
-<a href="{{site.faq}}.html" target="_blank"></a>
-
 <a href="{{site.faq}}ways-to-copy-dbr-js-deployable-files.html" target="_blank">How can I get a copy of Dbr JS deployable files (source code, etc.)?</a>
 
 <a href="{{site.faq}}server-requirements-for-dbr-js-deployment.html" target="_blank">What are the server requirements for Dbr JS deployment?</a>
@@ -68,7 +66,39 @@ Under Construction
 
 <a href="{{site.faq}}stop-camera-to-open-right-away.html" target="_blank">How to stop the camera stream to get open right after DBR JS demo is loaded? How to enable the camera after clicking 'start scanning' button?</a>
 
-<a href="{{site.faq}}.html" target="_blank">What is the difference between BarcodeReader class and the BarcodeScanner class? Can they be used interchangeably?</a>
+<a href="{{site.faq}}difference-between-barcodeReader-and-barcodeScanner.html" target="_blank">What is the difference between BarcodeReader class and the BarcodeScanner class? Can they be used interchangeably?</a>
+
+<a href="{{site.faq}}newline-character-not-being-rendered.html" target="_blank">Why the newline characters are not being rendered while displaying the barcode results in a textbox?</a>
+
+## Troubleshooting / User Cases
+
+<a href="{{site.faq}}general-troubleshooting-steps-for-decode-failure.html" target="_blank">What are the general troubleshooting steps if a customer’s image fails to decode in Dbr JS program?</a>
+
+<a href="{{site.faq}}avoid-incorrect-barcode-results.html" target="_blank">How to avoid incorrect barcode results?</a>
+
+<a href="{{site.faq}}difference-between-bestspeed-and-bestcoverage.html" target="_blank">What’s the scan setting differences between Best Speed and Best Coverage?/a>
+
+## Sales & Licensing
+
+<a href="{{site.faq}}.html" target="_blank"></a>
+
+<a href="{{site.faq}}.html" target="_blank"></a>
+
+<a href="{{site.faq}}.html" target="_blank"></a>
+
+<a href="{{site.faq}}.html" target="_blank"></a>
+
+<a href="{{site.faq}}.html" target="_blank"></a>
+
+<a href="{{site.faq}}.html" target="_blank"></a>
+
+<a href="{{site.faq}}.html" target="_blank"></a>
+
+<a href="{{site.faq}}.html" target="_blank"></a>
+
+<a href="{{site.faq}}.html" target="_blank"></a>
+
+<a href="{{site.faq}}.html" target="_blank"></a>
 
 <a href="{{site.faq}}.html" target="_blank"></a>
 
