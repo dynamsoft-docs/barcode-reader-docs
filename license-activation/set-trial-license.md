@@ -102,7 +102,7 @@ var reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 * Java for Android
 
 ``` java
-barcodeReader = new BarcodeReader();
+mBarcodeReader = new BarcodeReader();
 DMDLSConnectionParameters dls = new DMDLSConnectionParameters();
 // replace the number 123456 with YOUR-ORGANIZATION-ID
 dls.organizationID = "200001";
