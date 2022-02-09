@@ -102,16 +102,13 @@ var reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 * Java for Android
 
 ``` java
-mBarcodeReader = new BarcodeReader();
-DMDLSConnectionParameters dls = new DMDLSConnectionParameters();
-// replace the number 123456 with YOUR-ORGANIZATION-ID
-dls.organizationID = "200001";
-mbarcodeReader.initLicenseFromDLS(dls, new DBRDLSLicenseVerificationListener() {
+mbarcodeReader = new BarcodeReader();
+DMLTSConnectionParameters ltspar = new DMLTSConnectionParameters();
+ltspar.organizationID = "123456"; // replace the number 123456 with YOUR-ORGANIZATION-ID
+mbarcodeReader.initLicenseFromLTS(ltspar, new DBRLTSLicenseVerificationListener() {
     @Override
-    public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-        if (e != null){
-            Log.i("dls error: ", e.getMessage());  
-        } 
+    public void LTSLicenseVerificationCallback(boolean b, Exception e) {
+        if (e != null){ Log.i("lts error: ", e.getMessage());  } 
     }
 });
 ```
@@ -119,12 +116,11 @@ mbarcodeReader.initLicenseFromDLS(dls, new DBRDLSLicenseVerificationListener() {
 * Objective-C for iOS
 
 ``` obj-c
-DynamsoftBarcodeReader *barcodeReader;
-iDMDLSConnectionParameters* dls = [[iDMDLSConnectionParameters alloc] init];
-// replace the number 200001 with YOUR-ORGANIZATION-ID
-dls.organizationID = @"200001";
-barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:dls verificationDelegate:self];
-* (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
+DynamsoftBarcodeReader *barcodeReader; 
+iDMLTSConnectionParameters* lts = [[iDMLTSConnectionParameters alloc] init]; 
+lts.organizationID = @"123456"; // replace the number 123456 with YOUR-ORGANIZATION-ID
+barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromLTS:lts verificationDelegate:self]; 
+* (void)LTSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
 {
     //TODO add your code for license verification
 }
@@ -133,12 +129,8 @@ barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:dls verificat
 * Swift for iOS
 
 ```swift
-let dls = iDMDLSConnectionParameters()
-// replace the number 200001 with YOUR-ORGANIZATION-ID
-dls.organizationID = "200001"
-let barcodeReader = DynamsoftBarcodeReader.init(licenseFromDLS: dls, verificationDelegate: self)
-func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
-{
-    //TODO add your code for license verification
-}
+var barcodeReader:DynamsoftBarcodeReader! = nil
+let lts = iDMLTSConnectionParameters()
+lts.organizationID = "123456" // replace the number 123456 with YOUR-ORGANIZATION-ID
+barcodeReader = DynamsoftBarcodeReader(licenseFromLTS: lts, verificationDelegate: self)
 ```
