@@ -30,7 +30,7 @@ breadcrumbText: Accuracy
 
 There are 3 basic metrics for measuring the performance of a barcode reader application: **speed**, **accuracy** and **read-rate**. The Dynamsoft Barcode Reader SDK (DBR) has been carefully designed to have excellent performance in all three of these metrics. In this article, we try to investigate all the possible methods you can take to let DBR focus on **accuracy**.
 
-As the ultimate guide on how to configure DBR to realize its full accuracy potential, we will start with some common methods that are both simple and effective, and then delve into the various aspects of the barcode reading process defined by its algorithm. Lastly, we’ll cover some less-common methods which are useful in certain situations.
+As the ultimate guide on how to configure DBR to realize its full accuracy potential, we will start with some common methods that are both simple and effective, and then delve into the various aspects of the barcode reading process defined by its algorithm. Lastly, we’ll cover some of the less traditional methods which can be useful in certain situations.
 
 > The following shows the definition of the three metrics.
 >
@@ -48,30 +48,32 @@ The following settings can be applied to nearly all usage scenarios to improve t
 
 ### Filter the Result by Confidence
 
-The confidence attribute of the barcode results is determined by the reliability of that result. Users can set the [`minResultConfidence`]({{site.parameters_reference}}min-result-confidence.html) to make a filter on the barcode results by the confidence value. For Dynamsoft Barcode Reader v8.8 or higher version, the default value of the confidence is optimized to 30, which can filter out the majority of misreading barcode results. A higher `minResultConfidence` setting will definitely improve the accuracy of the barcode results but reduce the read rate and speed at the same time. Therefore, please set the `minResultConfidence` according to your actual usage scenario to balance the accuracy and speed.
+The confidence attribute of the barcode results is determined by the reliability of that result. Users can set the [`minResultConfidence`]({{site.parameters_reference}}min-result-confidence.html) to make a filter on the barcode results by the confidence value. For Dynamsoft Barcode Reader v8.8 or later, the default value of the confidence is optimized to 30, which can filter out the majority of misread barcode results. A higher `minResultConfidence` setting will definitely improve the accuracy of the barcode results but reduce the read rate and speed at the same time. Therefore, please set the `minResultConfidence` according to your actual usage scenario to balance the accuracy and speed.
 
 ### Enable Multi-frame Verification
 
-For video barcoding decoding scenarios, it is possible to get multiple duplicate results for a single barcode. These duplicate results can be applied to verify the correctness of the results. When a barcode result has been decoded more than once within a short period of time, it can be approved and output. However, if a barcode result has never been decoded a second time within a period of time, we consider it a misread result and discard it.
+For interactive video scenarios, it is possible to get duplicate results for a single barcode. These duplicate results can be applied to verify the accuracy of the results. When a barcode result has been decoded more than once within a short period of time, it can be approved and output. However, if a barcode result is not recognized a second time within that same short period of time, we consider it a misread result and discard it.
 
 **Remarks**
 
-For **JavaScript** edition, multi-frame verification is enabled when using video barcode scanning. For **Android** and **iOS** editions, you have to use the following APIs to control the status of the multi-frame verification:
+For the **JavaScript** edition, multi-frame verification is enabled when using video barcode scanning. For **Android** and **iOS** editions, you have to use the following APIs to control the status of the multi-frame verification:
 
 - [`enableResultVerification (Android)`]({{site.android_api}}primary-result.html#enableresultverification)
 - [`enableResultVerification (iOS)`]({{site.oc_api}}primary-result.html#enableresultverification)
 
 ## Specific Settings
 
-When configuring the specific settings, you have to know some basic information about your usage scenario. The information will help to exclude the uninterest or make filters on the barcode results.
+When configuring the specific settings, you have to know some basic information about your usage scenario. This type of  information will help exclude undesired barcode results or put a filter on the barcode results.
 
 ### Specify the Barcode Formats
 
-The barcode format specification is the most basic decode setting that affects all three metrics of the performance. Sometimes, misreading on an OneD barcode is caused by misrecognizing the OneD barcode to another OneD type. If the targeting OneD barcodes are scoped, you can specify the barcode format in your project to avoid this kind of misreading. In addition, specifying the required barcode formats will also benefit the barcode reading speed.
+The barcode format specification is the most basic decode setting that affects all three metrics of the performance. Sometimes, misreading on a 1D barcode is caused by misrecognizing the 1D barcode as another 1D type. If the targeted 1D barcodes are scoped, you can specify the barcode format in your project to avoid this kind of misread results. In addition, specifying the required barcode formats will not only benefit the accuracy, but also the barcode reading speed as we saw in the [Achieving Best Speed](speed.md) article.
+
+As mentioned previously, the two parameters responsible for this are: [ `BarcodeFormatIds` ](https://www.dynamsoft.com/barcode-reader/parameters/reference/barcode-format-ids.html?ver=latest) and [ `BarcodeFormatIds_2` ](https://www.dynamsoft.com/barcode-reader/parameters/reference/barcode-format-ids-2.html?ver=latest)
 
 ### Enable Result Text Filter
 
-When the target barcodes are confirmed, the barcode texts might have common features that help you implement a result filter on the results text. Via `FormatSpecification` parameters, you can add barcode result text restrictions like [`regular expression`]({{site.parameters_reference}}barcode-text-regex-pattern.html) requirements and [`text length`]({{site.parameters_reference}}barcode-text-length-range-array.html) range.
+When the target barcodes are confirmed, the barcode texts might have common features that help you implement a result filter on the result text. Via [`FormatSpecification`](https://www.dynamsoft.com/barcode-reader/parameters/structure-and-interfaces-of-parameters.html?ver=latest#parameter-list) parameters, you can add barcode result text restrictions like [`regular expression`]({{site.parameters_reference}}barcode-text-regex-pattern.html) requirements and [`text length`]({{site.parameters_reference}}barcode-text-length-range-array.html) range.
 
 ### Exclude Small-Module Barcodes
 
