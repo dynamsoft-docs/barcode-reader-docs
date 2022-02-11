@@ -70,7 +70,7 @@ The binarization of the image is the basis for the localization of barcodes. Dep
 
 **Recommendation**
  
-* If the images to be read are of high quality (acquired with good lighting conditions) like scanned documents, use `BM_THRESHOLD` as the top priority. Otherwise, use `BM_LOCAL_BLOCK`.
+* If the images to be read are of high quality (acquired with good lighting conditions) like scanned documents, use `BM_THRESHOLD`. Otherwise, use `BM_LOCAL_BLOCK`.
 * Try not to set both modes since DBR might try both and it slows things down. If you must set both, set `BM_THRESHOLD` as the first option.
 
 ### Adjust the localization modes
@@ -125,7 +125,7 @@ In addition to the above, DCE also does the following (only supported on iOS & A
 
 > Note that DCE and DBR run in parallel, so it's ok to enable more DCE features without affecting the overall speed.
 
-## Delving into the algorithm
+## Delve into the algorithm
 
 ### Reduce the size of the image
 
@@ -193,7 +193,7 @@ The grayscale image converted from the original image can usually be used direct
 
 **Recommendation**
 
-In most cases, just use the default `IPM_GENERAL` mode. If necessary, specify only one out of the 5 available values `IPM_GENERAL` , `IPM_GRAY_EQUALIZE` , `IPM_GRAY_SMOOTH` , `IPM_SHARPEN_SMOOTH` , `IPM_MORPHOLOGY` based on your images. The more image preprocessing modes you specify, the worse that the speed gets.
+In most cases, just use the default `IPM_GENERAL` mode. If necessary, specify only one out of the 5 available values `IPM_GENERAL` , `IPM_GRAY_EQUALIZE` , `IPM_GRAY_SMOOTH` , `IPM_SHARPEN_SMOOTH` , `IPM_MORPHOLOGY` based on your images. The more image preprocessing modes you specify, the worse that the speed might get.
 
 #### Remove texture and filter text
 
@@ -206,7 +206,7 @@ The less the noise, the faster the localization. Use the parameters [TextureDete
 
 #### Adapt image binarization for speed
 
-The image binarization is controlled by the parameter [BinarizationModes](https://www.dynamsoft.com/barcode-reader/parameters/reference/binarization-modes.html#binarizationmodes). This has been discussed briefly above in [Determine the appropriate binarization mode](#determine-the-appropriate-binarization-mode) where the recommendation is to use either `BM_THRESHOLD` or `BM_LOCAL_BLOCK` . Here, we will examine some mode arguments that allow the modes to adapt to a speed-first application. For a quick look on the relationship between modes and mode arguments, please refer to this [page](https://github.com/dynamsoft-docs/label-recognition-docs/blob/amro-branch/programming/javascript/api-reference/initialize.md#createinstance).
+The image binarization is controlled by the parameter [BinarizationModes](https://www.dynamsoft.com/barcode-reader/parameters/reference/binarization-modes.html#binarizationmodes). This has been discussed briefly above in [Determine the appropriate binarization mode](#determine-the-appropriate-binarization-mode) where the recommendation is to use either `BM_THRESHOLD` or `BM_LOCAL_BLOCK` . Here, we will examine some mode arguments that allow the modes to adapt to a speed-first application. For a quick look on the relationship between modes and mode arguments, please refer to this [page](https://www.dynamsoft.com/barcode-reader/parameters/enum/parameter-mode-enums.html?ver=latest).
 
 * For `BM_THRESHOLD`, we can explicitly set a value to the argument `BinarizationThreshold` which dictates at which point a pixel is regarded as black/white. Generally we can just use the default value `-1` which allows DBR to calculate a proper threshold itself.
 
