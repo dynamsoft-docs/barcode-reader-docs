@@ -105,7 +105,7 @@ For interactive barcode reading from a video input, you get better speed if:
 
 The [Dynamsoft Camera Enhancer SDK](https://www.dynamsoft.com/camera-enhancer/docs/introduction/) (DCE) is designed to do all the above like this:
 
-> NOTE: DCE is only available for iOS, Android and Web applications at present.
+> NOTE: DCE is available in the SDK packages of DBR iOS v8.2.1+, DBR Android v8.2.1+ and DLR ([Dynamsoft Label Recognizer](https://www.dynamsoft.com/label-recognition/programming/javascript/user-guide.html?ver=latest)) JavaScript v2.2+. Also, the logic is built into the `BarcodeScanner` class of DBR JavaScript v8.6.0+.
 
 * it comes with camera control and is able to find and open the best suited camera by default (with support for manual adjustment too); 
 * it has a lightspeed algorithm to detect whether a frame is blurry. Only clear frames are passed along to DBR (only supported on iOS & Android at present); 
