@@ -33,6 +33,7 @@ This is the main page of Dynamsoft Barcode Reader SDK documentation for Java Lan
 - [How to upgrade to latest version](upgrade-instruction.md)
 
 ## Online Store
-- <a href="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/#desktop" target="_blank">Desktop and Server Deployment</a>
 
+- <a href="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/#desktop" target="_blank">For Desktop Deployment</a>
+- <a href="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/#server" target="_blank">For Server Deployment</a>
 
