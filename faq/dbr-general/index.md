@@ -16,9 +16,9 @@ Under Construction
 
 <a href="{{site.faq}}supported-barcode-formats.html" target="_blank">What barcode types are supported by Dynamsoft Barcode Reader?</a>
 
-<a href="{{site.faq}}different-editions-of-dbr.html" target="_blank">There are many editions of DBR, what are the differences? which one should I use?</a>
+<a href="{{site.faq}}different-editions-of-dbr.html" target="_blank">There are many editions of DBR, what are the differences? Which one should I use?</a>
 
-<a href="{{site.faq}}dbr-free-trail.html" target="_blank">How do I get a free trial SDK? How many days of free trial does it allow? Can I extend my trial if I need more time, how? </a>
+<a href="{{site.faq}}dbr-free-trail.html" target="_blank">How do I get a free trial of the SDK? How many days does the free trial allow? Can I extend my trial if I need more time? If so, how?</a>
 
 <a href="{{site.faq}}non-english-characters.html" target="_blank">Why my barcode image is returning messy(non- english) characters on the online demo?</a>
 
@@ -38,6 +38,6 @@ Under Construction
 
 <a href="{{site.faq}}what-happens-if-license-expires.html" target="_blank">After one year the annual license expires and I don't renew it in time, what will happen?</a>
 
-<a href="{{site.faq}}how-hardware-is-bind-to-license.html" target="_blank">What information is collected while registering and lciensing a device and how it is bind to the hardware information? What hardware change would caues a new license consumption?</a>
+<a href="{{site.faq}}how-hardware-is-bind-to-license.html" target="_blank">What information is collected while registering and licensing a device and how is it bound to the hardware? What hardware change would cause the consuption of a new license seat?</a>
 
 <a href="{{site.faq}}ensure-no-overuse.html" target="_blank">How to ensure that a device does not overuse its allotted number of instances?</a>
