@@ -30,7 +30,7 @@ breadcrumbText: Accuracy
 
 There are 3 basic metrics for measuring the performance of a barcode reader application: **speed**, **accuracy** and **read-rate**. The Dynamsoft Barcode Reader SDK (DBR) has been carefully designed to have excellent performance in all three of these metrics. In this article, we try to investigate all the possible methods you can take to let DBR focus on **accuracy**.
 
-As the ultimate guide on how to configure DBR to realize its full accuracy potential, we will start with some general methods that are both simple and effective, and then delve into some of the more niche or specific methods to achieve a higher accuracy. Lastly, we’ll cover some external settings such as those of the Camera Enhancer SDK which can be useful in certain situations.
+As the ultimate guide on how to configure DBR to realize its full accuracy potential, we will start with some general methods that are both simple and effective, and then delve into some of the more niche or specific methods to achieve higher accuracy. Lastly, we'll cover some external settings such as those of the Camera Enhancer SDK which can be useful in certain situations.
 
 > The following shows the definition of the three metrics.
 >
@@ -40,7 +40,7 @@ As the ultimate guide on how to configure DBR to realize its full accuracy poten
 >
 >$ Read~Rate = \frac{Number~of~All~Decoded~Barcode~Results}{Number~of~All~Target~Barcodes} $
 >
->Do bear in mind that, if one of these metrics is prioritized, the other two may not be ideal.
+>Do bear in mind that if one of these metrics is prioritized, the other two may not be ideal.
 
 ## General Settings
 
@@ -56,9 +56,9 @@ Setting the `minResultConfidence` to a value of 50 instead of 30. Setting it hig
 
 ### Enable Multi-frame Verification
 
-For interactive video scenarios, it is possible to get duplicate results for a single barcode. These duplicate results can be used to verify the accuracy of the results. If a certain barcode result comes out twice or more within a short period of time (typically around 100-200 ms depending on the barcode processing speed), it can be approved and output. However, if a barcode result is not recognized a second time, the SDK waits at most for 3 seconds after the initial recognition, and if the result shows up again within those 3 seconds, the result is verified and output. If not, then it is considered a misread result and discard it.
+For interactive video scenarios, it is possible to get duplicate results for a single barcode. These duplicate results can be used to verify the accuracy of the results. If a certain barcode result comes out twice or more within a short period of time (typically around 100-200 ms depending on the barcode processing speed), it can be approved and output. However, if a barcode result is not recognized a second time, the SDK waits at most for 3 seconds after the initial recognition, and if the result shows up again within those 3 seconds, the result is verified and output. If not, then it is considered a misread result and discarded.
 
-In short, having a result verification filter reduces the possibility of inaccurate results by double checking the results of consecutive frames of the same localized barcode.
+In short, having a result verification filter reduces the possibility of inaccurate results by double-checking the results of consecutive frames of the same localized barcode.
 
 **Recommendation**
 
@@ -69,11 +69,11 @@ For the **JavaScript** edition, multi-frame verification is enabled when using v
 
 ## Specific Settings
 
-When configuring the specific settings, you have to know some basic information about your usage scenario. This type of  information will help exclude undesired barcode results or put a filter on the barcode results.
+When configuring the specific settings, you have to know some basic information about your usage scenario. This type of information will help exclude undesired barcode results or put a filter on the barcode results.
 
 ### Specify the Barcode Formats
 
-The barcode format specification is the most basic decode setting that affects all three metrics of the performance. Sometimes, misreading a 1D barcode is caused by misrecognizing the 1D barcode as another 1D barcode type. If the targeted 1D barcodes are scoped, you can specify the barcode format in your project to lower the probabibility of misread results. In addition, specifying the required barcode formats will not only benefit the accuracy, but also the barcode reading speed as we saw in the [Achieving Best Speed](speed.md) article.
+The barcode format specification is the most basic decode setting that affects all three metrics of the performance. Sometimes, misreading a 1D barcode is caused by misrecognizing the 1D barcode as another 1D barcode type. If the targeted 1D barcodes are scoped, you can specify the barcode format in your project to lower the probability of misread results. In addition, specifying the required barcode formats will not only benefit the accuracy, but also the barcode reading speed as we saw in the [Achieving Best Speed](speed.md) article.
 
 **Recommendation**
 
@@ -89,7 +89,7 @@ To best learn how to filter and sort the text results that DBR returns, please r
 
 ### Exclude Small-Module Barcodes
 
-The module size of the barcode refers to the pixel size of the barcode modules (e.g. the pixel width of a 1D barcode line or the smallest cell size of a QR code). The smaller the module size of the barcodes, the higher risk of a misread. If it is not necessary to decode all the small-size barcodes in the scenario, you can skip the small-module barcodes by specifying the minimum acceptable module size of the barcodes via parameter [`ModuleSizeRangeArray`]({{site.parameters_reference}}module-size-range-array.html). By increasing the `MinValue` of the `ModuleSizeRangeArray`, the SDK can skip the small-module barcodes and their potential misreads, thus ensuring a higher accuracy.
+The module size of the barcode refers to the pixel size of the barcode modules (e.g. the pixel width of a 1D barcode line or the smallest cell size of a QR code). The smaller the module size of the barcodes, the higher risk of a misread. If it is not necessary to decode all the small-size barcodes in the scenario, you can skip the small-module barcodes by specifying the minimum acceptable module size of the barcodes via parameter [`ModuleSizeRangeArray`]({{site.parameters_reference}}module-size-range-array.html). By increasing the `MinValue` of the `ModuleSizeRangeArray`, the SDK can skip the small-module barcodes and their potential misreads, thus ensuring higher accuracy.
 
 When processing large-size images, DBR scales down the images based on the [`scaleDownThreshold`]({{site.parameters_reference}}scale-down-threshold.html) before decoding. However, sometimes the barcode on the image might be shrunk too small. You can increase the [`scaleDownThreshold`]({{site.parameters_reference}}scale-down-threshold.html) value to ensure the module size of the barcodes is big enough to get the correct barcode results.
 
@@ -109,7 +109,7 @@ Please note, `DM_DEEP_ANALYSIS` is the most effective, but most complicated, mod
 
 ## External Settings – Camera Enhancer Settings
 
-Users can optimize the parameter settings to prevent misreading but this is not the only way to improve the accuracy. For the interactive video scenarios, promoting the quality of the video will definitely improve the barcode decoding accuracy. Although there are no camera control APIs within the Dynamsoft Barcode Reader API, Dynamsoft Camera Enhancer (DCE) APIs offers the ability to take control of the input video streaming. DCE is an SDK that integrates the camera control API and video frame pre-processing features. It can be easily bound to the Barcode Reader and enables users to optimize the input video streaming when using the Barcode Reader. The following DCE settings and functions can help improve the accuracy of barcode decoding:
+Users can optimize the parameter settings to prevent misreading but this is not the only way to improve the accuracy. For the interactive video scenarios, promoting the quality of the video will definitely improve the barcode decoding accuracy. Although there is no camera control APIs within the Dynamsoft Barcode Reader API, Dynamsoft Camera Enhancer (DCE) APIs offer the ability to take control of the input video streaming. DCE is an SDK that integrates the camera control API and video frame pre-processing features. It can be easily bound to the Barcode Reader and enables users to optimize the input video streaming when using the Barcode Reader. The following DCE settings and functions can help improve the accuracy of barcode decoding:
 
 ### Filter Out the Blurry Frames
 
@@ -121,7 +121,8 @@ The frame-filter feature of DCE can be enabled via the [`enableFeatures`](https:
 
 ### Enhance the Camera Focus
 
-It is highly recommended that this feature is implemented on low-end devices. Enhancing the camera focus ability will reduce the blurry frames in the video streaming, which benefits the barcode reading accuracy. 
+It is highly recommended that this feature be implemented on low-end devices. Enhancing the camera focus ability will reduce the blurry frames in the video streaming, which benefits the barcode reading accuracy. 
+
 
 **Recommendation**
 
