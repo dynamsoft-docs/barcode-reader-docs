@@ -56,7 +56,7 @@ Setting the `minResultConfidence` to a value of 50 instead of 30. Setting it hig
 
 ### Enable Multi-frame Verification
 
-For interactive video scenarios, it is possible to get duplicate results for a single barcode. These duplicate results can be used to verify the accuracy of the results. If a certain barcode result comes out twice or more within a short period of time (typically around 100-200 ms depending on the barcode processing speed), it can be approved and output. However, if a barcode result is not recognized a second time, the SDK waits at most for 5 seconds after the initial recognition, and if the result shows up again within those 5 seconds, the result is verified and output. If not, then it is considered a misread result and discard it.
+For interactive video scenarios, it is possible to get duplicate results for a single barcode. These duplicate results can be used to verify the accuracy of the results. If a certain barcode result comes out twice or more within a short period of time (typically around 100-200 ms depending on the barcode processing speed), it can be approved and output. However, if a barcode result is not recognized a second time, the SDK waits at most for 3 seconds after the initial recognition, and if the result shows up again within those 3 seconds, the result is verified and output. If not, then it is considered a misread result and discard it.
 
 In short, having a result verification filter reduces the possibility of inaccurate results by double checking the results of consecutive frames of the same localized barcode.
 
