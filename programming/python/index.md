@@ -34,6 +34,8 @@ This provides a brief guide on how to integrate Dynamsoft Barcode Reader into yo
 - [How to upgrade to latest version](upgrade-instruction.md)
 
 ## Online Store
-- <a href="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/#desktop" target="_blank">Desktop and Server Deployment</a>
+
+- <a href="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/#desktop" target="_blank">For Desktop Deployment</a>
+- <a href="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/#server" target="_blank">For Server Deployment</a>
 
 
