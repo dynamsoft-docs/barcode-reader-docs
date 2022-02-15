@@ -123,6 +123,7 @@ The frame-filter feature of DCE can be enabled via the [`enableFeatures`](https:
 
 It is highly recommended that this feature be implemented on low-end devices. Enhancing the camera focus ability will reduce the blurry frames in the video streaming, which benefits the barcode reading accuracy. 
 
+
 **Recommendation**
 
 To enable the enhanced-focus feature of DCE, please use [`enableFeatures`](https://www.dynamsoft.com/camera-enhancer/docs/programming/android/primary-api/camera-enhancer.html?ver=latest#enablefeatures).
