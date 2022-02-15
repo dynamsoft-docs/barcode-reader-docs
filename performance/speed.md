@@ -49,7 +49,7 @@ The related parameters are [ `BarcodeFormatIds` ](https://www.dynamsoft.com/barc
 
 * Always specify the type(s) of the barcodes you are trying to read.
 
-### Set a upper limit to the number of barcodes per image
+### Set an upper limit to the number of barcodes per image
 
 By default, DBR tries to find as many barcodes as possible from a given image. Assume the image is very big but has only one barcode at the top, DBR finds the barcode instantly but will spend more time scanning the rest of the image or even try more steps to find more barcodes. By telling DBR that we are only expecting one barcode, it will stop reading the image as soon as that barcode is found.
 
@@ -277,13 +277,13 @@ The related parameters are [BarcodeTextRegExPattern](https://www.dynamsoft.com/b
 
 ### Unleash the power of the CPU
 
-The algorithm to process an image has quite a few steps and for each step, there could be multiple options to try. For processes which don’t necessary need to wait for each other, we can tell DBR to open multiple threads/workers to work on different tasks at the same time. The related parameter is [`MaxAlgorithmThreadCount`](https://www.dynamsoft.com/barcode-reader/parameters/reference/max-algorithm-thread-count.html). However, note that this is only meaningful on devices with a good CPU. On low-end desktops or mobile devices, it's better to limit the threads to 2 or even 1.
+The algorithm to process an image has quite a few steps and for each step, there could be multiple options to try. For processes that don't necessary need to wait for each other, we can tell DBR to open multiple threads/workers to work on different tasks at the same time. The related parameter is [`MaxAlgorithmThreadCount`](https://www.dynamsoft.com/barcode-reader/parameters/reference/max-algorithm-thread-count.html). However, note that this is only meaningful on devices with a good CPU. On low-end desktops or mobile devices, it's better to limit the threads to 2 or even 1.
 
 Other than the built-in multi-threading, another way to speed things up is to create multiple DBR instances and have them decoding different images at the same time.
 
 ### Bypass time-consuming exceptions
 
-Sometimes, DBR may encoutner an image that is very challenging. The nature of DBR is to try its best at all costs, so it may take a really long time. Although the reading may eventually succeed, this probably isn’t what we want for our application. Therefore, we can tell DBR to set a timer and stops a reading process once the timer expires.
+Sometimes, DBR may encoutner an image that is very challenging. The nature of DBR is to try its best at all costs, so it may take a really long time. Although the reading may eventually succeed, this probably isn't what we want for our application. Therefore, we can tell DBR to set a timer and stops a reading process once the timer expires.
 
 This is especially useful when it comes to continuous scanning of video frames as it makes no sense to spend too much time on one difficult frame when the next frame probably contains the same barcode(s).
 
