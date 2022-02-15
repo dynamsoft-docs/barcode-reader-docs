@@ -248,7 +248,7 @@ Describes Dynamsoft products.
 | PROD_DPS | EnumProductDPS | 0x0010 | Dynamsoft Panorama |
 | PROD_ALL | EnumProductALL | 0xFFFF | All Dynamsoft products |
 
-## EnumPresetTemplate
+## PresetTemplate
 
 Describes the preset parameter setting templates.
 

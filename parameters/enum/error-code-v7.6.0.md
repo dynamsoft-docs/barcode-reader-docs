@@ -10,7 +10,7 @@ needAutoGenerateSidebar: false
   
 ## Error code common to all programming languages
 
-  | Erorr Code (except ObjC/Swift) | Erorr Code (ObjC/Swift) | Value | Description |
+  | Error Code (except ObjC/Swift) | Error Code (ObjC/Swift) | Value | Description |
   |--------------------------------|-------------------------|-------|-------------|
   | `DBR_OK` | `EnumErrorCode_OK` | 0 | Successful. |
   | `DBRERR_UNKNOWN` | `EnumErrorCode_Unknown ` | -10000 | Unknown error. |
