@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: What file/image formats are supported while reading barcodes from the existing files?
+title: What file/image formats are supported when reading barcodes from files in local memory?
 keywords: Dynamsoft Barcode Reader, FAQ, tech basic, files supported, pdf
-description: What file/image formats are supported while reading barcodes from the existing files?
+description: What file/image formats are supported when reading barcodes from files in local memory?
 needAutoGenerateSidebar: false
 ---
 
 # Tech Basic
 
-## What file/image formats are supported while reading barcodes from the existing files?
+## What file/image formats are supported when reading barcodes from files in local memory?
 
 - The supported image formats include png, jpeg, bmp, gif and a few others (some browsers support webp, tif).
-- PDF Files are currently not supported.
+- PDF files are currently not supported.

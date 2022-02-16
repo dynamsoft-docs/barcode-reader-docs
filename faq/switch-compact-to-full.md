@@ -10,7 +10,7 @@ needAutoGenerateSidebar: false
 
 ## How do you switch from the compact edition to the full edition of the library?
 
-To switch from compact edition to the full edition, you need to set `_bUseFullFeature` to `true`
+To switch from the compact edition to the full edition, you need to set `_bUseFullFeature` to `true`
 
 ```javascript
 Dynamsoft.DBR.BarcodeScanner._bUseFullFeature = true;

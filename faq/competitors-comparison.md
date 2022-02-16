@@ -10,4 +10,4 @@ needAutoGenerateSidebar: false
 
 ## How do you compare yourself with Scandit and DataSymbol SDKs? What are your advantages?
 
-The full breakdown of comparison between the SDKs can be found [here](https://www.dynamsoft.com/blog/insights/best-barcode-reader-sdks/)
+The full breakdown of comparison between the SDKs can be found [here](https://www.dynamsoft.com/blog/insights/best-barcode-reader-sdks/).

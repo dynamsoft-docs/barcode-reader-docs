@@ -12,4 +12,4 @@ needAutoGenerateSidebar: false
 
 The main difference between the two is the set of supported barcode formats.
 **Compact edition** supports `1D`, `QR`, `PDF417`, and `Datamatrix` (the most popular barcode formats), while the **full edition** supports the complete set of Dynamsoft Barcode Reader’s supported barcode formats.
-Furthermore, the full edition supports the following features while the compact does not: `getIntermediateResults`, ` initRuntimeSettingsWithString`, and ` outputSettingsToString`.
+Furthermore, the full edition supports the following features while the compact does not: `getIntermediateResults`, `initRuntimeSettingsWithString`, and ` outputSettingsToString`.

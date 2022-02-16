@@ -22,13 +22,11 @@ Under Construction
 
 <a href="{{site.faq}}switch-compact-to-full.html" target="_blank">How do you switch from the compact edition to the full edition of the library?</a>
 
-<a href="{{site.faq}}is-https-required.html" target="_blank">Is HTTPs absolutely required?</a>
+<a href="{{site.faq}}is-https-required.html" target="_blank">Is HTTPS absolutely required?</a>
 
 <a href="{{site.faq}}use-of-onFrameRead-and-onUnduplicateRead.html" target="_blank">When to use onFrameRead and when to use onUnduplicateRead?</a>
 
 <a href="{{site.faq}}call-loadWasm-proactively.html" target="_blank">Do we have to call loadWasm proactively?</a>
-
-<a href="{{site.faq}}when-loadWasm-is-used.html" target="_blank">When and why loadWasm is used?</a>
 
 <a href="{{site.faq}}differences-between-updateScanSettings-updateVideoSettings-and-updateRuntimeSettings.html" target="_blank">What are the differences between updateScanSettings/updateVideoSettings/updateRuntimeSettings?</a>
 
@@ -50,37 +48,37 @@ Under Construction
 
 <a href="{{site.faq}}read-from-existing-files.html" target="_blank">Can I read barcodes from existing files?</a>
 
-<a href="{{site.faq}}formats-supported-for-existing-files.html" target="_blank">What file/image formats are supported while reading barcodes from the existing files?</a>
+<a href="{{site.faq}}formats-supported-for-existing-files.html" target="_blank">What file/image formats are supported when reading barcodes from files in local memory?</a>
 
-<a href="{{site.faq}}read-text-from-barcode-image.html" target="_blank">How can I read the text info from a barcode image?</a>
+<a href="{{site.faq}}read-text-from-barcode-image.html" target="_blank">How can I read the text info usually located around a barcode image?</a>
 
-<a href="{{site.faq}}scan-US-drivers-license.html" target="_blank">Can I scan barcodes on US Driver’s Licenses and get the first name, last name, DOB, etc.?</a>
+<a href="{{site.faq}}scan-US-drivers-license.html" target="_blank">Can I scan the barcode on a US Driver’s License and get the first name, last name, DOB, etc.?</a>
 
 <a href="{{site.faq}}add-remove-beep-sound.html" target="_blank">Can I add/remove a “beep” sound once a barcode is found?</a>
 
-<a href="{{site.faq}}size-of-wasm.html" target="_blank">What is the size of the JavaScript SDK (.wasm)? What is the average time for downloading the wasm file?</a>
+<a href="{{site.faq}}size-of-wasm.html" target="_blank">What is the size of the JavaScript SDK (.wasm)?</a>
 
 <a href="{{site.faq}}check-current-version.html" target="_blank">How can I check the version of the JS SDK I am currently using?</a>
 
 <a href="{{site.faq}}unable-to-scan-aztec-code.html" target="_blank">Why I am unable to scan an Aztec code in the helloworld sample?</a>
 
-<a href="{{site.faq}}stop-camera-to-open-right-away.html" target="_blank">How to stop the camera stream to get open right after DBR JS demo is loaded? How to enable the camera after clicking 'start scanning' button?</a>
+<a href="{{site.faq}}stop-camera-to-open-right-away.html" target="_blank">How do you stop the camera stream from opening right away after DBR JS demo is loaded? How can you enable the camera on the click of a button?</a>
 
-<a href="{{site.faq}}difference-between-barcodeReader-and-barcodeScanner.html" target="_blank">What is the difference between BarcodeReader class and the BarcodeScanner class? Can they be used interchangeably?</a>
+<a href="{{site.faq}}difference-between-barcodeReader-and-barcodeScanner.html" target="_blank">What is the difference between the BarcodeReader class and the BarcodeScanner class? Can they be used interchangeably?</a>
 
-<a href="{{site.faq}}newline-character-not-being-rendered.html" target="_blank">Why the newline characters are not being rendered while displaying the barcode results in a textbox?</a>
+<a href="{{site.faq}}newline-character-not-being-rendered.html" target="_blank">Why are newline characters not being rendered when displaying the barcode results in a textbox?</a>
 
 ## Troubleshooting / User Cases
 
-<a href="{{site.faq}}general-troubleshooting-steps-for-decode-failure.html" target="_blank">What are the general troubleshooting steps if a customer’s image fails to decode in Dbr JS program?</a>
+<a href="{{site.faq}}general-troubleshooting-steps-for-decode-failure.html" target="_blank">What are the general troubleshooting steps if a customer’s image fails to decode with Dbr JS?</a>
 
 <a href="{{site.faq}}avoid-incorrect-barcode-results.html" target="_blank">How to avoid incorrect barcode results?</a>
 
-<a href="{{site.faq}}difference-between-bestspeed-and-bestcoverage.html" target="_blank">What’s the scan setting differences between Best Speed and Best Coverage?/a>
+<a href="{{site.faq}}difference-between-bestspeed-and-bestcoverage.html" target="_blank">What are the differences between the 'speed', 'coverage', 'balance, and 'single' runtime templates?</a>
 
 ## Sales & Licensing
 
-<a href="{{site.faq}}how-license-tracking-works.html" target="_blank">How license tracking works with the three standard licensing options - Per Scan, Per Device, Per Concurrent Device ?</a>
+<a href="{{site.faq}}how-license-tracking-works.html" target="_blank">How does license tracking work with the three standard licensing options - Per Scan, Per Device, Per Concurrent Device?</a>
 
 <a href="{{site.faq}}javascript-sdk-offline-mode-use.html" target="_blank">How can I use your JavaScript SDK in offline mode?</a>
 
