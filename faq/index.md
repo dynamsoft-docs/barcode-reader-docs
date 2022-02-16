@@ -20,8 +20,6 @@ Under Construction
 
 <a href="{{site.faq}}differences-between-full-and-compact-editions.html" target="_blank">What are the differences between the compact edition and the full edition?</a>
 
-<a href="{{site.faq}}switch-compact-to-full.html" target="_blank">How do you switch from the compact edition to the full edition of the library?</a>
-
 <a href="{{site.faq}}is-https-required.html" target="_blank">Is HTTPS absolutely required?</a>
 
 <a href="{{site.faq}}use-of-onFrameRead-and-onUnduplicateRead.html" target="_blank">When to use onFrameRead and when to use onUnduplicateRead?</a>
@@ -90,7 +88,7 @@ Under Construction
 
 ## Other
 
-<a href="{{site.faq}}competitors-comparison.html" target="_blank">How do you compare yourself with Scandit and DataSymbol SDKs? What are your advantages?</a>
+<a href="{{site.faq}}competitors-comparison.html" target="_blank">How does your SDK compare to other commercial SDKs?</a>
 
 <a href="{{site.faq}}.html" target="_blank"></a>
 
