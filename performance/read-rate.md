@@ -32,7 +32,7 @@ As the ultimate guide on how to configure DBR to realize its full potential on r
 >  
 > $ Read~Rate = \frac{Number~of~All~Decoded~Barcode~Results}{Number~of~All~Target~Barcodes} $
 >  
-> Do bear in mind that, if one of these metrics is prioritized, the other two may not be ideal.
+> Do bear in mind that if one metric is prioritized, the other two may be negatively affected.
 
 
 ## Strengthen Image Features for Localization

@@ -66,6 +66,8 @@ Under Construction
 
 <a href="{{site.faq}}newline-character-not-being-rendered.html" target="_blank">Why are newline characters not being rendered when displaying the barcode results in a textbox?</a>
 
+<a href="{{site.faq}}resolve-magic-word.html" target="_blank">How do I resolve the expected magic word error that occurs when using DBR JS?</a>
+
 ## Troubleshooting / User Cases
 
 <a href="{{site.faq}}general-troubleshooting-steps-for-decode-failure.html" target="_blank">What are the general troubleshooting steps if a customer’s image fails to decode with Dbr JS?</a>
