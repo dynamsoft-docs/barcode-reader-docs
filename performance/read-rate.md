@@ -20,9 +20,9 @@ keywords: Read Rate
 
 # How to Boost Barcode Read Rate
 
-There are 3 basic metrics for measuring the performance of a barcode reader application: **speed**, **accuracy** and **read-rate**. The Dynamsoft Barcode Reader SDK (DBR) has been carefully designed to have excellent performance in all three of these metrics. In this article, we try to investigate all the possible methods you can take to let DBR focus on **read-rate**. 
+There are 3 basic metrics for measuring the performance of a barcode reader application: **speed**, **accuracy** and **read-rate**. The Dynamsoft Barcode Reader SDK (DBR) has been carefully designed to offer excellent performance in all three of these metrics. In this article, we try to investigate all the possible methods you can take to let DBR focus on **read-rate**. 
 
-As the ultimate guide on how to configure DBR to realize its full potential on read rate, we will go through all the parameters can be customized during barcode reading process. With these customizations, DBR tries its best to strengthen image features before localization, improve barcode localization with multiple modes, endeavor to decode a barcode zone and optimize particular circumstances during decoding to get final results.
+As the ultimate guide on how to configure DBR to realize its full potential on read rate, we will go through all the parameters that can be customized during barcode reading process. With these customizations, DBR tries its best to strengthen image features before localization, and then try to improve barcode localization with multiple modes, followed by decoding the barcode zone, and lastly, optimize circumstances during decoding to get final results.
 
 > The following shows the definition of the three metrics.
 >  
@@ -36,13 +36,12 @@ As the ultimate guide on how to configure DBR to realize its full potential on r
 
 
 ## Strengthen Image Features for Localization
-Barcode zones are detectable by taking advantage of features of different barcode formats. For example, linear barcode is consist
-of several parallel lines, finding such an area with group of lines, a liner barcode zone is detected. But in some cases, these features may not be obvious or good enough to be detectable, so DBR will firstly go through the following processes to enhance barcode zone features before localization. 
+Barcode zones are detectable by taking advantage of features of different barcode formats. A linear barcode, for example, consists of several parallel lines, so the first step of locating the barcode is to find a group of parallel lines, at which a linear barcode zone (defining feature) is detected. But in some cases, these defining features may not be obvious or of good enough quality to be detectable, so DBR will go through the following processes to enhance barcode zone features before localization. 
 
 ### Optimize the Conversion from Colour Image to Grayscale
-If the original image is a colour image, DBR will convert it to grayscale. When doing that, the colour space and weights of each colour channel used directly affect the quality of the grayscale image. By default, DBR uses RGB space and automatically calculates the weights of three channels. To get a high quality grayscale image, you can also adjust the colour space and weight of channels by parameter [ColourConversionModes]({{ site.parameters_reference }}colour-conversion-modes.html). For example, if your image has a barcode on red background, setting `BlueChannelWeight, GreenChannelWeight and RedChannelWeight` to `0, 0 and 1000` will return a better grayscale than `300, 300 and 400`.
+If the original image is a colour image, DBR will convert it to grayscale. During that process, the colour space and weights of each colour channel used directly affects the quality of the grayscale image. By default, DBR uses RGB space and automatically calculates the weights of the three channels (red, green, blue). To get a high quality grayscale image, you can also adjust the colour space and weight of the channels using the [ColourConversionModes]({{ site.parameters_reference }}colour-conversion-modes.html) setting. For example, if your image has a barcode with a red background, setting `BlueChannelWeight, GreenChannelWeight`,  and `RedChannelWeight` to `0`, `0`, and `1000` respectively will return a better grayscale image than the values `300`, `300`, and `400` respectively.
 
-After the conversion, the barcode on the grayscale image is either darker or lighter than the background. For the lighter one, DBR needs to be informed with a `GTM_INVERTED` mode set in parameter [GrayscaleTransformationModes]({{ site.parameters_reference }}grayscale-transformation-modes.html) to invert the image in advance. Therefore, to insure the read rate, it is recommended to set `GTM_ORIGINAL` and `GTM_INVERTED` to cover both darker and lighter barcodes.
+After the conversion, the barcode on the grayscale image is either darker or lighter than the background. If the case is the latter, the barcode image is then considered to be 'inverted' and so DBR needs to set the `GTM_INVERTED` mode in [GrayscaleTransformationModes]({{ site.parameters_reference }}grayscale-transformation-modes.html) to invert the image in advance. Therefore, to insure a good read rate, it is recommended to set both `GTM_ORIGINAL` and `GTM_INVERTED` in the `GrayscaleTransformationModes` to cover both the darker and lighter backgrounds, respectively.
 
 
 ### Enhance the Grayscale Image Quality
