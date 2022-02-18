@@ -8,8 +8,6 @@ needAutoGenerateSidebar: true
 
 # FAQ
 
-Under Construction
-
 ## Tech Basic
 
 <a href="{{site.faq}}ways-to-copy-dbr-js-deployable-files.html" target="_blank">How can I get a copy of Dbr JS deployable files (source code, etc.)?</a>
@@ -84,24 +82,11 @@ Under Construction
 
 <a href="{{site.faq}}new-license-required-per-device-licensing.html" target="_blank">When is a new license required in per-device licensing model?</a>
 
-<a href="{{site.faq}}.html" target="_blank"></a>
-
-<a href="{{site.faq}}.html" target="_blank"></a>
 
 ## Other
 
 <a href="{{site.faq}}competitors-comparison.html" target="_blank">How does your SDK compare to other commercial SDKs?</a>
 
-<a href="{{site.faq}}.html" target="_blank"></a>
-
-<a href="{{site.faq}}.html" target="_blank"></a>
-
-<a href="{{site.faq}}.html" target="_blank"></a>
-
-<a href="{{site.faq}}.html" target="_blank"></a>
-
-<a href="{{site.faq}}.html" target="_blank"></a>
 
 ## General
 
-## JavaScript
