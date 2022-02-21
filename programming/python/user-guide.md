@@ -9,7 +9,8 @@ noTitleIndex: true
 ---
 
 # User Guide for Python
-In this guide, you will learn step by step on how to build a barcode reading application with Dynamsoft Barcode Reader SDK using Python.
+
+In this guide, you will learn step by step on how to build a barcode reading application with Dynamsoft Barcode Reader (DBR) SDK using Python.
 
 ## System Requirements
 
@@ -27,17 +28,20 @@ In this guide, you will learn step by step on how to build a barcode reading app
     - Python 2.7 (for versions below DBR 7.2.2.3)
 
 ## Installation
-Start terminal or command prompt to run the following command.
+
+Start terminal or command prompt to run the following command:
 
 ```
 pip install dbr
 ```
 
 ## Build Your First Application
+
 Let's start by creating a console application which demonstrates how to use the minimum code to read barcodes from an image file.  
->You can download the entire source code from [Here](https://download2.dynamsoft.com/samples/dbr/user-guide/dbr-python-sample.zip).
+> You can download the entire source code [here](https://download2.dynamsoft.com/samples/dbr/user-guide/dbr-python-sample.zip).
 
 ### Create a New Project 
+
 Create a new source file named `DBRPythonSample.py`.
 
 ### Include the Library
@@ -49,19 +53,24 @@ Import dbr package in the source file.
    ```
 
 ### Initialize a Barcode Reader Instance
+
 1. Create an instance of Dynamsoft Barcode Reader.
+
    ```python
    reader = BarcodeReader()
    ```
 
 2. Initialize the license key.
+
    ```python
    reader.init_license("<insert DBR license key here>")
    ```
-    >Please replace `<insert DBR license key here>` with a valid DBR licensekey. You can request a trial license from <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">Customer Portal</a>. 
+    > Please replace `<insert DBR license key here>` with a valid DBR license key. You can request a free trial from <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">Customer Portal</a>. 
 
 ### Configure the Barcode Scanning Behavior
-1. Set barcode format and count to read.
+
+DBR provides multiple APIs for you to customize the barcode scanning behavior. Here we set the barcode format and barcode count to read.
+
    ```python
    settings = reader.get_runtime_settings()
    settings.barcode_format_ids = EnumBarcodeFormat.BF_ALL
@@ -70,11 +79,12 @@ Import dbr package in the source file.
    reader.update_runtime_settings(settings)
    ```
 
-    >The barcode formats to enable is highly application-specific. We recommend that you only enable the barcode formats your application requires. Check out [Barcode Format Enumeration]({{ site.enumerations }}format-enums.html) for full supported barcode formats. 
+> For better performance, we recommend that you only enable the barcode formats your application requires. Check out [Barcode Format Enumeration]({{ site.enumerations }}format-enums.html) for fully supported barcode formats. 
 
-    >If you know exactly the barcode count you want to read, specify `excepted_barcodes_count` to speed up the process and improve the accuracy. 
+> If you know exactly the count of barcodes you want to read, specify `excepted_barcodes_count` to speed up the process and improve the accuracy. 
 
 ### Decode and Output Results 
+
 1. Decode barcodes from an image file.
 2. Get and output barcode results.
 
@@ -94,9 +104,9 @@ Import dbr package in the source file.
       print(bre)
    ```
 
-   >For the error handling mechanism, the SDK throws [BarcodeReaderError]({{site.python_class}}BarcodeReaderError.html) for each function. You should add codes for exception handling based on your needs. 
+   > For the error handling mechanism, the SDK throws [BarcodeReaderError]({{site.python_class}}BarcodeReaderError.html) for each function. You can add code for exception handling based on your needs. 
 
-   >The SDK returns multiple barcode information, including barcode count, barcode format, barcode text, location, barcode raw data, etc. Check out [TextResult]({{ site.python_class }}TextResult.html) for full supported result data.
+   > The SDK returns multiple barcode information items, including barcode count, barcode format, barcode text, location, barcode raw data, etc. Check out [TextResult]({{ site.python_class }}TextResult.html) for fully supported result data.
 
 
 ### Release Resource
@@ -109,6 +119,7 @@ del reader
 
 
 ### Build and Run the Project
+
 1. Start terminal or command prompt and change to the target directory where `DBRPythonSample.py` located in.
 2. Run the sample
 
@@ -116,8 +127,11 @@ del reader
 python DBRPythonSample.py
 ```
 
->You can download the entire source code from [Here](https://download2.dynamsoft.com/samples/dbr/user-guide/dbr-python-sample.zip).
+> You can download the entire source code of this simple sample [here](https://download2.dynamsoft.com/samples/dbr/user-guide/dbr-python-sample.zip). 
+
+> <a href="https://github.com/Dynamsoft/barcode-reader-python-samples" target="_blank">Find more Dynamsoft Barcode Reader Python samples in the Github repository</a>.
 
 ## Related Articles
+
 - [How to select the appropriate DBR parameter configuration]({{ site.scenario_settings }})
 - [How to upgrade to latest version](upgrade-instruction.md)
