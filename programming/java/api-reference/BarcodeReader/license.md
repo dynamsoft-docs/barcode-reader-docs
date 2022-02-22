@@ -139,7 +139,7 @@ static DMDLSConnectionParameters com.dynamsoft.dbr.BarcodeReader.initDLSConnecti
 
 ```java
 DMDLSConnectionParameters info = BarcodeReader.initDLSConnectionParameters();
-info.handShakeCode = "*****-hs-****";
+info.handshakeCode = "*****-hs-****";
 info.sessionPassword = "******";
 BarcodeReader.initLicenseFromDLS(info);
 BarcodeReader reader = new BarcodeReader();
@@ -161,7 +161,7 @@ static void com.dynamsoft.dbr.BarcodeReader.initLicenseFromDLS(DMDLSConnectionPa
 
 ```java
 DMDLSConnectionParameters info = BarcodeReader.initDLSConnectionParameters();
-info.handShakeCode = "*****-hs-****";
+info.handshakeCode = "*****-hs-****";
 info.sessionPassword = "******";
 BarcodeReader.initLicenseFromDLS(info);
 BarcodeReader reader = new BarcodeReader();
