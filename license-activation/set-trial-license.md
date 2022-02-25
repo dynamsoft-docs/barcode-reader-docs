@@ -11,66 +11,68 @@ needGenerateH3Content: false
 
 If you are using the mobile edition (8.2+) or the JavaScript edition (8.2.5+), please check [how to apply for a private trial license](#how-to-apply-for-a-private-trial-license). For other editions, please follow the steps below:
   
-
 ## Get a trial license key
 
 You can log in the customer portal and [request for a trial extension online](https://www.dynamsoft.com/customer/license/trialLicense).
 
 **Note**: If the trial license expires or it is missing, you can still get barcode reading results but partial of the result will be masked with "*".
 
-## Update the license key in C/C++/C#/Java/PHP/Python/VB.NET
+## Update the license key in C/C++/C#/Java/Python/PHP/VB.NET
 
 You can use `initLicense()` or `ProductKeys` to set the license.
- 
-Code snippet in C:
 
-``` c
+<div class="sample-code-prefix"></div>
+>- C
+>- C++
+>- C#
+>- Java
+>- Python
+>- PHP
+>- VB.NET
+>
+>1. 
+```c
  void *hBarcode = NULL;
  hBarcode = DBR_CreateInstance();
  DBR_InitLicense(hBarcode, "t0068NQAAAI8+mMcYRNwmijAzExhq******");
 ```
 
-Code snippet in C++:
-
-``` cpp
+2.
+```cpp
  CBarcodeReader reader = new CBarcodeReader();
  reader.InitLicense("t0068NQAAAI8+mMcYRNwmijAzExhq******");
 ```
 
-Code snippet in C#:
-
-``` csharp
+3.
+```csharp
  BarcodeReader reader = new BarcodeReader();
  reader.ProductKeys = "t0068NQAAAI8+mMcYRNwmijAzExhq******";
 ```
 
-Code snippet in VB. NET:
-
-``` vb
- Dim reader As BarcodeReader = New Dynamsoft.Barcode.BarcodeReader()
- reader.ProductKeys = "t0068NQAAAI8+mMcYRNwmijAzExhq******"
-```
-
-Code snippet in Java:
-
-``` java
+4.
+```java
  BarcodeReader mBarcodeReader;
  mBarcodeReader = new BarcodeReader("t0068NQAAAI8+mMcYRNwmijAzExhq******");
 ```
 
-Code snippet in PHP:
+5.
+```python
+ reader = BarcodeReader()
+ reader.init_license("t0068NQAAAI8+mMcYRNwmijAzExhq******")
+```
 
-``` php
+6.
+```php
  $br = new BarcodeReader();
  $br->initLicense("t0068NQAAAI8+mMcYRNwmijAzExhq******");
 ```
 
-Code snippet in Python:
-
-``` python
- reader = BarcodeReader()
- reader.init_license("t0068NQAAAI8+mMcYRNwmijAzExhq******")
+7.
+```vb
+ Dim reader As BarcodeReader = New Dynamsoft.Barcode.BarcodeReader()
+ reader.ProductKeys = "t0068NQAAAI8+mMcYRNwmijAzExhq******"
 ```
+
 
 Then please save and rebuild your application.
 
@@ -80,31 +82,30 @@ For mobile edition (8.2+) and the JavaScript edition (8.2.5+), a free trial lice
 
 1. Request the private trial license in the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense), register for a Dynamsoft account if necessary.
 2. A 30-day private-trial license will be generated and configured to your organization. 
-3. [Specify your organization ID](https://www.dynamsoft.com/license-tracking/docs/common/mechanism.html?ver=latest#specify-the-organization-id) in your code with the API "organizationID".
 
 > NOTE
 >  
 > In case a private trial license fails to be generated, Dynamsoft Support team will get in touch with you. Or you can [contact us](https://www.dynamsoft.com/company/contact/).
 
-## Update the license key in JavaScript
+3. Specify your organization ID in your code with the API "organizationID".
 
-**Code Snippet**  
-
-* JavaScript
-
-``` javascript
-Dynamsoft.DBR.BarcodeReader.organizationID = "123456"; // replace the number 123456 with YOUR-ORGANIZATION-ID
+<div class="sample-code-prefix"></div>
+>- JavaScript
+>- Java-Android
+>- Objective-C
+>- Swift
+>
+>1. 
+```javascript
+Dynamsoft.DBR.BarcodeReader.organizationID = "200001"; // replace the number 200001 with YOUR-ORGANIZATION-ID
 var reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 ```
 
-## Update the license key in Java for Android, Objective-C, and Swift
-
-* Java for Android
-
-``` java
+2. 
+```java
 mBarcodeReader = new BarcodeReader();
 DMDLSConnectionParameters dls = new DMDLSConnectionParameters();
-// replace the number 123456 with YOUR-ORGANIZATION-ID
+// replace the number 200001 with YOUR-ORGANIZATION-ID
 dls.organizationID = "200001";
 mbarcodeReader.initLicenseFromDLS(dls, new DBRDLSLicenseVerificationListener() {
     @Override
@@ -116,9 +117,8 @@ mbarcodeReader.initLicenseFromDLS(dls, new DBRDLSLicenseVerificationListener() {
 });
 ```
 
-* Objective-C for iOS
-
-``` obj-c
+3.
+```obj-c
 DynamsoftBarcodeReader *barcodeReader;
 iDMDLSConnectionParameters* dls = [[iDMDLSConnectionParameters alloc] init];
 // replace the number 200001 with YOUR-ORGANIZATION-ID
@@ -130,8 +130,7 @@ barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:dls verificat
 }
 ```
 
-* Swift for iOS
-
+4.
 ```swift
 let dls = iDMDLSConnectionParameters()
 // replace the number 200001 with YOUR-ORGANIZATION-ID
