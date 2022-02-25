@@ -83,7 +83,6 @@ You can set the license by following the steps below:
  CBarcodeReader::InitDLSConnectionParameters(&dlspar);
  dlspar.organizationID = "YOUR-ORGANIZATION-ID"; // Please replace the organizationID with your own
  iRet = CBarcodeReader::InitLicenseFromDLS(&dlspar, szErrorMsg, 256);
- 
  if (iRet != DBR_OK)
   {
       printf("Error code: %d. Error message: %s\n", iRet, szErrorMsg);
