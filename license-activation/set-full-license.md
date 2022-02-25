@@ -64,8 +64,8 @@ You can set the license by following the steps below:
 >
 >1. 
 ```js
-   Dynamsoft.DBR.BarcodeReader.organizationID = "YOUR-ORGANIZATION-ID";// Please replace the organizationID with your own
-   let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
+  Dynamsoft.DBR.BarcodeReader.organizationID = "YOUR-ORGANIZATION-ID";// Please replace the organizationID with your own
+  let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 ```
 2. 
 ```c
@@ -103,11 +103,11 @@ You can set the license by following the steps below:
 ```
 6. 
  ```objc
-   iDMDLSConnectionParameters* dls = [[iDMDLSConnectionParameters alloc] init];
-   dls.organizationID = @"YOUR-ORGANIZATION-ID"; // Please replace the organizationID with your own
-   _dbr = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:dls verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
-{
+  iDMDLSConnectionParameters* dls = [[iDMDLSConnectionParameters alloc] init];
+  dls.organizationID = @"YOUR-ORGANIZATION-ID"; // Please replace the organizationID with your own
+  _dbr = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:dls verificationDelegate:self];
+  - (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
+  {
     NSNumber* boolNumber = [NSNumber numberWithBool:isSuccess];
     dispatch_async(dispatch_get_main_queue(), ^{
     [self->m_verificationReceiver performSelector:self->m_verificationCallback withObject:boolNumber withObject:error];
@@ -118,17 +118,17 @@ You can set the license by following the steps below:
         //NSError* errormsg = nil;
         //NSArray* readResult = [_dbr decodeImage:image withTemplate:@"" error:&errormsg];
     });
-}
+  }
  ```
 7. 
 ```swift
-let dls = iDMDLSConnectionParameters();
-dls.organizationID = "YOUR-ORGANIZATION-ID";
-barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
-func dlsLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
-{
-   //TODO add your code for license verification
-}
+  let dls = iDMDLSConnectionParameters();
+  dls.organizationID = "YOUR-ORGANIZATION-ID";
+  barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
+  func dlsLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
+  {
+     //TODO add your code for license verification
+  }
 ```
 8. 
 ```java
@@ -143,15 +143,15 @@ func dlsLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
 ``` 
 9. 
 ```python
-reader = BarcodeReader()
-connection_paras = reader.init_dls_connection_parameters()
-# Please replace the organizationID with your own
-connection_paras.organization_id = "YOUR-ORGANIZATION-ID"
-try:
+  reader = BarcodeReader()
+  connection_paras = reader.init_dls_connection_parameters()
+  # Please replace the organizationID with your own
+  connection_paras.organization_id = "YOUR-ORGANIZATION-ID"
+  try:
     error = reader.init_licesne_from_dls(connection_paras)
     if error[0] != EnumErrorCode.DBR_OK:
         print(error[1])
-except BarcodeReaderError as bre:
+  except BarcodeReaderError as bre:
     print(bre)
 ```
  
