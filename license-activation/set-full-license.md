@@ -75,7 +75,6 @@ You can set the license by following the steps below:
   paramters.organizationID = "YOUR-ORGANIZATION-ID"; // Please replace the organizationID with your own
   DBR_InitLicenseFromDLS(&paramters, errorBuf, 512);
 ```
-
 3.
 ```cpp
  int iRet = -1;
@@ -91,7 +90,6 @@ You can set the license by following the steps below:
       return -1;
   }
 ```
-
 4.
 ```csharp
   DMDLSConnectionParameters dlspar = BarcodeReader.InitDLSConnectionParamters();           
@@ -104,7 +102,6 @@ You can set the license by following the steps below:
   dlspar.organizationID = "YOUR-ORGANIZATION-ID"; // Please replace the organizationID with your own
   BarcodeReader.initLicenseFromDLS(dlspar);
 ```
-
 6.
  ```objc
    iDMDLSConnectionParameters* dls = [[iDMDLSConnectionParameters alloc] init];
@@ -134,7 +131,6 @@ func dlsLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
    //TODO add your code for license verification
 }
 ```
-
 8.
 ```java
   DBRDLSLicenseVerificationListener dlsListener = new DBRDLSLicenseVerificationListener() {
@@ -145,8 +141,7 @@ func dlsLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
   DMDLSConnectionParameters parameters = new DMDLSConnectionParameters();
   parameters.organizationID = "YOUR-ORGANIZATION-ID"; // Please replace the organizationID with your own
   dbr.initLicenseFromDLS(parameters,dlsListener);
-```
- 
+``` 
 9.
 ```python
 reader = BarcodeReader()

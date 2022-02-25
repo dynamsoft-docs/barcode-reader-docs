@@ -36,37 +36,31 @@ You can use `initLicense()` or `ProductKeys` to set the license.
  hBarcode = DBR_CreateInstance();
  DBR_InitLicense(hBarcode, "t0068NQAAAI8+mMcYRNwmijAzExhq******");
 ```
-
 2.
 ```cpp
  CBarcodeReader reader = new CBarcodeReader();
  reader.InitLicense("t0068NQAAAI8+mMcYRNwmijAzExhq******");
 ```
-
 3.
 ```csharp
  BarcodeReader reader = new BarcodeReader();
  reader.ProductKeys = "t0068NQAAAI8+mMcYRNwmijAzExhq******";
 ```
-
 4.
 ```java
  BarcodeReader mBarcodeReader;
  mBarcodeReader = new BarcodeReader("t0068NQAAAI8+mMcYRNwmijAzExhq******");
 ```
-
 5.
 ```python
  reader = BarcodeReader()
  reader.init_license("t0068NQAAAI8+mMcYRNwmijAzExhq******")
 ```
-
 6.
 ```php
  $br = new BarcodeReader();
  $br->initLicense("t0068NQAAAI8+mMcYRNwmijAzExhq******");
 ```
-
 7.
 ```vb
  Dim reader As BarcodeReader = New Dynamsoft.Barcode.BarcodeReader()
@@ -100,7 +94,6 @@ For mobile edition (8.2+) and the JavaScript edition (8.2.5+), a free trial lice
 Dynamsoft.DBR.BarcodeReader.organizationID = "200001"; // replace the number 200001 with YOUR-ORGANIZATION-ID
 var reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 ```
-
 2. 
 ```java
 mBarcodeReader = new BarcodeReader();
@@ -116,7 +109,6 @@ mbarcodeReader.initLicenseFromDLS(dls, new DBRDLSLicenseVerificationListener() {
     }
 });
 ```
-
 3.
 ```obj-c
 DynamsoftBarcodeReader *barcodeReader;
@@ -129,7 +121,6 @@ barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:dls verificat
     //TODO add your code for license verification
 }
 ```
-
 4.
 ```swift
 let dls = iDMDLSConnectionParameters()
