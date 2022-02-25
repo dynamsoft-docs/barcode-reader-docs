@@ -64,7 +64,8 @@ You can set the license by following the steps below:
 >
 >1. 
 ```js
-  Dynamsoft.DBR.BarcodeReader.organizationID = "YOUR-ORGANIZATION-ID";// Please replace the organizationID with your own
+  // Please replace the organizationID with your own
+  Dynamsoft.DBR.BarcodeReader.organizationID = "YOUR-ORGANIZATION-ID";
   let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 ```
 2. 
@@ -72,39 +73,44 @@ You can set the license by following the steps below:
   char errorBuf[512];
   DMDLSConnectionParameters paramters;
   DBR_InitDLSConnectionParameters(&paramters);
-  paramters.organizationID = "YOUR-ORGANIZATION-ID"; // Please replace the organizationID with your own
+  // Please replace the organizationID with your own
+  paramters.organizationID = "YOUR-ORGANIZATION-ID"; 
   DBR_InitLicenseFromDLS(&paramters, errorBuf, 512);
 ```
 3. 
 ```cpp
- int iRet = -1;
- char szErrorMsg[256];
- DM_DLSConnectionParameters dlspar;    
- CBarcodeReader::InitDLSConnectionParameters(&dlspar);
- dlspar.organizationID = "YOUR-ORGANIZATION-ID"; // Please replace the organizationID with your own
- iRet = CBarcodeReader::InitLicenseFromDLS(&dlspar, szErrorMsg, 256);
- if (iRet != DBR_OK)
-  {
-      printf("Error code: %d. Error message: %s\n", iRet, szErrorMsg);
-      return -1;
-  }
+  int iRet = -1;
+  char szErrorMsg[256];
+  DM_DLSConnectionParameters dlspar;    
+  CBarcodeReader::InitDLSConnectionParameters(&dlspar);
+  // Please replace the organizationID with your own
+  dlspar.organizationID = "YOUR-ORGANIZATION-ID"; 
+  iRet = CBarcodeReader::InitLicenseFromDLS(&dlspar, szErrorMsg, 256);
+  if (iRet != DBR_OK)
+   {
+       printf("Error code: %d. Error message: %s\n", iRet, szErrorMsg);
+       return -1;
+   }
 ```
 4. 
 ```csharp
   DMDLSConnectionParameters dlspar = BarcodeReader.InitDLSConnectionParamters();           
-  dlspar.OrganizationID = "YOUR-ORGANIZATION-ID"; // Please replace the organizationID with your own
+  // Please replace the organizationID with your own
+  dlspar.OrganizationID = "YOUR-ORGANIZATION-ID"; 
   EnumErrorCode iRet = BarcodeReader.InitLicenseFromDLS(dlspar, out strErrorMSG);
 ```
 5. 
 ```java
   DMDLSConnectionParameters dlspar = BarcodeReader.initDLSConnectionParameters();
-  dlspar.organizationID = "YOUR-ORGANIZATION-ID"; // Please replace the organizationID with your own
+  // Please replace the organizationID with your own
+  dlspar.organizationID = "YOUR-ORGANIZATION-ID"; 
   BarcodeReader.initLicenseFromDLS(dlspar);
 ```
 6. 
  ```objc
   iDMDLSConnectionParameters* dls = [[iDMDLSConnectionParameters alloc] init];
-  dls.organizationID = @"YOUR-ORGANIZATION-ID"; // Please replace the organizationID with your own
+  // Please replace the organizationID with your own
+  dls.organizationID = @"YOUR-ORGANIZATION-ID"; 
   _dbr = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:dls verificationDelegate:self];
   - (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
   {
@@ -123,6 +129,7 @@ You can set the license by following the steps below:
 7. 
 ```swift
   let dls = iDMDLSConnectionParameters();
+  // Please replace the organizationID with your own
   dls.organizationID = "YOUR-ORGANIZATION-ID";
   barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
   func dlsLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
@@ -138,7 +145,8 @@ You can set the license by following the steps below:
      }
   };
   DMDLSConnectionParameters parameters = new DMDLSConnectionParameters();
-  parameters.organizationID = "YOUR-ORGANIZATION-ID"; // Please replace the organizationID with your own
+  // Please replace the organizationID with your own
+  parameters.organizationID = "YOUR-ORGANIZATION-ID"; 
   dbr.initLicenseFromDLS(parameters,dlsListener);
 ``` 
 9. 
