@@ -62,7 +62,7 @@ jobs:
           cd DBRDocPreview && bundle exec jekyll build --incremental
 
       - name: Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           server: ${{ secrets.FTP_TEST_SITE_SERVER }}
           username: ${{ secrets.FTP_TEST_SITE_USER }}
