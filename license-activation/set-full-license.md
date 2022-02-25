@@ -67,7 +67,7 @@ You can set the license by following the steps below:
    Dynamsoft.DBR.BarcodeReader.organizationID = "YOUR-ORGANIZATION-ID";// Please replace the organizationID with your own
    let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 ```
-2.
+2. 
 ```c
   char errorBuf[512];
   DMDLSConnectionParameters paramters;
@@ -75,7 +75,7 @@ You can set the license by following the steps below:
   paramters.organizationID = "YOUR-ORGANIZATION-ID"; // Please replace the organizationID with your own
   DBR_InitLicenseFromDLS(&paramters, errorBuf, 512);
 ```
-3.
+3. 
 ```cpp
  int iRet = -1;
  char szErrorMsg[256];
@@ -90,19 +90,19 @@ You can set the license by following the steps below:
       return -1;
   }
 ```
-4.
+4. 
 ```csharp
   DMDLSConnectionParameters dlspar = BarcodeReader.InitDLSConnectionParamters();           
   dlspar.OrganizationID = "YOUR-ORGANIZATION-ID"; // Please replace the organizationID with your own
   EnumErrorCode iRet = BarcodeReader.InitLicenseFromDLS(dlspar, out strErrorMSG);
 ```
-5.
+5. 
 ```java
   DMDLSConnectionParameters dlspar = BarcodeReader.initDLSConnectionParameters();
   dlspar.organizationID = "YOUR-ORGANIZATION-ID"; // Please replace the organizationID with your own
   BarcodeReader.initLicenseFromDLS(dlspar);
 ```
-6.
+6. 
  ```objc
    iDMDLSConnectionParameters* dls = [[iDMDLSConnectionParameters alloc] init];
    dls.organizationID = @"YOUR-ORGANIZATION-ID"; // Please replace the organizationID with your own
@@ -121,7 +121,7 @@ You can set the license by following the steps below:
     });
 }
  ```
-7.
+7. 
 ```swift
 let dls = iDMDLSConnectionParameters();
 dls.organizationID = "YOUR-ORGANIZATION-ID";
@@ -131,7 +131,7 @@ func dlsLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
    //TODO add your code for license verification
 }
 ```
-8.
+8. 
 ```java
   DBRDLSLicenseVerificationListener dlsListener = new DBRDLSLicenseVerificationListener() {
      @Override
@@ -142,7 +142,7 @@ func dlsLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
   parameters.organizationID = "YOUR-ORGANIZATION-ID"; // Please replace the organizationID with your own
   dbr.initLicenseFromDLS(parameters,dlsListener);
 ``` 
-9.
+9. 
 ```python
 reader = BarcodeReader()
 connection_paras = reader.init_dls_connection_parameters()
