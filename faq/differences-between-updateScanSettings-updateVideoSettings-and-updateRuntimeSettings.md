@@ -10,8 +10,8 @@ needAutoGenerateSidebar: false
 
 ## What are the differences between updateScanSettings/updateVideoSettings/updateRuntimeSettings ?
 
-`UpdateScanSettings` is used to update the [ScanSettings](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/interface/ScanSettings.html?ver=latest) interface.
+`updateScanSettings` is used to update the [ScanSettings](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/interface/ScanSettings.html?ver=latest) interface.
 
-`UpdateVideoSettings` is used to update the [MediaStreamConstraints](https://developer.mozilla.org/en-US/docs/Web/API/Media_Streams_API/Constraints) that define most of the video information (width, height, facingMode).
+`updateVideoSettings` is used to update the [MediaStreamConstraints](https://developer.mozilla.org/en-US/docs/Web/API/Media_Streams_API/Constraints) that define most of the video information (width, height, facingMode).
 
 `updateRuntimeSettings` is used to update the [RuntimeSettings](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/interface/RuntimeSettings.html?ver=latest) interface.

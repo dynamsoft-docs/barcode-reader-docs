@@ -13,7 +13,7 @@ needAutoGenerateSidebar: false
 To enable DPM, assign the `DPMCRM_GENERAL` enumeration to the `DPMCodeReadingModes` array of the furtherModes interface, as such:
 
 ```javascript
-settings.furtherModes.dpmCodeReadingModes[0] =
-  Dynamsoft.DBR.EnumDPMCodeReadingMode.DPMCRM_GENERAL;
+await settings = await scanner.getRuntimeSettings();
+settings.furtherModes.dpmCodeReadingModes[0] = Dynamsoft.DBR.EnumDPMCodeReadingMode.DPMCRM_GENERAL;
 await scanner.updateRuntimeSettings(settings);
 ```
