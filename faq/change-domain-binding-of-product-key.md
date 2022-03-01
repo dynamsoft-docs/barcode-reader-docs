@@ -16,4 +16,4 @@ needAutoGenerateSidebar: false
   3. Find the handshake code that contains the license item.
   4. Click on the edit icon next to the handshake code.
   5. Under “Bind Informations” include the domain info that you want to bind the handshake code to.
-- Please note that a single handshake code can contain multiple license items. If you wish to bind a single license item to a certain domain, then you will first need to remove the license item from its current handshake, then create a new handshake code, move the license item to the new handshake, and then edit the Binding Info of the new handshake
+- Please note that a single handshake code can contain multiple license items. If you wish to bind a single license item to a certain domain, then you will first need to remove the license item from its current handshake, create a new handshake code, move the license item to the new handshake, and finally edit the Binding Info of the new handshake.
