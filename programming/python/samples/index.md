@@ -11,7 +11,7 @@ needAutoGenerateSidebar: false
 
 ## Samples
 | Sample Name | Description |
-| - | - |
+| --- | --- |
 | <a href="https://github.com/Dynamsoft/barcode-reader-python-samples/blob/master/samples/hello-world.py" target="_blank">hello-world</a> | This sample demonstrates the simplest way to read barcodes from an image file and output barcode format and text. |
 | <a href="https://github.com/Dynamsoft/barcode-reader-python-samples/blob/master/samples/general-settings.py" target="_blank">general-settings</a> | This sample demonstrates how to configure general used settings and read barcodes from an image file. |
 | <a href="https://github.com/Dynamsoft/barcode-reader-python-samples/blob/master/samples/image-decoding.py" target="_blank">image-decoding</a> | This sample demonstrates how to decode images in various format (including Disk File/File Bytes in Memory/Raw Buffer/Base64 String/Bitmap) when using Dynamsoft Barcode Reader. |

@@ -11,7 +11,7 @@ needAutoGenerateSidebar: false
 
 ## Samples
 | Sample Name | Description |
-| - | - |
+| --- | --- |
 | <a href="https://github.com/Dynamsoft/barcode-reader-java-samples/tree/main/samples/HelloWorld" target="_blank">HelloWorld</a> | This sample demonstrates the simplest way to read barcodes from an image file and output barcode format and text. |
 | <a href="https://github.com/Dynamsoft/barcode-reader-java-samples/tree/main/samples/GeneralSettings" target="_blank">GeneralSettings</a> | This sample demonstrates how to configure general used settings and read barcodes from an image file. |
 | <a href="https://github.com/Dynamsoft/barcode-reader-java-samples/tree/main/samples/ImageDecoding" target="_blank">ImageDecoding</a> | This sample demonstrates how to decode images in various format (including Disk File/File Bytes in Memory/Raw Buffer/Base64 String/Bitmap) when using Dynamsoft Barcode Reader. |

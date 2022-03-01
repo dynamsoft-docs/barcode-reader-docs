@@ -11,7 +11,7 @@ needAutoGenerateSidebar: false
 
 ## Samples
 | Sample Name | Description |
-| - | - |
+| --- | --- |
 | <a href="https://github.com/Dynamsoft/barcode-reader-c-cpp-samples/tree/main/samples/C%2B%2B/HelloWorld" target="_blank">HelloWorld</a> | This sample demonstrates the simplest way to read barcodes from an image file and output barcode format and text. |
 | <a href="https://github.com/Dynamsoft/barcode-reader-c-cpp-samples/tree/main/samples/C%2B%2B/GeneralSettings" target="_blank">GeneralSettings</a> | This sample demonstrates how to configure general used settings and read barcodes from an image file. |
 | <a href="https://github.com/Dynamsoft/barcode-reader-c-cpp-samples/tree/main/samples/C%2B%2B/Performance/AccuracyFirstSettings" target="_blank">AccuracyFirstSettings</a> | This sample demonstrates how to configure Dynamsoft Barcode Reader to read barcodes as accurately as possible. The downside is that speed and read-rate might be affected. It is recommended to apply these configurations when misreading is unbearable. |

@@ -11,7 +11,7 @@ needAutoGenerateSidebar: false
 
 ## Samples
 | Sample Name | Description |
-| - | - |
+| --- | --- |
 | <a href="https://github.com/Dynamsoft/barcode-reader-c-cpp-samples/tree/main/samples/C/HelloWorld" target="_blank">HelloWorld</a> | This sample demonstrates the simplest way to read barcodes from an image file and output barcode format and text. |
 | <a href="https://github.com/Dynamsoft/barcode-reader-c-cpp-samples/tree/main/samples/C/GeneralSettings" target="_blank">GeneralSettings</a> | This sample demonstrates how to configure general used settings and read barcodes from an image file. |
 
