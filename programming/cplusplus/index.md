@@ -14,12 +14,12 @@ This is the main page of Dynamsoft Barcode Reader SDK documentation for C++ Lang
 
 
 ## Getting Started
-- [User Guide for C++](user-guide.md)
+- [User Guide for C++ Language](user-guide.md)
 
-## Samples and Demos
+## Samples and Demo
 
+- <a href="https://github.com/Dynamsoft/barcode-reader-c-cpp-samples" target="_blank">C++ Samples</a>
 - <a href="https://demo.dynamsoft.com/barcode-reader/" target="_blank">Online Demo</a>
-- <a href="https://www.dynamsoft.com/barcode-reader/resources/code-gallery/?tag=c/c++" target="_blank">Code Gallery - C/C++</a>
 
 ## API Reference
 - [API Reference](api-reference/index.md)

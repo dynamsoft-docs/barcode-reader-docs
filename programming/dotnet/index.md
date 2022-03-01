@@ -16,11 +16,11 @@ This is the main page of Dynamsoft Barcode Reader SDK documentation for .NET Lan
 ## Getting Started
 - [User Guide for .NET](user-guide.md)
 
-## Samples and Demos
+## Samples and Demo
 
-- <a href="https://demo.dynamsoft.com/barcode-reader/" target="_blank">Online Demo</a>
-- <a href="https://www.dynamsoft.com/barcode-reader/resources/code-gallery/?tag=c-sharp" target="_blank">Code Gallery - C#</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-dotnet-samples" target="_blank">.NET Samples</a>
 - <a href="https://www.dynamsoft.com/barcode-reader/resources/code-gallery/?tag=vb.net" target="_blank">Code Gallery - VB.NET</a>
+- <a href="https://demo.dynamsoft.com/barcode-reader/" target="_blank">Online Demo</a>
 
 ## API Reference
 - [API Reference](api-reference/index.md)
