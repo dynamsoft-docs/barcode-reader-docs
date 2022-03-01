@@ -10,6 +10,7 @@ needAutoGenerateSidebar: false
 
 
 ## Samples
+
 | Sample Name | Description |
 | --- | --- |
 | <a href="https://github.com/Dynamsoft/barcode-reader-dotnet-samples/tree/main/samples/HelloWorld" target="_blank">HelloWorld</a> | This sample demonstrates the simplest way to read barcodes from an image file and output barcode format and text. |
@@ -22,4 +23,4 @@ needAutoGenerateSidebar: false
 | <a href="https://github.com/Dynamsoft/barcode-reader-dotnet-samples/tree/main/samples/Performance/AccuracyFirstSettings" target="_blank">AccuracyFirstSettings</a> | This sample demonstrates how to configure Dynamsoft Barcode Reader to read barcodes as accurately as possible. The downside is that speed and read-rate might be affected. It is recommended to apply these configurations when misreading is unbearable. |
 
 ## Official Online Demo
-This <a href="https://demo.dynamsoft.com/barcode-reader/" target="_blank">Online Demo</a> is an online barcode scanner for all barcode types. All supported parameters are opened for customization to see how Dynamsoft Barcode Reader works in different usage. 
+This <a href="https://demo.dynamsoft.com/barcode-reader/" target="_blank">Online Demo</a> is an online barcode scanner for all barcode types. All supported parameters are opened for customization to see how Dynamsoft Barcode Reader works in different usage scenarios. 
