@@ -10,11 +10,11 @@ needAutoGenerateSidebar: false
 
 ## Can I read barcodes from existing files?
 
-Yes dynamsoft barcode reader supports reading from an existing file. This can be achieved via the `BarcodeReader` class instead of the `BarcodeScanner` class.
+Yes, the JavaScript SDK supports reading from a file in local memory. This can be achieved via the `BarcodeReader` class instead of the `BarcodeScanner` class.
 
 ```javascript
 let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 let results = await reader.decode(imageSource);
 ```
 
-> [this article]({{site.faq}}/formats-supported-for-existing-files.html) shows the supported formats.
+> [this article]({{site.faq}}/formats-supported-for-existing-files.html) shows the supported file formats.

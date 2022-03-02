@@ -20,10 +20,10 @@ This provides a brief guide on how to integrate Dynamsoft Barcode Reader into yo
 
 - [API Reference](api-reference/index.md)
 
-## Samples and Demos
+## Samples and Demo
 
+- <a href="https://github.com/Dynamsoft/barcode-reader-python-samples" target="_blank">Python Samples</a>
 - <a href="https://demo.dynamsoft.com/barcode-reader/" target="_blank">Online Demo</a>
-- <a href="https://github.com/Dynamsoft/python-barcode/tree/master/samples" target="_blank">Python Samples</a>
 
 ## Release Notes
 
