@@ -6,7 +6,7 @@ description: Dynamsoft Barcode Reader FAQ Homepage
 needAutoGenerateSidebar: true
 ---
 
-# FAQ
+# DBR JS FAQ
 
 ## Tech Basic
 
@@ -87,6 +87,4 @@ needAutoGenerateSidebar: true
 
 <a href="{{site.faq}}competitors-comparison.html" target="_blank">How does your SDK compare to other commercial SDKs?</a>
 
-
-## General
 
