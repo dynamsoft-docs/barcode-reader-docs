@@ -17,10 +17,10 @@ This is the main page of Dynamsoft Barcode Reader SDK documentation for Java Lan
 ## Getting Started
 - [User Guide for Java](user-guide.md)
 
-## Samples and Demos
+## Samples and Demo
 
+- <a href="https://github.com/Dynamsoft/barcode-reader-java-samples" target="_blank">Java Samples</a>
 - <a href="https://demo.dynamsoft.com/barcode-reader/" target="_blank">Online Demo</a>
-- <a href="https://www.dynamsoft.com/barcode-reader/resources/code-gallery/?tag=java" target="_blank">Code Gallery - Java</a>
 
 ## API Reference
 - [API Reference](api-reference/index.md)
@@ -33,6 +33,7 @@ This is the main page of Dynamsoft Barcode Reader SDK documentation for Java Lan
 - [How to upgrade to latest version](upgrade-instruction.md)
 
 ## Online Store
-- <a href="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/#desktop" target="_blank">Desktop and Server Deployment</a>
 
+- <a href="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/#desktop" target="_blank">For Desktop Deployment</a>
+- <a href="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/#server" target="_blank">For Server Deployment</a>
 
