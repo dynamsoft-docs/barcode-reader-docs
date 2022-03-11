@@ -11,6 +11,8 @@ needGenerateH3Content: false
 
   | Enumeration | Description |
   |-------------|-------------|
+  | [`AccompanyingTextRecognitionMode`](#barcodecolourmode) | Describes the barcode colour mode. |
+  | [`BarcodeColourMode`](#barcodecolourmode) | Describes the barcode colour mode. |
   | [`BarcodeColourMode`](#barcodecolourmode) | Describes the barcode colour mode. |
   | [`BarcodeComplementMode`](#barcodecomplementmode) | Describes the barcode complement mode. |
   | [`BinarizationMode`](#binarizationmode) | Describes the binarization mode. |
@@ -30,7 +32,24 @@ needGenerateH3Content: false
   | [`TextFilterMode`](#textfiltermode) | Describes the text filter mode. |
   | [`TextureDetectionMode`](#texturedetectionmode) | Describes the texture detection mode. | 
 
-  
+
+## AccompanyingTextRecognitionMode
+Sets whether or not to recognize a barcode's accompanying text, if there is some accompanying text.
+
+### Declarations
+
+| Language | Declaration |
+| -------- | ----------- |
+| C / C++ | `enum AccompanyingTextRecognitionMode` |
+| .Net | `enum Dynamsoft.DBR.EnumAccompanyingTextRecognitionMode` |
+| JavaScript | `Dynamsoft.DBR.EnumAccompanyingTextRecognitionMode` |
+| Python | `class EnumAccompanyingTextRecognitionMode(IntEnum)` |
+| Java / Android | `class EnumAccompanyingTextRecognitionMode` |
+| ObjC / Swift | `enum EnumAccompanyingTextRecognitionMode` |
+
+### Members
+
+
 
 ## BarcodeColourMode
 Describes the barcode colour mode.

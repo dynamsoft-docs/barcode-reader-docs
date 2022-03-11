@@ -13,7 +13,7 @@ needGenerateH3Content: true
 
 ### Mode Properties
 
-`AccompanyingTextRecognitionModes` is a parameter for setting the mode to recognize accompanying text. It consisits of one or more `AccompanyingTextRecognitionMode` items and each item has its own arguments. The array index represents the priority of the item. The smaller index is, the higher priority is.
+`AccompanyingTextRecognitionModes` is a parameter for setting the mode to recognize accompanying text. It consists of one or more `AccompanyingTextRecognitionMode` items and each item has its own arguments. The array index represents the priority of the item. The smaller index is, the higher priority is.
 
 | Value Type | Value Range | Default Value |
 | ---------- | ----------- | ------------- |

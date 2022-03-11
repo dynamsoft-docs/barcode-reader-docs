@@ -10,7 +10,8 @@ needAutoGenerateSidebar: false
 # Parameter Reference
 
  | Parameter Name | Description |
- | -------------- | ----------- |  
+ | -------------- | ----------- |
+ | [`AccompanyingTextRecognitionModes`](accompanying-text-recognition-modes.md) | Configures the SDK to recognize the text surrounding a barcode. |
  | [`AllModuleDeviation`](all-module-deviation.md) | Sets the module size deviation from the standard barcode module size. |
  | [`AustralianPostEncodingTable`](australian-post-encoding-table.md) | Sets the encoding table used to code the Customer Information Field of Australian Post Customer Barcode. | 
  | [`BarcodeAngleRangeArray`](barcode-angle-range-array.md) | Sets the range of angles (in degrees) for barcodes searching. | 
