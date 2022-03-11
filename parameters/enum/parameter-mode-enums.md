@@ -49,6 +49,11 @@ Sets whether or not to recognize a barcode's accompanying text, if there is some
 
 ### Members
 
+| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description | Valid Argument(s) |
+| -------------------------- | ------------------- | ----- | ----------- | ----------------- |
+| ATRM_SKIP | EnumColourClusteringModeSkip | 0x00 | Disables the accompanying text feature. | `N/A` |
+| ATRM_GENERAL | EnumColourClusteringModeGeneralHSV | 0x02 | Clusters colours using the general algorithm based on HSV. | [`Sensitivity`]({{ site.parameters_reference }}colour-clustering-modes.html#sensitivity) |
+
 
 
 ## BarcodeColourMode
