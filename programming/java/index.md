@@ -26,6 +26,7 @@ This is the main page of Dynamsoft Barcode Reader SDK documentation for Java Lan
 - [API Reference](api-reference/index.md)
 
 ## Release Notes
+- [Version 9.x](release-notes/java-9.md)
 - [Version 8.x](release-notes/java-8.md)
 - [Version 7.6.0 and below](release-notes/java-7.md)
 

@@ -76,7 +76,7 @@ To localize most barcodes, it is recommended to use DBR's default localization m
 
 - `LM_SCAN_DIRECTLY` is covered by `LM_CONNECTED_BLOCKS`, so setting `LM_SCAN_DIRECTLY` after `LM_CONNECTED_BLOCKS` will give no help on read rate but slow down the speed.
 
-## Refining the Decoding Process
+## Refine the Decoding Process
 Next in the algorithm, DBR performs a round of image processing on the precisely partitioned barcode area to get final barcode result. The parameter [DeblurModes]({{ site.parameters_reference }}deblur-modes.html) comes with 9 modes in total which can be used individually or together to configure how DBR runs this part of the algorithm. Of the 9 modes, 2 of them are designed for relatively simple situations: 
 
 - `DM_BASED_ON_LOC_BIN` is the most efficient mode when the barcode area is clear and clean. It reuses the binary image generated during the localization process. 
@@ -97,7 +97,7 @@ Last but not least, `DM_DEEP_ANALYSIS` is the most powerful way to deal with des
 >To speed up the process, choose only one or a few optimum modes.  
 >When `DM_DEEP_ANALYSIS` is used, make sure it is the last one since it's most time-consuming.
 
-## Optimizing Particular Circumstances while Decoding
+## Optimize Particular Circumstances while Decoding
 
 ### Enlarge Barcodes with Small Module Sizes
 Barcodes with a small module size may be distorted by some processing methods like rotation, binarization with inappropriate block size, etc. Enlarging the barcode area to a larger size can enhance the ability to prevent distortion, thereby improving the likelihood of decoding results. The parameter [ScaleUpModes]({{ site.parameters_reference }}scale-up-modes.html) can be used to determine how the enlarging should be done, if at all. For example, using `SUM_LINEAR_INTERPOLATION` with argument `ModuleSizeThreshold` set to 2 will activate the enlaring process using the linear interpolation method when the barcode module size is smaller than 2px.

@@ -9,8 +9,9 @@ needAutoGenerateSidebar: true
 # DBR General FAQ
 
 
-
 ## Tech Basic
+
+
 
 <a href="{{site.dbr-general}}what-is-dbr.html" target="_blank">What is Dynamsoft Barcode Reader SDK and what business needs can it meet?</a>
 
@@ -18,7 +19,7 @@ needAutoGenerateSidebar: true
 
 <a href="{{site.dbr-general}}different-editions-of-dbr.html" target="_blank">There are many editions of DBR, what are the differences? Which one should I use?</a>
 
-<a href="{{site.dbr-general}}dbr-free-trail.html" target="_blank">How do I get a free trial of the SDK? How many days does the free trial allow? Can I extend my trial if I need more time? If so, how?</a>
+<a href="{{site.dbr-general}}dbr-free-trial.html" target="_blank">How do I get a free trial of the SDK? How many days does the free trial allow? Can I extend my trial if I need more time? If so, how?</a>
 
 <a href="{{site.dbr-general}}non-english-characters.html" target="_blank">Why my barcode image is returning messy(non- english) characters on the online demo?</a>
 

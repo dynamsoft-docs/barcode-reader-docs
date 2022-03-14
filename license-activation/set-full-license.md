@@ -7,11 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
-# How to set full license in version 8.x
-
-Different methods are used for setting trial and full license keys. In our demo or sample applications, we use `.InitLicense()` or `.ProductKeys` to set trial license keys. 
-
-For the purchased version, you need to use `initLicenseFromDLS()` to set the Handshake Codes for your licenses.
+# How to set full license in version 9.x
 
 You can set the license by following the steps below:
 
@@ -52,119 +48,38 @@ You can set the license by following the steps below:
 ## Set the license in the code
 
 <div class="sample-code-prefix"></div>
->- Javascript
 >- C
 >- C++
 >- C#
 >- Java
->- Objective-C
->- Swift
->- Java-Android
->- Python
 >
 >1. 
-```js
-  // Please replace the organizationID with your own
-  Dynamsoft.DBR.BarcodeReader.organizationID = "YOUR-ORGANIZATION-ID";
-  let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
-```
-2. 
 ```c
   char errorBuf[512];
-  DMDLSConnectionParameters paramters;
-  DBR_InitDLSConnectionParameters(&paramters);
-  // Please replace the organizationID with your own
-  paramters.organizationID = "YOUR-ORGANIZATION-ID"; 
-  DBR_InitLicenseFromDLS(&paramters, errorBuf, 512);
+  DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+  void* barcodeReader = DBR_CreateInstance();
+  // add further process
+```
+2. 
+```cpp
+  char errorBuf[512];
+  dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+  CBarcodeReader* reader = new CBarcodeReader();
+  // add further process
 ```
 3. 
-```cpp
-  int iRet = -1;
-  char szErrorMsg[256];
-  DM_DLSConnectionParameters dlspar;    
-  CBarcodeReader::InitDLSConnectionParameters(&dlspar);
-  // Please replace the organizationID with your own
-  dlspar.organizationID = "YOUR-ORGANIZATION-ID"; 
-  iRet = CBarcodeReader::InitLicenseFromDLS(&dlspar, szErrorMsg, 256);
-  if (iRet != DBR_OK)
-   {
-       printf("Error code: %d. Error message: %s\n", iRet, szErrorMsg);
-       return -1;
-   }
+```csharp
+  string errorMsg;
+  BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
+  BarcodeReader reader = new BarcodeReader();
+  // add further process
 ```
 4. 
-```csharp
-  DMDLSConnectionParameters dlspar = BarcodeReader.InitDLSConnectionParamters();           
-  // Please replace the organizationID with your own
-  dlspar.OrganizationID = "YOUR-ORGANIZATION-ID"; 
-  EnumErrorCode iRet = BarcodeReader.InitLicenseFromDLS(dlspar, out strErrorMSG);
-```
-5. 
 ```java
-  DMDLSConnectionParameters dlspar = BarcodeReader.initDLSConnectionParameters();
-  // Please replace the organizationID with your own
-  dlspar.organizationID = "YOUR-ORGANIZATION-ID"; 
-  BarcodeReader.initLicenseFromDLS(dlspar);
+  BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+  BarcodeReader reader = new BarcodeReader();
+  // add further process
 ```
-6. 
- ```objc
-  iDMDLSConnectionParameters* dls = [[iDMDLSConnectionParameters alloc] init];
-  // Please replace the organizationID with your own
-  dls.organizationID = @"YOUR-ORGANIZATION-ID"; 
-  _dbr = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:dls verificationDelegate:self];
-  - (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
-  {
-    NSNumber* boolNumber = [NSNumber numberWithBool:isSuccess];
-    dispatch_async(dispatch_get_main_queue(), ^{
-    [self->m_verificationReceiver performSelector:self->m_verificationCallback withObject:boolNumber withObject:error];
-        NSLog(@"ifsuccess : %@",boolNumber);
-        NSLog(@"error code: %ld:",(long)error.code);
-        NSLog(@"errormsg : %@",error.userInfo);
-        //UIImage *image =[UIImage imageNamed:@"AllSupportedBarcodeTypes.bmp"];
-        //NSError* errormsg = nil;
-        //NSArray* readResult = [_dbr decodeImage:image withTemplate:@"" error:&errormsg];
-    });
-  }
- ```
-7. 
-```swift
-  let dls = iDMDLSConnectionParameters();
-  // Please replace the organizationID with your own
-  dls.organizationID = "YOUR-ORGANIZATION-ID";
-  barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
-  func dlsLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
-  {
-     //TODO add your code for license verification
-  }
-```
-8. 
-```java
-  DBRDLSLicenseVerificationListener dlsListener = new DBRDLSLicenseVerificationListener() {
-     @Override
-     public void DLSLicenseVerificationCallback(boolean success, Exception error) {
-     }
-  };
-  DMDLSConnectionParameters parameters = new DMDLSConnectionParameters();
-  // Please replace the organizationID with your own
-  parameters.organizationID = "YOUR-ORGANIZATION-ID"; 
-  dbr.initLicenseFromDLS(parameters,dlsListener);
-``` 
-9. 
-```python
-  reader = BarcodeReader()
-  connection_paras = reader.init_dls_connection_parameters()
-  # Please replace the organizationID with your own
-  connection_paras.organization_id = "YOUR-ORGANIZATION-ID"
-  try:
-    error = reader.init_licesne_from_dls(connection_paras)
-    if error[0] != EnumErrorCode.DBR_OK:
-        print(error[1])
-  except BarcodeReaderError as bre:
-    print(bre)
-```
- 
- Code snippet in Xamarin:
- Please refer to <a href="https://github.com/Dynamsoft/xamarin/tree/master/examples" target="_blank">this article</a>.
 
  If you run into any issues, please [contact Dynamsoft Support](https://www.dynamsoft.com/Company/Contact.aspx).
 

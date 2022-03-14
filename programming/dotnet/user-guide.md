@@ -15,7 +15,7 @@ In this guide, you will learn step by step on how to build a barcode reading app
 
 - Operating Systems:
     - Windows 7, 8, 10, 11
-    - Windows Server 2003, 2008, 2008 R2, 2012, 2016
+    - Windows Server 2003, 2008, 2008 R2, 2012, 2016, 2019, 2022
 
 - Developing Environment:
    - Visual Studio 2008 or above
@@ -54,7 +54,9 @@ Let's start by creating a console application which demonstrates how to use the 
 1. Create an instance of Dynamsoft Barcode Reader.
 
     ```csharp
-    BarcodeReader reader = new BarcodeReader("<insert DBR license key here>")
+    string errorMsg;
+    BarcodeReader.InitLicense("<insert DBR license key here>", out errorMsg);
+    BarcodeReader reader = new BarcodeReader();
     ```
     
     >Please replace `<insert DBR license key here>` with a valid DBR licensekey. There are two ways to obtain one:
