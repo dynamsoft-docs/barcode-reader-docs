@@ -27,7 +27,7 @@ needAutoGenerateSidebar: true
 Initializes license key and activate the SDK.
 
 ```csharp
-static int Dynamsoft.DBR.BarcodeReader.InitLicense (string license, out string errorMsg)
+static EnumErrorCode Dynamsoft.DBR.BarcodeReader.InitLicense (string license, out string errorMsg)
 ```   
    
 **Parameters**  
@@ -35,8 +35,8 @@ static int Dynamsoft.DBR.BarcodeReader.InitLicense (string license, out string e
 `[out]	errorMsg` <*string*> : The detailed error message.
 
 **Return Value**  
-Returns error code (returns 0 if the function operates successfully).    
-*You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
+Returns error code (returns DBR_SUCCESS if the function operates successfully).    
+*You can check `errorMsg` to get detailed error message.*
 
 **Code Snippet**  
 ```csharp
@@ -67,7 +67,7 @@ if(count > 0)
 }
 if(count < 0)
 {
-  //call DBR_InitLicense
+  //call InitLicense
   //create instance and process further
 }
 if(count = 0)
