@@ -70,7 +70,7 @@ if(count > 0)
 }
 if(count < 0)
 {
-  //call DBR_InitLicense
+  //call InitLicense
   //create instance and process further
 }
 if(count = 0)
