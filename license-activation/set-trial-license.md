@@ -71,8 +71,7 @@ You can use `initLicense()` to set the license.
   Dim errMsg As String = ""
   Dynamsoft.DBR.BarcodeReader.InitLicense("YOUR-LICENSE-KEY", errMsg)
   Dim reader As BarcodeReader = New Dynamsoft.DBR.BarcodeReader()
-  ' add further process
-
+  'add further process
 ```
 
 
