@@ -19,7 +19,7 @@ You can log in the customer portal and [request for a trial extension online](ht
 
 ## Update the license key in C/C++/C#/Java/Python/PHP/VB.NET
 
-You can use `initLicense()` or `ProductKeys` to set the license.
+You can use `initLicense()` to set the license.
 
 <div class="sample-code-prefix"></div>
 >- C
