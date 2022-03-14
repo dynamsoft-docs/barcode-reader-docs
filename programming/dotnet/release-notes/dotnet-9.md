@@ -48,6 +48,7 @@ The following items are now deprecated. They still work in this version but coul
 - Method [`InitDLSConnectionParameters`]({{ site.dotnet_methods }}license.html#initdlsconnectionparameters)
 - Method [`InitLicenseFromDLS`]({{ site.dotnet_methods }}license.html#initlicensefromdls)
 - Method [`BarcodeReader(string productKey)`]({{ site.dotnet_methods }}constructor-and-destructor.html#barcodereaderstring-productkey)
+- Method [`BarcodeReader(string modulePath, string productKey)`]({{ site.dotnet_methods }}constructor-and-destructor.html#barcodereaderstring-modulepath-string-productkey)
 - Attribute [`ProductKey`]({{ site.dotnet_methods }}index.html#barcodereader-attributes)
 - Enumeration [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)
 - Enumeration [`EnumDMDeploymentType`]({{ site.enumerations }}other-enums.html#dm_deploymenttype)

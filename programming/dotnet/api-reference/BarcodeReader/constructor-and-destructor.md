@@ -29,7 +29,7 @@ Dynamsoft.DBR.BarcodeReader.BarcodeReader()
 
 ### BarcodeReader(string productKey)
 
-Constructor with a given product key.
+`Deprecated`. It still works in this version but could be removed in the near future.
 
 ```csharp
 Dynamsoft.DBR.BarcodeReader.BarcodeReader(string productKey)
@@ -40,7 +40,7 @@ Dynamsoft.DBR.BarcodeReader.BarcodeReader(string productKey)
 
 ### BarcodeReader(string modulePath, string productKey)
 
-Constructor with a given product key and a given path to load DLLs.
+`Deprecated`. It still works in this version but could be removed in the near future.
 
 ```csharp
 Dynamsoft.DBR.BarcodeReader.BarcodeReader(string modulePath, string productKey)

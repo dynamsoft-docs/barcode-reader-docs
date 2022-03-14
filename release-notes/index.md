@@ -18,7 +18,7 @@ needGenerateH3Content: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 9.0.0 | [C](../programming/c/release-notes/c-8.md#880-10122021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#880-10122021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#880-10122021) / [Java](../programming/java/release-notes/java-8.md#880-10122021) |
+| 9.0.0 | [C](../programming/c/release-notes/c-9.md#900-03152022) / [C++](../programming/cplusplus/release-notes/cpp-9.md#900-03152022) / [DotNet](../programming/dotnet/release-notes/dotnet-9.md#900-03152022) / [Java](../programming/java/release-notes/java-9.md#900-03152022) |
 
 
 ## 8.9

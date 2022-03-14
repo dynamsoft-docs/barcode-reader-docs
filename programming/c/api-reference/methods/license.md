@@ -33,7 +33,7 @@ DBR_API int DBR_InitLicense (const char* pLicense, char errorMsgBuffer[], const 
    
 **Parameters**  
 `[in]	pLicense` The license string.
-`[in, out] errorMsgBuffer` The buffer is allocated by caller and the recommended length is 256. The error message will be copied to the buffer. 
+`[in, out] errorMsgBuffer` The buffer is allocated by caller and the recommended length is 512. The error message will be copied to the buffer. 
 `[in]	errorMsgBufferLen` The length of allocated buffer.  
 
 **Return Value**  
@@ -56,7 +56,10 @@ DBR_API int DBR_GetIdleInstancesCount()
 ```   
 
 **Return Value**  
-Returns available instances count.    
+Returns available instances count. 
+- 0: There is no space for new instance  
+- -1: The available count needs to be updated from server by calling DBR_InitLicense.
+- N ( N > 0 ): N more instances can be created.
 
 **Code Snippet**  
 ```c

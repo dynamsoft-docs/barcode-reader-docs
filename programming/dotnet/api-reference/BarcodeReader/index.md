@@ -129,7 +129,7 @@ needAutoGenerateSidebar: true
   
   | Attribute            | Description |
   |----------------------|-------------|
-  | `ProductKeys`  | Product keys used for Dynamsoft Barcode Reader. |
+  | `ProductKeys`  | `Deprecated`. It still works in this version but could be removed in the near future. |
   
    
  

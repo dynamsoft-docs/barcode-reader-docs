@@ -56,6 +56,9 @@ static int Dynamsoft.DBR.BarcodeReader.GetIdleInstancesCount()
 
 **Return Value**  
 Returns available instances count.    
+- 0: There is no space for new instance  
+- -1: The available count needs to be updated from server by calling InitLicense.
+- N ( N > 0 ): N more instances can be created.
 
 **Code Snippet**  
 ```csharp
