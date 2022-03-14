@@ -8,6 +8,19 @@ needGenerateH3Content: false
 
 # Release Notes
 
+## 9.0
+
+> First released: 03-15-2022
+
+### Highlights
+
+{%- include release-notes/product-highlight-9.0.0.md -%}
+
+| Versions | Available Editions |
+| -------- | ------------------ |
+| 9.0.0 | [C](../programming/c/release-notes/c-8.md#880-10122021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#880-10122021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#880-10122021) / [Java](../programming/java/release-notes/java-8.md#880-10122021) |
+
+
 ## 8.9
 
 > First released: 12-16-2021

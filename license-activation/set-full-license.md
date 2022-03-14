@@ -62,7 +62,8 @@ You can set the license by following the steps below:
 ```
 2. 
 ```cpp
-  dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY");
+  char errorBuf[512];
+  dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
   CBarcodeReader* reader = new CBarcodeReader();
   // add further process
 ```

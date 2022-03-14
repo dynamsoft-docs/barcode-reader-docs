@@ -21,8 +21,6 @@ needGenerateH3Content: false
   | [`Product`](#product) | Describes Dynamsoft products.   |
   | [`EnumPresetTemplate`](#enumpresettemplate) | Describes the preset parameter setting templates. |
   
----
-
 
 ## DM_ChargeWay
 Describes charge way.
