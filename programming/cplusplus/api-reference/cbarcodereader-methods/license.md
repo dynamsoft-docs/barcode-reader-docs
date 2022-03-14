@@ -28,7 +28,7 @@ needAutoGenerateSidebar: true
 Initializes license key and activate the SDK.
 
 ```cpp
-static int dynamsoft::dbr::CBarcodeReader::InitLicense (const char* pLicense)	
+static int dynamsoft::dbr::CBarcodeReader::InitLicense (const char* pLicense, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)	
 ```   
    
 **Parameters**  

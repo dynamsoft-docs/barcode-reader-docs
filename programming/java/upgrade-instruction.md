@@ -11,9 +11,19 @@ needAutoGenerateSidebar: false
 
 ## From version 8.x
 
-You need to replace the old assembly files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
+- You need to replace the old assembly files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
 
-Please note that the following license activation related functions have been deprecated, they still work in this version but could be removed in version 10.0. We recommend you to go to <a href="https://www.dynamsoft.com/customer/license/fullLicense" target="_blank">Customer Portal</a> to get your license key and then refer to [this article](../../license-activation/set-full-license.md) to set the license.
+- Go to <a href="https://www.dynamsoft.com/customer/license/fullLicense" target="_blank">Customer Portal</a> to get your license key.
+
+- Update your code to set the license
+```java
+  BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+  BarcodeReader reader = new BarcodeReader();
+  // add further process
+```
+
+>Note:
+>The following license activation related functions have been deprecated, they still work in this version but could be removed in version 10.0. We recommend you to use initLicense to set the license.
 
 - `initLicenseFromDLS`
 - `initLicenseFromServer`
@@ -21,9 +31,19 @@ Please note that the following license activation related functions have been de
 
 ## From version 7.x
 
-You need to replace the old assembly files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
+- You need to replace the old assembly files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
 
-Please note that the following license activation related functions have been deprecated, they still work in this version but could be removed in version 10.0. We recommend you to go to <a href="https://www.dynamsoft.com/customer/license/fullLicense" target="_blank">Customer Portal</a> to get your license key and then refer to [this article](../../license-activation/set-full-license.md) to set the license.
+- Go to <a href="https://www.dynamsoft.com/customer/license/fullLicense" target="_blank">Customer Portal</a> to get your license key.
+
+- Update your code to set the license
+```java
+  BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+  BarcodeReader reader = new BarcodeReader();
+  // add further process
+```
+
+>Note:
+>The following license activation related functions have been deprecated, they still work in this version but could be removed in version 10.0. We recommend you to use initLicense to set the license.
 
 - `initLicenseFromServer`
 - `initLicenseFromLicenseContent` 
