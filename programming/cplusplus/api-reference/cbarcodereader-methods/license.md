@@ -32,8 +32,8 @@ static int dynamsoft::dbr::CBarcodeReader::InitLicense (const char* pLicense, ch
 ```   
    
 **Parameters**  
-`[in]	pLicense` The product keys.
-`[in, out] errorMsgBuffer` The buffer is allocated by caller and the recommended length is 512. The error message will be copied to the buffer. 
+`[in]	pLicense` The product keys.  
+`[in, out] errorMsgBuffer` The buffer is allocated by caller and the recommended length is 512. The error message will be copied to the buffer.  
 `[in]	errorMsgBufferLen` The length of allocated buffer.  
 
 
