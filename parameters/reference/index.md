@@ -67,4 +67,5 @@ needAutoGenerateSidebar: false
  | [`TextureDetectionModes`](texture-detection-modes.md) | Sets the mode and priority for texture detection. |
  | [`TextResultOrderModes`](text-result-order-modes.md) | Sets the mode and priority for the order of the text results returned. | 
  | [`Timeout`](time-out.md) | Sets the maximum amount of time (in milliseconds) that should be spent searching for a barcode per page. |
+ | [`VerifyCheckDigit`](verify-check-digit.md) | Sets the value determining whether to verify the check digit in barcodes where this check digit is optional. |
 

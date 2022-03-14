@@ -32,24 +32,29 @@ You can use `initLicense()` or `ProductKeys` to set the license.
 >
 >1. 
 ```c
- void *hBarcode = NULL;
- hBarcode = DBR_CreateInstance();
- DBR_InitLicense(hBarcode, "t0068NQAAAI8+mMcYRNwmijAzExhq******");
+  char errorBuf[512];
+  DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+  void* barcodeReader = DBR_CreateInstance();
+  // add further process
 ```
 2. 
 ```cpp
- CBarcodeReader reader = new CBarcodeReader();
- reader.InitLicense("t0068NQAAAI8+mMcYRNwmijAzExhq******");
+  dynamsoft::dbr::CBarcodeReader::InitLicense(""YOUR-LICENSE-KEY");
+  CBarcodeReader* reader = new CBarcodeReader();
+  // add further process
 ```
 3. 
 ```csharp
- BarcodeReader reader = new BarcodeReader();
- reader.ProductKeys = "t0068NQAAAI8+mMcYRNwmijAzExhq******";
+  string errorMsg;
+  BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
+  BarcodeReader reader = new BarcodeReader();
+  // add further process
 ```
 4. 
 ```java
- BarcodeReader mBarcodeReader;
- mBarcodeReader = new BarcodeReader("t0068NQAAAI8+mMcYRNwmijAzExhq******");
+  BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+  BarcodeReader reader = new BarcodeReader();
+  // add further process
 ```
 5. 
 ```python
@@ -63,8 +68,11 @@ You can use `initLicense()` or `ProductKeys` to set the license.
 ```
 7. 
 ```vb
- Dim reader As BarcodeReader = New Dynamsoft.Barcode.BarcodeReader()
- reader.ProductKeys = "t0068NQAAAI8+mMcYRNwmijAzExhq******"
+  Dim errMsg As String = ""
+  Dynamsoft.DBR.BarcodeReader.InitLicense("YOUR-LICENSE-KEY", errMsg)
+  Dim reader As BarcodeReader = New Dynamsoft.DBR.BarcodeReader()
+  ' add further process
+
 ```
 
 

@@ -60,21 +60,23 @@ Let's start by creating a console application which demonstrates how to use the 
     ```
 
 ### Initialize a Barcode Reader Instance
-1. Create an instance of Dynamsoft Barcode Reader.
+1. Initialize the license key.
 
     ```c
-    void *hBarcode = DBR_CreateInstance();
-    ```
-
-2. Initialize the license key.
-
-    ```c
-    DBR_InitLicense(hBarcode, "<insert DBR license key here>");
+    char errorBuf[512];
+    DBR_InitLicense("<insert DBR license key here>", errorBuf, 512);
     ```    
     
     >Please replace `<insert DBR license key here>` with a valid DBR licensekey. There are two ways to obtain one:
     >- Search `DBR_InitLicense` and find the license from `[INSTALLATION FOLDER]/Samples/BarcodeReaderDemo/BarcodeReaderDemo.cpp`.
     >- Request a trial license from <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">Customer Portal</a>. 
+
+2. Create an instance of Dynamsoft Barcode Reader.
+
+    ```c
+    void *hBarcode = DBR_CreateInstance();
+    ```
+
 
 ### Configure the Barcode Scanning Behavior
 1. Set barcode format and count to read.

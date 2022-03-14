@@ -25,6 +25,7 @@ This is the main page of Dynamsoft Barcode Reader SDK documentation for C++ Lang
 - [API Reference](api-reference/index.md)
 
 ## Release Notes
+- [Version 9.x](release-notes/cpp-9.md)
 - [Version 8.x](release-notes/cpp-8.md)
 - [Version 7.6.0 and below](release-notes/cpp-7.md)
 

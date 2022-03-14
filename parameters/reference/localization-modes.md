@@ -72,6 +72,7 @@ Localizes 1D barcodes in a fast mode. This mode is designed for reading 1D barco
 
 - [ScanStride](#scanstride)
 - [ScanDirection](#scandirection)
+- [ConfidenceThreshold](#confidencethreshold)
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)
     
@@ -150,6 +151,7 @@ Setting more modes along with different arguments may improve the Read Rate.
 ## Candidate Argument List
 - [ScanStride](#scanstride)
 - [ScanDirection](#scandirection)
+- [ConfidenceThreshold](#confidencethreshold)
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)
  
@@ -178,6 +180,17 @@ Sets the scan direction when searching barcode.
   - 0: Both vertical and horizontal direction.   
   - 1: Vertical direction.   
   - 2: Horizontal direction. 
+
+### ConfidenceThreshold 
+Sets the confidence threshold.
+
+| Value Type | Value Range | Default Value | Valid For | 
+| ---------- | ----------- | ------------- | --------- |
+| *int* | [0, 100] | 60 | LM_ONED_FAST_SCAN |         
+
+**Remarks**         
+  - The localization result will be discarded if its conficence is less then the threshold.  
+
 
 ### LibraryFileName 
 Sets the file name of the library to load dynamically.

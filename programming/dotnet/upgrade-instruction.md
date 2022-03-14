@@ -9,17 +9,30 @@ needAutoGenerateSidebar: false
 
 # How-to Guides - Upgrade to Latest Version     
 
-## From version 8.0.0 to 8.x
-
-Just replace the old assembly files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx). Your existing license for 8.0.0 is compatible with 8.x.
-
-## From version 7.x
-
-### Replace the library
+## From version 8.x
 
 You need to replace the old assembly files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
 
-### Update existing code
+Please note that the following license activation related functions have been deprecated, they still work in this version but could be removed in version 10.0. We recommend you to go to <a href="https://www.dynamsoft.com/customer/license/fullLicense" target="_blank">Customer Portal</a> to get your license key and then refer to [this article](../../license-activation/set-full-license.md) to set the license.
+
+- `InitLicenseFromDLS`
+- `InitLicenseFromServer`
+- `InitLicenseFromLicenseContent` 
+- `BarcodeReader(string productKey)` 
+- `.ProductKeys` 
+
+## From version 7.x
+
+You need to replace the old assembly files with the ones in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
+
+Please note that the following license activation related functions have been deprecated, they still work in this version but could be removed in version 10.0. We recommend you to go to <a href="https://www.dynamsoft.com/customer/license/fullLicense" target="_blank">Customer Portal</a> to get your license key and then refer to [this article](../../license-activation/set-full-license.md) to set the license.
+
+- `InitLicenseFromServer`
+- `InitLicenseFromLicenseContent` 
+- `BarcodeReader(string productKey)` 
+- `.ProductKeys` 
+
+Please update existing code
 
    Change the namespace from:
    ```csharp
@@ -31,21 +44,7 @@ You need to replace the old assembly files with the ones in the latest version. 
       using Dynamsoft.DBR;
    ```
 
-###  Upgrade the license
-
- Your previous SDK license for version 7.x is not compatible with the version 8.x. Please [contact us](https://www.dynamsoft.com/Company/Contact.aspx) to upgrade your license.
-
- After you upgraded your license to version 8.x:
-
- - If you were using `ProductKeys`, please replace the old license with the newly generated one.
-
- - If you were using `InitLicenseFromServer` to connect to Dynamsoft server for license verification, then no need to change the license key. But please make sure the device has Internet connection.
-
- - If you were using `InitLicenseFromServer` + `InitLicenseFromLicenseContent` to connect to Dynamsoft server once and use the SDK offline, please follow [these steps](../../license-activation/set-full-license-7.md#connect-once) to re-register the device.
- 
- - If you were using `InitLicenseFromLicenseContent` to use the SDK offline, please follow [these steps](../../license-activation/set-full-license-7.md#offline) to re-register the device.
 
 ## From version 6.x
 
-We made some structural updates in the new version. To upgrade from 6.x to 8.x, we recommend you to review our sample code and re-write the barcode scanning module.
-
+We made some structural updates in the new version. To upgrade from 6.x to 9.x, we recommend you to review our sample code and re-write the barcode scanning module.

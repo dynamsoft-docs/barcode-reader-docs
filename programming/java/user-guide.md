@@ -47,21 +47,21 @@ Let's start by creating a console application which demonstrates how to use the 
    import com.dynamsoft.dbr.*;
    ```
 ### Initialize a Barcode Reader Instance
-1. Create an instance of Dynamsoft Barcode Reader.
+1. Initialize the license key.
 
     ```java
-    BarcodeReader reader = new BarcodeReader()
-    ```
-2. Initialize the license key.
-
-    ```java
-    reader.initLicense("<insert DBR license key here>");
+    BarcodeReader.initLicense("<insert DBR license key here>");
     ```    
     
     >Please replace `<insert DBR license key here>` with a valid DBR licensekey. There are two ways to obtain one:
     >- Search `initLicense` and find the license from `[INSTALLATION FOLDER]/samples/BarcodeReaderDemo/src/com/dynamsoft/demo/BarcodeReaderDemo.java`.
     >- Request a trial license from <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">Customer Portal</a>. 
 
+2. Create an instance of Dynamsoft Barcode Reader.
+
+    ```java
+    BarcodeReader reader = new BarcodeReader()
+    ```
 ### Configure the Barcode Scanning Behavior
 1. Set barcode format and count to read.
 

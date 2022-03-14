@@ -1,0 +1,65 @@
+---
+layout: default-layout
+title: Dynamsoft Barcode Reader for C++ Language - Release Notes v9.x
+description: This is the release notes page of Dynamsoft Barcode Reader for C++ Language v9.x.
+keywords: release notes, c++
+needGenerateH3Content: false
+---
+
+# Release Notes for C++ SDK - 9.x
+
+## 9.0.0 (03/15/2022)
+
+<div class="fold-panel-prefix"></div>
+
+### Version Highlights <i class="fa fa-caret-down"></i>
+
+<div class="fold-panel-start"></div>
+
+{%- include release-notes/product-highlight-9.0.0.md -%}
+
+<div class="fold-panel-end"></div>
+
+### Edition Highlights
+
+
+### Changelog
+
+#### New
+
+- Added `BF_CODE_11` under Enumeration [`BarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) to specify newly supported barcode format, Code 11. 
+- Added `BF2_PHARMACODE_ONE_TRACK`, `BF2_PHARMACODE_TWO_TRACK` and `BF2_PHARMACODE` under Enumeration [`BarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) to specify newly supported barcode format, Pharmacodes. 
+- Added a new error code [`DBRERR_PHARMACODE_LICENSE_INVALID`]({{ site.enumerations }}error-code.html#error-code--10062) which will be returned when the license of Pharmacode is invalid.
+- Added `DRM_BROAD_WARP`, `DRM_LOCAL_REFERENCE` and `DRM_DEWRINKLE` under Enumeration [`DeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode) to apply new deformation resisting modes.
+- Added a parameter [`FormatSpecification.VerifyCheckDigit`]({{ site.parameters_reference }}verify-check-digit.html)
+- Added an Argument [`ConfidenceThreshold`]({{ site.parameters_reference }}localization-modes.html#confidencethreshold) to the `LocalizationModes` mode arguments.
+
+#### Changed
+
+- Changed method [`InitLicense`]({{ site.cpp_methods }}license.html#initlicense) to a static method and added two more parameters to return detailed error message.
+- Changed value of BF_ONED under Enumeration [`BarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) to 0x003007FF to have BF_CODE_11 combined.
+- Changed value of BF_ALL under Enumeration [`BarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) to 0xFE3FFFFF to have BF_CODE_11 combined.
+
+
+#### Fixed
+- Fixed a bug that might cause a crash when using multiple threads for barcode decoding.
+- Other small fixes and tweaks.
+
+
+#### Deprecated
+
+The following items are now deprecated. They still work in this version but could be removed in the near future.
+- Method [`InitLicenseFromServer`]({{ site.cpp_methods }}license.html#initlicensefromserver)
+- Method [`InitLicenseFromLicenseContent`]({{ site.cpp_methods }}license.html#initlicensefromlicensecontent)
+- Method [`OutputLicenseToString`]({{ site.cpp_methods }}license.html#outputlicensetostring)
+- Method [`OutputLicenseToStringPtr`]({{ site.cpp_methods }}license.html#outputlicensetostringptr)
+- Method [`FreeLicenseString`]({{ site.cpp_methods }}license.html#freelicensestring)
+- Method [`InitDLSConnectionParameters`]({{ site.cpp_methods }}license.html#initdlsconnectionparameters)
+- Method [`InitLicenseFromDLS`]({{ site.cpp_methods }}license.html#initlicensefromdls)
+- Enumeration [`DM_ChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway)
+- Enumeration [`DM_DeploymentType`]({{ site.enumerations }}other-enums.html#dm_deploymenttype)
+- Enumeration [`DM_LicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
+- Enumeration [`DM_UUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
+- Enumeration [`Product`]({{ site.enumerations }}other-enums.html#product)
+
+

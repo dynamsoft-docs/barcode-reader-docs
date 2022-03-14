@@ -7,11 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
-# How to set full license in version 8.x
-
-Different methods are used for setting trial and full license keys. In our demo or sample applications, we use `.InitLicense()` or `.ProductKeys` to set trial license keys. 
-
-For the purchased version, you need to use `initLicenseFromDLS()` to set the Handshake Codes for your licenses.
+# How to set full license in version 9.x
 
 You can set the license by following the steps below:
 
@@ -71,40 +67,28 @@ You can set the license by following the steps below:
 2. 
 ```c
   char errorBuf[512];
-  DMDLSConnectionParameters paramters;
-  DBR_InitDLSConnectionParameters(&paramters);
-  // Please replace the organizationID with your own
-  paramters.organizationID = "YOUR-ORGANIZATION-ID"; 
-  DBR_InitLicenseFromDLS(&paramters, errorBuf, 512);
+  DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+  void* barcodeReader = DBR_CreateInstance();
+  // add further process
 ```
 3. 
 ```cpp
-  int iRet = -1;
-  char szErrorMsg[256];
-  DM_DLSConnectionParameters dlspar;    
-  CBarcodeReader::InitDLSConnectionParameters(&dlspar);
-  // Please replace the organizationID with your own
-  dlspar.organizationID = "YOUR-ORGANIZATION-ID"; 
-  iRet = CBarcodeReader::InitLicenseFromDLS(&dlspar, szErrorMsg, 256);
-  if (iRet != DBR_OK)
-   {
-       printf("Error code: %d. Error message: %s\n", iRet, szErrorMsg);
-       return -1;
-   }
+  dynamsoft::dbr::CBarcodeReader::InitLicense(""YOUR-LICENSE-KEY");
+  CBarcodeReader* reader = new CBarcodeReader();
+  // add further process
 ```
 4. 
 ```csharp
-  DMDLSConnectionParameters dlspar = BarcodeReader.InitDLSConnectionParamters();           
-  // Please replace the organizationID with your own
-  dlspar.OrganizationID = "YOUR-ORGANIZATION-ID"; 
-  EnumErrorCode iRet = BarcodeReader.InitLicenseFromDLS(dlspar, out strErrorMSG);
+  string errorMsg;
+  BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
+  BarcodeReader reader = new BarcodeReader();
+  // add further process
 ```
 5. 
 ```java
-  DMDLSConnectionParameters dlspar = BarcodeReader.initDLSConnectionParameters();
-  // Please replace the organizationID with your own
-  dlspar.organizationID = "YOUR-ORGANIZATION-ID"; 
-  BarcodeReader.initLicenseFromDLS(dlspar);
+  BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+  BarcodeReader reader = new BarcodeReader();
+  // add further process
 ```
 6. 
  ```objc
