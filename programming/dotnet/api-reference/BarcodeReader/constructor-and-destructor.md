@@ -35,9 +35,6 @@ Dynamsoft.DBR.BarcodeReader.BarcodeReader()
 Dynamsoft.DBR.BarcodeReader.BarcodeReader(string productKey)
 ```
 
-**Parameters**  
-`[in] productKey` <*string*> : Product key. 
-
 ### BarcodeReader(string modulePath, string productKey)
 
 `Deprecated`. It still works in this version but could be removed in the near future.
@@ -45,12 +42,6 @@ Dynamsoft.DBR.BarcodeReader.BarcodeReader(string productKey)
 ```csharp
 Dynamsoft.DBR.BarcodeReader.BarcodeReader(string modulePath, string productKey)
 ```
-
-**Parameters**  
-`[in] modulePath` <*string*> : The path where you store these DLLs.  
-`[in] productKey` <*string*> : Product key. 
-
-
 
 
 ## Dispose
