@@ -11,7 +11,6 @@ needGenerateH3Content: false
 
   | Enumeration | Description |
   |-------------|-------------|
-  | [`AccompanyingTextRecognitionMode`](#barcodecolourmode) | Describes the barcode colour mode. |
   | [`BarcodeColourMode`](#barcodecolourmode) | Describes the barcode colour mode. |
   | [`BarcodeColourMode`](#barcodecolourmode) | Describes the barcode colour mode. |
   | [`BarcodeComplementMode`](#barcodecomplementmode) | Describes the barcode complement mode. |
