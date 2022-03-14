@@ -22,7 +22,7 @@ needGenerateH3Content: false
 
 ### Edition Highlights
 
-Added ARM64 components for Linux to the SDK. In previous versions, Java Edition supported Windows x32/x64, macOS x64, and Linux x64.
+- Added ARM64 components for Linux to the SDK. In previous versions, Java Edition supported Windows x32/x64, macOS x64, and Linux x64.
 
 ### Changelog
 
