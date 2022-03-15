@@ -23,9 +23,11 @@ You can set the license by following the steps below:
 
  ![Activate][1]
 
- On the next page, set an Alias for your license or leave the default Alias and click the "Activate" button.
+ On the next page, set an Alias for your license or leave the default Alias and click the "Activate" button. Take "Connect to Dynamsoft's License Server" as an example.
 
  > Read more on What is an <a href ="https://www.dynamsoft.com/license-tracking/docs/about/terms.html#alias" target="_blank">Alias</a>
+ 
+ > <a href ="https://www.dynamsoft.com/license-server/docs/dshosting/index.html?ver=latest" target="_blank">Connect to Dynamsoft's License Server</a> vs. <a href ="https://www.dynamsoft.com/license-server/docs/selfhosting/index.html?ver=latest" target="_blank">Connect to My Self-hosted License Server</a>
  
  ![Activate2][2]
  
@@ -33,11 +35,7 @@ You can set the license by following the steps below:
  
  ![Activate3][3]
  
- Then you can see the message "Activation secceeded!...". Click "configure this new license item at this page" to continue.
- 
- ![Activate4][4]
-
- If you refresh the page, you will find that the License Key is listed on the page.
+You will find that the License Key is listed on the page now.
  
 ![Activate5][5]
  You can repeat the above steps to activate other license keys.
