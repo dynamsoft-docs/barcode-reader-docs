@@ -32,6 +32,7 @@ needGenerateH3Content: false
 - Changed method [`InitLicense`]({{ site.cpp_methods }}license.html#initlicense) to a static method and added two more parameters to return detailed error message.
 - Changed value of BF_ONED under Enumeration [`BarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) to 0x003007FF to have BF_CODE_11 combined.
 - Changed value of BF_ALL under Enumeration [`BarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) to 0xFE3FFFFF to have BF_CODE_11 combined.
+- Changed the behaviour of [`DeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode) DRM_GENERAL which now only applies basic process to resist deformation.
 
 
 #### Fixed
