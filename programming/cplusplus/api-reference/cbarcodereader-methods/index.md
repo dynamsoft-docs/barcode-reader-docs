@@ -20,17 +20,17 @@ needAutoGenerateSidebar: true
   
   | Method               | Description |
   |----------------------|-------------|
-  | [`InitLicense`](license.md#initlicense) | Read product key and activate the SDK. |
-  | [`InitLicenseFromServer`](license.md#initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
-  | [`InitLicenseFromLicenseContent`](license.md#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
-  | [`OutputLicenseToString`](license.md#outputlicensetostring) | Output the license content to a string from the license server. |
-  | [`OutputLicenseToStringPtr`](license.md#outputlicensetostringptr) | Output the license content to a string from the license server. |
-  | [`FreeLicenseString`](license.md#freelicensestring) | Free memory allocated for the license string. |
-  | [`InitDLSConnectionParameters`](license.md#initdlsconnectionparameters) | Initializes a DM_DLSConnectionParameters struct with default values. |
-  | [`InitLicenseFromDLS`](license.md#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`InitLicense`](license.md#initlicense) | Initializes license key and activate the SDK. |
   | [`GetIdleInstancesCount`](license.md#getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
-  | [`InitLTSConnectionParameters`](license.md#initltsconnectionparameters) | `Deprecated`. Use [InitDLSConnectionParameters](license.md#initdlsconnectionparameters) instead. |
-  | [`InitLicenseFromLTS`](license.md#initlicensefromlts) | `Deprecated`. Use [InitLicenseFromDLS](license.md#initlicensefromdls) instead. |
+  | [`InitLicenseFromServer`](license.md#initlicensefromserver) | `Deprecated` |
+  | [`InitLicenseFromLicenseContent`](license.md#initlicensefromlicensecontent) | `Deprecated` |
+  | [`OutputLicenseToString`](license.md#outputlicensetostring) | `Deprecated` |
+  | [`OutputLicenseToStringPtr`](license.md#outputlicensetostringptr) | `Deprecated` |
+  | [`FreeLicenseString`](license.md#freelicensestring) | `Deprecated` |
+  | [`InitDLSConnectionParameters`](license.md#initdlsconnectionparameters) | `Deprecated` |
+  | [`InitLicenseFromDLS`](license.md#initlicensefromdls) | `Deprecated` |
+  | [`InitLTSConnectionParameters`](license.md#initltsconnectionparameters) | `Deprecated` |
+  | [`InitLicenseFromLTS`](license.md#initlicensefromlts) | `Deprecated` |
 
    
    

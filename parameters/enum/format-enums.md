@@ -38,8 +38,8 @@ Describes the barcode types in BarcodeFormat group 1.
    
 | Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
 | -------------------------- | ------------------- | ----- | ----------- |
-| BF_ALL | EnumBarcodeFormatALL | -31457281 | All supported formats in [BarcodeFormat group 1](#barcodeformat). |
-| BF_ONED | EnumBarcodeFormatONED  | 0x001007FF | Combined value of BF_CODABAR, BF_CODE_128, BF_CODE_39, BF_CODE_39_Extended, BF_CODE_93, BF_EAN_13, BF_EAN_8, INDUSTRIAL_25, BF_ITF, BF_UPC_A, BF_UPC_E, BF_MSI_CODE. |
+| BF_ALL | EnumBarcodeFormatALL | 0xFE3FFFFF | All supported formats in [BarcodeFormat group 1](#barcodeformat). |
+| BF_ONED | EnumBarcodeFormatONED  | 0x003007FF | Combined value of BF_CODABAR, BF_CODE_128, BF_CODE_39, BF_CODE_39_Extended, BF_CODE_93, BF_EAN_13, BF_EAN_8, INDUSTRIAL_25, BF_ITF, BF_UPC_A, BF_UPC_E, BF_MSI_CODE, BF_CODE_11. |
 | BF_GS1_DATABAR | EnumBarcodeFormatGS1DATABAR | 0x0003F800 | Combined value of BF_GS1_DATABAR_OMNIDIRECTIONAL, BF_GS1_DATABAR_TRUNCATED, BF_GS1_DATABAR_STACKED, BF_GS1_DATABAR_STACKED_OMNIDIRECTIONAL, BF_GS1_DATABAR_EXPANDED, BF_GS1_DATABAR_EXPANDED_STACKED, BF_GS1_DATABAR_LIMITED. | 
 | BF_NULL | EnumBarcodeFormatNULL | 0x00 | No barcode format in [BarcodeFormat group 1](#barcodeformat). |
 | BF_CODE_39 | EnumBarcodeFormatCODE39 | 0x01 | Code 39 |
@@ -54,6 +54,7 @@ Describes the barcode types in BarcodeFormat group 1.
 | BF_INDUSTRIAL_25 | EnumBarcodeFormatINDUSTRIAL | 0x200 | Industrial 2 of 5 |
 | BF_MSI_CODE | EnumBarcodeFormatMSICODE | 0x100000 | MSI Code |
 | BF_CODE_39_EXTENDED | EnumBarcodeFormatCODE39EXTENDED | 0x400 | Code 39 Extended |
+| BF_CODE_11 | EnumBarcodeFormatCODE11 | 0x200000 | Code 11 |
 | BF_GS1_DATABAR_OMNIDIRECTIONAL | EnumBarcodeFormatGS1DATABAROMNIDIRECTIONAL | 0x800 | GS1 Databar Omnidirectional |
 | BF_GS1_DATABAR_TRUNCATED | EnumBarcodeFormatGS1DATABARTRUNCATED | 0x1000 | GS1 Databar Truncated |
 | BF_GS1_DATABAR_STACKED | EnumBarcodeFormatGS1DATABARSTACKED | 0x2000 | GS1 Databar Stacked |
@@ -98,6 +99,7 @@ Describes the barcode types in BarcodeFormat group 2.
 | Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
 | -------------------------- | ------------------- | ----- | ----------- |
 | BF2_POSTALCODE | EnumBarcodeFormat2POSTALCODE | 0x01F00000 | Combined value of BF2_USPSINTELLIGENTMAIL, BF2_POSTNET, BF2_PLANET, BF2_AUSTRALIANPOST, BF2_RM4SCC. |
+| BF2_PHARMACODE | EnumBarcodeFormat2PHARMACODE | 0x0C | Combined value of BF2_PHARMACODE_ONE_TRACK, BF2_PHARMACODE_TWO_TRACK. |
 | BF2_NULL | EnumBarcodeFormat2NULL | 0x00 | No barcode format in [BarcodeFormat group 2](#barcodeformat_2). |
 | BF2_NONSTANDARD_BARCODE | EnumBarcodeFormat2NONSTANDARDBARCODE | 0x01 | Nonstandard barcode |
 | BF2_USPSINTELLIGENTMAIL | EnumBarcodeFormat2USPSINTELLIGENTMAIL | 0x00100000 | USPS Intelligent Mail |
@@ -106,4 +108,6 @@ Describes the barcode types in BarcodeFormat group 2.
 | BF2_AUSTRALIANPOST | EnumBarcodeFormat2AUSTRALIANPOST | 0x00800000 | Australian Post |
 | BF2_RM4SCC | EnumBarcodeFormat2RM4SCC | 0x01000000 | Royal Mail 4-State Customer Barcode |
 | BF2_DOTCODE | EnumBarcodeFormat2DOTCODE | 0x02 | DotCode |
+| BF2_PHARMACODE_ONE_TRACK | EnumBarcodeFormat2PHARMACODE_ONE_TRACK | 0x04 | Pharmacode One-Track |
+| BF2_PHARMACODE_TWO_TRACK | EnumBarcodeFormat2PHARMACODE_TWO_TRACK | 0x08 | Pharmacode One-Track |
 

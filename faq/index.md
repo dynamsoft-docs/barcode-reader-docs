@@ -86,7 +86,3 @@ needAutoGenerateSidebar: true
 ## Other
 
 <a href="{{site.faq}}competitors-comparison.html" target="_blank">How does your SDK compare to other commercial SDKs?</a>
-
-
-## General
-

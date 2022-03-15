@@ -275,6 +275,9 @@ Describes the deformation resisting mode.
 | DRM_SKIP | EnumDeformationResistingModeSkip | 0x00 | Skip the deformation resisting. | `N/A` |
 | DRM_AUTO | EnumDeformationResistingModeAuto | 0x01 | **Not supported yet.** | `N/A` |
 | DRM_GENERAL | EnumDeformationResistingModeGeneral | 0x02 | Resists deformation using the general algorithm. | [`Level`]({{ site.parameters_reference }}deformation-resisting-modes.html#level) |
+| DRM_BROAD_WARP | EnumDeformationResistingModeBroadWarp | 0x04 | Resists deformation when the barcode is warped gently. | `N/A` |
+| DRM_LOCAL_REFERENCE | EnumDeformationResistingModeLocalReference | 0x08 | Resists deformation for barcodes with minor deformation in local modules. | `N/A` |
+| DRM_DEWRINKLE | EnumDeformationResistingModeDewrinkle | 0x10 | Resists deformation for barcodes on a wrinkled surface. | `N/A` |
 
 
 
@@ -403,7 +406,7 @@ Describes the localization mode.
 | LM_STATISTICS_MARKS | EnumLocalizationModeStatisticsMarks | 0x20 | Localizes barcodes by groups of marks.This is optimized for DPM codes. | `N/A` |
 | LM_STATISTICS_POSTAL_CODE | EnumLocalizationModeStatisticsPostalCode | 0x40 | Localizes barcodes by groups of connected blocks and lines.This is optimized for postal codes. | `N/A` |
 | LM_CENTRE | EnumLocalizationModeCentre | 0x80 | Localizes barcodes from the centre of the image. | `N/A` |
-| LM_ONED_FAST_SCAN | EnumLocalizationModeOneDFastScan | 0x100 | Localizes 1D barcodes in a fast mode. | [`ScanStride`]({{ site.parameters_reference }}localization-modes.html#scanstride)<br>[`ScanDirection`]({{ site.parameters_reference }}localization-modes.html#scandirection) |
+| LM_ONED_FAST_SCAN | EnumLocalizationModeOneDFastScan | 0x100 | Localizes 1D barcodes in a fast mode. | [`ScanStride`]({{ site.parameters_reference }}localization-modes.html#scanstride)<br>[`ScanDirection`]({{ site.parameters_reference }}localization-modes.html#scandirection)<br>[`ConfidenceThreshold`]({{ site.parameters_reference }}localization-modes.html#confidencethreshold) |
 
 
 

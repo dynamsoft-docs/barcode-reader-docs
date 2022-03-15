@@ -54,7 +54,9 @@ Let's start by creating a console application which demonstrates how to use the 
 1. Create an instance of Dynamsoft Barcode Reader.
 
     ```csharp
-    BarcodeReader reader = new BarcodeReader("<insert DBR license key here>")
+    string errorMsg;
+    BarcodeReader.InitLicense("<insert DBR license key here>", out errorMsg);
+    BarcodeReader reader = new BarcodeReader();
     ```
     
     >Please replace `<insert DBR license key here>` with a valid DBR licensekey. There are two ways to obtain one:

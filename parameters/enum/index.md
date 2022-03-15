@@ -61,13 +61,13 @@ breadcrumbText: Enumerations
 
   | Enumeration | Description |
   |-------------|-------------|
-  | [`DM_ChargeWay`](other-enums.md#dm_chargeway) | Describes the charge way. |
-  | [`DM_DeploymentType`](other-enums.md#dm_deploymenttype) | Describes the deployment type. |
-  | [`DM_LicenseModule`](other-enums.md#dm_licensemodule) | Describes Dynamsoft license modules. |
-  | [`DM_UUIDGenerationMethod`](other-enums.md#dm_uuidgenerationmethod) | Describes the UUID generation method. |
   | [`ImagePixelFormat`](other-enums.md#imagepixelformat) | Describes the image pixel format. |
   | [`QRCodeErrorCorrectionLevel`](other-enums.md#qrcodeerrorcorrectionlevel) | Describes the QR Code error correction level. |
-  | [`Product`](other-enums.md#product) | Describes Dynamsoft products. |
-  | [`EnumPresetTemplate`](other-enums.md#enumpresettemplate) | The preset parameter setting templates. |
+  | [`PresetTemplate`](other-enums.md#presettemplate) | The preset parameter setting templates. |
+  | [`DM_ChargeWay`](other-enums.md#dm_chargeway) | `Deprecated` |
+  | [`DM_DeploymentType`](other-enums.md#dm_deploymenttype) | `Deprecated` |
+  | [`DM_LicenseModule`](other-enums.md#dm_licensemodule) | `Deprecated` |
+  | [`DM_UUIDGenerationMethod`](other-enums.md#dm_uuidgenerationmethod) | `Deprecated` |
+  | [`Product`](other-enums.md#product) | `Deprecated` |
 
 ## [Error Code](error-code.md)
