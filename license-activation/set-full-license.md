@@ -21,29 +21,30 @@ You can set the license by following the steps below:
 
  To activate the license, click "Please first activate the license".
 
- ![FullLicenseList][1]
+ ![Activate][1]
 
- On the next page, set an Alias for your license or leave the default Alias and click the "Activate" button.
+ On the next page, set an Alias for your license or leave the default Alias and click the "Activate" button. Take "Connect to Dynamsoft's License Server" as an example.
 
  > Read more on What is an <a href ="https://www.dynamsoft.com/license-tracking/docs/about/terms.html#alias" target="_blank">Alias</a>
  
- ![SetAlias][2]
+ > <a href ="https://www.dynamsoft.com/license-server/docs/dshosting/index.html?ver=latest" target="_blank">Connect to Dynamsoft's License Server</a> vs. <a href ="https://www.dynamsoft.com/license-server/docs/selfhosting/index.html?ver=latest" target="_blank">Connect to My Self-hosted License Server</a>
+ 
+ ![Activate2][2]
  
  On the following popup window, click the "OK" button.
  
- ![ActivationContinue][3]
+ ![Activate3][3]
  
- Then you can see the message "Activation secceeded!...". Click "configure this new license item at this page" to continue.
+You will find that the License Key is listed on the page now.
  
- ![ConfigLicense][4]
-
+![Activate5][5]
  You can repeat the above steps to activate other license keys.
 
 ## Configure the license (optional)
 
- After the license is activated, the Handshake Code will be generated automatically. Read more on <a href ="https://www.dynamsoft.com/license-tracking/docs/about/terms.html#handshake-code" target="_blank">What is a Handshake Code</a>.
+ After the license is activated, the License Item will be added to Handshake Code and the License Key will be generated automatically. Read more on <a href ="https://www.dynamsoft.com/license-tracking/docs/about/terms.html#license-key" target="_blank">What is a License Key</a>.
  
- Basically, you can skip the step. But if you would like to edit the Handshake Codes for the license or view the statistics of a handshake code, please refer to <a href ="https://www.dynamsoft.com/license-tracking/docs/common/handshakeCodes.html" target="_blank">how to manage the handshake code</a>.
+ Basically, you can skip the step. But if you would like to configure the License Key or view the statistics of the License Key, please refer to <a href ="https://www.dynamsoft.com/license-tracking/docs/common/handshakeCodes.html" target="_blank">how to manage the handshake code</a>.
 
 ## Set the license in the code
 
@@ -91,11 +92,12 @@ All license usage data is submitted to the Dynamsoft License Server (`DLS`) host
 * <a href="https://www.dynamsoft.com/license-tracking/docs/common/statistics.html" target="_blank">View the license usage statistics</a>
 * <a href="https://www.dynamsoft.com/license-tracking/docs/common/usagealerts.html" target="_blank">Get notified about license status</a> 
 
-> Read more about <a href="https://www.dynamsoft.com/license-tracking/docs/common/mechanism.html" target="_blank">the mechanism</a> behind license tracking.
+> Read more about <a href="https://www.dynamsoft.com/license-tracking/docs/common/mechanism.html" target="_blank">the license mechanism</a>.
 > 
-[1]:assets\set-full-license-2\FullLicenseList.png
-[2]:assets\set-full-license-2\SetAlias8.6.png
-[3]:assets\set-full-license-2\ActivationContinue.png
-[4]:assets\set-full-license-2\ConfigLicense8.6.png
+[1]:assets\set-full-license-3\Activate.png
+[2]:assets\set-full-license-3\Activate2.png
+[3]:assets\set-full-license-3\Activate3.png
+[4]:assets\set-full-license-3\Activate4.png
+[5]:assets\set-full-license-3\Activate5.png
 
 

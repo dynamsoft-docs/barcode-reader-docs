@@ -32,10 +32,12 @@ needGenerateH3Content: false
 
 - Changed value of BF_ONED under Enumeration [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) to 0x003007FF to have BF_CODE_11 combined.
 - Changed value of BF_ALL under Enumeration [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) to 0xFE3FFFFF to have BF_CODE_11 combined.
+- Changed the behaviour of [`DeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode) DRM_GENERAL which now only applies basic process to resist deformation.
 
 
 #### Fixed
 - Fixed a bug that might cause a crash when using multiple threads for barcode decoding.
+- Fixed a bug where Function Code 1 (FNC1) character doesn't return if it is in the first position of GS1-128 codes.
 - Other small fixes and tweaks.
 
 
