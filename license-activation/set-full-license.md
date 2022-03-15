@@ -94,7 +94,7 @@ All license usage data is submitted to the Dynamsoft License Server (`DLS`) host
 * <a href="https://www.dynamsoft.com/license-tracking/docs/common/statistics.html" target="_blank">View the license usage statistics</a>
 * <a href="https://www.dynamsoft.com/license-tracking/docs/common/usagealerts.html" target="_blank">Get notified about license status</a> 
 
-> Read more about <a href="https://www.dynamsoft.com/license-tracking/docs/common/mechanism.html" target="_blank">the mechanism</a> behind license tracking.
+> Read more about <a href="https://www.dynamsoft.com/license-tracking/docs/common/mechanism.html" target="_blank">the license mechanism</a>.
 > 
 [1]:assets\set-full-license-3\Activate.png
 [2]:assets\set-full-license-3\Activate2.png

@@ -10,7 +10,6 @@ needGenerateH3Content: false
 
 ## 9.0.0 (03/15/2022)
 
-<div class="fold-panel-prefix"></div>
 
 ### Highlights
 
