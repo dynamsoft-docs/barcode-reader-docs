@@ -45,6 +45,7 @@ needGenerateH3Content: false
 #### Fixed
 - Fixed a bug that might cause a crash when using multiple threads for barcode decoding.
 - Fixed a bug that throws exceptions when using method getIdleInstanceCount.
+- Fixed a bug where Function Code 1 (FNC1) character doesn't return if it is in the first position of GS1-128 codes.
 - Other small fixes and tweaks.
 
 
