@@ -37,13 +37,15 @@ You can set the license by following the steps below:
  
  ![ConfigLicense][4]
 
+ If you refresh the page, you will find that the License Key is listed on the page.
+ 
  You can repeat the above steps to activate other license keys.
 
 ## Configure the license (optional)
 
- After the license is activated, the Handshake Code will be generated automatically. Read more on <a href ="https://www.dynamsoft.com/license-tracking/docs/about/terms.html#handshake-code" target="_blank">What is a Handshake Code</a>.
+ After the license is activated, the License Item will be added to Handshake Code and the License Key will be generated automatically. Read more on <a href ="https://www.dynamsoft.com/license-tracking/docs/about/terms.html#handshake-code" target="_blank">What is a Handshake Code</a>.
  
- Basically, you can skip the step. But if you would like to edit the Handshake Codes for the license or view the statistics of a handshake code, please refer to <a href ="https://www.dynamsoft.com/license-tracking/docs/common/handshakeCodes.html" target="_blank">how to manage the handshake code</a>.
+ Basically, you can skip the step. But if you would like to configure the License Key or view the statistics of the License Key, please refer to <a href ="https://www.dynamsoft.com/license-tracking/docs/common/handshakeCodes.html" target="_blank">how to manage the handshake code</a>.
 
 ## Set the license in the code
 
