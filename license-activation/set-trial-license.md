@@ -39,7 +39,7 @@ You can use `initLicense()` to set the license.
 ```
 2. 
 ```cpp
-  dynamsoft::dbr::CBarcodeReader::InitLicense(""YOUR-LICENSE-KEY");
+  dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY");
   CBarcodeReader* reader = new CBarcodeReader();
   // add further process
 ```
