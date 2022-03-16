@@ -42,7 +42,7 @@ breadcrumbText: BarcodeReader Methods
   | [`decodeFileInMemory`](decode.md#decodefileinmemory) | Decode barcodes from an image file in memory. |
   | [`decodeBuffer`](decode.md#decodebuffer) | Decode barcodes from raw buffer. |
   | [`decodeBase64String`](decode.md#decodebase64string) | Decode barcodes from a base64 encoded string. |
-  | [`decodeBufferedImage`](decode.md#decodeBufferedImage) | Decodes barcode from a buffered imag (bitmap). |
+  | [`decodeBufferedImage`](decode.md#decodebufferedimage) | Decodes barcode from a buffered imag (bitmap). |
   | [`initIntermediateResult`](decode.md#initintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
    

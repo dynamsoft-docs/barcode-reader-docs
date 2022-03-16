@@ -41,7 +41,7 @@ breadcrumbText: API Reference
   | [`decodeFileInMemory`](BarcodeReader/decode.md#decodefileinmemory) | Decode barcodes from an image file in memory. |
   | [`decodeBuffer`](BarcodeReader/decode.md#decodebuffer) | Decode barcodes from raw buffer. |
   | [`decodeBase64String`](BarcodeReader/decode.md#decodebase64string) | Decode barcodes from a base64 encoded string. |
-  | [`decodeBufferedImage`](BarcodeReader/decode.md#decodeBufferedImage) | Decodes barcode from a buffered image (bitmap). |
+  | [`decodeBufferedImage`](BarcodeReader/decode.md#decodebufferedimage) | Decodes barcode from a buffered image (bitmap). |
    
    
 &nbsp; 
