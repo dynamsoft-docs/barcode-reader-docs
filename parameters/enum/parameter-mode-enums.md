@@ -32,26 +32,8 @@ needGenerateH3Content: false
   | [`TextureDetectionMode`](#texturedetectionmode) | Describes the texture detection mode. | 
 
 
-## AccompanyingTextRecognitionMode
-Sets whether or not to recognize a barcode's accompanying text, if there is some accompanying text.
 
-### Declarations
 
-| Language | Declaration |
-| -------- | ----------- |
-| C / C++ | `enum AccompanyingTextRecognitionMode` |
-| .Net | `enum Dynamsoft.DBR.EnumAccompanyingTextRecognitionMode` |
-| JavaScript | `Dynamsoft.DBR.EnumAccompanyingTextRecognitionMode` |
-| Python | `class EnumAccompanyingTextRecognitionMode(IntEnum)` |
-| Java / Android | `class EnumAccompanyingTextRecognitionMode` |
-| ObjC / Swift | `enum EnumAccompanyingTextRecognitionMode` |
-
-### Members
-
-| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description | Valid Argument(s) |
-| -------------------------- | ------------------- | ----- | ----------- | ----------------- |
-| ATRM_SKIP | EnumColourClusteringModeSkip | 0x00 | Disables the accompanying text feature. | `N/A` |
-| ATRM_GENERAL | EnumColourClusteringModeGeneralHSV | 0x02 | Clusters colours using the general algorithm based on HSV. | [`Sensitivity`]({{ site.parameters_reference }}colour-clustering-modes.html#sensitivity) |
 
 
 
@@ -73,15 +55,15 @@ Describes the barcode colour mode.
 
 ### Members
    
-| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description | Valid Argument(s) |
-| -------------------------- | ------------------- | ----- | ----------- | ----------------- |
-| BICM_SKIP | EnumBarcodeColourModeSkip | 0x00 | Skips the barcode colour operation. | `N/A` |
-| BICM_DARK_ON_LIGHT | EnumBarcodeColourModeDarkOnLight | 0x01 | Dark items on a light background. | [`LightReflection`]({{ site.parameters_reference }}barcode-colour-modes.html#lightreflection) |
-| BICM_LIGHT_ON_DARK  | EnumBarcodeColourModeLightOnDark | 0x02 | Light items on a dark background. **Not supported yet**.  | `N/A` |
-| BICM_DARK_ON_DARK  | EnumBarcodeColourModeDarkOnDark | 0x04 | Dark items on a dark background. **Not supported yet**.  | `N/A` |
-| BICM_LIGHT_ON_LIGHT  | EnumBarcodeColourModeLightOnLight | 0x08 | Light items on a light background. **Not supported yet**.  | `N/A` |
-| BICM_DARK_LIGHT_MIXED  | EnumBarcodeColourModeDarkLightMixed | 0x10 | The background is mixed by dark and light. **Not supported yet**.  | `N/A` |
-| BICM_DARK_ON_LIGHT_DARK_SURROUNDING  | EnumBarcodeColourModeDarkOnLightDarkSurrounding | 0x20 | Dark item on a light background surrounded by dark.  | [`LightReflection`]({{ site.parameters_reference }}barcode-colour-modes.html#lightreflection) |
+| Member (except ObjC/Swift) | Member (ObjC) | Member (Swift) | Value | Description | Valid Argument(s) |
+| -------------------------- | ------------- | -------------- | ----- | ----------- | ----------------- |
+| BICM_SKIP | EnumBarcodeColourModeSkip | EnumBarcodeColourMode.skip | 0x00 | Skips the barcode colour operation. | `N/A` |
+| BICM_DARK_ON_LIGHT | EnumBarcodeColourModeDarkOnLight | EnumBarcodeColourMode.darkOnLight | 0x01 | Dark items on a light background. | [`LightReflection`]({{ site.parameters_reference }}barcode-colour-modes.html#lightreflection) |
+| BICM_LIGHT_ON_DARK  | EnumBarcodeColourModeLightOnDark | EnumBarcodeColourMode.lightOnDark | 0x02 | Light items on a dark background. **Not supported yet**.  | `N/A` |
+| BICM_DARK_ON_DARK  | EnumBarcodeColourModeDarkOnDark | EnumBarcodeColourMode.darkOnDark | 0x04 | Dark items on a dark background. **Not supported yet**.  | `N/A` |
+| BICM_LIGHT_ON_LIGHT  | EnumBarcodeColourModeLightOnLight | EnumBarcodeColourMode.lightOnLight | 0x08 | Light items on a light background. **Not supported yet**.  | `N/A` |
+| BICM_DARK_LIGHT_MIXED  | EnumBarcodeColourModeDarkLightMixed | EnumBarcodeColourMode.darkLightMixed | 0x10 | The background is mixed by dark and light. **Not supported yet**.  | `N/A` |
+| BICM_DARK_ON_LIGHT_DARK_SURROUNDING  | EnumBarcodeColourModeDarkOnLightDarkSurrounding | EnumBarcodeColourMode.darkOnLightDarkSurrounding | 0x20 | Dark item on a light background surrounded by dark.  | [`LightReflection`]({{ site.parameters_reference }}barcode-colour-modes.html#lightreflection) |
 
 
 
@@ -107,11 +89,11 @@ Describes the barcode complement mode.
 
 ### Members
    
-| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
-| -------------------------- | ------------------- | ----- | ----------- |
-| BCM_SKIP | EnumBarcodeComplementModeSkip | 0x00 | Skips the barcode complement. |
+| Member (except ObjC/Swift) | Member (ObjC) | Member (Swift) | Value | Description | Valid Argument(s) |
+| -------------------------- | ------------- | -------------- | ----- | ----------- | ----------------- |
+| BCM_SKIP | EnumBarcodeComplementModeSkip | EnumBarcodeComplementMode.skip | 0x00 | Skips the barcode complement. |
 | BCM_AUTO | EnumBarcodeComplementModeAuto | 0x01 | **Not supported yet.** |
-| BCM_GENERAL | EnumBarcodeComplementModeGeneral | 0x02 | Complements the barcode using the general algorithm. |
+| BCM_GENERAL | EnumBarcodeComplementModeGeneral | EnumBarcodeComplementMode.general | 0x02 | Complements the barcode using the general algorithm. |
 
 
 
@@ -137,12 +119,12 @@ Describes the binarization mode.
 
 ### Members
    
-| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description | Valid Argument(s) |
-| -------------------------- | ------------------- | ----- | ----------- | ----------------- |
-| BM_SKIP | EnumBinarizationModeSkip | 0x00 | Skips the binarization. | `N/A` |
-| BM_AUTO | EnumBinarizationModeAuto | 0x01 | **Not supported yet.** | `N/A` |
-| BM_LOCAL_BLOCK | EnumBinarizationModeLocalBlock | 0x02 | Binarizes the image based on the local block. | [`BlockSizeX`]({{ site.parameters_reference }}binarization-modes.html#blocksizex)<br>[`BlockSizeY`]({{ site.parameters_reference }}binarization-modes.html#blocksizey)<br>[`EnableFillBinaryVacancy`]({{ site.parameters_reference }}binarization-modes.html#enablefillbinaryvacancy)<br>[`ImagePreprocessingModesIndex`]({{ site.parameters_reference }}binarization-modes.html#imagepreprocessingmodesindex)<br>[`ThresholdCompensation`]({{ site.parameters_reference }}binarization-modes.html#thresholdcompensation)<br> |
-| BM_THRESHOLD | EnumBinarizationModeThreshold | 0x04 | Performs image binarization based on the given threshold. | [`BinarizationThreshold`]({{ site.parameters_reference }}binarization-modes.html#binarizationthreshold)<br>[`ImagePreprocessingModesIndex`]({{ site.parameters_reference }}binarization-modes.html#imagepreprocessingmodesindex) |
+| Member (except ObjC/Swift) | Member (ObjC) | Member (Swift) | Value | Description | Valid Argument(s) |
+| -------------------------- | ------------- | -------------- | ----- | ----------- | ----------------- |
+| BM_SKIP | EnumBinarizationModeSkip | EnumBinarizationMode.skip | 0x00 | Skips the binarization. | `N/A` |
+| BM_AUTO | EnumBinarizationModeAuto | EnumBinarizationMode.auto | 0x01 | **Not supported yet.** | `N/A` |
+| BM_LOCAL_BLOCK | EnumBinarizationModeLocalBlock | EnumBinarizationMode.localBlock | 0x02 | Binarizes the image based on the local block. | [`BlockSizeX`]({{ site.parameters_reference }}binarization-modes.html#blocksizex)<br>[`BlockSizeY`]({{ site.parameters_reference }}binarization-modes.html#blocksizey)<br>[`EnableFillBinaryVacancy`]({{ site.parameters_reference }}binarization-modes.html#enablefillbinaryvacancy)<br>[`ImagePreprocessingModesIndex`]({{ site.parameters_reference }}binarization-modes.html#imagepreprocessingmodesindex)<br>[`ThresholdCompensation`]({{ site.parameters_reference }}binarization-modes.html#thresholdcompensation)<br> |
+| BM_THRESHOLD | EnumBinarizationModeThreshold | EnumBinarizationMode.threshold | 0x04 | Performs image binarization based on the given threshold. | [`BinarizationThreshold`]({{ site.parameters_reference }}binarization-modes.html#binarizationthreshold)<br>[`ImagePreprocessingModesIndex`]({{ site.parameters_reference }}binarization-modes.html#imagepreprocessingmodesindex) |
 
 
 
@@ -168,11 +150,11 @@ Describes the colour clustering mode.
 
 ### Members
    
-| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description | Valid Argument(s) |
-| -------------------------- | ------------------- | ----- | ----------- | ----------------- |
-| CCM_SKIP | EnumColourClusteringModeSkip | 0x00 | Skips the colour clustering. | `N/A` |
-| CCM_AUTO | EnumColourClusteringModeAuto | 0x01 | **Not supported yet.** | `N/A` |
-| CCM_GENERAL_HSV | EnumColourClusteringModeGeneralHSV | 0x02 | Clusters colours using the general algorithm based on HSV. | [`Sensitivity`]({{ site.parameters_reference }}colour-clustering-modes.html#sensitivity) |
+| Member (except ObjC/Swift) | Member (ObjC) | Member (Swift) | Value | Description | Valid Argument(s) |
+| -------------------------- | ------------- | -------------- | ----- | ----------- | ----------------- |
+| CCM_SKIP | EnumColourClusteringModeSkip | EnumColourClusteringMode.skip | 0x00 | Skips the colour clustering. | `N/A` |
+| CCM_AUTO | EnumColourClusteringModeAuto | EnumColourClusteringMode.auto | 0x01 | **Not supported yet.** | `N/A` |
+| CCM_GENERAL_HSV | EnumColourClusteringModeGeneralHSV | EnumColourClusteringMode.generalHSV | 0x02 | Clusters colours using the general algorithm based on HSV. | [`Sensitivity`]({{ site.parameters_reference }}colour-clustering-modes.html#sensitivity) |
 
 
 
@@ -198,10 +180,10 @@ Describes the colour conversion mode.
 
 ### Members
    
-| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description | Valid Argument(s) |
-| -------------------------- | ------------------- | ----- | ----------- | ----------------- |
-| CICM_SKIP | EnumColourConversionModeSkip | 0x00 | Skip the colour conversion. | `N/A` |
-| CICM_GENERAL | EnumColourConversionModeGeneral | 0x01 | Converts a colour image to a grayscale image using the general algorithm. | [`BlueChannelWeight`]({{ site.parameters_reference }}colour-conversion-modes.html#bluechannelweight)<br>[`GreenChannelWeight`]({{ site.parameters_reference }}colour-conversion-modes.html#greenchannelweight)<br>[`RedChannelWeight`]({{ site.parameters_reference }}colour-conversion-modes.html#redchannelweight) |
+| Member (except ObjC/Swift) | Member (ObjC) | Member (Swift) | Value | Description | Valid Argument(s) |
+| -------------------------- | ------------- | -------------- | ----- | ----------- | ----------------- |
+| CICM_SKIP | EnumColourConversionModeSkip | EnumColourConversionMode.skip | 0x00 | Skip the colour conversion. | `N/A` |
+| CICM_GENERAL | EnumColourConversionModeGeneral | EnumColourConversionMode.general | 0x01 | Converts a colour image to a grayscale image using the general algorithm. | [`BlueChannelWeight`]({{ site.parameters_reference }}colour-conversion-modes.html#bluechannelweight)<br>[`GreenChannelWeight`]({{ site.parameters_reference }}colour-conversion-modes.html#greenchannelweight)<br>[`RedChannelWeight`]({{ site.parameters_reference }}colour-conversion-modes.html#redchannelweight) |
 
 
 
@@ -227,10 +209,10 @@ Describes the conflict mode.
 
 ### Members
    
-| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
-| -------------------------- | ------------------- | ----- | ----------- |
-| CM_IGNORE | EnumConflictModeIgnore | 0x01 | Ignores new settings and inherits the previous settings. |
-| CM_OVERWRITE | EnumConflictModeOverwrite | 0x02 | Overwrites the old settings with new settings. |
+| Member (except ObjC/Swift) | Member (ObjC) | Member (Swift) | Value | Description |
+| -------------------------- | ------------- | -------------- | ----- | ----------- |
+| CM_IGNORE | EnumConflictModeIgnore | EnumConflictMode.ignore | 0x01 | Ignores new settings and inherits the previous settings. |
+| CM_OVERWRITE | EnumConflictModeOverwrite | EnumConflictMode.overwrite | 0x02 | Overwrites the old settings with new settings. |
 
 
 
@@ -256,18 +238,18 @@ Describes the deblur mode.
 
 ### Members
    
-| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
-| -------------------------- | ------------------- | ----- | ----------- |
-| DM_SKIP | EnumDeblurModeSkip | 0x00 | Skips the deblur process. |
-| DM_DIRECT_BINARIZATION | EnumDeblurModeDirectBinarization | 0x01 | Performs deblur process using the direct binarization algorithm. |
-| DM_THRESHOLD_BINARIZATION | EnumDeblurModeThresholdBinarization | 0x02 | Performs deblur process using the threshold binarization algorithm. |
-| DM_GRAY_EQUALIZATION | EnumDeblurModeGrayEqualization | 0x04 | Performs deblur process using the gray equalization algorithm.|
-| DM_SMOOTHING | EnumDeblurModeSmoothing | 0x08 | Performs deblur process using the smoothing algorithm.|
-| DM_MORPHING | EnumDeblurModeMorphing | 0x10 | Performs deblur process using the morphing algorithm.|
-| DM_DEEP_ANALYSIS | EnumDeblurModeDeepAnalysis | 0x20 | Performs deblur process using the deep analysis algorithm. |
-| DM_SHARPENING | EnumDeblurModeSharpening | 0x40 | Performs deblur process using the sharpening algorithm. |
-| DM_BASED_ON_LOC_BIN | EnumDeblurModeBasedOnLocBin | 0x80 | Performs deblur process based on the binary image from the localization process. |
-| DM_SHARPENING_SMOOTHING | EnumDeblurModeSharpeningSmoothing | 0x100 | Performs deblur process using the sharpening and smoothing algorithm.|
+| Member (except ObjC/Swift) | Member (ObjC) | Member (Swift) | Value | Description |
+| -------------------------- | ------------- | -------------- | ----- | ----------- |
+| DM_SKIP | EnumDeblurModeSkip | EnumDeblurMode.skip | 0x00 | Skips the deblur process. |
+| DM_DIRECT_BINARIZATION | EnumDeblurModeDirectBinarization | EnumDeblurMode.directBinarization | 0x01 | Performs deblur process using the direct binarization algorithm. |
+| DM_THRESHOLD_BINARIZATION | EnumDeblurModeThresholdBinarization | EnumDeblurMode.thresholdBinarization | 0x02 | Performs deblur process using the threshold binarization algorithm. |
+| DM_GRAY_EQUALIZATION | EnumDeblurModeGrayEqualization | EnumDeblurMode.grayEqualization | 0x04 | Performs deblur process using the gray equalization algorithm.|
+| DM_SMOOTHING | EnumDeblurModeSmoothing | EnumDeblurMode.smoothing | 0x08 | Performs deblur process using the smoothing algorithm.|
+| DM_MORPHING | EnumDeblurModeMorphing | EnumDeblurMode.morphing | 0x10 | Performs deblur process using the morphing algorithm.|
+| DM_DEEP_ANALYSIS | EnumDeblurModeDeepAnalysis | EnumDeblurMode.deepAnalysis | 0x20 | Performs deblur process using the deep analysis algorithm. |
+| DM_SHARPENING | EnumDeblurModeSharpening | EnumDeblurMode.sharpening | 0x40 | Performs deblur process using the sharpening algorithm. |
+| DM_BASED_ON_LOC_BIN | EnumDeblurModeBasedOnLocBin | EnumDeblurMode.basedOnLocBin | 0x80 | Performs deblur process based on the binary image from the localization process. |
+| DM_SHARPENING_SMOOTHING | EnumDeblurModeSharpeningSmoothing | EnumDeblurMode.sharpeningSmoothing | 0x100 | Performs deblur process using the sharpening and smoothing algorithm.|
 
 
 
