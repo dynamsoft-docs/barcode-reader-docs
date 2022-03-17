@@ -96,8 +96,8 @@ Describes the barcode types in BarcodeFormat group 2.
 
 ### Members
    
-| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
-| -------------------------- | ------------------- | ----- | ----------- |
+| Member (except ObjC/Swift) | Member (ObjC) | Member (Swift) | Value | Description |
+| -------------------------- | ------------- | -------------- | ----- | ----------- |
 | BF2_POSTALCODE | EnumBarcodeFormat2POSTALCODE | POSTALCODE |0x01F00000 | Combined value of BF2_USPSINTELLIGENTMAIL, BF2_POSTNET, BF2_PLANET, BF2_AUSTRALIANPOST, BF2_RM4SCC. |
 | BF2_PHARMACODE | EnumBarcodeFormat2PHARMACODE | PHARMACODE |0x0C | Combined value of BF2_PHARMACODE_ONE_TRACK, BF2_PHARMACODE_TWO_TRACK. |
 | BF2_NULL | EnumBarcodeFormat2NULL | NULL |0x00 | No barcode format in [BarcodeFormat group 2](#barcodeformat_2). |
