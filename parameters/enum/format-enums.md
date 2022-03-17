@@ -33,14 +33,13 @@ Describes the barcode types in BarcodeFormat group 1.
 | Java / Android | `class EnumBarcodeFormat` |
 | ObjC / Swift | `enum EnumBarcodeFormat` |
 
-
 ### Members
-   
+
 | Member (except ObjC/Swift) | Member (ObjC) | Member (Swift) | Value | Description |
 | -------------------------- | ------------- | -------------- | ----- | ----------- |
 | BF_ALL | EnumBarcodeFormatALL | ALL | 0xFE3FFFFF | All supported formats in [BarcodeFormat group 1](#barcodeformat). |
 | BF_ONED | EnumBarcodeFormatONED  | ONED | 0x003007FF | Combined value of BF_CODABAR, BF_CODE_128, BF_CODE_39, BF_CODE_39_Extended, BF_CODE_93, BF_EAN_13, BF_EAN_8, INDUSTRIAL_25, BF_ITF, BF_UPC_A, BF_UPC_E, BF_MSI_CODE, BF_CODE_11. |
-| BF_GS1_DATABAR | EnumBarcodeFormatGS1DATABAR | GS1DATABAR | 0x0003F800 | Combined value of BF_GS1_DATABAR_OMNIDIRECTIONAL, BF_GS1_DATABAR_TRUNCATED, BF_GS1_DATABAR_STACKED, BF_GS1_DATABAR_STACKED_OMNIDIRECTIONAL, BF_GS1_DATABAR_EXPANDED, BF_GS1_DATABAR_EXPANDED_STACKED, BF_GS1_DATABAR_LIMITED. | 
+| BF_GS1_DATABAR | EnumBarcodeFormatGS1DATABAR | GS1DATABAR | 0x0003F800 | Combined value of BF_GS1_DATABAR_OMNIDIRECTIONAL, BF_GS1_DATABAR_TRUNCATED, BF_GS1_DATABAR_STACKED, BF_GS1_DATABAR_STACKED_OMNIDIRECTIONAL, BF_GS1_DATABAR_EXPANDED, BF_GS1_DATABAR_EXPANDED_STACKED, BF_GS1_DATABAR_LIMITED. |
 | BF_NULL | EnumBarcodeFormatNULL | NULL |0x00 | No barcode format in [BarcodeFormat group 1](#barcodeformat). |
 | BF_CODE_39 | EnumBarcodeFormatCODE39 | CODE39 | 0x01 | Code 39 |
 | BF_CODE_128 | EnumBarcodeFormatCODE128 | CODE128 | 0x02 | Code 128 |
@@ -72,18 +71,14 @@ Describes the barcode types in BarcodeFormat group 1.
 | BF_MICRO_QR | EnumBarcodeFormatMICROQR | MICROQR |0x40000000 | Micro QR Code |
 | BF_GS1_COMPOSITE | EnumBarcodeFormatGS1COMPOSITE | GS1COMPOSITE | -2147483648 | GS1 Composite Code |
 
-
-
 &nbsp;
 
-
-
 ## BarcodeFormat_2
+
 Describes the barcode types in BarcodeFormat group 2.
 
-
 ### Declarations
-   
+
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum BarcodeFormat_2` |
@@ -93,9 +88,8 @@ Describes the barcode types in BarcodeFormat group 2.
 | Java / Android | `class EnumBarcodeFormat_2` |
 | ObjC / Swift | `enum EnumBarcodeFormat_2` |
 
-
 ### Members
-   
+
 | Member (except ObjC/Swift) | Member (ObjC) | Member (Swift) | Value | Description |
 | -------------------------- | ------------- | -------------- | ----- | ----------- |
 | BF2_POSTALCODE | EnumBarcodeFormat2POSTALCODE | POSTALCODE |0x01F00000 | Combined value of BF2_USPSINTELLIGENTMAIL, BF2_POSTNET, BF2_PLANET, BF2_AUSTRALIANPOST, BF2_RM4SCC. |
@@ -110,4 +104,3 @@ Describes the barcode types in BarcodeFormat group 2.
 | BF2_DOTCODE | EnumBarcodeFormat2DOTCODE | DOTCODE |0x02 | DotCode |
 | BF2_PHARMACODE_ONE_TRACK | EnumBarcodeFormat2PHARMACODE_ONE_TRACK | PHARMACODE_ONE_TRACK |0x04 | Pharmacode One-Track |
 | BF2_PHARMACODE_TWO_TRACK | EnumBarcodeFormat2PHARMACODE_TWO_TRACK | PHARMACODE_TWO_TRACK |0x08 | Pharmacode One-Track |
-
