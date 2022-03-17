@@ -68,6 +68,8 @@ Describes the barcode types in BarcodeFormat group 1.
 | BF_MICRO_QR | EnumBarcodeFormatMICROQR | MICROQR | 0x40000000 | Micro QR Code |
 | BF_GS1_COMPOSITE | EnumBarcodeFormatGS1COMPOSITE | GS1COMPOSITE | -2147483648 | GS1 Composite Code |
 
+&nbsp;
+
 ## BarcodeFormat_2
 
 Describes the barcode types in BarcodeFormat group 2.
