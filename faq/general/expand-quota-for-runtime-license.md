@@ -6,7 +6,7 @@ description: How to expand the quota of a runtime license?
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - General
+# FAQ - General
 
 ## How to expand the quota of a runtime license?
 

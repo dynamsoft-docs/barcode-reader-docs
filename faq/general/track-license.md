@@ -6,7 +6,7 @@ description: How do you track the number of devices?
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - General
+# FAQ - General
 
 ## How do you track the number of devices?
 

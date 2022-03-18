@@ -6,7 +6,7 @@ description: What are the different ways to customize the UI?
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - JavaScript
+# FAQ - JavaScript
 
 ## What are the different ways to customize the UI?
 

@@ -6,7 +6,7 @@ description: What is Dynamsoft Barcode Reader SDK and what business needs can it
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - General
+# FAQ - General
 
 ## What is Dynamsoft Barcode Reader SDK and what business needs can it meet?
 

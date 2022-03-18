@@ -6,7 +6,7 @@ description: How to stop the camera stream from opening right away after DBR JS 
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - JavaScript
+# FAQ - JavaScript
 
 ## How to stop the camera stream from opening right away after DBR JS demo is loaded? How to enable the camera on the click of a button?
 

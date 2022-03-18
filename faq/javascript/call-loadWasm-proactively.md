@@ -6,7 +6,7 @@ description: Do we have to call loadWasm proactively?
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - JavaScript
+# FAQ - JavaScript
 
 ## Do we have to call loadWasm proactively?
 

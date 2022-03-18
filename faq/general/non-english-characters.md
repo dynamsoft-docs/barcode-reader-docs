@@ -6,7 +6,7 @@ description: Why is the barcode image returning messy (non-english) characters o
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - General
+# FAQ - General
 
 ## Why is the barcode image returning messy (non-english) characters on the online demo?
 

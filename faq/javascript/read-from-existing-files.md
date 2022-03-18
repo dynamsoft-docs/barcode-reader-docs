@@ -6,7 +6,7 @@ description: Can I read barcodes from existing files?
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - JavaScript
+# FAQ - JavaScript
 
 ## Can I read barcodes from existing files?
 

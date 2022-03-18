@@ -6,7 +6,7 @@ description: How to get the logs for the SDK?
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - JavaScript
+# FAQ - JavaScript
 
 ## How to get the logs for the SDK?
 

@@ -6,7 +6,7 @@ description: What are the server requirements for Dbr JS deployment?
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - JavaScript
+# FAQ - JavaScript
 
 ## What are the server requirements for Dbr JS deployment?
 

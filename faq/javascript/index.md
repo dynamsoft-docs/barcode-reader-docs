@@ -6,7 +6,7 @@ description: Dynamsoft Barcode Reader FAQ - JavaScript
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - JavaScript
+# FAQ - JavaScript
 
 <a href="{{site.faq_js}}ways-to-copy-dbr-js-deployable-files.html" target="_blank">How to get a copy of Dbr JS deployable files (source code, etc.)?</a>
 

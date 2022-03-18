@@ -6,7 +6,7 @@ description: What is the size of the JavaScript SDK (.wasm)?
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - JavaScript
+# FAQ - JavaScript
 
 ## What is the size of the JavaScript SDK (.wasm)?
 

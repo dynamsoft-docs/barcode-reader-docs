@@ -6,7 +6,7 @@ description: What is the difference between BarcodeReader class and the BarcodeS
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - JavaScript
+# FAQ - JavaScript
 
 ## What is the difference between the BarcodeReader class and the BarcodeScanner class? Can they be used interchangeably?
 

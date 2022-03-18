@@ -6,7 +6,7 @@ description: Can I scan the barcode on a US Driver's License and get the first n
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - JavaScript
+# FAQ - JavaScript
 
 ## How to scan the barcode on a US Driver's License and get the first name, last name, DOB, etc.?
 

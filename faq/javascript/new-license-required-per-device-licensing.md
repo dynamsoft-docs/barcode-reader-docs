@@ -6,7 +6,7 @@ description: When is a new license required in per-device licensing model?
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - JavaScript
+# FAQ - JavaScript
 
 ## When is a new license required in a per-device licensing model?
 

@@ -6,7 +6,7 @@ description: How to get a free trial SDK? How many days of free trial does it al
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - General
+# FAQ - General
 
 ## How to get a free trial of the SDK? How many days does the free trial allow? Can I extend my trial if I need more time? If so, how?
 
