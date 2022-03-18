@@ -6,7 +6,7 @@ description: Does SDK supports reading barcodes from PDF files? IS an additional
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - General
+# FAQ - General
 
 ## Does the SDK support reading barcodes from PDF files? Is an additional license required for this functionality?
 

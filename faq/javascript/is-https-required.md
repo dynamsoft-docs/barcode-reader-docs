@@ -6,7 +6,7 @@ description: Is HTTPs absolutely required?
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - JavaScript
+# FAQ - JavaScript
 
 ## Is HTTPS absolutely required?
 

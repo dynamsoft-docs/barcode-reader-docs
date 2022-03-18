@@ -6,7 +6,7 @@ description: How to upgrade from an old to new version?
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - JavaScript
+# FAQ - JavaScript
 
 ## How to upgrade from an old to new version?
 

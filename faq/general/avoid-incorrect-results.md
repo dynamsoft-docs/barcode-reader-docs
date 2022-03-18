@@ -6,7 +6,7 @@ description: Sometimes the barcode reader SDK returns incorrect results with fou
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - General
+# FAQ - General
 
 ## Sometimes the Barcode Reader SDK returns incorrect results with four or less characters. How do you avoid that?
 

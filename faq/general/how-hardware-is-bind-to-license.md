@@ -6,7 +6,7 @@ description: What information is collected while registering and licensing a dev
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - General
+# FAQ - General
 
 ## What information is collected while registering and licensing a device and how is it bound to the hardware? What hardware change would cause the consumption of a new license seat?
 

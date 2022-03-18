@@ -6,7 +6,7 @@ description: How does license tracking work with the three standard licensing op
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - JavaScript
+# FAQ - JavaScript
 
 ## How does license tracking work with the three standard licensing options - Per Scan, Per Device, Per Concurrent Device?
 

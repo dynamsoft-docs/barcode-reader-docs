@@ -6,7 +6,7 @@ description: Can the SDK work without internet connection?
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - General
+# FAQ - General
 
 ## Can the SDK work without internet connection?
 

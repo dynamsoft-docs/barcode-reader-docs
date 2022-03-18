@@ -6,7 +6,7 @@ description: What are the differences between the compact edition and the full e
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - JavaScript
+# FAQ - JavaScript
 
 ## What are the differences between the compact edition and the full edition? How do you switch between the two editions?
 

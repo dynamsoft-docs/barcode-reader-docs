@@ -6,7 +6,7 @@ description: What file/image formats are supported when reading barcodes from fi
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - JavaScript
+# FAQ - JavaScript
 
 ## What file/image formats are supported when reading barcodes from files in local memory?
 

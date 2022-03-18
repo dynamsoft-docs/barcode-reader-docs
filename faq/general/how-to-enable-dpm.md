@@ -6,7 +6,7 @@ description: How to enable DPM?
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - General
+# FAQ - General
 
 ## How to enable DPM?
 

@@ -6,7 +6,7 @@ description: How to add/remove a "beep" sound once a barcode is found?
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - JavaScript
+# FAQ - JavaScript
 
 ## How to add/remove a "beep" sound once a barcode is found?
 

@@ -6,7 +6,7 @@ description: When is singleFrameMode enabled?
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - JavaScript
+# FAQ - JavaScript
 
 ## When is singleFrameMode enabled?
 

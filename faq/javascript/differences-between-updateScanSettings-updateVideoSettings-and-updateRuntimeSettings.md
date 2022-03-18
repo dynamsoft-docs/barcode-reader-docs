@@ -6,7 +6,7 @@ description: What are the differences between updateScanSettings/updateVideoSett
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - JavaScript
+# FAQ - JavaScript
 
 ## What are the differences between updateScanSettings/updateVideoSettings/updateRuntimeSettings ?
 

@@ -6,7 +6,7 @@ description: What are the general troubleshooting steps if an image fails to dec
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - JavaScript
+# FAQ - JavaScript
 
 ## What are the general troubleshooting steps if an image fails to decode with Dbr JS?
 

@@ -6,7 +6,7 @@ description: How to avoid incorrect barcode results?
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - JavaScript
+# FAQ - JavaScript
 
 ## How to avoid incorrect barcode results?
 

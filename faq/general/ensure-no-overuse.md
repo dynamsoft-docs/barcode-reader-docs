@@ -6,7 +6,7 @@ description: How to ensure that a device does not overuse its allotted number of
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - General
+# FAQ - General
 
 ## How to ensure that a device does not overuse its allotted number of instances?
 

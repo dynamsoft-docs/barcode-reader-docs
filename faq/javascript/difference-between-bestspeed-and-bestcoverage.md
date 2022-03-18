@@ -6,7 +6,7 @@ description: What are the differences between the 'speed', 'coverage', 'balance,
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - JavaScript
+# FAQ - JavaScript
 
 ## What are the differences between the 'speed', 'coverage', 'balance, and 'single' runtime templates?
 

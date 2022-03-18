@@ -6,7 +6,7 @@ description: The pdf file has 10 pages but only the last page has a barcode. Is 
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - General
+# FAQ - General
 
 ## The PDF file has 10 pages but only the last page has a barcode. Is it possible to decode the last page only?
 

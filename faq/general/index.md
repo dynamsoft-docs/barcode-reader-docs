@@ -6,7 +6,7 @@ description: Dynamsoft Barcode Reader FAQ - General
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - General
+# FAQ - General
 
 <a href="{{site.faq_general}}what-is-dbr.html" target="_blank">What is Dynamsoft Barcode Reader SDK and what business needs can it meet?</a>
 

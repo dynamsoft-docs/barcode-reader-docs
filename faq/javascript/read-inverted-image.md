@@ -6,7 +6,7 @@ description: How to read an inverted barcode?
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - JavaScript
+# FAQ - JavaScript
 
 ## How to read an inverted barcode?
 
