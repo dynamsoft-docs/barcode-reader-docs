@@ -21,17 +21,17 @@ needAutoGenerateSidebar: true
    
   | Function               | Description |
   |----------------------|-------------|
-  | [`DBR_InitLicense`](license.md#dbr_initlicense) | Read product key and activate the SDK. |
-  | [`DBR_InitLicenseFromServer`](license.md#dbr_initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
-  | [`DBR_InitLicenseFromLicenseContent`](license.md#dbr_initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
-  | [`DBR_OutputLicenseToString`](license.md#dbr_outputlicensetostring) | Output the license content to a string from the license server. |
-  | [`DBR_OutputLicenseToStringPtr`](license.md#dbr_outputlicensetostringptr) | Output the license content to a string from the license server. |
-  | [`DBR_FreeLicenseString`](license.md#dbr_freelicensestring) | Free memory allocated for the license string. |
-  | [`DBR_InitDLSConnectionParameters`](license.md#dbr_initdlsconnectionparameters) | Initializes a DM_DLSConnectionParameters struct with default values. |
-  | [`DBR_InitLicenseFromDLS`](license.md#dbr_initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`DBR_InitLicense`](license.md#dbr_initlicense) | Initializes license key and activate the SDK. |
   | [`DBR_GetIdleInstancesCount`](license.md#dbr_getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
-  | [`DBR_InitLTSConnectionParameters`](license.md#dbr_initltsconnectionparameters) | `Deprecated`. Use [DBR_InitDLSConnectionParameters](license.md#dbr_initdlsconnectionparameters) instead. |
-  | [`DBR_InitLicenseFromLTS`](license.md#dbr_initlicensefromlts) | `Deprecated`. Use [DBR_InitLicenseFromDLS](license.md#dbr_initlicensefromdls) instead. |
+  | [`DBR_InitLicenseFromServer`](license.md#dbr_initlicensefromserver) | `Deprecated` |
+  | [`DBR_InitLicenseFromLicenseContent`](license.md#dbr_initlicensefromlicensecontent) | `Deprecated` |
+  | [`DBR_OutputLicenseToString`](license.md#dbr_outputlicensetostring) | `Deprecated` |
+  | [`DBR_OutputLicenseToStringPtr`](license.md#dbr_outputlicensetostringptr) | `Deprecated` |
+  | [`DBR_FreeLicenseString`](license.md#dbr_freelicensestring) | `Deprecated` |
+  | [`DBR_InitDLSConnectionParameters`](license.md#dbr_initdlsconnectionparameters) | `Deprecated` |
+  | [`DBR_InitLicenseFromDLS`](license.md#dbr_initlicensefromdls) | `Deprecated` |
+  | [`DBR_InitLTSConnectionParameters`](license.md#dbr_initltsconnectionparameters) | `Deprecated` |
+  | [`DBR_InitLicenseFromLTS`](license.md#dbr_initlicensefromlts) | `Deprecated` |
 
 
 ## Decode

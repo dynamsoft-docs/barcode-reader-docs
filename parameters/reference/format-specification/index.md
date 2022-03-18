@@ -39,8 +39,8 @@ It must be a unique name.
 
  | Parameter Name | Description |
  | -------------- | ----------- | 
- | [`FormatSpecification.AllModuleDeviation`](../all-module-deviation.md) | Set the module size deviation from the standard barcode module size. |
- | [`FormatSpecification.AustralianPostEncodingTable`](../australian-post-encoding-table.md) | Set the encoding table used to code the Customer Information Field of Australian Post Customer Barcode. | 
+ | [`FormatSpecification.AllModuleDeviation`](../all-module-deviation.md) | Sets the module size deviation from the standard barcode module size. |
+ | [`FormatSpecification.AustralianPostEncodingTable`](../australian-post-encoding-table.md) | Sets the encoding table used to code the Customer Information Field of Australian Post Customer Barcode. | 
  | [`FormatSpecification.BarcodeAngleRangeArray`](../barcode-angle-range-array.md) | Sets the range of angles (in degrees) for barcodes search. | 
  | [`FormatSpecification.BarcodeBytesLengthRangeArray`](../barcode-bytes-length-range-array.md) | Sets the range of barcode bytes length for barcodes search. | 
  | [`FormatSpecification.BarcodeBytesRegExPattern`](../barcode-bytes-regex-pattern.md) | Specifies the regular express pattern of barcode byte characters. | 
@@ -52,17 +52,19 @@ It must be a unique name.
  | [`FormatSpecification.BarcodeWidthRangeArray`](../barcode-width-range-array.md) | Sets the range of barcode widths (in pixels) for barcodes search.(Hint). | 
  | [`FormatSpecification.BarcodeZoneBarCountRangeArray`](../barcode-zone-bar-count-range-array.md) |	Sets the range of bar count of the barcode zone for barcodes search. | 
  | [`FormatSpecification.BarcodeZoneMinDistanceToImageBorders`](../barcode-zone-min-distance-to-image-borders.md) |	Sets the minimum distance (in pixels) between barcode zone and image borders. | 
- | [`FormatSpecification.Code128Subset`](../code128-subset.md) | Set the code 128 subset. | 
+ | [`FormatSpecification.Code128Subset`](../code128-subset.md) | Sets the code 128 subset. | 
  | [`FormatSpecification.FindUnevenModuleBarcode`](../find-uneven-module-barcode.md) | Specifies whether to find barcodes with uneven barcode modules. Not support yet. | 
- | [`FormatSpecification.HeadModuleRatio`](../head-module-ratio.md) | Set the module count and module size ratio of the barcode head part. | 
+ | [`FormatSpecification.HeadModuleRatio`](../head-module-ratio.md) | Sets the module count and module size ratio of the barcode head part. | 
  | [`FormatSpecification.MinQuietZoneWidth`](../min-quiet-zone-width.md) | The minimum width of the barcode quiet zone. | 
  | [`FormatSpecification.MinRatioOfBarcodeZoneWidthToHeight`](../min-ratio-of-barcode-zone-width-to-height.md) |	Sets the minimum ratio (width/height) of the barcode zone. | 
  | [`FormatSpecification.MirrorMode`](../mirror-mode.md) | Sets whether to decode mirrored barcodes. | 
  | [`FormatSpecification.ModuleSizeRangeArray`](../module-size-range-array.md) | Sets the range of module size (in pixels) for barcodes search. (Hint). |
  | [`FormatSpecification.MSICodeCheckDigitCalculation`](../msi-code-check-digit-calculation.md) | Sets the scheme used for calculating a check digit of an MSI barcode. | 
+ | [`FormatSpecification.PartitionModes`](../partition-modes.md) |	Sets the mode used to apply partition process. |
  | [`FormatSpecification.RequireStartStopChars`](../require-start-stop-chars.md) |	Sets whether the start and stop characters are required when searching for Code 39 barcodes. |
- | [`FormatSpecification.StandardFormat`](../standard-format.md) | Set the standard barcode format. | 
- | [`FormatSpecification.TailModuleRatio`](../tail-module-ratio.md) |	Set the module count and module size ratio of the barcode tail part. | 
+ | [`FormatSpecification.StandardFormat`](../standard-format.md) | Sets the standard barcode format. | 
+ | [`FormatSpecification.TailModuleRatio`](../tail-module-ratio.md) |	Sets the module count and module size ratio of the barcode tail part. | 
+ | [`FormatSpecification.VerifyCheckDigit`](../verify-check-digit.md) |	Sets the value determining whether to verify the check digit in barcodes where this check digit is optional. | 
 
 
  

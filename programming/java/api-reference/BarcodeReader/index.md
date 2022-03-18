@@ -24,15 +24,15 @@ needAutoGenerateSidebar: true
   
   | Method               | Description |
   |----------------------|-------------|
-  | [`initLicense`](license.md#initlicense) | Read product key and activate the SDK. |
-  | [`initLicenseFromServer`](license.md#initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
-  | [`initLicenseFromLicenseContent`](license.md#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
-  | [`outputLicenseToString`](license.md#outputlicensetostring) | Output the license content to a string from the license server. |
-  | [`initDLSConnectionParameters`](license.md#initdlsconnectionparameters) | Initializes a DMDLSConnectionParameters struct with default values. |
-  | [`initLicenseFromDLS`](license.md#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`initLicense`](license.md#initlicense) | Initializes license key and activate the SDK. |
   | [`getIdleInstancesCount`](license.md#getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
-  | [`initLTSConnectionParameters`](license.md#initltsconnectionparameters) | `Deprecated`. Use [initDLSConnectionParameters](license.md#initdlsconnectionparameters) instead. |
-  | [`initLicenseFromLTS`](license.md#initlicensefromlts) | `Deprecated`. Use [initLicenseFromDLS](license.md#initlicensefromdls) instead. |
+  | [`initLicenseFromServer`](license.md#initlicensefromserver) | `Deprecated` |
+  | [`initLicenseFromLicenseContent`](license.md#initlicensefromlicensecontent) | `Deprecated` |
+  | [`outputLicenseToString`](license.md#outputlicensetostring) | `Deprecated` |
+  | [`initDLSConnectionParameters`](license.md#initdlsconnectionparameters) | `Deprecated` |
+  | [`initLicenseFromDLS`](license.md#initlicensefromdls) | `Deprecated` |
+  | [`initLTSConnectionParameters`](license.md#initltsconnectionparameters) | `Deprecated` |
+  | [`initLicenseFromLTS`](license.md#initlicensefromlts) | `Deprecated` |
 
 
 ## Decode
@@ -43,7 +43,7 @@ needAutoGenerateSidebar: true
   | [`decodeFileInMemory`](decode.md#decodefileinmemory) | Decode barcodes from an image file in memory. |
   | [`decodeBuffer`](decode.md#decodebuffer) | Decode barcodes from raw buffer. |
   | [`decodeBase64String`](decode.md#decodebase64string) | Decode barcodes from a base64 encoded string. |
-  | [`decodeBufferedImage`](decode.md#decodeBufferedImage) | Decodes barcode from a buffered imag (bitmap). |
+  | [`decodeBufferedImage`](decode.md#decodebufferedimage) | Decodes barcode from a buffered imag (bitmap). |
   | [`initIntermediateResult`](decode.md#initintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
    

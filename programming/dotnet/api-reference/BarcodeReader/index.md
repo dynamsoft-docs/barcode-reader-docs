@@ -20,14 +20,15 @@ needAutoGenerateSidebar: true
   
   | Method               | Description |
   |----------------------|-------------|
-  | [`InitLicenseFromServer`](license.md#initlicensefromserver) | Initializes license and connect to the specified server for online verification. |
-  | [`InitLicenseFromLicenseContent`](license.md#initlicensefromlicensecontent) | Initializes license from the license content on client machine for offline verification. |
-  | [`OutputLicenseToString`](license.md#outputlicensetostring) | Outputs the license content as an encrypted string from the license server to be used for offline license verification.|
-  | [`InitDLSConnectionParameters`](license.md#initdlsconnectionparameters) | Initializes a DMDLSConnectionParameters struct with default values. |
-  | [`InitLicenseFromDLS`](license.md#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`InitLicense`](license.md#initlicense) | Initializes license key and activate the SDK. |
   | [`GetIdleInstancesCount`](license.md#getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
-  | [`InitLTSConnectionParameters`](license.md#initltsconnectionparameters) | `Deprecated`. Use [InitDLSConnectionParameters](license.md#initdlsconnectionparameters) instead. |
-  | [`InitLicenseFromLTS`](license.md#initlicensefromlts) | `Deprecated`. Use [InitLicenseFromDLS](license.md#initlicensefromdls) instead. |
+  | [`InitLicenseFromServer`](license.md#initlicensefromserver) | `Deprecated` |
+  | [`InitLicenseFromLicenseContent`](license.md#initlicensefromlicensecontent) | `Deprecated` |
+  | [`OutputLicenseToString`](license.md#outputlicensetostring) | `Deprecated` |
+  | [`InitDLSConnectionParameters`](license.md#initdlsconnectionparameters) | `Deprecated` |
+  | [`InitLicenseFromDLS`](license.md#initlicensefromdls) | `Deprecated` |
+  | [`InitLTSConnectionParameters`](license.md#initltsconnectionparameters) | `Deprecated` |
+  | [`InitLicenseFromLTS`](license.md#initlicensefromlts) | `Deprecated` |
    
    
    
@@ -128,7 +129,7 @@ needAutoGenerateSidebar: true
   
   | Attribute            | Description |
   |----------------------|-------------|
-  | `ProductKeys`  | Product keys used for Dynamsoft Barcode Reader. |
+  | `ProductKeys`  | `Deprecated`. It still works in this version but could be removed in the near future. |
   
    
  

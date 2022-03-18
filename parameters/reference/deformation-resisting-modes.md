@@ -14,10 +14,15 @@ needGenerateH3Content: true
 
 
 ## Candidate Mode List
+
 - DRM_GENERAL
+- DRM_BROAD_WARP
+- DRM_LOCAL_REFERENCE
+- DRM_DEWRINKLE
 - DRM_AUTO
 
 ### DRM_GENERAL
+
 Resists deformation using the general algorithm. This mode has the following arguments for further customizing.
 
 - [Level](#level)
@@ -25,7 +30,20 @@ Resists deformation using the general algorithm. This mode has the following arg
 - [LibraryParameters](#libraryparameters)
 
 
+### DRM_BROAD_WARP
+
+Resists deformation when the barcode is warped gently.
+
+### DRM_LOCAL_REFERENCE
+
+Resists deformation for barcodes with minor deformation in local modules.
+
+### DRM_DEWRINKLE
+
+Resists deformation for barcodes on a wrinkled surface.
+
 ### DRM_AUTO
+
 Lets the library choose a mode automatically. Not supported yet.
 
 
@@ -82,8 +100,7 @@ delete pSettings;
             "Level": 1
         },
         {
-            "Mode": "DRM_GENERAL", 
-            "Level": 9
+            "Mode": "DRM_DEWRINKLE"
         }
     ]
 }

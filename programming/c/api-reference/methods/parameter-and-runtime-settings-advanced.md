@@ -37,7 +37,7 @@ DBR_API int DBR_InitRuntimeSettingsWithFile (void* barcodeReader, const char* pF
 `[in] barcodeReader` Handle of the barcode reader instance.  
 `[in]	pFilePath` The settings file path.  
 `[in]	conflictMode` The parameter setting mode, which decides whether to inherit parameters from previous template settings or to overwrite previous settings with the new template.  
-`[in,out]	errorMsgBuffer` The buffer is allocated by caller and the recommending length is 256. The error message will be copied to the buffer.  
+`[in,out]	errorMsgBuffer` The buffer is allocated by caller and the recommended length is 256. The error message will be copied to the buffer.  
 `[in]	errorMsgBufferLen` The length of allocated buffer.  
  
 
@@ -71,7 +71,7 @@ DBR_API int DBR_InitRuntimeSettingsWithString (void* barcodeReader, const char* 
 `[in] barcodeReader` Handle of the barcode reader instance.  
 `[in]	content` A JSON string that represents the content of the settings.  
 `[in]	conflictMode` The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings with the new template.  
-`[in,out] errorMsgBuffer` The buffer is allocated by caller and the recommending length is 256. The error message will be copied to the buffer.  
+`[in,out] errorMsgBuffer` The buffer is allocated by caller and the recommended length is 256. The error message will be copied to the buffer.  
 `[in]	errorMsgBufferLen` The length of allocated buffer.
 
 
@@ -105,7 +105,7 @@ DBR_API int DBR_AppendTplFileToRuntimeSettings (void* barcodeReader, const char*
 `[in] barcodeReader` Handle of the barcode reader instance.  
 `[in]	pFilePath` The settings file path.     
 `[in]	conflictMode` The parameter setting mode, which decides whether to inherit parameters from previous template settings or to overwrite previous settings with the new template.     
-`[in,out]	errorMsgBuffer` The buffer is allocated by caller and the recommending length is 256. The error message will be copied to the buffer.     
+`[in,out]	errorMsgBuffer` The buffer is allocated by caller and the recommended length is 256. The error message will be copied to the buffer.     
 `[in] errorMsgBufferLen` The length of allocated buffer.
 
 
@@ -139,7 +139,7 @@ DBR_API int DBR_AppendTplStringToRuntimeSettings (void* barcodeReader, const cha
 `[in] barcodeReader` Handle of the barcode reader instance.  
 `[in] content` A JSON string that represents the content of the settings.   
 `[in] conflictMode` The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings with the new template.   
-`[in,out] errorMsgBuffer` The buffer is allocated by caller and the recommending length is 256. The error message will be copied to the buffer.  
+`[in,out] errorMsgBuffer` The buffer is allocated by caller and the recommended length is 256. The error message will be copied to the buffer.  
 `[in] errorMsgBufferLen` The length of allocated buffer.
 
 

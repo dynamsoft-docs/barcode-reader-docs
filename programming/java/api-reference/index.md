@@ -24,15 +24,15 @@ needGenerateH3Content: true
   
   | Method               | Description |
   |----------------------|-------------|
-  | [`initLicense`](BarcodeReader/license.md#initlicense) | Read product key and activate the SDK. |
-  | [`initLicenseFromServer`](BarcodeReader/license.md#initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
-  | [`initLicenseFromLicenseContent`](BarcodeReader/license.md#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
-  | [`outputLicenseToString`](BarcodeReader/license.md#outputlicensetostring) | Output the license content to a string from the license server. |
-  | [`initDLSConnectionParameters`](BarcodeReader/license.md#initdlsconnectionparameters) | Initializes a DMDLSConnectionParameters struct with default values. |
-  | [`initLicenseFromDLS`](BarcodeReader/license.md#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`initLicense`](BarcodeReader/license.md#initlicense) | Initializes license key and activate the SDK. |
   | [`getIdleInstancesCount`](BarcodeReader/license.md#getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
-  | [`initLTSConnectionParameters`](BarcodeReader/license.md#initltsconnectionparameters) | `Deprecated`. Use [initDLSConnectionParameters](BarcodeReader/license.md#initdlsconnectionparameters) instead. |
-  | [`initLicenseFromLTS`](BarcodeReader/license.md#initlicensefromlts) | `Deprecated`. Use [initLicenseFromDLS](BarcodeReader/license.md#initlicensefromdls) instead. |
+  | [`initLicenseFromServer`](BarcodeReader/license.md#initlicensefromserver) | `Deprecated` |
+  | [`initLicenseFromLicenseContent`](BarcodeReader/license.md#initlicensefromlicensecontent) | `Deprecated` |
+  | [`outputLicenseToString`](BarcodeReader/license.md#outputlicensetostring) | `Deprecated` |
+  | [`initDLSConnectionParameters`](BarcodeReader/license.md#initdlsconnectionparameters) | `Deprecated` |
+  | [`initLicenseFromDLS`](BarcodeReader/license.md#initlicensefromdls) | `Deprecated` |
+  | [`initLTSConnectionParameters`](BarcodeReader/license.md#initltsconnectionparameters) | `Deprecated` |
+  | [`initLicenseFromLTS`](BarcodeReader/license.md#initlicensefromlts) | `Deprecated` |
 
 
 ### Decode Methods
@@ -43,7 +43,7 @@ needGenerateH3Content: true
   | [`decodeFileInMemory`](BarcodeReader/decode.md#decodefileinmemory) | Decode barcodes from an image file in memory. |
   | [`decodeBuffer`](BarcodeReader/decode.md#decodebuffer) | Decode barcodes from raw buffer. |
   | [`decodeBase64String`](BarcodeReader/decode.md#decodebase64string) | Decode barcodes from a base64 encoded string. |
-  | [`decodeBufferedImage`](BarcodeReader/decode.md#decodeBufferedImage) | Decodes barcode from a buffered imag (bitmap). |
+  | [`decodeBufferedImage`](BarcodeReader/decode.md#decodebufferedimage) | Decodes barcode from a buffered imag (bitmap). |
   | [`initIntermediateResult`](BarcodeReader/decode.md#initintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](BarcodeReader/decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
    
@@ -205,13 +205,13 @@ needGenerateH3Content: true
 
   | Enumeration | Description |
   |-------------|-------------|
-  | [`DM_ChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway) | Describes the charge way. |
-  | [`DM_DeploymentType`]({{ site.enumerations }}other-enums.html#dm_deploymenttype) | Describes the deployment type. |
-  | [`DM_LicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule) | Describes Dynamsoft license modules. |
-  | [`DM_UUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod) | Describes the UUID generation method. |
+  | [`DM_ChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeway) | `Deprecated` |
+  | [`DM_DeploymentType`]({{ site.enumerations }}other-enums.html#dm_deploymenttype) | `Deprecated` |
+  | [`DM_LicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule) | `Deprecated` |
+  | [`DM_UUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod) | `Deprecated` |
   | [`ImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) | Describes the image pixel format. |
   | [`QRCodeErrorCorrectionLevel`]({{ site.enumerations }}other-enums.html#qrcodeerrorcorrectionlevel) | Describes the QR Code error correction level. |
-  | [`Product`]({{ site.enumerations }}other-enums.html#product) | Describes Dynamsoft products. |
+  | [`Product`]({{ site.enumerations }}other-enums.html#product) | `Deprecated` |
 
 
 

@@ -359,6 +359,13 @@ noTitleIndex: true
   |--------------------------------|-------------------------|-------|-------------|
   | `DBRERR_DOTCODE_LICENSE_INVALID` | `EnumErrorCode_DOTCODE_LICENSE_INVALID` | -10061 | The DotCode license is invalid. |
 
+### Error code -10062
+
+  | Error Code (except ObjC/Swift) | Error Code (ObjC/Swift) | Value | Description |
+  |--------------------------------|-------------------------|-------|-------------|
+  | `DBRERR_PHARMACODE_LICENSE_INVALID` | `EnumErrorCode_PHARMACODE_LICENSE_INVALID` | -10062 | The Pharmacode license is invalid. |
+
+
 ### Error code -20000
 
   | Error Code (except ObjC/Swift) | Error Code (ObjC/Swift) | Value | Description |

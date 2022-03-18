@@ -19,7 +19,7 @@ You can log in the customer portal and [request for a trial extension online](ht
 
 ## Update the license key in C/C++/C#/Java/Python/PHP/VB.NET
 
-You can use `initLicense()` or `ProductKeys` to set the license.
+You can use `initLicense()` to set the license.
 
 <div class="sample-code-prefix"></div>
 >- C
@@ -32,24 +32,29 @@ You can use `initLicense()` or `ProductKeys` to set the license.
 >
 >1. 
 ```c
- void *hBarcode = NULL;
- hBarcode = DBR_CreateInstance();
- DBR_InitLicense(hBarcode, "t0068NQAAAI8+mMcYRNwmijAzExhq******");
+  char errorBuf[512];
+  DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+  void* barcodeReader = DBR_CreateInstance();
+  // add further process
 ```
 2. 
 ```cpp
- CBarcodeReader reader = new CBarcodeReader();
- reader.InitLicense("t0068NQAAAI8+mMcYRNwmijAzExhq******");
+  dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY");
+  CBarcodeReader* reader = new CBarcodeReader();
+  // add further process
 ```
 3. 
 ```csharp
- BarcodeReader reader = new BarcodeReader();
- reader.ProductKeys = "t0068NQAAAI8+mMcYRNwmijAzExhq******";
+  string errorMsg;
+  BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
+  BarcodeReader reader = new BarcodeReader();
+  // add further process
 ```
 4. 
 ```java
- BarcodeReader mBarcodeReader;
- mBarcodeReader = new BarcodeReader("t0068NQAAAI8+mMcYRNwmijAzExhq******");
+  BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+  BarcodeReader reader = new BarcodeReader();
+  // add further process
 ```
 5. 
 ```python
@@ -63,8 +68,10 @@ You can use `initLicense()` or `ProductKeys` to set the license.
 ```
 7. 
 ```vb
- Dim reader As BarcodeReader = New Dynamsoft.Barcode.BarcodeReader()
- reader.ProductKeys = "t0068NQAAAI8+mMcYRNwmijAzExhq******"
+  Dim errMsg As String = ""
+  Dynamsoft.DBR.BarcodeReader.InitLicense("YOUR-LICENSE-KEY", errMsg)
+  Dim reader As BarcodeReader = New Dynamsoft.DBR.BarcodeReader()
+  'add further process
 ```
 
 
@@ -74,14 +81,14 @@ Then please save and rebuild your application.
 
 For mobile edition (8.2+) and the JavaScript edition (8.2.5+), a free trial license called ["public trial license"](https://www.dynamsoft.com/license-tracking/docs/about/terms.html?ver=latest#public-trial-license) will be used by default if no license is specified in your code. When this public trial license expires, you can get a 30-day free trial license called ["private trial license"](https://www.dynamsoft.com/license-tracking/docs/about/terms.html?ver=latest#private-trial-license). The following shows how to request this license.
 
-- 1. Request the private trial license in the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense), register for a Dynamsoft account if necessary.
-- 2. A 30-day private-trial license will be generated and configured to your organization. 
+- Request the private trial license in the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense), register for a Dynamsoft account if necessary.
+- A 30-day private-trial license will be generated and configured to your organization. 
 
 > NOTE
 >  
 > In case a private trial license fails to be generated, Dynamsoft Support team will get in touch with you. Or you can [contact us](https://www.dynamsoft.com/company/contact/).
 
-- 3. Specify your organization ID in your code with the API "organizationID".
+- Specify your organization ID in your code with the API "organizationID".
 
 <div class="sample-code-prefix"></div>
 >- JavaScript

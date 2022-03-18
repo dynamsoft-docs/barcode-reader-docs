@@ -50,6 +50,7 @@ needAutoGenerateSidebar: false
  | [`ModuleSizeRangeArray`](module-size-range-array.md) | Sets the range of module size (in pixels) for barcodes searching. |
  | [`MSICodeCheckDigitCalculation`](msi-code-check-digit-calculation.md) | Sets the scheme used for calculating a check digit of an MSI barcode. |
  | [`Pages`](pages.md) | Sets the specific pages or the range of pages of a file (.tiff or .pdf) for barcode searching. |
+ | [`PartitionModes`](partition-modes.md) |	Sets the mode used to apply partition process. |
  | [`PDFRasterDPI`](pdf-raster-dpi.md) | Sets the output image resolution. |
  | [`PDFReadingMode`](pdf-reading-mode.md) | Sets the way to detect barcodes from a PDF file when using the `DecodeFile` method. |
  | [`Region`](region.md) | Sets the region for barcodes searching. |
@@ -67,4 +68,5 @@ needAutoGenerateSidebar: false
  | [`TextureDetectionModes`](texture-detection-modes.md) | Sets the mode and priority for texture detection. |
  | [`TextResultOrderModes`](text-result-order-modes.md) | Sets the mode and priority for the order of the text results returned. | 
  | [`Timeout`](time-out.md) | Sets the maximum amount of time (in milliseconds) that should be spent searching for a barcode per page. |
+ | [`VerifyCheckDigit`](verify-check-digit.md) | Sets the value determining whether to verify the check digit in barcodes where this check digit is optional. |
 
