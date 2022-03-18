@@ -3,7 +3,7 @@ layout: default-layout
 title: There are many editions of DBR, what are the differences? which one should I use?
 keywords: Dynamsoft Barcode Reader, FAQ, DBR Introduction, General, editions
 description: There are many editions of DBR, what are the differences? which one should I use?
-needAutoGenerateSidebar: true
+needAutoGenerateSidebar: false
 ---
 
 # Dynamsoft Barcode Reader FAQ - General

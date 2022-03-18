@@ -28,7 +28,7 @@ needAutoGenerateSidebar: true
 
 <a href="{{site.faq_general}}scan-us-drivers-license.html" target="_blank">How to scan barcodes on US Driver's Licenses and get the first name, last name, BOD, etc?</a>
 
-<a href="{{site.faq_js}}how-to-enable-dpm.html" target="_blank">How to enable DPM?</a>
+<a href="{{site.faq_general}}how-to-enable-dpm.html" target="_blank">How to enable DPM?</a>
 
 <a href="{{site.faq_general}}expand-quota-for-runtime-license.html" target="_blank">How to expand the quota of a runtime license?</a>
 
