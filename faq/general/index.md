@@ -1,9 +1,9 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader FAQ General
-keywords: faq
-description: Dynamsoft Barcode Reader FAQ Homepage
-needAutoGenerateSidebar: true
+title: Dynamsoft Barcode Reader FAQ - General
+keywords: faq, general
+description: Dynamsoft Barcode Reader FAQ - General
+needAutoGenerateSidebar: false
 ---
 
 # Dynamsoft Barcode Reader FAQ - General
@@ -26,7 +26,7 @@ needAutoGenerateSidebar: true
 
 <a href="{{site.faq_general}}scan-us-drivers-license.html" target="_blank">How to scan barcodes on US Driver's Licenses and get the first name, last name, BOD, etc?</a>
 
-<a href="{{site.faq_js}}how-to-enable-dpm.html" target="_blank">How to enable DPM?</a>
+<a href="{{site.faq_general}}how-to-enable-dpm.html" target="_blank">How to enable DPM?</a>
 
 <a href="{{site.faq_general}}expand-quota-for-runtime-license.html" target="_blank">How to expand the quota of a runtime license?</a>
 
