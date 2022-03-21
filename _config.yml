@@ -17,6 +17,9 @@ release_notes: /barcode-reader/release-notes/
 performance: /barcode-reader/performance/
 faq: /barcode-reader/faq/
 
+faq_general: /barcode-reader/faq/general/
+faq_js: /barcode-reader/faq/javascript/
+
 comparison_tools: /barcode-reader/introduction/comparison-tools/
 
 c_cplusplus: /barcode-reader/programming/c-cplusplus/
