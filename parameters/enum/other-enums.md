@@ -94,7 +94,7 @@ Describes the preset parameter setting templates.
 | DEFAULT | EnumPresetTemplateDefault | default | 0 | The default parameter configuration. |
 | VIDEO_SINGLE_BARCODE | EnumPresetTemplateVideoSingleBarcode | videoSingleBarcode | 1 | The template for decoding a single barcode from the video. |
 | VIDEO_SPEED_FIRST | EnumPresetTemplateVideoSpeedFirst | videoSpeedFirst | 2 | The speed optimized template for video barcode decoding. |
-| VIDEO_READ_RATE_FIRST | EnumPresetTemplateVideoReadRateFirst | iideoReadRateFirst | 3 | The read rate optimized template for video barcode decoding. |
+| VIDEO_READ_RATE_FIRST | EnumPresetTemplateVideoReadRateFirst | videoReadRateFirst | 3 | The read rate optimized template for video barcode decoding. |
 | IMAGE_SPEED_FIRST | EnumPresetTemplateImageSpeedFirst | imageSpeedFirst | 4 | The speed optimized template for image barcode decoding. |
 | IMAGE_READ_RATE_FIRST | EnumPresetTemplateImageReadRateFirst | imageReadRateFirst | 5 | The read rate optimized template for image barcode decoding. |
 
