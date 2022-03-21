@@ -203,8 +203,8 @@ Describes the preset parameter setting templates.
 
 | Member (except ObjC/Swift) | Member (ObjC) |  Member (Swift) | Value | Description |
 | -------------------------- | ------------- | --------------- | ----- | ----------- |
-| DM_UUIDGM_RANDOM | EnumDMUUIDGenerationMethodRandom | MethodRandom | 1 | Generates UUID with random values. |
-| DM_UUIDGM_HARDWARE | EnumDMUUIDGenerationMethodHardware | MethodHardware | 2 | Generates UUID based on hardware info. |
+| DM_UUIDGM_RANDOM | EnumDMUUIDGenerationMethodRandom | random | 1 | Generates UUID with random values. |
+| DM_UUIDGM_HARDWARE | EnumDMUUIDGenerationMethodHardware | hardware | 2 | Generates UUID based on hardware info. |
 
 ## Product
 
