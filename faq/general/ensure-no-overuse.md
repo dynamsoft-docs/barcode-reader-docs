@@ -3,10 +3,10 @@ layout: default-layout
 title: How to ensure that a device does not overuse its allotted number of instances?
 keywords: Dynamsoft Barcode Reader, FAQ, Pricing/Licensing, General, ensure no overuse
 description: How to ensure that a device does not overuse its allotted number of instances?
-needAutoGenerateSidebar: true
+needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - General
+# FAQ - General
 
 ## How to ensure that a device does not overuse its allotted number of instances?
 

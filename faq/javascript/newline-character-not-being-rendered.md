@@ -6,7 +6,7 @@ description: Why are newline characters not being rendered when displaying the b
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - JavaScript
+# FAQ - JavaScript
 
 ## Why are newline characters not being rendered when displaying the barcode results in a textbox?
 

@@ -6,7 +6,7 @@ description: When to use onFrameRead and when to use onUnduplicateRead?
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - JavaScript
+# FAQ - JavaScript
 
 ## When to use onFrameRead and when to use onUnduplicateRead?
 

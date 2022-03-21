@@ -3,10 +3,10 @@ layout: default-layout
 title: Can the SDK work without internet connection?
 keywords: Dynamsoft Barcode Reader, FAQ, Pricing/Licensing, General, internet
 description: Can the SDK work without internet connection?
-needAutoGenerateSidebar: true
+needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - General
+# FAQ - General
 
 ## Can the SDK work without internet connection?
 

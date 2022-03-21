@@ -6,7 +6,7 @@ description: What are the pros and cons of using the CDN?
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - JavaScript
+# FAQ - JavaScript
 
 ## What are the pros and cons of using the CDN?
 

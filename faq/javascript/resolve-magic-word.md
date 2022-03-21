@@ -6,7 +6,7 @@ description: How to resolve the expected magic word error that occurs when using
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - JavaScript
+# FAQ - JavaScript
 
 ## How to resolve the expected magic word error that occurs when using DBR JS?
 

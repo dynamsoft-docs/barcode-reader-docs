@@ -6,7 +6,7 @@ description: How to get intermediate result images?
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - JavaScript
+# FAQ - JavaScript
 
 ## How to get intermediate result images?
 

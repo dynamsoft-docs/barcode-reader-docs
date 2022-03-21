@@ -6,7 +6,7 @@ description: How to check the version of the JS SDK I am currently using?
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - JavaScript
+# FAQ - JavaScript
 
 ## How to check the version of the JS SDK I am currently using?
 

@@ -31,13 +31,13 @@ breadcrumbText: Enumerations
   | [`DPMCodeReadingMode`](parameter-mode-enums.md#dpmcodereadingmode) | Describes the DPM code reading mode. |
   | [`GrayscaleTransformationMode`](parameter-mode-enums.md#grayscaletransformationmode) | Describes the grayscale transformation mode. |
   | [`ImagePreprocessingMode`](parameter-mode-enums.md#imagepreprocessingmode) | Describes the image preprocessing mode. |
-  | [`LocalizationMode`](parameter-mode-enums.md#localizationmode) | Describes the localization mode. | 
+  | [`LocalizationMode`](parameter-mode-enums.md#localizationmode) | Describes the localization mode. |
   | [`PDFReadingMode`](parameter-mode-enums.md#pdfreadingmode) | Describes the PDF reading mode. |
   | [`RegionPredetectionMode`](parameter-mode-enums.md#regionpredetectionmode) | Describes the region predetection mode. |
   | [`ScaleUpMode`](parameter-mode-enums.md#scaleupmode) | Describes the scale up mode. |
   | [`TerminatePhase`](parameter-mode-enums.md#terminatephase) | Describes the terminate phase. |
   | [`TextFilterMode`](parameter-mode-enums.md#textfiltermode) | Describes the text filter mode. |
-  | [`TextureDetectionMode`](parameter-mode-enums.md#texturedetectionmode) | Describes the texture detection mode. | 
+  | [`TextureDetectionMode`](parameter-mode-enums.md#texturedetectionmode) | Describes the texture detection mode. |
 
 ## [Result Related Enumeration](result-enums.md)
 
@@ -50,13 +50,6 @@ breadcrumbText: Enumerations
   | [`ResultType`](result-enums.md#resulttype) | Describes the extended result type. |
   | [`TextResultOrderMode`](result-enums.md#textresultordermode) | Describes the text result order mode. |
 
-## [Frame Decoding Enumeration](frame-decoding-enums.md)
-
-  | Enumeration | Description |
-  |-------------|-------------|
-  | [`ClarityCalculationMethod`](frame-decoding-enums.md#claritycalculationmethod) | Describes the clarity calculation method. |
-  | [`ClarityFilterMode`](frame-decoding-enums.md#clarityfiltermode) | Describes the clarity filter mode. |
-  
 ## [Other Enumeration](other-enums.md)
 
   | Enumeration | Description |

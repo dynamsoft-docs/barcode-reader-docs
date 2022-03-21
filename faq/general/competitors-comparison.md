@@ -6,7 +6,7 @@ description: How does your SDK compare to other commercial SDKs?
 needAutoGenerateSidebar: false
 ---
 
-# Dynamsoft Barcode Reader FAQ - General
+# FAQ - General
 
 ## How does your SDK compare to other commercial SDKs?
 
