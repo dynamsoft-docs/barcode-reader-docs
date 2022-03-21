@@ -96,7 +96,7 @@ Describes the intermediate result type.
 | IRT_PREDETECTED_REGION | EnumIntermediateResultTypePredetectedRegion | predetectedRegion | 0x10 | Predetected region |
 | IRT_PREPROCESSED_IMAGE | EnumIntermediateResultTypePreprocessedImage | preprocessedImage | 0x20 | Preprocessed image |
 | IRT_BINARIZED_IMAGE | EnumIntermediateResultTypeBinarizedImage | binarizedImage | 0x40 | Binarized image |
-| IRT_TEXT_ZONE | EnumIntermediateResultTypeTextZone | TextZone | 0x80 | Text zone |
+| IRT_TEXT_ZONE | EnumIntermediateResultTypeTextZone | textZone | 0x80 | Text zone |
 | IRT_CONTOUR | EnumIntermediateResultTypeContour | contour | 0x100 | Contour |
 | IRT_LINE_SEGMENT | EnumIntermediateResultTypeLineSegment | lineSegment | 0x200 | Line segment |
 | IRT_FORM | EnumIntermediateResultTypeForm | form | 0x400 | Form **(not supported yet)** |

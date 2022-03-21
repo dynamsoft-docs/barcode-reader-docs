@@ -22,13 +22,13 @@ needGenerateH3Content: false
   | [`DPMCodeReadingMode`](#dpmcodereadingmode) | Describes the DPM code reading mode. |
   | [`GrayscaleTransformationMode`](#grayscaletransformationmode) | Describes the grayscale transformation mode. |
   | [`ImagePreprocessingMode`](#imagepreprocessingmode) | Describes the image preprocessing mode. |
-  | [`LocalizationMode`](#localizationmode) | Describes the localization mode. | 
+  | [`LocalizationMode`](#localizationmode) | Describes the localization mode. |
   | [`PDFReadingMode`](#pdfreadingmode) | Describes the PDF reading mode.  |
   | [`RegionPredetectionMode`](#regionpredetectionmode) | Describes the region predetection mode. |
   | [`ScaleUpMode`](#scaleupmode) | Describes the scale up mode. |
   | [`TerminatePhase`](#terminatephase) | Describes the terminate phase. |
   | [`TextFilterMode`](#textfiltermode) | Describes the text filter mode. |
-  | [`TextureDetectionMode`](#texturedetectionmode) | Describes the texture detection mode. | 
+  | [`TextureDetectionMode`](#texturedetectionmode) | Describes the texture detection mode. |
 
 ## BarcodeColourMode
 
@@ -74,8 +74,8 @@ Describes the barcode complement mode.
 
 ### Members
 
-| Member (except ObjC/Swift) | Member (ObjC) |  Member (Swift) | Value | Description | Valid Argument(s) |
-| -------------------------- | ------------- | --------------- | ----- | ----------- | ----------------- |
+| Member (except ObjC/Swift) | Member (ObjC) |  Member (Swift) | Value | Description |
+| -------------------------- | ------------- | --------------- | ----- | ----------- |
 | BCM_SKIP | EnumBarcodeComplementModeSkip | skip | 0x00 | Skips the barcode complement. |
 | BCM_AUTO | EnumBarcodeComplementModeAuto | auto | 0x01 | **Not supported yet.** |
 | BCM_GENERAL | EnumBarcodeComplementModeGeneral | general | 0x02 | Complements the barcode using the general algorithm. |
@@ -166,8 +166,8 @@ Describes the conflict mode.
 
 ### Members
 
-| Member (except ObjC/Swift) | Member (ObjC) |  Member (Swift) | Value | Description | Valid Argument(s) |
-| -------------------------- | ------------- | --------------- | ----- | ----------- | ----------------- |
+| Member (except ObjC/Swift) | Member (ObjC) |  Member (Swift) | Value | Description |
+| -------------------------- | ------------- | --------------- | ----- | ----------- |
 | CM_IGNORE | EnumConflictModeIgnore | ignore | 0x01 | Ignores new settings and inherits the previous settings. |
 | CM_OVERWRITE | EnumConflictModeOverwrite | overwrite | 0x02 | Overwrites the old settings with new settings. |
 
@@ -188,8 +188,8 @@ Describes the deblur mode.
 
 ### Members
 
-| Member (except ObjC/Swift) | Member (ObjC) |  Member (Swift) | Value | Description | Valid Argument(s) |
-| -------------------------- | ------------- | --------------- | ----- | ----------- | ----------------- |
+| Member (except ObjC/Swift) | Member (ObjC) |  Member (Swift) | Value | Description |
+| -------------------------- | ------------- | --------------- | ----- | ----------- |
 | DM_SKIP | EnumDeblurModeSkip | skip | 0x00 | Skips the deblur process. |
 | DM_DIRECT_BINARIZATION | EnumDeblurModeDirectBinarization | directBinarization | 0x01 | Performs deblur process using the direct binarization algorithm. |
 | DM_THRESHOLD_BINARIZATION | EnumDeblurModeThresholdBinarization | thresholdBinarization | 0x02 | Performs deblur process using the threshold binarization algorithm. |
@@ -244,8 +244,8 @@ Describes the DPM code reading mode.
 
 ### Members
 
-| Member (except ObjC/Swift) | Member (ObjC) |  Member (Swift) | Value | Description | Valid Argument(s) |
-| -------------------------- | ------------- | --------------- | ----- | ----------- | ----------------- |
+| Member (except ObjC/Swift) | Member (ObjC) |  Member (Swift) | Value |
+| -------------------------- | ------------- | --------------- | ----- |
 | DPMCRM_SKIP | EnumDPMCodeReadingModeSkip | skip | 0x00 | Skip the DPM code reading. |
 | DPMCRM_AUTO | EnumDPMCodeReadingModeAuto | auto | 0x01 | **Not supported yet.** |
 | DPMCRM_GENERAL | EnumDPMCodeReadingModeGeneral | general | 0x02 | Reads DPM code using the general algorithm. |
@@ -267,8 +267,8 @@ Describes the grayscale transformation mode.
 
 ### Members
 
-| Member (except ObjC/Swift) | Member (ObjC) |  Member (Swift) | Value | Description | Valid Argument(s) |
-| -------------------------- | ------------- | --------------- | ----- | ----------- | ----------------- |
+| Member (except ObjC/Swift) | Member (ObjC) |  Member (Swift) | Value | Description |
+| -------------------------- | ------------- | --------------- | ----- | ----------- |
 | GTM_SKIP  | EnumGrayscaleTransformationModeSkip | skip | 0x00 | Skips grayscale transformation. |
 | GTM_INVERTED  | EnumGrayscaleTransformationModeInverted | inverted | 0x01 | Transforms to inverted grayscale. Recommended for light on dark images. |
 | GTM_ORIGINAL | EnumGrayscaleTransformationModeOriginal | original | 0x02 | Keeps the original grayscale. Recommended for dark on light images. |
@@ -347,8 +347,8 @@ Describes the PDF reading mode.
 
 ### Members
 
-| Member (except ObjC/Swift) | Member (ObjC) |  Member (Swift) | Value | Description | Valid Argument(s) |
-| -------------------------- | ------------- | --------------- | ----- | ----------- | ----------------- |
+| Member (except ObjC/Swift) | Member (ObjC) |  Member (Swift) | Value | Description |
+| -------------------------- | ------------- | --------------- | ----- | ----------- |
 | PDFRM_AUTO | EnumPDFReadingModeAuto | auto | 0x01 | Lets the library choose the reading mode automatically. |
 | PDFRM_VECTOR | EnumPDFReadingModeVector | vector | 0x02 | Detects barcode from vector data in PDF file. |
 | PDFRM_RASTER | EnumPDFReadingModeRaster | raster | 0x04 | Converts the PDF file to image(s) first, then perform barcode recognition. |
@@ -419,8 +419,8 @@ Describes the terminate phase.
 
 ### Members
 
-| Member (except ObjC/Swift) | Member (ObjC) |  Member (Swift) | Value | Description | Valid Argument(s) |
-| -------------------------- | ------------- | --------------- | ----- | ----------- | ----------------- |
+| Member (except ObjC/Swift) | Member (ObjC) |  Member (Swift) | Value | Description |
+| -------------------------- | ------------- | --------------- | ----- | ----------- |
 | TP_REGION_PREDETECTED | EnumTerminatePhasePredetected | predetected | 0x01 | Exits the barcode reading algorithm after the region predetection is done. |
 | TP_IMAGE_PREPROCESSED | EnumTerminatePhasePreprocecessed | preprocecessed | 0x02 | Exits the barcode reading algorithm after the region predetection and image pre-processing is done. |
 | TP_IMAGE_BINARIZED | EnumTerminatePhaseBinarized | binarized | 0x04 | Exits the barcode reading algorithm after the region predetection, image pre-processing, and image binarization are done. |
