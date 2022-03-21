@@ -145,10 +145,10 @@ Describes the extended result type.
 
 | Member (except ObjC/Swift) | Member (ObjC) |  Member (Swift) | Value | Description |
 | -------------------------- | ------------- | --------------- | ----- | ----------- |
-| RT_STANDARD_TEXT | EnumResultTypeStandardText | standardText | 0 | Specifies the standard text. This means the barcode value. |
-| RT_RAW_TEXT | EnumResultTypeRawText | rawText | 1 | Specifies the raw text. This means the text that includes start/stop characters, check digits, etc. |
-| RT_CANDIDATE_TEXT | EnumResultTypeCandidateText | candidateText | 2 | Specifies all the candidate text. This means all the standard text results decoded from the barcode. |
-| RT_PARTIAL_TEXT | EnumResultTypePartialText | partialText | 3 | Specifies the partial text. This means part of the text result decoded from the barcode. |
+| RT_STANDARD_TEXT | EnumResultTypeStandardText | standardText | 0x00 | Specifies the standard text. This means the barcode value. |
+| RT_RAW_TEXT | EnumResultTypeRawText | rawText | 0x01 | Specifies the raw text. This means the text that includes start/stop characters, check digits, etc. |
+| RT_CANDIDATE_TEXT | EnumResultTypeCandidateText | candidateText | 0x02 | Specifies all the candidate text. This means all the standard text results decoded from the barcode. |
+| RT_PARTIAL_TEXT | EnumResultTypePartialText | partialText | 0x03 | Specifies the partial text. This means part of the text result decoded from the barcode. |
 
 ## TextResultOrderMode
 
