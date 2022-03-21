@@ -20,14 +20,12 @@ needGenerateH3Content: false
   | [`DM_LicenseModule`](#dm_licensemodule) | `Deprecated` |
   | [`DM_UUIDGenerationMethod`](#dm_uuidgenerationmethod) | `Deprecated` |
   | [`Product`](#product) | `Deprecated` |
-  
 
 ## ImagePixelFormat
 Describes the image pixel format.
 
-
 ### Declarations
-   
+
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum ImagePixelFormat` |
@@ -37,16 +35,14 @@ Describes the image pixel format.
 | Java / Android | `class EnumImagePixelFormat` |
 | ObjC / Swift | `enum EnumImagePixelFormat` |
 
-
-
 ### Members
-   
-| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
-| -------------------------- | ------------------- | ----- | ----------- |
-| IPF_BINARY | EnumImagePixelFormatBinary | 0 | 0: Black, 1: White |
-| IPF_BINARYINVERTED | EnumImagePixelFormatBinaryInverted | 1 | 0: Black, 1: White |
-| IPF_GRAYSCALED | EnumImagePixelFormatGrayScaled | 2 | 8 bit gray |
-| IPF_NV21 | EnumImagePixelFormatNV21 | 3 | NV21 |
+
+| Member (except ObjC/Swift) | Member (ObjC) | Member (Swift) | Value | Description |
+| -------------------------- | ------------- | -------------- | ----- | ----------- |
+| IPF_BINARY | EnumImagePixelFormatBinary | binary | 0 | 0: Black, 1: White |
+| IPF_BINARYINVERTED | EnumImagePixelFormatBinaryInverted | binaryInverted | 1 | 0: Black, 1: White |
+| IPF_GRAYSCALED | EnumImagePixelFormatGrayScaled | grayScaled | 2 | 8 bit gray |
+| IPF_NV21 | EnumImagePixelFormatNV21 | NV21 | 3 | NV21 |
 | IPF_RGB_565 | EnumImagePixelFormatRGB_565 | 4 | 16bit with RGB channel order stored in memory from high to low address |
 | IPF_RGB_555 | EnumImagePixelFormatRGB_555 | 5 | 16bit with RGB channel order stored in memory from high to low address |
 | IPF_RGB_888 | EnumImagePixelFormatRGB_888 | 6 | 24bit with RGB channel order stored in memory from high to low address |
@@ -57,14 +53,11 @@ Describes the image pixel format.
 | IPF_ABGR_16161616 | EnumImagePixelFormatABGR_8888 | 11 | 64bit with ABGR channel order stored in memory from high to low address |
 | IPF_BGR_888 | EnumImagePixelFormatBGR_888 | 12 | 24bit with BGR channel order stored in memory from high to low address |
 
-
-
 ## QRCodeErrorCorrectionLevel
 Describes the QR Code error correction level.  
 
-
 ### Declarations
-   
+
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum QRCodeErrorCorrectionLevel` |
@@ -74,17 +67,14 @@ Describes the QR Code error correction level.
 | Java / Android | `class EnumQRCodeErrorCorrectionLevel` |
 | ObjC / Swift | `enum EnumQRCodeErrorCorrectionLevel` |
 
-
 ### Members
-   
+
 | Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
 | -------------------------- | ------------------- | ----- | ----------- |
 | QRECL_ERROR_CORRECTION_H | EnumQRCodeErrorCorrectionLevelErrorCorrectionH | 0 | Error Correction Level H (high) |
 | QRECL_ERROR_CORRECTION_L | EnumQRCodeErrorCorrectionLevelErrorCorrectionL | 1 | Error Correction Level L (low) |
 | QRECL_ERROR_CORRECTION_M | EnumQRCodeErrorCorrectionLevelErrorCorrectionM | 2 | Error Correction Level M (medium-low) |
 | QRECL_ERROR_CORRECTION_Q | EnumQRCodeErrorCorrectionLevelErrorCorrectionQ | 3 | Error Correction Level Q (medium-high) |
-
-
 
 ## PresetTemplate
 
@@ -108,13 +98,11 @@ Describes the preset parameter setting templates.
 | `IMAGE_SPEED_FIRST` | `EnumPresetTemplateImageSpeedFirst` | 4 | The speed optimized template for image barcode decoding. |
 | `IMAGE_READ_RATE_FIRST` | `EnumPresetTemplateImageReadRateFirst` | 5 | The read rate optimized template for image barcode decoding. |
 
-
-
 ## DM_ChargeWay
 `Deprecated`. It still works in this version but could be removed in the near future.
 
 ### Declarations
-   
+
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum DM_ChargeWay` |
@@ -124,9 +112,8 @@ Describes the preset parameter setting templates.
 | Java / Android | `class EnumDMChargeWay` |
 | ObjC / Swift | `enum EnumDMChargeWay` |
 
-
 ### Members
-   
+
 | Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
 | -------------------------- | ------------------- | ----- | ----------- |
 | DM_CW_AUTO | EnumDMChargeWayAuto | 0 | The charge way automatically determined by the license server. |
@@ -138,15 +125,11 @@ Describes the preset parameter setting templates.
 | DM_CW_INSTANCE_COUNT | EnumDMChargeWayInstanceCount | 9 | Charges by the count of instances. |
 | DM_CW_CONCURRENT_INSTANCE_COUNT | EnumDMChargeWayConcurrentInstanceCount | 10 | Charges by the count of concurrent instances. |
 
-
-
-
 ## DM_DeploymentType
 `Deprecated`. It still works in this version but could be removed in the near future.
 
-
 ### Declarations
-   
+
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum DM_DeploymentType` |
@@ -157,9 +140,8 @@ Describes the preset parameter setting templates.
 | Android | `N/A` |
 | ObjC / Swift | `N/A` |
 
-
 ### Members
-   
+
 | Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
 | -------------------------- | ------------------- | ----- | ----------- |
 | DM_DT_SERVER | N/A | 1 | Server deployment type |
@@ -167,14 +149,11 @@ Describes the preset parameter setting templates.
 | DM_DT_EMBEDDED_DEVICE | N/A | 6 | Embedded device deployment type |
 | DM_DT_OEM | N/A | 7 | OEM deployment type |
 
-
-
 ## DM_LicenseModule
 `Deprecated`. It still works in this version but could be removed in the near future.
 
-
 ### Declarations
-   
+
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum DM_LicenseModule` |
@@ -184,9 +163,8 @@ Describes the preset parameter setting templates.
 | Java / Android | `class EnumDMLicenseModule` |
 | ObjC / Swift | `enum EnumDMLicenseModule` |
 
-
 ### Members
-   
+
 | Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
 | -------------------------- | ------------------- | ----- | ----------- |
 | DM_LM_ONED | EnumDMLicenseModuleONED | 1 | One-D barcodes license module |
@@ -204,13 +182,11 @@ Describes the preset parameter setting templates.
 | DM_LM_DPM | EnumDMLicenseModuleDPM | 13 |DATAMATRIX DPM (Direct Part Marking) license module |
 | DM_LM_NONSTANDARD_BARCODE | EnumDMLicenseModuleNONSTANDARDBARCODE | 16 | Nonstandard barcodes license module|
 
-
 ## DM_UUIDGenerationMethod
 `Deprecated`. It still works in this version but could be removed in the near future.
 
-
 ### Declarations
-   
+
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum DM_UUIDGenerationMethod` |
@@ -220,22 +196,19 @@ Describes the preset parameter setting templates.
 | Java / Android | `class EnumDMUUIDGenerationMethod` |
 | ObjC / Swift | `enum EnumDMUUIDGenerationMethod` |
 
-
 ### Members
-   
+
 | Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
 | -------------------------- | ------------------- | ----- | ----------- |
 | DM_UUIDGM_RANDOM | EnumDMUUIDGenerationMethodRandom | 1 | Generates UUID with random values. |
 | DM_UUIDGM_HARDWARE | EnumDMUUIDGenerationMethodHardware | 2 | Generates UUID based on hardware info. |
 
-
-
 ## Product
+
 `Deprecated`. It still works in this version but could be removed in the near future.
 
-
 ### Declarations
-   
+
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum Product` |
@@ -246,7 +219,7 @@ Describes the preset parameter setting templates.
 | ObjC / Swift | `enum EnumProduct` |
 
 ### Members
-   
+
 | Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
 | -------------------------- | ------------------- | ----- | ----------- |
 | PROD_DBR | EnumProductDBR | 0x0001 | Dynamsoft Barcode Reader |
