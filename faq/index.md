@@ -6,7 +6,7 @@ description: Dynamsoft Barcode Reader FAQ Homepage
 needAutoGenerateSidebar: true
 ---
 
-# FAQ
+# DBR JS FAQ
 
 ## General
 

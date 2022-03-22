@@ -22,14 +22,14 @@ needGenerateH3Content: false
 
 ### Edition Highlights
 
-- Added ARM64 components for Linux to the SDK. In previous versions, Java Edition supported Windows x32/x64, macOS x64, and Linux x64.
+- Added ARM64 Linux support to the Java edition of the SDK. In previous versions, Java Edition supported Windows x32/x64, macOS x64, and Linux x64.
 
 ### Changelog
 
 #### New
 
 - Added `BF_CODE_11` under Enumeration [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) to specify newly supported barcode format, Code 11. 
-- Added `BF2_PHARMACODE_ONE_TRACK`, `BF2_PHARMACODE_TWO_TRACK` and `BF2_PHARMACODE` under Enumeration [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) to specify newly supported barcode format, Pharmacodes. 
+- Added `BF2_PHARMACODE_ONE_TRACK`, `BF2_PHARMACODE_TWO_TRACK` and `BF2_PHARMACODE` under Enumeration [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) to specify newly supported barcode format, Pharmacode. 
 - Added a new error code [`DBRERR_PHARMACODE_LICENSE_INVALID`]({{ site.enumerations }}error-code.html#error-code--10062) which will be returned when the license of Pharmacode is invalid.
 - Added `DRM_BROAD_WARP`, `DRM_LOCAL_REFERENCE` and `DRM_DEWRINKLE` under Enumeration [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode) to apply new deformation resisting modes.
 - Added a parameter [`FormatSpecification.PartitionModes`]({{ site.parameters_reference }}partition-modes.html)
@@ -42,12 +42,12 @@ needGenerateH3Content: false
 - Changed value of BF_ONED under Enumeration [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) to 0x003007FF to have BF_CODE_11 combined.
 - Changed value of BF_ALL under Enumeration [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) to 0xFE3FFFFF to have BF_CODE_11 combined.
 - Changed the behaviour of [`DeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode) DRM_GENERAL which now only applies basic process to resist deformation.
-- Changed the return value of the method getIdleInstancesCount from 0 to -1 when the available count needs to be updated from server by calling initLicense.
+- Changed the return value of the method [getIdleInstancesCount]({{ site.java_methods }}license.html#getidleinstancescount) from 0 to -1 when the available count needs to be updated from server by calling initLicense.
 
 
 #### Fixed
 - Fixed a bug that might cause a crash when using multiple threads for barcode decoding.
-- Fixed a bug that throws exceptions when using method getIdleInstanceCount.
+- Fixed a bug that throws exceptions when using method [getIdleInstancesCount]({{ site.java_methods }}license.html#getidleinstancescount).
 - Fixed a bug that Function Code 1 (FNC1) character would not return if it was in the first position of GS1-128 codes.
 - Other small fixes and tweaks.
 

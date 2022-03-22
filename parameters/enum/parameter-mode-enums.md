@@ -12,6 +12,7 @@ needGenerateH3Content: false
   | Enumeration | Description |
   |-------------|-------------|
   | [`BarcodeColourMode`](#barcodecolourmode) | Describes the barcode colour mode. |
+  | [`BarcodeColourMode`](#barcodecolourmode) | Describes the barcode colour mode. |
   | [`BarcodeComplementMode`](#barcodecomplementmode) | Describes the barcode complement mode. |
   | [`BinarizationMode`](#binarizationmode) | Describes the binarization mode. |
   | [`ColourClusteringMode`](#colourclusteringmode) | Describes the colour clustering mode. |
@@ -418,15 +419,21 @@ Describes the terminate phase.
 | ObjC / Swift | `enum EnumTerminatePhase` |
 
 ### Members
-
-| Member (except ObjC/Swift) | Member (ObjC) |  Member (Swift) | Value | Description |
-| -------------------------- | ------------- | --------------- | ----- | ----------- |
+   
+| Member (except ObjC/Swift) | Member (ObjC) | Member (Swift) | Value | Description |
+| -------------------------- | ------------- | -------------- | ----- | ----------- |
 | TP_REGION_PREDETECTED | EnumTerminatePhasePredetected | predetected | 0x01 | Exits the barcode reading algorithm after the region predetection is done. |
 | TP_IMAGE_PREPROCESSED | EnumTerminatePhasePreprocecessed | preprocecessed | 0x02 | Exits the barcode reading algorithm after the region predetection and image pre-processing is done. |
 | TP_IMAGE_BINARIZED | EnumTerminatePhaseBinarized | binarized | 0x04 | Exits the barcode reading algorithm after the region predetection, image pre-processing, and image binarization are done. |
-| TP_BARCODE_LOCALIZED | EnumTerminatePhasesLocalized | localized | 0x08 | Exits the barcode reading algorithm after the region predetection, image pre-processing, image binarization, and barcode localization are done. |
+| TP_BARCODE_LOCALIZED | EnumTerminatePhaseLocalized | localized | 0x08 | Exits the barcode reading algorithm after the region predetection, image pre-processing, image binarization, and barcode localization are done. |
 | TP_BARCODE_TYPE_DETERMINED | EnumTerminatePhaseDetermined | determined | 0x10 | Exits the barcode reading algorithm after the region predetection, image pre-processing, image binarization, barcode localization, and barcode type determining are done. |
 | TP_BARCODE_RECOGNIZED | EnumTerminatePhaseRecognized | recognized | 0x20 | Exits the barcode reading algorithm after the region predetection, image pre-processing, image binarization, barcode localization, barcode type determining, and barcode recognition are done. |
+
+
+
+
+
+
 
 ## TextFilterMode
 
