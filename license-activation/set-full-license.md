@@ -84,7 +84,7 @@ You will find that the License Key is listed on the page now.
   BarcodeReader reader = new BarcodeReader();
   // add further process
 ```
-5.
+5. 
 ```java
 BarcodeReader.initLicense("YOUR-LICENSE-KEY", new DBRLicenseVerificationListener() {
   @Override
@@ -93,7 +93,7 @@ BarcodeReader.initLicense("YOUR-LICENSE-KEY", new DBRLicenseVerificationListener
   }
 });
 ```
-6.
+6. 
 ```objc
 [DynamsoftBarcodeReader initLicense:@"YOUR-LICENSE-KEY" verificationDelegate:self];
 - (void)DBRLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error
@@ -101,7 +101,7 @@ BarcodeReader.initLicense("YOUR-LICENSE-KEY", new DBRLicenseVerificationListener
   // Add your code for license verification.
 }
 ```
-7.
+7. 
 ```swift
 DynamsoftBarcodeReader.initLicense("YOUR-LICENSE-KEY", verificationDelegate: self)
 func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
