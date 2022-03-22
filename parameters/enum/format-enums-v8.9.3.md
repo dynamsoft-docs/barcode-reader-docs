@@ -9,21 +9,20 @@ needGenerateH3Content: false
 
 
 # Format Enumeration
+
 The barcode format our library will search for is composed of [BarcodeFormat group 1](#barcodeformat) and [BarcodeFormat group 2](#barcodeformat_2), so you need to specify the barcode format in group 1 and group 2 individually.
 
   | Enumeration | Description |
   |-------------|-------------|
   | [`BarcodeFormat`](#barcodeformat) | Describes the barcode types in BarcodeFormat group 1. |
   | [`BarcodeFormat_2`](#barcodeformat_2) | Describes the barcode types in BarcodeFormat group 2. |
-  
-
-
 
 ## BarcodeFormat
-Describes the barcode types in BarcodeFormat group 1. 
+
+Describes the barcode types in BarcodeFormat group 1.
 
 ### Declarations
-   
+
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum BarcodeFormat` |
@@ -33,9 +32,8 @@ Describes the barcode types in BarcodeFormat group 1.
 | Java / Android | `class EnumBarcodeFormat` |
 | ObjC / Swift | `enum EnumBarcodeFormat` |
 
-
 ### Members
-   
+
 | Member (except ObjC/Swift) | Member (ObjC) | Member (Swift) | Value | Description |
 | -------------------------- | ------------- | -------------- | ----- | ----------- |
 | BF_ALL | EnumBarcodeFormatALL | ALL | 0xFE3FFFFF | All supported formats in [BarcodeFormat group 1](#barcodeformat). |
@@ -72,18 +70,14 @@ Describes the barcode types in BarcodeFormat group 1.
 | BF_MICRO_QR | EnumBarcodeFormatMICROQR | MICROQR | 0x40000000 | Micro QR Code |
 | BF_GS1_COMPOSITE | EnumBarcodeFormatGS1COMPOSITE | GS1COMPOSITE | -2147483648 | GS1 Composite Code |
 
-
-
 &nbsp;
 
-
-
 ## BarcodeFormat_2
+
 Describes the barcode types in BarcodeFormat group 2.
 
-
 ### Declarations
-   
+
 | Language | Declaration |
 | -------- | ----------- |
 | C / C++ | `enum BarcodeFormat_2` |
@@ -93,9 +87,8 @@ Describes the barcode types in BarcodeFormat group 2.
 | Java / Android | `class EnumBarcodeFormat_2` |
 | ObjC / Swift | `enum EnumBarcodeFormat_2` |
 
-
 ### Members
-   
+
 | Member (except ObjC/Swift) | Member (ObjC) | Member (Swift) | Value | Description |
 | -------------------------- | ------------- | -------------- | ----- | ----------- |
 | BF2_POSTALCODE | EnumBarcodeFormat2POSTALCODE | POSTALCODE | 0x01F00000 | Combined value of BF2_USPSINTELLIGENTMAIL, BF2_POSTNET, BF2_PLANET, BF2_AUSTRALIANPOST, BF2_RM4SCC. |
@@ -107,4 +100,3 @@ Describes the barcode types in BarcodeFormat group 2.
 | BF2_AUSTRALIANPOST | EnumBarcodeFormat2AUSTRALIANPOST | AUSTRALIANPOST | 0x00800000 | Australian Post |
 | BF2_RM4SCC | EnumBarcodeFormat2RM4SCC | RM4SCC | 0x01000000 | Royal Mail 4-State Customer Barcode |
 | BF2_DOTCODE | EnumBarcodeFormat2DOTCODE | DOTCODE | 0x02 | DotCode |
-
