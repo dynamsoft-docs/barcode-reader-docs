@@ -99,44 +99,31 @@ For mobile edition (8.2+) and the JavaScript edition (8.2.5+), a free trial lice
 >1. 
 ```javascript
 // replace the number 200001 with YOUR-ORGANIZATION-ID
-Dynamsoft.DBR.BarcodeReader.organizationID = "200001"; 
+Dynamsoft.DBR.BarcodeReader.organizationID = "200001";
 var reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
 ```
 2. 
 ```java
-mBarcodeReader = new BarcodeReader();
-DMDLSConnectionParameters dls = new DMDLSConnectionParameters();
-// replace the number 200001 with YOUR-ORGANIZATION-ID
-dls.organizationID = "200001";
-mbarcodeReader.initLicenseFromDLS(dls, new DBRDLSLicenseVerificationListener() {
-    @Override
-    public void DLSLicenseVerificationCallback(boolean b, Exception e) {
-        if (e != null){
-            Log.i("dls error: ", e.getMessage());  
-        } 
-    }
+BarcodeReader.initLicense("YOUR-LICENSE-KEY", new DBRLicenseVerificationListener() {
+  @Override
+  public void DBRLicenseVerificationCallback(boolean isSuccessful, Exception e) {
+    // Add your code for license verification.
+  }
 });
 ```
 3. 
-```obj-c
-DynamsoftBarcodeReader *barcodeReader;
-iDMDLSConnectionParameters* dls = [[iDMDLSConnectionParameters alloc] init];
-// replace the number 200001 with YOUR-ORGANIZATION-ID
-dls.organizationID = @"200001";
-barcodeReader = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:dls verificationDelegate:self];
-* (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
+```objc
+[DynamsoftBarcodeReader initLicense:@"YOUR-LICENSE-KEY" verificationDelegate:self];
+- (void)DBRLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error
 {
-    //TODO add your code for license verification
+  // Add your code for license verification.
 }
 ```
 4. 
 ```swift
-let dls = iDMDLSConnectionParameters()
-// replace the number 200001 with YOUR-ORGANIZATION-ID
-dls.organizationID = "200001"
-let barcodeReader = DynamsoftBarcodeReader.init(licenseFromDLS: dls, verificationDelegate: self)
-func DLSLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
+DynamsoftBarcodeReader.initLicense("YOUR-LICENSE-KEY", verificationDelegate: self)
+func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
 {
-    //TODO add your code for license verification
+  // Add your code for license verification.
 }
 ```

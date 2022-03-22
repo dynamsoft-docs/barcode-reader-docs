@@ -53,6 +53,9 @@ You will find that the License Key is listed on the page now.
 >- C++
 >- C#
 >- Java
+>- Android
+>- Objective-C
+>- Swift
 >
 >1. 
 ```c
@@ -80,6 +83,31 @@ You will find that the License Key is listed on the page now.
   BarcodeReader.initLicense("YOUR-LICENSE-KEY");
   BarcodeReader reader = new BarcodeReader();
   // add further process
+```
+5.
+```java
+BarcodeReader.initLicense("YOUR-LICENSE-KEY", new DBRLicenseVerificationListener() {
+  @Override
+  public void DBRLicenseVerificationCallback(boolean isSuccessful, Exception e) {
+    // Add your code for license verification.
+  }
+});
+```
+6.
+```objc
+[DynamsoftBarcodeReader initLicense:@"YOUR-LICENSE-KEY" verificationDelegate:self];
+- (void)DBRLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error
+{
+  // Add your code for license verification.
+}
+```
+7.
+```swift
+DynamsoftBarcodeReader.initLicense("YOUR-LICENSE-KEY", verificationDelegate: self)
+func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
+{
+  // Add your code for license verification.
+}
 ```
 
  If you run into any issues, please [contact Dynamsoft Support](https://www.dynamsoft.com/Company/Contact.aspx).
