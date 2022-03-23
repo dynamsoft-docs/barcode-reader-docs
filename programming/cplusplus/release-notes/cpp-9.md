@@ -34,7 +34,7 @@ needGenerateH3Content: false
 - Changed value of BF_ONED under Enumeration [`BarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) to 0x003007FF to have BF_CODE_11 combined.
 - Changed value of BF_ALL under Enumeration [`BarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) to 0xFE3FFFFF to have BF_CODE_11 combined.
 - Changed the behaviour of [`DeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode) DRM_GENERAL which now only applies basic process to resist deformation.
-- Changed the return value of the method [getIdleInstancesCount]({{ site.java_methods }}license.html#getidleinstancescount) from 0 to -1 when the available count needs to be updated from server by calling InitLicense.
+- Changed the return value of the method [`GetIdleInstancesCount`]({{ site.cpp_methods }}license.html#getidleinstancescount) from 0 to -1 when the available count needs to be updated from server by calling InitLicense.
 
 
 #### Fixed
