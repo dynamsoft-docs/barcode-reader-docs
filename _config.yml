@@ -123,6 +123,11 @@ defaults:
       category: "original-repo"
       editon: "desktop"
   - scope:
+      path: "programming/c-cplusplus"
+    values:
+      category: "original-repo"
+      editon: "desktop"
+  - scope:
       path: "programming/dotnet"
     values:
       category: "original-repo"
