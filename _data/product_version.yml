@@ -1,8 +1,10 @@
 version_info_list:
   - latest version
+  - 8.9.3
   - 8.9.0
+  - 8.8.7
   - 8.8.5
-  - 8.8.3  
+  - 8.8.3
   - 8.8.0
   - 8.6.3
   - 8.6.1
@@ -17,7 +19,7 @@ version_info_list:
   - 8.1.0
   - 8.0.0
   - 7.6.0
-  - 7.5.0
+  - 7.5.0 
 
 version_info_list_desktop:
   - latest version
@@ -50,7 +52,7 @@ version_info_list_js:
   - latest version
   - 8.8.7
   - 8.8.5
-  - 8.8.3  
+  - 8.8.3
   - 8.8.0
   - 8.6.3
   - 8.6.1
