@@ -62,7 +62,7 @@ Import dbr package in the source file.
    ```python
    BarcodeReader.init_license("<insert DBR license key here>")
    ```
-    > Please replace `<insert DBR license key here>` with a valid DBR license key. You can request a free trial from <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">Customer Portal</a>. 
+    > Please replace `<insert DBR license key here>` with a valid DBR license key. You can request a free trial from <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=desktop" target="_blank">Customer Portal</a>. 
 
 2. Create an instance of Dynamsoft Barcode Reader.
 

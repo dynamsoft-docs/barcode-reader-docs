@@ -13,7 +13,7 @@ If you are using the mobile edition (8.2+) or the JavaScript edition (8.2.5+), p
   
 ## Get a trial license key
 
-You can log in the customer portal and [request for a trial extension online](https://www.dynamsoft.com/customer/license/trialLicense).
+You can log in the customer portal and [request for a trial extension online](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs&product=dbr).
 
 **Note**: If the trial license expires or it is missing, you can still get barcode reading results but partial of the result will be masked with "*".
 
@@ -74,7 +74,7 @@ Then please save and rebuild your application.
 
 For mobile edition (8.2+) and the JavaScript edition (8.2.5+), a free trial license called ["public trial license"](https://www.dynamsoft.com/license-tracking/docs/about/terms.html?ver=latest#public-trial-license) will be used by default if no license is specified in your code. When this public trial license expires, you can get a 30-day free trial license called ["private trial license"](https://www.dynamsoft.com/license-tracking/docs/about/terms.html?ver=latest#private-trial-license). The following shows how to request this license.
 
-- 1. Request the private trial license in the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense), register for a Dynamsoft account if necessary.
+- 1. Request the private trial license in the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs&product=dbr), register for a Dynamsoft account if necessary.
 - 2. A 30-day private-trial license will be generated and configured to your organization. 
 
 > NOTE
