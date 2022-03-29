@@ -101,14 +101,42 @@ defaults:
       path: "programming/javascript"
     values:
       category: "js-repo"
+      editon: "js"
   - scope:
       path: "programming/android"
     values:
       category: "mobile-repo"
+      editon: "mobile"
   - scope:
       path: "programming/objectivec-swift"
     values:
       category: "mobile-repo"
+      editon: "mobile"
+  - scope:
+      path: "programming/c"
+    values:
+      category: "original-repo"
+      editon: "desktop"
+  - scope:
+      path: "programming/cplusplus"
+    values:
+      category: "original-repo"
+      editon: "desktop"
+  - scope:
+      path: "programming/dotnet"
+    values:
+      category: "original-repo"
+      editon: "desktop"
+  - scope:
+      path: "programming/python"
+    values:
+      category: "original-repo"
+      editon: "desktop"
+  - scope:
+      path: "programming/java"
+    values:
+      category: "original-repo"
+      editon: "desktop"
   - scope:
       path: ""
     values:
