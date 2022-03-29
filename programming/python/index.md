@@ -27,6 +27,7 @@ This provides a brief guide on how to integrate Dynamsoft Barcode Reader into yo
 
 ## Release Notes
 
+- [Version 9.x](release-notes/python-9.md)
 - [Version 8.x](release-notes/python-8.md)
 - [Version 7.4 - 7.6](release-notes/python-7.md)
 
