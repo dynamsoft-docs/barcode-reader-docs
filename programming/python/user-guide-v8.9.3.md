@@ -20,7 +20,6 @@ In this guide, you will learn step by step on how to build a barcode reading app
     - macOS<sup>1</sup> (10.15+)
 
 - Python Versions: 
-    - Python 3.10
     - Python 3.9
     - Python 3.8
     - Python 3.7
@@ -57,18 +56,18 @@ Import dbr package in the source file.
 
 ### Initialize a Barcode Reader Instance
 
-1. Initialize the license key.
-
-   ```python
-   BarcodeReader.init_license("<insert DBR license key here>")
-   ```
-    > Please replace `<insert DBR license key here>` with a valid DBR license key. You can request a free trial from <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=desktop" target="_blank">Customer Portal</a>. 
-
-2. Create an instance of Dynamsoft Barcode Reader.
+1. Create an instance of Dynamsoft Barcode Reader.
 
    ```python
    reader = BarcodeReader()
    ```
+
+2. Initialize the license key.
+
+   ```python
+   reader.init_license("<insert DBR license key here>")
+   ```
+    > Please replace `<insert DBR license key here>` with a valid DBR license key. You can request a free trial from <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=desktop" target="_blank">Customer Portal</a>. 
 
 ### Configure the Barcode Scanning Behavior
 

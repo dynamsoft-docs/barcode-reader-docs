@@ -76,7 +76,7 @@ Let's start by creating a console application which demonstrates how to use the 
     
     >Please replace `<insert DBR license key here>` with a valid DBR licensekey. There are two ways to obtain one:
     >- Search `InitLicense` and find the license from `[INSTALLATION FOLDER]/Samples/BarcodeReaderDemo/BarcodeReaderDemo.cpp`.
-    >- Request a trial license from <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">Customer Portal</a>. 
+    >- Request a trial license from <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=desktop" target="_blank">Customer Portal</a>. 
 
 ### Configure the Barcode Scanning Behavior
 1. Set barcode format and count to read.
