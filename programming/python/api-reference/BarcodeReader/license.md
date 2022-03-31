@@ -47,7 +47,7 @@ BarcodeReader.get_idle_instances_count()
 ```   
 
 **Return Value**  
-count <*int*> : Returns available instances count.    
+`count` <*int*> : Returns available instances count.    
 - 0: There is no space for new instance  
 - -1: The available count needs to be updated from server by calling initLicense.
 - N ( N > 0 ): N more instances can be created.
