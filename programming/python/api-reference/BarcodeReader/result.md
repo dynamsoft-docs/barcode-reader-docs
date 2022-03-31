@@ -13,7 +13,6 @@ needAutoGenerateSidebar: true
   |----------------------|-------------|
   | [`get_all_intermediate_results`](#get_all_intermediate_results) | Returns intermediate results containing the original image, the colour clustered image, the binarized Image, contours, Lines, TextBlocks, etc.  |
 
-  ---
 
 ## get_all_intermediate_results
 
@@ -25,7 +24,7 @@ BarcodeReader.get_all_intermediate_results()
 
 **Return Value**  
 
-`intermediate_results <*list[class IntermediateResult]*>` : All intermediate results.
+`intermediate_results` <*list[class IntermediateResult]*> : All intermediate results.
 
 **Code Snippet**  
 
