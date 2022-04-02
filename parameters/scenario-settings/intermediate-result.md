@@ -36,9 +36,9 @@ The following code snippet illustrate how to save intermediate results in memory
  reader->GetAllTextResults(&result);
  int icount = result->resultsCount;
  IntermediateResultArray *iResults = NULL;
- reader->GetIntermediateResults(&iResults);//Get intermediate results
+ reader->GetIntermediateResults(&iResults);//Get all intermediate results
  int rCount = iResults->resultsCount;
- for (int i = 0; i < rCount; i++) //Recursion the intermediate results
+ for (int i = 0; i < rCount; i++) //Show all intermediate results
     {
         if(iResults->results[i]->dataType == IMRDT_IMAGE)
         {
