@@ -34,7 +34,7 @@ delete pSettings;
 
 **See Also**      
 - `PublicRuntimeSettings:` [JavaScript]({{ site.js_api }}interface/RuntimeSettings.html) \| [C]({{ site.structs }}PublicRuntimeSettings.html?src=c) \| [C++]({{ site.structs }}PublicRuntimeSettings.html?src=cpp) \| [.NET]({{ site.dotnet_api }}struct/PublicRuntimeSettings.html) \| [Python]({{ site.python_api }}class/PublicRuntimeSettings.html) \| [Java]({{ site.java_api }}class/PublicRuntimeSettings.html) \| [Java-Android]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) \| [Objective-C & Swift]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html)
-- [`IntermediateResultType` Enumeration]({{ site.enumerations }}format-enums.html#intermediateresulttype)
+- [`IntermediateResultType` Enumeration]({{ site.enumerations }}result-enums.html#intermediateresulttype)
 
 
 ### As JSON Parameter
@@ -42,7 +42,7 @@ delete pSettings;
 
 | Key Name | Key Value |
 | -------- | --------- |
-| IntermediateResultTypes | A string array while each array item is one of the [`IntermediateResultType` Enumeration]({{ site.enumerations }}format-enums.html#intermediateresulttype) items. |
+| IntermediateResultTypes | A string array while each array item is one of the [`IntermediateResultType` Enumeration]({{ site.enumerations }}result-enums.html#intermediateresulttype) items. |
 
 
 **JSON Example**   
