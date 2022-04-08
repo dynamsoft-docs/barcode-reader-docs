@@ -14,7 +14,7 @@ Dynamsoft Barcode Reader (DBR) is a software development kit (SDK) with highly c
 
 ## Barcode Formats
 
-As of v8.1, DBR currently supports the following barcode formats:  
+As of v9.0, DBR currently supports the following barcode formats:  
 
 | 1D/Linear Barcodes       | 2D Barcodes         | GS1 DataBar             | Postal Codes          | Other Types         |     
 |--------------------------|---------------------|-------------------------| --------------------- | ------------------ |
