@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 
-# API Reference - Java
+# Java API Reference
    
 ## BarcodeReader Class
 

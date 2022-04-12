@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
-# API Reference - Python
+# Python API Reference
  
 ## BarcodeReader Class
 

@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
-# API Reference - .Net
+# .Net API Reference
 
 ## BarcodeReader Class
 
