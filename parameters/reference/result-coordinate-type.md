@@ -28,7 +28,7 @@ Returns the coordinate as a percentage value.
 `ResultCoordinateType` is supported to be set through `RuntimeSetting` or JSON template.
 
 ### As `PublicRuntimeSettings` Member
-`ResultCoordinateType` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct, it is one of the [`ResultCoordinateType`]({{ site.enumerations }}parameter-mode-enums.html#resultcoordinatetype) Enumeration items.
+`ResultCoordinateType` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct, it is one of the [`ResultCoordinateType`]({{ site.enumerations }}result-enums.html#resultcoordinatetype) Enumeration items.
 
 
 **Code Snippet in C++**
