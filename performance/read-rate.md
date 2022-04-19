@@ -112,10 +112,10 @@ In some cases, due to misprinting, the barcodes may miss some modules, like the 
 The barcodes on the surface of some flexible packaging or cylindrical objects tend to be distorted or deformed. DBR is able to correct these deformed barcodes to a standard shape by setting `DRM_GENERAL` mode in parameter [DeformationResistingModes]({{ site.parameters_reference }}deformation-resisting-modes.html).
 
 ### Support Direct Part Marking Codes 
-DPM (Direct Part Marking) Codes, DataMatrix typically, are widely used in industrial part tracking, from electronics manufacturing to automotive assembly. They always come with light reflection, low contrast, complex background texture, and other distorted features. DBR is able to decode such DPM codes by setting `DPMCRM_GENERAL` mode in parameter [DPMCodeReadingModes]({{ site.parameters_reference }}mirror-mode.html). 
+DPM (Direct Part Marking) Codes, DataMatrix typically, are widely used in industrial part tracking, from electronics manufacturing to automotive assembly. They always come with light reflection, low contrast, complex background texture, and other distorted features. DBR is able to decode such DPM codes by setting `DPMCRM_GENERAL` mode in parameter [DPMCodeReadingModes]({{ site.parameters_reference }}dpm-code-reading-modes.html). 
 
 ### Cover Both Normal and Mirrored States 
-Sometimes, barcodes can come out in a mirrored orientation compared to the normal orientation (left to right). DBR is able to cover both normal and mirrored barcodes by setting `MM_BOTH` mode in parameter [MirrorMode]({{ site.parameters_reference }}image.html). If the barcodes you are decoding are of the same state, setting it to only `MM_NORMAL` or `MM_MIRROR` can improve the speed without affecting the read rate.
+Sometimes, barcodes can come out in a mirrored orientation compared to the normal orientation (left to right). DBR is able to cover both normal and mirrored barcodes by setting `MM_BOTH` mode in parameter [MirrorMode]({{ site.parameters_reference }}mirror-mode.html). If the barcodes you are decoding are of the same state, setting it to only `MM_NORMAL` or `MM_MIRROR` can improve the speed without affecting the read rate.
 
 ### Comply with Non-standard Barcodes
 In some cases, the barcode may not be generated or printed following the standard. DBR is able to decode such non-standard barcodes by setting the following parameters to provide information about the non-standard part.
