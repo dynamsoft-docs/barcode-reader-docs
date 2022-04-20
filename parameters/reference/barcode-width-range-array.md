@@ -25,8 +25,8 @@ needGenerateH3Content: true
 
 | Key Name | Key Value | Description |
 | -------- | --------- | ----------- |
-| MinValue | A number from [0, 360] | Sets the minimum barcode width.  |
-| MaxValue | A number from [0, 360] | Sets the maximum barcode width. |
+| MinValue | A number from [0, 0x7fffffff] | Sets the minimum barcode width.  |
+| MaxValue | A number from [0, 0x7fffffff] | Sets the maximum barcode width. |
 
 
 **JSON Example**   
