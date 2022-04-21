@@ -394,7 +394,7 @@ PublicRuntimeSetting.min_result_confidence
     [0, 100]
       
 **Default Value**     
-    0
+    30
     
 **Remarks**       
     0: means no limitation on the result confidence.
@@ -525,7 +525,7 @@ PublicRuntimeSetting.result_coordinate_type
 ```
 
 **Value Range**     
-    Any one of the ResultCoordinateType Enumeration items
+    Any one of the [`ResultCoordinateType`]({{ site.enumerations }}result-enums.html#resultcoordinatetype) Enumeration items
       
 **Default Value**     
     EnumResultCoordinateType.RCT_PIXEL
