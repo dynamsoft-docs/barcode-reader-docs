@@ -32,7 +32,7 @@ Returns the text results in alphabetical and numerical order by barcode format s
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
-`TextResultOrderModes` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct, it is an array with 8 [`TextResultOrderMode`]({{ site.enumerations }}parameter-mode-enums.html#textresultordermode) Enumeration items.
+`TextResultOrderModes` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct, it is an array with 8 [`TextResultOrderMode`]({{ site.enumerations }}result-enums.html#textresultordermode) Enumeration items.
 
 
 **Code Snippet in C++**
