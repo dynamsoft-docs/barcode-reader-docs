@@ -344,7 +344,7 @@ int Dynamsoft.DBR.PublicRuntimeSettings.MinResultConfidence
     [0, 100]
       
 **Default Value**     
-    0
+    30
     
 **Remarks**       
     0: means no limitation on the result confidence.
