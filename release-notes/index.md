@@ -18,7 +18,7 @@ needGenerateH3Content: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 9.0.1 | [Android](../programming/android/release-notes/android-9.md#901-04202022) / [iOS](../programming/objectivec-swift/release-notes/ios-9.md#901-04202022) |
+| 9.0.1 | [JavaScript](../programming/javascript/release-notes/js-9.md#901-04252022) / [Android](../programming/android/release-notes/android-9.md#901-04202022) / [iOS](../programming/objectivec-swift/release-notes/ios-9.md#901-04202022) |
 | 9.0.0 | [JavaScript](../programming/javascript/release-notes/js-9.md#900-03242022) / [C](../programming/c/release-notes/c-9.md#900-03152022) / [C++](../programming/cplusplus/release-notes/cpp-9.md#900-03152022) / [DotNet](../programming/dotnet/release-notes/dotnet-9.md#900-03152022) / [Python](../programming/python/release-notes/python-9.md#900-03312022) / [Java](../programming/java/release-notes/java-9.md#900-03152022) / [Android](../programming/android/release-notes/android-9.md#900-03222022) / [iOS](../programming/objectivec-swift/release-notes/ios-9.md#900-03222022) |
 
 ## 8.9
