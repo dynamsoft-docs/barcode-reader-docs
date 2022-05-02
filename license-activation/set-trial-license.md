@@ -58,8 +58,8 @@ You can use `initLicense()` to set the license.
 ```
 5. 
 ```python
- reader = BarcodeReader()
- reader.init_license("t0068NQAAAI8+mMcYRNwmijAzExhq******")
+  error = BarcodeReader.init_license("t0068NQAAAI8+mMcYRNwmijAzExhq******")
+  dbr = BarcodeReader()
 ```
 6. 
 ```php
@@ -87,8 +87,6 @@ For mobile edition (8.2+) and the JavaScript edition (8.2.5+), a free trial lice
 > NOTE
 >  
 > In case a private trial license fails to be generated, Dynamsoft Support team will get in touch with you. Or you can [contact us](https://www.dynamsoft.com/company/contact/).
-
-- Specify your organization ID in your code with the API "organizationID".
 
 <div class="sample-code-prefix"></div>
 >- JavaScript
