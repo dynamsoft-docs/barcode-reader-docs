@@ -24,7 +24,7 @@ BarcodeReader.get_all_intermediate_results()
 
 **Return Value**  
 
-`intermediate_results` <*list[class IntermediateResult]*> : All intermediate results.
+`intermediate_results` <*list[class IntermediateResult]*> : A list of [`IntermediateResult`](../class/IntermediateResult.md) values.
 
 **Code Snippet**  
 
