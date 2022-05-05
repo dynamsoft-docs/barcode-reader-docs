@@ -26,8 +26,7 @@ IntermediateResult[] com.dynamsoft.dbr.BarcodeReader.getIntermediateResults() th
 ```   
 
 **Return Value**  
-The intermediate results returned by the SDK.
-
+An array of [`IntermediateResult`](../class/IntermediateResult.md)
 
 **Exception**  
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)

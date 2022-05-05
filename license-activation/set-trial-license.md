@@ -58,8 +58,8 @@ You can use `initLicense()` to set the license.
 ```
 5. 
 ```python
+ BarcodeReader.init_license("t0068NQAAAI8+mMcYRNwmijAzExhq******")
  reader = BarcodeReader()
- reader.init_license("t0068NQAAAI8+mMcYRNwmijAzExhq******")
 ```
 6. 
 ```php

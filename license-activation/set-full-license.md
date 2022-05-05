@@ -56,6 +56,8 @@ You will find that the License Key is listed on the page now.
 >- Android
 >- Objective-C
 >- Swift
+>- JavaScript
+>- Python
 >
 >1. 
 ```c
@@ -108,6 +110,16 @@ func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
 {
   // Add your code for license verification.
 }
+```
+8. 
+```javascript
+Dynamsoft.DBR.BarcodeReader.license = "YOUR-LICENSE-KEY";
+let scanner = await Dynamsoft.DBR.BarcodeReader.createInstance();
+```
+9. 
+```python
+error = BarcodeReader.init_license("YOUR-LICENSE-KEY")
+dbr = BarcodeReader()
 ```
 
  If you run into any issues, please [contact Dynamsoft Support](https://www.dynamsoft.com/Company/Contact.aspx).

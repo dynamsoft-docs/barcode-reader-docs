@@ -33,7 +33,7 @@ TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeFile(String fileFullPath, Str
 `templateName`  The template name.
 
 **Return Value**  
-All barcode text results decoded successfully.
+An array of [`TextResult`](../class/TextResult.md)
 
 **Exception**  
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
@@ -61,7 +61,7 @@ TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeFileInMemory(byte[] fileBytes
 `templateName` The template name.
 
 **Return Value**  
-All barcode text results decoded successfully.
+An array of [`TextResult`](../class/TextResult.md) 
 
 **Exception**  
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
@@ -85,7 +85,7 @@ TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeFileInMemory(InputStream file
 `templateName` The template name.
 
 **Return Value**  
-All barcode text results decoded successfully.
+An array of [`TextResult`](../class/TextResult.md)
 
 **Exception**  
 [`BarcodeReaderException`](../class/BarcodeReaderException.md), IOException
@@ -119,7 +119,7 @@ TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeBuffer(byte[] buffer, int wid
 `templateName` The template name.
 
 **Return Value**  
-All barcode text results decoded successfully.  
+An array of [`TextResult`](../class/TextResult.md)
 
 **Exception**  
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
@@ -156,7 +156,7 @@ TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeBase64String(String base64, S
 `templateName` The template name.
 
 **Return Value**  
-All barcode text results decoded successfully.
+An array of [`TextResult`](../class/TextResult.md)
 
 **Exception**  
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
@@ -187,7 +187,7 @@ TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeBufferedImage(BufferedImage i
 `templateName` The template name.
 
 **Return Value**  
-All barcode text results decoded successfully.  
+An array of [`TextResult`](../class/TextResult.md)
 
 **Exception**  
 [`BarcodeReaderException`](../class/BarcodeReaderException.md), IOException
@@ -205,7 +205,7 @@ reader.destroy();
 
 ## initIntermediateResult
 
-Inits an intermediateResult struct with default values.
+Initiates an intermediateResult struct with default values.
 
 ```java
 IntermediateResult com.dynamsoft.dbr.BarcodeReader.initIntermediateResult(int resultType)	throws BarcodeReaderException	
@@ -215,7 +215,7 @@ IntermediateResult com.dynamsoft.dbr.BarcodeReader.initIntermediateResult(int re
 `resultType`	The type of the intermediate result to init.   
    
 **Return Value**  
-An intermediateResult struct with default values.
+An [`IntermediateResult`](../class/IntermediateResult.md) class with default values.
 
 **Exception**  
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
@@ -242,7 +242,7 @@ TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeIntermediateResults(Intermedi
 `templateName`  The template name.
 
 **Return Value**  
-All barcode text results decoded successfully.
+An array of [`TextResult`](../class/TextResult.md)
 
 **Exception**  
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
