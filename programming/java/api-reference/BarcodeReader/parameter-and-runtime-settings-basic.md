@@ -130,7 +130,7 @@ PublicRuntimeSettings com.dynamsoft.dbr.BarcodeReader.getRuntimeSettings() throw
 ```   
  
 **Return Value**  
-An [`PublicRuntimeSettings`](../class/PublicRuntimeSettings.md) with current settings.
+A [`PublicRuntimeSettings`](../class/PublicRuntimeSettings.md) with current settings.
 
 **Exception**  
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
