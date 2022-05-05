@@ -130,7 +130,7 @@ PublicRuntimeSettings com.dynamsoft.dbr.BarcodeReader.getRuntimeSettings() throw
 ```   
  
 **Return Value**  
-The struct of template settings.
+An [`PublicRuntimeSettings`](../class/PublicRuntimeSettings.md) with current settings.
 
 **Exception**  
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
