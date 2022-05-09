@@ -56,7 +56,7 @@ public class IntermediateResult
 
 
 ### Results
-One of the following types: Array of [`Contour`](Contour.md), Array of [`ImageData`](ImageData.md), Array of [`LineSegment`](LineSegment.md), Array of [`LocalizationResult`](LocalizationResult.md), Array of [`RegionOfInterest`](RegionOfInterest.md).
+One of the following types: Array of [`Contour`](Contour.md), Array of [`ImageData`](ImageData.md), Array of [`LineSegment`](LineSegment.md), Array of [`LocalizationResult`](LocalizationResult.md), Array of [`RegionOfInterest`](RegionOfInterest.md), Array of [`Quadrilateral`](Quadrilateral.md).
 
 ```csharp
 object[] Dynamsoft.DBR.IntermediateResult.Results
