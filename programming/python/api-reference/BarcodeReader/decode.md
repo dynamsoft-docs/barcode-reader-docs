@@ -34,7 +34,7 @@ BarcodeReader.decode_file(image_file_name, template_name="")
 
 **Return Value**  
 
-`text_results <*list[class TextResult]*>` : All text results.
+`text_results <*list[class TextResult]*>` : All [`TextResult`](../class/TextResult.md) structs for successfully decoded barcodes.
 
 **Exception**  
 
@@ -80,7 +80,7 @@ BarcodeReader.decode_buffer(image, image_pixel_format=EnumImagePixelFormat.IPF_R
 
 **Return Value**  
 
-`text_results <*list[class TextResult]*>` : All text results.
+`text_results <*list[class TextResult]*>` : All [`TextResult`](../class/TextResult.md) structs for successfully decoded barcodes.
 
 **Exception**  
 
@@ -128,7 +128,7 @@ BarcodeReader.decode_file_stream(file_stream, template_name="")
 
 **Return Value**  
 
-All barcode text results decoded successfully. 
+`text_results <*list[class TextResult]*>` : All [`TextResult`](../class/TextResult.md) structs for successfully decoded barcodes.
 
 **Exception**  
 
@@ -180,7 +180,7 @@ BarcodeReader.decode_buffer_manually(self, buffer, width, height, stride, image_
 
 
 **Return Value**  
-text_results <*list[class TextResult]*> : All text results.
+text_results <*list[class TextResult]*> : All [`TextResult`](../class/TextResult.md) structs for successfully decoded barcodes.
 
 **Exception**  
 [`BarcodeReaderError`](../class/BarcodeReaderError.md) : If error happens, this function will throw a BarcodeReaderError exception that can report the detailed error message.  
@@ -195,11 +195,11 @@ BarcodeReader.init_intermediate_result(intermediate_result_type)
 
 **Parameters**  
 
-- `[in] intermediate_result_type` <*class EnumImagePixelFormat*> :	The type of the intermediate result to init.   
+- `[in] intermediate_result_type` <*EnumIntermediateResultType*> :	The type of the intermediate result to initialize. Please see [`EnumIntermediateResultType`](../../../../parameters/enum/result-enums.md#intermediateresulttype).   
 
 **Return Value**  
 
-`intermediate_result <*class IntermediateResult*>` : An intermediateResult struct with default values.
+`intermediate_result <*class IntermediateResult*>` : An [`IntermediateResult`](../class/IntermediateResult.md) struct with default values.
 
 **Exception**  
 
@@ -239,12 +239,12 @@ BarcodeReader.decode_intermediate_results(intermediate_results, template_name=""
 
 **Parameters**  
 
-- `[in] intermediate_results` <*list[class IntermediateResults]*> :	The intermediate result array for decoding.   
+- `[in] intermediate_results` <*list[class IntermediateResults]*> :	The [`IntermediateResult`](../class/IntermediateResult.md) array for decoding.
 - `[in] template_name` <*optional*><*str*> : The template name.
 
 **Return Value**  
 
-`text_results <*list[class TextResult]*>` : All text results.
+`text_results <*list[class TextResult]*>` : All [`TextResult`](../class/TextResult.md) structs for successfully decoded barcodes.
 
 **Exception**  
 

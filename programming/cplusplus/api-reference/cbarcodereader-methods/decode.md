@@ -48,7 +48,7 @@ delete reader;
 ```
 
 **Remarks**  
-If no template name is specified, current runtime settings will be used.
+If no template name is specified, current runtime settings will be used. To get the actual text results, please refer to [`GetAllTextResults`](result.md#getalltextresults).
 
 
 
@@ -85,7 +85,7 @@ delete reader;
 ```
 
 **Remarks**  
-If no template name is specified, current runtime settings will be used.
+If no template name is specified, current runtime settings will be used. To get the actual text results, please refer to [`GetAllTextResults`](result.md#getalltextresults).
 
 
 
@@ -128,7 +128,7 @@ delete reader;
 ```
 
 **Remarks**  
-If no template name is specified, current runtime settings will be used.
+If no template name is specified, current runtime settings will be used. To get the actual text results, please refer to [`GetAllTextResults`](result.md#getalltextresults).
 
 
 
@@ -167,7 +167,7 @@ delete reader;
 ```
 
 **Remarks**  
-If no template name is specified, current runtime settings will be used.
+If no template name is specified, current runtime settings will be used. To get the actual text results, please refer to [`GetAllTextResults`](result.md#getalltextresults).
 
 
 
@@ -202,7 +202,7 @@ delete reader;
 ```
 
 **Remarks**  
-If no template name is specified, current runtime settings will be used.
+If no template name is specified, current runtime settings will be used. To get the actual text results, please refer to [`GetAllTextResults`](result.md#getalltextresults).
 
 
 
@@ -216,8 +216,8 @@ int dynamsoft::dbr::CBarcodeReader::InitIntermediateResult(IntermediateResultTyp
 ```   
    
 **Parameters**  
-`[in]	intermediateResultType` The type of the intermediate result to init.  
-`[in, out]	pIntermediateResult` The intermediate result struct.  
+`[in]	intermediateResultType` The type of the intermediate result to init. Please see [`EnumIntermediateResultType`](../../../../parameters/enum/result-enums.md#intermediateresulttype).  
+`[in, out]	pIntermediateResult` The resulting [`IntermediateResult`](../../../c-cplusplus/struct/IntermediateResult.md) struct.  
 
 **Return Value**  
 Returns error code (returns 0 if the function operates successfully).    
@@ -242,7 +242,7 @@ int dynamsoft::dbr::CBarcodeReader::DecodeIntermediateResults(const Intermediate
 ```   
    
 **Parameters**  
-`[in]	pIntermediateResultArray` The intermediate result array for decoding.  
+`[in]	pIntermediateResultArray` The [`IntermediateResult`](../../../c-cplusplus/struct/IntermediateResult.md) array for decoding.
 `[in]	pTemplateName`<sub>Optional</sub> The template name.
 
 **Return Value**  
@@ -266,6 +266,6 @@ TextArray * results = NULL;
 reader->GetAllTextResults(&results);
 ```
 
-
-
+**Remarks**
+If no template name is specified, current runtime settings will be used. To get the actual text results, please refer to [`GetAllTextResults`](result.md#getalltextresults).
 

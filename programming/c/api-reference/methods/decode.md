@@ -48,6 +48,8 @@ int errorCode = DBR_DecodeFile(barcodeReader, "C:\\Program Files (x86)\\Dynamsof
 DBR_DestroyInstance(barcodeReader);
 ```
 
+**Remarks**  
+If no template name is specified, current runtime settings will be used. To get the actual text results, please refer to [`DBR_GetAllTextResults`](result.md#dbr_getalltextresults).
 
 
 
@@ -81,6 +83,9 @@ GetFileStream("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\All
 int errorCode = DBR_DecodeFileInMemory(barcodeReader, pFileBytes, nFileSize, "");
 DBR_DestroyInstance(barcodeReader);
 ```
+
+**Remarks**  
+If no template name is specified, current runtime settings will be used. To get the actual text results, please refer to [`DBR_GetAllTextResults`](result.md#dbr_getalltextresults).
 
 
 
@@ -122,6 +127,9 @@ int errorCode = DBR_DecodeBuffer(barcodeReader, pBufferBytes, iWidth, iHeight, i
 DBR_DestroyInstance(barcodeReader);
 ```
 
+**Remarks**  
+If no template name is specified, current runtime settings will be used. To get the actual text results, please refer to [`DBR_GetAllTextResults`](result.md#dbr_getalltextresults).
+
 
 
 
@@ -156,6 +164,9 @@ int errorCode = DBR_DecodeBase64String(barcodeReader, strBase64String, "");
 DBR_DestroyInstance(barcodeReader);
 ```
 
+**Remarks**  
+If no template name is specified, current runtime settings will be used. To get the actual text results, please refer to [`DBR_GetAllTextResults`](result.md#dbr_getalltextresults).
+
 
 
 
@@ -188,6 +199,10 @@ int errorCode = DBR_DecodeDIB(barcodeReader, pDIB, "");
 DBR_DestroyInstance(barcodeReader);
 ```
 
+**Remarks**  
+If no template name is specified, current runtime settings will be used. To get the actual text results, please refer to [`DBR_GetAllTextResults`](result.md#dbr_getalltextresults).
+
+
 
 
 
@@ -200,8 +215,8 @@ DBR_API int DBR_InitIntermediateResult (IntermediateResultType intermediateResul
 ```   
    
 **Parameters**  
-`[in]	intermediateResultType` The type of the intermediate result to init.  
-`[in, out]	pIntermediateResult` The intermediate result struct.  
+`[in]	intermediateResultType` The type of the intermediate result defined by [`EnumIntermediateResultType`](../../../../parameters/enum/result-enums.md#intermediateresulttype).  
+`[in, out]	pIntermediateResult` The intermediate result struct of type [`IntermediateResult`](../../../c-cplusplus/struct/IntermediateResult.md).
 
 **Return Value**  
 Returns error code (returns 0 if the function operates successfully).    
@@ -227,7 +242,7 @@ DBR_API int DBR_DecodeIntermediateResults (void* barcodeReader, const Intermedia
    
 **Parameters**  
 `[in] barcodeReader` Handle of the barcode reader instance.  
-`[in]	pIntermediateResultArray` The intermediate result array for decoding.  
+`[in]	pIntermediateResultArray` The [`IntermediateResultArray`](../../../c-cplusplus/struct/IntermediateResultArray.md) for decoding.  
 `[in]	pTemplateName` The template name.
 
 **Return Value**  

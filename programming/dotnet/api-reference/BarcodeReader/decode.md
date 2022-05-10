@@ -36,7 +36,7 @@ TextResult[] Dynamsoft.DBR.BarcodeReader.DecodeFile(string fileName, string temp
 `[in] templateName` <*string*> : The template name.
 
 **Return Value**  
-All barcode text results decoded successfully. 
+[`TextResult`](../class/TextResult.md) array.
 
 **Exception**  
 [`BarcodeReaderException`](../class/BarcodeReaderException.md) The exception thrown by Dynamsoft Barcode Reader.  
@@ -50,8 +50,6 @@ TextResult[] result = reader.DecodeFile(@"C:\Program Files (x86)\Dynamsoft\{Vers
 reader.Dispose();
 ```
 
-**See Also**  
-[`TextResult`](../class/TextResult.md)
 
 
 
@@ -69,7 +67,7 @@ TextResult[] Dynamsoft.DBR.BarcodeReader.DecodeFileInMemory(byte[] fileStream, s
 `[in] templateName` <*string*> : The template name. 
 
 **Return Value**  
-All barcode text results decoded successfully. 
+[`TextResult`](../class/TextResult.md) array.
 
 **Exception**  
 [`BarcodeReaderException`](../class/BarcodeReaderException.md) The exception thrown by Dynamsoft Barcode Reader.  
@@ -83,15 +81,14 @@ TextResult[] result = reader.DecodeFileInMemory(fileStream, "");
 reader.Dispose();
 ```
 
-**See Also**  
-[`TextResult`](../class/TextResult.md)
+
 
 
 
 
 ## DecodeBuffer
 
-Decode barcodes from the memory buffer containing image pixels in defined format.
+Decode barcodes from the memory buffer containing image pixels in a defined format.
 
 ```csharp
 TextResult[] Dynamsoft.DBR.BarcodeReader.DecodeBuffer(byte[] buffer, int width, int height, int stride, EnumImagePixelFormat imagePixelFormat, string templateName)	
@@ -106,7 +103,7 @@ TextResult[] Dynamsoft.DBR.BarcodeReader.DecodeBuffer(byte[] buffer, int width, 
 `[in] templateName` <*string*> : The template name.
 
 **Return Value**  
-All barcode text results decoded successfully. 
+[`TextResult`](../class/TextResult.md) array.
 
 **Exception**  
 [`BarcodeReaderException`](../class/BarcodeReaderException.md) The exception thrown by Dynamsoft Barcode Reader.  
@@ -128,8 +125,6 @@ TextResult[] result = reader.DecodeBuffer(buffer, width, height, stride, imagePi
 reader.Dispose();
 ```
 
-**See Also**   
-[`TextResult`](../class/TextResult.md)
 
 
 
@@ -182,7 +177,7 @@ TextResult[] Dynamsoft.DBR.BarcodeReader.DecodeBitmap(Bitmap bitMap, string temp
 `[in] templateName` <*string*> : The template name.
 
 **Return Value**  
-All barcode text results decoded successfully. 
+[`TextResult`](../class/TextResult.md) array.
 
 **Exception**  
 [`BarcodeReaderException`](../class/BarcodeReaderException.md) The exception thrown by Dynamsoft Barcode Reader. 
@@ -196,8 +191,7 @@ TextResult[] result = reader.DecodeBitmap(bBMP, "");
 reader.Dispose();
 ```
 
-**See Also**   
-[`TextResult`](../class/TextResult.md)
+
 
 
 
@@ -215,7 +209,7 @@ IntermediateResult Dynamsoft.DBR.BarcodeReader.InitIntermediateResult(EnumInterm
 `intermediateResultType` : The type of the intermediate result to init.   
 
 **Return Value**  
-An intermediateResult struct with default values. 
+[`IntermediateResult`](../class/IntermediateResult.md) with default values
 
 
 **Code Snippet**  
@@ -224,8 +218,6 @@ BarcodeReader reader = new BarcodeReader();
 IntermediateResult imResult = reader.InitIntermediateResult(EnumIntermediateResultType.IRT_ORIGINAL_IMAGE);
 ```
 
-**See Also**  
-[`IntermediateResult`](../class/IntermediateResult.md)
 
 
 
@@ -244,7 +236,7 @@ TextResult[] Dynamsoft.DBR.BarcodeReader.DecodeIntermediateResults(IntermediateR
 `templateName` : The template name.
 
 **Return Value**  
-All barcode text results decoded successfully. 
+[`TextResult`](../class/TextResult.md) array.
 
 **Exception**  
 [`BarcodeReaderException`](../class/BarcodeReaderException.md) The exception thrown by Dynamsoft Barcode Reader.  
@@ -262,8 +254,6 @@ IntermediateResult[] IMRs = reader.GetIntermediateResults();
 TextResult[] result = reader.DecodeIntermediateResults(IMRs, "");
 ```
 
-**See Also**  
-[`TextResult`](../class/TextResult.md)
 
 
 
