@@ -36,7 +36,7 @@ TextResult[] Dynamsoft.DBR.BarcodeReader.DecodeFile(string fileName, string temp
 `[in] templateName` <*string*> : The template name.
 
 **Return Value**  
-[`TextResult`](../class/TextResult.md)
+[`TextResult`](../class/TextResult.md) array.
 
 **Exception**  
 [`BarcodeReaderException`](../class/BarcodeReaderException.md) The exception thrown by Dynamsoft Barcode Reader.  
@@ -67,7 +67,7 @@ TextResult[] Dynamsoft.DBR.BarcodeReader.DecodeFileInMemory(byte[] fileStream, s
 `[in] templateName` <*string*> : The template name. 
 
 **Return Value**  
-[`TextResult`](../class/TextResult.md)
+[`TextResult`](../class/TextResult.md) array.
 
 **Exception**  
 [`BarcodeReaderException`](../class/BarcodeReaderException.md) The exception thrown by Dynamsoft Barcode Reader.  
@@ -103,7 +103,7 @@ TextResult[] Dynamsoft.DBR.BarcodeReader.DecodeBuffer(byte[] buffer, int width, 
 `[in] templateName` <*string*> : The template name.
 
 **Return Value**  
-[`TextResult`](../class/TextResult.md)
+[`TextResult`](../class/TextResult.md) array.
 
 **Exception**  
 [`BarcodeReaderException`](../class/BarcodeReaderException.md) The exception thrown by Dynamsoft Barcode Reader.  
@@ -177,7 +177,7 @@ TextResult[] Dynamsoft.DBR.BarcodeReader.DecodeBitmap(Bitmap bitMap, string temp
 `[in] templateName` <*string*> : The template name.
 
 **Return Value**  
-[`TextResult`](../class/TextResult.md)
+[`TextResult`](../class/TextResult.md) array.
 
 **Exception**  
 [`BarcodeReaderException`](../class/BarcodeReaderException.md) The exception thrown by Dynamsoft Barcode Reader. 
@@ -236,7 +236,7 @@ TextResult[] Dynamsoft.DBR.BarcodeReader.DecodeIntermediateResults(IntermediateR
 `templateName` : The template name.
 
 **Return Value**  
-[`TextResult`](../class/TextResult.md)
+[`TextResult`](../class/TextResult.md) array.
 
 **Exception**  
 [`BarcodeReaderException`](../class/BarcodeReaderException.md) The exception thrown by Dynamsoft Barcode Reader.  
