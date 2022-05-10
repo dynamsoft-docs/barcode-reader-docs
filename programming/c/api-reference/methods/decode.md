@@ -49,7 +49,7 @@ DBR_DestroyInstance(barcodeReader);
 ```
 
 **Remarks**  
-If no template name is specified, current runtime settings will be used. To get the actual text results, please refer to [`GetAllTextResults`](result.md#dbrgetalltextresults).
+If no template name is specified, current runtime settings will be used. To get the actual text results, please refer to [`DBR_GetAllTextResults`](result.md#dbr_getalltextresults).
 
 
 
@@ -85,7 +85,7 @@ DBR_DestroyInstance(barcodeReader);
 ```
 
 **Remarks**  
-If no template name is specified, current runtime settings will be used. To get the actual text results, please refer to [`GetAllTextResults`](result.md#dbrgetalltextresults).
+If no template name is specified, current runtime settings will be used. To get the actual text results, please refer to [`DBR_GetAllTextResults`](result.md#dbr_getalltextresults).
 
 
 
@@ -128,7 +128,7 @@ DBR_DestroyInstance(barcodeReader);
 ```
 
 **Remarks**  
-If no template name is specified, current runtime settings will be used. To get the actual text results, please refer to [`GetAllTextResults`](result.md#dbrgetalltextresults).
+If no template name is specified, current runtime settings will be used. To get the actual text results, please refer to [`DBR_GetAllTextResults`](result.md#dbr_getalltextresults).
 
 
 
@@ -165,7 +165,7 @@ DBR_DestroyInstance(barcodeReader);
 ```
 
 **Remarks**  
-If no template name is specified, current runtime settings will be used. To get the actual text results, please refer to [`GetAllTextResults`](result.md#dbrgetalltextresults).
+If no template name is specified, current runtime settings will be used. To get the actual text results, please refer to [`DBR_GetAllTextResults`](result.md#dbr_getalltextresults).
 
 
 
@@ -200,7 +200,7 @@ DBR_DestroyInstance(barcodeReader);
 ```
 
 **Remarks**  
-If no template name is specified, current runtime settings will be used. To get the actual text results, please refer to [`GetAllTextResults`](result.md#dbrgetalltextresults).
+If no template name is specified, current runtime settings will be used. To get the actual text results, please refer to [`DBR_GetAllTextResults`](result.md#dbr_getalltextresults).
 
 
 
@@ -242,7 +242,7 @@ DBR_API int DBR_DecodeIntermediateResults (void* barcodeReader, const Intermedia
    
 **Parameters**  
 `[in] barcodeReader` Handle of the barcode reader instance.  
-`[in]	pIntermediateResultArray` The intermediate result array ([`IntermediateResult`](../../../c-cplusplus/struct/IntermediateResult.md)) for decoding.  
+`[in]	pIntermediateResultArray` The [`IntermediateResultArray`](../../../c-cplusplus/struct/IntermediateResultArray.md) for decoding.  
 `[in]	pTemplateName` The template name.
 
 **Return Value**  
