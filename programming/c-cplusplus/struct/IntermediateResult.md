@@ -65,7 +65,7 @@ int tagIntermediateResult::resultsCount
 ```
 
 ### results
-One of the following types: Array of [`Contour`](Contour.md), Array of [`ImageData`](ImageData.md), Array of [`LineSegment`](LineSegment.md), Array of [`LocalizationResult`](LocalizationResult.md), Array of [`RegionOfInterest`](RegionOfInterest.md).
+One of the following types: Array of [`Contour`](Contour.md), Array of [`ImageData`](ImageData.md), Array of [`LineSegment`](LineSegment.md), Array of [`LocalizationResult`](LocalizationResult.md), Array of [`RegionOfInterest`](RegionOfInterest.md), Array of [`Quadrilateral`](Quadrilateral.md).
 ```cpp
 const void** tagIntermediateResult::results
 ```
