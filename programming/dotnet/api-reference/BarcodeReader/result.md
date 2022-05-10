@@ -26,7 +26,7 @@ IntermediateResult[] Dynamsoft.DBR.BarcodeReader.GetIntermediateResults()
 ```   
 
 **Return Value**  
-[`IntermediateResult`](../class/IntermediateResult.md)
+[`IntermediateResult`](../class/IntermediateResult.md) array.
 
 **Code Snippet**  
 ```csharp
