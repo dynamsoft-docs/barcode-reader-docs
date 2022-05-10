@@ -104,7 +104,7 @@ reader.destroy();
 
 ## DecodeBuffer
 
-Decode barcodes from the memory buffer containing image pixels in defined format.
+Decode barcodes from the memory buffer containing image pixels in a defined format.
 
 ```java
 TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeBuffer(byte[] buffer, int width, int height, int stride, int enumImagePixelFormat, String templateName)	throws BarcodeReaderException	

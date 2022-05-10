@@ -142,7 +142,7 @@ BarcodeReader.get_runtime_settings()
 
 **Return Value**  
 
-`runtime_settings <*class PublicRuntimeSetting*>` : The `PublicRuntimeSetting` object of current runtime settings.
+`runtime_settings <*class PublicRuntimeSetting*>` : a [`PublicRuntimeSetting`](../class/PublicRuntimeSettings.md) object with the current runtime settings.
 
 **Code Snippet**  
 
@@ -165,7 +165,7 @@ BarcodeReader.update_runtime_settings(settings)
 
 **Parameters**  
 
-`[in]	settings <*class PublicRuntimeSetting*>` : a `PublicRuntimeSetting` object.    
+`[in]	settings <*class PublicRuntimeSetting*>` : a [`PublicRuntimeSetting`](../class/PublicRuntimeSettings.md) object.    
  
 **Exception**  
 
