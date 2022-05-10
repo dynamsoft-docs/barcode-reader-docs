@@ -9,76 +9,6 @@ needGenerateH3Content: false
 
 # How to set trial license
 
-If you are using the mobile edition (8.2+) or the JavaScript edition (8.2.5+), please check [how to apply for a private trial license](#how-to-apply-for-a-private-trial-license). For other editions, please follow the steps below:
-  
-## Get a trial license key
-
-You can log in the customer portal and [request for a trial extension online](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs&product=dbr).
-
-**Note**: If the trial license expires or it is missing, you can still get barcode reading results but partial of the result will be masked with "*".
-
-## Update the license key in C/C++/C#/Java/Python/PHP/VB.NET
-
-You can use `initLicense()` to set the license.
-
-<div class="sample-code-prefix"></div>
->- C
->- C++
->- C#
->- Java
->- Python
->- PHP
->- VB.NET
->
->1. 
-```c
-  char errorBuf[512];
-  DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
-  void* barcodeReader = DBR_CreateInstance();
-  // add further process
-```
-2. 
-```cpp
-  dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY");
-  CBarcodeReader* reader = new CBarcodeReader();
-  // add further process
-```
-3. 
-```csharp
-  string errorMsg;
-  BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
-  BarcodeReader reader = new BarcodeReader();
-  // add further process
-```
-4. 
-```java
-  BarcodeReader.initLicense("YOUR-LICENSE-KEY");
-  BarcodeReader reader = new BarcodeReader();
-  // add further process
-```
-5. 
-```python
- BarcodeReader.init_license("t0068NQAAAI8+mMcYRNwmijAzExhq******")
- reader = BarcodeReader()
-```
-6. 
-```php
- $br = new BarcodeReader();
- $br->initLicense("t0068NQAAAI8+mMcYRNwmijAzExhq******");
-```
-7. 
-```vb
-  Dim errMsg As String = ""
-  Dynamsoft.DBR.BarcodeReader.InitLicense("YOUR-LICENSE-KEY", errMsg)
-  Dim reader As BarcodeReader = New Dynamsoft.DBR.BarcodeReader()
-  'add further process
-```
-
-
-Then please save and rebuild your application.
-
-## How to apply for a private trial license
-
 The following shows how you can apply for a 30-day free trial license.
 
 - Login to [Customer Portal](https://www.dynamsoft.com/customer/index?utm_source=docs&product=dbr), register for a Dynamsoft account if you haven't already done so;
@@ -87,4 +17,82 @@ The following shows how you can apply for a 30-day free trial license.
 
 > NOTE
 >  
-> In case a private trial license fails to be generated, Dynamsoft Support team will get in touch with you. Or you can [contact us](https://www.dynamsoft.com/company/contact/).
+> In case the trial license fails to be generated, Dynamsoft Support team will get in touch with you. Or you can [contact us](https://www.dynamsoft.com/company/contact/).
+
+The following shows how to set the license in the code
+
+<div class="sample-code-prefix"></div>
+>- JavaScript
+>- C
+>- C++
+>- C#
+>- Java
+>- Android
+>- Objective-C
+>- Swift
+>- Python
+>
+>1. 
+```javascript
+Dynamsoft.DBR.BarcodeReader.license = "YOUR-LICENSE-KEY";
+let scanner = await Dynamsoft.DBR.BarcodeReader.createInstance();
+```
+2. 
+```c
+  char errorBuf[512];
+  DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+  void* barcodeReader = DBR_CreateInstance();
+  // add further process
+```
+3. 
+```cpp
+  char errorBuf[512];
+  dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+  CBarcodeReader* reader = new CBarcodeReader();
+  // add further process
+```
+4. 
+```csharp
+  string errorMsg;
+  BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
+  BarcodeReader reader = new BarcodeReader();
+  // add further process
+```
+5. 
+```java
+  BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+  BarcodeReader reader = new BarcodeReader();
+  // add further process
+```
+6. 
+```java
+BarcodeReader.initLicense("YOUR-LICENSE-KEY", new DBRLicenseVerificationListener() {
+  @Override
+  public void DBRLicenseVerificationCallback(boolean isSuccessful, Exception e) {
+    // Add your code for license verification.
+  }
+});
+```
+7. 
+```objc
+[DynamsoftBarcodeReader initLicense:@"YOUR-LICENSE-KEY" verificationDelegate:self];
+- (void)DBRLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error
+{
+  // Add your code for license verification.
+}
+```
+8. 
+```swift
+DynamsoftBarcodeReader.initLicense("YOUR-LICENSE-KEY", verificationDelegate: self)
+func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
+{
+  // Add your code for license verification.
+}
+```
+9. 
+```python
+error = BarcodeReader.init_license("YOUR-LICENSE-KEY")
+dbr = BarcodeReader()
+```
+
+If you run into any issues, please [contact Dynamsoft Support](https://www.dynamsoft.com/Company/Contact.aspx).
