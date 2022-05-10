@@ -12,7 +12,6 @@ needGenerateH3Content: false
   | Enumeration | Description |
   |-------------|-------------|
   | [`BarcodeColourMode`](#barcodecolourmode) | Describes the barcode colour mode. |
-  | [`BarcodeColourMode`](#barcodecolourmode) | Describes the barcode colour mode. |
   | [`BarcodeComplementMode`](#barcodecomplementmode) | Describes the barcode complement mode. |
   | [`BinarizationMode`](#binarizationmode) | Describes the binarization mode. |
   | [`ColourClusteringMode`](#colourclusteringmode) | Describes the colour clustering mode. |
