@@ -142,7 +142,7 @@ BarcodeReader.get_runtime_settings()
 
 **Return Value**  
 
-`runtime_settings <*class PublicRuntimeSettings*>` : a [`PublicRuntimeSettings`](../class/PublicRuntimeSettings.md) object with the current runtime settings.
+`runtime_settings <*class PublicRuntimeSetting*>` : a [`PublicRuntimeSetting`](../class/PublicRuntimeSettings.md) object with the current runtime settings.
 
 **Code Snippet**  
 
@@ -157,7 +157,7 @@ print(settings.excepted_barcodes_count)
 
 ## update_runtime_settings
 
-Updates runtime settings with a given `PublicRuntimeSettings` object. 
+Updates runtime settings with a given `PublicRuntimeSetting` object. 
 
 ```python
 BarcodeReader.update_runtime_settings(settings)
@@ -165,7 +165,7 @@ BarcodeReader.update_runtime_settings(settings)
 
 **Parameters**  
 
-`[in]	settings <*class PublicRuntimeSettings*>` : a [`PublicRuntimeSettings`](../class/PublicRuntimeSettings.md) object.    
+`[in]	settings <*class PublicRuntimeSetting*>` : a [`PublicRuntimeSetting`](../class/PublicRuntimeSettings.md) object.    
  
 **Exception**  
 
