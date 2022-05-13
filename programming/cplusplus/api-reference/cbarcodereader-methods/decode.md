@@ -197,7 +197,7 @@ CBarcodeReader* reader = new CBarcodeReader();
 reader->InitLicense("t0260NwAAAHV***************");
 HANDLE pDIB;
 GetDIBFromImage("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\AllSupportedBarcodeTypes.tif", &pDIB);
-int errorCode = reader->DecodeDIB(pDIB "");
+int errorCode = reader->DecodeDIB(pDIB, "");
 delete reader;
 ```
 
