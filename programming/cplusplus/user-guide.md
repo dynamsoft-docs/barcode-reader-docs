@@ -155,42 +155,14 @@ Please change all `[INSTALLATION FOLDER]` in above code snippet to your unpackin
 >The SDK supports both x86 and x64, please set the platform based on your needs.
 
 #### For Linux/ARM/Mac
-1. Create a file named `Makefile` with following content and put it in the same directory as the file `DBRCPPSample.cpp`.
-
-    ```makefile
-    CXX=g++
-    CXXFLAGS=-c
-
-    DBR_LIB_PATH=../Lib/Linux
-    DBR_INCLUDE_PATH=../Include
-
-    LDFLAGS=-lDynamsoftBarcodeReader -lstdc++ -L $(DBR_LIB_PATH) -Wl,-rpath=$(DBR_LIB_PATH) -Wl,-rpath=./
-
-    TARGET=DBRCPPSample
-    OBJECT=DBRCPPSample.o
-    SOURCE=DBRCPPSample.cpp
-
-    # build rule for target.
-    $(TARGET): $(OBJECT)
-        $(CXX) -o $(TARGET) $(OBJECT) $(LDFLAGS)
-
-    # target to build an object file
-    $(OBJECT): $(SOURCE)
-        $(CXX) $(CXXFLAGS) -I $(DBR_INCLUDE_PATH) $(SOURCE)
-
-    # the clean target
-    .PHONY : clean
-    clean: 
-        rm -f $(OBJECT) $(TARGET)
-    ```
-
-2. Open a terminal and change to the target directory where `Makefile` located in. Build the sample:
+1. Open a terminal and change to the target directory where `DBRCPPSample.cpp` located in. Build the sample:
 
     ```bash
-    make
+    g++ -o DBRCPPSample DBRCPPSample.cpp -lDynamsoftBarcodeReader -L ../Lib/Linux -Wl,-rpath=../Lib/Linux -std=c++11
     ```
+    > Please replace `Linux` to `ARM32` or `ARM64` based on your platform.
 
-3. Run the program `DBRCPPSample`.
+2. Run the program `DBRCPPSample`.
 
     ```bash
     ./DBRCPPSample
