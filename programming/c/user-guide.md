@@ -160,7 +160,8 @@ Please change all `[INSTALLATION FOLDER]` in above code snippet to your unpackin
     ```bash
     gcc -o DBRCSample DBRCSample.c -lDynamsoftBarcodeReader -L ../Lib/Linux -Wl,-rpath=../Lib/Linux
     ```
-
+    > Please replace `Linux` to `ARM32` or `ARM64` based on your platform.
+ 
 2. Run the program `DBRCSample`.
 
     ```bash
