@@ -31,8 +31,9 @@ Returns an instance of Dynamsoft Barcode Reader. If failed, returns `NULL`.
 **Code Snippet**  
 
 ```c
+char errorBuf[512];
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 DBR_DestroyInstance(barcodeReader);
 ```
 
@@ -56,8 +57,9 @@ DBR_API void DBR_DestroyInstance (void* barcodeReader)
 **Code Snippet**  
 
 ```c
+char errorBuf[512];
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 DBR_DestroyInstance(barcodeReader);
 ```
 

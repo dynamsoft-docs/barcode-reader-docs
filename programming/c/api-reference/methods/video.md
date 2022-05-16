@@ -48,8 +48,9 @@ Returns error code. Possible return(s): DBR_OK; DBRERR_FRAME_DECODING_THREAD_EXI
 
 **Code Snippet**  
 ```c
+char errorBuf[512];
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 int errorCode = DBR_StartFrameDecoding(barcodeReader, 2, 10, 1024, 720, 720, IPF_BINARY, "");
 DBR_DestroyInstance(barcodeReader);
 ```
@@ -78,8 +79,9 @@ Returns error code. Possible return(s): DBR_OK; DBRERR_FRAME_DECODING_THREAD_EXI
 
 **Code Snippet**  
 ```c
+char errorBuf[512];
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 FrameDecodingParameters parameters;
 int errorCode = DBR_InitFrameDecodingParameters(barcodeReader, &parameters);
 if(errorCode == DBR_OK)
@@ -123,8 +125,9 @@ Returns the ID of the appended frame.
 
 **Code Snippet**  
 ```c
+char errorBuf[512];
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 int frameId = DBR_AppendFrame(barcodeReader, pBufferBytes);
 DBR_DestroyInstance(barcodeReader);
 ```
@@ -155,8 +158,9 @@ Returns error code. Possible return(s): DBR_OK; DBRERR_STOP_DECODING_THREAD_FAIL
 
 **Code Snippet**  
 ```c
+char errorBuf[512];
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 int errorCode = DBR_StopFrameDecoding(barcodeReader);
 DBR_DestroyInstance(barcodeReader);
 ```
@@ -185,8 +189,9 @@ Returns error code. Possible return(s): DBR_OK; DBRERR_NULL_POINTER.
 
 **Code Snippet**  
 ```c
+char errorBuf[512];
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 FrameDecodingParameters parameters;
 int errorCode = DBR_InitFrameDecodingParameters(barcodeReader, &parameters);
 if(errorCode == DBR_OK)
@@ -237,8 +242,9 @@ void ErrorFunction(int frameId, int errorCode, void * pUser)
 {
     //TODO add your code for using error code
 }
+char errorBuf[512];
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 DBR_SetErrorCallback(barcodeReader, ErrorFunction, NULL);
 DBR_StartFrameDecoding(barcodeReader, 2, 10, 1024, 720, 720, IPF_BINARY, "");
 ```
@@ -271,8 +277,9 @@ void TextResultFunction(int frameId, TextResultArray *pResults, void * pUser)
 {
     //TODO add your code for using test results
 }
+char errorBuf[512];
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 DBR_SetTextResultCallback(barcodeReader, TextResultFunction, NULL);
 DBR_StartFrameDecoding(barcodeReader, 2, 10, 1024, 720, 720, IPF_BINARY, "");
 ```
@@ -305,8 +312,9 @@ void IntermediateResultFunction(int frameId, IntermediateResultArray *pResults, 
 {
     //TODO add your code for using intermediate results
 }
+char errorBuf[512];
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 PublicRuntimeSettings settings;
 int errorCode = DBR_GetRuntimeSettings(barcodeReader, &settings);
 settings.intermediateResultTypes = IRT_ORIGINAL_IMAGE | IRT_COLOUR_CLUSTERED_IMAGE | IRT_COLOUR_CONVERTED_GRAYSCALE_IMAGE;
@@ -338,8 +346,9 @@ Returns the length of the inner frame queue.
 
 **Code Snippet**  
 ```c
+char errorBuf[512];
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 int frameLength = DBR_GetLengthOfFrameQueue(barcodeReader);
 DBR_DestroyInstance(barcodeReader);
 ```

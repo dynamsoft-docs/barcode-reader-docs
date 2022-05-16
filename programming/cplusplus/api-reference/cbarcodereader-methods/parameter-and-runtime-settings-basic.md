@@ -43,8 +43,9 @@ Returns error code. Possible return(s): DBR_OK; DBRERR_SET_MODE_ARGUMENT_ERROR.
 
 **Code Snippet**  
 ```cpp
+char errorBuf[512];
+dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 CBarcodeReader* reader = new CBarcodeReader();
-reader->InitLicense("t0260NwAAAHV***************");
 PublicRuntimeSettings* pSettings = new PublicRuntimeSettings;
 reader->GetRuntimeSettings(pSettings);
 pSettings->binarizationModes[0] = BM_LOCAL_BLOCK;
@@ -99,8 +100,9 @@ Returns error code. Possible return(s): DBR_OK; DBRERR_GET_MODE_ARGUMENT_ERROR.
 
 **Code Snippet**  
 ```cpp
+char errorBuf[512];
+dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 CBarcodeReader* reader = new CBarcodeReader();
-reader->InitLicense("t0260NwAAAHV***************");
 PublicRuntimeSettings* pSettings = new PublicRuntimeSettings;
 reader->GetRuntimeSettings(pSettings);
 pSettings->binarizationModes[0] = BM_LOCAL_BLOCK;
@@ -151,8 +153,9 @@ Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**  
 ```cpp
+char errorBuf[512];
+dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 CBarcodeReader* reader = new CBarcodeReader();
-reader->InitLicense("t0260NwAAAHV***************");
 PublicRuntimeSettings* pSettings = new PublicRuntimeSettings;
 int errorCode = reader->GetRuntimeSettings(pSettings);
 delete pSettings;
@@ -184,8 +187,9 @@ Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**  
 ```cpp
+char errorBuf[512];
+dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 CBarcodeReader* reader = new CBarcodeReader();
-reader->InitLicense("t0260NwAAAHV***************");
 PublicRuntimeSettings* pSettings = new PublicRuntimeSettings;
 int errorCode = reader->GetRuntimeSettings(pSettings);
 pSettings->deblurLevel = 9;
@@ -215,8 +219,9 @@ Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**  
 ```cpp
+char errorBuf[512];
+dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 CBarcodeReader* reader = new CBarcodeReader();
-reader->InitLicense("t0260NwAAAHV***************");
 PublicRuntimeSettings* pSettings = new PublicRuntimeSettings;
 int errorCode = reader->GetRuntimeSettings(pSettings);
 pSettings->deblurLevel = 9;

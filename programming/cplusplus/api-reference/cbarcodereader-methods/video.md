@@ -51,8 +51,9 @@ Returns error code. Possible return(s): DBR_OK; DBRERR_FRAME_DECODING_THREAD_EXI
 
 **Code Snippet**  
 ```cpp
+char errorBuf[512];
+dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 CBarcodeReader* reader = new CBarcodeReader();
-reader->InitLicense("t0260NwAAAHV***************");
 reader->StartFrameDecoding(2, 10, 1024, 720, 720, IPF_BINARY, "");
 delete reader;
 ```
@@ -84,8 +85,9 @@ Returns error code. Possible return(s): DBR_OK; DBRERR_FRAME_DECODING_THREAD_EXI
 
 **Code Snippet**  
 ```cpp
+char errorBuf[512];
+dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 CBarcodeReader* reader = new CBarcodeReader();
-reader->InitLicense("t0260NwAAAHV***************");
 FrameDecodingParameters parameters;
 int errorCode = reader->InitFrameDecodingParameters(&parameters);
 if(errorCode == DBR_OK)
@@ -132,8 +134,9 @@ Returns the ID of the appended frame.
 
 **Code Snippet**  
 ```cpp
+char errorBuf[512];
+dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 CBarcodeReader* reader = new CBarcodeReader();
-reader->InitLicense("t0260NwAAAHV***************");
 int frameId = reader->AppendFrame(pBufferBytes);
 delete reader;
 ```
@@ -159,8 +162,9 @@ Returns error code. Possible return(s): DBR_OK; DBRERR_STOP_DECODING_THREAD_FAIL
 
 **Code Snippet**  
 ```cpp
+char errorBuf[512];
+dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 CBarcodeReader* reader = new CBarcodeReader();
-reader->InitLicense("t0260NwAAAHV***************");
 reader->StartFrameDecoding(2, 10, 1024, 720, 720, IPF_BINARY, "");
 int errorCode = reader->StopFrameDecoding();
 delete reader;
@@ -191,8 +195,9 @@ Returns error code. Possible return(s): DBR_OK.
 
 **Code Snippet**  
 ```cpp
+char errorBuf[512];
+dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 CBarcodeReader* reader = new CBarcodeReader();
-reader->InitLicense("t0260NwAAAHV***************");
 FrameDecodingParameters parameters;
 int errorCode = reader->InitFrameDecodingParameters(&parameters);
 if(errorCode == DBR_OK)
@@ -244,8 +249,9 @@ void ErrorFunction(int frameId, int errorCode, void * pUser)
 {
     //TODO add your code for using error code
 }
+char errorBuf[512];
+dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 CBarcodeReader* reader = new CBarcodeReader();
-reader->InitLicense("t0260NwAAAHV***************");
 reader->SetErrorCallback(ErrorFunction, NULL);
 reader->StartFrameDecoding(2, 10, 1024, 720, 720, IPF_BINARY, "");
 ```
@@ -278,8 +284,9 @@ void TextResultFunction(int frameId, TextResultArray *pResults, void * pUser)
 {
     //TODO add your code for using text results
 }
+char errorBuf[512];
+dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 CBarcodeReader* reader = new CBarcodeReader();
-reader->InitLicense("t0260NwAAAHV***************");
 reader->SetTextResultCallback(TextResultFunction, NULL);
 reader->StartFrameDecoding(2, 10, 1024, 720, 720, IPF_BINARY, "");
 ```
@@ -313,8 +320,9 @@ void IntermediateResultFunction(int frameId, IntermediateResultArray *pResults, 
 {
     //TODO add your code for using intermediate results
 }
+char errorBuf[512];
+dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 CBarcodeReader* reader = new CBarcodeReader();
-reader->InitLicense("t0260NwAAAHV***************");
 PublicRuntimeSettings* pSettings = new PublicRuntimeSettings;
 reader->GetRuntimeSettings(pSettings);
 pSettings->intermediateResultTypes = IRT_ORIGINAL_IMAGE | IRT_COLOUR_CLUSTERED_IMAGE | IRT_COLOUR_CONVERTED_GRAYSCALE_IMAGE;
@@ -343,8 +351,9 @@ Returns length of current inner frame queue.
 
 **Code Snippet**  
 ```cpp
+char errorBuf[512];
+dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 CBarcodeReader* reader = new CBarcodeReader();
-reader->InitLicense("t0260NwAAAHV***************");
 int frameLength = reader->GetLengthOfFrameQueue();
 delete reader;
 ```

@@ -55,6 +55,8 @@ BarcodeReader.start_video_mode(frame_decoding_parameters, call_back_func, templa
 ```python
 import cv2
 from dbr import *
+license_key = 'YOUR-LICENSE-KEY'
+BarcodeReader.init_license(license_key)
 reader = BarcodeReader()
 
 

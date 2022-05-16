@@ -37,8 +37,9 @@ Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**  
 ```c
+char errorBuf[512];
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 TextResultArray* pResults;
 int errorCode = DBR_DecodeFile(barcodeReader, "C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\AllSupportedBarcodeTypes.tif", "");
 DBR_GetAllTextResults(barcodeReader, &pResults);
@@ -64,8 +65,9 @@ DBR_API void DBR_FreeTextResults (TextResultArray** pResults)
 
 **Code Snippet**  
 ```c
+char errorBuf[512];
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 TextResultArray* pResults;
 int errorCode = DBR_DecodeFile(barcodeReader, "C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\AllSupportedBarcodeTypes.tif", "");
 DBR_GetAllTextResults(barcodeReader, &pResults);
@@ -98,8 +100,9 @@ Returns error code. Possible return(s): DBR_OK.
 
 **Code Snippet**  
 ```c
+char errorBuf[512];
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 PublicRuntimeSettings settings;
 DBR_GetRuntimeSettings(barcodeReader, &settings);
 settings.intermediateResultTypes = IRT_ORIGINAL_IMAGE | IRT_COLOUR_CLUSTERED_IMAGE | IRT_COLOUR_CONVERTED_GRAYSCALE_IMAGE;
@@ -131,8 +134,9 @@ DBR_API void DBR_FreeIntermediateResults (IntermediateResultArray** pResults)
 
 **Code Snippet**  
 ```c
+char errorBuf[512];
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 PublicRuntimeSettings settings;
 DBR_GetRuntimeSettings(barcodeReader, &settings);
 settings.intermediateResultTypes = IRT_ORIGINAL_IMAGE | IRT_COLOUR_CLUSTERED_IMAGE | IRT_COLOUR_CONVERTED_GRAYSCALE_IMAGE;

@@ -40,7 +40,8 @@ An array of [`TextResult`](../class/TextResult.md)
 
 **Code Snippet**  
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
 TextResult[] result = reader.decodeFile("your file path", "");
 reader.destroy();
 ```
@@ -68,7 +69,8 @@ An array of [`TextResult`](../class/TextResult.md)
 
 **Code Snippet**  
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
 //get bufferBytes from other component
 TextResult[] result = reader.decodeFileInMemory(bufferBytes, "");
 reader.destroy();
@@ -92,7 +94,8 @@ An array of [`TextResult`](../class/TextResult.md)
 
 **Code Snippet**  
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
 //get FileInputStream fis from other component
 TextResult[] result = reader.decodeFileInMemory(fis, "");
 reader.destroy();
@@ -126,7 +129,8 @@ An array of [`TextResult`](../class/TextResult.md)
 
 **Code Snippet**  
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
 byte[] bufferBytes;
 int iWidth = 0;
 int iHeight = 0;
@@ -163,7 +167,8 @@ An array of [`TextResult`](../class/TextResult.md)
 
 **Code Snippet**  
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
 TextResult[] result = reader.decodeBase64String("file in base64 string", "");
 reader.destroy();
 ```
@@ -194,7 +199,8 @@ An array of [`TextResult`](../class/TextResult.md)
 
 **Code Snippet**  
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
 //get BufferedImage input from other component
 TextResult[] result = reader.decodeBufferedImage(input, "");
 reader.destroy();
@@ -222,7 +228,8 @@ An [`IntermediateResult`](../class/IntermediateResult.md) class with default val
 
 **Code Snippet**  
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
 IntermediateResult imResult = reader.initIntermediateResult(EnumIntermediateResultType.IRT_ORIGINAL_IMAGE);
 ```
 
@@ -249,7 +256,8 @@ An array of [`TextResult`](../class/TextResult.md)
 
 **Code Snippet**  
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
 PublicRuntimeSettings settings = reader.getRuntimeSettings(); settings.intermediateResultTypes = EnumIntermediateResultType.IRT_ORIGINAL_IMAGE;
 reader.updateRuntimeSettings(settings);
 reader.decodeFile("your file path", "");
