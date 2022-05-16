@@ -31,7 +31,8 @@ The version information string.
 
 **Code Snippet**  
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
 String versionInfo = reader.getVersion();
 reader.destroy();
 ```

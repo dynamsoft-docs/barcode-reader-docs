@@ -30,11 +30,11 @@ BarcodeReader.get_all_intermediate_results()
 
 ```python
 from dbr import *
-license_key = 't0260NwAAAHV***************'
+license_key = 'YOUR-LICENSE-KEY'
 image_file = r'C:\Program Files (x86)\Dynamsoft\{Version number}\Images\AllSupportedBarcodeTypes.tif'
 
+BarcodeReader.init_license(license_key)
 reader = BarcodeReader()
-reader.init_license(license_key)
 
 sts = reader.get_runtime_settings()
 sts.intermediate_result_saving_mode = EnumIntermediateResultSavingMode.IRSM_MEMORY

@@ -39,8 +39,9 @@ Returns error code.
 **Code Snippet**  
 
 ```csharp
+string errorMsg;
+BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
 BarcodeReader reader = new BarcodeReader();
-reader.ProductKeys = "t0260NwAAAHV***************";
 string errorMessage;
 EnumErrorCode error = reader.InitRuntimeSettingsWithFile(@"C:\Program Files (x86)\Dynamsoft\{Version number}\Templates\RuntimeSettings.json", EnumConflictMode.CM_OVERWRITE, out errorMessage);
 reader.Dispose();
@@ -69,8 +70,9 @@ Returns error code.
 **Code Snippet**  
 
 ```csharp
+string errorMsg;
+BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
 BarcodeReader reader = new BarcodeReader();
-reader.ProductKeys = "t0260NwAAAHV***************";
 string errorMessage;
 EnumErrorCode error = reader.InitRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", EnumConflictMode.CM_OVERWRITE, out errorMessage);
 reader.Dispose();
@@ -98,8 +100,9 @@ Returns error code.
 
 **Code Snippet**  
 ```csharp
+string errorMsg;
+BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
 BarcodeReader reader = new BarcodeReader();
-reader.ProductKeys = "t0260NwAAAHV***************";
 string errorMessage;
 EnumErrorCode error = reader.AppendTplFileToRuntimeSettings(@"C:\Program Files (x86)\Dynamsoft\Barcode Reader 6.4\Templates\RuntimeSettings.json", EnumConflictMode.CM_OVERWRITE, out errorMessage);
 reader.Dispose();
@@ -127,8 +130,9 @@ Returns error code.
 
 **Code Snippet**  
 ```csharp
+string errorMsg;
+BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
 BarcodeReader reader = new BarcodeReader();
-reader.ProductKeys = "t0260NwAAAHV***************";
 string errorMessage;
 EnumErrorCode error = reader.AppendTplStringToRuntimeSettings("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", EnumConflictMode.CM_IGNORE, out errorMessage);
 reader.Dispose();
@@ -151,8 +155,9 @@ The template name array.
 
 **Code Snippet**  
 ```csharp
+string errorMsg;
+BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
 BarcodeReader reader = new BarcodeReader();
-reader.ProductKeys = "t0260NwAAAHV***************";
 string errorMessage;
 reader.InitRuntimeSettingsWithFile(@"C:\Program Files (x86)\Dynamsoft\{Version number}\Templates\RuntimeSettings.json", EnumConflictMode.CM_OVERWRITE, out errorMessage);
 reader.AppendTplStringToRuntimeSettings("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", EnumConflictMode.CM_IGNORE, out errorMessage);
@@ -180,8 +185,9 @@ void Dynamsoft.DBR.BarcodeReader.OutputSettingsToFile(string outputFilePath, str
 
 **Code Snippet**  
 ```csharp
+string errorMsg;
+BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
 BarcodeReader reader = new BarcodeReader();
-reader.ProductKeys = "t0260NwAAAHV***************";
 string errorMessage;
 reader.InitRuntimeSettingsWithFile(@"C:\Program Files (x86)\Dynamsoft\{Version number}\Templates\RuntimeSettings.json", EnumConflictMode.CM_OVERWRITE, out errorMessage);
 reader.AppendTplStringToRuntimeSettings("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", EnumConflictMode.CM_IGNORE, out errorMessage);
@@ -211,8 +217,9 @@ The output string which stores the contents of current settings.
 
 **Code Snippet**  
 ```csharp
+string errorMsg;
+BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
 BarcodeReader reader = new BarcodeReader();
-reader.ProductKeys = "t0260NwAAAHV***************";
 string errorMessage;
 reader.InitRuntimeSettingsWithFile(@"C:\Program Files (x86)\Dynamsoft\{Version number}\Templates\RuntimeSettings.json", EnumConflictMode.CM_OVERWRITE, out errorMessage);
 reader.AppendTplStringToRuntimeSettings("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", EnumConflictMode.CM_IGNORE, out errorMessage);

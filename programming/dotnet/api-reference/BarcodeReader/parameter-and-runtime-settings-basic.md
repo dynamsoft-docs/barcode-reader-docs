@@ -41,8 +41,9 @@ Returns error code.
 
 **Code Snippet**  
 ```csharp
+string errorMsg;
+BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
 BarcodeReader reader = new BarcodeReader();
-reader.ProductKeys = "t0260NwAAAHV***************";
 PublicRuntimeSettings settings =  reader.GetRuntimeSettings();
 pSettings.BinarizationModes[0] = BM_LOCAL_BLOCK;
 string errorMessage;
@@ -91,8 +92,9 @@ Returns error code.
 
 **Code Snippet**  
 ```csharp
+string errorMsg;
+BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
 BarcodeReader reader = new BarcodeReader();
-reader.ProductKeys = "t0260NwAAAHV***************";
 PublicRuntimeSettings settings =  reader.GetRuntimeSettings();
 pSettings.BinarizationModes[0] = BM_LOCAL_BLOCK;
 string errorMessage;
@@ -139,8 +141,9 @@ The struct of template settings.
 
 **Code Snippet**  
 ```csharp
+string errorMsg;
+BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
 BarcodeReader reader = new BarcodeReader();
-reader.ProductKeys = "t0260NwAAAHV***************";
 PublicRuntimeSettings settings =  reader.GetRuntimeSettings();
 reader.Dispose();
 ```
@@ -168,8 +171,9 @@ void Dynamsoft.DBR.BarcodeReader.UpdateRuntimeSettings(PublicRuntimeSettings set
 
 **Code Snippet**  
 ```csharp
+string errorMsg;
+BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
 BarcodeReader reader = new BarcodeReader();
-reader.ProductKeys = "t0260NwAAAHV***************";
 PublicRuntimeSettings settings =  reader.GetRuntimeSettings();
 settings.Timeout = 10000;
 settings.MaxAlgorithmThreadCount = 3;
@@ -194,8 +198,9 @@ void Dynamsoft.DBR.BarcodeReader.ResetRuntimeSettings()
 
 **Code Snippet**  
 ```csharp
+string errorMsg;
+BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
 BarcodeReader reader = new BarcodeReader();
-reader.ProductKeys = "t0260NwAAAHV***************";
 PublicRuntimeSettings settings =  reader.GetRuntimeSettings();
 settings.Timeout = 10000;
 settings.MaxAlgorithmThreadCount = 3;
