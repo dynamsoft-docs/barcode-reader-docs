@@ -54,43 +54,74 @@ Dynamsoft Barcode Reader uses a template to set parameters. A template contains 
 - When the same parameter is set in both `RegionDefinition` and `FormatSpecification`, the decoding operation for the barcode format specified by `FormatSpecification` is used in the region specified by `RegionDefinition`; otherwise, the parameter values under the `ImageParameter` will be used.
 
 
-## Parameter list
+## ImageParameter list
 The parameters of `ImageParameter` are:
-- ImageParameter.BarcodeColourModes
-- ImageParameter.BarcodeComplementModes
-- ImageParameter.BarcodeFormatIds
-- ImageParameter.BarcodeFormatIds_2
-- ImageParameter.BinarizationModes
+
+### Parameters Related to Searching for Regions of Interest
+
 - ImageParameter.ColourClusteringModes
 - ImageParameter.ColourConversionModes
+- ImageParameter.GrayscaleTransformationModes
+- ImageParameter.RegionPredetectionModes
+- ImageParameter.ScaleDownThreshold
+
+
+### Parameters Related to Localization of Rough Barcode Zones
+
+- ImageParameter.BinarizationModes
+- ImageParameter.ImagePreprocessingModes
+- ImageParameter.LocalizationModes
+- ImageParameter.TextFilterModes
+- ImageParameter.TextureDetectionModes
+
+### Parameters Related to Partition for Precise Barcode Zones
+
+- ImageParameter.BarcodeColourModes
+- ImageParameter.ScaleUpModes
+
+### Parameters for Decoding
+
+- ImageParameter.BarcodeComplementModes
 - ImageParameter.DeblurLevel
 - ImageParameter.DeblurModes
 - ImageParameter.DeformationResistingModes
-- ImageParameter.Description
 - ImageParameter.DPMCodeReadingModes
-- ImageParameter.ExpectedBarcodesCount
-- ImageParameter.FormatSpecificationNameArray
-- ImageParameter.GrayscaleTransformationModes
-- ImageParameter.ImagePreprocessingModes
-- ImageParameter.IntermediateResultSavingMode
+
+### Parameters Related to Results
+
+- ImageParameter.ResultCoordinateType
+- ImageParameter.ReturnBarcodeZoneClarity
+- ImageParameter.TextResultOrderModes
+
+### Parameters Related to Intermediate Result
+
 - ImageParameter.IntermediateResultTypes
-- ImageParameter.LocalizationModes
-- ImageParameter.MaxAlgorithmThreadCount
+- ImageParameter.IntermediateResultSavingMode
+
+### Parameters for the Overall Flow
+
+- ImageParameter.ExpectedBarcodesCount
+- ImageParameter.TerminatePhase
+- ImageParameter.Timeout
+
+### General
+
 - ImageParameter.Name
+- ImageParameter.Description
+- ImageParameter.FormatSpecificationNameArray
+- ImageParameter.RegionDefinitionNameArray
+
+### Other
+
+- ImageParameter.BarcodeFormatIds
+- ImageParameter.BarcodeFormatIds_2
 - ImageParameter.Pages
 - ImageParameter.PDFRasterDPI
 - ImageParameter.PDFReadingMode
-- ImageParameter.RegionDefinitionNameArray
-- ImageParameter.RegionPredetectionModes
-- ImageParameter.ResultCoordinateType
-- ImageParameter.ReturnBarcodeZoneClarity
-- ImageParameter.ScaleDownThreshold
-- ImageParameter.ScaleUpModes
-- ImageParameter.TerminatePhase
-- ImageParameter.TextFilterModes
-- ImageParameter.TextResultOrderModes
-- ImageParameter.TextureDetectionModes
-- ImageParameter.Timeout
+- ImageParameter.MaxAlgorithmThreadCount
+
+
+## RegionDefinition
 
 The parameters of `RegionDefinition` are:
 - RegionDefinition.BarcodeFormatIds
@@ -103,6 +134,8 @@ The parameters of `RegionDefinition` are:
 - RegionDefinition.Name
 - RegionDefinition.Right
 - RegionDefinition.Top
+
+## FormatSpecification
 
 The parameters of `FormatSpecification` are:
 - FormatSpecification.AllModuleDeviation
