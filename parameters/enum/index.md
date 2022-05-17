@@ -31,13 +31,13 @@ breadcrumbText: Enumerations
   | [`DPMCodeReadingMode`](parameter-mode-enums.md#dpmcodereadingmode) | Describes the DPM code reading mode. |
   | [`GrayscaleTransformationMode`](parameter-mode-enums.md#grayscaletransformationmode) | Describes the grayscale transformation mode. |
   | [`ImagePreprocessingMode`](parameter-mode-enums.md#imagepreprocessingmode) | Describes the image preprocessing mode. |
-  | [`LocalizationMode`](parameter-mode-enums.md#localizationmode) | Describes the localization mode. | 
+  | [`LocalizationMode`](parameter-mode-enums.md#localizationmode) | Describes the localization mode. |
   | [`PDFReadingMode`](parameter-mode-enums.md#pdfreadingmode) | Describes the PDF reading mode. |
   | [`RegionPredetectionMode`](parameter-mode-enums.md#regionpredetectionmode) | Describes the region predetection mode. |
   | [`ScaleUpMode`](parameter-mode-enums.md#scaleupmode) | Describes the scale up mode. |
   | [`TerminatePhase`](parameter-mode-enums.md#terminatephase) | Describes the terminate phase. |
   | [`TextFilterMode`](parameter-mode-enums.md#textfiltermode) | Describes the text filter mode. |
-  | [`TextureDetectionMode`](parameter-mode-enums.md#texturedetectionmode) | Describes the texture detection mode. | 
+  | [`TextureDetectionMode`](parameter-mode-enums.md#texturedetectionmode) | Describes the texture detection mode. |
 
 ## [Result Related Enumeration](result-enums.md)
 
@@ -50,25 +50,17 @@ breadcrumbText: Enumerations
   | [`ResultType`](result-enums.md#resulttype) | Describes the extended result type. |
   | [`TextResultOrderMode`](result-enums.md#textresultordermode) | Describes the text result order mode. |
 
-## [Frame Decoding Enumeration](frame-decoding-enums.md)
-
-  | Enumeration | Description |
-  |-------------|-------------|
-  | [`ClarityCalculationMethod`](frame-decoding-enums.md#claritycalculationmethod) | Describes the clarity calculation method. |
-  | [`ClarityFilterMode`](frame-decoding-enums.md#clarityfiltermode) | Describes the clarity filter mode. |
-  
 ## [Other Enumeration](other-enums.md)
 
   | Enumeration | Description |
   |-------------|-------------|
-  | [`DM_ChargeWay`](other-enums.md#dm_chargeway) | Describes the charge way. |
-  | [`DM_DeploymentType`](other-enums.md#dm_deploymenttype) | Describes the deployment type. |
-  | [`DM_LicenseModule`](other-enums.md#dm_licensemodule) | Describes Dynamsoft license modules. |
-  | [`DM_UUIDGenerationMethod`](other-enums.md#dm_uuidgenerationmethod) | Describes the UUID generation method. |
   | [`ImagePixelFormat`](other-enums.md#imagepixelformat) | Describes the image pixel format. |
   | [`QRCodeErrorCorrectionLevel`](other-enums.md#qrcodeerrorcorrectionlevel) | Describes the QR Code error correction level. |
-  | [`Product`](other-enums.md#product) | Describes Dynamsoft products. |
+  | [`PresetTemplate`](other-enums.md#presettemplate) | The preset parameter setting templates. |
+  | [`DM_ChargeWay`](other-enums.md#dm_chargeway) | `Deprecated` |
+  | [`DM_DeploymentType`](other-enums.md#dm_deploymenttype) | `Deprecated` |
+  | [`DM_LicenseModule`](other-enums.md#dm_licensemodule) | `Deprecated` |
+  | [`DM_UUIDGenerationMethod`](other-enums.md#dm_uuidgenerationmethod) | `Deprecated` |
+  | [`Product`](other-enums.md#product) | `Deprecated` |
 
 ## [Error Code](error-code.md)
-  
-

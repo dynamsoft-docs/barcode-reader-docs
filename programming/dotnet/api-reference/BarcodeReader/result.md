@@ -26,12 +26,13 @@ IntermediateResult[] Dynamsoft.DBR.BarcodeReader.GetIntermediateResults()
 ```   
 
 **Return Value**  
-Intermediate results. 
+[`IntermediateResult`](../class/IntermediateResult.md) array.
 
 **Code Snippet**  
 ```csharp
+string errorMsg;
+BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
 BarcodeReader reader = new BarcodeReader();
-reader.ProductKeys = "t0260NwAAAHV***************";
 PublicRuntimeSettings settings = new PublicRuntimeSettings();
 settings = reader.GetRuntimeSettings();
 settings.IntermediateResultTypes = (int)(EnumIntermediateResultType.IRT_ORIGINAL_IMAGE | EnumIntermediateResultType.IRT_COLOUR_CLUSTERED_IMAGE | EnumIntermediateResultType.IRT_COLOUR_CONVERTED_GRAYSCALE_IMAGE);
@@ -41,6 +42,3 @@ TextResult[] textResult = demo.DecodeFile(fileName, "");
 IntermediateResult[] intermediateResults = reader.GetIntermediateResults();
 reader.Dispose();
 ```
-
-**See Also**  
-[`IntermediateResult`](../class/IntermediateResult.md)

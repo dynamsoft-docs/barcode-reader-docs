@@ -32,7 +32,7 @@ int dynamsoft::dbr::CBarcodeReader::DecodeFile (const char* pFileName, const cha
 ```   
    
 **Parameters**  
-`[in] pFileName`	A string defining the file name.   
+`[in] pFileName`	A string defining the file name. It supports BMP, JPEG, PNG, TIFF and PDF files.  
 `[in] pTemplateName`<sub>Optional</sub> The template name.
 
 **Return Value**  
@@ -41,14 +41,15 @@ Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**  
 ```cpp
+char errorBuf[512];
+dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 CBarcodeReader* reader = new CBarcodeReader();
-reader->InitLicense("t0260NwAAAHV***************");
 int errorCode = reader->DecodeFile("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\AllSupportedBarcodeTypes.tif", "");
 delete reader;
 ```
 
 **Remarks**  
-If no template name is specified, current runtime settings will be used.
+If no template name is specified, current runtime settings will be used. To get the actual text results, please refer to [`GetAllTextResults`](result.md#getalltextresults).
 
 
 
@@ -75,8 +76,9 @@ Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**  
 ```cpp
+char errorBuf[512];
+dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 CBarcodeReader* reader = new CBarcodeReader();
-reader->InitLicense("t0260NwAAAHV***************");
 unsigned char* pFileBytes;
 int nFileSize = 0;
 GetFileStream("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\AllSupportedBarcodeTypes.tif", &pFileBytes, &nFileSize);
@@ -85,7 +87,7 @@ delete reader;
 ```
 
 **Remarks**  
-If no template name is specified, current runtime settings will be used.
+If no template name is specified, current runtime settings will be used. To get the actual text results, please refer to [`GetAllTextResults`](result.md#getalltextresults).
 
 
 
@@ -115,8 +117,9 @@ Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**  
 ```cpp
+char errorBuf[512];
+dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 CBarcodeReader* reader = new CBarcodeReader();
-reader->InitLicense("t0260NwAAAHV***************");
 unsigned char* pBufferBytes;
 int iWidth = 0;
 int iHeight = 0;
@@ -128,7 +131,7 @@ delete reader;
 ```
 
 **Remarks**  
-If no template name is specified, current runtime settings will be used.
+If no template name is specified, current runtime settings will be used. To get the actual text results, please refer to [`GetAllTextResults`](result.md#getalltextresults).
 
 
 
@@ -155,8 +158,9 @@ Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**  
 ```cpp
+char errorBuf[512];
+dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 CBarcodeReader* reader = new CBarcodeReader();
-reader->InitLicense("t0260NwAAAHV***************");
 unsigned char* pFileBytes;
 int nFileSize = 0;
 GetFileStream("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\AllSupportedBarcodeTypes.tif", &pFileBytes, &nFileSize);
@@ -167,7 +171,7 @@ delete reader;
 ```
 
 **Remarks**  
-If no template name is specified, current runtime settings will be used.
+If no template name is specified, current runtime settings will be used. To get the actual text results, please refer to [`GetAllTextResults`](result.md#getalltextresults).
 
 
 
@@ -193,16 +197,17 @@ Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**  
 ```cpp
+char errorBuf[512];
+dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 CBarcodeReader* reader = new CBarcodeReader();
-reader->InitLicense("t0260NwAAAHV***************");
 HANDLE pDIB;
 GetDIBFromImage("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\AllSupportedBarcodeTypes.tif", &pDIB);
-int errorCode = reader->DecodeDIB(pDIB "");
+int errorCode = reader->DecodeDIB(pDIB, "");
 delete reader;
 ```
 
 **Remarks**  
-If no template name is specified, current runtime settings will be used.
+If no template name is specified, current runtime settings will be used. To get the actual text results, please refer to [`GetAllTextResults`](result.md#getalltextresults).
 
 
 
@@ -216,15 +221,15 @@ int dynamsoft::dbr::CBarcodeReader::InitIntermediateResult(IntermediateResultTyp
 ```   
    
 **Parameters**  
-`[in]	intermediateResultType` The type of the intermediate result to init.  
-`[in, out]	pIntermediateResult` The intermediate result struct.  
+`[in]	intermediateResultType` The type of the intermediate result to init. Please see [`EnumIntermediateResultType`](../../../../parameters/enum/result-enums.md#intermediateresulttype).  
+`[in, out]	pIntermediateResult` The resulting [`IntermediateResult`](../../../c-cplusplus/struct/IntermediateResult.md) struct.  
 
 **Return Value**  
 Returns error code (returns 0 if the function operates successfully).    
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
 **Code Snippet**  
-```c
+```cpp
 IntermediateResult imResult;
 dynamsoft::dbr::CBarcodeReader::InitIntermediateResult(IRT_ORIGINAL_IMAGE, &imResult);
 ```
@@ -242,7 +247,7 @@ int dynamsoft::dbr::CBarcodeReader::DecodeIntermediateResults(const Intermediate
 ```   
    
 **Parameters**  
-`[in]	pIntermediateResultArray` The intermediate result array for decoding.  
+`[in]	pIntermediateResultArray` The [`IntermediateResult`](../../../c-cplusplus/struct/IntermediateResult.md) array for decoding.
 `[in]	pTemplateName`<sub>Optional</sub> The template name.
 
 **Return Value**  
@@ -250,7 +255,9 @@ Returns error code (returns 0 if the function operates successfully).
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
 **Code Snippet**  
-```c
+```cpp
+char errorBuf[512];
+dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 CBarcodeReader * reader = new CBarcodeReader();
 char fileName[] = "Your barcode file";
 
@@ -266,6 +273,6 @@ TextArray * results = NULL;
 reader->GetAllTextResults(&results);
 ```
 
-
-
+**Remarks**
+If no template name is specified, current runtime settings will be used. To get the actual text results, please refer to [`GetAllTextResults`](result.md#getalltextresults).
 

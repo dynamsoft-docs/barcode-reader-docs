@@ -10,7 +10,8 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  Build-Main:
+    if: ${{ github.ref == 'refs/heads/master' }}
     # The type of runner that the job will run on
     runs-on: self-hosted
 
@@ -32,3 +33,33 @@ jobs:
           cd DBRDoc && bundle exec jekyll build
           python3 /home/ubuntu/ftp.py /home/ubuntu/DBRDoc/_site/ ./www.dynamsoft.com/barcode-reader/ prod
          
+  Build-Preview:
+    if: ${{ github.ref == 'refs/heads/preview' }}
+    # The type of runner that the job will run on
+    runs-on: self-hosted
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Runs a set of commands using the runners shell
+      - name: Build the site
+        run: |
+          cd /home/ubuntu
+          [ -d DBRDocPreview ] && rm -rf DBRDocPreview
+          [ ! -d DBRDocPreview ] && mkdir -p DBRDocPreview
+          cd barcode-reader-docs-preview && git pull && cd .. && cp -rfp ./barcode-reader-docs-preview/* ./DBRDocPreview/
+          cd barcode-reader-docs-js-preview && git pull && cd .. && cp -rfp ./barcode-reader-docs-js-preview/* ./DBRDocPreview/
+          cd barcode-reader-docs-mobile-preview && git pull && cd .. && cp -rfp ./barcode-reader-docs-mobile-preview/* ./DBRDocPreview/
+          cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DBRDocPreview/
+          sed -i -e "1,3s/blob\/master$/blob\/preview/" \
+          -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DBRDocPreview/_config.yml
+          cd DBRDocPreview && bundle exec jekyll build
+
+      - name: Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ${{ secrets.FTP_TEST_SITE_SERVER }}
+          username: ${{ secrets.FTP_TEST_SITE_USER }}
+          password: ${{ secrets.FTP_TEST_SITE_PASSWORD }}
+          port: 7500 
+          local-dir: /home/ubuntu/DBRDocPreview/_site/
+          server-dir: /www.dynamsoft.com/barcode-reader/          

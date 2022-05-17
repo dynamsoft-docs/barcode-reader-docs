@@ -43,8 +43,9 @@ Returns error code. Possible return(s): DBR_OK; DBRERR_SET_MODE_ARGUMENT_ERROR.
 
 **Code Snippet**  
 ```cpp
+char errorBuf[512];
+dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 CBarcodeReader* reader = new CBarcodeReader();
-reader->InitLicense("t0260NwAAAHV***************");
 PublicRuntimeSettings* pSettings = new PublicRuntimeSettings;
 reader->GetRuntimeSettings(pSettings);
 pSettings->binarizationModes[0] = BM_LOCAL_BLOCK;
@@ -57,18 +58,18 @@ delete reader;
 
 **Remarks**  
 Check follow link for available modes and arguments:
-- [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#mode-arguments)
-- [`BinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#mode-arguments)
-- [`ColourClusteringModes`]({{ site.parameters_reference }}image-parameter/ColourClusteringModes.html#mode-arguments)
-- [`ColourConversionModes`]({{ site.parameters_reference }}image-parameter/ColourConversionModes.html#mode-arguments)
-- [`DeformationResistingModes`]({{ site.parameters_reference }}image-parameter/DeformationResistingModes.html#mode-arguments)
-- [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#mode-arguments)
-- [`IntermediateResultSavingMode`]({{ site.parameters_reference }}image-parameter/IntermediateResultSavingMode.html#mode-arguments)
-- [`LocalizationModes`]({{ site.parameters_reference }}image-parameter/LocalizationModes.html#mode-arguments)
-- [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#mode-arguments)
-- [`ScaleUpModes`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#mode-arguments)
-- [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#mode-arguments)
-- [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#mode-arguments) 
+- [`BarcodeColourModes`]({{ site.parameters_reference }}barcode-colour-modes.html)
+- [`BinarizationModes`]({{ site.parameters_reference }}binarization-modes.html)
+- [`ColourClusteringModes`]({{ site.parameters_reference }}colour-clustering-modes.html)
+- [`ColourConversionModes`]({{ site.parameters_reference }}colour-conversion-modes.html)
+- [`DeformationResistingModes`]({{ site.parameters_reference }}deformation-resisting-modes.html)
+- [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-preprocessing-modes.html)
+- [`IntermediateResultSavingMode`]({{ site.parameters_reference }}intermediate-result-saving-mode.html)
+- [`LocalizationModes`]({{ site.parameters_reference }}localization-modes.html)
+- [`RegionPredetectionModes`]({{ site.parameters_reference }}region-predetection-modes.html)
+- [`ScaleUpModes`]({{ site.parameters_reference }}scale-up-modes.html)
+- [`TextFilterModes`]({{ site.parameters_reference }}text-filter-modes.html)
+- [`TextureDetectionModes`]({{ site.parameters_reference }}texture-detection-modes.html) 
 
 
 
@@ -99,8 +100,9 @@ Returns error code. Possible return(s): DBR_OK; DBRERR_GET_MODE_ARGUMENT_ERROR.
 
 **Code Snippet**  
 ```cpp
+char errorBuf[512];
+dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 CBarcodeReader* reader = new CBarcodeReader();
-reader->InitLicense("t0260NwAAAHV***************");
 PublicRuntimeSettings* pSettings = new PublicRuntimeSettings;
 reader->GetRuntimeSettings(pSettings);
 pSettings->binarizationModes[0] = BM_LOCAL_BLOCK;
@@ -115,18 +117,18 @@ delete reader;
 
 **Remarks**  
 Check follow link for available modes and arguments:
-- [`BarcodeColourModes`]({{ site.parameters_reference }}image-parameter/BarcodeColourModes.html#mode-arguments)
-- [`BinarizationModes`]({{ site.parameters_reference }}image-parameter/BinarizationModes.html#mode-arguments)
-- [`ColourClusteringModes`]({{ site.parameters_reference }}image-parameter/ColourClusteringModes.html#mode-arguments)
-- [`ColourConversionModes`]({{ site.parameters_reference }}image-parameter/ColourConversionModes.html#mode-arguments)
-- [`DeformationResistingModes`]({{ site.parameters_reference }}image-parameter/DeformationResistingModes.html#mode-arguments)
-- [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#mode-arguments)
-- [`IntermediateResultSavingMode`]({{ site.parameters_reference }}image-parameter/IntermediateResultSavingMode.html#mode-arguments)
-- [`LocalizationModes`]({{ site.parameters_reference }}image-parameter/LocalizationModes.html#mode-arguments)
-- [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#mode-arguments)
-- [`ScaleUpModes`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#mode-arguments)
-- [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#mode-arguments)
-- [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/TextureDetectionModes.html#mode-arguments)   
+- [`BarcodeColourModes`]({{ site.parameters_reference }}barcode-colour-modes.html)
+- [`BinarizationModes`]({{ site.parameters_reference }}binarization-modes.html)
+- [`ColourClusteringModes`]({{ site.parameters_reference }}colour-clustering-modes.html)
+- [`ColourConversionModes`]({{ site.parameters_reference }}colour-conversion-modes.html)
+- [`DeformationResistingModes`]({{ site.parameters_reference }}deformation-resisting-modes.html)
+- [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-preprocessing-modes.html)
+- [`IntermediateResultSavingMode`]({{ site.parameters_reference }}intermediate-result-saving-mode.html)
+- [`LocalizationModes`]({{ site.parameters_reference }}localization-modes.html)
+- [`RegionPredetectionModes`]({{ site.parameters_reference }}region-predetection-modes.html)
+- [`ScaleUpModes`]({{ site.parameters_reference }}scale-up-modes.html)
+- [`TextFilterModes`]({{ site.parameters_reference }}text-filter-modes.html)
+- [`TextureDetectionModes`]({{ site.parameters_reference }}texture-detection-modes.html)   
 
 
 
@@ -136,7 +138,7 @@ Check follow link for available modes and arguments:
 
 ## GetRuntimeSettings
 
-Get current settings and save them into a [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) struct.
+Get current settings and save them into a [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html?src=cpp) struct.
 
 ```cpp
 int dynamsoft::dbr::CBarcodeReader::GetRuntimeSettings (PublicRuntimeSettings* psettings)	
@@ -151,8 +153,9 @@ Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**  
 ```cpp
+char errorBuf[512];
+dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 CBarcodeReader* reader = new CBarcodeReader();
-reader->InitLicense("t0260NwAAAHV***************");
 PublicRuntimeSettings* pSettings = new PublicRuntimeSettings;
 int errorCode = reader->GetRuntimeSettings(pSettings);
 delete pSettings;
@@ -167,7 +170,7 @@ delete reader;
 
 ## UpdateRuntimeSettings
 
-Update runtime settings with a given [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html) struct.
+Update runtime settings with a given [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html?src=cpp) struct.
 
 ```cpp
 int dynamsoft::dbr::CBarcodeReader::UpdateRuntimeSettings (PublicRuntimeSettings* pSettings, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)
@@ -184,8 +187,9 @@ Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**  
 ```cpp
+char errorBuf[512];
+dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 CBarcodeReader* reader = new CBarcodeReader();
-reader->InitLicense("t0260NwAAAHV***************");
 PublicRuntimeSettings* pSettings = new PublicRuntimeSettings;
 int errorCode = reader->GetRuntimeSettings(pSettings);
 pSettings->deblurLevel = 9;
@@ -215,8 +219,9 @@ Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**  
 ```cpp
+char errorBuf[512];
+dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 CBarcodeReader* reader = new CBarcodeReader();
-reader->InitLicense("t0260NwAAAHV***************");
 PublicRuntimeSettings* pSettings = new PublicRuntimeSettings;
 int errorCode = reader->GetRuntimeSettings(pSettings);
 pSettings->deblurLevel = 9;

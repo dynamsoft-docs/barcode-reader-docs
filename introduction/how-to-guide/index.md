@@ -23,7 +23,6 @@ This section covers the following topics:
 - [Read barcodes from camera stream](read-barcode-from-camera-stream.md)
 - [Read barcodes with different colors](read-barcodes-with-different-colors.md)
 - [Scan in multiple threads](scan-in-multiple-threads.md)
-- [Set custom area for accompanying texts](set-custom-area-for-accompanying-texts.md)
 - [Set custom area for HSV pre-detection](set-custom-area-for-hsv-pre-detection.md)
 - [Test batch scan performance](test-batch-scan-performance.md)
 - [Turn on or off text filter](turn-on-or-off-text-filter.md)

@@ -11,7 +11,7 @@ In the process of image processing, DBR has a variety of types of intermediate r
 
 ## Saving options
 
-You can call [`IntermediateResultSavingMode`]({{ site.parameters_reference }}image-parameter/IntermediateResultSavingMode.html#intermediateresultsavingmode)to save intermediate results in memory or in the file system. Its enumerations are the following:
+You can call [`IntermediateResultSavingMode`]({{ site.parameters_reference }}intermediate-result-saving-mode.html#intermediateresultsavingmode)to save intermediate results in memory or in the file system. Its enumerations are the following:
 
 | Enumerator           | Value  | Note                            |
 |-----------------|--------|--------------------            |
@@ -36,9 +36,9 @@ The following code snippet illustrate how to save intermediate results in memory
  reader->GetAllTextResults(&result);
  int icount = result->resultsCount;
  IntermediateResultArray *iResults = NULL;
- reader->GetIntermediateResults(&iResults);//Get intermediate results
+ reader->GetIntermediateResults(&iResults);//Get all intermediate results
  int rCount = iResults->resultsCount;
- for (int i = 0; i < rCount; i++) //Recursion the intermediate results
+ for (int i = 0; i < rCount; i++) //Show all intermediate results
     {
         if(iResults->results[i]->dataType == IMRDT_IMAGE)
         {
@@ -163,7 +163,7 @@ The following illustrates how to set the IRSM_FILESYSTEM to save the intermediat
 
 ## Type of intermediate results 
 
-There are a variety of intermediate result types. You could get the desired intermediate result by specifying the [`IntermediateResultTypes`]({{ site.parameters_reference }}image-parameter/result-control.html#intermediateresulttypes)parameter, which has the following available enumerations:
+There are a variety of intermediate result types. You could get the desired intermediate result by specifying the [`IntermediateResultTypes`]({{ site.parameters_reference }}intermediate-result-types.html)parameter, which has the following available enumerations:
 
 |Enumeration                 |Value    |
 |-------------------   |----------|
@@ -188,14 +188,14 @@ The original image applies for the user who want to have a copy of the original 
 
 ### IRT_COLOUR_CONVERTED_GRAYSCALE_IMAGE
 
-Users who use [`ColourConversionModes`]({{ site.parameters_reference }}image-parameter/ColourConversionModes.html#colourconversionmodes)to adjust a colour image to a grayscale image could set IntermediateResultTypes to IRT_COLOUR_CONVERTED_GRAYSCALE_IMAGE to observe the result. Following are the original image and grayscale image obtain from intermediate result.
+Users who use [`ColourConversionModes`]({{ site.parameters_reference }}colour-conversion-modes.html#colourconversionmodes)to adjust a colour image to a grayscale image could set IntermediateResultTypes to IRT_COLOUR_CONVERTED_GRAYSCALE_IMAGE to observe the result. Following are the original image and grayscale image obtain from intermediate result.
 
 ![original colour image][8]
 ![grayscale image][9]
 
 ### IRT_TRANSFORMED_GRAYSCALE_IMAGE
 
-Users who use [`GrayscaleTransformationModes`]({{ site.parameters_reference }}image-parameter/GrayscaleTransformationModes.html#grayscaletransformationmodes)to do the colour conversion on a grayscale image could set IntermediateResultTypes to IRT_TRANSFORMED_GRAYSCALE_IMAGE to observe the result. Following are the original image and transformed grayscale image obtained from intermediate result.
+Users who use [`GrayscaleTransformationModes`]({{ site.parameters_reference }}grayscale-transformation-modes.html#grayscaletransformationmodes)to do the colour conversion on a grayscale image could set IntermediateResultTypes to IRT_TRANSFORMED_GRAYSCALE_IMAGE to observe the result. Following are the original image and transformed grayscale image obtained from intermediate result.
 
 ![original-inverted][16]
 ![inverted image][17]
@@ -225,7 +225,7 @@ JSON template
 
 ### IRT_PREDETECTED_QUADRILATERAL
 
-The intermediate result of [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes). Here is a sample image:
+The intermediate result of [`RegionPredetectionModes`]({{ site.parameters_reference }}region-predetection-modes.html#regionpredetectionmodes). Here is a sample image:
 
 ![original image before region detected][13]
 
@@ -249,7 +249,7 @@ JSON template:
 
 ### IRT_PREDETECTED_REGION
 
-Predetected region of interest. When using [`RegionPredetectionModes`]({{ site.parameters_reference }}image-parameter/RegionPredetectionModes.html#regionpredetectionmodes)and the `RegionDefinition`, we could set IntermediateResultTypes to IRT_PREDETECTED_REGION to observe the region of interest. For example, we could use RPM_GENERAL_HSV_CONTRAST to detect yellow region, and set the corresponding position to the yellow region, eventually, get the ROI with green rectangle.
+Predetected region of interest. When using [`RegionPredetectionModes`]({{ site.parameters_reference }}region-predetection-modes.html#regionpredetectionmodes)and the `RegionDefinition`, we could set IntermediateResultTypes to IRT_PREDETECTED_REGION to observe the region of interest. For example, we could use RPM_GENERAL_HSV_CONTRAST to detect yellow region, and set the corresponding position to the yellow region, eventually, get the ROI with green rectangle.
 
 ![predetected region sample][15]
 
@@ -298,7 +298,7 @@ JSON template
 
 ### IRT_PREPROCESSED_IMAGE
 
-This intermediate result type is used to observe the effect of adjusting image preprocessing using the [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#imagepreprocessingmodes)parameter. The following example shows both the original image and the pre-processed image after gray equalization.
+This intermediate result type is used to observe the effect of adjusting image preprocessing using the [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-preprocessing-modes.html#imagepreprocessingmodes)parameter. The following example shows both the original image and the pre-processed image after gray equalization.
 
 ![original-equalize][11]![equalized image][12]
 
@@ -332,7 +332,7 @@ This intermediate result is used to observe the effect of adjusting a binarized 
 
 ### IRT_TEXT_ZONE
 
-This intermediate result type is mainly used with barcode images that contain a lot of text. To get IRT_TEXT_ZONE intermediate result, you need to configure the [`TextFilterModes`]({{ site.parameters_reference }}image-parameter/TextFilterModes.html#textfiltermodes)in JSON template. The data for the text area is given in JSON as coordinates. The following sample image illustrates the effect of drawing the intermediate result (in red) onto the original image. 
+This intermediate result type is mainly used with barcode images that contain a lot of text. To get IRT_TEXT_ZONE intermediate result, you need to configure the [`TextFilterModes`]({{ site.parameters_reference }}text-filter-modes.html#textfiltermodes)in JSON template. The data for the text area is given in JSON as coordinates. The following sample image illustrates the effect of drawing the intermediate result (in red) onto the original image. 
 
 ![text zone demo][2]
 

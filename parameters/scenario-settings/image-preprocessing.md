@@ -8,7 +8,7 @@ needAutoGenerateSidebar: false
 
 # How to preprocess images based on different scenarios
 
-The default configuration of `DBR` can handle most common scenarios. However, there are still some specific scenarios where the default configuration of `DBR` cannot locate the code area for decoding. For these specific scenarios, `DBR` has built-in [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#imagepreprocessingmodes) to configure the image preprocessing algorithm. For different scenarios, a specific pre-processing algorithm can effectively improve the success rate when detecting areas of interest. This article will detail how to choose the appropriate pre-processing mode according to the scenario.
+The default configuration of `DBR` can handle most common scenarios. However, there are still some specific scenarios where the default configuration of `DBR` cannot locate the code area for decoding. For these specific scenarios, `DBR` has built-in [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-preprocessing-modes.html#imagepreprocessingmodes) to configure the image preprocessing algorithm. For different scenarios, a specific pre-processing algorithm can effectively improve the success rate when detecting areas of interest. This article will detail how to choose the appropriate pre-processing mode according to the scenario.
 
 ## Image preprocessing mode
 
@@ -46,7 +46,7 @@ This mode improves the binarization process by eliminating noise and filling hol
 
 ## Combination of pre-processing modes
 
-If the image to be processed is more complicated, you can use the above image preprocessing modes in combination. After configuring multiple modes through [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-parameter/ImagePreprocessingModes.html#imagepreprocessingmodes), `DBR` will try each mode in sequence until the number of successful decoded codes meets the expected value (`ExpectedBarcodeCount`), or the algorithm combination is exhausted.
+If the image to be processed is more complicated, you can use the above image preprocessing modes in combination. After configuring multiple modes through [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-preprocessing-modes.html#imagepreprocessingmodes), `DBR` will try each mode in sequence until the number of successful decoded codes meets the expected value (`ExpectedBarcodeCount`), or the algorithm combination is exhausted.
 
 
 ## Sample Code

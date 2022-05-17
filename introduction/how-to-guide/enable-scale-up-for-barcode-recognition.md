@@ -32,7 +32,7 @@ Result:
 The module size of the barcode in the image is 2, which is smaller than ModuleSizeThreshold, and the acute angle is larger than AcuteAngleWithXThreshold, so our library will perform scaling up operation. After scaling up, the barcode is enlarged to 2 times since 2 * modulesize >= TargetModuleSize.   
 
 
-For more information about enabling scale up mode, please see [`ScaleUpModes`]({{ site.parameters_reference }}image-parameter/ScaleUpModes.html#scaleupmodes) and [How to Set Scale Up Modes]({{ site.scenario_settings }}how-to-set-scaleup-modes.html).    
+For more information about enabling scale up mode, please see [`ScaleUpModes`]({{ site.parameters_reference }}scale-up-modes.html#scaleupmodes) and [How to Set Scale Up Modes]({{ site.scenario_settings }}how-to-set-scaleup-modes.html).    
 
 
 [1]: assets/enable-scale-up-for-barcode-recognition/scale-up-image.png

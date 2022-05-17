@@ -13,7 +13,7 @@ The `DBR` decoding result contains a variety of information, and we provide flex
 
 You can set the angle, width, height, and text length requirements that the decoded result should meet through parameters, and the results that do not meet the setting requirements will be filtered out.
 
-- [`BarcodeAngleRangeArray`]({{ site.parameters_reference }}format-specification/format-control.html#barcodeanglerangearray)   
+- [`BarcodeAngleRangeArray`]({{ site.parameters_reference }}barcode-angle-range-array.html)   
 
     Set the angle range that the returned result needs to meet, the value range is [0,360] (in degrees). 
 
@@ -28,33 +28,33 @@ You can set the angle, width, height, and text length requirements that the deco
    ![Aztec Angle Example][1]   
    
    ![Maxicode Angle Example][3]   
-- [`BarcodeHeightRangeArray`]({{ site.parameters_reference }}format-specification/format-control.html#barcodeheightrangearray)
+- [`BarcodeHeightRangeArray`]({{ site.parameters_reference }}barcode-height-range-array.html)
 
     Set the height range that the returned result needs to meet, the value range is [0,0x7ffffffff] (in pixels);
     
-- [`BarcodeWidthRangeArray`]({{ site.parameters_reference }}format-specification/format-control.html#barcodewidthrangearray)   
+- [`BarcodeWidthRangeArray`]({{ site.parameters_reference }}barcode-width-range-array.html)   
 
     Set the width range that the returned result needs to meet, the value range is [0,0x7ffffffff] (in pixels);
     
-- [`BarcodeBytesLengthRangeArray`]({{ site.parameters_reference }}format-specification/format-control.html#barcodebyteslengthrangearray)   
+- [`BarcodeBytesLengthRangeArray`]({{ site.parameters_reference }}barcode-bytes-length-range-array.html)   
 
     Set the length range that Bytes needs to meet in the returned result, the value range is [0,0x7ffffffff] (in bytes);
 
-- [`BarcodeTextLengthRangeArray`]({{ site.parameters_reference }}format-specification/format-control.html#barcodetextlengthrangearray)   
+- [`BarcodeTextLengthRangeArray`]({{ site.parameters_reference }}barcode-text-length-range-array.html)   
 
     Set the length range of the Text in the returned result, the value range is [0,0x7ffffffff] (in the number of characters).
 
 ## Use Regular Expression
 
-You can use [`BarcodeTextRegExPattern`]({{ site.parameters_reference }}format-specification/format-control.html#barcodetextregexpattern) to specify the regular expression requirements that must be met when `DBR` returns the result text. The default value is empty which means there is no limitation.
+You can use [`BarcodeTextRegExPattern`]({{ site.parameters_reference }}barcode-text-regex-pattern.html) to specify the regular expression requirements that must be met when `DBR` returns the result text. The default value is empty which means there is no limitation.
 
-For example, if we set [`BarcodeTextRegExPattern`]({{ site.parameters_reference }}format-specification/format-control.html#barcodetextregexpattern) as "[0-9]\d{4,11}", then the result text should be 5 to 12 digits. If the result is 123456 which matches the expression, it will be returned. If it is 123 which has only 3 digits or a123456 which has a letter in it, they don 't match the expression and will not be returned.
+For example, if we set [`BarcodeTextRegExPattern`]({{ site.parameters_reference }}barcode-text-regex-pattern.html) as "[0-9]\d{4,11}", then the result text should be 5 to 12 digits. If the result is 123456 which matches the expression, it will be returned. If it is 123 which has only 3 digits or a123456 which has a letter in it, they don 't match the expression and will not be returned.
 
 For more info, check out About Regular [Expression](https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2010/28hw3sce(v=vs.100))
 
 ## Use Confidence Score
 
-The decoding result of `DBR` will have a confidence score, and the result with too low score may be wrong. You can use [`MinResultConfidence`]({{ site.parameters_reference }}format-specification/result-control.html#minresultconfidence) to specify the minimum score that `DBR` needs to meet to return results. The default value is 0, which means there is no limit on the score of the returned result.
+The decoding result of `DBR` will have a confidence score, and the result with too low score may be wrong. You can use [`MinResultConfidence`]({{ site.parameters_reference }}min-result-confidence.html) to specify the minimum score that `DBR` needs to meet to return results. The default value is 0, which means there is no limit on the score of the returned result.
 
 Please refer to the following sample program for how to obtain the confidence of the returned result
 
@@ -77,7 +77,7 @@ delete reader;
 
 ## Coordinate format of decoding result position
 
-For the position coordinates of the decoding result, the parameter [`ResultCoordinateType`]({{ site.parameters_reference }}image-parameter/result-control.html#resultcoordinatetype) can be used to specify whether the coordinates are in pixels or percentage.
+For the position coordinates of the decoding result, the parameter [`ResultCoordinateType`]({{ site.parameters_reference }}result-coordinate-type.html) can be used to specify whether the coordinates are in pixels or percentage.
 
 |Name|Notes|
 |------|-----|
@@ -86,7 +86,7 @@ For the position coordinates of the decoding result, the parameter [`ResultCoord
 
 ## Ordering
 
-[`TextResultOrderModes`]({{ site.parameters_reference }}image-parameter/TextResultOrderModes.html#textresultordermodes) is used to sort the decoding results.
+[`TextResultOrderModes`]({{ site.parameters_reference }}text-result-order-modes.html#textresultordermodes) is used to sort the decoding results.
 
 |Name|Notes|
 |------|-----|
@@ -97,7 +97,7 @@ For the position coordinates of the decoding result, the parameter [`ResultCoord
 
 ## Clarity
 
-[`ReturnBarcodeZoneClarity`]({{ site.parameters_reference }}image-parameter/result-control.html#returnbarcodezoneclarity) specifies whether to return the clarity of the barcode region detected on the image. It can be set to 0 or 1. The default value is 0 which means no clarity is returned. To return the clarity, set it to 1.
+[`ReturnBarcodeZoneClarity`]({{ site.parameters_reference }}return-barcode-zone-clarity.html) specifies whether to return the clarity of the barcode region detected on the image. It can be set to 0 or 1. The default value is 0 which means no clarity is returned. To return the clarity, set it to 1.
 
 `DBR` uses the gray gradient changes of adjacent pixels to measure the clarity of the code area. The value range of `BarcodeZoneClarity` is 0~100, the larger the number, the clearer it is.
 

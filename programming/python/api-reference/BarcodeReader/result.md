@@ -13,7 +13,6 @@ needAutoGenerateSidebar: true
   |----------------------|-------------|
   | [`get_all_intermediate_results`](#get_all_intermediate_results) | Returns intermediate results containing the original image, the colour clustered image, the binarized Image, contours, Lines, TextBlocks, etc.  |
 
-  ---
 
 ## get_all_intermediate_results
 
@@ -25,17 +24,23 @@ BarcodeReader.get_all_intermediate_results()
 
 **Return Value**  
 
-`intermediate_results <*list[class IntermediateResult]*>` : All intermediate results.
+`intermediate_results` <*list[class IntermediateResult]*> : A list of [`IntermediateResult`](../class/IntermediateResult.md) values.
 
 **Code Snippet**  
 
 ```python
 from dbr import *
-license_key = 't0260NwAAAHV***************'
+license_key = 'YOUR-LICENSE-KEY'
 image_file = r'C:\Program Files (x86)\Dynamsoft\{Version number}\Images\AllSupportedBarcodeTypes.tif'
 
+BarcodeReader.init_license(license_key)
 reader = BarcodeReader()
-reader.init_license(license_key)
+
+sts = reader.get_runtime_settings()
+sts.intermediate_result_saving_mode = EnumIntermediateResultSavingMode.IRSM_MEMORY
+sts.intermediate_result_types = EnumIntermediateResultType.IRT_BINARIZED_IMAGE
+reader.update_runtime_settings(sts)
+
 try:
     text_results = reader.decode_file(image_file)
     if text_results != None:
@@ -50,5 +55,22 @@ try:
 except BarcodeReaderError as bre:
     print(bre)
 
-intermediateResults = reader.get_all_intermediate_results()
-```
+try: 
+    intermediateResults = reader.get_all_intermediate_results()
+    if intermediateResults != None:
+        for intermediateResult in intermediateResults:
+            if intermediateResult.data_type == EnumIMResultDataType.IMRDT_IMAGE
+                # deal with the image
+            else if intermediateResult.data_type == EnumIMResultDataType.IMRDT_LOCALIZATIONRESULT
+                # analyze the localization result
+            else if intermediateResult.data_type == EnumIMResultDataType.IMRDT_LINESEGMENT
+                # obtain the line segment info for each line
+            else if intermediateResult.data_type == EnumIMResultDataType.IMRDT_CONTOUR
+                # analyze the contour data
+            else if intermediateResult.data_type == EnumIMResultDataType.IMRDT_REGIONOFINTEREST
+                # obtain the whole region of interest
+            else
+                # Quadrilateral data
+except BarcodeReaderError as bre:
+    print(bre)
+```             

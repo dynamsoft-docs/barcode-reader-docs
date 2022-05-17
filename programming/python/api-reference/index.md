@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
-# API Reference - Python
+# Python API Reference
  
 ## BarcodeReader Class
 
@@ -35,14 +35,14 @@ needGenerateH3Content: true
   | Method               | Description |
   |----------------------|-------------|
   | [`init_license`](BarcodeReader/license.md#init_license) | Reads product key and activates the SDK.  |
-  | [`init_license_from_server`](BarcodeReader/license.md#init_license_from_server) | Initializes license and connects to the specified server for online verification. |
-  | [`init_license_from_license_content`](BarcodeReader/license.md#init_license_from_license_content) | Initializes license from the license content on client machine for offline verification. |
-  | [`output_license_to_string`](BarcodeReader/license.md#output_license_to_string) | Outputs the license content as an encrypted string from the license server to be used for offline license verification.|
-  | [`init_dls_connection_parameters`](BarcodeReader/license.md#init_dls_connection_parameters) | Initializes a DMDLSConnectionParameters struct with default values. |
-  | [`init_license_from_dls`](BarcodeReader/license.md#init_license_from_dls) | Initializes the barcode reader license and connects to the specified server for online verification. |
   | [`get_idle_instances_count`](BarcodeReader/license.md#get_idle_instances_count) | Gets available instances count when charging by concurrent instances count. |
-  | [`init_lts_connection_parameters`](BarcodeReader/license.md#init_lts_connection_parameters) | `Deprecated`. Use [init_dls_connection_parameters](BarcodeReader/license.md#init_dls_connection_parameters) instead. |
-  | [`init_license_from_lts`](BarcodeReader/license.md#init_license_from_lts) | `Deprecated`. Use [init_license_from_dls](BarcodeReader/license.md#init_license_from_dls) instead. |
+  | [`init_license_from_server`](BarcodeReader/license.md#init_license_from_server) | `Deprecated` |
+  | [`init_license_from_license_content`](BarcodeReader/license.md#init_license_from_license_content) | `Deprecated` |
+  | [`output_license_to_string`](BarcodeReader/license.md#output_license_to_string) | `Deprecated` |
+  | [`init_dls_connection_parameters`](BarcodeReader/license.md#init_dls_connection_parameters) | `Deprecated` |
+  | [`init_license_from_dls`](BarcodeReader/license.md#init_license_from_dls) | `Deprecated` |
+  | [`init_lts_connection_parameters`](BarcodeReader/license.md#init_lts_connection_parameters) | `Deprecated`. |
+  | [`init_license_from_lts`](BarcodeReader/license.md#init_license_from_lts) | `Deprecated`. |
       
 
 ### Decode Methods

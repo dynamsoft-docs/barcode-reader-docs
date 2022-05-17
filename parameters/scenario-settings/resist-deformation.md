@@ -8,7 +8,7 @@ needAutoGenerateSidebar: false
 
 # How to deal with deformed barcodes
 
-The barcodes on the surface of some flexible packaging or cylindrical objects tend to be distorted and deformed. DBR may not be able to handle such cases well by default, but we can configure [`DeformationResistingModes`]({{ site.parameters_reference }}image-parameter/DeformationResistingModes.html#deformationresistingmodes) to deal with these problems. 
+The barcodes on the surface of some flexible packaging or cylindrical objects tend to be distorted and deformed. DBR may not be able to handle such cases well by default, but we can configure [`DeformationResistingModes`]({{ site.parameters_reference }}deformation-resisting-modes.html#deformationresistingmodes) to deal with these problems. 
 
 The following images show two kinds of barcode images with deformation:
 
@@ -21,11 +21,11 @@ Columnar distortion:
 ![Deformation sample image2][2]
 ![Deformation sample image2][4]
 
-Currently, [`DeformationResistingModes`]({{ site.parameters_reference }}image-parameter/DeformationResistingModes.html#deformationresistingmodes) only works for QR Code and DataMatrix codes. 
+Currently, [`DeformationResistingModes`]({{ site.parameters_reference }}deformation-resisting-modes.html#deformationresistingmodes) only works for QR Code and DataMatrix codes. 
 
 ## How to configure
 
-As mentioned above, you can configure the anti-deformation mode via the setting [`DeformationResistingModes`]({{ site.parameters_reference }}image-parameter/DeformationResistingModes.html#deformationresistingmodes). DBR does not turn on anti-deformation by default. If you want to turn it on, you need to add `DRM_GENERAL` to [`DeformationResistingModes`]({{ site.parameters_reference }}image-parameter/DeformationResistingModes.html#deformationresistingmodes). By the way, multiple modes can also be set at the same time. For example, if DRM_SKIP and DRM_GENERAL are configured at the same time, our algorithm will try to turn off and turn on the anti-deformation mode in turn, until the decoding result meets the requirements.
+As mentioned above, you can configure the anti-deformation mode via the setting [`DeformationResistingModes`]({{ site.parameters_reference }}deformation-resisting-modes.html#deformationresistingmodes). DBR does not turn on anti-deformation by default. If you want to turn it on, you need to add `DRM_GENERAL` to [`DeformationResistingModes`]({{ site.parameters_reference }}deformation-resisting-modes.html#deformationresistingmodes). By the way, multiple modes can also be set at the same time. For example, if DRM_SKIP and DRM_GENERAL are configured at the same time, our algorithm will try to turn off and turn on the anti-deformation mode in turn, until the decoding result meets the requirements.
 
 ## Example
 

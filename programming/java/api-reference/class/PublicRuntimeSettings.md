@@ -257,7 +257,7 @@ int com.dynamsoft.dbr.PublicRuntimeSettings.resultCoordinateType
     Any one of the [`EnumResultCoordinateType`]({{ site.enumerations }}result-enums.html#resultcoordinatetype) Enumeration items
       
 **Default Value**     
-    IRSM_MEMORY
+    RCT_PIXEL
     
 **See Also**       
     [`EnumResultCoordinateType`]({{ site.enumerations }}result-enums.html#resultcoordinatetype)
@@ -323,7 +323,7 @@ int com.dynamsoft.dbr.PublicRuntimeSettings.minResultConfidence
     [0, 100]
       
 **Default Value**     
-    0
+    30
     
 **Remarks**       
     0: means no limitation on the result confidence.

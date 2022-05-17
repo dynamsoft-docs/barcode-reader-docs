@@ -13,7 +13,7 @@ To use a trial license, you can follow the steps below:
 
 ## Get a trial license key.
 
-You can log in the customer portal and [request for a trial extension online](https://www.dynamsoft.com/customer/license/trialLicense).
+You can log in the customer portal and [request for a trial extension online](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs&product=dbr).
 
 **Note**: If the trial license expires or it is missing, you can still get barcode reading results but partial of the result will be masked with "*".
 

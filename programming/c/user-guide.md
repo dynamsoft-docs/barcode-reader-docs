@@ -14,10 +14,10 @@ In this guide, you will learn step by step on how to build a barcode reading app
 ## Requirements
    
 - Operating System: 
-    - Windows 7, 8, 10, 2003, 2008, 2008 R2, 2012, 2016
+    - Windows 7, 8, 10, 11, 2003, 2008, 2008 R2, 2012, 2016, 2019, 2022
     - Linux x64: Ubuntu 14.04.4+ LTS, Debian 8+, etc
     - Linux arm 32bit
-    - Linux arm 64bit (not included in the trial package,  click <a href="https://tst.dynamsoft.com/public/download/dbr/8.6/dbr-c_cpp-8.6-(include-ARM64).zip" target="_blank">here</a> to download the SDK)
+    - Linux arm 64bit
     - MacOS 64bit: 10.12+ (not included in the trial package, contact us to get the SDK)
 
 - Developing Tool
@@ -60,21 +60,23 @@ Let's start by creating a console application which demonstrates how to use the 
     ```
 
 ### Initialize a Barcode Reader Instance
-1. Create an instance of Dynamsoft Barcode Reader.
+1. Initialize the license key.
+
+    ```c
+    char errorBuf[512];
+    DBR_InitLicense("<insert DBR license key here>", errorBuf, 512);
+    ```    
+    
+    >Please replace `<insert DBR license key here>` with a valid DBR licensekey. There are two ways to obtain one:
+    >- Search `DBR_InitLicense` and find the license from `[INSTALLATION FOLDER]/Samples/BarcodeReaderDemo/BarcodeReaderDemo.cpp`.
+    >- Request a trial license from <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dbr&package=desktop" target="_blank">Customer Portal</a>. 
+
+2. Create an instance of Dynamsoft Barcode Reader.
 
     ```c
     void *hBarcode = DBR_CreateInstance();
     ```
 
-2. Initialize the license key.
-
-    ```c
-    DBR_InitLicense(hBarcode, "<insert DBR license key here>");
-    ```    
-    
-    >Please replace `<insert DBR license key here>` with a valid DBR licensekey. There are two ways to obtain one:
-    >- Search `DBR_InitLicense` and find the license from `[INSTALLATION FOLDER]/Samples/BarcodeReaderDemo/BarcodeReaderDemo.cpp`.
-    >- Request a trial license from <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">Customer Portal</a>. 
 
 ### Configure the Barcode Scanning Behavior
 1. Set barcode format and count to read.
@@ -153,42 +155,14 @@ Please change all `[INSTALLATION FOLDER]` in above code snippet to your unpackin
 >The SDK supports both x86 and x64, please set the platform based on your needs.
 
 #### For Linux/ARM/Mac
-1. Create a file named `Makefile` with following content and put it in the same directory as the file `DBRCSample.c`.
-
-    ```makefile
-    CC=gcc
-    CCFLAGS=-c
-
-    DBR_LIB_PATH=../Lib/Linux
-    DBR_INCLUDE_PATH=../Include
-
-    LDFLAGS=-lDynamsoftBarcodeReader -L $(DBR_LIB_PATH) -Wl,-rpath=$(DBR_LIB_PATH) -Wl,-rpath=./
-
-    TARGET=DBRCSample
-    OBJECT=DBRCSample.o
-    SOURCE=DBRCSample.c
-
-    # build rule for target.
-    $(TARGET): $(OBJECT)
-        $(CC) -o $(TARGET) $(OBJECT) $(LDFLAGS)
-
-    # target to build an object file
-    $(OBJECT): $(SOURCE)
-        $(CC) $(CCFLAGS) -I $(DBR_INCLUDE_PATH) $(SOURCE)
-
-    # the clean target
-    .PHONY : clean
-    clean: 
-        rm -f $(OBJECT) $(TARGET)
-    ```
-
-2. Open a terminal and change to the target directory where `Makefile` located in. Build the sample:
+1. Open a terminal and change to the target directory where `DBRCSample.c` located in. Build the sample:
 
     ```bash
-    make
+    gcc -o DBRCSample DBRCSample.c -lDynamsoftBarcodeReader -L ../Lib/Linux -Wl,-rpath=../Lib/Linux
     ```
-
-3. Run the program `DBRCSample`.
+    > Please replace `Linux` to `ARM32` or `ARM64` based on your platform.
+ 
+2. Run the program `DBRCSample`.
 
     ```bash
     ./DBRCSample

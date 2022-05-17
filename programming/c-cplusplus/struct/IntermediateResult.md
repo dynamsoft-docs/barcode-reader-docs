@@ -54,7 +54,8 @@ typedef struct tagIntermediateResult*  PIntermediateResult
 | [`ccmIndex`](#ccmindex) | *int* |
 | [`scaleDownRatio`](#scaledownratio) | *int* |
 | [`frameId`](#frameid) | *int* |
-| [`reserved`](#reserved) | *char\[64\]* |
+| [`rpmColourArgumentIndex`](#rpmcolourargumentindex) | *int* |
+| [`reserved`](#reserved) | *char\[60\]* |
 
 
 ### resultsCount
@@ -64,7 +65,7 @@ int tagIntermediateResult::resultsCount
 ```
 
 ### results
-One of the following types: Array of [`Contour`](Contour.md), Array of [`ImageData`](ImageData.md), Array of [`LineSegment`](LineSegment.md), Array of [`LocalizationResult`](LocalizationResult.md), Array of [`RegionOfInterest`](RegionOfInterest.md).
+One of the following types: Array of [`Contour`](Contour.md), Array of [`ImageData`](ImageData.md), Array of [`LineSegment`](LineSegment.md), Array of [`LocalizationResult`](LocalizationResult.md), Array of [`RegionOfInterest`](RegionOfInterest.md), Array of [`Quadrilateral`](Quadrilateral.md).
 ```cpp
 const void** tagIntermediateResult::results
 ```
@@ -237,9 +238,15 @@ The ID of the operated frame.
 int tagIntermediateResult::frameId
 ```
 
+### rpmColourArgumentIndex
+The index of ForeAndBackgroundColour argument used for RegionPredetectionMode.
+```cpp
+int tagIntermediateResult::rpmColourArgumentIndex
+```
+
 ### reserved
 Reserved memory for the struct. The length of this array indicates the size of the memory reserved for this struct.
 ```cpp
-char tagIntermediateResult::reserved[64]
+char tagIntermediateResult::reserved[60]
 ```
 

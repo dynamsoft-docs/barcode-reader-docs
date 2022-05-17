@@ -49,8 +49,9 @@ Returns error code.
 **Code Snippet**  
 
 ```csharp
+string errorMsg;
+BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
 BarcodeReader reader = new BarcodeReader();
-reader.ProductKeys = "t0260NwAAAHV***************";
 EnumErrorCode error = reader.StartFrameDecoding(2, 10, 1024, 720, 720, EnumImagePixelFormat.IPF_BINARY, "");
 reader.Dispose();
 ```
@@ -76,8 +77,9 @@ Returns error code.
 
 **Code Snippet**  
 ```csharp
+string errorMsg;
+BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
 BarcodeReader reader = new BarcodeReader();
-reader.ProductKeys = "t0260NwAAAHV***************";
 FrameDecodingParameters parameters = reader.InitFrameDecodingParameters();
 parameters.MaxQueueLength = 3;
 parameters.MaxResultQueueLength = 10;
@@ -116,8 +118,9 @@ Returns the ID of the appended frame.
 
 **Code Snippet**  
 ```csharp
+string errorMsg;
+BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
 BarcodeReader reader = new BarcodeReader();
-reader.ProductKeys = "t0260NwAAAHV***************";
 int ret = reader.AppendFrame(pBufferBytes);
 reader.Dispose();
 ```
@@ -139,8 +142,9 @@ Returns error code.
 
 **Code Snippet**  
 ```csharp
+string errorMsg;
+BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
 BarcodeReader reader = new BarcodeReader();
-reader.ProductKeys = "t0260NwAAAHV***************";
 EnumErrorCode err = reader.StopFrameDecoding();
 reader.Dispose();
 ```
@@ -183,8 +187,9 @@ Returns error code.
 
 **Code Snippet**  
 ```csharp
+string errorMsg;
+BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
 BarcodeReader reader = new BarcodeReader();
-reader.ProductKeys = "t0260NwAAAHV***************";
 reader.SetErrorCallback(ErrorFunction, NULL);
 EnumErrorCode error = reader.StartFrameDecoding(2, 10, 1024, 720, 720, IPF_BINARY, "");
 reader.Dispose();
@@ -211,8 +216,9 @@ Returns error code.
 
 **Code Snippet**  
 ```csharp
+string errorMsg;
+BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
 BarcodeReader reader = new BarcodeReader();
-reader.ProductKeys = "t0260NwAAAHV***************";
 PublicRuntimeSettings settings = new PublicRuntimeSettings();
 settings = reader.GetRuntimeSettings();
 settings.IntermediateResultTypes = (int)(EnumIntermediateResultType.IRT_ORIGINAL_IMAGE | EnumIntermediateResultType.IRT_COLOUR_CLUSTERED_IMAGE | EnumIntermediateResultType.IRT_COLOUR_CONVERTED_GRAYSCALE_IMAGE);
@@ -243,8 +249,9 @@ Returns error code.
 
 **Code Snippet**  
 ```csharp
+string errorMsg;
+BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
 BarcodeReader reader = new BarcodeReader();
-reader.ProductKeys = "t0260NwAAAHV***************";
 reader.SetTextResultCallback(TextResultFunction, NULL);
 EnumErrorCode error = reader.StartFrameDecoding(2, 10, 1024, 720, 720, IPF_BINARY, "");
 reader.Dispose();

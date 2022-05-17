@@ -11,23 +11,23 @@ needAutoGenerateSidebar: true
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`initLicense`](#initlicense) | Reads product key and activate the SDK. |
-  | [`initLicenseFromServer`](#initlicensefromserver) | Initializes license and connect to the specified server for online verification. |
-  | [`initLicenseFromLicenseContent`](#initlicensefromlicensecontent) | Initializes license from the license content on client machine for offline verification. |
-  | [`outputLicenseToString`](#outputlicensetostring) | Outputs the license content to a string from the license server. |
-  | [`initDLSConnectionParameters`](#initdlsconnectionparameters) | Initializes a DMDLSConnectionParameters struct with default values. |
-  | [`initLicenseFromDLS`](#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`initLicense`](#initlicense) | Initializes license key and activate the SDK. |
   | [`getIdleInstancesCount`](#getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
-  | [`initLTSConnectionParameters`](#initltsconnectionparameters) | `Deprecated`. Use [initDLSConnectionParameters](#initdlsconnectionparameters) instead. |
-  | [`initLicenseFromLTS`](#initlicensefromlts) | `Deprecated`. Use [initLicenseFromDLS](#initlicensefromdls) instead. |
+  | [`initLicenseFromServer`](#initlicensefromserver) | `Deprecated` |
+  | [`initLicenseFromLicenseContent`](#initlicensefromlicensecontent) | `Deprecated` |
+  | [`outputLicenseToString`](#outputlicensetostring) | `Deprecated` |
+  | [`initDLSConnectionParameters`](#initdlsconnectionparameters) | `Deprecated` |
+  | [`initLicenseFromDLS`](#initlicensefromdls) | `Deprecated` |
+  | [`initLTSConnectionParameters`](#initltsconnectionparameters) | `Deprecated` |
+  | [`initLicenseFromLTS`](#initlicensefromlts) | `Deprecated` |
 
 
 ## initLicense
 
-Reads product key and activates the SDK.
+Initializes license key and activates the SDK.
 
 ```java
-void com.dynamsoft.dbr.BarcodeReader.initLicense(String license) throws BarcodeReaderException
+static void com.dynamsoft.dbr.BarcodeReader.initLicense(String license) throws BarcodeReaderException
 ```   
    
 **Parameters**  
@@ -41,131 +41,11 @@ void com.dynamsoft.dbr.BarcodeReader.initLicense(String license) throws BarcodeR
 **Code Snippet**  
 
 ```java
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
 BarcodeReader reader = new BarcodeReader();
-reader.initLicense("t0260NwAAAHV***************");
-reader.destroy();
+// add further process
 ```
 
-## initLicenseFromServer
-
-Initializes the license and connects to the specified server for online verification.
-
-```java
-void com.dynamsoft.dbr.BarcodeReader.initLicenseFromServer(String licenseServer, String licenseKey)	throws BarcodeReaderException
-```   
-   
-**Parameters**  
-
-`licenseServer` The URL of the license server.  
-`licenseKey` The license key.
-
-**Exception**  
-
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
-
-**Code Snippet**  
-
-```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
-reader.initLicenseFromServer("", "C087****");
-reader.destroy();
-```
-
-## initLicenseFromLicenseContent
-
-Initializes barcode reader license from the license content on the client machine for offline verification.
-
-```java
-void com.dynamsoft.dbr.BarcodeReader.initLicenseFromLicenseContent(String licenseKey, String licenseContent) throws BarcodeReaderException
-```   
-
-**Parameters**  
-
-`licenseKey` The license key.  
-`licenseContent` An encrypted string representing the license content (quota, expiration date, barcode type, etc.) obtained from the method [`OutputLicenseToString`](#outputlicensetostring).
-
-**Exception**  
-
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
-
-**Code Snippet**  
-
-```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
-reader.initLicenseFromLicenseContent("t0260NwAAAHV***************", "C087****");
-reader.destroy();
-```
-
-## outputLicenseToString
-
-Outputs the license content as an encrypted string from the license server for offline license verification.
-
-```java
-String com.dynamsoft.dbr.BarcodeReader.outputLicenseToString() throws BarcodeReaderException
-```   
-   
-**Return Value**  
-
-The output string which stores the content of the license.
-
-**Exception**  
-
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
-
-
-
-**Code Snippet**  
-
-```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
-reader.initLicenseFromLicenseContent("t0260NwAAAHV***************", "C087****");
-String licenseInfo = reader.outputLicenseToString();
-reader.destroy();
-```
-
-**Remarks**  
-[`InitLicenseFromServer`](#initlicensefromserver) has to be successfully called before calling this method.
-
-
-## initDLSConnectionParameters
-
-Initializes a `DMDLSConnectionParameters` struct with default values.
-
-```java
-static DMDLSConnectionParameters com.dynamsoft.dbr.BarcodeReader.initDLSConnectionParameters() throws BarcodeReaderException
-```
-   
-**Code Snippet**  
-
-```java
-DMDLSConnectionParameters info = BarcodeReader.initDLSConnectionParameters();
-info.handShakeCode = "*****-hs-****";
-info.sessionPassword = "******";
-BarcodeReader.initLicenseFromDLS(info);
-BarcodeReader reader = new BarcodeReader();
-```
-
-## initLicenseFromDLS
-
-Initializes the barcode reader license and connects to the specified server for online verification.
-
-```java
-static void com.dynamsoft.dbr.BarcodeReader.initLicenseFromDLS(DMDLSConnectionParameters dlsInfo) throws BarcodeReaderException
-```
-
-**Parameters**  
-
-`dlsInfo`: The struct `DMDLSConnectionParameters` with customized settings.  
-
-**Code Snippet**  
-
-```java
-DMDLSConnectionParameters info = BarcodeReader.initDLSConnectionParameters();
-info.handShakeCode = "*****-hs-****";
-info.sessionPassword = "******";
-BarcodeReader.initLicenseFromDLS(info);
-BarcodeReader reader = new BarcodeReader();
-```
 
 ## getIdleInstancesCount
 
@@ -178,6 +58,9 @@ static int com.dynamsoft.dbr.BarcodeReader.getIdleInstancesCount()
 **Return Value**  
 
 Returns available instances count.    
+- 0: There is no space for new instance  
+- -1: The available count needs to be updated from server by calling initLicense.
+- N ( N > 0 ): N more instances can be created.
 
 **Code Snippet**  
 
@@ -188,13 +71,62 @@ if(count > 0)
 {
   //create instance and process further
 }
-else 
+if(count < 0)
+{
+  //call InitLicense
+  //create instance and process further
+}
+if(count = 0)
 {
   //waiting for available instances 
 }
 ```
 
+## initLicenseFromServer
+
+`Deprecated`. It still works in this version but could be removed in the near future.
+
+```java
+void com.dynamsoft.dbr.BarcodeReader.initLicenseFromServer(String licenseServer, String licenseKey)	throws BarcodeReaderException
+```   
+   
+
+## initLicenseFromLicenseContent
+
+`Deprecated`. It still works in this version but could be removed in the near future.
+
+```java
+void com.dynamsoft.dbr.BarcodeReader.initLicenseFromLicenseContent(String licenseKey, String licenseContent) throws BarcodeReaderException
+```   
+
+
+## outputLicenseToString
+
+`Deprecated`. It still works in this version but could be removed in the near future.
+
+```java
+String com.dynamsoft.dbr.BarcodeReader.outputLicenseToString() throws BarcodeReaderException
+```   
+
+
+## initDLSConnectionParameters
+
+`Deprecated`. It still works in this version but could be removed in the near future.
+
+```java
+static DMDLSConnectionParameters com.dynamsoft.dbr.BarcodeReader.initDLSConnectionParameters() throws BarcodeReaderException
+```
+
+## initLicenseFromDLS
+
+`Deprecated`. It still works in this version but could be removed in the near future.
+
+```java
+static void com.dynamsoft.dbr.BarcodeReader.initLicenseFromDLS(DMDLSConnectionParameters dlsInfo) throws BarcodeReaderException
+```
+
+
 ## initLTSConnectionParameters
-`Deprecated`. Use [initDLSConnectionParameters](#initdlsconnectionparameters) instead.
+`Deprecated`. It still works in this version but could be removed in the near future.
 ## initLicenseFromLTS
-`Deprecated`. Use [initLicenseFromDLS](#initlicensefromdls) instead.
+`Deprecated`. It still works in this version but could be removed in the near future.

@@ -77,7 +77,7 @@ reader->StartFrameDecoding(2, 10, 1024, 720, 720, IPF_BINARY, "");
 delete reader;
 ```
 
-&nbsp; 
+ 
 
 
 
@@ -128,7 +128,7 @@ if(errorCode == DBR_OK)
 delete reader;
 ```
 
-&nbsp; 
+ 
 
 
 
@@ -156,7 +156,6 @@ int frameId = reader->AppendFrame(pBufferBytes);
 delete reader;
 ```
 
-&nbsp; 
 
 
 
@@ -168,14 +167,11 @@ delete reader;
 Stop the frame decoding thread created by [`StartFrameDecoding`](#startframedecoding) or [`StartFrameDecodingEx`](#startframedecodingex).
 
 ```cpp
-int CBarcodeReader::AppendFrame (unsigned char* pBufferBytes) 
+int CBarcodeReader::StopFrameDecoding() 
 ```   
-   
-#### Parameters
-`[in]	pBufferBytes` The array of bytes which contain the image data.
 
 #### Return value
-Returns error code. Possible return(s): DBR_OK; DBRERR_FRAME_DECODING_THREAD_EXISTS; DBRERR_PARAMETER_VALUE_INVALID.   
+Returns error code. Possible return(s): DBR_OK; DBRERR_STOP_DECODING_THREAD_FAILED.   
 *You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
 
 #### Code Snippet
@@ -186,9 +182,6 @@ reader->StartFrameDecoding(2, 10, 1024, 720, 720, IPF_BINARY, "");
 int errorCode = reader->StopFrameDecoding();
 delete reader;
 ```
-
-&nbsp; 
-
 
 
 
@@ -236,7 +229,7 @@ if(errorCode == DBR_OK)
 delete reader;
 ```
 
-&nbsp; 
+ 
 
 
 
@@ -271,7 +264,7 @@ reader->SetErrorCallback(ErrorFunction, NULL);
 reader->StartFrameDecoding(2, 10, 1024, 720, 720, IPF_BINARY, "");
 ```
 
-&nbsp; 
+ 
 
 
 
@@ -305,7 +298,7 @@ reader->SetTextResultCallback(TextResultFunction, NULL);
 reader->StartFrameDecoding(2, 10, 1024, 720, 720, IPF_BINARY, "");
 ```
 
-&nbsp; 
+ 
 
 
 
@@ -345,7 +338,7 @@ reader->SetIntermediateResultCallback(IntermediateResultFunction, NULL);
 reader->StartFrameDecoding(2, 10, 1024, 720, 720, IPF_BINARY, "");
 ```
 
-&nbsp; 
+ 
 
 
 

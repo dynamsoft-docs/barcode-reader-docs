@@ -15,7 +15,7 @@ needAutoGenerateSidebar: true
   | [`decodeFileInMemory`](#decodefileinmemory) | Decode barcodes from an image file in memory. |
   | [`decodeBuffer`](#decodebuffer) | Decode barcodes from raw buffer. |
   | [`decodeBase64String`](#decodebase64string) | Decode barcodes from a base64 encoded string. |
-  | [`decodeBufferedImage`](#decodeBufferedImage) | Decodes barcode from a buffered imag (bitmap). |
+  | [`decodeBufferedImage`](#decodebufferedimage) | Decodes barcode from a buffered imag (bitmap). |
   | [`initIntermediateResult`](#initintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
@@ -29,18 +29,19 @@ TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeFile(String fileFullPath, Str
 ```   
    
 **Parameters**  
-`fileFullPath`	A string defining the file path.   
+`fileFullPath`	A string defining the file path. It supports BMP, TIFF, JPG, PNG and PDF files.
 `templateName`  The template name.
 
 **Return Value**  
-All barcode text results decoded successfully.
+An array of [`TextResult`](../class/TextResult.md)
 
 **Exception**  
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
 **Code Snippet**  
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
 TextResult[] result = reader.decodeFile("your file path", "");
 reader.destroy();
 ```
@@ -61,14 +62,15 @@ TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeFileInMemory(byte[] fileBytes
 `templateName` The template name.
 
 **Return Value**  
-All barcode text results decoded successfully.
+An array of [`TextResult`](../class/TextResult.md) 
 
 **Exception**  
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
 **Code Snippet**  
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
 //get bufferBytes from other component
 TextResult[] result = reader.decodeFileInMemory(bufferBytes, "");
 reader.destroy();
@@ -85,14 +87,15 @@ TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeFileInMemory(InputStream file
 `templateName` The template name.
 
 **Return Value**  
-All barcode text results decoded successfully.
+An array of [`TextResult`](../class/TextResult.md)
 
 **Exception**  
 [`BarcodeReaderException`](../class/BarcodeReaderException.md), IOException
 
 **Code Snippet**  
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
 //get FileInputStream fis from other component
 TextResult[] result = reader.decodeFileInMemory(fis, "");
 reader.destroy();
@@ -104,7 +107,7 @@ reader.destroy();
 
 ## DecodeBuffer
 
-Decode barcodes from the memory buffer containing image pixels in defined format.
+Decode barcodes from the memory buffer containing image pixels in a defined format.
 
 ```java
 TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeBuffer(byte[] buffer, int width, int height, int stride, int enumImagePixelFormat, String templateName)	throws BarcodeReaderException	
@@ -119,14 +122,15 @@ TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeBuffer(byte[] buffer, int wid
 `templateName` The template name.
 
 **Return Value**  
-All barcode text results decoded successfully.  
+An array of [`TextResult`](../class/TextResult.md)
 
 **Exception**  
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
 **Code Snippet**  
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
 byte[] bufferBytes;
 int iWidth = 0;
 int iHeight = 0;
@@ -156,14 +160,15 @@ TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeBase64String(String base64, S
 `templateName` The template name.
 
 **Return Value**  
-All barcode text results decoded successfully.
+An array of [`TextResult`](../class/TextResult.md)
 
 **Exception**  
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
 **Code Snippet**  
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
 TextResult[] result = reader.decodeBase64String("file in base64 string", "");
 reader.destroy();
 ```
@@ -187,14 +192,15 @@ TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeBufferedImage(BufferedImage i
 `templateName` The template name.
 
 **Return Value**  
-All barcode text results decoded successfully.  
+An array of [`TextResult`](../class/TextResult.md)
 
 **Exception**  
 [`BarcodeReaderException`](../class/BarcodeReaderException.md), IOException
 
 **Code Snippet**  
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
 //get BufferedImage input from other component
 TextResult[] result = reader.decodeBufferedImage(input, "");
 reader.destroy();
@@ -205,7 +211,7 @@ reader.destroy();
 
 ## initIntermediateResult
 
-Inits an intermediateResult struct with default values.
+Initiates an intermediateResult struct with default values.
 
 ```java
 IntermediateResult com.dynamsoft.dbr.BarcodeReader.initIntermediateResult(int resultType)	throws BarcodeReaderException	
@@ -215,14 +221,15 @@ IntermediateResult com.dynamsoft.dbr.BarcodeReader.initIntermediateResult(int re
 `resultType`	The type of the intermediate result to init.   
    
 **Return Value**  
-An intermediateResult struct with default values.
+An [`IntermediateResult`](../class/IntermediateResult.md) class with default values.
 
 **Exception**  
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
 **Code Snippet**  
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
 IntermediateResult imResult = reader.initIntermediateResult(EnumIntermediateResultType.IRT_ORIGINAL_IMAGE);
 ```
 
@@ -242,14 +249,15 @@ TextResult[] com.dynamsoft.dbr.BarcodeReader.decodeIntermediateResults(Intermedi
 `templateName`  The template name.
 
 **Return Value**  
-All barcode text results decoded successfully.
+An array of [`TextResult`](../class/TextResult.md)
 
 **Exception**  
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
 
 **Code Snippet**  
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
 PublicRuntimeSettings settings = reader.getRuntimeSettings(); settings.intermediateResultTypes = EnumIntermediateResultType.IRT_ORIGINAL_IMAGE;
 reader.updateRuntimeSettings(settings);
 reader.decodeFile("your file path", "");

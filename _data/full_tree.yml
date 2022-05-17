@@ -2,9 +2,17 @@ tree_file_list:
   - sidelist-full-tree.html
   - sidelist-introduction/introduction-comparison-tools.html
   - sidelist-introduction/introduction-how-to-guides.html
+  - sidelist-introduction/introduction-how-to-guides-v7.6.0.html
   - sidelist-parameters/parameters-enumerations.html
+  - sidelist-parameters/parameters-enumerations-v8.9.3.html
   - sidelist-parameters/parameters-references.html
+  - sidelist-parameters/parameters-references-v7.6.0.html
+  - sidelist-parameters/parameters-references-v8.0.0.html
+  - sidelist-parameters/parameters-references-v8.1.2.html
+  - sidelist-parameters/parameters-references-v8.9.3.html
   - sidelist-parameters/parameters-scenario-settings.html
+  - sidelist-parameters/parameters-scenario-settings-v7.6.0.html
+  - sidelist-parameters/parameters-template-structure.html
   - sidelist-programming/programming-javascript-v7.5.0.html
   - sidelist-programming/programming-javascript-v7.6.0.html
   - sidelist-programming/programming-javascript-v8.0.0.html
@@ -24,11 +32,19 @@ tree_file_list:
   - sidelist-programming/programming-java.html
   - sidelist-programming/programming-python.html
   - sidelist-programming/programming-c-v8.4.0.html
+  - sidelist-programming/programming-c-v8.9.3.html
   - sidelist-programming/programming-cpp-v8.4.0.html
+  - sidelist-programming/programming-cpp-v8.9.3.html
   - sidelist-programming/programming-dotnet-v8.4.0.html
+  - sidelist-programming/programming-dotnet-v8.9.3.html
   - sidelist-programming/programming-java-v8.4.0.html
+  - sidelist-programming/programming-java-v8.9.3.html
   - sidelist-programming/programming-python-v8.4.0.html
+  - sidelist-programming/programming-python-v8.9.3.html
   - sidelist-programming/programming-android.html
+  - sidelist-programming/programming-android-v8.9.3.html
+  - sidelist-programming/programming-android-v8.8.0.html
+  - sidelist-programming/programming-android-v8.6.0.html
   - sidelist-programming/programming-android-v8.4.0.html
   - sidelist-programming/programming-android-v8.2.5.html
   - sidelist-programming/programming-android-v8.2.1.html
@@ -39,6 +55,9 @@ tree_file_list:
   - sidelist-programming/programming-android-v7.6.0.html
   - sidelist-programming/programming-android-v7.5.0.html
   - sidelist-programming/programming-oc.html
+  - sidelist-programming/programming-oc-v8.9.3.html
+  - sidelist-programming/programming-oc-v8.8.0.html
+  - sidelist-programming/programming-oc-v8.6.0.html
   - sidelist-programming/programming-oc-v8.4.0.html
   - sidelist-programming/programming-oc-v8.2.5.html
   - sidelist-programming/programming-oc-v8.2.1.html
@@ -54,3 +73,5 @@ tree_file_list:
   - sidelist-parameters.html
   - sidelist-programming.html
   - sidelist-release-notes.html
+  - sidelist-faq.html
+  - sidelist-performance.html

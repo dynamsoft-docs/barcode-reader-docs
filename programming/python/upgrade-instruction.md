@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader How-to Guides - Upgrade to Latest Version
+title: Dynamsoft Barcode Reader - Upgrade Instruction - Python
 description: This page shows how to upgrade to latest version.
 keywords: Upgrade, how-to guides
 needAutoGenerateSidebar: false
@@ -9,18 +9,46 @@ needAutoGenerateSidebar: false
 
 # How-to Guides - Upgrade to Latest Version     
 
-## From version 8.0.0 to 8.x
-Run the following command to upgrade the assembly files
-```
-pip install dbr --upgrade
-```
+## From version 8.x
+- Run the following command to upgrade the assembly files
+    ```
+    pip install dbr --upgrade
+    ```
+
+- Go to <a href="https://www.dynamsoft.com/customer/license/fullLicense?utm_source=docs" target="_blank">Customer Portal</a> to get your license key.
+
+- Update your code to set the license
+    ```python
+    BarcodeReader.init_license("YOUR-LICENSE-KEY");
+    reader = BarcodeReader()
+    # add further process
+    ```
+
+>Note:
+>The following license activation related functions have been deprecated, they still work in this version but could be removed in version 10.0. We recommend you to use init_license to set the license.
+
+- `init_license_from_dls`
+- `init_license_from_server`
+- `init_license_from_license_content` 
 
 ## From version 7.x
-Run the following command to upgrade the assembly files
-```
-pip install dbr --upgrade
-```
+- Run the following command to upgrade the assembly files
+    ```
+    pip install dbr --upgrade
+    ```
 
-Your previous SDK license for version 7.x is not compatible with the version 8.x. Please [contact us](https://www.dynamsoft.com/Company/Contact.aspx) to upgrade your license.
+- Go to <a href="https://www.dynamsoft.com/customer/license/fullLicense?utm_source=docs" target="_blank">Customer Portal</a> to get your license key.
 
-In v8.0.0, we introduced a new license tracking mechanism, <a href="https://www.dynamsoft.com/license-server/docs/about/index.html" target="_blank">License 2.0</a>. If you wish to use License 2.0, please refer to [this article](../../license-activation/set-full-license.md) to set the license.
+- Update your code to set the license
+    ```python
+    BarcodeReader.init_license("YOUR-LICENSE-KEY");
+    reader = BarcodeReader()
+    # add further process
+    ```
+
+>Note:
+>The following license activation related functions have been deprecated, they still work in this version but could be removed in version 10.0. We recommend you to use init_license to set the license.
+
+- `init_license_from_server`
+- `init_license_from_license_content` 
+

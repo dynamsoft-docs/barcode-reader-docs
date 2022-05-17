@@ -12,14 +12,14 @@ needAutoGenerateSidebar: true
   | Method               | Description |
   |----------------------|-------------|
   | [`init_license`](#init_license) | Reads product key and activates the SDK.  |
-  | [`init_license_from_server`](#init_license_from_server) | Initializes license and connect to the specified server for online verification. |
-  | [`init_license_from_license_content`](#init_license_from_license_content) | Initializes barcode reader license and connects to the specified server for online verification. |
-  | [`output_license_to_string`](#output_license_to_string) | Outputs the license content as an encrypted string from the license server to be used for offline license verification.|
-  | [`init_dls_connection_parameters`](#init_dls_connection_parameters) | Initializes a DMDLSConnectionParameters struct with default values. |
-  | [`init_license_from_dls`](#init_license_from_dls) | Initializes the barcode reader license and connects to the specified server for online verification. |
   | [`get_idle_instances_count`](#get_idle_instances_count) | Gets available instances count when charging by concurrent instances count. |
-  | [`init_lts_connection_parameters`](#init_lts_connection_parameters) | `Deprecated`. Use [init_dls_connection_parameters](#init_dls_connection_parameters) instead. |
-  | [`init_license_from_lts`](#init_license_from_lts) | `Deprecated`. Use [init_license_from_dls](#init_license_from_dls) instead. |
+  | [`init_license_from_server`](#init_license_from_server) | `Deprecated` |
+  | [`init_license_from_license_content`](#init_license_from_license_content) | `Deprecated` |
+  | [`output_license_to_string`](#output_license_to_string) | `Deprecated` |
+  | [`init_dls_connection_parameters`](#init_dls_connection_parameters) | `Deprecated` |
+  | [`init_license_from_dls`](#init_license_from_dls) | `Deprecated` |
+  | [`init_lts_connection_parameters`](#init_lts_connection_parameters) | `Deprecated` |
+  | [`init_license_from_lts`](#init_license_from_lts) | `Deprecated` |
   
 
 ## init_license
@@ -32,92 +32,11 @@ BarcodeReader.init_license(dbr_license)
 
 **Parameters**  
 
-`[in]	dbr_license` <*str*> : The product keys.
+`[in]	dbr_license` <*str*> : The license key.
 
 **Return Value**  
 
 `error` <*tuple*> : error_code = error[0], error_message = error[1], if error_code != EnumErrorCode.DBR_OK, you can get the detailed error message by error_message.
-
-## init_license_from_server
-
-Initialize the license and connect to the specified server for online verification.
-
-```python
-BarcodeReader.init_license_from_server(license_server, license_key)
-```
-
-**Parameters**  
-
-`[in]	license_server` <*str*> : The name/IP of the license server.  
-`[in]	license_key` <*str*> : The license key of Barcode Reader.
-
-**Return Value**  
-
-`error` <*tuple*> : error_code = error[0], error_message = error[1], if error_code != EnumErrorCode.DBR_OK, you can get the detailed error message by error_message.
-
-## init_license_from_license_content
-
-Initializes barcode reader license from the license content on the client machine for offline verification.
-
-```python
-BarcodeReader.init_license_from_license_content(license_key, license_content)
-```
-
-**Parameters**  
-
-`[in]	license_key` <*str*> :	The license key of Barcode Reader.   
-`[in]	license_content` <*str*> :	An encrypted string representing the license content (runtime number, expiry date, barcode type, etc.) obtained from the method output_license_to_string(). 
-
-**Return Value**  
-
-`error` <*tuple*> : error_code = error[0], error_message = error[1], if error_code != EnumErrorCode.DBR_OK, you can get the detailed error message by error_message.
-
-## output_license_to_string
-
-Outputs the license content as an encrypted string from the license server to be used for offline license verification. 
-
-```python
-BarcodeReader.output_license_to_string()
-```
-
-**Return Value**  
-
-`license_string` <*str*> : An encrypted string which stores the content of license. 
-
-**Exception**  
-
-[`BarcodeReaderError`](../class/BarcodeReaderError.md) : If error happens, this function will throw a BarcodeReaderError exception that can report the detailed error message.
-
-## init_dls_connection_parameters
-
-Initializes a DMDLSConnectionParameters struct with default values.
-
-```python
-BarcodeReader.init_dls_connection_parameters()
-```
-
-**Return Value**  
-
-`DMDLSConnectionParameters` <*class DMDLSConnectionParameters*> : A DMDLSConnectionParameters struct with default values.
-
-
-
-## init_license_from_dls
-
-Initializes the barcode reader license and connects to the specified server for online verification.
-
-```python
-BarcodeReader.init_license_from_dls(dls_connection_parameters)
-```
-
-**Parameters**  
-
-- `[in]	dls_connection_parameters` <*class DMDLSConnectionParameters*> : The struct DMDLSConnectionParameters with customized settings.  
-
-**Return Value**  
-
-`error` <*tuple*> : error_code = error[0], error_message = error[1], if error_code != EnumErrorCode.DBR_OK, you can get the detailed error message by error_message.
-
 
 
 ## get_idle_instances_count
@@ -128,10 +47,54 @@ BarcodeReader.get_idle_instances_count()
 ```   
 
 **Return Value**  
-count <*int*> : Returns available instances count.    
+`count` <*int*> : Returns available instances count.    
+- 0: There is no space for new instance  
+- -1: The available count needs to be updated from server by calling initLicense.
+- N ( N > 0 ): N more instances can be created.
+
+
+## init_license_from_server
+
+`Deprecated`. It still works in this version but could be removed in the near future.
+
+```python
+BarcodeReader.init_license_from_server(license_server, license_key)
+```
+
+## init_license_from_license_content
+
+`Deprecated`. It still works in this version but could be removed in the near future.
+
+```python
+BarcodeReader.init_license_from_license_content(license_key, license_content)
+```
+
+## output_license_to_string
+
+`Deprecated`. It still works in this version but could be removed in the near future.
+
+```python
+BarcodeReader.output_license_to_string()
+```
+
+## init_dls_connection_parameters
+
+`Deprecated`. It still works in this version but could be removed in the near future.
+
+```python
+BarcodeReader.init_dls_connection_parameters()
+```
+
+## init_license_from_dls
+
+`Deprecated`. It still works in this version but could be removed in the near future.
+
+```python
+BarcodeReader.init_license_from_dls(dls_connection_parameters)
+```
 
 ## init_lts_connection_parameters
-`Deprecated`. Use [init_dls_connection_parameters](#init_dls_connection_parameters) instead.
+`Deprecated`. It still works in this version but could be removed in the near future.
 
 ## init_license_from_lts
-`Deprecated`. Use [init_license_from_dls](#init_license_from_dls) instead.
+`Deprecated`. It still works in this version but could be removed in the near future.

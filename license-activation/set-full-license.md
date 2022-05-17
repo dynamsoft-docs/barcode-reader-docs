@@ -7,169 +7,124 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 ---
 
-# How to set full license in version 8.x
-
-Different methods are used for setting trial and full license keys. In our demo or sample applications, we use `.InitLicense()` or `.ProductKeys` to set trial license keys. 
-
-For the purchased version, you need to use `initLicenseFromDLS()` to set the Handshake Codes for your licenses.
+# How to set full license in version 9.x
 
 You can set the license by following the steps below:
 
 1. [Activate the license](#activate-the-license)
-2. [Configure the license (optional)](#configure-the-license-optional) 
+2. [Configure the license (optional)](#configure-the-license-optional)
 3. [Set the license in the code](#set-the-license-in-the-code)
 
 ## Activate the license
 
- Once you purchase a full license from our <a href ="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/" target="_blank">online store</a>, you can find your license information at <a href ="https://www.dynamsoft.com/customer/license/fullLicense" target="_blank">Customer Portal</a>. 
+Once you purchase a full license from Dynamsoft, you can find your license information in the <a href ="https://www.dynamsoft.com/customer/license/fullLicense" target="_blank">Customer Portal</a>.
 
- To activate the license, click "Please first activate the license".
+To activate the license, click "Activate".
 
- ![FullLicenseList][1]
+ ![Activate][1]
 
- On the next page, set an Alias for your license or leave the default Alias and click the "Activate" button.
+On the next page, set an Alias for your license or leave the default Alias and click the "Activate" button. Take "Connect to Dynamsoft's License Server" as an example.
 
- > Read more on What is an <a href ="https://www.dynamsoft.com/license-tracking/docs/about/terms.html#alias" target="_blank">Alias</a>
- 
- ![SetAlias][2]
- 
- On the following popup window, click the "OK" button.
- 
- ![ActivationContinue][3]
- 
- Then you can see the message "Activation secceeded!...". Click "configure this new license item at this page" to continue.
- 
- ![ConfigLicense][4]
+> Read more on <a href ="https://www.dynamsoft.com/license-server/docs/about/terms.html#alias?utm_source=docs&product=dbr" target="_blank">Alias</a>
+>
+> <a href ="https://www.dynamsoft.com/license-server/docs/about/activate.html?utm_source=docs&product=dbr" target="_blank">Connect to Dynamsoft's License Server</a> vs. <a href ="https://www.dynamsoft.com/license-server/docs/selfhosting/index.html?utm_source=docs&product=dbr" target="_blank">Connect to My Self-hosted License Server</a>
 
- You can repeat the above steps to activate other license keys.
+![Activate2][2]
+
+On the following popup window, click the "OK" button.
+
+![Activate3][3]
+
+You will find that the License Key is listed on the license details page now.
+
+![Activate5][5]
+
+You can repeat the above steps to activate other license keys.
 
 ## Configure the license (optional)
 
- After the license is activated, the Handshake Code will be generated automatically. Read more on <a href ="https://www.dynamsoft.com/license-tracking/docs/about/terms.html#handshake-code" target="_blank">What is a Handshake Code</a>.
- 
- Basically, you can skip the step. But if you would like to edit the Handshake Codes for the license or view the statistics of a handshake code, please refer to <a href ="https://www.dynamsoft.com/license-tracking/docs/common/handshakeCodes.html" target="_blank">how to manage the handshake code</a>.
+To configure the License Key, you can click the name after "Linked Project Name" on the license details page to get to the configuration page. Read <a href ="https://www.dynamsoft.com/license-server/docs/common/project.html?utm_source=docs&product=dbr" target="_blank">how to manage the project</a> for more information.
 
 ## Set the license in the code
 
- Code snippet in JavaScript:
- ```js
-    Dynamsoft.DBR.BarcodeReader.organizationID = "YOUR-ORGANIZATION-ID";// Please replace the organizationID with your own
-    let reader = await Dynamsoft.DBR.BarcodeReader.createInstance();
- ```
-
- Code snippet in C:
- ```c
-   char errorBuf[512];
-   DMDLSConnectionParameters paramters;
-   DBR_InitDLSConnectionParameters(&paramters);
-   paramters.organizationID = "YOUR-ORGANIZATION-ID"; // Please replace the organizationID with your own
-   DBR_InitLicenseFromDLS(&paramters, errorBuf, 512);
- ```
-
- Code snippet in C++:
- ```cpp
-   int iRet = -1;
-   char szErrorMsg[256];
-   DM_DLSConnectionParameters dlspar;    
-   CBarcodeReader::InitDLSConnectionParameters(&dlspar);
-   dlspar.organizationID = "YOUR-ORGANIZATION-ID"; // Please replace the organizationID with your own
-   iRet = CBarcodeReader::InitLicenseFromDLS(&dlspar, szErrorMsg, 256);
-   
-   if (iRet != DBR_OK)
-    {
-        printf("Error code: %d. Error message: %s\n", iRet, szErrorMsg);
-        return -1;
-    }
- ```
-
- Code snippet in C#:
- ```csharp
-   DMDLSConnectionParameters dlspar = BarcodeReader.InitDLSConnectionParamters();           
-   dlspar.OrganizationID = "YOUR-ORGANIZATION-ID"; // Please replace the organizationID with your own
-   EnumErrorCode iRet = BarcodeReader.InitLicenseFromDLS(dlspar, out strErrorMSG);
- ```
-
- Code snippet in Java:
- ```java
-   DMDLSConnectionParameters dlspar = BarcodeReader.initDLSConnectionParameters();
-   dlspar.organizationID = "YOUR-ORGANIZATION-ID"; // Please replace the organizationID with your own
-   BarcodeReader.initLicenseFromDLS(dlspar);
- ```
-
- Code snippet in iOS (Objective-C):
- ```objc
-   iDMDLSConnectionParameters* dls = [[iDMDLSConnectionParameters alloc] init];
-   dls.organizationID = @"YOUR-ORGANIZATION-ID"; // Please replace the organizationID with your own
-   _dbr = [[DynamsoftBarcodeReader alloc] initLicenseFromDLS:dls verificationDelegate:self];
-- (void)DLSLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error
-{
-    NSNumber* boolNumber = [NSNumber numberWithBool:isSuccess];
-    dispatch_async(dispatch_get_main_queue(), ^{
-    [self->m_verificationReceiver performSelector:self->m_verificationCallback withObject:boolNumber withObject:error];
-        NSLog(@"ifsuccess : %@",boolNumber);
-        NSLog(@"error code: %ld:",(long)error.code);
-        NSLog(@"errormsg : %@",error.userInfo);
-        //UIImage *image =[UIImage imageNamed:@"AllSupportedBarcodeTypes.bmp"];
-        //NSError* errormsg = nil;
-        //NSArray* readResult = [_dbr decodeImage:image withTemplate:@"" error:&errormsg];
-    });
-}
- ```
- Code snippet in iOS(Swift):
- ```swift
-  let dls = iDMDLSConnectionParameters();
-  dls.organizationID = "YOUR-ORGANIZATION-ID";
-  barcodeReader = DynamsoftBarcodeReader(licenseFromDLS: dls, verificationDelegate: self)
-  func dlsLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
-  {
-     //TODO add your code for license verification
+<div class="sample-code-prefix"></div>
+>- JavaScript
+>- C
+>- C++
+>- C#
+>- Java
+>- Android
+>- Objective-C
+>- Swift
+>- Python
+>
+>1. 
+```javascript
+Dynamsoft.DBR.BarcodeReader.license = "YOUR-LICENSE-KEY";
+let scanner = await Dynamsoft.DBR.BarcodeReader.createInstance();
+```
+2. 
+```c
+  char errorBuf[512];
+  DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+  void* barcodeReader = DBR_CreateInstance();
+  // add further process
+```
+3. 
+```cpp
+  char errorBuf[512];
+  dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+  CBarcodeReader* reader = new CBarcodeReader();
+  // add further process
+```
+4. 
+```csharp
+  string errorMsg;
+  BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
+  BarcodeReader reader = new BarcodeReader();
+  // add further process
+```
+5. 
+```java
+  BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+  BarcodeReader reader = new BarcodeReader();
+  // add further process
+```
+6. 
+```java
+BarcodeReader.initLicense("YOUR-LICENSE-KEY", new DBRLicenseVerificationListener() {
+  @Override
+  public void DBRLicenseVerificationCallback(boolean isSuccessful, Exception e) {
+    // Add your code for license verification.
   }
- ```
+});
+```
+7. 
+```objc
+[DynamsoftBarcodeReader initLicense:@"YOUR-LICENSE-KEY" verificationDelegate:self];
+- (void)DBRLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error
+{
+  // Add your code for license verification.
+}
+```
+8. 
+```swift
+DynamsoftBarcodeReader.initLicense("YOUR-LICENSE-KEY", verificationDelegate: self)
+func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
+{
+  // Add your code for license verification.
+}
+```
+9. 
+```python
+error = BarcodeReader.init_license("YOUR-LICENSE-KEY")
+dbr = BarcodeReader()
+```
 
- Code snippet in Android:
- ```java
-   DBRDLSLicenseVerificationListener dlsListener = new DBRDLSLicenseVerificationListener() {
-      @Override
-      public void DLSLicenseVerificationCallback(boolean success, Exception error) {
-      }
-   };
-   DMDLSConnectionParameters parameters = new DMDLSConnectionParameters();
-   parameters.organizationID = "YOUR-ORGANIZATION-ID"; // Please replace the organizationID with your own
-   dbr.initLicenseFromDLS(parameters,dlsListener);
- ```
- 
- Code snippet in Python:
- ```python
- reader = BarcodeReader()
- connection_paras = reader.init_dls_connection_parameters()
- # Please replace the organizationID with your own
- connection_paras.organization_id = "YOUR-ORGANIZATION-ID"
- try:
-     error = reader.init_licesne_from_dls(connection_paras)
-     if error[0] != EnumErrorCode.DBR_OK:
-         print(error[1])
- except BarcodeReaderError as bre:
-     print(bre)
- ```
- 
- Code snippet in Xamarin:
- Please refer to <a href="https://github.com/Dynamsoft/xamarin/tree/master/examples" target="_blank">this article</a>.
+If you run into any issues, please [contact Dynamsoft Support](https://www.dynamsoft.com/Company/Contact.aspx).
 
- If you run into any issues, please [contact Dynamsoft Support](https://www.dynamsoft.com/Company/Contact.aspx).
-
-**Notes:**
-
-All license usage data is submitted to the Dynamsoft License Server (`DLS`) hosted by Dynamsoft. You can
-
-* <a href="https://www.dynamsoft.com/license-tracking/docs/common/licenseitems.html" target="_blank">View activated license items</a>
-* <a href="https://www.dynamsoft.com/license-tracking/docs/common/statistics.html" target="_blank">View the license usage statistics</a>
-* <a href="https://www.dynamsoft.com/license-tracking/docs/common/usagealerts.html" target="_blank">Get notified about license status</a> 
-
-> Read more about <a href="https://www.dynamsoft.com/license-tracking/docs/common/mechanism.html" target="_blank">the mechanism</a> behind license tracking.
-> 
-[1]:assets\set-full-license-2\FullLicenseList.png
-[2]:assets\set-full-license-2\SetAlias8.6.png
-[3]:assets\set-full-license-2\ActivationContinue.png
-[4]:assets\set-full-license-2\ConfigLicense8.6.png
-
-
+[1]:assets\set-full-license-3\Activate.png
+[2]:assets\set-full-license-3\Activate2.png
+[3]:assets\set-full-license-3\Activate3.png
+[4]:assets\set-full-license-3\Activate4.png
+[5]:assets\set-full-license-3\Activate5.png

@@ -51,7 +51,8 @@ void com.dynamsoft.dbr.BarcodeReader.startFrameDecoding	(final int maxQueueLengt
 
 **Code Snippet**  
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
 reader.setErrorCallback(new ErrorCallback() {
     @Override
     public void errorCallback(int frameId, int errorCode, Object userData) {
@@ -86,7 +87,8 @@ void com.dynamsoft.dbr.BarcodeReader.startFrameDecodingEx(FrameDecodingParameter
 
 **Code Snippet**  
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
 FrameDecodingParameters parameters = reader.initFrameDecodingParameters();
 parameters.maxQueueLength = 2;
 parameters.maxResultQueueLength = 10;
@@ -126,7 +128,8 @@ Returns the ID of the appended frame.
 
 **Code Snippet**  
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
 reader.startFrameDecoding(2, 10, 1024, 720, 1024, EnumImagePixelFormat.IPF_GRAYSCALED, "");
 int frameId = reader.appendFrame(bufferBytes);
 reader.destroy();
@@ -153,7 +156,8 @@ void com.dynamsoft.dbr.BarcodeReader.stopFrameDecoding() throws BarcodeReaderExc
 
 **Code Snippet**  
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
 reader.startFrameDecoding(2, 10, 1024, 720, 1024, EnumImagePixelFormat.IPF_GRAYSCALED, "");
 reader.stopFrameDecoding();
 reader.destroy();
@@ -184,7 +188,8 @@ The frame decoding parameters.
 
 **Code Snippet**  
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
 FrameDecodingParameters parameters = reader.initFrameDecodingParameters();
 reader.destroy();
 ```
@@ -214,7 +219,8 @@ void com.dynamsoft.dbr.BarcodeReader.setErrorCallback(ErrorCallback errorCallbac
 
 **Code Snippet**  
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
 reader.setErrorCallback(new ErrorCallback() {
     @Override
     public void errorCallback(int frameId, int errorCode, Object userData) {
@@ -248,7 +254,8 @@ void com.dynamsoft.dbr.BarcodeReader.setTextResultCallback(TextResultCallback te
 
 **Code Snippet**  
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
 reader.setTextResultCallback(new TextResultCallback() {
     @Override
     public void textResultCallback(int frameId, TextResult[] results, Object userData) {
@@ -282,7 +289,8 @@ void com.dynamsoft.dbr.BarcodeReader.setIntermediateResultCallback(IntermediateR
 
 **Code Snippet**  
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 settings.intermediateResultTypes = EnumIntermediateResultType.IRT_ORIGINAL_IMAGE | EnumIntermediateResultType.IRT_COLOUR_CLUSTERED_IMAGE | EnumIntermediateResultType.IRT_COLOUR_CONVERTED_GRAYSCALE_IMAGE;
 reader.updateRuntimeSettings(settings);
@@ -315,7 +323,8 @@ Returns length of current inner frame queue.
 
 **Code Snippet**  
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
 int length = reader.getLengthOfFrameQueue();
 reader.destroy();
 ```

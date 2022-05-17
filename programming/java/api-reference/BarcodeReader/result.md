@@ -26,8 +26,7 @@ IntermediateResult[] com.dynamsoft.dbr.BarcodeReader.getIntermediateResults() th
 ```   
 
 **Return Value**  
-The intermediate results returned by the SDK.
-
+An array of [`IntermediateResult`](../class/IntermediateResult.md)
 
 **Exception**  
 [`BarcodeReaderException`](../class/BarcodeReaderException.md)
@@ -35,7 +34,8 @@ The intermediate results returned by the SDK.
 
 **Code Snippet**  
 ```java
-BarcodeReader reader = new BarcodeReader("t0260NwAAAHV***************");
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 settings.intermediateResultTypes = EnumIntermediateResultType.IRT_ORIGINAL_IMAGE | EnumIntermediateResultType.IRT_COLOUR_CLUSTERED_IMAGE | EnumIntermediateResultType.IRT_COLOUR_CONVERTED_GRAYSCALE_IMAGE;
 reader.updateRuntimeSettings(settings);
