@@ -99,7 +99,7 @@ PublicRuntimeSettings settings =  reader.GetRuntimeSettings();
 pSettings.BinarizationModes[0] = BM_LOCAL_BLOCK;
 string errorMessage;
 reader.UpdateRuntimeSettings(pSettings);
-EnumErrorCode error = reader.SetModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "1", errorMessage);
+EnumErrorCode error = reader.SetModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "1", out errorMessage);
 string angumentValue;
 EnumErrorCode error = reader.GetModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", out angumentValue, out errorMessage);
 reader.Dispose();
