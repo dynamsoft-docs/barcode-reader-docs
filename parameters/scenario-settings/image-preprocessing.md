@@ -40,7 +40,7 @@ Sharpening and smoothing are used to reduce blur. The following sample image dem
 
 - `IPM_MORPHOLOGY`
 
-This mode improves the binarization process by eliminating noise and filling holes through corrosion and expansion operations. It is suitable for whe the barcode area is polluted or destroyed. The following sample image demonstrates the effect.
+This mode improves the binarization process by eliminating noise and filling holes through corrosion and expansion operations. It is suitable for the barcode area is polluted or destroyed. The following sample image demonstrates the effect.
 
 ![Before Morphology][9]![After Morphology][10]  
 
