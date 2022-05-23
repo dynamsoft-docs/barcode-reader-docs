@@ -18,7 +18,7 @@ needGenerateH3Content: true
 - SUM_LINEAR_INTERPOLATION
 - SUM_NEAREST_NEIGHBOUR_INTERPOLATION
 
-### CCM_AUTO
+### SUM_AUTO
 Lets the library choose a mode automatically.
 
 ### SUM_LINEAR_INTERPOLATION
