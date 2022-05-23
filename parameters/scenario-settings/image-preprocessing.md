@@ -28,7 +28,7 @@ Grayscale smoothing, which is used to reduce image noise and texture. The follow
 
 ![Grayscale Before Smoothing][3]![Binarized Before Smoothing][5]   
 
-After configuring `IPM_GRAY_SMOOTH` for smoothing. The noise of the binarized image are well handled well as shown below.
+After configuring `IPM_GRAY_SMOOTH` for smoothing. The noise of the binarized image are well handled as shown below.
 
 ![Grayscal After Smoothing][4]![Binarizedd After Smoothing][6]  
 
