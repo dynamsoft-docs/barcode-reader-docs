@@ -12,6 +12,7 @@ needAutoGenerateSidebar: true
   |----------------------|-------------|
   | [`DBR_InitLicense`](#dbr_initlicense) | Initializes license key and activate the SDK. |
   | [`DBR_GetIdleInstancesCount`](#dbr_getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
+  | [`DBR_SetDeviceFriendlyName`](#dbr_setdevicefriendlyname) | Sets a human-readable name that identifies the device. |
   | [`DBR_InitLicenseFromServer`](#dbr_initlicensefromserver) | `Deprecated` |
   | [`DBR_InitLicenseFromLicenseContent`](#dbr_initlicensefromlicensecontent) | `Deprecated` |
   | [`DBR_OutputLicenseToString`](#dbr_outputlicensetostring) | `Deprecated` |
@@ -21,26 +22,31 @@ needAutoGenerateSidebar: true
   | [`DBR_InitLicenseFromDLS`](#dbr_initlicensefromdls) | `Deprecated` |
   | [`DBR_InitLTSConnectionParameters`](#dbr_initltsconnectionparameters) | `Deprecated` |
   | [`DBR_InitLicenseFromLTS`](#dbr_initlicensefromlts) | `Deprecated` |
-  
-  
-  
+
 ## DBR_InitLicense
+
 Initializes license key and activate the SDK.
 
 ```c
 DBR_API int DBR_InitLicense (const char* pLicense, char errorMsgBuffer[], const int errorMsgBufferLen)
-```   
-   
-**Parameters**  
-`[in]	pLicense` The license string.
-`[in, out] errorMsgBuffer` The buffer is allocated by caller and the recommended length is 512. The error message will be copied to the buffer. 
-`[in]	errorMsgBufferLen` The length of allocated buffer.  
+```
 
-**Return Value**  
-Returns error code (returns 0 if the function operates successfully).    
+**Parameters**
+
+`[in] pLicense` The license string.
+
+`[in, out] errorMsgBuffer` The buffer is allocated by caller and the recommended length is 512. The error message will be copied to the buffer.
+
+`[in] errorMsgBufferLen` The length of allocated buffer.
+
+**Return Value**
+
+Returns error code (returns 0 if the function operates successfully).
+
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
-**Code Snippet**  
+**Code Snippet**
+
 ```c
 char errorBuf[512];
 DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
@@ -49,19 +55,23 @@ void* barcodeReader = DBR_CreateInstance();
 ```
 
 ## DBR_GetIdleInstancesCount
+
 Gets available instances count when charging by concurrent instances count.
 
 ```c
 DBR_API int DBR_GetIdleInstancesCount()
-```   
+```
 
-**Return Value**  
-Returns available instances count. 
+**Return Value**
+
+Returns available instances count.
+
 - 0: There is no space for new instance  
 - -1: The available count needs to be updated from server by calling DBR_InitLicense.
 - N ( N > 0 ): N more instances can be created.
 
-**Code Snippet**  
+**Code Snippet**
+
 ```c
 //...
 int count = DBR_GetIdleInstancesCount();
@@ -78,6 +88,34 @@ if(count = 0)
 {
   //waiting for available instances 
 }
+```
+
+## DBR_SetDeviceFriendlyName
+
+Sets a human-readable name that identifies the device.
+
+```c
+DBR_API int DBR_SetDeviceFriendlyName(const char* name)
+```
+
+**Parameters**
+
+`[in] name` The device alias.
+
+**Return Value**
+
+Returns error code (returns 0 if the function operates successfully).
+
+*You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
+
+**Code Snippet**
+
+```c
+char errorBuf[512];
+DBR_SetDeviceFriendlyName("My-PC");
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+void* barcodeReader = DBR_CreateInstance();
+// add further process
 ```
 
 ## DBR_InitLicenseFromServer

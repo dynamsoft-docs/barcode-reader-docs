@@ -10,6 +10,7 @@ breadcrumbText: Release Notes
 # Release Notes for .NET SDK
 
 
+- [9.2.0 (05/31/2022)](dotnet-9.md#920-05312022)
 - [9.0.0 (03/15/2022)](dotnet-9.md#900-03152022)
 - [8.8.0 (10/12/2021)](dotnet-8.md#880-10122021)
 - [8.6.0 (07/15/2021)](dotnet-8.md#860-07152021)

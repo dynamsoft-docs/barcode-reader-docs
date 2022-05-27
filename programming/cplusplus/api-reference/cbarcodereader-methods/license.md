@@ -13,6 +13,7 @@ needAutoGenerateSidebar: true
   |----------------------|-------------|
   | [`InitLicense`](#initlicense) | Initializes license key and activate the SDK. |
   | [`GetIdleInstancesCount`](#getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
+  | [`SetDeviceFriendlyName`](#setdevicefriendlyname) | Sets a human-readable name that identifies the device. |
   | [`InitLicenseFromServer`](#initlicensefromserver) | `Deprecated` |
   | [`InitLicenseFromLicenseContent`](#initlicensefromlicensecontent) | `Deprecated` |
   | [`OutputLicenseToString`](#outputlicensetostring) | `Deprecated` |
@@ -81,6 +82,34 @@ if(count = 0)
 {
   //waiting for available instances 
 }
+```
+
+## SetDeviceFriendlyName
+
+Sets a human-readable name that identifies the device.
+
+```cpp
+static int dynamsoft::dbr::CBarcodeReader::SetDeviceFriendlyName(const char* name)
+```
+
+**Parameters**
+
+`[in] name` The device alias.
+
+**Return Value**
+
+Returns error code (returns 0 if the function operates successfully).
+
+*You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
+
+**Code Snippet**
+
+```c
+char errorBuf[512];
+dynamsoft::dbr::CBarcodeReader::SetDeviceFriendlyName("My-PC");
+dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+CBarcodeReader* reader = new CBarcodeReader();
+// add further process
 ```
 
 

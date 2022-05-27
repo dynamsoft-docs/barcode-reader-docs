@@ -13,6 +13,7 @@ needAutoGenerateSidebar: true
   |----------------------|-------------|
   | [`InitLicense`](#initlicense) | Initializes license key and activate the SDK. |
   | [`GetIdleInstancesCount`](#getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
+  | [`SetDeviceFriendlyName`](#setdevicefriendlyname) | Sets a human-readable name that identifies the device. |
   | [`InitLicenseFromServer`](#initlicensefromserver) | `Deprecated` |
   | [`InitLicenseFromLicenseContent`](#initlicensefromlicensecontent) | `Deprecated` |
   | [`OutputLicenseToString`](#outputlicensetostring) | `Deprecated` |
@@ -77,6 +78,32 @@ if(count = 0)
 {
   //waiting for available instances 
 }
+```
+
+## SetDeviceFriendlyName
+
+Sets a human-readable name that identifies the device.
+
+```csharp
+static EnumErrorCode Dynamsoft.DBR.BarcodeReader.SetDeviceFriendlyName(string name)
+```
+
+**Parameters**
+
+`[in] name` The device alias.
+
+**Return Value**
+
+Returns error code (returns DBR_SUCCESS if the function operates successfully).
+
+**Code Snippet**
+
+```csharp
+string errorMsg;
+BarcodeReader.SetDeviceFriendlyName("My-PC");
+BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
+BarcodeReader reader = new BarcodeReader();
+// add further process
 ```
 
 ## InitLicenseFromServer

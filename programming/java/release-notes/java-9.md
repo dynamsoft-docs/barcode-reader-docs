@@ -8,6 +8,18 @@ needGenerateH3Content: false
 
 # Release Notes for Java SDK - 9.x
 
+## 9.2.0 (05/31/2022)
+
+### Highlights
+
+{%- include release-notes/product-highlight-9.2.0.md -%}
+
+### Changelog
+
+#### New
+
+- Added a new method [`setDeviceFriendlyName`]({{site.java_methods}}license.html#setdevicefriendlyname) to set a human-readable name that identifies the device.
+
 ## 9.0.0 (03/15/2022)
 
 <div class="fold-panel-prefix"></div>

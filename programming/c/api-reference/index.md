@@ -8,7 +8,7 @@ needGenerateH3Content: true
 ---
 
 # C Language API Reference
-		
+
 ## Global Functions
 
 ### Initialize and Destroy
@@ -19,11 +19,12 @@ needGenerateH3Content: true
   | [`DBR_DestroyInstance`](methods/initialize-and-destroy.md#dbr_destroyinstance) | Destroy the instance of Dynamsoft Barcode Reader. |
 
 ### License Functions
-   
+
   | Function               | Description |
   |----------------------|-------------|
   | [`DBR_InitLicense`](methods/license.md#dbr_initlicense) | Initializes license key and activate the SDK. |
   | [`DBR_GetIdleInstancesCount`](methods/license.md#dbr_getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
+  | [`DBR_SetDeviceFriendlyName`](methods/license.md#dbr_setdevicefriendlyname) | Sets a human-readable name that identifies the device. |
   | [`DBR_InitLicenseFromServer`](methods/license.md#dbr_initlicensefromserver) | `Deprecated` |
   | [`DBR_InitLicenseFromLicenseContent`](methods/license.md#dbr_initlicensefromlicensecontent) | `Deprecated` |
   | [`DBR_OutputLicenseToString`](methods/license.md#dbr_outputlicensetostring) | `Deprecated` |

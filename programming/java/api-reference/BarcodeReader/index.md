@@ -26,6 +26,7 @@ needAutoGenerateSidebar: true
   |----------------------|-------------|
   | [`initLicense`](license.md#initlicense) | Initializes license key and activate the SDK. |
   | [`getIdleInstancesCount`](license.md#getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
+  | [`setDeviceFriendlyName`](license.md#setdevicefriendlyname) | Sets a human-readable name that identifies the device. |
   | [`initLicenseFromServer`](license.md#initlicensefromserver) | `Deprecated` |
   | [`initLicenseFromLicenseContent`](license.md#initlicensefromlicensecontent) | `Deprecated` |
   | [`outputLicenseToString`](license.md#outputlicensetostring) | `Deprecated` |
