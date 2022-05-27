@@ -10,9 +10,19 @@ needGenerateH3Content: false
 
 ## 9.2.0 (05/31/2022)
 
-### Highlights
+<div class="fold-panel-prefix"></div>
+
+### Version Highlights <i class="fa fa-caret-down"></i>
+
+<div class="fold-panel-start"></div>
 
 {%- include release-notes/product-highlight-9.2.0.md -%}
+
+<div class="fold-panel-end"></div>
+
+### Edition Highlights
+
+- Added macOS ARM64 support to the Java edition of the SDK.
 
 ### Changelog
 
