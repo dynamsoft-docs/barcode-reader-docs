@@ -20,7 +20,7 @@ needGenerateH3Content: false
 
 - Added a new method [`SetDeviceFriendlyName`]({{site.cpp_methods}}license.html#setdevicefriendlyname) to set a human-readable name that identifies the device.
 
-### Fixed
+#### Fixed
 
 - Fixed a bug that `InitLicense` failed when using [online license](https://www.dynamsoft.com/license-server/docs/about/terms.html?ver=latest#online-license) on Linux ARM 32-bit system.
 - Other small fixes and tweaks.

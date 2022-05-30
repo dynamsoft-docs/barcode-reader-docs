@@ -20,7 +20,7 @@ needGenerateH3Content: false
 
 - Added a new method [`SetDeviceFriendlyName`]({{site.dotnet_methods}}license.html#setdevicefriendlyname) to set a human-readable name that identifies the device.
 
-### Fixed
+#### Fixed
 
 - Small fixes and tweaks.
 
