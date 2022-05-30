@@ -7,7 +7,7 @@ needAutoGenerateSidebar: false
 breadcrumbText: Enumerations
 ---
 
-# Dynamesoft Barcode Reader - Enumerations
+# Dynamsoft Barcode Reader - Enumerations
 
 ## [Format Enumeration](format-enums.md)
 
