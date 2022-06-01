@@ -44,8 +44,9 @@ TextResult[] Dynamsoft.DBR.BarcodeReader.DecodeFile(string fileName, string temp
 
 **Code Snippet**  
 ```csharp
+string errorMsg;
+BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
 BarcodeReader reader = new BarcodeReader();
-reader.ProductKeys = "t0260NwAAAHV***************";
 TextResult[] result = reader.DecodeFile(@"C:\Program Files (x86)\Dynamsoft\{Version number}\Images\AllSupportedBarcodeTypes.tif", "");
 reader.Dispose();
 ```
@@ -74,8 +75,9 @@ TextResult[] Dynamsoft.DBR.BarcodeReader.DecodeFileInMemory(byte[] fileStream, s
 
 **Code Snippet**  
 ```csharp
+string errorMsg;
+BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
 BarcodeReader reader = new BarcodeReader();
-reader.ProductKeys = "t0260NwAAAHV***************";
 byte[] fileStream = GetFileStream(@"C:\Program Files (x86)\Dynamsoft\{Version number}\Images\AllSupportedBarcodeTypes.tif");
 TextResult[] result = reader.DecodeFileInMemory(fileStream, "");
 reader.Dispose();
@@ -110,8 +112,9 @@ TextResult[] Dynamsoft.DBR.BarcodeReader.DecodeBuffer(byte[] buffer, int width, 
 
 **Code Snippet**  
 ```csharp
+string errorMsg;
+BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
 BarcodeReader reader = new BarcodeReader();
-reader.ProductKeys = "t0260NwAAAHV***************";
 Bitmap bBMP = new Bitmap(@"C:\Program Files (x86)\Dynamsoft\{Version number}\Images\AllSupportedBarcodeTypes.tif");
 BitmapData bmdat = bBMP.LockBits(new Rectangle(Point.Empty, bBMP.Size), ImageLockMode.ReadOnly, PixelFormat.Format32bppArgb);
 int width = bBMP.Width;
@@ -150,8 +153,9 @@ All barcode text results decoded successfully.
 
 **Code Snippet**  
 ```csharp
+string errorMsg;
+BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
 BarcodeReader reader = new BarcodeReader();
-reader.ProductKeys = "t0260NwAAAHV***************";
 byte[] byteFileStream = GetFileStream(@"C:\Program Files (x86)\Dynamsoft\{Version number}\Images\AllSupportedBarcodeTypes.tif");
 string base64String = GetFileBase64String(byteFileStream);
 TextResult[] result = reader.DecodeBase64String(base64String, "");
@@ -184,8 +188,9 @@ TextResult[] Dynamsoft.DBR.BarcodeReader.DecodeBitmap(Bitmap bitMap, string temp
 
 **Code Snippet**  
 ```csharp
+string errorMsg;
+BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
 BarcodeReader reader = new BarcodeReader();
-reader.ProductKeys = "t0260NwAAAHV***************";
 Bitmap bBMP = new Bitmap(@"C:\Program Files (x86)\Dynamsoft\{Version number}\Images\AllSupportedBarcodeTypes.tif");
 TextResult[] result = reader.DecodeBitmap(bBMP, "");
 reader.Dispose();
@@ -244,8 +249,9 @@ TextResult[] Dynamsoft.DBR.BarcodeReader.DecodeIntermediateResults(IntermediateR
 
 **Code Snippet**  
 ```csharp
+string errorMsg;
+BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
 BarcodeReader reader = new BarcodeReader();
-reader.ProductKeys = "t0260NwAAAHV***************";
 PublicRuntimeSettings settings = reader.GetRuntimeSettings();
 settings.IntermediateResultType = (int)EnumIntermediateResultType.IRT_ORIGINAL_IMAGE;
 reader.UpdateRuntimeSettings(settings);

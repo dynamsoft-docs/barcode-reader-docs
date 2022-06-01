@@ -45,8 +45,9 @@ Returns error code. Possible return(s): DBR_OK; DBRERR_SET_MODE_ARGUMENT_ERROR.
   
 **Code Snippet**  
 ```c
+char errorBuf[512];
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 PublicRuntimeSettings settings;
 DBR_GetRuntimeSettings(barcodeReader, &settings);
 settings.binarizationModes[0] = BM_LOCAL_BLOCK;
@@ -101,8 +102,9 @@ Returns error code. Possible return(s): DBR_OK; DBRERR_GET_MODE_ARGUMENT_ERROR.
 
 **Code Snippet**  
 ```c
+char errorBuf[512];
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 PublicRuntimeSettings settings;
 DBR_GetRuntimeSettings(barcodeReader, &settings);
 settings.binarizationModes[0] = BM_LOCAL_BLOCK;
@@ -151,8 +153,9 @@ Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**  
 ```c
+char errorBuf[512];
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 PublicRuntimeSettings settings;
 int errorCode = DBR_GetRuntimeSettings(barcodeReader, &settings);
 DBR_DestroyInstance(barcodeReader);
@@ -183,8 +186,9 @@ Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**  
 ```c
+char errorBuf[512];
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 PublicRuntimeSettings settings;
 int errorCode = DBR_GetRuntimeSettings(barcodeReader, &settings);
 settings.deblurLevel = 9;
@@ -216,8 +220,9 @@ Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**  
 ```c
+char errorBuf[512];
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 PublicRuntimeSettings settings;
 int errorCode = DBR_GetRuntimeSettings(barcodeReader, &settings);
 settings.deblurLevel = 9;

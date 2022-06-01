@@ -47,8 +47,9 @@ Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**  
 ```c
+char errorBuf[512];
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 char errorMessage[256];
 DBR_InitRuntimeSettingsWithFile(barcodeReader, "C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Templates\\RuntimeSettings.json", CM_OVERWRITE, errorMessage, 256);
 DBR_DestroyInstance(barcodeReader);
@@ -81,8 +82,9 @@ Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**  
 ```c
+char errorBuf[512];
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 char errorMessage[256];
 DBR_InitRuntimeSettingsWithString(barcodeReader, "{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", CM_OVERWRITE, errorMessage, 256);
 DBR_DestroyInstance(barcodeReader);
@@ -115,8 +117,9 @@ Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**  
 ```c
+char errorBuf[512];
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 char errorMessage[256];
 DBR_AppendTplFileToRuntimeSettings(barcodeReader, "C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Templates\\RuntimeSettings.json", CM_IGNORE, errorMessage, 256);
 DBR_DestroyInstance(barcodeReader);
@@ -149,8 +152,9 @@ Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**  
 ```c
+char errorBuf[512];
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 char errorMessage[256];
 DBR_AppendTplStringToRuntimeSettings(barcodeReader, "{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", CM_IGNORE, errorMessage, 256);
 DBR_DestroyInstance(barcodeReader);
@@ -178,8 +182,9 @@ Returns the count of parameter templates. Returns -1 if DBRERR_NULL_POINTER happ
 
 **Code Snippet**  
 ```c
+char errorBuf[512];
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 char errorMessageInit[256];
 char errorMessageAppend[256];
 DBR_InitRuntimeSettingsWithFile(barcodeReader, "C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Templates\\RuntimeSettings.json", CM_OVERWRITE, errorMessageInit, 256);
@@ -214,8 +219,9 @@ Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**  
 ```c
+char errorBuf[512];
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 char errorMessageInit[256];
 char errorMessageAppend[256];
 DBR_InitRuntimeSettingsWithFile(barcodeReader, "C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Templates\\RuntimeSettings.json", CM_OVERWRITE, errorMessageInit, 256);
@@ -253,8 +259,9 @@ Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**  
 ```c
+char errorBuf[512];
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 char errorMessageInit[256];
 char errorMessageAppend[256];
 DBR_InitRuntimeSettingsWithFile(barcodeReader, "C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Templates\\RuntimeSettings.json", CM_OVERWRITE, errorMessageInit, 256);
@@ -289,8 +296,9 @@ Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**  
 ```c
+char errorBuf[512];
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 char errorMessageInit[256];
 char errorMessageAppend[256];
 DBR_InitRuntimeSettingsWithFile(barcodeReader, "C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Templates\\RuntimeSettings.json", CM_OVERWRITE, errorMessageInit, 256);
@@ -325,8 +333,9 @@ Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**  
 ```c
+char errorBuf[512];
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 char errorMessageInit[256];
 char errorMessageAppend[256];
  DBR_InitRuntimeSettingsWithFile(barcodeReader, "C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Templates\\RuntimeSettings.json", CM_OVERWRITE, errorMessageInit, 256);
@@ -356,8 +365,9 @@ DBR_API void DBR_FreeSettingsString (char** content)
 
 **Code Snippet**  
 ```c
+char errorBuf[512];
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 char errorMessageInit[256];
 char errorMessageAppend[256];
 DBR_InitRuntimeSettingsWithFile(barcodeReader, "C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Templates\\RuntimeSettings.json", CM_OVERWRITE, errorMessageInit, 256);

@@ -41,8 +41,9 @@ Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**  
 ```cpp
+char errorBuf[512];
+dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 CBarcodeReader* reader = new CBarcodeReader();
-reader->InitLicense("t0260NwAAAHV***************");
 int errorCode = reader->DecodeFile("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\AllSupportedBarcodeTypes.tif", "");
 delete reader;
 ```
@@ -75,8 +76,9 @@ Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**  
 ```cpp
+char errorBuf[512];
+dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 CBarcodeReader* reader = new CBarcodeReader();
-reader->InitLicense("t0260NwAAAHV***************");
 unsigned char* pFileBytes;
 int nFileSize = 0;
 GetFileStream("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\AllSupportedBarcodeTypes.tif", &pFileBytes, &nFileSize);
@@ -115,8 +117,9 @@ Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**  
 ```cpp
+char errorBuf[512];
+dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 CBarcodeReader* reader = new CBarcodeReader();
-reader->InitLicense("t0260NwAAAHV***************");
 unsigned char* pBufferBytes;
 int iWidth = 0;
 int iHeight = 0;
@@ -155,8 +158,9 @@ Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**  
 ```cpp
+char errorBuf[512];
+dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 CBarcodeReader* reader = new CBarcodeReader();
-reader->InitLicense("t0260NwAAAHV***************");
 unsigned char* pFileBytes;
 int nFileSize = 0;
 GetFileStream("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\AllSupportedBarcodeTypes.tif", &pFileBytes, &nFileSize);
@@ -193,8 +197,9 @@ Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**  
 ```cpp
+char errorBuf[512];
+dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 CBarcodeReader* reader = new CBarcodeReader();
-reader->InitLicense("t0260NwAAAHV***************");
 HANDLE pDIB;
 GetDIBFromImage("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\AllSupportedBarcodeTypes.tif", &pDIB);
 int errorCode = reader->DecodeDIB(pDIB "");
@@ -224,7 +229,7 @@ Returns error code (returns 0 if the function operates successfully).
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
 **Code Snippet**  
-```c
+```cpp
 IntermediateResult imResult;
 dynamsoft::dbr::CBarcodeReader::InitIntermediateResult(IRT_ORIGINAL_IMAGE, &imResult);
 ```
@@ -250,7 +255,9 @@ Returns error code (returns 0 if the function operates successfully).
 *You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
 
 **Code Snippet**  
-```c
+```cpp
+char errorBuf[512];
+dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 CBarcodeReader * reader = new CBarcodeReader();
 char fileName[] = "Your barcode file";
 

@@ -35,8 +35,9 @@ The error message.
 
 **Code Snippet**  
 ```cpp
+char errorBuf[512];
+dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 CBarcodeReader* reader = new CBarcodeReader();
-reader->InitLicense("t0260NwAAAHV***************");
 int errorCode = reader->DecodeFile("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\AllSupportedBarcodeTypes.tif", "");
 const char* errorString = dynamsoft::dbr::CBarcodeReader::GetErrorString(errorCode);
 delete reader;

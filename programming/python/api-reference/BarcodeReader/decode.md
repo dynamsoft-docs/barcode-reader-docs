@@ -44,11 +44,11 @@ BarcodeReader.decode_file(image_file_name, template_name="")
 
 ```python
 from dbr import *
-license_key = 't0260NwAAAHV***************'
+license_key = 'YOUR-LICENSE-KEY'
 image_file = r'C:\Program Files (x86)\Dynamsoft\{Version number}\Images\AllSupportedBarcodeTypes.tif'
 
+BarcodeReader.init_license(license_key)
 reader = BarcodeReader()
-reader.init_license(license_key)
 try:
     text_results = reader.decode_file(image_file)
     if text_results != None:
@@ -91,13 +91,13 @@ BarcodeReader.decode_buffer(image, image_pixel_format=EnumImagePixelFormat.IPF_R
 ```python
 import cv2
 from dbr import *
-license_key = 't0260NwAAAHV***************'
+license_key = 'YOUR-LICENSE-KEY'
 image_file = r'C:\Program Files (x86)\Dynamsoft\{Version number}\Images\AllSupportedBarcodeTypes.tif'
 
 image = cv2.imread(image_file)
 
+BarcodeReader.init_license(license_key)
 reader = BarcodeReader()
-reader.init_license(license_key)
 try:
     text_results = reader.decode_buffer(image)
     if text_results != None:
@@ -138,14 +138,14 @@ BarcodeReader.decode_file_stream(file_stream, template_name="")
 
 ```python
 from dbr import *
-license_key = 't0260NwAAAHV***************'
+license_key = 'YOUR-LICENSE-KEY'
 image_file = r'C:\Program Files (x86)\Dynamsoft\{Version number}\Images\AllSupportedBarcodeTypes.tif'
 
 with open(image_file, "rb") as fread:
     total = fread.read()
 
+BarcodeReader.init_license(license_key)
 reader = BarcodeReader()
-reader.init_license(license_key)
 try:
     text_results = reader.decode_file_stream(bytearray(total))
     if text_results != None:
@@ -209,11 +209,11 @@ BarcodeReader.init_intermediate_result(intermediate_result_type)
 
 ```python
 from dbr import *
-license_key = 't0260NwAAAHV***************'
+license_key = 'YOUR-LICENSE-KEY'
 image_file = r'C:\Program Files (x86)\Dynamsoft\{Version number}\Images\AllSupportedBarcodeTypes.tif'
 
+BarcodeReader.init_license(license_key)
 reader = BarcodeReader()
-reader.init_license(license_key)
 try:
     text_results = reader.decode_file(image_file)
     if text_results != None:
@@ -254,11 +254,11 @@ BarcodeReader.decode_intermediate_results(intermediate_results, template_name=""
 
 ```python
 from dbr import *
-license_key = 't0260NwAAAHV***************'
+license_key = 'YOUR-LICENSE-KEY'
 image_file = r'C:\Program Files (x86)\Dynamsoft\{Version number}\Images\AllSupportedBarcodeTypes.tif'
 
+BarcodeReader.init_license(license_key)
 reader = BarcodeReader()
-reader.init_license(license_key)
 try:
     text_results = reader.decode_file(image_file)
     if text_results != None:

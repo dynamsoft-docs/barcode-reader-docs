@@ -42,8 +42,9 @@ Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**  
 ```c
+char errorBuf[512];
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 int errorCode = DBR_DecodeFile(barcodeReader, "C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\AllSupportedBarcodeTypes.tif", "");
 DBR_DestroyInstance(barcodeReader);
 ```
@@ -75,8 +76,9 @@ Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**  
 ```c
+char errorBuf[512];
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 unsigned char* pFileBytes;
 int nFileSize = 0;
 GetFileStream("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\AllSupportedBarcodeTypes.tif", &pFileBytes, &nFileSize);
@@ -115,8 +117,9 @@ Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**  
 ```c
+char errorBuf[512];
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 unsigned char* pBufferBytes;
 int iWidth = 0;
 int iHeight = 0;
@@ -153,8 +156,9 @@ Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**  
 ```c
+char errorBuf[512];
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 unsigned char* pBufferBytes;
 int nFileSize = 0;
 GetFileStream("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\AllSupportedBarcodeTypes.tif", &pFileBytes, &nFileSize);
@@ -191,8 +195,9 @@ Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**  
 ```c
+char errorBuf[512];
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 void* barcodeReader = DBR_CreateInstance();
-DBR_InitLicense(barcodeReader, "t0260NwAAAHV***************");
 HANDLE pDIB;
 GetDIBFromImage("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\AllSupportedBarcodeTypes.tif", &pDIB);
 int errorCode = DBR_DecodeDIB(barcodeReader, pDIB, "");
@@ -251,19 +256,20 @@ Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**  
 ```c
-void * handle = DBR_CreateInstance();
 char errorBuf[512];
+DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+void* barcodeReader = DBR_CreateInstance();
 char fileName[] = "Your barcode file";
 PublicRuntimeSettings settings;
-DBR_GetRuntimeSettings(handle, &settings);
+DBR_GetRuntimeSettings(barcodeReader, &settings);
 settings.intermediateResultTypes = IRT_ORIGINAL_IMAGE;
-DBR_UpdateRuntimeSettings(handle, &settings, errorBuf, 512);
-DBR_DecodeFile(handle, fileName, "");
+DBR_UpdateRuntimeSettings(barcodeReader, &settings, errorBuf, 512);
+DBR_DecodeFile(barcodeReader, fileName, "");
 IntermediateResultArray * imResults = NULL;
-DBR_GetIntermediateResults(handle, &imResults);
-DBR_DecodeIntermediateResults(handle, imResults, "");
+DBR_GetIntermediateResults(barcodeReader, &imResults);
+DBR_DecodeIntermediateResults(barcodeReader, imResults, "");
 TextArray * results = NULL;
-DBR_GetAllTextResults(handle, &results);
+DBR_GetAllTextResults(barcodeReader, &results);
 DBR_FreeTextResults(&results);
 DBR_DestroyInstance(barcodeReader);
 ```
