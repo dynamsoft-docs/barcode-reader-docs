@@ -8,7 +8,7 @@ needGenerateH3Content: false
 
 # Release Notes for .NET SDK - 9.x
 
-## 9.2.0 (05/31/2022)
+## 9.2.0 (06/07/2022)
 
 ### Highlights
 

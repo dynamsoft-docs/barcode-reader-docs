@@ -10,7 +10,7 @@ needGenerateH3Content: false
 
 ## 9.2
 
-> First released: 05-31-2022
+> First released: 06-07-2022
 
 ### Highlights
 
@@ -18,7 +18,7 @@ needGenerateH3Content: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 9.2.0 | [C](../programming/c/release-notes/c-9.md#920-05312022) / [C++](../programming/cplusplus/release-notes/cpp-9.md#920-05312022) / [DotNet](../programming/dotnet/release-notes/dotnet-9.md#920-05312022) / [Java](../programming/java/release-notes/java-9.md#920-05312022) |
+| 9.2.0 | [C](../programming/c/release-notes/c-9.md#920-06072022) / [C++](../programming/cplusplus/release-notes/cpp-9.md#920-06072022) / [DotNet](../programming/dotnet/release-notes/dotnet-9.md#920-06072022) / [Java](../programming/java/release-notes/java-9.md#920-06072022) |
 
 ## 9.0
 
