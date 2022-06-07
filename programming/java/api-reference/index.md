@@ -26,6 +26,7 @@ needGenerateH3Content: true
   |----------------------|-------------|
   | [`initLicense`](BarcodeReader/license.md#initlicense) | Initializes license key and activate the SDK. |
   | [`getIdleInstancesCount`](BarcodeReader/license.md#getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
+  | [`setDeviceFriendlyName`](BarcodeReader/license.md#setdevicefriendlyname) | Sets a human-readable name that identifies the device. |
   | [`initLicenseFromServer`](BarcodeReader/license.md#initlicensefromserver) | `Deprecated` |
   | [`initLicenseFromLicenseContent`](BarcodeReader/license.md#initlicensefromlicensecontent) | `Deprecated` |
   | [`outputLicenseToString`](BarcodeReader/license.md#outputlicensetostring) | `Deprecated` |

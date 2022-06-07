@@ -24,7 +24,6 @@ needGenerateH3Content: true
   |----------------------|-------------|
   | [`DBR_InitLicense`](methods/license.md#dbr_initlicense) | Initializes license key and activate the SDK. |
   | [`DBR_GetIdleInstancesCount`](methods/license.md#dbr_getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
-  | [`DBR_SetDeviceFriendlyName`](methods/license.md#dbr_setdevicefriendlyname) | Sets a human-readable name that identifies the device. |
   | [`DBR_InitLicenseFromServer`](methods/license.md#dbr_initlicensefromserver) | `Deprecated` |
   | [`DBR_InitLicenseFromLicenseContent`](methods/license.md#dbr_initlicensefromlicensecontent) | `Deprecated` |
   | [`DBR_OutputLicenseToString`](methods/license.md#dbr_outputlicensetostring) | `Deprecated` |
@@ -34,7 +33,6 @@ needGenerateH3Content: true
   | [`DBR_InitLicenseFromDLS`](methods/license.md#dbr_initlicensefromdls) | `Deprecated` |
   | [`DBR_InitLTSConnectionParameters`](methods/license.md#dbr_initltsconnectionparameters) | `Deprecated` |
   | [`DBR_InitLicenseFromLTS`](methods/license.md#dbr_initlicensefromlts) | `Deprecated` |
-
 
 
 ### Decode Functions
@@ -74,16 +72,14 @@ needGenerateH3Content: true
   | [`DBR_OutputSettingsToStringPtr`](methods/parameter-and-runtime-settings-advanced.md#dbr_outputsettingstostringptr) | Output runtime settings to a string. |
   | [`DBR_FreeSettingsString`](methods/parameter-and-runtime-settings-advanced.md#dbr_freesettingsstring) | Free memory allocated for runtime settings string. |
 
-
 ### Result Functions
-   
+
   | Function               | Description |
   |----------------------|-------------|
   | [`DBR_GetAllTextResults`](methods/result.md#dbr_getalltextresults) | Get all recognized barcode results.  |
   | [`DBR_FreeTextResults`](methods/result.md#dbr_freetextresults) | Free memory allocated for text results. |
   | [`DBR_GetIntermediateResults`](methods/result.md#dbr_getintermediateresults) | Get intermediate results. |
   | [`DBR_FreeIntermediateResults`](methods/result.md#dbr_freeintermediateresults) | Free memory allocated for the intermediate results. |
-
 
 ### Status Retrieval Functions
   
@@ -92,10 +88,10 @@ needGenerateH3Content: true
   | [`DBR_GetErrorString`](methods/status-retrieval.md#dbr_geterrorstring) | Get error message by error code. |
   | [`DBR_GetVersion`](methods/status-retrieval.md#dbr_getversion) | Get version information of SDK. |
 
-
 ### Video Functions
+
 #### Decode
-   
+
   | Function               | Description |
   |----------------------|-------------|
   | [`DBR_StartFrameDecoding`](methods/video.md#dbr_startframedecoding) | Decode barcodes from inner frame queue. |
@@ -104,13 +100,13 @@ needGenerateH3Content: true
   | [`DBR_StopFrameDecoding`](methods/video.md#dbr_stopframedecoding) | Stop thread used for frame decoding. |
 
 #### Parameter
-   
+
   | Function               | Description |
   |----------------------|-------------|
   | [`DBR_InitFrameDecodingParameters`](methods/video.md#dbr_initframedecodingparameters) | Initialize frame decoding parameter. |
 
 #### Callback
-   
+
   | Function               | Description |
   |----------------------|-------------|
   | [`DBR_SetErrorCallback`](methods/video.md#dbr_seterrorcallback) | Set callback function to process errors generated during frame decoding. |
@@ -118,11 +114,10 @@ needGenerateH3Content: true
   | [`DBR_SetIntermediateResultCallback`](methods/video.md#dbr_setintermediateresultcallback) | Set callback function to process intermediate results generated during frame decoding. |
 
 #### Status retrieval
-   
+
   | Function               | Description |
   |----------------------|-------------|
   | [`DBR_GetLengthOfFrameQueue`](methods/video.md#dbr_getlengthofframequeue) | Get length of current inner frame queue. |
-  
 
 ## Structs
 
@@ -215,13 +210,10 @@ needGenerateH3Content: true
   | [`QRCodeErrorCorrectionLevel`]({{ site.enumerations }}other-enums.html#qrcodeerrorcorrectionlevel) | Describes the QR Code error correction level. |
   | [`Product`]({{ site.enumerations }}other-enums.html#product) | Describes Dynamsoft products. |
 
-
 ## Callbacks
 
   | Function | Description |
   |----------|-------------|
   | [`CB_Error`](function-pointer.md#cb_error) | Represents the function that will handle the error code returned by the SDK. |
   | [`CB_IntermediateResult`](function-pointer.md#cb_intermediateresult) | Represents the function that will handle the intermediate result array returned by the SDK. |
-  | [`CB_TextResult`](function-pointer.md#cb_textresult) | Represents the function that will handle the text result array returned by the SDK. | 
-
-
+  | [`CB_TextResult`](function-pointer.md#cb_textresult) | Represents the function that will handle the text result array returned by the SDK. |
