@@ -19,7 +19,8 @@ In this guide, you will learn step by step on how to build a barcode reading app
    - Windows Server 2003, 2008, 2008 R2, 2012, 2019, 2022
    - Linux x64 (Ubuntu 14.04.4+ LTS, Debian 8+, etc.)
    - Linux arm 64bit
-   - macOS x64 10.12+
+   - macOS x64: 10.12+
+   - macOS ARM: 11+
 
 - Developing Environment:
    - JDK 1.7 and above

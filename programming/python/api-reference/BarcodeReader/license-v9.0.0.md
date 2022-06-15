@@ -13,7 +13,6 @@ needAutoGenerateSidebar: true
   |----------------------|-------------|
   | [`init_license`](#init_license) | Reads product key and activates the SDK.  |
   | [`get_idle_instances_count`](#get_idle_instances_count) | Gets available instances count when charging by concurrent instances count. |
-  | [`set_device_friendly_name`](#set_device_friendly_name) | Sets a human-readable name that identifies the device. |
   | [`init_license_from_server`](#init_license_from_server) | `Deprecated` |
   | [`init_license_from_license_content`](#init_license_from_license_content) | `Deprecated` |
   | [`output_license_to_string`](#output_license_to_string) | `Deprecated` |
@@ -52,22 +51,6 @@ BarcodeReader.get_idle_instances_count()
 - 0: There is no space for new instance  
 - -1: The available count needs to be updated from server by calling initLicense.
 - N ( N > 0 ): N more instances can be created.
-
-## set_device_friendly_name
-
-Sets a human-readable name that identifies the device.
-
-```python
-BarcodeReader.set_device_friendly_name(name)
-```
-
-**Parameters**  
-
-`[in] name` <*str*> : The device alias.
-
-**Return Value**  
-
-`error` <*int*> :  EnumErrorCode.
 
 ## init_license_from_server
 

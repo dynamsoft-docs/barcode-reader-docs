@@ -28,6 +28,7 @@ In this guide, you will learn step by step on how to build a barcode reading app
     - Python 3.5 (for versions below DBR 7.5)
     - Python 2.7 (for versions below DBR 7.2.2.3)
 
+
 <sup>1</sup> DBR Python is not compatible with the M1 (ARM64) Mac devices.<br />
 <sup>2</sup> On AWS Lambda, DBR Python can only be used with a license 1.0 key. License 2.0 keys and above are currently not supported by DBR Python on AWS Lambda.
 

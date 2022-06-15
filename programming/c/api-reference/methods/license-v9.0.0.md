@@ -12,7 +12,6 @@ needAutoGenerateSidebar: true
   |----------------------|-------------|
   | [`DBR_InitLicense`](#dbr_initlicense) | Initializes license key and activate the SDK. |
   | [`DBR_GetIdleInstancesCount`](#dbr_getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
-  | [`DBR_SetDeviceFriendlyName`](#dbr_setdevicefriendlyname) | Sets a human-readable name that identifies the device. |
   | [`DBR_InitLicenseFromServer`](#dbr_initlicensefromserver) | `Deprecated` |
   | [`DBR_InitLicenseFromLicenseContent`](#dbr_initlicensefromlicensecontent) | `Deprecated` |
   | [`DBR_OutputLicenseToString`](#dbr_outputlicensetostring) | `Deprecated` |
@@ -88,34 +87,6 @@ if(count = 0)
 {
   //waiting for available instances 
 }
-```
-
-## DBR_SetDeviceFriendlyName
-
-Sets a human-readable name that identifies the device.
-
-```c
-DBR_API int DBR_SetDeviceFriendlyName(const char* name)
-```
-
-**Parameters**
-
-`[in] name` The device alias.
-
-**Return Value**
-
-Returns error code (returns 0 if the function operates successfully).
-
-*You can call [`DBR_GetErrorString`](status-retrieval.md#dbr_geterrorstring) to get detailed error message.*
-
-**Code Snippet**
-
-```c
-char errorBuf[512];
-DBR_SetDeviceFriendlyName("My-PC");
-DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
-void* barcodeReader = DBR_CreateInstance();
-// add further process
 ```
 
 ## DBR_InitLicenseFromServer

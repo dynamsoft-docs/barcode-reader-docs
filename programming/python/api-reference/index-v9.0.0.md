@@ -36,7 +36,6 @@ needGenerateH3Content: true
   |----------------------|-------------|
   | [`init_license`](BarcodeReader/license.md#init_license) | Reads product key and activates the SDK.  |
   | [`get_idle_instances_count`](BarcodeReader/license.md#get_idle_instances_count) | Gets available instances count when charging by concurrent instances count. |
-  | [`set_device_friendly_name`](BarcodeReader/license.md#set_device_friendly_name) | Sets a human-readable name that identifies the device. |
   | [`init_license_from_server`](BarcodeReader/license.md#init_license_from_server) | `Deprecated` |
   | [`init_license_from_license_content`](BarcodeReader/license.md#init_license_from_license_content) | `Deprecated` |
   | [`output_license_to_string`](BarcodeReader/license.md#output_license_to_string) | `Deprecated` |
