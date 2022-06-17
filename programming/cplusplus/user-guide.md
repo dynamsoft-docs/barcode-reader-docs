@@ -24,6 +24,8 @@ In this guide, you will learn step by step on how to build a barcode reading app
     - Visual Studio 2008 or above
     - G++ 5.4+  
 
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/05UtoF7_HJQ" title="How to Use Dynamsoft Barcode Reader Java SDK | Dynamsoft Tutorial" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Installation
 If you haven't downloaded the SDK yet, download the `C/C++ Package` now from <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a> and unpack the package into the directory of your choice.
 >For this tutorial, we unpack it to `[INSTALLATION FOLDER]`, change it to your unpacking path for the following content.
