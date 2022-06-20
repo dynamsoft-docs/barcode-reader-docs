@@ -8,8 +8,8 @@ needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-# User Guide for .Net
-In this guide, you will learn step by step on how to build a barcode reading application with Dynamsoft Barcode Reader SDK using .Net.
+# User Guide for .NET
+In this guide, you will learn step by step on how to build a barcode reading application with Dynamsoft Barcode Reader SDK using .NET.
 
 ## Requirements
 

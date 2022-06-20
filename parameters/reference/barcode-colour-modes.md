@@ -10,7 +10,7 @@ needGenerateH3Content: true
 
 # BarcodeColourModes 
 
-`BarcodeColourModes` is a parameter to specify the barcode colour modes. It consisits of one or more modes, each mode represents a colour mode.
+`BarcodeColourModes` is a parameter to specify the barcode colour modes. It consists of one or more modes, each mode represents a colour mode.
 
 
 ## Candidate Mode List

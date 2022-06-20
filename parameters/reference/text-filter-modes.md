@@ -10,7 +10,7 @@ needGenerateH3Content: true
 
 # TextFilterModes 
 
-`TextFilterModes` is a parameter to control how to filter texts on an image. It consisits of one or more modes, each mode represents a way to implement the filtering.
+`TextFilterModes` is a parameter to control how to filter texts on an image. It consists of one or more modes, each mode represents a way to implement the filtering.
 
 
 ## Candidate Mode List

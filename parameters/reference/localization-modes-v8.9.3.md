@@ -10,7 +10,7 @@ needGenerateH3Content: true
 
 # LocalizationModes 
 
-`LocalizationModes` is a parameter to control how to localize barcodes. It consisits of one or more modes, each mode represents a way to implement the localization.
+`LocalizationModes` is a parameter to control how to localize barcodes. It consists of one or more modes, each mode represents a way to implement the localization.
 
 
 ## Candidate Mode List

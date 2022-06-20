@@ -12,7 +12,7 @@ needGenerateH3Content: true
 
 This parameter helps control the process of binarization, i.e., converting grayscale image to binary image. A better binary image helps a lot for barcode reading. During the binarization, as we know, the threshold is the key criteria. If the pixel value is smaller than the threshold, it is set to 0, otherwise, it is set to a maximum value (255 in the library). By default, the library automatically calculates the adaptive size of the neighbourhood area and then binarizes the grayscale image with the adaptive threshold based on a small neighbourhood area with an adaptive size around it. Assume this field is in your wheelhouse, this parameter may help specify the appropriate settings for getting a better binary image.
 
-It consisits of one or more modes, each mode is a way to implement the binarization.
+It consists of one or more modes, each mode is a way to implement the binarization.
 
 
 ## Candidate Mode List

@@ -10,7 +10,7 @@ needGenerateH3Content: true
 
 # DeformationResistingModes 
 
-`DeformationResistingModes` is a parameter to control how to handle distorted and deformed barcodes. It consisits of one or more modes, each mode represents a way to implement the deformation resisting.
+`DeformationResistingModes` is a parameter to control how to handle distorted and deformed barcodes. It consists of one or more modes, each mode represents a way to implement the deformation resisting.
 
 
 ## Candidate Mode List

@@ -10,7 +10,7 @@ needGenerateH3Content: true
 
 # TextureDetectionModes 
 
-`TextureDetectionModes` is a parameter to control how to detect texture on an image. It consisits of one or more modes, each mode represents a way to implement the detection.
+`TextureDetectionModes` is a parameter to control how to detect texture on an image. It consists of one or more modes, each mode represents a way to implement the detection.
 
 
 ## Candidate Mode List

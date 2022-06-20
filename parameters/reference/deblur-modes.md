@@ -12,7 +12,7 @@ needGenerateH3Content: true
 
 Sets the mode and priority for deblurring.  
 
-It consisits of one or more modes, each mode represents a way to transform the grayscale image.
+It consists of one or more modes, each mode represents a way to transform the grayscale image.
 
 
 ## Candidate Mode List

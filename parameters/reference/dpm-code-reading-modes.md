@@ -10,7 +10,7 @@ needGenerateH3Content: true
 
 # DPMCodeReadingModes 
 
-`DPMCodeReadingModes` is a parameter to control how to read direct part mark (DPM) barcodes. It consisits of one or more modes, each mode is an implement to read DPM barcode.
+`DPMCodeReadingModes` is a parameter to control how to read direct part mark (DPM) barcodes. It consists of one or more modes, each mode is an implement to read DPM barcode.
 
 
 ## Candidate Mode List

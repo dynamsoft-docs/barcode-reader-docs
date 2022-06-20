@@ -10,7 +10,7 @@ needGenerateH3Content: true
 
 # ScaleUpModes 
 
-`ScaleUpModes` is a parameter to control the process for scaling up an image used for detecting barcodes with small module size. It consisits of one or more modes, each mode represents a way to implement the scale-up.
+`ScaleUpModes` is a parameter to control the process for scaling up an image used for detecting barcodes with small module size. It consists of one or more modes, each mode represents a way to implement the scale-up.
 
 
 ## Candidate Mode List

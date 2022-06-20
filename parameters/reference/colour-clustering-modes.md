@@ -10,7 +10,7 @@ needGenerateH3Content: true
 
 # ColourClusteringModes 
 
-`ColourClusteringModes` is a parameter to control the process for colour categorization. It consisits of one or more modes, each mode represents a way to implement the categorization.
+`ColourClusteringModes` is a parameter to control the process for colour categorization. It consists of one or more modes, each mode represents a way to implement the categorization.
 
 
 ## Candidate Mode List
