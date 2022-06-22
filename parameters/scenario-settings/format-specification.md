@@ -51,7 +51,7 @@ If you want to configure parameters for a certain barcode type, you can use the 
 This parameter specifies the code type of the current FormatSpecification setting.
 
 ## MirrorMode
-This parameter specifies the mirroring mode for decoding. Sometimes the image and the real scene happen to be mirror images of each other. For 2D barcodes, mirroring may cause the decoding to fail. In this case, we could configure the MirrorMode to correct the situation. The default value of MirrorMode is MM_NORMAL, which means it will only attempt to solve the original image. 
+This parameter specifies the mirroring mode for decoding. Sometimes the image and the real scene happen to be mirror images of each other. For 2D barcodes, mirroring may cause the decoding to fail. In this case, we could configure the MirrorMode to correct the situation. The default value of MirrorMode is MM_BOTH for QRCode, DataMatrix, PDF417, AZTEC, Micro QR Code, Micro PDF417, DotCode and Pharmacode Two-Track, and MM_NORMAL for other barcode types.
 
 
 
@@ -59,7 +59,7 @@ This parameter specifies the mirroring mode for decoding. Sometimes the image an
 |-----------|--------|----------------------|
 | MM_NORMAL | 0x01   | Keep the original image for the decoding process        |
 | MM_MIRROR | 0x02   | Decode the mirror image         |
-| MM_BOTH   | 0x04   | Try both of the above methods. Default value |
+| MM_BOTH   | 0x04   | Try both of the above methods. |
 
 Below are two sample diagrams of normal and mirror QR
 

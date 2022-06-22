@@ -8,6 +8,28 @@ needGenerateH3Content: false
 
 # Release Notes for Python SDK - 9.x
 
+## 9.2.0 (06/21/2022)
+
+<div class="fold-panel-prefix"></div>
+
+### Version Highlights <i class="fa fa-caret-down"></i>
+
+<div class="fold-panel-start"></div>
+
+{%- include release-notes/product-highlight-9.2.0.md -%}
+
+<div class="fold-panel-end"></div>
+
+### Edition Highlights
+
+- Added macOS ARM64 support to the Python edition of the SDK.
+
+### Changelog
+
+#### New
+
+- Added a new method [`set_device_friendly_name`]({{site.python_methods}}license.html#set_device_friendly_name) to set a human-readable name that identifies the device.
+
 ## 9.0.0 (03/31/2022)
 
 <div class="fold-panel-prefix"></div>
