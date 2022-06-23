@@ -23,4 +23,4 @@ needAutoGenerateSidebar: false
 
 
 ## Official Online Demo
-This <a href="https://demo.dynamsoft.com/barcode-reader/" target="_blank">Online Demo</a> is an online barcode scanner for all barcode types. All supported parameters are opened for customization to see how Dynamsoft Barcode Reader works in different usage scenarios. 
+This <a href="https://demo6.dynamsoft.com/barcode-reader/" target="_blank">Online Demo</a> is an online barcode scanner for all barcode types. All supported parameters are opened for customization to see how Dynamsoft Barcode Reader works in different usage scenarios. 
