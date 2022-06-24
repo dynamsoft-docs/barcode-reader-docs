@@ -13,4 +13,4 @@ To scan barcodes in multiple threads using Dynamsoft Barcode Reader, you need to
 
 We have a sample that shows how to use multiple threads to read barcodes from images using the C++ API.
 
-Get the sample: [MultiThreadDecoding Sample in C++](https://github.com/Dynamsoft/barcode-reader-c-cpp-samples/tree/main/samples/C%2B%2B/MultiThreadDecoding) >
+Get the sample: <a href="https://github.com/Dynamsoft/barcode-reader-c-cpp-samples/tree/main/samples/C%2B%2B/MultiThreadDecoding" target="_blank">MultiThreadDecoding Sample in C++</a> >
