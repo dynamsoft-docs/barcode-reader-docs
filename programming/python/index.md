@@ -23,7 +23,7 @@ This provides a brief guide on how to integrate Dynamsoft Barcode Reader into yo
 ## Samples and Demo
 
 - <a href="https://github.com/Dynamsoft/barcode-reader-python-samples" target="_blank">Python Samples</a>
-- <a href="https://demo.dynamsoft.com/barcode-reader/" target="_blank">Online Demo</a>
+- <a href="https://demo6.dynamsoft.com/barcode-reader/" target="_blank">Online Demo</a>
 
 ## Release Notes
 

@@ -20,7 +20,7 @@ This is the main page of Dynamsoft Barcode Reader SDK documentation for .NET Lan
 
 - <a href="https://github.com/Dynamsoft/barcode-reader-dotnet-samples" target="_blank">.NET Samples</a>
 - <a href="https://www.dynamsoft.com/barcode-reader/resources/code-gallery/?tag=vb.net" target="_blank">Code Gallery - VB.NET</a>
-- <a href="https://demo.dynamsoft.com/barcode-reader/" target="_blank">Online Demo</a>
+- <a href="https://demo6.dynamsoft.com/barcode-reader/" target="_blank">Online Demo</a>
 
 ## API Reference
 - [API Reference](api-reference/index.md)
