@@ -18,7 +18,8 @@ needGenerateH3Content: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 9.2.0 | [C](../programming/c/release-notes/c-9.md#920-06072022) / [C++](../programming/cplusplus/release-notes/cpp-9.md#920-06072022) / [DotNet](../programming/dotnet/release-notes/dotnet-9.md#920-06072022) / [Java](../programming/java/release-notes/java-9.md#920-06072022) / [Python](../programming/python/release-notes/python-9.md#920-06212022) / [Android](../programming/android/release-notes/android-9.md#920-06302022) / [iOS](../programming/objectivec-swift/release-notes/ios-9.md#920-06302022) |
+| 9.2.10 | [Android](../programming/android/release-notes/android-9.md#9210-06282022) / [iOS](../programming/objectivec-swift/release-notes/ios-9.md#9210-06282022) |
+| 9.2.0 | [C](../programming/c/release-notes/c-9.md#920-06072022) / [C++](../programming/cplusplus/release-notes/cpp-9.md#920-06072022) / [DotNet](../programming/dotnet/release-notes/dotnet-9.md#920-06072022) / [Java](../programming/java/release-notes/java-9.md#920-06072022) / [Python](../programming/python/release-notes/python-9.md#920-06212022) |
 
 ## 9.0
 
