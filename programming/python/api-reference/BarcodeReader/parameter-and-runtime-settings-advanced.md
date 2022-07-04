@@ -184,7 +184,7 @@ for i, template_name in range(len(template_names)), template_names:
 Output runtime settings to a settings file (JSON file).
 
 ```python
-BarcodeReader.output_settings_to_json_filesave_file_path)
+BarcodeReader.output_settings_to_json_file(save_file_path)
 ```
 
 **Parameters**  

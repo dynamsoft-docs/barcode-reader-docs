@@ -17,7 +17,7 @@ In terms of API methods, the full edition supports the following features while 
 
 As a result of that, the **compact edition** is smaller in size compared to the full edition, offering a slightly faster compilation time when the user first uses the application. Using the **compact edition** can also help in reducing the size of the compiled *wasm*.
 
-By default, the SDK goes with the **full edition** of the Barcode Reader engine. If you would like to switch to the **compact edition**, please refer to the following [article]({{site.faq}}switch-compact-to-full.html).
+By default, the SDK goes with the **full edition** of the Barcode Reader engine. If you would like to switch to the **compact edition**, please refer to the following [article](https://www.dynamsoft.com/barcode-reader/programming/javascript/user-guide/features-requirements.html#compact-and-full-editions).
 
 To switch from the full edition to the compact edition, you need to set `_bUseFullFeature` to `false`
 
