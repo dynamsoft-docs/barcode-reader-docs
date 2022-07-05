@@ -26,7 +26,7 @@ class QRCodeDetailedResult
 | [`rows`](#rows) | *int* |
 | [`columns`](#columns) | *int* |
 | [`error_correction_level`](#error_correction_level) | [`EnumQRCodeErrorCorrectionLevel`]({{ site.enumerations }}other-enums.html#qrcodeerrorcorrectionlevel) |
-| [`version`](#version) | *int* |
+| [`versions`](#versions) | *int* |
 | [`model`](#model) | *int* |
 
 
@@ -58,11 +58,11 @@ The error correction level of the barcode.
 QRCodeDetailedResult.error_correction_level
 ```
 
-### version
+### versions
 The version of the QR Code.
 
 ```python
-QRCodeDetailedResult.version
+QRCodeDetailedResult.versions
 ```
 
 ### model
