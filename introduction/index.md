@@ -27,6 +27,8 @@ Dynamsoft Barcode Reader (DBR) SDK enables you to easily implement 1D and 2D bar
 
     [Build an iOS app with Objective-C or Swift](../programming/objectivec-swift/user-guide.md/)
 
+    <a href="https://www.dynamsoft.com/capture-vision/docs/programming/react-native/?ver=latest" target="_blank">Build a cross-platform app with React Native</a>
+
 ## How-To Guides  
 
 - [How-to Guides]({{ site.how_to }})
