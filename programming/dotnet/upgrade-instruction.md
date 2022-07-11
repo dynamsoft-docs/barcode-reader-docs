@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader - Upgrade Instruction - Dotnet
-description: This page shows how to upgrade to latest version.
+description: Follow the how-to guide and learn how to upgrade your Barcode Reader SDK version 6.x, 7.x or 8.x built for .NET to the latest version.
 keywords: Upgrade, how-to guides
 needAutoGenerateSidebar: false
 ---

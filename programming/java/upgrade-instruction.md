@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader - Upgrade Instruction - Java
-description: This page shows how to upgrade to latest version.
+description: Get started with barcode reading from images using this API reference guide containing an index for essential barcode reading functionality in Java.
 keywords: Upgrade, how-to guides
 needAutoGenerateSidebar: false
 ---
