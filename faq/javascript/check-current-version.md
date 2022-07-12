@@ -16,7 +16,7 @@ There are multiple ways to check the version currently being used -
 - If you are using the library via npm or yarn, then you can check the version of the package via
 
     ```javascript
-    npm –v dynamsoft-javascript-barcode
+    npm view dynamsoft-javascript-barcode version
     ```
 
 - If you are including the library via the CDN link, then the version number should be mentioned in that reference link.
