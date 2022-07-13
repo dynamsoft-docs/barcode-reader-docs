@@ -43,7 +43,7 @@ Cross-platform application development is now the new trend. The core of DBR is 
 | JavaScript           | React Native          |
 | Python               | Xamarin/Xamarin.Forms |
 | C\#/VB.NET           | .NET Core             |
-| Java                 |                       |
+| Java                 | Flutter               |
 | Swift/Objective-C    |                       |
 | PHP                  |                       |
 

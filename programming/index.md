@@ -23,3 +23,4 @@ Learn how to use Dynamsoft Barcode Reader SDK in different platforms:
   - [Java (Android)]({{ site.android }})
   - [Objective-C & Swift]({{ site.oc }})
   - <a href="https://www.dynamsoft.com/capture-vision/docs/programming/react-native/?ver=latest" target="_blank">React Native</a>
+  - <a href="https://www.dynamsoft.com/capture-vision/docs/programming/flutter/?ver=latest" target="_blank">Flutter</a>

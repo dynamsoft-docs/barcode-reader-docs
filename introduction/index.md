@@ -29,10 +29,12 @@ Dynamsoft Barcode Reader (DBR) SDK enables you to easily implement 1D and 2D bar
 
     <a href="https://www.dynamsoft.com/capture-vision/docs/programming/react-native/?ver=latest" target="_blank">Build a cross-platform app with React Native</a>
 
+    <a href="https://www.dynamsoft.com/capture-vision/docs/programming/flutter/?ver=latest" target="_blank">Build a cross-platform app with Flutter</a>
+
 ## How-To Guides  
 
 - [How-to Guides]({{ site.how_to }})
-- [Customize Parameters for Different Scenarios](../parameters/scenario-settings/) 
+- [Customize Parameters for Different Scenarios](../parameters/scenario-settings/)
 - [Test Batch Scanning with Performance Tool]({{ site.introduction }}comparison-tools/batch-test.html)
 - [License Activation](../license-activation/set-trial-license.md/)
 
