@@ -308,6 +308,22 @@ PublicRuntimeSetting.grayscale_transformation_modes
 **Remarks**       
     The list index represents the priority of the item. The smaller index is, the higher priority is.
 
+### image_preprocessing_modes
+Sets the mode and priority for image preprocessing algorithms.
+
+```python
+PublicRuntimeSetting.image_preprocessing_modes
+```
+
+**Value Range**     
+    Each list item can be any one of the [`EnumImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode) Enumeration items.
+      
+**Default Value**     
+    [EnumImagePreprocessingMode.IPM_GENERAL, EnumImagePreprocessingMode.IPM_SKIP, EnumImagePreprocessingMode.IPM_SKIP, EnumImagePreprocessingMode.IPM_SKIP, EnumImagePreprocessingMode.IPM_SKIP, EnumImagePreprocessingMode.IPM_SKIP, EnumImagePreprocessingMode.IPM_SKIP, EnumImagePreprocessingMode.IPM_SKIP]
+    
+**Remarks**       
+    The list index represents the priority of the item. The smaller index is, the higher priority is.
+
 ### intermediate_result_saving_mode
 Sets the mode for saving intermediate result.
 

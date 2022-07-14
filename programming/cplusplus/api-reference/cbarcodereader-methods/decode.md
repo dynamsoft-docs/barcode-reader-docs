@@ -202,7 +202,7 @@ dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 CBarcodeReader* reader = new CBarcodeReader();
 HANDLE pDIB;
 GetDIBFromImage("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\AllSupportedBarcodeTypes.tif", &pDIB);
-int errorCode = reader->DecodeDIB(pDIB "");
+int errorCode = reader->DecodeDIB(pDIB, "");
 delete reader;
 ```
 

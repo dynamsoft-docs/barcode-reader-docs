@@ -8,7 +8,7 @@ needGenerateH3Content: false
 
 # Release Notes for Python SDK - 9.x
 
-## 9.2.0 (06/14/2022)
+## 9.2.0 (06/21/2022)
 
 <div class="fold-panel-prefix"></div>
 

@@ -32,11 +32,11 @@ For more information, please refer to: [How to set the barcode format and the nu
 
 Understanding the general flow of the DBR algorithm can help you better choose the appropriate parameters for your project. The general processing process of DBR for images consists the below:
 
-- [Determine Regions Of Interest (ROI) in the image](#Determine-the-Region-Of-Interest-in-the-image)
-- [Barcode region localization in ROI(s)](#Barcode-Region-Localization-in-ROI)
-- [Identify the type of located barcode](#Identify-the-type-of-located-barcode-region)
-- [Decode located barcodes](#Decode-Located-Barcode-Region)
-- [Return results](#Return-Results)
+- [Determine Regions Of Interest (ROI) in the image](#determine-the-region-of-interest-in-the-image)
+- [Barcode region localization in ROI(s)](#barcode-region-localization-in-roi)
+- [Identify the type of located barcode](#identify-the-type-of-located-barcode-region)
+- [Decode located barcodes](#decode-located-barcode-region)
+- [Return results](#return-results)
 
 ### Determine the Region Of Interest in the image 
 

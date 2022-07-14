@@ -152,7 +152,7 @@ reader = BarcodeReader()
 
 settings = reader.get_runtime_settings()
 print(settings.barcode_format_ids)
-print(settings.excepted_barcodes_count)
+print(settings.expected_barcodes_count)
 ```
 
 ## update_runtime_settings
@@ -179,12 +179,12 @@ reader = BarcodeReader()
 
 settings = reader.get_runtime_settings()
 settings.barcode_format_ids = EnumBarcodeFormat.BF_ONED
-settings.excepted_barcodes_count = 4
+settings.expected_barcodes_count = 4
 try:
     reader.update_runtime_settings(settings)
     changed_settings = reader.get_runtime_settings()
     print(changed_settings.barcode_format_ids)
-    print(changed_settings.excepted_barcodes_count)
+    print(changed_settings.expected_barcodes_count)
 except BarcodeReaderError as e:
     print(e)
 ```
@@ -205,17 +205,17 @@ reader = BarcodeReader()
 
 settings = reader.get_runtime_settings()
 settings.barcode_format_ids = EnumBarcodeFormat.BF_ONED
-settings.excepted_barcodes_count = 4
+settings.expected_barcodes_count = 4
 try:
     reader.update_runtime_settings(settings)
     changed_settings = reader.get_runtime_settings()
     print(changed_settings.barcode_format_ids)
-    print(changed_settings.excepted_barcodes_count)
+    print(changed_settings.expected_barcodes_count)
 
     reader.reset_runtime_settings()
     reset_settings = reader.get_runtime_settings()
     print(reset_settings.barcode_format_ids)
-    print(reset_settings.excepted_barcodes_count)
+    print(reset_settings.expected_barcodes_count)
 except BarcodeReaderError as e:
     print(e)
 ```

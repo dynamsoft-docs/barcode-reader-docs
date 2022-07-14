@@ -25,4 +25,4 @@ needAutoGenerateSidebar: false
 | <a href="https://github.com/Dynamsoft/barcode-reader-python-samples/blob/master/samples/use-case/read-dpm-barcode.py" target="_blank">read-dpm-barcode</a> | This is a python sample that shows how to configure Dynamsoft Barcode Reader to read DPM barcodes. |
 
 ## Official Online Demo
-This <a href="https://demo.dynamsoft.com/barcode-reader/" target="_blank">Online Demo</a> is an online barcode scanner for all barcode types. All supported parameters are opened for customization to see how Dynamsoft Barcode Reader works in different usage scenarios. 
+This <a href="https://demo6.dynamsoft.com/barcode-reader/" target="_blank">Online Demo</a> is an online barcode scanner for all barcode types. All supported parameters are opened for customization to see how Dynamsoft Barcode Reader works in different usage scenarios. 

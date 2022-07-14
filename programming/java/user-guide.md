@@ -25,6 +25,7 @@ In this guide, you will learn step by step on how to build a barcode reading app
 - Developing Environment:
    - JDK 1.7 and above
 
+<iframe width="400" height="225" src="https://www.youtube.com/embed/05UtoF7_HJQ" title="How to Use Dynamsoft Barcode Reader Java SDK | Dynamsoft Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Installation
 If you haven't downloaded the SDK yet, download the `Java Package` now from <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a> and unpack the package into the directory of your choice.

@@ -13,7 +13,7 @@ needAutoGenerateSidebar: false
 1. The first thing to try is the [JavaScript online demo](https://demo.dynamsoft.com/barcode-reader-js/). If the image still can’t be decoded via the online demo, then we can move to next step.
 2. Was the user trying to decode the barcode via video (`BarcodeScanner`) or was it a still image (`BarcodeReader`)?
    - If it was via video, then it’s best to try the **“coverage”** template for the `RuntimeSettings` first, as shown [here](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeReader.html?ver=latest#updateruntimesettings).
-   - If it was a still image, it's best to take a clear picture of the barcode (if one doesn’t already exist) and try to decode it using the [main online demo](https://demo.dynamsoft.com/barcode-reader/) (not the JavaScript edition, but still the same SDK).
+   - If it was a still image, it's best to take a clear picture of the barcode (if one doesn’t already exist) and try to decode it using the [main online demo](https://demo6.dynamsoft.com/barcode-reader/) (not the JavaScript edition, but still the same SDK).
       * If the image is still not getting decoded, then please shift the slider on the left–hand side of the online demo to **“Best Coverage”**. This slider determines which `mode` the SDK will use, going from best speed (least coverage) to best coverage (worst speed).
 3. If the image does indeed get decoded as a static image, then we should investigate some of the important factors that affect video decoding.
    - What type of device are you using to decode via video? If it is a mobile, what phone model is it?
