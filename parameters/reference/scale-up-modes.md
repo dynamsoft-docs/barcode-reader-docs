@@ -5,6 +5,7 @@ description: This page shows Dynamsoft Barcode Reader Parameter Reference for Sc
 keywords: ScaleUpModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/scale-up-modes.html
 ---
 
 
@@ -18,7 +19,7 @@ needGenerateH3Content: true
 - SUM_LINEAR_INTERPOLATION
 - SUM_NEAREST_NEIGHBOUR_INTERPOLATION
 
-### SUM_AUTO
+### CCM_AUTO
 Lets the library choose a mode automatically.
 
 ### SUM_LINEAR_INTERPOLATION

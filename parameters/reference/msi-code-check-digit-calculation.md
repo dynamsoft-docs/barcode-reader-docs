@@ -5,6 +5,7 @@ description: This page shows Dynamsoft Barcode Reader Parameter Reference for MS
 keywords: MSICodeCheckDigitCalculation, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/msi-code-check-digit-calculation.html
 ---
 
 

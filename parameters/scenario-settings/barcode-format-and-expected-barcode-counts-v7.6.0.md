@@ -4,6 +4,7 @@ title: How to set the barcode format and the number of barcodes expected to be d
 description: This article describes how to set the barcode format and the number of barcodes expected to be detected, and the effect of these settings.
 keywords: barcode format, expected barcode counts
 needAutoGenerateSidebar: false
+permalink: /parameters/scenario-settings/barcode-format-and-expected-barcode-counts-v7.6.0.html
 ---
 
 # How to set the barcode format and the number of barcodes expected to be detected 

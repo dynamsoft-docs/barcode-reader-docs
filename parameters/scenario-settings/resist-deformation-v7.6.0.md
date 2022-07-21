@@ -4,6 +4,7 @@ description: This article introduces how to deal with deformed barcodes
 title: How to deal with deformed barcodes
 keywords: resist deformation
 needAutoGenerateSidebar: false
+permalink: /parameters/scenario-settings/resist-deformation-v7.6.0.html
 ---
 
 # How to deal with deformed barcodes

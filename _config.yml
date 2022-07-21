@@ -1,146 +1,140 @@
 repositoryUrl: https://github.com/dynamsoft-docs/barcode-reader-docs/blob/master
-repositoryUrlJS: https://github.com/dynamsoft-docs/barcode-reader-docs-js/blob/main
-repositoryUrlMobile: https://github.com/dynamsoft-docs/barcode-reader-docs-mobile/blob/main
 repository: dynamsoft-docs/barcode-reader-docs
-docFullPath: https://www.dynamsoft.com/barcode-reader
-firstLevelUrl: /barcode-reader
-docHomePage: /barcode-reader/introduction/
+docFullPath: https://www.dynamsoft.com/barcode-reader-review/docs/core/
+firstLevelUrl: /barcode-reader-review/docs/core
+docHomePage: /barcode-reader-review/docs/core/
 
 useVersionTree: true
 
-introduction: /barcode-reader/introduction/
-programming: /barcode-reader/programming/
-parameters: /barcode-reader/parameters/
-license_activation: /barcode-reader/license-activation/
-release_notes: /barcode-reader/release-notes/
-performance: /barcode-reader/performance/
-faq: /barcode-reader/faq/
+introduction: /barcode-reader-review/docs/core/introduction/
+programming: /barcode-reader-review/docs/core/programming/
+parameters: /barcode-reader-review/docs/core/parameters/
+license_activation: /barcode-reader-review/docs/core/license-activation/
+release_notes: /barcode-reader-review/docs/core/release-notes/
+performance: /barcode-reader-review/docs/core/performance/
+faq: /barcode-reader-review/docs/core/faq/
+faq_general: /barcode-reader-review/docs/core/faq/general/
 
-faq_general: /barcode-reader/faq/general/
-faq_js: /barcode-reader/faq/javascript/
+comparison_tools: /barcode-reader-review/docs/core/introduction/comparison-tools/
 
-comparison_tools: /barcode-reader/introduction/comparison-tools/
+c: /barcode-reader-review/docs/server/programming/c/
+c_api: /barcode-reader-review/docs/server/programming/c/api-reference/
+c_methods: /barcode-reader-review/docs/server/programming/c/api-reference/methods/
+c_release_notes: /barcode-reader-review/docs/server/programming/c/release-notes/
 
-c_cplusplus: /barcode-reader/programming/c-cplusplus/
-structs: /barcode-reader/programming/c-cplusplus/struct/
+cpp: /barcode-reader-review/docs/server/programming/cplusplus/
+cpp_api: /barcode-reader-review/docs/server/programming/cplusplus/api-reference/
+cpp_methods: /barcode-reader-review/docs/server/programming/cplusplus/api-reference/cbarcodereader-methods/
+cpp_release_notes: /barcode-reader-review/docs/server/programming/cplusplus/release-notes/
 
-c: /barcode-reader/programming/c/
-c_api: /barcode-reader/programming/c/api-reference/
-c_methods: /barcode-reader/programming/c/api-reference/methods/
-c_release_notes: /barcode-reader/programming/c/release-notes/
+js: /barcode-reader-review/docs/web/programming/javascript/
+js_api: /barcode-reader-review/docs/web/programming/javascript/api-reference/
+js_release_notes: /barcode-reader-review/docs/web/programming/javascript/release-notes/
 
-cpp: /barcode-reader/programming/cplusplus/
-cpp_api: /barcode-reader/programming/cplusplus/api-reference/
-cpp_methods: /barcode-reader/programming/cplusplus/api-reference/cbarcodereader-methods/
-cpp_release_notes: /barcode-reader/programming/cplusplus/release-notes/
+dotnet: /barcode-reader-review/docs/server/programming/dotnet/
+dotnet_api: /barcode-reader-review/docs/server/programming/dotnet/api-reference/
+dotnet_methods: /barcode-reader-review/docs/server/programming/dotnet/api-reference/BarcodeReader/
+dotnet_class: /barcode-reader-review/docs/server/programming/dotnet/api-reference/class/
+dotnet_release_notes: /barcode-reader-review/docs/server/programming/dotnet/release-notes/
 
-js: /barcode-reader/programming/javascript/
-js_api: /barcode-reader/programming/javascript/api-reference/
-js_release_notes: /barcode-reader/programming/javascript/release-notes/
+oc: /barcode-reader-review/docs/mobile/programming/objectivec-swift/
+oc_api: /barcode-reader-review/docs/mobile/programming/objectivec-swift/api-reference/
+oc_release_notes: /barcode-reader-review/docs/mobile/programming/objectivec-swift/release-notes/
+oc_methods: /barcode-reader-review/docs/mobile/programming/objectivec-swift/api-reference/methods/
+oc_class: /barcode-reader-review/docs/mobile/programming/objectivec-swift/api-reference/class/
+oc_methods: /barcode-reader-review/docs/mobile/programming/objectivec-swift/api-reference/methods/
 
-dotnet: /barcode-reader/programming/dotnet/
-dotnet_api: /barcode-reader/programming/dotnet/api-reference/
-dotnet_methods: /barcode-reader/programming/dotnet/api-reference/BarcodeReader/
-dotnet_class: /barcode-reader/programming/dotnet/api-reference/class/
-dotnet_release_notes: /barcode-reader/programming/dotnet/release-notes/
+java: /barcode-reader-review/docs/server/programming/java/
+java_api: /barcode-reader-review/docs/server/programming/java/api-reference/
+java_methods: /barcode-reader-review/docs/server/programming/java/api-reference/BarcodeReader/
+java_class: /barcode-reader-review/docs/server/programming/java/api-reference/class/
+java_release_notes: /barcode-reader-review/docs/server/programming/java/release-notes/
 
-oc: /barcode-reader/programming/objectivec-swift/
-oc_api: /barcode-reader/programming/objectivec-swift/api-reference/
-oc_release_notes: /barcode-reader/programming/objectivec-swift/release-notes/
-oc_methods: /barcode-reader/programming/objectivec-swift/api-reference/methods/
-oc_class: /barcode-reader/programming/objectivec-swift/api-reference/class/
-oc_methods: /barcode-reader/programming/objectivec-swift/api-reference/methods/
-
-java: /barcode-reader/programming/java/
-java_api: /barcode-reader/programming/java/api-reference/
-java_methods: /barcode-reader/programming/java/api-reference/BarcodeReader/
-java_class: /barcode-reader/programming/java/api-reference/class/
-java_release_notes: /barcode-reader/programming/java/release-notes/
-
-android: /barcode-reader/programming/android/
-android_api: /barcode-reader/programming/android/api-reference/
-android_release_notes: /barcode-reader/programming/android/release-notes/
-android_class: /barcode-reader/programming/android/api-reference/class/
-android_methods: /barcode-reader/programming/android/api-reference/BarcodeReader/
+android: /barcode-reader-review/docs/mobile/programming/android/
+android_api: /barcode-reader-review/docs/mobile/programming/android/api-reference/
+android_release_notes: /barcode-reader-review/docs/mobile/programming/android/release-notes/
+android_class: /barcode-reader-review/docs/mobile/programming/android/api-reference/class/
+android_methods: /barcode-reader-review/docs/mobile/programming/android/api-reference/BarcodeReader/
   
-python: /barcode-reader/programming/python/
-python_api: /barcode-reader/programming/python/api-reference/
-python_methods: /barcode-reader/programming/python/api-reference/BarcodeReader/
-python_class: /barcode-reader/programming/python/api-reference/class/
-python_release_notes: /barcode-reader/programming/python/release-notes/
+python: /barcode-reader-review/docs/server/programming/python/
+python_api: /barcode-reader-review/docs/server/programming/python/api-reference/
+python_methods: /barcode-reader-review/docs/server/programming/python/api-reference/BarcodeReader/
+python_class: /barcode-reader-review/docs/server/programming/python/api-reference/class/
+python_release_notes: /barcode-reader-review/docs/server/programming/python/release-notes/
 
-parameters_reference: /barcode-reader/parameters/reference/
-image_parameters: /barcode-reader/parameters/reference/image-parameter/
-scenario_settings: /barcode-reader/parameters/scenario-settings/
-enumerations: /barcode-reader/parameters/enum/
+parameters_reference: /barcode-reader-review/docs/core/parameters/reference/
+image_parameters: /barcode-reader-review/docs/core/parameters/reference/image-parameter/
+scenario_settings: /barcode-reader-review/docs/core/parameters/scenario-settings/
+enumerations: /barcode-reader-review/docs/core/parameters/enum/
 
-faqs: /barcode-reader/introduction/faqs.html
-how_to: /barcode-reader/introduction/how-to-guide/
+faqs: /barcode-reader-review/docs/core/faq/
+how_to: /barcode-reader-review/docs/core/faq/how-to-guide/
 
-assets: /barcode-reader/assets/
-edit_icon: /barcode-reader/assets/img-icon/edit-icon.png
-smile_icon: /barcode-reader/assets/img-icon/icon-smile.png
-sad_icon: /barcode-reader/assets/img-icon/icon-sad.png
-dbr_icon: /barcode-reader/assets/img-icon/icon-dbr.svg
-dwt_icon: /barcode-reader/assets/img-icon/icon-dwt.svg
-dnt_icon: /barcode-reader/assets/img-icon/icon-dnt.svg
+assets: /barcode-reader-review/docs/core/assets/
+edit_icon: /barcode-reader-review/docs/core/assets/img-icon/edit-icon.png
+smile_icon: /barcode-reader-review/docs/core/assets/img-icon/icon-smile.png
+sad_icon: /barcode-reader-review/docs/core/assets/img-icon/icon-sad.png
+dbr_icon: /barcode-reader-review/docs/core/assets/img-icon/icon-dbr.svg
+dwt_icon: /barcode-reader-review/docs/core/assets/img-icon/icon-dwt.svg
+dnt_icon: /barcode-reader-review/docs/core/assets/img-icon/icon-dnt.svg
 
-camera: /camera-enhancer/docs/introduction/
-
-baseurl: "/barcode-reader"
+baseurl: "/barcode-reader-review/docs/core"
 plugins:
   - jemoji
+
+edition: algorithm
 
 defaults:
   - scope:
       path: ""
     values:
       category: "original-repo"
+      edition: "algorithm"
   - scope:
-      path: "programming/javascript"
+      path: "web/programming/javascript"
     values:
       category: "js-repo"
-      editon: "js"
+      edition: "js"
   - scope:
-      path: "programming/android"
+      path: "mobile/programming/android"
     values:
       category: "mobile-repo"
-      editon: "mobile"
+      edition: "mobile"
   - scope:
-      path: "programming/objectivec-swift"
+      path: "mobile/programming/objectivec-swift"
     values:
       category: "mobile-repo"
-      editon: "mobile"
+      edition: "mobile"
   - scope:
-      path: "programming/c"
+      path: "server/programming/c"
     values:
       category: "original-repo"
-      editon: "desktop"
+      edition: "desktop"
   - scope:
-      path: "programming/cplusplus"
+      path: "server/programming/cplusplus"
     values:
       category: "original-repo"
-      editon: "desktop"
+      edition: "desktop"
   - scope:
-      path: "programming/c-cplusplus"
+      path: "server/programming/c-cplusplus"
     values:
       category: "original-repo"
-      editon: "desktop"
+      edition: "desktop"
   - scope:
-      path: "programming/dotnet"
+      path: "server/programming/dotnet"
     values:
       category: "original-repo"
-      editon: "desktop"
+      edition: "desktop"
   - scope:
-      path: "programming/python"
+      path: "server/programming/python"
     values:
       category: "original-repo"
-      editon: "desktop"
+      edition: "desktop"
   - scope:
-      path: "programming/java"
+      path: "server/programming/java"
     values:
       category: "original-repo"
-      editon: "desktop"
+      edition: "desktop"
   - scope:
       path: ""
     values:

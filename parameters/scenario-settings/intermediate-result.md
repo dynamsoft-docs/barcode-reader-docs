@@ -4,6 +4,7 @@ description: In this article, we will introduce how to obtain and use intermedia
 title: How to obtain and use intermediate results
 keywords: IntermediateResult
 needAutoGenerateSidebar: true
+permalink: /parameters/scenario-settings/intermediate-result.html
 ---
 # How to obtain and use intermediate results
 

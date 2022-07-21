@@ -5,6 +5,7 @@ description: This page shows how to set full license of Dynamsoft Barcode Reader
 keywords: full license, licensing
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /license-activation/set-full-license.html
 ---
 
 # How to set full license in version 9.x

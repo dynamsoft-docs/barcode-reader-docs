@@ -5,12 +5,13 @@ description: This page shows Dynamsoft Barcode Reader Parameter Reference for Mi
 keywords: MinRatioOfBarcodeZoneWidthToHeight, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/min-ratio-of-barcode-zone-width-to-height.html
 ---
 
 
 # MinRatioOfBarcodeZoneWidthToHeight 
 
-`MinRatioOfBarcodeZoneWidthToHeight` is a parameter to specify the minimum ratio (width/height as a percentage) of the barcode zone. It is defined as below:
+`MinRatioOfBarcodeZoneWidthToHeight` is a parameter to specify the minimum ratio (width/height) of the barcode zone. It is defined as below:
 
 | Value Type | Value Range | Default Value |
 | ---------- | ----------- | ------------- |

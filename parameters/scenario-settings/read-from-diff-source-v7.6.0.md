@@ -4,6 +4,7 @@ title: How to read images from different sources
 description: This article introduces how to read images from different sources, including read from file, read from memory and read from video stream
 keywords: file memory video stream
 needAutoGenerateSidebar: false
+permalink: /parameters/scenario-settings/read-from-diff-source-v7.6.0.html
 ---
 
 # How to read images from different sources 

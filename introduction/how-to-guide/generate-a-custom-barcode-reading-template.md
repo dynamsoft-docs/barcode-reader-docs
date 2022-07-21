@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader How-to Guides - Generate a Custom Barcode Readin
 description: This page shows how to generate a custom barcode reading template.
 keywords: custom settings, template, how-to guides
 needAutoGenerateSidebar: false
+permalink: /introduction/how-to-guide/generate-a-custom-barcode-reading-template.html
 ---
 
 
@@ -13,7 +14,7 @@ needAutoGenerateSidebar: false
 Starting from Dynamsoft Barcode Reader version 6, it is recommended to set all barcode reading configurations in the template (*.json). This article will talk about how to customize your own template based on our standard templates on our online demo.    
 
 
-1. Open our [Online Demo](https://demo6.dynamsoft.com/barcode-reader/):    
+1. Open our [Online Demo](https://demo.dynamsoft.com/barcode-reader/):    
     ![Online Demo Example Image][1]     
 
 2. Modify the settings on the left panel:     

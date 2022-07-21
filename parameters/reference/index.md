@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader Parameter Reference - Main Page
 description: Dynamsoft Barcode Reader Parameter Reference - Main Page
 keywords: parameter reference, parameters
 needAutoGenerateSidebar: false
+permalink: /parameters/reference/index.html
 ---
 
 
@@ -12,7 +13,7 @@ needAutoGenerateSidebar: false
  | Parameter Name | Description |
  | -------------- | ----------- |
  | [`AllModuleDeviation`](all-module-deviation.md) | Sets the module size deviation from the standard barcode module size. |
- | [`AustralianPostEncodingTable`](australian-post-encoding-table.md) | Sets the encoding table used to code the Customer Information Field of Australian Post Customer Barcode. | 
+ | [`AustralianPostEncodingTable`](australian-post-encoding-table.md) | Sets the encoding table used to code the Customer Information Field of Australian Post Customer Barcode. |
  | [`BarcodeAngleRangeArray`](barcode-angle-range-array.md) | Sets the range of angles (in degrees) for barcodes searching. | 
  | [`BarcodeBytesLengthRangeArray`](barcode-bytes-length-range-array.md) | Sets the range of barcode bytes length for barcodes searching. | 
  | [`BarcodeBytesRegExPattern`](barcode-bytes-regex-pattern.md) | Specifies the regular expression pattern of barcode byte characters. | 

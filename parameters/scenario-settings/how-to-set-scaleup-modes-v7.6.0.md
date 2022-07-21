@@ -4,6 +4,7 @@ description: This article introduces how DBR can enlarge the low resolution code
 title: How to read barcodes with small module sizes  
 keywords: ScaleUpModes, blurred image
 needAutoGenerateSidebar: false
+permalink: /parameters/scenario-settings/how-to-set-scaleup-modes-v7.6.0.html
 ---
 
 # How to read barcodes with small module sizes

@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader How-to Guides - Read Barcodes from Camera Stream
 description: This page shows how to read barcodes from camera stream.
 keywords: camera stream, frame decoding, image source, StartFrameDecoding, StopFrameDecoding, how-to guides
 needAutoGenerateSidebar: false
+permalink: /introduction/how-to-guide/read-barcode-from-camera-stream.html
 ---
 
 

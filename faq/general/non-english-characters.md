@@ -4,6 +4,7 @@ title: Why is the barcode image returning messy (non-english) characters on the 
 keywords: Dynamsoft Barcode Reader, FAQ, DBR Introduction, messy characters, non-English characters
 description: Why is the barcode image returning messy (non-english) characters on the online demo?
 needAutoGenerateSidebar: false
+permalink: /faq/general/non-english-characters.html
 ---
 
 # FAQ - General

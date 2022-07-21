@@ -5,6 +5,7 @@ description: This page shows Dynamsoft Barcode Reader Parameter Reference for Mi
 keywords: MirrorMode, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/mirror-mode.html
 ---
 
 
@@ -14,7 +15,7 @@ needGenerateH3Content: true
 
 | Value Type | Value Range | Default Value |
 | ---------- | ----------- | ------------- |
-| *string* | "MM_NORMAL"<br>"MM_MIRROR"<br>"MM_BOTH" | For `QRCode`, `DataMatrix`, `PDF417`, `AZTEC`, `Micro QR Code`, `Micro PDF417`, `DotCode` and `Pharmacode Two-Track`, it's "MM_BOTH". <br> For other barcode types, it's "MM_NORMAL".  |
+| *string* | "MM_NORMAL"<br>"MM_MIRROR"<br>"MM_BOTH" | "MM_NORMAL"  |
 
 **Remarks**     
 - "MM_NORMAL": Doesn't decode mirror barcodes.

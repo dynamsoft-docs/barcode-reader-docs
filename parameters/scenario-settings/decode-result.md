@@ -3,6 +3,7 @@ layout: default-layout
 description: This article describes how to filter and sort decoding results and related parameters
 title: How to filter and sort decoding results
 keywords: decode result
+permalink: /parameters/scenario-settings/decode-result.html
 ---
 
 # How to filter and sort decoding results

@@ -5,6 +5,7 @@ description: This article shows RegionDefinition Object of Dynamsoft Barcode Rea
 keywords: parameter reference, parameters, RegionDefinition
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+permalink: /parameters/reference/region-definition/
 ---
 
 

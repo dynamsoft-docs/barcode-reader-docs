@@ -5,6 +5,7 @@ description: This page shows Dynamsoft Barcode Reader Parameter Reference for Ba
 keywords: BarcodeTextLengthRangeArray, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/barcode-text-length-range-array.html
 ---
 
 

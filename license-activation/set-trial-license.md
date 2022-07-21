@@ -5,6 +5,7 @@ description: This page shows how to set trial license of Dynamsoft Barcode Reade
 keywords: trial license, licensing
 needAutoGenerateSidebar: false
 needGenerateH3Content: false
+permalink: /license-activation/set-trial-license.html
 ---
 
 # How to set trial license
@@ -96,3 +97,20 @@ dbr = BarcodeReader()
 ```
 
 If you run into any issues, please [contact Dynamsoft Support](https://www.dynamsoft.com/Company/Contact.aspx).
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />

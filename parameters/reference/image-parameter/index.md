@@ -5,6 +5,7 @@ description: This page shows Dynamsoft Barcode Reader Parameter Reference - Imag
 keywords: parameter reference, parameters, ImageParameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+permalink: /parameters/reference/image-parameter/
 ---
 
 
@@ -134,7 +135,7 @@ An array item is a name of any available `RegionDefinitions`.
  | [`ImageParameter.DeblurLevel`](../deblur-level.md) | Sets the degree of blurriness of the barcode. |
  | [`ImageParameter.DeblurModes`](../deblur-modes.md) | Sets the mode and priority for deblurring. |
  | [`ImageParameter.DeformationResistingModes`](../deformation-resisting-modes.md) | Sets the mode and priority for deformation resisting. |
- | [`ImageParameter.DPMCodeReadingModes`](../dpm-code-reading-modes.md) | Sets the mode and priority for DPM code reading. |
+ | [`ImageParameter.DPMCodeReadingModes`](../dpm-code-reading-modes.md) | Sets the mode and priority for DPM code reading. Not support yet. |
  | [`ImageParameter.GrayscaleTransformationModes`](../grayscale-transformation-modes.md) | Sets the mode and priority for the grayscale image conversion. |
  | [`ImageParameter.ImagePreprocessingModes`](../image-preprocessing-modes.md) | Sets the mode and priority for image preprocessing algorithms. |
  | [`ImageParameter.LocalizationModes`](../localization-modes.md) | 	Sets the mode and priority for localization algorithms. |

@@ -4,6 +4,7 @@ description: This article introduces DBR's ROI (Region Of Interest), applicable 
 title: Manually Define Region Of Interest and its configurations
 keywords: ROI Region-Of-Interest RegionDefinition
 needAutoGenerateSidebar: false
+permalink: /parameters/scenario-settings/manually-define-region-of-interest.html
 ---
 
 # Manually Define Region Of Interest
