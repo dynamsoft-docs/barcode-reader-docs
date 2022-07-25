@@ -39,34 +39,49 @@ The following code snippet shows how to configure the parameters via a json temp
    >- C++
    >- C
    >
->```javascript
+>
+```javascript
+const scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+// Defines settings for reading dense barcodes in a template.
+let jsonString = "{\"ImageParameter\":{\"BarcodeComplementModes\":[\"BCM_SKIP\"],\"DeblurModes\":[{\"Mode\":\"DM_SHARPENING\"},{\"Mode\":\"DM_GRAY_EQUALIZATION\"}],\"ExpectedBarcodesCount\":1,\"LocalizationModes\":[\"LM_CONNECTED_BLOCKS\"],\"ScaleUpModes\":[\"SUM_LINEAR_INTERPOLATION(0,4,6)\"],\"MaxAlgorithmThreadCount\":1,\"Name\":\"high-density-qr-tpl\",\"ScaleDownThreshold\":10000,\"Timeout\":5000},\"Version\":\"3.0\"}";
+// Configures the BarcodeScanner object with the settings.
+await scanner.initRuntimeSettingsWithString(jsonString);
+scanner.show();
 ```
->```java
+>
+```java
 String jsonPara = "{\"ImageParameter\":{\"BarcodeComplementModes\":[\"BCM_SKIP\"],\"DeblurModes\":[{\"Mode\":\"DM_SHARPENING\"},{\"Mode\":\"DM_GRAY_EQUALIZATION\"}],\"ExpectedBarcodesCount\":1,\"LocalizationModes\":[\"LM_CONNECTED_BLOCKS\"],\"ScaleUpModes\":[\"SUM_LINEAR_INTERPOLATION(0,4,6)\"],\"MaxAlgorithmThreadCount\":1,\"Name\":\"high-density-qr-tpl\",\"ScaleDownThreshold\":10000,\"Timeout\":5000},\"Version\":\"3.0\"}";
 // Apply the template string to the reader.
 reader.initRuntimeSettingsWithString(jsonPara, EnumConflictMode.CM_OVERWRITE);
 TextResult[] result = reader.decodeFile("YOUR-IMAGE-FILE-PATH");
 ```
->```objc
+>
+```objc
 NSError* err = nil;
 NSString* jsonPara = @"{\"ImageParameter\":{\"BarcodeComplementModes\":[\"BCM_SKIP\"],\"DeblurModes\":[{\"Mode\":\"DM_SHARPENING\"},{\"Mode\":\"DM_GRAY_EQUALIZATION\"}],\"ExpectedBarcodesCount\":1,\"LocalizationModes\":[\"LM_CONNECTED_BLOCKS\"],\"ScaleUpModes\":[\"SUM_LINEAR_INTERPOLATION(0,4,6)\"],\"MaxAlgorithmThreadCount\":1,\"Name\":\"high-density-qr-tpl\",\"ScaleDownThreshold\":10000,\"Timeout\":5000},\"Version\":\"3.0\"}";
 // Apply the template string to the reader.
 [reader initRuntimeSettingsWithString:jsonPara conflictMode:EnumConflictModeOverwrite error:&err];
 NSArray<iTextResult*>* result = [reader decodeFileWithName:"YOUR-IMAGE-FILE-PATH" error:&err];
 ```
->```swift
+>
+```swift
 let jsonPara = "{\"ImageParameter\":{\"BarcodeComplementModes\":[\"BCM_SKIP\"],\"DeblurModes\":[{\"Mode\":\"DM_SHARPENING\"},{\"Mode\":\"DM_GRAY_EQUALIZATION\"}],\"ExpectedBarcodesCount\":1,\"LocalizationModes\":[\"LM_CONNECTED_BLOCKS\"],\"ScaleUpModes\":[\"SUM_LINEAR_INTERPOLATION(0,4,6)\"],\"MaxAlgorithmThreadCount\":1,\"Name\":\"high-density-qr-tpl\",\"ScaleDownThreshold\":10000,\"Timeout\":5000},\"Version\":\"3.0\"}"
 // Apply the template string to the reader.
 try? reader.initRuntimeSettingsWithString(jsonPara,conflictMode:EnumConflictMode.overwrite)
 let result = try? reader.decodeFileWithName("YOUR-IMAGE-FILE-PATH")
 ```
->```python
+>
+```python
 ```
->```java
+>
+```java
 ```
->```csharp
+>
+```csharp
 ```
->```c++
+>
+```c++
 ```
->```c
+>
+```c
 ```

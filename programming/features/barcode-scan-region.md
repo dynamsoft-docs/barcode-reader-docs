@@ -182,6 +182,8 @@ To do the same with a JSON Template:
 
 If you need to specify more than one ROI, the only way is to use a JSON template. Furthermore, you can even configure different barcode-decoding parameter settings for each region.
 
+> Read more on [RuntimeSettings vs Template](use-runtimesettings-or-templates.md).
+
 ```json
 {
    "ImageParameter": {
