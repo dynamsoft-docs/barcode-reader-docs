@@ -54,7 +54,7 @@ NSError* err = nil;
 // Obtain current runtime settings of `reader` instance.
 iPublicRuntimeSettings* settings = [reader getRuntimeSettings:&err];
 // Add BCM_GENERAL to the barcodeComplementModes to decode incomplete barcodes.
-settings.iFurtherModes.barcodeComplementModes = @[@(EnumBarcodeComplementModeGeneral)];
+settings.furtherModes.barcodeComplementModes = @[@(EnumBarcodeComplementModeGeneral)];
 // Update the settings.
 [reader updateRuntimeSettings:settings error:&err];
 ```
@@ -62,7 +62,7 @@ settings.iFurtherModes.barcodeComplementModes = @[@(EnumBarcodeComplementModeGen
 // Obtain current runtime settings of `barcodeReader` instance.
 let settings = try? barcodeReader.getRuntimeSettings()
 // Add BCM_GENERAL to the barcodeComplementModes to decode incomplete barcodes.
-settings.iFurtherModes.barcodeComplementModes = [EnumBarcodeComplementMode.general]
+settings?.furtherModes.barcodeComplementModes = [EnumBarcodeComplementMode.general]
 // Update the settings.
 try? barcodeReader.updateRuntimeSettings(settings!)
 ```

@@ -40,15 +40,33 @@ await scanner.show();
 ```
 >
 ```java
-NOT SURE JAVA-ANDROID
+BarcodeReader reader = new BarcodeReader();
+PublicRuntimeSettings settings = reader.getRuntimeSettings(); //Get the current RuntimeSettings
+settings.furtherModes.textFilterModes[0] = EnumTextFilterMode.TFM_GENERAL_CONTOUR; // Set a TFM_GENERAL_CONTOUR mode to filter texts
+reader.updateRuntimeSettings(settings); // Update RuntimeSettings with above setting
+TextResult[] result = reader.decodeFile("YOUR-IMAGE-FILE-PATH"); // Start decoding
+// Add further process
 ```
 >
 ```objc
-NOT SURE OBJC
+NSError *err = nil;
+DynamsoftBarcodeReader* reader = [[DynamsoftBarcodeReader alloc] init];
+//Get the current RuntimeSettings
+iPublicRuntimeSettings* settings = [reader getRuntimeSettings:&err];
+settings.furtherModes.textFilterModes[0] = EnumTextFilterModeGeneralContour; // Set a TFM_GENERAL_CONTOUR mode to filter texts
+[reader updateRuntimeSettings:settings error:&err]; // Update RuntimeSettings with above setting
+NSArray<iTextResult*>* result = [reader decodeFileWithName:@"YOUR-IMAGE-FILE-PATH" error:&err]; // Start decoding
+// Add further process
 ```
 >
 ```swift
-NOT SURE SWIFT
+let reader = DynamsoftBarcodeReader()
+//Get the current RuntimeSettings
+let settings = try? reader.getRuntimeSettings()
+settings.furtherModes.textFilterModes[0] = EnumTextFilterMode.generalContour; // Set a TFM_GENERAL_CONTOUR mode to filter texts
+try? reader.updateRuntimeSettings(settings); // Update RuntimeSettings with above setting
+let result = try? reader.decodeFileWithName("YOUR-IMAGE-FILE-PATH") // Start decoding
+// Add further process
 ```
 >
 ```python

@@ -131,15 +131,43 @@ for (int iIndex = 0; iIndex < result.length; iIndex++)
 ```
 6. 
 ```java
-
+BarcodeReader reader = new BarcodeReader();
+TextResult[] result = reader.decodeFile("YOUR-IMAGE-FILE-PATH"); // Start decoding
+for (int iIndex = 0; iIndex < result.length; iIndex++)
+{
+    int confidence = result[iIndex].results[0].confidence;
+    int angle = result[iIndex].localizationResult.angle;
+    //add further process with the confidence and angle
+}
+// Add further process
 ```
 7. 
 ```objc
-
+NSError *error = nil;
+DynamsoftBarcodeReader* reader = [[DynamsoftBarcodeReader alloc] init];
+NSArray<iTextResult*>* result = [reader decodeFileWithName:@"YOUR-IMAGE-FILE-PATH" error:&err]; // Start decoding
+for (iTextResult* barcode in result)
+{
+    int confidence = barcode.results[0].confidence;
+    int angle = barcode.localizationResult.angle;
+    //add further process with the confidence and angle
+}
+// Add further process
 ```
 8. 
 ```swift
-
+let reader = DynamsoftBarcodeReader()
+var result: [iTextResult]? = nil
+do {
+    result = try reader.decodeFileWithName("YOUR-IMAGE-FILE-PATH")
+} catch let err {
+} // Start decoding
+for barcode in result ?? [] {
+    let confidence = barcode.results[0].confidence
+    let angle = barcode.localizationResult.angle
+    //add further process with the confidence and angle
+}
+// Add further process
 ```
 9. 
 ```python

@@ -76,14 +76,14 @@ settings.furtherModes.textureDetectionModes = @[@(EnumTextureDetectionModeGenera
 // Update the settings.
 [reader updateRuntimeSettings:settings error:&err];
 // Fine-tune the `Sensitivity` parameter value of the first mode in `TextureDetectionModes`
-[reader setModeArgument:@"TextureDetectionModes" index:0 argumentName:@"Sensitivity" argumentValue:"5" error:nil];
+[reader setModeArgument:@"TextureDetectionModes" index:0 argumentName:@"Sensitivity" argumentValue:@"5" error:nil];
 ```
 >
 ```swift
 // Obtain current runtime settings of `reader` instance.
 let settings = try? reader.getRuntimeSettings()
 // Enable a texture detection mode
-settings!.furtherModes.textureDetectionModes = [EnumTextureDetectionMode.generalWidthConcentration.rawValue]
+settings?.furtherModes.textureDetectionModes = [EnumTextureDetectionMode.generalWidthConcentration.rawValue]
 // Update the settings.
 try? reader.updateRuntimeSettings(settings!)
 // Fine-tune the `Sensitivity` parameter value of the first mode in `TextureDetectionModes`

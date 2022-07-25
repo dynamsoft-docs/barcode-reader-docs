@@ -85,11 +85,11 @@ settings.region.regionMeasuredByPercentage = 1;
 ```swift
 // Obtain current runtime settings of `barcodeReader` instance.
 let settings = try? barcodeReader.getRuntimeSettings()
-settings.region.regionTop = 10
-settings.region.regionBottom = 90
-settings.region.regionLeft = 10
-settings.region.regionRight = 90
-settings.region.regionMeasuredByPercentage = 1
+settings?.region.regionTop = 10
+settings?.region.regionBottom = 90
+settings?.region.regionLeft = 10
+settings?.region.regionRight = 90
+settings?.region.regionMeasuredByPercentage = 1
 // Update the settings.
 try? barcodeReader.updateRuntimeSettings(settings!)
 ```
@@ -159,15 +159,16 @@ settings.region.regionMeasuredByPercentage = 1;
 DBR_UpdateRuntimeSettings(reader, &settings, szErrorMsg, 256);
 ```
 
-To do the same with a JSON Template:
+To do the same with a JSON Template. Read more on [RuntimeSettings and templates](use-runtimesettings-or-templates.md#json-templates):
 
 ```json
 { 
    "ImageParameter": {
       "BarcodeFormatIds": ["BF_ALL"],
-      "RegionDefinitionNameArray": ["RP_1", "RP_2"]
+      "RegionDefinitionNameArray": ["RP_1"]
    }, 
    "RegionDefinition": {
+      "Name": "RP_1",
       "Top": 10,
       "Bottom": 90,
       "Left": 10,
@@ -178,14 +179,13 @@ To do the same with a JSON Template:
 }
 ```
 
-## Mulpitle Region Specification
+## Multiple Region Specification
 
-If you need to specify more than one ROI, the only way is to use a JSON template. Furthermore, you can even configure different barcode-decoding parameter settings for each region.
+If you need to specify more than one ROI, the only way is to use a JSON template. Furthermore, you can even configure different barcode-decoding parameter settings for each region. Read more on [RuntimeSettings and templates](use-runtimesettings-or-templates.md#json-templates):
 
 ```json
 {
    "ImageParameter": {
-      "BarcodeFormatIds": ["BF_ALL"],
       "RegionDefinitionNameArray": ["RP_1", "RP_2"]
    },
    "RegionDefinitionArray": [

@@ -68,9 +68,9 @@ settings.scaleUpModes = @[@(EnumScaleUpModeLinearInterpolation)];
 // Update the settings.
 [reader updateRuntimeSettings:settings error:&err];
 // Fine-tune some arguments of the first mode in `ScaleUpModes`
-[reader setModeArgument:@"scaleUpModes" index:0 argumentName:@"AcuteAngleWithXThreshold" argumentValue:"0" error:nil];
-[reader setModeArgument:@"scaleUpModes" index:0 argumentName:@"ModuleSizeThreshold" argumentValue:"3" error:nil];
-[reader setModeArgument:@"scaleUpModes" index:0 argumentName:@"TargetModuleSize" argumentValue:"8" error:nil];
+[reader setModeArgument:@"scaleUpModes" index:0 argumentName:@"AcuteAngleWithXThreshold" argumentValue:@"0" error:nil];
+[reader setModeArgument:@"scaleUpModes" index:0 argumentName:@"ModuleSizeThreshold" argumentValue:@"3" error:nil];
+[reader setModeArgument:@"scaleUpModes" index:0 argumentName:@"TargetModuleSize" argumentValue:@"8" error:nil];
 ```
 >
 ```swift
