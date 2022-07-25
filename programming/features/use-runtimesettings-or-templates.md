@@ -63,53 +63,113 @@ await scanner.updateRuntimeSettings(rs);
 ```
 >
 ```java
-NOT SURE JAVA-ANDROID
+// Creates a BarcodeReader instance.
+BarcodeReader reader = new BarcodeReader();
+// Obtains the current runtime settings.
+PublicRuntimeSettings rs = reader.getRuntimeSettings();
+// Sets the barcode format(s).
+rs.barcodeFormatIds = EnumBarcodeFormat.BF_QR_CODE;
+// Updates the settings.
+reader.updateRuntimeSettings(rs);
 ```
 >
 ```objc
-NOT SURE OBJC
+NSError* err = nil;
+// Creates a BarcodeReader instance.
+DynamsoftBarcodeReader* reader = [[DynamsoftBarcodeReader alloc] init];
+// Obtains the current runtime settings.
+iPublicRuntimeSettings* rs = [reader getRuntimeSettings:&err];
+// Sets the barcode format(s).
+rs.barcodeFormatIds = EnumBarcodeFormatQRCODE;
+// Updates the settings.
+[reader updateRuntimeSettings:rs error:&err];
 ```
 >
 ```swift
-NOT SURE SWIFT
+// Creates a BarcodeReader instance.
+let reader = DynamsoftBarcodeReader()
+// Obtains the current runtime settings.
+let rs = try? reader.getRuntimeSettings()
+// Sets the barcode format(s).
+rs?.barcodeFormatIds = EnumBarcodeFormatQRCODE
+// Updates the settings.
+try? reader.updateRuntimeSettings(rs)
 ```
 >
 ```python
-NOT SURE PYTHON
+error = BarcodeReader.init_license("YOUR-LICENSE-KEY")
+if error[0] != EnumErrorCode.DBR_OK:
+    print(error[1])
+dbr = BarcodeReader()
+settings = dbr.get_runtime_settings()
+settings.barcode_format_ids = EnumBarcodeFormat.BF_QR_CODE
+settings.barcode_format_ids_2 = EnumBarcodeFormat.BF2_POSTALCODE
+dbr.update_runtime_settings(settings)
+text_results = dbr.decode_file("YOUR-IMAGE-FILE-PATH")
+# Add further process
 ```
 >
 ```java
-NOT SURE JAVA
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
+PublicRuntimeSettings settings = reader.getRuntimeSettings(); //Get the current RuntimeSettings
+settings.barcodeFormatIds = EnumBarcodeFormat.BF_QR_CODE;
+settings.barcodeFormatIds_2 = EnumBarcodeFormat_2.BF2_POSTALCODE;
+reader.updateRuntimeSettings(settings); // Update RuntimeSettings with above setting
+TextResult[] result = reader.decodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
+// Add further process
 ```
 >
-```c#
-NOT SURE C#
+```csharp
+string errorMsg;
+EnumErrorCode iRet = BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
+if (iRet != EnumErrorCode.DBR_SUCCESS)
+{
+    Console.WriteLine(errorMsg);
+}
+BarcodeReader reader = new BarcodeReader();
+PublicRuntimeSettings settings = reader.GetRuntimeSettings(); //Get the current RuntimeSettings
+settings.BarcodeFormatIds = (int)EnumBarcodeFormat.BF_QR_CODE;
+settings.BarcodeFormatIds_2 = (int)EnumBarcodeFormat_2.BF2_POSTALCODE;
+reader.UpdateRuntimeSettings(settings); // Update RuntimeSettings with above setting
+TextResult[] result = reader.DecodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
+// Add further process
 ```
 >
-```c++
-// Creates a BarcodeReader instance.
+```cpp
+char errorBuf[512];
+int iRet = -1;
+iRet = dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+if (iRet != DBR_OK)
+{
+    cout << errorBuf << endl;
+}
 CBarcodeReader* reader = new CBarcodeReader();
-// Specifies a license.
-reader->InitLicense("YOUR-LICENSE-KEY");
-// Obtains the current runtime settings.
 PublicRuntimeSettings* runtimeSettings = new PublicRuntimeSettings();
-reader->GetRuntimeSettings(runtimeSettings);
-// Sets the barcode format(s).
+reader->GetRuntimeSettings(runtimeSettings); //Get the current RuntimeSettings
 runtimeSettings->barcodeFormatIds = BF_QR_CODE;
-char sError[512];
-// Updates the settings.
-reader->UpdateRuntimeSettings(runtimeSettings, sError, 512);
-reader->DecodeFile("type your image path", "");
-TextResultArray* paryResult = NULL;
-// Gets the decoding results.
-reader->GetAllTextResults(&paryResult);
-dynamsoft::dbr::CBarcodeReader::FreeTextResults(&paryResult);
-delete runtimeSettings;
-delete reader;
+runtimeSettings->barcodeFormatIds_2 = BF2_POSTALCODE;
+reader->UpdateRuntimeSettings(runtimeSettings, errorBuf, 512); // Update RuntimeSettings with above setting
+reader->DecodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
+// Add further process
 ```
 >
 ```c
-NOT SURE C
+int iRet = -1;
+char errorBuf[512];
+iRet = DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+if (iRet != DBR_OK)
+{
+    printf("%s\n", errorBuf);
+}
+void* barcodeReader = DBR_CreateInstance();
+PublicRuntimeSettings runtimeSettings;
+DBR_GetRuntimeSettings(barcodeReader, &runtimeSettings); //Get the current RuntimeSettings
+runtimeSettings.barcodeFormatIds = BF_QR_CODE;
+runtimeSettings.barcodeFormatIds_2 = BF2_POSTALCODE;
+DBR_UpdateRuntimeSettings(barcodeReader, &runtimeSettings, errorBuf, 512); // Update RuntimeSettings with above setting
+DBR_DecodeFile(barcodeReader, "YOUR-IMAGE-FILE-PATH", ""); // Start decoding
+// Add further process
 ```
 
 ## JSON Templates
@@ -155,42 +215,84 @@ await scanner.initRuntimeSettingsWithString(b);
 ```
 >
 ```java
-NOT SURE JAVA-ANDROID
+// Creates a BarcodeReader instance.
+BarcodeReader reader = new BarcodeReader();
+// Updates the settings with the string.
+reader.initRuntimeSettingsWithString("A-JSON-Template");
 ```
 >
 ```objc
-NOT SURE OBJC
+NSError* err = nil;
+// Creates a BarcodeReader instance.
+DynamsoftBarcodeReader* reader = [[DynamsoftBarcodeReader alloc] init];
+// Updates the settings with the string.
+[reader initRuntimeSettingsWithString:@"A-JSON-Template" error:&err];
 ```
 >
 ```swift
-NOT SURE SWIFT
+// Creates a BarcodeReader instance.
+let reader = DynamsoftBarcodeReader()
+// Updates the settings with the string.
+try? reader.initRuntimeSettingsWithString("A-JSON-Template")
 ```
 >
 ```python
-NOT SURE PYTHON
+error = BarcodeReader.init_license("YOUR-LICENSE-KEY")
+if error[0] != EnumErrorCode.DBR_OK:
+    print(error[1])
+dbr = BarcodeReader()
+dbr.init_runtime_settings_with_string('{"Version":"3.0", "ImageParameter":{"Name":"IP1","ImagePreprocessingModes": [{"Mode": "IPM_GRAY_EQUALIZE","Sensitivity": 9},{"Mode": "IPM_GRAY_SMOOTH","SmoothBlockSizeX": 10,"SmoothBlockSizeY": 10},{"Mode": "IPM_SHARPEN_SMOOTH","SharpenBlockSizeX": 5,"SharpenBlockSizeY": 5},{"Mode": "IPM_MORPHOLOGY","MorphOperation": "Close","MorphOperationKernelSizeX": 7,"MorphOperationKernelSizeY": 7}]}}')
+text_results = dbr.decode_file("YOUR-IMAGE-FILE-PATH")
+# Add further process
 ```
 >
 ```java
-NOT SURE JAVA
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
+reader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\",\"ImagePreprocessingModes\": [{\"Mode\": \"IPM_GRAY_EQUALIZE\",\"Sensitivity\": 9},{\"Mode\": \"IPM_GRAY_SMOOTH\",\"SmoothBlockSizeX\": 10,\"SmoothBlockSizeY\": 10},{\"Mode\": \"IPM_SHARPEN_SMOOTH\",\"SharpenBlockSizeX\": 5,\"SharpenBlockSizeY\": 5},{\"Mode\": \"IPM_MORPHOLOGY\",\"MorphOperation\": \"Close\",\"MorphOperationKernelSizeX\": 7,\"MorphOperationKernelSizeY\": 7}]}}", EnumConflictMode.CM_OVERWRITE);
+TextResult[] result = reader.decodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
+// Add further process
 ```
 >
-```c#
-NOT SURE C#
+```csharp
+string errorMsg;
+EnumErrorCode iRet = BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
+if (iRet != EnumErrorCode.DBR_SUCCESS)
+{
+    Console.WriteLine(errorMsg);
+}
+BarcodeReader reader = new BarcodeReader();
+reader.InitRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\",\"ImagePreprocessingModes\": [{\"Mode\": \"IPM_GRAY_EQUALIZE\",\"Sensitivity\": 9},{\"Mode\": \"IPM_GRAY_SMOOTH\",\"SmoothBlockSizeX\": 10,\"SmoothBlockSizeY\": 10},{\"Mode\": \"IPM_SHARPEN_SMOOTH\",\"SharpenBlockSizeX\": 5,\"SharpenBlockSizeY\": 5},{\"Mode\": \"IPM_MORPHOLOGY\",\"MorphOperation\": \"Close\",\"MorphOperationKernelSizeX\": 7,\"MorphOperationKernelSizeY\": 7}]}}", EnumConflictMode.CM_OVERWRITE, out errorMsg);
+TextResult[] result = reader.DecodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
+// Add further process
 ```
 >
-```c++
-// Creates a BarcodeReader instance.
-CBarcodeReader* reader = new CBarcodeReader();
+```cpp
 char errorBuf[512];
-dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+int iRet = -1;
+iRet = dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+if (iRet != DBR_OK)
+{
+    cout << errorBuf << endl;
+}
 CBarcodeReader* reader = new CBarcodeReader();
-char errorMessage[256];
-// Initilizes the reader directly with the template in a file.
-reader->InitRuntimeSettingsWithFile("{PATH-TO-YOUR-TEMPLATE}template.json", CM_OVERWRITE, errorMessage, 256);
+reader->InitRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\",\"ImagePreprocessingModes\": [{\"Mode\": \"IPM_GRAY_EQUALIZE\",\"Sensitivity\": 9},{\"Mode\": \"IPM_GRAY_SMOOTH\",\"SmoothBlockSizeX\": 10,\"SmoothBlockSizeY\": 10},{\"Mode\": \"IPM_SHARPEN_SMOOTH\",\"SharpenBlockSizeX\": 5,\"SharpenBlockSizeY\": 5},{\"Mode\": \"IPM_MORPHOLOGY\",\"MorphOperation\": \"Close\",\"MorphOperationKernelSizeX\": 7,\"MorphOperationKernelSizeY\": 7}]}}", CM_OVERWRITE, errorBuf, 512);
+reader->DecodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
+// Add further process
 ```
 >
 ```c
-NOT SURE C
+int iRet = -1;
+char errorBuf[512];
+iRet = DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+if (iRet != DBR_OK)
+{
+    printf("%s\n", errorBuf);
+}
+void* barcodeReader = DBR_CreateInstance();
+DBR_InitRuntimeSettingsWithString(barcodeReader, "{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\",\"ImagePreprocessingModes\": [{\"Mode\": \"IPM_GRAY_EQUALIZE\",\"Sensitivity\": 9},{\"Mode\": \"IPM_GRAY_SMOOTH\",\"SmoothBlockSizeX\": 10,\"SmoothBlockSizeY\": 10},{\"Mode\": \"IPM_SHARPEN_SMOOTH\",\"SharpenBlockSizeX\": 5,\"SharpenBlockSizeY\": 5},{\"Mode\": \"IPM_MORPHOLOGY\",\"MorphOperation\": \"Close\",\"MorphOperationKernelSizeX\": 7,\"MorphOperationKernelSizeY\": 7}]}}", CM_OVERWRITE, errorBuf, 512);
+DBR_DecodeFile(barcodeReader, "YOUR-IMAGE-FILE-PATH", ""); // Start decoding
+// Add further process
 ```
 
 ## Mixed Usage
