@@ -150,15 +150,48 @@ for (int iIndex = 0; iIndex < result.length; iIndex++)
 ```
 6. 
 ```java
-
+BarcodeReader reader = new BarcodeReader();
+TextResult[] result = reader.decodeFile("YOUR-IMAGE-FILE-WITH-QR-CODES"); // Start decoding
+for (int iIndex = 0; iIndex < result.length; iIndex++)
+{
+    if(EnumBarcodeFormat.BF_QR_CODE == result[iIndex].barcodeFormat)
+    {
+        // For QR Code, the type of detailedResult is QRCodeDetails
+        QRCodeDetails qrd = (QRCodeDetails)result[iIndex].detailedResult;
+        //Add further process
+    }
+}
 ```
 7. 
 ```objc
-
+NSError *err = nil;
+DynamsoftBarcodeReader* reader = [[DynamsoftBarcodeReader alloc] init];
+NSArray<iTextResult*>* result = [reader decodeFileWithName:@"YOUR-IMAGE-FILE-PATH" error:&err]; // Start decoding
+for (iTextResult* barcode in result)
+{
+    if(barcode.barcodeFormat == EnumBarcodeFormatQRCODE)
+    {
+        // For QR Code, the type of detailedResult is QRCodeDetails
+        iQRCodeDetails* qrd = (iQRCodeDetails*)barcode.detailedResult;
+        //Add further process
+    }
+}
 ```
 8. 
 ```swift
-
+let reader = DynamsoftBarcodeReader()
+var result: [iTextResult]? = nil
+do {
+    result = try reader.decodeFileWithName("YOUR-IMAGE-FILE-PATH")
+} catch let err {
+} // Start decoding
+for barcode in result ?? [] {
+    if barcode.barcodeFormat == EnumBarcodeFormat.QRCODE {
+        // For QR Code, the type of detailedResult is QRCodeDetails
+        let qrd = barcode.detailedResult as! QRCodeDetails
+        //Add further process
+    }
+}
 ```
 9. 
 ```python

@@ -52,7 +52,7 @@ NSError* err = nil;
 // Obtain current runtime settings of `reader` instance.
 iPublicRuntimeSettings* settings = [reader getRuntimeSettings:&err];
 // Add DRM_GENERAL to the deformationResistingModes to decode deformed barcodes.
-settings.iFurtherModes.deformationResistingModes = @[@(EnumDeformationResistingModeGeneral)];
+settings.furtherModes.deformationResistingModes = @[@(EnumDeformationResistingModeGeneral)];
 // Update the settings.
 [reader updateRuntimeSettings:settings error:&err];
 ```
@@ -60,7 +60,7 @@ settings.iFurtherModes.deformationResistingModes = @[@(EnumDeformationResistingM
 // Obtain current runtime settings of `barcodeReader` instance.
 let settings = try? barcodeReader.getRuntimeSettings()
 // Add DRM_GENERAL to the deformationResistingModes to decode deformed barcodes.
-settings.iFurtherModes.deformationResistingModes = [EnumDeformationResistingMode.general]
+settings?.furtherModes.deformationResistingModes = [EnumDeformationResistingMode.general]
 // Update the settings.
 try? barcodeReader.updateRuntimeSettings(settings!)
 ```

@@ -88,9 +88,9 @@ settings.furtherModes.colourConversionModes = @[@(EnumColourConversionModeGenera
 // Update the settings.
 [reader updateRuntimeSettings:settings error:&err];
 // Fine-tune three `Weight` parameter value of the first mode in `colourConversionModes`
-[reader setModeArgument:@"colourConversionModes" index:0 argumentName:@"RedChannelWeight" argumentValue:"1000" error:nil];
-[reader setModeArgument:@"colourConversionModes" index:0 argumentName:@"GreenChannelWeight" argumentValue:"0" error:nil];
-[reader setModeArgument:@"colourConversionModes" index:0 argumentName:@"BlueChannelWeight" argumentValue:"0" error:nil];
+[reader setModeArgument:@"colourConversionModes" index:0 argumentName:@"RedChannelWeight" argumentValue:@"1000" error:nil];
+[reader setModeArgument:@"colourConversionModes" index:0 argumentName:@"GreenChannelWeight" argumentValue:@"0" error:nil];
+[reader setModeArgument:@"colourConversionModes" index:0 argumentName:@"BlueChannelWeight" argumentValue:@"0" error:nil];
 ```
 >
 ```swift

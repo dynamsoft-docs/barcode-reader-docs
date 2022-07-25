@@ -68,7 +68,7 @@ let settings = try? barcodeReader.getRuntimeSettings()
 // The Majority of common barcodes like oneD barcode and QR code are stored in the first group of barcode format.
 // Some of the enumeration members are combined value of a group of barcodes like BF_ONED and BF_GS1_DATABAR
 // Use "|" to enable multiple barcode formats at one time.
-settings.barcodeFormatIds = EnumBarcodeFormat.ONED | EnumBarcodeFormat.QRCODE
+settings?.barcodeFormatIds = EnumBarcodeFormat.ONED | EnumBarcodeFormat.QRCODE
 // Update the settings.
 try? barcodeReader.updateRuntimeSettings(settings!)
 ```

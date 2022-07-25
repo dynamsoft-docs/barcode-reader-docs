@@ -145,21 +145,34 @@ TextResult[] result = reader.DecodeFile("YOUR-IMAGE-FILE-WITH-QR-CODES", "IP_Fil
 ```java
 BarcodeReader.initLicense("YOUR-LICENSE-KEY");
 BarcodeReader reader = new BarcodeReader();
-reader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP_FilterBarcode\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"TextResultOrderModes\":[{\"Mode\":\"TROM_POSITION\"}], \"FormatSpecificationNameArray\": [\"FP_1\"]},\"FormatSpecification\":{\"Name\":\"FP_1\", \"MinResultConfidence\":50}}", CM_OVERWRITE, errorBuf, 512);
+reader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP_FilterBarcode\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"TextResultOrderModes\":[{\"Mode\":\"TROM_POSITION\"}], \"FormatSpecificationNameArray\": [\"FP_1\"]},\"FormatSpecification\":{\"Name\":\"FP_1\", \"MinResultConfidence\":50}}", EnumConflictMode.CM_OVERWRITE);
 TextResult[] result = reader.decodeFile("YOUR-IMAGE-FILE-WITH-QR-CODES", "IP_FilterBarcode"); // Start decoding
 // Add further process
 ```
 6. 
 ```java
-
+BarcodeReader reader = new BarcodeReader();
+reader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP_FilterBarcode\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"TextResultOrderModes\":[{\"Mode\":\"TROM_POSITION\"}], \"FormatSpecificationNameArray\": [\"FP_1\"]},\"FormatSpecification\":{\"Name\":\"FP_1\", \"MinResultConfidence\":50}}", EnumConflictMode.CM_OVERWRITE);
+// Start decoding
+TextResult[] result = reader.decodeFile("YOUR-IMAGE-FILE-WITH-QR-CODES"); 
+// Add further process
 ```
 7. 
 ```objc
-
+NSError* err = nil;
+DynamsoftBarcodeReader* reader = [[DynamsoftBarcodeReader alloc] init];
+[reader initRuntimeSettingsWithString:@"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP_FilterBarcode\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"TextResultOrderModes\":[{\"Mode\":\"TROM_POSITION\"}], \"FormatSpecificationNameArray\": [\"FP_1\"]},\"FormatSpecification\":{\"Name\":\"FP_1\", \"MinResultConfidence\":50}}" conflictMode:EnumConflictModeOverwrite error:&err];
+// Start decoding
+NSArray<iTextResult*>* result = [reader decodeFileWithName:@"YOUR-IMAGE-FILE-WITH-QR-CODES" error:&err]; 
+// Add further process
 ```
 8. 
 ```swift
-
+let reader = DynamsoftBarcodeReader()
+reader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP_FilterBarcode\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"TextResultOrderModes\":[{\"Mode\":\"TROM_POSITION\"}], \"FormatSpecificationNameArray\": [\"FP_1\"]},\"FormatSpecification\":{\"Name\":\"FP_1\", \"MinResultConfidence\":50}}", conflictMode:EnumConflictMode.overwrite)
+// Start decoding
+let result = try? reader.decodeFileWithName("YOUR-IMAGE-FILE-WITH-QR-CODES")
+// Add further process
 ```
 9. 
 ```python

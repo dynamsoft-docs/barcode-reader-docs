@@ -91,15 +91,67 @@ await scanner.show();
 ```
 >
 ```java
-NOT SURE JAVA-ANDROID
+// Obtains the current runtime settings of DBR.
+PublicRuntimeSettings rs = reader.getRuntimeSettings();
+// Sets the termination phase.
+rs.terminatePhase = EnumTerminatePhase.TP_BARCODE_TYPE_DETERMINED;
+// Sets the intermidate result types.
+rs.intermediateResultTypes =
+    EnumIntermediateResultType.IRT_ORIGINAL_IMAGE |
+    EnumIntermediateResultType.IRT_BINARIZED_IMAGE |
+    EnumIntermediateResultType.IRT_COLOUR_CONVERTED_GRAYSCALE_IMAGE |
+    EnumIntermediateResultType.IRT_TRANSFORMED_GRAYSCALE_IMAGE |
+    EnumIntermediateResultType.IRT_PREPROCESSED_IMAGE;
+rs.intermediateResultSavingMode = EnumIntermediateResultSavingMode.IRSM_FILESYSTEM;
+// Updates the settings.
+reader.updateRuntimeSettings(rs);
+reader.setModeArgument("IntermediateResultSavingMode", 0, "FolderPath", "YOUR-FOLDER-PATH");
+reader.setModeArgument("IntermediateResultSavingMode", 0, "RecordsetSizeOfLatestImages", "1");
+// Decodes the image.
+reader.decodeFile("YOUR-IMAGE-FILE-PATH");
 ```
 >
 ```objc
-NOT SURE OBJC
+NSError* err = nil;
+// Obtains the current runtime settings of DBR.
+iPublicRuntimeSettings* rs = [reader getRuntimeSettings:&err];
+// Sets the termination phase.
+rs.terminatePhase = EnumTerminatePhaseDetermined;
+// Sets the intermidate result types.
+rs.intermediateResultTypes =
+    EnumIntermediateResultTypeOriginalImage |
+    EnumIntermediateResultTypeBinarizedImage |
+    EnumIntermediateResultTypeColourConvertedGrayImage |
+    EnumIntermediateResultTypeTransformedGrayscaleImage |
+    EnumIntermediateResultTypePreprocessedImage;
+rs.intermediateResultSavingMode = EnumIntermediateResultSavingModeFileSystem;
+// Updates the settings.
+[reader updateRuntimeSettings:rs error:&err];
+[reader setModeArgument:@"IntermediateResultSavingMode" index:0 argumentName:@"FolderPath" argumentValue:@"YOUR-FOLDER-PATH" error:&err];
+[reader setModeArgument:@"IntermediateResultSavingMode" index:0 argumentName:@"RecordsetSizeOfLatestImages" argumentValue:@"1" error:&err];
+// Decodes the image.
+[reader decodeFileWithName:@"YOUR-IMAGE-FILE-PATH" error:&err];
 ```
 >
 ```swift
-NOT SURE SWIFT
+// Obtains the current runtime settings of DBR.
+let rs = try? reader.getRuntimeSettings()
+// Sets the termination phase.
+rs.terminatePhase = EnumTerminatePhase.Determined
+// Sets the intermidate result types.
+rs.intermediateResultTypes =
+    EnumIntermediateResultType.originalImage |
+    EnumIntermediateResultType.binarizedImage |
+    EnumIntermediateResultType.colourConvertedGrayImage |
+    EnumIntermediateResultType.transformedGrayscaleImage |
+    EnumIntermediateResultType.preprocessedImage
+rs.intermediateResultSavingMode = EnumIntermediateResultSavingMode.fileSystem
+// Updates the settings.
+try? reader.updateRuntimeSettings(rs!)
+try? reader.setModeArgument("IntermediateResultSavingMode", index:0, argumentName:"FolderPath", argumentValue:"YOUR-FOLDER-PATH")
+try? reader.setModeArgument("IntermediateResultSavingMode", index:0, argumentName:"RecordsetSizeOfLatestImages", argumentValue:"1")
+// Decodes the image.
+try? reader.decodeFileWithName("YOUR-IMAGE-FILE-PATH")
 ```
 >
 ```python
@@ -162,15 +214,34 @@ The following code illustrates how to set `Timeout`:
 ```
 >
 ```java
-NOT SURE JAVA-ANDROID
+BarcodeReader reader = new BarcodeReader();
+// Obtains the current runtime settings of DBR.
+PublicRuntimeSettings rs = reader.getRuntimeSettings();
+// Sets timeout to 1000 milliseconds.
+rs.timeout = 1000;
+// Updates the settings.
+reader.updateRuntimeSettings(rs);
 ```
 >
 ```objc
-NOT SURE OBJC
+NSError* err = nil;
+DBRBarcodeReader* reader = [[DBRBarcodeReader alloc] init];
+// Obtains the current runtime settings of DBR.
+iPublicRuntimeSettings* rs = [reader getRuntimeSettings:&err];
+// Sets timeout to 1000 milliseconds.
+rs.timeout = 1000;
+// Updates the settings.
+[reader updateRuntimeSettings:rs error:&err];
 ```
 >
 ```swift
-NOT SURE SWIFT
+let reader = DynamsoftBarcodeReader();
+// Obtains the current runtime settings of DBR.
+let rs = try? reader.getRuntimeSettings();
+// Sets timeout to 1000 milliseconds.
+rs?.timeout = 1000;
+// Updates the settings.
+try? reader.updateRuntimeSettings(rs!);
 ```
 >
 ```python

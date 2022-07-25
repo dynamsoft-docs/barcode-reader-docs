@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
    CameraEnhancer mCamera;
    @Override
    protected void onCreate(Bundle savedInstanceState) {
+      // You have to add camera view to your layout file in "res>layout>activity_main.xml".      
       DCECameraView cameraView = findViewById(R.id.cameraView);
       // Create an instance of Dynamsoft Camera Enhancer for video streaming.
       mCamera = new CameraEnhancer(MainActivity.this);
@@ -91,16 +92,14 @@ class ViewController: UIViewController {
 Initialize Dynamsoft Barcode Reader and bind the Camera Enhancer to the Barcode Reader. The barcode reader will continuously receive video frames when the video barcode decoding thread is enabled.
 
 <div class="sample-code-prefix template2"></div>
-   >- JavaScript
    >- Android
    >- Objective-C
    >- Swift
    >
->```js
-```
 >```java
 public class MainActivity extends AppCompatActivity {
    BarcodeReader mBarcodeReader;
+   CameraEnhancer mCamera;
    @Override
    protected void onCreate(Bundle savedInstanceState) {
       ...
@@ -117,6 +116,7 @@ public class MainActivity extends AppCompatActivity {
 ```
 >```objc
 @property(nonatomic, strong) DynamsoftBarcodeReader *barcodeReader;
+@property(nonatomic, strong) DynamsoftCameraEnhancer *dce;
 ...
 - (void)configurationDBR{
    // Add function configureDBR and add the following code.

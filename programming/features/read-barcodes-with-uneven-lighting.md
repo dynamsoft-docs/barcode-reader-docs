@@ -86,17 +86,17 @@ settings.scaleUpModes = @[@(EnumBinarizationModeLocalBlock)];
 // Update the settings.
 [reader updateRuntimeSettings:settings error:&err];
 // Fine-tune some arguments of the first mode in `binarizationModes`
-[reader setModeArgument:@"binarizationModes" index:0 argumentName:@"BlockSizeX" argumentValue:"0" error:nil];
-[reader setModeArgument:@"binarizationModes" index:0 argumentName:@"BlockSizeY" argumentValue:"0" error:nil];
-[reader setModeArgument:@"binarizationModes" index:0 argumentName:@"EnableFillBinaryVacancy" argumentValue:"1" error:nil];
-[reader setModeArgument:@"binarizationModes" index:0 argumentName:@"ThresholdCompensation" argumentValue:"10" error:nil];
+[reader setModeArgument:@"binarizationModes" index:0 argumentName:@"BlockSizeX" argumentValue:@"0" error:nil];
+[reader setModeArgument:@"binarizationModes" index:0 argumentName:@"BlockSizeY" argumentValue:@"0" error:nil];
+[reader setModeArgument:@"binarizationModes" index:0 argumentName:@"EnableFillBinaryVacancy" argumentValue:@"1" error:nil];
+[reader setModeArgument:@"binarizationModes" index:0 argumentName:@"ThresholdCompensation" argumentValue:@"10" error:nil];
 ```
 >
 ```swift
 // Obtain current runtime settings of `reader` instance.
 let settings = try? reader.getRuntimeSettings()
 // Set a binarization mode
-settings!.scaleUpModes = [EnumBinarizationMode.localBlock.rawValue]
+settings?.scaleUpModes = [EnumBinarizationMode.localBlock.rawValue]
 // Update the settings.
 try? reader.updateRuntimeSettings(settings!)
 // Fine-tune some arguments of the first mode in `binarizationModes`

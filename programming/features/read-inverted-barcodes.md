@@ -52,7 +52,7 @@ NSError* err = nil;
 // Obtain current runtime settings of `reader` instance.
 iPublicRuntimeSettings* settings = [reader getRuntimeSettings:&err];
 // Add GTM_INVERTED to GrayscaleTransformationModes to decode inverted barcodes.
-settings.iFurtherModes.grayscaleTransformationModes = @[@(EnumGrayscaleTransformationModeOriginal),@(EnumGrayscaleTransformationModeInverted)];
+settings.furtherModes.grayscaleTransformationModes = @[@(EnumGrayscaleTransformationModeOriginal),@(EnumGrayscaleTransformationModeInverted)];
 // Update the settings.
 [reader updateRuntimeSettings:settings error:&err];
 ```
@@ -60,7 +60,7 @@ settings.iFurtherModes.grayscaleTransformationModes = @[@(EnumGrayscaleTransform
 // Obtain current runtime settings of `barcodeReader` instance.
 let settings = try? barcodeReader.getRuntimeSettings()
 // Add GTM_INVERTED to GrayscaleTransformationModes to decode inverted barcodes.
-settings.iFurtherModes.grayscaleTransformationModes = [EnumGrayscaleTransformationMode.original, EnumGrayscaleTransformationMode.inverted]
+settings?.furtherModes.grayscaleTransformationModes = [EnumGrayscaleTransformationMode.original, EnumGrayscaleTransformationMode.inverted]
 // Update the settings.
 try? barcodeReader.updateRuntimeSettings(settings!)
 ```
