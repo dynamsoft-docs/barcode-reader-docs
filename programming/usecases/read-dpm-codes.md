@@ -97,15 +97,31 @@ TextResult[] result = reader.decodeFile("YOUR-IMAGE-FILE-WITH-DPM-CODES", ""); /
 ```
 6. 
 ```java
-
+BarcodeReader reader = new BarcodeReader();
+PublicRuntimeSettings settings = reader.getRuntimeSettings(); //Get the current RuntimeSettings
+settings.furtherModes.dpmCodeReadingModes[0] = EnumDPMCodeReadingMode.DPMCRM_GENERAL; // Set a DPMCRM_GENERAL mode to read DPM codes
+reader.updateRuntimeSettings(settings); // Update RuntimeSettings with above setting
+TextResult[] result = reader.decodeFile("YOUR-IMAGE-FILE-WITH-DPM-CODES"); // Start decoding
+// Add further process
 ```
 7. 
 ```objc
-
+NSError* err = nil;
+DynamsoftBarcodeReader* reader = [[DynamsoftBarcodeReader alloc] init];
+iPublicRuntimeSettings* settings = [reader getRuntimeSettings:&err]; //Get the current RuntimeSettings
+settings.furtherModes.dpmCodeReadingModes[0] = EnumDPMCodeReadingModeGeneral; // Set a DPMCRM_GENERAL mode to read DPM codes
+[reader updateRuntimeSettings:settings error:&err]; // Update RuntimeSettings with above setting
+NSArray<iTextResult*>* result = [reader decodeFileWithName:@"YOUR-IMAGE-FILE-WITH-DPM-CODES" error:&err]; // Start decoding
+// Add further process
 ```
 8. 
 ```swift
-
+let reader = DynamsoftBarcodeReader()
+let settings = try? reader.getRuntimeSettings() //Get the current RuntimeSettings
+settings?.furtherModes.dpmCodeReadingModes[0] = EnumDPMCodeReadingMode.general; // Set a DPMCRM_GENERAL mode to read DPM codes
+try? reader.updateRuntimeSettings(settings) // Update RuntimeSettings with above setting
+let result = try? reader.decodeFileWithName("YOUR-IMAGE-FILE-WITH-DPM-CODES") // Start decoding
+// Add further process
 ```
 9. 
 ```python
@@ -120,5 +136,5 @@ text_results = dbr.decode_file("YOUR-IMAGE-FILE-WITH-DPM-CODES")
 # Add further process
 ```
 
-[1]:assets\dpm-decoding\DPM-sample1.png
-[2]:assets\dpm-decoding\DPM-sample2.png
+[1]:assets\read-dpm-codes\DPM-sample1.png
+[2]:assets\read-dpm-codes\DPM-sample2.png

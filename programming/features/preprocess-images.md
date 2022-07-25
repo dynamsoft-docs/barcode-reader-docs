@@ -172,15 +172,68 @@ TextResult[] result = reader.decodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start de
 ```
 6. 
 ```java
-
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
+PublicRuntimeSettings settings = reader.getRuntimeSettings(); //Get the current RuntimeSettings
+settings.furtherModes.imagePreprocessingModes[0] = EnumImagePreprocessingMode.IPM_GRAY_EQUALIZE;
+settings.furtherModes.imagePreprocessingModes[1] = EnumImagePreprocessingMode.IPM_GRAY_SMOOTH;
+settings.furtherModes.imagePreprocessingModes[2] = EnumImagePreprocessingMode.IPM_SHARPEN_SMOOTH;
+settings.furtherModes.imagePreprocessingModes[3] = EnumImagePreprocessingMode.IPM_MORPHOLOGY;
+reader.updateRuntimeSettings(settings); // Update RuntimeSettings with above setting
+reader.setModeArgument("ImagePreprocessingModes", 0, "Sensitivity", "9");
+reader.setModeArgument("ImagePreprocessingModes", 1, "SmoothBlockSizeX", "10");
+reader.setModeArgument("ImagePreprocessingModes", 1, "SmoothBlockSizeY", "10");
+reader.setModeArgument("ImagePreprocessingModes", 2, "SharpenBlockSizeX", "5");
+reader.setModeArgument("ImagePreprocessingModes", 2, "SharpenBlockSizeY", "5");
+reader.setModeArgument("ImagePreprocessingModes", 3, "MorphOperation", "Close");
+reader.setModeArgument("ImagePreprocessingModes", 3, "MorphOperationKernelSizeX", "7");
+reader.setModeArgument("ImagePreprocessingModes", 3, "MorphOperationKernelSizeY", "7");
+TextResult[] result = reader.decodeFile("YOUR-IMAGE-FILE-PATH"); // Start decoding
+// Add further process
 ```
 7. 
 ```objc
-
+NSError *err = nil;
+DynamsoftBarcodeReader* reader = [[DynamsoftBarcodeReader alloc] init];
+iPublicRuntimeSettings* settings = [reader getRuntimeSettings:&err];//Get the current RuntimeSettings
+settings.furtherModes.imagePreprocessingModes[0] = EnumImagePreprocessingModeGrayEqualize;
+settings.furtherModes.imagePreprocessingModes[1] = EnumImagePreprocessingModeGraySmooth;
+settings.furtherModes.imagePreprocessingModes[2] = EnumImagePreprocessingModeSharpenSmooth;
+settings.furtherModes.imagePreprocessingModes[3] = EnumImagePreprocessingModeMorphology;
+[reader updateRuntimeSettings:settings error:&err]; // Update RuntimeSettings with above setting
+[reader setModeArgument:@"ImagePreprocessingModes" index:0 argumentName:@"Sensitivity" argumentValue:@"9" error:&err];
+[reader setModeArgument:@"ImagePreprocessingModes" index:1 argumentName:@"SmoothBlockSizeX" argumentValue:@"10" error:&err];
+[reader setModeArgument:@"ImagePreprocessingModes" index:1 argumentName:@"SmoothBlockSizeY" argumentValue:@"10" error:&err];
+[reader setModeArgument:@"ImagePreprocessingModes" index:2 argumentName:@"SharpenBlockSizeX" argumentValue:@"5" error:&err];
+[reader setModeArgument:@"ImagePreprocessingModes" index:2 argumentName:@"SharpenBlockSizeY" argumentValue:@"5" error:&err];
+[reader setModeArgument:@"ImagePreprocessingModes" index:3 argumentName:@"MorphOperation" argumentValue:@"Close" error:&err];
+[reader setModeArgument:@"ImagePreprocessingModes" index:3 argumentName:@"MorphOperationKernelSizeX" argumentValue:@"7" error:&err];
+[reader setModeArgument:@"ImagePreprocessingModes" index:3 argumentName:@"MorphOperationKernelSizeY" argumentValue:@"7" error:&err];
+NSArray<iTextResult*>* result = [reader decodeFileWithName:@"YOUR-IMAGE-FILE-PATH" error:&err]; // Start decoding
+// Add further process
 ```
 8. 
 ```swift
-
+let reader = DynamsoftBarcodeReader()
+let settings = try? reader.getRuntimeSettings() //Get the current RuntimeSettings
+settings?.furtherModes.imagePreprocessingModes[0] = EnumImagePreprocessingMode.grayEqualize
+settings?.furtherModes.imagePreprocessingModes[1] = EnumImagePreprocessingMode.graySmooth
+settings?.furtherModes.imagePreprocessingModes[2] = EnumImagePreprocessingMode.sharpenSmooth
+settings?.furtherModes.imagePreprocessingModes[3] = EnumImagePreprocessingMode.morphology
+do {
+    try reader.updateRuntimeSettings(settings); // Update RuntimeSettings with above setting
+    try reader.setModeArgument("ImagePreprocessingModes", index:0, argumentName:"Sensitivity", argumentValue:"9")
+    try reader.setModeArgument("ImagePreprocessingModes", index:1, argumentName:"SmoothBlockSizeX", argumentValue:"10")
+    try reader.setModeArgument("ImagePreprocessingModes", index:1, argumentName:"SmoothBlockSizeY", argumentValue:"10")
+    try reader.setModeArgument("ImagePreprocessingModes", index:2, argumentName:"SharpenBlockSizeX", argumentValue:"5")
+    try reader.setModeArgument("ImagePreprocessingModes", index:2, argumentName:"SharpenBlockSizeY", argumentValue:"5")
+    try reader.setModeArgument("ImagePreprocessingModes", index:3, argumentName:"MorphOperation", argumentValue:"Close")
+    try reader.setModeArgument("ImagePreprocessingModes", index:3, argumentName:"MorphOperationKernelSizeX", argumentValue:"7")
+    try reader.setModeArgument("ImagePreprocessingModes", index:3, argumentName:"MorphOperationKernelSizeY", argumentValue:"7")
+    let result = try reader.decodeFileWithName("YOUR-IMAGE-FILE-PATH") // Add further process
+} catch let err {
+}
+// Add further process
 ```
 9. 
 ```python
@@ -267,21 +320,31 @@ TextResult[] result = reader.DecodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start de
 ```java
 BarcodeReader.initLicense("YOUR-LICENSE-KEY");
 BarcodeReader reader = new BarcodeReader();
-reader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\",\"ImagePreprocessingModes\": [{\"Mode\": \"IPM_GRAY_EQUALIZE\",\"Sensitivity\": 9},{\"Mode\": \"IPM_GRAY_SMOOTH\",\"SmoothBlockSizeX\": 10,\"SmoothBlockSizeY\": 10},{\"Mode\": \"IPM_SHARPEN_SMOOTH\",\"SharpenBlockSizeX\": 5,\"SharpenBlockSizeY\": 5},{\"Mode\": \"IPM_MORPHOLOGY\",\"MorphOperation\": \"Close\",\"MorphOperationKernelSizeX\": 7,\"MorphOperationKernelSizeY\": 7}]}}", CM_OVERWRITE, errorBuf, 512);
+reader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\",\"ImagePreprocessingModes\": [{\"Mode\": \"IPM_GRAY_EQUALIZE\",\"Sensitivity\": 9},{\"Mode\": \"IPM_GRAY_SMOOTH\",\"SmoothBlockSizeX\": 10,\"SmoothBlockSizeY\": 10},{\"Mode\": \"IPM_SHARPEN_SMOOTH\",\"SharpenBlockSizeX\": 5,\"SharpenBlockSizeY\": 5},{\"Mode\": \"IPM_MORPHOLOGY\",\"MorphOperation\": \"Close\",\"MorphOperationKernelSizeX\": 7,\"MorphOperationKernelSizeY\": 7}]}}", EnumConflictMode.CM_OVERWRITE);
 TextResult[] result = reader.decodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
 // Add further process
 ```
 6. 
 ```java
-
+BarcodeReader reader = new BarcodeReader();
+reader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\",\"ImagePreprocessingModes\": [{\"Mode\": \"IPM_GRAY_EQUALIZE\",\"Sensitivity\": 9},{\"Mode\": \"IPM_GRAY_SMOOTH\",\"SmoothBlockSizeX\": 10,\"SmoothBlockSizeY\": 10},{\"Mode\": \"IPM_SHARPEN_SMOOTH\",\"SharpenBlockSizeX\": 5,\"SharpenBlockSizeY\": 5},{\"Mode\": \"IPM_MORPHOLOGY\",\"MorphOperation\": \"Close\",\"MorphOperationKernelSizeX\": 7,\"MorphOperationKernelSizeY\": 7}]}}", EnumConflictMode.CM_OVERWRITE);
+TextResult[] result = reader.decodeFile("YOUR-IMAGE-FILE-PATH"); // Start decoding
+// Add further process
 ```
 7. 
 ```objc
-
+NSError* error = nil;
+DynamsoftBarcodeReader* reader = [[DynamsoftBarcodeReader alloc] init];
+[reader initRuntimeSettingsWithString:@"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\",\"ImagePreprocessingModes\": [{\"Mode\": \"IPM_GRAY_EQUALIZE\",\"Sensitivity\": 9},{\"Mode\": \"IPM_GRAY_SMOOTH\",\"SmoothBlockSizeX\": 10,\"SmoothBlockSizeY\": 10},{\"Mode\": \"IPM_SHARPEN_SMOOTH\",\"SharpenBlockSizeX\": 5,\"SharpenBlockSizeY\": 5},{\"Mode\": \"IPM_MORPHOLOGY\",\"MorphOperation\": \"Close\",\"MorphOperationKernelSizeX\": 7,\"MorphOperationKernelSizeY\": 7}]}}" confictMode:EnumConflictModeOverwrite error:&error];
+NSArray<iTextResult*>* result = [reader decodeFileWithName:@"YOUR-IMAGE-FILE-PATH" error:&err]; // Start decoding
+// Add further process
 ```
 8. 
 ```swift
-
+let reader = DynamsoftBarcodeReader()
+try? reader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\",\"ImagePreprocessingModes\": [{\"Mode\": \"IPM_GRAY_EQUALIZE\",\"Sensitivity\": 9},{\"Mode\": \"IPM_GRAY_SMOOTH\",\"SmoothBlockSizeX\": 10,\"SmoothBlockSizeY\": 10},{\"Mode\": \"IPM_SHARPEN_SMOOTH\",\"SharpenBlockSizeX\": 5,\"SharpenBlockSizeY\": 5},{\"Mode\": \"IPM_MORPHOLOGY\",\"MorphOperation\": \"Close\",\"MorphOperationKernelSizeX\": 7,\"MorphOperationKernelSizeY\": 7}]}}", confictMode:EnumConflictMode.overwrite)
+let result = try? reader.decodeFileWithName("YOUR-IMAGE-FILE-PATH"); // Start decoding
+// Add further process
 ```
 9. 
 ```python
@@ -294,17 +357,13 @@ text_results = dbr.decode_file("YOUR-IMAGE-FILE-PATH")
 # Add further process
 ```
 
-```Json
-{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\",\"ImagePreprocessingModes\": [{\"Mode\": \"IPM_GRAY_EQUALIZE\",\"Sensitivity\": 9},{\"Mode\": \"IPM_GRAY_SMOOTH\",\"SmoothBlockSizeX\": 10,\"SmoothBlockSizeY\": 10},{\"Mode\": \"IPM_SHARPEN_SMOOTH\",\"SharpenBlockSizeX\": 5,\"SharpenBlockSizeY\": 5},{\"Mode\": \"IPM_MORPHOLOGY\",\"MorphOperation\": \"Close\",\"MorphOperationKernelSizeX\": 7,\"MorphOperationKernelSizeY\": 7}]}}     
-```
-
-[1]:assets/image-preprocessing/gray-equalize-sample-1.png
-[2]:assets/image-preprocessing/gray-equalize-sample-2.png
-[3]:assets/image-preprocessing/gray-smooth-sample-1.png
-[4]:assets/image-preprocessing/gray-smooth-sample-2.png
-[5]:assets/image-preprocessing/gray-smooth-sample-3.png
-[6]:assets/image-preprocessing/gray-smooth-sample-4.png
-[7]:assets/image-preprocessing/before-sharpen-sample.png
-[8]:assets/image-preprocessing/after-sharpen-sample.png
-[9]:assets/image-preprocessing/before-close-sample.png
-[10]:assets/image-preprocessing/after-close-sample.png
+[1]:assets/preprocess-images/gray-equalize-sample-1.png
+[2]:assets/preprocess-images/gray-equalize-sample-2.png
+[3]:assets/preprocess-images/gray-smooth-sample-1.png
+[4]:assets/preprocess-images/gray-smooth-sample-2.png
+[5]:assets/preprocess-images/gray-smooth-sample-3.png
+[6]:assets/preprocess-images/gray-smooth-sample-4.png
+[7]:assets/preprocess-images/before-sharpen-sample.png
+[8]:assets/preprocess-images/after-sharpen-sample.png
+[9]:assets/preprocess-images/before-close-sample.png
+[10]:assets/preprocess-images/after-close-sample.png
