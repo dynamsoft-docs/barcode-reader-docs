@@ -26,6 +26,8 @@ jobs:
           cd /home/ubuntu
           [ -d DBRDoc ] && rm -rf DBRDoc
           [ ! -d DBRDoc ] && mkdir -p DBRDoc
+          [ -d barcode-reader-docs-js ] && rm -rf barcode-reader-docs-js
+          [ ! -d barcode-reader-docs-js ] && git clone --depth 1 --branch temp https://github.com/dynamsoft-docs/barcode-reader-docs-js.git barcode-reader-docs-js
           cd barcode-reader-docs && git pull && cd .. && cp -rfp ./barcode-reader-docs/* ./DBRDoc/
           cd barcode-reader-docs-js && git pull && cd .. && cp -rfp ./barcode-reader-docs-js/* ./DBRDoc/
           cd barcode-reader-docs-mobile && git pull && cd .. && cp -rfp ./barcode-reader-docs-mobile/* ./DBRDoc/
