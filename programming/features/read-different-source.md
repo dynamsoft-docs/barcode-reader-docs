@@ -20,12 +20,32 @@ The DBR algorithm provides multiple ways to read images from different sources. 
 ## DecodeFile
 
 <div class="sample-code-prefix template2"></div>
+   >- Android
+   >- Objective-C
+   >- Swift
    >- C
    >- C++
    >- C#
    >- Java
    >- Python
    >
+>```java
+try{
+   BarcodeReader reader = new BarcodeReader();
+   TextResult[] result = reader.decodeFile("your file path");
+} catch (BarcodeReaderException ex) {
+   ex.printStackTrace();
+}
+```
+>```objc
+NSError* err=nil;
+DynamsoftBarcodeReader *reader = [[DynamsoftBarcodeReader alloc] init];
+NSArray<iTextResult*>* result = [reader decodeFileWithName:@"your file path" error:&err];
+```
+>```swift
+let reader = DynamsoftBarcodeReader()
+let result = try? reader.decodeFileWithName("your file path")
+```
 >```c
 int errorCode = DBR_DecodeFile(barcodeReader, "C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\AllSupportedBarcodeTypes.tif", "");
 ```
@@ -62,12 +82,35 @@ try:
 - `templateName`: The barcode decoding template name.
 
 <div class="sample-code-prefix template2"></div>
+   >- Android
+   >- Objective-C
+   >- Swift
    >- C
    >- C++
    >- C#
    >- Java
    >- Python
    >
+>```java
+try{
+   BarcodeReader reader = new BarcodeReader();
+   //TODO: read the image file and get the byte data `fileBytes`
+   TextResult[] result = reader.decodeFileInMemory(fileBytes);
+} catch (BarcodeReaderException ex) {
+   ex.printStackTrace();
+}
+```
+>```objc
+NSError* err=nil;
+DynamsoftBarcodeReader *reader = [[DynamsoftBarcodeReader alloc] init];
+//TODO: read the image file and get the byte data `fileBytes`
+NSArray<iTextResult*>* result = [reader decodeFileInMemory:fileBytes error:&err];
+```
+>```swift
+let reader = DynamsoftBarcodeReader()
+//TODO: read the image file and get the byte data `fileBytes`
+let result = try? reader.decodeFileInMemory(fileBytes)
+```
 >```c
 barcodeReader = DBR_CreateInstance();
 FILE* fp;
@@ -171,12 +214,35 @@ results = dbr.decode_file_stream(bytearray(bytes))
 - TemplateName: The template name. It indicates which barcode decoding template you are going to use when decoding the buffer.
 
 <div class="sample-code-prefix template2"></div>
+   >- Android
+   >- Objective-C
+   >- Swift
    >- C
    >- C++
    >- C#
    >- Java
    >- Python
    >
+>```java
+try{
+   BarcodeReader reader = new BarcodeReader();
+   //TODO: parse the image and convert it into raw buffer data `bufferBytes`. The arrangement of the pixels in the `bufferBytes` is determined by the `format` parameter.
+   TextResult[] result = reader.decodeBuffer(bufferBytes, width, height, stride, format);
+} catch (BarcodeReaderException ex) {
+   ex.printStackTrace();
+}
+```
+>```objc
+NSError* err=nil;
+DynamsoftBarcodeReader *reader = [[DynamsoftBarcodeReader alloc] init];
+//TODO: parse the image and convert it into raw buffer data `bufferBytes`. The arrangement of the pixels in the `bufferBytes` is determined by the `format` parameter.
+NSArray<iTextResult*>* result = [reader decodeBuffer:bufferBytes withWidth:width height:height stride:stride format:format error:&err];
+```
+>```swift
+let reader = DynamsoftBarcodeReader()
+//TODO: parse the image and convert it into raw buffer data `bufferBytes`. The arrangement of the pixels in the `bufferBytes` is determined by the `format` parameter.
+let result = try? reader.decodeBuffer(bufferBytes, withWidth:width, height:height, stride:stride, format:format)
+```
 >```c
 barcodeReader = DBR_CreateInstance();
 int errorCode = DBR_DecodeBuffer(barcodeReader, pBufferBytes, iWidth, iHeight, iStride, format, "");

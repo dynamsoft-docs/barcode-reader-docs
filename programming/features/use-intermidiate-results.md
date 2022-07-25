@@ -31,7 +31,7 @@ Here we will show how to save the binarized image to your file system and obtain
 >1. 
 ```javascript
 ```
-2. 
+>2. 
 ```c
 int iRet = -1;
 char errorBuf[512];
@@ -69,7 +69,7 @@ for (int i = 0; i < iCount; i++) //Loop all intermediate results
 }
 // Add further process
 ```
-3. 
+>3. 
 ```cpp
 char errorBuf[512];
 int iRet = -1;
@@ -107,7 +107,7 @@ for (int i = 0; i < iCount; i++) //Loop all intermediate results
 }
 // Add further process
 ```
-4. 
+>4. 
 ```csharp
 string errorMsg;
 EnumErrorCode iRet = BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
@@ -141,7 +141,7 @@ foreach (IntermediateResult ir in intermediateResults) //Loop all intermediate r
 }
 // Add further process
 ```
-5. 
+>5. 
 ```java
 BarcodeReader.initLicense("YOUR-LICENSE-KEY");
 BarcodeReader reader = new BarcodeReader();
@@ -172,7 +172,7 @@ for (int i = 0; i < iCount; i++) //Loop all intermediate results
 }
 // Add further process
 ```
-6. 
+>6. 
 ```java
 BarcodeReader.initLicense("YOUR-LICENSE-KEY");
 BarcodeReader reader = new BarcodeReader();
@@ -203,7 +203,7 @@ for (int i = 0; i < iCount; i++) //Loop all intermediate results
 }
 // Add further process
 ```
-7. 
+>7. 
 ```objc
 NSError *err = nil;
 DynamsoftBarcodeReader* reader = [[DynamsoftBarcodeReader alloc] init];
@@ -233,7 +233,7 @@ for (iIntermediateResult* ir in intermediateResults) //Loop all intermediate res
 }
 // Add further process
 ```
-8. 
+>8. 
 ```swift
 let reader = DynamsoftBarcodeReader()
 let settings = try? reader.getRuntimeSettings() //Get the current RuntimeSettings
@@ -259,7 +259,7 @@ for ir in intermediateResults! {
 }
 // Add further process
 ```
-9. 
+>9. 
 ```python
 error = BarcodeReader.init_license("YOUR-LICENSE-KEY")
 if error[0] != EnumErrorCode.DBR_OK:
