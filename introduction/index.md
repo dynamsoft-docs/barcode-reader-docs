@@ -56,8 +56,8 @@ Choose the programming language you use to build your application and learn how 
 
 * [Java (Android)]({{site.android}})
 * [Object-C or Swift (iOS)]({{site.oc}})
-* [React Native](https://www.dynamsoft.com/capture-vision/docs/programming/react-native/?ver=latest)
-* [Flutter](https://www.dynamsoft.com/capture-vision/docs/programming/flutter/?ver=latest)
+* <a href="https://www.dynamsoft.com/capture-vision/docs/programming/react-native/?ver=latest" target="_blank">React Native</a>
+* <a href="https://www.dynamsoft.com/capture-vision/docs/programming/flutter/?ver=latest" target="_blank">Flutter</a>
 
 ### Server / Desktop
 
