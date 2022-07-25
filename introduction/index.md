@@ -61,6 +61,6 @@ Choose the programming language you use to build your application and learn how 
 
 * [Python]({{site.python}})
 * [Java]({{site.java}})
-* [C\#]({{site.dotnet}})
+* [.NET]({{site.dotnet}})
 * [C++]({{site.cpp}})
 * [C]({{site.c}})
