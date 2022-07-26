@@ -91,47 +91,47 @@ defaults:
       category: "original-repo"
       edition: "algorithm"
   - scope:
-      path: "web/programming/javascript"
+      path: "programming/javascript"
     values:
       category: "js-repo"
       edition: "js"
   - scope:
-      path: "mobile/programming/android"
+      path: "programming/android"
     values:
       category: "mobile-repo"
       edition: "mobile"
   - scope:
-      path: "mobile/programming/objectivec-swift"
+      path: "programming/objectivec-swift"
     values:
       category: "mobile-repo"
       edition: "mobile"
   - scope:
-      path: "server/programming/c"
+      path: "programming/c"
     values:
       category: "original-repo"
       edition: "desktop"
   - scope:
-      path: "server/programming/cplusplus"
+      path: "programming/cplusplus"
     values:
       category: "original-repo"
       edition: "desktop"
   - scope:
-      path: "server/programming/c-cplusplus"
+      path: "programming/c-cplusplus"
     values:
       category: "original-repo"
       edition: "desktop"
   - scope:
-      path: "server/programming/dotnet"
+      path: "programming/dotnet"
     values:
       category: "original-repo"
       edition: "desktop"
   - scope:
-      path: "server/programming/python"
+      path: "programming/python"
     values:
       category: "original-repo"
       edition: "desktop"
   - scope:
-      path: "server/programming/java"
+      path: "programming/java"
     values:
       category: "original-repo"
       edition: "desktop"
