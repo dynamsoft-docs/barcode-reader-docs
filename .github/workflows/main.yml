@@ -82,5 +82,5 @@ jobs:
           password: ${{ secrets.FTP_TEST_SITE_PASSWORD }}
           port: 7500 
           local-dir: /home/ubuntu/DBRDocCore-preview/_site/
-          server-dir: /www.dynamsoft.com/barcode-reader-review/docs/core/
+          server-dir: /www.dynamsoft.com/barcode-reader/docs/core/
           
