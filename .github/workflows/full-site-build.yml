@@ -37,7 +37,7 @@ jobs:
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
           -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DBRDocCore/_config.yml
           cd DBRDocCore && bundle exec jekyll build
-          python3 /home/ubuntu/ftp.py /home/ubuntu/DBRDoc/_site/ ./www.dynamsoft.com/barcode-reader/docs/core/ prod
+          python3 /home/ubuntu/ftp.py /home/ubuntu/DBRDocCore/_site/ ./www.dynamsoft.com/barcode-reader/docs/core/ prod
          
   Build-Preview:
     if: ${{ github.ref == 'refs/heads/preview' }}
