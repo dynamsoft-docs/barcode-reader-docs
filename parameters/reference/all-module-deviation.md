@@ -8,7 +8,6 @@ needGenerateH3Content: true
 permalink: /parameters/reference/all-module-deviation.html
 ---
 
-
 # AllModuleDeviation 
 
 `AllModuleDeviation` is a parameter to specify the width deviation value (in moduleSize) of a non-standard 1D barcode type relative to the standard barcode width. It is defined as below:
