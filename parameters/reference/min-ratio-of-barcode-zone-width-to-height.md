@@ -11,17 +11,16 @@ permalink: /parameters/reference/min-ratio-of-barcode-zone-width-to-height.html
 
 # MinRatioOfBarcodeZoneWidthToHeight 
 
-`MinRatioOfBarcodeZoneWidthToHeight` is a parameter to specify the minimum ratio (width/height) of the barcode zone. It is defined as below:
+`MinRatioOfBarcodeZoneWidthToHeight` is a parameter to specify the minimum ratio (width/height as a percentage) of the barcode zone. It is defined as below:
 
 | Value Type | Value Range | Default Value |
 | ---------- | ----------- | ------------- |
 | *int* | [0, 10000] | 0 |
 
+**Remarks**
 
-**Remarks**  
 - 0: means no limitation.
 
-    
 ## Setting Methods
 `MinRatioOfBarcodeZoneWidthToHeight` is supported to be set through JSON template.
 
@@ -32,8 +31,8 @@ permalink: /parameters/reference/min-ratio-of-barcode-zone-width-to-height.html
 | -------- | --------- |
 | MinRatioOfBarcodeZoneWidthToHeight | A number from [0, 10000] |
 
+**JSON Example**
 
-**JSON Example**   
 ```
 {
     "MinRatioOfBarcodeZoneWidthToHeight": 100

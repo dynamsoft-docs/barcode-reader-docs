@@ -5,9 +5,7 @@ description: This page shows Dynamsoft Barcode Reader Parameter Reference for Bi
 keywords: BinarizationModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-permalink: /parameters/reference/binarization-modes.html
 ---
-
 
 # BinarizationModes 
 
@@ -16,26 +14,30 @@ This parameter helps control the process of binarization, i.e., converting grays
 It consisits of one or more modes, each mode is a way to implement the binarization.
 
 ## Candidate Mode List
+
 - BM_LOCAL_BLOCK
 - BM_THRESHOLD
 
 ### BM_LOCAL_BLOCK
+
 Binarizes the image for each pixel based on a threshold which is calculated based on a small region around it. This mode has the following arguments for further customizing.
+
 - [BlockSizeX](#blocksizex)
 - [BlockSizeY](#blocksizey)
 - [EnableFillBinaryVacancy](#enablefillbinaryvacancy)
 - [ImagePreprocessingModesIndex](#imagepreprocessingmodesindex)
-- [ThresholdCompensation](#thresholdcompensation)
+- [ThreshValueCoefficient](#threshvaluecoefficient)
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)
 
 ### BM_THRESHOLD
 Binarizes the image for each pixel based on a unified threshold. If the gray value of the pixel is less than the threshold, it will be black in the binary image, otherwise it will be white. This mode has the following arguments for further customizing.
+
 - [ImagePreprocessingModesIndex](#imagepreprocessingmodesindex)
-- [BinarizationThreshold](#binarizationthreshold)
+- [BinarizationThreshold](#binarizationThreshold)
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)
-    
+
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
@@ -58,14 +60,11 @@ delete pSettings;
 **Remarks**     
 `GetModeArgument` and `SetModeArgument` need to be called for getting and setting [`Arguments`](#candidate-argument-list).
 
-
 **See Also**      
 - `PublicRuntimeSettings:` [JavaScript]({{ site.js_api }}interface/RuntimeSettings.html) \| [C]({{ site.structs }}PublicRuntimeSettings.html?src=c) \| [C++]({{ site.structs }}PublicRuntimeSettings.html?src=cpp) \| [.NET]({{ site.dotnet_api }}struct/PublicRuntimeSettings.html) \| [Python]({{ site.python_api }}class/PublicRuntimeSettings.html) \| [Java]({{ site.java_api }}class/PublicRuntimeSettings.html) \| [Java-Android]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) \| [Objective-C & Swift]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html)
 - [`BinarizationMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)
 - `GetModeArgument:` [JavaScript]({{ site.js_api}}BarcodeReader.html#getmodeargument) \| [C]({{ site.c_methods }}parameter-and-runtime-settings-basic.html#dbr_getmodeargument) \| [C++]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) \| [.NET]({{ site.dotnet_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#getmodeargument) \| [Python]({{ site.python_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#get_mode_argument) \| [Java]({{ site.java_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#getmodeargument) \| [Java-Android]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#getmodeargument) \| [Objective-C & Swift]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#getmodeargument)
 - `SetModeArgument:` [JavaScript]({{ site.js_api}}BarcodeReader.html#setmodeargument) \| [C]({{ site.c_methods }}parameter-and-runtime-settings-basic.html#dbr_setmodeargument) \| [C++]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) \| [.NET]({{ site.dotnet_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#setmodeargument) \| [Python]({{ site.python_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#set_mode_argument) \| [Java]({{ site.java_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#setmodeargument) \| [Java-Android]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#setmodeargument) \| [Objective-C & Swift]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#setmodeargument)
-
-
 
 ### As JSON Parameter
 `BinarizationModes` as a JSON parameter is a JSON Object array. Each JSON object is defined as below.   
@@ -73,16 +72,14 @@ delete pSettings;
 | Key Name | Key Value | Description |
 | -------- | --------- | ----------- |
 | Mode | Any one in Candidate Mode List as string | (Required) Sets a binarization mode.  |
-| BinarizationThreshold | A number from value range of BinarizationThreshold | (Optional) Sets the Argument [BinarizationThreshold](#binarizationthreshold). |
+| BinarizationThreshold | A number from value range of BinarizationThreshold | (Optional) Sets the Argument [BinarizationThreshold](#binarizationThreshold). |
 | BlockSizeX | A number from value range of BlockSizeX | (Optional) Sets the Argument [BlockSizeX](#blocksizex). |
 | BlockSizeY | A number from value range of BlockSizeY | (Optional) Sets the Argument [BlockSizeY](#blocksizey). |
 | EnableFillBinaryVacancy | A number from value range of EnableFillBinaryVacancy | (Optional) Sets the Argument [EnableFillBinaryVacancy](#enablefillbinaryvacancy). |
 | ImagePreprocessingModesIndex | A number from value range of ImagePreprocessingModesIndex | (Optional) Sets the Argument [ImagePreprocessingModesIndex](#imagepreprocessingmodesindex). |
-| ThresholdCompensation | A number from value range of ThresholdCompensation | (Optional) Sets the Argument [ThresholdCompensation](#thresholdcompensation). |
+| ThreshValueCoefficient | A number from value range of ThreshValueCoefficient | (Optional) Sets the Argument [ThreshValueCoefficient](#threshvaluecoefficient). |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
 | LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
-
-
 
 **JSON Parameter Example**   
 ```
@@ -101,33 +98,26 @@ delete pSettings;
 }
 ```
 
-
-
-
-
 <!--
 ## Impacts on Performance
 ### Speed
 The SDK will loop the setting modes one by one until find as many barcodes as `ExpectedBarcodesCount` specified or timeout. The more modes you set, the more time the process may take. Setting an appropriate mode first in order or setting only necessary modes may speed up the process.
-
 ### Read Rate
 Setting more binarization modes along with different arguments may improve the Read Rate. 
-
 ### Accuracy
 `BinarizationModes` has no influence on the Accuracy.
-
 -->
 ## Candidate Argument List
 - [BlockSizeX](#blocksizex)
 - [BlockSizeY](#blocksizey)
 - [EnableFillBinaryVacancy](#enablefillbinaryvacancy)
 - [ImagePreprocessingModesIndex](#imagepreprocessingmodesindex)
-- [ThresholdCompensation](#thresholdcompensation)
 - [ThreshValueCoefficient](#threshvaluecoefficient)
-- [BinarizationThreshold](#binarizationthreshold)
+- [ThreshValueCoefficient](#threshvaluecoefficient)
+- [BinarizationThreshold](#binarizationThreshold)
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)
- 
+
 ### BlockSizeX 
 Sets the horizontal block size for the binarization process.
 
@@ -142,10 +132,9 @@ Sets the horizontal block size for the binarization process.
   - N:
      - 1 <= N <= 3: the block size used for binarization will be set to 3.
      - N > 3: the block size used for binarization will be set to N.
-     
+
 **Performance Adaptability**        
 Setting this to an appropriate value ( 5 - 8 times module size is recommended ) may improve the Read Rate.
-
 
 ### BlockSizeY 
 Sets the vertical block size for the binarization process.
@@ -165,7 +154,6 @@ Sets the vertical block size for the binarization process.
 **Performance Adaptability**        
 Setting this to an appropriate value ( 5 - 8 times module size is recommended ) may improve the Read Rate.
 
-
 ### EnableFillBinaryVacancy 
 Sets whether to enable binary vacancy filling.
 
@@ -176,12 +164,11 @@ Sets whether to enable binary vacancy filling.
 **Remarks**         
   - 0: disable.   
   - 1: enable.
-  
+
   For barcodes with a large module size, there might be a vacant area in the position detection pattern after binarization. The vacant area may result in decoding failure. Setting this to True will fill in the vacant area with black and may help improve the decoding success rate. 
 
 **Performance Adaptability**        
 Enabling this may improve the Read Rate but slowdown the Speed. 
-  
 
 ### ImagePreprocessingModesIndex 
 The index of a specific image preprocessing mode in the [ImagePreprocessingModes](image-preprocessing-modes.md#imagepreprocessingmodes) parameter which the current binarization mode is applied to.
@@ -193,8 +180,7 @@ The index of a specific image preprocessing mode in the [ImagePreprocessingModes
 **Remarks**         
   -1: The current binarization mode is applied to all modes in parameter [ImagePreprocessingModes](image-preprocessing-modes.md#imagepreprocessingmodes).
 
-
-### ThresholdCompensation 
+### ThreshValueCoefficient 
 Constant subtracted from the mean or weighted mean used for calculating the threshold. Normally, it is positive but may be zero or negative as well.
 
 | Value Type | Value Range | Default Value | Valid For | 
@@ -202,7 +188,7 @@ Constant subtracted from the mean or weighted mean used for calculating the thre
 | *int* | [-255, 255] | 10 | BM_LOCAL_BLOCK |         
 
 ### ThreshValueCoefficient 
-Deprecated. Use [ThresholdCompensation](#thresholdcompensation) instead.
+Deprecated. Use [ThreshValueCoefficient](#threshvaluecoefficient) instead.
 
 ### BinarizationThreshold
 Sets the binarization threshold.
@@ -218,10 +204,8 @@ Sets the file name of the library to load dynamically.
 | ---------- | ----------- | ------------- | --------- |
 | *string* | A string value representing file name. | "" | All modes |         
 
-
 **Remarks**         
   The library must be in the same place with Dynamsoft Barcode Reader Library.
-
 
 ### LibraryParameters 
 Sets the parameters passed to the library to load dynamically.
@@ -230,7 +214,7 @@ Sets the parameters passed to the library to load dynamically.
 | ---------- | ----------- | ------------- | ----------- |
 | *string* | A string value representing parameters. | "" | All modes |         
 
-
 ## Related Articles
 - [How to configure the binarization parameters]({{ site.scenario_settings }}how-to-set-binarization-modes.html)
 - [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+	

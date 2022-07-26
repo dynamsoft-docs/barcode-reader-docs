@@ -13,13 +13,14 @@ permalink: /parameters/reference/scale-up-modes.html
 
 `ScaleUpModes` is a parameter to control the process for scaling up an image used for detecting barcodes with small module size. It consisits of one or more modes, each mode represents a way to implement the scale-up.
 
-
 ## Candidate Mode List
+
 - SUM_AUTO
 - SUM_LINEAR_INTERPOLATION
 - SUM_NEAREST_NEIGHBOUR_INTERPOLATION
 
-### CCM_AUTO
+### SUM_AUTO
+
 Lets the library choose a mode automatically.
 
 ### SUM_LINEAR_INTERPOLATION
