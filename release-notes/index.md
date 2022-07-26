@@ -18,9 +18,9 @@ permalink: /release-notes/index.html
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 9.2.11 | [iOS](../programming/objectivec-swift/release-notes/ios-9.md#9211-07112022) |
-| 9.2.10 | [Android](../programming/android/release-notes/android-9.md#9210-06282022) / [iOS](../programming/objectivec-swift/release-notes/ios-9.md#9210-06282022) |
-| 9.2.0 | [C](../programming/c/release-notes/c-9.md#920-06072022) / [C++](../programming/cplusplus/release-notes/cpp-9.md#920-06072022) / [DotNet](../programming/dotnet/release-notes/dotnet-9.md#920-06072022) / [Java](../programming/java/release-notes/java-9.md#920-06072022) / [Python](../programming/python/release-notes/python-9.md#920-06212022) |
+| 9.2.11 | [iOS]({{ site.oc_release_notes }}ios-9.md#9211-07112022) |
+| 9.2.10 | [Android](({{ site.android_release_notes }}android-9.md#9210-06282022) / [iOS]({{ site.oc_release_notes }}ios-9.md#9210-06282022) |
+| 9.2.0 | [C]({{ site.c_release_notes}}c-9.md#920-06072022) / [C++]({{ site.cpp_release_notes}}cpp-9.md#920-06072022) / [DotNet]({{ site.dotnet_release_notes }}dotnet-9.md#920-06072022) / [Java]({{ site.java_release_notes }}java-9.md#920-06072022) / [Python]({{ site.python_release_notes }}python-9.md#920-06212022) |
 
 ## 9.0
 
@@ -34,7 +34,7 @@ permalink: /release-notes/index.html
 | -------- | ------------------ |
 | 9.0.2 | [JavaScript]({{ site.js }}release-notes/js-9.html#902-05062022) |
 | 9.0.1 | [JavaScript]({{ site.js }}release-notes/js-9.html#901-04252022) / [Android]({{ site.android }}release-notes/android-9.html#901-04202022) / [iOS]({{ site.oc }}release-notes/ios-9.html#901-04202022) |
-| 9.0.0 | [JavaScript]({{ site.js }}release-notes/js-9.html#900-03242022) / [C]({{ site.c}}release-notes/c-9.html#900-03152022) / [C++]({{ site.cpp}}release-notes/cpp-9.html#900-03152022) / [DotNet]({{ site.dotnet }}release-notes/dotnet-9.html#900-03152022) / [Python]({{ site.python }}python-9.html#900-03312022) / [Java]({{ site.java }}release-notes/java-9.html#900-03152022) / [Android]({{ site.android }}release-notes/android-9.html#900-03222022) / [iOS]({{ site.oc }}release-notes/ios-9.html#900-03222022) |
+| 9.0.0 | [JavaScript]({{ site.js }}release-notes/js-9.html#900-03242022) / [C]({{ site.c}}release-notes/c-9.html#900-03152022) / [C++]({{ site.cpp}}release-notes/cpp-9.html#900-03152022) / [DotNet]({{ site.dotnet }}release-notes/dotnet-9.html#900-03152022) / [Python]({{ site.python_release_notes }}python-9.html#900-03312022) / [Java]({{ site.java }}release-notes/java-9.html#900-03152022) / [Android]({{ site.android }}release-notes/android-9.html#900-03222022) / [iOS]({{ site.oc }}release-notes/ios-9.html#900-03222022) |
 
 ## 8.9
 
@@ -63,7 +63,7 @@ permalink: /release-notes/index.html
 | 8.8.7 | [JavaScript]({{ site.js }}release-notes/js-8.html#887-01262022) |
 | 8.8.5 | [JavaScript]({{ site.js }}release-notes/js-8.html#885-01262022) |
 | 8.8.3 | [JavaScript]({{ site.js }}release-notes/js-8.html#883-10292021) |
-| 8.8.0 | [JavaScript]({{ site.js }}release-notes/js-8.html#880-10282021) / [C]({{ site.c}}release-notes/c-8.html#880-10122021) / [C++]({{ site.cpp}}release-notes/cpp-8.html#880-10122021) / [DotNet]({{ site.dotnet }}release-notes/dotnet-8.html#880-10122021) / [Python]({{ site.python }}python-8.html#880-10222021) / [Java]({{ site.java }}release-notes/java-8.html#880-10122021) / [Android]({{ site.android }}release-notes/android-8.html#880-10192021) / [iOS]({{ site.oc }}release-notes/ios-8.html#880-10192021) |
+| 8.8.0 | [JavaScript]({{ site.js }}release-notes/js-8.html#880-10282021) / [C]({{ site.c}}release-notes/c-8.html#880-10122021) / [C++]({{ site.cpp}}release-notes/cpp-8.html#880-10122021) / [DotNet]({{ site.dotnet }}release-notes/dotnet-8.html#880-10122021) / [Python]({{ site.python_release_notes }}python-8.html#880-10222021) / [Java]({{ site.java }}release-notes/java-8.html#880-10122021) / [Android]({{ site.android }}release-notes/android-8.html#880-10192021) / [iOS]({{ site.oc }}release-notes/ios-8.html#880-10192021) |
 
 ## 8.6
 
@@ -77,7 +77,7 @@ permalink: /release-notes/index.html
 | -------- | ------------------ |
 | 8.6.3 | [JavaScript]({{ site.js }}release-notes/js-8.html#863-09302021) |
 | 8.6.1 | [JavaScript]({{ site.js }}release-notes/js-8.html#861-09012021) |
-| 8.6.0 | [JavaScript]({{ site.js }}release-notes/js-8.html#860-08312021) / [C]({{ site.c}}release-notes/c-8.html#860-07152021) / [C++]({{ site.cpp}}release-notes/cpp-8.html#860-07152021) / [DotNet]({{ site.dotnet }}release-notes/dotnet-8.html#860-07152021) / [Python]({{ site.python }}python-8.html#860-07202021) / [Java]({{ site.java }}release-notes/java-8.html#860-07152021) / [Android]({{ site.android }}release-notes/android-8.html#860-07152021) / [iOS]({{ site.oc }}release-notes/ios-8.html#860-07152021) |
+| 8.6.0 | [JavaScript]({{ site.js }}release-notes/js-8.html#860-08312021) / [C]({{ site.c}}release-notes/c-8.html#860-07152021) / [C++]({{ site.cpp}}release-notes/cpp-8.html#860-07152021) / [DotNet]({{ site.dotnet }}release-notes/dotnet-8.html#860-07152021) / [Python]({{ site.python_release_notes }}python-8.html#860-07202021) / [Java]({{ site.java }}release-notes/java-8.html#860-07152021) / [Android]({{ site.android }}release-notes/android-8.html#860-07152021) / [iOS]({{ site.oc }}release-notes/ios-8.html#860-07152021) |
 
 ## 8.4
 
@@ -96,7 +96,7 @@ permalink: /release-notes/index.html
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 8.4.0 | [JavaScript]({{ site.js }}release-notes/js-8.html#840-06292021) / [C]({{ site.c}}release-notes/c-8.html#840-06082021) / [C++]({{ site.cpp}}release-notes/cpp-8.html#840-06082021) / [DotNet]({{ site.dotnet }}release-notes/dotnet-8.html#840-06082021) / [Python]({{ site.python }}python-8.html#840-06102021) / [Java]({{ site.java }}release-notes/java-8.html#840-06082021) / [Android]({{ site.android }}release-notes/android-8.html#840-06082021) / [iOS]({{ site.oc }}release-notes/ios-8.html#840-06082021) |
+| 8.4.0 | [JavaScript]({{ site.js }}release-notes/js-8.html#840-06292021) / [C]({{ site.c}}release-notes/c-8.html#840-06082021) / [C++]({{ site.cpp}}release-notes/cpp-8.html#840-06082021) / [DotNet]({{ site.dotnet }}release-notes/dotnet-8.html#840-06082021) / [Python]({{ site.python_release_notes }}python-8.html#840-06102021) / [Java]({{ site.java }}release-notes/java-8.html#840-06082021) / [Android]({{ site.android }}release-notes/android-8.html#840-06082021) / [iOS]({{ site.oc }}release-notes/ios-8.html#840-06082021) |
 
 ## 8.2
 
@@ -114,7 +114,7 @@ permalink: /release-notes/index.html
 | 8.2.5 | [JavaScript]({{ site.js }}release-notes/js-8.html#825-05182021) |
 | 8.2.3 | [JavaScript]({{ site.js }}release-notes/js-8.html#823-04152021) |
 | 8.2.1 | [JavaScript]({{ site.js }}release-notes/js-8.html#821-03292021) / [Android]({{ site.android }}release-notes/android-8.html#821-05272021) / [iOS]({{ site.oc }}release-notes/ios-8.html#821-05272021) |
-| 8.2.0 | [JavaScript]({{ site.js }}release-notes/js-8.html#820-03172021) / [C]({{ site.c}}release-notes/c-8.html#820-03172021) / [C++]({{ site.cpp}}release-notes/cpp-8.html#820-03172021) / [DotNet]({{ site.dotnet }}release-notes/dotnet-8.html#820-03172021) / [Python]({{ site.python }}python-8.html#820-03172021) / [Java]({{ site.java }}release-notes/java-8.html#820-03172021) / [Android]({{ site.android }}release-notes/android-8.html#820-03172021) / [iOS]({{ site.oc }}release-notes/ios-8.html#820-03172021) |
+| 8.2.0 | [JavaScript]({{ site.js }}release-notes/js-8.html#820-03172021) / [C]({{ site.c}}release-notes/c-8.html#820-03172021) / [C++]({{ site.cpp}}release-notes/cpp-8.html#820-03172021) / [DotNet]({{ site.dotnet }}release-notes/dotnet-8.html#820-03172021) / [Python]({{ site.python_release_notes }}python-8.html#820-03172021) / [Java]({{ site.java }}release-notes/java-8.html#820-03172021) / [Android]({{ site.android }}release-notes/android-8.html#820-03172021) / [iOS]({{ site.oc }}release-notes/ios-8.html#820-03172021) |
 
 ## 8.1
 
@@ -135,8 +135,8 @@ permalink: /release-notes/index.html
 | Versions | Available Editions |
 | -------- | ------------------ |
 | 8.1.3 | [JavaScript]({{ site.js }}release-notes/js-8.html#813-03042021) |
-| 8.1.2 | [JavaScript]({{ site.js }}release-notes/js-8.html#812-01222021) / [C]({{ site.c}}release-notes/c-8.html#812-01222021) / [C++]({{ site.cpp}}release-notes/cpp-8.html#812-01222021) / [DotNet]({{ site.dotnet }}release-notes/dotnet-8.html#812-01222021) / [Python]({{ site.python }}python-8.html#812-01222021) / [Java]({{ site.java }}release-notes/java-8.html#812-01222021) / [Android]({{ site.android }}release-notes/android-8.html#812-01222021) / [iOS]({{ site.oc }}release-notes/ios-8.html#812-01222021) |
-| 8.1.0 | [JavaScript]({{ site.js }}release-notes/js-8.html#810-01192021) / [C]({{ site.c}}release-notes/c-8.html#810-01122021) / [C++]({{ site.cpp}}release-notes/cpp-8.html#810-01122021) / [DotNet]({{ site.dotnet }}release-notes/dotnet-8.html#810-01122021) / [Python]({{ site.python }}python-8.html#810-01192021) / [Java]({{ site.java }}release-notes/java-8.html#810-01122021) / [Android]({{ site.android }}release-notes/android-8.html#810-01122021) / [iOS]({{ site.oc }}release-notes/ios-8.html#810-01122021) |
+| 8.1.2 | [JavaScript]({{ site.js }}release-notes/js-8.html#812-01222021) / [C]({{ site.c}}release-notes/c-8.html#812-01222021) / [C++]({{ site.cpp}}release-notes/cpp-8.html#812-01222021) / [DotNet]({{ site.dotnet }}release-notes/dotnet-8.html#812-01222021) / [Python]({{ site.python_release_notes }}python-8.html#812-01222021) / [Java]({{ site.java }}release-notes/java-8.html#812-01222021) / [Android]({{ site.android }}release-notes/android-8.html#812-01222021) / [iOS]({{ site.oc }}release-notes/ios-8.html#812-01222021) |
+| 8.1.0 | [JavaScript]({{ site.js }}release-notes/js-8.html#810-01192021) / [C]({{ site.c}}release-notes/c-8.html#810-01122021) / [C++]({{ site.cpp}}release-notes/cpp-8.html#810-01122021) / [DotNet]({{ site.dotnet }}release-notes/dotnet-8.html#810-01122021) / [Python]({{ site.python_release_notes }}python-8.html#810-01192021) / [Java]({{ site.java }}release-notes/java-8.html#810-01122021) / [Android]({{ site.android }}release-notes/android-8.html#810-01122021) / [iOS]({{ site.oc }}release-notes/ios-8.html#810-01122021) |
 
 ## 8.0
 
@@ -159,8 +159,8 @@ permalink: /release-notes/index.html
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 8.0.0.1 | [Python]({{ site.python }}python-8.html#8001-01062021) |
-| 8.0.0 | [JavaScript]({{ site.js }}release-notes/js-8.html#800-11252020) / [C]({{ site.c}}release-notes/c-8.html#800-11172020) / [C++]({{ site.cpp}}release-notes/cpp-8.html#800-11172020) / [DotNet]({{ site.dotnet }}release-notes/dotnet-8.html#800-11172020) / [Python]({{ site.python }}python-8.html#800-11262020) / [Java]({{ site.java }}release-notes/java-8.html#800-11172020) / [Android]({{ site.android }}release-notes/android-8.html#800-11172020) / [iOS]({{ site.oc }}release-notes/ios-8.html#800-11172020) |
+| 8.0.0.1 | [Python]({{ site.python_release_notes }}python-8.html#8001-01062021) |
+| 8.0.0 | [JavaScript]({{ site.js }}release-notes/js-8.html#800-11252020) / [C]({{ site.c}}release-notes/c-8.html#800-11172020) / [C++]({{ site.cpp}}release-notes/cpp-8.html#800-11172020) / [DotNet]({{ site.dotnet }}release-notes/dotnet-8.html#800-11172020) / [Python]({{ site.python_release_notes }}python-8.html#800-11262020) / [Java]({{ site.java }}release-notes/java-8.html#800-11172020) / [Android]({{ site.android }}release-notes/android-8.html#800-11172020) / [iOS]({{ site.oc }}release-notes/ios-8.html#800-11172020) |
 
 &nbsp;
 

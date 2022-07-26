@@ -23,7 +23,7 @@ jobs:
           cd /home/ubuntu 
           [ -d DBRDocCore ] && rm -rf DBRDocCore
           [ -d barcode-reader-docs ] && rm -rf barcode-reader-docs 
-          [ -d Docs-Template-Repo-preview ] && rm -rf Docs-Template-Repo-preview
+          [ -d Docs-Template-Repo-Preview2 ] && rm -rf Docs-Template-Repo-Preview2
           cd /home/ubuntu
 
       - name: Build the full site - main
@@ -31,7 +31,7 @@ jobs:
           cd /home/ubuntu
           mkdir -p DBRDocCore
           [ ! -d barcode-reader-docs ] && git clone --depth 1 https://github.com/dynamsoft-docs/barcode-reader-docs.git barcode-reader-docs
-          [ ! -d Docs-Template-Repo-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-preview
+          [ ! -d Docs-Template-Repo-Preview2 ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview2
           cd barcode-reader-docs && git pull && cd .. && cp -rfp ./barcode-reader-docs/* ./DBRDocCore/
           cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DBRDocCore/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
@@ -52,7 +52,7 @@ jobs:
           cd /home/ubuntu 
           [ -d DBRDocCore-preview ] && rm -rf DBRDocCore-preview
           [ -d barcode-reader-docs-preview ] && rm -rf barcode-reader-docs-preview 
-          [ -d Docs-Template-Repo-preview ] && rm -rf Docs-Template-Repo-preview
+          [ -d Docs-Template-Repo-Preview2 ] && rm -rf Docs-Template-Repo-Preview2
           cd /home/ubuntu
 
       - name: Build the full site - preview
@@ -60,9 +60,9 @@ jobs:
           cd /home/ubuntu
           mkdir -p DBRDocCore-preview
           [ ! -d barcode-reader-docs-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/barcode-reader-docs.git barcode-reader-docs-preview
-          [ ! -d Docs-Template-Repo-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-preview
+          [ ! -d Docs-Template-Repo-Preview2 ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview2
           cd barcode-reader-docs-preview && git pull && cd .. && cp -rfp ./barcode-reader-docs-preview/* ./DBRDocCore-preview/
-          cd Docs-Template-Repo-preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-preview/* ./DBRDocCore-preview/
+          cd Docs-Template-Repo-Preview2 && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview2/* ./DBRDocCore-preview/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
           -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DBRDocCore-preview/_config.yml
           cd DBRDocCore-preview && bundle exec jekyll build
