@@ -5,6 +5,7 @@ description: This page shows Dynamsoft Barcode Reader Parameter Reference for De
 keywords: DeblurLevel, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/deblur-level.html
 ---
 
 

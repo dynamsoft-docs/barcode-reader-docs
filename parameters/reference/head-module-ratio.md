@@ -5,6 +5,7 @@ description: This page shows Dynamsoft Barcode Reader Parameter Reference for He
 keywords: HeadModuleRatio, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/head-module-ratio.html
 ---
 
 

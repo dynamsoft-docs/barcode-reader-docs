@@ -4,6 +4,7 @@ description: This article introduces two ways to modify the configuration DBR Ru
 title: How to set DBR parameters 
 keywords: DBR RuntimeSetting Json Template ImageParameter FormatSpecification
 needAutoGenerateSidebar: false
+permalink: /parameters/scenario-settings/how-to-set-parameters.html
 ---
 
 # How to set DBR parameters 

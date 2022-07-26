@@ -5,35 +5,34 @@ description: This is the architecture page of Dynamsoft Barcode Reader Introduct
 keywords: architecture, principles
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /introduction/architecture.html
 ---
 
 # Principles of Dynamsoft Barcode Reader Algorithm
 
-Dynamsoft Barcode Reader (DBR) is a flexible SDK used to implement barcode reading functionality in cross-platform applications. Supported barcode formats include QR Code, Linear(1D), PDF 417, DataMatrix, and [more](overview.md#barcode-formats). 
+Dynamsoft Barcode Reader (DBR) is a flexible SDK used to implement barcode reading functionality in cross-platform applications. Supported barcode formats include QR Code, Linear(1D), PDF 417, DataMatrix, and [more]({{site.introduction}}index.md#barcode-formats).
 
-Its flexibilities not only fit in most scenarios, which greatly vary in terms of barcode features but also most requirements regarding programming practices. The software architecture and design of DBR can accommodate a variety of application requirements. The barrier of entry to barcode reading is low, allowing customers to start building their application effortlessly, all the while providing various customization options to handle further complicated barcodes. 
+Its flexibilities not only fit in most scenarios, which greatly vary in terms of barcode features but also most requirements regarding programming practices. The software architecture and design of DBR can accommodate a variety of application requirements. The barrier of entry to barcode reading is low, allowing customers to start building their application effortlessly, all the while providing various customization options to handle further complicated barcodes.
 
-DBR powers your software development from the following aspects: 
-(1) performance of reading barcodes, 
-(2) agility of dealing with unpredictable-featured barcodes, 
-(3) integration of multipurpose image processing, 
-(4) extensibility of deployment. 
+DBR powers your software development from the following aspects:
+
+(1) performance of reading barcodes,
+(2) agility of dealing with unpredictable-featured barcodes,
+(3) integration of multipurpose image processing,
+(4) extensibility of deployment.
 
 In this article, we will present the architectures and their corresponding contributions to the above advantages.
 
 ## Flexible Algorithm Flow & Versatile Parameters
 
-The algorithm of DBR includes a flow of 5 stages at the top level, as illustrated in Figure 1, where localization, partition, and decoding are the three core stages. DBR is designed to deal with a variety of barcode scenarios and qualities and offers many customizable parameters to increase its versatility. Furthermore, the architecture of the algorithm and its parameters solidifies the agility to meet new requirements.   
-   
-   
-   
+The algorithm of DBR includes a flow of 5 stages at the top level, as illustrated in Figure 1, where localization, partition, and decoding are the three core stages. DBR is designed to deal with a variety of barcode scenarios and qualities and offers many customizable parameters to increase its versatility. Furthermore, the architecture of the algorithm and its parameters solidifies the agility to meet new requirements.
+
 <div align="center">
-   <p><img src="assets/architecture/top-level-flow-of-dbr-algorithm.png" alt="Top Level Flow of DBR Algorithm" width="30%" /></p>
+   <p><img src="{{ site.introduction }}/assets/architecture/top-level-flow-of-dbr-algorithm.png" alt="Top Level Flow of DBR Algorithm" width="30%" /></p>
    <p>Figure 1 – Top Level Flow of DBR Algorithm</p>
-</div>   
-   
-      
-### Stage 1 is to get regions of interest (ROI) image(s). 
+</div>
+
+### Stage 1 is to get regions of interest (ROI) image(s)
 
 This stage begins with how to get an image from a variety of sources, including files, videos, or buffers of other applications. Then there are some optional steps to convert the original image to a grayscale image. What these steps do depends on relevant parameters’ values. Table 1 lists these parameters and their respective design intents.
 
@@ -50,7 +49,7 @@ Table 1 – Parameters of DBR Algorithm in the Stage 1
 
 As mentioned above, the focus of this stage is to reduce the time cost by scaling down or finding out ROIs. It is not essential for most scenarios but would be helpful for some extreme cases.
 
-### Stage 2 is to localize barcode zones. 
+### Stage 2 is to localize barcode zones
 
 Various features of different barcode formats help detect barcode zones. Before detecting and localizing barcode zones, some optional steps can be taken to speed up, such as filter distraction, enhance/keep barcode zone features etc. These steps are related to the respective parameters listed in the Table 2.
 
@@ -77,13 +76,13 @@ Table 3 – Barcode Localization Modes of DBR
 | `LM_STATISTICS_POSTAL_CODE` | Optimized for postal codes. | Not applicable to other barcode formats. |
 | `LM_...` | Customizable, Addible | More time and cost. |
 
-1. `LM_SCAN_DIRECTLY` is recommended when the barcode is large relative to the image size. 1D, GS1 Databar, and GS1 Composite bar are better able to take advantage of `LM_SCAN_DIRECTLY`.   
+1. `LM_SCAN_DIRECTLY` is recommended when the barcode is large relative to the image size. 1D, GS1 Databar, and GS1 Composite bar are better able to take advantage of `LM_SCAN_DIRECTLY`.
 
 2. `LM_CONNECTED_BLOCKS` offers the right balance between efficiency and accuracy for most scenarios. It can share intermediate data, contours, with a few other localization modes: `LM_LINES`, `LM_STATISTICS_MARKS`, `LM_STATISTICS_POSTAL_CODE`. So, `LM_CONNECTED_BLOCKS` is usually placed before these modes.   
 
 3. `LM_LINES` is a good option to follow `LM_CONNECTED_BLOCKS` if you want to achieve higher accuracy with a low time cost.   
 
-4. `LM_STATISTICS` will try to find out the areas where the distribution of grayscale values looks like a barcode zone. It’s an auxiliary method when the above modes don’t work.   
+4. `LM_STATISTICS` will try to find out the areas where the distribution of grayscale values looks like a barcode zone. It’s an auxiliary method when the above modes don’t work.
 
 The above four modes can support most regular barcode formats. The barcodes of these formats can be localized in one pass of
 an image. Limit the barcode formats for localization using the parameter [`BarcodeFormatIds`]({{ site.parameters_reference }}barcode-format-ids.html) and [`BarcodeFormatIds_2`]({{ site.parameters_reference }}barcode-format-ids-2.html).
@@ -94,13 +93,13 @@ an image. Limit the barcode formats for localization using the parameter [`Barco
 
 Localization modes could be added according to particular features of the barcodes to meet the requirements of more barcode formats in the future.
 
-### Stage 3 is to partition barcode zones precisely.
+### Stage 3 is to partition barcode zones precisely
 
-For localized barcode zones, further work is essential before DBR takes it as a barcode to the decoding stage. Barcode format and exact boundary are two key factors. Some rough barcode zones, the result of certain localization modes, have the format information. However, it isn’t always the case. The exact boundary of a barcode is more meaningful than the rough zone for the following decoding stage. Though some barcode formats are robust to the boundary roughness, an exact boundary can improve the accuracy of poor-quality barcodes.   
+For localized barcode zones, further work is essential before DBR takes it as a barcode to the decoding stage. Barcode format and exact boundary are two key factors. Some rough barcode zones, the result of certain localization modes, have the format information. However, it isn’t always the case. The exact boundary of a barcode is more meaningful than the rough zone for the following decoding stage. Though some barcode formats are robust to the boundary roughness, an exact boundary can improve the accuracy of poor-quality barcodes.
 
-[`BarcodeColourModes`]({{ site.parameters_reference }}barcode-colour-modes.html#barcodecolourmodes) is a parameter to control how to seek the boundary. Before, during, or after seeking boundary, the format can be determined. With an exact boundary, DBR may scale up the barcode if the module size is too small. The parameter, [`ScaleUpModes`]({{ site.parameters_reference }}scale-up-modes.html#scaleupmodes), is used to assign one or more scale up methods. At last, the anti-perspective transformation will be applied if the boundary isn’t relatively rectangular.   
+[`BarcodeColourModes`]({{ site.parameters_reference }}barcode-colour-modes.html#barcodecolourmodes) is a parameter to control how to seek the boundary. Before, during, or after seeking boundary, the format can be determined. With an exact boundary, DBR may scale up the barcode if the module size is too small. The parameter, [`ScaleUpModes`]({{ site.parameters_reference }}scale-up-modes.html#scaleupmodes), is used to assign one or more scale up methods. At last, the anti-perspective transformation will be applied if the boundary isn’t relatively rectangular.
 
-### Stage 4 is to decode one-calibrated-barcoded images.
+### Stage 4 is to decode one-calibrated-barcoded images
 
 This is the most complicated stage that accommodates a few methods to deal with varying barcode quality situations. Table 4 lists the parameters to customize the decoding procedure.
 
@@ -114,7 +113,7 @@ Table 4 – Parameters to Deal with Varying Quality Situation
 | [`DeblurLevel`]({{ site.parameters_reference }}deblur-level.html)/[`DeblurModes`]({{ site.parameters_reference }}deblur-modes.html#deblurmodes) | To apply a variety of image processing methods to sample modules. The higher the level, the more attempts. | Available |
 | [`MirrorMode`]({{ site.parameters_reference }}mirror-mode.html) | To try to decode barcode with mirroring. | Available |
 
-### Stage 5 is to output results. 
+### Stage 5 is to output results
 
 This stage organizes the barcode decoding results. DBR checks all results together and checks if there are results close to together, which can be merged. The original results are all hex bytes. Then the results are converted, filtered, and sorted according to the following parameters.
 
@@ -133,9 +132,9 @@ Table 5 – Parameters to Organize the Results
 
 While DBR owns such versatility and flexibility, DBR is competitive in speed as well as accuracy. Both the programming and the architecture guarantee the speed. As an extreme example, the most efficient internal path of the algorithm flow can only include the following steps when reading barcodes from a binary buffer image:
 
-1. Scan rows with a specific row stride. This gets white/black sample data while localizing possible barcodes.   
+1. Scan rows with a specific row stride. This gets white/black sample data while localizing possible barcodes.
 
-2. Decoding the sample data if it is a 1D barcode.   
+2. Decoding the sample data if it is a 1D barcode.
 
 While taking advantage of the most straightforward cases to improve speed, DBR can comply with other scenarios automatically. There are four levels to consider when balancing speed and accuracy.
 
@@ -156,11 +155,11 @@ Table 6 – Parameters to Organize the Results
 | `WaitingFramesCount` | To quit the flow as soon as possible, given the frame count in the waiting list exceeds the limitation. | Available |
 | [`TerminatePhase`]({{ site.parameters_reference }}terminate-phase.html) | To quit the flow when DBR finishes a certain stage. | Available |
 
-[`ExpectedBarcodesCount`]({{ site.parameters_reference }}expected-barcodes-count.html) represents how many barcodes are expected to be read or decoded successfully. The default value, 0, means DBR will check whether there are any barcodes at the end of each localization mode. The default value fits both single barcode images and high-quality images, as DBR will try localization modes in turns to find at least one barcode and return all barcodes in the last tried localization mode. If [`ExpectedBarcodesCount`]({{ site.parameters_reference }}expected-barcodes-count.html) is assigned a value greater than 0, DBR will check whenever a barcode is decoded successfully. For example, value 1 means DBR will end the flow once it finds one barcode, which is more efficient than value 0. When its value is greater than the possible barcode count, DBR will apply all localization modes to find as many barcodes as possible.   
+[`ExpectedBarcodesCount`]({{ site.parameters_reference }}expected-barcodes-count.html) represents how many barcodes are expected to be read or decoded successfully. The default value, 0, means DBR will check whether there are any barcodes at the end of each localization mode. The default value fits both single barcode images and high-quality images, as DBR will try localization modes in turns to find at least one barcode and return all barcodes in the last tried localization mode. If [`ExpectedBarcodesCount`]({{ site.parameters_reference }}expected-barcodes-count.html) is assigned a value greater than 0, DBR will check whenever a barcode is decoded successfully. For example, value 1 means DBR will end the flow once it finds one barcode, which is more efficient than value 0. When its value is greater than the possible barcode count, DBR will apply all localization modes to find as many barcodes as possible.
 
-[`Timeout`]({{ site.parameters_reference }}time-out.html) is an upper limit of time cost. DBR checks at a few points whether the elapsed time for the current image is longer than its value. If so, DBR will end the flow. Timeout prevents one image from costing too much time.   
+[`Timeout`]({{ site.parameters_reference }}time-out.html) is an upper limit of time cost. DBR checks at a few points whether the elapsed time for the current image is longer than its value. If so, DBR will end the flow. Timeout prevents one image from costing too much time.
 
-`WaitingFramesCount` is another way to inform DBR whether the flow of current images should end. This parameter is designed to improve interactive friendliness lest one image blocks the video stream. It can be altered to control the max time cost of one image. If you set `WaitingFramesCount` value to 1 and take the image buffer as a video frame, you may decode the image by calling [`AppendFrame`]({{ site.cpp_methods }}video.html#appendframe) and append the next image after some time later. The time interval of the two images is the max time cost for the former. There are higher frequent checkpoints of `WaitingFramesCount` than [`Timeout`]({{ site.parameters_reference }}time-out.html).   
+`WaitingFramesCount` is another way to inform DBR whether the flow of current images should end. This parameter is designed to improve interactive friendliness lest one image blocks the video stream. It can be altered to control the max time cost of one image. If you set `WaitingFramesCount` value to 1 and take the image buffer as a video frame, you may decode the image by calling [`AppendFrame`]({{ site.cpp_methods }}video.html#appendframe) and append the next image after some time later. The time interval of the two images is the max time cost for the former. There are higher frequent checkpoints of `WaitingFramesCount` than [`Timeout`]({{ site.parameters_reference }}time-out.html).
 
 [`TerminatePhase`]({{ site.parameters_reference }}terminate-phase.html) is for users who only care about the intermediate results instead of the final barcode results. Please refer to the next section about the issues on how to exchange data with other applications.
 
@@ -188,4 +187,3 @@ Table 7 – Intermediate Result Types
 | `IRT_TYPED_BARCODE_ZONE` | Areas identified as barcode zones, regardless of successful decoding. | 3 | Available |
 
 All results output with coordinates to show where it is produced in the algorithm flow. The coordinates consist of the modes (specific values) of a series of parameters.
-

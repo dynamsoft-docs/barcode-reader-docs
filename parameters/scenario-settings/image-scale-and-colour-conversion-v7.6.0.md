@@ -4,6 +4,7 @@ title: How to set image scaling and colour transformation
 description: This article introduces how to set image scaling, colour image grayscale, grayscale colour inversion and its usage scenarios.
 keywords: scale, grayscale
 needAutoGenerateSidebar: false
+permalink: /parameters/scenario-settings/image-scale-and-colour-conversion-v7.6.0.html
 ---
 
 # How to set image scaling and colour transformation

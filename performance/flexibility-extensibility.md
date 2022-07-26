@@ -5,6 +5,7 @@ description: This page shows what makes Dynamsoft Barcode Reader flexible and ex
 keywords: flexibility, extensibility
 needAutoGenerateSidebar: true
 noTitleIndex: false
+permalink: /performance/flexibility-extensibility.html
 ---
 
 # What makes Dynamsoft Barcode Reader flexible and extensible

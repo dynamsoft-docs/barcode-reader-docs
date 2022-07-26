@@ -5,6 +5,7 @@ description: This page shows Dynamsoft Barcode Reader Parameter Reference for Ba
 keywords: BarcodeFormatIds_2, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/barcode-format-ids-2.html
 ---
 
 

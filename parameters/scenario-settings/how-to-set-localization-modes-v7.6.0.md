@@ -4,6 +4,7 @@ description: This article introduces how to use different localization modes to 
 title: How to use different localization modes
 keywords: localization, barcode area
 needAutoGenerateSidebar: false
+permalink: /parameters/scenario-settings/how-to-set-localization-modes-v7.6.0.html
 ---
 
 # How to use different localization modes

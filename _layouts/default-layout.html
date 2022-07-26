@@ -2,30 +2,35 @@
 <html lang="en-US">
 
 {%- include head.html -%}
-
+{%- assign noTitleIndex = "" -%}
+{%- if page.noTitleIndex or page.url contains 'release-notes' -%}
+    {%- assign noTitleIndex = "noTitleIndex" -%}
+{%- endif -%}
 <body>
     <div class="headWrapper">
         {%- include page_header.html -%}
     </div>
     {%- include dbrNav.html -%}
     <div class="sideBarIcon"><i class="fa fa-list" style="margin-right: 5px;"></i> Table of contents</div>
-    <div class="container">
+    <div class="container" id="categoryMenuTree">
         <div class="row">
             <div class="sideBar col-xs-12 col-md-3 hide-xs hide-sm">
                 <div id="sideBarCnt">
                     <div class="docSearchPart" style="margin-top: 30px;">
                         <input id="txtSearch" class="search" type="text">
                     </div>
-                    <ul class="mainPage" id="fullTreeMenuListContainer" name="listLevel1">
-                    </ul>
+                    <div class="mainPage">
+                        <ul id="fullTreeMenuListContainer" name="listLevel1">
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="docContainer col-xs-12 col-md-9">
                 <div id="docHead" class="head row hide-xs hide-sm">
                     {%- include main-page-head.html -%}
                 </div>
-                <div class="main row">
-                    <div class="content markdown-body headCounter col-xs-12 col-md-12 col-lg-9 col-xl-10" style="margin-bottom: 20px;">
+                <div class="main row showRightSideMenu" id="articleContent" data-needh3="{{page.needGenerateH3Content}}">
+                    <div class="content markdown-body headCounter {{noTitleIndex}} col-xs-12 col-md-12 col-lg-9 col-xl-10 showRightSideMenu" style="margin-bottom: 20px;">
                         <div class="dbrThanksDownloading">
                             <p class="thanksDownloadTitle">Thanks for downloading Dynamsoft Barcode Reader <span class="editionName"></span> Package!</p>
                             <p style="margin-bottom: 0;">Your download will start shortly. If your download does not begin, <a class="bluelink downloadlink" href="">click here to retry</a>.</p>
@@ -33,7 +38,7 @@
                         {{ content }}
 
                     </div>
-                    <div class="rightSideMenu col-xs-12 col-md-12 col-lg-3 col-xl-2  hide-md hide-sm hide-xs">
+                    <div class="rightSideMenu col-xs-12 col-md-12 col-lg-3 col-xl-2  hide-md hide-sm hide-xs showRightSideMenu">
                         <div id="compatibleInfo">
                             <p>This page is compatible for:</p>
                             <p class="compatibleCurVersion">Version 7.5.0</p>
@@ -49,10 +54,15 @@
                         {%- endif -%}
                     </div>
                 </div>
+                <div class="main row" style="display: none; background: #f5f5f5;" id="loadingContent">
+                    <div class="loading" id="loadingLogin">
+                        <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="history list">
+    <div class="history list" id="categoryMenuTree_history">
         <div class="container">
             <div class="col-xs-12">
                 {%- include liquid_autoGenerateHistoryList.html -%} {%- include auto-version-list.html -%}
@@ -94,17 +104,17 @@
                 var curHref = window.location.href.toLowerCase()
                 if (curHref.indexOf('/c/') > -1 || curHref.indexOf('/cplusplus/') > -1) {
                     $('.editionName').html('C/C++');
-                    $('.downloadlink').attr('href', 'https://download2.dynamsoft.com/dbr/dynamsoft-barcode-reader-c_cpp-9.2.0.zip');
+                    $('.downloadlink').attr('href', 'https://download2.dynamsoft.com/dbr/dbr-c_cpp-9.0.zip');
                     $('.dbrThanksDownloading').show();
                     $('.downloadlink')[0].click();
                 } else if (curHref.indexOf('/dotnet/') > -1) {
                     $('.editionName').html('.NET');
-                    $('.downloadlink').attr('href', 'https://download2.dynamsoft.com/dbr/dynamsoft-barcode-reader-dotnet-9.2.0.zip');
+                    $('.downloadlink').attr('href', 'https://download2.dynamsoft.com/dbr/dbr-dotnet-9.0.zip');
                     $('.dbrThanksDownloading').show();
                     $('.downloadlink')[0].click();
                 } else if (curHref.indexOf('/java/') > -1) {
                     $('.editionName').html('Java');
-                    $('.downloadlink').attr('href', 'https://download2.dynamsoft.com/dbr/dynamsoft-barcode-reader-java-9.2.0.zip');
+                    $('.downloadlink').attr('href', 'https://download2.dynamsoft.com/dbr/dbr-java-9.0.zip');
                     $('.dbrThanksDownloading').show();
                     $('.downloadlink')[0].click();
                 } else if (curHref.indexOf('/javascript/') > -1) {
@@ -114,12 +124,12 @@
                     $('.downloadlink')[0].click();
                 } else if (curHref.indexOf('/android/') > -1) {
                     $('.editionName').html('Android');
-                    $('.downloadlink').attr('href', 'https://download2.dynamsoft.com/dbr/dynamsoft-barcode-reader-android-9.2.10.zip');
+                    $('.downloadlink').attr('href', 'https://download2.dynamsoft.com/dbr/dbr-android-9.0.1.zip');
                     $('.dbrThanksDownloading').show();
                     $('.downloadlink')[0].click();
                 } else if (curHref.indexOf('/objectivec-swift/') > -1) {
                     $('.editionName').html('iOS');
-                    $('.downloadlink').attr('href', 'https://download2.dynamsoft.com/dbr/dynamsoft-barcode-reader-ios-9.2.11.zip');
+                    $('.downloadlink').attr('href', 'https://download2.dynamsoft.com/dbr/dbr-ios-9.0.1.zip');
                     $('.dbrThanksDownloading').show();
                     $('.downloadlink')[0].click();
                 }

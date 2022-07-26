@@ -5,6 +5,7 @@ description: This page shows Dynamsoft Barcode Reader Parameter Reference for Co
 keywords: Code128Subset, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/code128-subset.html
 ---
 
 

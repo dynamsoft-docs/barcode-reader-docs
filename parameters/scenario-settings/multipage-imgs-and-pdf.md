@@ -4,6 +4,7 @@ title: Scan Barcodes from PDF & multi-page TIF
 description: This article describes how Dynamsoft's barcode SDK processes multi-page images, such as TIF and PDF.
 keywords: tif, pdf, multi-page
 needAutoGenerateSidebar: false
+permalink: /parameters/scenario-settings/multipage-imgs-and-pdf.html
 ---
 
 # Scan Barcodes from PDF & multi-page TIF

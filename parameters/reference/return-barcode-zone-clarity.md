@@ -5,6 +5,7 @@ description: This page shows Dynamsoft Barcode Reader Parameter Reference for Re
 keywords: ReturnBarcodeZoneClarity, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/return-barcode-zone-clarity.html
 ---
 
 

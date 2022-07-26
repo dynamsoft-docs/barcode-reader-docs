@@ -4,6 +4,7 @@ title: How to process multi-page TIF & PDF
 description: This article describes how DBR processes multi-page images, such as TIF and PDF.
 keywords: tif pdf multipage
 needAutoGenerateSidebar: false
+permalink: /parameters/scenario-settings/multipage-imgs-and-pdf-v7.6.0.html
 ---
 
 # How to process multi-page TIF & PDF

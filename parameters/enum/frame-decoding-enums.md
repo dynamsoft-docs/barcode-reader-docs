@@ -5,6 +5,7 @@ description: This article shows Frame Decoding Enumerations of Dynamsoft Barcode
 keywords: ClarityCalculationMethod, ClarityFilterMode, frame decoding enumeration, enumeration
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+permalink: /parameters/enum/frame-decoding-enums.html
 ---
 
 

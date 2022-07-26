@@ -5,6 +5,7 @@ description: This page shows Dynamsoft Barcode Reader Parameter Reference for Mi
 keywords: MinRatioOfBarcodeZoneWidthToHeight, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/min-ratio-of-barcode-zone-width-to-height.html
 ---
 
 
@@ -16,11 +17,10 @@ needGenerateH3Content: true
 | ---------- | ----------- | ------------- |
 | *int* | [0, 10000] | 0 |
 
+**Remarks**
 
-**Remarks**  
 - 0: means no limitation.
 
-    
 ## Setting Methods
 `MinRatioOfBarcodeZoneWidthToHeight` is supported to be set through JSON template.
 
@@ -31,8 +31,8 @@ needGenerateH3Content: true
 | -------- | --------- |
 | MinRatioOfBarcodeZoneWidthToHeight | A number from [0, 10000] |
 
+**JSON Example**
 
-**JSON Example**   
 ```
 {
     "MinRatioOfBarcodeZoneWidthToHeight": 100

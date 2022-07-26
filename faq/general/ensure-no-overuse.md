@@ -4,6 +4,7 @@ title: How to ensure that a device does not overuse its allotted number of insta
 keywords: Dynamsoft Barcode Reader, FAQ, Pricing/Licensing, General, ensure no overuse
 description: How to ensure that a device does not overuse its allotted number of instances?
 needAutoGenerateSidebar: false
+permalink: /faq/general/ensure-no-overuse.html
 ---
 
 # FAQ - General

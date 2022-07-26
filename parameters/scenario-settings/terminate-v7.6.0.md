@@ -4,6 +4,7 @@ title: How to control the Terminate Phase for DBR
 description: This article describes how to use runtime settings to make DBR terminate at a certain stage.
 keywords: terminate timeout
 needAutoGenerateSidebar: false
+permalink: /parameters/scenario-settings/terminate-v7.6.0.html
 ---
 
 # How to control the Terminate Phase for DBR

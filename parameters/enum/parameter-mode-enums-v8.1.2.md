@@ -5,6 +5,7 @@ description: This article shows Parameter Mode Enumerations of Dynamsoft Barcode
 keywords: BarcodeColourMode, BarcodeComplementMode, BinarizationMode, ColourClusteringMode, ColourConversionMode, ConflictMode, DeblurMode, DeformationResistingMode, DPMCodeReadingMode, GrayscaleTransformationMode, ImagePreprocessingMode, LocalizationMode, PDFReadingMode, RegionPredetectionMode, ScaleUpMode, TerminatePhase, TextAssistedCorrectionMode, TextFilterMode, TextureDetectionMode, parameter mode enumeration, enumeration
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+permalink: /parameters/enum/parameter-mode-enums-v8.1.2.html
 ---
 
 # Dynamsoft Barcode Reader Enumeration - Parameter Mode Enumeration

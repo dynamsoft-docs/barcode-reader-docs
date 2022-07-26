@@ -5,6 +5,7 @@ description: This page shows Dynamsoft Barcode Reader Parameter Reference for Te
 keywords: TextResultOrderModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/text-result-order-modes.html
 ---
 
 
@@ -53,10 +54,9 @@ delete pSettings;
 
 
 ### As JSON Parameter
-`TextResultOrderModes` as a JSON parameter is a JSON Object array defined as below.
-
+`TextResultOrderModes` as a JSON parameter is a JSON Object array defined as below.   
 | Key Name | Key Value |
-| -------- | --------- |
+| -------- | --------- | 
 | TextResultOrderModes | a JSON object defined as below |
 
 

@@ -5,6 +5,7 @@ description: This article shows the main page of Dynamsoft Barcode Reader Enumer
 keywords: enumerations
 needAutoGenerateSidebar: false
 breadcrumbText: Enumerations
+permalink: /parameters/enum/
 ---
 
 # Dynamsoft Barcode Reader - Enumerations

@@ -5,6 +5,7 @@ description: This page shows Dynamsoft Barcode Reader Parameter Reference for Fi
 keywords: FindUnevenModuleBarcode, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/find-uneven-module-barcode.html
 ---
 
 

@@ -4,6 +4,7 @@ description: This article introduces how to configure the binarization parameter
 title: How to configure the binarization parameters
 keywords: BinarizationModes, IntermediateResultType.IRT_BINARIZED_IMAGE  
 needAutoGenerateSidebar: false
+permalink: /parameters/scenario-settings/how-to-set-binarization-modes.html
 ---
 
 # How to configure the binarization parameters

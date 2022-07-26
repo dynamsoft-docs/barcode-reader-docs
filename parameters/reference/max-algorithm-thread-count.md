@@ -5,6 +5,7 @@ description: This page shows Dynamsoft Barcode Reader Parameter Reference for Ma
 keywords: MaxAlgorithmThreadCount, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/max-algorithm-thread-count.html
 ---
 
 

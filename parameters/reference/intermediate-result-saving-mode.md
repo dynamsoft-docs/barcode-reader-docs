@@ -5,6 +5,7 @@ description: This page shows Dynamsoft Barcode Reader Parameter Reference for In
 keywords: IntermediateResultSavingMode, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/intermediate-result-saving-mode.html
 ---
 
 
