@@ -54,8 +54,6 @@ needAutoGenerateSidebar: false
 
 <a href="{{site.faq_js}}check-current-version.html" target="_blank">How to check the version of the JavaScript SDK I am currently using?</a>
 
-<a href="{{site.faq_js}}unable-to-scan-aztec-code.html" target="_blank">Why am I unable to scan an Aztec code in the helloworld sample?</a>
-
 <a href="{{site.faq_js}}stop-camera-to-open-right-away.html" target="_blank">How to stop the camera stream from opening right away after DBR JS demo is loaded? How can you enable the camera on the click of a button?</a>
 
 <a href="{{site.faq_js}}difference-between-barcodeReader-and-barcodeScanner.html" target="_blank">What is the difference between the BarcodeReader class and the BarcodeScanner class? Can they be used interchangeably?</a>
