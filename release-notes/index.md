@@ -12,6 +12,7 @@ permalink: /release-notes/index.html
 ## 9.2
 
 > First released: 06-07-2022
+
 ### Highlights
 
 {%- include release-notes/product-highlight-9.2.0.md -%}
