@@ -21,7 +21,7 @@ jobs:
       - name: clear space
         run: |
           cd /home/ubuntu 
-          [ -d DBRDocCore ] && rm -rf DBRDocCore
+          [ -d DBRDocCoreFull ] && rm -rf DBRDocCoreFull
           [ -d barcode-reader-docs ] && rm -rf barcode-reader-docs 
           [ -d Docs-Template-Repo-Preview2 ] && rm -rf Docs-Template-Repo-Preview2
           cd /home/ubuntu
@@ -29,15 +29,15 @@ jobs:
       - name: Build the full site - main
         run: |
           cd /home/ubuntu
-          mkdir -p DBRDocCore
+          mkdir -p DBRDocCoreFull
           [ ! -d barcode-reader-docs ] && git clone --depth 1 https://github.com/dynamsoft-docs/barcode-reader-docs.git barcode-reader-docs
           [ ! -d Docs-Template-Repo-Preview2 ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview2
-          cd barcode-reader-docs && git pull && cd .. && cp -rfp ./barcode-reader-docs/* ./DBRDocCore/
-          cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DBRDocCore/
+          cd barcode-reader-docs && git pull && cd .. && cp -rfp ./barcode-reader-docs/* ./DBRDocCoreFull/
+          cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DBRDocCoreFull/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
-          -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DBRDocCore/_config.yml
-          cd DBRDocCore && bundle exec jekyll build
-          python3 /home/ubuntu/ftp.py /home/ubuntu/DBRDocCore/_site/ ./www.dynamsoft.com/barcode-reader/docs/core/ prod
+          -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DBRDocCoreFull/_config.yml
+          cd DBRDocCoreFull && bundle exec jekyll build
+          python3 /home/ubuntu/ftp.py /home/ubuntu/DBRDocCoreFull/_site/ ./www.dynamsoft.com/barcode-reader/docs/core/ prod
          
   Build-Preview:
     if: ${{ github.ref == 'refs/heads/preview' }}
@@ -50,7 +50,7 @@ jobs:
       - name: clear space
         run: |
           cd /home/ubuntu 
-          [ -d DBRDocCore-preview ] && rm -rf DBRDocCore-preview
+          [ -d DBRDocCoreFull-preview ] && rm -rf DBRDocCoreFull-preview
           [ -d barcode-reader-docs-preview ] && rm -rf barcode-reader-docs-preview 
           [ -d Docs-Template-Repo-Preview2 ] && rm -rf Docs-Template-Repo-Preview2
           cd /home/ubuntu
@@ -58,14 +58,14 @@ jobs:
       - name: Build the full site - preview
         run: |
           cd /home/ubuntu
-          mkdir -p DBRDocCore-preview
+          mkdir -p DBRDocCoreFull-preview
           [ ! -d barcode-reader-docs-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/barcode-reader-docs.git barcode-reader-docs-preview
           [ ! -d Docs-Template-Repo-Preview2 ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview2
-          cd barcode-reader-docs-preview && git pull && cd .. && cp -rfp ./barcode-reader-docs-preview/* ./DBRDocCore-preview/
-          cd Docs-Template-Repo-Preview2 && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview2/* ./DBRDocCore-preview/
+          cd barcode-reader-docs-preview && git pull && cd .. && cp -rfp ./barcode-reader-docs-preview/* ./DBRDocCoreFull-preview/
+          cd Docs-Template-Repo-Preview2 && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview2/* ./DBRDocCoreFull-preview/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
-          -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DBRDocCore-preview/_config.yml
-          cd DBRDocCore-preview && bundle exec jekyll build
+          -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DBRDocCoreFull-preview/_config.yml
+          cd DBRDocCoreFull-preview && bundle exec jekyll build
 
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
@@ -74,5 +74,5 @@ jobs:
           username: ${{ secrets.FTP_TEST_SITE_USER }}
           password: ${{ secrets.FTP_TEST_SITE_PASSWORD }}
           port: 7500 
-          local-dir: /home/ubuntu/DBRDocCore-preview/_site/
+          local-dir: /home/ubuntu/DBRDocCoreFull-preview/_site/
           server-dir: /www.dynamsoft.com/barcode-reader/docs/core/
