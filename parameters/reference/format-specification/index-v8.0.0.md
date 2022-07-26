@@ -5,6 +5,7 @@ description: This page shows Dynamsoft Barcode Reader Parameter Reference - Form
 keywords: parameter reference, parameters, FormatSpecification
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+permalink: /parameters/reference/format-specification/index-v8.0.0.html
 ---
 
 
