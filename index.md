@@ -19,6 +19,8 @@ DEVELOPMENT
 * Mobile
   * [Android]({{ site.android }})
   * [iOS]({{ site.oc }})
+  * <a href="https://www.dynamsoft.com/capture-vision/docs/programming/react-native/?ver=latest" target="_blank">React Native</a>
+  * <a href="https://www.dynamsoft.com/capture-vision/docs/programming/flutter/?ver=latest" target="_blank">Flutter</a>
 * Server / Desktop
   * [Python]({{ site.python }})
   * [Java]({{ site.java }})
