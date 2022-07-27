@@ -111,7 +111,7 @@ Dynamsoft.DCP.CodeParser.license ='DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
 (async () => {
     try {
         let parser = await Dynamsoft.DCP.CodeParser.createInstance();
-        parser.setCodeFormat(Dynamsoft.DCP.EnumCodeFormat.CF_DL_AAMVA_ANSI);
+        parser.setCodeFormat(Dynamsoft.DCP.EnumCodeFormat.CF_DL_AAMVA);
         // Parses the raw data retrieved from the barcode
         let info = await parser.parseData(rawString);
         // Checks the readable information in the console

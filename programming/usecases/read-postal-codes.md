@@ -28,6 +28,16 @@ The following code snippet shows how to set the parameter via RuntimeSettings to
 >
 >1. 
 ```javascript
+const scanner = scanner || await Dynamsoft.DBR.BarcodeScanner.createInstance();
+let settings = await scanner.getRuntimeSettings();
+// Sets barcode formats to read Postal Code.
+settings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_NULL;
+settings.barcodeFormatIds_2 = Dynamsoft.DBR.EnumBarcodeFormat_2.BF2_POSTALCODE;
+await scanner.updateRuntimeSettings(settings);
+scanner.onUniqueRead = (txt, result) => {
+    rawString = txt;
+};
+await scanner.show();
 ```
 >2. 
 ```c
