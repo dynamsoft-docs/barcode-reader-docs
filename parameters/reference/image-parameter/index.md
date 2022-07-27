@@ -8,7 +8,6 @@ needGenerateH3Content: false
 permalink: /parameters/reference/image-parameter/index.html
 ---
 
-
 # ImageParameter Object Parameters
 
 ## Content Organization Control
