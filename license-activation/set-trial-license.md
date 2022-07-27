@@ -13,11 +13,11 @@ permalink: /license-activation/set-trial-license.html
 The following shows how you can apply for a 30-day free trial license.
 
 - Login to [Customer Portal](https://www.dynamsoft.com/customer/index?utm_source=docs&product=dbr), register for a Dynamsoft account if you haven't already done so;
-- Go to the [Trial License](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs&product=dbr) page, select the correct product and click "Register for a 30-Day Trial";
+- Go to the [License | Trial License](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs&product=dbr) page, select the correct version and package/edition, then click "Register for a 30-Day Trial";
 - A 30-day private-trial license will be generated and the instruction on how to use it will show up on the page.
 
 > NOTE
->  
+>
 > In case the trial license fails to be generated, Dynamsoft Support team will get in touch with you. Or you can [contact us](https://www.dynamsoft.com/company/contact/).
 
 The following shows how to set the license in the code
@@ -35,8 +35,8 @@ The following shows how to set the license in the code
 >
 >1. 
 ```javascript
-Dynamsoft.DBR.BarcodeReader.license = "YOUR-LICENSE-KEY";
-let scanner = await Dynamsoft.DBR.BarcodeReader.createInstance();
+Dynamsoft.DBR.BarcodeScanner.license = "YOUR-LICENSE-KEY";
+let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 ```
 2. 
 ```c
