@@ -17,9 +17,9 @@ permalink: /programming/features/read-video-streaming-js.html
 <!DOCTYPE html>
 <html>
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.2/dist/dbr.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.2.11/dist/dbr.js"></script>
     <script>
-        // Specifies a license, you can visit https://www.dynamsoft.com/customer/license/trialLicense?ver=9.0.2&utm_source=guide&product=dbr&package=js to get your own trial license good for 30 days. 
+        // Specifies a license, you can visit https://www.dynamsoft.com/customer/license/trialLicense?ver=9.2.11&utm_source=guide&product=dbr&package=js to get your own trial license good for 30 days. 
         Dynamsoft.DBR.BarcodeScanner.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
         // Initializes and uses the library
         (async () => {

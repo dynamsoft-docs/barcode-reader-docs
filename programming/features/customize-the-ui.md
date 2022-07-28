@@ -53,7 +53,7 @@ We'll start with the following code which shows the video stream in a plain vide
 </head>
 
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.0.2/dist/dbr.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.2.11/dist/dbr.js"></script>
     <div id="UIElement">
         <div id="div-ui-container" style="width:100%;height:100%;position:relative;">
             <div class="dce-video-container" style="position:absolute;width:100%;height:100%;"></div>
