@@ -66,6 +66,25 @@ If the image to be processed is more complicated, you can use the above image pr
 >
 >1. 
 ```javascript
+// Obtains the current runtime settings of DBR.
+let rs = await scanner.getRuntimeSettings();
+// Sets the preprocessing modes
+rs.furtherModes.imagePreprocessingModes[0] = Dynamsoft.DBR.EnumImagePreprocessingMode.IPM_GRAY_EQUALIZE;
+rs.furtherModes.imagePreprocessingModes[1] = Dynamsoft.DBR.EnumImagePreprocessingMode.IPM_GRAY_SMOOTH;
+rs.furtherModes.imagePreprocessingModes[2] = Dynamsoft.DBR.EnumImagePreprocessingMode.IPM_SHARPEN_SMOOTH;
+rs.furtherModes.imagePreprocessingModes[3] = Dynamsoft.DBR.EnumImagePreprocessingMode.IPM_MORPHOLOGY;
+// Updates the settings.
+await scanner.updateRuntimeSettings(rs);
+// Fine-tunes some arguments of these modes
+scanner.setModeArgument("imagePreprocessingModes", 0, "Sensitivity", "9");
+scanner.setModeArgument("imagePreprocessingModes", 1, "SmoothBlockSizeX", "10");
+scanner.setModeArgument("imagePreprocessingModes", 1, "SmoothBlockSizeY", "10");
+scanner.setModeArgument("imagePreprocessingModes", 2, "SharpenBlockSizeX", "5");
+scanner.setModeArgument("imagePreprocessingModes", 2, "SharpenBlockSizeY", "5");
+scanner.setModeArgument("imagePreprocessingModes", 3, "MorphOperation", "Close");
+scanner.setModeArgument("imagePreprocessingModes", 3, "MorphOperationKernelSizeX", "7");
+scanner.setModeArgument("imagePreprocessingModes", 3, "MorphOperationKernelSizeY", "7");
+await scanner.show();
 ```
 2. 
 ```c
@@ -274,6 +293,12 @@ text_results = dbr.decode_file("YOUR-IMAGE-FILE-PATH")
 >
 >1. 
 ```javascript
+const scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+// Defines settings for the preprocessing in a template.
+let jsonString = "{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\",\"ImagePreprocessingModes\": [{\"Mode\": \"IPM_GRAY_EQUALIZE\",\"Sensitivity\": 9},{\"Mode\": \"IPM_GRAY_SMOOTH\",\"SmoothBlockSizeX\": 10,\"SmoothBlockSizeY\": 10},{\"Mode\": \"IPM_SHARPEN_SMOOTH\",\"SharpenBlockSizeX\": 5,\"SharpenBlockSizeY\": 5},{\"Mode\": \"IPM_MORPHOLOGY\",\"MorphOperation\": \"Close\",\"MorphOperationKernelSizeX\": 7,\"MorphOperationKernelSizeY\": 7}]}}";
+// Configures the BarcodeScanner object with the settings.
+await scanner.initRuntimeSettingsWithString(jsonString);
+scanner.show();
 ```
 2. 
 ```c

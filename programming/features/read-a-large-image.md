@@ -32,14 +32,14 @@ In some cases, the captured image is very large, so DBR may require more memory 
    >
 >
 ```javascript
-let reader =await Dynamsoft.DBR.BarcodeReader.createInstance();
+let scanner =await Dynamsoft.DBR.BarcodeScanner.createInstance();
 // Obtains the current runtime settings of DBR.
-let rs = await reader.getRuntimeSettings();
+let rs = await scanner.getRuntimeSettings();
 // Sets the threshold for scaling down.
 rs.scaleDownThreshold = 2000;
 // Updates the settings.
-await reader.updateRuntimeSettings(rs);
-await reader.show();
+await scanner.updateRuntimeSettings(rs);
+await scanner.show();
 ```
 >
 ```java
