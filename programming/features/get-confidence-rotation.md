@@ -53,6 +53,21 @@ The following code snippet shows how to get the conficence and rotation angle of
 >
 >1. 
 ```javascript
+(async() => {
+    let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+    // Obtains the current runtime settings of DBR.
+    let rs = await scanner.getRuntimeSettings();
+    // Sets timeout to 1000 milliseconds.
+    rs.timeout = 1000;
+    // Updates the settings.
+    await scanner.updateRuntimeSettings(rs);
+    scanner.onUniqueRead = (txt, result) => {
+        let conficence = result.results[0].confidence;
+        let angle = result.localizationResult.angle;
+        alert(txt);
+    };
+    await scanner.show();
+})();
 ```
 >2. 
 ```c
