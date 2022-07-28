@@ -14,7 +14,7 @@ Dynamsoft Barcode Reader (DBR) enables you to embed barcode reading capabilities
 
 ## Supported Barcode Formats
 
-As of version 9.0, DBR supports the following barcode formats:  
+Dynamsoft Barcode Reader supports the following barcode formats:  
 
 | 1D/Linear Barcodes       | 2D Barcodes         | GS1 DataBar             | Postal Codes          | Other Types        |
 |--------------------------|---------------------|-------------------------| --------------------- | ------------------ |
@@ -46,7 +46,7 @@ As of version 9.0, DBR supports the following barcode formats:
 
 ## Next Step
 
-Choose the programming language you use to build your application and learn how to use DBR to add barcode reading capabilities:
+Choose the programming language you use to build your application and learn how to use Dynamsoft Barcode Reader to add barcode reading capabilities:
 
 ### Web
 
