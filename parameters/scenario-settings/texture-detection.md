@@ -4,6 +4,7 @@ description: This article introduces the relevant parameters of texture detectio
 title: How to deal with image textures
 keywords: texture detection
 needAutoGenerateSidebar: false
+permalink: /parameters/scenario-settings/texture-detection.html
 ---
 
 # How to deal with image textures

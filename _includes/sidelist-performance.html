@@ -1,10 +1,8 @@
-<li><a>Performance</a>
+<li><a href="{{ site.performance }}" class="otherLinkColour">Performance</a>
     <ul>
         <li><a href="{{ site.performance }}accuracy.html" class="otherLinkColour">Accuracy</a></li>
         <li><a href="{{ site.performance }}read-rate.html" class="otherLinkColour">Read Rate</a></li>
         <li><a href="{{ site.performance }}speed.html" class="otherLinkColour">Speed</a></li>
-        {%- comment -%}
-        <li><a href="{{ site.performance }}flexibility-extensibility.html" class="otherLinkColour">Flexibility-Extensibility</a></li>
-        {%- endcomment -%}
+        {%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath targetRelativePath="introduction-comparison-tools.html" -%}
     </ul>
 </li>

@@ -5,11 +5,12 @@ description: This page shows how to set full license of Dynamsoft Barcode Reader
 keywords: full license, licensing
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /license-activation/set-full-license-8.html
 ---
 
 # How to set full license in version 8.x
 
-Different methods are used for setting trial and full license keys. In our demo or sample applications, we use `.InitLicense()` or `.ProductKeys` to set trial license keys. 
+Different methods are used for setting trial and full license keys. In our demo or sample applications, we use `.InitLicense()` or `.ProductKeys` to set trial license keys.
 
 For the purchased version, you need to use `initLicenseFromDLS()` to set the Handshake Codes for your licenses.
 

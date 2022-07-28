@@ -4,6 +4,7 @@ description: This article introduces how to recognize accompanying text.
 title: How to recognize accompanying text
 keywords: accompanyingText, OCR
 needAutoGenerateSidebar: false
+permalink: /parameters/scenario-settings/recognise-accompanying-text.html
 ---
 
 # How to recognize accompanying text

@@ -4,6 +4,7 @@ title: The pdf file has 10 pages but only the last page has a barcode. Is it pos
 keywords: Dynamsoft Barcode Reader, FAQ, DBR Introduction, scan specific page
 description: The pdf file has 10 pages but only the last page has a barcode. Is it possible to decode the last page only?
 needAutoGenerateSidebar: false
+permalink: /faq/general/scan-specific-page.html
 ---
 
 # FAQ - General

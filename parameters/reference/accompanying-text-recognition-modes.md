@@ -5,6 +5,7 @@ description: This page shows Dynamsoft Barcode Reader Parameter Reference for Im
 keywords: AccompanyingTextRecognitionModes, ImageParameter, image process control parameters, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/accompanying-text-recognition-modes.html
 ---
 
 # ImageParameter Object - Image Process Control Parameters

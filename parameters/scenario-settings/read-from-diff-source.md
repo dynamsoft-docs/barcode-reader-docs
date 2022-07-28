@@ -4,13 +4,14 @@ title: How to read images from different sources
 description: This article introduces how to read images from different sources, including read from file, read from memory and read from video stream
 keywords: file memory video stream
 needAutoGenerateSidebar: false
+permalink: /parameters/scenario-settings/read-from-diff-source.html
 ---
 
 # How to read images from different sources 
 The DBR algorithm provides multiple ways to read images from different sources. This article will introduce the following methods. 
-1. [Read from File](#Read from File)
-2. [Read from Memory](#Read from Memory)
-3. [Read from Video stream ](#Read from Video stream )
+1. [Read from File](#read-from-file)
+2. [Read from Memory](#read-from-memory)
+3. [Read from Video stream ](#read-from-video-stream)
 
 ## Read from File
 For image files, DBR provides the following two APIs.

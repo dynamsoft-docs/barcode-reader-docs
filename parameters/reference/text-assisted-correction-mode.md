@@ -5,6 +5,7 @@ description: This page shows Dynamsoft Barcode Reader Parameter Reference for Im
 keywords: TextAssistedCorrectionMode, ImageParameter, image process control parameters, parameter reference, parameter 
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/text-assisted-correction-mode.html
 ---
 
 # TextAssistedCorrectionMode  

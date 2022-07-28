@@ -4,6 +4,7 @@ title: How does your SDK compare to other commercial SDKs?
 keywords: Dynamsoft Barcode Reader, FAQ, Other, comparison 
 description: How does your SDK compare to other commercial SDKs?
 needAutoGenerateSidebar: false
+permalink: /faq/general/competitors-comparison.html
 ---
 
 # FAQ - General

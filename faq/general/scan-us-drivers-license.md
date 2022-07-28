@@ -4,6 +4,7 @@ title: How to scan barcodes on US Driver's Licenses and get the first name, last
 keywords: Dynamsoft Barcode Reader, FAQ, DBR Introduction, US driver's license
 description: How to scan barcodes on US Driver's Licenses and get the first name, last name, BOD, etc?
 needAutoGenerateSidebar: false
+permalink: /faq/general/scan-us-drivers-license.html
 ---
 
 # FAQ - General

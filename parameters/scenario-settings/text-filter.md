@@ -4,6 +4,7 @@ description: This article describes how to filter irrelevant text in the image t
 title: How to filter text in an image
 keywords: text filter
 needAutoGenerateSidebar: false
+permalink: /parameters/scenario-settings/text-filter.html
 ---
 
 # How to filter text in an image

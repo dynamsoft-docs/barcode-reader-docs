@@ -29,7 +29,7 @@ Resists deformation using the general algorithm. This mode has the following arg
 Lets the library choose a mode automatically. Not supported yet.
 
 
-    
+
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
@@ -94,19 +94,16 @@ delete pSettings;
 ## Impacts on Performance
 ### Speed
 The SDK will loop the setting modes one by one until find as many barcodes as `ExpectedBarcodesCount` specified or timeout. The more modes you set, the more time the process may take. Setting an appropriate mode first in order or setting only necessary modes may speed up the process.
-
 ### Read Rate
 Setting more modes along with different arguments may improve the Read Rate. 
-
 ### Accuracy
 `DeformationResistingModes` has no influence on the Accuracy.
-
 -->
 ## Candidate Argument List
 - [Level](#level)
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)
- 
+
 ### Level 
 Sets the effort level used for deformation resisting. Not supported yet.
 
@@ -116,7 +113,7 @@ Sets the effort level used for deformation resisting. Not supported yet.
 
 **Performance Adaptability**        
 A larger value may improve the Read Rate but slowdown the Speed. 
-    
+
 
 ### LibraryFileName 
 Sets the file name of the library to load dynamically.

@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader How-to Guides - Test Batch Scan Performance
 description: This page shows how to test batch scan performance.
 keywords: test batch, scan performance, how-to guides
 needAutoGenerateSidebar: false
+permalink: /introduction/how-to-guide/test-batch-scan-performance.html
 ---
 
 

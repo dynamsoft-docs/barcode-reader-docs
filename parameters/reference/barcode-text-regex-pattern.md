@@ -5,6 +5,7 @@ description: This page shows Dynamsoft Barcode Reader Parameter Reference for Ba
 keywords: BarcodeTextRegExPattern, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/barcode-text-regex-pattern.html
 ---
 
 

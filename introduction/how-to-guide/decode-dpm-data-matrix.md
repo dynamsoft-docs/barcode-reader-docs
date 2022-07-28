@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader How-to Guides - Decode DPM Data Matrix
 description: This page shows how to decode DPM Data Matrix.
 keywords: dmp, decode, how-to guides
 needAutoGenerateSidebar: false
+permalink: /introduction/how-to-guide/decode-dpm-data-matrix.html
 ---
 
 # How-to Guides - Decode DPM Data Matrix   

@@ -4,6 +4,7 @@ description: This article describes how to configure the FormatSpecification par
 title: Format Specification
 keywords: nonstandard barcode, specification
 needAutoGenerateSidebar: false
+permalink: /parameters/scenario-settings/format-specification.html
 ---
 
 # Barcode format specification
@@ -27,23 +28,23 @@ If you want to configure parameters for a certain barcode type, you can use the 
 
 -  [HeadModuleRati,TailModuleRatio](#HeadModuleRatio,TailModuleRatio)
 
-    Species the number and size of customized bars at the head and tail of non-standard 1D barcode
+    Specifies the number and size of customized bars at the head and tail of non-standard 1D barcode
 
 -  [StandardFormat](#StandardFormat)
 
-    Species a standard barcode format for non-standard 1D character set
+    Specifies a standard barcode format for non-standard 1D character set
 
 -  [AustralianPostEncodingTable](#AustralianPostEncodingTable)
 
-    Species the decoding table used by the Customer Information Field in the AustralianPost Code 
+    Specifies the decoding table used by the Customer Information Field in the AustralianPost Code 
 
 -  [MinQuietZoneWidth](#MinQuietZoneWidth)
 
-    Species the minimum width of the barcode quite zone
+    Specifies the minimum width of the barcode quite zone
 
 -  [ModuleSizeRangeArray](#ModuleSizeRangeArray)
 
-    Species the size range of the module size to search for barcode
+    Specifies the size range of the module size to search for barcode
 
 -  [Others](#Others)
 

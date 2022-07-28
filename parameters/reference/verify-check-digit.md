@@ -3,6 +3,7 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Parameter Reference for VerifyCheckDigit
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for VerifyCheckDigit.
 keywords: VerifyCheckDigit, parameter reference, parameter
+permalink: /parameters/reference/verify-check-digit.html
 ---
 
 

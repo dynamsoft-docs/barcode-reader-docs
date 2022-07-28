@@ -5,6 +5,7 @@ description: This article shows other Enumerations of Dynamsoft Barcode Reader.
 keywords: DM_ChargeWay, DM_DeploymentType, DM_LicenseModule, DM_UUIDGenerationMethod, ImagePixelFormat, QRCodeErrorCorrectionLevel, other enumeration, enumeration
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+permalink: /parameters/enum/other-enums-v8.9.3.html
 ---
 
 

@@ -5,6 +5,7 @@ description: This page shows Dynamsoft Barcode Reader Parameter Reference for Bi
 keywords: BinarizationModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/binarization-modes.html
 ---
 
 
@@ -13,7 +14,6 @@ needGenerateH3Content: true
 This parameter helps control the process of binarization, i.e., converting grayscale image to binary image. A better binary image helps a lot for barcode reading. During the binarization, as we know, the threshold is the key criteria. If the pixel value is smaller than the threshold, it is set to 0, otherwise, it is set to a maximum value (255 in the library). By default, the library automatically calculates the adaptive size of the neighbourhood area and then binarizes the grayscale image with the adaptive threshold based on a small neighbourhood area with an adaptive size around it. Assume this field is in your wheelhouse, this parameter may help specify the appropriate settings for getting a better binary image.
 
 It consists of one or more modes, each mode is a way to implement the binarization.
-
 
 ## Candidate Mode List
 - BM_LOCAL_BLOCK
@@ -29,22 +29,17 @@ Binarizes the image for each pixel based on a threshold which is calculated base
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)
 
-
-
 ### BM_THRESHOLD
 Binarizes the image for each pixel based on a unified threshold. If the gray value of the pixel is less than the threshold, it will be black in the binary image, otherwise it will be white. This mode has the following arguments for further customizing.
 - [ImagePreprocessingModesIndex](#imagepreprocessingmodesindex)
 - [BinarizationThreshold](#binarizationthreshold)
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)
-
-
     
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
 `BinarizationModes` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct, it is an array with 8 [`BinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) Enumeration items.
-
 
 **Code Snippet in C++**
 ```cpp
@@ -59,7 +54,6 @@ reader->SetModeArgument("BinarizationModes", 1, "BinarizationThreshold", "125");
 delete pSettings;
 //...other codes
 ```
-
 
 **Remarks**     
 `GetModeArgument` and `SetModeArgument` need to be called for getting and setting [`Arguments`](#candidate-argument-list).

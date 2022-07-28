@@ -5,6 +5,7 @@ description: This article enumerates the error codes of Dynamsoft Barcode Reader
 keywords: error code, enumeration
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /parameters/enum/error-code.html
 ---
 
 # Error Code

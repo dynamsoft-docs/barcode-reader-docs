@@ -4,6 +4,7 @@ title: What information is collected while registering and licensing a device an
 keywords: Dynamsoft Barcode Reader, FAQ, Pricing/Licensing, General, information gathered, hardware bind, new license consumption
 description: What information is collected while registering and licensing a device and how it is bind to the hardware information? What hardware change would cause a new license consumption?
 needAutoGenerateSidebar: false
+permalink: /faq/general/how-hardware-is-bind-to-license.html
 ---
 
 # FAQ - General
