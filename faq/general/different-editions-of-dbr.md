@@ -21,3 +21,5 @@ The edition of the SDK depends on the application environment/type, which is one
 - webapp (client-side): JavaScript edition
 
 > Note - It is important to note the difference the Windows/Linux edition and the JavaScript edition when it comes to web applications. The Windows/Linux edition can only operate on the server-side, so it cannot offer live video decoding, while the JavaScript edition can since it is client-side.
+
+[Back to FAQ index](index.md)

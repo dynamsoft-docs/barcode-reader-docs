@@ -22,3 +22,5 @@ This can indeed be done via the `Pages` parameter of the `ImageParameter` interf
 ```
 
 Once the JSON string is set, you can initialize the runtime settings to use it via the `InitRuntimeSettingsWithString` or `InitRuntimeSettingsWithFile` method. Please note that if you are modifying any other settings, you can include them in the JSON string/file as well, or you can access them individually after calling either of the aforementioned methods.
+
+[Back to FAQ index](index.md)

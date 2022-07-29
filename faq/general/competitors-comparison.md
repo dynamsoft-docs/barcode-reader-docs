@@ -45,3 +45,5 @@ If none of this has convinced you to choose Dynamsoft over other commercial SDKs
 The full breakdown of comparison between the SDKs can be found in this [article](https://www.dynamsoft.com/blog/insights/best-barcode-reader-sdks/) as well.
 
 If you still have some doubts over what our SDK can do compared to other SDKs, or if it can satisfy your usage scenario, then please feel free to contact the [Dynamsoft Support Team](https://www.dynamsoft.com/company/contact/).
+
+[Back to FAQ index](index.md)

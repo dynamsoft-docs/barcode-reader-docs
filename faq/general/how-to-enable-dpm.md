@@ -18,3 +18,5 @@ await settings = await scanner.getRuntimeSettings();
 settings.furtherModes.dpmCodeReadingModes[0] = Dynamsoft.DBR.EnumDPMCodeReadingMode.DPMCRM_GENERAL;
 await scanner.updateRuntimeSettings(settings);
 ```
+
+[Back to FAQ index](index.md)
