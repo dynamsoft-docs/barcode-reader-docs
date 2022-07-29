@@ -52,6 +52,19 @@ Here we take QR Code as example and show how to get the version and model of a Q
 >
 >1. 
 ```javascript
+(async() => {
+    let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+    scanner.onUniqueRead = (txt, result) => {
+        // Gets detailed information about QR codes.
+        if(result.barcodeFormat == Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE) {
+            let QRCodeDetails = result.detailedResult;
+            let model = QRCodeDetails.model;
+            let version = QRCodeDetails.version;
+            let moduleSize = QRCodeDetails.moduleSize;
+        }
+    };
+    await scanner.show();
+})();
 ```
 >2. 
 ```c

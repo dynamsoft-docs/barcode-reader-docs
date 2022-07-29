@@ -10,7 +10,7 @@ permalink: /programming/features/filter-and-sort.html
 
 # How to Filter and Sort Barcode Results
 
-Dynamsoft Barcode Reader SDK is able to read multiple barcodes at once and return results of all the decoded barcodes. However, you may not want all the results. For example, you may need only the results of a specific barcode format, or you may need only the barcodes with a certain text string. The SDK provides following parameters to help you filter the barcode results by barcode format, confidence, etc and order the results by confidence, position or format.
+Dynamsoft Barcode Reader SDK is able to read multiple barcodes at once and return results of all the decoded barcodes. However, you may not want all the results. For example, you may need only the results of a specific barcode format, or you may need only the barcodes with a certain text string. The SDK provides the following parameters to help you filter the barcode results by barcode format, confidence, etc and order the results by confidence, position or format.
 
 - [BarcodeFormatIds]({{ site.parameters_reference }}barcode-format-ids.html) and [BarcodeFormatIds_2]({{ site.parameters_reference }}barcode-format-ids-2.html)
 - [BarcodeAngleRangeArray]({{ site.parameters_reference }}barcode-angle-range-array.html)
@@ -23,7 +23,7 @@ Dynamsoft Barcode Reader SDK is able to read multiple barcodes at once and retur
 - [ModuleSizeRangeArray]({{ site.parameters_reference }}module-size-range-array.html)
 - [TextResultOrderModes]({{ site.parameters_reference }}text-result-order-modes.html)
 
-Here is an example setting containing all these parameters:
+Here is an example template containing all these parameters:
 
 ```json
 {
@@ -99,6 +99,12 @@ These parameters can work both individually and in combination. Here we will sho
 >
 >1. 
 ```javascript
+const scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+// Defines the template for the filtering & sorting
+let jsonString = "{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP_FilterBarcode\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"TextResultOrderModes\":[{\"Mode\":\"TROM_POSITION\"}], \"FormatSpecificationNameArray\": [\"FP_1\"]},\"FormatSpecification\":{\"Name\":\"FP_1\", \"MinResultConfidence\":50}}";
+// Configures the BarcodeScanner object with the settings.
+await scanner.initRuntimeSettingsWithString(jsonString);
+scanner.show();
 ```
 >2. 
 ```c

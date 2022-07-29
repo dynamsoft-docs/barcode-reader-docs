@@ -28,8 +28,27 @@ Here we will show how to save the binarized image to your file system and obtain
 >- Swift
 >- Python
 >
->1. 
+>1.
 ```javascript
+(async () => {
+    let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+    let rs = await scanner.getRuntimeSettings();
+    // Sets the intermediate results you want to check.
+    rs.intermediateResultTypes = Dynamsoft.DBR.EnumIntermediateResultType.IRT_ORIGINAL_IMAGE | Dynamsoft.DBR.EnumIntermediateResultType.IRT_BINARIZED_IMAGE;
+    await scanner.updateRuntimeSettings(rs);
+    scanner.onUniqueRead = async (txt, result) => {
+        try {
+            // Gets the intermediate results and show them on the page.
+            let cvss = await scanner.getIntermediateCanvas();
+            for (let cvs of cvss) {
+                document.body.appendChild(cvs);
+            }
+        } catch (ex) {
+            console.error(ex);
+        }
+    };
+    await scanner.show();
+})();
 ```
 >2. 
 ```c
