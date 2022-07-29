@@ -18,7 +18,7 @@ As shown below, barcodes on the surface of some flexible packaging or cylindrica
    <p>Deformed Barcodes</p>
 </div>
 
-By default, DBR may not handle such cases well. To get such images decoded, enable deformation resistance by adding `DRM_GENERAL` to [`DeformationResistingModes`]({{ site.parameters_reference }}deformation-resisting-modes.html) as shown in the code snippet below:
+By default, DBR may not handle such cases well. To get such images decoded, enable deformation resistance by adding `DRM_BROAD_WARP`, `DRM_LOCAL_REFERENCE` and `DRM_DEWRINKLE` to [`DeformationResistingModes`]({{ site.parameters_reference }}deformation-resisting-modes.html) as shown in the code snippet below:
 
 <div class="sample-code-prefix template2"></div>
    >- JavaScript
@@ -55,7 +55,7 @@ NSError* err = nil;
 // Obtain current runtime settings of `reader` instance.
 iPublicRuntimeSettings* settings = [reader getRuntimeSettings:&err];
 // Add DRM_GENERAL to the deformationResistingModes to decode deformed barcodes.
-settings.furtherModes.deformationResistingModes = @[@(EnumDeformationResistingModeGeneral)];
+settings.furtherModes.deformationResistingModes = @[@(EnumDeformationResistingModeBroadWarp),@(EnumDeformationResistingModeLocalReference),@(EnumDeformationResistingModeDewrinkle)];
 // Update the settings.
 [reader updateRuntimeSettings:settings error:&err];
 ```
@@ -64,7 +64,7 @@ settings.furtherModes.deformationResistingModes = @[@(EnumDeformationResistingMo
 // Obtain current runtime settings of `barcodeReader` instance.
 let settings = try? barcodeReader.getRuntimeSettings()
 // Add DRM_GENERAL to the deformationResistingModes to decode deformed barcodes.
-settings?.furtherModes.deformationResistingModes = [EnumDeformationResistingMode.general]
+settings?.furtherModes.deformationResistingModes = [EnumDeformationResistingMode.broadwarp,EnumDeformationResistingMode.localReference,EnumDeformationResistingMode.dewrinkle]
 // Update the settings.
 try? barcodeReader.updateRuntimeSettings(settings!)
 ```
@@ -128,7 +128,7 @@ reader.update_runtime_settings(settings)
 >
 > `DeformationResistingModes` only works for QR Code and DataMatrix codes.
 
-If the mode `DRM_GENERAL` doesn't work, try one of the following:
+You can either specify one of the `DeformationResistingModes` or add all of them. If mulpitle modes are specified, the library will switch between the modes automatically until the number of detected barcodes meets the `ExpectedBarcodeCount`.
 
 * `DRM_BROAD_WARP`: Resists deformation when the barcode is warped gently.
 * `DRM_LOCAL_REFERENCE`: Resists deformation for barcodes with minor deformation in local modules.
