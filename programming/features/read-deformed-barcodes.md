@@ -31,23 +31,26 @@ By default, DBR may not handle such cases well. To get such images decoded, enab
    >- Java
    >- Python
    >
->```javascript
+>
+```javascript
 // Obtains the current runtime settings of DBR.
 let settings = await scanner.getRuntimeSettings();
 // Adds DRM_GENERAL to deformationResistingModes.
-settings.furtherModes.deformationResistingModes = [Dynamsoft.DBR.EnumDeformationResistingMode.DRM_GENERAL];
+settings.furtherModes.deformationResistingModes = [Dynamsoft.DBR.EnumDeformationResistingMode.DRM_BROAD_WARP, Dynamsoft.DBR.EnumDeformationResistingMode.DRM_LOCAL_REFERENCE, Dynamsoft.DBR.EnumDeformationResistingMode.DRM_DEWRINKLE];
 // Updates the settings.
 await scanner.updateRuntimeSettings(settings);
 ```
->```java
+>
+```java
 // Obtain current runtime settings of `reader` instance.
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 // Add DRM_GENERAL to the deformationResistingModes to decode deformed barcodes.
-settings.furtherModes.deformationResistingModes = new int[]{EnumDeformationResistingMode.DRM_GENERAL};
+settings.furtherModes.deformationResistingModes = new int[]{EnumDeformationResistingMode.DRM_BROAD_WARP, EnumDeformationResistingMode.DRM_LOCAL_REFERENCE，EnumDeformationResistingMode.DRM_DEWRINKLE};
 // Update the settings.
 reader.updateRuntimeSettings(settings);
 ```
->```objc
+>
+```objc
 NSError* err = nil;
 // Obtain current runtime settings of `reader` instance.
 iPublicRuntimeSettings* settings = [reader getRuntimeSettings:&err];
@@ -56,7 +59,8 @@ settings.furtherModes.deformationResistingModes = @[@(EnumDeformationResistingMo
 // Update the settings.
 [reader updateRuntimeSettings:settings error:&err];
 ```
->```swift
+>
+```swift
 // Obtain current runtime settings of `barcodeReader` instance.
 let settings = try? barcodeReader.getRuntimeSettings()
 // Add DRM_GENERAL to the deformationResistingModes to decode deformed barcodes.
@@ -64,13 +68,16 @@ settings?.furtherModes.deformationResistingModes = [EnumDeformationResistingMode
 // Update the settings.
 try? barcodeReader.updateRuntimeSettings(settings!)
 ```
->```c
+>
+```c
 PublicRuntimeSettings settings;
 char szErrorMsg[256] = {0};
 // Obtain current runtime settings of `reader` instance.
 DBR_GetRuntimeSettings(reader, &settings);
 // Add DRM_GENERAL to the deformationResistingModes to decode deformed barcodes.
-settings.furtherModes.deformationResistingModes[0] = DRM_GENERAL;
+settings.furtherModes.deformationResistingModes[0] = DRM_BROAD_WARP;
+settings.furtherModes.deformationResistingModes[1] = DRM_LOCAL_REFERENCE;
+settings.furtherModes.deformationResistingModes[2] = DRM_DEWRINKLE;
 // Update the settings.
 DBR_UpdateRuntimeSettings(reader, &settings, szErrorMsg, 256);
 ```
@@ -80,7 +87,9 @@ char szErrorMsg[256] = {0};
 // Obtain current runtime settings of `reader` instance.
 reader.GetRuntimeSettings(&settings);
 // Add DRM_GENERAL to the deformationResistingModes to decode deformed barcodes.
-settings.furtherModes.deformationResistingModes[0] = DRM_GENERAL;
+settings.furtherModes.deformationResistingModes[0] = DRM_BROAD_WARP;
+settings.furtherModes.deformationResistingModes[1] = DRM_LOCAL_REFERENCE;
+settings.furtherModes.deformationResistingModes[2] = DRM_DEWRINKLE;
 // Update the settings.
 reader.UpdateRuntimeSettings(&settings, szErrorMsg, 256);
 ```
@@ -88,23 +97,29 @@ reader.UpdateRuntimeSettings(&settings, szErrorMsg, 256);
 // Obtain current runtime settings of `reader` instance.
 PublicRuntimeSettings settings = reader.GetRuntimeSettings();
 // Add DRM_GENERAL to the deformationResistingModes to decode deformed barcodes.
-settings.FurtherModes.DeformationResistingModes[0] = DRM_GENERAL;
+settings.FurtherModes.DeformationResistingModes[0] = DRM_BROAD_WARP;
+settings.FurtherModes.DeformationResistingModes[1] = DRM_LOCAL_REFERENCE;
+settings.FurtherModes.DeformationResistingModes[2] = DRM_DEWRINKLE;
 // Update the settings.
 reader.UpdateRuntimeSettings(settings);
 ```
->```java
+>
+```java
 // Obtain current runtime settings of `reader` instance.
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 // Add DRM_GENERAL to the deformationResistingModes to decode deformed barcodes.
-settings.furtherModes.deformationResistingModes = new int[]{EnumDeformationResistingMode.DRM_GENERAL};
+settings.furtherModes.deformationResistingModes = new int[]{EnumDeformationResistingMode.DRM_BROAD_WARP, EnumDeformationResistingMode.DRM_LOCAL_REFERENCE，EnumDeformationResistingMode.DRM_DEWRINKLE};
 // Update the settings.
 reader.updateRuntimeSettings(settings);
 ```
->```python
+>
+```python
 # Obtain current runtime settings of `reader` instance.
 settings = reader.get_runtime_settings()
 # Add DRM_GENERAL to the deformationResistingModes to decode deformed barcodes.
-settings.further_modes.deformation_resisting_modes[0] = EnumDeformationResistingMode.DRM_GENERAL
+settings.further_modes.deformation_resisting_modes[0] = EnumDeformationResistingMode.DRM_BROAD_WARP
+settings.further_modes.deformation_resisting_modes[1] = EnumDeformationResistingMode.DRM_LOCAL_REFERENCE
+settings.further_modes.deformation_resisting_modes[2] = EnumDeformationResistingMode.DRM_DEWRINKLE
 # Update the settings.
 reader.update_runtime_settings(settings)
 ```
