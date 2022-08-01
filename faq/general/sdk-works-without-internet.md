@@ -18,3 +18,5 @@ The SDK can indeed be used without an internet connection. In order to use the S
 - In some exclusive cases, Dynamsoft offers licenses that don't require a connection to any network, such as the per server and per domain licenses. Please contact the [Dynamsoft support team](https://www.dynamsoft.com/company/contact/) for more info on those options.
 
 - Full details are explained here: [Dynamsoft Licensing FAQ](https://www.dynamsoft.com/license-server/docs/about/licensefaq.html?ver=latest#can-i-use-dynamsoft-sdks-in-an-environment-with-no-internet-connection)
+
+[Back to FAQ index](index.md)

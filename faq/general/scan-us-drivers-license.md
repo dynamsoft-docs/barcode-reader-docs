@@ -16,3 +16,5 @@ The SDK can indeed scan driver license barcodes and extract all the information 
 - [JavaScript edition (most popular use case)](https://github.com/Dynamsoft/dbr-browser-samples/blob/master/4.use-case/2.read-a-drivers-license.html)
 - [iOS sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/Usecase/ReadADriversLicenseSwift)
 - [Android sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Usecase/ReadADriversLicense)
+
+[Back to FAQ index](index.md)

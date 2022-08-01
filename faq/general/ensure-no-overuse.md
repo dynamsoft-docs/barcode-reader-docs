@@ -15,3 +15,5 @@ Sometimes a device might run into an error that says that "Instance count is ove
 
 - One way to avoid this error from occurring is to check the number of allowed instances (on the local machine rather than the total available on this license) using the [GetIdleInstancesCount](https://www.dynamsoft.com/barcode-reader/programming/dotnet/api-reference/BarcodeReader/license.html?ver=latest#getidleinstancescount) method. If the result of that method is over 0 then proceed with creating the DBR instance, and no if not.
 - If you would like for a single machine to be able to operate more than one instance, that can be defined using the [MaxConcurrentInstanceCount parameter](https://www.dynamsoft.com/barcode-reader/programming/dotnet/api-reference/class/DMDLSConnectionParameters.html?ver=latest#maxconcurrentinstancecount).
+
+[Back to FAQ index](index.md)
