@@ -7,7 +7,7 @@ needAutoGenerateSidebar: false
 permalink: /faq/general/index.html
 ---
 
-# FAQ - General
+# FAQ Index
 
 1. [What is Dynamsoft Barcode Reader SDK and what business needs can it meet?](what-is-dbr.md)
 
