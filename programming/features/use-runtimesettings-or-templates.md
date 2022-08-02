@@ -180,7 +180,7 @@ With a JSON template, you can make use of all the configuration options that DBR
 * `FormatSpecification`: Defines the configurations used for a particular barcode format.
 * `RegionDefinition`: Defines the configurations for a specific area of the image.
 
-> Read [Parameter Template Structure]({{ site.parameters }}structure-and-interfaces-of-parameters.md) to learn more about the structure of templates.
+> Read [Parameter Template Structure]({{ site.parameters }}structure-and-interfaces-of-parameters.html) to learn more about the structure of templates.
 
 To use a template, you can either use `InitRuntimeSettingsWithFile` to load a JSON file, or use `InitRuntimeSettingsWithString`/`initRuntimeSettingsWithString` to load a JSON string.
 
@@ -211,7 +211,7 @@ let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 // Stringify a template into a string.
 let template = JSON.stringify("A-JSON-Template");
 // Updates the settings with the string.
-await scanner.initRuntimeSettingsWithString(b);
+await scanner.initRuntimeSettingsWithString(template);
 ```
 >
 ```java
