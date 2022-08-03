@@ -46,8 +46,6 @@ jobs:
       - name: Build the site
         run: |
           cd /home/ubuntu
-          [ -d DBRDocCoreFull ] && rm -rf DBRDocCoreFull 
-          [ -d Docs-Template-Repo-Preview2 ] && rm -rf Docs-Template-Repo-Preview2
           [ ! -d DBRDocCore-preview ] && mkdir -p DBRDocCore-preview
           [ ! -d barcode-reader-docs-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/barcode-reader-docs.git barcode-reader-docs-preview
           [ ! -d Docs-Template-Repo-Preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview
