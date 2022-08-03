@@ -82,7 +82,7 @@ NSError* err = nil;
 // Obtain current runtime settings of `reader` instance.
 iPublicRuntimeSettings* settings = [reader getRuntimeSettings:&err];
 // Set a binarization mode
-settings.scaleUpModes = @[@(EnumBinarizationModeLocalBlock)];
+settings.binarizationModes = @[@(EnumBinarizationModeLocalBlock)];
 // Update the settings.
 [reader updateRuntimeSettings:settings error:&err];
 // Fine-tune some arguments of the first mode in `binarizationModes`
@@ -96,7 +96,7 @@ settings.scaleUpModes = @[@(EnumBinarizationModeLocalBlock)];
 // Obtain current runtime settings of `reader` instance.
 let settings = try? reader.getRuntimeSettings()
 // Set a binarization mode
-settings?.scaleUpModes = [EnumBinarizationMode.localBlock.rawValue]
+settings?.binarizationModes = [EnumBinarizationMode.localBlock.rawValue]
 // Update the settings.
 try? reader.updateRuntimeSettings(settings!)
 // Fine-tune some arguments of the first mode in `binarizationModes`
@@ -107,16 +107,87 @@ try? reader.setModeArgument("binarizationModes", index: 0, argumentName: "Thresh
 ```
 >
 ```python
+error = BarcodeReader.init_license("YOUR-LICENSE-KEY")
+if error[0] != EnumErrorCode.DBR_OK:
+    print(error[1])
+dbr = BarcodeReader()
+settings = dbr.get_runtime_settings()
+settings.binarization_modes[0] = EnumBinarizationMode.BM_LOCAL_BLOCK
+dbr.update_runtime_settings(settings)
+dbr.set_mode_argument("BinarizationModes", 0, "BlockSizeX", "0")
+dbr.set_mode_argument("BinarizationModes", 0, "BlockSizeY", "0")
+dbr.set_mode_argument("BinarizationModes", 0, "ThresholdCompensation", "10")
+text_results = dbr.decode_file("YOUR-IMAGE-FILE-PATH")
+# Add further process
 ```
 >
 ```java
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
+PublicRuntimeSettings settings = reader.getRuntimeSettings(); //Get the current RuntimeSettings
+settings.binarizationModes[0] = EnumBinarizationMode.BM_LOCAL_BLOCK;
+reader.updateRuntimeSettings(settings); // Update RuntimeSettings with above setting
+reader.setModeArgument("BinarizationModes", 0, "BlockSizeX", "0");
+reader.setModeArgument("BinarizationModes", 0, "BlockSizeY", "0");
+reader.setModeArgument("BinarizationModes", 0, "ThresholdCompensation", "10");
+TextResult[] result = reader.decodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
+// Add further process
 ```
 >
-```c#
+```csharp
+string errorMsg;
+EnumErrorCode iRet = BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
+if (iRet != EnumErrorCode.DBR_SUCCESS)
+{
+    Console.WriteLine(errorMsg);
+}
+BarcodeReader reader = new BarcodeReader();
+PublicRuntimeSettings settings = reader.GetRuntimeSettings(); //Get the current RuntimeSettings
+settings.BinarizationModes[0] = EnumBinarizationMode.BM_LOCAL_BLOCK;
+reader.UpdateRuntimeSettings(settings); // Update RuntimeSettings with above setting
+reader.SetModeArgument("BinarizationModes", 0, "BlockSizeX", "0", out errorMsg);
+reader.SetModeArgument("BinarizationModes", 0, "BlockSizeY", "0", out errorMsg);
+reader.SetModeArgument("BinarizationModes", 0, "ThresholdCompensation", "10", out errorMsg);
+TextResult[] result = reader.DecodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
+// Add further process
 ```
 >
-```c++
+```cpp
+char errorBuf[512];
+int iRet = -1;
+iRet = dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+if (iRet != DBR_OK)
+{
+    cout << errorBuf << endl;
+}
+CBarcodeReader* reader = new CBarcodeReader();
+PublicRuntimeSettings* runtimeSettings = new PublicRuntimeSettings();
+reader->GetRuntimeSettings(runtimeSettings); //Get the current RuntimeSettings
+runtimeSettings->binarizationModes[0] = BM_LOCAL_BLOCK;
+reader->UpdateRuntimeSettings(runtimeSettings, errorBuf, 512); // Update RuntimeSettings with above setting
+reader->SetModeArgument("BinarizationModes", 0, "BlockSizeX", "0", sError, 512);
+reader->SetModeArgument("BinarizationModes", 0, "BlockSizeY", "0", sError, 512);
+reader->SetModeArgument("BinarizationModes", 0, "ThresholdCompensation", "10", sError, 512);
+reader->DecodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
+// Add further process
 ```
 >
 ```c
+int iRet = -1;
+char errorBuf[512];
+iRet = DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+if (iRet != DBR_OK)
+{
+    printf("%s\n", errorBuf);
+}
+void* barcodeReader = DBR_CreateInstance();
+PublicRuntimeSettings runtimeSettings;
+DBR_GetRuntimeSettings(barcodeReader, &runtimeSettings); //Get the current RuntimeSettings
+runtimeSettings.binarizationModes[0] = BM_LOCAL_BLOCK;
+DBR_UpdateRuntimeSettings(barcodeReader, &runtimeSettings, errorBuf, 512); // Update RuntimeSettings with above setting
+DBR_SetModeArgument(barcodeReader, "BinarizationModes", 0, "BlockSizeX", "0", sError, 512);
+DBR_SetModeArgument(barcodeReader, "BinarizationModes", 0, "BlockSizeY", "0", sError, 512);
+DBR_SetModeArgument(barcodeReader, "BinarizationModes", 0, "ThresholdCompensation", "10", sError, 512);
+DBR_DecodeFile(barcodeReader, "YOUR-IMAGE-FILE-PATH", ""); // Start decoding
+// Add further process
 ```
