@@ -86,7 +86,7 @@ Here is an example template containing all these parameters:
 
 These parameters can work both individually and in combination. Here we will show how to filter out QR Code results with confidence greater than 50 and then order the results by position.
 
-<div class="sample-code-prefix"></div>
+<div class="sample-code-prefix template2"></div>
 >- JavaScript
 >- C
 >- C++

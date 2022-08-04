@@ -17,7 +17,7 @@ Apart from getting the results like barcode type, value, location, Dynamsoft Bar
 
 Here we will show how to save the binarized image to your file system and obtain the localized barcode zone in memory:
 
-<div class="sample-code-prefix"></div>
+<div class="sample-code-prefix template2"></div>
    >- JavaScript
    >- Android
    >- Objective-C

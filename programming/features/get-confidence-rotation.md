@@ -40,7 +40,7 @@ The following illustrations will show how the angle is calculated for different 
 
 The following code snippet shows how to get the conficence and rotation angle of the barcode result:
 
-<div class="sample-code-prefix"></div>
+<div class="sample-code-prefix template2"></div>
 >- JavaScript
 >- C
 >- C++

@@ -53,7 +53,7 @@ If the image to be processed is more complicated, you can use the above image pr
 
 - Using RuntimeSetting
 
-<div class="sample-code-prefix"></div>
+<div class="sample-code-prefix template2"></div>
 >- JavaScript
 >- C
 >- C++
@@ -280,7 +280,7 @@ text_results = dbr.decode_file("YOUR-IMAGE-FILE-PATH")
 
 - Using a JSON template
 
-<div class="sample-code-prefix"></div>
+<div class="sample-code-prefix template2"></div>
 >- JavaScript
 >- C
 >- C++

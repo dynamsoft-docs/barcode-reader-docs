@@ -39,7 +39,7 @@ Here we take QR Code as example and show how to get the version and model of a Q
 
 ## Code Snippet for Getting Detailed Barcode Information
 
-<div class="sample-code-prefix"></div>
+<div class="sample-code-prefix template2"></div>
 >- JavaScript
 >- C
 >- C++

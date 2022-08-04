@@ -15,7 +15,7 @@ permalink: /programming/usecases/read-postal-codes.html
 
 The following code snippet shows how to set the parameter via RuntimeSettings to read Postal code.
 
-<div class="sample-code-prefix"></div>
+<div class="sample-code-prefix template2"></div>
 >- JavaScript
 >- C
 >- C++
