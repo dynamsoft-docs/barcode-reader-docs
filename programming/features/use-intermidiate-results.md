@@ -18,16 +18,16 @@ Apart from getting the results like barcode type, value, location, Dynamsoft Bar
 Here we will show how to save the binarized image to your file system and obtain the localized barcode zone in memory:
 
 <div class="sample-code-prefix"></div>
->- JavaScript
->- C
->- C++
->- C#
->- Java
->- Android
->- Objective-C
->- Swift
->- Python
->
+   >- JavaScript
+   >- Android
+   >- Objective-C
+   >- Swift
+   >- Python
+   >- Java
+   >- C#
+   >- C++
+   >- C
+   >
 >
 ```javascript
 (async () => {
@@ -49,147 +49,6 @@ Here we will show how to save the binarized image to your file system and obtain
     };
     await scanner.show();
 })();
-```
->
-```c
-int iRet = -1;
-char errorBuf[512];
-iRet = DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
-if (iRet != DBR_OK)
-{
-    printf("%s\n", errorBuf);
-}
-void* reader = DBR_CreateInstance();
-PublicRuntimeSettings runtimeSettings;
-DBR_GetRuntimeSettings(reader, &runtimeSettings);
-// Set binarized image and localized barcode zone of the intermediate result types to be saved
-runtimeSettings.intermediateResultTypes = IRT_BINARIZED_IMAGE | IRT_TYPED_BARCODE_ZONE;
-// Save intermediate result to both file system and memory
-runtimeSettings.intermediateResultSavingMode = IRSM_BOTH;
-// Update RuntimeSettings with above settings
-DBR_UpdateRuntimeSettings(reader, &runtimeSettings, errorBuf, 512);
-// Set the folder path which stores the intermediate result. Please make sure you have write permission to this folder.
-DBR_SetModeArgument(reader, "IntermediateResultSavingMode", 0, "FolderPath", "YOUR-SAVING-PATH", errorBuf, 512);
-DBR_DecodeFile(reader, "YOUR-IMAGE-FILE-PATH", "");
-// After decoding, the binarized image can be found at "YOUR-SAVING-PATH"
-// Here we will get the localized barcode zone in memory
-IntermediateResultArray* pResults = NULL;
-DBR_GetIntermediateResults(reader, &pResults); // Get all the intermediate results
-int iCount = pResults->resultsCount;
-for (int i = 0; i < iCount; i++) //Loop all intermediate results
-{
-    // Here we only process the localized barcode zone
-    if (pResults->results[i]->dataType == IMRDT_LOCALIZATIONRESULT)
-    {
-        LocalizationResult* localization = (LocalizationResult*)pResults->results[i]->results[0];
-        printf("confidence: %d\n", localization->confidence);
-        // Use more information in localization
-    }
-}
-// Add further process
-```
->
-```cpp
-char errorBuf[512];
-int iRet = -1;
-iRet = dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
-if (iRet != DBR_OK)
-{
-    cout << errorBuf << endl;
-}
-CBarcodeReader* reader = new CBarcodeReader();
-PublicRuntimeSettings runtimeSettings;
-reader->GetRuntimeSettings(&runtimeSettings);
-// Set binarized image and localized barcode zone of the intermediate result types to be saved
-runtimeSettings.intermediateResultTypes = IRT_BINARIZED_IMAGE | IRT_TYPED_BARCODE_ZONE;
-// Save intermediate result to both file system and memory
-runtimeSettings.intermediateResultSavingMode = IRSM_BOTH;
-// Update RuntimeSettings with above settings
-reader->UpdateRuntimeSettings(&runtimeSettings, errorBuf, 512);
-// Set the folder path which stores the intermediate result. Please make sure you have write permission to this folder.
-reader->SetModeArgument("IntermediateResultSavingMode", 0, "FolderPath", "YOUR-SAVING-PATH", errorBuf, 512);
-reader->DecodeFile("YOUR-IMAGE-FILE-PATH", "");
-// After decoding, the binarized image can be found at "YOUR-SAVING-PATH"
-// Here we will get the localized barcode zone in memory
-IntermediateResultArray* pResults = NULL;
-reader->GetIntermediateResults(&pResults); // Get all the intermediate results
-int iCount = pResults->resultsCount;
-for (int i = 0; i < iCount; i++) //Loop all intermediate results
-{
-    // Here we only process the localized barcode zone
-    if (pResults->results[i]->dataType == IMRDT_LOCALIZATIONRESULT)
-    {
-        LocalizationResult* localization = (LocalizationResult*)pResults->results[i]->results[0];
-        cout << "confidence: " << localization->confidence << endl;
-        // Use more information in localization
-    }
-}
-// Add further process
-```
->
-```csharp
-string errorMsg;
-EnumErrorCode iRet = BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
-if (iRet != EnumErrorCode.DBR_SUCCESS)
-{
-    Console.WriteLine(errorMsg);
-}
-BarcodeReader reader = new BarcodeReader();
-PublicRuntimeSettings settings = reader.GetRuntimeSettings();
-// Set binarized image and localized barcode zone of the intermediate result types to be saved
-settings.IntermediateResultTypes = (int)(EnumIntermediateResultType.IRT_BINARIZED_IMAGE | EnumIntermediateResultType.IRT_TYPED_BARCODE_ZONE);
-// Save intermediate result to both file system and memory
-settings.IntermediateResultSavingMode = EnumIntermediateResultSavingMode.IRSM_BOTH;
-// Update RuntimeSettings with above settings
-reader.UpdateRuntimeSettings(settings);
-// Set the folder path which stores the intermediate result. Please make sure you have write permission to this folder.
-reader.SetModeArgument("IntermediateResultSavingMode", 0, "FolderPath", "YOUR-SAVING-PATH", out errorMsg);
-reader.DecodeFile("YOUR-IMAGE-FILE-PATH", "");
-// After decoding, the binarized image can be found at "YOUR-SAVING-PATH"
-// Here we will get the localized barcode zone in memory
-IntermediateResult[] intermediateResults = reader.GetIntermediateResults(); // Get all the intermediate results
-foreach (IntermediateResult ir in intermediateResults) //Loop all intermediate results
-{
-    // Here we only process the localized barcode zone
-    if (ir.DataType == EnumIMResultDataType.IMRDT_LOCALIZATIONRESULT)
-    {
-        LocalizationResult localization = (LocalizationResult)ir.Results[0];
-        Console.WriteLine("confidence: " + localization.Confidence);
-        // Use more information in localization
-    }
-}
-// Add further process
-```
->
-```java
-BarcodeReader.initLicense("YOUR-LICENSE-KEY");
-BarcodeReader reader = new BarcodeReader();
-PublicRuntimeSettings settings = reader.getRuntimeSettings();
-// Set binarized image and localized barcode zone of the intermediate result types to be saved
-settings.intermediateResultTypes = EnumIntermediateResultType.IRT_BINARIZED_IMAGE | EnumIntermediateResultType.IRT_TYPED_BARCODE_ZONE;
-// Save intermediate result to both file system and memory
-settings.intermediateResultSavingMode = EnumIntermediateResultSavingMode.IRSM_BOTH;
-// Update RuntimeSettings with above settings
-reader.updateRuntimeSettings(settings);
-// Set the folder path which stores the intermediate result. Please make sure you have write permission to this folder.
-reader.setModeArgument("IntermediateResultSavingMode", 0, "FolderPath", "YOUR-SAVING-PATH");
-reader.decodeFile("YOUR-IMAGE-FILE-PATH", "");
-// After decoding, the binarized image can be found at "YOUR-SAVING-PATH"
-// Here we will get the localized barcode zone in memory
-IntermediateResult[] intermediateResults = reader.getIntermediateResults(); // Get all the intermediate results
-int iCount = intermediateResults.length;
-for (int i = 0; i < iCount; i++) //Loop all intermediate results
-{
-    IntermediateResult ir =intermediateResults[i];
-    // Here we only process the localized barcode zone
-    if (ir.dataType == EnumIMResultDataType.IMRESULT_LOCALIZATIONRESULT)
-    {
-        LocalizationResult localization = (LocalizationResult)ir.results[0];
-        System.out.println("confidence: " + localization.confidence);
-        // Use more information in localization
-    }
-}
-// Add further process
 ```
 >
 ```java
@@ -304,4 +163,145 @@ for intermediateResult in intermediateResults:
         print(localization.confidence)
         # Use more information in localization
 # Add further process
+```
+>
+```java
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
+PublicRuntimeSettings settings = reader.getRuntimeSettings();
+// Set binarized image and localized barcode zone of the intermediate result types to be saved
+settings.intermediateResultTypes = EnumIntermediateResultType.IRT_BINARIZED_IMAGE | EnumIntermediateResultType.IRT_TYPED_BARCODE_ZONE;
+// Save intermediate result to both file system and memory
+settings.intermediateResultSavingMode = EnumIntermediateResultSavingMode.IRSM_BOTH;
+// Update RuntimeSettings with above settings
+reader.updateRuntimeSettings(settings);
+// Set the folder path which stores the intermediate result. Please make sure you have write permission to this folder.
+reader.setModeArgument("IntermediateResultSavingMode", 0, "FolderPath", "YOUR-SAVING-PATH");
+reader.decodeFile("YOUR-IMAGE-FILE-PATH", "");
+// After decoding, the binarized image can be found at "YOUR-SAVING-PATH"
+// Here we will get the localized barcode zone in memory
+IntermediateResult[] intermediateResults = reader.getIntermediateResults(); // Get all the intermediate results
+int iCount = intermediateResults.length;
+for (int i = 0; i < iCount; i++) //Loop all intermediate results
+{
+    IntermediateResult ir =intermediateResults[i];
+    // Here we only process the localized barcode zone
+    if (ir.dataType == EnumIMResultDataType.IMRESULT_LOCALIZATIONRESULT)
+    {
+        LocalizationResult localization = (LocalizationResult)ir.results[0];
+        System.out.println("confidence: " + localization.confidence);
+        // Use more information in localization
+    }
+}
+// Add further process
+```
+>
+```csharp
+string errorMsg;
+EnumErrorCode iRet = BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
+if (iRet != EnumErrorCode.DBR_SUCCESS)
+{
+    Console.WriteLine(errorMsg);
+}
+BarcodeReader reader = new BarcodeReader();
+PublicRuntimeSettings settings = reader.GetRuntimeSettings();
+// Set binarized image and localized barcode zone of the intermediate result types to be saved
+settings.IntermediateResultTypes = (int)(EnumIntermediateResultType.IRT_BINARIZED_IMAGE | EnumIntermediateResultType.IRT_TYPED_BARCODE_ZONE);
+// Save intermediate result to both file system and memory
+settings.IntermediateResultSavingMode = EnumIntermediateResultSavingMode.IRSM_BOTH;
+// Update RuntimeSettings with above settings
+reader.UpdateRuntimeSettings(settings);
+// Set the folder path which stores the intermediate result. Please make sure you have write permission to this folder.
+reader.SetModeArgument("IntermediateResultSavingMode", 0, "FolderPath", "YOUR-SAVING-PATH", out errorMsg);
+reader.DecodeFile("YOUR-IMAGE-FILE-PATH", "");
+// After decoding, the binarized image can be found at "YOUR-SAVING-PATH"
+// Here we will get the localized barcode zone in memory
+IntermediateResult[] intermediateResults = reader.GetIntermediateResults(); // Get all the intermediate results
+foreach (IntermediateResult ir in intermediateResults) //Loop all intermediate results
+{
+    // Here we only process the localized barcode zone
+    if (ir.DataType == EnumIMResultDataType.IMRDT_LOCALIZATIONRESULT)
+    {
+        LocalizationResult localization = (LocalizationResult)ir.Results[0];
+        Console.WriteLine("confidence: " + localization.Confidence);
+        // Use more information in localization
+    }
+}
+// Add further process
+```
+>
+```cpp
+char errorBuf[512];
+int iRet = -1;
+iRet = dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+if (iRet != DBR_OK)
+{
+    cout << errorBuf << endl;
+}
+CBarcodeReader* reader = new CBarcodeReader();
+PublicRuntimeSettings runtimeSettings;
+reader->GetRuntimeSettings(&runtimeSettings);
+// Set binarized image and localized barcode zone of the intermediate result types to be saved
+runtimeSettings.intermediateResultTypes = IRT_BINARIZED_IMAGE | IRT_TYPED_BARCODE_ZONE;
+// Save intermediate result to both file system and memory
+runtimeSettings.intermediateResultSavingMode = IRSM_BOTH;
+// Update RuntimeSettings with above settings
+reader->UpdateRuntimeSettings(&runtimeSettings, errorBuf, 512);
+// Set the folder path which stores the intermediate result. Please make sure you have write permission to this folder.
+reader->SetModeArgument("IntermediateResultSavingMode", 0, "FolderPath", "YOUR-SAVING-PATH", errorBuf, 512);
+reader->DecodeFile("YOUR-IMAGE-FILE-PATH", "");
+// After decoding, the binarized image can be found at "YOUR-SAVING-PATH"
+// Here we will get the localized barcode zone in memory
+IntermediateResultArray* pResults = NULL;
+reader->GetIntermediateResults(&pResults); // Get all the intermediate results
+int iCount = pResults->resultsCount;
+for (int i = 0; i < iCount; i++) //Loop all intermediate results
+{
+    // Here we only process the localized barcode zone
+    if (pResults->results[i]->dataType == IMRDT_LOCALIZATIONRESULT)
+    {
+        LocalizationResult* localization = (LocalizationResult*)pResults->results[i]->results[0];
+        cout << "confidence: " << localization->confidence << endl;
+        // Use more information in localization
+    }
+}
+// Add further process
+```
+>
+```c
+int iRet = -1;
+char errorBuf[512];
+iRet = DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+if (iRet != DBR_OK)
+{
+    printf("%s\n", errorBuf);
+}
+void* reader = DBR_CreateInstance();
+PublicRuntimeSettings runtimeSettings;
+DBR_GetRuntimeSettings(reader, &runtimeSettings);
+// Set binarized image and localized barcode zone of the intermediate result types to be saved
+runtimeSettings.intermediateResultTypes = IRT_BINARIZED_IMAGE | IRT_TYPED_BARCODE_ZONE;
+// Save intermediate result to both file system and memory
+runtimeSettings.intermediateResultSavingMode = IRSM_BOTH;
+// Update RuntimeSettings with above settings
+DBR_UpdateRuntimeSettings(reader, &runtimeSettings, errorBuf, 512);
+// Set the folder path which stores the intermediate result. Please make sure you have write permission to this folder.
+DBR_SetModeArgument(reader, "IntermediateResultSavingMode", 0, "FolderPath", "YOUR-SAVING-PATH", errorBuf, 512);
+DBR_DecodeFile(reader, "YOUR-IMAGE-FILE-PATH", "");
+// After decoding, the binarized image can be found at "YOUR-SAVING-PATH"
+// Here we will get the localized barcode zone in memory
+IntermediateResultArray* pResults = NULL;
+DBR_GetIntermediateResults(reader, &pResults); // Get all the intermediate results
+int iCount = pResults->resultsCount;
+for (int i = 0; i < iCount; i++) //Loop all intermediate results
+{
+    // Here we only process the localized barcode zone
+    if (pResults->results[i]->dataType == IMRDT_LOCALIZATIONRESULT)
+    {
+        LocalizationResult* localization = (LocalizationResult*)pResults->results[i]->results[0];
+        printf("confidence: %d\n", localization->confidence);
+        // Use more information in localization
+    }
+}
+// Add further process
 ```
