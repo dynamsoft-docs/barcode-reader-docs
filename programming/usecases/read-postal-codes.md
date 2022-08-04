@@ -26,7 +26,7 @@ The following code snippet shows how to set the parameter via RuntimeSettings to
 >- Swift
 >- Python
 >
->1. 
+>
 ```javascript
 const scanner = scanner || await Dynamsoft.DBR.BarcodeScanner.createInstance();
 let settings = await scanner.getRuntimeSettings();
@@ -39,7 +39,7 @@ scanner.onUniqueRead = (txt, result) => {
 };
 await scanner.show();
 ```
->2. 
+>
 ```c
 int iRet = -1;
 char errorBuf[512];
@@ -57,7 +57,7 @@ DBR_UpdateRuntimeSettings(barcodeReader, &runtimeSettings, errorBuf, 512); // Up
 DBR_DecodeFile(barcodeReader, "YOUR-IMAGE-FILE-WITH-POSTAL-CODES", ""); // Start decoding
 // Add further process
 ```
->3. 
+>
 ```cpp
 char errorBuf[512];
 int iRet = -1;
@@ -75,7 +75,7 @@ reader->UpdateRuntimeSettings(runtimeSettings, errorBuf, 512); // Update Runtime
 reader->DecodeFile("YOUR-IMAGE-FILE-WITH-POSTAL-CODES", ""); // Start decoding
 // Add further process
 ```
->4. 
+>
 ```csharp
 string errorMsg;
 EnumErrorCode iRet = BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
@@ -91,7 +91,7 @@ reader.UpdateRuntimeSettings(settings); // Update RuntimeSettings with above set
 TextResult[] result = reader.DecodeFile("YOUR-IMAGE-FILE-WITH-POSTAL-CODES", ""); // Start decoding
 // Add further process
 ```
->5. 
+>
 ```java
 BarcodeReader.initLicense("YOUR-LICENSE-KEY");
 BarcodeReader reader = new BarcodeReader();
@@ -102,7 +102,7 @@ reader.updateRuntimeSettings(settings); // Update RuntimeSettings with above set
 TextResult[] result = reader.decodeFile("YOUR-IMAGE-FILE-WITH-POSTAL-CODES", ""); // Start decoding
 // Add further process
 ```
->6. 
+>
 ```java
 BarcodeReader reader = new BarcodeReader();
 PublicRuntimeSettings settings = reader.getRuntimeSettings(); //Get the current RuntimeSettings
@@ -112,7 +112,7 @@ reader.updateRuntimeSettings(settings); // Update RuntimeSettings with above set
 TextResult[] result = reader.decodeFile("YOUR-IMAGE-FILE-WITH-POSTAL-CODES"); // Start decoding
 // Add further process
 ```
->7. 
+>
 ```objc
 NSError* err = nil;
 DynamsoftBarcodeReader *reader = [[DynamsoftBarcodeReader alloc] init];
@@ -123,7 +123,7 @@ settings.barcodeFormatIds_2 = EnumBarcodeFormat2POSTALCODE;
 NSArray<iTextResult*>* result = [reader decodeFileWithName:@"YOUR-IMAGE-FILE-WITH-POSTAL-CODES" error:&err]; // Start decoding
 // Add further process
 ```
->8. 
+>
 ```swift
 let reader = DynamsoftBarcodeReader()
 let settings = try? reader.getRuntimeSettings() //Get the current RuntimeSettings
@@ -133,7 +133,7 @@ try? reader.updateRuntimeSettings(settings) // Update RuntimeSettings with above
 let result = try? reader.decodeFileWithName("YOUR-IMAGE-FILE-WITH-POSTAL-CODES") // Start decoding
 // Add further process
 ```
->9. 
+>
 ```python
 error = BarcodeReader.init_license("YOUR-LICENSE-KEY")
 if error[0] != EnumErrorCode.DBR_OK:

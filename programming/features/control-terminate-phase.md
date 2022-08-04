@@ -155,22 +155,117 @@ try? reader.decodeFileWithName("YOUR-IMAGE-FILE-PATH")
 ```
 >
 ```python
-NOT SURE PYTHON
+error = BarcodeReader.init_license("YOUR-LICENSE-KEY")
+if error[0] != EnumErrorCode.DBR_OK:
+    print(error[1])
+dbr = BarcodeReader()
+settings = dbr.get_runtime_settings()
+# Sets the termination phase
+settings.terminate_phase = EnumTerminatePhase.TP_BARCODE_TYPE_DETERMINED
+# Set binarized image and localized barcode zone of the intermediate result types to be saved
+settings.intermediate_result_types = EnumIntermediateResultType.IRT_BINARIZED_IMAGE | EnumIntermediateResultType.IRT_TYPED_BARCODE_ZONE
+# Save intermediate result to both file system and memory
+settings.intermediate_result_saving_mode = EnumIntermediateResultSavingMode.IRSM_FILESYSTEM
+dbr.update_runtime_settings(settings)
+# Set the folder path which stores the intermediate result. Please make sure you have write permission to this folder.
+dbr.set_mode_argument("IntermediateResultSavingMode", 0, "FolderPath", "YOUR-SAVING-PATH")
+dbr.decode_file("YOUR-IMAGE-FILE-PATH")
+# After decoding, the intermediate results can be found at "YOUR-SAVING-PATH"
+# Add further process
 ```
 >
 ```java
-NOT SURE JAVA
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
+PublicRuntimeSettings settings = reader.getRuntimeSettings();
+// Sets the termination phase
+settings.terminatePhase = EnumTerminatePhase.TP_BARCODE_TYPE_DETERMINED;
+// Set binarized image and localized barcode zone of the intermediate result types to be saved
+settings.intermediateResultTypes = EnumIntermediateResultType.IRT_BINARIZED_IMAGE | EnumIntermediateResultType.IRT_TYPED_BARCODE_ZONE;
+// Save intermediate result to both file system and memory
+settings.intermediateResultSavingMode = EnumIntermediateResultSavingMode.IRSM_FILESYSTEM;
+// Update RuntimeSettings with above settings
+reader.updateRuntimeSettings(settings);
+// Set the folder path which stores the intermediate result. Please make sure you have write permission to this folder.
+reader.setModeArgument("IntermediateResultSavingMode", 0, "FolderPath", "YOUR-SAVING-PATH");
+reader.decodeFile("YOUR-IMAGE-FILE-PATH", "");
+// After decoding, the intermediate results can be found at "YOUR-SAVING-PATH"
+// Add further process
 ```
 >
-```c#
-NOT SURE C#
+```csharp
+string errorMsg;
+EnumErrorCode iRet = BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
+if (iRet != EnumErrorCode.DBR_SUCCESS)
+{
+    Console.WriteLine(errorMsg);
+}
+BarcodeReader reader = new BarcodeReader();
+PublicRuntimeSettings settings = reader.GetRuntimeSettings();
+// Sets the termination phase
+settings.TerminatePhase = EnumTerminatePhase.TP_BARCODE_TYPE_DETERMINED;
+// Set binarized image and localized barcode zone of the intermediate result types to be saved
+settings.IntermediateResultTypes = (int)(EnumIntermediateResultType.IRT_BINARIZED_IMAGE | EnumIntermediateResultType.IRT_TYPED_BARCODE_ZONE);
+// Save intermediate result to both file system and memory
+settings.IntermediateResultSavingMode = EnumIntermediateResultSavingMode.IRSM_FILESYSTEM;
+// Update RuntimeSettings with above settings
+reader.UpdateRuntimeSettings(settings);
+// Set the folder path which stores the intermediate result. Please make sure you have write permission to this folder.
+reader.SetModeArgument("IntermediateResultSavingMode", 0, "FolderPath", "YOUR-SAVING-PATH", out errorMsg);
+reader.DecodeFile("YOUR-IMAGE-FILE-PATH", "");
+// After decoding, the intermediate results can be found at "YOUR-SAVING-PATH"
+// Add further process
 ```
 >
-```c++
-NOT SURE C++
+```cpp
+char errorBuf[512];
+int iRet = -1;
+iRet = dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+if (iRet != DBR_OK)
+{
+    cout << errorBuf << endl;
+}
+CBarcodeReader* reader = new CBarcodeReader();
+PublicRuntimeSettings runtimeSettings;
+reader->GetRuntimeSettings(&runtimeSettings);
+// Sets the termination phase
+runtimeSettings.terminatePhase = TP_BARCODE_TYPE_DETERMINED;
+// Set binarized image and localized barcode zone of the intermediate result types to be saved
+runtimeSettings.intermediateResultTypes = IRT_BINARIZED_IMAGE | IRT_TYPED_BARCODE_ZONE;
+// Save intermediate result to both file system and memory
+runtimeSettings.intermediateResultSavingMode = IRSM_FILESYSTEM;
+// Update RuntimeSettings with above settings
+reader->UpdateRuntimeSettings(&runtimeSettings, errorBuf, 512);
+// Set the folder path which stores the intermediate result. Please make sure you have write permission to this folder.
+reader->SetModeArgument("IntermediateResultSavingMode", 0, "FolderPath", "YOUR-SAVING-PATH", errorBuf, 512);
+reader->DecodeFile("YOUR-IMAGE-FILE-PATH", "");
+// After decoding, the intermediate results can be found at "YOUR-SAVING-PATH"
+// Add further process
 ```
->```c
-NOT SURE C
+```c
+int iRet = -1;
+char errorBuf[512];
+iRet = DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+if (iRet != DBR_OK)
+{
+    printf("%s\n", errorBuf);
+}
+void* reader = DBR_CreateInstance();
+PublicRuntimeSettings runtimeSettings;
+DBR_GetRuntimeSettings(reader, &runtimeSettings);
+// Sets the termination phase
+runtimeSettings.terminatePhase = TP_BARCODE_TYPE_DETERMINED;
+// Set binarized image and localized barcode zone of the intermediate result types to be saved
+runtimeSettings.intermediateResultTypes = IRT_BINARIZED_IMAGE | IRT_TYPED_BARCODE_ZONE;
+// Save intermediate result to both file system and memory
+runtimeSettings.intermediateResultSavingMode = IRSM_FILESYSTEM;
+// Update RuntimeSettings with above settings
+DBR_UpdateRuntimeSettings(reader, &runtimeSettings, errorBuf, 512);
+// Set the folder path which stores the intermediate result. Please make sure you have write permission to this folder.
+DBR_SetModeArgument(reader, "IntermediateResultSavingMode", 0, "FolderPath", "YOUR-SAVING-PATH", errorBuf, 512);
+DBR_DecodeFile(reader, "YOUR-IMAGE-FILE-PATH", "");
+// After decoding, the intermediate results can be found at "YOUR-SAVING-PATH"
+// Add further process
 ```
 
 ### Timeout
@@ -245,32 +340,72 @@ try? reader.updateRuntimeSettings(rs!);
 ```
 >
 ```python
-NOT SURE PYTHON
+error = BarcodeReader.init_license("YOUR-LICENSE-KEY")
+if error[0] != EnumErrorCode.DBR_OK:
+    print(error[1])
+dbr = BarcodeReader()
+settings = dbr.get_runtime_settings()
+settings.timeout = 1000
+dbr.update_runtime_settings(settings)
+text_results = dbr.decode_file("YOUR-IMAGE-FILE-PATH")
+# Add further process
 ```
 >
 ```java
-NOT SURE JAVA
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
+PublicRuntimeSettings settings = reader.getRuntimeSettings(); //Get the current RuntimeSettings
+settings.timeout = 1000;
+reader.updateRuntimeSettings(settings); // Update RuntimeSettings with above setting
+TextResult[] result = reader.decodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
+// Add further process
 ```
 >
-```c#
-NOT SURE C#
+```csharp
+string errorMsg;
+EnumErrorCode iRet = BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
+if (iRet != EnumErrorCode.DBR_SUCCESS)
+{
+    Console.WriteLine(errorMsg);
+}
+BarcodeReader reader = new BarcodeReader();
+PublicRuntimeSettings settings = reader.GetRuntimeSettings(); //Get the current RuntimeSettings
+settings.Timeout = 1000;
+reader.UpdateRuntimeSettings(settings); // Update RuntimeSettings with above setting
+TextResult[] result = reader.DecodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
+// Add further process
 ```
 >
-```c++
-char sError[512];
-TextResultArray* paryResult = NULL;
-PublicRuntimeSettings* runtimeSettings = new PublicRuntimeSettings();
+```cpp
+char errorBuf[512];
+int iRet = -1;
+iRet = dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+if (iRet != DBR_OK)
+{
+    cout << errorBuf << endl;
+}
 CBarcodeReader* reader = new CBarcodeReader();
-reader->InitLicense("input your license");
-reader->GetRuntimeSettings(runtimeSettings); //Configure runtimesettings
-runtimeSettings->timeout = 1000; //set timeout
-reader->UpdateRuntimeSettings(runtimeSettings, sError, 512); //Update runtimesettings
-reader->DecodeFile("input your file path", ""); //Decoding  
-reader->GetAllTextResults(&paryResult); //Get results
-dynamsoft::dbr:: CBarcodeReader:: FreeTextResults(&paryResult);
-delete runtimeSettings;
-delete reader;
+PublicRuntimeSettings* runtimeSettings = new PublicRuntimeSettings();
+reader->GetRuntimeSettings(runtimeSettings); //Get the current RuntimeSettings
+runtimeSettings->timeout = 1000;
+reader->UpdateRuntimeSettings(runtimeSettings, errorBuf, 512); // Update RuntimeSettings with above setting
+reader->DecodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
+// Add further process
 ```
->```c
-NOT SURE C
+>
+```c
+int iRet = -1;
+char errorBuf[512];
+iRet = DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+if (iRet != DBR_OK)
+{
+    printf("%s\n", errorBuf);
+}
+void* barcodeReader = DBR_CreateInstance();
+PublicRuntimeSettings runtimeSettings;
+DBR_GetRuntimeSettings(barcodeReader, &runtimeSettings); //Get the current RuntimeSettings
+runtimeSettings.timeout = 1000;
+DBR_UpdateRuntimeSettings(barcodeReader, &runtimeSettings, errorBuf, 512); // Update RuntimeSettings with above setting
+DBR_DecodeFile(barcodeReader, "YOUR-IMAGE-FILE-PATH", ""); // Start decoding
+// Add further process
 ```

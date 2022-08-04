@@ -17,6 +17,8 @@ faq_general: /barcode-reader/docs/core/faq/general/
 
 comparison_tools: /barcode-reader/docs/core/introduction/comparison-tools/
 
+structs: /barcode-reader/docs/server/programming/c-cplusplus/struct/
+
 c: /barcode-reader/docs/server/programming/c/
 c_api: /barcode-reader/docs/server/programming/c/api-reference/
 c_methods: /barcode-reader/docs/server/programming/c/api-reference/methods/

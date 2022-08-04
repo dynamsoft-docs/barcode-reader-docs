@@ -28,7 +28,7 @@ Here we will show how to save the binarized image to your file system and obtain
 >- Swift
 >- Python
 >
->1.
+>
 ```javascript
 (async () => {
     let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
@@ -50,7 +50,7 @@ Here we will show how to save the binarized image to your file system and obtain
     await scanner.show();
 })();
 ```
->2. 
+>
 ```c
 int iRet = -1;
 char errorBuf[512];
@@ -88,7 +88,7 @@ for (int i = 0; i < iCount; i++) //Loop all intermediate results
 }
 // Add further process
 ```
->3. 
+>
 ```cpp
 char errorBuf[512];
 int iRet = -1;
@@ -126,7 +126,7 @@ for (int i = 0; i < iCount; i++) //Loop all intermediate results
 }
 // Add further process
 ```
->4. 
+>
 ```csharp
 string errorMsg;
 EnumErrorCode iRet = BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
@@ -160,7 +160,7 @@ foreach (IntermediateResult ir in intermediateResults) //Loop all intermediate r
 }
 // Add further process
 ```
->5. 
+>
 ```java
 BarcodeReader.initLicense("YOUR-LICENSE-KEY");
 BarcodeReader reader = new BarcodeReader();
@@ -173,7 +173,7 @@ settings.intermediateResultSavingMode = EnumIntermediateResultSavingMode.IRSM_BO
 reader.updateRuntimeSettings(settings);
 // Set the folder path which stores the intermediate result. Please make sure you have write permission to this folder.
 reader.setModeArgument("IntermediateResultSavingMode", 0, "FolderPath", "YOUR-SAVING-PATH");
-reader.decodeFile("YOUR-IMAGE-FILE-WITH-DPM-CODES", "");
+reader.decodeFile("YOUR-IMAGE-FILE-PATH", "");
 // After decoding, the binarized image can be found at "YOUR-SAVING-PATH"
 // Here we will get the localized barcode zone in memory
 IntermediateResult[] intermediateResults = reader.getIntermediateResults(); // Get all the intermediate results
@@ -191,7 +191,7 @@ for (int i = 0; i < iCount; i++) //Loop all intermediate results
 }
 // Add further process
 ```
->6. 
+>
 ```java
 BarcodeReader.initLicense("YOUR-LICENSE-KEY");
 BarcodeReader reader = new BarcodeReader();
@@ -204,7 +204,7 @@ settings.intermediateResultSavingMode = EnumIntermediateResultSavingMode.IRSM_BO
 reader.updateRuntimeSettings(settings);
 // Set the folder path which stores the intermediate result. Please make sure you have write permission to this folder.
 reader.setModeArgument("IntermediateResultSavingMode", 0, "FolderPath", "YOUR-SAVING-PATH");
-reader.decodeFile("YOUR-IMAGE-FILE-WITH-DPM-CODES");
+reader.decodeFile("YOUR-IMAGE-FILE-PATH");
 // After decoding, the binarized image can be found at "YOUR-SAVING-PATH"
 // Here we will get the localized barcode zone in memory
 IntermediateResult[] intermediateResults = reader.getIntermediateResults(); // Get all the intermediate results
@@ -222,7 +222,7 @@ for (int i = 0; i < iCount; i++) //Loop all intermediate results
 }
 // Add further process
 ```
->7. 
+>
 ```objc
 NSError *err = nil;
 DynamsoftBarcodeReader* reader = [[DynamsoftBarcodeReader alloc] init];
@@ -252,7 +252,7 @@ for (iIntermediateResult* ir in intermediateResults) //Loop all intermediate res
 }
 // Add further process
 ```
->8. 
+>
 ```swift
 let reader = DynamsoftBarcodeReader()
 let settings = try? reader.getRuntimeSettings() //Get the current RuntimeSettings
@@ -278,7 +278,7 @@ for ir in intermediateResults! {
 }
 // Add further process
 ```
->9. 
+>
 ```python
 error = BarcodeReader.init_license("YOUR-LICENSE-KEY")
 if error[0] != EnumErrorCode.DBR_OK:

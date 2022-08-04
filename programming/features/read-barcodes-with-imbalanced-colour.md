@@ -107,16 +107,87 @@ try? reader.setModeArgument("colourConversionModes", index: 0, argumentName: "Bl
 ```
 >
 ```python
+error = BarcodeReader.init_license("YOUR-LICENSE-KEY")
+if error[0] != EnumErrorCode.DBR_OK:
+    print(error[1])
+dbr = BarcodeReader()
+settings = dbr.get_runtime_settings()
+settings.colour_conversion_modes[0] = EnumColourConversionMode.CICM_GENERAL
+dbr.update_runtime_settings(settings)
+dbr.set_mode_argument("ColourConversionModes", 0, "RedChannelWeight", "1000")
+dbr.set_mode_argument("ColourConversionModes", 0, "GreenChannelWeight", "0")
+dbr.set_mode_argument("ColourConversionModes", 0, "BlueChannelWeight", "0")
+text_results = dbr.decode_file("YOUR-IMAGE-FILE-PATH")
+# Add further process
 ```
 >
 ```java
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
+PublicRuntimeSettings settings = reader.getRuntimeSettings(); //Get the current RuntimeSettings
+settings.furtherModes.colourConversionModes[0] = EnumColourConversionMode.CICM_GENERAL;
+reader.updateRuntimeSettings(settings); // Update RuntimeSettings with above setting
+reader.setModeArgument("ColourConversionModes", 0, "RedChannelWeight", "1000");
+reader.setModeArgument("ColourConversionModes", 0, "GreenChannelWeight", "0");
+reader.setModeArgument("ColourConversionModes", 0, "BlueChannelWeight", "0");
+TextResult[] result = reader.decodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
+// Add further process
 ```
 >
 ```csharp
+string errorMsg;
+EnumErrorCode iRet = BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
+if (iRet != EnumErrorCode.DBR_SUCCESS)
+{
+    Console.WriteLine(errorMsg);
+}
+BarcodeReader reader = new BarcodeReader();
+PublicRuntimeSettings settings = reader.GetRuntimeSettings(); //Get the current RuntimeSettings
+settings.FurtherModes.ColourConversionModes[0] = EnumColourConversionMode.CICM_GENERAL;
+reader.UpdateRuntimeSettings(settings); // Update RuntimeSettings with above setting
+reader.SetModeArgument("ColourConversionModes", 0, "RedChannelWeight", "1000", out errorMsg);
+reader.SetModeArgument("ColourConversionModes", 0, "GreenChannelWeight", "0", out errorMsg);
+reader.SetModeArgument("ColourConversionModes", 0, "BlueChannelWeight", "0", out errorMsg);
+TextResult[] result = reader.DecodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
+// Add further process
 ```
 >
-```c++
+```cpp
+char errorBuf[512];
+int iRet = -1;
+iRet = dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+if (iRet != DBR_OK)
+{
+    cout << errorBuf << endl;
+}
+CBarcodeReader* reader = new CBarcodeReader();
+PublicRuntimeSettings* runtimeSettings = new PublicRuntimeSettings();
+reader->GetRuntimeSettings(runtimeSettings); //Get the current RuntimeSettings
+runtimeSettings->furtherModes.colourConversionModes[0] = CICM_GENERAL;
+reader->UpdateRuntimeSettings(runtimeSettings, errorBuf, 512); // Update RuntimeSettings with above setting
+reader->SetModeArgument("ColourConversionModes", 0, "RedChannelWeight", "1000", sError, 512);
+reader->SetModeArgument("ColourConversionModes", 0, "GreenChannelWeight", "0", sError, 512);
+reader->SetModeArgument("ColourConversionModes", 0, "BlueChannelWeight", "0", sError, 512);
+reader->DecodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
+// Add further process
 ```
 >
 ```c
+int iRet = -1;
+char errorBuf[512];
+iRet = DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+if (iRet != DBR_OK)
+{
+    printf("%s\n", errorBuf);
+}
+void* barcodeReader = DBR_CreateInstance();
+PublicRuntimeSettings runtimeSettings;
+DBR_GetRuntimeSettings(barcodeReader, &runtimeSettings); //Get the current RuntimeSettings
+runtimeSettings.furtherModes.colourConversionModes[0] = CICM_GENERAL;
+DBR_UpdateRuntimeSettings(barcodeReader, &runtimeSettings, errorBuf, 512); // Update RuntimeSettings with above setting
+DBR_SetModeArgument(barcodeReader, "ColourConversionModes", 0, "RedChannelWeight", "1000", sError, 512);
+DBR_SetModeArgument(barcodeReader, "ColourConversionModes", 0, "GreenChannelWeight", "0", sError, 512);
+DBR_SetModeArgument(barcodeReader, "ColourConversionModes", 0, "BlueChannelWeight", "0", sError, 512);
+DBR_DecodeFile(barcodeReader, "YOUR-IMAGE-FILE-PATH", ""); // Start decoding
+// Add further process
 ```

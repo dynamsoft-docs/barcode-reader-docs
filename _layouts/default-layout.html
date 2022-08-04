@@ -92,48 +92,7 @@
 
     <!-- for dbr -->
     <script type="text/javascript">
-        function getCookie(name) {
-            var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
-            return (arr = document.cookie.match(reg)) ? unescape(arr[2]) : null;
-        }
-
-
         $(document).ready(function() {
-            var download = getUrlParam('download');
-            if (download == 'true' && (getCookie('DynamsoftEmail') || getCookie('SourceServer') == '1')) {
-                var curHref = window.location.href.toLowerCase()
-                if (curHref.indexOf('/c/') > -1 || curHref.indexOf('/cplusplus/') > -1) {
-                    $('.editionName').html('C/C++');
-                    $('.downloadlink').attr('href', 'https://download2.dynamsoft.com/dbr/dbr-c_cpp-9.0.zip');
-                    $('.dbrThanksDownloading').show();
-                    $('.downloadlink')[0].click();
-                } else if (curHref.indexOf('/dotnet/') > -1) {
-                    $('.editionName').html('.NET');
-                    $('.downloadlink').attr('href', 'https://download2.dynamsoft.com/dbr/dbr-dotnet-9.0.zip');
-                    $('.dbrThanksDownloading').show();
-                    $('.downloadlink')[0].click();
-                } else if (curHref.indexOf('/java/') > -1) {
-                    $('.editionName').html('Java');
-                    $('.downloadlink').attr('href', 'https://download2.dynamsoft.com/dbr/dbr-java-9.0.zip');
-                    $('.dbrThanksDownloading').show();
-                    $('.downloadlink')[0].click();
-                } else if (curHref.indexOf('/javascript/') > -1) {
-                    $('.editionName').html('Javascript');
-                    $('.downloadlink').attr('href', 'https://download2.dynamsoft.com/dbr/dynamsoft-barcode-reader-js-9.2.12.zip');
-                    $('.dbrThanksDownloading').show();
-                    $('.downloadlink')[0].click();
-                } else if (curHref.indexOf('/android/') > -1) {
-                    $('.editionName').html('Android');
-                    $('.downloadlink').attr('href', 'https://download2.dynamsoft.com/dbr/dbr-android-9.0.1.zip');
-                    $('.dbrThanksDownloading').show();
-                    $('.downloadlink')[0].click();
-                } else if (curHref.indexOf('/objectivec-swift/') > -1) {
-                    $('.editionName').html('iOS');
-                    $('.downloadlink').attr('href', 'https://download2.dynamsoft.com/dbr/dbr-ios-9.0.1.zip');
-                    $('.dbrThanksDownloading').show();
-                    $('.downloadlink')[0].click();
-                }
-            }
 
             $('#txtSearch').keydown(function(e) {
                 if (e.keyCode == 13) {
