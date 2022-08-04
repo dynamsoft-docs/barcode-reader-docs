@@ -40,7 +40,7 @@ The following illustrations will show how the angle is calculated for different 
 
 The following code snippet shows how to get the conficence and rotation angle of the barcode result:
 
-<div class="sample-code-prefix"></div>
+<div class="sample-code-prefix template2"></div>
 >- JavaScript
 >- C
 >- C++
@@ -51,7 +51,7 @@ The following code snippet shows how to get the conficence and rotation angle of
 >- Swift
 >- Python
 >
->1. 
+>
 ```javascript
 (async() => {
     let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
@@ -63,7 +63,7 @@ The following code snippet shows how to get the conficence and rotation angle of
     await scanner.show();
 })();
 ```
->2. 
+>
 ```c
 int iRet = -1;
 char errorBuf[512];
@@ -85,7 +85,7 @@ for (int iIndex = 0; iIndex < paryResult->resultsCount; iIndex++)
 DBR_FreeTextResults(&paryResult);
 // Add further process
 ```
->3. 
+>
 ```cpp
 char errorBuf[512];
 int iRet = -1;
@@ -107,7 +107,7 @@ for (int iIndex = 0; iIndex < paryResult->resultsCount; iIndex++)
 CBarcodeReader::FreeTextResults(&paryResult);
 // Add further process
 ```
->4. 
+>
 ```csharp
 string errorMsg;
 EnumErrorCode iRet = BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
@@ -125,7 +125,7 @@ for (int iIndex = 0; iIndex < result.Length; iIndex++)
 }
 // Add further process
 ```
->5. 
+>
 ```java
 BarcodeReader.initLicense("YOUR-LICENSE-KEY");
 BarcodeReader reader = new BarcodeReader();
@@ -138,7 +138,7 @@ for (int iIndex = 0; iIndex < result.length; iIndex++)
 }
 // Add further process
 ```
->6. 
+>
 ```java
 BarcodeReader reader = new BarcodeReader();
 TextResult[] result = reader.decodeFile("YOUR-IMAGE-FILE-PATH"); // Start decoding
@@ -150,7 +150,7 @@ for (int iIndex = 0; iIndex < result.length; iIndex++)
 }
 // Add further process
 ```
->7. 
+>
 ```objc
 NSError *error = nil;
 DynamsoftBarcodeReader* reader = [[DynamsoftBarcodeReader alloc] init];
@@ -163,7 +163,7 @@ for (iTextResult* barcode in result)
 }
 // Add further process
 ```
->8. 
+>
 ```swift
 let reader = DynamsoftBarcodeReader()
 var result: [iTextResult]? = nil
@@ -178,7 +178,7 @@ for barcode in result ?? [] {
 }
 // Add further process
 ```
->9. 
+>
 ```python
 error = BarcodeReader.init_license("YOUR-LICENSE-KEY")
 if error[0] != EnumErrorCode.DBR_OK:

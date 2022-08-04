@@ -53,7 +53,7 @@ If the image to be processed is more complicated, you can use the above image pr
 
 - Using RuntimeSetting
 
-<div class="sample-code-prefix"></div>
+<div class="sample-code-prefix template2"></div>
 >- JavaScript
 >- C
 >- C++
@@ -64,7 +64,7 @@ If the image to be processed is more complicated, you can use the above image pr
 >- Swift
 >- Python
 >
->1. 
+>
 ```javascript
 // Obtains the current runtime settings of DBR.
 let rs = await scanner.getRuntimeSettings();
@@ -86,7 +86,7 @@ scanner.setModeArgument("imagePreprocessingModes", 3, "MorphOperationKernelSizeX
 scanner.setModeArgument("imagePreprocessingModes", 3, "MorphOperationKernelSizeY", "7");
 await scanner.show();
 ```
-2. 
+>
 ```c
 int iRet = -1;
 char errorBuf[512];
@@ -114,7 +114,7 @@ DBR_SetModeArgument(barcodeReader, "ImagePreprocessingModes", 3, "MorphOperation
 DBR_DecodeFile(barcodeReader, "YOUR-IMAGE-FILE-PATH", ""); // Start decoding
 // Add further process
 ```
-3. 
+>
 ```cpp
 char errorBuf[512];
 int iRet = -1;
@@ -142,7 +142,7 @@ reader->SetModeArgument("ImagePreprocessingModes", 3, "MorphOperationKernelSizeY
 reader->DecodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
 // Add further process
 ```
-4. 
+>
 ```csharp
 string errorMsg;
 EnumErrorCode iRet = BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
@@ -168,7 +168,7 @@ reader.SetModeArgument("ImagePreprocessingModes", 3, "MorphOperationKernelSizeY"
 TextResult[] result = reader.DecodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
 // Add further process
 ```
-5. 
+>
 ```java
 BarcodeReader.initLicense("YOUR-LICENSE-KEY");
 BarcodeReader reader = new BarcodeReader();
@@ -189,7 +189,7 @@ reader.setModeArgument("ImagePreprocessingModes", 3, "MorphOperationKernelSizeY"
 TextResult[] result = reader.decodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
 // Add further process
 ```
-6. 
+>
 ```java
 BarcodeReader.initLicense("YOUR-LICENSE-KEY");
 BarcodeReader reader = new BarcodeReader();
@@ -210,7 +210,7 @@ reader.setModeArgument("ImagePreprocessingModes", 3, "MorphOperationKernelSizeY"
 TextResult[] result = reader.decodeFile("YOUR-IMAGE-FILE-PATH"); // Start decoding
 // Add further process
 ```
-7. 
+>
 ```objc
 NSError *err = nil;
 DynamsoftBarcodeReader* reader = [[DynamsoftBarcodeReader alloc] init];
@@ -231,7 +231,7 @@ settings.furtherModes.imagePreprocessingModes[3] = EnumImagePreprocessingModeMor
 NSArray<iTextResult*>* result = [reader decodeFileWithName:@"YOUR-IMAGE-FILE-PATH" error:&err]; // Start decoding
 // Add further process
 ```
-8. 
+>
 ```swift
 let reader = DynamsoftBarcodeReader()
 let settings = try? reader.getRuntimeSettings() //Get the current RuntimeSettings
@@ -254,7 +254,7 @@ do {
 }
 // Add further process
 ```
-9. 
+>
 ```python
 error = BarcodeReader.init_license("YOUR-LICENSE-KEY")
 if error[0] != EnumErrorCode.DBR_OK:
@@ -280,7 +280,7 @@ text_results = dbr.decode_file("YOUR-IMAGE-FILE-PATH")
 
 - Using a JSON template
 
-<div class="sample-code-prefix"></div>
+<div class="sample-code-prefix template2"></div>
 >- JavaScript
 >- C
 >- C++
@@ -291,7 +291,7 @@ text_results = dbr.decode_file("YOUR-IMAGE-FILE-PATH")
 >- Swift
 >- Python
 >
->1. 
+>
 ```javascript
 const scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 // Defines settings for the preprocessing in a template.
@@ -300,7 +300,7 @@ let jsonString = "{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\",\"I
 await scanner.initRuntimeSettingsWithString(jsonString);
 scanner.show();
 ```
-2. 
+>
 ```c
 int iRet = -1;
 char errorBuf[512];
@@ -314,7 +314,7 @@ DBR_InitRuntimeSettingsWithString(barcodeReader, "{\"Version\":\"3.0\", \"ImageP
 DBR_DecodeFile(barcodeReader, "YOUR-IMAGE-FILE-PATH", ""); // Start decoding
 // Add further process
 ```
-3. 
+>
 ```cpp
 char errorBuf[512];
 int iRet = -1;
@@ -328,7 +328,7 @@ reader->InitRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":
 reader->DecodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
 // Add further process
 ```
-4. 
+>
 ```csharp
 string errorMsg;
 EnumErrorCode iRet = BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
@@ -341,7 +341,7 @@ reader.InitRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{
 TextResult[] result = reader.DecodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
 // Add further process
 ```
-5. 
+>
 ```java
 BarcodeReader.initLicense("YOUR-LICENSE-KEY");
 BarcodeReader reader = new BarcodeReader();
@@ -349,14 +349,14 @@ reader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{
 TextResult[] result = reader.decodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
 // Add further process
 ```
-6. 
+>
 ```java
 BarcodeReader reader = new BarcodeReader();
 reader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\",\"ImagePreprocessingModes\": [{\"Mode\": \"IPM_GRAY_EQUALIZE\",\"Sensitivity\": 9},{\"Mode\": \"IPM_GRAY_SMOOTH\",\"SmoothBlockSizeX\": 10,\"SmoothBlockSizeY\": 10},{\"Mode\": \"IPM_SHARPEN_SMOOTH\",\"SharpenBlockSizeX\": 5,\"SharpenBlockSizeY\": 5},{\"Mode\": \"IPM_MORPHOLOGY\",\"MorphOperation\": \"Close\",\"MorphOperationKernelSizeX\": 7,\"MorphOperationKernelSizeY\": 7}]}}", EnumConflictMode.CM_OVERWRITE);
 TextResult[] result = reader.decodeFile("YOUR-IMAGE-FILE-PATH"); // Start decoding
 // Add further process
 ```
-7. 
+>
 ```objc
 NSError* error = nil;
 DynamsoftBarcodeReader* reader = [[DynamsoftBarcodeReader alloc] init];
@@ -364,14 +364,14 @@ DynamsoftBarcodeReader* reader = [[DynamsoftBarcodeReader alloc] init];
 NSArray<iTextResult*>* result = [reader decodeFileWithName:@"YOUR-IMAGE-FILE-PATH" error:&err]; // Start decoding
 // Add further process
 ```
-8. 
+>
 ```swift
 let reader = DynamsoftBarcodeReader()
 try? reader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\",\"ImagePreprocessingModes\": [{\"Mode\": \"IPM_GRAY_EQUALIZE\",\"Sensitivity\": 9},{\"Mode\": \"IPM_GRAY_SMOOTH\",\"SmoothBlockSizeX\": 10,\"SmoothBlockSizeY\": 10},{\"Mode\": \"IPM_SHARPEN_SMOOTH\",\"SharpenBlockSizeX\": 5,\"SharpenBlockSizeY\": 5},{\"Mode\": \"IPM_MORPHOLOGY\",\"MorphOperation\": \"Close\",\"MorphOperationKernelSizeX\": 7,\"MorphOperationKernelSizeY\": 7}]}}", confictMode:EnumConflictMode.overwrite)
 let result = try? reader.decodeFileWithName("YOUR-IMAGE-FILE-PATH"); // Start decoding
 // Add further process
 ```
-9. 
+>
 ```python
 error = BarcodeReader.init_license("YOUR-LICENSE-KEY")
 if error[0] != EnumErrorCode.DBR_OK:
