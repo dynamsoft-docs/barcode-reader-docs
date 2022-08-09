@@ -7,9 +7,9 @@ needAutoGenerateSidebar: false
 permalink: /faq/general/non-english-characters.html
 ---
 
-# FAQ - General
-
 ## Why is the barcode image returning messy (non-english) characters on the online demo?
+
+[<< Back to FAQ index](index.md)
 
 The barcode text of the result is of a non-Latin based language, as by default most webpages are able to display Latin-based languages. 
 

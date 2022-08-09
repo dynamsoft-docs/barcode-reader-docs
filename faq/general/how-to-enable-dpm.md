@@ -7,9 +7,9 @@ needAutoGenerateSidebar: false
 permalink: /faq/general/how-to-enable-dpm.html
 ---
 
-# FAQ - General
-
 ## How to enable DPM?
+
+[<< Back to FAQ index](index.md)
 
 To enable DPM, assign the `DPMCRM_GENERAL` enumeration to the `DPMCodeReadingModes` array of the furtherModes interface, as such:
 

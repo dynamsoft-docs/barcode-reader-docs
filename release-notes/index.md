@@ -19,9 +19,10 @@ permalink: /release-notes/index.html
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 9.2.11 | [JavaScript]({{ site.js }}release-notes/js-9.html#9211-07282022) /[iOS]({{ site.oc_release_notes }}ios-9.md#9211-07112022) |
-| 9.2.10 | [Android]({{ site.android_release_notes }}android-9.md#9210-06282022) / [iOS]({{ site.oc_release_notes }}ios-9.md#9210-06282022) |
-| 9.2.0 | [C]({{ site.c_release_notes}}c-9.md#920-06072022) / [C++]({{ site.cpp_release_notes}}cpp-9.md#920-06072022) / [DotNet]({{ site.dotnet_release_notes }}dotnet-9.md#920-06072022) / [Java]({{ site.java_release_notes }}java-9.md#920-06072022) / [Python]({{ site.python_release_notes }}python-9.md#920-06212022) |
+| 9.2.12 | [JavaScript]({{ site.js }}release-notes/js-9.html#9212-08042022) /[iOS]({{ site.oc_release_notes }}ios-9.html#9212-08022022) |
+| 9.2.11 | [JavaScript]({{ site.js }}release-notes/js-9.html#9211-07282022) /[iOS]({{ site.oc_release_notes }}ios-9.html#9211-07112022) |
+| 9.2.10 | [Android]({{ site.android_release_notes }}android-9.html#9210-06282022) / [iOS]({{ site.oc_release_notes }}ios-9.html#9210-06282022) |
+| 9.2.0 | [C]({{ site.c_release_notes}}c-9.html#920-06072022) / [C++]({{ site.cpp_release_notes}}cpp-9.html#920-06072022) / [DotNet]({{ site.dotnet_release_notes }}dotnet-9.html#920-06072022) / [Java]({{ site.java_release_notes }}java-9.html#920-06072022) / [Python]({{ site.python_release_notes }}python-9.html#920-06212022) |
 
 ## 9.0
 

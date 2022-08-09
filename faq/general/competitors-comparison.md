@@ -7,9 +7,9 @@ needAutoGenerateSidebar: false
 permalink: /faq/general/competitors-comparison.html
 ---
 
-# FAQ - General
-
 ## How does your SDK compare to other commercial SDKs?
+
+[<< Back to FAQ index](index.md)
 
 The Dynamsoft Barcode Reader offers some of the best performance metrics out of all of the SDKs in the industry. Throughout the years, our SDK has proven to meet any and every requirement there is on the spectrum, whether that is amazingly fast results in an interactive video scenario, or wildly accurate results when decoding DPM codes on warehouse machinery. The Dynamsoft Barcode Reader is tried and true, and has been utilized throughout various industries with utmost satisfaction.
 

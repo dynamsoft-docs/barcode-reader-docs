@@ -7,9 +7,9 @@ needAutoGenerateSidebar: false
 permalink: /faq/general/dbr-free-trial.html
 ---
 
-# FAQ - General
-
 ## How to get a free trial of the SDK? How many days does the free trial allow? Can I extend my trial if I need more time? If so, how?
+
+[<< Back to FAQ index](index.md)
 
 To get a free trial of the SDK, please download it from [our website](https://www.dynamsoft.com/barcode-reader/downloads/).
 

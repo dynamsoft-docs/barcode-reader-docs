@@ -39,7 +39,7 @@ Here we take QR Code as example and show how to get the version and model of a Q
 
 ## Code Snippet for Getting Detailed Barcode Information
 
-<div class="sample-code-prefix"></div>
+<div class="sample-code-prefix template2"></div>
 >- JavaScript
 >- C
 >- C++
@@ -50,10 +50,23 @@ Here we take QR Code as example and show how to get the version and model of a Q
 >- Swift
 >- Python
 >
->1. 
+>
 ```javascript
+(async() => {
+    let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+    scanner.onUniqueRead = (txt, result) => {
+        // Gets detailed information about QR codes.
+        if(result.barcodeFormat == Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE) {
+            let QRCodeDetails = result.detailedResult;
+            let model = QRCodeDetails.model;
+            let version = QRCodeDetails.version;
+            let moduleSize = QRCodeDetails.moduleSize;
+        }
+    };
+    await scanner.show();
+})();
 ```
->2. 
+>
 ```c
 int iRet = -1;
 char errorBuf[512];
@@ -80,7 +93,7 @@ for (int iIndex = 0; iIndex < paryResult->resultsCount; iIndex++)
 DBR_FreeTextResults(&paryResult);
 // Add further process
 ```
->3. 
+>
 ```cpp
 char errorBuf[512];
 int iRet = -1;
@@ -107,7 +120,7 @@ for (int iIndex = 0; iIndex < paryResult->resultsCount; iIndex++)
 CBarcodeReader::FreeTextResults(&paryResult);
 // Add further process
 ```
->4. 
+>
 ```csharp
 string errorMsg;
 EnumErrorCode iRet = BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
@@ -130,7 +143,7 @@ for (int iIndex = 0; iIndex < result.Length; iIndex++)
 }
 // Add further process
 ```
->5. 
+>
 ```java
 BarcodeReader.initLicense("YOUR-LICENSE-KEY");
 BarcodeReader reader = new BarcodeReader();
@@ -148,7 +161,7 @@ for (int iIndex = 0; iIndex < result.length; iIndex++)
 }
 // Add further process
 ```
->6. 
+>
 ```java
 BarcodeReader reader = new BarcodeReader();
 TextResult[] result = reader.decodeFile("YOUR-IMAGE-FILE-WITH-QR-CODES"); // Start decoding
@@ -162,7 +175,7 @@ for (int iIndex = 0; iIndex < result.length; iIndex++)
     }
 }
 ```
->7. 
+>
 ```objc
 NSError *err = nil;
 DynamsoftBarcodeReader* reader = [[DynamsoftBarcodeReader alloc] init];
@@ -177,7 +190,7 @@ for (iTextResult* barcode in result)
     }
 }
 ```
->8. 
+>
 ```swift
 let reader = DynamsoftBarcodeReader()
 var result: [iTextResult]? = nil
@@ -193,7 +206,7 @@ for barcode in result ?? [] {
     }
 }
 ```
->9. 
+>
 ```python
 error = BarcodeReader.init_license("YOUR-LICENSE-KEY")
 if error[0] != EnumErrorCode.DBR_OK:

@@ -28,6 +28,9 @@ Lets the library choose a mode automatically.
 Takes the whole image as a region. 
 This mode has the following arguments for further customizing.
 
+- [LibraryFileName](#libraryfilename)
+- [LibraryParameters](#libraryparameters)
+
 ### RPM_GENERAL_RGB_CONTRAST
 Detects region using the general algorithm based on RGB colour contrast. 
 This mode has the following arguments for further customizing.

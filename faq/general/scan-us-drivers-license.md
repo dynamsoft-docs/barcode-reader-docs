@@ -7,9 +7,9 @@ needAutoGenerateSidebar: false
 permalink: /faq/general/scan-us-drivers-license.html
 ---
 
-# FAQ - General
-
 ## How to scan barcodes on the back of driver licenses and get the first name, last name, DOB, and more info?
+
+[<< Back to FAQ index](index.md)
 
 The SDK can indeed scan driver license barcodes and extract all the information that is encoded in the barcode. The best resources to reference in order to do this are the samples available:
 

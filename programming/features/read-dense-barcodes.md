@@ -72,16 +72,60 @@ let result = try? reader.decodeFileWithName("YOUR-IMAGE-FILE-PATH")
 ```
 >
 ```python
+error = BarcodeReader.init_license("YOUR-LICENSE-KEY")
+if error[0] != EnumErrorCode.DBR_OK:
+    print(error[1])
+dbr = BarcodeReader()
+dbr.init_runtime_settings_with_string('{"Version":"3.0", "ImageParameter":{"Name":"high-density-qr-tpl","DeblurModes":[{"Mode":"DM_SHARPENING"},{"Mode":"DM_GRAY_EQUALIZATION"}],"ExpectedBarcodesCount":1,"LocalizationModes":[{"Mode":"LM_CONNECTED_BLOCKS"}],"ScaleUpModes": [{"Mode": "SUM_LINEAR_INTERPOLATION","AcuteAngleWithXThreshold": 0,"ModuleSizeThreshold": 4,"TargetModuleSize": 6}],"ScaleDownThreshold":10000,"Timeout":5000}}')
+text_results = dbr.decode_file("YOUR-IMAGE-FILE-PATH")
+# Add further process
 ```
 >
 ```java
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
+reader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"high-density-qr-tpl\",\"DeblurModes\":[{\"Mode\":\"DM_SHARPENING\"},{\"Mode\":\"DM_GRAY_EQUALIZATION\"}],\"ExpectedBarcodesCount\":1,\"LocalizationModes\":[{\"Mode\":\"LM_CONNECTED_BLOCKS\"}],\"ScaleUpModes\": [{\"Mode\": \"SUM_LINEAR_INTERPOLATION\",\"AcuteAngleWithXThreshold\": 0,\"ModuleSizeThreshold\": 4,\"TargetModuleSize\": 6}],\"ScaleDownThreshold\":10000,\"Timeout\":5000}}}", EnumConflictMode.CM_OVERWRITE);
+TextResult[] result = reader.decodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
+// Add further process
 ```
 >
 ```csharp
+string errorMsg;
+EnumErrorCode iRet = BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
+if (iRet != EnumErrorCode.DBR_SUCCESS)
+{
+    Console.WriteLine(errorMsg);
+}
+BarcodeReader reader = new BarcodeReader();
+reader.InitRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"high-density-qr-tpl\",\"DeblurModes\":[{\"Mode\":\"DM_SHARPENING\"},{\"Mode\":\"DM_GRAY_EQUALIZATION\"}],\"ExpectedBarcodesCount\":1,\"LocalizationModes\":[{\"Mode\":\"LM_CONNECTED_BLOCKS\"}],\"ScaleUpModes\": [{\"Mode\": \"SUM_LINEAR_INTERPOLATION\",\"AcuteAngleWithXThreshold\": 0,\"ModuleSizeThreshold\": 4,\"TargetModuleSize\": 6}],\"ScaleDownThreshold\":10000,\"Timeout\":5000}}}", EnumConflictMode.CM_OVERWRITE, out errorMsg);
+TextResult[] result = reader.DecodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
+// Add further process
 ```
 >
-```c++
+```cpp
+char errorBuf[512];
+int iRet = -1;
+iRet = dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+if (iRet != DBR_OK)
+{
+    cout << errorBuf << endl;
+}
+CBarcodeReader* reader = new CBarcodeReader();
+reader->InitRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"high-density-qr-tpl\",\"DeblurModes\":[{\"Mode\":\"DM_SHARPENING\"},{\"Mode\":\"DM_GRAY_EQUALIZATION\"}],\"ExpectedBarcodesCount\":1,\"LocalizationModes\":[{\"Mode\":\"LM_CONNECTED_BLOCKS\"}],\"ScaleUpModes\": [{\"Mode\": \"SUM_LINEAR_INTERPOLATION\",\"AcuteAngleWithXThreshold\": 0,\"ModuleSizeThreshold\": 4,\"TargetModuleSize\": 6}],\"ScaleDownThreshold\":10000,\"Timeout\":5000}}}", CM_OVERWRITE, errorBuf, 512);
+reader->DecodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
+// Add further process
 ```
 >
 ```c
+int iRet = -1;
+char errorBuf[512];
+iRet = DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+if (iRet != DBR_OK)
+{
+    printf("%s\n", errorBuf);
+}
+void* barcodeReader = DBR_CreateInstance();
+DBR_InitRuntimeSettingsWithString(barcodeReader, "{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"high-density-qr-tpl\",\"DeblurModes\":[{\"Mode\":\"DM_SHARPENING\"},{\"Mode\":\"DM_GRAY_EQUALIZATION\"}],\"ExpectedBarcodesCount\":1,\"LocalizationModes\":[{\"Mode\":\"LM_CONNECTED_BLOCKS\"}],\"ScaleUpModes\": [{\"Mode\": \"SUM_LINEAR_INTERPOLATION\",\"AcuteAngleWithXThreshold\": 0,\"ModuleSizeThreshold\": 4,\"TargetModuleSize\": 6}],\"ScaleDownThreshold\":10000,\"Timeout\":5000}}}", CM_OVERWRITE, errorBuf, 512);
+DBR_DecodeFile(barcodeReader, "YOUR-IMAGE-FILE-PATH", ""); // Start decoding
+// Add further process
 ```
