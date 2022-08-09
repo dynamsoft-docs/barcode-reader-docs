@@ -7,7 +7,7 @@ needAutoGenerateSidebar: false
 permalink: /parameters/scenario-settings/multipage-imgs-and-pdf.html
 ---
 
-# Scan Barcodes from PDF & multi-page TIF
+# Scan Barcodes from PDFs & multi-page TIFs
 
 For multi-page TIF and PDF files, DBR provides the parameter [`Pages`]({{ site.parameters_reference }}pages.html) to process them, [`PDFReadingMode`]({{ site.parameters_reference }}pdf-reading-mode.html) and [`PDFRasterDPI`]({{ site.parameters_reference }}pdf-raster-dpi.html) are used to handle PDF file specifically. 
 
@@ -43,12 +43,12 @@ delete reader;
 
 ## Select PDFReadingMode
 
-The parameter [`PDFReadingMode`]({{ site.parameters_reference }}pdf-reading-mode.html) is used to set how to process PDF files. DBR provides two ways to read PDF data, PDFRM_RASTER and PDFRM_VECTOR.
+The parameter [`PDFReadingMode`]({{ site.parameters_reference }}pdf-reading-mode.html) determines how to process PDF files. DBR provides two ways to read PDF data, `PDFRM_RASTER` and `PDFRM_VECTOR`.
 
-- PDFRM_RASTER   
+- `PDFRM_RASTER`   
 This method will render each page of the PDF as an image, which will be processed later. This reading mode can be used for all PDF files, but the drawback is that you need to choose the appropriate value of PDFRasterDPI to render the image. Otherwise, if the image is too large, the processing speed of DBR may be slowed, and if the image is too small, the barcode region may be distorted and cannot be decoded.
 
-- PDFRM_VECTOR   
+- `PDFRM_VECTOR`   
 This method is specifically designed for PDF composed of vector data. This mode will not render PDF data into images, but directly extract PDF vector data for barcode region positioning and decoding. Its advantages are fast speed and high accuracy, but it is only suitable for PDF composed of vector data.
 
 At the same time, we also provide PDFRM_AUTO mode, this mode will automatically choose the appropriate processing mode according to whether the PDF file has enough available vector data.

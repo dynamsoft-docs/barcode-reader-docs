@@ -7,7 +7,7 @@ needAutoGenerateSidebar: false
 permalink: /parameters/scenario-settings/dpm-decoding.html
 ---
 
-# How to read DPM codes
+# How to Read DPM Codes
 
 ## What is DPM (Direct Part Marking)?
 
