@@ -4,14 +4,14 @@ description: This article introduces how to configure the binarization parameter
 title: How to configure the binarization parameters
 keywords: BinarizationModes, IntermediateResultType.IRT_BINARIZED_IMAGE  
 needAutoGenerateSidebar: false
-permalink: /parameters/scenario-settings/how-to-set-binarization-modes.html
+permalink: /parameters/scenarios/how-to-set-binarization-modes.html
 ---
 
-# How to configure the binarization parameters
+# How to Configure the Binarization Parameters
 
-This article introduces how to adjust the configurable parameters in the binarization process to obtain better results. DBR provides two binarization modes, BM_THRESHOLD and BM_LOCAL_BLOCK.
+This article introduces how to adjust the configurable parameters in the binarization process to obtain better results. DBR provides two binarization modes, `BM_THRESHOLD` and `BM_LOCAL_BLOCK`.
 
-You can set the intermediate result IRT_BINARIZED_IMAGE to output and observe the effect of the binary image in the process of adjusting parameters. We will introduce the two methods respectively in the following sections.
+You can set the intermediate result `IRT_BINARIZED_IMAGE` to output and observe the effect of the binary image in the process of adjusting parameters. We will introduce the two methods respectively in the following sections.
 
 ## BM_THRESHOLD
 

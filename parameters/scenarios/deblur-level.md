@@ -4,7 +4,7 @@ description: How to configure DeblurLevel
 title: How to configure DeblurLevel
 keywords: deblur level
 needAutoGenerateSidebar: false
-permalink: /parameters/scenario-settings/deblur-level.html
+permalink: /parameters/scenarios/deblur-level.html
 ---
 
 # How to configure DeblurLevel

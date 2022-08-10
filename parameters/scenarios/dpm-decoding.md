@@ -4,7 +4,7 @@ description: This article introduces how to read DPM codes.
 title: How to read DPM codes
 keywords: DPM, Direct Part Marking
 needAutoGenerateSidebar: false
-permalink: /parameters/scenario-settings/dpm-decoding.html
+permalink: /parameters/scenarios/dpm-decoding.html
 ---
 
 # How to Read DPM Codes
@@ -22,8 +22,7 @@ For reference, here are two sample images of DPM codes:
 
 To enable the DPM feature, simply add `DPMCRM_GENERAL` to the array of [`DPMCodeReadingModes`]({{ site.parameters_reference }}dpm-code-reading-modes.html#dpmcodereadingmodes). 
 
->Note: Adding `DPMCRM_GENERAL` to [`DPMCodeReadingModes`]({{ site.parameters_reference }}dpm-code-reading-modes.html#dpmcodereadingmodes) will change the default value of LocalizationModes. It automatically adds a new mode `LM_STATISTICS_MARKS` to LocalizationModes.    
-`LM_STATISTICS_MARKS` is a dot matrix-based localization method specifically for DPM code and DotCode. 
+>Note: Adding `DPMCRM_GENERAL` to [`DPMCodeReadingModes`]({{ site.parameters_reference }}dpm-code-reading-modes.html#dpmcodereadingmodes) will change the default value of LocalizationModes. It automatically adds a new mode `LM_STATISTICS_MARKS` to LocalizationModes. `LM_STATISTICS_MARKS` is a dot matrix-based localization method specifically for DPM code and DotCode. 
 
 ## Example
 

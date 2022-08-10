@@ -4,7 +4,7 @@ description: This article introduces how to read DPM codes.
 title: How to read DPM codes
 keywords: DPM, Direct Part Marking
 needAutoGenerateSidebar: false
-permalink: /parameters/scenario-settings/dpm-decoding-v7.6.0.html
+permalink: /parameters/scenarios/dpm-decoding-v7.6.0.html
 ---
 
 # How to read DPM codes

@@ -4,7 +4,7 @@ needAutoGenerateSidebar: true
 title: How to select the appropriate DBR parameter configuration
 description: This article shows how to select the appropriate DBR parameter configuration.
 breadcrumbText: Parameter Scenarios
-permalink: /parameters/scenario-settings/
+permalink: /parameters/scenarios/
 ---
 
 # How to set appropriate DBR parameter configurations

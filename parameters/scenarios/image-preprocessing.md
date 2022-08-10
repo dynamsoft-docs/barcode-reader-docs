@@ -4,7 +4,7 @@ description: This article introduces how to perform image preprocessing accordin
 title: How to preprocess images based on different scenarios
 keywords: image preprocessing
 needAutoGenerateSidebar: false
-permalink: /parameters/scenario-settings/image-preprocessing.html
+permalink: /parameters/scenarios/image-preprocessing.html
 ---
 
 # How to Preprocess Images based on Different Scenarios

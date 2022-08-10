@@ -1,13 +1,13 @@
 ---   
 layout: default-layout
 title: How to read barcodes from different sources 
-description: This article introduces how to read images from different sources, including read from file, read from memory and read from video stream
+description: This article introduces how to read barcodes from different sources, including read from file, read from memory and read from video stream
 keywords: file memory video stream
 needAutoGenerateSidebar: false
-permalink: /parameters/scenario-settings/read-from-diff-source.html
+permalink: /parameters/scenarios/read-from-diff-source.html
 ---
 
-# How to read barcodes from different sources
+# How to Read Barcodes from Different Sources
 
 The DBR algorithm provides multiple ways to read images from different sources. This article will introduce the following methods. 
 1. [Read from File](#read-from-file)

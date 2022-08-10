@@ -4,18 +4,18 @@ description: This article introduces DBR's ROI (Region Of Interest), applicable 
 title: Manually Define Region Of Interest and its configurations
 keywords: ROI Region-Of-Interest RegionDefinition
 needAutoGenerateSidebar: false
-permalink: /parameters/scenario-settings/manually-define-region-of-interest.html
+permalink: /parameters/scenarios/manually-define-region-of-interest.html
 ---
 
 # Manually Define Region of Interest
 
-By default, DBR will locate the code region and decode in the entire image, but if the user is concerned about some specific regions rather than the entire image, you can define a Region of Interest, referred to as ROI, by the parameter `RegionDefinition`. After defining a specific region, DBR will only decode barcodes within that region. Of course, this is very conducive to increasing the speed. This article will introduce the definition of ROI and its configurable parameters  [`ExpectedBarcodesCount`]({{ site.parameters_reference }}region-definition/index.html#cost-control), [`BarcodeFormatIds`]({{ site.parameters_reference }}region-definition/index.html#format-control),[`BarcodeFormatIds_2`]({{ site.parameters_reference }}region-definition/index.html#format-control), [`FormatSpecificationNameArray`]({{ site.parameters_reference }}region-definition/index.html#formatspecificationnamearray).
+By default, DBR will locate the code region and decode in the entire image, but if the user is concerned about some specific regions rather than the entire image, you can define a Region of Interest, referred to as ROI, by the parameter `RegionDefinition`. After defining a specific region, DBR will only decode barcodes within that region. Of course, this is very conducive to a faster performance. This article will introduce the definition of ROI and its configurable parameters: [`ExpectedBarcodesCount`]({{ site.parameters_reference }}region-definition/index.html#cost-control), [`BarcodeFormatIds`]({{ site.parameters_reference }}region-definition/index.html#format-control),[`BarcodeFormatIds_2`]({{ site.parameters_reference }}region-definition/index.html#format-control), [`FormatSpecificationNameArray`]({{ site.parameters_reference }}region-definition/index.html#formatspecificationnamearray).
 
 ## Definition of ROI RegionDefinition
 
 If the user is only concerned about certain regions of the image, then in JSON, you can define one or more areas through the `RegionDefinition` object. You need to specify the four-corner coordinates of the area  [`Top`]({{ site.parameters_reference }}region-definition/index.html#image-process-control), [`Left`]({{ site.parameters_reference }}region-definition/index.html#image-process-control), [`Right`]({{ site.parameters_reference }}region-definition/index.html#image-process-control), [`Bottom`]({{ site.parameters_reference }}region-definition/index.html#image-process-control) and `Name`of different ROIs. The parameter [`MeasuredByPercentage`]({{ site.parameters_reference }}region-definition/index.html#image-process-control) can be used to set whether the four-corner coordinate unit of the ROI is pixels or a percentage, which is defined the original image width and height as 100%.
 
-To use the defined RegionDefinition, please specify the ROI Name through `RegionDefinitionNameArray`.
+To use the defined `RegionDefinition`, please specify the ROI Name through `RegionDefinitionNameArray`.
 
 ## Expected count of barcodes in ROI - ExpectedBarcodesCount
 
@@ -27,7 +27,7 @@ These two parameters set the code type to be processed in the ROI. Specific conf
 
 ## Specific barcode format configuration used by ROI - FormatSpecificationNameArray
 
-This parameter sets names corresponding to `FormatSpecifications` used by the current ROI. After setting, the ROI will use the corresponding FormatSpecifications configuration. The default value is empty, using the global FormatSpecifications configuration. If you want to configure some specific barcode format in ROI, you should use this parameter. For a detailed description of `FormatSpecifications`, please refer to our documentation [Specific barcode format configuration][1].
+This parameter sets names corresponding to `FormatSpecifications` used by the current ROI. Afterwards, the ROI will use the corresponding `FormatSpecifications` configuration. The default value is empty, using the global `FormatSpecifications` configuration. If you want to configure some specific barcode format in ROI, you should use this parameter. For a detailed description of `FormatSpecifications`, please refer to our documentation [Specific barcode format configuration][1].
 
 ## Examples
 

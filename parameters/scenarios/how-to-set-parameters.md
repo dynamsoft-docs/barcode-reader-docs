@@ -4,14 +4,14 @@ description: This article introduces two ways to modify the configuration DBR Pu
 title: How to set DBR parameters 
 keywords: DBR PublicRuntimeSettings Json Template ImageParameter FormatSpecification
 needAutoGenerateSidebar: false
-permalink: /parameters/scenario-settings/how-to-set-parameters.html
+permalink: /parameters/scenarios/how-to-set-parameters.html
 ---
 
-# How to set DBR parameters 
+# How to Set DBR parameters 
 
 DBR provides flexible parameter configurations to meet your barcode decoding requirements under different scenarios. You can modify the configurations either through the `PublicRuntimeSettings` object or a **JSON template**. 
 
-- [PublicRuntimeSettings](#PublicRuntimeSettings-object)  
+- [PublicRuntimeSettings](#PublicRuntimeSettings)  
  
   `PublicRuntimeSettings` is an object that manages various parameters during runtime. If you need to *dynamically* change the DBR configuration when the program is running, modifying `PublicRuntimeSettings` will be a good choice. 
 
@@ -23,7 +23,7 @@ DBR provides flexible parameter configurations to meet your barcode decoding req
 
   You can use the JSON template along with `PublicRuntimeSettings`: first use the JSON template to read the complete and stable settings, and then use `PublicRuntimeSettings` for common and variable settings. 
 
-## PublicRuntimeSettings object 
+## PublicRuntimeSettings 
 
 `PublicRuntimeSettings` object manages various parameters of the DBR runtime. You can change the DBR configurations by modifying the field values in `PublicRuntimeSettings`. This method is suitable for scenarios that require dynamic configuration changes. 
 

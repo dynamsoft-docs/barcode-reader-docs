@@ -11,7 +11,7 @@ permalink: /faq/general/scan-specific-page.html
 
 [<< Back to FAQ index](index.md)
 
-This can indeed be done via the `Pages` parameter of the `ImageParameter` interface as explained [here](https://www.dynamsoft.com/barcode-reader/parameters/scenario-settings/multipage-imgs-and-pdf.html?ver=latest). This can ONLY be set via the JSON. Here is a JSON snippet for reading the last page of a 10 page document:
+This can indeed be done via the `Pages` parameter of the `ImageParameter` interface as explained [here](https://www.dynamsoft.com/barcode-reader/parameters/scenarios/multipage-imgs-and-pdf.html?ver=latest). This can ONLY be set via the JSON. Here is a JSON snippet for reading the last page of a 10 page document:
 
 ```json
 {    "ImageParameter":  {                               

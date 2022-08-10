@@ -86,7 +86,7 @@ When the target barcodes are confirmed, the barcode texts might have common feat
 
 **Recommendation**
 
-To best learn how to filter and sort the text results that DBR returns, please refer to this [article](https://www.dynamsoft.com/barcode-reader/parameters/scenario-settings/decode-result.html?ver=latest).
+To best learn how to filter and sort the text results that DBR returns, please refer to this [article](https://www.dynamsoft.com/barcode-reader/parameters/scenarios/decode-result.html?ver=latest).
 
 ### Exclude Small-Module Barcodes
 
