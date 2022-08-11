@@ -67,7 +67,7 @@ The related parameter is [`ExpectedBarcodesCount`](https://www.dynamsoft.com/bar
 
 ### Determine the appropriate binarization mode
 
-The binarization of the image is the basis for the localization of barcodes. Depending on the lighting conditions, we can choose either the mode [BM_THRESHOLD](https://www.dynamsoft.com/barcode-reader/parameters/scenarios/how-to-set-binarization-modes.html?ver=latest#bm_threshold) or [BM_LOCAL_BLOCK](https://www.dynamsoft.com/barcode-reader/parameters/scenarios/how-to-set-binarization-modes.html?ver=latest#bm_local_block) for the parameter [BinarizationModes](https://www.dynamsoft.com/barcode-reader/parameters/reference/binarization-modes.html#binarizationmodes).
+The binarization of the image is the basis for the localization of barcodes. Depending on the lighting conditions, we can choose either the mode [BM_THRESHOLD](https://www.dynamsoft.com/barcode-reader/parameters/scenario-settings/how-to-set-binarization-modes.html?ver=latest#bm_threshold) or [BM_LOCAL_BLOCK](https://www.dynamsoft.com/barcode-reader/parameters/scenario-settings/how-to-set-binarization-modes.html?ver=latest#bm_local_block) for the parameter [BinarizationModes](https://www.dynamsoft.com/barcode-reader/parameters/reference/binarization-modes.html#binarizationmodes).
 
 **Recommendation**
  
@@ -202,8 +202,8 @@ The less the noise, the faster the localization. Use the parameters [TextureDete
 
 **Recommendation**
  
-* For images with texture (such as images taken on the screen), enable texture detection with `TextureDetectionModes`. Read more on [How to deal with image textures](https://www.dynamsoft.com/barcode-reader/parameters/scenarios/texture-detection.html?ver=latest#).
-* For images with lots of text, enable text filter with `TextFilterModes`. Read more on [How to filter text in an image](https://www.dynamsoft.com/barcode-reader/parameters/scenarios/text-filter.html?ver=latest#)
+* For images with texture (such as images taken on the screen), enable texture detection with `TextureDetectionModes`. Read more on [How to deal with image textures](https://www.dynamsoft.com/barcode-reader/parameters/scenario-settings/texture-detection.html?ver=latest#).
+* For images with lots of text, enable text filter with `TextFilterModes`. Read more on [How to filter text in an image](https://www.dynamsoft.com/barcode-reader/parameters/scenario-settings/text-filter.html?ver=latest#)
 
 #### Adapt image binarization for speed
 

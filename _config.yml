@@ -66,7 +66,7 @@ python_release_notes: /barcode-reader/docs/server/programming/python/release-not
 
 parameters_reference: /barcode-reader/docs/core/parameters/reference/
 image_parameters: /barcode-reader/docs/core/parameters/reference/image-parameter/
-scenario_settings: /barcode-reader/docs/core/parameters/scenarios/
+scenario_settings: /barcode-reader/docs/core/parameters/scenario-settings/
 enumerations: /barcode-reader/docs/core/parameters/enum/
 
 faqs: /barcode-reader/docs/core/faq/

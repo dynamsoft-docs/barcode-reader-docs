@@ -119,19 +119,19 @@ As mentioned above, we use a unified threshold for binarization, but this might 
 For example, the picture below has different lighting conditions in different areas. If we use BM_THRESHOLD to set a global value as a threshold, it will be difficult to yield good results. In this case, it is more suitable to use BM_LOCAL_BLOCK to set an adaptive binarization threshold. 
     
 <div align="center">
-<img src="../parameters/scenarios/assets/how-to-set-binarization-modes/uneven-illumination.png" alt="uneven-illumination"/>
+<img src="../parameters/scenario-settings/assets/how-to-set-binarization-modes/uneven-illumination.png" alt="uneven-illumination"/>
 <p>Figure 2 – original image</p>
 </div>
 
 The following images show the effects of BM_THRESHOLD (global thresholding) and BM_LOCAL_BLOCK (adaptive thresholding) individually for an image with varying illumination:
 
 <div align="center">
-<img src="../parameters/scenarios/assets/how-to-set-binarization-modes/dm-threshold.png" alt="dm-threshold"/>
+<img src="../parameters/scenario-settings/assets/how-to-set-binarization-modes/dm-threshold.png" alt="dm-threshold"/>
 <p>Figure 3 – binarization result of BM_THRESHOLD</p>
 </div>
 
 <div align="center">
-<img src="../parameters/scenarios/assets/how-to-set-binarization-modes/dm-local-block.png" alt="dm-local-block"/>
+<img src="../parameters/scenario-settings/assets/how-to-set-binarization-modes/dm-local-block.png" alt="dm-local-block"/>
 <p>Figure 4 – binarization result of BM_LOCAL_BLOCK</p>
 </div>
 
@@ -198,14 +198,14 @@ In the following JSON template, we configured two different binarization modes (
 The following is an original grayscale image. We will use the above settings in the template to do the binarization process.
 
 <div align="center">
-<img src="../parameters/scenarios/assets/how-to-set-binarization-modes/binarization-modes-original-image-sample.png" alt="original grayscale image"/>
+<img src="../parameters/scenario-settings/assets/how-to-set-binarization-modes/binarization-modes-original-image-sample.png" alt="original grayscale image"/>
 <p>Figure 5 – original grayscale image</p>
 </div>
 
 The followings show the binarization image using the default arguments on BM_LOCAL_BLOCK. 
 
 <div align="center">
-<img src="../parameters/scenarios/assets/how-to-set-binarization-modes/binarization-modes-binarized-image-sample1.png" alt="default binarization image"/>
+<img src="../parameters/scenario-settings/assets/how-to-set-binarization-modes/binarization-modes-binarized-image-sample1.png" alt="default binarization image"/>
 <p>Figure 6 – default binarization image</p>
 </div>
 
@@ -214,7 +214,7 @@ Apparently, the three finder patterns of the QR Code have been destroyed, result
 The following show the binarization image using the customed arguments on BM_LOCAL_BLOCK. In this image, the finder patterns of the QR Code are very clear and can be successfully localized and decoded.
 
 <div align="center">
-<img src="../parameters/scenarios/assets/how-to-set-binarization-modes/binarization-modes-binarized-image-sample2.png" alt="customed binarization image"/>
+<img src="../parameters/scenario-settings/assets/how-to-set-binarization-modes/binarization-modes-binarized-image-sample2.png" alt="customed binarization image"/>
 <p>Figure 7 – customed binarization image</p>
 </div>
 
