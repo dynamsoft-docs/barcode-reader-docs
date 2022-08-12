@@ -7,7 +7,7 @@ needAutoGenerateSidebar: false
 permalink: /parameters/scenario-settings/multipage-imgs-and-pdf.html
 ---
 
-# Scan Barcodes from PDF & multi-page TIF
+# Scan Barcodes from PDFs & multi-page TIFs
 
 For multi-page TIF and PDF files, DBR provides the parameter [`Pages`]({{ site.parameters_reference }}pages.html) to process them, [`PDFReadingMode`]({{ site.parameters_reference }}pdf-reading-mode.html) and [`PDFRasterDPI`]({{ site.parameters_reference }}pdf-raster-dpi.html) are used to handle PDF file specifically. 
 
@@ -21,7 +21,7 @@ When DBR is processing multi-page files (TIF or PDF), you can use the parameter 
 
 [`Pages`]({{ site.parameters_reference }}pages.html) can only be configured in Json, for example, `{"Pages": "0,3,5,7-10"}`.
 
-In the returned decoding result, you can get the information of the corresponding barcode on the page of the file. Please refer to the following procedure:
+In the returned decoding result of a certain barcode, you can get its corresponding page number (out of the entire document) via the `LocalizationResult`. Please refer to the following procedure:
 
 ```c++
 BarcodeReader* reader = new CBarcodeReader();     
@@ -43,19 +43,19 @@ delete reader;
 
 ## Select PDFReadingMode
 
-The parameter [`PDFReadingMode`]({{ site.parameters_reference }}pdf-reading-mode.html) is used to set how to process PDF files. DBR provides two ways to read PDF data, PDFRM_RASTER and PDFRM_VECTOR.
+The parameter [`PDFReadingMode`]({{ site.parameters_reference }}pdf-reading-mode.html) determines how to process PDF files. DBR provides two ways to read PDF data, `PDFRM_RASTER` and `PDFRM_VECTOR`.
 
-- PDFRM_RASTER   
+- `PDFRM_RASTER`   
 This method will render each page of the PDF as an image, which will be processed later. This reading mode can be used for all PDF files, but the drawback is that you need to choose the appropriate value of PDFRasterDPI to render the image. Otherwise, if the image is too large, the processing speed of DBR may be slowed, and if the image is too small, the barcode region may be distorted and cannot be decoded.
 
-- PDFRM_VECTOR   
-This method is specifically designed for PDF composed of vector data. This mode will not render PDF data into images, but directly extract PDF vector data for barcode region positioning and decoding. Its advantages are fast speed and high accuracy, but it is only suitable for PDF composed of vector data.
+- `PDFRM_VECTOR`   
+This method is specifically designed for PDF composed of vector data. This mode will not render PDF data into images, but directly extract PDF vector data for barcode region positioning and decoding. This mode can offer faster speed and higher accuracy, but it is only suitable for PDF composed of vector data.
 
-At the same time, we also provide PDFRM_AUTO mode, this mode will automatically choose the appropriate processing mode according to whether the PDF file has enough available vector data.
+At the same time, we also provide `PDFRM_AUTO` mode, this mode will automatically choose the appropriate processing mode according to whether the PDF file has enough available vector data.
 
 ## Select the appropriate PDFRasterDPI
 
-When using PDFRM_RASTER, we need to select an appropriate [`PDFRasterDPI`]({{ site.parameters_reference }}pdf-raster-dpi.html) to ensure that the rendered image has the right size. The higher the PDFRasterDPI, the higher the final resolution of the rendered image. The high-resolution image can ensure the image details are not distorted, which is helpful for DBR to correctly identify the barcode region but will make the processing speed slow at the same time. This section will introduce the calculation method from PDFRasterDPI to the size of the rendered image. You can observe the rendered image based on the calculation method and the intermediate result IRT_ORIGINAL_IMAGE to decide how to adjust PDFRasterDPI.
+When using `PDFRM_RASTER`, we need to select an appropriate [`PDFRasterDPI`]({{ site.parameters_reference }}pdf-raster-dpi.html) to ensure that the rendered image has the right size. The higher the PDFRasterDPI, the higher the final resolution of the rendered image. A high-resolution image can ensure the image details are not distorted, which is helpful for DBR to correctly identify the barcode region but will make the processing speed slow at the same time. This section will clarify the calculation from PDFRasterDPI to the size of the rendered image. You can observe the rendered image based on the calculation method via the intermediate result `IRT_ORIGINAL_IMAGE` to decide how to adjust PDFRasterDPI.
 
 The resolution of the rendered image is calculated as follows:
 Set PDF page height to h and page width to w,
