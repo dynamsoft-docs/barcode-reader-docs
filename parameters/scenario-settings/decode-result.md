@@ -6,9 +6,9 @@ keywords: decode result
 permalink: /parameters/scenario-settings/decode-result.html
 ---
 
-# How to filter and sort decoding results
+# How to Filter and Sort Barcode Results
 
-The `DBR` decoding result contains a variety of information, and we provide flexible parameters to filter and sort the results you care about.
+The `DBR` decoding result contains a variety of information, and we provide flexible parameters to filter and sort the results you care about. With each heading, we will explore a new parameter that you could use to filter and sort the results.
 
 ## Angle, width, height and text length of the decoded result
 
@@ -18,7 +18,7 @@ You can set the angle, width, height, and text length requirements that the deco
 
     Set the angle range that the returned result needs to meet, the value range is [0,360] (in degrees). 
 
-    The definition of Angle in `DBR` is: the angle between the vector at the lower left corner of the barcode as the starting point and the end point at the lower right corner of the barcode and the X axis, clockwise is positive. Let us take actual pictures to illustrate the angle
+    The definition of `Angle` in DBR is: the angle between the vector at the lower left corner of the barcode as the starting point and the end point at the lower right corner of the barcode and the X axis, clockwise is positive. Let us take actual pictures to illustrate the angle
    
    ![1D Angle Example][4]   
    
@@ -45,17 +45,17 @@ You can set the angle, width, height, and text length requirements that the deco
 
     Set the length range of the Text in the returned result, the value range is [0,0x7ffffffff] (in the number of characters).
 
-## Use Regular Expression
+## Regular Expression
 
-You can use [`BarcodeTextRegExPattern`]({{ site.parameters_reference }}barcode-text-regex-pattern.html) to specify the regular expression requirements that must be met when `DBR` returns the result text. The default value is empty which means there is no limitation.
+You can use [`BarcodeTextRegExPattern`]({{ site.parameters_reference }}barcode-text-regex-pattern.html) to specify the regular expression requirements that must be met when DBR returns the result text. The default value is empty which means there is no limitation.
 
 For example, if we set [`BarcodeTextRegExPattern`]({{ site.parameters_reference }}barcode-text-regex-pattern.html) as "[0-9]\d{4,11}", then the result text should be 5 to 12 digits. If the result is 123456 which matches the expression, it will be returned. If it is 123 which has only 3 digits or a123456 which has a letter in it, they don 't match the expression and will not be returned.
 
 For more info, check out About Regular [Expression](https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2010/28hw3sce(v=vs.100))
 
-## Use Confidence Score
+## Confidence Score
 
-The decoding result of `DBR` will have a confidence score, and the result with too low score may be wrong. You can use [`MinResultConfidence`]({{ site.parameters_reference }}min-result-confidence.html) to specify the minimum score that `DBR` needs to meet to return results. The default value is 0, which means there is no limit on the score of the returned result.
+The decoding results of DBR will have a confidence score, and the result with too low of a score may be wrong. You can use [`MinResultConfidence`]({{ site.parameters_reference }}min-result-confidence.html) to specify the minimum score that DBR needs to meet to return results. The default value is 30, which is the recommended value for 1D barcodes.
 
 Please refer to the following sample program for how to obtain the confidence of the returned result
 
@@ -76,7 +76,7 @@ dynamsoft::dbr::CBarcodeReader::FreeTextResults(&pResult);
 delete reader;  
 ```
 
-## Coordinate format of decoding result position
+## Coordinate format of result position
 
 For the position coordinates of the decoding result, the parameter [`ResultCoordinateType`]({{ site.parameters_reference }}result-coordinate-type.html) can be used to specify whether the coordinates are in pixels or percentage.
 
@@ -100,7 +100,7 @@ For the position coordinates of the decoding result, the parameter [`ResultCoord
 
 [`ReturnBarcodeZoneClarity`]({{ site.parameters_reference }}return-barcode-zone-clarity.html) specifies whether to return the clarity of the barcode region detected on the image. It can be set to 0 or 1. The default value is 0 which means no clarity is returned. To return the clarity, set it to 1.
 
-`DBR` uses the gray gradient changes of adjacent pixels to measure the clarity of the code area. The value range of `BarcodeZoneClarity` is 0~100, the larger the number, the clearer it is.
+DBR uses the gray gradient changes of adjacent pixels to measure the clarity of the code area. The value range of `BarcodeZoneClarity` is 0~100, the larger the number, the clearer it is.
 
 Please refer to the following sample program on how to obtain 
 

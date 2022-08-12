@@ -1,24 +1,25 @@
 ---   
 layout: default-layout
-title: How to read images from different sources 
-description: This article introduces how to read images from different sources, including read from file, read from memory and read from video stream
+title: How to read barcodes from different sources 
+description: This article introduces how to read barcodes from different sources, including read from file, read from memory and read from video stream
 keywords: file memory video stream
 needAutoGenerateSidebar: false
 permalink: /parameters/scenario-settings/read-from-diff-source.html
 ---
 
-# How to read images from different sources 
+# How to Read Barcodes from Different Sources
+
 The DBR algorithm provides multiple ways to read images from different sources. This article will introduce the following methods. 
 1. [Read from File](#read-from-file)
 2. [Read from Memory](#read-from-memory)
 3. [Read from Video stream ](#read-from-video-stream)
 
 ## Read from File
+
 For image files, DBR provides the following two APIs.
 - [`DecodeFile`]({{ site.cpp_methods }}decode.html#decodefile)
 - [`DecodeFileInMemory`]({{ site.cpp_methods }}decode.html#decodefileinmemory)
 
-Sample codes:
 ``` c++
 //DecodeFile
 CBarcodeReader* reader = new CBarcodeReader();
@@ -36,7 +37,9 @@ GetFileStream("image path", &pFileBytes, &nFileSize); //read file to memory
 int errorCode = reader->DecodeFileInMemory(pFileBytes, nFileSize, "");
 delete reader;
 ```
-## Read from Memory 
+
+## Read from Memory
+
 For the image data in the memory, DBR provides the following API. 
 - [`DecodeBuffer`]({{ site.cpp_methods }}decode.html#decodebuffer)   
    Decodes barcodes from the memory buffer containing image pixels in defined format. This API is generally used in video stream decoding. After obtaining a frame of image data, you can invoke this API to decode the frame. The main parameters are as follows: 

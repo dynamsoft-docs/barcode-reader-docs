@@ -10,7 +10,7 @@ needGenerateH3Content: true
 
 # RegionPredetectionModes 
 
-`RegionPredetectionModes` is a parameter to control how to find a region of interesting. It consisits of one or more modes, each mode represents a way to find a region.
+`RegionPredetectionModes` is a parameter to control how to find a region of interesting. It consists of one or more modes, each mode represents a way to find a region.
 
 
 ## Candidate Mode List

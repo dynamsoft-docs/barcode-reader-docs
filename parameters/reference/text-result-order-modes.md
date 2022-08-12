@@ -11,7 +11,7 @@ permalink: /parameters/reference/text-result-order-modes.html
 
 # TextResultOrderModes 
 
-`TextResultOrderModes` is a parameter to specify the order of the returned text results. It consisits of one or more modes, each mode represents a way to order the result.
+`TextResultOrderModes` is a parameter to specify the order of the returned text results. It consists of one or more modes, each mode represents a way to order the result.
 
 
 ## Candidate Mode List

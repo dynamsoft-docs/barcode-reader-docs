@@ -7,7 +7,7 @@ needAutoGenerateSidebar: false
 permalink: /parameters/scenario-settings/how-to-set-localization-modes.html
 ---
 
-# How to use different localization modes
+# How to Use Different Localization Modes
 
 DBR provides a few localization modes to localize the barcode area. This article will introduce how to select the appropriate localization mode in different scenarios to obtain the best barcode localization results for further decoding.
 

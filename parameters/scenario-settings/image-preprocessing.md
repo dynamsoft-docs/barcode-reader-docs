@@ -7,11 +7,11 @@ needAutoGenerateSidebar: false
 permalink: /parameters/scenario-settings/image-preprocessing.html
 ---
 
-# How to preprocess images based on different scenarios
+# How to Preprocess Images based on Different Scenarios
 
 The default configuration of `DBR` can handle most common scenarios. However, there are still some specific scenarios where the default configuration of `DBR` cannot locate the code area for decoding. For these specific scenarios, `DBR` has built-in [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-preprocessing-modes.html#imagepreprocessingmodes) to configure the image preprocessing algorithm. For different scenarios, a specific pre-processing algorithm can effectively improve the success rate when detecting areas of interest. This article will detail how to choose the appropriate pre-processing mode according to the scenario.
 
-## Image preprocessing mode
+## Image Preprocessing modes
 
 `DBR` provides multiple image preprocessing modes to deal with different situations. After configuring the preprocessing modes, we can judge the effectiveness and make adjustments by looking at the intermediate result `IRT_PREPROCESSED_IMAGE`, which is the pre-processed grayscale image, and `IRT_BINARIZED_IMAGE`, which is the binarized image. Below we will introduce the scenarios where one of the four modes `IPM_GRAY_EQUALIZE`, `IPM_GRAY_SMOOTH`, `IPM_SHARPEN_SMOOTH` and `IPM_MORPHOLOGY` helps.
 
