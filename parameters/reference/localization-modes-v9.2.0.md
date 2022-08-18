@@ -47,7 +47,6 @@ Localizes barcodes quickly. This mode is recommended in interactive scenario. Th
 
 - [ScanStride](#scanstride)
 - [ScanDirection](#scandirection)
-- [IsOneDStacked](#isonedstacked)
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)
 
@@ -154,7 +153,6 @@ Setting more modes along with different arguments may improve the Read Rate.
 - [ScanStride](#scanstride)
 - [ScanDirection](#scandirection)
 - [ConfidenceThreshold](#confidencethreshold)
-- [IsOneDStacked](#isonedstacked)
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)
  
@@ -194,12 +192,6 @@ Sets the confidence threshold.
 **Remarks**         
   - The localization result will be discarded if its conficence is less then the threshold.  
 
-### IsOneDStacked 
-Sets whether the oned barcodes are stacked.
-
-| Value Type | Value Range | Default Value | Valid For |
-| ---------- | ----------- | ------------- | --------- |
-| *int* | [0, 1] | 0 | LM_SCAN_DIRECTLY |
 
 ### LibraryFileName 
 Sets the file name of the library to load dynamically.
