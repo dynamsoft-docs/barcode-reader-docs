@@ -7,13 +7,13 @@ needAutoGenerateSidebar: false
 permalink: /programming/features/preprocess-images.html
 ---
 
-# How to preprocess images based on different scenarios
+# How to Preprocess Images based on Different Scenarios
 
-The default configuration of Dynamsoft Barcode Reader (DBR) can handle most common scenarios. However, there are still some specific scenarios where the default configuration of `DBR` cannot locate the code area for decoding. For these specific scenarios, `DBR` has built-in [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-preprocessing-modes.html#imagepreprocessingmodes) to configure the image preprocessing algorithm. For different scenarios, a specific pre-processing algorithm can effectively improve the success rate when detecting areas of interest. This article will detail how to choose the appropriate pre-processing mode according to the scenario.
+The default configuration of Dynamsoft Barcode Reader (DBR) can handle most common scenarios. However, there are still some specific scenarios where the default configuration of DBR cannot locate the code area for decoding. For these specific scenarios, DBR has built-in [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-preprocessing-modes.html#imagepreprocessingmodes) to configure the image preprocessing algorithm. For different scenarios, a specific pre-processing algorithm can effectively improve the success rate when detecting areas of interest. This article will detail how to choose the appropriate pre-processing mode according to the scenario.
 
 ## Image preprocessing mode
 
-`DBR` provides multiple image preprocessing modes to deal with different situations. After configuring the preprocessing modes, we can judge the effectiveness and make adjustments by looking at the intermediate result `IRT_PREPROCESSED_IMAGE`, which is the pre-processed grayscale image, and `IRT_BINARIZED_IMAGE`, which is the binarized image. Below we will introduce the scenarios where one of the four modes `IPM_GRAY_EQUALIZE`, `IPM_GRAY_SMOOTH`, `IPM_SHARPEN_SMOOTH` and `IPM_MORPHOLOGY` helps.
+DBR provides multiple image preprocessing modes to deal with different situations. After configuring the preprocessing modes, we can judge the effectiveness and make adjustments by looking at the intermediate result `IRT_PREPROCESSED_IMAGE`, which is the pre-processed grayscale image, and `IRT_BINARIZED_IMAGE`, which is the binarized image. Below we will introduce the scenarios where one of the four modes `IPM_GRAY_EQUALIZE`, `IPM_GRAY_SMOOTH`, `IPM_SHARPEN_SMOOTH` and `IPM_MORPHOLOGY` helps.
 
 - `IPM_GRAY_EQUALIZE`
 
@@ -21,7 +21,7 @@ Gray-level equalization, which is used to enhance the contrast of an image. The 
 
 ![Before Equalizing][1]![After Equalizing][2]
 
-This mode has an additional parameter `Sensitivity`, where the default value is 5, and the range is [1~9]. When you set `IPM_GRAY_EQUALIZE`, `DBR` does not necessarily perform equalization but will judge whether to perform it based on the gray distribution and `Sensitivity` of the image itself. The greater the value of `Sensitivity`, the more likely that `DBR` will perform the equalization process. Setting it to 9 means that gray-scale equalization must be performed while 1 means to skip the process.
+This mode has an additional parameter `Sensitivity`, where the default value is 5, and the range is [1~9]. When you set `IPM_GRAY_EQUALIZE`, `DBR` does not necessarily perform equalization but will judge whether to perform it based on the gray distribution and `Sensitivity` of the image itself. The greater the value of `Sensitivity`, the more likely that DBR will perform the equalization process. Setting it to 9 means that gray-scale equalization must be performed while 1 means to skip the process.
 
 - `IPM_GRAY_SMOOTH`
 
@@ -31,7 +31,7 @@ Grayscale smoothing, which is used to reduce image noise and texture. The follow
 
 After configuring `IPM_GRAY_SMOOTH` for smoothing. The noise of the binarized image are well handled well as shown below.
 
-![Grayscal After Smoothing][4]![Binarizedd After Smoothing][6]  
+![Grayscale After Smoothing][4]![Binarized After Smoothing][6]  
 
 - `IPM_SHARPEN_SMOOTH`
 
@@ -41,13 +41,13 @@ Sharpening and smoothing are used to reduce blur. The following sample image dem
 
 - `IPM_MORPHOLOGY`
 
-This mode improves the binarization process by eliminating noise and filling holes through corrosion and expansion operations. It is suitable for whe the barcode area is polluted or destroyed. The following sample image demonstrates the effect.
+This mode improves the binarization process by eliminating noise and filling holes through corrosion and expansion operations. It is suitable for when the barcode area is polluted or destroyed. The following sample image demonstrates the effect.
 
 ![Before Morphology][9]![After Morphology][10]  
 
 ## Combination of pre-processing modes
 
-If the image to be processed is more complicated, you can use the above image preprocessing modes in combination. After configuring multiple modes through [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-preprocessing-modes.html#imagepreprocessingmodes), `DBR` will try each mode in sequence until the number of successful decoded codes meets the expected value (`ExpectedBarcodeCount`), or the algorithm combination is exhausted.
+If the image to be processed is more complicated, you can use the above image preprocessing modes in combination. After configuring multiple modes through [`ImagePreprocessingModes`]({{ site.parameters_reference }}image-preprocessing-modes.html#imagepreprocessingmodes), DBR will try each mode in sequence until the number of successful decoded barcodes meets the expected value (`ExpectedBarcodeCount`), or the algorithm combination is exhausted.
 
 ## Sample Code
 

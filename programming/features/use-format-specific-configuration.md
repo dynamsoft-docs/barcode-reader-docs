@@ -54,9 +54,9 @@ The default value of `MirrorMode` is
 * `MM_BOTH` for `QRCode`, `DataMatrix`, `PDF417`, `AZTEC`, `Micro QR Code`, `Micro PDF417`, `DotCode`, `Pharmacode Two-Track`
 * `MM_NORMAL` for other barcode types.
 
-In most cases, the default value will work fine. But assuming all your QR codes are mirrored, you can configure DBR like this:
+In most cases, the default value will work fine. But assuming that you work excusively with mirrored QR codes, you can configure DBR like this:
 
-```javascript
+```json
 {
     "ImageParameter": {
         "Name": "ImageParameter1", 
@@ -78,20 +78,20 @@ In most cases, the default value will work fine. But assuming all your QR codes 
 
 This parameter specifies whether decoding requires start and stop symbols.
 
-1D barcodes usually have fixed start and end symbols. Normally, DBR can only decode a barcode properly if it finds the start and end symbols. However, in some cases, the actual barcode symbol may be missing the start and/or end symbols. `RequireStartStopChars` is designed to read these non-standard barcodes and is used to specify whether the start and end symbols are required for decoding. The allowed values are
+1D barcodes usually have fixed start and stop symbols. Normally, DBR can only decode a barcode properly if it finds the start and stop symbols. However, in some cases, the actual barcode symbol may be missing the start and/or stop symbols. `RequireStartStopChars` is designed to read these non-standard barcodes and is used to specify whether the start and stop symbols are required for decoding. The allowed values are
 
 * 0: start and stop symbols are optional
 * 1: start and stop symbols are required
 
-The figure below shows a standard Code39 with start and end symbols:
+The figure below shows a standard Code39 with start and stop symbols:
 
 ![standard-code39][3]
 
-This one shows the same barcode without start and end symbols:
+This one shows the same barcode without start and stop symbols:
 
 ![code39 without start and end pattern][4]
 
-The following template configures DBR to read Code39 barcodes that don't have start and/or end symbols:
+The following template configures DBR to read Code39 barcodes that don't have start and/or stop symbols:
 
 ```json
 {
@@ -115,9 +115,9 @@ The following template configures DBR to read Code39 barcodes that don't have st
 
 This parameter specifies the deviation of the bar width from the standard bar width for 1D barcodes. The default value is 0.
 
-Occasionally, due to typographical errors, 1D barcodes may contain bars of non-standard widths. Such barcodes are considered invalid and ignored by DBR. If you want DBR to read these barcodes too, you can use the parameter `AllModuleDeviation`.
+Occasionally, due to typographical errors, 1D barcodes may contain bars of non-standard widths. Such barcodes are considered invalid and ignored by DBR. If you want DBR to read these barcodes, you can use the parameter `AllModuleDeviation`.
 
-Note that "all" in the parameter name means it only works if all bars (black & white) of the barcode are off (have the same deviation). For example, if the widths (in pixels) of bars for a standard barcodes are [6, 2, 4, 2], a deviation of 2 would mean the widths become [8, 4, 6, 4], whereas the widths [12, 4, 8, 4] would be considered correctly enlarged.
+Note that "all" in the parameter name means it only works if all bars (black & white) of the barcode are off (have the same deviation). For example, if the width (in pixels) of bars for a standard barcode are [6, 2, 4, 2], a deviation of 2 would mean the widths become [8, 4, 6, 4], whereas the widths [12, 4, 8, 4] would be considered correctly enlarged.
 
 To utilize this parameter, you need to set the following parameters as well:
 
@@ -127,7 +127,7 @@ To utilize this parameter, you need to set the following parameters as well:
 
 3. `ImageParameter.BarcodeFormatIds_2` should be set to `NON_STANDARD_BARCODE`, which means non-standard barcodes are to be read.
 
-The following shows a standard Code128 barcode with a moduleSize of 2px followed by a non-standard Code128 barcode which consists of bars with a deviation of 2px.
+The following shows a standard Code128 barcode with a module size of 2px followed by a non-standard Code128 barcode which consists of bars with a deviation of 2px.
 
 ![standard-code128][5]
 
@@ -160,7 +160,7 @@ To read this non-standard barcode, we can set the deviation to 2 as shown in the
 
 These parameters specify the exception bars used as the start or stop symbols of a non-standard 1D barcode.
 
-The last parameter [`AllModuleDeviation`](#allmoduledeviation) handles barcodes consisting of all bars that deviate in the same way. If the bars that make up the start or end symbol of a barcode have irregular deviations, `HeadModuleRatio` and `TailModuleRatio` can be used to specify them.
+The last parameter [`AllModuleDeviation`](#allmoduledeviation) handles barcodes consisting of all bars that deviate in the same way. If the bars that make up the start or stop symbol of a barcode have irregular deviations, `HeadModuleRatio` and `TailModuleRatio` can be used to specify them.
 
 Just like [`AllModuleDeviation`](#allmoduledeviation), you need to set the following parameters to utilize `HeadModuleRatio` and `TailModuleRatio`:
 
@@ -170,15 +170,15 @@ Just like [`AllModuleDeviation`](#allmoduledeviation), you need to set the follo
 
 3. `ImageParameter.BarcodeFormatIds_2` should be set to `NON_STANDARD_BARCODE`, which means non-standard barcodes are to be read.
 
-The image below is such a non-standard barcode: it has irregular start bars with a ratio of 2:1:1:3:3:1 and irregular end bars with a ratio of 2:3:3:2:2:2:3.
+The image below is such a non-standard barcode: it has irregular start bars with a ratio of 2:1:1:3:3:1 and irregular stop bars with a ratio of 2:3:3:2:2:2:3.
 
 ![nonstandard-start-end][7]
 
-If the barcode conforms to the standard (Code Set C), it should has start bars with a ratio of 2:1:1:2:3:2 and end bars with a ratio of 2:3:3:1:1:1:2 like this:
+If the barcode conforms to the standard (Code Set C), it should have start bars with a ratio of 2:1:1:2:3:2 and stop bars with a ratio of 2:3:3:1:1:1:2 like this:
 
 ![standard-start-end][8]
 
-The following template demostrates how to use `HeadModuleRatio` and `TailModuleRatio` to tell DBR about the irregular start and end symbols of the barcode:
+The following template demostrates how to use `HeadModuleRatio` and `TailModuleRatio` to tell DBR about the irregular start and stop symbols of the barcode:
 
 ```json
 {
@@ -206,7 +206,7 @@ The following template demostrates how to use `HeadModuleRatio` and `TailModuleR
 
 ## StandardFormat
 
-This parameter specifies a standard barcode format based on which a non-standard format is defined. See it in action with the parameter [`AllModuleDeviation`](#allmoduledeviation), [`HeadModuleRatio`](#headmoduleratio-tailmoduleratio) and [`TailModuleRatio`](#headmoduleratio-tailmoduleratio).
+This parameter specifies a standard barcode format based on which a non-standard format is defined. See it in action with the parameters [`AllModuleDeviation`](#allmoduledeviation), [`HeadModuleRatio`](#headmoduleratio-tailmoduleratio) and [`TailModuleRatio`](#headmoduleratio-tailmoduleratio).
 
 ## AustralianPostEncodingTable
 
@@ -277,7 +277,7 @@ In this case, we can set `MinQuietZoneWidth` to 1 or 0:
 
 The module size is the width of the thinnest possible bar for 1D barcodes or the width of the smallest building block for a 2D barcode. By default, DBR will try to locate and decode barcodes with any module size. In some cases, you may only be interested in barcodes with certain module sizes. In this case, you can use `ModuleSizeRangeArray` to specify a range of different module sizes for DBR to use when reading barcodes.
 
-The allowed values are from 0 to 0x7fffffff in pixels.
+The allowed values range from 0 to 0x7fffffff in pixels.
 
 The template below limits the module size to 10 ~ 100.
 

@@ -18,7 +18,13 @@ Typically, barcodes are dark on a light background. But in some cases, the barco
    <p>Inverted Barcodes</p>
 </div>
 
-The feature to decode such inverted barcodes is not enabled by default. To enable it, add the value `GTM_INVERTED` to `GrayscaleTransformationModes` as shown in the code snippet below:
+The feature to decode such inverted barcodes is not enabled by default. To control this feature, we must use the [`GrayscaleTransformationModes`]({{ site.parameters_reference }}grayscale-transformation-modes.html). Now for a quick breakdown of each of the modes:
+
+- With only `GTM_GENERAL` enabled in `GrayscaleTransformationModes`, DBR scans only general black-on-white barcodes.
+- With only `GTM_INVERTED` enabled in `GrayscaleTransformationModes`, DBR scans only inverted barcodes.
+- When `GTM_GENERAL` is enabled as the first mode and `GTM_INVERTED` is enabled as the second mode in `GrayscaleTransformationModes`, DBR will try to decode general barcodes first. If the count of decoded barcodes does not reach the expected number, DBR will then try decoding the inverted barcodes.
+
+To allow for inverted barcodes, add the value `GTM_INVERTED` to `GrayscaleTransformationModes` as shown in the code snippet below:
 
 <div class="sample-code-prefix template2"></div>
    >- JavaScript
@@ -112,9 +118,3 @@ settings.further_modes.grayscale_transformation_modes[1] = EnumGrayscaleTransfor
 # Update the settings.
 reader.update_runtime_settings(settings)
 ```
-
-**Remarks**
-
-- With only `GTM_GENERAL` enabled in `GrayscaleTransformationModes`, DBR scans only general black-on-white barcodes.
-- With only `GTM_INVERTED` enabled in `GrayscaleTransformationModes`, DBR scans only inverted barcodes.
-- When `GTM_GENERAL` is enabled as the first mode and `GTM_INVERTED` is enabled as the second mode in `GrayscaleTransformationModes`, DBR will try to decode general barcodes first. If the count of decoded barcodes does not reach the expected number, DBR will then try decoding the inverted barcodes.

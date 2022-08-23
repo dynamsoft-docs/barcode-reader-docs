@@ -9,9 +9,9 @@ noTitleIndex: true
 permalink: /programming/features/read-images-with-lots-of-text.html
 ---
 
-# How to Read Barcodes from Image With Lots of Text
+# How to Read Barcodes from an Image With Lots of Text
 
-When trying to read an image where a barcode is surrounded by a large number of irrelevant characters, the presence of these words may lead to incorrect positioning, and slow down the execution speed. Dynamsoft Barcode Reader (DBR) provides a parameter, [`TextFilterModes`]({{ site.parameters_reference }}text-filter-modes.html#textfiltermodes), to control how to filter texts on an image.
+When trying to read an image where a barcode is surrounded by a large amount of irrelevant text, the presence of these characters may lead to incorrect positioning and slow down the execution speed. Dynamsoft Barcode Reader (DBR) provides a parameter, [`TextFilterModes`]({{ site.parameters_reference }}text-filter-modes.html#textfiltermodes), to control how to filter texts on an image.
 
 ## Sample Code
 

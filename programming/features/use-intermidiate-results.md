@@ -11,7 +11,7 @@ permalink: /programming/features/use-intermidiate-results.html
 
 # How to Use Intermediate Results
 
-Apart from getting the results like barcode type, value, location, Dynamsoft Barcode Reader (DBR) also provides APIs for you to obtain the intermediate results like original image, transformed grayscale image, binarized image, text zone, etc. for further analysis. See enum [`IntermediateResultType`]({{ site.enumerations }}result-enums.html#intermediateresulttype) for full list of supported intermediate result types. All these results can be saved in memory and in file system, which is controled by parameter [`IntermediateResultSavingMode`]({{ site.parameters_reference }}intermediate-result-saving-mode.html#intermediateresultsavingmode).
+Apart from getting the results like barcode type, value, location, Dynamsoft Barcode Reader (DBR) also provides APIs for you to obtain the intermediate results like original image, transformed grayscale image, binarized image, text zone, and more for further analysis. See enum [`IntermediateResultType`]({{ site.enumerations }}result-enums.html#intermediateresulttype) for the full list of supported intermediate result types. All these results can be saved in memory or in the file system, which is controled by parameter [`IntermediateResultSavingMode`]({{ site.parameters_reference }}intermediate-result-saving-mode.html#intermediateresultsavingmode).
 
 **Note**: You will need a separate license for all the intermediate results except the original image.
 

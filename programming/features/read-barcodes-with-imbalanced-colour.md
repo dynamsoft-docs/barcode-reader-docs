@@ -9,9 +9,9 @@ noTitleIndex: true
 permalink: /programming/features/read-barcodes-with-imbalanced-colour.html
 ---
 
-# How to read barcodes with imbalanced colour
+# How to Read Barcodes with Imbalanced Colour
 
-As we all know, any color is composed of red, blue and green. If the image is a colour image, DBR will convert it to grayscale first for further process.
+As we all know, any color is composed of red, blue and green (RGB). If the image is a colour image, DBR will convert it to grayscale first for further processing.
 
 ```math
 Gray = Red*RedChannelWeight + Green*GreenChannelWeight + Blue*BlueChannelWeight
@@ -24,7 +24,7 @@ The default weights in DBR are suitable for most cases. However, some color imag
    <p>Figure 1 – Sample barcode colour image</p>
 </div>
 
-The default grayscale image converted by DBR is show below.
+The default grayscale image converted by DBR is shown below.
 
 <div align="center">
    <p><img src="assets/read-barcodes-with-imbalanced-colour/default-gray-img.png" alt="barcode gray image using default" width="25%" /></p>
@@ -38,7 +38,7 @@ The image below shows the grayscale image converted by DBR using only red channe
    <p>Figure 3 – Sample barcode gray image using only red channel</p>
 </div>
 
-As we can see, the gray image converted using only red channel is much better than the default gray image. Now we will demonstrate how to configure the `PublicRuntimeSettings.furtherModes.colourConversionModes` to complete the conversion.
+As we can see, the gray image converted using only red channel is much better than the default gray image. Now we will demonstrate how to configure the `colourConversionModes` to complete the conversion.
 
 <div class="sample-code-prefix template2"></div>
    >- JavaScript

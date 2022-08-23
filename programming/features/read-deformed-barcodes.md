@@ -18,7 +18,19 @@ As shown below, barcodes on the surface of some flexible packaging or cylindrica
    <p>Deformed Barcodes</p>
 </div>
 
-By default, DBR may not handle such cases well. To get such images decoded, enable deformation resistance by adding `DRM_BROAD_WARP`, `DRM_LOCAL_REFERENCE` and `DRM_DEWRINKLE` to [`DeformationResistingModes`]({{ site.parameters_reference }}deformation-resisting-modes.html) as shown in the code snippet below:
+By default, DBR may not handle such cases well. To get such images decoded, enable deformation resistance by adding `DRM_BROAD_WARP`, `DRM_LOCAL_REFERENCE` and `DRM_DEWRINKLE` to [`DeformationResistingModes`]({{ site.parameters_reference }}deformation-resisting-modes.html). Here is a quick breakdown of each of the modes:
+
+* `DRM_BROAD_WARP`: Resists deformation when the barcode is warped gently.
+* `DRM_LOCAL_REFERENCE`: Resists deformation for barcodes with minor deformation in local modules.
+* `DRM_DEWRINKLE`: Resists deformation for barcodes on a wrinkled surface.
+
+> Note:
+>
+> `DeformationResistingModes` only works for QR Code and DataMatrix codes.
+
+You can either specify one of the `DeformationResistingModes` or add all of them. If mulpitle modes are specified, the library will switch between the modes automatically until the number of detected barcodes meets the `ExpectedBarcodeCount`.
+
+## Code Snippet
 
 <div class="sample-code-prefix template2"></div>
    >- JavaScript
@@ -123,13 +135,3 @@ settings.further_modes.deformation_resisting_modes[2] = EnumDeformationResisting
 # Update the settings.
 reader.update_runtime_settings(settings)
 ```
-
-> Note:
->
-> `DeformationResistingModes` only works for QR Code and DataMatrix codes.
-
-You can either specify one of the `DeformationResistingModes` or add all of them. If mulpitle modes are specified, the library will switch between the modes automatically until the number of detected barcodes meets the `ExpectedBarcodeCount`.
-
-* `DRM_BROAD_WARP`: Resists deformation when the barcode is warped gently.
-* `DRM_LOCAL_REFERENCE`: Resists deformation for barcodes with minor deformation in local modules.
-* `DRM_DEWRINKLE`: Resists deformation for barcodes on a wrinkled surface.
