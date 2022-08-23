@@ -129,6 +129,8 @@ The parameters of `FormatSpecification` are:
 * FormatSpecification. Code128Subset
 * FormatSpecification. DeblurLevel
 * FormatSpecification. DeformationResistingModes
+* FormatSpecification.EnableDataMatrixECC000-140
+* FormatSpecification.EnableQRCodeModel1
 * FormatSpecification. FindUnevenModuleBarcode
 * FormatSpecification. HeadModuleRatio
 * FormatSpecification. MinQuietZoneWidth

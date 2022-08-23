@@ -34,7 +34,7 @@ The algorithm of DBR includes a flow of 5 stages at the top level, as illustrate
 
 ### Stage 1 is to get regions of interest (ROI) image(s)
 
-This stage begins with how to get an image from a variety of sources, including files, videos, or buffers of other applications. Then there are some optional steps to convert the original image to a grayscale image. What these steps do depends on relevant parameters’ values. Table 1 lists these parameters and their respective design intents.
+This stage begins with how to get an image from a variety of sources, including files, videos, or buffers of other applications. Then there are some optional steps to convert the original image to a grayscale image. What these steps do depends on relevant parameters' values. Table 1 lists these parameters and their respective design intents.
 
 Table 1 – Parameters of DBR Algorithm in the Stage 1
 
@@ -68,7 +68,7 @@ Table 3 – Barcode Localization Modes of DBR
 
 | **Mode Name** | **Pros** | **Cons** |
 |---------------|----------|----------|
-| `LM_SCAN_DIRECTLY` | Fast | Easy to miss barcodes. Performance isn’t consistent with different barcodes types. |
+| `LM_SCAN_DIRECTLY` | Fast | Easy to miss barcodes. Performance isn't consistent with different barcodes types. |
 | `LM_CONNECTED_BLOCKS` | Efficient for clear images. | Sensitive to damage of module connection. |
 | `LM_LINES` | Robust for broken barcodes. | More computation required to extract vectors of lines compared to `LM_CONNECTED_BLOCKS`. |
 | `LM_STATISTICS` | Robust for blurry images. | Hard to differentiate barcodes from other printing areas where there are similar black-white contrasts. |
@@ -82,22 +82,22 @@ Table 3 – Barcode Localization Modes of DBR
 
 3. `LM_LINES` is a good option to follow `LM_CONNECTED_BLOCKS` if you want to achieve higher accuracy with a low time cost.   
 
-4. `LM_STATISTICS` will try to find out the areas where the distribution of grayscale values looks like a barcode zone. It’s an auxiliary method when the above modes don’t work.
+4. `LM_STATISTICS` will try to find out the areas where the distribution of grayscale values looks like a barcode zone. It's an auxiliary method when the above modes don't work.
 
 The above four modes can support most regular barcode formats. The barcodes of these formats can be localized in one pass of
 an image. Limit the barcode formats for localization using the parameter [`BarcodeFormatIds`]({{ site.parameters_reference }}barcode-format-ids.html) and [`BarcodeFormatIds_2`]({{ site.parameters_reference }}barcode-format-ids-2.html).
 
 1. `LM_STATISTICS_MARKS` is designed mainly to find out barcodes whose modules are separate, e.g., Direct Part Marking (DPM), and DotCode.
 
-2. `LM_STATISTICS_POSTAL_CODE` finds bars of postal codes in terms of bars’ distribution. `LM_SCAN_DIRECTLY`, `LM_CONNECTED_BLOCKS`, and `LM_LINES` can also contribute to the location of postal codes.
+2. `LM_STATISTICS_POSTAL_CODE` finds bars of postal codes in terms of bars' distribution. `LM_SCAN_DIRECTLY`, `LM_CONNECTED_BLOCKS`, and `LM_LINES` can also contribute to the location of postal codes.
 
 Localization modes could be added according to particular features of the barcodes to meet the requirements of more barcode formats in the future.
 
 ### Stage 3 is to partition barcode zones precisely
 
-For localized barcode zones, further work is essential before DBR takes it as a barcode to the decoding stage. Barcode format and exact boundary are two key factors. Some rough barcode zones, the result of certain localization modes, have the format information. However, it isn’t always the case. The exact boundary of a barcode is more meaningful than the rough zone for the following decoding stage. Though some barcode formats are robust to the boundary roughness, an exact boundary can improve the accuracy of poor-quality barcodes.
+For localized barcode zones, further work is essential before DBR takes it as a barcode to the decoding stage. Barcode format and exact boundary are two key factors. Some rough barcode zones, the result of certain localization modes, have the format information. However, it isn't always the case. The exact boundary of a barcode is more meaningful than the rough zone for the following decoding stage. Though some barcode formats are robust to the boundary roughness, an exact boundary can improve the accuracy of poor-quality barcodes.
 
-[`BarcodeColourModes`]({{ site.parameters_reference }}barcode-colour-modes.html#barcodecolourmodes) is a parameter to control how to seek the boundary. Before, during, or after seeking boundary, the format can be determined. With an exact boundary, DBR may scale up the barcode if the module size is too small. The parameter, [`ScaleUpModes`]({{ site.parameters_reference }}scale-up-modes.html#scaleupmodes), is used to assign one or more scale up methods. At last, the anti-perspective transformation will be applied if the boundary isn’t relatively rectangular.
+[`BarcodeColourModes`]({{ site.parameters_reference }}barcode-colour-modes.html#barcodecolourmodes) is a parameter to control how to seek the boundary. Before, during, or after seeking boundary, the format can be determined. With an exact boundary, DBR may scale up the barcode if the module size is too small. The parameter, [`ScaleUpModes`]({{ site.parameters_reference }}scale-up-modes.html#scaleupmodes), is used to assign one or more scale up methods. At last, the anti-perspective transformation will be applied if the boundary isn't relatively rectangular.
 
 ### Stage 4 is to decode one-calibrated-barcoded images
 
@@ -165,7 +165,7 @@ Table 6 – Parameters to Organize the Results
 
 ## Intermediate Result and third-party integration
 
-DBR outputs not only the barcodes and their locations but also lots of data created during the reading procedure, i.e., intermediate results. These data help analyze the performance and debug in development. Considering scenarios where barcode reading isn’t the only goal, intermediate results can be utilized by third-party applications, e.g., OCR, to reduce duplicate work. DBR supports receiving such data from third-party applications to improve the speed as well.
+DBR outputs not only the barcodes and their locations but also lots of data created during the reading procedure, i.e., intermediate results. These data help analyze the performance and debug in development. Considering scenarios where barcode reading isn't the only goal, intermediate results can be utilized by third-party applications, e.g., OCR, to reduce duplicate work. DBR supports receiving such data from third-party applications to improve the speed as well.
 
 Table 7 – Intermediate Result Types
 

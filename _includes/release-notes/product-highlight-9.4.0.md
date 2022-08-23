@@ -1,3 +1,4 @@
 
-- The performance of DotCode decoding has improved.
-- The performance of stacked, skewed or perspective OneD barcode decoding is improved.
+- **DotCode** decoding has been improved by optimizing the localization and decoding algorithm.
+- **Stacked**, **skewed** and **perspective OneD barcode** decoding has been improved.
+
