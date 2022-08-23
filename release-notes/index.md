@@ -163,7 +163,7 @@ permalink: /release-notes/index.html
 - Implemented a new licensing tracking mechanism, License 2.0, which makes it easier for users to track license usage. 
 - Added a new format control parameter, BarcodeZoneMinDistanceToImageBorders, to set the minimum distance (in pixels) between the barcode zone and image borders.
 - Added a new format control parameter, MinRatioOfBarcodeZoneWidthToHeight, to set the minimum ratio (width/height) of the barcode zone.
-- Added a new format control parameter, BarcodeZoneBarCountRangeArray, to set the barcode zone’s range of bar count for barcode search.
+- Added a new format control parameter, BarcodeZoneBarCountRangeArray, to set the barcode zone's range of bar count for barcode search.
 - Added a new argument, SpatialIndexBlockSize, for RPM_GENERAL_RGB_CONTRAST, RPM_GENERAL_GRAY_CONTRAST and RPM_GENERAL_HSV_CONTRAST.
 - Added a new parameter, DeblurModes, so users can use different deblur algorithms for different scenarios. DeblurModes has the following enum types: DirectBinarization, ThresholdBinarization, GrayEqulization, Smoothing, Morphing, DeepAnalysis and Sharpening.
 - Improved the localization speed for the ScanDirectly mode.
@@ -413,7 +413,7 @@ permalink: /release-notes/index.html
 #### IMPROVED
 
 - Optimized barcode reading workflow for QRCode/DataMatrix/Aztec code recognition. A QRCode/DataMatrix/Aztec barcode zone will be submitted to the deblurring process when its decoding results vary with different binarization arguments.
-- Reduced the error rate of 1D barcode recognition. Giving more chances for confirmation of a 1D barcode decoding result whose confidence isn’t extreme high.
+- Reduced the error rate of 1D barcode recognition. Giving more chances for confirmation of a 1D barcode decoding result whose confidence isn't extreme high.
 - Reduced the possibility of conflicts with neighbour barcodes. This improved the precision of the zone to be deleted when a barcode is recognized successfully.
 
 #### FIXED
@@ -732,7 +732,7 @@ permalink: /release-notes/index.html
 
 #### NEW
 
-- Dynamsoft’s barcode recognition engine has been in existence since April 2012. It works as an add-on to our Dynamic Web TWAIN and Dynamic .NET TWAIN SDKs. In this new release, we are changing the product name to Dynamic Barcode Reader and the version to 1.0.
+- Dynamsoft's barcode recognition engine has been in existence since April 2012. It works as an add-on to our Dynamic Web TWAIN and Dynamic .NET TWAIN SDKs. In this new release, we are changing the product name to Dynamic Barcode Reader and the version to 1.0.
 - Updates in this version include 1D barcode improvements in accuracy and performance for Code 39 and Code128 recognition. Also, image preprocessing is improved. For Code 128, the recognition ratio and speed have jumped up by as much as 30 percent.
 
 <div class="fold-panel-end"></div>

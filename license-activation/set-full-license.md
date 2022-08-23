@@ -25,14 +25,14 @@ To activate the license, click "Activate".
 
  ![Activate][1]
 
-On the next page, set an Alias for your license or leave the default Alias, choose where you want the license to be hosted ("Dynamsoft’s License Server"
+On the next page, set an Alias for your license or leave the default Alias, choose where you want the license to be hosted ("Dynamsoft's License Server"
 or "My Self-Hosted License Server") and click the "Activate" button.
 
 ![Activate2][2]
 
 > 1. **Alias** is a way to identify the license. You can set a meaningful Alias to a license so that you can easily identify the purpose of the license.
 >
-> 2. In most cases, you should choose "Dynamsoft’s License Server", choose "My Self-Hosted License Server" only when you have [consulted us](https://www.dynamsoft.com/company/contact/).
+> 2. In most cases, you should choose "Dynamsoft's License Server", choose "My Self-Hosted License Server" only when you have [consulted us](https://www.dynamsoft.com/company/contact/).
 >
 > 3. You might be prompted to add the new license to an existing project or create a new project for this license.
 

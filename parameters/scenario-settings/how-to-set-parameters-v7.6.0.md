@@ -8,7 +8,7 @@ permalink: /parameters/scenario-settings/how-to-set-parameters-v7.6.0.html
 ---
 
 # How to set DBR parameters 
-DBR provides flexible parameter configuration to meet user’s decoding requirements under different scenarios and different needs. Users can modify the configuration through RuntimeSetting and the Json template. 
+DBR provides flexible parameter configuration to meet user's decoding requirements under different scenarios and different needs. Users can modify the configuration through RuntimeSetting and the Json template. 
 - RuntimeSetting   
 RuntimeSetting is an object that manages various parameters during runtime. If you need to dynamically change the DBR configuration when the program is running, modifying RuntimeSetting will be a good choice. RuntimeSetting only provides some common parameters for setting, the complete parameter setting can be achieved through the Json template. 
 - Json template 

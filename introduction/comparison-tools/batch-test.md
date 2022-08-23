@@ -84,7 +84,7 @@ After the program has executed, you will see DBR_T_DEFAULT_xxxxx.csv, the perfor
 |Time Cost (ms) |The time spent reading barcodes in the file. Unit in ms. |
 |Barcode Count |Count of barcodes decoded in the file |
 |Barcode Hex |Hex encoding of all the decoded barcode content. Mainly used for comparing different identification results. |
-|Barcode Text |The content of the barcode identified. If the recognition result cannot be fully displayed due to the output format and/or word count limit, the field ‘Original’ will be set to No.|
+|Barcode Text |The content of the barcode identified. If the recognition result cannot be fully displayed due to the output format and/or word count limit, the field ‘Original' will be set to No.|
 |Original|If the value of this field is No, you can refer to the 'Note' section at the bottom of the file to view the details of the barcode. |
 
 

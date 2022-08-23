@@ -45,7 +45,7 @@ await scanner.updateRuntimeSettings(settings);
 // Obtain current runtime settings of `reader` instance.
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 // Add DRM_GENERAL to the deformationResistingModes to decode deformed barcodes.
-settings.furtherModes.deformationResistingModes = new int[]{EnumDeformationResistingMode.DRM_BROAD_WARP, EnumDeformationResistingMode.DRM_LOCAL_REFERENCE，EnumDeformationResistingMode.DRM_DEWRINKLE};
+settings.furtherModes.deformationResistingModes = new int[]{EnumDeformationResistingMode.DRM_BROAD_WARP, EnumDeformationResistingMode.DRM_LOCAL_REFERENCE,EnumDeformationResistingMode.DRM_DEWRINKLE};
 // Update the settings.
 reader.updateRuntimeSettings(settings);
 ```
@@ -108,7 +108,7 @@ reader.UpdateRuntimeSettings(settings);
 // Obtain current runtime settings of `reader` instance.
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 // Add DRM_GENERAL to the deformationResistingModes to decode deformed barcodes.
-settings.furtherModes.deformationResistingModes = new int[]{EnumDeformationResistingMode.DRM_BROAD_WARP, EnumDeformationResistingMode.DRM_LOCAL_REFERENCE，EnumDeformationResistingMode.DRM_DEWRINKLE};
+settings.furtherModes.deformationResistingModes = new int[]{EnumDeformationResistingMode.DRM_BROAD_WARP, EnumDeformationResistingMode.DRM_LOCAL_REFERENCE,EnumDeformationResistingMode.DRM_DEWRINKLE};
 // Update the settings.
 reader.updateRuntimeSettings(settings);
 ```
