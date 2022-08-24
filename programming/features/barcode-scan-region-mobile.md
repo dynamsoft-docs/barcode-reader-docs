@@ -21,7 +21,7 @@ DBR will locate the code region and decode the entire image by default. However,
 - `regionBottom`: The y coordinate of the Bottom border of the region.
 - `regionLeft`: The x coordinate of the left border of the region.
 - `regionRight`: The x coordinate of the right border of the region.
-- `RegionMeasuredByPercentage`: If measured by percentage, the above values will be recognized as percentages (1 to 100). Otherwise, the above values will be recognized as pixel length.
+- `regionMeasuredByPercentage`: If measured by percentage, the above values will be recognized as percentages (1 to 100). Otherwise, the above values will be recognized as pixel length.
 
 > Notes:
 >
