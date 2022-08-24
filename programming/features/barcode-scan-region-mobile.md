@@ -13,7 +13,7 @@ permalink: /programming/features/barcode-scan-region-mobile.html
 
 ## Read from a specific region of an image
 
-DBR will locate the code region and decode the entire image by default. However, if only specific regions are required when decoding the barcode, you can define a Region Of Interest (ROI) by the parameter `RegionDefinition`. After defining a specific region, DBR will only decode barcodes within that region. Of course, this is very conducive to increasing the speed.
+DBR will locate the code region and decode the entire image by default. However, if only a specific region of the image or video is required to locate the barcode, you can define a Region Of Interest (ROI) via the parameter `RegionDefinition`. After defining a specific region, DBR will only decode barcodes within that region. Of course, this is very conducive to increasing the speed.
 
 `RegionDefinition` is the struct that is designed to specify the ROI.
 
@@ -21,13 +21,13 @@ DBR will locate the code region and decode the entire image by default. However,
 - `regionBottom`: The y coordinate of the Bottom border of the region.
 - `regionLeft`: The x coordinate of the left border of the region.
 - `regionRight`: The x coordinate of the right border of the region.
-- `MeasureByPercentage`: If measured by percentage, the above values will be recognized as percentages (1 to 100). Otherwise, the above values will be recognized as pixel length.
+- `regionMeasuredByPercentage`: If measured by percentage, the above values will be recognized as percentages (1 to 100). Otherwise, the above values will be recognized as pixel length.
 
 > Notes:
 >
 > - You can either configure these settings via the `PublicRuntimeSettings` struct or via a JSON template.
 > - When using `PublicRuntimeSettings`, you can only specify one region.
-> - When using JSON template, you can either specify one or more regions.
+> - When using JSON template, you can specify more than one region.
 
 ### Single Region Specification
 
@@ -99,7 +99,7 @@ To do the same with a JSON Template. Read more on [RuntimeSettings and templates
 
 ### Multiple Region Specification
 
-If you need to specify more than one ROI, the only way is to use a JSON template. Furthermore, you can even configure different barcode-decoding parameter settings for each region. Read more on [RuntimeSettings and templates](use-runtimesettings-or-templates.md#json-templates)
+If you need to specify more than one ROI, you have to use a JSON template. Furthermore, you can even configure different barcode-decoding parameter settings for each region. Read more on [RuntimeSettings and templates](use-runtimesettings-or-templates.md#json-templates)
 
 ```json
 {

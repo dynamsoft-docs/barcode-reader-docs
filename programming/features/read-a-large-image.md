@@ -9,9 +9,9 @@ noTitleIndex: true
 permalink: /programming/features/read-a-large-image.html
 ---
 
-# How to read barcodes from large images
+# How to Read Barcodes from Large Images
 
-In some cases, the captured image is very large, so DBR may require more memory and take longer to read the barcode. To speed up the barcode localization process and reduce memory overhead, you can configure `PublicRuntimeSettings.ScaleDownThreshold` parameter to shrink the image size. If the shorter side length of the image is larger than `ScaleDownThreshold`, the library will shrink the image (50% on each dimension) until the shorter side is less than the threshold.
+In some cases, the captured image is very large, so DBR may require more memory and take longer to read the barcode. To speed up the barcode localization process and reduce memory overhead, you can configure the `ScaleDownThreshold` parameter to shrink the image size. If the shorter side length of the image is larger than `ScaleDownThreshold`, the library will shrink the image (50% on each dimension) until the shorter side is less than the threshold.
 
 >Note:
 >

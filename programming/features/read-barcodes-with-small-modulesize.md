@@ -9,16 +9,16 @@ noTitleIndex: true
 permalink: /programming/features/read-barcodes-with-small-modulesize.html
 ---
 
-# How to read barcodes with small module size
+# How to Read Barcodes with Small Module Size
 
-A module is the narrowest "bar" in a 1D barcode, or the smallest "box" in a 2D barcode. Keep in mind this "bar" or "box" can be either light or dark. The figure below illustrates the module size of 1d and 2d barcodes.
+A module is the narrowest "bar" in a 1D barcode, or the smallest "box" in a 2D barcode. Keep in mind this "bar" or "box" can be either light or dark. The figure below illustrates the module size of 1D and 2D barcodes.
 
 <div align="center">
    <p><img src="assets/read-barcodes-with-small-module-size/sample-barcode-with-small-module-size.png" alt="Module size of barcodes" width="50%" /></p>
    <p>Figure 1 – Module size of 1D and 2D barcodes</p>
 </div>
 
-In some scenarios, the barcode is very small relative to the entire image, and its module size is even smaller, which makes it difficult for our library to read the barcode. In this case, we can use the parameter `ScaleUpMode` in `PublicRuntimeSettings.scaleUpModes` to enlarge the barcode symboal for easier processing.
+In some scenarios, the barcode is very small relative to the entire image, and its module size is even smaller, making it difficult for the library to read the barcode. In this case, we can use the parameter `ScaleUpModes` in to enlarge the barcode symbol for easier processing.
 
 <div class="sample-code-prefix template2"></div>
    >- JavaScript

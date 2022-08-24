@@ -11,23 +11,23 @@ permalink: /programming/features/customize-the-ui.html
 
 # Customize the UI
 
-Typically, DBR JS reads barcodes directly from video frames. Finding and aiming at the barcode is something essential to the process, therefore, it's very important to have a good integration of the video stream for the reading process.
+Typically, DBR JS reads barcodes directly from video frames. Finding and aiming at the barcode is something essential to the process. Therefore, it's important to have a user friendly UI for the video stream to simplify the reading process for the user.
 
 ## The built-in UI
 
 The `BarcodeScanner` class of DBR JS comes with a built-in UI which consists of the following elements:
 
-* An `HTMLVideoElement` that plays the video stream from the camera and allows the SDK to manipulate the video object (in our case, the camera);
-* A laser-like moving `HTMLDivElement` that indicates that the SDK is scanning a certain area of the image for barcodes;
-* Two built-in `HTMLSelectElement`s that offer the options to change the camera or change the resolution of the current camera;
-* An `HTMLCanvasElement` on top of the video stream which is used to highlight the location of found barcodes and show other information if required;
-* Other assisting elements.
+* An `HTMLVideoElement` that plays the video stream from the camera and allows the SDK to manipulate the video object (in our case, the camera)
+* A laser-like moving `HTMLDivElement` that indicates that the SDK is scanning a certain area of the image for barcodes
+* Two built-in `HTMLSelectElement`s that offer the options to change the camera or change the resolution of the current camera
+* An `HTMLCanvasElement` on top of the video stream which is used to highlight the location of found barcodes and show other information if required
+* Other assisting elements
 
 All of these elements can be customized.
 
 ## How to customize the UI
 
-Although you can build your UI for DBR JS from scratch, we recommend that you use the default UI or just customize some element based on it to save time.
+Although you can build your UI for DBR JS from scratch, it is recommended to use the default UI and customize the already existing elements to save time.
 
 If you don't intend to change anything, then all you need is the following two lines of code which will automatically make use of the default UI.
 
@@ -84,7 +84,7 @@ We'll start with the following code which shows the video stream in a plain vide
 
 ### Add a loading indicator
 
-The SDK takes a bit of time to initialize, for better user experience, we can add a loading indicator to inform the user that the loading is happening.
+The SDK takes a bit of time to initialize. For a better user experience, we can add a loading indicator to inform the user that the loading is happening.
 
 We add the following SVG into the div `div-ui-container` :
 
@@ -197,9 +197,9 @@ scanner.barcodeStrokeStyle = "rgba(73, 245, 73, 1)";
 
 ### Add a viewfinder frame
 
-Having a video playing on the page may seem a bit incongruous. we can add a viewfinder frame around the video to make it better.
+Having a video playing on the page may seem a bit incongruous. We can add a viewfinder frame around the video to make it better.
 
-To do this, we add the following code inside the div `div-ui-container` :
+To do this, we add the following code inside the div `div-ui-container`:
 
 ```html
 <div id="dce-mask" hidden style="width:100%;height:100%;position:absolute;top:-10px;left:-10px;padding:10px;">

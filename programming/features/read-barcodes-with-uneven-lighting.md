@@ -11,7 +11,7 @@ permalink: /programming/features/read-barcodes-with-uneven-lighting.html
 
 # How to read barcodes with uneven lighting
 
-In some scenarios, the captured barcode image may have inconsistent lighting. For example, the following image shows a barcode image with uneven lighting.
+In some scenarios, the captured barcode image may have inconsistent lighting across the barcode. For example, the following image shows a barcode image with uneven lighting.
 
 <div align="center">
    <p><img src="assets/read-barcodes-with-uneven-lighting/uneven-illumination.png" alt="Sample barcode image with uneven lighting" width="50%" /></p>
@@ -34,7 +34,7 @@ The following two images show the effects of `BM_THRESHOLD` (global thresholding
    <p>Figure 3 – Binarized image by local thresholding</p>
 </div>
 
-Obviously, the local thresholding result is much better. Now we will demonstrate how to configure the `PublicRuntimeSettings.binarizationModes` to use the `BM_LOCAL_BLOCK` binarization.
+Obviously, the local thresholding result is much better. Now we will demonstrate how to configure the `BinarizationModes` to use the `BM_LOCAL_BLOCK` binarization.
 
 <div class="sample-code-prefix template2"></div>
    >- JavaScript

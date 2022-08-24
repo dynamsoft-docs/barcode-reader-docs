@@ -11,14 +11,14 @@ permalink: /programming/features/read-dense-barcodes.html
 
 # How to read high-density QR Codes
 
-A QR code can store up to 7,089 numbers, 4,296 alphanumeric characters, 2,953 bytes, or 1,817 Japanese Kanjis. As the encoded information increases, the QR code becomes denser. As shown below, the QR code has high density.
+A QR code can store up to 7,089 numbers, 4,296 alphanumeric characters, 2,953 bytes, or 1,817 Japanese Kanjis. As the encoded information increases, the QR code becomes denser. The diagram below displays a QR code that has high density.
 
 <div align="center">
    <p><img src="assets/read-dense-barcodes/dense-qr-code.jpg" alt="High-density QR Code" width="80%" /></p>
    <p>Figure 1 – High-density QR Code</p>
 </div>
 
-In some scenarios, high-density QR codes become more difficult to locate and recognize due to small barcode images, perspective and distortion.
+In some scenarios, high-density QR codes become more difficult to locate and recognize due to small barcode images, perspective, and distortion.
 
 We can do the following to optimize the read rate of high-density QR codes:
 

@@ -11,7 +11,7 @@ permalink: /programming/features/read-video-streaming-js.html
 
 # Read Barcode from Video Streaming
 
-`BarcodeScanner` is the class for video streaming barcode decoding. An example of `BarcodeScanner` is shown below.
+`BarcodeScanner` is the class to use for video streaming barcode decoding. An example on how to quickly use `BarcodeScanner` is shown below:
 
 ```html
 <!DOCTYPE html>
