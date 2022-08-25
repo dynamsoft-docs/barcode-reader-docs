@@ -17,10 +17,12 @@ permalink: /parameters/reference/barcode-format-ids.html
 - The default value is all supported barcode formats in BarcodeFormat group 1.
 - The barcode format our library will search for is composed of [BarcodeFormat group 1]({{ site.enumerations }}format-enums.html#barcodeformat) and [BarcodeFormat group 2]({{ site.enumerations }}format-enums.html#barcodeformat_2), so you need to specify the barcode format in group 1 and group 2 individually.
 
-
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *int* / *EnumBarcodeFormat_2* | N/A | `BF_ALL` | `ImageParameter`/`FormatSpecification`/`RegionDefinition` |
     
 ## Setting Methods
-`BarcodeFormatIds` is supported to be set through `RuntimeSetting` or JSON template.
+`BarcodeFormatIds` can be set through `RuntimeSetting` or JSON template.
 
 ### As `PublicRuntimeSettings` Member
 `BarcodeFormatIds` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct.

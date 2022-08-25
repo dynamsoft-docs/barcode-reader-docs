@@ -13,9 +13,9 @@ permalink: /parameters/reference/australian-post-encoding-table.html
 
 `AustralianPostEncodingTable` is a parameter to specify the encoding table used to code the Customer Information Field of Australian Post Customer Barcode. It is defined as below:
 
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| *string* | "C"<br>"N" | "C"  |
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *string* | "C"<br>"N" | "C"  | `FormatSpecification` |
 
 
     

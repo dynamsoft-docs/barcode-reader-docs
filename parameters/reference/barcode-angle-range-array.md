@@ -13,6 +13,9 @@ permalink: /parameters/reference/barcode-angle-range-array.html
 
 `BarcodeAngleRangeArray` is a parameter to specify the range of angles (in degrees) for barcodes searching and result filtering. It is not set by default which means there is no limitation on the barcode angles.
 
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *int* | [0, 360] | N/A | `FormatSpecification` |
     
 ## Setting Methods
 `BarcodeAngleRangeArray` is supported to be set through JSON template.
