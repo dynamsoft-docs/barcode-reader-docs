@@ -35,6 +35,8 @@ permalink: /parameters/reference/index.html
  | [`DeblurModes`](deblur-modes.md) | Sets the mode and priority for deblurring. |
  | [`DeformationResistingModes`](deformation-resisting-modes.md) | Sets the mode and priority for deformation resisting. |
  | [`DPMCodeReadingModes`](dpm-code-reading-modes.md) | Sets the mode and priority for DPM code reading. |
+ | [`EnableDataMatrixECC000-140`](enable-datamatrix-ecc000-140.md) | Specifies whether to decode DataMatrix ECC000-140 barcodes. |
+ | [`EnableQRCodeModel1`](enable-qrcode-model1.md) | Specifies whether to decode QRCode model 1 barcodes. |
  | [`ExpectedBarcodesCount`](expected-barcodes-count.md) | Sets the number of barcodes expected to be detected for each image. |
  | [`FindUnevenModuleBarcode`](find-uneven-module-barcode.md) | Specifies whether to find barcodes with uneven barcode modules. To be supported.| 
  | [`GrayscaleTransformationModes`](grayscale-transformation-modes.md) | Sets the mode and priority for the grayscale image conversion. |
