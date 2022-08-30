@@ -90,18 +90,18 @@ delete pSettings;
 **JSON Parameter Example**   
 ```
 {
-    "ScaleUpModes": [
-        {
-            "Mode": "SUM_LINEAR_INTERPOLATION", 
-            "ModuleSizeThreshold": 4,
-            "TargetModuleSize": 8
-        },
-        {
-            "Mode": "SUM_NEAREST_NEIGHBOUR_INTERPOLATION", 
-            "ModuleSizeThreshold": 4,
-            "TargetModuleSize": 6
-        }
-    ]
+    "ScaleUpModes": [
+        {
+            "Mode": "SUM_LINEAR_INTERPOLATION", 
+            "ModuleSizeThreshold": 4,
+            "TargetModuleSize": 8
+        },
+        {
+            "Mode": "SUM_NEAREST_NEIGHBOUR_INTERPOLATION", 
+            "ModuleSizeThreshold": 4,
+            "TargetModuleSize": 6
+        }
+    ]
 }
 ```
 

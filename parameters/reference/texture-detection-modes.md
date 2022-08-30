@@ -73,12 +73,12 @@ delete pSettings;
 **JSON Parameter Example**   
 ```
 {
-    "TextureDetectionModes": [
-        {
-            "Mode": "TDM_GENERAL_WIDTH_CONCENTRATION", 
-            "Sensitivity": 5
-        }
-    ]
+    "TextureDetectionModes": [
+        {
+            "Mode": "TDM_GENERAL_WIDTH_CONCENTRATION", 
+            "Sensitivity": 5
+        }
+    ]
 }
 ```
 

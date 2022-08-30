@@ -125,14 +125,14 @@ delete pSettings;
 **JSON Parameter Example**   
 ```
 {
-    "DeblurModes": [
-        {
-            "Mode": "DM_BASED_ON_LOC_BIN"
-        },
-        {
-            "Mode": "DM_THRESHOLD_BINARIZATION" 
-        }
-    ]
+    "DeblurModes": [
+        {
+            "Mode": "DM_BASED_ON_LOC_BIN"
+        },
+        {
+            "Mode": "DM_THRESHOLD_BINARIZATION" 
+        }
+    ]
 }
 ```
 

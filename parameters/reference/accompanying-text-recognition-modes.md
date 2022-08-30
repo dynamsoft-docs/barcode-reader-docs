@@ -78,14 +78,14 @@ Specifies the y-coordinate of the top-left corner of the region in percentage. T
 
 ```json
 {
-    "AccompanyingTextRecognitionModes": [
+    "AccompanyingTextRecognitionModes": [
         {
-            "Mode": "ATRM_GENERAL",
-            "RegionBottom": 50, 
-            "RegionLeft": 50,
-            "RegionRight": 50, 
-            "RegionTop": 50
-        }
+            "Mode": "ATRM_GENERAL",
+            "RegionBottom": 50, 
+            "RegionLeft": 50,
+            "RegionRight": 50, 
+            "RegionTop": 50
+        }
 ]
 }
 ```
