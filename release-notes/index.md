@@ -11,7 +11,7 @@ permalink: /release-notes/index.html
 
 ## 9.4
 
-> First released: 08-25-2022
+> First released: 08-30-2022
 
 ### Highlights
 
@@ -19,7 +19,7 @@ permalink: /release-notes/index.html
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 9.4.0 | [C]({{ site.c_release_notes}}c-9.html#940-08252022) / [C++]({{ site.cpp_release_notes}}cpp-9.html#940-08252022) / [DotNet]({{ site.dotnet_release_notes }}dotnet-9.html#940-08252022) / [Java]({{ site.java_release_notes }}java-9.html#940-08252022) / [Python]({{ site.python_release_notes }}python-9.html#940-0825202) |
+| 9.4.0 | [C]({{ site.c_release_notes}}c-9.html#940-08302022) / [C++]({{ site.cpp_release_notes}}cpp-9.html#940-08302022) / [DotNet]({{ site.dotnet_release_notes }}dotnet-9.html#940-08302022) / [Java]({{ site.java_release_notes }}java-9.html#940-08302022) <!--/ [Python]({{ site.python_release_notes }}python-9.html#940-08302022) -->|
 
 ## 9.2
 
