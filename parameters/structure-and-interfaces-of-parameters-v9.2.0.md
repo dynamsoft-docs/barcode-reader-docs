@@ -61,91 +61,89 @@ Dynamsoft Barcode Reader uses a template to set parameters. A template contains 
 
 The parameters of `ImageParameter` are:
 
-* ImageParameter.BarcodeColourModes
-* ImageParameter.BarcodeComplementModes
-* ImageParameter.BarcodeFormatIds
-* ImageParameter.BarcodeFormatIds_2
-* ImageParameter.BinarizationModes
-* ImageParameter.ColourClusteringModes
-* ImageParameter.ColourConversionModes
-* ImageParameter.DeblurLevel
-* ImageParameter.DeblurModes
-* ImageParameter.DeformationResistingModes
-* ImageParameter.Description
-* ImageParameter.DPMCodeReadingModes
-* ImageParameter.ExpectedBarcodesCount
-* ImageParameter.FormatSpecificationNameArray
-* ImageParameter.GrayscaleTransformationModes
-* ImageParameter.ImagePreprocessingModes
-* ImageParameter.IntermediateResultSavingMode
-* ImageParameter.IntermediateResultTypes
-* ImageParameter.LocalizationModes
-* ImageParameter.MaxAlgorithmThreadCount
-* ImageParameter.Name
-* ImageParameter.Pages
-* ImageParameter.PDFRasterDPI
-* ImageParameter.PDFReadingMode
-* ImageParameter.RegionDefinitionNameArray
-* ImageParameter.RegionPredetectionModes
-* ImageParameter.ResultCoordinateType
-* ImageParameter.ReturnBarcodeZoneClarity
-* ImageParameter.ScaleDownThreshold
-* ImageParameter.ScaleUpModes
-* ImageParameter.TerminatePhase
-* ImageParameter.TextFilterModes
-* ImageParameter.TextResultOrderModes
-* ImageParameter.TextureDetectionModes
-* ImageParameter.Timeout
+* ImageParameter. BarcodeColourModes
+* ImageParameter. BarcodeComplementModes
+* ImageParameter. BarcodeFormatIds
+* ImageParameter. BarcodeFormatIds_2
+* ImageParameter. BinarizationModes
+* ImageParameter. ColourClusteringModes
+* ImageParameter. ColourConversionModes
+* ImageParameter. DeblurLevel
+* ImageParameter. DeblurModes
+* ImageParameter. DeformationResistingModes
+* ImageParameter. Description
+* ImageParameter. DPMCodeReadingModes
+* ImageParameter. ExpectedBarcodesCount
+* ImageParameter. FormatSpecificationNameArray
+* ImageParameter. GrayscaleTransformationModes
+* ImageParameter. ImagePreprocessingModes
+* ImageParameter. IntermediateResultSavingMode
+* ImageParameter. IntermediateResultTypes
+* ImageParameter. LocalizationModes
+* ImageParameter. MaxAlgorithmThreadCount
+* ImageParameter. Name
+* ImageParameter. Pages
+* ImageParameter. PDFRasterDPI
+* ImageParameter. PDFReadingMode
+* ImageParameter. RegionDefinitionNameArray
+* ImageParameter. RegionPredetectionModes
+* ImageParameter. ResultCoordinateType
+* ImageParameter. ReturnBarcodeZoneClarity
+* ImageParameter. ScaleDownThreshold
+* ImageParameter. ScaleUpModes
+* ImageParameter. TerminatePhase
+* ImageParameter. TextFilterModes
+* ImageParameter. TextResultOrderModes
+* ImageParameter. TextureDetectionModes
+* ImageParameter. Timeout
 
 The parameters of `RegionDefinition` are:
 
-* RegionDefinition.BarcodeFormatIds
-* RegionDefinition.BarcodeFormatIds_2
-* RegionDefinition.Bottom
-* RegionDefinition.ExpectedBarcodesCount
-* RegionDefinition.FormatSpecificationNameArray
-* RegionDefinition.Left
-* RegionDefinition.MeasuredByPercentage
-* RegionDefinition.Name
-* RegionDefinition.Right
-* RegionDefinition.Top
+* RegionDefinition. BarcodeFormatIds
+* RegionDefinition. BarcodeFormatIds_2
+* RegionDefinition. Bottom
+* RegionDefinition. ExpectedBarcodesCount
+* RegionDefinition. FormatSpecificationNameArray
+* RegionDefinition. Left
+* RegionDefinition. MeasuredByPercentage
+* RegionDefinition. Name
+* RegionDefinition. Right
+* RegionDefinition. Top
 
 The parameters of `FormatSpecification` are:
 
-* FormatSpecification.AllModuleDeviation
-* FormatSpecification.AustralianPostEncodingTable
-* FormatSpecification.BarcodeAngleRangeArray
-* FormatSpecification.BarcodeBytesLengthRangeArray
-* FormatSpecification.BarcodeBytesRegExPattern
-* FormatSpecification.BarcodeComplementModes
-* FormatSpecification.BarcodeFormatIds
-* FormatSpecification.BarcodeFormatIds_2
-* FormatSpecification.BarcodeHeightRangeArray
-* FormatSpecification.BarcodeTextLengthRangeArray
-* FormatSpecification.BarcodeTextRegExPattern
-* FormatSpecification.BarcodeWidthRangeArray
-* FormatSpecification.BarcodeZoneBarCountRangeArray
-* FormatSpecification.BarcodeZoneMinDistanceToImageBorders
-* FormatSpecification.Code128Subset
-* FormatSpecification.DeblurLevel
-* FormatSpecification.DeformationResistingModes
+* FormatSpecification. AllModuleDeviation
+* FormatSpecification. AustralianPostEncodingTable
+* FormatSpecification. BarcodeAngleRangeArray
+* FormatSpecification. BarcodeBytesLengthRangeArray
+* FormatSpecification. BarcodeBytesRegExPattern
+* FormatSpecification. BarcodeComplementModes
+* FormatSpecification. BarcodeFormatIds
+* FormatSpecification. BarcodeFormatIds_2
+* FormatSpecification. BarcodeHeightRangeArray
+* FormatSpecification. BarcodeTextLengthRangeArray
+* FormatSpecification. BarcodeTextRegExPattern
+* FormatSpecification. BarcodeWidthRangeArray
+* FormatSpecification. BarcodeZoneBarCountRangeArray
+* FormatSpecification. BarcodeZoneMinDistanceToImageBorders
+* FormatSpecification. Code128Subset
+* FormatSpecification. DeblurLevel
+* FormatSpecification. DeformationResistingModes
 * FormatSpecification.EnableDataMatrixECC000-140
 * FormatSpecification.EnableQRCodeModel1
-* FormatSpecification.FindUnevenModuleBarcode
-* FormatSpecification.HeadModuleRatio
-* FormatSpecification.MinQuietZoneWidth
-* FormatSpecification.MinRatioOfBarcodeZoneWidthToHeight
-* FormatSpecification.MinResultConfidence
-* FormatSpecification.MirrorMode
-* FormatSpecification.ModuleSizeRangeArray
-* FormatSpecification.MSICodeCheckDigitCalculation
-* FormatSpecification.Name
-* FormatSpecification.PartitionModes
-* FormatSpecification.PatchCodeSearchingMargins
-* FormatSpecification.RequireStartStopChars
-* FormatSpecification.ReturnPartialBarcodeValue
-* FormatSpecification.StandardFormat
-* FormatSpecification.TailModuleRatio
+* FormatSpecification. FindUnevenModuleBarcode
+* FormatSpecification. HeadModuleRatio
+* FormatSpecification. MinQuietZoneWidth
+* FormatSpecification. MinRatioOfBarcodeZoneWidthToHeight
+* FormatSpecification. MinResultConfidence
+* FormatSpecification. MirrorMode
+* FormatSpecification. ModuleSizeRangeArray
+* FormatSpecification. MSICodeCheckDigitCalculation
+* FormatSpecification. Name
+* FormatSpecification. RequireStartStopChars
+* FormatSpecification. ReturnPartialBarcodeValue
+* FormatSpecification. StandardFormat
+* FormatSpecification. TailModuleRatio
 
 ## Parameter template files assignment rules
 

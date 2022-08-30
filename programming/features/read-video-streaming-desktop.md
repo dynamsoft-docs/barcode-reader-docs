@@ -13,7 +13,7 @@ permalink: /programming/features/read-video-streaming-desktop.html
 
 DBR provides several processing interfaces for video streams, which facilitates the processing of video frame queues and multi-threading.
 
-DBR creates a queue to be processed to store the video frame currently being processed and then creates a decoding thread to process the queue. The decoding thread takes the latest frame in the queue for processing each time and then moves it out of the queue after decoding to perform the next processing. The results will be put into a result queue. If the length of the queue to be processed reaches the maximum value you set, the decoding thread will exit the current processing frame as soon as possible, empty the queue to be processed, and then wait for new frames to join the queue and restart processing to prevent a frame from taking too long.
+DBR creates a queue to store the video frames currently being processed and then creates a decoding thread to process that queue. The decoding thread takes the latest frame in the queue for processing and then takes it out of the queue after decoding to move on to the next frame in the queue. The results will be put into a result queue. If the length of the queue to be processed reaches the maximum value you set, the decoding thread will quit the frame it is currently processing as soon as possible and empty the queue. The thread then waits for new frames to join the queue and restart the process to prevent a frame from taking too long.
 
 DBR also provides the feature to filter blurred frames. When enabled, DBR will calculate the sharpness of the image frames in the queue to be processed, and the frames whose sharpness is lower than the threshold you set will be removed. The main APIs are as follows
 
@@ -52,7 +52,7 @@ DBR also provides the feature to filter blurred frames. When enabled, DBR will c
   - `fps`
     The frequency of calling `AppendFrame` per second. DBR will refer to this value when performing fuzzy frame filtering logic. If it is not set, then DBR will estimate based on the frequency of calling `AppendFrame`.
 
-The following example demonstrates these interfaces. In this example, we use opencv to read camera data and call DBR’s video streaming interface to decode.
+The following example demonstrates these interfaces. In this example, we use opencv to read camera data and call DBR's video streaming interface to decode.
 
 <div class="sample-code-prefix template2"></div>
    >- C

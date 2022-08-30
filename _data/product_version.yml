@@ -4,6 +4,7 @@ version_info_list_algorithm:
   - value: latest version
   - value: 9.x
     child:
+      - 9.2.0
       - 9.0.0
   - value: 8.x
     child:

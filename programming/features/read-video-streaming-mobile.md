@@ -13,10 +13,10 @@ permalink: /programming/features/read-video-streaming-mobile.html
 
 ## Configurations on the Camera
 
-Firstly, to decode from video streaming, you have to create a camera module. The camera module is responsible for:
+Firstly, to decode from video streaming, you have to create a camera module using the [Dynamsoft Camera Enhancer](https://www.dynamsoft.com/camera-enhancer/docs/introduction/?ver=latest). The camera module is responsible for:
 
-- Capturing the video streaming.
-- Displaying the video streaming on the UI.
+- Capturing the video stream.
+- Displaying the video stream on the UI.
 - Transfer the captured data to the barcode reader for barcode decoding.
 
 <div class="sample-code-prefix template2"></div>
@@ -140,7 +140,7 @@ class ViewController: UIViewController {
 
 ### Obtain Video Barcode Decoding Results
 
-Method `startScanning` is the switch of video streaming barcode decoding. If you have bound the instance of CameraEnhancer to the BarcodeReader, you can turn on the switch by triggering `startScanning`. To turn off the video barcode decoding, you can use `stopScanning`.
+Method `startScanning` is the main toggle for enabling video  barcode decoding. If you have bound the instance of CameraEnhancer to the BarcodeReader, you can turn on the switch by triggering `startScanning`. To turn off the video barcode decoding, you can use `stopScanning`.
 
 `TextResultCallback` is the callback method that will be triggered each time when the BarcodeReader completed processing on a video frame. The following data will be transfered in the callback method:
 

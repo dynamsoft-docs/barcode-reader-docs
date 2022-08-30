@@ -9,16 +9,16 @@ noTitleIndex: true
 permalink: /programming/features/read-images-with-texture.html
 ---
 
-# How to read barcodes with textures
+# How to Read Barcodes from Images with Different Textures
 
-In some scenes, the background of images may appear textured, such as a pattern background, screen stripes, etc. As shown below, the barcode background has obvious screen texture.
+In some scenes, the background of images may appear textured, such as a patterned background, screen stripes, etc. As shown below, the barcode background has an odd texture due to the computer screen it is being displayed on.
 
 <div align="center">
    <p><img src="assets/read-barcodes-with-texture/texture-image-sample.png" alt="Sample barcode image with texture" width="50%" /></p>
    <p>Figure 1 – Sample barcode image with texture</p>
 </div>
 
-This may increase barcode localization time or even lead to localization errors. The texture detection feature of DBR works on images with textured backgrounds. The following two images demonstrate the binarized images used for localization without and with texture detection enabled:
+This may extend the barcode localization time or even lead to localization errors. The texture detection feature of DBR works on images with textured backgrounds. The following two images demonstrate the binarized images used for localization without and with texture detection enabled:
 
 <div align="center">
    <p><img src="assets/read-barcodes-with-texture/binary-before-texture-detect.png" alt="Sample barcode image with texture" width="50%"/></p>
@@ -30,7 +30,7 @@ This may increase barcode localization time or even lead to localization errors.
    <p>Figure 3 – Binarized image with texture detection enabled</p>
 </div>
 
-We can configure one or more `TextureDetectionMode` in `PublicRuntimeSettings.furtherModes.textureDetectionModes` to enable texture detection feature.
+We can configure one or more [`TextureDetectionModes`]({{ site.parameters_reference }}texture-detection-modes.html) in `PublicRuntimeSettings.furtherModes.textureDetectionModes` to enable texture detection feature.
 
 <div class="sample-code-prefix template2"></div>
    >- JavaScript

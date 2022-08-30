@@ -13,7 +13,7 @@ permalink: /programming/features/barcode-formats-and-count.html
 
 ## Set Barcode Formats
 
-Specifying the barcode format is always the first step of barcode reader configuration. Be sure to confirm that the target barcode formats are included. Meanwhile, excluding the undesired barcodes will improve the processing efficiency. If you are not familiar with barcode format, the <a href="https://www.dynamsoft.com/barcode-types/barcode-types/" target="_blank">introduction of barcode formats</a> may help you understand it. Generally, the barcode format settings are updated via `PublicRuntimeSettings` class by specifying enumeration member of `BarcodeFormat` or `BarcodeFormat_2`.
+Specifying the barcode format is always the first step when it comes to the configuration of DBR. Be sure to confirm that the target barcode formats are indeed supported by DBR by checking our [list of supported barcode types](https://www.dynamsoft.com/barcode-types/barcode-types/). Excluding undesired barcode types will improve the processing efficiency. Generally, the barcode format settings are updated via `PublicRuntimeSettings` class by specifying enumeration member of `BarcodeFormat` or `BarcodeFormat_2`.
 
 <div class="sample-code-prefix template2"></div>
    >- JavaScript
@@ -136,13 +136,13 @@ DBR_UpdateRuntimeSettings(reader, &settings, szErrorMsg, 256);
 
 ## Set Barcode Count
 
-The `expectedBarcodeCount` is the parameter that controls the number of expected results of the recognized barcodes via barcode reader from a single image. The process will be stopped as soon as the count of successfully decoded barcodes reaches the expected amount.
+The `expectedBarcodeCount` parameter controls the number of expected results of the recognized barcodes via barcode reader from a single image. The process will be stopped as soon as the count of successfully decoded barcodes reaches the expected amount.
 
 There are some suggestions on how to set the `expectedBarcodeCount`:
 
-- When your project is designed for decoding **single** barcode, the recommended `expectedBarcodeCount` is **1**. This will sharply improve the processing speed.
-- When there are **n** barcodes in a single image (**n** is a fixed number) and you'd like the barcode reader to decode **all of them**, the recommended `expectedBarcodeCount` is **n**.
-- When the number of barcodes is unknown and you want to output **as many** barcode results as possible, you can set the `expectedBarcodeCount` to the **maximum possible count**.
+- When your project is designed for decoding a **single** barcode per image or frame, the recommended `expectedBarcodeCount` is **1**. This will sharply improve the processing speed.
+- When there are **n** barcodes in a single image or frame (**n** is a fixed number) and you'd like the barcode reader to decode **all of them**, the recommended `expectedBarcodeCount` is **n**.
+- When the number of barcodes is unknown and you want to output **as many** barcode results as possible, you can set the `expectedBarcodeCount` to the **maximum possible value** of `expectedBarcodeCount`.
 - When the number of barcodes is unknown and you want to output **at least one** barcode result as **soon** as possible, you can set the `expectedBarcodeCount` to **0**. The barcode reader will try to decode at least one barcode from the image.
 
 <div class="sample-code-prefix template2"></div>

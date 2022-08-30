@@ -10,7 +10,7 @@ permalink: /programming/features/control-terminate-phase.html
 
 # Control when to terminate a decoding process
 
-Typically, DBR will terminate a decoding process after the barcode is decoded or the process has failed. In some cases we may want the process to terminate early. To do this, we use either the parameter [ `TerminatePhase` ]({{ site.parameters_reference }}terminate-phase.html) or the parameter [ `Timeout` ]({{ site.parameters_reference }}time-out.html). The former specifies the stage to terminate the process, the latter specifies the maximum time allowed for the process.
+Typically, DBR will terminate a decoding process after the barcode is decoded or the process has failed. In some cases we may want the process to terminate earlier than that. To do this, we use either the parameter [ `TerminatePhase` ]({{ site.parameters_reference }}terminate-phase.html) or the parameter [ `Timeout` ]({{ site.parameters_reference }}time-out.html). The former specifies the stage to terminate the process while the latter specifies the maximum time allowed for the process.
 
 ## TerminatePhase
 
@@ -27,7 +27,7 @@ This parameter specifies a certain stage to terminate the decoding. By default, 
 
 After the termination, we can acquire information generated in the process as `Intermediate Results` which include the following:
 
-> Note that for the JavaScript Edition, the intermediate result is only available when it is presented as an image.
+> Note that for the JavaScript Edition, the intermediate result is only available when decoding an image and not a video stream.
 
 | Enumeration name | Notes | Available in JavaScript Edition |
 |---|----|---|

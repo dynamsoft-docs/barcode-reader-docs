@@ -52,6 +52,8 @@ It must be a unique name.
  | [`FormatSpecification.BarcodeTextRegExPattern`](../barcode-text-regex-pattern.md) | Specifies the regular express pattern of barcode characters. | 
  | [`FormatSpecification.BarcodeWidthRangeArray`](../barcode-width-range-array.md) | Sets the range of barcode widths (in pixels) for barcodes search.(Hint). | 
  | [`FormatSpecification.Code128Subset`](../code128-subset.md) | Set the code 128 subset. | 
+ | [`FormatSpecification.EnableDataMatrixECC000-140`](../enable-datamatrix-ecc000-140.md) | Specifies whether to decode DataMatrix ECC000-140 barcodes. |
+ | [`FormatSpecification.EnableQRCodeModel1`](../enable-qrcode-model1.md) | Specifies whether to decode QRCode model 1 barcodes. |
  | [`FormatSpecification.FindUnevenModuleBarcode`](../find-uneven-module-barcode.md) | Specifies whether to find barcodes with uneven barcode modules. Not support yet. | 
  | [`FormatSpecification.HeadModuleRatio`](../head-module-ratio.md) | Set the module count and module size ratio of the barcode head part. | 
  | [`FormatSpecification.MinQuietZoneWidth`](../min-quiet-zone-width.md) | The minimum width of the barcode quiet zone. | 

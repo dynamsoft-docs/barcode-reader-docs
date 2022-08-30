@@ -54,6 +54,8 @@ It must be a unique name.
  | [`FormatSpecification.BarcodeZoneBarCountRangeArray`](../barcode-zone-bar-count-range-array.md) |	Sets the range of bar count of the barcode zone for barcodes search. | 
  | [`FormatSpecification.BarcodeZoneMinDistanceToImageBorders`](../barcode-zone-min-distance-to-image-borders.md) |	Sets the minimum distance (in pixels) between barcode zone and image borders. | 
  | [`FormatSpecification.Code128Subset`](../code128-subset.md) | Sets the code 128 subset. | 
+ | [`FormatSpecification.EnableDataMatrixECC000-140`](../enable-datamatrix-ecc000-140.md) | Specifies whether to decode DataMatrix ECC000-140 barcodes. |
+ | [`FormatSpecification.EnableQRCodeModel1`](../enable-qrcode-model1.md) | Specifies whether to decode QRCode model 1 barcodes. |
  | [`FormatSpecification.FindUnevenModuleBarcode`](../find-uneven-module-barcode.md) | Specifies whether to find barcodes with uneven barcode modules. Not support yet. | 
  | [`FormatSpecification.HeadModuleRatio`](../head-module-ratio.md) | Sets the module count and module size ratio of the barcode head part. | 
  | [`FormatSpecification.MinQuietZoneWidth`](../min-quiet-zone-width.md) | The minimum width of the barcode quiet zone. | 
@@ -61,7 +63,8 @@ It must be a unique name.
  | [`FormatSpecification.MirrorMode`](../mirror-mode.md) | Sets whether to decode mirrored barcodes. | 
  | [`FormatSpecification.ModuleSizeRangeArray`](../module-size-range-array.md) | Sets the range of module size (in pixels) for barcodes search. (Hint). |
  | [`FormatSpecification.MSICodeCheckDigitCalculation`](../msi-code-check-digit-calculation.md) | Sets the scheme used for calculating a check digit of an MSI barcode. | 
- | [`FormatSpecification.PartitionModes`](../partition-modes.md) |	Sets the mode used to apply partition process. |
+ | [`FormatSpecification.PartitionModes`](../partition-modes.md) | Sets the mode used to apply partition process. |
+ | [`FormatSpecification.PatchCodeSearchingMargins`](../patchcode-searching-margins.md) | Sets the margins for searching PatchCode. |
  | [`FormatSpecification.RequireStartStopChars`](../require-start-stop-chars.md) |	Sets whether the start and stop characters are required when searching for Code 39 barcodes. |
  | [`FormatSpecification.StandardFormat`](../standard-format.md) | Sets the standard barcode format. | 
  | [`FormatSpecification.TailModuleRatio`](../tail-module-ratio.md) |	Sets the module count and module size ratio of the barcode tail part. | 

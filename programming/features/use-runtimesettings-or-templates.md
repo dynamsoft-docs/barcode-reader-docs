@@ -11,7 +11,7 @@ permalink: /programming/features/use-runtimesettings-or-templates.html
 
 # Use RuntimeSettings or Templates
 
-DBR provides two ways for configuration: via `RuntimeSettings` or via a JSON template.
+DBR provides two ways for configuring the settings: via `RuntimeSettings` or via a JSON template.
 
 * [RuntimeSettings](#runtimesettings)
 
@@ -27,15 +27,15 @@ DBR provides two ways for configuration: via `RuntimeSettings` or via a JSON tem
 
 ## RuntimeSettings
 
-`RuntimeSettings` is an object that manages various runtime settings of the DBR SDK that determine how barcode reading is done. The following shows how to use it.
+`RuntimeSettings` is an object that manages various runtime settings of the DBR SDK which dictate the performance of the barcode reader.
 
 Basic steps:
 
 1. Get the current value of the `RuntimeSettings` object
-2. Change one or several settings
+2. Change one or more settings
 3. Update the `RuntimeSettings` object with the changed copy for the changes to take effect
 
-The following code snippet demonstrates how to specify barcode formats with `RuntimeSettings`.  
+The following code snippet demonstrates how to specify barcode formats via `RuntimeSettings`.  
 
 <div class="sample-code-prefix template2"></div>
    >- Javascript
@@ -182,11 +182,13 @@ With a JSON template, you can make use of all the configuration options that DBR
 
 > Read [Parameter Template Structure]({{ site.parameters }}structure-and-interfaces-of-parameters.html) to learn more about the structure of templates.
 
+> To easily create your own template, please use DBR's [online demo](https://demo.dynamsoft.com/barcode-reader/) settings menu on the left-hand side. When you toggle the "Advanced Settings" part of the menu and scroll to the bottom, you will find the full list of settings as a struct and more importantly, a JSON template that you can simply copy and paste.
+
 To use a template, you can either use `InitRuntimeSettingsWithFile` to load a JSON file, or use `InitRuntimeSettingsWithString`/`initRuntimeSettingsWithString` to load a JSON string.
 
 > Notes about the JavaScript edition
 >
-> 1. It only supports importing a JSON string
+> 1. It only supports importing a JSON string and not a file
 > 2. It only allows one fixed template, in other words, the template itself should contain only one `ImageParameter` object 
 
 The following code snippet demonstrates how to make use of a template.  

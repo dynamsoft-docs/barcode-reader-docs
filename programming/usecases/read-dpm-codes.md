@@ -42,7 +42,7 @@ let settings = await scanner.getRuntimeSettings();
 settings.furtherModes.dpmCodeReadingModes[0] = Dynamsoft.DBR.EnumDPMCodeReadingMode.DPMCRM_GENERAL;
 await scanner.updateRuntimeSettings(settings);
 scanner.onUniqueRead = (txt, result) => {
-    rawString = txt;
+    alert(txt);
 };
 await scanner.show();
 ```
