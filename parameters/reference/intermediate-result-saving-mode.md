@@ -74,11 +74,11 @@ delete pSettings;
 **JSON Parameter Example**   
 ```
 {
-    "IntermediateResultSavingMode": {
-            "Mode": "IRSM_FILESYSTEM",
-            "FolderPath": "C:\",
+    "IntermediateResultSavingMode": {
+            "Mode": "IRSM_FILESYSTEM",
+            "FolderPath": "C:\",
             "RecordsetSizeOfLatestImages": 0
-        }
+        }
 }
 ```
 

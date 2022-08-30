@@ -125,15 +125,15 @@ delete pSettings;
 **JSON Parameter Example**   
 ```
 {
-    "LocalizationModes": [
-        {
-            "Mode": "LM_SCAN_DIRECTLY", 
-            "ScanStride": 5
-        },
-        {
-            "Mode": "LM_CONNECTED_BLOCKS" 
-        }
-    ]
+    "LocalizationModes": [
+        {
+            "Mode": "LM_SCAN_DIRECTLY", 
+            "ScanStride": 5
+        },
+        {
+            "Mode": "LM_CONNECTED_BLOCKS" 
+        }
+    ]
 }
 ```
 

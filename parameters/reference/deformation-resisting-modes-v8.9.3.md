@@ -76,16 +76,16 @@ delete pSettings;
 **JSON Parameter Example**   
 ```
 {
-    "DeformationResistingModes": [
-        {
-            "Mode": "DRM_GENERAL", 
-            "Level": 1
-        },
-        {
-            "Mode": "DRM_GENERAL", 
-            "Level": 9
-        }
-    ]
+    "DeformationResistingModes": [
+        {
+            "Mode": "DRM_GENERAL", 
+            "Level": 1
+        },
+        {
+            "Mode": "DRM_GENERAL", 
+            "Level": 9
+        }
+    ]
 }
 ```
 

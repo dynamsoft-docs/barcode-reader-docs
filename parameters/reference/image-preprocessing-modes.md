@@ -115,17 +115,17 @@ delete pSettings;
 **JSON Parameter Example**   
 ```
 {
-    "ImagePreprocessingModes": [
-        {
-            "Mode": "IPM_GRAY_SMOOTH", 
-            "SmoothBlockSizeX": 5,
-            "SmoothBlockSizeY": 5
-        },
-        {
-            "Mode": "IPM_GRAY_EQUALIZE", 
-            "Sensitivity": 1
-        }
-    ]
+    "ImagePreprocessingModes": [
+        {
+            "Mode": "IPM_GRAY_SMOOTH", 
+            "SmoothBlockSizeX": 5,
+            "SmoothBlockSizeY": 5
+        },
+        {
+            "Mode": "IPM_GRAY_EQUALIZE", 
+            "Sensitivity": 1
+        }
+    ]
 }
 ```
 

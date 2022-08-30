@@ -77,16 +77,16 @@ delete pSettings;
 **JSON Parameter Example**   
 ```
 {
-    "ColourClusteringModes": [
-        {
-            "Mode": "CCM_GENERAL_HSV", 
-            "Sensitivity": 1
-        },
-        {
-            "Mode": "CCM_GENERAL_HSV", 
-            "Sensitivity": 9
-        }
-    ]
+    "ColourClusteringModes": [
+        {
+            "Mode": "CCM_GENERAL_HSV", 
+            "Sensitivity": 1
+        },
+        {
+            "Mode": "CCM_GENERAL_HSV", 
+            "Sensitivity": 9
+        }
+    ]
 }
 ```
 

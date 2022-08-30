@@ -87,17 +87,17 @@ delete pSettings;
 **JSON Parameter Example**   
 ```
 {
-    "BinarizationModes": [
-        {
-            "Mode": "BM_LOCAL_BLOCK", 
-            "BlockSizeX": 5,
-            "BlockSizeY": 5
-        },
-        {
-            "Mode": "BM_THRESHOLD", 
-            "BinarizationThreshold": 125
-        }
-    ]
+    "BinarizationModes": [
+        {
+            "Mode": "BM_LOCAL_BLOCK", 
+            "BlockSizeX": 5,
+            "BlockSizeY": 5
+        },
+        {
+            "Mode": "BM_THRESHOLD", 
+            "BinarizationThreshold": 125
+        }
+    ]
 }
 ```
 
