@@ -13,14 +13,14 @@ permalink: /parameters/reference/code128-subset.html
 
 `Code128Subset` is a parameter to specify the subset of Code 128. It is defined as below:
 
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| *string* | "A"<br>"B"<br>"C" | ""  |
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *string* | "A"<br>"B"<br>"C" | ""  | `FormatSpecification` |
 
 
     
 ## Setting Methods
-`Code128Subset` is supported to be set through JSON template.
+`Code128Subset` can be set via JSON template.
 
 ### As JSON Parameter
 `Code128Subset` as a JSON parameter is a string value defined as below.   

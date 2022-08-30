@@ -15,7 +15,7 @@ permalink: /parameters/reference/standard-format.html
 
     
 ## Setting Methods
-`StandardFormat` is supported to be set through JSON template.
+`StandardFormat` can be set via JSON template.
 
 ### As JSON Parameter
 `StandardFormat` as a JSON parameter is a string value defined as below.   

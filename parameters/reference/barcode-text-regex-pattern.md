@@ -11,11 +11,14 @@ permalink: /parameters/reference/barcode-text-regex-pattern.html
 
 # BarcodeTextRegExPattern 
 
-`BarcodeTextRegExPattern` is a parameter to specify the regular express pattern of barcode text characters for barcodes searching and result filtering. It is not set by default which means there is no limitation on the barcode text characters.
+`BarcodeTextRegExPattern` is a parameter to specify the regular expression pattern of barcode text characters for barcodes searching and result filtering. It set to an empty string by default which means there is no limitation on the barcode text characters.
 
-    
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *string* | N/A | `""` | `FormatSpecification` |
+
 ## Setting Methods
-`BarcodeTextRegExPattern` is supported to be set through JSON template.
+`BarcodeTextRegExPattern` can be set via JSON template.
 
 ### As JSON Parameter
 `BarcodeTextRegExPattern` as a JSON parameter is defined as below.   

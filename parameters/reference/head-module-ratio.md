@@ -14,7 +14,7 @@ permalink: /parameters/reference/head-module-ratio.html
 `HeadModuleRatio` is a parameter to specify the module count and module size ratio of the barcode head part.
     
 ## Setting Methods
-`HeadModuleRatio` is supported to be set through JSON template.
+`HeadModuleRatio` can be set via JSON template.
 
 ### As JSON Parameter
 `HeadModuleRatio` as a JSON parameter is a string value defined as below.   

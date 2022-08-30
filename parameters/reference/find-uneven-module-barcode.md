@@ -13,9 +13,9 @@ permalink: /parameters/reference/find-uneven-module-barcode.html
 
 `FindUnevenModuleBarcode` is a parameter to specify whether to find barcodes with uneven barcode modules. It is defined as below:
 
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| *int* | [0, 1] | 1 |
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *int* | [0, 1] | 1 | `FormatSpecification` |
 
 
 **Remarks**  
@@ -25,7 +25,7 @@ permalink: /parameters/reference/find-uneven-module-barcode.html
 
     
 ## Setting Methods
-`FindUnevenModuleBarcode` is supported to be set through JSON template.
+`FindUnevenModuleBarcode` can be set via JSON template.
 
 ### As JSON Parameter
 `FindUnevenModuleBarcode` as a JSON parameter is a number value defined as below.   

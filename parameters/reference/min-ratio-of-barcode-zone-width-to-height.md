@@ -22,7 +22,7 @@ permalink: /parameters/reference/min-ratio-of-barcode-zone-width-to-height.html
 - 0: means no limitation.
 
 ## Setting Methods
-`MinRatioOfBarcodeZoneWidthToHeight` is supported to be set through JSON template.
+`MinRatioOfBarcodeZoneWidthToHeight` can be set via JSON template.
 
 ### As JSON Parameter
 `MinRatioOfBarcodeZoneWidthToHeight` as a JSON parameter is a number value defined as below.   

@@ -13,14 +13,14 @@ permalink: /parameters/reference/deblur-level.html
 
 `DeblurLevel` is a parameter to control the efforts used to process the blurriness of the barcode. It is defined as below:
 
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| *int* | [0, 9] | 9 |
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *int* | [0, 9] | 9 | `ImageParameter`/`FormatSpecification` |
 
 
 **Remarks**  
-If you have a blurry image, you can set this property to a larger value. The higher value set, the more effort the library will spend to decode images, but it may also slow down the recognition process.<br>
-DeblurLevel is now deprecated. It still works in this version but could be removed in the near future. We recommend using [`DeblurModes`](deblur-modes.md#deblurmodes) instead. Migrating mapping:
+If you have a blurry image, you can set this property to a larger value. The higher the value set, the more effort the library will spend to decode images, but it may also slow down the recognition process.<br>
+DeblurLevel is now deprecated. It still works in the current version but could be removed in the near future. We recommend using [`DeblurModes`](deblur-modes.md#deblurmodes) instead. Migration mapping:
 
 - For Barcode Format PDF417  
 

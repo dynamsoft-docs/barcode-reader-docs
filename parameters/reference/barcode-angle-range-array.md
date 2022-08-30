@@ -15,10 +15,10 @@ permalink: /parameters/reference/barcode-angle-range-array.html
 
 | Value Type | Value Range | Default Value | Template Structure Type |
 | ---------- | ----------- | ------------- | ----------------------- |
-| *int* | [0, 360] | N/A | `FormatSpecification` |
+| *int* | [0, 360] | `null` | `FormatSpecification` |
     
 ## Setting Methods
-`BarcodeAngleRangeArray` is supported to be set through JSON template.
+`BarcodeAngleRangeArray` can be set via JSON template.
 
 ### As JSON Parameter
 `BarcodeAngleRangeArray` as a JSON parameter is defined as below.   

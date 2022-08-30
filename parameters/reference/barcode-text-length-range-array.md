@@ -18,7 +18,7 @@ permalink: /parameters/reference/barcode-text-length-range-array.html
 | *int* | [0, 0x7fffffff] | N/A | `FormatSpecification` |
     
 ## Setting Methods
-`BarcodeTextLengthRangeArray` is supported to be set through JSON template.
+`BarcodeTextLengthRangeArray` can be set via JSON template.
 
 ### As JSON Parameter
 `BarcodeTextLengthRangeArray` as a JSON parameter is defined as below.   

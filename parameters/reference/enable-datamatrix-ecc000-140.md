@@ -11,9 +11,9 @@ permalink: /parameters/reference/enable-datamatrix-ecc000-140.html
 
 `EnableDataMatrixECC000-140` is a parameter to set the value determining whether to decode DataMatrix ECC000-140 barcodes. It is defined as below:
 
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| *int* | [0, 1] | 0  |
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *int* | [0, 1] | 0  | `FormatSpecification` |
 
 **Remarks**
 
@@ -23,7 +23,7 @@ permalink: /parameters/reference/enable-datamatrix-ecc000-140.html
 
 ## Setting Methods
 
-`EnableDataMatrixECC000-140` is supported to be set through JSON template.
+`EnableDataMatrixECC000-140` can be set via JSON template.
 
 ### As JSON Parameter
 

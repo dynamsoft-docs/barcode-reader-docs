@@ -25,7 +25,7 @@ permalink: /parameters/reference/require-start-stop-chars.html
 
     
 ## Setting Methods
-`RequireStartStopChars` is supported to be set through JSON template.
+`RequireStartStopChars` can be set via JSON template.
 
 ### As JSON Parameter
 `RequireStartStopChars` as a JSON parameter is a number value defined as below.   

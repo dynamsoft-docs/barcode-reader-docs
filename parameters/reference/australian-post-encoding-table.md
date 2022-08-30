@@ -20,7 +20,7 @@ permalink: /parameters/reference/australian-post-encoding-table.html
 
     
 ## Setting Methods
-`AustralianPostEncodingTable` is supported to be set through JSON template.
+`AustralianPostEncodingTable` can be set via JSON template.
 
 ### As JSON Parameter
 `AustralianPostEncodingTable` as a JSON parameter is a number value defined as below.   

@@ -11,9 +11,9 @@ permalink: /parameters/reference/enable-qrcode-model1.html
 
 `EnableQRCodeModel1` is a parameter to set the value determining whether to decode QRCode model 1 barcodes. It is defined as below:
 
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| *int* | [0, 1] | 0  |
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *int* | [0, 1] | 0  | `FormatSpecification` |
 
 **Remarks**
 
@@ -23,7 +23,7 @@ permalink: /parameters/reference/enable-qrcode-model1.html
 
 ## Setting Methods
 
-`EnableQRCodeModel1` is supported to be set through JSON template.
+`EnableQRCodeModel1` can be set via JSON template.
 
 ### As JSON Parameter
 

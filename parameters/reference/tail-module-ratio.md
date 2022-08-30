@@ -14,7 +14,7 @@ permalink: /parameters/reference/tail-module-ratio.html
 `TailModuleRatio` is a parameter to specify the module count and module size ratio of the barcode tail part.
     
 ## Setting Methods
-`TailModuleRatio` is supported to be set through JSON template.
+`TailModuleRatio` can be set via JSON template.
 
 ### As JSON Parameter
 `TailModuleRatio` as a JSON parameter is a string value defined as below.   

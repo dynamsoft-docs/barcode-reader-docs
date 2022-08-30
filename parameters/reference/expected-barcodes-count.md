@@ -13,9 +13,9 @@ permalink: /parameters/reference/expected-barcodes-count.html
 
 `ExpectedBarcodesCount` is a parameter to control the number of barcodes expected to be detected. It is defined as below:
 
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| *int* | [0, 0x7fffffff] | 0 |
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *int* | [0, 0x7fffffff] | 0 | `ImageParameter`/`RegionDefinition`
 
 
 **Remarks**  

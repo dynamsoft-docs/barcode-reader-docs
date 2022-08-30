@@ -14,7 +14,7 @@ permalink: /parameters/reference/pages.html
 `Pages` is a parameter to specify pages or the range of pages of a file (.tiff or .pdf) for barcode searching.
     
 ## Setting Methods
-`Pages` is supported to be set through JSON template.
+`Pages` can be set via JSON template.
 
 ### As JSON Parameter
 `Pages` as a JSON parameter is a string value defined as below.   

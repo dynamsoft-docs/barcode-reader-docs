@@ -22,7 +22,7 @@ permalink: /parameters/reference/verify-check-digit.html
 
     
 ## Setting Methods
-`VerifyCheckDigit` is supported to be set through JSON template.
+`VerifyCheckDigit` can be set via JSON template.
 
 ### As JSON Parameter
 `VerifyCheckDigit` as a JSON parameter is an int value defined as below.   

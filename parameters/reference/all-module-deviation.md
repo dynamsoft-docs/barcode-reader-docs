@@ -23,7 +23,7 @@ The unit is barcode module size. For example, if the standard barcode module siz
 
     
 ## Setting Methods
-`AllModuleDeviation` is supported to be set through JSON template.
+`AllModuleDeviation` can be set via JSON template.
 
 ### As JSON Parameter
 `AllModuleDeviation` as a JSON parameter is a number value defined as below.   

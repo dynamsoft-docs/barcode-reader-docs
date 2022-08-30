@@ -12,7 +12,7 @@ permalink: /parameters/reference/patchcode-searching-margins.html
 `PatchCodeSearchingMargins` is a parameter to specify the margins where to search PatchCode.
 
 ## Setting Methods
-`PatchCodeSearchingMargins` is supported to be set through JSON template.
+`PatchCodeSearchingMargins` can be set via JSON template.
 
 ### As JSON Parameter
 `PatchCodeSearchingMargins` as a JSON parameter is a JSON Object defined as below.

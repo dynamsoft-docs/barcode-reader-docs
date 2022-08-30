@@ -25,7 +25,7 @@ permalink: /parameters/reference/partition-modes.html
 
 ## Setting Methods
 
-`PartitionModes` is supported to be set through JSON template.
+`PartitionModes` can be set via JSON template.
 
 ### As JSON Parameter
 

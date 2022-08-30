@@ -19,7 +19,7 @@ permalink: /parameters/reference/msi-code-check-digit-calculation.html
 
     
 ## Setting Methods
-`MSICodeCheckDigitCalculation` is supported to be set through JSON template.
+`MSICodeCheckDigitCalculation` can be set via JSON template.
 
 ### As JSON Parameter
 `MSICodeCheckDigitCalculation` as a JSON parameter is a number value defined as below.   

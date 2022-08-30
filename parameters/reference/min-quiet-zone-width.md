@@ -23,7 +23,7 @@ permalink: /parameters/reference/min-quiet-zone-width.html
 
     
 ## Setting Methods
-`MinQuietZoneWidth` is supported to be set through JSON template.
+`MinQuietZoneWidth` can be set via JSON template.
 
 ### As JSON Parameter
 `MinQuietZoneWidth` as a JSON parameter is a number value defined as below.   

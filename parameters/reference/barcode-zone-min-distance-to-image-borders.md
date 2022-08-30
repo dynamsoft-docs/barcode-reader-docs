@@ -13,9 +13,9 @@ permalink: /parameters/reference/barcode-zone-min-distance-to-image-borders.html
 
 `BarcodeZoneMinDistanceToImageBorders` is a parameter to specify the minimum distance (in pixels) between the barcode zone and image borders. It is defined as below:
 
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| *int* | [0, 0x7fffffff] | 0 |
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *int* | [0, 0x7fffffff] | 0 | `FormatSpecification` |
 
 
 **Remarks**  

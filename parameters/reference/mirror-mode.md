@@ -25,7 +25,7 @@ permalink: /parameters/reference/mirror-mode.html
 
     
 ## Setting Methods
-`MirrorMode` is supported to be set through JSON template.
+`MirrorMode` can be set via JSON template.
 
 ### As JSON Parameter
 `MirrorMode` as a JSON parameter is a number value defined as below.   

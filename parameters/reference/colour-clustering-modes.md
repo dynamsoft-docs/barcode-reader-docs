@@ -11,7 +11,7 @@ permalink: /parameters/reference/colour-clustering-modes.html
 
 # ColourClusteringModes 
 
-`ColourClusteringModes` is a parameter to control the process for colour categorization. It consists of one or more modes, each mode represents a way to implement the categorization.
+`ColourClusteringModes` is a parameter to control the process of colour categorization. It consists of one or more modes, each mode representing a different way to implement the categorization.
 
 
 ## Candidate Mode List
@@ -19,7 +19,7 @@ permalink: /parameters/reference/colour-clustering-modes.html
 - CCM_AUTO
 
 ### CCM_GENERAL_HSV
-Clusters colours using the general algorithm based on HSV. This mode has the following arguments for further customizing.
+This mode clusters the colours using the general algorithm based on HSV (hue, saturation, value). This mode has the following arguments for further customization.
 
 - [Sensitivity](#sensitivity)
 - [LibraryFileName](#libraryfilename)

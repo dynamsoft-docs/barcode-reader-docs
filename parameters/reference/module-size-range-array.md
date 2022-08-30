@@ -15,7 +15,7 @@ permalink: /parameters/reference/module-size-range-array.html
 
     
 ## Setting Methods
-`ModuleSizeRangeArray` is supported to be set through JSON template.
+`ModuleSizeRangeArray` can be set via JSON template.
 
 ### As JSON Parameter
 `ModuleSizeRangeArray` as a JSON parameter is a JSON Object array defined as below.   

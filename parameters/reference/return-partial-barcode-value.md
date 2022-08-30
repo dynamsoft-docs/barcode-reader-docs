@@ -25,7 +25,7 @@ permalink: /parameters/reference/return-partial-barcode-value.html
 
     
 ## Setting Methods
-`ReturnPartialBarcodeValue` is supported to be set through JSON template.
+`ReturnPartialBarcodeValue` can be set via JSON template.
 
 
 ### As JSON Parameter

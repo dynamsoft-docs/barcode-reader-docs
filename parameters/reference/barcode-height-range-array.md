@@ -15,10 +15,10 @@ permalink: /parameters/reference/barcode-height-range-array.html
 
 | Value Type | Value Range | Default Value | Template Structure Type |
 | ---------- | ----------- | ------------- | ----------------------- |
-| *int* | [0, 0x7fffffff] | N/A | `FormatSpecification` |
+| *int* | [0, 0x7fffffff] | `null` | `FormatSpecification` |
 
 ## Setting Methods
-`BarcodeHeightRangeArray` is supported to be set through JSON template.
+`BarcodeHeightRangeArray` can be set via JSON template.
 
 ### As JSON Parameter
 `BarcodeHeightRangeArray` as a JSON parameter is defined as below.   

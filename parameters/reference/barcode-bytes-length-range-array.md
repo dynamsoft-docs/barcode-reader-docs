@@ -19,7 +19,7 @@ permalink: /parameters/reference/barcode-bytes-length-range-array.html
 
     
 ## Setting Methods
-`BarcodeBytesLengthRangeArray` is supported to be set through JSON template.
+`BarcodeBytesLengthRangeArray` can be set via JSON template.
 
 ### As JSON Parameter
 `BarcodeBytesLengthRangeArray` as a JSON parameter is defined as below.   
