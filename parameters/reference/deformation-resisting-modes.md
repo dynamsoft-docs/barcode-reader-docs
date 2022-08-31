@@ -95,15 +95,15 @@ delete pSettings;
 **JSON Parameter Example**   
 ```
 {
-    "DeformationResistingModes": [
-        {
-            "Mode": "DRM_GENERAL", 
-            "Level": 1
-        },
-        {
-            "Mode": "DRM_DEWRINKLE"
-        }
-    ]
+    "DeformationResistingModes": [
+        {
+            "Mode": "DRM_GENERAL", 
+            "Level": 1
+        },
+        {
+            "Mode": "DRM_DEWRINKLE"
+        }
+    ]
 }
 ```
 

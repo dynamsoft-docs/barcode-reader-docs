@@ -77,14 +77,14 @@ delete pSettings;
 **JSON Parameter Example**   
 ```
 {
-    "GrayscaleTransformationModes": [
-        {
-            "Mode": "GTM_ORIGINAL"
-        },
-        {
-            "Mode": "GTM_INVERTED" 
-        }
-    ]
+    "GrayscaleTransformationModes": [
+        {
+            "Mode": "GTM_ORIGINAL"
+        },
+        {
+            "Mode": "GTM_INVERTED" 
+        }
+    ]
 }
 ```
 

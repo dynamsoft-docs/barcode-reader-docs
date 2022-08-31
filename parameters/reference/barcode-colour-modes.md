@@ -103,16 +103,16 @@ delete pSettings;
 **JSON Parameter Example**   
 ```
 {
-    "BarcodeColourModes": [
-        {
-            "Mode": "BICM_DARK_ON_LIGHT", 
-            "LightReflection": 1
-        },
-        {
-            "Mode": "BICM_DARK_ON_LIGHT", 
-            "LightReflection": 0
-        }
-    ]
+    "BarcodeColourModes": [
+        {
+            "Mode": "BICM_DARK_ON_LIGHT", 
+            "LightReflection": 1
+        },
+        {
+            "Mode": "BICM_DARK_ON_LIGHT", 
+            "LightReflection": 0
+        }
+    ]
 }
 ```
 

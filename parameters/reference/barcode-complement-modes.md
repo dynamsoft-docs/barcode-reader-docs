@@ -77,11 +77,11 @@ delete pSettings;
 **JSON Parameter Example**   
 ```
 {
-    "BarcodeComplementModes": [
-        {
-            "Mode": "BCM_GENERAL" 
-        }
-    ]
+    "BarcodeComplementModes": [
+        {
+            "Mode": "BCM_GENERAL" 
+        }
+    ]
 }
 ```
 

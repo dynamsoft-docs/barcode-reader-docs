@@ -78,20 +78,20 @@ delete pSettings;
 **JSON Parameter Example**   
 ```
 {
-    "ColourConversionModes": [
-        {
-            "Mode": "CICM_GENERAL", 
-            "BlueChannelWeight": 1000,
-            "GreenChannelWeight": 0,
-            "RedChannelWeight": 0
-        },
-        {
-            "Mode": "CICM_GENERAL", 
-            "BlueChannelWeight": 0,
-            "GreenChannelWeight": 500,
-            "RedChannelWeight": 500
-        }
-    ]
+    "ColourConversionModes": [
+        {
+            "Mode": "CICM_GENERAL", 
+            "BlueChannelWeight": 1000,
+            "GreenChannelWeight": 0,
+            "RedChannelWeight": 0
+        },
+        {
+            "Mode": "CICM_GENERAL", 
+            "BlueChannelWeight": 0,
+            "GreenChannelWeight": 500,
+            "RedChannelWeight": 500
+        }
+    ]
 }
 ```
 

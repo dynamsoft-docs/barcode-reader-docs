@@ -61,7 +61,7 @@ delete pSettings;
 **JSON Parameter Example**   
 ```
 {
-    "ResultCoordinateType": "RCT_PERCENTAGE" 
+    "ResultCoordinateType": "RCT_PERCENTAGE" 
 }
 ```
 

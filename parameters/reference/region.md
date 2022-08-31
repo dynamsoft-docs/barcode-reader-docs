@@ -61,15 +61,15 @@ delete pSettings;
 **JSON Example**   
 ```
 {
-    "RegionDefinition": 
-        {
-            "Name": "RD1", 
-            "Top": 25, 
-            "Left": 25, 
-            "Right": 75, 
-            "Bottom": 75, 
-            "MeasuredByPercentage": 1
-        }
+    "RegionDefinition": 
+        {
+            "Name": "RD1", 
+            "Top": 25, 
+            "Left": 25, 
+            "Right": 75, 
+            "Bottom": 75, 
+            "MeasuredByPercentage": 1
+        }
 }
 ```
 

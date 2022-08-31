@@ -33,13 +33,13 @@ permalink: /parameters/reference/patchcode-searching-margins.html
 
 ```json
 {
-    "PatchCodeSearchingMargins": 
-        {
-            "Top": 25, 
-            "Left": 25, 
-            "Right": 25, 
-            "Bottom": 25, 
-            "MeasuredByPercentage": 1
-        }
+    "PatchCodeSearchingMargins": 
+    {
+        "Top": 25, 
+        "Left": 25, 
+        "Right": 25, 
+        "Bottom": 25, 
+        "MeasuredByPercentage": 1
+    }
 }
 ```

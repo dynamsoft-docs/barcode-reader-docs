@@ -74,12 +74,12 @@ delete pSettings;
 **JSON Parameter Example**   
 ```
 {
-    "TextFilterModes": [
-        {
-            "Mode": "TFM_GENERAL_CONTOUR", 
-            "Sensitivity": 5
-        }
-    ]
+    "TextFilterModes": [
+        {
+            "Mode": "TFM_GENERAL_CONTOUR", 
+            "Sensitivity": 5
+        }
+    ]
 }
 ```
 

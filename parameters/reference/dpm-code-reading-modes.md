@@ -74,11 +74,11 @@ delete pSettings;
 **JSON Parameter Example**   
 ```
 {
-    "DPMCodeReadingModes": [
-        {
-            "Mode": "DPMCRM_GENERAL" 
-        }
-    ]
+    "DPMCodeReadingModes": [
+        {
+            "Mode": "DPMCRM_GENERAL" 
+        }
+    ]
 }
 ```
 

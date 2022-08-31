@@ -76,7 +76,7 @@ delete pSettings;
 **JSON Parameter Example**   
 ```
 {
-    "TerminatePhase": "TP_BARCODE_LOCALIZED" 
+    "TerminatePhase": "TP_BARCODE_LOCALIZED" 
 }
 ```
 

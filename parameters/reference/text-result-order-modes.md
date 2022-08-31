@@ -69,11 +69,11 @@ delete pSettings;
 **JSON Parameter Example**   
 ```
 {
-    "TextResultOrderModes": [
+    "TextResultOrderModes": [
         {"Mode"":"TROM_CONFIDENCE"},
         {"Mode":"TROM_POSITION"},
         {"Mode":"TROM_FORMAT"}
-    ]
+    ]
 }
 ```
 
