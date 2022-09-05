@@ -45,6 +45,8 @@ Dynamsoft.DBR.BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9'
                 rawString = txt;
             };
             await scanner.show();
+            // Sets a high resolution so that the dense barcode gets recognized easier
+            await scanner.setResolution(1920, 1080);
         } catch (ex) {
             alert(ex.message);
             throw ex;
