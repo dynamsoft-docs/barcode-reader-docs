@@ -64,7 +64,7 @@ delete pSettings;
 **JSON Parameter Example**   
 ```
 {
-    "PDFReadingMode": "PDFRM_VECTOR" 
+    "PDFReadingMode": "PDFRM_VECTOR" 
 }
 ```
 
