@@ -95,7 +95,7 @@ settings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_QR_
 reader.updateRuntimeSettings(settings);
 ```
 >
-```c#
+```csharp
 // Obtain current runtime settings of `reader` instance.
 PublicRuntimeSettings settings = reader.GetRuntimeSettings();
 // Specify the barcode formats by enumeration values.
@@ -212,7 +212,7 @@ settings.expectedBarcodesCount = 0;
 reader.updateRuntimeSettings(settings);
 ```
 >
-```c#
+```csharp
 // Obtain current runtime settings of `reader` instance.
 PublicRuntimeSettings settings = reader.GetRuntimeSettings();
 // Set the expected barcode count
