@@ -72,11 +72,11 @@ You can set the license by following the steps below:
 2. 
 ```c
   char errorBuf[512];
-  DMDLSConnectionParameters paramters;
-  DBR_InitDLSConnectionParameters(&paramters);
+  DMDLSConnectionParameters parameters;
+  DBR_InitDLSConnectionParameters(&parameters);
   // Please replace the organizationID with your own
-  paramters.organizationID = "YOUR-ORGANIZATION-ID"; 
-  DBR_InitLicenseFromDLS(&paramters, errorBuf, 512);
+  parameters.organizationID = "YOUR-ORGANIZATION-ID"; 
+  DBR_InitLicenseFromDLS(&parameters, errorBuf, 512);
 ```
 3. 
 ```cpp
@@ -95,7 +95,7 @@ You can set the license by following the steps below:
 ```
 4. 
 ```csharp
-  DMDLSConnectionParameters dlspar = BarcodeReader.InitDLSConnectionParamters();           
+  DMDLSConnectionParameters dlspar = BarcodeReader.InitDLSConnectionParameters();           
   // Please replace the organizationID with your own
   dlspar.OrganizationID = "YOUR-ORGANIZATION-ID"; 
   EnumErrorCode iRet = BarcodeReader.InitLicenseFromDLS(dlspar, out strErrorMSG);
