@@ -11,7 +11,7 @@ permalink: /parameters/reference/barcode-bytes-regex-pattern.html
 
 # BarcodeBytesRegExPattern 
 
-`BarcodeBytesRegExPattern` is a parameter to specify the regular expression pattern of barcode byte characters for barcode searching and result filtering. It is set to an empty string by default which means there is no limitation on the barcode byte characters.
+`BarcodeBytesRegExPattern` defines the regular expression pattern of barcode byte characters for barcode searching and result filtering. It is set to an empty string by default which means there is no limitation on the barcode byte characters.
 
 | Value Type | Value Range | Default Value | Template Structure Type |
 | ---------- | ----------- | ------------- | ----------------------- |

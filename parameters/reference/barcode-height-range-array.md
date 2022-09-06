@@ -11,7 +11,7 @@ permalink: /parameters/reference/barcode-height-range-array.html
 
 # BarcodeHeightRangeArray 
 
-`BarcodeHeightRangeArray` is a parameter to specify the range of heights (in pixels) for barcodes searching and result filtering. It is not set by default which means there is no limitation on the barcode heights.
+`BarcodeHeightRangeArray` defines the range of heights (in pixels) for barcodes searching and result filtering. It is not set by default which means there is no limitation on the barcode heights.
 
 | Value Type | Value Range | Default Value | Template Structure Type |
 | ---------- | ----------- | ------------- | ----------------------- |

@@ -11,7 +11,7 @@ permalink: /parameters/reference/colour-clustering-modes.html
 
 # ColourClusteringModes 
 
-`ColourClusteringModes` is a parameter to control the process of colour categorization. It consists of one or more modes, each mode representing a different way to implement the categorization.
+`ColourClusteringModes` controls the process of colour categorization. It consists of one or more modes, each mode representing a different way to implement the categorization.
 
 
 ## Candidate Mode List

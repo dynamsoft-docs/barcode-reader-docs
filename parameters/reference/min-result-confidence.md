@@ -11,7 +11,7 @@ permalink: /parameters/reference/min-result-confidence.html
 
 # MinResultConfidence 
 
-`MinResultConfidence` is a parameter to specify the minimum confidence of the result. It is defined as below:
+`MinResultConfidence` defines the minimum confidence of the result. It is defined as below:
 
 | Value Type | Value Range | Default Value | Template Structure Type |
 | ---------- | ----------- | ------------- | ----------------------- |

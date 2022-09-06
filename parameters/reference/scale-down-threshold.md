@@ -11,7 +11,7 @@ permalink: /parameters/reference/scale-down-threshold.html
 
 # ScaleDownThreshold 
 
-`ScaleDownThreshold` is a parameter to specify the threshold for image shrinking. It is defined as below:
+`ScaleDownThreshold` defines the threshold for image shrinking. It is defined as below:
 
 | Value Type | Value Range | Default Value | Template Structure Type |
 | ---------- | ----------- | ------------- | ----------------------- |

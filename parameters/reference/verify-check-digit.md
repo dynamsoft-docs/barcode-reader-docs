@@ -9,7 +9,7 @@ permalink: /parameters/reference/verify-check-digit.html
 
 # VerifyCheckDigit 
 
-`VerifyCheckDigit` is a parameter to set whether to verify the check digit in barcodes where this check digit is optional. It is defined as below:
+`VerifyCheckDigit` specifies whether to verify the check digit in barcodes where this check digit is optional. It is defined as below:
 
 | Value Type | Value Range | Default Value | Template Structure Type |
 | ---------- | ----------- | ------------- | ----------------------- |

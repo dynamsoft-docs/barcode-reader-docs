@@ -11,7 +11,7 @@ permalink: /parameters/reference/expected-barcodes-count.html
 
 # ExpectedBarcodesCount 
 
-`ExpectedBarcodesCount` is a parameter to control the number of barcodes expected to be detected. It is defined as below:
+`ExpectedBarcodesCount` determines the number of barcodes expected to be detected. It is defined as below:
 
 | Value Type | Value Range | Default Value | Template Structure Type |
 | ---------- | ----------- | ------------- | ----------------------- |

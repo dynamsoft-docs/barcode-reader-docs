@@ -11,7 +11,7 @@ permalink: /parameters/reference/standard-format.html
 
 # StandardFormat 
 
-`StandardFormat` is a parameter to specify the standard barcode format. It is not set by default.
+`StandardFormat` defines the standard barcode format. It is not set by default.
 
 | Value Type | Value Range | Default Value | Template Structure Type |
 | ---------- | ----------- | ------------- | ----------------------- |

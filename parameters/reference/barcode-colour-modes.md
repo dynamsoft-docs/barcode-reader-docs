@@ -11,7 +11,7 @@ permalink: /parameters/reference/barcode-colour-modes.html
 
 # BarcodeColourModes 
 
-`BarcodeColourModes` is a parameter to specify the barcode colour modes. It consists of one or more modes, with each representing a different colour environment.
+`BarcodeColourModes` defines the barcode colour modes. It consists of one or more modes, with each representing a different colour environment.
 
 | Value Type | Value Range | Default Value | Template Structure Type |
 | ---------- | ----------- | ------------- | ----------------------- |

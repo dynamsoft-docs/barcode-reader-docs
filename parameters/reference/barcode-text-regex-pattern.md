@@ -11,7 +11,7 @@ permalink: /parameters/reference/barcode-text-regex-pattern.html
 
 # BarcodeTextRegExPattern 
 
-`BarcodeTextRegExPattern` is a parameter to specify the regular expression pattern of barcode text characters for barcodes searching and result filtering. It set to an empty string by default which means there is no limitation on the barcode text characters.
+`BarcodeTextRegExPattern` defines the regular expression pattern of barcode text characters for barcodes searching and result filtering. It set to an empty string by default which means there is no limitation on the barcode text characters.
 
 | Value Type | Value Range | Default Value | Template Structure Type |
 | ---------- | ----------- | ------------- | ----------------------- |

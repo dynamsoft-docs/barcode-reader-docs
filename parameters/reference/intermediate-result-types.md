@@ -11,7 +11,7 @@ permalink: /parameters/reference/intermediate-result-types.html
 
 # IntermediateResultTypes 
 
-`IntermediateResultTypes` is a parameter to specify the types of intermediate result(s) to be kept for further reference. It is a combined value of [`IntermediateResultType` Enumeration]({{ site.enumerations }}result-enums.html#intermediateresulttype) items. No intermediate result will be kept by default.
+`IntermediateResultTypes` defines the types of intermediate result(s) to be kept for further reference. It is a combined value of [`IntermediateResultType` Enumeration]({{ site.enumerations }}result-enums.html#intermediateresulttype) items. No intermediate result will be kept by default.
 
 | Value Type | Value Range | Default Value | Template Structure Type |
 | ---------- | ----------- | ------------- | ----------------------- |

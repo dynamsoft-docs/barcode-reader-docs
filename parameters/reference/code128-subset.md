@@ -11,7 +11,7 @@ permalink: /parameters/reference/code128-subset.html
 
 # Code128Subset 
 
-`Code128Subset` is a parameter to specify the subset of Code 128. It is defined as below:
+`Code128Subset` defines the subset of Code 128. It is defined as below:
 
 | Value Type | Value Range | Default Value | Template Structure Type |
 | ---------- | ----------- | ------------- | ----------------------- |

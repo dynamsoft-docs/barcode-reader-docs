@@ -11,7 +11,7 @@ permalink: /parameters/reference/deformation-resisting-modes.html
 
 # DeformationResistingModes 
 
-`DeformationResistingModes` is a parameter to control how to handle distorted and deformed barcodes. It consists of one or more modes, each mode representing a different way to implement the deformation resistance algorithm.
+`DeformationResistingModes` describes how to handle distorted and deformed barcodes. It consists of one or more modes, each mode representing a different way to implement the deformation resistance algorithm.
 
 
 ## Candidate Mode List

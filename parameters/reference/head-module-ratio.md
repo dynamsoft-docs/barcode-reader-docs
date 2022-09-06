@@ -11,7 +11,7 @@ permalink: /parameters/reference/head-module-ratio.html
 
 # HeadModuleRatio 
 
-`HeadModuleRatio` is a parameter to specify the module count and module size ratio of the barcode head section. By default, there is no restriction on the head module count or module size ratio.
+`HeadModuleRatio` defines the module count and module size ratio of the barcode head section. By default, there is no restriction on the head module count or module size ratio.
 
 | Value Type | Value Range | Default Value | Template Structure Type |
 | ---------- | ----------- | ------------- | ----------------------- |

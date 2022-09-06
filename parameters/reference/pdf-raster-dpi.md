@@ -11,7 +11,7 @@ permalink: /parameters/reference/pdf-raster-dpi.html
 
 # PDFRasterDPI 
 
-`PDFRasterDPI` is a parameter to specify the resolution used for rasterizing a PDF file. It is defined as below:
+`PDFRasterDPI` defines the resolution used for rasterizing a PDF file. It is defined as below:
 
 | Value Type | Value Range | Default Value | Template Structure Type |
 | ---------- | ----------- | ------------- | ----------------------- |

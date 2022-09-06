@@ -9,7 +9,7 @@ permalink: /parameters/reference/enable-qrcode-model1.html
 
 # EnableQRCodeModel1 
 
-`EnableQRCodeModel1` is a parameter to set the value determining whether to decode QRCode model 1 barcodes. It is defined as below:
+`EnableQRCodeModel1` determines whether to decode QRCode model 1 barcodes. It is defined as below:
 
 | Value Type | Value Range | Default Value | Template Structure Type |
 | ---------- | ----------- | ------------- | ----------------------- |

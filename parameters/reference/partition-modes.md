@@ -11,7 +11,7 @@ permalink: /parameters/reference/partition-modes.html
 
 # PartitionModes 
 
-`PartitionModes` is a parameter used to select the mode used to apply partition process when decoding QRCode and DataMatrix. It is defined as below:
+`PartitionModes` is used to select the mode used to apply partition process when decoding QRCode and DataMatrix. It is defined as below:
 
 | Value Type | Value Range | Default Value | Template Structure Type |
 | ---------- | ----------- | ------------- | ----------------------- |

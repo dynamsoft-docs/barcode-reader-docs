@@ -11,7 +11,7 @@ permalink: /parameters/reference/mirror-mode.html
 
 # MirrorMode 
 
-`MirrorMode` is a parameter to specify whether to decode mirrored barcodes. It is defined as below:
+`MirrorMode` defines whether to decode mirrored barcodes. It is defined as below:
 
 | Value Type | Value Range | Default Value | Template Structure Type |
 | ---------- | ----------- | ------------- | ----------------------- |

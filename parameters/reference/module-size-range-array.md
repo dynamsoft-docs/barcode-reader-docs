@@ -11,7 +11,7 @@ permalink: /parameters/reference/module-size-range-array.html
 
 # ModuleSizeRangeArray 
 
-`ModuleSizeRangeArray` is a parameter to specify the range of module size (in pixels) while barcode searching and result filtering. It is not set by default which means there is no limitation on the barcode module size.
+`ModuleSizeRangeArray` defines the range of module size (in pixels) while barcode searching and result filtering. It is not set by default which means there is no limitation on the barcode module size.
 
 | Value Type | Value Range | Default Value | Template Structure Type |
 | ---------- | ----------- | ------------- | ----------------------- |

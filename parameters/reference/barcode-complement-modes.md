@@ -11,7 +11,7 @@ permalink: /parameters/reference/barcode-complement-modes.html
 
 # BarcodeComplementModes 
 
-`BarcodeComplementModes` is a parameter to control how to complement the missing parts of a barcode. It consists of one or more modes, each mode is an implement to complement the barcode.
+`BarcodeComplementModes` determines how to complement the missing parts of a barcode. It consists of one or more modes, each mode is an implement to complement the barcode.
 
 | Value Type | Value Range | Default Value | Template Structure Type |
 | ---------- | ----------- | ------------- | ----------------------- |

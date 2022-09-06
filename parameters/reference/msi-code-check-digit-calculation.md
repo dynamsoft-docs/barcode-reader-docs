@@ -11,7 +11,7 @@ permalink: /parameters/reference/msi-code-check-digit-calculation.html
 
 # MSICodeCheckDigitCalculation 
 
-`MSICodeCheckDigitCalculation` is a parameter to specify the scheme used for calculating a check digit of an MSI barcode. It is defined as below:
+`MSICodeCheckDigitCalculation` defines the scheme used for calculating a check digit of an MSI barcode. It is defined as below:
 
 | Value Type | Value Range | Default Value | Template Structure Type |
 | ---------- | ----------- | ------------- | ----------------------- |

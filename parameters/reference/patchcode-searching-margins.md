@@ -9,7 +9,7 @@ permalink: /parameters/reference/patchcode-searching-margins.html
 
 # PatchCodeSearchingMargins 
 
-`PatchCodeSearchingMargins` is a parameter to specify the margins where to search PatchCode.
+`PatchCodeSearchingMargins` defines the margins where to search PatchCode.
 
 | Value Type | Value Range | Default Value | Template Structure Type |
 | ---------- | ----------- | ------------- | ----------------------- |

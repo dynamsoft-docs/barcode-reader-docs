@@ -11,7 +11,7 @@ permalink: /parameters/reference/barcode-bytes-length-range-array.html
 
 # BarcodeBytesLengthRangeArray 
 
-`BarcodeBytesLengthRangeArray` is a parameter to specify the range of barcode bytes length for barcodes searching and result filtering. It is not set by default which means there is no limitation on the barcode byte length.
+`BarcodeBytesLengthRangeArray` defines the range of barcode bytes length for barcodes searching and result filtering. It is not set by default which means there is no limitation on the barcode byte length.
 
 | Value Type | Value Range | Default Value | Template Structure Type |
 | ---------- | ----------- | ------------- | ----------------------- |

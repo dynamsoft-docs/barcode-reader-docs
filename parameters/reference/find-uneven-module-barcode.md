@@ -11,7 +11,7 @@ permalink: /parameters/reference/find-uneven-module-barcode.html
 
 # FindUnevenModuleBarcode 
 
-`FindUnevenModuleBarcode` is a parameter to specify whether to find barcodes with uneven barcode modules. It is defined as below:
+`FindUnevenModuleBarcode` defines whether to find barcodes with uneven barcode modules. It is defined as below:
 
 | Value Type | Value Range | Default Value | Template Structure Type |
 | ---------- | ----------- | ------------- | ----------------------- |

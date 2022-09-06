@@ -11,7 +11,7 @@ permalink: /parameters/reference/barcode-format-ids-2.html
 
 # BarcodeFormatIds_2 
 
-`BarcodeFormatIds_2` is a parameter to specify the formats of the barcode in BarcodeFormat group 2 to be read. It is a combined value of [`BarcodeFormat_2` Enumeration]({{ site.enumerations }}format-enums.html#barcodeformat_2) items.
+`BarcodeFormatIds_2` defines the formats of the barcode in BarcodeFormat group 2 to be read. It is a combined value of [`BarcodeFormat_2` Enumeration]({{ site.enumerations }}format-enums.html#barcodeformat_2) items.
 
 **Remarks**  
 - The default value is all supported barcode formats in BarcodeFormat group 2.

@@ -11,7 +11,7 @@ permalink: /parameters/reference/barcode-zone-bar-count-range-array.html
 
 # BarcodeZoneBarCountRangeArray 
 
-`BarcodeZoneBarCountRangeArray` is a parameter to specify the range of bar count of the barcode zone for barcodes searching. By default, the minimum bar count is 1 and the maximum bar count is 128.
+`BarcodeZoneBarCountRangeArray` defines the range of bar count of the barcode zone for barcodes searching. By default, the minimum bar count is 1 and the maximum bar count is 128.
 
 | Value Type | Value Range | Default Value | Template Structure Type |
 | ---------- | ----------- | ------------- | ----------------------- |

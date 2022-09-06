@@ -11,7 +11,7 @@ permalink: /parameters/reference/deblur-level.html
 
 # DeblurLevel 
 
-`DeblurLevel` is a parameter to control the efforts used to process the blurriness of the barcode. It is defined as below:
+`DeblurLevel` determines the efforts used to process the blurriness of the barcode. It is defined as below:
 
 | Value Type | Value Range | Default Value | Template Structure Type |
 | ---------- | ----------- | ------------- | ----------------------- |

@@ -11,7 +11,7 @@ permalink: /parameters/reference/min-quiet-zone-width.html
 
 # MinQuietZoneWidth 
 
-`MinQuietZoneWidth` is a parameter to specify the minimum width (in moduleSize) of the barcode quiet zone. It is defined as below:
+`MinQuietZoneWidth` defines the minimum width (in moduleSize) of the barcode quiet zone. It is defined as below:
 
 | Value Type | Value Range | Default Value | Template Structure Type |
 | ---------- | ----------- | ------------- | ----------------------- |

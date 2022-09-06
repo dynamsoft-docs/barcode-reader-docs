@@ -11,7 +11,7 @@ permalink: /parameters/reference/region.html
 
 # Region 
 
-`Region` is a parameter to specify a region in where to search barcodes. By default, DBR does not restrict the reading region. It is defined by RegionTop, RegionLeft, RegionRight, RegionBottom, and RegionMeasuredByPercentage:
+`Region` defines a region in where to search barcodes. By default, DBR does not restrict the reading region. It is defined by RegionTop, RegionLeft, RegionRight, RegionBottom, and RegionMeasuredByPercentage:
 
 | Value Type | Value Range | Default Value | Template Structure Type |
 | ---------- | ----------- | ------------- | ----------------------- |
