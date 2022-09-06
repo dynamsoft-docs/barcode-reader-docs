@@ -11,10 +11,14 @@ permalink: /parameters/reference/intermediate-result-types.html
 
 # IntermediateResultTypes 
 
-`IntermediateResultTypes` is a parameter to specify the types of intermediate result to be kept for further reference. It is a combined value of [`IntermediateResultType` Enumeration]({{ site.enumerations }}result-enums.html#intermediateresulttype) items. No intermediate result will be kept by default
+`IntermediateResultTypes` is a parameter to specify the types of intermediate result(s) to be kept for further reference. It is a combined value of [`IntermediateResultType` Enumeration]({{ site.enumerations }}result-enums.html#intermediateresulttype) items. No intermediate result will be kept by default.
+
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| [*`IntermediateResultType`*]({{ site.enumerations }}result-enums.html#intermediateresulttype) | N/A | `IRT_NO_RESULT` | `ImageParameter` |
     
 ## Setting Methods
-`IntermediateResultTypes` is supported to be set through `RuntimeSetting` or JSON template.
+`IntermediateResultTypes` can be set through `PublicRuntimeSettings` or JSON template.
 
 ### As `PublicRuntimeSettings` Member
 `IntermediateResultTypes` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct.

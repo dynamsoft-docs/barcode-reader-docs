@@ -15,7 +15,7 @@ permalink: /parameters/reference/expected-barcodes-count.html
 
 | Value Type | Value Range | Default Value | Template Structure Type |
 | ---------- | ----------- | ------------- | ----------------------- |
-| *int* | [0, 0x7fffffff] | 0 | `ImageParameter`/`RegionDefinition`
+| *int* | [0, 0x7fffffff] | 0 | `ImageParameter`/`RegionDefinition` |
 
 
 **Remarks**  

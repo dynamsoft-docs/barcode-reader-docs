@@ -13,9 +13,9 @@ permalink: /parameters/reference/mirror-mode.html
 
 `MirrorMode` is a parameter to specify whether to decode mirrored barcodes. It is defined as below:
 
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| *string* | "MM_NORMAL"<br>"MM_MIRROR"<br>"MM_BOTH" | For `QRCode`, `DataMatrix`, `PDF417`, `AZTEC`, `Micro QR Code`, `Micro PDF417`, `DotCode` and `Pharmacode Two-Track`, it's "MM_BOTH". <br> For other barcode types, it's "MM_NORMAL". |
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *string* | "MM_NORMAL"<br>"MM_MIRROR"<br>"MM_BOTH" | For `QRCode`, `DataMatrix`, `PDF417`, `AZTEC`, `Micro QR Code`, `Micro PDF417`, `DotCode` and `Pharmacode Two-Track`, it's "MM_BOTH". <br> For other barcode types, it's "MM_NORMAL". | `FormatSpecification` |
 
 **Remarks**     
 - "MM_NORMAL": Doesn't decode mirror barcodes.

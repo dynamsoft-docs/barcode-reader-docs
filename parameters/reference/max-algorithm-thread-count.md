@@ -13,9 +13,9 @@ permalink: /parameters/reference/max-algorithm-thread-count.html
 
 `MaxAlgorithmThreadCount` is a parameter to specify the number of threads the image processing algorithm will use to decode barcodes. It is defined as below:
 
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| *int* | [1, 4] | 4 |
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *int* | [1, 4] | 4 | `ImageParameter` |
 
     
 ## Setting Methods

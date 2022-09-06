@@ -13,9 +13,9 @@ permalink: /parameters/reference/msi-code-check-digit-calculation.html
 
 `MSICodeCheckDigitCalculation` is a parameter to specify the scheme used for calculating a check digit of an MSI barcode. It is defined as below:
 
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| *string* | "MSICCDC_NO_CHECK_DIGIT"<br>"MSICCDC_MOD_10"<br>"MSICCDC_MOD_11"<br>"MSICCDC_MOD_1110"<br>"MSICCDC_MOD_1010" | "MSICCDC_MOD_10"  |
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *string* | "MSICCDC_NO_CHECK_DIGIT"<br>"MSICCDC_MOD_10"<br>"MSICCDC_MOD_11"<br>"MSICCDC_MOD_1110"<br>"MSICCDC_MOD_1010" | "MSICCDC_MOD_10"  | `FormatSpecification` |
 
     
 ## Setting Methods

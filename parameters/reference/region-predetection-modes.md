@@ -11,7 +11,7 @@ permalink: /parameters/reference/region-predetection-modes.html
 
 # RegionPredetectionModes 
 
-`RegionPredetectionModes` is a parameter to control how to find a region of interesting. It consists of one or more modes, each mode represents a way to find a region.
+`RegionPredetectionModes` is a parameter to control how to find a region of interest. It consists of one or more modes, each mode representing a different way to find a region.
 
 
 ## Candidate Mode List
