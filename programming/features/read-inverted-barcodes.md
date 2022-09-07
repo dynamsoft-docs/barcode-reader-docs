@@ -113,8 +113,8 @@ reader.updateRuntimeSettings(settings);
 # Obtain current runtime settings of `reader` instance.
 settings = reader.get_runtime_settings()
 # Add GTM_INVERTED to GrayscaleTransformationModes to decode inverted barcodes.
-settings.further_modes.grayscale_transformation_modes[0] = EnumGrayscaleTransformationMode.GTM_ORIGINAL
-settings.further_modes.grayscale_transformation_modes[1] = EnumGrayscaleTransformationMode.GTM_INVERTED
+settings.grayscale_transformation_modes[0] = EnumGrayscaleTransformationMode.GTM_ORIGINAL
+settings.grayscale_transformation_modes[1] = EnumGrayscaleTransformationMode.GTM_INVERTED
 # Update the settings.
 reader.update_runtime_settings(settings)
 ```

@@ -93,7 +93,8 @@ settings.furtherModes.deformationResistingModes[2] = DRM_DEWRINKLE;
 // Update the settings.
 DBR_UpdateRuntimeSettings(reader, &settings, szErrorMsg, 256);
 ```
->```cpp
+>
+```cpp
 PublicRuntimeSettings settings;
 char szErrorMsg[256] = {0};
 // Obtain current runtime settings of `reader` instance.
@@ -105,7 +106,8 @@ settings.furtherModes.deformationResistingModes[2] = DRM_DEWRINKLE;
 // Update the settings.
 reader.UpdateRuntimeSettings(&settings, szErrorMsg, 256);
 ```
->```c#
+>
+```c#
 // Obtain current runtime settings of `reader` instance.
 PublicRuntimeSettings settings = reader.GetRuntimeSettings();
 // Add DRM_GENERAL to the deformationResistingModes to decode deformed barcodes.
@@ -129,9 +131,9 @@ reader.updateRuntimeSettings(settings);
 # Obtain current runtime settings of `reader` instance.
 settings = reader.get_runtime_settings()
 # Add DRM_GENERAL to the deformationResistingModes to decode deformed barcodes.
-settings.further_modes.deformation_resisting_modes[0] = EnumDeformationResistingMode.DRM_BROAD_WARP
-settings.further_modes.deformation_resisting_modes[1] = EnumDeformationResistingMode.DRM_LOCAL_REFERENCE
-settings.further_modes.deformation_resisting_modes[2] = EnumDeformationResistingMode.DRM_DEWRINKLE
+settings.deformation_resisting_modes[0] = EnumDeformationResistingMode.DRM_BROAD_WARP
+settings.deformation_resisting_modes[1] = EnumDeformationResistingMode.DRM_LOCAL_REFERENCE
+settings.deformation_resisting_modes[2] = EnumDeformationResistingMode.DRM_DEWRINKLE
 # Update the settings.
 reader.update_runtime_settings(settings)
 ```
