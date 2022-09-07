@@ -106,7 +106,7 @@ reader.updateRuntimeSettings(settings);
 # Obtain current runtime settings of `reader` instance.
 settings = reader.get_runtime_settings()
 # Add BCM_GENERAL to the barcodeComplementModes to decode incomplete barcodes.
-settings.further_modes.barcode_complement_modes[0] = EnumBarcodeComplementMode.BCM_GENERAL
+settings.barcode_complement_modes[0] = EnumBarcodeComplementMode.BCM_GENERAL
 # Update the settings.
 reader.update_runtime_settings(settings)
 ```

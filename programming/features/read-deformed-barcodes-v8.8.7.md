@@ -104,7 +104,7 @@ reader.updateRuntimeSettings(settings);
 # Obtain current runtime settings of `reader` instance.
 settings = reader.get_runtime_settings()
 # Add DRM_GENERAL to the deformationResistingModes to decode deformed barcodes.
-settings.further_modes.deformation_resisting_modes[0] = EnumDeformationResistingMode.DRM_GENERAL
+settings.deformation_resisting_modes[0] = EnumDeformationResistingMode.DRM_GENERAL
 # Update the settings.
 reader.update_runtime_settings(settings)
 ```
