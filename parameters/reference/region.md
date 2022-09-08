@@ -54,11 +54,11 @@ delete pSettings;
 | Key Name | Key Value | Description |
 | -------- | --------- | ----------- |
 | Name | A string value representing a unique name | The name of the RegionDefinition object. |
-| RegionTop | A number from [0, 0x7fffffff] when MeasuredByPercentage=0 or [0, 100] when MeasuredByPercentage=1 | The top-most coordinate or percentage of the region. |
+| Top | A number from [0, 0x7fffffff] when MeasuredByPercentage=0 or [0, 100] when MeasuredByPercentage=1 | The top-most coordinate or percentage of the region. |
 | RegionLeft | A number from [0, 0x7fffffff] when MeasuredByPercentage=0 or [0, 100] when MeasuredByPercentage=1 | The left-most coordinate or percentage of the region. |
-| RegionRight | A number from [0, 0x7fffffff] when MeasuredByPercentage=0 or [0, 100] when MeasuredByPercentage=1 | The right-most coordinate or percentage of the region. |
-| RegionBottom | A number from [0, 0x7fffffff] when MeasuredByPercentage=0 or [0, 100] when MeasuredByPercentage=1 | The bottom-most coordinate or percentage of the region. |
-| RegionMeasuredByPercentage | A number from [0, 1] | Sets whether or not to use percentages to measure the Region size. |
+| Right | A number from [0, 0x7fffffff] when MeasuredByPercentage=0 or [0, 100] when MeasuredByPercentage=1 | The right-most coordinate or percentage of the region. |
+| Bottom | A number from [0, 0x7fffffff] when MeasuredByPercentage=0 or [0, 100] when MeasuredByPercentage=1 | The bottom-most coordinate or percentage of the region. |
+| MeasuredByPercentage | A number from [0, 1] | Sets whether or not to use percentages to measure the Region size. |
 
 
 **JSON Example**   
