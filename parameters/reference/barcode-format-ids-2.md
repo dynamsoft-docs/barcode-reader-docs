@@ -11,16 +11,19 @@ permalink: /parameters/reference/barcode-format-ids-2.html
 
 # BarcodeFormatIds_2 
 
-`BarcodeFormatIds_2` is a parameter to specify the formats of the barcode in BarcodeFormat group 2 to be read. It is a combined value of [`BarcodeFormat_2` Enumeration]({{ site.enumerations }}format-enums.html#barcodeformat_2) items.
+`BarcodeFormatIds_2` defines the formats of the barcode in BarcodeFormat group 2 to be read. It is a combined value of [`BarcodeFormat_2` Enumeration]({{ site.enumerations }}format-enums.html#barcodeformat_2) items.
 
 **Remarks**  
 - The default value is all supported barcode formats in BarcodeFormat group 2.
 - The barcode format our library will search for is composed of [BarcodeFormat group 1]({{ site.enumerations }}format-enums.html#barcodeformat) and [BarcodeFormat group 2]({{ site.enumerations }}format-enums.html#barcodeformat_2), so you need to specify the barcode format in group 1 and group 2 individually.
 
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *int* / *EnumBarcodeFormat_2* | N/A | Combined value of all *EnumBarcodeFormat_2* items | `ImageParameter`/`FormatSpecification`/`RegionDefinition` |
 
     
 ## Setting Methods
-`BarcodeFormatIds_2` is supported to be set through `RuntimeSetting` or JSON template.
+`BarcodeFormatIds_2` can be set through `RuntimeSetting` or JSON template.
 
 ### As `PublicRuntimeSettings` Member
 `BarcodeFormatIds_2` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct.

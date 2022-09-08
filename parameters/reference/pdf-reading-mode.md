@@ -11,7 +11,7 @@ permalink: /parameters/reference/pdf-reading-mode.html
 
 # PDFReadingMode 
 
-`PDFReadingMode` is a parameter to control how to read barcodes from PDF files. 
+`PDFReadingMode` determines how to read barcodes from PDF files. 
 
 ## Candidate Mode List
 - PDFRM_AUTO

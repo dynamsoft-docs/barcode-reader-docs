@@ -11,7 +11,7 @@ permalink: /parameters/reference/dpm-code-reading-modes.html
 
 # DPMCodeReadingModes 
 
-`DPMCodeReadingModes` is a parameter to control how to read direct part mark (DPM) barcodes. It consists of one or more modes, each mode is an implement to read DPM barcode.
+`DPMCodeReadingModes` determines how to read direct part mark (DPM) barcodes. It currently can consist of two modes, with the main mode being `DPMCRM_GENERAL`.
 
 
 ## Candidate Mode List
@@ -19,7 +19,7 @@ permalink: /parameters/reference/dpm-code-reading-modes.html
 - DPMCRM_AUTO
 
 ### DPMCRM_GENERAL
-Reads DPM code using the general algorithm. This mode has the following arguments for further customizing.
+Reads DPM codes using the general algorithm. This mode has the following arguments for further customizing.
 
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)

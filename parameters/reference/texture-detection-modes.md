@@ -11,7 +11,7 @@ permalink: /parameters/reference/texture-detection-modes.html
 
 # TextureDetectionModes 
 
-`TextureDetectionModes` is a parameter to control how to detect texture on an image. It consists of one or more modes, each mode represents a way to implement the detection.
+`TextureDetectionModes` determines how to detect texture on an image. It consists of one or more modes, each mode represents a way to implement the detection.
 
 
 ## Candidate Mode List

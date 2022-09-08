@@ -11,11 +11,14 @@ permalink: /parameters/reference/barcode-width-range-array.html
 
 # BarcodeWidthRangeArray 
 
-`BarcodeWidthRangeArray` is a parameter to specify the range of widths (in pixels) for barcodes searching and result filtering. It is not set by default which means there is no limitation on the barcode widths.
+`BarcodeWidthRangeArray` defines the range of widths (in pixels) for barcodes searching and result filtering. It is not set by default which means there is no limitation on the barcode widths.
 
-    
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *int* | [0, 0x7fffffff] | `null` | `FormatSpecification` |
+
 ## Setting Methods
-`BarcodeWidthRangeArray` is supported to be set through JSON template.
+`BarcodeWidthRangeArray` can be set via JSON template.
 
 ### As JSON Parameter
 `BarcodeWidthRangeArray` as a JSON parameter is defined as below.   

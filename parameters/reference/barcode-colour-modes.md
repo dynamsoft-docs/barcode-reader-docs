@@ -11,7 +11,11 @@ permalink: /parameters/reference/barcode-colour-modes.html
 
 # BarcodeColourModes 
 
-`BarcodeColourModes` is a parameter to specify the barcode colour modes. It consists of one or more modes, each mode represents a colour mode.
+`BarcodeColourModes` defines the barcode colour modes. It consists of one or more modes, with each representing a different colour environment.
+
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *int* / *EnumBarcodeColourMode* | N/A | `BICM_DARK_ON_LIGHT` | `ImageParameter` |
 
 
 ## Candidate Mode List

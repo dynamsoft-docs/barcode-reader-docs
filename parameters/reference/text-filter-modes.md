@@ -11,7 +11,7 @@ permalink: /parameters/reference/text-filter-modes.html
 
 # TextFilterModes 
 
-`TextFilterModes` is a parameter to control how to filter texts on an image. It consists of one or more modes, each mode represents a way to implement the filtering.
+`TextFilterModes` determines how to filter texts on an image. It consists of one or more modes, each mode represents a way to implement the filtering.
 
 
 ## Candidate Mode List

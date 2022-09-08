@@ -11,11 +11,14 @@ permalink: /parameters/reference/barcode-text-length-range-array.html
 
 # BarcodeTextLengthRangeArray 
 
-`BarcodeTextLengthRangeArray` is a parameter to specify the range of barcode text length for barcodes searching and result filtering. It is not set by default which means there is no limitation on the barcode text length.
+`BarcodeTextLengthRangeArray` defines the range of barcode text length for barcodes searching and result filtering. It is not set by default which means there is no limitation on the barcode text length.
 
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *int* | [0, 0x7fffffff] | N/A | `FormatSpecification` |
     
 ## Setting Methods
-`BarcodeTextLengthRangeArray` is supported to be set through JSON template.
+`BarcodeTextLengthRangeArray` can be set via JSON template.
 
 ### As JSON Parameter
 `BarcodeTextLengthRangeArray` as a JSON parameter is defined as below.   

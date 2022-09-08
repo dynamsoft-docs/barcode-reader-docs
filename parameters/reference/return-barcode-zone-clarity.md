@@ -11,11 +11,11 @@ permalink: /parameters/reference/return-barcode-zone-clarity.html
 
 # ReturnBarcodeZoneClarity 
 
-`ReturnBarcodeZoneClarity` is a parameter to specify whether to return the clarity of the barcode zone. It is defined as below:
+`ReturnBarcodeZoneClarity` defines whether to return the clarity of the barcode zone. It is defined as below:
 
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| *int* | [0, 1] | 0 |
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *int* | [0, 1] | 0 | `ImageParameter` |
 
 
 **Remarks**  
