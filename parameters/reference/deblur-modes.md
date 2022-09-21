@@ -13,7 +13,7 @@ permalink: /parameters/reference/deblur-modes.html
 
 Sets the mode and priority for deblurring.  
 
-It consists of one or more modes, each mode represents a way to transform the grayscale image.
+It consists of one or more modes, each mode representing a different way to apply the deblur algorithm.
 
 
 ## Candidate Mode List

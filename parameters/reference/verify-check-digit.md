@@ -9,11 +9,11 @@ permalink: /parameters/reference/verify-check-digit.html
 
 # VerifyCheckDigit 
 
-`VerifyCheckDigit` is a parameter to set the value determining whether to verify the check digit in barcodes where this check digit is optional. It is defined as below:
+`VerifyCheckDigit` specifies whether to verify the check digit in barcodes where this check digit is optional. It is defined as below:
 
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| *int* | [0, 1] | 0  |
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *int* | [0, 1] | 0  | `FormatSpecification` |
 
 **Remarks**     
 - 0: Do not verify the check digit.
@@ -22,7 +22,7 @@ permalink: /parameters/reference/verify-check-digit.html
 
     
 ## Setting Methods
-`VerifyCheckDigit` is supported to be set through JSON template.
+`VerifyCheckDigit` can be set via JSON template.
 
 ### As JSON Parameter
 `VerifyCheckDigit` as a JSON parameter is an int value defined as below.   

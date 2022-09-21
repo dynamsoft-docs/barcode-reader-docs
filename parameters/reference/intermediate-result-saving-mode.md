@@ -11,7 +11,7 @@ permalink: /parameters/reference/intermediate-result-saving-mode.html
 
 # IntermediateResultSavingMode 
 
-`IntermediateResultSavingMode` is a parameter to specify how to save the intermediate result. It can be one of the follwoing candidate modes.
+`IntermediateResultSavingMode` defines how to save the intermediate result(s). It can be one of the follwoing candidate modes.
 
 ## Candidate Mode List
 - IRSM_MEMORY

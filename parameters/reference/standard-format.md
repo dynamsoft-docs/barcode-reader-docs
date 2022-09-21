@@ -11,11 +11,14 @@ permalink: /parameters/reference/standard-format.html
 
 # StandardFormat 
 
-`StandardFormat` is a parameter to specify the standard barcode format. 
+`StandardFormat` defines the standard barcode format. It is not set by default.
 
-    
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *string* | [*`BarcodeFormat`*]({{ site.enumerations }}format-enums.html#barcodeformat) / [*`BarcodeFormat_2`*]({{ site.enumerations }}format-enums.html#barcodeformat_2) | `""` | `FormatSpecification` |
+
 ## Setting Methods
-`StandardFormat` is supported to be set through JSON template.
+`StandardFormat` can be set via JSON template.
 
 ### As JSON Parameter
 `StandardFormat` as a JSON parameter is a string value defined as below.   

@@ -11,11 +11,11 @@ permalink: /parameters/reference/require-start-stop-chars.html
 
 # RequireStartStopChars 
 
-`RequireStartStopChars` is a parameter to specify whether the start and stop characters are required when searching for Code 39 barcodes. It is defined as below:
+`RequireStartStopChars` defines whether the start and stop characters are required when searching for Code 39 barcodes. It is defined as below:
 
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| *int* | [0, 1] | 1 |
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *int* | [0, 1] | 1 | `FormatSpecification` |
 
 
 **Remarks**     
@@ -25,7 +25,7 @@ permalink: /parameters/reference/require-start-stop-chars.html
 
     
 ## Setting Methods
-`RequireStartStopChars` is supported to be set through JSON template.
+`RequireStartStopChars` can be set via JSON template.
 
 ### As JSON Parameter
 `RequireStartStopChars` as a JSON parameter is a number value defined as below.   

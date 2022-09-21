@@ -11,7 +11,7 @@ permalink: /parameters/reference/result-coordinate-type.html
 
 # ResultCoordinateType 
 
-`ResultCoordinateType` is a parameter to specify the returned coordinate type. 
+`ResultCoordinateType` defines the returned coordinate type. 
 
 ## Candidate Mode List
 - RCT_PIXEL

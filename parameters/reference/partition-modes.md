@@ -11,11 +11,11 @@ permalink: /parameters/reference/partition-modes.html
 
 # PartitionModes 
 
-`PartitionModes` is a parameter to set the mode used to apply partition process when decoding QRCode and DataMatrix. It is defined as below:
+`PartitionModes` is used to select the mode used to apply partition process when decoding QRCode and DataMatrix. It is defined as below:
 
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| *string array* | "PM_WHOLE_BARCODE"<br>"PM_ALIGNMENT_PARTITION" | ["PM_WHOLE_BARCODE","PM_ALIGNMENT_PARTITION"] |
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *string array* | "PM_WHOLE_BARCODE"<br>"PM_ALIGNMENT_PARTITION" | ["PM_WHOLE_BARCODE","PM_ALIGNMENT_PARTITION"] | `FormatSpecification` |
 
 **Remarks**
 
@@ -25,7 +25,7 @@ permalink: /parameters/reference/partition-modes.html
 
 ## Setting Methods
 
-`PartitionModes` is supported to be set through JSON template.
+`PartitionModes` can be set via JSON template.
 
 ### As JSON Parameter
 

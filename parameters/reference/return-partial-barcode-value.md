@@ -11,11 +11,11 @@ permalink: /parameters/reference/return-partial-barcode-value.html
 
 # ReturnPartialBarcodeValue 
 
-`ReturnPartialBarcodeValue` is a parameter to specify whether to return partial barcode value(s). It is defined as below:
+`ReturnPartialBarcodeValue` defines whether to return partial barcode value(s). It is defined as below:
 
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| *int* | [0, 1] | 1 |
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *int* | [0, 1] | 1 | `FormatSpecification` |
 
 
 **Remarks**  
@@ -25,7 +25,7 @@ permalink: /parameters/reference/return-partial-barcode-value.html
 
     
 ## Setting Methods
-`ReturnPartialBarcodeValue` is supported to be set through JSON template.
+`ReturnPartialBarcodeValue` can be set via JSON template.
 
 
 ### As JSON Parameter

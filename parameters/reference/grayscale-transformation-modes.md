@@ -11,7 +11,7 @@ permalink: /parameters/reference/grayscale-transformation-modes.html
 
 # GrayscaleTransformationModes 
 
-This parameter helps control the colour mode of the grayscale image. By default, the library can only locate the dark barcodes that stand on a light background. Assume your image has different features to default, this parameter may help configure the appropriate settings for your case.  
+This parameter helps control the colour mode of the grayscale image. This parameter is very important when trying to read inverted barcodes. Barcodes typically are dark on a light background, but sometimes they might be inverted, resulting in a light barcode on a dark background. By default, the library is configured to detect the former. So if you are working with inverted barcodes, `GrayscaleTransformationModes` is the parameter to deal with them.
 
 It consists of one or more modes, each mode represents a way to transform the grayscale image.
 
@@ -21,13 +21,13 @@ It consists of one or more modes, each mode represents a way to transform the gr
 - GTM_INVERTED
 
 ### GTM_ORIGINAL
-Keeps the original grayscale. This mode has the following arguments for further customizing.
+Keeps the original grayscale. This mode has the following arguments for further customization.
 
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)
 
 ### GTM_INVERTED
-Transforms the image to inverted grayscale. This mode has the following arguments for further customizing.
+Transforms the image to inverted grayscale. This mode is the one to use for inverted barcodes. It also has the following arguments for further customization.
 
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)

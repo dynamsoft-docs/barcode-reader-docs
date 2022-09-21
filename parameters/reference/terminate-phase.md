@@ -11,7 +11,7 @@ permalink: /parameters/reference/terminate-phase.html
 
 # TerminatePhase 
 
-`TerminatePhase` is a parameter to specify the phase where the algorithm stops. It can be one of following values.
+`TerminatePhase` defines the phase where the algorithm stops. It can be one of following values.
 
 ## Candidate Value List
 - TP_REGION_PREDETECTED
