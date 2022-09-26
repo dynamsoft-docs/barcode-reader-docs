@@ -165,7 +165,7 @@ Table 6 – Parameters to Organize the Results
 
 ## Intermediate Result and third-party integration
 
-DBR outputs not only the barcodes and their locations but also lots of data created during the reading procedure, i.e., intermediate results. These data help analyze the performance and debug in development. Considering scenarios where barcode reading isn't the only goal, intermediate results can be utilized by third-party applications, e.g., OCR, to reduce duplicate work. DBR supports receiving such data from third-party applications to improve the speed as well.
+DBR outputs not only the barcodes and their locations but also lots of data created during the reading procedure, i.e., intermediate results. This data helps analyze the performance of the SDK and provides some debugging tools in development. Certain scenarios call for the use of this intermediate data, so it can be utilized by third-party applications where barcode reading isn't the only goal , i.e. OCR, to reduce the need for more external components as well as the work needed to implement this functionality. DBR also supports receiving such intermediate data from third-party applications to improve the performance.
 
 Table 7 – Intermediate Result Types
 
