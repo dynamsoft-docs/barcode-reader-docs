@@ -11,7 +11,7 @@ permalink: /introduction/how-to-guide/enable-scale-up-for-barcode-recognition.ht
 
 For some barcodes with small module size, Dynamsoft Barcode Reader SDK will automatically enlarge the barcode to a proper size before recognition.
 
-Since version 7.3, Dynamsoft Barcode Reader SDK provides [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html)->[`ScaleUpModes`]({{ site.structs }}PublicRuntimeSettings.html)#scaleupmodes) with arguments - `ModuleSizeThreshold`, `AcuteAngleWithXThreshold` and `TargetModuleSize` APIs which allow you to set the custom rules for scaling up. To enable it, you need to set [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html)->[`ScaleUpModes`]({{ site.structs }}PublicRuntimeSettings.html#scaleupmodes) to `SUM_LINEAR_INTERPOLATION` or `SUM_NEAREST_NEIGHBOUR_INTERPOLATION`, then set the rest parameters.
+Since version 7.3, Dynamsoft Barcode Reader SDK provides [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html)->[`ScaleUpModes`]({{ site.structs }}PublicRuntimeSettings.html#scaleupmodes) with arguments - `ModuleSizeThreshold`, `AcuteAngleWithXThreshold` and `TargetModuleSize` APIs which allow you to set the custom rules for scaling up. To enable it, you need to set [`PublicRuntimeSettings`]({{ site.structs }}PublicRuntimeSettings.html)->[`ScaleUpModes`]({{ site.structs }}PublicRuntimeSettings.html#scaleupmodes) to `SUM_LINEAR_INTERPOLATION` or `SUM_NEAREST_NEIGHBOUR_INTERPOLATION`, then set the rest parameters.
 
 If the module size of the barcode < ModuleSizeThreshold and the acute angle with X of the barcode > AcuteAngleWithXThreshold, the barcode will be enlarged to N times (N=1,2,3...) till N * modulesize >= TargetModuleSize.
 
