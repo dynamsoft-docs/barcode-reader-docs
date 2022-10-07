@@ -11,7 +11,7 @@ permalink: /programming/features/barcode-scan-region.html
 
 # Read a Specific Area/Region
 
-DBR will locate the code region and decode the entire image by default. However, if only a specific region of the image or video is required to locate the barcode, you can define a Region Of Interest (ROI) via the parameter `RegionDefinition`. After defining a specific region, DBR will only decode barcodes within that region. Of course, this is very conducive to increasing the speed.
+DBR will locate the code region and decode the entire image by default. However, if only a specific region of the image or video is required to locate the barcode, you can define a Region Of Interest (ROI) via the parameter `RegionDefinition`. After defining a specific region, DBR will only decode barcodes within that region. Of course, this is very conducive to increasing the speed. To learn more about RegionDefinition and how it works, please refer to this [**section**](../../parameters/structure-and-interfaces-of-parameters.md#regiondefinition-and-how-it-works) of the Structure and Interfaces page.
 
 `RegionDefinition` is the struct that is designed to specify the ROI.
 
