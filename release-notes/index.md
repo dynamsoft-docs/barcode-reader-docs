@@ -31,6 +31,8 @@ permalink: /release-notes/index.html
 
 | Versions | Available Editions |
 | -------- | ------------------ |
+| 9.3.1 | [JavaScript]({{ site.js }}release-notes/js-9.html#931-10102022) |
+| 9.3.0 | [JavaScript]({{ site.js }}release-notes/js-9.html#930-09272022) |
 | 9.2.13 | [JavaScript]({{ site.js }}release-notes/js-9.html#9213-08112022) |
 | 9.2.12 | [JavaScript]({{ site.js }}release-notes/js-9.html#9212-08042022) /[iOS]({{ site.oc_release_notes }}ios-9.html#9212-08022022) |
 | 9.2.11 | [JavaScript]({{ site.js }}release-notes/js-9.html#9211-07282022) /[iOS]({{ site.oc_release_notes }}ios-9.html#9211-07112022) |
