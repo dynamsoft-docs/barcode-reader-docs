@@ -23,7 +23,7 @@ In either mode, the points are listed in clockwise order, starting from the top-
 
 ## Code Snippet
 
-The following code snippet shows how to get the conficence and rotation angle of the barcode result:
+The following code snippet shows how to get the coordinates of the barcode:
 
 <div class="sample-code-prefix template2"></div>
 >- JavaScript
@@ -49,9 +49,7 @@ The following code snippet shows how to get the conficence and rotation angle of
         let y3 = result.localizationResult.y3;
         let x4 = result.localizationResult.x4;
         let y4 = result.localizationResult.x4;
-
         /* use the coordinates in some way */ 
-
         alert(txt);
     };
     await scanner.show();
@@ -72,7 +70,6 @@ DBR_DecodeFile(reader, "YOUR-IMAGE-FILE-PATH", ""); // Start decoding
 DBR_GetAllTextResults(reader, &paryResult);
 for (int iIndex = 0; iIndex < paryResult->resultsCount; iIndex++)
 {
-
     int x1 = paryResult->results[iIndex]->localizationResult->x1;
     int y1 = paryResult->results[iIndex]->localizationResult->y1;
     int x2 = paryResult->results[iIndex]->localizationResult->x2;
@@ -81,9 +78,7 @@ for (int iIndex = 0; iIndex < paryResult->resultsCount; iIndex++)
     int y3 = paryResult->results[iIndex]->localizationResult->y3;
     int x4 = paryResult->results[iIndex]->localizationResult->x4;
     int y4 = paryResult->results[iIndex]->localizationResult->y4;
-
     /* use the coordinates to draw a highlight rectangle around them */
-
 }
 DBR_FreeTextResults(&paryResult);
 // Add further process
@@ -103,7 +98,6 @@ reader->DecodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
 reader->GetAllTextResults(&paryResult);
 for (int iIndex = 0; iIndex < paryResult->resultsCount; iIndex++)
 {
-
     int x1 = paryResult->results[iIndex]->localizationResult->x1;
     int y1 = paryResult->results[iIndex]->localizationResult->y1;
     int x2 = paryResult->results[iIndex]->localizationResult->x2;
@@ -112,7 +106,6 @@ for (int iIndex = 0; iIndex < paryResult->resultsCount; iIndex++)
     int y3 = paryResult->results[iIndex]->localizationResult->y3;
     int x4 = paryResult->results[iIndex]->localizationResult->x4;
     int y4 = paryResult->results[iIndex]->localizationResult->y4;
-
     /* Use the coordinates to draw a highlight rectangle around the barcode */
 }
 CBarcodeReader::FreeTextResults(&paryResult);
@@ -183,7 +176,6 @@ for (iTextResult* barcode in result)
 let reader = DynamsoftBarcodeReader()
 var result: [iTextResult]? = nil
 var resLocation:[CGPoint]
-
 do {
     result = try reader.decodeFileWithName("YOUR-IMAGE-FILE-PATH")
 } catch let err {
