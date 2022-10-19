@@ -243,12 +243,6 @@ Sets the morph operation for the morphology process.
 | ---------- | ----------- | ------------- | --------- |
 | *string* | "Rectangle"<br>"Cross"<br>"Ellipse" | "Rectangle" |  IPM_MORPHOLOGY |        
 
-**Remarks**        
-   - "Rectangle": 
-   - "Cross": 
-   - "Ellipse": 
-
-
 
 ### MorphOperationKernelSizeX  
 Sets the horizontal kernel size for the morphology process. 
