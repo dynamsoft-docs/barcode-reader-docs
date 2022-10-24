@@ -35,7 +35,7 @@ Preprocesses the image using the gray equalization algorithm. This mode can be u
 - [LibraryParameters](#libraryparameters)
 
 ### IPM_GRAY_SMOOTH
-Preprocesses the image using the gray smoothing algorithm. This mode can be used for for images with noise or texture. This mode has the following arguments for further customizing.
+Preprocesses the image using the gray smoothing algorithm. This mode can be used for images with noise or texture. This mode has the following arguments for further customizing.
 - [SmoothBlockSizeX](#smoothblocksizex)
 - [SmoothBlockSizeY](#smoothblocksizey)
 - [LibraryFileName](#libraryfilename)
