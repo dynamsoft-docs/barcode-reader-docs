@@ -38,7 +38,7 @@ The image below shows the grayscale image converted by DBR using only red channe
    <p>Figure 3 – Sample barcode gray image using only red channel</p>
 </div>
 
-As we can see, the gray image converted using only red channel is much better than the default gray image. Now we will demonstrate how to configure the `colourConversionModes` to complete the conversion.
+As we can see, the gray image converted using only red channel is much better than the default gray image. Now we will demonstrate how to configure the `colourConversionModes` to adjust the colour channel weights used for converting a colour image to a grayscale image.
 
 <div class="sample-code-prefix template2"></div>
    >- JavaScript
@@ -60,6 +60,7 @@ rs.furtherModes.colourConversionModes[0] = Dynamsoft.DBR.EnumColourConversionMod
 // Updates the settings.
 await scanner.updateRuntimeSettings(rs);
 // Fine-tunes some arguments of the first mode in `colourConversionModes`
+// In this case, we set RedChannelWeight to 1000 while GreenChannelWeight and BlueChannelWeight to 0 which means using red channel only
 scanner.setModeArgument("colourConversionModes", 0, "RedChannelWeight", "1000");
 scanner.setModeArgument("colourConversionModes", 0, "GreenChannelWeight", "0");
 scanner.setModeArgument("colourConversionModes", 0, "BlueChannelWeight", "0");
@@ -74,6 +75,7 @@ settings.furtherModes.colourConversionModes = new int[]{ EnumColourConversionMod
 // Update the settings.
 reader.updateRuntimeSettings(settings);
 // Fine-tune three `Weight` parameter value of the first mode in `colourConversionModes`
+// In this case, we set RedChannelWeight to 1000 while GreenChannelWeight and BlueChannelWeight to 0 which means using red channel only
 reader.setModeArgument("colourConversionModes", 0, "RedChannelWeight", "1000");
 reader.setModeArgument("colourConversionModes", 0, "GreenChannelWeight", "0");
 reader.setModeArgument("colourConversionModes", 0, "BlueChannelWeight", "0");
@@ -88,6 +90,7 @@ settings.furtherModes.colourConversionModes = @[@(EnumColourConversionModeGenera
 // Update the settings.
 [reader updateRuntimeSettings:settings error:&err];
 // Fine-tune three `Weight` parameter value of the first mode in `colourConversionModes`
+// In this case, we set RedChannelWeight to 1000 while GreenChannelWeight and BlueChannelWeight to 0 which means using red channel only
 [reader setModeArgument:@"colourConversionModes" index:0 argumentName:@"RedChannelWeight" argumentValue:@"1000" error:nil];
 [reader setModeArgument:@"colourConversionModes" index:0 argumentName:@"GreenChannelWeight" argumentValue:@"0" error:nil];
 [reader setModeArgument:@"colourConversionModes" index:0 argumentName:@"BlueChannelWeight" argumentValue:@"0" error:nil];
@@ -101,6 +104,7 @@ settings!.furtherModes.colourConversionModes = [EnumColourConversionMode.general
 // Update the settings.
 try? reader.updateRuntimeSettings(settings!)
 // Fine-tune three `Weight` parameter value of the first mode in `colourConversionModes`
+// In this case, we set RedChannelWeight to 1000 while GreenChannelWeight and BlueChannelWeight to 0 which means using red channel only
 try? reader.setModeArgument("colourConversionModes", index: 0, argumentName: "RedChannelWeight", argumentValue: "1000")
 try? reader.setModeArgument("colourConversionModes", index: 0, argumentName: "GreenChannelWeight", argumentValue: "0")
 try? reader.setModeArgument("colourConversionModes", index: 0, argumentName: "BlueChannelWeight", argumentValue: "0")
@@ -114,6 +118,7 @@ dbr = BarcodeReader()
 settings = dbr.get_runtime_settings()
 settings.colour_conversion_modes[0] = EnumColourConversionMode.CICM_GENERAL
 dbr.update_runtime_settings(settings)
+# In this case, we set RedChannelWeight to 1000 while GreenChannelWeight and BlueChannelWeight to 0 which means using red channel only
 dbr.set_mode_argument("ColourConversionModes", 0, "RedChannelWeight", "1000")
 dbr.set_mode_argument("ColourConversionModes", 0, "GreenChannelWeight", "0")
 dbr.set_mode_argument("ColourConversionModes", 0, "BlueChannelWeight", "0")
@@ -127,6 +132,7 @@ BarcodeReader reader = new BarcodeReader();
 PublicRuntimeSettings settings = reader.getRuntimeSettings(); //Get the current RuntimeSettings
 settings.furtherModes.colourConversionModes[0] = EnumColourConversionMode.CICM_GENERAL;
 reader.updateRuntimeSettings(settings); // Update RuntimeSettings with above setting
+// In this case, we set RedChannelWeight to 1000 while GreenChannelWeight and BlueChannelWeight to 0 which means using red channel only
 reader.setModeArgument("ColourConversionModes", 0, "RedChannelWeight", "1000");
 reader.setModeArgument("ColourConversionModes", 0, "GreenChannelWeight", "0");
 reader.setModeArgument("ColourConversionModes", 0, "BlueChannelWeight", "0");
@@ -145,6 +151,7 @@ BarcodeReader reader = new BarcodeReader();
 PublicRuntimeSettings settings = reader.GetRuntimeSettings(); //Get the current RuntimeSettings
 settings.FurtherModes.ColourConversionModes[0] = EnumColourConversionMode.CICM_GENERAL;
 reader.UpdateRuntimeSettings(settings); // Update RuntimeSettings with above setting
+// In this case, we set RedChannelWeight to 1000 while GreenChannelWeight and BlueChannelWeight to 0 which means using red channel only
 reader.SetModeArgument("ColourConversionModes", 0, "RedChannelWeight", "1000", out errorMsg);
 reader.SetModeArgument("ColourConversionModes", 0, "GreenChannelWeight", "0", out errorMsg);
 reader.SetModeArgument("ColourConversionModes", 0, "BlueChannelWeight", "0", out errorMsg);
@@ -165,6 +172,7 @@ PublicRuntimeSettings* runtimeSettings = new PublicRuntimeSettings();
 reader->GetRuntimeSettings(runtimeSettings); //Get the current RuntimeSettings
 runtimeSettings->furtherModes.colourConversionModes[0] = CICM_GENERAL;
 reader->UpdateRuntimeSettings(runtimeSettings, errorBuf, 512); // Update RuntimeSettings with above setting
+// In this case, we set RedChannelWeight to 1000 while GreenChannelWeight and BlueChannelWeight to 0 which means using red channel only
 reader->SetModeArgument("ColourConversionModes", 0, "RedChannelWeight", "1000", sError, 512);
 reader->SetModeArgument("ColourConversionModes", 0, "GreenChannelWeight", "0", sError, 512);
 reader->SetModeArgument("ColourConversionModes", 0, "BlueChannelWeight", "0", sError, 512);
@@ -185,6 +193,7 @@ PublicRuntimeSettings runtimeSettings;
 DBR_GetRuntimeSettings(barcodeReader, &runtimeSettings); //Get the current RuntimeSettings
 runtimeSettings.furtherModes.colourConversionModes[0] = CICM_GENERAL;
 DBR_UpdateRuntimeSettings(barcodeReader, &runtimeSettings, errorBuf, 512); // Update RuntimeSettings with above setting
+// In this case, we set RedChannelWeight to 1000 while GreenChannelWeight and BlueChannelWeight to 0 which means using red channel only
 DBR_SetModeArgument(barcodeReader, "ColourConversionModes", 0, "RedChannelWeight", "1000", sError, 512);
 DBR_SetModeArgument(barcodeReader, "ColourConversionModes", 0, "GreenChannelWeight", "0", sError, 512);
 DBR_SetModeArgument(barcodeReader, "ColourConversionModes", 0, "BlueChannelWeight", "0", sError, 512);
