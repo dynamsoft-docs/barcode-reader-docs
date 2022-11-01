@@ -19,8 +19,8 @@ In some scenarios, the captured barcode image may have inconsistent lighting acr
 </div>
 
 Converting the original barcode image to a binarized image is a very important step. DBR provides two binarization modes:
-    - `BM_THRESHOLD`: uses a global threshold to binarize the image. If the gray value of the pixel is less than the threshold, it will be black in the binary image, otherwise it will be white.
-    - `BM_LOCAL_BLOCK`: use a threshold for a pixel based on a small region around it.
+- `BM_THRESHOLD`: uses a global threshold to binarize the image. If the gray value of the pixel is less than the threshold, it will be black in the binary image, otherwise it will be white.
+- `BM_LOCAL_BLOCK`: use a threshold for a pixel based on a small region around it.
 
 The following two images show the effects of `BM_THRESHOLD` (global thresholding) and `BM_LOCAL_BLOCK` (local thresholding).
 

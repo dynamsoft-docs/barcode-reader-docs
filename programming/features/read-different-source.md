@@ -11,7 +11,7 @@ permalink: /programming/features/read-different-source.html
 
 # Read Barcode from Different Image Sources
 
-The DBR algorithm provides multiple ways to read images from different sources. This article will introduce the following methods.
+The DBR algorithm provides multiple ways to read barcode from different image sources. This article will introduce the following methods.
 
 - `DecodeFile`: Decode barcodes from a still image. You have to specify the file path when using this method to decode the barcodes.
 - `DecodeFileInMemory`: Decode barcodes from an image file in memory.

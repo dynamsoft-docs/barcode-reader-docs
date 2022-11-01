@@ -35,7 +35,7 @@ Preprocesses the image using the gray equalization algorithm. This mode can be u
 - [LibraryParameters](#libraryparameters)
 
 ### IPM_GRAY_SMOOTH
-Preprocesses the image using the gray smoothing algorithm. This mode can be used for for images with noise or texture. This mode has the following arguments for further customizing.
+Preprocesses the image using the gray smoothing algorithm. This mode can be used for images with noise or texture. This mode has the following arguments for further customizing.
 - [SmoothBlockSizeX](#smoothblocksizex)
 - [SmoothBlockSizeY](#smoothblocksizey)
 - [LibraryFileName](#libraryfilename)
@@ -225,13 +225,13 @@ Sets the morph operation for the morphology process.
 
 | Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | --------- |
-| *string* | "Erode"<br>"Dilate"<br>"Open"<br>"Close" | "Close" | IPM_MORPHOLOGY |         
+| *string* | `Erode`<br>`Dilate`<br>`Open`<br>`Close` | `Close` | IPM_MORPHOLOGY |         
 
 **Remarks**        
-   - "Erode": Perform erosion process.
-   - "Dilate": Perform dilation process.
-   - "Open": Perform erosion first, then perform dilation.
-   - "Close": Perform dilation first, then perform erosion.
+   - `Erode`: Perform erosion process.
+   - `Dilate`: Perform dilation process.
+   - `Open`: Perform erosion first, then perform dilation.
+   - `Close`: Perform dilation first, then perform erosion.
    
    For more information, please check out [Image Processing in OpenCV - Morphological Transformations](https://docs.opencv.org/master/d9/d61/tutorial_py_morphological_ops.html) for reference.
 
@@ -241,7 +241,7 @@ Sets the morph operation for the morphology process.
 
 | Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | --------- |
-| *string* | "Rectangle"<br>"Cross"<br>"Ellipse" | "Rectangle" |  IPM_MORPHOLOGY |        
+| *string* | `Rectangle`<br>`Cross`<br>`Ellipse` | `Rectangle` |  IPM_MORPHOLOGY |        
 
 
 ### MorphOperationKernelSizeX  
