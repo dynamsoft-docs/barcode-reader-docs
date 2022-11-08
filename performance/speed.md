@@ -87,7 +87,7 @@ A barcode is localized before it gets decoded. The localization process takes up
 
 The parameter [DeblurModes](https://www.dynamsoft.com/barcode-reader/parameters/reference/deblur-modes.html#deblurmodes) is used to configure how DBR processes already-localized barcode zones (images cut around the barcode boundaries from the original image) to get the final results.
 
-Deblurring is the last configurable step before a barcode is decoded. DBR by default has all deblurring algorithms enabled so that it tries its best to decode each localized barcode zone. When speed is the priority over the other metrics, we can ask DBR to try just one or two of these modes by setting `DeblurModes`.
+By default, DBR disables all deblurring algorithms to decode each localized barcode zone. If your images are of high quality, you can keep the default setting to skip this step, or just try one or two of them. 
 
 **Recommendation**
 
