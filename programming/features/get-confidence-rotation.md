@@ -38,7 +38,7 @@ The following illustrations will show how the angle is calculated for different 
 
 ## Code Snippet for Getting Confidence and Angle
 
-The following code snippet shows how to get the conficence and rotation angle of the barcode result:
+The following code snippet shows how to get the confidence and rotation angle of the barcode result:
 
 <div class="sample-code-prefix template2"></div>
 >- JavaScript
@@ -56,7 +56,7 @@ The following code snippet shows how to get the conficence and rotation angle of
 (async() => {
     let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
     scanner.onUniqueRead = (txt, result) => {
-        let conficence = result.results[0].confidence;
+        let conficence = result.localizationResult.confidence;
         let angle = result.localizationResult.angle;
         alert(txt);
     };
