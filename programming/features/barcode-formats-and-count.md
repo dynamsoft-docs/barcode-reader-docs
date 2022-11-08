@@ -31,9 +31,10 @@ Specifying the barcode format is always the first step when it comes to the conf
 // Obtain current runtime settings of `reader` instance.
 let settings = await scanner.getRuntimeSettings();
 // Specify the barcode formats by enumeration values.
-// The first group of barcode format (barcodeFormatIds) contains the majority of common barcode formats.
-// Some special formats are listed in the second group (barcodeFormatIds_2).
+// There are two enumerations storing all supported barcode formats and each one needs to be set individually.
+// Use "|" to enable multiple barcode formats at one time.
 settings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED | Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE;
+settings.barcodeFormatIds_2 = Dynamsoft.DBR.EnumBarcodeFormat_2.BF2_POSTALCODE;
 // Update the settings.
 await scanner.updateRuntimeSettings(settings);
 ```
@@ -42,9 +43,10 @@ await scanner.updateRuntimeSettings(settings);
 // Obtain current runtime settings of `reader` instance.
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 // Specify the barcode formats by enumeration values.
-// The first group of barcode format (barcodeFormatIds) contains the majority of common barcode formats.
-// Some special formats are listed in the second group (barcodeFormatIds_2).
+// There are two enumerations storing all supported barcode formats and each one needs to be set individually.
+// Use "|" to enable multiple barcode formats at one time.
 settings.barcodeFormatIds = EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_ONED;
+settings.barcodeFormatIds_2 = EnumBarcodeFormat_2.BF2_POSTALCODE;
 // Update the settings.
 reader.updateRuntimeSettings(settings);
 ```
@@ -54,9 +56,10 @@ NSError* err = nil;
 // Obtain current runtime settings of `reader` instance.
 iPublicRuntimeSettings* settings = [reader getRuntimeSettings:&err];
 // Specify the barcode formats by enumeration values.
-// The first group of barcode format (barcodeFormatIds) contains the majority of common barcode formats.
-// Some special formats are listed in the second group (barcodeFormatIds_2).
+// There are two enumerations storing all supported barcode formats and each one needs to be set individually.
+// Use "|" to enable multiple barcode formats at one time.
 settings.barcodeFormatIds = EnumBarcodeFormatQRCODE | EnumBarcodeFormatONED;
+settings.barcodeFormatIds_2 = EnumBarcodeFormat2POSTALCODE;
 // Update the settings.
 [reader updateRuntimeSettings:settings error:&err];
 ```
@@ -64,11 +67,11 @@ settings.barcodeFormatIds = EnumBarcodeFormatQRCODE | EnumBarcodeFormatONED;
 ```swift
 // Obtain current runtime settings of `barcodeReader` instance.
 let settings = try? barcodeReader.getRuntimeSettings()
-// There are two groups of barcode formats, BarcodeFormat and BarcodeFormat_2
-// The Majority of common barcodes like oneD barcode and QR code are stored in the first group of barcode format.
-// Some of the enumeration members are combined value of a group of barcodes like BF_ONED and BF_GS1_DATABAR
+// Specify the barcode formats by enumeration values.
+// There are two enumerations storing all supported barcode formats and each one needs to be set individually.
 // Use "|" to enable multiple barcode formats at one time.
 settings?.barcodeFormatIds = EnumBarcodeFormat.ONED | EnumBarcodeFormat.QRCODE
+settings?.barcodeFormatIds_2 = EnumBarcodeFormat2.POSTALCODE
 // Update the settings.
 try? barcodeReader.updateRuntimeSettings(settings!)
 ```
@@ -77,9 +80,10 @@ try? barcodeReader.updateRuntimeSettings(settings!)
 # Obtain current runtime settings of `reader` instance.
 settings = reader.get_runtime_settings()
 # Specify the barcode formats by enumeration values.
-# The first group of barcode format (barcodeFormatIds) contains the majority of common barcode formats.
-# Some special formats are listed in the second group (barcodeFormatIds_2).
+# There are two enumerations storing all supported barcode formats and each one needs to be set individually.
+# Use "|" to enable multiple barcode formats at one time.
 settings.barcode_format_ids = EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_QR_CODE
+settings.barcode_format_ids_2 = EnumBarcodeFormat_2.BF2_POSTALCODE
 # Update the settings.
 reader.update_runtime_settings(settings)
 ```
@@ -88,9 +92,10 @@ reader.update_runtime_settings(settings)
 // Obtain current runtime settings of `reader` instance.
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 // Specify the barcode formats by enumeration values.
-// The first group of barcode format (barcodeFormatIds) contains the majority of common barcode formats.
-// Some special formats are listed in the second group (barcodeFormatIds_2).
+// There are two enumerations storing all supported barcode formats and each one needs to be set individually.
+// Use "|" to enable multiple barcode formats at one time.
 settings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_QR_CODE;
+settings.barcodeFormatIds_2 = EnumBarcodeFormat_2.BF2_POSTALCODE;
 // Update the settings.
 reader.updateRuntimeSettings(settings);
 ```
@@ -99,9 +104,10 @@ reader.updateRuntimeSettings(settings);
 // Obtain current runtime settings of `reader` instance.
 PublicRuntimeSettings settings = reader.GetRuntimeSettings();
 // Specify the barcode formats by enumeration values.
-// The first group of barcode format (barcodeFormatIds) contains the majority of common barcode formats.
-// Some special formats are listed in the second group (barcodeFormatIds_2).
+// There are two enumerations storing all supported barcode formats and each one needs to be set individually.
+// Use "|" to enable multiple barcode formats at one time.
 settings.BarcodeFormatIds = (int)(EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_ONED);
+settings.BarcodeFormatIds_2 = (int)(EnumBarcodeFormat_2.BF2_POSTALCODE);
 // Update the settings.
 reader.UpdateRuntimeSettings(settings);
 ```
@@ -111,11 +117,11 @@ PublicRuntimeSettings settings;
 char szErrorMsg[256] = {0};
 // Obtain current runtime settings of `reader` instance.
 reader.GetRuntimeSettings(&settings);
-// There are two groups of barcode formats, BarcodeFormat and BarcodeFormat_2
-// The Majority of common barcodes like oneD barcode and QR code are stored in the first group of barcode format.
-// Some of the enumeration members are combined value of a group of barcodes like BF_ONED and BF_GS1_DATABAR
+// Specify the barcode formats by enumeration values.
+// There are two enumerations storing all supported barcode formats and each one needs to be set individually.
 // Use "|" to enable multiple barcode formats at one time.
 settings.barcodeFormatIds = BF_QR_CODE | BF_ONED;
+settings.barcodeFormatIds_2 = BF2_POSTALCODE;
 // Update the settings.
 reader.UpdateRuntimeSettings(&settings, szErrorMsg, 256);
 ```
@@ -125,11 +131,11 @@ PublicRuntimeSettings settings;
 char szErrorMsg[256] = {0};
 // Obtain current runtime settings of `reader` instance.
 DBR_GetRuntimeSettings(reader, &settings);
-// There are two groups of barcode formats, BarcodeFormat and BarcodeFormat_2
-// The Majority of common barcodes like oneD barcode and QR code are stored in the first group of barcode format.
-// Some of the enumeration members are combined value of a group of barcodes like BF_ONED and BF_GS1_DATABAR
+// Specify the barcode formats by enumeration values.
+// There are two enumerations storing all supported barcode formats and each one needs to be set individually.
 // Use "|" to enable multiple barcode formats at one time.
 settings.barcodeFormatIds = BF_QR_CODE | BF_ONED;
+settings.barcodeFormatIds_2 = BF2_POSTALCODE;
 // Update the settings.
 DBR_UpdateRuntimeSettings(reader, &settings, szErrorMsg, 256);
 ```
@@ -216,7 +222,7 @@ reader.updateRuntimeSettings(settings);
 // Obtain current runtime settings of `reader` instance.
 PublicRuntimeSettings settings = reader.GetRuntimeSettings();
 // Set the expected barcode count
-settings.expectedBarcodesCount = 0;
+settings.ExpectedBarcodesCount = 0;
 // Update the settings.
 reader.UpdateRuntimeSettings(settings);
 ```

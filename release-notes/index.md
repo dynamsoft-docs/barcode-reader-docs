@@ -19,7 +19,7 @@ permalink: /release-notes/index.html
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 9.4.0 | [C]({{ site.c_release_notes}}c-9.html#940-08302022) / [C++]({{ site.cpp_release_notes}}cpp-9.html#940-08302022) / [DotNet]({{ site.dotnet_release_notes }}dotnet-9.html#940-08302022) / [Java]({{ site.java_release_notes }}java-9.html#940-08302022) / [Python]({{ site.python_release_notes }}python-9.html#940-08302022) |
+| 9.4.0 | [C]({{ site.c_release_notes}}c-9.html#940-08302022) / [C++]({{ site.cpp_release_notes}}cpp-9.html#940-08302022) / [DotNet]({{ site.dotnet_release_notes }}dotnet-9.html#940-08302022) / [Java]({{ site.java_release_notes }}java-9.html#940-08302022) / [Python]({{ site.python_release_notes }}python-9.html#940-08302022) / [Android]({{ site.android_release_notes }}android-9.html#940-11042022) / [iOS]({{ site.oc_release_notes }}ios-9.html#940-11042022) |
 
 ## 9.2
 
@@ -31,6 +31,8 @@ permalink: /release-notes/index.html
 
 | Versions | Available Editions |
 | -------- | ------------------ |
+| 9.3.1 | [JavaScript]({{ site.js }}release-notes/js-9.html#931-10102022) |
+| 9.3.0 | [JavaScript]({{ site.js }}release-notes/js-9.html#930-09272022) |
 | 9.2.13 | [JavaScript]({{ site.js }}release-notes/js-9.html#9213-08112022) |
 | 9.2.12 | [JavaScript]({{ site.js }}release-notes/js-9.html#9212-08042022) /[iOS]({{ site.oc_release_notes }}ios-9.html#9212-08022022) |
 | 9.2.11 | [JavaScript]({{ site.js }}release-notes/js-9.html#9211-07282022) /[iOS]({{ site.oc_release_notes }}ios-9.html#9211-07112022) |

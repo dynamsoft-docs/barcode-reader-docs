@@ -24,9 +24,9 @@ permalink: /performance/speed.html
 
 # How to Boost Barcode Reading Speed
 
-There are 3 basic metrics for measuring the performance of a barcode reader application: **speed**, **accuracy** and **read-rate**. The Dynamsoft Barcode Reader SDK (DBR) has been carefully designed to offer excellent performance in all three of these metrics. In this article, we investigate all the possible ways in which you can configure DBR to focus on **speed**. 
+There are 3 basic metrics for measuring the performance of a barcode reader application: **speed**, **accuracy** and **read-rate**. The Dynamsoft Barcode Reader SDK (DBR) has been carefully designed to offer excellent performance in all three of these metrics. In this article, we investigate all the possible ways in which you can configure DBR to focus on **speed**.
 
-This guide explores how DBR can be used to its full-speed potential, and it will be divided into three sections: The first section addresses some of the common and simple methods you can use to effectively increase speed metrics. The second section delves into the various stages of DBR's algorithm and how we can improve the speed at each of the crucial stages. The third and last section will cover some of the much less popular and used methods that our SDK can use to potentially increase the speed metric should the other methods not be sufficient.
+This guide explores how DBR can be used to its full-speed potential, and it will be divided into three sections: The first section addresses some of the common and simple methods you can use to effectively increase speed metrics. The second section delves into the various stages of DBR's algorithm and how we can improve the speed at each of the crucial stages. The third and last section will introduce some less popular and used methods that our SDK can use to potentially improve speed metrics if other methods are not sufficient.
 
 > The following shows the definition of the three metrics.
 >  
