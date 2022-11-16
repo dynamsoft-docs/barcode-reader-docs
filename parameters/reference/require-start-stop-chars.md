@@ -11,7 +11,7 @@ permalink: /parameters/reference/require-start-stop-chars.html
 
 # RequireStartStopChars 
 
-`RequireStartStopChars` defines whether the start and stop characters are required when searching for Code 39 barcodes. It is defined as below:
+`RequireStartStopChars` defines whether the start and stop characters are required when searching for common 1D barcodes. It is defined as below:
 
 | Value Type | Value Range | Default Value | Template Structure Type |
 | ---------- | ----------- | ------------- | ----------------------- |
