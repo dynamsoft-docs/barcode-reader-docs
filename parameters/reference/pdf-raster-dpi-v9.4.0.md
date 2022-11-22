@@ -15,7 +15,7 @@ permalink: /parameters/reference/pdf-raster-dpi.html
 
 | Value Type | Value Range | Default Value | Template Structure Type |
 | ---------- | ----------- | ------------- | ----------------------- |
-| *int* | [100, 3000] | 300 | `ImageParameter` |
+| *int* | [100, 600] | 300 | `ImageParameter` |
 
 
 **Remarks**     
@@ -52,7 +52,7 @@ delete pSettings;
 
 | Key Name | Key Value |
 | -------- | --------- |
-| PDFRasterDPI | A number from [100, 3000] |
+| PDFRasterDPI | A number from [100, 600] |
 
 
 **JSON Example**   
