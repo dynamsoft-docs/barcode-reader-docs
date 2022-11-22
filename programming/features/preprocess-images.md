@@ -1,7 +1,7 @@
 ---   
 layout: default-layout 
 description: This article introduces how to perform image preprocessing according to scene characteristics to improve the success rate of DBR positioning code area
-title: How to preprocess images based on different scenarios
+title: Preprocess Images based on Different Scenarios
 keywords: image preprocessing
 needAutoGenerateSidebar: false
 permalink: /programming/features/preprocess-images.html
