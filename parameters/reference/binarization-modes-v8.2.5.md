@@ -34,7 +34,7 @@ Binarizes the image for each pixel based on a threshold which is calculated base
 Binarizes the image for each pixel based on a unified threshold. If the gray value of the pixel is less than the threshold, it will be black in the binary image, otherwise it will be white. This mode has the following arguments for further customizing.
 
 - [ImagePreprocessingModesIndex](#imagepreprocessingmodesindex)
-- [BinarizationThreshold](#binarizationThreshold)
+- [BinarizationThreshold](#binarizationthreshold)
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)
 
@@ -72,7 +72,7 @@ delete pSettings;
 | Key Name | Key Value | Description |
 | -------- | --------- | ----------- |
 | Mode | Any one in Candidate Mode List as string | (Required) Sets a binarization mode.  |
-| BinarizationThreshold | A number from value range of BinarizationThreshold | (Optional) Sets the Argument [BinarizationThreshold](#binarizationThreshold). |
+| BinarizationThreshold | A number from value range of BinarizationThreshold | (Optional) Sets the Argument [BinarizationThreshold](#binarizationthreshold). |
 | BlockSizeX | A number from value range of BlockSizeX | (Optional) Sets the Argument [BlockSizeX](#blocksizex). |
 | BlockSizeY | A number from value range of BlockSizeY | (Optional) Sets the Argument [BlockSizeY](#blocksizey). |
 | EnableFillBinaryVacancy | A number from value range of EnableFillBinaryVacancy | (Optional) Sets the Argument [EnableFillBinaryVacancy](#enablefillbinaryvacancy). |
@@ -114,7 +114,7 @@ Setting more binarization modes along with different arguments may improve the R
 - [ImagePreprocessingModesIndex](#imagepreprocessingmodesindex)
 - [ThreshValueCoefficient](#threshvaluecoefficient)
 - [ThreshValueCoefficient](#threshvaluecoefficient)
-- [BinarizationThreshold](#binarizationThreshold)
+- [BinarizationThreshold](#binarizationthreshold)
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)
 
