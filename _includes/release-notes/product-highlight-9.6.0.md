@@ -7,3 +7,4 @@
 - **QR code** localizing is improved by reducing the mis-assemble rate of the finder patterns when using the localization mode LM_CONNECTED_BLOCK or LM_SCAN_DIRECTLY, which are designed for speed. The mis-assembling only occurs when there exist dense QR codes on the same image.
 - **Mirrored rectangular DataMatrix barcode** is supported by implementing `MirrorMode` when localizing the barcodes.
 - Deformed barcode decoding is improved by extending the supported modes and mode arguments of `DeformationResistingModes`.
+
