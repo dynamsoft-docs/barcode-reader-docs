@@ -65,7 +65,7 @@ It must be a unique name.
  | [`FormatSpecification.MSICodeCheckDigitCalculation`](../msi-code-check-digit-calculation.md) | Sets the scheme used for calculating a check digit of an MSI barcode. | 
  | [`FormatSpecification.PartitionModes`](../partition-modes.md) | Sets the mode used to apply partition process. |
  | [`FormatSpecification.PatchCodeSearchingMargins`](../patchcode-searching-margins.md) | Sets the margins for searching PatchCode. |
- | [`FormatSpecification.RequireStartStopChars`](../require-start-stop-chars.md) |	Sets whether the start and stop characters are required when searching for Code 39 barcodes. |
+ | [`FormatSpecification.RequireStartStopChars`](../require-start-stop-chars.md) |	Sets whether the start and stop characters are required when searching for common 1D barcodes. |
  | [`FormatSpecification.StandardFormat`](../standard-format.md) | Sets the standard barcode format. | 
  | [`FormatSpecification.TailModuleRatio`](../tail-module-ratio.md) |	Sets the module count and module size ratio of the barcode tail part. | 
  | [`FormatSpecification.VerifyCheckDigit`](../verify-check-digit.md) |	Sets the value determining whether to verify the check digit in barcodes where this check digit is optional. | 
