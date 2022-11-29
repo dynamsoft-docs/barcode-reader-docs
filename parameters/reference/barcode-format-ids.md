@@ -77,4 +77,4 @@ Setting `BarcodeFormatIds` to a specific value when barcode formats are certain 
 
 -->
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)

@@ -59,5 +59,5 @@ Enabling `BarcodeZoneBarCountRangeArray` to filter out results may improve the A
 
 -->
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)
 - [How to filter out results]({{ site.scenario_settings }}decode-result.html)
