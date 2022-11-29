@@ -1,42 +1,58 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for GrayscaleTransformationModes
-description: This page shows Dynamsoft Barcode Reader Parameter Reference for GrayscaleTransformationModes.
-keywords: GrayscaleTransformationModes, parameter reference, parameter
+title: Dynamsoft Barcode Reader Parameter Reference for DeformationResistingModes
+description: This page shows Dynamsoft Barcode Reader Parameter Reference for DeformationResistingModes.
+keywords: DeformationResistingModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-permalink: /parameters/reference/grayscale-transformation-modes.html
+permalink: /parameters/reference/deformation-resisting-modes.html
 ---
 
 
-# GrayscaleTransformationModes 
+# DeformationResistingModes 
 
-This parameter helps control the colour mode of the grayscale image. This parameter is very important when trying to read inverted barcodes. Barcodes typically are dark on a light background, but sometimes they might be inverted, resulting in a light barcode on a dark background. By default, the library is configured to detect the former. So if you are working with inverted barcodes, `GrayscaleTransformationModes` is the parameter to deal with them.
-
-It consists of one or more modes, each mode represents a way to transform the grayscale image.
+`DeformationResistingModes` describes how to handle distorted and deformed barcodes. It consists of one or more modes, each mode representing a different way to implement the deformation resistance algorithm.
 
 
 ## Candidate Mode List
-- GTM_ORIGINAL
-- GTM_INVERTED
 
-### GTM_ORIGINAL
-Keeps the original grayscale. This mode has the following arguments for further customization.
+- DRM_GENERAL
+- DRM_BROAD_WARP
+- DRM_LOCAL_REFERENCE
+- DRM_DEWRINKLE
+- DRM_AUTO
 
+### DRM_GENERAL
+
+Resists deformation using the general algorithm. This mode has the following arguments for further customizing.
+
+- [Level](#level)
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)
 
-### GTM_INVERTED
-Transforms the image to inverted grayscale. This mode is the one to use for inverted barcodes. It also has the following arguments for further customization.
 
-- [LibraryFileName](#libraryfilename)
-- [LibraryParameters](#libraryparameters)
+### DRM_BROAD_WARP
+
+Resists deformation when the barcode is warped gently.
+
+### DRM_LOCAL_REFERENCE
+
+Resists deformation for barcodes with minor deformation in local modules.
+
+### DRM_DEWRINKLE
+
+Resists deformation for barcodes on a wrinkled surface.
+
+### DRM_AUTO
+
+Lets the library choose a mode automatically. Not supported yet.
+
 
     
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
-`GrayscaleTransformationModes` can be set dynamically during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 [`GrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode) Enumeration items.
+`DeformationResistingModes` can be set dynamically during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 [`DeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode) Enumeration items.
 
 
 **Code Snippet in C++**
@@ -44,8 +60,9 @@ Transforms the image to inverted grayscale. This mode is the one to use for inve
 //...other codes
 PublicRuntimeSettings* pSettings = new PublicRuntimeSettings;
 int errorCode = reader->GetRuntimeSettings(pSettings);
-pSettings->grayscaleTransformationModes[0] = GTM_ORIGINAL;
+pSettings->deformationResistingModes[0] = DRM_GENERAL;
 reader->UpdateRuntimeSettings(pSettings);
+reader->SetModeArgument("DeformationResistingModes", 0, "Level", "1");
 delete pSettings;
 //...other codes
 ```
@@ -58,17 +75,18 @@ delete pSettings;
 **See Also**      
 - `FurtherModes:` [C]({{ site.structs }}FurtherModes.html?src=c) \| [C++]({{ site.structs }}FurtherModes.html?src=cpp) \| [.NET]({{ site.dotnet_api }}struct/FurtherModes.html) \| [Java]({{ site.java_api }}class/FurtherModes.html) \| [Java-Android]({{ site.android_api }}auxiliary-FurtherModes.html) \| [Objective-C & Swift]({{ site.oc_api }}auxiliary-iFurtherModes.html)
 - `PublicRuntimeSettings:` [JavaScript]({{ site.js_api }}interface/RuntimeSettings.html) \| [C]({{ site.structs }}PublicRuntimeSettings.html?src=c) \| [C++]({{ site.structs }}PublicRuntimeSettings.html?src=cpp) \| [.NET]({{ site.dotnet_api }}struct/PublicRuntimeSettings.html) \| [Python]({{ site.python_api }}class/PublicRuntimeSettings.html) \| [Java]({{ site.java_api }}class/PublicRuntimeSettings.html) \| [Java-Android]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) \| [Objective-C & Swift]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html)
-- [`GrayscaleTransformationMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)
+- [`DeformationResistingMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode)
 - `GetModeArgument:` [JavaScript]({{ site.js_api}}BarcodeReader.html#getmodeargument) \| [C]({{ site.c_methods }}parameter-and-runtime-settings-basic.html#dbr_getmodeargument) \| [C++]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) \| [.NET]({{ site.dotnet_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#getmodeargument) \| [Python]({{ site.python_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#get_mode_argument) \| [Java]({{ site.java_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#getmodeargument) \| [Java-Android]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#getmodeargument) \| [Objective-C & Swift]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#getmodeargument)
 - `SetModeArgument:` [JavaScript]({{ site.js_api}}BarcodeReader.html#setmodeargument) \| [C]({{ site.c_methods }}parameter-and-runtime-settings-basic.html#dbr_setmodeargument) \| [C++]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) \| [.NET]({{ site.dotnet_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#setmodeargument) \| [Python]({{ site.python_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#set_mode_argument) \| [Java]({{ site.java_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#setmodeargument) \| [Java-Android]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#setmodeargument) \| [Objective-C & Swift]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#setmodeargument)
 
 
 ### As JSON Parameter
-`GrayscaleTransformationModes` as a JSON parameter is a JSON Object array. Each JSON object is defined as below.   
+`DeformationResistingModes` as a JSON parameter is a JSON Object array. Each JSON object is defined as below.   
 
 | Key Name | Key Value | Description |
 | -------- | --------- | ----------- |
-| Mode | Any one in Candidate Mode List as string | (Required) Specifies a mode for grayscale transformation.  |
+| Mode | Any one in Candidate Mode List as string | (Required) Specifies a mode for deformation resisting.  |
+| Level | A number from value range of Level | (Optional) Sets the Argument [Level](#level). |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
 | LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
 
@@ -77,12 +95,13 @@ delete pSettings;
 **JSON Parameter Example**   
 ```
 {
-    "GrayscaleTransformationModes": [
+    "DeformationResistingModes": [
         {
-            "Mode": "GTM_ORIGINAL"
+            "Mode": "DRM_GENERAL", 
+            "Level": 1
         },
         {
-            "Mode": "GTM_INVERTED" 
+            "Mode": "DRM_DEWRINKLE"
         }
     ]
 }
@@ -98,14 +117,24 @@ The SDK will loop the setting modes one by one until find as many barcodes as `E
 Setting more modes along with different arguments may improve the Read Rate. 
 
 ### Accuracy
-`GrayscaleTransformationModes` has no influence on the Accuracy.
+`DeformationResistingModes` has no influence on the Accuracy.
 
 -->
 ## Candidate Argument List
+- [Level](#level)
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)
  
+### Level 
+Sets the effort level used for deformation resisting. Not supported yet.
 
+| Value Type | Value Range | Default Value | Valid For | 
+| ---------- | ----------- | ------------- | --------- |
+| *int* | [1, 9] | 5 | DRM_GENERAL |         
+
+**Performance Adaptability**        
+A larger value may improve the Read Rate but slowdown the Speed. 
+    
 
 ### LibraryFileName 
 Sets the file name of the library to load dynamically.
@@ -116,7 +145,7 @@ Sets the file name of the library to load dynamically.
 
 
 **Remarks**         
-  The library must be in the same place with Dynamsoft Barcode Reader Library.
+The library must be in the same place with Dynamsoft Barcode Reader Library.
 
 
 ### LibraryParameters 
@@ -129,4 +158,4 @@ Sets the parameters passed to the library to load dynamically.
 
 ## Related Articles
 - [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)
-- [How to configure GrayscaleTransformationModes]({{ site.scenario_settings }}image-scale-and-colour-conversion.html#grayscale-colour-inversion-transformation)
+- [How to deal with deformed barcodes]({{ site.scenario_settings }}resist-deformation.html)

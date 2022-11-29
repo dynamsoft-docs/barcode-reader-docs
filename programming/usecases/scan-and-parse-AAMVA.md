@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Use Cases - Dynamsoft Barcode Reader
+title: Scan and parse PDF417 on AAMVA documents
 description: Dynamsoft Barcode Reader SDK Use Case - Scan and parse PDF417 on AAMVA documents
 keywords: input, barcode, use-case, AAMVA, parse
 noTitleIndex: true

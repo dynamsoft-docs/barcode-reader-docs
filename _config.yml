@@ -7,15 +7,21 @@ docHomePage: /barcode-reader/docs/core/
 useVersionTree: true
 
 introduction: /barcode-reader/docs/core/introduction/
+comparison_tools: /barcode-reader/docs/core/introduction/comparison-tools/
+
 programming: /barcode-reader/docs/core/programming/
+features: /barcode-reader/docs/core/programming/features/
+
 parameters: /barcode-reader/docs/core/parameters/
+parameters_reference: /barcode-reader/docs/core/parameters/reference/
+image_parameters: /barcode-reader/docs/core/parameters/reference/image-parameter/
+scenario_settings: /barcode-reader/docs/core/parameters/scenario-settings/
+
 license_activation: /barcode-reader/docs/core/license-activation/
 release_notes: /barcode-reader/docs/core/release-notes/
 performance: /barcode-reader/docs/core/performance/
 faq: /barcode-reader/docs/core/faq/
 faq_general: /barcode-reader/docs/core/faq/general/
-
-comparison_tools: /barcode-reader/docs/core/introduction/comparison-tools/
 
 structs: /barcode-reader/docs/server/programming/c-cplusplus/struct/
 
@@ -64,13 +70,14 @@ python_methods: /barcode-reader/docs/server/programming/python/api-reference/Bar
 python_class: /barcode-reader/docs/server/programming/python/api-reference/class/
 python_release_notes: /barcode-reader/docs/server/programming/python/release-notes/
 
-parameters_reference: /barcode-reader/docs/core/parameters/reference/
-image_parameters: /barcode-reader/docs/core/parameters/reference/image-parameter/
-scenario_settings: /barcode-reader/docs/core/parameters/scenario-settings/
 enumerations: /barcode-reader/docs/core/parameters/enum/
+js_enumerations: /barcode-reader/docs/web/programming/javascript/api-reference/enum/
+c_cpp_enumerations: /barcode-reader/docs/server/programming/c-cplusplus/enumeration/
+dotnet_enumerations: /barcode-reader/docs/server/programming/dotnet/api-reference/enumeration/
+python_enumerations: /barcode-reader/docs/server/programming/python/api-reference/enumeration/
+java_enumerations: /barcode-reader/docs/server/programming/java/api-reference/enumeration/
+mobile_enumerations: /barcode-reader/docs/mobile/programming/enumeration/
 
-faqs: /barcode-reader/docs/core/faq/
-how_to: /barcode-reader/docs/core/faq/how-to-guide/
 
 assets: /barcode-reader/docs/core/assets/
 edit_icon: /barcode-reader/docs/core/assets/img-icon/edit-icon.png

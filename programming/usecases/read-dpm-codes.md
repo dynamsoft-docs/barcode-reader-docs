@@ -1,12 +1,12 @@
 ---   
 layout: default-layout
 description: This article introduces how to read DPM codes.
-title: How to read DPM codes
+title: Read DPM Codes
 keywords: DPM, Direct Part Marking
 permalink: /programming/usecases/read-dpm-codes.html
 ---
 
-# How to read DPM codes
+# How to Read DPM Codes
 
 ## What is DPM (Direct Part Marking)?
 

@@ -284,4 +284,4 @@ Sets the parameters passed to the library to load dynamically.
 
 ## Related Articles
 - [How to configure the ImagePreprocessingModes parameter]({{ site.scenario_settings }}image-preprocessing.html)
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)

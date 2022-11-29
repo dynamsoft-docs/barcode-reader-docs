@@ -54,5 +54,5 @@ Setting `MinQuietZoneWidth` to a appropriate number for barcodes with narrow qui
 
 -->
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)
 - [Configure parameters for a certain barcode format]({{ site.scenario_settings }}format-specification.html#minquietzonewidth)

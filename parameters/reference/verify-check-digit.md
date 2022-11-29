@@ -40,5 +40,5 @@ permalink: /parameters/reference/verify-check-digit.html
 ```
 
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)
 - [Configure parameters for a certain barcode format]({{ site.scenario_settings }}format-specification.html)

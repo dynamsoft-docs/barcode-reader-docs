@@ -1,28 +1,33 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for Timeout
-description: This page shows Dynamsoft Barcode Reader Parameter Reference for Timeout.
-keywords: Timeout, parameter reference, parameter
+title: Dynamsoft Barcode Reader Parameter Reference for PDFRasterDPI
+description: This page shows Dynamsoft Barcode Reader Parameter Reference for PDFRasterDPI.
+keywords: PDFRasterDPI, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-permalink: /parameters/reference/time-out.html
+permalink: /parameters/reference/pdf-raster-dpi.html
 ---
 
 
-# Timeout 
+# PDFRasterDPI 
 
-`Timeout` defines the maximum amount of time (in milliseconds) that should be spent searching for a barcode per page. It does not include the time taken to load/decode an image (Tiff, PNG, etc) from disk into memory. It is defined as below:
+`PDFRasterDPI` defines the resolution used for rasterizing a PDF file. It is defined as below:
 
 | Value Type | Value Range | Default Value | Template Structure Type |
 | ---------- | ----------- | ------------- | ----------------------- |
-| *int* | [0, 0x7fffffff] | 10000 | `ImageParameter` |
+| *int* | [100, 600] | 300 | `ImageParameter` |
+
+
+**Remarks**     
+When decoding a PDF file using `DecodeFile` method, the library will convert the pdf file to image(s) first, then perform barcode recognition.    
+
 
     
 ## Setting Methods
-`Timeout` is supported to be set through `RuntimeSetting` or JSON template.
+`PDFRasterDPI` is supported to be set through `RuntimeSetting` or JSON template.
 
 ### As `PublicRuntimeSettings` Member
-`Timeout` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct.
+`PDFRasterDPI` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct.
 
 
 **Code Snippet in C++**
@@ -30,11 +35,12 @@ permalink: /parameters/reference/time-out.html
 //...other codes
 PublicRuntimeSettings* pSettings = new PublicRuntimeSettings;
 int errorCode = reader->GetRuntimeSettings(pSettings);
-pSettings->timeout = 500;
+pSettings->pdfRasterDPI = 300;
 reader->UpdateRuntimeSettings(pSettings);
 delete pSettings;
 //...other codes
 ```
+
 
 
 **See Also**      
@@ -42,17 +48,17 @@ delete pSettings;
 
 
 ### As JSON Parameter
-`Timeout` as a JSON parameter is a number value defined as below.   
+`PDFRasterDPI` as a JSON parameter is a number value defined as below.   
 
 | Key Name | Key Value |
 | -------- | --------- |
-| Timeout | A number from [0, 0x7fffffff] |
+| PDFRasterDPI | A number from [100, 600] |
 
 
 **JSON Example**   
 ```
 {
-    "Timeout": 500
+    "PDFRasterDPI": 300
 }
 ```
 
@@ -60,15 +66,15 @@ delete pSettings;
 <!--
 ## Impacts on Performance
 ### Speed
-Setting `Timeout` to a smaller value may improve the Speed.
+Setting `PDFRasterDPI` to a smaller number may speed up the process.
 
 ### Read Rate
-Setting `Timeout` to a larger value may improve the Read Rate.
+Setting `PDFRasterDPI` to a larger number may improve the Read Rate. 
 
 ### Accuracy
-`Timeout` has no influence on the Accuracy.
+`PDFRasterDPI` has no influence on the Accuracy.
 
 -->
 ## Related Articles
 - [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)
-- [How to terminate the process]({{ site.scenario_settings }}terminate.html)
+- [How to process multi-page TIF & PDF]({{ site.scenario_settings }}multipage-imgs-and-pdf.html)

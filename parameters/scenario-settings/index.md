@@ -81,7 +81,7 @@ This part includes the following steps:
 - Resist Deformation  
 Read more: [How to deal with deformed barcodes](resist-deformation.md).
 - Barcode Complementation  
-Read more: [How to decode incomplete barcodes](how-to-set-barcode-complememt-modes.md).
+Read more: [How to decode incomplete barcodes](how-to-set-barcode-complement-modes.md).
 - Sample Decoding  
 Sample decoding process mainly involves [Deblur Level](deblur-level.md) and [DPM Decoding](dpm-decoding.md).
 

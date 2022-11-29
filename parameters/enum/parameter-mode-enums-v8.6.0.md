@@ -119,7 +119,7 @@ Describes the binarization mode.
 | BM_SKIP | EnumBinarizationModeSkip | 0x00 | Skips the binarization. | `N/A` |
 | BM_AUTO | EnumBinarizationModeAuto | 0x01 | **Not supported yet.** | `N/A` |
 | BM_LOCAL_BLOCK | EnumBinarizationModeLocalBlock | 0x02 | Binarizes the image based on the local block. | [`BlockSizeX`]({{ site.parameters_reference }}binarization-modes.html#blocksizex)<br>[`BlockSizeY`]({{ site.parameters_reference }}binarization-modes.html#blocksizey)<br>[`EnableFillBinaryVacancy`]({{ site.parameters_reference }}binarization-modes.html#enablefillbinaryvacancy)<br>[`ImagePreprocessingModesIndex`]({{ site.parameters_reference }}binarization-modes.html#imagepreprocessingmodesindex)<br>[`ThresholdCompensation`]({{ site.parameters_reference }}binarization-modes.html#thresholdcompensation)<br> |
-| BM_THRESHOLD | EnumBinarizationModeThreshold | 0x04 | Performs image binarization based on the given threshold. | [`BinarizationThreshold`]({{ site.parameters_reference }}binarization-modes.html#binarizationThreshold)<br>[`ImagePreprocessingModesIndex`]({{ site.parameters_reference }}binarization-modes.html#imagepreprocessingmodesindex) |
+| BM_THRESHOLD | EnumBinarizationModeThreshold | 0x04 | Performs image binarization based on the given threshold. | [`BinarizationThreshold`]({{ site.parameters_reference }}binarization-modes.html#binarizationthreshold)<br>[`ImagePreprocessingModesIndex`]({{ site.parameters_reference }}binarization-modes.html#imagepreprocessingmodesindex) |
 
 
 

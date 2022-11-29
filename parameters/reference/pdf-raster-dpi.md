@@ -15,7 +15,7 @@ permalink: /parameters/reference/pdf-raster-dpi.html
 
 | Value Type | Value Range | Default Value | Template Structure Type |
 | ---------- | ----------- | ------------- | ----------------------- |
-| *int* | [100, 600] | 300 | `ImageParameter` |
+| *int* | [100, 3000] | 300 | `ImageParameter` |
 
 
 **Remarks**     
@@ -52,7 +52,7 @@ delete pSettings;
 
 | Key Name | Key Value |
 | -------- | --------- |
-| PDFRasterDPI | A number from [100, 600] |
+| PDFRasterDPI | A number from [100, 3000] |
 
 
 **JSON Example**   
@@ -76,5 +76,5 @@ Setting `PDFRasterDPI` to a larger number may improve the Read Rate.
 
 -->
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)
 - [How to process multi-page TIF & PDF]({{ site.scenario_settings }}multipage-imgs-and-pdf.html)
