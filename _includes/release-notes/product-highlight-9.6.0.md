@@ -5,7 +5,7 @@
 - **DotCode** decoding is improved by optimizing the localization of DotCodes that are close to one another.
 
 <div align="center">
-    <p><img src="{{site.mobile_assets}}dotcode-v9.6.png" width="20%" alt="dotcode"></p>
+    <p><img src="{{site.mobile_assets}}dotcode-v9.6.png" width="40%" alt="dotcode"></p>
 </div>
 
 - **EAN8 barcode** decoding is improved by honing the accuracy of localization algorithms.
