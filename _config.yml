@@ -77,6 +77,7 @@ dotnet_enumerations: /barcode-reader/docs/server/programming/dotnet/api-referenc
 python_enumerations: /barcode-reader/docs/server/programming/python/api-reference/enumeration/
 java_enumerations: /barcode-reader/docs/server/programming/java/api-reference/enumeration/
 mobile_enumerations: /barcode-reader/docs/mobile/programming/enumeration/
+mobile_assets: /barcode-reader/docs/mobile/programming/assets/
 
 
 assets: /barcode-reader/docs/core/assets/
