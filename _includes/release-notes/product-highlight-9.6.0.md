@@ -17,3 +17,4 @@
 </div>
 
 - Deformed barcode decoding is improved by extending the supported modes and mode arguments of `DeformationResistingModes`.
+
