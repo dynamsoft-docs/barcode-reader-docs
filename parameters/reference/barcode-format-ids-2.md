@@ -43,10 +43,11 @@ delete pSettings;
 
 
 
-**See Also**      
+**See Also**  
+
 - `PublicRuntimeSettings:` [JavaScript]({{ site.js_api }}interface/RuntimeSettings.html) \| [C]({{ site.structs }}PublicRuntimeSettings.html?src=c) \| [C++]({{ site.structs }}PublicRuntimeSettings.html?src=cpp) \| [.NET]({{ site.dotnet_api }}struct/PublicRuntimeSettings.html) \| [Python]({{ site.python_api }}class/PublicRuntimeSettings.html) \| [Java]({{ site.java_api }}class/PublicRuntimeSettings.html) \| [Java-Android]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) \| [Objective-C & Swift]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html)
-- [`BarcodeFormat` Enumeration]({{ site.enumerations }}format-enums.html#barcodeformat)
-- [`BarcodeFormat_2` Enumeration]({{ site.enumerations }}format-enums.html#barcodeformat_2)
+- `BarcodeFormat:` [JavaScript]({{ site.js_enumerations }}EnumBarcodeFormat.html) \| [C]({{ site.c_cpp_enumerations }}format-enums.html?src=c#barcodeformat) \| [C++]({{ site.c_cpp_enumerations }}format-enums.html?src=cpp#barcodeformat) \| [.NET]({{ site.dotnet_enumerations }}format-enums.html#barcodeformat) \| [Python]({{ site.python_enumerations }}format-enums.html#barcodeformat) \| [Java]({{ site.java_enumerations }}format-enums.html#barcodeformat) \| [Java-Android]({{ site.mobile_enumerations }}barcode-format.html?lang=android) \| [Objective-C & Swift]({{ site.mobile_enumerations }}barcode-format.html?lang=objc,swift)
+- `BarcodeFormat_2:` [JavaScript]({{ site.js_enumerations }}EnumBarcodeFormat_2.html) \| [C]({{ site.c_cpp_enumerations }}format-enums.html?src=c#barcodeformat_2) \| [C++]({{ site.c_cpp_enumerations }}format-enums.html?src=cpp#barcodeformat_2) \| [.NET]({{ site.dotnet_enumerations }}format-enums.html#barcodeformat_2) \| [Python]({{ site.python_enumerations }}format-enums.html#barcodeformat_2) \| [Java]({{ site.java_enumerations }}format-enums.html#barcodeformat_2) \| [Java-Android]({{ site.mobile_enumerations }}barcode-format2.html?lang=android) \| [Objective-C & Swift]({{ site.mobile_enumerations }}barcode-format2.html?lang=objc,swift)
 
 
 ### As JSON Parameter

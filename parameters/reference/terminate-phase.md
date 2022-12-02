@@ -61,7 +61,7 @@ delete pSettings;
 
 **See Also**      
 - `PublicRuntimeSettings:` [JavaScript]({{ site.js_api }}interface/RuntimeSettings.html) \| [C]({{ site.structs }}PublicRuntimeSettings.html?src=c) \| [C++]({{ site.structs }}PublicRuntimeSettings.html?src=cpp) \| [.NET]({{ site.dotnet_api }}struct/PublicRuntimeSettings.html) \| [Python]({{ site.python_api }}class/PublicRuntimeSettings.html) \| [Java]({{ site.java_api }}class/PublicRuntimeSettings.html) \| [Java-Android]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) \| [Objective-C & Swift]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html)
-- [`TerminatePhase` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#terminatephase)
+- `TerminatePhase:` [JavaScript]({{ site.js_enumerations }}EnumTerminatePhase.html) \| [C]({{ site.c_cpp_enumerations }}parameter-mode-enums.html?src=c#textfiltermode) \| [C++]({{ site.c_cpp_enumerations }}parameter-mode-enums.html?src=cpp#textfiltermode) \| [.NET]({{ site.dotnet_enumerations }}parameter-mode-enums.html#textfiltermode) \| [Python]({{ site.python_enumerations }}parameter-mode-enums.html#textfiltermode) \| [Java]({{ site.java_enumerations }}parameter-mode-enums.html#textfiltermode) \| [Java-Android]({{ site.mobile_enumerations }}terminate-phase.html?lang=android) \| [Objective-C & Swift]({{ site.mobile_enumerations }}terminate-phase.html?lang=objc,swift)
 
 
 ### As JSON Parameter

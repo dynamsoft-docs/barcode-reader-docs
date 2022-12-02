@@ -57,7 +57,7 @@ delete pSettings;
 
 **See Also**      
 - `PublicRuntimeSettings:` [JavaScript]({{ site.js_api }}interface/RuntimeSettings.html) \| [C]({{ site.structs }}PublicRuntimeSettings.html?src=c) \| [C++]({{ site.structs }}PublicRuntimeSettings.html?src=cpp) \| [.NET]({{ site.dotnet_api }}struct/PublicRuntimeSettings.html) \| [Python]({{ site.python_api }}class/PublicRuntimeSettings.html) \| [Java]({{ site.java_api }}class/PublicRuntimeSettings.html) \| [Java-Android]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) \| [Objective-C & Swift]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html)
-- [`IntermediateResultSavingMode` Enumeration]({{ site.enumerations }}result-enums.html#intermediateresultsavingmode)
+- `IntermediateResultSavingMode:` [JavaScript]({{ site.js_enumerations }}EnumIntermediateResultSavingMode.html) \| [C]({{ site.c_cpp_enumerations }}result-enums.html?src=c#intermediateresultsavingmode) \| [C++]({{ site.c_cpp_enumerations }}result-enums.html?src=cpp#intermediateresultsavingmode) \| [.NET]({{ site.dotnet_enumerations }}result-enums.html#intermediateresultsavingmode) \| [Python]({{ site.python_enumerations }}result-enums.html#intermediateresultsavingmode) \| [Java]({{ site.java_enumerations }}result-enums.html#intermediateresultsavingmode) \| [Java-Android]({{ site.mobile_enumerations }}intermediate-result-saving-mode.html?lang=android) \| [Objective-C & Swift]({{ site.mobile_enumerations }}intermediate-result-saving-mode.html?lang=objc,swift)
 
 
 ### As JSON Parameter

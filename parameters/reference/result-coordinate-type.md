@@ -46,7 +46,7 @@ delete pSettings;
 
 **See Also**      
 - `PublicRuntimeSettings:` [JavaScript]({{ site.js_api }}interface/RuntimeSettings.html) \| [C]({{ site.structs }}PublicRuntimeSettings.html?src=c) \| [C++]({{ site.structs }}PublicRuntimeSettings.html?src=cpp) \| [.NET]({{ site.dotnet_api }}struct/PublicRuntimeSettings.html) \| [Python]({{ site.python_api }}class/PublicRuntimeSettings.html) \| [Java]({{ site.java_api }}class/PublicRuntimeSettings.html) \| [Java-Android]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) \| [Objective-C & Swift]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html)
-- [`ResultCoordinateType` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#resultcoordinatetype)
+- `ResultCoordinateType:` [JavaScript]({{ site.js_enumerations }}EnumResultCoordinateType.html) \| [C]({{ site.c_cpp_enumerations }}result-enums.html?src=c#resultcoordinatetype) \| [C++]({{ site.c_cpp_enumerations }}result-enums.html?src=cpp#resultcoordinatetype) \| [.NET]({{ site.dotnet_enumerations }}result-enums.html#resultcoordinatetype) \| [Python]({{ site.python_enumerations }}result-enums.html#resultcoordinatetype) \| [Java]({{ site.java_enumerations }}result-enums.html#resultcoordinatetype) \| [Java-Android]({{ site.mobile_enumerations }}result-coordinate-type.html?lang=android) \| [Objective-C & Swift]({{ site.mobile_enumerations }}result-coordinate-type.html?lang=objc,swift)
 
 
 ### As JSON Parameter

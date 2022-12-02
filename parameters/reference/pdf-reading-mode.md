@@ -49,7 +49,7 @@ delete pSettings;
 
 **See Also**      
 - `PublicRuntimeSettings:` [JavaScript]({{ site.js_api }}interface/RuntimeSettings.html) \| [C]({{ site.structs }}PublicRuntimeSettings.html?src=c) \| [C++]({{ site.structs }}PublicRuntimeSettings.html?src=cpp) \| [.NET]({{ site.dotnet_api }}struct/PublicRuntimeSettings.html) \| [Python]({{ site.python_api }}class/PublicRuntimeSettings.html) \| [Java]({{ site.java_api }}class/PublicRuntimeSettings.html) \| [Java-Android]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) \| [Objective-C & Swift]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html)
-- [`PDFReadingMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#pdfreadingmode)
+- `PDFReadingMode:` [JavaScript]({{ site.js_enumerations }}EnumPDFReadingMode.html) \| [C]({{ site.c_cpp_enumerations }}parameter-mode-enums.html?src=c#pdfreadingmode) \| [C++]({{ site.c_cpp_enumerations }}parameter-mode-enums.html?src=cpp#pdfreadingmode) \| [.NET]({{ site.dotnet_enumerations }}parameter-mode-enums.html#pdfreadingmode) \| [Python]({{ site.python_enumerations }}parameter-mode-enums.html#pdfreadingmode) \| [Java]({{ site.java_enumerations }}parameter-mode-enums.html#pdfreadingmode) \| [Java-Android]({{ site.mobile_enumerations }}pdf-reading-mode.html?lang=android) \| [Objective-C & Swift]({{ site.mobile_enumerations }}pdf-reading-mode.html?lang=objc,swift)
 
 
 ### As JSON Parameter
