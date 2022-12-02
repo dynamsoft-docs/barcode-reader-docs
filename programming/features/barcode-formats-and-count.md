@@ -70,8 +70,8 @@ let settings = try? barcodeReader.getRuntimeSettings()
 // Specify the barcode formats by enumeration values.
 // There are two enumerations storing all supported barcode formats and each one needs to be set individually.
 // Use "|" to enable multiple barcode formats at one time.
-settings?.barcodeFormatIds = EnumBarcodeFormat.ONED | EnumBarcodeFormat.QRCODE
-settings?.barcodeFormatIds_2 = EnumBarcodeFormat2.POSTALCODE
+settings?.barcodeFormatIds = EnumBarcodeFormat.ONED.rawValue | EnumBarcodeFormat.QRCODE.rawValue
+settings?.barcodeFormatIds_2 = EnumBarcodeFormat2.POSTALCODE.rawValue
 // Update the settings.
 try? barcodeReader.updateRuntimeSettings(settings!)
 ```
@@ -195,7 +195,7 @@ settings.expectedBarcodesCount = 0;
 // Obtain current runtime settings of `barcodeReader` instance.
 let settings = try? barcodeReader.getRuntimeSettings()
 // Set the expected barcode count
-settings.expectedBarcodesCount = 0;
+settings.expectedBarcodesCount = 0
 // Update the settings.
 try? barcodeReader.updateRuntimeSettings(settings!)
 ```

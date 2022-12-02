@@ -171,3 +171,7 @@ DBR_SetModeArgument(barcodeReader, "ScaleUpModes", 0, "TargetModuleSize", "8", s
 DBR_DecodeFile(barcodeReader, "YOUR-IMAGE-FILE-PATH", ""); // Start decoding
 // Add further process
 ```
+
+When processing the video streaming, you can enlarge the barcode module size with higher efficency. View [TinyBarcodeDecodingSample]({{site.android}}samples/tiny-barcode.html) to see how you can control the camera zooming and focusing to decode the small module size barcodes.
+
+When processing the video streaming, you can enlarge the barcode module size with higher efficency. View [TinyBarcodeDecodingSample]({{site.oc}}samples/tiny-barcode.html) to see how you can control the camera zooming and focusing to decode the small module size barcodes.

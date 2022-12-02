@@ -180,12 +180,12 @@ do {
     result = try reader.decodeFileWithName("YOUR-IMAGE-FILE-PATH")
 } catch let err {
 } // Start decoding
-for barcode in result ?? [] {
-    resLocation = item.localizationResult.resultPoints as! [CGPoint];
-    let resPoint1:CGPoint = resLocation[0];
-    let resPoint2:CGPoint = resLocation[1];
-    let resPoint3:CGPoint = resLocation[2];
-    let resPoint4:CGPoint = resLocation[3];
+for item in result ?? [] {
+    resLocation = item.localizationResult.resultPoints as! [CGPoint]
+    let resPoint1:CGPoint = resLocation[0]
+    let resPoint2:CGPoint = resLocation[1]
+    let resPoint3:CGPoint = resLocation[2]
+    let resPoint4:CGPoint = resLocation[3]
     //add further process with the coordinate points
 }
 // Add further process
