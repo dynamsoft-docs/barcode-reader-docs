@@ -53,18 +53,20 @@ delete pSettings;
 
 
 ### As JSON Parameter
-`PDFReadingMode` as a JSON parameter is a string value defined as below.   
+`PDFReadingMode` as a JSON parameter is a JSON Object defined as below.
 
 | Key Name | Key Value |
 | -------- | --------- |
-| PDFReadingMode | Any one in PDFReadingMode Enumeration as string |
+| Mode | Any one in Candidate Mode List as string |
 
 
 
 **JSON Parameter Example**   
 ```
 {
-    "PDFReadingMode": "PDFRM_VECTOR" 
+    "PDFReadingMode": {
+        "Mode" : "PDFRM_VECTOR"
+    } 
 }
 ```
 
