@@ -60,7 +60,7 @@ The target barcode is on background which is mixed by dark and light. Not suppor
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
-`BarcodeColourModes` can be set dynamically during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 [`BarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode) Enumeration items.
+`BarcodeColourModes` can be set dynamically during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 `BarcodeColourMode` Enumeration items.
 
 
 **Code Snippet in C++**

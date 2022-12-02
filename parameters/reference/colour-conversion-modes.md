@@ -33,7 +33,7 @@ Converts a colour image to a grayscale image using the general algorithm. This m
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
-`ColourConversionModes` can be set dynamically during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 [`ColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode) Enumeration items.
+`ColourConversionModes` can be set dynamically during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 `ColourConversionMode` Enumeration items.
 
 
 **Code Snippet in C++**

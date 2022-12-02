@@ -45,7 +45,7 @@ Scales up using the linear interpolation method. This mode has the following arg
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
-`ScaleUpModes` can be set dynamically during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 [`ScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode) Enumeration items.
+`ScaleUpModes` can be set dynamically during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 `ScaleUpMode` Enumeration items.
 
 
 **Code Snippet in C++**

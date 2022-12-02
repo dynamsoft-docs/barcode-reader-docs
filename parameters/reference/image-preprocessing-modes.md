@@ -64,7 +64,7 @@ Preprocesses the image using the morphology algorithm. It can be used for images
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
-`ImagePreprocessingModes` can be set dynamically during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 [`ImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode) Enumeration items.
+`ImagePreprocessingModes` can be set dynamically during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 `ImagePreprocessingMode` Enumeration items.
 
 
 **Code Snippet in C++**

@@ -13,10 +13,6 @@ permalink: /parameters/reference/intermediate-result-types.html
 
 `IntermediateResultTypes` defines the types of intermediate result(s) to be kept for further reference. It is a combined value of [`IntermediateResultType` Enumeration]({{ site.enumerations }}result-enums.html#intermediateresulttype) items. No intermediate result will be kept by default.
 
-| Value Type | Value Range | Default Value | Template Structure Type |
-| ---------- | ----------- | ------------- | ----------------------- |
-| [*`IntermediateResultType`*]({{ site.enumerations }}result-enums.html#intermediateresulttype) | N/A | `IRT_NO_RESULT` | `ImageParameter` |
-    
 ## Setting Methods
 `IntermediateResultTypes` can be set through `PublicRuntimeSettings` or JSON template.
 
@@ -47,7 +43,7 @@ delete pSettings;
 
 | Key Name | Key Value |
 | -------- | --------- |
-| IntermediateResultTypes | A string array while each array item is one of the [`IntermediateResultType` Enumeration]({{ site.enumerations }}result-enums.html#intermediateresulttype) items. |
+| IntermediateResultTypes | A string array while each array item is one of the [`IntermediateResultType` Enumeration]({{ site.c_cpp_enumerations }}result-enums.html?src=cpp#intermediateresulttype) items. |
 
 
 **JSON Example**   

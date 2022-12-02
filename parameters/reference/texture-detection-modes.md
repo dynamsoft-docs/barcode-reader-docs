@@ -30,7 +30,7 @@ Detects texture using the general algorithm. This mode has the following argumen
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
-`TextureDetectionModes` can be set dynamically during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 [`TextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode) Enumeration items.
+`TextureDetectionModes` can be set dynamically during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 `TextureDetectionMode` Enumeration items.
 
 
 **Code Snippet in C++**

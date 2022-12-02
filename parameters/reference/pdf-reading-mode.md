@@ -32,7 +32,7 @@ Converts the PDF file to image(s) first, then detects barcode.
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
-`PDFReadingMode` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct, it is one of the [`PDFReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#pdfreadingmode) Enumeration items.
+`PDFReadingMode` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct, it is one of the `PDFReadingMode` Enumeration items.
 
 
 **Code Snippet in C++**

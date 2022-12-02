@@ -30,7 +30,7 @@ Filters text using the general algorithm based on contour. This mode has the fol
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
-`TextFilterModes` can be set dynamically during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 [`TextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode) Enumeration items.
+`TextFilterModes` can be set dynamically during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 `TextFilterMode` Enumeration items.
 
 
 **Code Snippet in C++**

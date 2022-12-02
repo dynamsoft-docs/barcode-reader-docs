@@ -44,7 +44,7 @@ Exits the barcode reading algorithm after the region predetection, image pre-pro
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
-`TerminatePhase` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct, it is one of the [`TerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase) Enumeration items.
+`TerminatePhase` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct, it is one of the `TerminatePhase` Enumeration items.
 
 
 **Code Snippet in C++**

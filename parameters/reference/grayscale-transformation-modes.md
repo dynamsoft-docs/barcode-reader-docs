@@ -36,7 +36,7 @@ Transforms the image to inverted grayscale. This mode is the one to use for inve
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
-`GrayscaleTransformationModes` can be set dynamically during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 [`GrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode) Enumeration items.
+`GrayscaleTransformationModes` can be set dynamically during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 `GrayscaleTransformationMode` Enumeration items.
 
 
 **Code Snippet in C++**

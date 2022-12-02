@@ -11,16 +11,13 @@ permalink: /parameters/reference/barcode-format-ids.html
 
 # BarcodeFormatIds 
 
-`BarcodeFormatIds` defines the formats of the barcode in BarcodeFormat group 1 to be read. It is a combined value of [`BarcodeFormat` Enumeration]({{ site.enumerations }}format-enums.html#barcodeformat) items.
+`BarcodeFormatIds` defines the formats of the barcode in `BarcodeFormat group 1` to be read. It is a combined value of `BarcodeFormat` Enumeration items.
 
 **Remarks**  
-- The default value is all supported barcode formats in BarcodeFormat group 1.
-- The barcode format our library will search for is composed of [BarcodeFormat group 1]({{ site.enumerations }}format-enums.html#barcodeformat) and [BarcodeFormat group 2]({{ site.enumerations }}format-enums.html#barcodeformat_2), so you need to specify the barcode format in group 1 and group 2 individually.
 
-| Value Type | Value Range | Default Value | Template Structure Type |
-| ---------- | ----------- | ------------- | ----------------------- |
-| *int* / *EnumBarcodeFormat_2* | N/A | `BF_ALL` | `ImageParameter`/`FormatSpecification`/`RegionDefinition` |
-    
+- The default value is all supported barcode formats in `BarcodeFormat group 1`.
+- The barcode format our library will search for is composed of `BarcodeFormat group 1` and [`BarcodeFormat group 2`](barcode-format-ids-2.md), so you need to specify the barcode format in group 1 and group 2 individually.
+
 ## Setting Methods
 `BarcodeFormatIds` can be set through `RuntimeSetting` or JSON template.
 
@@ -43,6 +40,7 @@ delete pSettings;
 
 
 **See Also**      
+
 - `PublicRuntimeSettings:` [JavaScript]({{ site.js_api }}interface/RuntimeSettings.html) \| [C]({{ site.structs }}PublicRuntimeSettings.html?src=c) \| [C++]({{ site.structs }}PublicRuntimeSettings.html?src=cpp) \| [.NET]({{ site.dotnet_api }}struct/PublicRuntimeSettings.html) \| [Python]({{ site.python_api }}class/PublicRuntimeSettings.html) \| [Java]({{ site.java_api }}class/PublicRuntimeSettings.html) \| [Java-Android]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) \| [Objective-C & Swift]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html)
 - `BarcodeFormat:` [JavaScript]({{ site.js_enumerations }}EnumBarcodeFormat.html) \| [C]({{ site.c_cpp_enumerations }}format-enums.html?src=c#barcodeformat) \| [C++]({{ site.c_cpp_enumerations }}format-enums.html?src=cpp#barcodeformat) \| [.NET]({{ site.dotnet_enumerations }}format-enums.html#barcodeformat) \| [Python]({{ site.python_enumerations }}format-enums.html#barcodeformat) \| [Java]({{ site.java_enumerations }}format-enums.html#barcodeformat) \| [Java-Android]({{ site.mobile_enumerations }}barcode-format.html?lang=android) \| [Objective-C & Swift]({{ site.mobile_enumerations }}barcode-format.html?lang=objc,swift)
 - `BarcodeFormat_2:` [JavaScript]({{ site.js_enumerations }}EnumBarcodeFormat_2.html) \| [C]({{ site.c_cpp_enumerations }}format-enums.html?src=c#barcodeformat_2) \| [C++]({{ site.c_cpp_enumerations }}format-enums.html?src=cpp#barcodeformat_2) \| [.NET]({{ site.dotnet_enumerations }}format-enums.html#barcodeformat_2) \| [Python]({{ site.python_enumerations }}format-enums.html#barcodeformat_2) \| [Java]({{ site.java_enumerations }}format-enums.html#barcodeformat_2) \| [Java-Android]({{ site.mobile_enumerations }}barcode-format2.html?lang=android) \| [Objective-C & Swift]({{ site.mobile_enumerations }}barcode-format2.html?lang=objc,swift)
@@ -53,7 +51,7 @@ delete pSettings;
 
 | Key Name | Key Value |
 | -------- | --------- |
-| BarcodeFormatIds | A string array while each array item is one of the [`BarcodeFormat` Enumeration]({{ site.enumerations }}format-enums.html#barcodeformat) items. |
+| BarcodeFormatIds | A string array while each array item is one of the [`BarcodeFormat` Enumeration]({{ site.c_cpp_enumerations }}format-enums.html?src=cpp#barcodeformat) items. |
 
 
 **JSON Example**   
