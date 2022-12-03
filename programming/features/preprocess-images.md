@@ -365,7 +365,7 @@ NSArray<iTextResult*>* result = [reader decodeFileWithName:@"YOUR-IMAGE-FILE-PAT
 ```swift
 let reader = DynamsoftBarcodeReader()
 try? reader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\",\"ImagePreprocessingModes\": [{\"Mode\": \"IPM_GRAY_EQUALIZE\",\"Sensitivity\": 9},{\"Mode\": \"IPM_GRAY_SMOOTH\",\"SmoothBlockSizeX\": 10,\"SmoothBlockSizeY\": 10},{\"Mode\": \"IPM_SHARPEN_SMOOTH\",\"SharpenBlockSizeX\": 5,\"SharpenBlockSizeY\": 5},{\"Mode\": \"IPM_MORPHOLOGY\",\"MorphOperation\": \"Close\",\"MorphOperationKernelSizeX\": 7,\"MorphOperationKernelSizeY\": 7}]}}", confictMode:EnumConflictMode.overwrite)
-let result = try? reader.decodeFileWithName("YOUR-IMAGE-FILE-PATH"); // Start decoding
+let result = try? reader.decodeFileWithName("YOUR-IMAGE-FILE-PATH") // Start decoding
 // Add further process
 ```
 >
