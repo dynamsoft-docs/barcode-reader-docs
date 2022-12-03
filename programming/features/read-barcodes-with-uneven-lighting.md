@@ -96,7 +96,7 @@ settings.binarizationModes = @[@(EnumBinarizationModeLocalBlock)];
 // Obtain current runtime settings of `reader` instance.
 let settings = try? reader.getRuntimeSettings()
 // Set a binarization mode
-settings?.binarizationModes = [EnumBinarizationMode.localBlock.rawValue]
+settings?.binarizationModes = [EnumBinarizationMode.localBlock]
 // Update the settings.
 try? reader.updateRuntimeSettings(settings!)
 // Fine-tune some arguments of the first mode in `binarizationModes`

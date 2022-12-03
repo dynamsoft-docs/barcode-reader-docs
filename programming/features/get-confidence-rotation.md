@@ -165,7 +165,7 @@ for (iTextResult* barcode in result)
 ```
 >
 ```swift
-let reader = DynamsoftBarcodeReader()
+let reader = DynamsoftBarcodeReader.init()
 var result: [iTextResult]? = nil
 do {
     result = try reader.decodeFileWithName("YOUR-IMAGE-FILE-PATH")

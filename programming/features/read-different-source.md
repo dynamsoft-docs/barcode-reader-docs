@@ -43,7 +43,7 @@ DynamsoftBarcodeReader *reader = [[DynamsoftBarcodeReader alloc] init];
 NSArray<iTextResult*>* result = [reader decodeFileWithName:@"your file path" error:&err];
 ```
 >```swift
-let reader = DynamsoftBarcodeReader()
+let reader = DynamsoftBarcodeReader.init()
 let result = try? reader.decodeFileWithName("your file path")
 ```
 >```c

@@ -87,11 +87,11 @@ rs.barcodeFormatIds = EnumBarcodeFormatQRCODE;
 >
 ```swift
 // Creates a BarcodeReader instance.
-let reader = DynamsoftBarcodeReader()
+let reader = DynamsoftBarcodeReader.init()
 // Obtains the current runtime settings.
 let rs = try? reader.getRuntimeSettings()
 // Sets the barcode format(s).
-rs?.barcodeFormatIds = EnumBarcodeFormatQRCODE
+rs?.barcodeFormatIds = EnumBarcodeFormat.QRCODE.rawValue
 // Updates the settings.
 try? reader.updateRuntimeSettings(rs)
 ```
@@ -233,7 +233,7 @@ DynamsoftBarcodeReader* reader = [[DynamsoftBarcodeReader alloc] init];
 >
 ```swift
 // Creates a BarcodeReader instance.
-let reader = DynamsoftBarcodeReader()
+let reader = DynamsoftBarcodeReader.init()
 // Updates the settings with the string.
 try? reader.initRuntimeSettingsWithString("A-JSON-Template")
 ```

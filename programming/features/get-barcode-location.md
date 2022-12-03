@@ -173,15 +173,15 @@ for (iTextResult* barcode in result)
 ```
 >
 ```swift
-let reader = DynamsoftBarcodeReader()
+let reader = DynamsoftBarcodeReader.init()
 var result: [iTextResult]? = nil
 var resLocation:[CGPoint]
 do {
     result = try reader.decodeFileWithName("YOUR-IMAGE-FILE-PATH")
 } catch let err {
 } // Start decoding
-for item in result ?? [] {
-    resLocation = item.localizationResult.resultPoints as! [CGPoint]
+for barcode in result ?? [] {
+    resLocation = barcode.localizationResult.resultPoints as! [CGPoint]
     let resPoint1:CGPoint = resLocation[0]
     let resPoint2:CGPoint = resLocation[1]
     let resPoint3:CGPoint = resLocation[2]
