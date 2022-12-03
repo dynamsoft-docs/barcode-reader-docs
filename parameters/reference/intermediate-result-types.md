@@ -13,10 +13,6 @@ permalink: /parameters/reference/intermediate-result-types.html
 
 `IntermediateResultTypes` defines the types of intermediate result(s) to be kept for further reference. It is a combined value of [`IntermediateResultType` Enumeration]({{ site.enumerations }}result-enums.html#intermediateresulttype) items. No intermediate result will be kept by default.
 
-| Value Type | Value Range | Default Value | Template Structure Type |
-| ---------- | ----------- | ------------- | ----------------------- |
-| [*`IntermediateResultType`*]({{ site.enumerations }}result-enums.html#intermediateresulttype) | N/A | `IRT_NO_RESULT` | `ImageParameter` |
-    
 ## Setting Methods
 `IntermediateResultTypes` can be set through `PublicRuntimeSettings` or JSON template.
 
@@ -39,7 +35,7 @@ delete pSettings;
 
 **See Also**      
 - `PublicRuntimeSettings:` [JavaScript]({{ site.js_api }}interface/RuntimeSettings.html) \| [C]({{ site.structs }}PublicRuntimeSettings.html?src=c) \| [C++]({{ site.structs }}PublicRuntimeSettings.html?src=cpp) \| [.NET]({{ site.dotnet_api }}struct/PublicRuntimeSettings.html) \| [Python]({{ site.python_api }}class/PublicRuntimeSettings.html) \| [Java]({{ site.java_api }}class/PublicRuntimeSettings.html) \| [Java-Android]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) \| [Objective-C & Swift]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html)
-- [`IntermediateResultType` Enumeration]({{ site.enumerations }}result-enums.html#intermediateresulttype)
+- `IntermediateResultType:` [JavaScript]({{ site.js_enumerations }}EnumIntermediateResultType.html) \| [C]({{ site.c_cpp_enumerations }}result-enums.html?src=c#intermediateresulttype) \| [C++]({{ site.c_cpp_enumerations }}result-enums.html?src=cpp#intermediateresulttype) \| [.NET]({{ site.dotnet_enumerations }}result-enums.html#intermediateresulttype) \| [Python]({{ site.python_enumerations }}result-enums.html#intermediateresulttype) \| [Java]({{ site.java_enumerations }}result-enums.html#intermediateresulttype) \| [Java-Android]({{ site.mobile_enumerations }}intermediate-result-type.html?lang=android) \| [Objective-C & Swift]({{ site.mobile_enumerations }}intermediate-result-type.html?lang=objc,swift)
 
 
 ### As JSON Parameter
@@ -47,7 +43,7 @@ delete pSettings;
 
 | Key Name | Key Value |
 | -------- | --------- |
-| IntermediateResultTypes | A string array while each array item is one of the [`IntermediateResultType` Enumeration]({{ site.enumerations }}result-enums.html#intermediateresulttype) items. |
+| IntermediateResultTypes | A string array while each array item is one of the [`IntermediateResultType` Enumeration]({{ site.c_cpp_enumerations }}result-enums.html?src=cpp#intermediateresulttype) items. |
 
 
 **JSON Example**   

@@ -100,7 +100,7 @@ settings.furtherModes.colourConversionModes = @[@(EnumColourConversionModeGenera
 // Obtain current runtime settings of `reader` instance.
 let settings = try? reader.getRuntimeSettings()
 // Enable a colour conversion mode
-settings!.furtherModes.colourConversionModes = [EnumColourConversionMode.general.rawValue]
+settings!.furtherModes.colourConversionModes = [EnumColourConversionMode.general]
 // Update the settings.
 try? reader.updateRuntimeSettings(settings!)
 // Fine-tune three `Weight` parameter value of the first mode in `colourConversionModes`

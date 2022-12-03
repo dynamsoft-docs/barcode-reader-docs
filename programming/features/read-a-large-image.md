@@ -65,7 +65,7 @@ settings.scaleDownThreshold = 1600;
 // Obtain current runtime settings of `reader` instance.
 let settings = try? reader.getRuntimeSettings()
 // Set a suitable scaleDownThreshold
-settings!.scaleDownThreshold = 1600;
+settings!.scaleDownThreshold = 1600
 // Update the settings.
 try? reader.updateRuntimeSettings(settings!)
 ```

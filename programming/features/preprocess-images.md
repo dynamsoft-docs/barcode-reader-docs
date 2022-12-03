@@ -233,14 +233,11 @@ NSArray<iTextResult*>* result = [reader decodeFileWithName:@"YOUR-IMAGE-FILE-PAT
 ```
 >
 ```swift
-let reader = DynamsoftBarcodeReader()
+let reader = DynamsoftBarcodeReader.init()
 let settings = try? reader.getRuntimeSettings() //Get the current RuntimeSettings
-settings?.furtherModes.imagePreprocessingModes[0] = EnumImagePreprocessingMode.grayEqualize
-settings?.furtherModes.imagePreprocessingModes[1] = EnumImagePreprocessingMode.graySmooth
-settings?.furtherModes.imagePreprocessingModes[2] = EnumImagePreprocessingMode.sharpenSmooth
-settings?.furtherModes.imagePreprocessingModes[3] = EnumImagePreprocessingMode.morphology
+settings?.furtherModes.imagePreprocessingModes = [EnumImagePreprocessingMode.grayEqualize, EnumImagePreprocessingMode.graySmooth, EnumImagePreprocessingMode.sharpenSmooth, EnumImagePreprocessingMode.morphology]
 do {
-    try reader.updateRuntimeSettings(settings); // Update RuntimeSettings with above setting
+    try reader.updateRuntimeSettings(settings) // Update RuntimeSettings with above setting
     try reader.setModeArgument("ImagePreprocessingModes", index:0, argumentName:"Sensitivity", argumentValue:"9")
     try reader.setModeArgument("ImagePreprocessingModes", index:1, argumentName:"SmoothBlockSizeX", argumentValue:"10")
     try reader.setModeArgument("ImagePreprocessingModes", index:1, argumentName:"SmoothBlockSizeY", argumentValue:"10")
