@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for ColourClusteringModes
+title: ColourClusteringModes - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for ColourClusteringModes.
 keywords: ColourClusteringModes, parameter reference, parameter
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for GrayscaleTransformationModes
+title: GrayscaleTransformationModes - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for GrayscaleTransformationModes.
 keywords: GrayscaleTransformationModes, parameter reference, parameter
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for ImagePreprocessingModes
+title: ImagePreprocessingModes - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for ImagePreprocessingModes.
 keywords: ImagePreprocessingModes, parameter reference, parameter
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for TailModuleRatio
+title: TailModuleRatio - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for TailModuleRatio.
 keywords: TailModuleRatio, parameter reference, parameter
 needAutoGenerateSidebar: true

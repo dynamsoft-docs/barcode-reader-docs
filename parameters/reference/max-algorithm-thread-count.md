@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for MaxAlgorithmThreadCount
+title: MaxAlgorithmThreadCount - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for MaxAlgorithmThreadCount.
 keywords: MaxAlgorithmThreadCount, parameter reference, parameter
 needAutoGenerateSidebar: true

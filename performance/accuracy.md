@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Performance - Accuracy
+title: Accuracy - Dynamsoft Barcode Reader Performance
 description: This page illustrates how to maximize the accuracy of Dynamsoft Barcode Reader
 Keywords: accuracy
 needAutoGenerateSidebar: true

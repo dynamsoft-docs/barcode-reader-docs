@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for BarcodeComplementModes
+title: BarcodeComplementModes - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for BarcodeComplementModes.
 keywords: BarcodeComplementModes, parameter reference, parameter
 needAutoGenerateSidebar: true

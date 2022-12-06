@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader How-to Guides - Read Barcodes with Different Colours
+title: Read Barcodes with Different Colours - Dynamsoft Barcode Reader How-to Guides
 description: This page shows how to read barcodes with different colours.
 keywords: colour mode, colourful barcode, how-to guides
 needAutoGenerateSidebar: false

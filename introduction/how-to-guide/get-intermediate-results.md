@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader How-to Guides - Get Intermediate Results
+title: Get Intermediate Results - Dynamsoft Barcode Reader How-to Guides
 description: This page shows how to get Intermediate Results.
 keywords: intermediate results, IntermediateResult, IntermediateResultType, how-to guides
 needAutoGenerateSidebar: false

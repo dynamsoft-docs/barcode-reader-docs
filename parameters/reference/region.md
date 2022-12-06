@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for Region
+title: Region - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for Region.
 keywords: Region, parameter reference, parameter
 needAutoGenerateSidebar: true

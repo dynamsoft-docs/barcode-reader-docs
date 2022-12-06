@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for MinQuietZoneWidth
+title: MinQuietZoneWidth - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for MinQuietZoneWidth.
 keywords: MinQuietZoneWidth, parameter reference, parameter
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for EnableQRCodeModel1
+title: EnableQRCodeModel1 - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for EnableQRCodeModel1.
 keywords: EnableQRCodeModel1, parameter reference, parameter
 permalink: /parameters/reference/enable-qrcode-model1.html

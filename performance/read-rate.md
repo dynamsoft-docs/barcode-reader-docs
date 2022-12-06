@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Performance - Read Rate
+title: Read Rate - Dynamsoft Barcode Reader Performance
 description: This page shows how the Dynamsoft Barcode Reader SDK is designed to improve read rate
 keywords: Read Rate
 breadcrumbText: Read Rate

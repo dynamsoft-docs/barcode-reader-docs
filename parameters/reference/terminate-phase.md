@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for TerminatePhase
+title: TerminatePhase - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for TerminatePhase.
 keywords: TerminatePhase, parameter reference, parameter
 needAutoGenerateSidebar: true

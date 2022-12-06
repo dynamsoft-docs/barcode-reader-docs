@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for BarcodeAngleRangeArray
+title: BarcodeAngleRangeArray - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for BarcodeAngleRangeArray.
 keywords: BarcodeAngleRangeArray, parameter reference, parameter
 needAutoGenerateSidebar: true

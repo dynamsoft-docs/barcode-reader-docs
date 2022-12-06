@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for PatchCodeSearchingMargins
+title: PatchCodeSearchingMargins - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for PatchCodeSearchingMargins.
 keywords: PatchCodeSearchingMargins, parameter reference, parameter
 permalink: /parameters/reference/patchcode-searching-margins.html

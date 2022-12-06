@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for DeblurModes
+title: DeblurModes - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for DeblurModes.
 keywords: DeblurModes, parameter reference, parameter
 needAutoGenerateSidebar: true

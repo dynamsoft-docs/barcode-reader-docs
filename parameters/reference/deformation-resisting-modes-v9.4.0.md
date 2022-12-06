@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for DeformationResistingModes
+title: DeformationResistingModes - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for DeformationResistingModes.
 keywords: DeformationResistingModes, parameter reference, parameter
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for IntermediateResultSavingMode
+title: IntermediateResultSavingMode - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for IntermediateResultSavingMode.
 keywords: IntermediateResultSavingMode, parameter reference, parameter
 needAutoGenerateSidebar: true

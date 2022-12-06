@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for AllModuleDeviation
+title: AllModuleDeviation - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for AllModuleDeviation.
 keywords: AllModuleDeviation, parameter reference, parameter
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader How-to Guides - Set Custom Area for HSV Pre-detection 
+title: Set Custom Area for HSV Pre-detection - Dynamsoft Barcode Reader How-to Guides
 description: This page shows how to set custom area for HSV Pre-detection.
 keywords: pre-detection, pre-detected region, hsv, custom setting, how-to guides
 needAutoGenerateSidebar: false

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for Timeout
+title: Timeout - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for Timeout.
 keywords: Timeout, parameter reference, parameter
 needAutoGenerateSidebar: true

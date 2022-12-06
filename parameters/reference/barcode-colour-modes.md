@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for BarcodeColourModes
+title: BarcodeColourModes - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for BarcodeColourModes.
 keywords: BarcodeColourModes, parameter reference, parameter
 needAutoGenerateSidebar: true

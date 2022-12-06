@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for DPMCodeReadingModes
+title: DPMCodeReadingModes - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for DPMCodeReadingModes.
 keywords: DPMCodeReadingModes, parameter reference, parameter
 needAutoGenerateSidebar: true
