@@ -9,7 +9,8 @@ permalink: /programming/features/use-region-predetection.html
 
 # How To Use Region Predetection
 
-Dynamsoft Barcode Reader (DBR) can automatically detect Region of Interest (ROI) from image. For example, in the case of small barcodes in a large image, if the background of the image itself is not very complicated and the barcode is clear, then the time to process the entire image is relatively slow. To reduce processing time, you can enable region detection by configuring the parameter  [`RegionPredetectionModes`]({{ site.parameters_reference }}region-predetection-modes.html#regionpredetectionmodes) to detect the ROI from the large image to get several areas where the barcodes may exist, the further process will only be applied on these ROIs instead of the entire image. DBR currently supports three area detection modes and supports setting multiple modes at the same time.
+Dynamsoft Barcode Reader (DBR) can automatically detect Region of Interest (ROI) from image. A ROI is a sub area of the image where the barcodes may exist. Enableing ROI detection helps speed up the process since the decoding will only be applied on these ROIs instead of the entire image. For example, in the case of a small barcode in a large image, the time to process the entire image is relatively slow. If the background of the image itself is not very complicated and the barcode is clear, you can enable ROI detection by configuring the parameter  [`RegionPredetectionModes`]({{ site.parameters_reference }}region-predetection-modes.html#regionpredetectionmodes), the time to process the small barcode area is much more faster. DBR currently supports three ROI detection modes and supports setting multiple modes at the same time.
+
 
 ## Black & White or Gray Barcode on a Colored Background
 
@@ -106,5 +107,6 @@ JSON Template:
 [2]:assets/use-region-predetection/region-predetection-hsv.png
 [3]:assets/use-region-predetection/region-predetection-label.png
 
+## Related Articles
 
-
+- [Use Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html#json-template)
