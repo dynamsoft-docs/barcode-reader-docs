@@ -174,8 +174,8 @@ NSArray<iTextResult*>* result = [reader decodeFileWithName:@"YOUR-IMAGE-FILE-WIT
 ```
 >
 ```swift
-let reader = DynamsoftBarcodeReader()
-reader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP_FilterBarcode\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"TextResultOrderModes\":[{\"Mode\":\"TROM_POSITION\"}], \"FormatSpecificationNameArray\": [\"FP_1\"]},\"FormatSpecification\":{\"Name\":\"FP_1\", \"MinResultConfidence\":50}}", conflictMode:EnumConflictMode.overwrite)
+let reader = DynamsoftBarcodeReader.init()
+try? reader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP_FilterBarcode\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"TextResultOrderModes\":[{\"Mode\":\"TROM_POSITION\"}], \"FormatSpecificationNameArray\": [\"FP_1\"]},\"FormatSpecification\":{\"Name\":\"FP_1\", \"MinResultConfidence\":50}}", conflictMode:EnumConflictMode.overwrite)
 // Start decoding
 let result = try? reader.decodeFileWithName("YOUR-IMAGE-FILE-WITH-QR-CODES")
 // Add further process

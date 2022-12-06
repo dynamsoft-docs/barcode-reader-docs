@@ -60,11 +60,11 @@ NSArray<iTextResult*>* result = [reader decodeFileWithName:@"YOUR-IMAGE-FILE-PAT
 ```
 >
 ```swift
-let reader = DynamsoftBarcodeReader()
+let reader = DynamsoftBarcodeReader.init()
 //Get the current RuntimeSettings
 let settings = try? reader.getRuntimeSettings()
-settings.furtherModes.textFilterModes[0] = EnumTextFilterMode.generalContour; // Set a TFM_GENERAL_CONTOUR mode to filter texts
-try? reader.updateRuntimeSettings(settings); // Update RuntimeSettings with above setting
+settings.furtherModes.textFilterModes?[0] = EnumTextFilterMode.generalContour; // Set a TFM_GENERAL_CONTOUR mode to filter texts
+try? reader.updateRuntimeSettings(settings) // Update RuntimeSettings with above setting
 let result = try? reader.decodeFileWithName("YOUR-IMAGE-FILE-PATH") // Start decoding
 // Add further process
 ```

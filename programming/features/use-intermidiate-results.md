@@ -98,14 +98,17 @@ settings.intermediateResultSavingMode = EnumIntermediateResultSavingModeBoth;
 [reader decodeFileWithName:@"YOUR-IMAGE-FILE-PATH" error:&err];
 // After decoding, the binarized image can be found at "YOUR-SAVING-PATH"
 // Here we will get the localized barcode zone in memory
-NSArray<iIntermediateResult*>* intermediateResults = [reader getIntermediateResults:&err]; // Get all the intermediate results
-for (iIntermediateResult* ir in intermediateResults) //Loop all intermediate results
+// The method returns an array of intermediate result.
+NSArray<iIntermediateResult*>* intermediateResultArray = [reader getIntermediateResults:&err]; // Get all the intermediate results
+for (iIntermediateResult* intermediateResult in intermediateResultArray) //Loop all intermediate results
 {
     // Here we only process the localized barcode zone
-    if (ir.dataType == EnumIMResultDataTypeLocalizationResult)
+    if (intermediateResult.dataType == EnumIMResultDataTypeLocalizationResult)
     {
-        iLocalizationResult* localization = (iLocalizationResult*)ir.results[0];
-        NSLog(@"confidence: %f", localization.confidence);
+        NSArray<iLocalizationResult*>* localizationResultArray = (NSArray<iLocalizationResult*>*) intermediateResult.results;
+        for localizationResult in localizationResultArray{
+            // Now you can get each iLocalizationResult from the iIntermediateResult.
+        }
         // Use more information in localization
     }
 }
@@ -113,10 +116,10 @@ for (iIntermediateResult* ir in intermediateResults) //Loop all intermediate res
 ```
 >
 ```swift
-let reader = DynamsoftBarcodeReader()
+let reader = DynamsoftBarcodeReader.init()
 let settings = try? reader.getRuntimeSettings() //Get the current RuntimeSettings
 // Set binarized image and localized barcode zone of the intermediate result types to be saved
-settings?.intermediateResultTypes = .binarizedImage | .typedBarcodeZone
+settings?.intermediateResultTypes = EnumIntermediateResultType.binarizedImage.rawValue | EnumIntermediateResultType.typedBarcodeZone.rawValue
 // Save intermediate result to both file system and memory
 settings?.intermediateResultSavingMode = .both
 // Update RuntimeSettings with above settings
@@ -124,15 +127,18 @@ try? reader.updateRuntimeSettings(settings) // Update RuntimeSettings with above
 // Set the folder path which stores the intermediate result. Please make sure you have write permission to this folder.
 try? reader.setModeArgument("IntermediateResultSavingMode", index:0, argumentName:"FolderPath", argumentValue:"YOUR-SAVING-PATH")
 try? reader.decodeFileWithName("YOUR-IMAGE-FILE-PATH")
-// After decoding, the binarized image can be found at "YOUR-SAVING-PATH"
-// Here we will get the localized barcode zone in memory
-let intermediateResults = try? reader.getIntermediateResults() // Get all the intermediate results
-for ir in intermediateResults! {
+// After decoding, the binarized image can be found at "YOUR-SAVING-PATH".
+// Here we will get the localized barcode zone in memory.
+// The method returns an array of intermediate result.
+let intermediateResultArray = try? reader.getIntermediateResults()
+for intermediateResult in intermediateResultArray! {
     // Here we only process the localized barcode zone
-    if ir.dataType == .localizationResult {
-        let localization = ir.results[0] as! LocalizationResult
-        print("confidence: \(localization.confidence)")
-        // Use more information in localization
+    if intermediateResult.dataType == .localizationResult {
+        // Get an array of localization from a single intermediateResult
+        let localizationResultArray = intermediateResult.results as! [iLocalizationResult]
+        for localizationResult in localizationResultArray{
+            // Now you can get each iLocalizationResult from the iIntermediateResult.
+        }
     }
 }
 // Add further process

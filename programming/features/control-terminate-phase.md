@@ -137,15 +137,11 @@ rs.intermediateResultSavingMode = EnumIntermediateResultSavingModeFileSystem;
 // Obtains the current runtime settings of DBR.
 let rs = try? reader.getRuntimeSettings()
 // Sets the termination phase.
-rs.terminatePhase = EnumTerminatePhase.Determined
+rs?.terminatePhase = EnumTerminatePhase.Determined
 // Sets the intermidate result types.
-rs.intermediateResultTypes =
-    EnumIntermediateResultType.originalImage |
-    EnumIntermediateResultType.binarizedImage |
-    EnumIntermediateResultType.colourConvertedGrayImage |
-    EnumIntermediateResultType.transformedGrayscaleImage |
-    EnumIntermediateResultType.preprocessedImage
-rs.intermediateResultSavingMode = EnumIntermediateResultSavingMode.fileSystem
+rs?.intermediateResultTypes =
+    [EnumIntermediateResultType.originalImage.rawValue | EnumIntermediateResultType.binarizedImage.rawValue | EnumIntermediateResultType.colourConvertedGrayImage.rawValue | EnumIntermediateResultType.transformedGrayscaleImage.rawValue | EnumIntermediateResultType.preprocessedImage.rawValue]
+rs?.intermediateResultSavingMode = EnumIntermediateResultSavingMode.fileSystem
 // Updates the settings.
 try? reader.updateRuntimeSettings(rs!)
 try? reader.setModeArgument("IntermediateResultSavingMode", index:0, argumentName:"FolderPath", argumentValue:"YOUR-FOLDER-PATH")
