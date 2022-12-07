@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for HeadModuleRatio
+title: HeadModuleRatio - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for HeadModuleRatio.
 keywords: HeadModuleRatio, parameter reference, parameter
 needAutoGenerateSidebar: true

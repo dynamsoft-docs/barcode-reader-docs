@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Performance - Speed
+title: Speed - Dynamsoft Barcode Reader Performance
 description: This page shows how to adjust the settings to achieve best speed in barcode reading
 keywords: speed
 needAutoGenerateSidebar: true

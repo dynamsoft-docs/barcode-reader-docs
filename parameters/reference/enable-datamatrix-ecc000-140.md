@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for EnableDataMatrixECC000-140
+title: EnableDataMatrixECC000-140 - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for EnableDataMatrixECC000-140.
 keywords: EnableDataMatrixECC000-140, parameter reference, parameter
 permalink: /parameters/reference/enable-datamatrix-ecc000-140.html

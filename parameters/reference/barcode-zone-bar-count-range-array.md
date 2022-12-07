@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for BarcodeZoneBarCountRangeArray
+title: BarcodeZoneBarCountRangeArray - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for BarcodeZoneBarCountRangeArray.
 keywords: BarcodeZoneBarCountRangeArray, parameter reference, parameter
 needAutoGenerateSidebar: true

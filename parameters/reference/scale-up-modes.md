@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for ScaleUpModes
+title: ScaleUpModes - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for ScaleUpModes.
 keywords: ScaleUpModes, parameter reference, parameter
 needAutoGenerateSidebar: true

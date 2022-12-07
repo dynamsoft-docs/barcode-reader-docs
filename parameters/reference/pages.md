@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for Pages
+title: Pages - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for Pages.
 keywords: Pages, parameter reference, parameter
 needAutoGenerateSidebar: true

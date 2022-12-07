@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for BarcodeBytesLengthRangeArray
+title: BarcodeBytesLengthRangeArray - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for BarcodeBytesLengthRangeArray.
 keywords: BarcodeBytesLengthRangeArray, parameter reference, parameter
 needAutoGenerateSidebar: true

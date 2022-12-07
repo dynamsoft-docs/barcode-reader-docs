@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Performance - Flexibility and Extensibility
+title: Flexibility and Extensibility - Dynamsoft Barcode Reader Performance
 description: This page shows what makes Dynamsoft Barcode Reader flexible and extensible
 keywords: flexibility, extensibility
 needAutoGenerateSidebar: true

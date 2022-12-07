@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for BarcodeFormatIds_2
+title: BarcodeFormatIds_2 - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for BarcodeFormatIds_2.
 keywords: BarcodeFormatIds_2, parameter reference, parameter
 needAutoGenerateSidebar: true

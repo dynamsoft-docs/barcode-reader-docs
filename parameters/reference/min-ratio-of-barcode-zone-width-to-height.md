@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for MinRatioOfBarcodeZoneWidthToHeight
+title: MinRatioOfBarcodeZoneWidthToHeight - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for MinRatioOfBarcodeZoneWidthToHeight.
 keywords: MinRatioOfBarcodeZoneWidthToHeight, parameter reference, parameter
 needAutoGenerateSidebar: true

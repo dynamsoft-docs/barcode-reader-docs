@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for BarcodeZoneMinDistanceToImageBorders
+title: BarcodeZoneMinDistanceToImageBorders - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for BarcodeZoneMinDistanceToImageBorders.
 keywords: BarcodeZoneMinDistanceToImageBorders, parameter reference, parameter
 needAutoGenerateSidebar: true

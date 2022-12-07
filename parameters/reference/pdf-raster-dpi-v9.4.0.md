@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for PDFRasterDPI
+title: PDFRasterDPI - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for PDFRasterDPI.
 keywords: PDFRasterDPI, parameter reference, parameter
 needAutoGenerateSidebar: true

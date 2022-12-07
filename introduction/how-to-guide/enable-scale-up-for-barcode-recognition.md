@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader How-to Guides - Enable Scale Up for Barcode Recognition
+title: Enable Scale Up for Barcode Recognition - Dynamsoft Barcode Reader How-to Guides
 description: This page shows how to enable scale up for barcode recognition.
 keywords: scale up, small image decode, ScaleUpModes, how-to guides
 needAutoGenerateSidebar: false

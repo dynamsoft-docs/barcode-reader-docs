@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for PDFReadingMode
+title: PDFReadingMode - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for PDFReadingMode.
 keywords: PDFReadingMode, parameter reference, parameter
 needAutoGenerateSidebar: true

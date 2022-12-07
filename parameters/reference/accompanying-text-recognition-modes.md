@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for ImageParameter Object - AccompanyingTextRecognitionModes
+title: ImageParameter Object - AccompanyingTextRecognitionModes - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for ImageParameter Object - AccompanyingTextRecognitionModes.
 keywords: AccompanyingTextRecognitionModes, ImageParameter, image process control parameters, parameter reference, parameter
 needAutoGenerateSidebar: true

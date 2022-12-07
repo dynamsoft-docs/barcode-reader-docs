@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader How-to Guides - Filter Out Unwanted Barcode Result
+title: Filter Out Unwanted Barcode Result - Dynamsoft Barcode Reader How-to Guides
 description: This page shows how to filter out unwanted barcode results.
 keywords: filter, decode result, barcode confidence, result length, how-to guides
 needAutoGenerateSidebar: false
