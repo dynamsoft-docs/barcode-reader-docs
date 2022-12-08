@@ -55,37 +55,7 @@ Dynamsoft.DBR.BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9'
 })();
 ```
 >
-```java
-NOT SURE JAVA-ANDROID
-```
->
-```objc
-NOT SURE OBJC
-```
->
-```swift
-NOT SURE SWIFT
-```
->
-```python
-NOT SURE PYTHON
-```
->
-```java
-NOT SURE JAVA
-```
->
-```c#
-NOT SURE C#
-```
->
-```c++
-NOT SURE C++
-```
->
-```c
-NOT SURE C
-```
+
 
 Now we have the original encoded data (`rawString`), the next step is to parse it to extract useful information.
 
@@ -125,37 +95,7 @@ Dynamsoft.DCP.CodeParser.license ='DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
 })();
 </script>
 ```
->
-```java
-NOT SURE JAVA-ANDROID
-```
->
-```objc
-NOT SURE OBJC
-```
->
-```swift
-NOT SURE SWIFT
-```
->
-```python
-NOT SURE PYTHON
-```
->
-```java
-NOT SURE JAVA
-```
->
-```c#
-NOT SURE C#
-```
->
-```c++
-NOT SURE C++
-```
->```c
-NOT SURE C
-```
+
 
 > If you are using the JavaScript edition, also check out:
 >
