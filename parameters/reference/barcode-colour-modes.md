@@ -138,7 +138,7 @@ Setting more modes along with different arguments may improve the Read Rate.
 - [LibraryParameters](#libraryparameters)
  
 ### LightReflection 
-Sets if there is light reflection on the barocde zone.
+Sets if there is light reflection on the barcode zone.
 
 | Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | --------- |
