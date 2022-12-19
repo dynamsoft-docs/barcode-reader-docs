@@ -19,7 +19,8 @@ permalink: /release-notes/index.html
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 9.6.0 | [C]({{ site.c_release_notes}}c-9.html#960-11292022) / [C++]({{ site.cpp_release_notes}}cpp-9.html#960-11292022) / [DotNet]({{ site.dotnet_release_notes }}dotnet-9.html#960-11292022) / [Java]({{ site.java_release_notes }}java-9.html#960-11292022) / [Python]({{ site.python_release_notes }}python-9.html#960-11292022) / [Android]({{ site.android_release_notes }}android-9.html#960-12132022) / [iOS]({{ site.oc_release_notes }}ios-9.html#960-12132022) |
+| 9.6.1 | [JavaScript]({{ site.js }}release-notes/js-9.html#961-12192022) |
+| 9.6.0 | [JavaScript]({{ site.js }}release-notes/js-9.html#960-12132022) / [C]({{ site.c_release_notes}}c-9.html#960-11292022) / [C++]({{ site.cpp_release_notes}}cpp-9.html#960-11292022) / [DotNet]({{ site.dotnet_release_notes }}dotnet-9.html#960-11292022) / [Java]({{ site.java_release_notes }}java-9.html#960-11292022) / [Python]({{ site.python_release_notes }}python-9.html#960-11292022) / [Android]({{ site.android_release_notes }}android-9.html#960-12132022) / [iOS]({{ site.oc_release_notes }}ios-9.html#960-12132022) |
 
 ## 9.4
 

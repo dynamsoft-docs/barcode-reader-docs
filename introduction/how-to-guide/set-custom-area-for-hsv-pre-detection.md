@@ -37,7 +37,7 @@ reader.SetModeArgument("regionPredetectionModes", 0, "ForeAndBackgroundColours",
 // "[0,-1,5]" - define red colour zone as ROI
 reader.SetModeArgument("regionPredetectionModes", 0, "HeightRange", "[300,400]", errorMessage, 256);
 reader.SetModeArgument("regionPredetectionModes", 0, "WidthRange", "[600,700]", errorMessage, 256);
-reader.SetModeArgument("regionPredetectionModes", 0, "AspectRatioRange", "[0.1,1]", errorMessage, 256);
+reader.SetModeArgument("regionPredetectionModes", 0, "AspectRatioRange", "[25,100]", errorMessage, 256);
 // invoke decode method...
 ```  
 
