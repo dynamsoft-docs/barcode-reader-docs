@@ -17,7 +17,7 @@ permalink: /parameters/reference/verify-check-digit.html
 
 **Remarks**     
 - 0: Do not verify the check digit.
-- 1: Verify the check digit and if it does not match, no result will not be returned. Do not set this parameter to 1 for barcodes without an optional check digit.
+- 1: Verify the check digit and if it does not match, no result will be returned. Do not set this parameter to 1 for barcodes without an optional check digit.
 - It is valid only for Code 11.
 
     
