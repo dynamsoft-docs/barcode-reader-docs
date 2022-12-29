@@ -12,10 +12,6 @@ permalink: /parameters/reference/module-size-range-array.html
 # ModuleSizeRangeArray 
 
 `ModuleSizeRangeArray` defines the range of module size (in pixels) while barcode searching and result filtering. It is not set by default which means there is no limitation on the barcode module size.
-
-| Value Type | Value Range | Default Value | Template Structure Type |
-| ---------- | ----------- | ------------- | ----------------------- |
-| *int* | [0, 100] | 30 | `FormatSpecification` |
     
 ## Setting Methods
 `ModuleSizeRangeArray` can be set via JSON template.
@@ -25,12 +21,12 @@ permalink: /parameters/reference/module-size-range-array.html
 
 | Key Name | Key Value |
 | -------- | --------- |
-| ModuleSizeRangeArray | a JSON Object defined as below |
+| ModuleSizeRangeArray | A JSON Object array while each Object is defined as below. |
 
 | Key Name | Key Value | Description |
 | -------- | --------- | ----------- |
-| MinValue | A number from [0, 360] | Sets the minimum barcode module size.  |
-| MaxValue | A number from [0, 360] | Sets the maximum barcode module size. |
+| MinValue | A number from [0, 0x7fffffff] | Sets the minimum barcode module size.  |
+| MaxValue | A number from [0, 0x7fffffff] | Sets the maximum barcode module size. |
 
 
 **JSON Example**   

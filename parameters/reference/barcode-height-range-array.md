@@ -13,10 +13,6 @@ permalink: /parameters/reference/barcode-height-range-array.html
 
 `BarcodeHeightRangeArray` defines the range of heights (in pixels) for barcodes searching and result filtering. It is not set by default which means there is no limitation on the barcode heights.
 
-| Value Type | Value Range | Default Value | Template Structure Type |
-| ---------- | ----------- | ------------- | ----------------------- |
-| *int* | [0, 0x7fffffff] | `null` | `FormatSpecification` |
-
 ## Setting Methods
 `BarcodeHeightRangeArray` can be set via JSON template.
 
