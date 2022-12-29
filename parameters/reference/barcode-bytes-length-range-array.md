@@ -13,10 +13,6 @@ permalink: /parameters/reference/barcode-bytes-length-range-array.html
 
 `BarcodeBytesLengthRangeArray` defines the range of barcode bytes length for barcodes searching and result filtering. It is not set by default which means there is no limitation on the barcode byte length.
 
-| Value Type | Value Range | Default Value | Template Structure Type |
-| ---------- | ----------- | ------------- | ----------------------- |
-| *int* | [0, 0x7fffffff] | N/A | `FormatSpecification` |
-
     
 ## Setting Methods
 `BarcodeBytesLengthRangeArray` can be set via JSON template.
