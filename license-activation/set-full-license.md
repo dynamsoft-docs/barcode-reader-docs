@@ -50,9 +50,9 @@ If you have other new licenses, you can follow the same steps to activate them.
 
 > A license usually expires one year after it is activated. Do not activate the license until you actually need to use it.
 
-## Configure the license (optional)
+## Configure the license by projects (optional)
 
-To configure the License Key, you can click the project name (found after "Linked Project Name") on the license details page to get to the configuration page. Read <a href ="https://www.dynamsoft.com/license-server/docs/common/project.html?utm_source=docs&product=dbr" target="_blank">how to manage the project</a> for more information.
+If you have multiple projects which you want to manage the license usage separately, you can click the project name (found after "Linked Project Name") on the license details page to get to the configuration page. Read <a href ="https://www.dynamsoft.com/license-server/docs/common/project.html?utm_source=docs&product=dbr" target="_blank">how to manage the project</a> for more information.
 
 ## Set the license in the code
 
