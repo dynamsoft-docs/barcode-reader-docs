@@ -66,11 +66,6 @@ public void textResultCallback(int id, ImageData imageData, TextResult[] textRes
 ```objc
 - (void)textResultCallback:(NSInteger)frameId imageData:(iImageData *)imageData results:(NSArray<iTextResult *> *)results{
     if (results) {
-        [_barcodeReader stopScanning];
-        [DCEFeedback vibrate];
-        //[DCEFeedback beep];
-        NSString *title = @"Results";
-        NSString *msgText = @"";
         for (NSInteger i = 0; i< [results count]; i++) {
             // Check whether the barcode is a GS1 DataMatrix or GS1 128
             const unsigned char* barcodeByteChar = results[i].barcodeBytes.bytes;
@@ -96,8 +91,6 @@ public void textResultCallback(int id, ImageData imageData, TextResult[] textRes
 ```swift
 func textResultCallback(_ frameId: Int, imageData: iImageData, results: [iTextResult]?) {
     if (results != nil){
-        var msgText:String = ""
-        let title:String = "Results"
         for item in results! {
             // Check whether the barcode result is a GS1 128 or GS1 DataMatrix barcode.
             if ((item.barcodeFormat == EnumBarcodeFormat.CODE128 || item.barcodeFormat == EnumBarcodeFormat.DATAMATRIX) && item.barcodeBytes?[0] == 29){
