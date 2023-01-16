@@ -17,9 +17,11 @@ Typically, DBR JS reads barcodes directly from video frames. Finding and aiming 
 
 The `BarcodeScanner` class of DBR JS comes with a built-in UI which consists of the following elements:
 
-* An `HTMLVideoElement` that plays the video stream from the camera and allows the SDK to manipulate the video object (in our case, the camera)
-* A laser-like moving `HTMLDivElement` that indicates that the SDK is scanning a certain area of the image for barcodes
-* Two built-in `HTMLSelectElement`s that offer the options to change the camera or change the resolution of the current camera
+* An `HTMLVideoElement` that plays the video stream from the camera and allows the SDK to manipulate the video object (in our case, the camera) - class name is `dce-video-container`.
+* A laser-like moving `HTMLDivElement` that indicates that the SDK is scanning a certain area of the image for barcodes - class name is `dce-scanlight`.
+* A dropdown `HTMLSelectElement` box for selecting the camera - class name is `dce-sel-camera`.
+* A dropdown `HTMLSelectElement` box for specifying the camera resolution - class name is `dce-sel-resolution`.
+* A close button `HTMLButtonElement` that is used to close the video stream - class name is `dce-btn-close`.
 * An `HTMLCanvasElement` on top of the video stream which is used to highlight the location of found barcodes and show other information if required
 * Other assisting elements
 
