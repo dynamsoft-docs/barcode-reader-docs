@@ -116,6 +116,7 @@ delete pSettings;
 | Mode | Any one in Candidate Mode List as string | (Required) Specifies a mode for deformation resisting.  |
 | ScanStride | A number from value range of ScanStride | (Optional) Sets the Argument [ScanStride](#scanstride). |
 | ScanDirection | A number from value range of ScanDirection | (Optional) Sets the Argument [ScanDirection](#scandirection). |
+| ConfidenceThreshold | A number from value range of ConfidenceThreshold | (Optional) Sets the Argument [ConfidenceThreshold](#confidencethreshold). |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
 | LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
 
