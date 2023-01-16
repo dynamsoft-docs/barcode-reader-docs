@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: How to ?
+title: How to Remove GS1 Symbols?
 keywords: Dynamsoft Barcode Reader, FAQ, tech basic, enable DPM
 description:
 needAutoGenerateSidebar: false
@@ -15,6 +15,7 @@ It is known that when the barcode complies with the GS1 standard, the first elem
 
 You can use the following code to find all GS1 symbols and remove them from the `barcodeByte`:
 
+<!--
 <div class="sample-code-prefix template2"></div>
    >- JavaScript
    >- Android
@@ -27,8 +28,13 @@ You can use the following code to find all GS1 symbols and remove them from the 
    >- C
    >
 >
-```javascript
-```
+-->
+
+<div class="sample-code-prefix template2"></div>
+   >- Android
+   >- Objective-C
+   >- Swift
+   >
 >
 ```java
 public void textResultCallback(int id, ImageData imageData, TextResult[] textResults) {
@@ -117,19 +123,4 @@ func textResultCallback(_ frameId: Int, imageData: iImageData, results: [iTextRe
         return
     }
 }
-```
->
-```python
-```
->
-```java
-```
->
-```csharp
-```
->
-```c++
-```
->
-```c
 ```
