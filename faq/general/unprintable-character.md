@@ -86,6 +86,13 @@ public class ProcessBarcodeResultUtil {
 ```
 >
 ```objc
+typedef NS_ENUM(NSInteger,EnumResultProcessMode)
+{
+    RPM_KEEP = 0,
+    RPM_CONVERT = 1,
+    RPM_REMOVE = 2
+};
+...
 @property(nonatomic, strong) NSMapTable<NSNumber*,NSString *> *charValueToStringDict;
 @property(nonatomic, strong) NSArray<NSNumber*>* nonPrintingAsciiCharsKey;
 @property(nonatomic, strong) NSArray<NSString*>* nonPrintingAsciiCharsString;
@@ -93,8 +100,8 @@ public class ProcessBarcodeResultUtil {
 - (void)textResultCallback:(NSInteger)frameId imageData:(iImageData *)imageData results:(NSArray<iTextResult *> *)results{
     if (results) {
         for (NSInteger i = 0; i< [results count]; i++) {
-            // Check whether the barcode is a GS1 DataMatrix or GS1 128
-            const unsigned char* barcodeByteChar = results[i].barcodeBytes.bytes;
+            results[i].barcodeText = [self processResult:results[i].barcodeBytes mode:RPM_CONVERT isBreaklineKept:false];
+            msgText = [msgText stringByAppendingString:[NSString stringWithFormat:@"\nFormat: %@\nText: %@\n", results[i].barcodeFormatString, results[i].barcodeText]];
             }
         }
     }
@@ -115,7 +122,6 @@ public class ProcessBarcodeResultUtil {
             printf("True, Barcode byte char = %i%s", (int)barcodeByteChar[i], "\n\n");
             NSString *nextString = [NSString stringWithFormat:@"%c",barcodeByteChar[i]];
             processedText = [processedText stringByAppendingString:nextString];
-            //NSLog(@"Next String1 = %@%@", processedText, @"\n\n");
         }
         else if (mode == RPM_CONVERT){
             printf("False, Barcode byte char = %i%s", (int)barcodeByteChar[i],"\n\n");
@@ -123,7 +129,6 @@ public class ProcessBarcodeResultUtil {
             NSLog(@"Key = %@", keyValue);
             NSString *nextString = [_charValueToStringDict objectForKey:@2];
             processedText = [processedText stringByAppendingString:nextString];
-            //NSLog(@"Next String2 = %@%@", nextString, @"\n\n");
         }
     }
     return processedText;
@@ -131,6 +136,11 @@ public class ProcessBarcodeResultUtil {
 ```
 >
 ```swift
+enum EnumResultProcessMode{
+    case keep
+    case convert
+    case remove
+}
 func textResultCallback(_ frameId: Int, imageData: iImageData, results: [iTextResult]?) {
     if (results != nil){
         for item in results! {
