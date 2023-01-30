@@ -43,4 +43,4 @@ permalink: /faq/general/index.html
 
 17. [How does your SDK compare to other commercial SDKs?](competitors-comparison.html)
 
-18. [How to Handle Unprintable Characters Like "\u{1D}" or "{GS}" from the Barcode Text?](unprintable-character.md)
+18. [How to Handle Non-printable Characters Like "\u{1D}" or "{GS}" from the Barcode Text?](unprintable-character.md)
