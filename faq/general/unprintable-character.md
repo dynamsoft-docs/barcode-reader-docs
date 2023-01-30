@@ -168,25 +168,20 @@ typedef NS_ENUM(NSInteger,EnumResultProcessMode)
     RPM_REMOVE = 2
 };
 ...
-@property(nonatomic, strong) NSMapTable<NSNumber*,NSString *> *charValueToStringDict;
-@property(nonatomic, strong) NSArray<NSNumber*>* nonPrintingAsciiCharsKey;
-@property(nonatomic, strong) NSArray<NSString*>* nonPrintingAsciiCharsString;
-...
 - (void)textResultCallback:(NSInteger)frameId imageData:(iImageData *)imageData results:(NSArray<iTextResult *> *)results{
     if (results) {
         for (NSInteger i = 0; i< [results count]; i++) {
             results[i].barcodeText = [self processResult:results[i].barcodeBytes mode:RPM_CONVERT isBreaklineKept:false];
             msgText = [msgText stringByAppendingString:[NSString stringWithFormat:@"\nFormat: %@\nText: %@\n", results[i].barcodeFormatString, results[i].barcodeText]];
-            }
         }
     }
 }
 - (NSString *)processBarcodeBytes:(NSData *)byte
                      mode:(EnumResultProcessMode)mode
-          isBreaklineKept:(bool)isKept{
-    _nonPrintingAsciiCharsKey = @[@0,@1,@2,@3,@4,@5,@6,@7,@8,@9,@10,@11,@12,@13,@14,@15,@16,@17,@18,@19,@20,@21,@22,@23,@24,@25,@26,@27,@28,@29,@30,@31,@127];
-    _nonPrintingAsciiCharsString = @[@"{NUL}",@"{SOH}",@"{STX}",@"{ETX}",@"{EOT}",@"{ENQ}",@"{ACK}",@"{BEL}",@"{BS}",@"{HT}",@"{LF}",@"{VT}",@"{FF}",@"{CR}",@"{SO}",@"{SI}",@"{DLE}",@"{DC1}",@"{DC2}",@"{DC3}",@"{DC4}",@"{NAK}",@"{SYN}",@"{ETB}",@"{CAN}",@"{EM}",@"{SUB}",@"{ESC}",@"{FS}",@"{GS}",@"{RS}",@"{US}",@"{DEL}"];
-    _charValueToStringDict = [NSMapTable strongToStrongObjectsMapTable];
+          isBreaklineKept:(BOOL)isKept{
+    NSArray<NSNumber*>* _nonPrintingAsciiCharsKey = @[@0,@1,@2,@3,@4,@5,@6,@7,@8,@9,@10,@11,@12,@13,@14,@15,@16,@17,@18,@19,@20,@21,@22,@23,@24,@25,@26,@27,@28,@29,@30,@31,@127];
+    NSArray<NSString*>* _nonPrintingAsciiCharsString = @[@"{NUL}",@"{SOH}",@"{STX}",@"{ETX}",@"{EOT}",@"{ENQ}",@"{ACK}",@"{BEL}",@"{BS}",@"{HT}",@"{LF}",@"{VT}",@"{FF}",@"{CR}",@"{SO}",@"{SI}",@"{DLE}",@"{DC1}",@"{DC2}",@"{DC3}",@"{DC4}",@"{NAK}",@"{SYN}",@"{ETB}",@"{CAN}",@"{EM}",@"{SUB}",@"{ESC}",@"{FS}",@"{GS}",@"{RS}",@"{US}",@"{DEL}"];
+    NSMapTable<NSNumber*,NSString *> * _charValueToStringDict = [NSMapTable strongToStrongObjectsMapTable];
     for (int i=0; i<_nonPrintingAsciiCharsKey.count;i++){
         [_charValueToStringDict setObject:_nonPrintingAsciiCharsString[i] forKey:_nonPrintingAsciiCharsKey[i]];
     }
@@ -194,14 +189,11 @@ typedef NS_ENUM(NSInteger,EnumResultProcessMode)
     NSString *processedText = @"";
     for (int i=0;i<byte.length;i++){
         if ((isKept && (barcodeByteChar[i]==10 || barcodeByteChar[i]==13)) || mode==RPM_KEEP || ((int)barcodeByteChar[i]>31 && (int)barcodeByteChar[i]!=127 && (int)barcodeByteChar[i]!=0)){
-            printf("True, Barcode byte char = %i%s", (int)barcodeByteChar[i], "\n\n");
             NSString *nextString = [NSString stringWithFormat:@"%c",barcodeByteChar[i]];
             processedText = [processedText stringByAppendingString:nextString];
         }
         else if (mode == RPM_CONVERT){
-            printf("False, Barcode byte char = %i%s", (int)barcodeByteChar[i],"\n\n");
             NSNumber *keyValue = [[NSNumber alloc] initWithInt:(int)barcodeByteChar[i]];
-            NSLog(@"Key = %@", keyValue);
             NSString *nextString = [_charValueToStringDict objectForKey:@2];
             processedText = [processedText stringByAppendingString:nextString];
         }
