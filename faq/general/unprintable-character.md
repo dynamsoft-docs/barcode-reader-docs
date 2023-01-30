@@ -29,10 +29,86 @@ Since `barcodeText` is a string value that generated from the `barcodeBytes`, is
    >- Java
    >- C#
    >- C++
-   >- C
    >
 >
 ```javascript
+const ProcessNonPrintingCharsMode = {
+  PNPCM_KEEP: 0,
+  PNPCM_REMOVE: 1,
+  PNPCM_CONVERT: 2};
+class ProcessBarcodeBytesUtil {
+  #__non_printing_ascii_chars_value_to_string_dict = new Map([
+    [0, '{NUL}'],
+    [1, '{SOH}'],
+    [2, '{STX}'],
+    [3, '{ETX}'],
+    [4, '{EOT}'],
+    [5, '{ENQ}'],
+    [6, '{ACK}'],
+    [7, '{BEL}'],
+    [8, '{BS}'],
+    [9, '{HT}'],
+    [10, '{LF}'],
+    [11, '{VT}'],
+    [12, '{FF}'],
+    [13, '{CR}'],
+    [14, '{SO}'],
+    [15, '{SI}'],
+    [16, '{DLE}'],
+    [17, '{DC1}'],
+    [18, '{DC2}'],
+    [19, '{DC3}'],
+    [20, '{DC4}'],
+    [21, '{NAK}'],
+    [22, '{SYN}'],
+    [23, '{ETB}'],
+    [24, '{CAN}'],
+    [25, '{EM}'],
+    [26, '{SUB}'],
+    [27, '{ESC}'],
+    [28, '{FS}'],
+    [29, '{GS}'],
+    [30, '{RS}'],
+    [31, '{US}'],
+    [127, '{DEL}']
+  ])
+  process_barcode_bytes(bytes, mode, keepLineBreak = true) {
+    // Process the non-printing chars of barcode bytes to obtain desired text.
+    // Parameters
+    // ----------
+    // bytes : bytearray
+    //    The barcode content in a byte array.
+    // mode : ProcessNonPrintingCharsMode
+    //    The mode indicates how to processing non-printing chars.
+    // keepLineBreak : bool
+    //    The flag indicates whether to preserve the original line breaks in the resulting text. It is only valid when mode is PNPCM_REMOVE or PNPCM_CONVERT.
+    // Returns
+    // -------
+    // result : str
+    //    Returns The text result after processing barcode bytes.
+    let result = "";
+    for (let _byte in bytes) {
+      if (this.#__non_printing_ascii_chars_value_to_string_dict.has(_byte) || mode == ProcessNonPrintingCharsMode.PNPCM_KEEP || keepLineBreak && (_byte == 10 || _byte == 13)) {
+        result += String.fromCharCode(_byte);
+      } else if (mode == ProcessNonPrintingCharsMode.PNPCM_CONVERT) {
+        result += this.#__non_printing_ascii_chars_value_to_string_dict.get(_byte);
+      }
+    }
+    return result;
+  }
+}
+let barcode_bytes = text_result.barcode_bytes;
+let util = new ProcessBarcodeBytesUtil();
+let origin_str = util.process_barcode_bytes(barcode_bytes, ProcessNonPrintingCharsMode.PNPCM_KEEP);
+console.log('original text:\n' + origin_str);
+let removed_str = util.process_barcode_bytes(barcode_bytes, ProcessNonPrintingCharsMode.PNPCM_REMOVE);
+console.log('2.text after removing non-printing chars except line break:\n' + removed_str);
+let removed_str2 = util.process_barcode_bytes(barcode_bytes, ProcessNonPrintingCharsMode.PNPCM_REMOVE, false);
+console.log('3.text after removing non-printing chars:\n' + removed_str2);
+let converted_str = util.process_barcode_bytes(barcode_bytes, ProcessNonPrintingCharsMode.PNPCM_CONVERT);
+console.log('4.text after converting non-printing chars except line break:\n' + converted_str);
+let converted_str2 = util.process_barcode_bytes(barcode_bytes, ProcessNonPrintingCharsMode.PNPCM_CONVERT, false);
+console.log('5.text after converting non-printing chars:\n' + converted_str2);
 ```
 >
 ```java
@@ -411,7 +487,4 @@ int main()
     std::cout << "5.text after converting non-printing chars:" << std::endl << strAfterConvert << std::endl << std::endl;
     return 0;
 }
-```
->
-```c
 ```
