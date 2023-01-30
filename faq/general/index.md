@@ -42,3 +42,5 @@ permalink: /faq/general/index.html
 16. [How to ensure that a device does not overuse its allotted number of instances?](ensure-no-overuse.html)
 
 17. [How does your SDK compare to other commercial SDKs?](competitors-comparison.html)
+
+18. [How to Handle Non-printable Characters Like "\u{1D}" or "{GS}" from the Barcode Text?](unprintable-character.md)
