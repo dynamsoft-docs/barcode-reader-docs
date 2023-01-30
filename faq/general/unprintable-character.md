@@ -7,16 +7,16 @@ needAutoGenerateSidebar: false
 permalink: /faq/general/unprintable-character.html
 ---
 
-# How to Handle Unprintable Characters Like "\u{1D}" or "{GS}" from the Barcode Text?
+# How to Handle Non-printable Characters Like "\u{1D}" or "{GS}" from the Barcode Text?
 
-This page helps to you modify the barcode results when unreadable characters exists in the barcode text you decoded.
+This page helps to you modify the barcode results when non-printable characters exists in the barcode text you decoded.
 
 You always get 2 values that stands for the barcode decoding result from the `textResult` object:
 
-- `barcodeByte`
+- `barcodeBytes`
 - `barcodeText`
 
-Since `barcodeText` is a string value that generated from the `barcodeByte`, is might be decoded into different characters based on different character encoding formats. When there exists a non-printable ASCII value (0 ~ 31 or 127) in the `barcodeByte` array, the value is decoded into a unreadable character. Currently, the library doesn't provide methods to remove the unreadable characters nor convert them into readable characters, you have to add your own code to recognize the non-printable values and replace or remove them. The following code snippet is an example for how to create a method for processing the `barcodeByte` into a string you want.
+Since `barcodeText` is a string value that generated from the `barcodeBytes`, is might be decoded into different characters based on different character encoding formats. When there exists a non-printable ASCII value (0 ~ 31 or 127) in the `barcodeBytes` array, the value is decoded into a messy code. Currently, the library doesn't provide methods to remove the non-printable characters nor convert them into printable characters, you have to add your own code to recognize the non-printable characters and replace or remove them. The following code snippet is an example for how to create a method for processing the `barcodeBytes` into a string you want.
 
 **Code Snippet**
 
@@ -51,7 +51,6 @@ mReader.setTextResultListener(new TextResultListener() {
     }
 }
 // Create a ProcessBarcodeResultUtil class
-import java.util.HashMap;
 public class ProcessBarcodeResultUtil {
     enum ProcessNonPrintingCharsMode{
         PNPCM_KEEP,
@@ -147,8 +146,6 @@ func textResultCallback(_ frameId: Int, imageData: iImageData, results: [iTextRe
             let processedBarcodeText = processBarcodeBytes(byte: item.barcodeBytes!, processMode: EnumResultProcessMode.convert, isKeep: true)
             item.barcodeText = processedBarcodeText
         }
-    }else{
-        return
     }
 }
 private func processBarcodeBytes(byte:Data, processMode:EnumResultProcessMode, isKeep:Bool) -> String{
@@ -222,7 +219,6 @@ if __name__ == '__main__':
 ```
 >
 ```java
-import java.util.HashMap;
 public class ProcessBarcodeBytesUtil {
     enum ProcessNonPrintingCharsMode
     {
@@ -264,16 +260,6 @@ public class ProcessBarcodeBytesUtil {
         return result.toString();
     }
     public static void main(String[] args) throws InterruptedException {
-        String s0 = util.processBarcodeBytes(testBytes, ProcessNonPrintingCharsMode.PNPCM_KEEP, true);
-        String s1 = util.processBarcodeBytes(testBytes, ProcessNonPrintingCharsMode.PNPCM_REMOVE, true);
-        String s2 = util.processBarcodeBytes(testBytes, ProcessNonPrintingCharsMode.PNPCM_REMOVE, false);
-        String s3 = util.processBarcodeBytes(testBytes, ProcessNonPrintingCharsMode.PNPCM_CONVERT, true);
-        String s4 = util.processBarcodeBytes(testBytes, ProcessNonPrintingCharsMode.PNPCM_CONVERT, false);
-        System.out.println("0:\n" + s0);
-        System.out.println("\n1:\n" + s1);
-        System.out.println("\n2:\n" + s2);
-        System.out.println("\n3:\n" + s3);
-        System.out.println("\n4:\n" + s4);
         byte[] barcodeBytes = textResult.barcodeBytes;
         ProcessBarcodeBytesUtil util = new ProcessBarcodeBytesUtil();
         String s0 = util.ProcessBarcodeBytes(barcodeBytes, ProcessNonPrintingCharsMode.PNPCM_KEEP, true);
@@ -281,11 +267,11 @@ public class ProcessBarcodeBytesUtil {
         String s2 = util.ProcessBarcodeBytes(barcodeBytes, ProcessNonPrintingCharsMode.PNPCM_REMOVE, false);
         String s3 = util.ProcessBarcodeBytes(barcodeBytes, ProcessNonPrintingCharsMode.PNPCM_CONVERT, true);
         String s4 = util.ProcessBarcodeBytes(barcodeBytes, ProcessNonPrintingCharsMode.PNPCM_CONVERT, false);
-        Console.WriteLine("1.original text:\n" + s0);
-        Console.WriteLine("\n2.text after removing non-printing chars except line break:\n" + s1);
-        Console.WriteLine("\n3.text after removing non-printing chars:\n" + s2);
-        Console.WriteLine("\n4.text after converting non-printing chars except line break:\n" + s3);
-        Console.WriteLine("\n5.text after converting non-printing chars:\n" + s4);
+        System.out.println("1.original text:\n" + s0);
+        System.out.println("\n2.text after removing non-printing chars except line break:\n" + s1);
+        System.out.println("\n3.text after removing non-printing chars:\n" + s2);
+        System.out.println("\n4.text after converting non-printing chars except line break:\n" + s3);
+        System.out.println("\n5.text after converting non-printing chars:\n" + s4);
     }
 }
 ```
