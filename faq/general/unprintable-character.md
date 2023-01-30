@@ -171,7 +171,7 @@ typedef NS_ENUM(NSInteger,EnumResultProcessMode)
 - (void)textResultCallback:(NSInteger)frameId imageData:(iImageData *)imageData results:(NSArray<iTextResult *> *)results{
     if (results) {
         for (NSInteger i = 0; i< [results count]; i++) {
-            results[i].barcodeText = [self processResult:results[i].barcodeBytes mode:RPM_CONVERT isBreaklineKept:false];
+            results[i].barcodeText = [self processResult:results[i].barcodeBytes mode:RPM_CONVERT isBreaklineKept:NO];
             msgText = [msgText stringByAppendingString:[NSString stringWithFormat:@"\nFormat: %@\nText: %@\n", results[i].barcodeFormatString, results[i].barcodeText]];
         }
     }
