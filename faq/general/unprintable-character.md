@@ -4,10 +4,10 @@ title: How to ?
 keywords: Dynamsoft Barcode Reader, FAQ, tech basic, enable DPM
 description:
 needAutoGenerateSidebar: false
-permalink: /faq/general/gs1-result-output.html
+permalink: /faq/general/unprintable-character.html
 ---
 
-# How to Remove Unreadable Characters Like "\u{1D}" or "{GS}" from the Barcode Text?
+# How to Handle Unprintable Characters Like "\u{1D}" or "{GS}" from the Barcode Text?
 
 This page helps to you modify the barcode results when unreadable characters exists in the barcode text you decoded.
 
