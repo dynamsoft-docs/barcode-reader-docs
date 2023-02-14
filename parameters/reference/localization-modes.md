@@ -194,7 +194,7 @@ Sets the confidence threshold.
 | *int* | [0, 100] | 60 | LM_ONED_FAST_SCAN |         
 
 **Remarks**         
-  - The localization result will be discarded if its conficence is less then the threshold.  
+  - The localization result will be discarded if its confidence is less then the threshold.  
 
 ### IsOneDStacked 
 Sets whether the oned barcodes are stacked.
