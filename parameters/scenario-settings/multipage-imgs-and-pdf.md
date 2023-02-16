@@ -13,7 +13,7 @@ For multi-page TIF and PDF files, DBR provides the parameter [`Pages`]({{ site.p
 
 ## Specify the page number to be processed
 
-When DBR is processing multi-page files (TIF or PDF), you can use the parameter [`Pages`]({{ site.parameters_reference }}image-parameter/image-process-control.html#pages) to specify the specific page or range of pages to be processed. This parameter can be used to specify one or more page index values, starting from 0. The default value is "", which means all pages.
+When DBR is processing multi-page files (TIF or PDF), you can use the parameter [`Pages`]({{ site.parameters_reference }}pages.html) to specify the specific page or range of pages to be processed. This parameter can be used to specify one or more page index values, starting from 0. The default value is "", which means all pages.
 
 [`Pages`]({{ site.parameters_reference }}pages.html)can be set by one or more of the following data, separated by commas:
 - An integer index value, representing a specific page;
