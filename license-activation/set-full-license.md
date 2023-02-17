@@ -74,66 +74,66 @@ let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 ```
 2. 
 ```c
-  int errorCode = 0;
-  char errorBuf[512];
-  errorCode = DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
-  if (errorCode != DBR_OK)
-  {
-      // Add your code for license error processing;
-  }
-  // ...
-  void* dbr = DBR_CreateInstance(); // Change to void* dbr = DBR_GetInstance(); if you are using a *concurrent instance license*
-  if(dbr != NULL)
-  {
-      // Add your code here to call decoding method, process barcode results and so on
-      // ...
-      // Release the allocated resources for the instance
-      DBR_DestroyInstance(dbr); // Change to DBR_RecycleInstance(dbr); if you are using a *concurrent instance license*
-  }
+int errorCode = 0;
+char errorBuf[512];
+errorCode = DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+if (errorCode != DBR_OK)
+{
+    // Add your code for license error processing;
+}
+// ...
+void* dbr = DBR_CreateInstance(); // Change to "void* dbr = DBR_GetInstance();" if you are using a *concurrent instance license*
+if(dbr != NULL)
+{
+    // Add your code here to call decoding method, process barcode results and so on
+    // ...
+    // Release the allocated resources for the instance
+    DBR_DestroyInstance(dbr); // Change to DBR_RecycleInstance(dbr); if you are using a *concurrent instance license*
+}
 ```
 3. 
 ```cpp
-  int errorCode = 0;
-  char errorBuf[512];
-  errorCode = CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
-  if (errorCode != DBR_OK)
-  {
-      // Add your code for license error processing;
-  }
-  // ...
-  CBarcodeReader* dbr = new CBarcodeReader(); // Change to CBarcodeReader* dbr = CBarcodeReader::GetInstance(); if you are using a *concurrent instance license*
-  if(dbr != NULL)
-  {
-      // Add your code here to call decoding method, process barcode results and so on
-      // ...
-      // Release the allocated resources for the instance
-      delete dbr; // Change to dbr->Recycle(); if you are using a *concurrent instance license*
-  }
+int errorCode = 0;
+char errorBuf[512];
+errorCode = CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+if (errorCode != DBR_OK)
+{
+    // Add your code for license error processing;
+}
+// ...
+CBarcodeReader* dbr = new CBarcodeReader(); // Change to "CBarcodeReader* dbr = CBarcodeReader::GetInstance();" if you are using a *concurrent instancelicense*
+if(dbr != NULL)
+{
+    // Add your code here to call decoding method, process barcode results and so on
+    // ...
+    // Release the allocated resources for the instance
+    delete dbr; // Change to dbr->Recycle(); if you are using a *concurrent instance license*
+}
 ```
 4. 
 ```csharp
-  string errorMsg;
-  EnumErrorCode errorCode = BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
-  if (errorCode != EnumErrorCode.DBR_SUCCESS)
-  {
-      // Add your code for license error processing;
-  }
-  // ...
-  BarcodeReader reader = new BarcodeReader(); // Change to BarcodeReader reader = BarcodeReader.GetInstance(); if you are using a *concurrent instance license*
-  if (reader != null)
-  {
-      // Add your code here to call decoding method, process barcode results and so on
-      // ...
-      // Release the allocated resources for the instance
-      reader.Dispose(); // Change to reader.Recycle(); if you are using a *concurrent instance license*
-  }
+string errorMsg;
+EnumErrorCode errorCode = BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
+if (errorCode != EnumErrorCode.DBR_SUCCESS)
+{
+    // Add your code for license error processing;
+}
+// ...
+BarcodeReader reader = new BarcodeReader(); // Change to "BarcodeReader reader = BarcodeReader.GetInstance();" if you are using a *concurrent instance license*
+if (reader != null)
+{
+    // Add your code here to call decoding method, process barcode results and so on
+    // ...
+    // Release the allocated resources for the instance
+    reader.Dispose(); // Change to reader.Recycle(); if you are using a *concurrent instance license*
+}
 ```
 5. 
 ```java
-  try {
+try {
     BarcodeReader.initLicense("YOUR-LICENSE-KEY");
     // ...
-    BarcodeReader reader = new BarcodeReader(); // Change to BarcodeReader reader = BarcodeReader.getInstance(); if you are using a *concurrent instance license*
+    BarcodeReader reader = new BarcodeReader(); // Change to "BarcodeReader reader = BarcodeReader.getInstance();" if you are using a *concurrent instance license*
     if(reader != null)
     {
         // Add your code here to call decoding method, process barcode results and so on
@@ -141,9 +141,9 @@ let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
         // Release the allocated resources for the instance
         reader.destroy(); // Change to reader.recycle(); if you are using a *concurrent instance license*
     }
-  } catch (BarcodeReaderException ex) {
-      // ...
-  }
+} catch (BarcodeReaderException ex) {
+    // ...
+}
 ```
 6. 
 ```java
@@ -176,7 +176,7 @@ error = BarcodeReader.init_license("YOUR-LICENSE-KEY")
 if error[0] != EnumErrorCode.DBR_OK:
   # Add your code for license error processing
 # ...
-reader = BarcodeReader() # Change to reader = BarcodeReader.get_instance() if you are using a *concurrent instance license*
+reader = BarcodeReader() # Change to "reader = BarcodeReader.get_instance()" if you are using a *concurrent instance license*
 if reader != None:
    # Add your code here to call decoding method, process barcode results and so on
    # ...
