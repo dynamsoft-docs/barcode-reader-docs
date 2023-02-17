@@ -79,7 +79,7 @@ char errorBuf[512];
 errorCode = DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 if (errorCode != DBR_OK)
 {
-    // Add your code for license error processing;
+        // Add your code for license error processing;
 }
 // ...
 void* dbr = DBR_CreateInstance(); // Change to "void* dbr = DBR_GetInstance();" if you are using a *concurrent instance license*
@@ -101,7 +101,7 @@ if (errorCode != DBR_OK)
     // Add your code for license error processing;
 }
 // ...
-CBarcodeReader* dbr = new CBarcodeReader(); // Change to "CBarcodeReader* dbr = CBarcodeReader::GetInstance();" if you are using a *concurrent instancelicense*
+CBarcodeReader* dbr = new CBarcodeReader(); // Change to "CBarcodeReader* dbr = CBarcodeReader::GetInstance();" if you are using a *concurrent instance license*
 if(dbr != NULL)
 {
     // Add your code here to call decoding method, process barcode results and so on
@@ -174,14 +174,14 @@ func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
 ```python
 error = BarcodeReader.init_license("YOUR-LICENSE-KEY")
 if error[0] != EnumErrorCode.DBR_OK:
-  # Add your code for license error processing
+    # Add your code for license error processing
 # ...
 reader = BarcodeReader() # Change to "reader = BarcodeReader.get_instance()" if you are using a *concurrent instance license*
 if reader != None:
-   # Add your code here to call decoding method, process barcode results and so on
-   # ...
-   # Release the allocated resources for the instance
-   del reader # Change to reader.recycle() if you are using a *concurrent instance license*
+    # Add your code here to call decoding method, process barcode results and so on
+    # ...
+    # Release the allocated resources for the instance
+    del reader # Change to reader.recycle() if you are using a *concurrent instance license*
 ```
 
 If you run into any issues, please [contact Dynamsoft Support](https://www.dynamsoft.com/Company/Contact.aspx).
