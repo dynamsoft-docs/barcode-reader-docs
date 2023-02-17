@@ -56,30 +56,30 @@ If you have multiple projects which you want to manage the license usage separat
 
 ## Set the license in the code
 
-<div class="sample-code-prefix"></div>
->- JavaScript
->- C
->- C++
->- C#
->- Java
->- Android
->- Objective-C
->- Swift
->- Python
+<div class="sample-code-prefix template2"></div>
+   >- JavaScript
+   >- C
+   >- C++
+   >- C#
+   >- Java
+   >- Android
+   >- Objective-C
+   >- Swift
+   >- Python
+   >
 >
->1. 
 ```javascript
 Dynamsoft.DBR.BarcodeScanner.license = "YOUR-LICENSE-KEY";
 let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 ```
-2. 
+>
 ```c
 int errorCode = 0;
 char errorBuf[512];
 errorCode = DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
 if (errorCode != DBR_OK)
 {
-        // Add your code for license error processing;
+    // Add your code for license error processing;
 }
 // ...
 void* dbr = DBR_CreateInstance(); // Change to "void* dbr = DBR_GetInstance();" if you are using a *concurrent instance license*
@@ -91,7 +91,7 @@ if(dbr != NULL)
     DBR_DestroyInstance(dbr); // Change to DBR_RecycleInstance(dbr); if you are using a *concurrent instance license*
 }
 ```
-3. 
+>
 ```cpp
 int errorCode = 0;
 char errorBuf[512];
@@ -110,7 +110,7 @@ if(dbr != NULL)
     delete dbr; // Change to dbr->Recycle(); if you are using a *concurrent instance license*
 }
 ```
-4. 
+>
 ```csharp
 string errorMsg;
 EnumErrorCode errorCode = BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
@@ -128,7 +128,7 @@ if (reader != null)
     reader.Dispose(); // Change to reader.Recycle(); if you are using a *concurrent instance license*
 }
 ```
-5. 
+>
 ```java
 try {
     BarcodeReader.initLicense("YOUR-LICENSE-KEY");
@@ -145,7 +145,7 @@ try {
     // ...
 }
 ```
-6. 
+>
 ```java
 BarcodeReader.initLicense("YOUR-LICENSE-KEY", new DBRLicenseVerificationListener() {
   @Override
@@ -154,7 +154,7 @@ BarcodeReader.initLicense("YOUR-LICENSE-KEY", new DBRLicenseVerificationListener
   }
 });
 ```
-7. 
+>
 ```objc
 [DynamsoftBarcodeReader initLicense:@"YOUR-LICENSE-KEY" verificationDelegate:self];
 - (void)DBRLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error
@@ -162,7 +162,7 @@ BarcodeReader.initLicense("YOUR-LICENSE-KEY", new DBRLicenseVerificationListener
   // Add your code for license verification.
 }
 ```
-8. 
+>
 ```swift
 DynamsoftBarcodeReader.initLicense("YOUR-LICENSE-KEY", verificationDelegate: self)
 func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
@@ -170,7 +170,7 @@ func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
   // Add your code for license verification.
 }
 ```
-9. 
+>
 ```python
 error = BarcodeReader.init_license("YOUR-LICENSE-KEY")
 if error[0] != EnumErrorCode.DBR_OK:
