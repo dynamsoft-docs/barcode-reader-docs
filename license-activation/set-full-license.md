@@ -186,7 +186,7 @@ if reader != None:
     del reader
 ```
 
-If you are using a concurrent instance license:
+If you are using a **concurrent instance license**:
 
 <div class="sample-code-prefix template2"></div>
    >- C
