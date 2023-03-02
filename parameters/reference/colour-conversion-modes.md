@@ -11,7 +11,7 @@ permalink: /parameters/reference/colour-conversion-modes.html
 
 # ColourConversionModes 
 
-This parameter helps control the process of colour conversion, i.e., converting a colour image to a grayscale image. If you input a colour image, the library will convert it to the grayscale image first for further processes. By default, the conversion will base on the RGB channels with the default weights of three channels. This parameter allows you to specify the referred colour channel (RGB or HSV) and the weight of each channel during the colour conversion. Assume your image has a disgusting contrast of one colour channel between the barcode area and background, this parameter may help specify the appropriate settings for getting a higher quality grayscale image. 
+This parameter helps control the process of colour conversion, i.e., converting a colour image to a grayscale image. If you input a colour image, the library will convert it to the grayscale image first for further processes. By default, the conversion will base on the RGB channels with the default weights of three channels. This parameter allows you to specify the referred colour channel (RGB or HSV) and the weight of each channel during the colour conversion. Assume your image has a significant contrast of one colour channel between the barcode area and background, this parameter may help specify the appropriate settings for getting a higher quality grayscale image. 
 
 It currently can consist of only a single mode, `CICM_GENERAL`.
 
