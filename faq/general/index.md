@@ -44,3 +44,7 @@ permalink: /faq/general/index.html
 17. [How does your SDK compare to other commercial SDKs?](competitors-comparison.html)
 
 18. [How to Handle Non-printable Characters Like "\u{1D}" or "{GS}" from the Barcode Text?](unprintable-character.md)
+
+19. [How to generate a custom settings template to use in your own application?](custom-settings-template.md)
+
+20. [How can I sort the barcodes of my image in reading order?](sort-barcodes-image.md)
