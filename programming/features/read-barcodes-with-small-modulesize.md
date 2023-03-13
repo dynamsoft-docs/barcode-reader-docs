@@ -171,3 +171,5 @@ DBR_SetModeArgument(barcodeReader, "ScaleUpModes", 0, "TargetModuleSize", "8", s
 DBR_DecodeFile(barcodeReader, "YOUR-IMAGE-FILE-PATH", ""); // Start decoding
 // Add further process
 ```
+
+Read more about [how to read barcodes which seem blurry](https://www.dynamsoft.com/barcode-dataset/blurry-barcodes/).
