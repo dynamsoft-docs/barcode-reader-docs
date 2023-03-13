@@ -140,3 +140,5 @@ DBR_UpdateRuntimeSettings(barcodeReader, &runtimeSettings, errorBuf, 512); // Up
 DBR_DecodeFile(barcodeReader, "YOUR-IMAGE-FILE-PATH", ""); // Start decoding
 // Add further process
 ```
+
+Read more about [how to read barcodes on a large image](https://www.dynamsoft.com/barcode-dataset/blurry-barcodes/).
