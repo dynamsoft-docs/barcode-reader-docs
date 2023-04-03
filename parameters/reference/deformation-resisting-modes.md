@@ -171,7 +171,7 @@ Sets the process used to enhance the quality of the grayscale image for deformat
 | Mode | *string* | `GEM_GENERAL`<br>`GEM_GRAY_EQUALIZE`<br>`GEM_GRAY_SMOOTH`<br>`GEM_SHARPEN_SMOOTH` | `GEM_GENERAL` | (Required) Sets a grayscale enhancement mode. |
 | Sensitivity | *int* | [1, 9] | 5 | (Optional) Sets the sensitivity to perform the equalization process.<br>Valid when mode is `GEM_GRAY_EQUALIZE`.<br>A larger value means a higher possibility that gray equalization will be activated. |
 | SmoothBlockSizeX | *int* | [3, 1000] | 3 | (Optional) Sets the horizontal block size (neighborhood pixel counts) for the smoothing process.<br>Valid when mode is `GEM_GRAY_SMOOTH` or `GEM_SHARPEN_SMOOTH`. |
-| SmoothBlockSizeX | *int* | [3, 1000] | 3 | (Optional) Sets the vertical block size (neighborhood pixel counts) for the smoothing process.<br>Valid when mode is `GEM_GRAY_SMOOTH` or `GEM_SHARPEN_SMOOTH`. |
+| SmoothBlockSizeY | *int* | [3, 1000] | 3 | (Optional) Sets the vertical block size (neighborhood pixel counts) for the smoothing process.<br>Valid when mode is `GEM_GRAY_SMOOTH` or `GEM_SHARPEN_SMOOTH`. |
 | SharpenBlockSizeX | *int* | [3, 1000] | 3 | (Optional) Sets the horizontal block size (neighborhood pixel counts) for the sharpening process.<br>Valid when mode is `GEM_SHARPEN_SMOOTH`. |
 | SharpenBlockSizeY | *int* | [3, 1000] | 3 | (Optional) Sets the vertical block size (neighborhood pixel counts) for the sharpening process.<br>Valid when mode is `GEM_SHARPEN_SMOOTH`. |
 
