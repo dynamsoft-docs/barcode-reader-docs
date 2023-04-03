@@ -5,7 +5,7 @@ description: This page shows Dynamsoft Barcode Reader Parameter Reference for Lo
 keywords: LocalizationModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-permalink: /parameters/reference/localization-modes.html
+permalink: /parameters/reference/localization-modes-v9.2.0.html
 ---
 
 
