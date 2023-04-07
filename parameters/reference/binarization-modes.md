@@ -81,7 +81,7 @@ delete pSettings;
 | ImagePreprocessingModesIndex | A number from value range of ImagePreprocessingModesIndex | (Optional) Sets the Argument [ImagePreprocessingModesIndex](#imagepreprocessingmodesindex). |
 | ThresholdCompensation | A number from value range of ThresholdCompensation | (Optional) Sets the Argument [ThresholdCompensation](#thresholdcompensation). |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
-| LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
+| LibraryParameters | A string from value range of LibraryParameters | (Optional) Sets the Argument [LibraryParameters](#libraryparameters). |
 
 
 

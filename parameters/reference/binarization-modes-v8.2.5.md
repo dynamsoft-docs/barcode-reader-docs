@@ -79,7 +79,7 @@ delete pSettings;
 | ImagePreprocessingModesIndex | A number from value range of ImagePreprocessingModesIndex | (Optional) Sets the Argument [ImagePreprocessingModesIndex](#imagepreprocessingmodesindex). |
 | ThreshValueCoefficient | A number from value range of ThreshValueCoefficient | (Optional) Sets the Argument [ThreshValueCoefficient](#threshvaluecoefficient). |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
-| LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
+| LibraryParameters | A string from value range of LibraryParameters | (Optional) Sets the Argument [LibraryParameters](#libraryparameters). |
 
 **JSON Parameter Example**   
 ```

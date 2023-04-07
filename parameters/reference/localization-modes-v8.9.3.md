@@ -115,7 +115,7 @@ delete pSettings;
 | ScanStride | A number from value range of ScanStride | (Optional) Sets the Argument [ScanStride](#scanstride). |
 | ScanDirection | A number from value range of ScanDirection | (Optional) Sets the Argument [ScanDirection](#scandirection). |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
-| LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
+| LibraryParameters | A string from value range of LibraryParameters | (Optional) Sets the Argument [LibraryParameters](#libraryparameters). |
 
 
 

@@ -120,7 +120,7 @@ delete pSettings;
 | ConfidenceThreshold | A number from value range of ConfidenceThreshold | (Optional) Sets the Argument [ConfidenceThreshold](#confidencethreshold). |
 | IsOneDStacked | A number from value range of IsOneDStacked | (Optional) Sets the Argument [IsOneDStacked](#isonedstacked). |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
-| LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
+| LibraryParameters | A string from value range of LibraryParameters | (Optional) Sets the Argument [LibraryParameters](#libraryparameters). |
 
 
 
