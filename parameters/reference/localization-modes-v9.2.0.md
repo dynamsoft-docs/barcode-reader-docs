@@ -118,7 +118,7 @@ delete pSettings;
 | ScanDirection | A number from value range of ScanDirection | (Optional) Sets the Argument [ScanDirection](#scandirection). |
 | ConfidenceThreshold | A number from value range of ConfidenceThreshold | (Optional) Sets the Argument [ConfidenceThreshold](#confidencethreshold). |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
-| LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
+| LibraryParameters | A string from value range of LibraryParameters | (Optional) Sets the Argument [LibraryParameters](#libraryparameters). |
 
 
 

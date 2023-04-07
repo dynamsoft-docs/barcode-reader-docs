@@ -110,7 +110,7 @@ delete pSettings;
 | SpatialIndexBlockSize | A number from value range of SpatialIndexBlockSize | (Optional) Sets the Argument [SpatialIndexBlockSize](#spatialindexblocksize). |
 | WidthRange | A string from value range of WidthRange | (Optional) Sets the Argument [WidthRange](#widthrange). |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
-| LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
+| LibraryParameters | A string from value range of LibraryParameters | (Optional) Sets the Argument [LibraryParameters](#libraryparameters). |
 
 
 

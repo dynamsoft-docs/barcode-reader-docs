@@ -95,7 +95,7 @@ delete pSettings;
 | GrayscaleEnhancementMode | A JSON object defined as GrayscaleEnhancementMode | (Optional) Sets the Argument [GrayscaleEnhancementMode](#grayscaleenhancementmode). |
 | BinarizationMode | A JSON object defined as BinarizationMode | (Optional) Sets the Argument [BinarizationMode](#binarizationmode). |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
-| LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
+| LibraryParameters | A string from value range of LibraryParameters | (Optional) Sets the Argument [LibraryParameters](#libraryparameters). |
 
 **JSON Parameter Example**
 
