@@ -1,3 +1,10 @@
+---
+layout: default-layout
+title: CDecodedBarcodeElement Class
+description: This page shows CDecodedBarcodeElement class definition of Dynamsoft Barcode Reader SDK C++ Edition.
+keywords: GetText, GetBytes, GetBytesLength, CDecodedBarcodeElement, api reference
+permalink: /programming-10/cplusplus/api-reference/decoded-barcode-element.html
+---
 # CDecodedBarcodeElement
 
 The CDecodedBarcodeElement class represents a decoded barcode element. It inherits from the CLocalizedBarcodeElement class and provides additional functionality for retrieving information about the decoded barcode.
@@ -15,14 +22,14 @@ class CDecodedBarcodeElement : public CLocalizedBarcodeElement
 | Method | Description |
 | --- | --- |
 | [`~CDecodedBarcodeElement`](#cdecodedbarcodeelement) | Destructor. |
-| [`GetText`](#gettext) | Gets the text of the decoded barcode. |
-| [`GetBytes`](#getbytes)| Gets the raw bytes of the decoded barcode.|
-| [`GetBytesLength`](#getbyteslength)  | Gets the length of the raw bytes of the decoded barcode.|
-| [`GetDetails`](#getdetails) | Gets the details of the decoded barcode.|
-| [`IsDPM`](#isdpm)| Determines whether the decoded barcode is a DPM (Direct Part Marking) code.|
-| [`IsMirrored`](#ismirrored)| Determines whether the decoded barcode is mirrored.|
-| [`GetExtendedBarcodeResultsCount`](#getextendedbarcoderesultscount) | Gets the number of extended barcode results for the decoded barcode.|
-| [`GetExtendedBarcodeResult`](#getextendedbarcoderesult) | Gets the extended barcode result at the specified index for the decoded barcode.|
+| [`GetText()`](#gettext) | Gets the text of the decoded barcode. |
+| [`GetBytes()`](#getbytes)| Gets the raw bytes of the decoded barcode.|
+| [`GetBytesLength()`](#getbyteslength)  | Gets the length of the raw bytes of the decoded barcode.|
+| [`GetDetails()`](#getdetails) | Gets the details of the decoded barcode.|
+| [`IsDPM()`](#isdpm)| Determines whether the decoded barcode is a DPM (Direct Part Marking) code.|
+| [`IsMirrored()`](#ismirrored)| Determines whether the decoded barcode is mirrored.|
+| [`GetExtendedBarcodeResultsCount()`](#getextendedbarcoderesultscount) | Gets the number of extended barcode results for the decoded barcode.|
+| [`GetExtendedBarcodeResult()`](#getextendedbarcoderesult) | Gets the extended barcode result at the specified index for the decoded barcode.|
 
 ### ~CDecodedBarcodeElement
 

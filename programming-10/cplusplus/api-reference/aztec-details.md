@@ -1,3 +1,10 @@
+---
+layout: default-layout
+title: CAztecDetails Class
+description: This page shows CAztecDetails class definition of Dynamsoft Barcode Reader SDK C++ Edition.
+keywords: rows, columns, layerNumber, CAztecDetails, api reference
+permalink: /programming-10/cplusplus/api-reference/aztec-details.html
+---
 # CAztecDetails
 
 The CAztecDetails class represents a barcode in Aztec format. It inherits from the CBarcodeDetails class and contains information about the row count, column count, and layer number of the barcode.

@@ -1,3 +1,10 @@
+---
+layout: default-layout
+title: CDataMatrixDetails Class
+description: This page shows CDataMatrixDetails class definition of Dynamsoft Barcode Reader SDK C++ Edition.
+keywords: rows, columns, CDataMatrixDetails, api reference
+permalink: /programming-10/cplusplus/api-reference/datamatrix-details.html
+---
 # CDataMatrixDetails
 
 The CDataMatrixDetails class represents the details of a DataMatrix barcode. It is derived from the CBarcodeDetails class and contains various attributes related to the DataMatrix barcode. 

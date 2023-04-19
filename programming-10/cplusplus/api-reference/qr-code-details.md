@@ -1,3 +1,10 @@
+---
+layout: default-layout
+title: CQRCodeDetails Class
+description: This page shows CQRCodeDetails class definition of Dynamsoft Barcode Reader SDK C++ Edition.
+keywords: rows, columns, errorCorrectionLevel, version, model, CQRCodeDetails, api reference
+permalink: /programming-10/cplusplus/api-reference/qr-code-details.html
+---
 # CQRCodeDetails
 
 The CQRCodeDetails class represents the details of a QR Code barcode. It is derived from the CBarcodeDetails class and contains various attributes related to the QR Code barcode. 

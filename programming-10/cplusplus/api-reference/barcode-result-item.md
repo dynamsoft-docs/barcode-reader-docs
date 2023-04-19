@@ -1,12 +1,9 @@
 ---
 layout: default-layout
-Title: CBarcodeResultItem - Dynamsoft Barcode Reader Classes
-Description: The class CBarcodeResultItem of Dynamsoft Barcode Reader represents a barcode result item decoded by barcode reader engine.
-Keywords: Barcode result item
-needGenerateH3Content: true
-needAutoGenerateSidebar: true
-noTitleIndex: true
-breadcrumbText: CBarcodeResultItem
+title: CBarcodeResultItem Class
+description: This page shows CBarcodeResultItem class definition of Dynamsoft Barcode Reader SDK C++ Edition.
+keywords: GetFormat, GetText, GetLocation, GetConfidence, GetModuleSize, CBarcodeResultItem, api reference
+permalink: /programming-10/cplusplus/api-reference/barcode-result-item.html
 ---
 
 # CBarcodeResultItem
@@ -33,7 +30,7 @@ class CBarcodeResultItem : public CCapturedResultItem
 | [`GetDetails()`](#getdetails) | Gets the details of the decoded barcode result. |
 | [`IsDPM()`](#isdpm) | Gets whether the decoded barcode is a DPM code. |
 | [`IsMirrored()`](#ismirrored) | Gets whether the decoded barcode is a mirrored barcode. |
-| [`GetRotatationTransformMatrix()`](#getrotatationtransformmatrix) | Gets the rotatation transform matrix of the decoded barcode result. |
+| [`GetRotationTransformMatrix()`](#getrotationtransformmatrix) | Gets the rotation transform matrix of the decoded barcode result. |
 
 
 ### GetFormat
@@ -180,12 +177,12 @@ virtual bool IsMirrored() const = 0;
 
 Returns whether the decoded barcode is mirrored.
 
-### GetRotatationTransformMatrix
+### GetRotationTransformMatrix
 
 It is used to get the rotation transform matrix of the decoded barcode.
 
 ```cpp
-virtual void GetRotatationTransformMatrix(double matrix[9]) const = 0;
+virtual void GetRotationTransformMatrix(double matrix[9]) const = 0;
 ```
 
 **Parameters**

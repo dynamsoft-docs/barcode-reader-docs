@@ -1,14 +1,10 @@
 ---
 layout: default-layout
-Title: CDecodedBarcodesResult - Dynamsoft Label Recognizer Classes
-Description: The class CDecodedBarcodesResult of Dynamsoft Barcode Reader represents the result of a barcode reading process.
-Keywords: Decoded barcodes result
-needGenerateH3Content: true
-needAutoGenerateSidebar: true
-noTitleIndex: true
-breadcrumbText: CDecodedBarcodesResult
+title: CDecodedBarcodesResult Class
+description: This page shows CDecodedBarcodesResult class definition of Dynamsoft Barcode Reader SDK C++ Edition.
+keywords: GetSourceImageHashId, GetCount, GetErrorCode, CDecodedBarcodesResult, api reference
+permalink: /programming-10/cplusplus/api-reference/decoded-barcodes-result.html
 ---
-
 # CDecodedBarcodesResult
 
 The `CDecodedBarcodesResult` class represents the result of a barcode reading process. It provides access to information about the decoded barcodes, the source image, and any errors that occurred during the barcode reading process.
@@ -21,12 +17,12 @@ class CDecodedBarcodesResult
 
 | Method               | Description |
 |----------------------|-------------|
-| [`GetSourceImageHashId`](#getsourceimagehashid) | Gets the hash ID of the source image. |
-| [`GetSourceImageTag`](#getsourceimagetag) | Gets the tag of the source image. |
-| [`GetCount`](#getcount) | Gets the number of text line result items in the barcode reading result. |
-| [`GetItem`](#getitem) | Gets the text line result item at the specified index. |
-| [`GetErrorCode`](#geterrorcode) | Gets the error code of the barcode reading result, if an error occurred. |
-| [`GetErrorString`](#geterrorstring) | Gets the error message of the barcode reading result, if an error occurred. |
+| [`GetSourceImageHashId()`](#getsourceimagehashid) | Gets the hash ID of the source image. |
+| [`GetSourceImageTag()`](#getsourceimagetag) | Gets the tag of the source image. |
+| [`GetCount()`](#getcount) | Gets the number of text line result items in the barcode reading result. |
+| [`GetItem()`](#getitem) | Gets the text line result item at the specified index. |
+| [`GetErrorCode()`](#geterrorcode) | Gets the error code of the barcode reading result, if an error occurred. |
+| [`GetErrorString()`](#geterrorstring) | Gets the error message of the barcode reading result, if an error occurred. |
 
 ### GetSourceImageHashId
 
