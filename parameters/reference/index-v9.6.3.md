@@ -4,7 +4,7 @@ title: Dynamsoft Barcode Reader Parameter Reference - Main Page
 description: Dynamsoft Barcode Reader Parameter Reference - Main Page
 keywords: parameter reference, parameters
 needAutoGenerateSidebar: false
-permalink: /parameters/reference/index.html
+permalink: /parameters/reference/index-v9.6.3.html
 ---
 
 
@@ -19,17 +19,19 @@ permalink: /parameters/reference/index.html
  | [`BarcodeBytesRegExPattern`](barcode-bytes-regex-pattern.md) | Specifies the regular expression pattern of barcode byte characters. | 
  | [`BarcodeColourModes`](barcode-colour-modes.md) | Sets the mode and priority for the barcode colour mode used to process the barcode zone. |
  | [`BarcodeComplementModes`](barcode-complement-modes.md) | Sets the mode and priority to complement the missing parts in the barcode. |
- | [`BarcodeFormatIds`](barcode-format-ids.md) | Sets the formats of the barcode to be read.
+ | [`BarcodeFormatIds`](barcode-format-ids.md) | Sets the formats of the barcode to be read. Barcode formats can be combined. |
+ | [`BarcodeFormatIds_2`](barcode-format-ids-2.md) | Sets the formats of the barcode in BarcodeFormat group 2 to be read. Barcode formats in BarcodeFormat group 2 can be combined. |
  | [`BarcodeHeightRangeArray`](barcode-height-range-array.md) | Sets the range of barcode heights (in pixels) for barcodes searching. | 
  | [`BarcodeTextLengthRangeArray`](barcode-text-length-range-array.md) | Sets the range of barcode text length for barcodes searching. | 
  | [`BarcodeTextRegExPattern`](barcode-text-regex-pattern.md) | Specifies the regular expression pattern of barcode characters. | 
  | [`BarcodeWidthRangeArray`](barcode-width-range-array.md) | Sets the range of barcode widths (in pixels) for barcodes searching.| 
- | [`BarcodeZoneBarCountRangeArray`](barcode-zone-bar-count-range-array.md) | Sets the range of bar count of the barcode zone for barcodes searching. |
- | [`BarcodeZoneMinDistanceToImageBorders`](barcode-zone-min-distance-to-image-borders.md) | Sets the minimum distance (in pixels) between barcode zone and image borders. |
+ | [`BarcodeZoneBarCountRangeArray`](barcode-zone-bar-count-range-array.md) | Sets the range of bar count of the barcode zone for barcodes searching. | 
+ | [`BarcodeZoneMinDistanceToImageBorders`](barcode-zone-min-distance-to-image-borders.md) | Sets the minimum distance (in pixels) between barcode zone and image borders. | 
  | [`BinarizationModes`](binarization-modes.md) | Sets the mode and priority for binarization. |
- | [`Code128Subset`](code128-subset.md) | Sets the code 128 subset. |
+ | [`Code128Subset`](code128-subset.md) | Sets the code 128 subset. | 
  | [`ColourClusteringModes`](colour-clustering-modes.md) | Sets the mode and priority for colour categorization. To be supported. |
  | [`ColourConversionModes`](colour-conversion-modes.md) | Sets the mode and priority for converting a colour image to a grayscale image. |
+ | [`DeblurLevel`](deblur-level.md) | Sets the degree of blurriness of the barcode. |
  | [`DeblurModes`](deblur-modes.md) | Sets the mode and priority for deblurring. |
  | [`DeformationResistingModes`](deformation-resisting-modes.md) | Sets the mode and priority for deformation resisting. |
  | [`DPMCodeReadingModes`](dpm-code-reading-modes.md) | Sets the mode and priority for DPM code reading. |
@@ -37,12 +39,13 @@ permalink: /parameters/reference/index.html
  | [`EnableQRCodeModel1`](enable-qrcode-model1.md) | Specifies whether to decode QRCode model 1 barcodes. |
  | [`ExpectedBarcodesCount`](expected-barcodes-count.md) | Sets the number of barcodes expected to be detected for each image. |
  | [`FindUnevenModuleBarcode`](find-uneven-module-barcode.md) | Specifies whether to find barcodes with uneven barcode modules. To be supported.| 
- | [`GrayscaleEnhancementModes`](gray-scale-enhancement-modes.md) | Sets the mode and priority for the grayscale image enhancement. |
  | [`GrayscaleTransformationModes`](grayscale-transformation-modes.md) | Sets the mode and priority for the grayscale image conversion. |
- | [`HeadModuleRatio`](head-module-ratio.md) | Sets the module count and module size ratio of the barcode head part. |
- | [`IfEraseTextZone`](if-erase-text-zone.md) | Specifies whether to remove text. |
+ | [`HeadModuleRatio`](head-module-ratio.md) | Sets the module count and module size ratio of the barcode head part. | 
+ | [`ImagePreprocessingModes`](image-preprocessing-modes.md) | Sets the mode and priority for image preprocessing algorithms. |
+ | [`IntermediateResultSavingMode`](intermediate-result-saving-mode.md) | Sets the mode for saving the intermediate result. | 
+ | [`IntermediateResultTypes`](intermediate-result-types.md) | Sets which types of intermediate results to be kept for further reference. Intermediate result types can be combined. | 
  | [`LocalizationModes`](localization-modes.md) | Sets the mode and priority for localization algorithms. |
- | [`MaxThreadsInOneTask`](max-threads-in-one-task.md) | Sets the number of threads for the image processing algorithm uses to decode barcodes. |
+ | [`MaxAlgorithmThreadCount`](max-algorithm-thread-count.md) | Sets the number of threads for the image processing algorithm uses to decode barcodes. |
  | [`MinQuietZoneWidth`](min-quiet-zone-width.md) | Sets the minimum width of the barcode quiet zone. | 
  | [`MinRatioOfBarcodeZoneWidthToHeight`](min-ratio-of-barcode-zone-width-to-height.md) | Sets the minimum ratio (width/height) of the barcode zone. | 
  | [`MinResultConfidence`](min-result-confidence.md) | Sets the minimum confidence of the result. | 
@@ -62,13 +65,12 @@ permalink: /parameters/reference/index.html
  | [`ReturnPartialBarcodeValue`](return-partial-barcode-value.md) | Sets whether or not to return partial barcode value(s). Not support yet. | 
  | [`ScaleDownThreshold`](scale-down-threshold.md) | Sets the threshold for the image shrinking. |
  | [`ScaleUpModes`](scale-up-modes.md) | Sets the mode and priority to control the sampling methods of scale-up for linear barcodes with small module sizes. | 
- | [`SectionImageParameterArray`](section-image-parameter-array.md) | Sets the image parameters used by specific sections. | 
  | [`StandardFormat`](standard-format.md) | Sets the standard barcode format. | 
- | [`StartSection`](start-section.md) | Sets the start section of barcode reading task. | 
  | [`TailModuleRatio`](tail-module-ratio.md) | Sets the module count and module size ratio of the barcode tail part. | 
- | [`TerminateSetting`](terminate-setting.md) | Sets the phase where the algorithm stops. |
- | [`TextDetectionMode`](text-detection-mode.md) | Sets the mode for detecting text. |
+ | [`TerminatePhase`](terminate-phase.md) | Sets the phase where the algorithm stops. |
+ | [`TextFilterModes`](text-filter-modes.md) | Sets the mode and priority for text filter. |
  | [`TextureDetectionModes`](texture-detection-modes.md) | Sets the mode and priority for texture detection. |
  | [`TextResultOrderModes`](text-result-order-modes.md) | Sets the mode and priority for the order of the text results returned. | 
  | [`Timeout`](time-out.md) | Sets the maximum amount of time (in milliseconds) that should be spent searching for a barcode per page. |
  | [`VerifyCheckDigit`](verify-check-digit.md) | Sets the value determining whether to verify the check digit in barcodes where this check digit is optional. |
+
