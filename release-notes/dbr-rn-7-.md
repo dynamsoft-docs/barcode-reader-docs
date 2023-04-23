@@ -10,9 +10,7 @@ noTitleIndex: true
 
 # Release Notes for Dynamsoft Barcode Reader 1.x ~ 7.x 
 
-## 7.x Versions <i class="fa fa-caret-down"></i>
-
-<div class="fold-panel-start"></div>
+## 7.x Versions
 
 > First released: 07-11-2019
 
@@ -220,8 +218,6 @@ noTitleIndex: true
 - Fixed an issue where the barcode could be calculated incorrectly in some occasions.
 
 &nbsp;
-
-<div class="fold-panel-end"></div>
 
 <div class="fold-panel-prefix"></div>
 
