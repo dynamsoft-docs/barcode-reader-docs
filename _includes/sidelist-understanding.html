@@ -1,5 +1,20 @@
 <li class="category">UNDERSTANDING DBR</li>
-<li><a href="{{ site.introduction }}architecture.html" class="otherLinkColour">Architecture</a></li>
-{%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath targetRelativePath="sidelist-performance.html" -%}
-{%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath targetRelativePath="sidelist-parameters/parameters-template-structure.html" -%}
-{%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath targetRelativePath="sidelist-parameters/parameters-references.html" -%}
+<li><a href="{{ site.introduction }}architecture.html" class="otherLinkColour">Architecture</a>
+    <ul>
+        <li><a href="{{ site.architecture }}" class="otherLinkColour">Capture-Vision Architecture</a></li>
+        <li><a href="{{ site.architecture }}input.html" class="otherLinkColour">Input</a></li>
+        <li><a href="{{ site.architecture }}image-processing/region-predetection.html" class="otherLinkColour">Region
+                Pre-detection</a></li>
+        <li><a href="{{ site.architecture }}image-processing/shared-detection.html" class="otherLinkColour">Shared
+                Detection</a></li>
+        <li><a href="{{ site.architecture }}image-processing/barcode-localization.html" class="otherLinkColour">Barcode
+                Localization</a></li>
+        <li><a href="{{ site.architecture }}image-processing/barcode-decoding.html" class="otherLinkColour">Barcode
+                Decoding</a></li>
+        <li><a href="{{ site.architecture }}output.html" class="otherLinkColour">Output</a></li>
+    </ul>
+</li>
+{%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath
+targetRelativePath="sidelist-parameters-organization.html" -%}
+{%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath
+targetRelativePath="sidelist-parameters/parameters-references.html" -%}
