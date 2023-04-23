@@ -37,7 +37,6 @@ permalink: /parameters/reference/index.html
 | [`BarcodeComplementModes`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/barcode-complement-modes.html) | Defines how to complement the missing parts of a barcode. |
 | [`BarcodeFormatIds`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/barcode-format-ids.html) | Defines the formats of the barcode to process. |
 | [`BaseBarcodeReaderTaskSettingName`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/base-barcode-reader-task-setting-name.html) | Represents the name of another `BarcodeReaderTaskSetting` object to inherit from. |
-| [`DeblurLevel`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/deblur-level.html) | Defines the efforts used to process the blurriness of the barcode. |
 | [`DeblurModes`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/deblur-modes.html) | Defines the mode and priority for deblurring. |
 | [`DeformationResistingModes`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/deformation-resisting-modes.html) | Defines how to handle distorted and deformed barcodes. |
 | [`DPMCodeReadingModes`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/dpm-code-reading-modes.html) | Defines how to read direct part mark (DPM) barcodes. |
