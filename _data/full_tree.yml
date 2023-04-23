@@ -9,6 +9,7 @@ tree_file_list:
   - sidelist-parameters/parameters-references-v9.6.20.html
   - sidelist-parameters/parameters-references.html
   - sidelist-parameters/parameters-template-structure.html
+  - sidelist-parameter-reference.html
   - sidelist-parameters-organization.html
   - sidelist-performance.html
   - sidelist-release-notes.html
