@@ -1,74 +1,114 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference - Main Page
+title: Dynamsoft Barcode Reader Reference - Main Page
 description: Dynamsoft Barcode Reader Parameter Reference - Main Page
-keywords: parameter reference, parameters
+keywords: barcode reader parameter, parameter reference, parameters
 needAutoGenerateSidebar: false
 permalink: /parameters/reference/index.html
 ---
 
-
 # Parameter Reference
 
- | Parameter Name | Description |
- | -------------- | ----------- |
- | [`AllModuleDeviation`](all-module-deviation.md) | Sets the module size deviation from the standard barcode module size. |
- | [`AustralianPostEncodingTable`](australian-post-encoding-table.md) | Sets the encoding table used to code the Customer Information Field of Australian Post Customer Barcode. |
- | [`BarcodeAngleRangeArray`](barcode-angle-range-array.md) | Sets the range of angles (in degrees) for barcodes searching. | 
- | [`BarcodeBytesLengthRangeArray`](barcode-bytes-length-range-array.md) | Sets the range of barcode bytes length for barcodes searching. | 
- | [`BarcodeBytesRegExPattern`](barcode-bytes-regex-pattern.md) | Specifies the regular expression pattern of barcode byte characters. | 
- | [`BarcodeColourModes`](barcode-colour-modes.md) | Sets the mode and priority for the barcode colour mode used to process the barcode zone. |
- | [`BarcodeComplementModes`](barcode-complement-modes.md) | Sets the mode and priority to complement the missing parts in the barcode. |
- | [`BarcodeFormatIds`](barcode-format-ids.md) | Sets the formats of the barcode to be read.
- | [`BarcodeHeightRangeArray`](barcode-height-range-array.md) | Sets the range of barcode heights (in pixels) for barcodes searching. | 
- | [`BarcodeTextLengthRangeArray`](barcode-text-length-range-array.md) | Sets the range of barcode text length for barcodes searching. | 
- | [`BarcodeTextRegExPattern`](barcode-text-regex-pattern.md) | Specifies the regular expression pattern of barcode characters. | 
- | [`BarcodeWidthRangeArray`](barcode-width-range-array.md) | Sets the range of barcode widths (in pixels) for barcodes searching.| 
- | [`BarcodeZoneBarCountRangeArray`](barcode-zone-bar-count-range-array.md) | Sets the range of bar count of the barcode zone for barcodes searching. |
- | [`BarcodeZoneMinDistanceToImageBorders`](barcode-zone-min-distance-to-image-borders.md) | Sets the minimum distance (in pixels) between barcode zone and image borders. |
- | [`BinarizationModes`](binarization-modes.md) | Sets the mode and priority for binarization. |
- | [`Code128Subset`](code128-subset.md) | Sets the code 128 subset. |
- | [`ColourClusteringModes`](colour-clustering-modes.md) | Sets the mode and priority for colour categorization. To be supported. |
- | [`ColourConversionModes`](colour-conversion-modes.md) | Sets the mode and priority for converting a colour image to a grayscale image. |
- | [`DeblurModes`](deblur-modes.md) | Sets the mode and priority for deblurring. |
- | [`DeformationResistingModes`](deformation-resisting-modes.md) | Sets the mode and priority for deformation resisting. |
- | [`DPMCodeReadingModes`](dpm-code-reading-modes.md) | Sets the mode and priority for DPM code reading. |
- | [`EnableDataMatrixECC000-140`](enable-datamatrix-ecc000-140.md) | Specifies whether to decode DataMatrix ECC000-140 barcodes. |
- | [`EnableQRCodeModel1`](enable-qrcode-model1.md) | Specifies whether to decode QRCode model 1 barcodes. |
- | [`ExpectedBarcodesCount`](expected-barcodes-count.md) | Sets the number of barcodes expected to be detected for each image. |
- | [`FindUnevenModuleBarcode`](find-uneven-module-barcode.md) | Specifies whether to find barcodes with uneven barcode modules. To be supported.| 
- | [`GrayscaleEnhancementModes`](gray-scale-enhancement-modes.md) | Sets the mode and priority for the grayscale image enhancement. |
- | [`GrayscaleTransformationModes`](grayscale-transformation-modes.md) | Sets the mode and priority for the grayscale image conversion. |
- | [`HeadModuleRatio`](head-module-ratio.md) | Sets the module count and module size ratio of the barcode head part. |
- | [`IfEraseTextZone`](if-erase-text-zone.md) | Specifies whether to remove text. |
- | [`LocalizationModes`](localization-modes.md) | Sets the mode and priority for localization algorithms. |
- | [`MaxThreadsInOneTask`](max-threads-in-one-task.md) | Sets the number of threads for the image processing algorithm uses to decode barcodes. |
- | [`MinQuietZoneWidth`](min-quiet-zone-width.md) | Sets the minimum width of the barcode quiet zone. | 
- | [`MinRatioOfBarcodeZoneWidthToHeight`](min-ratio-of-barcode-zone-width-to-height.md) | Sets the minimum ratio (width/height) of the barcode zone. | 
- | [`MinResultConfidence`](min-result-confidence.md) | Sets the minimum confidence of the result. | 
- | [`MirrorMode`](mirror-mode.md) | Sets whether to decode mirrored barcodes. | 
- | [`ModuleSizeRangeArray`](module-size-range-array.md) | Sets the range of module size (in pixels) for barcodes searching. |
- | [`MSICodeCheckDigitCalculation`](msi-code-check-digit-calculation.md) | Sets the scheme used for calculating a check digit of an MSI barcode. |
- | [`Pages`](pages.md) | Sets the specific pages or the range of pages of a file (.tiff or .pdf) for barcode searching. |
- | [`PartitionModes`](partition-modes.md) |	Sets the mode used to apply partition process. |
- | [`PatchCodeSearchingMargins`](patchcode-searching-margins.md) | Sets the margins for searching PatchCode. |
- | [`PDFRasterDPI`](pdf-raster-dpi.md) | Sets the output image resolution. |
- | [`PDFReadingMode`](pdf-reading-mode.md) | Sets the way to detect barcodes from a PDF file when using the `DecodeFile` method. |
- | [`Region`](region.md) | Sets the region for barcodes searching. |
- | [`RegionPredetectionModes`](region-predetection-modes.md) | Sets the region pre-detection mode for barcodes searching. |
- | [`RequireStartStopChars`](require-start-stop-chars.md) |	Sets whether the start and stop characters are required when searching for Code 39 barcodes. |
- | [`ResultCoordinateType`](result-coordinate-type.md) | Specifies the format for the coordinates returned | 
- | [`ReturnBarcodeZoneClarity`](return-barcode-zone-clarity.md) | Sets whether or not to return the clarity of the barcode zone. | 
- | [`ReturnPartialBarcodeValue`](return-partial-barcode-value.md) | Sets whether or not to return partial barcode value(s). Not support yet. | 
- | [`ScaleDownThreshold`](scale-down-threshold.md) | Sets the threshold for the image shrinking. |
- | [`ScaleUpModes`](scale-up-modes.md) | Sets the mode and priority to control the sampling methods of scale-up for linear barcodes with small module sizes. | 
- | [`SectionImageParameterArray`](section-image-parameter-array.md) | Sets the image parameters used by specific sections. | 
- | [`StandardFormat`](standard-format.md) | Sets the standard barcode format. | 
- | [`StartSection`](start-section.md) | Sets the start section of barcode reading task. | 
- | [`TailModuleRatio`](tail-module-ratio.md) | Sets the module count and module size ratio of the barcode tail part. | 
- | [`TerminateSetting`](terminate-setting.md) | Sets the phase where the algorithm stops. |
- | [`TextDetectionMode`](text-detection-mode.md) | Sets the mode for detecting text. |
- | [`TextureDetectionModes`](texture-detection-modes.md) | Sets the mode and priority for texture detection. |
- | [`TextResultOrderModes`](text-result-order-modes.md) | Sets the mode and priority for the order of the text results returned. | 
- | [`Timeout`](time-out.md) | Sets the maximum amount of time (in milliseconds) that should be spent searching for a barcode per page. |
- | [`VerifyCheckDigit`](verify-check-digit.md) | Sets the value determining whether to verify the check digit in barcodes where this check digit is optional. |
+## Capture Vision Template
+
+| Parameter Name | Description |
+| -------------- | ----------- |
+| [`ImageROIProcessingNameArray`]({{ site.dcv_parameters_reference }}capture-vision-template/image-roi-processing-name-array.html) | Defines the collection of image ROI processing object names, used to refer to the `TargetROIDef` objects. |
+| [`ImageSourceName`]({{ site.dcv_parameters_reference }}capture-vision-template/image-source-name.html) | Indicates the input source name, used to refer to the `ImageSource` object. |
+| [`MaxParallelTasks`]({{ site.dcv_parameters_reference }}capture-vision-template/max-parallel-tasks.html) | Defines the maximum number of parallel tasks for the DCV runtime. |
+| [`OutputRawImage`]({{ site.dcv_parameters_reference }}capture-vision-template/output-raw-Image.html) | Indicates whether DCV finally outputs the original input image. |
+| [`SemanticProcessingNameArray`]({{ site.dcv_parameters_reference }}capture-vision-template/semantic-processing-name-array.html) | Represents the collection of semantic-processing object names, used to refer to the `SematicProcessing` objects. |
+| [`Timeout`]({{ site.dcv_parameters_reference }}capture-vision-template/timeout.html) | Defines the maximum amount of time (in milliseconds) that should be spent processing each image or frame. |
+
+## Target ROI Def
+
+| Parameter Name  | Description |
+| --------------- | ----------- |
+| [`BaseTargetROIDefName`]({{ site.dcv_parameters_reference }}target-roi-def/base-target-roidef-name.html) | Represents the name of another `TargetROIDef` object to inherit from. |
+| [`Location`]({{ site.dcv_parameters_reference }}target-roi-def/location.html) | Defines the location of the TargetROI with `reference objects` filter conditions and `offset` parameters. |
+| [`PauseFlag`]({{ site.dcv_parameters_reference }}target-roi-def/pause-flag.html) | Indicates that the region results generated by this `TargetROIDef` will not be used by other `TargetROIDef` objects that depend on it to calculate the target regions, unless the user explicitly performs an update operation. |
+| [`TaskSettingNameArray`]({{ site.dcv_parameters_reference }}target-roi-def/task-setting-name-array.html) | Parameter `TaskSettingNameArray` represents the collection of task setting object names, used to refer to the `BarcodeReaderTaskSetting`, `LabelRecognizerTaskSetting`, `DocumentNormalizerTaskSetting` objects. |
+
+## Barcode Reader Task Setting
+
+| Parameter Name | Description |
+| -------------- | ----------- |
+| [`BarcodeColourModes`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/barcode-colour-modes.html) | Defines the barcode colour modes. |
+| [`BarcodeComplementModes`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/barcode-complement-modes.html) | Defines how to complement the missing parts of a barcode. |
+| [`BarcodeFormatIds`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/barcode-format-ids.html) | Defines the formats of the barcode to process. |
+| [`BaseBarcodeReaderTaskSettingName`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/base-barcode-reader-task-setting-name.html) | Represents the name of another `BarcodeReaderTaskSetting` object to inherit from. |
+| [`DeblurLevel`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/deblur-level.html) | Defines the efforts used to process the blurriness of the barcode. |
+| [`DeblurModes`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/deblur-modes.html) | Defines the mode and priority for deblurring. |
+| [`DeformationResistingModes`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/deformation-resisting-modes.html) | Defines how to handle distorted and deformed barcodes. |
+| [`DPMCodeReadingModes`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/dpm-code-reading-modes.html) | Defines how to read direct part mark (DPM) barcodes. |
+| [`ExpectedBarcodesCount`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/expected-barcodes-count.html) | Defines the number of barcodes expected to be detected. |
+| [`LocalizationModes`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/localization-modes.html) | Defines how to localize barcodes. |
+| [`ResultCoordinateType`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/result-coordinate-type.html) | Defines the returned coordinate type. |
+| [`ReturnBarcodeZoneClarity`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/return-barcode-zone-clarity.html) | Defines whether to return the clarity of the barcode zone. |
+| [`TextResultOrderModes`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/text-result-order-modes.html) | Defines the order of the returned text results. |
+
+## ImageParameter
+
+| Parameter Name | Description |
+| ---------------------------------- | ----------- |
+| [`BaseImageParameterName`]({{ site.dcv_parameters_reference }}image-parameter/base-image-parameter-name.html) | Represents the name of another `ImageParameter` object to inherit from. |
+| [`BinarizationModes`]({{ site.dcv_parameters_reference }}image-parameter/binarization-modes.html) | Defines the process of binarization |
+| [`ColourChannelUsageType`]({{ site.dcv_parameters_reference }}image-parameter/colour-channel-usage-type.html) | Defines how to use the colour channel from the source image buffer. |
+| [`ColourConversionModes`]({{ site.dcv_parameters_reference }}image-parameter/colour-conversion-modes.html) | Defines how to convert a colour image to a grayscale image. |
+| [`GrayscaleEnhancementModes`]({{ site.dcv_parameters_reference }}image-parameter/grayscale-enhancement-modes.html) | Defines the image processing methods to enhance the quality of the grayscale image. |
+| [`GrayscaleTransformationModes`]({{ site.dcv_parameters_reference }}image-parameter/grayscale-transformation-modes.html) | Defines whether or not to invert the color of the grayscale image. |
+| [`IfEraseTextZone`]({{ site.dcv_parameters_reference }}image-parameter/if-erase-text-zone.html) | Defines whether to erase the detected text zone. |
+| [`RegionPredetectionModes`]({{ site.dcv_parameters_reference }}image-parameter/region-predetection-modes.html) | Defines how to find a region of interest (ROI) within the image or frame. |
+| [`ScaleDownThreshold`]({{ site.dcv_parameters_reference }}image-parameter/scale-down-threshold.html) | Defines the threshold for image shrinking. |
+| [`ScaleUpModes`]({{ site.dcv_parameters_reference }}image-parameter/scale-up-modes.html) | Defines the scale-up process when targets in the image are too small. |
+| [`TextDetectionMode`]({{ site.dcv_parameters_reference }}image-parameter/text-detection-mode.html) | Defines how to detect the text area. |
+| [`TextureDetectionModes`]({{ site.dcv_parameters_reference }}image-parameter/texture-detection-modes.html) | Defines how to detect texture on an image. |
+
+## Barcode Format Specification
+
+| Parameter Name   | Description |
+| ---------------- | ----------- |
+| [`AllModuleDeviation`]({{ site.dcv_parameters_reference }}barcode-format-specification/all-module-deviation.html) | Defines the width deviation value (in moduleSize) of a non-standard 1D barcode type relative to the standard barcode width. |
+| [`AustralianPostEncodingTable`]({{ site.dcv_parameters_reference }}barcode-format-specification/australian-post-encoding-table.html) | Defines the encoding table used to code the Customer Information Field of Australian Post Customer Barcode. |
+| [`BarcodeAngleRangeArray`]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-angle-range-array.html) | Defines the range of angles (in degrees) for barcodes searching and result filtering. |
+| [`BarcodeBytesLengthRangeArray`]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-bytes-length-range-array.html) | Defines the range of barcode bytes length for barcodes searching and result filtering. |
+| [`BarcodeHeightRangeArray`]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-height-range-array.html) | Defines the range of heights (in pixels) for barcodes searching and result filtering. |
+| [`BarcodeTextLengthRangeArray`]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-text-length-range-array.html) | Defines the range of barcode text length for barcodes searching and result filtering. |
+| [`BarcodeTextRegExPattern`]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-text-regex-pattern.html) | Defines the regular expression pattern of barcode text characters for barcodes searching and result filtering. |
+| [`BarcodeWidthRangeArray`]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-width-range-array.html) | Defines the range of widths (in pixels) for barcodes searching and result filtering. |
+| [`BarcodeZoneBarCountRangeArray`]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-zone-bar-count-range-array.html) | Defines the range of bar count of the barcode zone for barcodes searching. |
+| [`BarcodeZoneMinDistanceToImageBorders`]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-zone-min-distance-to-image-borders.html) | Defines the minimum distance (in pixels) between the barcode zone and image borders. |
+| [`Code128Subset`]({{ site.dcv_parameters_reference }}barcode-format-specification/code128-subset.html) | Defines the subset of Code 128. |
+| [`EnableAddonCode`]({{ site.dcv_parameters_reference }}barcode-format-specification/enable-addon-code.html) | Defines whether to identify addon code. |
+| [`FindUnevenModuleBarcode`]({{ site.dcv_parameters_reference }}barcode-format-specification/find-uneven-module-barcode.html) | Defines whether to find barcodes with uneven barcode modules. |
+| [`HeadModuleRatio`]({{ site.dcv_parameters_reference }}barcode-format-specification/head-module-ratio.html) | Defines the module count and module size ratio of the barcode head section. |
+| [`MinQuietZoneWidth`]({{ site.dcv_parameters_reference }}barcode-format-specification/min-quiet-zone-width.html) | Defines the minimum width (in moduleSize) of the barcode quiet zone. |
+| [`MinRatioOfBarcodeZoneWidthToHeight`]({{ site.dcv_parameters_reference }}barcode-format-specification/min-ratio-of-barcode-zone-width-to-height.html) | Defines the minimum ratio (width/height as a percentage) of the barcode zone. |
+| [`MinResultConfidence`]({{ site.dcv_parameters_reference }}barcode-format-specification/min-result-confidence.html) | Defines the minimum confidence of the result. |
+| [`MirrorMode`]({{ site.dcv_parameters_reference }}barcode-format-specification/mirror-mode.html) | Defines whether to decode mirrored barcodes. |
+| [`ModuleSizeRangeArray`]({{ site.dcv_parameters_reference }}barcode-format-specification/module-size-range-array.html) | Defines the range of module size (in pixels) while barcode searching and result filtering. |
+| [`MSICodeCheckDigitCalculation`]({{ site.dcv_parameters_reference }}barcode-format-specification/msi-code-check-digit-calculation.html) | Defines the scheme used for calculating a check digit of an MSI barcode. |
+| [`PartitionModes`]({{ site.dcv_parameters_reference }}barcode-format-specification/partition-modes.html) | Defines the mode to apply partition process when decoding QRCode and DataMatrix. |
+| [`RequireStartStopChars`]({{ site.dcv_parameters_reference }}barcode-format-specification/require-start-stop-chars.html) | Defines whether the start and stop characters are required when searching for common 1D barcodes. |
+| [`ReturnPartialBarcodeValue`]({{ site.dcv_parameters_reference }}barcode-format-specification/return-partial-barcode-value.html) | Defines whether to return partial barcode value(s). |
+| [`StandardFormat`]({{ site.dcv_parameters_reference }}barcode-format-specification/standard-format.html) | Defines the standard barcode format. |
+| [`TailModuleRatio`]({{ site.dcv_parameters_reference }}barcode-format-specification/tail-module-ratio.html) | Defines the module count and module size ratio of the barcode tail section. |
+| [`VerifyCheckDigit`]({{ site.dcv_parameters_reference }}barcode-format-specification/verify-check-digit.html) | Defines whether to verify the check digit in barcodes where this check digit is optional. |
+
+
+## Global Parameter
+
+| Parameter Name  | Description |
+| ---------------------------- | ----------- |
+| [`MaxTotalImageDimension`]({{ site.dcv_parameters_reference }}global-parameter/max-total-image-dimension.html) | Defines the maximum total dimension of the images that read in the memory. |
+
+## Shared Parameter
+
+| Parameter Name  | Description |
+| --------------- | ----------- |
+| [`DirectoryPath`]({{ site.dcv_parameters_reference }}shared-parameter/directory-path.html) | Defines a path when the library have to read files. |
+| [`MaxThreadsInOneTask`]({{ site.dcv_parameters_reference }}shared-parameter/max-threads-in-one-task.html) | Defines the maximum threads that can be consumed in one task. |
+| [`Name`]({{ site.dcv_parameters_reference }}shared-parameter/name.html) | Represents the name of the top-level objects in Dynamsoft Capture Vision Parameter Template, which serves as its unique identifier. |
+| [`SectionImageParameterArray`]({{ site.dcv_parameters_reference }}shared-parameter/section-image-parameter-array.html) | Defines the image processing algorithms that implemented in the task. |
+| [`StartSection`]({{ site.dcv_parameters_reference }}shared-parameter/start-section.html) | Defines the start section of the algorithm task. |
+| [`TerminateSetting`]({{ site.dcv_parameters_reference }}shared-parameter/terminate-setting.html) | Defines the terminate stages of the task. |
