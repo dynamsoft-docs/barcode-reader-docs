@@ -94,6 +94,14 @@ permalink: /parameters/reference/index.html
 | [`TailModuleRatio`]({{ site.dcv_parameters_reference }}barcode-format-specification/tail-module-ratio.html) | Defines the module count and module size ratio of the barcode tail section. |
 | [`VerifyCheckDigit`]({{ site.dcv_parameters_reference }}barcode-format-specification/verify-check-digit.html) | Defines whether to verify the check digit in barcodes where this check digit is optional. |
 
+## Image Source Options
+
+| Parameter Name | Description |
+| -------------------- | ----------- |
+| [`FileFilter`]({{ site.dcv_parameters_reference }}image-source-options/file-filter.html) | Defines a file name filter string, which determines which files are fetched. |
+| [`PDFReadingMode`]({{ site.dcv_parameters_reference }}image-source-options/pdf-reading-mode.html) | Defines how to handle PDF files. |
+| [`Recursive`]({{ site.dcv_parameters_reference }}image-source-options/recursive.html) | Defines whether to fetch files recursively. |
+| [`Type`]({{ site.dcv_parameters_reference }}image-source-options/type.html) | Defines the type of the ImageSource object, which helps CVR create the correct type of image source. |
 
 ## Global Parameter
 
