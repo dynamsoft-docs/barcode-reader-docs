@@ -158,5 +158,7 @@ defaults:
       noTitleIndex: true
       needAutoGenerateSidebar: true
       needGenerateH3Content: true
+      docRootName: "Barcode Reader" 
+      docHomePage: "/barcode-reader/docs/core/introduction/"
 
 url: "https://www.dynamsoft.com" # sitemap root
