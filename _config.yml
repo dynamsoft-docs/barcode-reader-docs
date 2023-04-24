@@ -86,6 +86,19 @@ mobile_enumerations: /barcode-reader/docs/mobile/programming/enumeration/
 mobile_assets: /barcode-reader/docs/mobile/programming/assets/
 
 
+flutter: /capture-vision/docs/mobile/programming/flutter/
+flutter_api: /capture-vision/docs/mobile/programming/flutter/api-reference/
+
+xamarin: /capture-vision/docs/mobile/programming/xamarin/
+xamarin_api: /capture-vision/docs/mobile/programming/xamarin/api-reference/
+
+cordova: /capture-vision/docs/mobile/programming/cordova/
+cordova_api: /capture-vision/docs/mobile/programming/cordova/api-reference/
+
+react_native: /capture-vision/docs/mobile/programming/react-native/
+react_native_api: /capture-vision/docs/mobile/programming/react-native/api-reference/
+
+
 assets: /barcode-reader/docs/core/assets/
 edit_icon: /barcode-reader/docs/core/assets/img-icon/edit-icon.png
 smile_icon: /barcode-reader/docs/core/assets/img-icon/icon-smile.png
