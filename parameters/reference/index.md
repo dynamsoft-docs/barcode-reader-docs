@@ -17,7 +17,6 @@ permalink: /parameters/reference/index.html
 | [`ImageSourceName`]({{ site.dcv_parameters_reference }}capture-vision-template/image-source-name.html) | Indicates the input source name, used to refer to the `ImageSource` object. |
 | [`MaxParallelTasks`]({{ site.dcv_parameters_reference }}capture-vision-template/max-parallel-tasks.html) | Defines the maximum number of parallel tasks for the DCV runtime. |
 | [`OutputRawImage`]({{ site.dcv_parameters_reference }}capture-vision-template/output-raw-Image.html) | Indicates whether DCV finally outputs the original input image. |
-| [`SemanticProcessingNameArray`]({{ site.dcv_parameters_reference }}capture-vision-template/semantic-processing-name-array.html) | Represents the collection of semantic-processing object names, used to refer to the `SematicProcessing` objects. |
 | [`Timeout`]({{ site.dcv_parameters_reference }}capture-vision-template/timeout.html) | Defines the maximum amount of time (in milliseconds) that should be spent processing each image or frame. |
 
 ## Target ROI Def
