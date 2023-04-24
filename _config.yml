@@ -135,6 +135,26 @@ defaults:
       category: "mobile-repo"
       edition: "mobile"
   - scope:
+      path: "programming/flutter"
+    values:
+      category: "mobile-repo"
+      edition: "mobile"
+  - scope:
+      path: "programming/xamarin"
+    values:
+      category: "mobile-repo"
+      edition: "mobile"
+  - scope:
+      path: "programming/cordova"
+    values:
+      category: "mobile-repo"
+      edition: "mobile"
+  - scope:
+      path: "programming/react-native"
+    values:
+      category: "mobile-repo"
+      edition: "mobile"
+  - scope:
       path: "programming/c"
     values:
       category: "original-repo"
