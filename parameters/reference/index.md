@@ -79,6 +79,8 @@ permalink: /parameters/reference/index.html
 | [`BarcodeZoneMinDistanceToImageBorders`]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-zone-min-distance-to-image-borders.html) | Defines the minimum distance (in pixels) between the barcode zone and image borders. |
 | [`Code128Subset`]({{ site.dcv_parameters_reference }}barcode-format-specification/code128-subset.html) | Defines the subset of Code 128. |
 | [`EnableAddonCode`]({{ site.dcv_parameters_reference }}barcode-format-specification/enable-addon-code.html) | Defines whether to identify addon code. |
+| [`EnableDataMatrixECC000-140`]({{ site.dcv_parameters_reference }}barcode-format-specification/enable-data-matrix-ecc000-140.html) | Defines whether to read Data Matrix ECC000-140 barcode. |
+| [`EnableQRCodeModel1`]({{ site.dcv_parameters_reference }}barcode-format-specification/enable-qr-code-model-1.html) | Defines whether to read QR code model 1. |
 | [`FindUnevenModuleBarcode`]({{ site.dcv_parameters_reference }}barcode-format-specification/find-uneven-module-barcode.html) | Defines whether to find barcodes with uneven barcode modules. |
 | [`HeadModuleRatio`]({{ site.dcv_parameters_reference }}barcode-format-specification/head-module-ratio.html) | Defines the module count and module size ratio of the barcode head section. |
 | [`MinQuietZoneWidth`]({{ site.dcv_parameters_reference }}barcode-format-specification/min-quiet-zone-width.html) | Defines the minimum width (in moduleSize) of the barcode quiet zone. |
@@ -88,6 +90,7 @@ permalink: /parameters/reference/index.html
 | [`ModuleSizeRangeArray`]({{ site.dcv_parameters_reference }}barcode-format-specification/module-size-range-array.html) | Defines the range of module size (in pixels) while barcode searching and result filtering. |
 | [`MSICodeCheckDigitCalculation`]({{ site.dcv_parameters_reference }}barcode-format-specification/msi-code-check-digit-calculation.html) | Defines the scheme used for calculating a check digit of an MSI barcode. |
 | [`PartitionModes`]({{ site.dcv_parameters_reference }}barcode-format-specification/partition-modes.html) | Defines the mode to apply partition process when decoding QRCode and DataMatrix. |
+| [`PatchCodeSearchingMargin`]({{ site.dcv_parameters_reference }}barcode-format-specification/patch-code-searching-margin.html) | Defines the patch code searching margins. |
 | [`RequireStartStopChars`]({{ site.dcv_parameters_reference }}barcode-format-specification/require-start-stop-chars.html) | Defines whether the start and stop characters are required when searching for common 1D barcodes. |
 | [`ReturnPartialBarcodeValue`]({{ site.dcv_parameters_reference }}barcode-format-specification/return-partial-barcode-value.html) | Defines whether to return partial barcode value(s). |
 | [`StandardFormat`]({{ site.dcv_parameters_reference }}barcode-format-specification/standard-format.html) | Defines the standard barcode format. |
