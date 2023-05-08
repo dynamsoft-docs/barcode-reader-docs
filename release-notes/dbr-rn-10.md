@@ -11,3 +11,13 @@ noTitleIndex: true
 # Release Notes for Dynamsoft Barcode Reader - 10.x
 
 ## 10.0
+
+> First released: 05-18-2023
+
+### Highlights
+
+{%- include release-notes/product-highlight-10.0.0.md -%}
+
+| Versions | Available Editions |
+| -------- | ------------------ |
+| 10.0.0 | [C++]({{ site.cpp_release_notes}}cpp-10.html#1000-05182023) |
