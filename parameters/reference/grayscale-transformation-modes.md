@@ -70,7 +70,7 @@ delete pSettings;
 | -------- | --------- | ----------- |
 | Mode | Any one in Candidate Mode List as string | (Required) Specifies a mode for grayscale transformation.  |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
-| LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
+| LibraryParameters | A string from value range of LibraryParameters | (Optional) Sets the Argument [LibraryParameters](#libraryparameters). |
 
 
 

@@ -5,7 +5,7 @@ description: This page shows Dynamsoft Barcode Reader Parameter Reference for Lo
 keywords: LocalizationModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-permalink: /parameters/reference/localization-modes.html
+permalink: /parameters/reference/localization-modes-v9.2.0.html
 ---
 
 
@@ -118,7 +118,7 @@ delete pSettings;
 | ScanDirection | A number from value range of ScanDirection | (Optional) Sets the Argument [ScanDirection](#scandirection). |
 | ConfidenceThreshold | A number from value range of ConfidenceThreshold | (Optional) Sets the Argument [ConfidenceThreshold](#confidencethreshold). |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
-| LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
+| LibraryParameters | A string from value range of LibraryParameters | (Optional) Sets the Argument [LibraryParameters](#libraryparameters). |
 
 
 

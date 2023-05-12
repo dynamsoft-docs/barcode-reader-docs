@@ -71,7 +71,7 @@ delete pSettings;
 | GreenChannelWeight | A number from value range of GreenChannelWeight | (Optional) Sets the Argument [GreenChannelWeight](#greenchannelweight). |
 | RedChannelWeight | A number from value range of RedChannelWeight | (Optional) Sets the Argument [RedChannelWeight](#redchannelweight). |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
-| LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
+| LibraryParameters | A string from value range of LibraryParameters | (Optional) Sets the Argument [LibraryParameters](#libraryparameters). |
 
 
 

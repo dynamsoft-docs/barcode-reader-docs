@@ -5,7 +5,7 @@ description: This page shows Dynamsoft Barcode Reader Parameter Reference for De
 keywords: DeformationResistingModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-permalink: /parameters/reference/deformation-resisting-modes.html
+permalink: /parameters/reference/deformation-resisting-modes-v9.4.0.html
 ---
 
 
@@ -88,7 +88,7 @@ delete pSettings;
 | Mode | Any one in Candidate Mode List as string | (Required) Specifies a mode for deformation resisting.  |
 | Level | A number from value range of Level | (Optional) Sets the Argument [Level](#level). |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
-| LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
+| LibraryParameters | A string from value range of LibraryParameters | (Optional) Sets the Argument [LibraryParameters](#libraryparameters). |
 
 
 

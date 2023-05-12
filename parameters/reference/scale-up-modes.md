@@ -83,7 +83,7 @@ delete pSettings;
 | ModuleSizeThreshold | A number from value range of ModuleSizeThreshold | (Optional) Sets the Argument [modulesizethreshold](#modulesizethreshold). |
 | TargetModuleSize | A number from value range of TargetModuleSize | (Optional) Sets the Argument [TargetModuleSize](#targetmodulesize). |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
-| LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
+| LibraryParameters | A string from value range of LibraryParameters | (Optional) Sets the Argument [LibraryParameters](#libraryparameters). |
 
 
 
