@@ -15,7 +15,7 @@ In some cases, the captured image is very large, so DBR may require more memory 
 
 >Note:
 >
->1. If the image size is large and the barcode [`module size`](read-barcodes-with-small-module-size.md) is small, shrinking the image size may result in unreadable barcodes.
+>1. If the image size is large and the barcode [`module size`](read-barcodes-with-small-modulesize.md) is small, shrinking the image size may result in unreadable barcodes.
 >2. Don't worry about the location of the barcodes, as DBR will still return their coordinates in the original image.
 >3. For the JavaScript edition, a `BarcodeScanner` instance comes with a default `ScaleDownThreshold` of `2300`, which makes it easier to handle continuous video frames.
 
