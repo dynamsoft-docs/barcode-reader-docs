@@ -42,6 +42,9 @@ The following code snippet shows how to configure the parameters via a json temp
 >
 ```javascript
 const scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+// Allow js to directly process 4K images in canvas without compressing them.
+// Please test on the target devices. On devices with limited memory, the settings can lead to out of memory.
+scanner.maxCvsSideLength = 4096;
 // Defines settings for reading dense barcodes in a template.
 let jsonString = "{\"ImageParameter\":{\"BarcodeComplementModes\":[\"BCM_SKIP\"],\"DeblurModes\":[{\"Mode\":\"DM_SHARPENING\"},{\"Mode\":\"DM_GRAY_EQUALIZATION\"}],\"ExpectedBarcodesCount\":1,\"LocalizationModes\":[\"LM_CONNECTED_BLOCKS\"],\"ScaleUpModes\":[\"SUM_LINEAR_INTERPOLATION(0,4,6)\"],\"MaxAlgorithmThreadCount\":1,\"Name\":\"high-density-qr-tpl\",\"ScaleDownThreshold\":10000,\"Timeout\":5000},\"Version\":\"3.0\"}";
 // Configures the BarcodeScanner object with the settings.
