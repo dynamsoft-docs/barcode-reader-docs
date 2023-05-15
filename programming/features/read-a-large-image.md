@@ -32,7 +32,7 @@ In some cases, the captured image is very large, so DBR may require more memory 
    >
 >
 ```javascript
-let scanner =await Dynamsoft.DBR.BarcodeScanner.createInstance();
+let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 // Force js to compress images larger than 2K.
 scanner.maxCvsSideLength = 2048;
 // Obtains the current runtime settings of DBR.
