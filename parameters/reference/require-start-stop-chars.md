@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for RequireStartStopChars
+title: RequireStartStopChars - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for RequireStartStopChars.
 keywords: RequireStartStopChars, parameter reference, parameter
 needAutoGenerateSidebar: true

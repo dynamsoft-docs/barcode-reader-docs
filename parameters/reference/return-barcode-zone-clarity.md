@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for ReturnBarcodeZoneClarity
+title: ReturnBarcodeZoneClarity - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for ReturnBarcodeZoneClarity.
 keywords: ReturnBarcodeZoneClarity, parameter reference, parameter
 needAutoGenerateSidebar: true

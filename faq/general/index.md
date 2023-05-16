@@ -42,8 +42,6 @@ permalink: /faq/general/index.html
 16. [How to ensure that a device does not overuse its allotted number of instances?](ensure-no-overuse.html)
 
 17. [How does your SDK compare to other commercial SDKs?](competitors-comparison.html)
-<<<<<<< Updated upstream
-=======
 
 18. [How to Handle Non-printable Characters Like "\u{1D}" or "{GS}" from the Barcode Text?](unprintable-character.md)
 
@@ -51,5 +49,4 @@ permalink: /faq/general/index.html
 
 20. [How can I sort the barcodes of my image in reading order?](sort-barcodes-image.md)
 
-21. [How many concurrent instances I should purchase?](purchase-concurrent-instance-license.md)
->>>>>>> Stashed changes
+21. [How many concurrent instances should I purchase?](purchase-concurrent-instance-license.md)

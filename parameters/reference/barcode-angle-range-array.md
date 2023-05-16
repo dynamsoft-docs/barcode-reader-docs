@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for BarcodeAngleRangeArray
+title: BarcodeAngleRangeArray - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for BarcodeAngleRangeArray.
 keywords: BarcodeAngleRangeArray, parameter reference, parameter
 needAutoGenerateSidebar: true
@@ -12,10 +12,6 @@ permalink: /parameters/reference/barcode-angle-range-array.html
 # BarcodeAngleRangeArray 
 
 `BarcodeAngleRangeArray` defines the range of angles (in degrees) for barcodes searching and result filtering. It is not set by default which means there is no limitation on the barcode angles.
-
-| Value Type | Value Range | Default Value | Template Structure Type |
-| ---------- | ----------- | ------------- | ----------------------- |
-| *int* | [0, 360] | `null` | `FormatSpecification` |
     
 ## Setting Methods
 `BarcodeAngleRangeArray` can be set via JSON template.

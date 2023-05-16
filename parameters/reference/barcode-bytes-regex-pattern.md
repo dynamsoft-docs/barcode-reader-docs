@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for BarcodeBytesRegExPattern
+title: BarcodeBytesRegExPattern - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for BarcodeBytesRegExPattern.
 keywords: BarcodeBytesRegExPattern, parameter reference, parameter
 needAutoGenerateSidebar: true

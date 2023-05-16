@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for BinarizationModes
+title: BinarizationModes - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for BinarizationModes.
 keywords: BinarizationModes, parameter reference, parameter
 needAutoGenerateSidebar: true
@@ -79,7 +79,7 @@ delete pSettings;
 | ImagePreprocessingModesIndex | A number from value range of ImagePreprocessingModesIndex | (Optional) Sets the Argument [ImagePreprocessingModesIndex](#imagepreprocessingmodesindex). |
 | ThreshValueCoefficient | A number from value range of ThreshValueCoefficient | (Optional) Sets the Argument [ThreshValueCoefficient](#threshvaluecoefficient). |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
-| LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
+| LibraryParameters | A string from value range of LibraryParameters | (Optional) Sets the Argument [LibraryParameters](#libraryparameters). |
 
 **JSON Parameter Example**   
 ```

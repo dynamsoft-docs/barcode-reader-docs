@@ -33,8 +33,14 @@ In some scenarios, the barcode is very small relative to the entire image, and i
    >
 >
 ```javascript
+let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+// Allow js to directly process 4K images in canvas without compressing them.
+// Please test on the target devices. On devices with limited memory, the settings can lead to out of memory.
+scanner.maxCvsSideLength = 4096;
 // Obtains the current runtime settings of DBR.
 let rs = await scanner.getRuntimeSettings();
+// Do not scale down images equal or smaller than 4K
+rs.scaleDownThreshold = 4096;
 // Sets the scale-up mode.
 rs.scaleUpModes[0] = Dynamsoft.DBR.EnumScaleUpMode.SUM_LINEAR_INTERPOLATION;
 // Updates the settings.
@@ -171,3 +177,5 @@ DBR_SetModeArgument(barcodeReader, "ScaleUpModes", 0, "TargetModuleSize", "8", s
 DBR_DecodeFile(barcodeReader, "YOUR-IMAGE-FILE-PATH", ""); // Start decoding
 // Add further process
 ```
+
+Read more about [how to read barcodes which seem blurry](https://www.dynamsoft.com/barcode-dataset/blurry-barcodes/).

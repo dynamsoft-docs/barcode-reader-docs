@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for TextResultOrderModes
+title: TextResultOrderModes - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for TextResultOrderModes.
 keywords: TextResultOrderModes, parameter reference, parameter
 needAutoGenerateSidebar: true
@@ -54,9 +54,11 @@ delete pSettings;
 
 
 ### As JSON Parameter
-`TextResultOrderModes` as a JSON parameter is a JSON Object array defined as below.   
+
+`TextResultOrderModes` as a JSON parameter is a JSON Object array defined as below.
+
 | Key Name | Key Value |
-| -------- | --------- | 
+| -------- | --------- |
 | TextResultOrderModes | a JSON object defined as below |
 
 

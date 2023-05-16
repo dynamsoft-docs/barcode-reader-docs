@@ -22,7 +22,7 @@ DBR is able to work in a multitude of usage scenarios and industries where our c
 - [**COVID-19 Vaccine Passport Scanner**](https://www.youtube.com/watch?v=GdRRsqho-vk)
 - [**Creating a Warehouse Management System with DBR**](https://www.youtube.com/watch?v=bCyzcV0ofMk)
 
-These are some of the most popular use cases that we have come across, but there's much more that our SDK can accomplish, most of which are mentioned [here](https://www.dynamsoft.com/barcode-reader/introduction/overview.html?ver=latest#user-scenarios).
+These are some of the most popular use cases that we have come across, but there's much more that our SDK can accomplish.
 
 Unlike most of our competitors, the Dynamsoft Barcode Reader comes in a variety of flavours, whether you are looking to build a desktop application, a native mobile application, or a web application. DBR supports a multitude of languages, including C, .NET, Java, Swift, JavaScript, and many more that our competitors do not support. In addition, DBR also supports a variety of the major frameworks that are used to create applications, such as Xamarin, Cordova, React, and a handful more. No matter the programming language or framework that you want to use for your application, Dynamsoft has got you covered. Feel free to check out the following videos that explore the different editions the SDK offers.
 

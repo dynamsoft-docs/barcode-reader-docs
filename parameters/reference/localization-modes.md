@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for LocalizationModes
+title: LocalizationModes - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for LocalizationModes.
 keywords: LocalizationModes, parameter reference, parameter
 needAutoGenerateSidebar: true
@@ -117,8 +117,10 @@ delete pSettings;
 | Mode | Any one in Candidate Mode List as string | (Required) Specifies a mode for deformation resisting.  |
 | ScanStride | A number from value range of ScanStride | (Optional) Sets the Argument [ScanStride](#scanstride). |
 | ScanDirection | A number from value range of ScanDirection | (Optional) Sets the Argument [ScanDirection](#scandirection). |
+| ConfidenceThreshold | A number from value range of ConfidenceThreshold | (Optional) Sets the Argument [ConfidenceThreshold](#confidencethreshold). |
+| IsOneDStacked | A number from value range of IsOneDStacked | (Optional) Sets the Argument [IsOneDStacked](#isonedstacked). |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
-| LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
+| LibraryParameters | A string from value range of LibraryParameters | (Optional) Sets the Argument [LibraryParameters](#libraryparameters). |
 
 
 
@@ -192,7 +194,7 @@ Sets the confidence threshold.
 | *int* | [0, 100] | 60 | LM_ONED_FAST_SCAN |         
 
 **Remarks**         
-  - The localization result will be discarded if its conficence is less then the threshold.  
+  - The localization result will be discarded if its confidence is less then the threshold.  
 
 ### IsOneDStacked 
 Sets whether the oned barcodes are stacked.

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for TextureDetectionModes
+title: TextureDetectionModes - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for TextureDetectionModes.
 keywords: TextureDetectionModes, parameter reference, parameter
 needAutoGenerateSidebar: true
@@ -66,7 +66,7 @@ delete pSettings;
 | Mode | Any one in Candidate Mode List as string | (Required) Specifies a mode for text filtering.  |
 | Sensitivity | A number from value range of Sensitivity | (Optional) Sets the Argument [Sensitivity](#sensitivity). |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
-| LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
+| LibraryParameters | A string from value range of LibraryParameters | (Optional) Sets the Argument [LibraryParameters](#libraryparameters). |
 
 
 

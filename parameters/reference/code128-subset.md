@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for Code128Subset
+title: Code128Subset - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for Code128Subset.
 keywords: Code128Subset, parameter reference, parameter
 needAutoGenerateSidebar: true

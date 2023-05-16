@@ -9,7 +9,8 @@ permalink: /programming/features/use-region-predetection.html
 
 # How To Use Region Predetection
 
-DBR can automatically detect barcodes in a Region of Interest (ROI) through configuration parameters. For example, in the case of small barcodes in a large image, if the background of the image itself is not very complicated and the barcode is clear, then the time to process the entire image is relatively fast. You can use region detection to pre-detect the ROI of the large image to get several areas where the barcodes may exist to reduce processing time. You can enable region detection by configuring the parameter  [`RegionPredetectionModes`]({{ site.parameters_reference }}region-predetection-modes.html#regionpredetectionmodes). DBR currently supports three area detection modes and supports setting multiple modes at the same time.
+Dynamsoft Barcode Reader (DBR) can automatically detect Region of Interest (ROI) from image. A ROI is a sub area of the image where the barcodes may exist. Enabling ROI detection helps speed up the process since the decoding will only be applied on these ROIs instead of the entire image. For example, in the case of a small barcode in a large image, the time to process the entire image is relatively slow. If the background of the image itself is not very complicated and the barcode is clear, you can enable ROI detection by configuring the parameter  [`RegionPredetectionModes`]({{ site.parameters_reference }}region-predetection-modes.html#regionpredetectionmodes), the time to process the small barcode area is much more faster. DBR currently supports three ROI detection modes and supports setting multiple modes at the same time.
+
 
 ## Black & White or Gray Barcode on a Colored Background
 
@@ -77,7 +78,7 @@ JSON Template:
 
 ## Other color characteristic regions in the image
 
-For some special images, the code area has no obvious features to be detected directly, but there are some other regions with color features on the image. At this time, RPM_GENERAL_HSV_CONTRAST mode can also be used to detect these areas with color features. If the position of the barcode is fixed relative to the position of these areas, the position of the barcode can be deduced from the position of these areas, thereby realizing a quick barcode recognition. 
+For some special images, the code area has no obvious features to be detected directly, but there are some other regions with color features on the image. At this time, RPM_GENERAL_HSV_CONTRAST mode can also be used to detect these areas with color features. If the position of the barcode is fixed relative to the position of these areas, the position of the barcode can be deduced from the position of these areas, thereby realizing a quick barcode recognition.  
 As shown in the figure below, there is a clear yellow label area. If the background color is set to yellow 54 and the fault tolerance is 28, the exact position of the label can be detected (the area marked by the red frame, can be observed through the intermediate result IRT_PREDETECTED_QUADRILATERAL), and then use RelativeBarcodeRegions parameter to get the relative position of the barcode region (the area marked by the green frame).
 
 
@@ -106,5 +107,6 @@ JSON Template:
 [2]:assets/use-region-predetection/region-predetection-hsv.png
 [3]:assets/use-region-predetection/region-predetection-label.png
 
+## Related Articles
 
-
+- [Use Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html#json-template)

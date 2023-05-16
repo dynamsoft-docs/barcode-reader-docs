@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader How-to Guides - Set Custom Area for HSV Pre-detection 
+title: Set Custom Area for HSV Pre-detection - Dynamsoft Barcode Reader How-to Guides
 description: This page shows how to set custom area for HSV Pre-detection.
 keywords: pre-detection, pre-detected region, hsv, custom setting, how-to guides
 needAutoGenerateSidebar: false
@@ -37,7 +37,7 @@ reader.SetModeArgument("regionPredetectionModes", 0, "ForeAndBackgroundColours",
 // "[0,-1,5]" - define red colour zone as ROI
 reader.SetModeArgument("regionPredetectionModes", 0, "HeightRange", "[300,400]", errorMessage, 256);
 reader.SetModeArgument("regionPredetectionModes", 0, "WidthRange", "[600,700]", errorMessage, 256);
-reader.SetModeArgument("regionPredetectionModes", 0, "AspectRatioRange", "[0.1,1]", errorMessage, 256);
+reader.SetModeArgument("regionPredetectionModes", 0, "AspectRatioRange", "[25,100]", errorMessage, 256);
 // invoke decode method...
 ```  
 

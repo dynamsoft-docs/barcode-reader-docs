@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Licensing -  How to set trial license
+title:  How to set trial license - Dynamsoft Barcode Reader Licensing
 description: This page shows how to set trial license of Dynamsoft Barcode Reader.
 keywords: trial license, licensing
 needAutoGenerateSidebar: false

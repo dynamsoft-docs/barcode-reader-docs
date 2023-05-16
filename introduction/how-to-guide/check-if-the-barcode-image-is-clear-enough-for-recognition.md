@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader How-to Guides - Check If the Barcode Image Is Clear Enough for Recognition
+title: Check If the Barcode Image Is Clear Enough for Recognition - Dynamsoft Barcode Reader How-to Guides
 description: This page shows how to check if the barcode image is clear enough for recognition.
 keywords: image resolution, barcode module, clear image, how-to guides
 needAutoGenerateSidebar: false

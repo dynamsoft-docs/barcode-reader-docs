@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for ExpectedBarcodesCount
+title: ExpectedBarcodesCount - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for ExpectedBarcodesCount.
 keywords: ExpectedBarcodesCount, parameter reference, parameter
 needAutoGenerateSidebar: true

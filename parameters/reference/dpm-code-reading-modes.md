@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for DPMCodeReadingModes
+title: DPMCodeReadingModes - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for DPMCodeReadingModes.
 keywords: DPMCodeReadingModes, parameter reference, parameter
 needAutoGenerateSidebar: true
@@ -67,7 +67,7 @@ delete pSettings;
 | -------- | --------- | ----------- |
 | Mode | Any one in Candidate Mode List as string | (Required) Specifies a mode to read DPM barcode.  |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
-| LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
+| LibraryParameters | A string from value range of LibraryParameters | (Optional) Sets the Argument [LibraryParameters](#libraryparameters). |
 
 
 

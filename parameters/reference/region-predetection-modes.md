@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for RegionPredetectionModes
+title: RegionPredetectionModes - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for RegionPredetectionModes.
 keywords: RegionPredetectionModes, parameter reference, parameter
 needAutoGenerateSidebar: true
@@ -116,7 +116,7 @@ delete pSettings;
 | SpatialIndexBlockSize | A number from value range of SpatialIndexBlockSize | (Optional) Sets the Argument [SpatialIndexBlockSize](#spatialindexblocksize). |
 | WidthRange | A string from value range of WidthRange | (Optional) Sets the Argument [WidthRange](#widthrange). |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
-| LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
+| LibraryParameters | A string from value range of LibraryParameters | (Optional) Sets the Argument [LibraryParameters](#libraryparameters). |
 
 
 

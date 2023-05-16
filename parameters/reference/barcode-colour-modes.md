@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for BarcodeColourModes
+title: BarcodeColourModes - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for BarcodeColourModes.
 keywords: BarcodeColourModes, parameter reference, parameter
 needAutoGenerateSidebar: true
@@ -96,7 +96,7 @@ delete pSettings;
 | Mode | Any one in Candidate Mode List as string | (Required) Specifies a target barcode colour mode.  |
 | LightReflection | A number from value range of LightReflection | (Optional) Sets the Argument [LightReflection](#lightreflection). |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
-| LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
+| LibraryParameters | A string from value range of LibraryParameters | (Optional) Sets the Argument [LibraryParameters](#libraryparameters). |
 
 
 
@@ -138,7 +138,7 @@ Setting more modes along with different arguments may improve the Read Rate.
 - [LibraryParameters](#libraryparameters)
  
 ### LightReflection 
-Sets if there is light reflection on the barocde zone.
+Sets if there is light reflection on the barcode zone.
 
 | Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | --------- |

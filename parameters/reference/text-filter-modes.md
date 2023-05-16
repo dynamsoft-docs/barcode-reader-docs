@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for TextFilterModes
+title: TextFilterModes - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for TextFilterModes.
 keywords: TextFilterModes, parameter reference, parameter
 needAutoGenerateSidebar: true
@@ -67,7 +67,7 @@ delete pSettings;
 | MinImageDimension | A number from value range of MinImageDimension | (Optional) Sets the Argument [MinImageDimension](#minimagedimension). |
 | Sensitivity | A number from value range of Sensitivity | (Optional) Sets the Argument [Sensitivity](#sensitivity). |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
-| LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
+| LibraryParameters | A string from value range of LibraryParameters | (Optional) Sets the Argument [LibraryParameters](#libraryparameters). |
 
 
 

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for DeblurModes
+title: DeblurModes - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for DeblurModes.
 keywords: DeblurModes, parameter reference, parameter
 needAutoGenerateSidebar: true
@@ -118,7 +118,7 @@ delete pSettings;
 | -------- | --------- | ----------- |
 | Mode | Any one in Candidate Mode List as string | (Required) Specifies a mode for deblurring.  |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
-| LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
+| LibraryParameters | A string from value range of LibraryParameters | (Optional) Sets the Argument [LibraryParameters](#libraryparameters). |
 
 
 

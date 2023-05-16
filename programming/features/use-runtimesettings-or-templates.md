@@ -210,10 +210,11 @@ The following code snippet demonstrates how to make use of a template.
 Dynamsoft.DBR.BarcodeScanner.license = 'YOUR-LICENSE-KEY';
 // Creates a BarcodeScanner instance.
 let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-// Stringify a template into a string.
-let template = JSON.stringify("A-JSON-Template");
+// Stringify a template into a string if it is not yet a string.
+let template = {ImageParameter:{}, version:3.0}; // An example of a template object, a real template would be much more complicated.
+let templateString = JSON.stringify(jsonTemplate);
 // Updates the settings with the string.
-await scanner.initRuntimeSettingsWithString(template);
+await scanner.initRuntimeSettingsWithString(templateString);
 ```
 >
 ```java

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for MSICodeCheckDigitCalculation
+title: MSICodeCheckDigitCalculation - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for MSICodeCheckDigitCalculation.
 keywords: MSICodeCheckDigitCalculation, parameter reference, parameter
 needAutoGenerateSidebar: true

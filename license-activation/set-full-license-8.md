@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Licensing - How to set full license in version 8.x
+title: How to set full license in version 8.x - Dynamsoft Barcode Reader Licensing
 description: This page shows how to set full license of Dynamsoft Barcode Reader.
 keywords: full license, licensing
 needAutoGenerateSidebar: true

@@ -17,7 +17,7 @@ DBR provides multiple image preprocessing modes to deal with different situation
 
 - `IPM_GRAY_EQUALIZE`
 
-Gray-level equalization, which is used to enhance the contrast of an image. The sample image below demonstrates the effect, before and after grayscale equalization. The colours of the DataMatrix code on the original image (left) is too similar to the background color, which would makes decoding, as is, more difficult. The picture on the right is the result of preprocessing through `IPM_GRAY_EQUALIZE`. The DataMatrix becomes much more pronounced, which will make the subsequent decoding process much easier.
+Gray-level equalization, which is used to enhance the contrast of an image. The sample image below demonstrates the effect, before and after grayscale equalization. The colours of the QR code on the original image (left) is too similar to the background color, which would makes decoding, as is, more difficult. The picture on the right is the result of preprocessing through `IPM_GRAY_EQUALIZE`. The QR code becomes much more pronounced, which will make the subsequent decoding process much easier.
 
 ![Before Equalizing][1]![After Equalizing][2]
 

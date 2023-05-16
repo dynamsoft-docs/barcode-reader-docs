@@ -17,14 +17,6 @@ The first step is to get the encrypted information as raw string from the barcod
 
 <div class="sample-code-prefix template2"></div>
    >- Javascript
-   >- Android
-   >- Objective-C
-   >- Swift
-   >- Python
-   >- Java
-   >- C#
-   >- C++
-   >- C
    >
 >
 ```js
@@ -40,7 +32,13 @@ Dynamsoft.DBR.BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9'
             let settings = await scanner.getRuntimeSettings();
             // Sets the barcode type to PDF417.
             settings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_PDF417;
+            // Sets the scale-up mode.
+            rs.scaleUpModes[0] = Dynamsoft.DBR.EnumScaleUpMode.SUM_LINEAR_INTERPOLATION;
             await scanner.updateRuntimeSettings(settings);
+            // Fine-tunes some arguments of the first mode in `scaleUpModes`
+            scanner.setModeArgument("scaleUpModes", 0, "AcuteAngleWithXThreshold", "0");
+            scanner.setModeArgument("scaleUpModes", 0, "ModuleSizeThreshold", "3");
+            scanner.setModeArgument("scaleUpModes", 0, "TargetModuleSize", "8");
             scanner.onUniqueRead = (txt, result) => {
                 rawString = txt;
             };
@@ -54,38 +52,6 @@ Dynamsoft.DBR.BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9'
     });
 })();
 ```
->
-```java
-NOT SURE JAVA-ANDROID
-```
->
-```objc
-NOT SURE OBJC
-```
->
-```swift
-NOT SURE SWIFT
-```
->
-```python
-NOT SURE PYTHON
-```
->
-```java
-NOT SURE JAVA
-```
->
-```c#
-NOT SURE C#
-```
->
-```c++
-NOT SURE C++
-```
->
-```c
-NOT SURE C
-```
 
 Now we have the original encoded data (`rawString`), the next step is to parse it to extract useful information.
 
@@ -95,14 +61,6 @@ The encoded data is not readable, therefore, we parse it to extract the actual i
 
 <div class="sample-code-prefix template2"></div>
    >- Javascript
-   >- Android
-   >- Objective-C
-   >- Swift
-   >- Python
-   >- Java
-   >- C#
-   >- C++
-   >- C
    >
 >
 ```html
@@ -124,37 +82,6 @@ Dynamsoft.DCP.CodeParser.license ='DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
     }
 })();
 </script>
-```
->
-```java
-NOT SURE JAVA-ANDROID
-```
->
-```objc
-NOT SURE OBJC
-```
->
-```swift
-NOT SURE SWIFT
-```
->
-```python
-NOT SURE PYTHON
-```
->
-```java
-NOT SURE JAVA
-```
->
-```c#
-NOT SURE C#
-```
->
-```c++
-NOT SURE C++
-```
->```c
-NOT SURE C
 ```
 
 > If you are using the JavaScript edition, also check out:

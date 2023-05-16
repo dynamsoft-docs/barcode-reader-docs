@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for DeblurLevel
+title: DeblurLevel - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for DeblurLevel.
 keywords: DeblurLevel, parameter reference, parameter
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for BarcodeBytesLengthRangeArray
+title: BarcodeBytesLengthRangeArray - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for BarcodeBytesLengthRangeArray.
 keywords: BarcodeBytesLengthRangeArray, parameter reference, parameter
 needAutoGenerateSidebar: true
@@ -12,10 +12,6 @@ permalink: /parameters/reference/barcode-bytes-length-range-array.html
 # BarcodeBytesLengthRangeArray 
 
 `BarcodeBytesLengthRangeArray` defines the range of barcode bytes length for barcodes searching and result filtering. It is not set by default which means there is no limitation on the barcode byte length.
-
-| Value Type | Value Range | Default Value | Template Structure Type |
-| ---------- | ----------- | ------------- | ----------------------- |
-| *int* | [0, 0x7fffffff] | N/A | `FormatSpecification` |
 
     
 ## Setting Methods

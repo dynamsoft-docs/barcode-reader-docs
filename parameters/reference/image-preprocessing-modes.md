@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for ImagePreprocessingModes
+title: ImagePreprocessingModes - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for ImagePreprocessingModes.
 keywords: ImagePreprocessingModes, parameter reference, parameter
 needAutoGenerateSidebar: true
@@ -108,7 +108,7 @@ delete pSettings;
 | MorphOperationKernelSizeX | A number from value range of MorphOperationKernelSizeX | (Optional) Sets the Argument [MorphOperationKernelSizeX](#morphoperationkernelsizex). |
 | MorphOperationKernelSizeY | A number from value range of MorphOperationKernelSizeY | (Optional) Sets the Argument [MorphOperationKernelSizeY](#morphoperationkernelsizey). |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
-| LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
+| LibraryParameters | A string from value range of LibraryParameters | (Optional) Sets the Argument [LibraryParameters](#libraryparameters). |
 
 
 

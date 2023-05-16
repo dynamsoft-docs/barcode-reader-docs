@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for ReturnPartialBarcodeValue
+title: ReturnPartialBarcodeValue - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for ReturnPartialBarcodeValue.
 keywords: ReturnPartialBarcodeValue, parameter reference, parameter
 needAutoGenerateSidebar: true
