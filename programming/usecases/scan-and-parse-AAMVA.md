@@ -32,7 +32,13 @@ Dynamsoft.DBR.BarcodeReader.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9'
             let settings = await scanner.getRuntimeSettings();
             // Sets the barcode type to PDF417.
             settings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_PDF417;
+            // Sets the scale-up mode.
+            rs.scaleUpModes[0] = Dynamsoft.DBR.EnumScaleUpMode.SUM_LINEAR_INTERPOLATION;
             await scanner.updateRuntimeSettings(settings);
+            // Fine-tunes some arguments of the first mode in `scaleUpModes`
+            scanner.setModeArgument("scaleUpModes", 0, "AcuteAngleWithXThreshold", "0");
+            scanner.setModeArgument("scaleUpModes", 0, "ModuleSizeThreshold", "3");
+            scanner.setModeArgument("scaleUpModes", 0, "TargetModuleSize", "8");
             scanner.onUniqueRead = (txt, result) => {
                 rawString = txt;
             };
