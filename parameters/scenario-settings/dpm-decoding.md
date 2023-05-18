@@ -1,6 +1,6 @@
 ---   
 layout: default-layout
-description: This article introduces how to read DPM codes.
+description: Learn how to read Direct Part Marking (DPM) Codes using Dynamsoft Barcode Reader SDK.
 title: How to read DPM codes
 keywords: DPM, Direct Part Marking
 needAutoGenerateSidebar: false

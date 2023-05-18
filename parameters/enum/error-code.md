@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader Enumerations - Error Code
-description: This article enumerates the error codes of Dynamsoft Barcode Reader
+description: This article enumerates the error codes of Dynamsoft Barcode Reader common to all programming laguages.
 keywords: error code, enumeration
 needAutoGenerateSidebar: true
 noTitleIndex: true

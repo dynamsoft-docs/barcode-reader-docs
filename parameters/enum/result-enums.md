@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader Enumerations - Result Enumerations
-description: This article shows Result Enumerations of Dynamsoft Barcode Reader.
+description: This article shows Result Enumerations of Dynamsoft Barcode Reader such as IMResultDataType, IntermediateResultSavingMode and others
 keywords: IMResultDataType, IntermediateResultSavingMode, IntermediateResultType, ResultCoordinateType, ResultType, TextResultOrderMode, result enumeration, enumeration
 needAutoGenerateSidebar: true
 needGenerateH3Content: false

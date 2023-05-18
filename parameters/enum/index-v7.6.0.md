@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader Enumerations - Main Page
-description: This article shows the main page of Dynamsoft Barcode Reader Enumerations.
+description: This article shows the main page of Dynamsoft Barcode Reader v7.6.0 Enumerations.
 keywords: enumerations
 needAutoGenerateSidebar: false
 breadcrumbText: Enumerations

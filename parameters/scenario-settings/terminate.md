@@ -1,7 +1,7 @@
 ---   
 layout: default-layout
 title: How to control the Terminate Phase for DBR
-description: This article describes how to use runtime settings to make DBR terminate at a certain stage.
+description: Learn how to use runtime settings to make Dynamsoft Barcode Reader terminate at a certain stage.
 keywords: terminate timeout
 needAutoGenerateSidebar: false
 ---

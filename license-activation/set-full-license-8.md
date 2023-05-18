@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader Licensing - How to set full license
-description: This page shows how to set full license of Dynamsoft Barcode Reader.
+description: Find out about the different methods used for setting trial and full license key in DBR v8.x
 keywords: full license, licensing
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader Enumerations - Other Enumerations
-description: This article shows other Enumerations of Dynamsoft Barcode Reader.
+description: This article shows other Enumerations of Dynamsoft Barcode Reader v7.6.0.
 keywords: ImagePixelFormat, QRCodeErrorCorrectionLevel, other enumeration, enumeration
 needAutoGenerateSidebar: true
 needGenerateH3Content: false

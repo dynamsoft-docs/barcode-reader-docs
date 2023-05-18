@@ -1,6 +1,6 @@
 ---   
 layout: default-layout
-description: This article describes how to configure the region predetection mode for different scenario and automatically detect ROI.
+description: Learn how to configure the region predetection mode for different scenario and automatically detect ROI using Dynamsoft Barcode Reader SDK.
 title: How To Use Region Predetection
 keywords: region predetection,ROI,region of interest
 needAutoGenerateSidebar: false
