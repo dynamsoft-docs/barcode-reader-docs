@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader How-to Guides - Get Detailed Barcode Information
 description: Find out how to get the detailed barcode information like checksum digit, start/stop characters, error correction level, etc.
 keywords: additional information, angle, confidence, decode result, how-to guides
 needAutoGenerateSidebar: false
+permalink: /introduction/how-to-guide/get-detailed-barcode-information.html
 ---
 
 

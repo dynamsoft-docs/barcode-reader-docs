@@ -1,20 +1,20 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for AllModuleDeviation
+title: AllModuleDeviation - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for AllModuleDeviation.
 keywords: AllModuleDeviation, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/all-module-deviation.html
 ---
-
 
 # AllModuleDeviation 
 
-`AllModuleDeviation` is a parameter to specify the width deviation value (in moduleSize) of a non-standard 1D barcode type relative to the standard barcode width. It is defined as below:
+`AllModuleDeviation` specifies the width deviation value (in moduleSize) of a non-standard 1D barcode type relative to the standard barcode width. It is defined as below:
 
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| *int* | [0, 0x7fffffff] | 0 |
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *int* | [0, 0x7fffffff] | 0 | `FormatSpecification` |
 
 
 **Remarks**  
@@ -23,7 +23,7 @@ The unit is barcode module size. For example, if the standard barcode module siz
 
     
 ## Setting Methods
-`AllModuleDeviation` is supported to be set through JSON template.
+`AllModuleDeviation` can be set via JSON template.
 
 ### As JSON Parameter
 `AllModuleDeviation` as a JSON parameter is a number value defined as below.   
@@ -54,5 +54,5 @@ Setting `AllModuleDeviation` to an appropriate value when detecting non-standard
 
 -->
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)
 - [Configure parameters for a certain barcode format]({{ site.scenario_settings }}format-specification.html#allmoduledeviation)

@@ -4,8 +4,8 @@ title: Dynamsoft Barcode Reader Parameters - Main Page
 description: Dynamsoft Barcode Reader provides flexible APIs for you to customize the scanning settings for different usage scenarios. 
 needAutoGenerateSidebar: false
 breadcrumbText: Parameters
+permalink: /parameters/
 ---
-
 
 # Parameters
 
@@ -23,4 +23,3 @@ Dynamsoft Barcode Reader provides rich template parameters that you can customiz
 ## Customization
 
 - [Scenario Settings]({{ site.scenario_settings }})
-

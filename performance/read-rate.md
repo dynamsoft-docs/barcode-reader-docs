@@ -1,8 +1,11 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Performance - Read Rate
+title: Read Rate - Dynamsoft Barcode Reader Performance
 description: This page shows how the Dynamsoft Barcode Reader SDK is designed to improve read rate
 keywords: Read Rate
+breadcrumbText: Read Rate
+noTitleIndex: false
+permalink: /performance/read-rate.html
 ---
 
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
@@ -77,12 +80,14 @@ To localize most barcodes, it is recommended to use DBR's default localization m
 - `LM_SCAN_DIRECTLY` is covered by `LM_CONNECTED_BLOCKS`, so setting `LM_SCAN_DIRECTLY` after `LM_CONNECTED_BLOCKS` will give no help on read rate but slow down the speed.
 
 ## Refine the Decoding Process
+
 Next in the algorithm, DBR performs a round of image processing on the precisely partitioned barcode area to get final barcode result. The parameter [DeblurModes]({{ site.parameters_reference }}deblur-modes.html) comes with 9 modes in total which can be used individually or together to configure how DBR runs this part of the algorithm. Of the 9 modes, 2 of them are designed for relatively simple situations: 
 
 - `DM_BASED_ON_LOC_BIN` is the most efficient mode when the barcode area is clear and clean. It reuses the binary image generated during the localization process. 
 - `DM_THRESHOLD_BINARIZATION` is preferred when the barcode content modules have distinct colour contrast with the background.
 
 The following 6 modes provide more adaptability to handle more complicated situations.
+
 - `DM_DIRECT_BINARIZATION` is preferred when the barcode content modules have varying illumination levels.
 - `DM_GRAY_EQUALIZATION` is preferred when the barcode content modules have low colour contrast with the background.
 - `DM_SMOOTHING` is preferred when the barcode area has intensive noise or textures.
@@ -100,24 +105,31 @@ Last but not least, `DM_DEEP_ANALYSIS` is the most powerful way to deal with des
 ## Optimize Particular Circumstances while Decoding
 
 ### Enlarge Barcodes with Small Module Sizes
+
 Barcodes with a small module size may be distorted by some processing methods like rotation, binarization with inappropriate block size, etc. Enlarging the barcode area to a larger size can enhance the ability to prevent distortion, thereby improving the likelihood of decoding results. The parameter [ScaleUpModes]({{ site.parameters_reference }}scale-up-modes.html) can be used to determine how the enlarging should be done, if at all. For example, using `SUM_LINEAR_INTERPOLATION` with argument `ModuleSizeThreshold` set to 2 will activate the enlaring process using the linear interpolation method when the barcode module size is smaller than 2px.
 
 ### Enable All Wanted Barcode Types
+
 Barcode types are defined with the parameters [BarcodeFormat]({{ site.enumerations }}format-enums.html#barcodeformat) and [BarcodeFormat_2]({{ site.enumerations }}format-enums.html#barcodeformat_2). A barcode can be detected only when its type is enabled. When the barcode type is uncertain, you should enable all barcode types to ensure the read rate.
 
 ### Restore Incomplete Modules
+
 In some cases, due to misprinting, the barcodes may miss some modules, like the patterns of a QR code or the border of a Datamatrix. DBR is able to restore the missing modules for these barcodes by setting `BCM_GENERAL` mode in the parameter [BarcodeComplementModes]({{ site.parameters_reference }}barcode-complement-modes.html).
 
 ### Correct Deformed Barcodes
+
 The barcodes on the surface of some flexible packaging or cylindrical objects tend to be distorted or deformed. DBR is able to correct these deformed barcodes to a standard shape by setting `DRM_GENERAL` mode in parameter [DeformationResistingModes]({{ site.parameters_reference }}deformation-resisting-modes.html).
 
-### Support Direct Part Marking Codes 
-DPM (Direct Part Marking) Codes, DataMatrix typically, are widely used in industrial part tracking, from electronics manufacturing to automotive assembly. They always come with light reflection, low contrast, complex background texture, and other distorted features. DBR is able to decode such DPM codes by setting `DPMCRM_GENERAL` mode in parameter [DPMCodeReadingModes]({{ site.parameters_reference }}dpm-code-reading-modes.html). 
+### Support Direct Part Marking Codes
 
-### Cover Both Normal and Mirrored States 
+DPM (Direct Part Marking) Codes, DataMatrix typically, are widely used in industrial part tracking, from electronics manufacturing to automotive assembly. They always come with light reflection, low contrast, complex background texture, and other distorted features. DBR is able to decode such DPM codes by setting `DPMCRM_GENERAL` mode in parameter [DPMCodeReadingModes]({{ site.parameters_reference }}dpm-code-reading-modes.html).
+
+### Cover Both Normal and Mirrored States
+
 Sometimes, barcodes can come out in a mirrored orientation compared to the normal orientation (left to right). DBR is able to cover both normal and mirrored barcodes by setting `MM_BOTH` mode in parameter [MirrorMode]({{ site.parameters_reference }}mirror-mode.html). If the barcodes you are decoding are of the same state, setting it to only `MM_NORMAL` or `MM_MIRROR` can improve the speed without affecting the read rate.
 
 ### Comply with Non-standard Barcodes
+
 In some cases, the barcode may not be generated or printed following the standard. DBR is able to decode such non-standard barcodes by setting the following parameters to provide information about the non-standard part.
 
 - [StandardFormat]({{ site.parameters_reference }}standard-format.html) to specify the standard barcode format.

@@ -4,11 +4,12 @@ description: This article describes how to filter irrelevant text in the image t
 title: How to filter text in an image
 keywords: text filter
 needAutoGenerateSidebar: false
+permalink: /parameters/scenario-settings/text-filter.html
 ---
 
-# How to filter text in an image
+# How to Filter Text in an Image
 
-When trying to read an image where a barcode is surrounded by a large number of irrelevant characters, the presence of these words may lead to incorrect positioning, and slow down the execution speed of `DBR`. `DBR` handles such scenarios by utilizing the built-in [`TextFilterModes`]({{ site.parameters_reference }}text-filter-modes.html#textfiltermodes). 
+When trying to read an image where a barcode is surrounded by a large number of irrelevant text, the presence of said text may lead to incorrect positioning, and slow down the execution speed of `DBR`. `DBR` handles such scenarios by utilizing the built-in [`TextFilterModes`]({{ site.parameters_reference }}text-filter-modes.html#textfiltermodes). 
 
 Let us consider the following image
 

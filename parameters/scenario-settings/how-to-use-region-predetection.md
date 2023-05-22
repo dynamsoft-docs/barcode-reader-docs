@@ -4,6 +4,7 @@ description: Learn how to configure the region predetection mode for different s
 title: How To Use Region Predetection
 keywords: region predetection,ROI,region of interest
 needAutoGenerateSidebar: false
+permalink: /parameters/scenario-settings/how-to-use-region-predetection.html
 ---
 
 # How To Use Region Predetection

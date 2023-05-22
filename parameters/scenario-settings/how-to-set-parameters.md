@@ -1,38 +1,39 @@
 ---   
 layout: default-layout
-description: This article introduces two ways to modify the configuration DBR RuntimeSetting and Json template, and their syntax rules
+description: This article introduces two ways to modify the configuration DBR PublicRuntimeSettings and Json template, and their syntax rules
 title: How to set DBR parameters 
-keywords: DBR RuntimeSetting Json Template ImageParameter FormatSpecification
+keywords: DBR PublicRuntimeSettings Json Template ImageParameter FormatSpecification
 needAutoGenerateSidebar: false
+permalink: /parameters/scenario-settings/how-to-set-parameters.html
 ---
 
-# How to set DBR parameters 
+# How to Set DBR parameters 
 
-DBR provides flexible parameter configurations to meet your barcode decoding requirements under different scenarios. You can modify the configurations either through the `RuntimeSetting` object or a JSON template. 
+DBR provides flexible parameter configurations to meet your barcode decoding requirements under different scenarios. You can modify the configurations either through the `PublicRuntimeSettings` object or a **JSON template**. 
 
-- [RuntimeSetting](#RuntimeSetting-object)  
+- [PublicRuntimeSettings](#PublicRuntimeSettings)  
  
-  `RuntimeSetting` is an object that manages various parameters during runtime. If you need to *dynamically* change the DBR configuration when the program is running, modifying `RuntimeSetting` will be a good choice. 
+  `PublicRuntimeSettings` is an object that manages various parameters during runtime. If you need to *dynamically* change the DBR configuration when the program is running, modifying `PublicRuntimeSettings` will be a good choice. 
 
-  `RuntimeSetting` only provides some common parameters though. The complete parameter setting can be achieved through the JSON template. 
+  `PublicRuntimeSettings` only provides some common parameters though. The complete parameter setting can be achieved through the JSON template. 
 
 - [JSON template](#JSON-template)
 
   DBR also allows you to manage various parameters via a JSON template. If your application scenario is relatively fixed and you do not need to change the scanning configurations frequently, the JSON template will be a suitable choice. 
 
-  You can use the JSON template along with `RuntimeSetting`: first use the JSON template to read the complete and stable settings, and then use `RuntimeSetting` for common and variable settings. 
+  You can use the JSON template along with `PublicRuntimeSettings`: first use the JSON template to read the complete and stable settings, and then use `PublicRuntimeSettings` for common and variable settings. 
 
-## RuntimeSetting object 
+## PublicRuntimeSettings 
 
-`RuntimeSetting` object manages various parameters of the DBR runtime. You can change the DBR configurations by modifying the field values in `RuntimeSetting`. This method is suitable for scenarios that require dynamic configuration changes. 
+`PublicRuntimeSettings` object manages various parameters of the DBR runtime. You can change the DBR configurations by modifying the field values in `PublicRuntimeSettings`. This method is suitable for scenarios that require dynamic configuration changes. 
 
 Basic steps:
 
-1. Get the current `RuntimeSetting` object through `GetRuntimeSetting` 
+1. Get the current `PublicRuntimeSettings` object via `GetRuntimeSetting` 
 2. Update the corresponding field configuration
 3. Use  `UpdateRuntimeSetting`  to make the configuration take effect
 
-The following C++ example shows how to specify barcode types to be processed by changing the `barcodeFormatIds` field in `RuntimeSetting`.  
+The following C++ example shows how to specify barcode types to be processed by changing the `barcodeFormatIds` field via `PublicRuntimeSettings`.  
 
 ```c++
 CBarcodeReader* reader = new CBarcodeReader();   

@@ -1,16 +1,17 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for RegionPredetectionModes
+title: RegionPredetectionModes - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for RegionPredetectionModes.
 keywords: RegionPredetectionModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/region-predetection-modes.html
 ---
 
 
 # RegionPredetectionModes 
 
-`RegionPredetectionModes` is a parameter to control how to find a region of interesting. It consisits of one or more modes, each mode represents a way to find a region.
+`RegionPredetectionModes` determines how to find a region of interest. It consists of one or more modes, each mode representing a different way to find a region.
 
 
 ## Candidate Mode List
@@ -26,6 +27,9 @@ Lets the library choose a mode automatically.
 ### RPM_GENERAL
 Takes the whole image as a region. 
 This mode has the following arguments for further customizing.
+
+- [LibraryFileName](#libraryfilename)
+- [LibraryParameters](#libraryparameters)
 
 ### RPM_GENERAL_RGB_CONTRAST
 Detects region using the general algorithm based on RGB colour contrast. 
@@ -68,7 +72,7 @@ This mode has the following arguments for further customizing.
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
-`RegionPredetectionModes` can be set dynamically during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 [`RegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode) Enumeration items.
+`RegionPredetectionModes` can be set dynamically during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 `RegionPredetectionMode` Enumeration items.
 
 
 **Code Snippet in C++**
@@ -91,7 +95,7 @@ delete pSettings;
 **See Also**      
 - `FurtherModes:` [C]({{ site.structs }}FurtherModes.html?src=c) \| [C++]({{ site.structs }}FurtherModes.html?src=cpp) \| [.NET]({{ site.dotnet_api }}struct/FurtherModes.html) \| [Java]({{ site.java_api }}class/FurtherModes.html) \| [Java-Android]({{ site.android_api }}auxiliary-FurtherModes.html) \| [Objective-C & Swift]({{ site.oc_api }}auxiliary-iFurtherModes.html)
 - `PublicRuntimeSettings:` [JavaScript]({{ site.js_api }}interface/RuntimeSettings.html) \| [C]({{ site.structs }}PublicRuntimeSettings.html?src=c) \| [C++]({{ site.structs }}PublicRuntimeSettings.html?src=cpp) \| [.NET]({{ site.dotnet_api }}struct/PublicRuntimeSettings.html) \| [Python]({{ site.python_api }}class/PublicRuntimeSettings.html) \| [Java]({{ site.java_api }}class/PublicRuntimeSettings.html) \| [Java-Android]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) \| [Objective-C & Swift]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html)
-- [`RegionPredetectionMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode)
+- `RegionPredetectionMode:` [JavaScript]({{ site.js_enumerations }}EnumRegionPredetectionMode.html) \| [C]({{ site.c_cpp_enumerations }}parameter-mode-enums.html?src=c#regionpredetectionmode) \| [C++]({{ site.c_cpp_enumerations }}parameter-mode-enums.html?src=cpp#regionpredetectionmode) \| [.NET]({{ site.dotnet_enumerations }}parameter-mode-enums.html#regionpredetectionmode) \| [Python]({{ site.python_enumerations }}parameter-mode-enums.html#regionpredetectionmode) \| [Java]({{ site.java_enumerations }}parameter-mode-enums.html#regionpredetectionmode) \| [Java-Android]({{ site.mobile_enumerations }}region-predetection-mode.html?lang=android) \| [Objective-C & Swift]({{ site.mobile_enumerations }}region-predetection-mode.html?lang=objc,swift)
 - `GetModeArgument:` [JavaScript]({{ site.js_api}}BarcodeReader.html#getmodeargument) \| [C]({{ site.c_methods }}parameter-and-runtime-settings-basic.html#dbr_getmodeargument) \| [C++]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) \| [.NET]({{ site.dotnet_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#getmodeargument) \| [Python]({{ site.python_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#get_mode_argument) \| [Java]({{ site.java_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#getmodeargument) \| [Java-Android]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#getmodeargument) \| [Objective-C & Swift]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#getmodeargument)
 - `SetModeArgument:` [JavaScript]({{ site.js_api}}BarcodeReader.html#setmodeargument) \| [C]({{ site.c_methods }}parameter-and-runtime-settings-basic.html#dbr_setmodeargument) \| [C++]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) \| [.NET]({{ site.dotnet_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#setmodeargument) \| [Python]({{ site.python_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#set_mode_argument) \| [Java]({{ site.java_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#setmodeargument) \| [Java-Android]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#setmodeargument) \| [Objective-C & Swift]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#setmodeargument)
 
@@ -112,23 +116,23 @@ delete pSettings;
 | SpatialIndexBlockSize | A number from value range of SpatialIndexBlockSize | (Optional) Sets the Argument [SpatialIndexBlockSize](#spatialindexblocksize). |
 | WidthRange | A string from value range of WidthRange | (Optional) Sets the Argument [WidthRange](#widthrange). |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
-| LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
+| LibraryParameters | A string from value range of LibraryParameters | (Optional) Sets the Argument [LibraryParameters](#libraryparameters). |
 
 
 
 **JSON Parameter Example**   
 ```
 {
-    "RegionPredetectionModes": [
-        {
-            "Mode": "RPM_GENERAL_RGB_CONTRAST", 
-            "Sensitivity": 5
-        },
-        {
-            "Mode": "RPM_GENERAL_HSV_CONTRAST", 
-            "WidthRange": "[100, 200]"
-        }
-    ]
+    "RegionPredetectionModes": [
+        {
+            "Mode": "RPM_GENERAL_RGB_CONTRAST", 
+            "Sensitivity": 5
+        },
+        {
+            "Mode": "RPM_GENERAL_HSV_CONTRAST", 
+            "WidthRange": "[100, 200]"
+        }
+    ]
 }
 ```
 
@@ -305,5 +309,5 @@ Sets the parameters passed to the library to load dynamically.
 
 
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)
 - [How to configure region predetection]({{ site.scenario_settings }}how-to-use-region-predetection.html)

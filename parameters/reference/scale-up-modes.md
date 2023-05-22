@@ -1,24 +1,26 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for ScaleUpModes
+title: ScaleUpModes - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for ScaleUpModes.
 keywords: ScaleUpModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/scale-up-modes.html
 ---
 
 
 # ScaleUpModes 
 
-`ScaleUpModes` is a parameter to control the process for scaling up an image used for detecting barcodes with small module size. It consisits of one or more modes, each mode represents a way to implement the scale-up.
-
+`ScaleUpModes` determines the process for scaling up an image used for detecting barcodes with small module size. It consists of one or more modes, each mode represents a way to implement the scale-up.
 
 ## Candidate Mode List
+
 - SUM_AUTO
 - SUM_LINEAR_INTERPOLATION
 - SUM_NEAREST_NEIGHBOUR_INTERPOLATION
 
 ### SUM_AUTO
+
 Lets the library choose a mode automatically.
 
 ### SUM_LINEAR_INTERPOLATION
@@ -43,7 +45,7 @@ Scales up using the linear interpolation method. This mode has the following arg
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
-`ScaleUpModes` can be set dynamically during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 [`ScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode) Enumeration items.
+`ScaleUpModes` can be set dynamically during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 `ScaleUpMode` Enumeration items.
 
 
 **Code Snippet in C++**
@@ -66,7 +68,7 @@ delete pSettings;
 **See Also**      
 - `FurtherModes:` [C]({{ site.structs }}FurtherModes.html?src=c) \| [C++]({{ site.structs }}FurtherModes.html?src=cpp) \| [.NET]({{ site.dotnet_api }}struct/FurtherModes.html) \| [Java]({{ site.java_api }}class/FurtherModes.html) \| [Java-Android]({{ site.android_api }}auxiliary-FurtherModes.html) \| [Objective-C & Swift]({{ site.oc_api }}auxiliary-iFurtherModes.html)
 - `PublicRuntimeSettings:` [JavaScript]({{ site.js_api }}interface/RuntimeSettings.html) \| [C]({{ site.structs }}PublicRuntimeSettings.html?src=c) \| [C++]({{ site.structs }}PublicRuntimeSettings.html?src=cpp) \| [.NET]({{ site.dotnet_api }}struct/PublicRuntimeSettings.html) \| [Python]({{ site.python_api }}class/PublicRuntimeSettings.html) \| [Java]({{ site.java_api }}class/PublicRuntimeSettings.html) \| [Java-Android]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) \| [Objective-C & Swift]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html)
-- [`ScaleUpMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode)
+- `ScaleUpMode:` [JavaScript]({{ site.js_enumerations }}EnumScaleUpMode.html) \| [C]({{ site.c_cpp_enumerations }}parameter-mode-enums.html?src=c#scaleupmode) \| [C++]({{ site.c_cpp_enumerations }}parameter-mode-enums.html?src=cpp#scaleupmode) \| [.NET]({{ site.dotnet_enumerations }}parameter-mode-enums.html#scaleupmode) \| [Python]({{ site.python_enumerations }}parameter-mode-enums.html#scaleupmode) \| [Java]({{ site.java_enumerations }}parameter-mode-enums.html#scaleupmode) \| [Java-Android]({{ site.mobile_enumerations }}scale-up-mode.html?lang=android) \| [Objective-C & Swift]({{ site.mobile_enumerations }}scale-up-mode.html?lang=objc,swift)
 - `GetModeArgument:` [JavaScript]({{ site.js_api}}BarcodeReader.html#getmodeargument) \| [C]({{ site.c_methods }}parameter-and-runtime-settings-basic.html#dbr_getmodeargument) \| [C++]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) \| [.NET]({{ site.dotnet_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#getmodeargument) \| [Python]({{ site.python_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#get_mode_argument) \| [Java]({{ site.java_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#getmodeargument) \| [Java-Android]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#getmodeargument) \| [Objective-C & Swift]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#getmodeargument)
 - `SetModeArgument:` [JavaScript]({{ site.js_api}}BarcodeReader.html#setmodeargument) \| [C]({{ site.c_methods }}parameter-and-runtime-settings-basic.html#dbr_setmodeargument) \| [C++]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) \| [.NET]({{ site.dotnet_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#setmodeargument) \| [Python]({{ site.python_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#set_mode_argument) \| [Java]({{ site.java_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#setmodeargument) \| [Java-Android]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#setmodeargument) \| [Objective-C & Swift]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#setmodeargument)
 
@@ -81,25 +83,25 @@ delete pSettings;
 | ModuleSizeThreshold | A number from value range of ModuleSizeThreshold | (Optional) Sets the Argument [modulesizethreshold](#modulesizethreshold). |
 | TargetModuleSize | A number from value range of TargetModuleSize | (Optional) Sets the Argument [TargetModuleSize](#targetmodulesize). |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
-| LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
+| LibraryParameters | A string from value range of LibraryParameters | (Optional) Sets the Argument [LibraryParameters](#libraryparameters). |
 
 
 
 **JSON Parameter Example**   
 ```
 {
-    "ScaleUpModes": [
-        {
-            "Mode": "SUM_LINEAR_INTERPOLATION", 
-            "ModuleSizeThreshold": 4,
-            "TargetModuleSize": 8
-        },
-        {
-            "Mode": "SUM_NEAREST_NEIGHBOUR_INTERPOLATION", 
-            "ModuleSizeThreshold": 4,
-            "TargetModuleSize": 6
-        }
-    ]
+    "ScaleUpModes": [
+        {
+            "Mode": "SUM_LINEAR_INTERPOLATION", 
+            "ModuleSizeThreshold": 4,
+            "TargetModuleSize": 8
+        },
+        {
+            "Mode": "SUM_NEAREST_NEIGHBOUR_INTERPOLATION", 
+            "ModuleSizeThreshold": 4,
+            "TargetModuleSize": 6
+        }
+    ]
 }
 ```
 
@@ -180,5 +182,5 @@ Sets the parameters passed to the library to load dynamically.
 
 
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)
 - [How to configure ScaleUpModes]({{ site.scenario_settings }}how-to-set-scaleup-modes.html)

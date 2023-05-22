@@ -1,15 +1,16 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Licensing - How to set full license
+title: Dynamsoft Barcode Reader Licensing - How to set full license in 8.x
 description: Find out about the different methods used for setting trial and full license key in DBR v8.x
 keywords: full license, licensing
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /license-activation/set-full-license-8.html
 ---
 
 # How to set full license in version 8.x
 
-Different methods are used for setting trial and full license keys. In our demo or sample applications, we use `.InitLicense()` or `.ProductKeys` to set trial license keys. 
+Different methods are used for setting trial and full license keys. In our demo or sample applications, we use `.InitLicense()` or `.ProductKeys` to set trial license keys.
 
 For the purchased version, you need to use `initLicenseFromDLS()` to set the Handshake Codes for your licenses.
 
@@ -71,11 +72,11 @@ You can set the license by following the steps below:
 2. 
 ```c
   char errorBuf[512];
-  DMDLSConnectionParameters paramters;
-  DBR_InitDLSConnectionParameters(&paramters);
+  DMDLSConnectionParameters parameters;
+  DBR_InitDLSConnectionParameters(&parameters);
   // Please replace the organizationID with your own
-  paramters.organizationID = "YOUR-ORGANIZATION-ID"; 
-  DBR_InitLicenseFromDLS(&paramters, errorBuf, 512);
+  parameters.organizationID = "YOUR-ORGANIZATION-ID"; 
+  DBR_InitLicenseFromDLS(&parameters, errorBuf, 512);
 ```
 3. 
 ```cpp
@@ -94,7 +95,7 @@ You can set the license by following the steps below:
 ```
 4. 
 ```csharp
-  DMDLSConnectionParameters dlspar = BarcodeReader.InitDLSConnectionParamters();           
+  DMDLSConnectionParameters dlspar = BarcodeReader.InitDLSConnectionParameters();           
   // Please replace the organizationID with your own
   dlspar.OrganizationID = "YOUR-ORGANIZATION-ID"; 
   EnumErrorCode iRet = BarcodeReader.InitLicenseFromDLS(dlspar, out strErrorMSG);

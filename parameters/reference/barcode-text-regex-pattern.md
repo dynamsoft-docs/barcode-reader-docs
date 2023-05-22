@@ -1,20 +1,24 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for BarcodeTextRegExPattern
+title: BarcodeTextRegExPattern - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for BarcodeTextRegExPattern.
 keywords: BarcodeTextRegExPattern, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/barcode-text-regex-pattern.html
 ---
 
 
 # BarcodeTextRegExPattern 
 
-`BarcodeTextRegExPattern` is a parameter to specify the regular express pattern of barcode text characters for barcodes searching and result filtering. It is not set by default which means there is no limitation on the barcode text characters.
+`BarcodeTextRegExPattern` defines the regular expression pattern of barcode text characters for barcodes searching and result filtering. It set to an empty string by default which means there is no limitation on the barcode text characters.
 
-    
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *string* | N/A | `""` | `FormatSpecification` |
+
 ## Setting Methods
-`BarcodeTextRegExPattern` is supported to be set through JSON template.
+`BarcodeTextRegExPattern` can be set via JSON template.
 
 ### As JSON Parameter
 `BarcodeTextRegExPattern` as a JSON parameter is defined as below.   
@@ -44,5 +48,5 @@ Enabling `BarcodeTextRegExPattern` to filter out results may improve the Accurac
 
 -->
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)
 - [How to filter out results]({{ site.scenario_settings }}decode-result.html)

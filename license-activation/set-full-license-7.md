@@ -1,10 +1,11 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Licensing - How to set full license in version 7.x
+title: How to set full license in version 7.x - Dynamsoft Barcode Reader Licensing
 description: This page shows how to set full license of Dynamsoft Barcode Reader in version 7.x.
 keywords: full license, licensing, 7.x, License 1.0
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+permalink: /license-activation/set-full-license-7.html
 ---
 
 # How to set full license in version 7.x

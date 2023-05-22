@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for LocalizationModes
+title: LocalizationModes - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for LocalizationModes.
 keywords: LocalizationModes, parameter reference, parameter
 needAutoGenerateSidebar: true
@@ -10,7 +10,7 @@ needGenerateH3Content: true
 
 # LocalizationModes 
 
-`LocalizationModes` is a parameter to control how to localize barcodes. It consisits of one or more modes, each mode represents a way to implement the localization.
+`LocalizationModes` is a parameter to control how to localize barcodes. It consists of one or more modes, each mode represents a way to implement the localization.
 
 
 ## Candidate Mode List
@@ -115,22 +115,22 @@ delete pSettings;
 | ScanStride | A number from value range of ScanStride | (Optional) Sets the Argument [ScanStride](#scanstride). |
 | ScanDirection | A number from value range of ScanDirection | (Optional) Sets the Argument [ScanDirection](#scandirection). |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
-| LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
+| LibraryParameters | A string from value range of LibraryParameters | (Optional) Sets the Argument [LibraryParameters](#libraryparameters). |
 
 
 
 **JSON Parameter Example**   
 ```
 {
-    "LocalizationModes": [
-        {
-            "Mode": "LM_SCAN_DIRECTLY", 
-            "ScanStride": 5
-        },
-        {
-            "Mode": "LM_CONNECTED_BLOCKS" 
-        }
-    ]
+    "LocalizationModes": [
+        {
+            "Mode": "LM_SCAN_DIRECTLY", 
+            "ScanStride": 5
+        },
+        {
+            "Mode": "LM_CONNECTED_BLOCKS" 
+        }
+    ]
 }
 ```
 
@@ -200,5 +200,5 @@ Sets the parameters passed to the library to load dynamically.
 
 
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)
 - [How to use different localization modes]({{ site.scenario_settings }}how-to-set-localization-modes.html)

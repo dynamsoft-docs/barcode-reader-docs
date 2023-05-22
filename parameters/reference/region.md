@@ -1,20 +1,24 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for Region
+title: Region - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for Region.
 keywords: Region, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/region.html
 ---
 
 
 # Region 
 
-`Region` is a parameter to specify a region in where to search barcodes. It is defined with RegionTop, RegionLeft, RegionRight, RegionBottom, and RegionMeasuredByPercentage:
+`Region` defines a region in where to search barcodes. By default, DBR does not restrict the reading region. It is defined by RegionTop, RegionLeft, RegionRight, RegionBottom, and RegionMeasuredByPercentage:
 
-    
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *int* | *see [this section](#as-json-parameter)* | *see [this section](#as-json-parameter)* | `RegionDefinition` |
+
 ## Setting Methods
-`Region` is supported to be set through `RuntimeSetting` or JSON template.
+`Region` is supported to be set through `PublicRuntimeSettings` or JSON template.
 
 ### As `PublicRuntimeSettings` Member
 `Region` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct.
@@ -51,7 +55,7 @@ delete pSettings;
 | -------- | --------- | ----------- |
 | Name | A string value representing a unique name | The name of the RegionDefinition object. |
 | Top | A number from [0, 0x7fffffff] when MeasuredByPercentage=0 or [0, 100] when MeasuredByPercentage=1 | The top-most coordinate or percentage of the region. |
-| Left | A number from [0, 0x7fffffff] when MeasuredByPercentage=0 or [0, 100] when MeasuredByPercentage=1 | The left-most coordinate or percentage of the region. |
+| RegionLeft | A number from [0, 0x7fffffff] when MeasuredByPercentage=0 or [0, 100] when MeasuredByPercentage=1 | The left-most coordinate or percentage of the region. |
 | Right | A number from [0, 0x7fffffff] when MeasuredByPercentage=0 or [0, 100] when MeasuredByPercentage=1 | The right-most coordinate or percentage of the region. |
 | Bottom | A number from [0, 0x7fffffff] when MeasuredByPercentage=0 or [0, 100] when MeasuredByPercentage=1 | The bottom-most coordinate or percentage of the region. |
 | MeasuredByPercentage | A number from [0, 1] | Sets whether or not to use percentages to measure the Region size. |
@@ -60,15 +64,15 @@ delete pSettings;
 **JSON Example**   
 ```
 {
-    "RegionDefinition": 
-        {
-            "Name": "RD1", 
-            "Top": 25, 
-            "Left": 25, 
-            "Right": 75, 
-            "Bottom": 75, 
-            "MeasuredByPercentage": 1
-        }
+    "RegionDefinition": 
+        {
+            "Name": "RD1", 
+            "Top": 25, 
+            "Left": 25, 
+            "Right": 75, 
+            "Bottom": 75, 
+            "MeasuredByPercentage": 1
+        }
 }
 ```
 
@@ -86,4 +90,4 @@ Setting `Region` to a appropriate value may speed up the process.
 
 -->
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)

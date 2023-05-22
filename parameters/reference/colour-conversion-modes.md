@@ -1,18 +1,19 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for ColourConversionModes
+title: ColourConversionModes - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for ColourConversionModes.
 keywords: ColourConversionModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/colour-conversion-modes.html
 ---
 
 
 # ColourConversionModes 
 
-This parameter helps control the process of colour conversion, i.e., converting colour image to grayscale image. If you input a colour image, the library will convert it to the grayscale image first for further processes. By default, the conversion will base on the RGB channels with the default weights of three channels. This parameter allows you to specify the referred colour channel (RGB or HSV) and the weight of each channel during the colour conversion. Assume your image has a disgusting contrast of one colour channel between the barcode area and background, this parameter may help specify the appropriate settings for getting a higher quality grayscale image. 
+This parameter helps control the process of colour conversion, i.e., converting a colour image to a grayscale image. If you input a colour image, the library will convert it to the grayscale image first for further processes. By default, the conversion will base on the RGB channels with the default weights of three channels. This parameter allows you to specify the referred colour channel (RGB or HSV) and the weight of each channel during the colour conversion. Assume your image has a significant contrast of one colour channel between the barcode area and background, this parameter may help specify the appropriate settings for getting a higher quality grayscale image. 
 
-It consisits of one or more modes, each mode represents a way to implement the convertion.
+It currently can consist of only a single mode, `CICM_GENERAL`.
 
 
 ## Candidate Mode List
@@ -32,7 +33,7 @@ Converts a colour image to a grayscale image using the general algorithm. This m
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
-`ColourConversionModes` can be set dynamically during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 [`ColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode) Enumeration items.
+`ColourConversionModes` can be set dynamically during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 `ColourConversionMode` Enumeration items.
 
 
 **Code Snippet in C++**
@@ -55,7 +56,7 @@ delete pSettings;
 **See Also**      
 - `FurtherModes:` [C]({{ site.structs }}FurtherModes.html?src=c) \| [C++]({{ site.structs }}FurtherModes.html?src=cpp) \| [.NET]({{ site.dotnet_api }}struct/FurtherModes.html) \| [Java]({{ site.java_api }}class/FurtherModes.html) \| [Java-Android]({{ site.android_api }}auxiliary-FurtherModes.html) \| [Objective-C & Swift]({{ site.oc_api }}auxiliary-iFurtherModes.html)
 - `PublicRuntimeSettings:` [JavaScript]({{ site.js_api }}interface/RuntimeSettings.html) \| [C]({{ site.structs }}PublicRuntimeSettings.html?src=c) \| [C++]({{ site.structs }}PublicRuntimeSettings.html?src=cpp) \| [.NET]({{ site.dotnet_api }}struct/PublicRuntimeSettings.html) \| [Python]({{ site.python_api }}class/PublicRuntimeSettings.html) \| [Java]({{ site.java_api }}class/PublicRuntimeSettings.html) \| [Java-Android]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) \| [Objective-C & Swift]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html)
-- [`ColourConversionMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode)
+- `ColourConversionMode:` [JavaScript]({{ site.js_enumerations }}EnumColourConversionMode.html) \| [C]({{ site.c_cpp_enumerations }}parameter-mode-enums.html?src=c#colourconversionmode) \| [C++]({{ site.c_cpp_enumerations }}parameter-mode-enums.html?src=cpp#colourconversionmode) \| [.NET]({{ site.dotnet_enumerations }}parameter-mode-enums.html#colourconversionmode) \| [Python]({{ site.python_enumerations }}parameter-mode-enums.html#colourconversionmode) \| [Java]({{ site.java_enumerations }}parameter-mode-enums.html#colourconversionmode) \| [Java-Android]({{ site.mobile_enumerations }}colour-conversion-mode.html?lang=android) \| [Objective-C & Swift]({{ site.mobile_enumerations }}colour-conversion-mode.html?lang=objc,swift)
 - `GetModeArgument:` [JavaScript]({{ site.js_api}}BarcodeReader.html#getmodeargument) \| [C]({{ site.c_methods }}parameter-and-runtime-settings-basic.html#dbr_getmodeargument) \| [C++]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) \| [.NET]({{ site.dotnet_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#getmodeargument) \| [Python]({{ site.python_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#get_mode_argument) \| [Java]({{ site.java_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#getmodeargument) \| [Java-Android]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#getmodeargument) \| [Objective-C & Swift]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#getmodeargument)
 - `SetModeArgument:` [JavaScript]({{ site.js_api}}BarcodeReader.html#setmodeargument) \| [C]({{ site.c_methods }}parameter-and-runtime-settings-basic.html#dbr_setmodeargument) \| [C++]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) \| [.NET]({{ site.dotnet_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#setmodeargument) \| [Python]({{ site.python_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#set_mode_argument) \| [Java]({{ site.java_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#setmodeargument) \| [Java-Android]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#setmodeargument) \| [Objective-C & Swift]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#setmodeargument)
 
@@ -70,27 +71,27 @@ delete pSettings;
 | GreenChannelWeight | A number from value range of GreenChannelWeight | (Optional) Sets the Argument [GreenChannelWeight](#greenchannelweight). |
 | RedChannelWeight | A number from value range of RedChannelWeight | (Optional) Sets the Argument [RedChannelWeight](#redchannelweight). |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
-| LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
+| LibraryParameters | A string from value range of LibraryParameters | (Optional) Sets the Argument [LibraryParameters](#libraryparameters). |
 
 
 
 **JSON Parameter Example**   
 ```
 {
-    "ColourConversionModes": [
-        {
-            "Mode": "CICM_GENERAL", 
-            "BlueChannelWeight": 1000,
-            "GreenChannelWeight": 0,
-            "RedChannelWeight": 0
-        },
-        {
-            "Mode": "CICM_GENERAL", 
-            "BlueChannelWeight": 0,
-            "GreenChannelWeight": 500,
-            "RedChannelWeight": 500
-        }
-    ]
+    "ColourConversionModes": [
+        {
+            "Mode": "CICM_GENERAL", 
+            "BlueChannelWeight": 1000,
+            "GreenChannelWeight": 0,
+            "RedChannelWeight": 0
+        },
+        {
+            "Mode": "CICM_GENERAL", 
+            "BlueChannelWeight": 0,
+            "GreenChannelWeight": 500,
+            "RedChannelWeight": 500
+        }
+    ]
 }
 ```
 
@@ -170,5 +171,5 @@ Sets the parameters passed to the library to load dynamically.
 
 
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)
 - [How to configure ColourConversionModes]({{ site.scenario_settings }}image-scale-and-colour-conversion.html#convert-colour-image-to-grayscale)

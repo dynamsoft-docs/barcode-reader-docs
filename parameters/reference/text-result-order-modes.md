@@ -1,16 +1,17 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for TextResultOrderModes
+title: TextResultOrderModes - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for TextResultOrderModes.
 keywords: TextResultOrderModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/text-result-order-modes.html
 ---
 
 
 # TextResultOrderModes 
 
-`TextResultOrderModes` is a parameter to specify the order of the returned text results. It consisits of one or more modes, each mode represents a way to order the result.
+`TextResultOrderModes` defines the order of the returned text results. It consists of one or more modes, each mode represents a way to order the result.
 
 
 ## Candidate Mode List
@@ -32,7 +33,7 @@ Returns the text results in alphabetical and numerical order by barcode format s
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
-`TextResultOrderModes` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct, it is an array with 8 [`TextResultOrderMode`]({{ site.enumerations }}result-enums.html#textresultordermode) Enumeration items.
+`TextResultOrderModes` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct, it is an array with 8 `TextResultOrderMode` Enumeration items.
 
 
 **Code Snippet in C++**
@@ -49,10 +50,11 @@ delete pSettings;
 
 **See Also**      
 - `PublicRuntimeSettings:` [JavaScript]({{ site.js_api }}interface/RuntimeSettings.html) \| [C]({{ site.structs }}PublicRuntimeSettings.html?src=c) \| [C++]({{ site.structs }}PublicRuntimeSettings.html?src=cpp) \| [.NET]({{ site.dotnet_api }}struct/PublicRuntimeSettings.html) \| [Python]({{ site.python_api }}class/PublicRuntimeSettings.html) \| [Java]({{ site.java_api }}class/PublicRuntimeSettings.html) \| [Java-Android]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) \| [Objective-C & Swift]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html)
-- [`TextResultOrderMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#textresultordermode)
+- `TextResultOrderMode:` [JavaScript]({{ site.js_enumerations }}EnumTextResultOrderMode.html) \| [C]({{ site.c_cpp_enumerations }}result-enums.html?src=c#textresultordermode) \| [C++]({{ site.c_cpp_enumerations }}result-enums.html?src=cpp#textresultordermode) \| [.NET]({{ site.dotnet_enumerations }}result-enums.html#textresultordermode) \| [Python]({{ site.python_enumerations }}result-enums.html#textresultordermode) \| [Java]({{ site.java_enumerations }}result-enums.html#textresultordermode) \| [Java-Android]({{ site.mobile_enumerations }}text-result-order-mode.html?lang=android) \| [Objective-C & Swift]({{ site.mobile_enumerations }}text-result-order-mode.html?lang=objc,swift)
 
 
 ### As JSON Parameter
+
 `TextResultOrderModes` as a JSON parameter is a JSON Object array defined as below.
 
 | Key Name | Key Value |
@@ -69,11 +71,11 @@ delete pSettings;
 **JSON Parameter Example**   
 ```
 {
-    "TextResultOrderModes": [
+    "TextResultOrderModes": [
         {"Mode"":"TROM_CONFIDENCE"},
         {"Mode":"TROM_POSITION"},
         {"Mode":"TROM_FORMAT"}
-    ]
+    ]
 }
 ```
 
@@ -91,5 +93,5 @@ delete pSettings;
 
 -->
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)
 - [How to filter and order results]({{ site.scenario_settings }}decode-result.html)

@@ -1,11 +1,12 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Performance - Accuracy
+title: Accuracy - Dynamsoft Barcode Reader Performance
 description: This page illustrates how to maximize the accuracy of Dynamsoft Barcode Reader
 Keywords: accuracy
 needAutoGenerateSidebar: true
 noTitleIndex: false
 breadcrumbText: Accuracy
+permalink: /performance/accuracy.html
 ---
 
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for DeformationResistingModes
+title: DeformationResistingModes - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for DeformationResistingModes.
 keywords: DeformationResistingModes, parameter reference, parameter
 needAutoGenerateSidebar: true
@@ -10,7 +10,7 @@ needGenerateH3Content: true
 
 # DeformationResistingModes 
 
-`DeformationResistingModes` is a parameter to control how to handle distorted and deformed barcodes. It consisits of one or more modes, each mode represents a way to implement the deformation resisting.
+`DeformationResistingModes` is a parameter to control how to handle distorted and deformed barcodes. It consists of one or more modes, each mode represents a way to implement the deformation resisting.
 
 
 ## Candidate Mode List
@@ -29,7 +29,7 @@ Resists deformation using the general algorithm. This mode has the following arg
 Lets the library choose a mode automatically. Not supported yet.
 
 
-    
+
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
@@ -69,23 +69,23 @@ delete pSettings;
 | Mode | Any one in Candidate Mode List as string | (Required) Specifies a mode for deformation resisting.  |
 | Level | A number from value range of Level | (Optional) Sets the Argument [Level](#level). |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
-| LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
+| LibraryParameters | A string from value range of LibraryParameters | (Optional) Sets the Argument [LibraryParameters](#libraryparameters). |
 
 
 
 **JSON Parameter Example**   
 ```
 {
-    "DeformationResistingModes": [
-        {
-            "Mode": "DRM_GENERAL", 
-            "Level": 1
-        },
-        {
-            "Mode": "DRM_GENERAL", 
-            "Level": 9
-        }
-    ]
+    "DeformationResistingModes": [
+        {
+            "Mode": "DRM_GENERAL", 
+            "Level": 1
+        },
+        {
+            "Mode": "DRM_GENERAL", 
+            "Level": 9
+        }
+    ]
 }
 ```
 
@@ -94,19 +94,16 @@ delete pSettings;
 ## Impacts on Performance
 ### Speed
 The SDK will loop the setting modes one by one until find as many barcodes as `ExpectedBarcodesCount` specified or timeout. The more modes you set, the more time the process may take. Setting an appropriate mode first in order or setting only necessary modes may speed up the process.
-
 ### Read Rate
 Setting more modes along with different arguments may improve the Read Rate. 
-
 ### Accuracy
 `DeformationResistingModes` has no influence on the Accuracy.
-
 -->
 ## Candidate Argument List
 - [Level](#level)
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)
- 
+
 ### Level 
 Sets the effort level used for deformation resisting. Not supported yet.
 
@@ -116,7 +113,7 @@ Sets the effort level used for deformation resisting. Not supported yet.
 
 **Performance Adaptability**        
 A larger value may improve the Read Rate but slowdown the Speed. 
-    
+
 
 ### LibraryFileName 
 Sets the file name of the library to load dynamically.
@@ -139,5 +136,5 @@ Sets the parameters passed to the library to load dynamically.
 
 
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)
 - [How to deal with deformed barcodes]({{ site.scenario_settings }}resist-deformation.html)

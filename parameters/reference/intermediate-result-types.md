@@ -1,19 +1,20 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for IntermediateResultTypes
+title: IntermediateResultTypes - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for IntermediateResultTypes.
 keywords: IntermediateResultTypes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/intermediate-result-types.html
 ---
 
 
 # IntermediateResultTypes 
 
-`IntermediateResultTypes` is a parameter to specify the types of intermediate result to be kept for further reference. It is a combined value of [`IntermediateResultType` Enumeration]({{ site.enumerations }}result-enums.html#intermediateresulttype) items. No intermediate result will be kept by default
-    
+`IntermediateResultTypes` defines the types of intermediate result(s) to be kept for further reference. It is a combined value of [`IntermediateResultType` Enumeration]({{ site.enumerations }}result-enums.html#intermediateresulttype) items. No intermediate result will be kept by default.
+
 ## Setting Methods
-`IntermediateResultTypes` is supported to be set through `RuntimeSetting` or JSON template.
+`IntermediateResultTypes` can be set through `PublicRuntimeSettings` or JSON template.
 
 ### As `PublicRuntimeSettings` Member
 `IntermediateResultTypes` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct.
@@ -34,7 +35,7 @@ delete pSettings;
 
 **See Also**      
 - `PublicRuntimeSettings:` [JavaScript]({{ site.js_api }}interface/RuntimeSettings.html) \| [C]({{ site.structs }}PublicRuntimeSettings.html?src=c) \| [C++]({{ site.structs }}PublicRuntimeSettings.html?src=cpp) \| [.NET]({{ site.dotnet_api }}struct/PublicRuntimeSettings.html) \| [Python]({{ site.python_api }}class/PublicRuntimeSettings.html) \| [Java]({{ site.java_api }}class/PublicRuntimeSettings.html) \| [Java-Android]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) \| [Objective-C & Swift]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html)
-- [`IntermediateResultType` Enumeration]({{ site.enumerations }}result-enums.html#intermediateresulttype)
+- `IntermediateResultType:` [JavaScript]({{ site.js_enumerations }}EnumIntermediateResultType.html) \| [C]({{ site.c_cpp_enumerations }}result-enums.html?src=c#intermediateresulttype) \| [C++]({{ site.c_cpp_enumerations }}result-enums.html?src=cpp#intermediateresulttype) \| [.NET]({{ site.dotnet_enumerations }}result-enums.html#intermediateresulttype) \| [Python]({{ site.python_enumerations }}result-enums.html#intermediateresulttype) \| [Java]({{ site.java_enumerations }}result-enums.html#intermediateresulttype) \| [Java-Android]({{ site.mobile_enumerations }}intermediate-result-type.html?lang=android) \| [Objective-C & Swift]({{ site.mobile_enumerations }}intermediate-result-type.html?lang=objc,swift)
 
 
 ### As JSON Parameter
@@ -42,7 +43,7 @@ delete pSettings;
 
 | Key Name | Key Value |
 | -------- | --------- |
-| IntermediateResultTypes | A string array while each array item is one of the [`IntermediateResultType` Enumeration]({{ site.enumerations }}result-enums.html#intermediateresulttype) items. |
+| IntermediateResultTypes | A string array while each array item is one of the [`IntermediateResultType` Enumeration]({{ site.c_cpp_enumerations }}result-enums.html?src=cpp#intermediateresulttype) items. |
 
 
 **JSON Example**   
@@ -66,5 +67,5 @@ The more types you set, the more time the process may take.
 
 -->
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)
 - [How to obtain and use intermediate results]({{ site.scenario_settings }}intermediate-result.html)

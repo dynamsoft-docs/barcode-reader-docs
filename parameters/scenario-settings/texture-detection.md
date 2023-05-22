@@ -4,11 +4,12 @@ description: This article introduces the relevant parameters of texture detectio
 title: How to deal with image textures
 keywords: texture detection
 needAutoGenerateSidebar: false
+permalink: /parameters/scenario-settings/texture-detection.html
 ---
 
-# How to deal with image textures
+# How to Deal with Image Textures
  
-In some scenes, the background of the picture may appear textured, such as a pattern background, screen stripes, etc., which may have an adverse effect on `DBR`, such as mis location and increase in consumed time. To deal with such textures, `DBR` uses the parameter [`TextureDetectionModes`]({{ site.parameters_reference }}texture-detection-modes.html#texturedetectionmodes). You can configure one or more Modes in `TextureDetectionMode`. If multiple Modes are configured, `DBR` will use each Mode in turn to process the image. The enumeration of `TextureDetectionMode` is as follows: 
+In some scenes, the background of the picture may appear textured, such as a patterned background, screen stripes, etc., which may have an adverse effect on DBR, such as mislocating the barcode(s) and increasing time cost. To deal with such textures, DBR uses the parameter [`TextureDetectionModes`]({{ site.parameters_reference }}texture-detection-modes.html#texturedetectionmodes). You can configure one or more modes in `TextureDetectionMode`. If multiple modes are configured, DBR will use each mode in turn to process the image. The enumeration of `TextureDetectionMode` is as follows: 
 
 Name|Value|Notes|
 ---|:--:|---:|

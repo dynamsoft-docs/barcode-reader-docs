@@ -5,6 +5,7 @@ description: This is the main page of Dynamsoft Barcode Reader Licensing.
 keywords: license, usage tracking, licensing
 needAutoGenerateSidebar: false
 breadcrumbText: License Activation
+permalink: /license-activation/index.html
 ---
 
 # License Activation

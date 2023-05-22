@@ -1,20 +1,20 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for BarcodeTextLengthRangeArray
+title: BarcodeTextLengthRangeArray - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for BarcodeTextLengthRangeArray.
 keywords: BarcodeTextLengthRangeArray, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/barcode-text-length-range-array.html
 ---
 
 
 # BarcodeTextLengthRangeArray 
 
-`BarcodeTextLengthRangeArray` is a parameter to specify the range of barcode text length for barcodes searching and result filtering. It is not set by default which means there is no limitation on the barcode text length.
-
+`BarcodeTextLengthRangeArray` defines the range of barcode text length for barcodes searching and result filtering. It is not set by default which means there is no limitation on the barcode text length.
     
 ## Setting Methods
-`BarcodeTextLengthRangeArray` is supported to be set through JSON template.
+`BarcodeTextLengthRangeArray` can be set via JSON template.
 
 ### As JSON Parameter
 `BarcodeTextLengthRangeArray` as a JSON parameter is defined as below.   
@@ -55,5 +55,5 @@ Enabling `BarcodeTextLengthRangeArray` to filter out results may improve the Acc
 
 -->
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)
 - [How to filter out results]({{ site.scenario_settings }}decode-result.html)

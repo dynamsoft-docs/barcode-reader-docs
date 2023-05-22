@@ -1,32 +1,32 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for ModuleSizeRangeArray
+title: ModuleSizeRangeArray - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for ModuleSizeRangeArray.
 keywords: ModuleSizeRangeArray, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/module-size-range-array.html
 ---
 
 
 # ModuleSizeRangeArray 
 
-`ModuleSizeRangeArray` is a parameter to specify the range of module size (in pixels) for barcodes searching and result filtering. It is not set by default which means there is no limitation on the barcode module size.
-
+`ModuleSizeRangeArray` defines the range of module size (in pixels) while barcode searching and result filtering. It is not set by default which means there is no limitation on the barcode module size.
     
 ## Setting Methods
-`ModuleSizeRangeArray` is supported to be set through JSON template.
+`ModuleSizeRangeArray` can be set via JSON template.
 
 ### As JSON Parameter
 `ModuleSizeRangeArray` as a JSON parameter is a JSON Object array defined as below.   
 
 | Key Name | Key Value |
 | -------- | --------- |
-| ModuleSizeRangeArray | a JSON Object defined as below |
+| ModuleSizeRangeArray | A JSON Object array while each Object is defined as below. |
 
 | Key Name | Key Value | Description |
 | -------- | --------- | ----------- |
-| MinValue | A number from [0, 360] | Sets the minimum barcode module size.  |
-| MaxValue | A number from [0, 360] | Sets the maximum barcode module size. |
+| MinValue | A number from [0, 0x7fffffff] | Sets the minimum barcode module size.  |
+| MaxValue | A number from [0, 0x7fffffff] | Sets the maximum barcode module size. |
 
 
 **JSON Example**   
@@ -55,5 +55,5 @@ Enabling `ModuleSizeRangeArray` to filter out barcodes with small module size ma
 
 -->
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)
 - [Configure parameters for a certain barcode format]({{ site.scenario_settings }}format-specification.html)

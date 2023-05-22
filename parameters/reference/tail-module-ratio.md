@@ -1,19 +1,24 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for TailModuleRatio
+title: TailModuleRatio - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for TailModuleRatio.
 keywords: TailModuleRatio, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/tail-module-ratio.html
 ---
 
 
 # TailModuleRatio 
 
-`TailModuleRatio` is a parameter to specify the module count and module size ratio of the barcode tail part.
+`TailModuleRatio` defines the module count and module size ratio of the barcode tail part. By default, there is no restriction on the tail module count or module size ratio.
+
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *string* | N/A | `""` | `FormatSpecification` |
     
 ## Setting Methods
-`TailModuleRatio` is supported to be set through JSON template.
+`TailModuleRatio` can be set via JSON template.
 
 ### As JSON Parameter
 `TailModuleRatio` as a JSON parameter is a string value defined as below.   
@@ -44,5 +49,5 @@ Setting `TailModuleRatio` to an appropriate value when detecting non-standard ba
 
 -->
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)
 - [Configure parameters for a certain barcode format]({{ site.scenario_settings }}format-specification.html)

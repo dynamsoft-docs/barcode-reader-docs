@@ -1,20 +1,20 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for BarcodeAngleRangeArray
+title: BarcodeAngleRangeArray - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for BarcodeAngleRangeArray.
 keywords: BarcodeAngleRangeArray, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/barcode-angle-range-array.html
 ---
 
 
 # BarcodeAngleRangeArray 
 
-`BarcodeAngleRangeArray` is a parameter to specify the range of angles (in degrees) for barcodes searching and result filtering. It is not set by default which means there is no limitation on the barcode angles.
-
+`BarcodeAngleRangeArray` defines the range of angles (in degrees) for barcodes searching and result filtering. It is not set by default which means there is no limitation on the barcode angles.
     
 ## Setting Methods
-`BarcodeAngleRangeArray` is supported to be set through JSON template.
+`BarcodeAngleRangeArray` can be set via JSON template.
 
 ### As JSON Parameter
 `BarcodeAngleRangeArray` as a JSON parameter is defined as below.   
@@ -55,5 +55,5 @@ Enabling `BarcodeAngleRangeArray` to filter out results may improve the Accuracy
 
 -->
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)
 - [How to filter out results]({{ site.scenario_settings }}decode-result.html)

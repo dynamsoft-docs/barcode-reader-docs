@@ -1,24 +1,25 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for MSICodeCheckDigitCalculation
+title: MSICodeCheckDigitCalculation - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for MSICodeCheckDigitCalculation.
 keywords: MSICodeCheckDigitCalculation, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/msi-code-check-digit-calculation.html
 ---
 
 
 # MSICodeCheckDigitCalculation 
 
-`MSICodeCheckDigitCalculation` is a parameter to specify the scheme used for calculating a check digit of an MSI barcode. It is defined as below:
+`MSICodeCheckDigitCalculation` defines the scheme used for calculating a check digit of an MSI barcode. It is defined as below:
 
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| *string* | "MSICCDC_NO_CHECK_DIGIT"<br>"MSICCDC_MOD_10"<br>"MSICCDC_MOD_11"<br>"MSICCDC_MOD_1110"<br>"MSICCDC_MOD_1010" | "MSICCDC_MOD_10"  |
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *string* | "MSICCDC_NO_CHECK_DIGIT"<br>"MSICCDC_MOD_10"<br>"MSICCDC_MOD_11"<br>"MSICCDC_MOD_1110"<br>"MSICCDC_MOD_1010" | "MSICCDC_MOD_10"  | `FormatSpecification` |
 
     
 ## Setting Methods
-`MSICodeCheckDigitCalculation` is supported to be set through JSON template.
+`MSICodeCheckDigitCalculation` can be set via JSON template.
 
 ### As JSON Parameter
 `MSICodeCheckDigitCalculation` as a JSON parameter is a number value defined as below.   
@@ -49,4 +50,4 @@ needGenerateH3Content: true
 
 -->
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)

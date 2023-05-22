@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for RegionPredetectionModes
+title: RegionPredetectionModes - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for RegionPredetectionModes.
 keywords: RegionPredetectionModes, parameter reference, parameter
 needAutoGenerateSidebar: true
@@ -10,7 +10,7 @@ needGenerateH3Content: true
 
 # RegionPredetectionModes 
 
-`RegionPredetectionModes` is a parameter to control how to find a region of interesting. It consisits of one or more modes, each mode represents a way to find a region.
+`RegionPredetectionModes` is a parameter to control how to find a region of interesting. It consists of one or more modes, each mode represents a way to find a region.
 
 
 ## Candidate Mode List
@@ -110,23 +110,23 @@ delete pSettings;
 | SpatialIndexBlockSize | A number from value range of SpatialIndexBlockSize | (Optional) Sets the Argument [SpatialIndexBlockSize](#spatialindexblocksize). |
 | WidthRange | A string from value range of WidthRange | (Optional) Sets the Argument [WidthRange](#widthrange). |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
-| LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
+| LibraryParameters | A string from value range of LibraryParameters | (Optional) Sets the Argument [LibraryParameters](#libraryparameters). |
 
 
 
 **JSON Parameter Example**   
 ```
 {
-    "RegionPredetectionModes": [
-        {
-            "Mode": "RPM_GENERAL_RGB_CONTRAST", 
-            "Sensitivity": 5
-        },
-        {
-            "Mode": "RPM_GENERAL_HSV_CONTRAST", 
-            "WidthRange": "[100, 200]"
-        }
-    ]
+    "RegionPredetectionModes": [
+        {
+            "Mode": "RPM_GENERAL_RGB_CONTRAST", 
+            "Sensitivity": 5
+        },
+        {
+            "Mode": "RPM_GENERAL_HSV_CONTRAST", 
+            "WidthRange": "[100, 200]"
+        }
+    ]
 }
 ```
 
@@ -291,5 +291,5 @@ Sets the parameters passed to the library to load dynamically.
 
 
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)
 - [How to configure region predetection]({{ site.scenario_settings }}how-to-use-region-predetection.html)

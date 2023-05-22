@@ -1,25 +1,26 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for DeblurLevel
+title: DeblurLevel - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for DeblurLevel.
 keywords: DeblurLevel, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/deblur-level.html
 ---
 
 
 # DeblurLevel 
 
-`DeblurLevel` is a parameter to control the efforts used to process the blurriness of the barcode. It is defined as below:
+`DeblurLevel` determines the efforts used to process the blurriness of the barcode. It is defined as below:
 
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| *int* | [0, 9] | 9 |
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *int* | [0, 9] | 9 | `ImageParameter`/`FormatSpecification` |
 
 
 **Remarks**  
-If you have a blurry image, you can set this property to a larger value. The higher value set, the more effort the library will spend to decode images, but it may also slow down the recognition process.<br>
-DeblurLevel is now deprecated. It still works in this version but could be removed in the near future. We recommend using [`DeblurModes`](deblur-modes.md#deblurmodes) instead. Migrating mapping:
+If you have a blurry image, you can set this property to a larger value. The higher the value set, the more effort the library will spend to decode images, but it may also slow down the recognition process.<br>
+DeblurLevel is now deprecated. It still works in the current version but could be removed in the near future. We recommend using [`DeblurModes`](deblur-modes.md#deblurmodes) instead. Migration mapping:
 
 - For Barcode Format PDF417  
 
@@ -28,8 +29,8 @@ DeblurLevel is now deprecated. It still works in this version but could be remov
 | 0 | [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION] |
 | 1-3 | [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION] |
 | 4-6 | [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION,DM_SMOOTHING] |
-| 7-8 | [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION,DM_SMOOTHING，DM_GRAY_EQUALIZATION] |
-| 9 | [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION,DM_SMOOTHING，DM_GRAY_EQUALIZATION,DM_MORPHING,DM_DEEP_ANALYSIS] |
+| 7-8 | [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION,DM_SMOOTHING,DM_GRAY_EQUALIZATION] |
+| 9 | [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION,DM_SMOOTHING,DM_GRAY_EQUALIZATION,DM_MORPHING,DM_DEEP_ANALYSIS] |
 
 - For Barcode Format OneD  
 
@@ -38,8 +39,8 @@ DeblurLevel is now deprecated. It still works in this version but could be remov
 | 0 | [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_THRESHOLD_BINARIZATION] |
 | 1-3 | [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION] |
 | 4-6 | [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION,DM_SMOOTHING] |
-| 7-8 | [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION,DM_SMOOTHING，DM_GRAY_EQUALIZATION] |
-| 9 | [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION,DM_DEEP_ANALYSIS,DM_SMOOTHING，DM_GRAY_EQUALIZATION,DM_MORPHING] |
+| 7-8 | [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION,DM_SMOOTHING,DM_GRAY_EQUALIZATION] |
+| 9 | [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION,DM_DEEP_ANALYSIS,DM_SMOOTHING,DM_GRAY_EQUALIZATION,DM_MORPHING] |
 
 - For other formats
 
@@ -48,8 +49,8 @@ DeblurLevel is now deprecated. It still works in this version but could be remov
 | 0 | [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION] |
 | 1-3 | [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION] |
 | 4-6 | [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION,DM_SMOOTHING] |
-| 7-8 | [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION,DM_SMOOTHING，DM_GRAY_EQUALIZATION] |
-| 9 | [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION,DM_DEEP_ANALYSIS,DM_SMOOTHING，DM_GRAY_EQUALIZATION,DM_MORPHING] |
+| 7-8 | [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION,DM_SMOOTHING,DM_GRAY_EQUALIZATION] |
+| 9 | [DM_BASED_ON_LOC_BIN,DM_THRESHOLD_BINARIZATION,DM_DIRECT_BINARIZATION,DM_DEEP_ANALYSIS,DM_SMOOTHING,DM_GRAY_EQUALIZATION,DM_MORPHING] |
 
 
     
@@ -106,4 +107,4 @@ Setting `DeblurLevel` to a larger number when the image is blurry may improve th
 
 -->
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)

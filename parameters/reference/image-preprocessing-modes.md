@@ -1,10 +1,11 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for ImagePreprocessingModes
+title: ImagePreprocessingModes - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for ImagePreprocessingModes.
 keywords: ImagePreprocessingModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/image-preprocessing-modes.html
 ---
 
 
@@ -12,7 +13,7 @@ needGenerateH3Content: true
 
 This parameter provides some image processing methods to enhance the quality of the grayscale image before reading barcodes. By default, the library does no preprocessing method. Assume your image has distorted features that can be solved by common image processing methods, this parameter may help set the processing mode(s) for getting a higher quality grayscale image.  
 
-It consisits of one or more modes, each mode is a way to implement the preprocessing algorithm.
+It consists of one or more modes, each mode is a way to implement the preprocessing algorithm.
 
 
 ## Candidate Mode List
@@ -34,7 +35,7 @@ Preprocesses the image using the gray equalization algorithm. This mode can be u
 - [LibraryParameters](#libraryparameters)
 
 ### IPM_GRAY_SMOOTH
-Preprocesses the image using the gray smoothing algorithm. This mode can be used for for images with noise or texture. This mode has the following arguments for further customizing.
+Preprocesses the image using the gray smoothing algorithm. This mode can be used for images with noise or texture. This mode has the following arguments for further customizing.
 - [SmoothBlockSizeX](#smoothblocksizex)
 - [SmoothBlockSizeY](#smoothblocksizey)
 - [LibraryFileName](#libraryfilename)
@@ -63,7 +64,7 @@ Preprocesses the image using the morphology algorithm. It can be used for images
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
-`ImagePreprocessingModes` can be set dynamically during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 [`ImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode) Enumeration items.
+`ImagePreprocessingModes` can be set dynamically during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 `ImagePreprocessingMode` Enumeration items.
 
 
 **Code Snippet in C++**
@@ -86,7 +87,7 @@ delete pSettings;
 
 **See Also**      
 - `PublicRuntimeSettings:` [JavaScript]({{ site.js_api }}interface/RuntimeSettings.html) \| [C]({{ site.structs }}PublicRuntimeSettings.html?src=c) \| [C++]({{ site.structs }}PublicRuntimeSettings.html?src=cpp) \| [.NET]({{ site.dotnet_api }}struct/PublicRuntimeSettings.html) \| [Python]({{ site.python_api }}class/PublicRuntimeSettings.html) \| [Java]({{ site.java_api }}class/PublicRuntimeSettings.html) \| [Java-Android]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) \| [Objective-C & Swift]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html)
-- [`ImagePreprocessingMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode)
+- `ImagePreprocessingMode:` [JavaScript]({{ site.js_enumerations }}EnumImagePreprocessingMode.html) \| [C]({{ site.c_cpp_enumerations }}parameter-mode-enums.html?src=c#imagepreprocessingmode) \| [C++]({{ site.c_cpp_enumerations }}parameter-mode-enums.html?src=cpp#imagepreprocessingmode) \| [.NET]({{ site.dotnet_enumerations }}parameter-mode-enums.html#imagepreprocessingmode) \| [Python]({{ site.python_enumerations }}parameter-mode-enums.html#imagepreprocessingmode) \| [Java]({{ site.java_enumerations }}parameter-mode-enums.html#imagepreprocessingmode) \| [Java-Android]({{ site.mobile_enumerations }}image-preprocessing-mode.html?lang=android) \| [Objective-C & Swift]({{ site.mobile_enumerations }}image-preprocessing-mode.html?lang=objc,swift)
 - `GetModeArgument:` [JavaScript]({{ site.js_api}}BarcodeReader.html#getmodeargument) \| [C]({{ site.c_methods }}parameter-and-runtime-settings-basic.html#dbr_getmodeargument) \| [C++]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) \| [.NET]({{ site.dotnet_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#getmodeargument) \| [Python]({{ site.python_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#get_mode_argument) \| [Java]({{ site.java_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#getmodeargument) \| [Java-Android]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#getmodeargument) \| [Objective-C & Swift]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#getmodeargument)
 - `SetModeArgument:` [JavaScript]({{ site.js_api}}BarcodeReader.html#setmodeargument) \| [C]({{ site.c_methods }}parameter-and-runtime-settings-basic.html#dbr_setmodeargument) \| [C++]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) \| [.NET]({{ site.dotnet_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#setmodeargument) \| [Python]({{ site.python_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#set_mode_argument) \| [Java]({{ site.java_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#setmodeargument) \| [Java-Android]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#setmodeargument) \| [Objective-C & Swift]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#setmodeargument)
 
@@ -107,24 +108,24 @@ delete pSettings;
 | MorphOperationKernelSizeX | A number from value range of MorphOperationKernelSizeX | (Optional) Sets the Argument [MorphOperationKernelSizeX](#morphoperationkernelsizex). |
 | MorphOperationKernelSizeY | A number from value range of MorphOperationKernelSizeY | (Optional) Sets the Argument [MorphOperationKernelSizeY](#morphoperationkernelsizey). |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
-| LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
+| LibraryParameters | A string from value range of LibraryParameters | (Optional) Sets the Argument [LibraryParameters](#libraryparameters). |
 
 
 
 **JSON Parameter Example**   
 ```
 {
-    "ImagePreprocessingModes": [
-        {
-            "Mode": "IPM_GRAY_SMOOTH", 
-            "SmoothBlockSizeX": 5,
-            "SmoothBlockSizeY": 5
-        },
-        {
-            "Mode": "IPM_GRAY_EQUALIZE", 
-            "Sensitivity": 1
-        }
-    ]
+    "ImagePreprocessingModes": [
+        {
+            "Mode": "IPM_GRAY_SMOOTH", 
+            "SmoothBlockSizeX": 5,
+            "SmoothBlockSizeY": 5
+        },
+        {
+            "Mode": "IPM_GRAY_EQUALIZE", 
+            "Sensitivity": 1
+        }
+    ]
 }
 ```
 
@@ -224,13 +225,13 @@ Sets the morph operation for the morphology process.
 
 | Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | --------- |
-| *string* | "Erode"<br>"Dilate"<br>"Open"<br>"Close" | "Close" | IPM_MORPHOLOGY |         
+| *string* | `Erode`<br>`Dilate`<br>`Open`<br>`Close` | `Close` | IPM_MORPHOLOGY |         
 
 **Remarks**        
-   - "Erode": Perform erosion process.
-   - "Dilate": Perform dilation process.
-   - "Open": Perform erosion first, then perform dilation.
-   - "Close": Perform dilation first, then perform erosion.
+   - `Erode`: Perform erosion process.
+   - `Dilate`: Perform dilation process.
+   - `Open`: Perform erosion first, then perform dilation.
+   - `Close`: Perform dilation first, then perform erosion.
    
    For more information, please check out [Image Processing in OpenCV - Morphological Transformations](https://docs.opencv.org/master/d9/d61/tutorial_py_morphological_ops.html) for reference.
 
@@ -240,13 +241,7 @@ Sets the morph operation for the morphology process.
 
 | Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | --------- |
-| *string* | "Rectangle"<br>"Cross"<br>"Ellipse" | "Rectangle" |  IPM_MORPHOLOGY |        
-
-**Remarks**        
-   - "Rectangle": 
-   - "Cross": 
-   - "Ellipse": 
-
+| *string* | `Rectangle`<br>`Cross`<br>`Ellipse` | `Rectangle` |  IPM_MORPHOLOGY |        
 
 
 ### MorphOperationKernelSizeX  
@@ -289,4 +284,4 @@ Sets the parameters passed to the library to load dynamically.
 
 ## Related Articles
 - [How to configure the ImagePreprocessingModes parameter]({{ site.scenario_settings }}image-preprocessing.html)
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)

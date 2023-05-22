@@ -1,27 +1,32 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for BarcodeBytesRegExPattern
+title: BarcodeBytesRegExPattern - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for BarcodeBytesRegExPattern.
 keywords: BarcodeBytesRegExPattern, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/barcode-bytes-regex-pattern.html
 ---
 
 
 # BarcodeBytesRegExPattern 
 
-`BarcodeBytesRegExPattern` is a parameter to specify the regular express pattern of barcode byte characters for barcodes searching and result filtering. It is not set by default which means there is no limitation on the barcode byte characters.
+`BarcodeBytesRegExPattern` defines the regular expression pattern of barcode byte characters for barcode searching and result filtering. It is set to an empty string by default which means there is no limitation on the barcode byte characters.
 
-    
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *string* | N/A | `""` | `FormatSpecification` |
+
+
 ## Setting Methods
-`BarcodeBytesRegExPattern` is supported to be set through JSON template.
+`BarcodeBytesRegExPattern` can be set via JSON template.
 
 ### As JSON Parameter
 `BarcodeBytesRegExPattern` as a JSON parameter is defined as below.   
 
 | Key Name | Key Value |
 | -------- | --------- |
-| BarcodeBytesRegExPattern | a string representing regular express pattern |
+| BarcodeBytesRegExPattern | a string representing regular expression pattern |
 
 
 **JSON Example**   
@@ -45,5 +50,5 @@ Enabling `BarcodeBytesRegExPattern` to filter out results may improve the Accura
 
 -->
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)
 - [How to filter out results]({{ site.scenario_settings }}decode-result.html)

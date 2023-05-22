@@ -1,20 +1,20 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for BarcodeZoneBarCountRangeArray
+title: BarcodeZoneBarCountRangeArray - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for BarcodeZoneBarCountRangeArray.
 keywords: BarcodeZoneBarCountRangeArray, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/barcode-zone-bar-count-range-array.html
 ---
 
 
 # BarcodeZoneBarCountRangeArray 
 
-`BarcodeZoneBarCountRangeArray` is a parameter to specify the range of bar count of the barcode zone for barcodes searching. By default, the minimum bar count is 1 and the maximum bar count is 128.
-
-    
+`BarcodeZoneBarCountRangeArray` defines the range of bar count of the barcode zone for barcodes searching. By default, the minimum bar count is 1 and the maximum bar count is 128.
+ 
 ## Setting Methods
-`BarcodeZoneBarCountRangeArray` is supported to be set through JSON template.
+`BarcodeZoneBarCountRangeArray` can be set via JSON template.
 
 ### As JSON Parameter
 `BarcodeZoneBarCountRangeArray` as a JSON parameter is defined as below.   
@@ -55,5 +55,5 @@ Enabling `BarcodeZoneBarCountRangeArray` to filter out results may improve the A
 
 -->
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)
 - [How to filter out results]({{ site.scenario_settings }}decode-result.html)

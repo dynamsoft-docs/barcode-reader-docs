@@ -4,48 +4,48 @@ title: Dynamsoft Barcode Reader SDK Documentation
 keywords: dynamsoft barcode reader, dbr, documentation
 breadcrumbText: HomePage
 description: Dynamsoft Barcode Reader SDK Documentation Homepage
+permalink: /index.html
 ---
 
-# Dynamsoft Barcode Reader Documentation  
+# Dynamsoft Barcode Reader Documentation
 
+* [Introduction]({{ site.introduction }})
 
-- [Introduction]({{ site.introduction }})
-   - [Overview]({{ site.introduction }}overview.html)
-   - [Principle of Algorithm]({{ site.introduction }}architecture.html)
-   - [How-to Guides]({{ site.how_to }})
-   - [Comparison Tools]({{ site.comparison_tools }})   
+<hr>
+DEVELOPMENT
+<hr>
 
-- [Programming]({{ site.programming }})
-   - [JavaScript]({{ site.js }})
-   - [C]({{ site.c }})
-   - [C++]({{ site.cpp }})
-   - [.NET]({{ site.dotnet }})
-   - [Python]({{ site.python }})
-   - [Java]({{ site.java }})
-   - [Java (Android)]({{ site.android }})
-   - [Objective-C & Swift]({{ site.oc }})
-   
-- [Parameters]({{ site.parameters }})
-   - [Reference]({{ site.parameters_reference }})
-   - [Enumerations]({{ site.enumerations }})
-   - [Scenario Settings]({{ site.scenario_settings }})
+* [Web (Client Side)]({{ site.js }})
+* Mobile
+  * [Android]({{ site.android }})
+  * [iOS]({{ site.oc }})
+  * <a href="https://www.dynamsoft.com/capture-vision/docs/programming/react-native/?ver=latest" target="_blank">React Native</a>
+  * <a href="https://www.dynamsoft.com/capture-vision/docs/programming/flutter/?ver=latest" target="_blank">Flutter</a>
+  * <a href="https://www.dynamsoft.com/capture-vision/docs/programming/xamarin/?ver=latest" target="_blank">Xamarin.Forms</a>
+  * <a href="https://www.dynamsoft.com/capture-vision/docs/programming/cordova/?ver=latest" target="_blank">Cordova</a>
+* Server / Desktop
+  * [Python]({{ site.python }})
+  * [Java]({{ site.java }})
+  * [C\#]({{ site.dotnet }})
+  * [C++]({{ site.cpp }})
+  * [C]({{ site.c }})
 
-- [License Activation]({{ site.license_activation }})
-   - [Set Trial License]({{ site.license_activation }}set-trial-license.html)
-   - [Set Full License in version 8]({{ site.license_activation }}set-full-license.html)
-   - [Set Full License in version 7]({{ site.license_activation }}set-full-license-7.html)
+<hr>
+UNDERSTANDING DBR
+<hr>
 
-- [FAQ]({{ site.faq }})
-   - [General]({{ site.faq_general }}index.html)
-   - [JavaScript]({{ site.faq_js }}index.html)
+* [Algorithm Principles]({{ site.introduction }}architecture.html)
+* [Template Structure]({{ site.parameters }}structure-and-interfaces-of-parameters.html)
+* [Parameter Reference]({{ site.parameters_reference }})
+* [Performance]({{ site.performance }})
 
-{%- comment -%}
- [Introduction]({{ site.introduction }})
- [Overview]({{ site.introduction }}overview.html)
- [Principle of Algorithm]({{ site.introduction }}architecture.html)
- [License & Usage Tracking]({{ site.introduction }}licensing/)
- [How-to Guides]({{ site.how_to }})
- Enhancements
-{%- endcomment -%}
+<hr>
+USEFUL RESOURCES
+<hr>
 
-
+* [Release Notes]({{ site.release_notes }})
+* [License]({{ site.license_activation }})
+  * [Set Trial License]({{ site.license_activation }}set-trial-license.html)
+  * [Set Full License in version 8]({{ site.license_activation }}set-full-license-8.html)
+  * [Set Full License in version 7]({{ site.license_activation }}set-full-license-7.html)
+* [FAQ]({{ site.faq }}general/)

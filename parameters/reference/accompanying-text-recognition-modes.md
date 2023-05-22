@@ -1,10 +1,11 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for ImageParameter Object - AccompanyingTextRecognitionModes
+title: ImageParameter Object - AccompanyingTextRecognitionModes - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for ImageParameter Object - AccompanyingTextRecognitionModes.
 keywords: AccompanyingTextRecognitionModes, ImageParameter, image process control parameters, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/accompanying-text-recognition-modes.html
 ---
 
 # ImageParameter Object - Image Process Control Parameters
@@ -35,7 +36,7 @@ If [RegionBottom](#regionbottom), [RegionLeft](#regionleft), [RegionRight](#regi
 
 Specifies the y-coordinate of the bottom-right corner of the region in percentage. This value is relative to the top-left corner of the barcode.
 
-| Value Type | Value Range | Default Value | Vaild Modes |
+| Value Type | Value Range | Default Value | Valid Mode(s) |
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [-255, 255] | 0 | "ATRM_GENERAL" |
 
@@ -43,7 +44,7 @@ Specifies the y-coordinate of the bottom-right corner of the region in percentag
 
 Specifies the x-coordinate of the top-left corner of the region in percentage. This value is relative to the top-left corner of the barcode.
 
-| Value Type | Value Range | Default Value | Vaild Modes |
+| Value Type | Value Range | Default Value | Valid Mode(s) |
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [-255, 255] | 0 | "ATRM_GENERAL" |  
 
@@ -51,7 +52,7 @@ Specifies the x-coordinate of the top-left corner of the region in percentage. T
 
 Specifies the x-coordinate of the bottom-right corner of the region in percentage. This value is relative to the top-left corner of the barcode.
 
-| Value Type | Value Range | Default Value | Vaild Modes |
+| Value Type | Value Range | Default Value | Valid Mode(s) |
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [-255, 255] | 0 | "ATRM_GENERAL" |  
 
@@ -59,7 +60,7 @@ Specifies the x-coordinate of the bottom-right corner of the region in percentag
 
 Specifies the y-coordinate of the top-left corner of the region in percentage. This value is relative to the top-left corner of the barcode.
 
-| Value Type | Value Range | Default Value | Vaild Modes | 
+| Value Type | Value Range | Default Value | Valid Mode(s) | 
 | ---------- | ----------- | ------------- | ----------- |
 | *int* | [-255, 255] | 0 | "ATRM_GENERAL" |  
 
@@ -67,7 +68,7 @@ Specifies the y-coordinate of the top-left corner of the region in percentage. T
 
 #### As JSON Parameter
 
-`AccompanyingTextRecognitionModes` as a JSON parameter is a JSON Object array. Each JSON Object has several keys for setting the mode and the value of arguments. The array index decides the priority the mode to recognize accompanying text. Default values will be used if there is no manual setting.
+`AccompanyingTextRecognitionModes` as a JSON parameter is a JSON Object array. Each JSON Object has several keys for setting the mode and the value of arguments. The array order decides the priority order the modes are applied. Default values will be used if there is no manual setting.
 
 | Json Object | Json Parameter Name | Value Type |
 | ----------- | ------------------- | ---------- |

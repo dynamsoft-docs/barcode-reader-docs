@@ -1,16 +1,21 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for BarcodeColourModes
+title: BarcodeColourModes - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for BarcodeColourModes.
 keywords: BarcodeColourModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/barcode-colour-modes.html
 ---
 
 
 # BarcodeColourModes 
 
-`BarcodeColourModes` is a parameter to specify the barcode colour modes. It consisits of one or more modes, each mode represents a colour mode.
+`BarcodeColourModes` defines the barcode colour modes. It consists of one or more modes, with each representing a different colour environment.
+
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *int* / *EnumBarcodeColourMode* | N/A | `BICM_DARK_ON_LIGHT` | `ImageParameter` |
 
 
 ## Candidate Mode List
@@ -55,7 +60,7 @@ The target barcode is on background which is mixed by dark and light. Not suppor
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
-`BarcodeColourModes` can be set dynamically during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 [`BarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode) Enumeration items.
+`BarcodeColourModes` can be set dynamically during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 `BarcodeColourMode` Enumeration items.
 
 
 **Code Snippet in C++**
@@ -78,7 +83,7 @@ delete pSettings;
 **See Also**      
 - `FurtherModes:` [C]({{ site.structs }}FurtherModes.html?src=c) \| [C++]({{ site.structs }}FurtherModes.html?src=cpp) \| [.NET]({{ site.dotnet_api }}struct/FurtherModes.html) \| [Java]({{ site.java_api }}class/FurtherModes.html) \| [Java-Android]({{ site.android_api }}auxiliary-FurtherModes.html) \| [Objective-C & Swift]({{ site.oc_api }}auxiliary-iFurtherModes.html)
 - `PublicRuntimeSettings:` [JavaScript]({{ site.js_api }}interface/RuntimeSettings.html) \| [C]({{ site.structs }}PublicRuntimeSettings.html?src=c) \| [C++]({{ site.structs }}PublicRuntimeSettings.html?src=cpp) \| [.NET]({{ site.dotnet_api }}struct/PublicRuntimeSettings.html) \| [Python]({{ site.python_api }}class/PublicRuntimeSettings.html) \| [Java]({{ site.java_api }}class/PublicRuntimeSettings.html) \| [Java-Android]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) \| [Objective-C & Swift]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html)
-- [`BarcodeColourMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode)
+- `BarcodeColourMode:` [JavaScript]({{ site.js_enumerations }}EnumBarcodeColourMode.html) \| [C]({{ site.c_cpp_enumerations }}parameter-mode-enums.html?src=c#barcodecolourmode) \| [C++]({{ site.c_cpp_enumerations }}parameter-mode-enums.html?src=cpp#barcodecolourmode) \| [.NET]({{ site.dotnet_enumerations }}parameter-mode-enums.html#barcodecolourmode) \| [Python]({{ site.python_enumerations }}parameter-mode-enums.html#barcodecolourmode) \| [Java]({{ site.java_enumerations }}parameter-mode-enums.html#barcodecolourmode) \| [Java-Android]({{ site.mobile_enumerations }}barcode-colour-mode.html?lang=android) \| [Objective-C & Swift]({{ site.mobile_enumerations }}barcode-colour-mode.html?lang=objc,swift)
 - `GetModeArgument:` [JavaScript]({{ site.js_api}}BarcodeReader.html#getmodeargument) \| [C]({{ site.c_methods }}parameter-and-runtime-settings-basic.html#dbr_getmodeargument) \| [C++]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) \| [.NET]({{ site.dotnet_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#getmodeargument) \| [Python]({{ site.python_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#get_mode_argument) \| [Java]({{ site.java_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#getmodeargument) \| [Java-Android]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#getmodeargument) \| [Objective-C & Swift]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#getmodeargument)
 - `SetModeArgument:` [JavaScript]({{ site.js_api}}BarcodeReader.html#setmodeargument) \| [C]({{ site.c_methods }}parameter-and-runtime-settings-basic.html#dbr_setmodeargument) \| [C++]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) \| [.NET]({{ site.dotnet_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#setmodeargument) \| [Python]({{ site.python_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#set_mode_argument) \| [Java]({{ site.java_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#setmodeargument) \| [Java-Android]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#setmodeargument) \| [Objective-C & Swift]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#setmodeargument)
 
@@ -91,23 +96,23 @@ delete pSettings;
 | Mode | Any one in Candidate Mode List as string | (Required) Specifies a target barcode colour mode.  |
 | LightReflection | A number from value range of LightReflection | (Optional) Sets the Argument [LightReflection](#lightreflection). |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
-| LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
+| LibraryParameters | A string from value range of LibraryParameters | (Optional) Sets the Argument [LibraryParameters](#libraryparameters). |
 
 
 
 **JSON Parameter Example**   
 ```
 {
-    "BarcodeColourModes": [
-        {
-            "Mode": "BICM_DARK_ON_LIGHT", 
-            "LightReflection": 1
-        },
-        {
-            "Mode": "BICM_DARK_ON_LIGHT", 
-            "LightReflection": 0
-        }
-    ]
+    "BarcodeColourModes": [
+        {
+            "Mode": "BICM_DARK_ON_LIGHT", 
+            "LightReflection": 1
+        },
+        {
+            "Mode": "BICM_DARK_ON_LIGHT", 
+            "LightReflection": 0
+        }
+    ]
 }
 ```
 
@@ -133,7 +138,7 @@ Setting more modes along with different arguments may improve the Read Rate.
 - [LibraryParameters](#libraryparameters)
  
 ### LightReflection 
-Sets if there is light reflection on the barocde zone.
+Sets if there is light reflection on the barcode zone.
 
 | Value Type | Value Range | Default Value | Valid For | 
 | ---------- | ----------- | ------------- | --------- |
@@ -165,4 +170,4 @@ Sets the parameters passed to the library to load dynamically.
 
 
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)

@@ -1,20 +1,21 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for PDFRasterDPI
+title: PDFRasterDPI - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for PDFRasterDPI.
 keywords: PDFRasterDPI, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/pdf-raster-dpi.html
 ---
 
 
 # PDFRasterDPI 
 
-`PDFRasterDPI` is a parameter to specify the resolution used for rasterizing a PDF file. It is defined as below:
+`PDFRasterDPI` defines the resolution used for rasterizing a PDF file. It is defined as below:
 
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| *int* | [100, 600] | 300 |
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *int* | [100, 3000] | 300 | `ImageParameter` |
 
 
 **Remarks**     
@@ -51,7 +52,7 @@ delete pSettings;
 
 | Key Name | Key Value |
 | -------- | --------- |
-| PDFRasterDPI | A number from [100, 600] |
+| PDFRasterDPI | A number from [100, 3000] |
 
 
 **JSON Example**   
@@ -75,5 +76,5 @@ Setting `PDFRasterDPI` to a larger number may improve the Read Rate.
 
 -->
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)
 - [How to process multi-page TIF & PDF]({{ site.scenario_settings }}multipage-imgs-and-pdf.html)

@@ -1,16 +1,17 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for TextFilterModes
+title: TextFilterModes - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for TextFilterModes.
 keywords: TextFilterModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/text-filter-modes.html
 ---
 
 
 # TextFilterModes 
 
-`TextFilterModes` is a parameter to control how to filter texts on an image. It consisits of one or more modes, each mode represents a way to implement the filtering.
+`TextFilterModes` determines how to filter texts on an image. It consists of one or more modes, each mode represents a way to implement the filtering.
 
 
 ## Candidate Mode List
@@ -29,7 +30,7 @@ Filters text using the general algorithm based on contour. This mode has the fol
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
-`TextFilterModes` can be set dynamically during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 [`TextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode) Enumeration items.
+`TextFilterModes` can be set dynamically during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 `TextFilterMode` Enumeration items.
 
 
 **Code Snippet in C++**
@@ -52,7 +53,7 @@ delete pSettings;
 **See Also**      
 - `FurtherModes:` [C]({{ site.structs }}FurtherModes.html?src=c) \| [C++]({{ site.structs }}FurtherModes.html?src=cpp) \| [.NET]({{ site.dotnet_api }}struct/FurtherModes.html) \| [Java]({{ site.java_api }}class/FurtherModes.html) \| [Java-Android]({{ site.android_api }}auxiliary-FurtherModes.html) \| [Objective-C & Swift]({{ site.oc_api }}auxiliary-iFurtherModes.html)
 - `PublicRuntimeSettings:` [JavaScript]({{ site.js_api }}interface/RuntimeSettings.html) \| [C]({{ site.structs }}PublicRuntimeSettings.html?src=c) \| [C++]({{ site.structs }}PublicRuntimeSettings.html?src=cpp) \| [.NET]({{ site.dotnet_api }}struct/PublicRuntimeSettings.html) \| [Python]({{ site.python_api }}class/PublicRuntimeSettings.html) \| [Java]({{ site.java_api }}class/PublicRuntimeSettings.html) \| [Java-Android]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) \| [Objective-C & Swift]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html)
-- [`TextFilterMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode)
+- `TextFilterMode:` [JavaScript]({{ site.js_enumerations }}EnumTextFilterMode.html) \| [C]({{ site.c_cpp_enumerations }}parameter-mode-enums.html?src=c#textfiltermode) \| [C++]({{ site.c_cpp_enumerations }}parameter-mode-enums.html?src=cpp#textfiltermode) \| [.NET]({{ site.dotnet_enumerations }}parameter-mode-enums.html#textfiltermode) \| [Python]({{ site.python_enumerations }}parameter-mode-enums.html#textfiltermode) \| [Java]({{ site.java_enumerations }}parameter-mode-enums.html#textfiltermode) \| [Java-Android]({{ site.mobile_enumerations }}text-filter-mode.html?lang=android) \| [Objective-C & Swift]({{ site.mobile_enumerations }}text-filter-mode.html?lang=objc,swift)
 - `GetModeArgument:` [JavaScript]({{ site.js_api}}BarcodeReader.html#getmodeargument) \| [C]({{ site.c_methods }}parameter-and-runtime-settings-basic.html#dbr_getmodeargument) \| [C++]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) \| [.NET]({{ site.dotnet_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#getmodeargument) \| [Python]({{ site.python_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#get_mode_argument) \| [Java]({{ site.java_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#getmodeargument) \| [Java-Android]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#getmodeargument) \| [Objective-C & Swift]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#getmodeargument)
 - `SetModeArgument:` [JavaScript]({{ site.js_api}}BarcodeReader.html#setmodeargument) \| [C]({{ site.c_methods }}parameter-and-runtime-settings-basic.html#dbr_setmodeargument) \| [C++]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) \| [.NET]({{ site.dotnet_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#setmodeargument) \| [Python]({{ site.python_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#set_mode_argument) \| [Java]({{ site.java_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#setmodeargument) \| [Java-Android]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#setmodeargument) \| [Objective-C & Swift]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#setmodeargument)
 
@@ -66,19 +67,19 @@ delete pSettings;
 | MinImageDimension | A number from value range of MinImageDimension | (Optional) Sets the Argument [MinImageDimension](#minimagedimension). |
 | Sensitivity | A number from value range of Sensitivity | (Optional) Sets the Argument [Sensitivity](#sensitivity). |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
-| LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
+| LibraryParameters | A string from value range of LibraryParameters | (Optional) Sets the Argument [LibraryParameters](#libraryparameters). |
 
 
 
 **JSON Parameter Example**   
 ```
 {
-    "TextFilterModes": [
-        {
-            "Mode": "TFM_GENERAL_CONTOUR", 
-            "Sensitivity": 5
-        }
-    ]
+    "TextFilterModes": [
+        {
+            "Mode": "TFM_GENERAL_CONTOUR", 
+            "Sensitivity": 5
+        }
+    ]
 }
 ```
 
@@ -145,5 +146,5 @@ Sets the parameters passed to the library to load dynamically.
 
 
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)
 - [How to configure TextFilterModes]({{ site.scenario_settings }}text-filter.html#)

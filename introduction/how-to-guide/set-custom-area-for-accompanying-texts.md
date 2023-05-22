@@ -1,9 +1,10 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader How-to Guides - Set Custom Area for Accompanying Texts 
+title: Set Custom Area for Accompanying Texts - Dynamsoft Barcode Reader How-to Guides
 description: This page shows how to set custom area for accompanying texts.
 keywords: accompanying texts, custom setting, text area, AccompanyingTextRecognitionModes, how-to guides
 needAutoGenerateSidebar: false
+permalink: /introduction/how-to-guide/set-custom-area-for-accompanying-texts.html
 ---  
 
 

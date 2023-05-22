@@ -4,6 +4,7 @@ description: This article describes how to configure the FormatSpecification par
 title: Format Specification
 keywords: nonstandard barcode, specification
 needAutoGenerateSidebar: false
+permalink: /parameters/scenario-settings/format-specification-v7.6.0.html
 ---
 
 # Barcode format specification

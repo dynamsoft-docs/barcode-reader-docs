@@ -1,25 +1,26 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for AustralianPostEncodingTable
+title: AustralianPostEncodingTable - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for AustralianPostEncodingTable.
 keywords: AustralianPostEncodingTable, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/australian-post-encoding-table.html
 ---
 
 
 # AustralianPostEncodingTable 
 
-`AustralianPostEncodingTable` is a parameter to specify the encoding table used to code the Customer Information Field of Australian Post Customer Barcode. It is defined as below:
+`AustralianPostEncodingTable` helps specify the encoding table used to code the Customer Information Field of Australian Post Customer Barcode. It is defined as below:
 
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| *string* | "C"<br>"N" | "C"  |
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *string* | "C"<br>"N" | "C"  | `FormatSpecification` |
 
 
     
 ## Setting Methods
-`AustralianPostEncodingTable` is supported to be set through JSON template.
+`AustralianPostEncodingTable` can be set via JSON template.
 
 ### As JSON Parameter
 `AustralianPostEncodingTable` as a JSON parameter is a number value defined as below.   
@@ -50,5 +51,5 @@ Setting `AustralianPostEncodingTable` to an appropriate value when detecting Aus
 
 -->
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)
 - [Configure parameters for a certain barcode format]({{ site.scenario_settings }}format-specification.html#australianpostencodingtable)

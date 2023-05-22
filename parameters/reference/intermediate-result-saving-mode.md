@@ -1,16 +1,17 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for IntermediateResultSavingMode
+title: IntermediateResultSavingMode - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for IntermediateResultSavingMode.
 keywords: IntermediateResultSavingMode, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/intermediate-result-saving-mode.html
 ---
 
 
 # IntermediateResultSavingMode 
 
-`IntermediateResultSavingMode` is a parameter to specify how to save the intermediate result. It can be one of the follwoing candidate modes.
+`IntermediateResultSavingMode` defines how to save the intermediate result(s). It can be one of the follwoing candidate modes.
 
 ## Candidate Mode List
 - IRSM_MEMORY
@@ -39,7 +40,7 @@ Saves intermediate results in memory with internal data format. This mode has th
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
-`IntermediateResultSavingMode` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct, it is one of the [`IntermediateResultSavingMode`]({{ site.enumerations }}parameter-mode-enums.html#intermediateresultsavingmode) Enumeration items.
+`IntermediateResultSavingMode` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct, it is one of the `IntermediateResultSavingMode` Enumeration items.
 
 
 **Code Snippet in C++**
@@ -56,7 +57,7 @@ delete pSettings;
 
 **See Also**      
 - `PublicRuntimeSettings:` [JavaScript]({{ site.js_api }}interface/RuntimeSettings.html) \| [C]({{ site.structs }}PublicRuntimeSettings.html?src=c) \| [C++]({{ site.structs }}PublicRuntimeSettings.html?src=cpp) \| [.NET]({{ site.dotnet_api }}struct/PublicRuntimeSettings.html) \| [Python]({{ site.python_api }}class/PublicRuntimeSettings.html) \| [Java]({{ site.java_api }}class/PublicRuntimeSettings.html) \| [Java-Android]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) \| [Objective-C & Swift]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html)
-- [`IntermediateResultSavingMode` Enumeration]({{ site.enumerations }}result-enums.html#intermediateresultsavingmode)
+- `IntermediateResultSavingMode:` [JavaScript]({{ site.js_enumerations }}EnumIntermediateResultSavingMode.html) \| [C]({{ site.c_cpp_enumerations }}result-enums.html?src=c#intermediateresultsavingmode) \| [C++]({{ site.c_cpp_enumerations }}result-enums.html?src=cpp#intermediateresultsavingmode) \| [.NET]({{ site.dotnet_enumerations }}result-enums.html#intermediateresultsavingmode) \| [Python]({{ site.python_enumerations }}result-enums.html#intermediateresultsavingmode) \| [Java]({{ site.java_enumerations }}result-enums.html#intermediateresultsavingmode) \| [Java-Android]({{ site.mobile_enumerations }}intermediate-result-saving-mode.html?lang=android) \| [Objective-C & Swift]({{ site.mobile_enumerations }}intermediate-result-saving-mode.html?lang=objc,swift)
 
 
 ### As JSON Parameter
@@ -73,11 +74,11 @@ delete pSettings;
 **JSON Parameter Example**   
 ```
 {
-    "IntermediateResultSavingMode": {
-            "Mode": "IRSM_FILESYSTEM",
-            "FolderPath": "C:\",
+    "IntermediateResultSavingMode": {
+            "Mode": "IRSM_FILESYSTEM",
+            "FolderPath": "C:\",
             "RecordsetSizeOfLatestImages": 0
-        }
+        }
 }
 ```
 
@@ -123,5 +124,5 @@ Sets the maximum count of recordset to store the latest images' intermediate res
 
 
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)
 - [How to obtain and use intermediate results]({{ site.scenario_settings }}intermediate-result.html)

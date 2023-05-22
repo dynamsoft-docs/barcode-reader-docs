@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for MinResultConfidence
+title: MinResultConfidence - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for MinResultConfidence.
 keywords: MinResultConfidence, parameter reference, parameter
 needAutoGenerateSidebar: true
@@ -10,7 +10,7 @@ needGenerateH3Content: true
 
 # MinResultConfidence 
 
-`MinResultConfidence` is a parameter to specify the minimum confidence of the result. It is defined as below:
+`MinResultConfidence` defines the minimum confidence of the result. It is defined as below:
 
 | Value Type | Value Range | Default Value |
 | ---------- | ----------- | ------------- |
@@ -69,5 +69,5 @@ Setting a larger `MinResultConfidence` may improve the Accuracy.
 
 -->
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)
 - [How to filter out results]({{ site.scenario_settings }}decode-result.html)

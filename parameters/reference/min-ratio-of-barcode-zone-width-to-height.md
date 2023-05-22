@@ -1,28 +1,28 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for MinRatioOfBarcodeZoneWidthToHeight
+title: MinRatioOfBarcodeZoneWidthToHeight - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for MinRatioOfBarcodeZoneWidthToHeight.
 keywords: MinRatioOfBarcodeZoneWidthToHeight, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/min-ratio-of-barcode-zone-width-to-height.html
 ---
 
 
 # MinRatioOfBarcodeZoneWidthToHeight 
 
-`MinRatioOfBarcodeZoneWidthToHeight` is a parameter to specify the minimum ratio (width/height as a percentage) of the barcode zone. It is defined as below:
+`MinRatioOfBarcodeZoneWidthToHeight` defines the minimum ratio (width/height as a percentage) of the barcode zone. It is defined as below:
 
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| *int* | [0, 10000] | 0 |
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *int* | [0, 10000] | 0 | `FormatSpecification` |
 
+**Remarks**
 
-**Remarks**  
 - 0: means no limitation.
 
-    
 ## Setting Methods
-`MinRatioOfBarcodeZoneWidthToHeight` is supported to be set through JSON template.
+`MinRatioOfBarcodeZoneWidthToHeight` can be set via JSON template.
 
 ### As JSON Parameter
 `MinRatioOfBarcodeZoneWidthToHeight` as a JSON parameter is a number value defined as below.   
@@ -31,8 +31,8 @@ needGenerateH3Content: true
 | -------- | --------- |
 | MinRatioOfBarcodeZoneWidthToHeight | A number from [0, 10000] |
 
+**JSON Example**
 
-**JSON Example**   
 ```
 {
     "MinRatioOfBarcodeZoneWidthToHeight": 100
@@ -53,5 +53,5 @@ Enabling `MinRatioOfBarcodeZoneWidthToHeight` to filter out results may improve 
 
 -->
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)
 - [How to filter out results]({{ site.scenario_settings }}decode-result.html)

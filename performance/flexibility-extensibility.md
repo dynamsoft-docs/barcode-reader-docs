@@ -1,10 +1,11 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Performance - Flexibility and Extensibility
+title: Flexibility and Extensibility - Dynamsoft Barcode Reader Performance
 description: This page shows what makes Dynamsoft Barcode Reader flexible and extensible
 keywords: flexibility, extensibility
 needAutoGenerateSidebar: true
 noTitleIndex: false
+permalink: /performance/flexibility-extensibility.html
 ---
 
 # What makes Dynamsoft Barcode Reader flexible and extensible
@@ -104,7 +105,7 @@ Barcodes can be described from the following characteristics: barcode format, ba
 
 DBR provides various build-in processing modes at each stage of the algorithm to maintain great flexibility. They could be divide into two categories: **Common Modes** And **DBR-oriented Modes**. The common modes are mainly used for image preprocessing like image grayscale, image binarization, image enhancement, texture filtering, text filtering, etc. The DBR-oriented modes are mainly used for barcode-oriented processing, such as barcode localization, barcode deblurring, barcode complement, barcode anti-deformation, etc. 
 
-Let’s take [`BinarizationModes`]({{ site.parameters_reference }}binarization-modes.html#binarizationmodes) as an example to illustrate. This parameter helps control the process of converting grayscale image into binary image. A better binary image helps a lot for barcode reading. DBR provides two  binarization modes: `BM_THRESHOLD` and `BM_LOCAL_BLOCK`.
+Let's take [`BinarizationModes`]({{ site.parameters_reference }}binarization-modes.html#binarizationmodes) as an example to illustrate. This parameter helps control the process of converting grayscale image into binary image. A better binary image helps a lot for barcode reading. DBR provides two  binarization modes: `BM_THRESHOLD` and `BM_LOCAL_BLOCK`.
 
 **BM_THRESHOLD** 
 

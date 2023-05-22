@@ -1,16 +1,17 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for PDFReadingMode
+title: PDFReadingMode - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for PDFReadingMode.
 keywords: PDFReadingMode, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/pdf-reading-mode.html
 ---
 
 
 # PDFReadingMode 
 
-`PDFReadingMode` is a parameter to control how to read barcodes from PDF files. 
+`PDFReadingMode` determines how to read barcodes from PDF files. 
 
 ## Candidate Mode List
 - PDFRM_AUTO
@@ -20,18 +21,22 @@ needGenerateH3Content: true
 ### PDFRM_AUTO
 Lets the library choose a mode automatically.
 
-
 ### PDFRM_VECTOR
 Detects barcode from vector data in PDF file.
+
+**Remarks**         
+  - The `PDFRM_VECTOR` mode only works for linear barcodes at this point.
 
 ### PDFRM_RASTER
 Converts the PDF file to image(s) first, then detects barcode.
 
+**Remarks**         
+  - The `PDFRM_RASTER` mode works for all barcode formats, including linear barcode, PDF417, QR code, and other 2D codes.
 
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
-`PDFReadingMode` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct, it is one of the [`PDFReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#pdfreadingmode) Enumeration items.
+`PDFReadingMode` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct, it is one of the `PDFReadingMode` Enumeration items.
 
 
 **Code Snippet in C++**
@@ -48,22 +53,24 @@ delete pSettings;
 
 **See Also**      
 - `PublicRuntimeSettings:` [JavaScript]({{ site.js_api }}interface/RuntimeSettings.html) \| [C]({{ site.structs }}PublicRuntimeSettings.html?src=c) \| [C++]({{ site.structs }}PublicRuntimeSettings.html?src=cpp) \| [.NET]({{ site.dotnet_api }}struct/PublicRuntimeSettings.html) \| [Python]({{ site.python_api }}class/PublicRuntimeSettings.html) \| [Java]({{ site.java_api }}class/PublicRuntimeSettings.html) \| [Java-Android]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) \| [Objective-C & Swift]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html)
-- [`PDFReadingMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#pdfreadingmode)
+- `PDFReadingMode:` [JavaScript]({{ site.js_enumerations }}EnumPDFReadingMode.html) \| [C]({{ site.c_cpp_enumerations }}parameter-mode-enums.html?src=c#pdfreadingmode) \| [C++]({{ site.c_cpp_enumerations }}parameter-mode-enums.html?src=cpp#pdfreadingmode) \| [.NET]({{ site.dotnet_enumerations }}parameter-mode-enums.html#pdfreadingmode) \| [Python]({{ site.python_enumerations }}parameter-mode-enums.html#pdfreadingmode) \| [Java]({{ site.java_enumerations }}parameter-mode-enums.html#pdfreadingmode) \| [Java-Android]({{ site.mobile_enumerations }}pdf-reading-mode.html?lang=android) \| [Objective-C & Swift]({{ site.mobile_enumerations }}pdf-reading-mode.html?lang=objc,swift)
 
 
 ### As JSON Parameter
-`PDFReadingMode` as a JSON parameter is a string value defined as below.   
+`PDFReadingMode` as a JSON parameter is a JSON Object defined as below.
 
 | Key Name | Key Value |
 | -------- | --------- |
-| PDFReadingMode | Any one in PDFReadingMode Enumeration as string |
+| Mode | Any one in Candidate Mode List as string |
 
 
 
 **JSON Parameter Example**   
 ```
 {
-    "PDFReadingMode": "PDFRM_VECTOR" 
+    "PDFReadingMode": {
+        "Mode" : "PDFRM_VECTOR"
+    } 
 }
 ```
 
@@ -82,4 +89,4 @@ Setting `PDFReadingMode` to PDFRM_AUTO when barcode type (image or vector) in PD
 
 -->
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)

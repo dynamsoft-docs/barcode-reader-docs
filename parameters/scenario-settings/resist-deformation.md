@@ -4,9 +4,10 @@ description: This article introduces how to deal with deformed barcodes
 title: How to deal with deformed barcodes
 keywords: resist deformation
 needAutoGenerateSidebar: false
+permalink: /parameters/scenario-settings/resist-deformation.html
 ---
 
-# How to deal with deformed barcodes
+# How to Deal with Deformed Barcodes
 
 The barcodes on the surface of some flexible packaging or cylindrical objects tend to be distorted and deformed. DBR may not be able to handle such cases well by default, but we can configure [`DeformationResistingModes`]({{ site.parameters_reference }}deformation-resisting-modes.html#deformationresistingmodes) to deal with these problems. 
 
@@ -25,7 +26,7 @@ Currently, [`DeformationResistingModes`]({{ site.parameters_reference }}deformat
 
 ## How to configure
 
-As mentioned above, you can configure the anti-deformation mode via the setting [`DeformationResistingModes`]({{ site.parameters_reference }}deformation-resisting-modes.html#deformationresistingmodes). DBR does not turn on anti-deformation by default. If you want to turn it on, you need to add `DRM_GENERAL` to [`DeformationResistingModes`]({{ site.parameters_reference }}deformation-resisting-modes.html#deformationresistingmodes). By the way, multiple modes can also be set at the same time. For example, if DRM_SKIP and DRM_GENERAL are configured at the same time, our algorithm will try to turn off and turn on the anti-deformation mode in turn, until the decoding result meets the requirements.
+As mentioned above, you can configure the anti-deformation mode via the setting [`DeformationResistingModes`]({{ site.parameters_reference }}deformation-resisting-modes.html#deformationresistingmodes). DBR does not turn on anti-deformation by default. If you want to turn it on, you need to add `DRM_GENERAL` to [`DeformationResistingModes`]({{ site.parameters_reference }}deformation-resisting-modes.html#deformationresistingmodes). By the way, multiple modes can also be set at the same time. For example, if `DRM_SKIP` and `DRM_GENERAL` are configured at the same time, our algorithm will try to turn off and turn on the anti-deformation mode in turn, until the decoding result meets the requirements.
 
 ## Example
 

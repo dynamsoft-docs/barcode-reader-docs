@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader Parameter Reference - Main Page
 description: Dynamsoft Barcode Reader Parameter Reference - Main Page
 keywords: parameter reference, parameters
 needAutoGenerateSidebar: false
+permalink: /parameters/reference/index.html
 ---
 
 
@@ -12,7 +13,7 @@ needAutoGenerateSidebar: false
  | Parameter Name | Description |
  | -------------- | ----------- |
  | [`AllModuleDeviation`](all-module-deviation.md) | Sets the module size deviation from the standard barcode module size. |
- | [`AustralianPostEncodingTable`](australian-post-encoding-table.md) | Sets the encoding table used to code the Customer Information Field of Australian Post Customer Barcode. | 
+ | [`AustralianPostEncodingTable`](australian-post-encoding-table.md) | Sets the encoding table used to code the Customer Information Field of Australian Post Customer Barcode. |
  | [`BarcodeAngleRangeArray`](barcode-angle-range-array.md) | Sets the range of angles (in degrees) for barcodes searching. | 
  | [`BarcodeBytesLengthRangeArray`](barcode-bytes-length-range-array.md) | Sets the range of barcode bytes length for barcodes searching. | 
  | [`BarcodeBytesRegExPattern`](barcode-bytes-regex-pattern.md) | Specifies the regular expression pattern of barcode byte characters. | 
@@ -34,6 +35,8 @@ needAutoGenerateSidebar: false
  | [`DeblurModes`](deblur-modes.md) | Sets the mode and priority for deblurring. |
  | [`DeformationResistingModes`](deformation-resisting-modes.md) | Sets the mode and priority for deformation resisting. |
  | [`DPMCodeReadingModes`](dpm-code-reading-modes.md) | Sets the mode and priority for DPM code reading. |
+ | [`EnableDataMatrixECC000-140`](enable-datamatrix-ecc000-140.md) | Specifies whether to decode DataMatrix ECC000-140 barcodes. |
+ | [`EnableQRCodeModel1`](enable-qrcode-model1.md) | Specifies whether to decode QRCode model 1 barcodes. |
  | [`ExpectedBarcodesCount`](expected-barcodes-count.md) | Sets the number of barcodes expected to be detected for each image. |
  | [`FindUnevenModuleBarcode`](find-uneven-module-barcode.md) | Specifies whether to find barcodes with uneven barcode modules. To be supported.| 
  | [`GrayscaleTransformationModes`](grayscale-transformation-modes.md) | Sets the mode and priority for the grayscale image conversion. |
@@ -51,6 +54,7 @@ needAutoGenerateSidebar: false
  | [`MSICodeCheckDigitCalculation`](msi-code-check-digit-calculation.md) | Sets the scheme used for calculating a check digit of an MSI barcode. |
  | [`Pages`](pages.md) | Sets the specific pages or the range of pages of a file (.tiff or .pdf) for barcode searching. |
  | [`PartitionModes`](partition-modes.md) |	Sets the mode used to apply partition process. |
+ | [`PatchCodeSearchingMargins`](patchcode-searching-margins.md) | Sets the margins for searching PatchCode. |
  | [`PDFRasterDPI`](pdf-raster-dpi.md) | Sets the output image resolution. |
  | [`PDFReadingMode`](pdf-reading-mode.md) | Sets the way to detect barcodes from a PDF file when using the `DecodeFile` method. |
  | [`Region`](region.md) | Sets the region for barcodes searching. |

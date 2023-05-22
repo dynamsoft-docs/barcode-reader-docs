@@ -4,40 +4,49 @@ title: Dynamsoft Barcode Reader FAQ - General
 keywords: faq, general
 description: Dynamsoft Barcode Reader FAQ - General
 needAutoGenerateSidebar: false
+permalink: /faq/general/index.html
 ---
 
-# FAQ - General
+# FAQ Index
 
-<a href="{{site.faq_general}}what-is-dbr.html" target="_blank">What is Dynamsoft Barcode Reader SDK and what business needs can it meet?</a>
+1. [What is Dynamsoft Barcode Reader SDK and what business needs can it meet?](what-is-dbr.md)
 
-<a href="{{site.faq_general}}supported-barcode-formats.html" target="_blank">What barcode types are supported by Dynamsoft Barcode Reader?</a>
+2. [What barcode types are supported by Dynamsoft Barcode Reader?](supported-barcode-formats.html)
 
-<a href="{{site.faq_general}}different-editions-of-dbr.html" target="_blank">There are many editions of DBR, what are the differences? Which one should I use?</a>
+3. [There are many editions of DBR, what are the differences? Which one should I use?](different-editions-of-dbr.html)
 
-<a href="{{site.faq_general}}dbr-free-trial.html" target="_blank">How to get a free trial of the SDK? How many days does the free trial allow? Can I extend my trial if I need more time? If so, how?</a>
+4. [How to get a free trial of the SDK? How many days does the free trial allow? Can I extend my trial if I need more time? If so, how?](dbr-free-trial.html)
 
-<a href="{{site.faq_general}}non-english-characters.html" target="_blank">Why the barcode image is returning messy (non-english) characters on the online demo?</a>
+5. [Why the barcode image is returning messy (non-english)characters on the online demo?](non-english-characters.html)
 
-<a href="{{site.faq_general}}dbr-supports-pdf.html" target="_blank">Does the SDK support reading barcodes from PDF files? Is an additional license required for this functionality?</a>
+6. [Does the SDK support reading barcodes from PDF files? Is an additional license required for this functionality?](dbr-supports-pdf.html)
 
-<a href="{{site.faq_general}}scan-specific-page.html" target="_blank">The pdf file has 10 pages but only the last page has a barcode. Is it possible to decode the last page only?</a>
+7. [The pdf file has 10 pages but only the last page has a barcode. Is it possible to decode the last page only?](scan-specific-page.html)
 
-<a href="{{site.faq_general}}avoid-incorrect-results.html" target="_blank">Sometimes the barcode reader SDK returns incorrect results with four or less characters. How to avoid it?</a>
+8. [Sometimes the barcode reader SDK returns incorrect results with four or less characters. How to avoid it?](avoid-incorrect-results.html)
 
-<a href="{{site.faq_general}}scan-us-drivers-license.html" target="_blank">How to scan barcodes on US Driver's Licenses and get the first name, last name, BOD, etc?</a>
+9. [How to scan barcodes on US Driver's Licenses and get the first name, last name, BOD, etc?](scan-us-drivers-license.html)
 
-<a href="{{site.faq_general}}how-to-enable-dpm.html" target="_blank">How to enable DPM?</a>
+10. [How to enable DPM?](how-to-enable-dpm.html)
 
-<a href="{{site.faq_general}}expand-quota-for-runtime-license.html" target="_blank">How to expand the quota of a runtime license?</a>
+11. [How to expand the quota of a runtime license?](expand-quota-for-runtime-license.html)
 
-<a href="{{site.faq_general}}track-license.html" target="_blank">How to track the number of devices?</a>
+12. [How to track the number of devices?](track-license.html)
 
-<a href="{{site.faq_general}}sdk-works-without-internet.html" target="_blank">Can the SDK work without internet connection?</a>
+13. [Can the SDK work without internet connection?](sdk-works-without-internet.html)
 
-<a href="{{site.faq_general}}what-happens-if-license-expires.html" target="_blank">After one year the annual license expires and I don't renew it in time, what will happen?</a>
+14. [After one year the annual license expires and I don't renew it in time, what will happen?](what-happens-if-license-expires.html)
 
-<a href="{{site.faq_general}}how-hardware-is-bind-to-license.html" target="_blank">What information is collected while registering and licensing a device and how is it bound to the hardware? What hardware change would cause the consumption of a new license seat?</a>
+15. [What information is collected while registering and licensing a device and how is it bound to the hardware? What hardware change would cause the consumption of a new license seat?](how-hardware-is-bind-to-license.html)
 
-<a href="{{site.faq_general}}ensure-no-overuse.html" target="_blank">How to ensure that a device does not overuse its allotted number of instances?</a>
+16. [How to ensure that a device does not overuse its allotted number of instances?](ensure-no-overuse.html)
 
-<a href="{{site.faq_general}}competitors-comparison.html" target="_blank">How does your SDK compare to other commercial SDKs?</a>
+17. [How does your SDK compare to other commercial SDKs?](competitors-comparison.html)
+
+18. [How to Handle Non-printable Characters Like "\u{1D}" or "{GS}" from the Barcode Text?](unprintable-character.md)
+
+19. [How to generate a custom settings template to use in your own application?](custom-settings-template.md)
+
+20. [How can I sort the barcodes of my image in reading order?](sort-barcodes-image.md)
+
+21. [How many concurrent instances should I purchase?](purchase-concurrent-instance-license.md)

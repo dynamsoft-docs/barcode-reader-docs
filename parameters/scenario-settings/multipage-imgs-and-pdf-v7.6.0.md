@@ -4,11 +4,12 @@ title: How to process multi-page TIF & PDF
 description: This article describes how DBR processes multi-page images, such as TIF and PDF.
 keywords: tif pdf multipage
 needAutoGenerateSidebar: false
+permalink: /parameters/scenario-settings/multipage-imgs-and-pdf-v7.6.0.html
 ---
 
 # How to process multi-page TIF & PDF
 
-For multi-page TIF and PDF files, DBR provides the parameter [`Pages`]({{ site.parameters_reference }}pages.html) to process them, [`PDFReadingMode`]({{ site.parameters_reference }}pdf-reading-mode.html)和[`PDFRasterDPI`]({{ site.parameters_reference }}pdf-raster-dpi.html) are used to handle PDF file specifically. 
+For multi-page TIF and PDF files, DBR provides the parameter [`Pages`]({{ site.parameters_reference }}pages.html) to process them, [`PDFReadingMode`]({{ site.parameters_reference }}pdf-reading-mode.html) and [`PDFRasterDPI`]({{ site.parameters_reference }}pdf-raster-dpi.html) are used to handle PDF file specifically. 
 
 ## Specify the page number to be processed
 

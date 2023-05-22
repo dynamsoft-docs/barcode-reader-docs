@@ -1,20 +1,21 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for Timeout
+title: Timeout - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for Timeout.
 keywords: Timeout, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/time-out.html
 ---
 
 
 # Timeout 
 
-`Timeout` is a parameter to specify the maximum amount of time (in milliseconds) that should be spent searching for a barcode per page. It does not include the time taken to load/decode an image (Tiff, PNG, etc) from disk into memory. It is defined as below:
+`Timeout` defines the maximum amount of time (in milliseconds) that should be spent searching for a barcode per page. It does not include the time taken to load/decode an image (Tiff, PNG, etc) from disk into memory. It is defined as below:
 
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| *int* | [0, 0x7fffffff] | 10000 |
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *int* | [0, 0x7fffffff] | 10000 | `ImageParameter` |
 
     
 ## Setting Methods
@@ -69,5 +70,5 @@ Setting `Timeout` to a larger value may improve the Read Rate.
 
 -->
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)
 - [How to terminate the process]({{ site.scenario_settings }}terminate.html)

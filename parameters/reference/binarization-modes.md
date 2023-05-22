@@ -1,19 +1,19 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for BinarizationModes
+title: BinarizationModes - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for BinarizationModes.
 keywords: BinarizationModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/binarization-modes.html
 ---
 
 
 # BinarizationModes 
 
-This parameter helps control the process of binarization, i.e., converting grayscale image to binary image. A better binary image helps a lot for barcode reading. During the binarization, as we know, the threshold is the key criteria. If the pixel value is smaller than the threshold, it is set to 0, otherwise, it is set to a maximum value (255 in the library). By default, the library automatically calculates the adaptive size of the neighbourhood area and then binarizes the grayscale image with the adaptive threshold based on a small neighbourhood area with an adaptive size around it. Assume this field is in your wheelhouse, this parameter may help specify the appropriate settings for getting a better binary image.
+This parameter helps control the process of binarization, i.e., converting a grayscale image to a binary image. A better binary image greatly helps the process of barcode reading. During binarization, the threshold is the key criteria. If the pixel value is smaller than the threshold, it is set to 0, otherwise, it is set to a maximum value (255 in the library). By default, the library automatically calculates the adaptive size of the neighbourhood area and then binarizes the grayscale image with the adaptive threshold based on a small neighbourhood area with an adaptive size around it.
 
-It consisits of one or more modes, each mode is a way to implement the binarization.
-
+The array consists of one or more modes, each mode representing a different way to implement the binarization.
 
 ## Candidate Mode List
 - BM_LOCAL_BLOCK
@@ -29,22 +29,17 @@ Binarizes the image for each pixel based on a threshold which is calculated base
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)
 
-
-
 ### BM_THRESHOLD
 Binarizes the image for each pixel based on a unified threshold. If the gray value of the pixel is less than the threshold, it will be black in the binary image, otherwise it will be white. This mode has the following arguments for further customizing.
 - [ImagePreprocessingModesIndex](#imagepreprocessingmodesindex)
 - [BinarizationThreshold](#binarizationthreshold)
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)
-
-
     
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
-`BinarizationModes` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct, it is an array with 8 [`BinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) Enumeration items.
-
+`BinarizationModes` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct, it is an array with 8 `BinarizationMode` Enumeration items.
 
 **Code Snippet in C++**
 ```cpp
@@ -60,14 +55,14 @@ delete pSettings;
 //...other codes
 ```
 
-
 **Remarks**     
 `GetModeArgument` and `SetModeArgument` need to be called for getting and setting [`Arguments`](#candidate-argument-list).
 
 
-**See Also**      
+**See Also**  
+
 - `PublicRuntimeSettings:` [JavaScript]({{ site.js_api }}interface/RuntimeSettings.html) \| [C]({{ site.structs }}PublicRuntimeSettings.html?src=c) \| [C++]({{ site.structs }}PublicRuntimeSettings.html?src=cpp) \| [.NET]({{ site.dotnet_api }}struct/PublicRuntimeSettings.html) \| [Python]({{ site.python_api }}class/PublicRuntimeSettings.html) \| [Java]({{ site.java_api }}class/PublicRuntimeSettings.html) \| [Java-Android]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) \| [Objective-C & Swift]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html)
-- [`BinarizationMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)
+- `BinarizationMode:` [JavaScript]({{ site.js_enumerations }}EnumBinarizationMode.html) \| [C]({{ site.c_cpp_enumerations }}parameter-mode-enums.html?src=c#binarizationmode) \| [C++]({{ site.c_cpp_enumerations }}parameter-mode-enums.html?src=cpp#binarizationmode) \| [.NET]({{ site.dotnet_enumerations }}parameter-mode-enums.html#binarizationmode) \| [Python]({{ site.python_enumerations }}parameter-mode-enums.html#binarizationmode) \| [Java]({{ site.java_enumerations }}parameter-mode-enums.html#binarizationmode) \| [Java-Android]({{ site.mobile_enumerations }}binarization-mode.html?lang=android) \| [Objective-C & Swift]({{ site.mobile_enumerations }}binarization-mode.html?lang=objc,swift)
 - `GetModeArgument:` [JavaScript]({{ site.js_api}}BarcodeReader.html#getmodeargument) \| [C]({{ site.c_methods }}parameter-and-runtime-settings-basic.html#dbr_getmodeargument) \| [C++]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) \| [.NET]({{ site.dotnet_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#getmodeargument) \| [Python]({{ site.python_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#get_mode_argument) \| [Java]({{ site.java_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#getmodeargument) \| [Java-Android]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#getmodeargument) \| [Objective-C & Swift]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#getmodeargument)
 - `SetModeArgument:` [JavaScript]({{ site.js_api}}BarcodeReader.html#setmodeargument) \| [C]({{ site.c_methods }}parameter-and-runtime-settings-basic.html#dbr_setmodeargument) \| [C++]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) \| [.NET]({{ site.dotnet_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#setmodeargument) \| [Python]({{ site.python_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#set_mode_argument) \| [Java]({{ site.java_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#setmodeargument) \| [Java-Android]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#setmodeargument) \| [Objective-C & Swift]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#setmodeargument)
 
@@ -86,24 +81,24 @@ delete pSettings;
 | ImagePreprocessingModesIndex | A number from value range of ImagePreprocessingModesIndex | (Optional) Sets the Argument [ImagePreprocessingModesIndex](#imagepreprocessingmodesindex). |
 | ThresholdCompensation | A number from value range of ThresholdCompensation | (Optional) Sets the Argument [ThresholdCompensation](#thresholdcompensation). |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
-| LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
+| LibraryParameters | A string from value range of LibraryParameters | (Optional) Sets the Argument [LibraryParameters](#libraryparameters). |
 
 
 
 **JSON Parameter Example**   
 ```
 {
-    "BinarizationModes": [
-        {
-            "Mode": "BM_LOCAL_BLOCK", 
-            "BlockSizeX": 5,
-            "BlockSizeY": 5
-        },
-        {
-            "Mode": "BM_THRESHOLD", 
-            "BinarizationThreshold": 125
-        }
-    ]
+    "BinarizationModes": [
+        {
+            "Mode": "BM_LOCAL_BLOCK", 
+            "BlockSizeX": 5,
+            "BlockSizeY": 5
+        },
+        {
+            "Mode": "BM_THRESHOLD", 
+            "BinarizationThreshold": 125
+        }
+    ]
 }
 ```
 
@@ -239,4 +234,4 @@ Sets the parameters passed to the library to load dynamically.
 
 ## Related Articles
 - [How to configure the binarization parameters]({{ site.scenario_settings }}how-to-set-binarization-modes.html)
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)

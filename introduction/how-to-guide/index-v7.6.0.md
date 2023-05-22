@@ -5,6 +5,7 @@ description: This is the main page of Dynamsoft Barcode Reader How-to Guides.
 keywords: how-to guides
 needAutoGenerateSidebar: false
 breadcrumbText: How-to Guide
+permalink: /introduction/how-to-guide/index-v7.6.0.html
 ---
 
 

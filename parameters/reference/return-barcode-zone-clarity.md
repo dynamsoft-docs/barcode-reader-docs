@@ -1,20 +1,21 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for ReturnBarcodeZoneClarity
+title: ReturnBarcodeZoneClarity - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for ReturnBarcodeZoneClarity.
 keywords: ReturnBarcodeZoneClarity, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/return-barcode-zone-clarity.html
 ---
 
 
 # ReturnBarcodeZoneClarity 
 
-`ReturnBarcodeZoneClarity` is a parameter to specify whether to return the clarity of the barcode zone. It is defined as below:
+`ReturnBarcodeZoneClarity` defines whether to return the clarity of the barcode zone. It is defined as below:
 
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| *int* | [0, 1] | 0 |
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *int* | [0, 1] | 0 | `ImageParameter` |
 
 
 **Remarks**  
@@ -75,5 +76,5 @@ Disabling `ReturnBarcodeZoneClarity` may improve the Speed.
 
 -->
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)
 - [How to filter and sort results]({{ site.scenario_settings }}decode-result.html)

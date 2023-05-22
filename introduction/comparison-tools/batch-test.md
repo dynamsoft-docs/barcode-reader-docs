@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader Comparison Tools - Batch Test
 description: This page shows how to test barcode reading performance.
 keywords: batch test, comparison tools
 needAutoGenerateSidebar: true
+permalink: /introduction/comparison-tools/batch-test.html
 ---
 # How to Batch Test Barcode Reading Performance
 
@@ -11,7 +12,7 @@ This guide introduces how to use the BatchDecode program provided by Dynamsoft t
 
 ## Download the Program
 
-If you haven’t got the program yet,  [download the package from here](https://download2.dynamsoft.com/samples/dbr/dbr_cpp_performanceevaluation.zip) and unpack it into the directory of your choice.
+If you haven't got the program yet,  [download the package from here](https://download2.dynamsoft.com/samples/dbr/dbr_cpp_performanceevaluation.zip) and unpack it into the directory of your choice.
 
 ## Configure and Run the Daemon Tool
 

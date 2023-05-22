@@ -4,11 +4,12 @@ title: How does your SDK compare to other commercial SDKs?
 keywords: Dynamsoft Barcode Reader, FAQ, Other, comparison 
 description: How does your SDK compare to other commercial SDKs?
 needAutoGenerateSidebar: false
+permalink: /faq/general/competitors-comparison.html
 ---
 
-# FAQ - General
-
 ## How does your SDK compare to other commercial SDKs?
+
+[<< Back to FAQ index](index.md)
 
 The Dynamsoft Barcode Reader offers some of the best performance metrics out of all of the SDKs in the industry. Throughout the years, our SDK has proven to meet any and every requirement there is on the spectrum, whether that is amazingly fast results in an interactive video scenario, or wildly accurate results when decoding DPM codes on warehouse machinery. The Dynamsoft Barcode Reader is tried and true, and has been utilized throughout various industries with utmost satisfaction.
 
@@ -21,7 +22,7 @@ DBR is able to work in a multitude of usage scenarios and industries where our c
 - [**COVID-19 Vaccine Passport Scanner**](https://www.youtube.com/watch?v=GdRRsqho-vk)
 - [**Creating a Warehouse Management System with DBR**](https://www.youtube.com/watch?v=bCyzcV0ofMk)
 
-These are some of the most popular use cases that we have come across, but there's much more that our SDK can accomplish, most of which are mentioned [here](https://www.dynamsoft.com/barcode-reader/introduction/overview.html?ver=latest#user-scenarios).
+These are some of the most popular use cases that we have come across, but there's much more that our SDK can accomplish.
 
 Unlike most of our competitors, the Dynamsoft Barcode Reader comes in a variety of flavours, whether you are looking to build a desktop application, a native mobile application, or a web application. DBR supports a multitude of languages, including C, .NET, Java, Swift, JavaScript, and many more that our competitors do not support. In addition, DBR also supports a variety of the major frameworks that are used to create applications, such as Xamarin, Cordova, React, and a handful more. No matter the programming language or framework that you want to use for your application, Dynamsoft has got you covered. Feel free to check out the following videos that explore the different editions the SDK offers.
 

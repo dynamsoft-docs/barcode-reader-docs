@@ -5,8 +5,8 @@ description: This page shows Dynamsoft Barcode Reader Parameter Reference - Imag
 keywords: parameter reference, parameters, ImageParameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+permalink: /parameters/reference/image-parameter/index.html
 ---
-
 
 # ImageParameter Object Parameters
 

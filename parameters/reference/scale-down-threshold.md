@@ -1,20 +1,21 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for ScaleDownThreshold
+title: ScaleDownThreshold - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for ScaleDownThreshold.
 keywords: ScaleDownThreshold, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/scale-down-threshold.html
 ---
 
 
 # ScaleDownThreshold 
 
-`ScaleDownThreshold` is a parameter to specify the threshold for image shrinking. It is defined as below:
+`ScaleDownThreshold` defines the threshold for image shrinking. It is defined as below:
 
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| *int* | [512, 0x7fffffff] | 2300 |
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *int* | [512, 0x7fffffff] | 2300 | `ImageParameter` |
 
 
 **Remarks**     
@@ -75,4 +76,4 @@ Setting `ScaleDownThreshold` to a larger value than the shorter edge of the imag
 
 -->
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)

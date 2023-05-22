@@ -1,9 +1,10 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader How-to Guides - Get Additional Barcode Information
+title: Get Additional Barcode Information - Dynamsoft Barcode Reader How-to Guides
 description: This page shows how to get additional barcode information.
 keywords: additional information, angle, confidence, decode result, how-to guides
 needAutoGenerateSidebar: false
+permalink: /introduction/how-to-guide/get-additional-barcode-information.html
 ---
 
 

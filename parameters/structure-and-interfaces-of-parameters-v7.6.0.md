@@ -1,9 +1,10 @@
 ---   
 description: Introduce the parameter definitions, organization structure, usage rules and related interfaces involved in Dynamsoft Barcode Reader.
-title: Dynamsoft Barcode Reader Parameters - Structure and Interfaces of Parameters
+title: Structure and Interfaces of Parameters - Dynamsoft Barcode Reader Parameters
 keywords: Parameter,Interface,Hierarchy
 layout: default-layout
 needAutoGenerateSidebar: true
+permalink: /parameters/structure-and-interfaces-of-parameters-v7.6.0.html
 ---
 
 
@@ -114,6 +115,8 @@ The parameters of `FormatSpecification` are:
 - FormatSpecification.Code128Subset
 - FormatSpecification.DeblurLevel
 - FormatSpecification.DeformationResistingModes
+- FormatSpecification.EnableDataMatrixECC000-140
+- FormatSpecification.EnableQRCodeModel1
 - FormatSpecification.FindUnevenModuleBarcode
 - FormatSpecification.HeadModuleRatio
 - FormatSpecification.MinQuietZoneWidth

@@ -4,6 +4,7 @@ description: In this article, we will introduce how to obtain and use intermedia
 title: How to obtain and use intermediate results
 keywords: IntermediateResult
 needAutoGenerateSidebar: true
+permalink: /parameters/scenario-settings/intermediate-result.html
 ---
 # How to obtain and use intermediate results
 
@@ -15,9 +16,10 @@ You can call [`IntermediateResultSavingMode`]({{ site.parameters_reference }}int
 
 | Enumerator           | Value  | Note                            |
 |-----------------|--------|--------------------            |
-| IRSM_MEMORY    | 0x01   | Saves intermediate results in memory             |
+| IRSM_MEMORY    | 0x01   | Saves intermediate results in memory.            |
 | IRSM_FILESYSTEM | 0x02   | Saves intermediate results in file system.  |
 | IRSM_BOTH      | 0x04   | Saves intermediate results in both memory and file system.    |
+| IRSM_REFERENCE_MEMORY | 0x08 | Saves intermediate results in memory with internal data format. |
 
 The following code snippet illustrate how to save intermediate results in memory, and obtain from memory:
 

@@ -1,10 +1,12 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Licensing - How to set full license
+title: How to set full license - Dynamsoft Barcode Reader Licensing
 description: This page shows how to set full license of Dynamsoft Barcode Reader.
 keywords: full license, licensing
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+noTitleIndex: false
+permalink: /license-activation/set-full-license.html
 ---
 
 # How to set full license in version 9.x
@@ -17,80 +19,135 @@ You can set the license by following the steps below:
 
 ## Activate the license
 
-Once you purchase a full license from Dynamsoft, you can find your license information in the <a href ="https://www.dynamsoft.com/customer/license/fullLicense" target="_blank">Customer Portal</a>.
+Once you purchase a full license from Dynamsoft, you can find your license information in the <a href ="https://www.dynamsoft.com/customer/license/fullLicense" target="_blank">Customer Portal (License | Full License)</a>.
 
 To activate the license, click "Activate".
 
  ![Activate][1]
 
-On the next page, set an Alias for your license or leave the default Alias and click the "Activate" button. Take "Connect to Dynamsoft's License Server" as an example.
-
-> Read more on <a href ="https://www.dynamsoft.com/license-server/docs/about/terms.html#alias?utm_source=docs&product=dbr" target="_blank">Alias</a>
->
-> <a href ="https://www.dynamsoft.com/license-server/docs/about/activate.html?utm_source=docs&product=dbr" target="_blank">Connect to Dynamsoft's License Server</a> vs. <a href ="https://www.dynamsoft.com/license-server/docs/selfhosting/index.html?utm_source=docs&product=dbr" target="_blank">Connect to My Self-hosted License Server</a>
+On the next page, set an Alias for your license or leave the default Alias, choose where you want the license to be hosted ("Dynamsoft's License Server"
+or "My Self-Hosted License Server") and click the "Activate" button.
 
 ![Activate2][2]
+
+> 1. **Alias** is a way to identify the license. You can set a meaningful Alias to a license so that you can easily identify the purpose of the license.
+>
+> 2. In most cases, you should choose "Dynamsoft's License Server", choose "My Self-Hosted License Server" only when you have [consulted us](https://www.dynamsoft.com/company/contact/).
+>
+> 3. You might be prompted to add the new license to an existing project or create a new project for this license.
 
 On the following popup window, click the "OK" button.
 
 ![Activate3][3]
 
-You will find that the License Key is listed on the license details page now.
+You will find that the **License Key** is listed on the license details page now.
 
 ![Activate5][5]
 
-You can repeat the above steps to activate other license keys.
+You can copy the **License Key** and use it in your application.
 
-## Configure the license (optional)
+If you have other new licenses, you can follow the same steps to activate them.
 
-To configure the License Key, you can click the name after "Linked Project Name" on the license details page to get to the configuration page. Read <a href ="https://www.dynamsoft.com/license-server/docs/common/project.html?utm_source=docs&product=dbr" target="_blank">how to manage the project</a> for more information.
+> A license usually expires one year after it is activated. Do not activate the license until you actually need to use it.
+
+## Configure the license by projects (optional)
+
+If you have multiple projects which you want to manage the license usage separately, you can click the project name (found after "Linked Project Name") on the license details page to get to the configuration page. Read <a href ="https://www.dynamsoft.com/license-server/docs/common/project.html?utm_source=docs&product=dbr" target="_blank">how to manage the project</a> for more information.
 
 ## Set the license in the code
 
-<div class="sample-code-prefix"></div>
->- JavaScript
->- C
->- C++
->- C#
->- Java
->- Android
->- Objective-C
->- Swift
->- Python
+Replace the trial license with the purchased license key:
+
+<div class="sample-code-prefix template2"></div>
+   >- JavaScript
+   >- C
+   >- C++
+   >- C#
+   >- Java
+   >- Android
+   >- Objective-C
+   >- Swift
+   >- Python
+   >
 >
->1. 
 ```javascript
-Dynamsoft.DBR.BarcodeReader.license = "YOUR-LICENSE-KEY";
-let scanner = await Dynamsoft.DBR.BarcodeReader.createInstance();
+Dynamsoft.DBR.BarcodeScanner.license = "YOUR-LICENSE-KEY";
+let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
 ```
-2. 
+>
 ```c
-  char errorBuf[512];
-  DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
-  void* barcodeReader = DBR_CreateInstance();
-  // add further process
+int errorCode = 0;
+char errorBuf[512];
+errorCode = DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+if (errorCode != DBR_OK)
+{
+    // Add your code for license error processing;
+}
+// ...
+void* dbr = DBR_CreateInstance();
+if(dbr != NULL)
+{
+    // Add your code here to call decoding method, process barcode results and so on
+    // ...
+    // Release the allocated resources for the instance
+    DBR_DestroyInstance(dbr);
+}
 ```
-3. 
+>
 ```cpp
-  char errorBuf[512];
-  dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
-  CBarcodeReader* reader = new CBarcodeReader();
-  // add further process
+int errorCode = 0;
+char errorBuf[512];
+errorCode = CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+if (errorCode != DBR_OK)
+{
+    // Add your code for license error processing;
+}
+// ...
+CBarcodeReader* dbr = new CBarcodeReader();
+if(dbr != NULL)
+{
+    // Add your code here to call decoding method, process barcode results and so on
+    // ...
+    // Release the allocated resources for the instance
+    delete dbr;
+}
 ```
-4. 
+>
 ```csharp
-  string errorMsg;
-  BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
-  BarcodeReader reader = new BarcodeReader();
-  // add further process
+string errorMsg;
+EnumErrorCode errorCode = BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
+if (errorCode != EnumErrorCode.DBR_SUCCESS)
+{
+    // Add your code for license error processing;
+}
+// ...
+BarcodeReader reader = new BarcodeReader();
+if (reader != null)
+{
+    // Add your code here to call decoding method, process barcode results and so on
+    // ...
+    // Release the allocated resources for the instance
+    reader.Dispose();
+}
 ```
-5. 
+>
 ```java
-  BarcodeReader.initLicense("YOUR-LICENSE-KEY");
-  BarcodeReader reader = new BarcodeReader();
-  // add further process
+try {
+    BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+    // ...
+    BarcodeReader reader = new BarcodeReader();
+    if(reader != null)
+    {
+        // Add your code here to call decoding method, process barcode results and so on
+        // ...
+        // Release the allocated resources for the instance
+        reader.destroy();
+    }
+} catch (BarcodeReaderException ex) {
+    // ...
+}
 ```
-6. 
+>
 ```java
 BarcodeReader.initLicense("YOUR-LICENSE-KEY", new DBRLicenseVerificationListener() {
   @Override
@@ -99,7 +156,7 @@ BarcodeReader.initLicense("YOUR-LICENSE-KEY", new DBRLicenseVerificationListener
   }
 });
 ```
-7. 
+>
 ```objc
 [DynamsoftBarcodeReader initLicense:@"YOUR-LICENSE-KEY" verificationDelegate:self];
 - (void)DBRLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error
@@ -107,7 +164,7 @@ BarcodeReader.initLicense("YOUR-LICENSE-KEY", new DBRLicenseVerificationListener
   // Add your code for license verification.
 }
 ```
-8. 
+>
 ```swift
 DynamsoftBarcodeReader.initLicense("YOUR-LICENSE-KEY", verificationDelegate: self)
 func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
@@ -115,10 +172,114 @@ func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
   // Add your code for license verification.
 }
 ```
-9. 
+>
 ```python
 error = BarcodeReader.init_license("YOUR-LICENSE-KEY")
-dbr = BarcodeReader()
+if error[0] != EnumErrorCode.DBR_OK:
+    # Add your code for license error processing
+# ...
+reader = BarcodeReader()
+if reader != None:
+    # Add your code here to call decoding method, process barcode results and so on
+    # ...
+    # Release the allocated resources for the instance
+    del reader
+```
+
+If you are using a **concurrent instance license**:
+
+<div class="sample-code-prefix template2"></div>
+   >- C
+   >- C++
+   >- C#
+   >- Java
+   >- Python
+   >
+>
+```c
+int errorCode = 0;
+char errorBuf[512];
+errorCode = DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+if (errorCode != DBR_OK)
+{
+    // Add your code for license error processing;
+}
+// ...
+void* dbr = DBR_GetInstance();
+if(dbr != NULL)
+{
+    // Add your code here to call decoding method, process barcode results and so on
+    // ...
+    // Release the allocated resources for the instance
+    DBR_RecycleInstance(dbr);
+}
+```
+>
+```cpp
+int errorCode = 0;
+char errorBuf[512];
+errorCode = CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+if (errorCode != DBR_OK)
+{
+    // Add your code for license error processing;
+}
+// ...
+CBarcodeReader* dbr = CBarcodeReader::GetInstance();
+if(dbr != NULL)
+{
+    // Add your code here to call decoding method, process barcode results and so on
+    // ...
+    // Release the allocated resources for the instance
+    dbr->Recycle();
+}
+```
+>
+```csharp
+string errorMsg;
+EnumErrorCode errorCode = BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
+if (errorCode != EnumErrorCode.DBR_SUCCESS)
+{
+    // Add your code for license error processing;
+}
+// ...
+BarcodeReader reader = BarcodeReader.GetInstance();
+if (reader != null)
+{
+    // Add your code here to call decoding method, process barcode results and so on
+    // ...
+    // Release the allocated resources for the instance
+    reader.Recycle();
+}
+```
+>
+```java
+try {
+    BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+    // ...
+    BarcodeReader reader = BarcodeReader.getInstance();
+    if(reader != null)
+    {
+        // Add your code here to call decoding method, process barcode results and so on
+        // ...
+        // Release the allocated resources for the instance
+        reader.recycle();
+    }
+} catch (BarcodeReaderException ex) {
+    // ...
+}
+```
+>
+```python
+error = BarcodeReader.init_license("YOUR-LICENSE-KEY")
+if error[0] != EnumErrorCode.DBR_OK:
+    # Add your code for license error processing
+# ...
+reader = BarcodeReader.get_instance()
+if reader != None:
+    # Add your code here to call decoding method, process barcode results and so on
+    # ...
+    # Release the allocated resources for the instance
+    reader.recycle()
 ```
 
 If you run into any issues, please [contact Dynamsoft Support](https://www.dynamsoft.com/Company/Contact.aspx).

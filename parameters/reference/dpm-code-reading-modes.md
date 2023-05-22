@@ -1,16 +1,17 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for DPMCodeReadingModes
+title: DPMCodeReadingModes - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for DPMCodeReadingModes.
 keywords: DPMCodeReadingModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/dpm-code-reading-modes.html
 ---
 
 
 # DPMCodeReadingModes 
 
-`DPMCodeReadingModes` is a parameter to control how to read direct part mark (DPM) barcodes. It consisits of one or more modes, each mode is an implement to read DPM barcode.
+`DPMCodeReadingModes` determines how to read direct part mark (DPM) barcodes. It currently can consist of two modes, with the main mode being `DPMCRM_GENERAL`.
 
 
 ## Candidate Mode List
@@ -18,7 +19,7 @@ needGenerateH3Content: true
 - DPMCRM_AUTO
 
 ### DPMCRM_GENERAL
-Reads DPM code using the general algorithm. This mode has the following arguments for further customizing.
+Reads DPM codes using the general algorithm. This mode has the following arguments for further customizing.
 
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)
@@ -32,7 +33,7 @@ Lets the library choose a mode automatically. Not supported yet.
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
-`DPMCodeReadingModes` can be set dynamically during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 [`DPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode) Enumeration items.
+`DPMCodeReadingModes` can be set dynamically during runtime as a member of `FurtherModes`, which is a member of `PublicRuntimeSettings` struct, it is an array with 8 `DPMCodeReadingMode` Enumeration items.
 
 
 **Code Snippet in C++**
@@ -54,7 +55,7 @@ delete pSettings;
 **See Also**      
 - `FurtherModes:` [C]({{ site.structs }}FurtherModes.html?src=c) \| [C++]({{ site.structs }}FurtherModes.html?src=cpp) \| [.NET]({{ site.dotnet_api }}struct/FurtherModes.html) \| [Java]({{ site.java_api }}class/FurtherModes.html) \| [Java-Android]({{ site.android_api }}auxiliary-FurtherModes.html) \| [Objective-C & Swift]({{ site.oc_api }}auxiliary-iFurtherModes.html)
 - `PublicRuntimeSettings:` [JavaScript]({{ site.js_api }}interface/RuntimeSettings.html) \| [C]({{ site.structs }}PublicRuntimeSettings.html?src=c) \| [C++]({{ site.structs }}PublicRuntimeSettings.html?src=cpp) \| [.NET]({{ site.dotnet_api }}struct/PublicRuntimeSettings.html) \| [Python]({{ site.python_api }}class/PublicRuntimeSettings.html) \| [Java]({{ site.java_api }}class/PublicRuntimeSettings.html) \| [Java-Android]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) \| [Objective-C & Swift]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html)
-- [`DPMCodeReadingMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode)
+- `DPMCodeReadingMode:` [JavaScript]({{ site.js_enumerations }}EnumDPMCodeReadingMode.html) \| [C]({{ site.c_cpp_enumerations }}parameter-mode-enums.html?src=c#dpmcodereadingmode) \| [C++]({{ site.c_cpp_enumerations }}parameter-mode-enums.html?src=cpp#dpmcodereadingmode) \| [.NET]({{ site.dotnet_enumerations }}parameter-mode-enums.html#dpmcodereadingmode) \| [Python]({{ site.python_enumerations }}parameter-mode-enums.html#dpmcodereadingmode) \| [Java]({{ site.java_enumerations }}parameter-mode-enums.html#dpmcodereadingmode) \| [Java-Android]({{ site.mobile_enumerations }}dpm-code-reading-mode.html?lang=android) \| [Objective-C & Swift]({{ site.mobile_enumerations }}dpm-code-reading-mode.html?lang=objc,swift)
 - `GetModeArgument:` [JavaScript]({{ site.js_api}}BarcodeReader.html#getmodeargument) \| [C]({{ site.c_methods }}parameter-and-runtime-settings-basic.html#dbr_getmodeargument) \| [C++]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) \| [.NET]({{ site.dotnet_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#getmodeargument) \| [Python]({{ site.python_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#get_mode_argument) \| [Java]({{ site.java_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#getmodeargument) \| [Java-Android]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#getmodeargument) \| [Objective-C & Swift]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#getmodeargument)
 - `SetModeArgument:` [JavaScript]({{ site.js_api}}BarcodeReader.html#setmodeargument) \| [C]({{ site.c_methods }}parameter-and-runtime-settings-basic.html#dbr_setmodeargument) \| [C++]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) \| [.NET]({{ site.dotnet_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#setmodeargument) \| [Python]({{ site.python_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#set_mode_argument) \| [Java]({{ site.java_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#setmodeargument) \| [Java-Android]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#setmodeargument) \| [Objective-C & Swift]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#setmodeargument)
 
@@ -66,18 +67,18 @@ delete pSettings;
 | -------- | --------- | ----------- |
 | Mode | Any one in Candidate Mode List as string | (Required) Specifies a mode to read DPM barcode.  |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
-| LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
+| LibraryParameters | A string from value range of LibraryParameters | (Optional) Sets the Argument [LibraryParameters](#libraryparameters). |
 
 
 
 **JSON Parameter Example**   
 ```
 {
-    "DPMCodeReadingModes": [
-        {
-            "Mode": "DPMCRM_GENERAL" 
-        }
-    ]
+    "DPMCodeReadingModes": [
+        {
+            "Mode": "DPMCRM_GENERAL" 
+        }
+    ]
 }
 ```
 
@@ -120,5 +121,5 @@ Sets the parameters passed to the library to load dynamically.
 
 
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)
 - [How to read DPM barcodes]({{ site.scenario_settings }}dpm-decoding.html)

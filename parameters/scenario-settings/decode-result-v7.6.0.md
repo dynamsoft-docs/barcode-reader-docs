@@ -3,6 +3,7 @@ layout: default-layout
 description: This article describes how to filter and sort decoding results and related parameters
 title: How to filter and sort decoding results
 keywords: decode result
+permalink: /parameters/scenario-settings/decode-result-v7.6.0.html
 ---
 
 # How to filter and sort decoding results
@@ -48,7 +49,7 @@ You can set the angle, width, height, and text length requirements that the deco
 
 You can use [`BarcodeTextRegExPattern`]({{ site.parameters_reference }}barcode-text-regex-pattern.html) to specify the regular expression requirements that must be met when `DBR` returns the result text. The default value is empty which means there is no limitation.
 
-For example, if we set [`BarcodeTextRegExPattern`]({{ site.parameters_reference }}barcode-text-regex-pattern.html) as "[0-9]\d{4,11}", then the result text should be 4 to 11 digits. If the result is 123456 which matches the expression, it will be returned. If it is 123 which has only 3 digits or a123456 which has a letter in it, they don’t match the expression and will not be returned.
+For example, if we set [`BarcodeTextRegExPattern`]({{ site.parameters_reference }}barcode-text-regex-pattern.html) as "[0-9]\d{4,11}", then the result text should be 4 to 11 digits. If the result is 123456 which matches the expression, it will be returned. If it is 123 which has only 3 digits or a123456 which has a letter in it, they don't match the expression and will not be returned.
 
 For more info, check out About Regular [Expression](https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2010/28hw3sce(v=vs.100))
 

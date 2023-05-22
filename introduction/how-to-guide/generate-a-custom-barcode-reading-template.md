@@ -1,9 +1,10 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader How-to Guides - Generate a Custom Barcode Reading Template
+title: Generate a Custom Barcode Reading Template - Dynamsoft Barcode Reader How-to Guides
 description: This page shows how to generate a custom barcode reading template.
 keywords: custom settings, template, how-to guides
 needAutoGenerateSidebar: false
+permalink: /introduction/how-to-guide/generate-a-custom-barcode-reading-template.html
 ---
 
 

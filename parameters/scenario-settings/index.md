@@ -3,12 +3,13 @@ layout: default-layout
 needAutoGenerateSidebar: true
 title: How to select the appropriate DBR parameter configuration
 description: This article shows how to select the appropriate DBR parameter configuration.
-breadcrumbText: Scenario Settings
+breadcrumbText: Parameter scenario-settings
+permalink: /parameters/scenario-settings/
 ---
 
 # How to set appropriate DBR parameter configurations
 
-Dynamsoft Barcode Reader (DBR) offers flexible parameters to meet the decoding requirements of different scenarios and requirements. Here you can learn how to choose the appropriate parameter configurations for your project.
+Dynamsoft Barcode Reader (DBR) offers flexible parameters to meet the decoding requirements of different scenario-settings and requirements. Here you can learn how to choose the appropriate parameter configurations for your project.
 
 - [DBR Parameter Configuration Methods](#dbr-parameter-configuration-methods)
 - [DBR Barcode Format and Expected Barcode Counts](#dbr-barcode-format-and-expected-barcode-counts)
@@ -55,7 +56,7 @@ For more information, please refer to this article: [Manually define Region Of I
 This part is to locate the barcode region in ROI. Main steps:
 
 - Grayscale Pre-processing  
-Learn more: [How to preprocess images based on different scenarios](image-preprocessing.md).
+Learn more: [How to preprocess images based on different scenario-settings](image-preprocessing.md).
 - Grayscale Binarization  
 Learn more: [How to configure the binarization parameters](how-to-set-binarization-modes.md).
 - Texture Detection  
@@ -80,7 +81,7 @@ This part includes the following steps:
 - Resist Deformation  
 Read more: [How to deal with deformed barcodes](resist-deformation.md).
 - Barcode Complementation  
-Read more: [How to decode incomplete barcodes](how-to-set-barcode-complememt-modes.md).
+Read more: [How to decode incomplete barcodes](how-to-set-barcode-complement-modes.md).
 - Sample Decoding  
 Sample decoding process mainly involves [Deblur Level](deblur-level.md) and [DPM Decoding](dpm-decoding.md).
 

@@ -5,6 +5,7 @@ description: Learn about the Format Enumerations of Dynamsoft Barcode Reader in 
 keywords: BarcodeFormat, BarcodeFormat_2, format enumeration, enumeration
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+permalink: /parameters/enum/format-enums.html
 ---
 
 

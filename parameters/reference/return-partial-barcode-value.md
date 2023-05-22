@@ -1,20 +1,21 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for ReturnPartialBarcodeValue
+title: ReturnPartialBarcodeValue - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for ReturnPartialBarcodeValue.
 keywords: ReturnPartialBarcodeValue, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/return-partial-barcode-value.html
 ---
 
 
 # ReturnPartialBarcodeValue 
 
-`ReturnPartialBarcodeValue` is a parameter to specify whether to return partial barcode value(s). It is defined as below:
+`ReturnPartialBarcodeValue` defines whether to return partial barcode value(s). It is defined as below:
 
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| *int* | [0, 1] | 1 |
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *int* | [0, 1] | 1 | `FormatSpecification` |
 
 
 **Remarks**  
@@ -24,7 +25,7 @@ needGenerateH3Content: true
 
     
 ## Setting Methods
-`ReturnPartialBarcodeValue` is supported to be set through JSON template.
+`ReturnPartialBarcodeValue` can be set via JSON template.
 
 
 ### As JSON Parameter
@@ -56,4 +57,4 @@ Disabling `ReturnPartialBarcodeValue` may improve the Accuracy.
 
 -->
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)

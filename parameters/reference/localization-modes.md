@@ -1,16 +1,17 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for LocalizationModes
+title: LocalizationModes - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for LocalizationModes.
 keywords: LocalizationModes, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/localization-modes.html
 ---
 
 
 # LocalizationModes 
 
-`LocalizationModes` is a parameter to control how to localize barcodes. It consisits of one or more modes, each mode represents a way to implement the localization.
+`LocalizationModes` determines how to localize barcodes. It consists of one or more modes, each mode representing a different localization process.
 
 
 ## Candidate Mode List
@@ -46,6 +47,7 @@ Localizes barcodes quickly. This mode is recommended in interactive scenario. Th
 
 - [ScanStride](#scanstride)
 - [ScanDirection](#scandirection)
+- [IsOneDStacked](#isonedstacked)
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)
 
@@ -79,7 +81,7 @@ Localizes 1D barcodes in a fast mode. This mode is designed for reading 1D barco
 ## Setting Methods
 
 ### As `PublicRuntimeSettings` Member
-`LocalizationModes` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct, it is an array with 8 [`LocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode) Enumeration items.
+`LocalizationModes` can be set dynamically during runtime as a member of `PublicRuntimeSettings` struct, it is an array with 8 `LocalizationMode` Enumeration items.
 
 
 **Code Snippet in C++**
@@ -102,7 +104,7 @@ delete pSettings;
 
 **See Also**      
 - `PublicRuntimeSettings:` [JavaScript]({{ site.js_api }}interface/RuntimeSettings.html) \| [C]({{ site.structs }}PublicRuntimeSettings.html?src=c) \| [C++]({{ site.structs }}PublicRuntimeSettings.html?src=cpp) \| [.NET]({{ site.dotnet_api }}struct/PublicRuntimeSettings.html) \| [Python]({{ site.python_api }}class/PublicRuntimeSettings.html) \| [Java]({{ site.java_api }}class/PublicRuntimeSettings.html) \| [Java-Android]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) \| [Objective-C & Swift]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html)
-- [`LocalizationMode` Enumeration]({{ site.enumerations }}parameter-mode-enums.html#localizationmode)
+- `LocalizationMode:` [JavaScript]({{ site.js_enumerations }}EnumLocalizationMode.html) \| [C]({{ site.c_cpp_enumerations }}parameter-mode-enums.html?src=c#localizationmode) \| [C++]({{ site.c_cpp_enumerations }}parameter-mode-enums.html?src=cpp#localizationmode) \| [.NET]({{ site.dotnet_enumerations }}parameter-mode-enums.html#localizationmode) \| [Python]({{ site.python_enumerations }}parameter-mode-enums.html#localizationmode) \| [Java]({{ site.java_enumerations }}parameter-mode-enums.html#localizationmode) \| [Java-Android]({{ site.mobile_enumerations }}localization-mode.html?lang=android) \| [Objective-C & Swift]({{ site.mobile_enumerations }}localization-mode.html?lang=objc,swift)
 - `GetModeArgument:` [JavaScript]({{ site.js_api}}BarcodeReader.html#getmodeargument) \| [C]({{ site.c_methods }}parameter-and-runtime-settings-basic.html#dbr_getmodeargument) \| [C++]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#getmodeargument) \| [.NET]({{ site.dotnet_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#getmodeargument) \| [Python]({{ site.python_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#get_mode_argument) \| [Java]({{ site.java_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#getmodeargument) \| [Java-Android]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#getmodeargument) \| [Objective-C & Swift]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#getmodeargument)
 - `SetModeArgument:` [JavaScript]({{ site.js_api}}BarcodeReader.html#setmodeargument) \| [C]({{ site.c_methods }}parameter-and-runtime-settings-basic.html#dbr_setmodeargument) \| [C++]({{ site.cpp_methods }}parameter-and-runtime-settings-basic.html#setmodeargument) \| [.NET]({{ site.dotnet_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#setmodeargument) \| [Python]({{ site.python_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#set_mode_argument) \| [Java]({{ site.java_api }}BarcodeReader/parameter-and-runtime-settings-basic.html#setmodeargument) \| [Java-Android]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#setmodeargument) \| [Objective-C & Swift]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#setmodeargument)
 
@@ -115,23 +117,25 @@ delete pSettings;
 | Mode | Any one in Candidate Mode List as string | (Required) Specifies a mode for deformation resisting.  |
 | ScanStride | A number from value range of ScanStride | (Optional) Sets the Argument [ScanStride](#scanstride). |
 | ScanDirection | A number from value range of ScanDirection | (Optional) Sets the Argument [ScanDirection](#scandirection). |
+| ConfidenceThreshold | A number from value range of ConfidenceThreshold | (Optional) Sets the Argument [ConfidenceThreshold](#confidencethreshold). |
+| IsOneDStacked | A number from value range of IsOneDStacked | (Optional) Sets the Argument [IsOneDStacked](#isonedstacked). |
 | LibraryFileName | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
-| LibraryParameters | A string from value range of LibraryFileName | (Optional) Sets the Argument [LibraryFileName](#libraryfilename). |
+| LibraryParameters | A string from value range of LibraryParameters | (Optional) Sets the Argument [LibraryParameters](#libraryparameters). |
 
 
 
 **JSON Parameter Example**   
 ```
 {
-    "LocalizationModes": [
-        {
-            "Mode": "LM_SCAN_DIRECTLY", 
-            "ScanStride": 5
-        },
-        {
-            "Mode": "LM_CONNECTED_BLOCKS" 
-        }
-    ]
+    "LocalizationModes": [
+        {
+            "Mode": "LM_SCAN_DIRECTLY", 
+            "ScanStride": 5
+        },
+        {
+            "Mode": "LM_CONNECTED_BLOCKS" 
+        }
+    ]
 }
 ```
 
@@ -152,6 +156,7 @@ Setting more modes along with different arguments may improve the Read Rate.
 - [ScanStride](#scanstride)
 - [ScanDirection](#scandirection)
 - [ConfidenceThreshold](#confidencethreshold)
+- [IsOneDStacked](#isonedstacked)
 - [LibraryFileName](#libraryfilename)
 - [LibraryParameters](#libraryparameters)
  
@@ -189,8 +194,14 @@ Sets the confidence threshold.
 | *int* | [0, 100] | 60 | LM_ONED_FAST_SCAN |         
 
 **Remarks**         
-  - The localization result will be discarded if its conficence is less then the threshold.  
+  - The localization result will be discarded if its confidence is less then the threshold.  
 
+### IsOneDStacked 
+Sets whether the oned barcodes are stacked.
+
+| Value Type | Value Range | Default Value | Valid For |
+| ---------- | ----------- | ------------- | --------- |
+| *int* | [0, 1] | 0 | LM_SCAN_DIRECTLY |
 
 ### LibraryFileName 
 Sets the file name of the library to load dynamically.
@@ -213,5 +224,5 @@ Sets the parameters passed to the library to load dynamically.
 
 
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)
 - [How to use different localization modes]({{ site.scenario_settings }}how-to-set-localization-modes.html)

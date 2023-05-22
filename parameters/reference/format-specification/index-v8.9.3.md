@@ -5,6 +5,7 @@ description: This page shows Dynamsoft Barcode Reader Parameter Reference - Form
 keywords: parameter reference, parameters, FormatSpecification
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+permalink: /parameters/reference/format-specification/index-v8.9.3.html
 ---
 
 
@@ -53,6 +54,8 @@ It must be a unique name.
  | [`FormatSpecification.BarcodeZoneBarCountRangeArray`](../barcode-zone-bar-count-range-array.md) |	Sets the range of bar count of the barcode zone for barcodes search. | 
  | [`FormatSpecification.BarcodeZoneMinDistanceToImageBorders`](../barcode-zone-min-distance-to-image-borders.md) |	Sets the minimum distance (in pixels) between barcode zone and image borders. | 
  | [`FormatSpecification.Code128Subset`](../code128-subset.md) | Set the code 128 subset. | 
+ | [`FormatSpecification.EnableDataMatrixECC000-140`](../enable-datamatrix-ecc000-140.md) | Specifies whether to decode DataMatrix ECC000-140 barcodes. |
+ | [`FormatSpecification.EnableQRCodeModel1`](../enable-qrcode-model1.md) | Specifies whether to decode QRCode model 1 barcodes. |
  | [`FormatSpecification.FindUnevenModuleBarcode`](../find-uneven-module-barcode.md) | Specifies whether to find barcodes with uneven barcode modules. Not support yet. | 
  | [`FormatSpecification.HeadModuleRatio`](../head-module-ratio.md) | Set the module count and module size ratio of the barcode head part. | 
  | [`FormatSpecification.MinQuietZoneWidth`](../min-quiet-zone-width.md) | The minimum width of the barcode quiet zone. | 

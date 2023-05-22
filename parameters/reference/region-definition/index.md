@@ -5,12 +5,10 @@ description: This article shows RegionDefinition Object of Dynamsoft Barcode Rea
 keywords: parameter reference, parameters, RegionDefinition
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+permalink: /parameters/reference/region-definition/index.html
 ---
 
-
 # RegionDefinition Object Parameters
-
-
 
 ## Content Organization Control
 
@@ -20,9 +18,11 @@ needGenerateH3Content: false
  | [`RegionDefinition.FormatSpecificationNameArray`](#formatspecificationnamearray) | The names of the referenced FormatSpecification object(s). |
 
 ### Name
+
 The name of the RegionDefinition object. 
 
-**Remarks**      
+**Remarks**
+
 It must be a unique name.
 
 **JSON Definition**
@@ -31,7 +31,8 @@ It must be a unique name.
 | ------------- | -------- | -------------- | ------------- |
 | RegionDefinition | Name | *string* | It must be a mandatory setting value. |
 
-**JSON Example**   
+**JSON Example**
+
 ```
 {
     "Name":"Region1"
@@ -40,6 +41,7 @@ It must be a unique name.
 
 
 ### FormatSpecificationNameArray
+
 The names of the referenced FormatSpecification object(s).
 
 **Remarks**     
@@ -51,8 +53,7 @@ An array item is a name of any available `FormatSpecifications`.
 | ----------- | ------------------- | ---------- | ------------- |
 | RegionDefinition | FormatSpecificationNameArray | *string Array* | `null` |
 
-   
-**JSON Example**   
+**JSON Example**
 ```
 {
     "FormatSpecificationNameArray":[
@@ -62,14 +63,11 @@ An array item is a name of any available `FormatSpecifications`.
 }
 ```
 
-
-
 ## Cost Control
 
  | Parameter Name | Description |
  | -------------- | ----------- | 
  | [`RegionDefinition.ExpectedBarcodesCount`](../expected-barcodes-count.md) | Sets the expected number of barcodes to be decoded for the current region. |
-
 
 ## Format Control
 
@@ -77,7 +75,6 @@ An array item is a name of any available `FormatSpecifications`.
  | -------------- | ----------- | 
  | [`RegionDefinition.BarcodeFormatIds`](../barcode-format-ids.md) | Sets which types of barcode(s) in BarcodeFormat group 1 to be read in this region. |
  | [`RegionDefinition.BarcodeFormatIds_2`](../barcode-format-ids-2.md) | Sets which types of barcode(s) in BarcodeFormat group 2 to be read in this region. |
- 
  
 ## Image Process Control
 
@@ -88,5 +85,3 @@ An array item is a name of any available `FormatSpecifications`.
  | [`RegionDefinition.Right`](../region.md) | 	The right-most coordinate or percentage of the region. | 
  | [`RegionDefinition.Bottom`](../region.md) | 	The bottom-most coordinate or percentage of the region. | 
  | [`RegionDefinition.MeasuredByPercentage`](../region.md) | 	Sets whether or not to use percentages to measure the Region size. | 
-
-

@@ -4,9 +4,10 @@ description: This article introduces how to recognize accompanying text.
 title: How to recognize accompanying text
 keywords: accompanyingText, OCR
 needAutoGenerateSidebar: false
+permalink: /parameters/scenario-settings/recognise-accompanying-text.html
 ---
 
-# How to recognize accompanying text
+# How to Recognize Accompanying Text
 
 In some scenarios, especially for 1D barcodes, a barcode can be accompanied by human readable text. This accompanying text might be useful for barcode value verification, or for further use in your application. Currently, DBR only supports the recognition of the accompanying text with 1D barcodes.
 

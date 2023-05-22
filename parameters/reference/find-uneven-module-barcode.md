@@ -1,20 +1,21 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for FindUnevenModuleBarcode
+title: FindUnevenModuleBarcode - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for FindUnevenModuleBarcode.
 keywords: FindUnevenModuleBarcode, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/find-uneven-module-barcode.html
 ---
 
 
 # FindUnevenModuleBarcode 
 
-`FindUnevenModuleBarcode` is a parameter to specify whether to find barcodes with uneven barcode modules. It is defined as below:
+`FindUnevenModuleBarcode` defines whether to find barcodes with uneven barcode modules. It is defined as below:
 
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| *int* | [0, 1] | 1 |
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *int* | [0, 1] | 1 | `FormatSpecification` |
 
 
 **Remarks**  
@@ -24,7 +25,7 @@ needGenerateH3Content: true
 
     
 ## Setting Methods
-`FindUnevenModuleBarcode` is supported to be set through JSON template.
+`FindUnevenModuleBarcode` can be set via JSON template.
 
 ### As JSON Parameter
 `FindUnevenModuleBarcode` as a JSON parameter is a number value defined as below.   
@@ -55,5 +56,5 @@ Setting `FindUnevenModuleBarcode` to an appropriate value when detecting non-sta
 
 -->
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)
 - [Configure parameters for a certain barcode format]({{ site.scenario_settings }}format-specification.html)

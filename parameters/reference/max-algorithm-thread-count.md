@@ -1,20 +1,21 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for MaxAlgorithmThreadCount
+title: MaxAlgorithmThreadCount - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for MaxAlgorithmThreadCount.
 keywords: MaxAlgorithmThreadCount, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/max-algorithm-thread-count.html
 ---
 
 
 # MaxAlgorithmThreadCount 
 
-`MaxAlgorithmThreadCount` is a parameter to specify the number of threads the image processing algorithm will use to decode barcodes. It is defined as below:
+`MaxAlgorithmThreadCount` defines the number of threads the image processing algorithm will use to decode barcodes. It is defined as below:
 
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| *int* | [1, 4] | 4 |
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *int* | [1, 4] | 4 | `ImageParameter` |
 
     
 ## Setting Methods
@@ -69,4 +70,4 @@ Setting `MaxAlgorithmThreadCount` to a appropriate number based on the CPU core 
 
 -->
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)

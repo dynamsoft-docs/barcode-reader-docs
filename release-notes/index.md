@@ -4,9 +4,40 @@ title: Dynamsoft Barcode Reader SDK - Release Notes
 description: This is the release notes page of Dynamsoft Barcode Reader.
 keywords: release notes
 needGenerateH3Content: false
+permalink: /release-notes/index.html
 ---
 
 # Release Notes
+
+## 9.6
+
+> First released: 11-29-2022
+
+### Highlights
+
+{%- include release-notes/product-highlight-9.6.0.md -%}
+
+| Versions | Available Editions |
+| -------- | ------------------ |
+| 9.6.21 | [iOS]({{ site.oc_release_notes }}ios-9.html#9621-03272023) |
+| 9.6.20 | [JavaScript]({{ site.js }}release-notes/js-9.html#9620-04182023) /[C]({{ site.c_release_notes}}c-9.html#9620-03162023) / [C++]({{ site.cpp_release_notes}}cpp-9.html#9620-03162023) / [DotNet]({{ site.dotnet_release_notes }}dotnet-9.html#9620-03162023) / [Java]({{ site.java_release_notes }}java-9.html#9620-03162023) / [Python]({{ site.python_release_notes }}python-9.html#9620-03162023) / [Android]({{ site.android_release_notes }}android-9.html#9620-03162023) / [iOS]({{ site.oc_release_notes }}ios-9.html#9620-03162023) |
+| 9.6.11 | [JavaScript]({{ site.js }}release-notes/js-9.html#9611-03132023) /[Android]({{ site.android_release_notes }}android-9.html#9611-01162023) |
+| 9.6.10 | [JavaScript]({{ site.js }}release-notes/js-9.html#9610-02212023) /[C]({{ site.c_release_notes}}c-9.html#9610-01102023) / [C++]({{ site.cpp_release_notes}}cpp-9.html#9610-01102023) / [DotNet]({{ site.dotnet_release_notes }}dotnet-9.html#9610-01102023) / [Java]({{ site.java_release_notes }}java-9.html#9610-01102023) / [Python]({{ site.python_release_notes }}python-9.html#9610-01102023) / [Android]({{ site.android_release_notes }}android-9.html#9610-01102023) / [iOS]({{ site.oc_release_notes }}ios-9.html#9610-01102023) |
+| 9.6.2 | [JavaScript]({{ site.js }}release-notes/js-9.html#962-01162023) |
+| 9.6.1 | [JavaScript]({{ site.js }}release-notes/js-9.html#961-12192022) |
+| 9.6.0 | [JavaScript]({{ site.js }}release-notes/js-9.html#960-12132022) / [C]({{ site.c_release_notes}}c-9.html#960-11292022) / [C++]({{ site.cpp_release_notes}}cpp-9.html#960-11292022) / [DotNet]({{ site.dotnet_release_notes }}dotnet-9.html#960-11292022) / [Java]({{ site.java_release_notes }}java-9.html#960-11292022) / [Python]({{ site.python_release_notes }}python-9.html#960-11292022) / [Android]({{ site.android_release_notes }}android-9.html#960-12132022) / [iOS]({{ site.oc_release_notes }}ios-9.html#960-12132022) |
+
+## 9.4
+
+> First released: 08-30-2022
+
+### Highlights
+
+{%- include release-notes/product-highlight-9.4.0.md -%}
+
+| Versions | Available Editions |
+| -------- | ------------------ |
+| 9.4.0 | [C]({{ site.c_release_notes}}c-9.html#940-08302022) / [C++]({{ site.cpp_release_notes}}cpp-9.html#940-08302022) / [DotNet]({{ site.dotnet_release_notes }}dotnet-9.html#940-08302022) / [Java]({{ site.java_release_notes }}java-9.html#940-08302022) / [Python]({{ site.python_release_notes }}python-9.html#940-08302022) / [Android]({{ site.android_release_notes }}android-9.html#940-11042022) / [iOS]({{ site.oc_release_notes }}ios-9.html#940-11042022) |
 
 ## 9.2
 
@@ -18,8 +49,13 @@ needGenerateH3Content: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 9.2.10 | [Android](../programming/android/release-notes/android-9.md#9210-06282022) / [iOS](../programming/objectivec-swift/release-notes/ios-9.md#9210-06282022) |
-| 9.2.0 | [C](../programming/c/release-notes/c-9.md#920-06072022) / [C++](../programming/cplusplus/release-notes/cpp-9.md#920-06072022) / [DotNet](../programming/dotnet/release-notes/dotnet-9.md#920-06072022) / [Java](../programming/java/release-notes/java-9.md#920-06072022) / [Python](../programming/python/release-notes/python-9.md#920-06212022) |
+| 9.3.1 | [JavaScript]({{ site.js }}release-notes/js-9.html#931-10102022) |
+| 9.3.0 | [JavaScript]({{ site.js }}release-notes/js-9.html#930-09272022) |
+| 9.2.13 | [JavaScript]({{ site.js }}release-notes/js-9.html#9213-08112022) |
+| 9.2.12 | [JavaScript]({{ site.js }}release-notes/js-9.html#9212-08042022) /[iOS]({{ site.oc_release_notes }}ios-9.html#9212-08022022) |
+| 9.2.11 | [JavaScript]({{ site.js }}release-notes/js-9.html#9211-07282022) /[iOS]({{ site.oc_release_notes }}ios-9.html#9211-07112022) |
+| 9.2.10 | [Android]({{ site.android_release_notes }}android-9.html#9210-06282022) / [iOS]({{ site.oc_release_notes }}ios-9.html#9210-06282022) |
+| 9.2.0 | [C]({{ site.c_release_notes}}c-9.html#920-06072022) / [C++]({{ site.cpp_release_notes}}cpp-9.html#920-06072022) / [DotNet]({{ site.dotnet_release_notes }}dotnet-9.html#920-06072022) / [Java]({{ site.java_release_notes }}java-9.html#920-06072022) / [Python]({{ site.python_release_notes }}python-9.html#920-06212022) |
 
 ## 9.0
 
@@ -31,9 +67,9 @@ needGenerateH3Content: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 9.0.2 | [JavaScript](../programming/javascript/release-notes/js-9.md#902-05062022) / [Android](../programming/android/release-notes/android-9.md#902-05262022) / [iOS](../programming/objectivec-swift/release-notes/ios-9.md#902-05262022) |
-| 9.0.1 | [JavaScript](../programming/javascript/release-notes/js-9.md#901-04252022) / [Android](../programming/android/release-notes/android-9.md#901-04202022) / [iOS](../programming/objectivec-swift/release-notes/ios-9.md#901-04202022) |
-| 9.0.0 | [JavaScript](../programming/javascript/release-notes/js-9.md#900-03242022) / [C](../programming/c/release-notes/c-9.md#900-03152022) / [C++](../programming/cplusplus/release-notes/cpp-9.md#900-03152022) / [DotNet](../programming/dotnet/release-notes/dotnet-9.md#900-03152022) / [Python](../programming/python/release-notes/python-9.md#900-03312022) / [Java](../programming/java/release-notes/java-9.md#900-03152022) / [Android](../programming/android/release-notes/android-9.md#900-03222022) / [iOS](../programming/objectivec-swift/release-notes/ios-9.md#900-03222022) |
+| 9.0.2 | [JavaScript]({{ site.js }}release-notes/js-9.html#902-05062022) |
+| 9.0.1 | [JavaScript]({{ site.js }}release-notes/js-9.html#901-04252022) / [Android]({{ site.android }}release-notes/android-9.html#901-04202022) / [iOS]({{ site.oc }}release-notes/ios-9.html#901-04202022) |
+| 9.0.0 | [JavaScript]({{ site.js }}release-notes/js-9.html#900-03242022) / [C]({{ site.c}}release-notes/c-9.html#900-03152022) / [C++]({{ site.cpp}}release-notes/cpp-9.html#900-03152022) / [DotNet]({{ site.dotnet }}release-notes/dotnet-9.html#900-03152022) / [Python]({{ site.python_release_notes }}python-9.html#900-03312022) / [Java]({{ site.java }}release-notes/java-9.html#900-03152022) / [Android]({{ site.android }}release-notes/android-9.html#900-03222022) / [iOS]({{ site.oc }}release-notes/ios-9.html#900-03222022) |
 
 ## 8.9
 
@@ -45,9 +81,9 @@ needGenerateH3Content: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 8.9.3 | [Android](../programming/android/release-notes/android-8.md#893-03022022) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#893-03022022) |
-| 8.9.1 | [Android](../programming/android/release-notes/android-8.md#891-12282021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#891-12282021) |
-| 8.9.0 | [Android](../programming/android/release-notes/android-8.md#890-12162021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#890-12162021) |
+| 8.9.3 | [Android]({{ site.android }}release-notes/android-8.html#893-03022022) / [iOS]({{ site.oc }}release-notes/ios-8.html#893-03022022) |
+| 8.9.1 | [Android]({{ site.android }}release-notes/android-8.html#891-12282021) / [iOS]({{ site.oc }}release-notes/ios-8.html#891-12282021) |
+| 8.9.0 | [Android]({{ site.android }}release-notes/android-8.html#890-12162021) / [iOS]({{ site.oc }}release-notes/ios-8.html#890-12162021) |
 
 ## 8.8
 
@@ -59,10 +95,10 @@ needGenerateH3Content: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 8.8.7 | [JavaScript](../programming/javascript/release-notes/js-8.md#887-01262022) |
-| 8.8.5 | [JavaScript](../programming/javascript/release-notes/js-8.md#885-01262022) |
-| 8.8.3 | [JavaScript](../programming/javascript/release-notes/js-8.md#883-10292021) |
-| 8.8.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#880-10282021) / [C](../programming/c/release-notes/c-8.md#880-10122021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#880-10122021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#880-10122021) / [Python](../programming/python/release-notes/python-8.md#880-10222021) / [Java](../programming/java/release-notes/java-8.md#880-10122021) / [Android](../programming/android/release-notes/android-8.md#880-10192021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#880-10192021) |
+| 8.8.7 | [JavaScript]({{ site.js }}release-notes/js-8.html#887-01262022) |
+| 8.8.5 | [JavaScript]({{ site.js }}release-notes/js-8.html#885-01262022) |
+| 8.8.3 | [JavaScript]({{ site.js }}release-notes/js-8.html#883-10292021) |
+| 8.8.0 | [JavaScript]({{ site.js }}release-notes/js-8.html#880-10282021) / [C]({{ site.c}}release-notes/c-8.html#880-10122021) / [C++]({{ site.cpp}}release-notes/cpp-8.html#880-10122021) / [DotNet]({{ site.dotnet }}release-notes/dotnet-8.html#880-10122021) / [Python]({{ site.python_release_notes }}python-8.html#880-10222021) / [Java]({{ site.java }}release-notes/java-8.html#880-10122021) / [Android]({{ site.android }}release-notes/android-8.html#880-10192021) / [iOS]({{ site.oc }}release-notes/ios-8.html#880-10192021) |
 
 ## 8.6
 
@@ -74,9 +110,9 @@ needGenerateH3Content: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 8.6.3 | [JavaScript](../programming/javascript/release-notes/js-8.md#863-09302021) |
-| 8.6.1 | [JavaScript](../programming/javascript/release-notes/js-8.md#861-09012021) |
-| 8.6.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#860-08312021) / [C](../programming/c/release-notes/c-8.md#860-07152021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#860-07152021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#860-07152021) / [Python](../programming/python/release-notes/python-8.md#860-07202021) / [Java](../programming/java/release-notes/java-8.md#860-07152021) / [Android](../programming/android/release-notes/android-8.md#860-07152021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#860-07152021) |
+| 8.6.3 | [JavaScript]({{ site.js }}release-notes/js-8.html#863-09302021) |
+| 8.6.1 | [JavaScript]({{ site.js }}release-notes/js-8.html#861-09012021) |
+| 8.6.0 | [JavaScript]({{ site.js }}release-notes/js-8.html#860-08312021) / [C]({{ site.c}}release-notes/c-8.html#860-07152021) / [C++]({{ site.cpp}}release-notes/cpp-8.html#860-07152021) / [DotNet]({{ site.dotnet }}release-notes/dotnet-8.html#860-07152021) / [Python]({{ site.python_release_notes }}python-8.html#860-07202021) / [Java]({{ site.java }}release-notes/java-8.html#860-07152021) / [Android]({{ site.android }}release-notes/android-8.html#860-07152021) / [iOS]({{ site.oc }}release-notes/ios-8.html#860-07152021) |
 
 ## 8.4
 
@@ -95,7 +131,7 @@ needGenerateH3Content: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 8.4.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#840-06292021) / [C](../programming/c/release-notes/c-8.md#840-06082021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#840-06082021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#840-06082021) / [Python](../programming/python/release-notes/python-8.md#840-06102021) / [Java](../programming/java/release-notes/java-8.md#840-06082021) / [Android](../programming/android/release-notes/android-8.md#840-06082021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#840-06082021) |
+| 8.4.0 | [JavaScript]({{ site.js }}release-notes/js-8.html#840-06292021) / [C]({{ site.c}}release-notes/c-8.html#840-06082021) / [C++]({{ site.cpp}}release-notes/cpp-8.html#840-06082021) / [DotNet]({{ site.dotnet }}release-notes/dotnet-8.html#840-06082021) / [Python]({{ site.python_release_notes }}python-8.html#840-06102021) / [Java]({{ site.java }}release-notes/java-8.html#840-06082021) / [Android]({{ site.android }}release-notes/android-8.html#840-06082021) / [iOS]({{ site.oc }}release-notes/ios-8.html#840-06082021) |
 
 ## 8.2
 
@@ -110,10 +146,10 @@ needGenerateH3Content: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 8.2.5 | [JavaScript](../programming/javascript/release-notes/js-8.md#825-05182021) |
-| 8.2.3 | [JavaScript](../programming/javascript/release-notes/js-8.md#823-04152021) |
-| 8.2.1 | [JavaScript](../programming/javascript/release-notes/js-8.md#821-03292021) / [Android](../programming/android/release-notes/android-8.md#821-05272021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#821-05272021) |
-| 8.2.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#820-03172021) / [C](../programming/c/release-notes/c-8.md#820-03172021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#820-03172021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#820-03172021) / [Python](../programming/python/release-notes/python-8.md#820-03172021) / [Java](../programming/java/release-notes/java-8.md#820-03172021) / [Android](../programming/android/release-notes/android-8.md#820-03172021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#820-03172021) |
+| 8.2.5 | [JavaScript]({{ site.js }}release-notes/js-8.html#825-05182021) |
+| 8.2.3 | [JavaScript]({{ site.js }}release-notes/js-8.html#823-04152021) |
+| 8.2.1 | [JavaScript]({{ site.js }}release-notes/js-8.html#821-03292021) / [Android]({{ site.android }}release-notes/android-8.html#821-05272021) / [iOS]({{ site.oc }}release-notes/ios-8.html#821-05272021) |
+| 8.2.0 | [JavaScript]({{ site.js }}release-notes/js-8.html#820-03172021) / [C]({{ site.c}}release-notes/c-8.html#820-03172021) / [C++]({{ site.cpp}}release-notes/cpp-8.html#820-03172021) / [DotNet]({{ site.dotnet }}release-notes/dotnet-8.html#820-03172021) / [Python]({{ site.python_release_notes }}python-8.html#820-03172021) / [Java]({{ site.java }}release-notes/java-8.html#820-03172021) / [Android]({{ site.android }}release-notes/android-8.html#820-03172021) / [iOS]({{ site.oc }}release-notes/ios-8.html#820-03172021) |
 
 ## 8.1
 
@@ -133,9 +169,9 @@ needGenerateH3Content: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 8.1.3 | [JavaScript](../programming/javascript/release-notes/js-8.md#813-03042021) |
-| 8.1.2 | [JavaScript](../programming/javascript/release-notes/js-8.md#812-01222021) / [C](../programming/c/release-notes/c-8.md#812-01222021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#812-01222021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#812-01222021) / [Python](../programming/python/release-notes/python-8.md#812-01222021) / [Java](../programming/java/release-notes/java-8.md#812-01222021) / [Android](../programming/android/release-notes/android-8.md#812-01222021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#812-01222021) |
-| 8.1.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#810-01192021) / [C](../programming/c/release-notes/c-8.md#810-01122021) / [C++](../programming/cplusplus/release-notes/cpp-8.md#810-01122021) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#810-01122021) / [Python](../programming/python/release-notes/python-8.md#810-01192021) / [Java](../programming/java/release-notes/java-8.md#810-01122021) / [Android](../programming/android/release-notes/android-8.md#810-01122021) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#810-01122021) |
+| 8.1.3 | [JavaScript]({{ site.js }}release-notes/js-8.html#813-03042021) |
+| 8.1.2 | [JavaScript]({{ site.js }}release-notes/js-8.html#812-01222021) / [C]({{ site.c}}release-notes/c-8.html#812-01222021) / [C++]({{ site.cpp}}release-notes/cpp-8.html#812-01222021) / [DotNet]({{ site.dotnet }}release-notes/dotnet-8.html#812-01222021) / [Python]({{ site.python_release_notes }}python-8.html#812-01222021) / [Java]({{ site.java }}release-notes/java-8.html#812-01222021) / [Android]({{ site.android }}release-notes/android-8.html#812-01222021) / [iOS]({{ site.oc }}release-notes/ios-8.html#812-01222021) |
+| 8.1.0 | [JavaScript]({{ site.js }}release-notes/js-8.html#810-01192021) / [C]({{ site.c}}release-notes/c-8.html#810-01122021) / [C++]({{ site.cpp}}release-notes/cpp-8.html#810-01122021) / [DotNet]({{ site.dotnet }}release-notes/dotnet-8.html#810-01122021) / [Python]({{ site.python_release_notes }}python-8.html#810-01192021) / [Java]({{ site.java }}release-notes/java-8.html#810-01122021) / [Android]({{ site.android }}release-notes/android-8.html#810-01122021) / [iOS]({{ site.oc }}release-notes/ios-8.html#810-01122021) |
 
 ## 8.0
 
@@ -148,7 +184,7 @@ needGenerateH3Content: false
 - Implemented a new licensing tracking mechanism, License 2.0, which makes it easier for users to track license usage. 
 - Added a new format control parameter, BarcodeZoneMinDistanceToImageBorders, to set the minimum distance (in pixels) between the barcode zone and image borders.
 - Added a new format control parameter, MinRatioOfBarcodeZoneWidthToHeight, to set the minimum ratio (width/height) of the barcode zone.
-- Added a new format control parameter, BarcodeZoneBarCountRangeArray, to set the barcode zone’s range of bar count for barcode search.
+- Added a new format control parameter, BarcodeZoneBarCountRangeArray, to set the barcode zone's range of bar count for barcode search.
 - Added a new argument, SpatialIndexBlockSize, for RPM_GENERAL_RGB_CONTRAST, RPM_GENERAL_GRAY_CONTRAST and RPM_GENERAL_HSV_CONTRAST.
 - Added a new parameter, DeblurModes, so users can use different deblur algorithms for different scenarios. DeblurModes has the following enum types: DirectBinarization, ThresholdBinarization, GrayEqulization, Smoothing, Morphing, DeepAnalysis and Sharpening.
 - Improved the localization speed for the ScanDirectly mode.
@@ -158,8 +194,8 @@ needGenerateH3Content: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 8.0.0.1 | [Python](../programming/python/release-notes/python-8.md#8001-01062021) |
-| 8.0.0 | [JavaScript](../programming/javascript/release-notes/js-8.md#800-11252020) / [C](../programming/c/release-notes/c-8.md#800-11172020) / [C++](../programming/cplusplus/release-notes/cpp-8.md#800-11172020) / [DotNet](../programming/dotnet/release-notes/dotnet-8.md#800-11172020) / [Python](../programming/python/release-notes/python-8.md#800-11262020) / [Java](../programming/java/release-notes/java-8.md#800-11172020) / [Android](../programming/android/release-notes/android-8.md#800-11172020) / [iOS](../programming/objectivec-swift/release-notes/ios-8.md#800-11172020) |
+| 8.0.0.1 | [Python]({{ site.python_release_notes }}python-8.html#8001-01062021) |
+| 8.0.0 | [JavaScript]({{ site.js }}release-notes/js-8.html#800-11252020) / [C]({{ site.c}}release-notes/c-8.html#800-11172020) / [C++]({{ site.cpp}}release-notes/cpp-8.html#800-11172020) / [DotNet]({{ site.dotnet }}release-notes/dotnet-8.html#800-11172020) / [Python]({{ site.python_release_notes }}python-8.html#800-11262020) / [Java]({{ site.java }}release-notes/java-8.html#800-11172020) / [Android]({{ site.android }}release-notes/android-8.html#800-11172020) / [iOS]({{ site.oc }}release-notes/ios-8.html#800-11172020) |
 
 &nbsp;
 
@@ -216,7 +252,7 @@ needGenerateH3Content: false
 
 ### 7.4.0.1
 
-[JavaScript](../programming/javascript/release-notes/js-7.md#7401-05182020)
+[JavaScript]({{ site.js }}release-notes/js-7.html#7401-05182020)
 
 ### 7.4.0
 
@@ -251,15 +287,15 @@ needGenerateH3Content: false
 
 ### 7.3.0.4
 
-[JavaScript](../programming/javascript/release-notes/js-7.md#730-v4-7304-04022020)
+[JavaScript]({{ site.js }}release-notes/js-7.html#730-v4-7304-04022020)
 
 ### 7.3.0.2
 
-[JavaScript](../programming/javascript/release-notes/js-7.md#730-v2-7302-02142020)
+[JavaScript]({{ site.js }}release-notes/js-7.html#730-v2-7302-02142020)
 
 ### 7.3.0.1
 
-[JavaScript](../programming/javascript/release-notes/js-7.md#730-v1-7301-01202020)
+[JavaScript]({{ site.js }}release-notes/js-7.html#730-v1-7301-01202020)
 
 ### 7.3.0
 
@@ -398,7 +434,7 @@ needGenerateH3Content: false
 #### IMPROVED
 
 - Optimized barcode reading workflow for QRCode/DataMatrix/Aztec code recognition. A QRCode/DataMatrix/Aztec barcode zone will be submitted to the deblurring process when its decoding results vary with different binarization arguments.
-- Reduced the error rate of 1D barcode recognition. Giving more chances for confirmation of a 1D barcode decoding result whose confidence isn’t extreme high.
+- Reduced the error rate of 1D barcode recognition. Giving more chances for confirmation of a 1D barcode decoding result whose confidence isn't extreme high.
 - Reduced the possibility of conflicts with neighbour barcodes. This improved the precision of the zone to be deleted when a barcode is recognized successfully.
 
 #### FIXED
@@ -717,7 +753,7 @@ needGenerateH3Content: false
 
 #### NEW
 
-- Dynamsoft’s barcode recognition engine has been in existence since April 2012. It works as an add-on to our Dynamic Web TWAIN and Dynamic .NET TWAIN SDKs. In this new release, we are changing the product name to Dynamic Barcode Reader and the version to 1.0.
+- Dynamsoft's barcode recognition engine has been in existence since April 2012. It works as an add-on to our Dynamic Web TWAIN and Dynamic .NET TWAIN SDKs. In this new release, we are changing the product name to Dynamic Barcode Reader and the version to 1.0.
 - Updates in this version include 1D barcode improvements in accuracy and performance for Code 39 and Code128 recognition. Also, image preprocessing is improved. For Code 128, the recognition ratio and speed have jumped up by as much as 30 percent.
 
 <div class="fold-panel-end"></div>

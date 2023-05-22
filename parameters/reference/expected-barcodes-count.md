@@ -1,20 +1,21 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameter Reference for ExpectedBarcodesCount
+title: ExpectedBarcodesCount - Dynamsoft Barcode Reader Parameter Reference
 description: This page shows Dynamsoft Barcode Reader Parameter Reference for ExpectedBarcodesCount.
 keywords: ExpectedBarcodesCount, parameter reference, parameter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /parameters/reference/expected-barcodes-count.html
 ---
 
 
 # ExpectedBarcodesCount 
 
-`ExpectedBarcodesCount` is a parameter to control the number of barcodes expected to be detected. It is defined as below:
+`ExpectedBarcodesCount` determines the number of barcodes expected to be detected. It is defined as below:
 
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| *int* | [0, 0x7fffffff] | 0 |
+| Value Type | Value Range | Default Value | Template Structure Type |
+| ---------- | ----------- | ------------- | ----------------------- |
+| *int* | [0, 0x7fffffff] | 0 | `ImageParameter`/`RegionDefinition` |
 
 
 **Remarks**  
@@ -78,4 +79,4 @@ Setting `ExpectedBarcodesCount` to a large number when barcode count is uncertai
 
 -->
 ## Related Articles
-- [How to set DBR parameters]({{ site.scenario_settings }}how-to-set-parameters.html)
+- [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)
