@@ -21,13 +21,17 @@ permalink: /parameters/reference/pdf-reading-mode.html
 ### PDFRM_AUTO
 Lets the library choose a mode automatically.
 
-
 ### PDFRM_VECTOR
 Detects barcode from vector data in PDF file.
+
+**Remarks**         
+  - The `PDFRM_VECTOR` mode only works for linear barcodes at this point.
 
 ### PDFRM_RASTER
 Converts the PDF file to image(s) first, then detects barcode.
 
+**Remarks**         
+  - The `PDFRM_RASTER` mode works for all barcode formats, including linear barcode, PDF417, QR code, and other 2D codes.
 
 ## Setting Methods
 
