@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader Enumerations - Format Enumerations
-description: This article shows Format Enumerations of Dynamsoft Barcode Reader.
+description: Learn about the Format Enumerations of Dynamsoft Barcode Reader in detail.
 keywords: BarcodeFormat, BarcodeFormat_2, format enumeration, enumeration
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
