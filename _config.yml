@@ -19,7 +19,6 @@ dcv_parameters_reference: /capture-vision/docs/core/parameters/reference/
 
 parameters: /barcode-reader/docs/core/parameters/
 parameters_reference: /barcode-reader/docs/core/parameters/reference/
-dcv_parameters_reference: /capture-vision/docs/core/parameters/reference/
 image_parameters: /barcode-reader/docs/core/parameters/reference/image-parameter/
 scenario_settings: /barcode-reader/docs/core/parameters/scenario-settings/
 
