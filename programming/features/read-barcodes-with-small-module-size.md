@@ -6,7 +6,7 @@ keywords: small barcode, small module size
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-permalink: /programming/features/read-barcodes-with-small-modulesize.html
+permalink: /programming/features/read-barcodes-with-small-module-size.html
 ---
 
 # How to Read Barcodes with Small Module Size

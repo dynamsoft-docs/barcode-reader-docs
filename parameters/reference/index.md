@@ -89,7 +89,7 @@ permalink: /parameters/reference/index.html
 | [`ModuleSizeRangeArray`]({{ site.dcv_parameters_reference }}barcode-format-specification/module-size-range-array.html) | Defines the range of module size (in pixels) while barcode searching and result filtering. |
 | [`MSICodeCheckDigitCalculation`]({{ site.dcv_parameters_reference }}barcode-format-specification/msi-code-check-digit-calculation.html) | Defines the scheme used for calculating a check digit of an MSI barcode. |
 | [`PartitionModes`]({{ site.dcv_parameters_reference }}barcode-format-specification/partition-modes.html) | Defines the mode to apply partition process when decoding QRCode and DataMatrix. |
-| [`PatchCodeSearchingMargin`]({{ site.dcv_parameters_reference }}barcode-format-specification/patch-code-searching-margin.html) | Defines the patch code searching margins. |
+| [`PatchCodeSearchingMargin`]({{ site.dcv_parameters_reference }}barcode-format-specification/patch-code-searching-margins.html) | Defines the patch code searching margins. |
 | [`RequireStartStopChars`]({{ site.dcv_parameters_reference }}barcode-format-specification/require-start-stop-chars.html) | Defines whether the start and stop characters are required when searching for common 1D barcodes. |
 | [`ReturnPartialBarcodeValue`]({{ site.dcv_parameters_reference }}barcode-format-specification/return-partial-barcode-value.html) | Defines whether to return partial barcode value(s). |
 | [`StandardFormat`]({{ site.dcv_parameters_reference }}barcode-format-specification/standard-format.html) | Defines the standard barcode format. |
