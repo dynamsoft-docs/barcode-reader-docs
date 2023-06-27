@@ -30,8 +30,28 @@ The following shows how you can apply for a 30-day free trial license.
 The following shows how to set the license in the code.
 
 <div class="sample-code-prefix template2"></div>
+   >- JavaScript
+   >- C
    >- C++
+   >- C#
+   >- Java
+   >- Android
+   >- Objective-C
+   >- Swift
+   >- Python
    >
+> 
+```javascript
+  Dynamsoft.DBR.BarcodeScanner.license = "YOUR-LICENSE-KEY";
+  let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+```
+> 
+```c
+  char errorBuf[512];
+  DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+  void* barcodeReader = DBR_CreateInstance();
+  // add further process
+```
 >
 ```cpp
     int errorCode = 1;
@@ -40,4 +60,47 @@ The following shows how to set the license in the code.
     if (errorCode != EC_OK)
         cout << "License initialization error: " << errorMsg << endl;
     // add further process
+```
+>
+```csharp
+  string errorMsg;
+  BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
+  BarcodeReader reader = new BarcodeReader();
+  // add further process
+```
+>
+```java
+  BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+  BarcodeReader reader = new BarcodeReader();
+  // add further process
+```
+>
+```java
+BarcodeReader.initLicense("YOUR-LICENSE-KEY", new DBRLicenseVerificationListener() {
+  @Override
+  public void DBRLicenseVerificationCallback(boolean isSuccessful, Exception e) {
+    // Add your code for license verification.
+  }
+});
+```
+>
+```objc
+[DynamsoftBarcodeReader initLicense:@"YOUR-LICENSE-KEY" verificationDelegate:self];
+- (void)DBRLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error
+{
+  // Add your code for license verification.
+}
+```
+>
+```swift
+DynamsoftBarcodeReader.initLicense("YOUR-LICENSE-KEY", verificationDelegate: self)
+func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
+{
+  // Add your code for license verification.
+}
+```
+>
+```python
+error = BarcodeReader.init_license("YOUR-LICENSE-KEY")
+dbr = BarcodeReader()
 ```
