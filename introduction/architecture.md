@@ -12,7 +12,7 @@ permalink: /introduction/architecture.html
 
 Starting in version 10.0, Dynamsoft Barcode Reader is restructured under Dynamsoft Capture Vision Framework.
 
-Read [Dynamsoft Capture Vision Architecture](https://www.dynamsoft.com/capture-vision/docs/core/architecture/index.html) to learn the overall architecture of the framework.
+Read [Dynamsoft Capture Vision Architecture]({{ site.architecture }}index.html) to learn the overall architecture of the framework.
 
 The following articles describe the processes involved when using Dynamsoft Barcode Reader
 
