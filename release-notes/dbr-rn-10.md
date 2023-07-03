@@ -12,7 +12,7 @@ noTitleIndex: true
 
 ## 10.0
 
-> First released: 06-29-2023
+> First released: 07-04-2023
 
 ### Highlights
 
@@ -20,4 +20,4 @@ noTitleIndex: true
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 10.0.0 | [C++]({{ site.cpp_release_notes}}cpp-10.html#1000-06292023) |
+| 10.0.0 | [C++]({{ site.cpp_release_notes}}cpp-10.html#1000-07042023) |
