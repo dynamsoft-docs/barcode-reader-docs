@@ -19,7 +19,7 @@ jobs:
   Build-Main:
     if: ${{ github.ref == 'refs/heads/master' }}
     # The type of runner that the job will run on
-    runs-on: self-hosted
+    runs-on: [self-hosted, r3]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -48,7 +48,7 @@ jobs:
   Build-Preview:
     if: ${{ github.ref == 'refs/heads/preview' }}
     # The type of runner that the job will run on
-    runs-on: self-hosted
+    runs-on: [self-hosted, r3]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:

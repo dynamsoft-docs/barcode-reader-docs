@@ -13,7 +13,7 @@ jobs:
   Build-Main:
     if: ${{ github.ref == 'refs/heads/master' }}
     # The type of runner that the job will run on
-    runs-on: self-hosted
+    runs-on: [self-hosted, r3]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -35,12 +35,22 @@ jobs:
           cp -rfp ./barcode-reader-docs/* ./DBRDocCore/
           cp -rfp ./Docs-Template-Repo-Preview/* ./DBRDocCore/
           cd DBRDocCore && bundle exec jekyll build
-          python3 /home/ubuntu/ftp.py /home/ubuntu/DBRDocCore/_site/ ./www.dynamsoft.com/barcode-reader/docs/core/ prod
+          #python3 /home/ubuntu/ftp.py /home/ubuntu/DBRDocCore/_site/ ./www.dynamsoft.com/barcode-reader/docs/core/ prod
+
+      - name: Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ${{ secrets.FTP_DYNAMSOFT_LOCAL_SERVER }}
+          username: ${{ secrets.FTP_DYNAMSOFT_LOCAL_USER }}
+          password: ${{ secrets.FTP_DYNAMSOFT_LOCAL_PASSWORD }}
+          port: 21 
+          local-dir: /home/ubuntu/DBRDocCore/_site/
+          server-dir: /www.dynamsoft.com/barcode-reader/docs/core/        
          
   Build-Preview:
     if: ${{ github.ref == 'refs/heads/preview' }}
     # The type of runner that the job will run on
-    runs-on: self-hosted
+    runs-on: [self-hosted, r3]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
