@@ -13,7 +13,7 @@ jobs:
   Build-Main:
     if: ${{ github.ref == 'refs/heads/master' }}
     # The type of runner that the job will run on
-    runs-on: self-hosted
+    runs-on: [self-hosted, r3]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -23,7 +23,7 @@ jobs:
           cd /home/ubuntu
           [ -d DBRDocCore ] && rm -rf DBRDocCore
           [ -d barcode-reader-docs ] && rm -rf barcode-reader-docs 
-          [ -d Docs-Template-Repo-Preview ] && rm -rf Docs-Template-Repo-Preview
+          [ -d Docs-Template-Repo-Preview-R3 ] && rm -rf Docs-Template-Repo-Preview-R3
           cd /home/ubuntu
 
       - name: Build the full site - main
@@ -31,16 +31,26 @@ jobs:
           cd /home/ubuntu
           mkdir -p DBRDocCore
           git clone --depth 1 https://github.com/dynamsoft-docs/barcode-reader-docs.git barcode-reader-docs
-          git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview
+          git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview-R3
           cp -rfp ./barcode-reader-docs/* ./DBRDocCore/
-          cp -rfp ./Docs-Template-Repo-Preview/* ./DBRDocCore/
+          cp -rfp ./Docs-Template-Repo-Preview-R3/* ./DBRDocCore/
           cd DBRDocCore && bundle exec jekyll build
-          python3 /home/ubuntu/ftp.py /home/ubuntu/DBRDocCore/_site/ ./www.dynamsoft.com/barcode-reader/docs/core/ prod
+          #python3 /home/ubuntu/ftp.py /home/ubuntu/DBRDocCore/_site/ ./www.dynamsoft.com/barcode-reader/docs/core/ prod
+
+      - name: Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ${{ secrets.FTP_DYNAMSOFT_LOCAL_SERVER }}
+          username: ${{ secrets.FTP_DYNAMSOFT_LOCAL_USER }}
+          password: ${{ secrets.FTP_DYNAMSOFT_LOCAL_PASSWORD }}
+          port: 21 
+          local-dir: /home/ubuntu/DBRDocCore/_site/
+          server-dir: /www.dynamsoft.com/barcode-reader/docs/core/        
          
   Build-Preview:
     if: ${{ github.ref == 'refs/heads/preview' }}
     # The type of runner that the job will run on
-    runs-on: self-hosted
+    runs-on: [self-hosted, r3]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -50,7 +60,7 @@ jobs:
           cd /home/ubuntu 
           [ -d DBRDocCore-preview ] && rm -rf DBRDocCore-preview
           [ -d barcode-reader-docs-preview ] && rm -rf barcode-reader-docs-preview 
-          [ -d Docs-Template-Repo-Preview ] && rm -rf Docs-Template-Repo-Preview
+          [ -d Docs-Template-Repo-Preview-R3 ] && rm -rf Docs-Template-Repo-Preview-R3
           cd /home/ubuntu
 
       - name: Build the full site - preview
@@ -58,9 +68,9 @@ jobs:
           cd /home/ubuntu
           mkdir -p DBRDocCore-preview
           git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/barcode-reader-docs.git barcode-reader-docs-preview
-          git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview
+          git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview-R3
           cp -rfp ./barcode-reader-docs-preview/* ./DBRDocCore-preview/
-          cp -rfp ./Docs-Template-Repo-Preview/* ./DBRDocCore-preview/
+          cp -rfp ./Docs-Template-Repo-Preview-R3/* ./DBRDocCore-preview/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
           -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DBRDocCore-preview/_config.yml
           cd DBRDocCore-preview && bundle exec jekyll build
