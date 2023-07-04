@@ -190,6 +190,7 @@ To use a template, you can either use `InitRuntimeSettingsWithFile` to load a JS
 >
 > 1. It only supports importing a JSON string and not a file
 > 2. It only allows one fixed template, in other words, the template itself should contain only one `ImageParameter` object 
+> 3. Importing a JSON string is usually slower than using the `RuntimeSettings` interface so we recommend going with the `RuntimeSettings` method if you are not using a completely customized settings template.
 
 The following code snippet demonstrates how to make use of a template.  
 

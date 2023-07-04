@@ -6,11 +6,16 @@ docHomePage: /barcode-reader/docs/core/
 
 useVersionTree: true
 
+architecture: /capture-vision/docs/core/architecture/
+parameter: /capture-vision/docs/core/parameters/
 introduction: /barcode-reader/docs/core/introduction/
 comparison_tools: /barcode-reader/docs/core/introduction/comparison-tools/
 
 programming: /barcode-reader/docs/core/programming/
 features: /barcode-reader/docs/core/programming/features/
+
+dcv_parameters: /capture-vision/docs/core/parameters/
+dcv_parameters_reference: /capture-vision/docs/core/parameters/reference/
 
 parameters: /barcode-reader/docs/core/parameters/
 parameters_reference: /barcode-reader/docs/core/parameters/reference/
@@ -80,6 +85,19 @@ mobile_enumerations: /barcode-reader/docs/mobile/programming/enumeration/
 mobile_assets: /barcode-reader/docs/mobile/programming/assets/
 
 
+flutter: /capture-vision/docs/mobile/programming/flutter/
+flutter_api: /capture-vision/docs/mobile/programming/flutter/api-reference/
+
+xamarin: /capture-vision/docs/mobile/programming/xamarin/
+xamarin_api: /capture-vision/docs/mobile/programming/xamarin/api-reference/
+
+cordova: /capture-vision/docs/mobile/programming/cordova/
+cordova_api: /capture-vision/docs/mobile/programming/cordova/api-reference/
+
+react_native: /capture-vision/docs/mobile/programming/react-native/
+react_native_api: /capture-vision/docs/mobile/programming/react-native/api-reference/
+
+
 assets: /barcode-reader/docs/core/assets/
 edit_icon: /barcode-reader/docs/core/assets/img-icon/edit-icon.png
 smile_icon: /barcode-reader/docs/core/assets/img-icon/icon-smile.png
@@ -112,6 +130,26 @@ defaults:
       edition: "mobile"
   - scope:
       path: "programming/objectivec-swift"
+    values:
+      category: "mobile-repo"
+      edition: "mobile"
+  - scope:
+      path: "programming/flutter"
+    values:
+      category: "mobile-repo"
+      edition: "mobile"
+  - scope:
+      path: "programming/xamarin"
+    values:
+      category: "mobile-repo"
+      edition: "mobile"
+  - scope:
+      path: "programming/cordova"
+    values:
+      category: "mobile-repo"
+      edition: "mobile"
+  - scope:
+      path: "programming/react-native"
     values:
       category: "mobile-repo"
       edition: "mobile"
@@ -152,5 +190,7 @@ defaults:
       noTitleIndex: true
       needAutoGenerateSidebar: true
       needGenerateH3Content: true
+      docRootName: "Barcode Reader" 
+      docHomePage: "/barcode-reader/docs/core/introduction/"
 
 url: "https://www.dynamsoft.com" # sitemap root
