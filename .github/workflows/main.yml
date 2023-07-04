@@ -29,9 +29,9 @@ jobs:
           cd /home/ubuntu
           [ ! -d DBRDocCore ] && mkdir -p DBRDocCore
           [ ! -d barcode-reader-docs ] && git clone --depth 1 https://github.com/dynamsoft-docs/barcode-reader-docs.git barcode-reader-docs
-          [ ! -d Docs-Template-Repo-Preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview
+          [ ! -d Docs-Template-Repo-Preview-R3 ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview-R3
           cd barcode-reader-docs && git pull && cd .. && cp -rfp ./barcode-reader-docs/* ./DBRDocCore/
-          cd Docs-Template-Repo-Preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview/* ./DBRDocCore/
+          cd Docs-Template-Repo-Preview-R3 && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview-R3/* ./DBRDocCore/
           cd DBRDocCore && bundle exec jekyll build --incremental
           #python3 /home/ubuntu/ftp.py /home/ubuntu/DBRDocCore/_site/ ./www.dynamsoft.com/barcode-reader/docs/core/ prod
 
@@ -58,9 +58,9 @@ jobs:
           cd /home/ubuntu
           [ ! -d DBRDocCore-preview ] && mkdir -p DBRDocCore-preview
           [ ! -d barcode-reader-docs-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/barcode-reader-docs.git barcode-reader-docs-preview
-          [ ! -d Docs-Template-Repo-Preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview
+          [ ! -d Docs-Template-Repo-Preview-R3 ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview-R3
           cd barcode-reader-docs-preview && git pull && cd .. && cp -rfp ./barcode-reader-docs-preview/* ./DBRDocCore-preview/
-          cd Docs-Template-Repo-Preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview/* ./DBRDocCore-preview/
+          cd Docs-Template-Repo-Preview-R3 && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview-R3/* ./DBRDocCore-preview/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
           -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DBRDocCore-preview/_config.yml
           cd DBRDocCore-preview && bundle exec jekyll build --incremental && cd ..
