@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader Enumerations - Other Enumerations
-description: This article shows other Enumerations of Dynamsoft Barcode Reader.
+description: This article shows other Enumerations of Dynamsoft Barcode Reader v8.9.3.
 keywords: DM_ChargeWay, DM_DeploymentType, DM_LicenseModule, DM_UUIDGenerationMethod, ImagePixelFormat, QRCodeErrorCorrectionLevel, other enumeration, enumeration
 needAutoGenerateSidebar: true
 needGenerateH3Content: false

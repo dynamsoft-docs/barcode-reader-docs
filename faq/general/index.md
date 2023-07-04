@@ -48,3 +48,5 @@ permalink: /faq/general/index.html
 19. [How to generate a custom settings template to use in your own application?](custom-settings-template.md)
 
 20. [How can I sort the barcodes of my image in reading order?](sort-barcodes-image.md)
+
+21. [How many concurrent instances should I purchase?](purchase-concurrent-instance-license.md)

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader Enumerations - Main Page
-description: This article shows the main page of Dynamsoft Barcode Reader Enumerations.
+description: Learn about Dynamsoft Barcode Reader Enumerations such as Format Enumeration, Parameter Mode Enumeration, Result Related Enumeration and Others.
 keywords: enumerations
 needAutoGenerateSidebar: false
 breadcrumbText: Enumerations
