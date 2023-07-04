@@ -29,11 +29,21 @@ jobs:
           cd /home/ubuntu
           [ ! -d DBRDocCore ] && mkdir -p DBRDocCore
           [ ! -d barcode-reader-docs ] && git clone --depth 1 https://github.com/dynamsoft-docs/barcode-reader-docs.git barcode-reader-docs
-          [ ! -d Docs-Template-Repo-Preview-DCV2 ] && git clone --depth 1 --branch jenny-preview-branch https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview-DCV2
+          [ ! -d Docs-Template-Repo-Preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview
           cd barcode-reader-docs && git pull && cd .. && cp -rfp ./barcode-reader-docs/* ./DBRDocCore/
-          cd Docs-Template-Repo-Preview-DCV2 && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview-DCV2/* ./DBRDocCore/
+          cd Docs-Template-Repo-Preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview/* ./DBRDocCore/
           cd DBRDocCore && bundle exec jekyll build --incremental
-          python3 /home/ubuntu/ftp.py /home/ubuntu/DBRDocCore/_site/ ./www.dynamsoft.com/barcode-reader/docs/core/ prod
+          #python3 /home/ubuntu/ftp.py /home/ubuntu/DBRDocCore/_site/ ./www.dynamsoft.com/barcode-reader/docs/core/ prod
+
+      - name: Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ${{ secrets.FTP_DYNAMSOFT_LOCAL_SERVER }}
+          username: ${{ secrets.FTP_DYNAMSOFT_LOCAL_USER }}
+          password: ${{ secrets.FTP_DYNAMSOFT_LOCAL_PASSWORD }}
+          port: 21 
+          local-dir: /home/ubuntu/DBRDocCore/_site/
+          server-dir: /www.dynamsoft.com/barcode-reader/docs/core/        
 
   Build-Preview:
     if: ${{ github.ref == 'refs/heads/preview' }}
@@ -48,9 +58,9 @@ jobs:
           cd /home/ubuntu
           [ ! -d DBRDocCore-preview ] && mkdir -p DBRDocCore-preview
           [ ! -d barcode-reader-docs-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/barcode-reader-docs.git barcode-reader-docs-preview
-          [ ! -d Docs-Template-Repo-Preview-DCV2 ] && git clone --depth 1 --branch jenny-preview-branch https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview-DCV2
+          [ ! -d Docs-Template-Repo-Preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview
           cd barcode-reader-docs-preview && git pull && cd .. && cp -rfp ./barcode-reader-docs-preview/* ./DBRDocCore-preview/
-          cd Docs-Template-Repo-Preview-DCV2 && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview-DCV2/* ./DBRDocCore-preview/
+          cd Docs-Template-Repo-Preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview/* ./DBRDocCore-preview/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
           -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DBRDocCore-preview/_config.yml
           cd DBRDocCore-preview && bundle exec jekyll build --incremental && cd ..
