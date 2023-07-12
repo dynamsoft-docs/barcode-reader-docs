@@ -86,6 +86,5 @@ Dynamsoft.DCP.CodeParser.license ='DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
 
 > If you are using the JavaScript edition, also check out:
 >
-> * <a target = "_blank" href="https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/samples-demos/usecase2-pdf417DL.html?utm_source=usecaseArticle">Read the PDF417 Barcode on the Driver's License - Guide</a>
 > * <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/4.use-case/2.read-a-drivers-license.html?utm_source=usecaseArticle">Read the PDF417 Barcode on the Driver's License - Demo</a>
 > * <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/4.use-case/2.read-a-drivers-license.html?utm_source=usecaseArticle">Read the PDF417 Barcode on the Driver's License - Source Code</a>
