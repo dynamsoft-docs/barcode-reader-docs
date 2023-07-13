@@ -59,6 +59,7 @@ The following shows how to set the license in the code.
     errorCode = CLicenseManager::InitLicense("YOUR-LICENSE-KEY", errorMsg, 512);
     if (errorCode != EC_OK)
         cout << "License initialization error: " << errorMsg << endl;
+    CCaptureVisionRouter *cvr = new CCaptureVisionRouter;
     // add further process
 ```
 >
@@ -103,4 +104,31 @@ func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
 ```python
 error = BarcodeReader.init_license("YOUR-LICENSE-KEY")
 dbr = BarcodeReader()
+```
+
+If you are using a **concurrent instance license**, you need to apply two more operations:
+
+* Call method SetMaxConcurrentInstanceCount to set the license count you purchased.
+* Update the parameter MaxParallelTasks to align with the purchased quantity.
+
+<div class="sample-code-prefix template2"></div>
+   >- C++
+   >
+>
+```cpp
+    int licenseCount = YOUR-PURCHASED-LICENSE-COUNT;
+    int errorCode = 1;
+    char errorMsg[512];
+    // Set the license count you purchased
+    SetMaxConcurrentInstanceCount(licenseCount);
+    errorCode = CLicenseManager::InitLicense("YOUR-LICENSE-KEY", errorMsg, 512);
+    if (errorCode != EC_OK)
+        cout << "License initialization error: " << errorMsg << endl;
+    CCaptureVisionRouter *cvr = new CCaptureVisionRouter;
+    // Update parameter maxParallelTasks
+    SimplifiedCaptureVisionSettings setting;
+    cvr->GetSimplifiedSettings(CPresetTemplate::PT_READ_BARCODES, &setting);
+    setting.maxParallelTasks = licenseCount;
+    cvr->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &setting);
+    // add further process
 ```
