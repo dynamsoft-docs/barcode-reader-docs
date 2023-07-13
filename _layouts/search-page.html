@@ -227,28 +227,37 @@
           }, 100)
       })
 
-    //   let timeInt = setInterval(function() {
-    //       var container = $('#sideBarCnt'), scrollTo = $('#sideBarCnt .activeLink');
-    //       if (scrollTo.length>0) {
-    //           container.scrollTop(
-    //               scrollTo.offset().top - container.offset().top + container.scrollTop()
-    //           );
-    //           clearInterval(timeInt)
-    //       }
-    //   }, 500)
-  
-      function onSearchFinish(e) {
-          var evt = window.event || e;
-          if (evt.keyCode == 13) {
-
-          }
-      }
-
-      $('#txtSearch').keydown(function(e) { 
-          if (e.keyCode == 13) {
-              window.location.href = '/barcode-reader/search.html?q=' + $('#txtSearch').val()
-          }
-      })
+      $("body").delegate("#searchResult .gsc-resultsRoot a.gs-title", "click", function(e) {
+        e.preventDefault();
+        var link = $(this).eq(0).data("ctorig")
+        if (link.indexOf("capture-vision/docs") > 0) {
+            if (link.indexOf("?") > 0) {
+                var arr = link.split("?")
+                var repoType = "core";
+                var lang = getCurrentUrlLang(link, true)
+                if (!lang || lang == '') {
+                    repoType = "core"
+                } else if (lang == 'android' || lang == 'objectivec-swift') {
+                    repoType = "mobile"
+                } else if (lang == 'javascript') {
+                    repoType = "web"
+                } else if (lang == 'cplusplus' || lang == 'c' || lang == 'java' || lang == 'dotnet') {
+                    repoType = "server"
+                } else {
+                    repoType = "core"
+                }
+                if(arr[1].indexOf("#") > 0) {
+                    var subArr = arr[1].split("#")
+                    link = link +"?product=dbr&repoType="+ repoType +"&" + arr[1]
+                } else {
+                    link = link + "&product=dbr&repoType=" + repoType
+                }
+            } else {
+                link = link + "?product=dbr&repoType=core"
+            }
+        }
+        window.location.href = link
+      });
 
   </script>
 
