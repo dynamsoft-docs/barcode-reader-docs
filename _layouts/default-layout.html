@@ -99,22 +99,23 @@
                 if (e.keyCode == 13) {
                     let lang = getCurrentUrlLang(document.URL, true)
                     if (!lang || lang == '') {
-                        window.location.href = '/barcode-reader/search.html?q=' + $('#txtSearch').val();
+                        window.location.href = '/barcode-reader/docs/core/search.html?q=' + $('#txtSearch').val();
                     } else if (lang == 'android' || lang == 'objectivec-swift') {
-                        window.location.href = '/barcode-reader/search.html?refinement=mobile_native_app&q=' + $('#txtSearch').val();
+                        window.location.href = '/barcode-reader/docs/core/search.html?refinement=mobile_native_app&q=' + $('#txtSearch').val();
                     } else if (lang == 'javascript') {
-                        window.location.href = '/barcode-reader/search.html?refinement=javascript_web&q=' + $('#txtSearch').val();
+                        window.location.href = '/barcode-reader/docs/core/search.html?refinement=javascript_web&q=' + $('#txtSearch').val();
                     } else if (lang == 'cplusplus' || lang == 'c') {
-                        window.location.href = '/barcode-reader/search.html?refinement=c/c++&q=' + $('#txtSearch').val();
+                        window.location.href = '/barcode-reader/docs/core/search.html?refinement=c/c++&q=' + $('#txtSearch').val();
                     } else if (lang == 'java') {
-                        window.location.href = '/barcode-reader/search.html?refinement=java&q=' + $('#txtSearch').val();
+                        window.location.href = '/barcode-reader/docs/core/search.html?refinement=java&q=' + $('#txtSearch').val();
                     } else if (lang == 'dotnet') {
-                        window.location.href = '/barcode-reader/search.html?refinement=.net&q=' + $('#txtSearch').val();
+                        window.location.href = '/barcode-reader/docs/core/search.html?refinement=.net&q=' + $('#txtSearch').val();
                     } else {
-                        window.location.href = '/barcode-reader/search.html?q=' + $('#txtSearch').val();
+                        window.location.href = '/barcode-reader/docs/core/search.html?q=' + $('#txtSearch').val();
                     }
                 }
             })
+            
         })
     </script>
 
