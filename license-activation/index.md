@@ -11,7 +11,7 @@ permalink: /license-activation/index.html
 
 ## Get a trial license
 
-The following shows how you can apply for a 30-day free trial license.
+The following shows how you can apply for a 30-day free trial license. 
 
 - Sign in the [Customer Portal](https://www.dynamsoft.com/customer/index?utm_source=docs&product=dbr). Register for a Dynamsoft account if you haven't already done so;
 - Go to [License > Trial License](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs&product=dbr) page, select the correct version and package/edition, then click "Register for a 30-Day Trial";
