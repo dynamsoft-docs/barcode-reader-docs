@@ -1,13 +1,13 @@
 tree_file_list:
   - introduction-comparison-tools.html
-  - sidelist-development-v9.6.20.html
+  - sidelist-development-v9.6.30.html
   - sidelist-development.html
   - sidelist-faq.html
   - sidelist-full-tree.html
   - sidelist-introduction.html
   - sidelist-license-activation.html
-  - sidelist-license-activation-v9.6.20.html
-  - sidelist-parameters/parameters-references-v9.6.20.html
+  - sidelist-license-activation-v9.6.30.html
+  - sidelist-parameters/parameters-references-v9.6.30.html
   - sidelist-parameters/parameters-references.html
   - sidelist-parameters/parameters-template-structure.html
   - sidelist-parameter-reference.html
@@ -15,6 +15,6 @@ tree_file_list:
   - sidelist-parameters-organization.html
   - sidelist-performance.html
   - sidelist-release-notes.html
-  - sidelist-understanding-v9.6.20.html
+  - sidelist-understanding-v9.6.30.html
   - sidelist-understanding.html
   - sidelist-useful.html

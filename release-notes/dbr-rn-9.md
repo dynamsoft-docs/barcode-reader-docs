@@ -20,6 +20,7 @@ noTitleIndex: true
 
 | Versions | Available Editions |
 | -------- | ------------------ |
+| 9.6.30 | [C]({{ site.c_release_notes}}c-9.html#9630-08292023) / [C++]({{ site.cpp_release_notes}}cpp-9.html#9630-08292023) / [DotNet]({{ site.dotnet_release_notes }}dotnet-9.html#9630-08292023) / [Java]({{ site.java_release_notes }}java-9.html#9630-08292023) / [Python]({{ site.python_release_notes }}python-9.html#9630-08292023) |
 | 9.6.21 | [iOS]({{ site.oc_release_notes }}ios-9.html#9621-03272023) |
 | 9.6.20 | [JavaScript]({{ site.js }}release-notes/js-9.html#9620-04182023) /[C]({{ site.c_release_notes}}c-9.html#9620-03162023) / [C++]({{ site.cpp_release_notes}}cpp-9.html#9620-03162023) / [DotNet]({{ site.dotnet_release_notes }}dotnet-9.html#9620-03162023) / [Java]({{ site.java_release_notes }}java-9.html#9620-03162023) / [Python]({{ site.python_release_notes }}python-9.html#9620-03162023) / [Android]({{ site.android_release_notes }}android-9.html#9620-03162023) / [iOS]({{ site.oc_release_notes }}ios-9.html#9620-03162023) |
 | 9.6.11 | [JavaScript]({{ site.js }}release-notes/js-9.html#9611-03132023) /[Android]({{ site.android_release_notes }}android-9.html#9611-01162023) |
