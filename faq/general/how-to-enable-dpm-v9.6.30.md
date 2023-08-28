@@ -11,33 +11,10 @@ permalink: /faq/general/how-to-enable-dpm.html
 
 [<< Back to FAQ index](index.md)
 
-To enable DPM, assign the `DPMCRM_GENERAL` enumeration to the `DPMCodeReadingModes` array.
+To enable DPM, assign the `DPMCRM_GENERAL` enumeration to the `DPMCodeReadingModes` array of the furtherModes interface, as such:
 
-You can use [OutputSettingsToFile](https://www.dynamsoft.com/capture-vision/docs/server/programming/cplusplus/api-reference/capture-vision-router/settings.html?product=dbr&repoType=server#outputsettingstofile) to save the current runtime settings into a JSON file:
+```javascript
+await settings = await scanner.getRuntimeSettings();
+settings.furtherModes.dpmCodeReadingModes[0] = Dynamsoft.DBR.EnumDPMCodeReadingMode.DPMCRM_GENERAL;
+await scanner.updateRuntimeSettings(settings);
 ```
-int OutputSettingsToFile(const char* templateName, const char* filePath)
-
-```
-
- Here is a JSON snippet for enabling DPM, update it in your output template:
-
-```json
-	"BarcodeReaderTaskSettingOptions" : 
-	[
-		{
-			"DPMCodeReadingModes" : 
-			[
-				{
-					"Mode" : "DPMCRM_GENERAL"
-				}
-			]
-        }
-    ]
-```
-
-Once the JSON string is set, you can initialize the runtime settings to use it via the  [InitSettingsFromFile](https://www.dynamsoft.com/capture-vision/docs/server/programming/cplusplus/api-reference/capture-vision-router/settings.html?product=dbr&repoType=server#outputsettingstofile) to update your current runtime settings with your modified template:
-```
-int InitSettingsFromFile(const char* filePath, char errorMsgBuffer[]=NULL, const int errorMsgBufferLen=0)
-```
-
-Please note that if you are modifying any other settings, you can include them in the JSON string/file as well, or you can access them individually after calling either of the aforementioned methods.
