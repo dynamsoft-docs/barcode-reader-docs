@@ -11,14 +11,6 @@ permalink: /faq/general/scan-specific-page.html
 
 [<< Back to FAQ index](index.md)
 
-This can indeed be done via the `Pages` parameter of the `ImageParameter` interface as explained [here](https://www.dynamsoft.com/barcode-reader/parameters/scenario-settings/multipage-imgs-and-pdf.html?ver=latest). This can ONLY be set via the JSON. Here is a JSON snippet for reading the last page of a 10 page document:
+We are planning to add `Pages` parameter of the `ImageParameterOptions` Parameter.
 
-```json
-{    "ImageParameter":  {                               
-        "Pages": "9"               
-    },     
-    "Version": "3.0"
-}
-```
-
-Once the JSON string is set, you can initialize the runtime settings to use it via the `InitRuntimeSettingsWithString` or `InitRuntimeSettingsWithFile` method. Please note that if you are modifying any other settings, you can include them in the JSON string/file as well, or you can access them individually after calling either of the aforementioned methods.
+Currently you will need to manually filter out the extra results from the returned retults or you can convert the specific pages pdf file to single image files and then decode the images. 
