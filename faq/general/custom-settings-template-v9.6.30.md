@@ -4,7 +4,7 @@ title: How to generate a custom settings template to use in your own application
 keywords: Dynamsoft Barcode Reader, FAQ, DBR Introduction, General, runtime settings, template
 description: How to generate a custom settings template to use in your own application?
 needAutoGenerateSidebar: false
-permalink: /faq/general/custom-settings-template.html
+permalink: /faq/general/custom-settings-template-v9.6.30.html
 ---
 
 ## How to generate a custom settings template to use in your own application?

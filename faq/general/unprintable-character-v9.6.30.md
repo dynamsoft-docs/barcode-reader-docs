@@ -4,7 +4,7 @@ title: How to ?
 keywords: Dynamsoft Barcode Reader, FAQ, tech basic, enable DPM
 description:
 needAutoGenerateSidebar: false
-permalink: /faq/general/unprintable-character.html
+permalink: /faq/general/unprintable-character-v9.6.30.html
 ---
 
 # How to Handle Non-printable Characters Like "\u{1D}" or "{GS}" from the Barcode Text?
