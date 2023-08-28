@@ -33,7 +33,7 @@ The standard way(C++) to use concurrent instance license is:
     // add further process
 ```
 
-Sometimes, a device may encounter an error message indicating that the instance count has exceeded the limit. This occurs when a device attempts to request more instances than the license pool has available or to initiate more parallel tasks than allowed.
+Sometimes, a device may encounter an error message indicating that the instance count has exceeded the limit. This occurs when a device attempts to request more instances than the license pool has available or to initiate more parallel tasks than requested.
 
 By default, if `SetMaxConcurrentInstanceCount` is not called, your program will obtain the full number of instances from the license. If you request more instances than are available in your license pool, an error will be thrown.
 
