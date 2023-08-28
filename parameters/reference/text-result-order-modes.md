@@ -24,7 +24,7 @@ permalink: /parameters/reference/text-result-order-modes.html
 Returns the text results in descending order by confidence.
 
 ### TROM_POSITION
-Returns the text results in position order, from top to bottom, then left to right.
+Returns the text results in positional order - from top to bottom, and left to right.
 
 ### TROM_FORMAT
 Returns the text results in alphabetical and numerical order by barcode format string.
