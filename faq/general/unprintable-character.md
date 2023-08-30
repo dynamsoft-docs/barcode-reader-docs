@@ -81,7 +81,7 @@ public:
 int main()
 {
     // obtain bytes from CDecodedBarcodeElement or CBarcodeResultItem.
-    unsighed char* barcodeBytes = textResult->GetBytes();
+    unsigned char* barcodeBytes = textResult->GetBytes();
     int bytesLength = textResult->GetBytesLength();
     ProcessBarcodeBytesUtil util;
     std::string originStr = util.processBarcodeBytes(barcodeBytes, bytesLength, PNPCM_KEEP);
