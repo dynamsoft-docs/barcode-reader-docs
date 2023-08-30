@@ -15,7 +15,7 @@ The standard way(C++) to use concurrent instance license is:
 
 * Call method SetMaxConcurrentInstanceCount to set the license count you purchased.
 * Update the parameter MaxParallelTasks to align with the purchased quantity.
-```
+```cpp
     int licenseCount = YOUR-PURCHASED-LICENSE-COUNT;
     int errorCode = 1;
     char errorMsg[512];

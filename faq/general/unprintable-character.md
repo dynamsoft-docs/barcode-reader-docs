@@ -11,7 +11,7 @@ permalink: /faq/general/unprintable-character.html
 
 This page helps to you modify the barcode results when non-printable characters exists in the barcode text you decoded.
 
-You always get 2 values that stands for the barcode decoding result from the `textResult` object:
+You always get 2 values that stands for the barcode decoding result from the `CBarcodeResultItem` object:
 
 - `barcodeBytes`
 - `barcodeText`
@@ -23,7 +23,6 @@ Since `barcodeText` is a string value that generated from the `barcodeBytes`, is
 <div class="sample-code-prefix template2"></div>
    >- C++
    >
-
 >
 ```c++
 #include <string>
@@ -80,9 +79,9 @@ public:
 };
 int main()
 {
-    // obtain bytes from CDecodedBarcodeElement or CBarcodeResultItem.
-    unsigned char* barcodeBytes = textResult->GetBytes();
-    int bytesLength = textResult->GetBytesLength();
+    // obtain bytes from CBarcodeResultItem.
+    unsigned char* barcodeBytes = barcodeResult->GetBytes();
+    int bytesLength = barcodeResult->GetBytesLength();
     ProcessBarcodeBytesUtil util;
     std::string originStr = util.processBarcodeBytes(barcodeBytes, bytesLength, PNPCM_KEEP);
     std::cout << "1.original text:" << std::endl << originStr << std::endl << std::endl;
