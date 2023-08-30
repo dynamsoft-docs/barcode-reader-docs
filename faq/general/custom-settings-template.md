@@ -1,13 +1,13 @@
 ---
 layout: default-layout
-title: How to generate a custom settings template to use in your own application?
+title: How to create custom settings template?
 keywords: Dynamsoft Barcode Reader, FAQ, DBR Introduction, General, runtime settings, template
-description: How to generate a custom settings template to use in your own application?
+description: How to create custom settings template?
 needAutoGenerateSidebar: false
 permalink: /faq/general/custom-settings-template.html
 ---
 
-## How to generate a custom settings template to use in your own application?
+## How to create custom settings template?
 
 One of the strengths of the Dynamsoft Barcode Reader is its wide range of cuztomizable options that can optimize the performance of the SDK. Whether you are looking to prioritize read rate or speed, these settings can be used in many ways to match the targeted use case.
 

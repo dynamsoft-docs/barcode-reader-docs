@@ -1,13 +1,13 @@
 ---
 layout: default-layout
-title: Sometimes the barcode reader SDK returns incorrect results with four or less characters. How to avoid it?
+title: How to filter incorrect results with the barcode result length?
 keywords: Dynamsoft Barcode Reader, FAQ, DBR Introduction, General, incorrect results
-description: Sometimes the barcode reader SDK returns incorrect results with four or less characters. How to avoid it?
+description: How to filter incorrect results with the barcode result length?
 needAutoGenerateSidebar: false
 permalink: /faq/general/avoid-incorrect-results.html
 ---
 
-## Sometimes the Barcode Reader SDK returns incorrect results with four or less characters. How do you avoid that?
+## How to filter incorrect results with the barcode result length?
 
 [<< Back to FAQ index](index.md)
 

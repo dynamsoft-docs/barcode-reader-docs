@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: How to ?
+title: How to Handle Non-printable Characters Like "\u{1D}" or "{GS}" from the Barcode Text?
 keywords: Dynamsoft Barcode Reader, FAQ, tech basic, enable DPM
-description:
+description: How to Handle Non-printable Characters Like "\u{1D}" or "{GS}" from the Barcode Text?
 needAutoGenerateSidebar: false
 permalink: /faq/general/unprintable-character.html
 ---
