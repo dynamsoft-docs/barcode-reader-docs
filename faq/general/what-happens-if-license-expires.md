@@ -1,13 +1,13 @@
 ---
 layout: default-layout
-title: What will happen if I don't renew it in time?
+title: What will happen if licenses are not renewed in time?
 keywords: Dynamsoft Barcode Reader, FAQ, Pricing/Licensing, expired license
-description: What will happen if I don't renew it in time?
+description: What will happen if licenses are not renewed in time?
 needAutoGenerateSidebar: false
 permalink: /faq/general/what-happens-if-license-expires.html
 ---
 
-## What will happen if I don't renew it in time?
+## What will happen if licenses are not renewed in time?
 
 [<< Back to FAQ index](index.md)
 
