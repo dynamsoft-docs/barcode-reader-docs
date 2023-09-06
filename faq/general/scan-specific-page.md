@@ -1,13 +1,13 @@
 ---
 layout: default-layout
-title: The pdf file has 10 pages but only the last page has a barcode. Is it possible to decode the last page only?
+title: How to scan specific pages of a pdf file?
 keywords: Dynamsoft Barcode Reader, FAQ, DBR Introduction, scan specific page
-description: The pdf file has 10 pages but only the last page has a barcode. Is it possible to decode the last page only?
+description: How to scan specific pages of a pdf file?
 needAutoGenerateSidebar: false
 permalink: /faq/general/scan-specific-page.html
 ---
 
-## The PDF file has 10 pages but only the last page has a barcode. Is it possible to decode the last page only?
+## How to scan specific pages of a pdf file?
 
 [<< Back to FAQ index](index.md)
 

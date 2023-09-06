@@ -1,13 +1,13 @@
 ---
 layout: default-layout
-title: How to ensure that a device does not overuse its allotted number of instances?
+title: How to properly use concurrent instance license?
 keywords: Dynamsoft Barcode Reader, FAQ, Pricing/Licensing, General, ensure no overuse
-description: How to ensure that a device does not overuse its allotted number of instances?
+description: How to properly use concurrent instance license?
 needAutoGenerateSidebar: false
 permalink: /faq/general/ensure-no-overuse.html
 ---
 
-## How to ensure that a device does not overuse its allotted number of instances?
+## How to properly use concurrent instance license?
 
 [<< Back to FAQ index](index.md)
 
