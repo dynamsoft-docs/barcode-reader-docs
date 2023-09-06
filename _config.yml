@@ -7,7 +7,6 @@ docHomePage: /barcode-reader/docs/core/
 useVersionTree: true
 
 architecture: /capture-vision/docs/core/architecture/
-parameter: /capture-vision/docs/core/parameters/
 introduction: /barcode-reader/docs/core/introduction/
 comparison_tools: /barcode-reader/docs/core/introduction/comparison-tools/
 
