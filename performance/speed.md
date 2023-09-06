@@ -104,7 +104,7 @@ For interactive barcode reading from a video input, you get better speed if:
 * the video frames are trimmed around the barcode(s) before submitted for barcode reading; 
 * the video frames are provided in a way that reduces the waiting time of the barcode reading engine.
 
-The [Dynamsoft Camera Enhancer SDK](https://www.dynamsoft.com/camera-enhancer/docs/core/introduction/) (DCE) is designed to do all the above like this:
+The <a href="https://www.dynamsoft.com/camera-enhancer/docs/core/introduction/" target="_blank">Dynamsoft Camera Enhancer SDK</a> (DCE) is designed to do all the above like this:
 
 
 * it comes with camera control and is able to find and open the best suited camera by default (with support for manual adjustment too); 

@@ -101,7 +101,7 @@ When the frame filter feature of DCE is enabled, a quick sharpness evaluation wi
 
 **Recommendation**
 
-The frame-filter feature of DCE can be enabled via the [`enableEnhancedFeatures`](https://www.dynamsoft.com/camera-enhancer/docs/mobile/programming/android/primary-api/camera-enhancer.html#enableenhancedfeatures) method.
+The frame-filter feature of DCE can be enabled via the <a href="https://www.dynamsoft.com/camera-enhancer/docs/mobile/programming/android/primary-api/camera-enhancer.html#enableenhancedfeatures" target="_blank">`enableEnhancedFeatures`</a> method.
 
 ### Enhance the Camera Focus
 
@@ -110,7 +110,7 @@ It is highly recommended that this feature be implemented on low-end devices. En
 
 **Recommendation**
 
-To enable the enhanced-focus feature of DCE, please use [`enableEnhancedFeatures`](https://www.dynamsoft.com/camera-enhancer/docs/mobile/programming/android/primary-api/camera-enhancer.html#enableenhancedfeatures).
+To enable the enhanced-focus feature of DCE, please use <a href="https://www.dynamsoft.com/camera-enhancer/docs/mobile/programming/android/primary-api/camera-enhancer.html#enableenhancedfeatures" target="_blank">`enableEnhancedFeatures`</a>.
 
 ### Set Higher Resolution
 
@@ -118,7 +118,7 @@ A higher resolution will promote the sharpness of the video frames and enlarge t
 
 **Recommendation**
 
-To configure the resolution, please use the [`setResolution`](https://www.dynamsoft.com/camera-enhancer/docs/mobile/programming/android/primary-api/camera-enhancer.html#setresolution) method.
+To configure the resolution, please use the <a href="https://www.dynamsoft.com/camera-enhancer/docs/mobile/programming/android/primary-api/camera-enhancer.html#setresolution" target="_blank">`setResolution`</a> method.
 
 ### Define the Scan Region
 
@@ -126,7 +126,7 @@ Using DCE, you can specify the scan region so that the SDK only works with a spe
 
 **Recommendation**
 
-You can specify the scan region via the DCE method [`setScanRegion`](https://www.dynamsoft.com/camera-enhancer/docs/mobile/programming/android/primary-api/camera-enhancer.html#setscanregion).
+You can specify the scan region via the DCE method <a href="https://www.dynamsoft.com/camera-enhancer/docs/mobile/programming/android/primary-api/camera-enhancer.html#setscanregion" target="_blank">`setScanRegion`</a>.
 
 ## Summary
 
