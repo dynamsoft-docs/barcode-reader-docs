@@ -74,7 +74,7 @@ When configuring the specific settings, you have to know some basic information 
 
 ### Specify the Barcode Formats
 
-The barcode format specification is the most basic decode setting that affects all three metrics of the performance. Sometimes, misreading a 1D barcode is caused by misrecognizing the 1D barcode as another 1D barcode type. If the targeted 1D barcodes are scoped, you can specify the barcode format in your project to lower the probability of misread results. In addition, specifying the required barcode formats will not only benefit the accuracy, but also the barcode reading speed as we saw in the [Achieving Best Speed]({{site.performance}speed.html) article.
+The barcode format specification is the most basic decode setting that affects all three metrics of the performance. Sometimes, misreading a 1D barcode is caused by misrecognizing the 1D barcode as another 1D barcode type. If the targeted 1D barcodes are scoped, you can specify the barcode format in your project to lower the probability of misread results. In addition, specifying the required barcode formats will not only benefit the accuracy, but also the barcode reading speed as we saw in the [Achieving Best Speed]({{site.performance}}speed.html) article.
 
 **Recommendation**
 
@@ -154,7 +154,7 @@ Some of the accuracy-friendly settings may benefit the speed or read rate at the
 
 The following links are the article that explains how to make settings when either speed or read rate is prioritized. Reading the articles will help you further understand the parameter settings and measure how to configure the setting for your own project.
 
-- [How to boost Speed]({{ site.performance }speed.html)
-- [How to boost Read Rate]({{ site.performance }read-rate.html)
+- [How to boost Speed]({{ site.performance }}speed.html)
+- [How to boost Read Rate]({{ site.performance }}read-rate.html)
 
 If you are not sure where to start regarding which dimension of the performance should be prioritized or you are still puzzled by the parameter settings, please feel free to [contact us](https://www.dynamsoft.com/company/contact/) to get support from our technical support team. Our team can give you professional suggestions on the parameter settings that best fulfill your requirements.
