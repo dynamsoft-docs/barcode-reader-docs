@@ -5,7 +5,7 @@ description: This is the Performance Optimization index page for Dynamsoft Barco
 keywords: performance optimization
 breadcrumbText: Performance
 needGenerateH3Content: false
-permalink: /performance/index-v9.6.30.html
+permalink: /performance/index.html
 ---
 
 # Performance Optimization
@@ -15,3 +15,4 @@ This section covers the following topics:
 * [How to Boost Barcode Reading Speed](speed.md)
 * [How to Boost Barcode Read Rate](read-rate.md)
 * [How to Boost Barcode Reading Accuracy](accuracy.md)
+* [How to Batch Test Barcode Reading Performance]({{ site.comparison_tools}}batch-test.html)
