@@ -1,13 +1,13 @@
 ---
 layout: default-layout
-title: How do you track the number of devices?
+title: How to track the number of devices?
 keywords: Dynamsoft Barcode Reader, FAQ, Pricing/Licensing, General, track license
-description: How do you track the number of devices?
+description: How to track the number of devices?
 needAutoGenerateSidebar: false
 permalink: faq/general/track-license.html
 ---
 
-## How do you track the number of devices?
+## How to track the number of devices?
 
 [<< Back to FAQ index](index.md)
 
