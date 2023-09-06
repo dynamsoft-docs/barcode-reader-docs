@@ -140,7 +140,7 @@ Some of the accuracy-friendly settings may benefit the speed or read rate at the
 
 The following links are the article that explains how to make settings when either speed or read rate is prioritized. Reading the articles will help you further understand the parameter settings and measure how to configure the setting for your own project.
 
-- [How to boost Speed]({{ site.performance }speed.html)
-- [How to boost Read Rate]({{ site.performance }read-rate.html)
+- [How to boost Speed]({{ site.performance }}speed.html)
+- [How to boost Read Rate]({{ site.performance }}read-rate.html)
 
 If you are not sure where to start regarding which dimension of the performance should be prioritized or you are still puzzled by the parameter settings, please feel free to [contact us](https://www.dynamsoft.com/company/contact/) to get support from our technical support team. Our team can give you professional suggestions on the parameter settings that best fulfill your requirements.
