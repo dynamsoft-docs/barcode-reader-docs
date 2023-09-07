@@ -8,7 +8,7 @@ permalink: /faq/general/purchase-concurrent-instance-license.html
 ---
 
 ## How many concurrent instances I should purchase?
-To make the most of our DBR instance, we suggest creating no more than the same number of threads as your CPU.
+To make the most of our DBR instance, we suggest creating no more than the same number of threads of your CPU.
 
 For instance, if your CPU has 2 cores with 2 threads each, creating 4 DBR instances is a good idea.
 
