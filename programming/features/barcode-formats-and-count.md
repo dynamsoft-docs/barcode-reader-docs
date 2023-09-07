@@ -39,39 +39,39 @@ cvr->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &settings, szErrorMsg, 25
 * Configure barcode format via `JSON parameter template file`
   * update parameter `BarcodeFormatIds` in your JSON template
    ```json
-   {
-    "CaptureVisionTemplates": [
-        {
-            "Name" : "CV_0",
-            "ImageROIProcessingNameArray": ["TA_0" ]
-        }       
-    ],
-    "TargetROIDefOptions" : [
-        {
-            "Name" : "TA_0",
-            "TaskSettingNameArray": [ "BR_0" ]
-        }
-    ],
-    "BarcodeReaderTaskSettingOptions": [
-        {
-            "Name" : "BR_0",
-            "BarcodeFormatIds" : ["BF_ONED", "BF_QR_CODE"]
-        }
-    ]
-   }
+    {
+        "CaptureVisionTemplates": [
+            {
+                "Name" : "CV_0",
+                "ImageROIProcessingNameArray": ["TA_0" ]
+            }       
+        ],
+        "TargetROIDefOptions" : [
+            {
+                "Name" : "TA_0",
+                "TaskSettingNameArray": [ "BR_0" ]
+            }
+        ],
+        "BarcodeReaderTaskSettingOptions": [
+            {
+                "Name" : "BR_0",
+                "BarcodeFormatIds" : ["BF_ONED", "BF_QR_CODE"]
+            }
+        ]
+    }
    ```
-  * apply settings by calling method `InitSettingsFromFile`
 
-   <div class="sample-code-prefix template2"></div>
-      >- C++
-      >
-   >
-   ```c++
-   char szErrorMsg[256] = {0};
-   CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
-   cvr->InitSettingsFromFile("PATH-TO-YOUR-SETTING-FILE", szErrorMsg, 256);
-   // more process here
-   ```
+  * apply settings by calling method `InitSettingsFromFile`
+    <div class="sample-code-prefix template2"></div>
+        >- C++
+        >
+    >
+    ```c++
+    char szErrorMsg[256] = {0};
+    CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
+    cvr->InitSettingsFromFile("PATH-TO-YOUR-SETTING-FILE", szErrorMsg, 256);
+    // more process here
+    ```
 
 
 ## Set Barcode Count
