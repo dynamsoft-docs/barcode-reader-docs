@@ -35,7 +35,6 @@ settings.barcodeSettings.barcodeFormatIds = BF_QR_CODE | BF_ONED;
 // Update the settings.
 cvr->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &settings, szErrorMsg, 256);
 ```
-see also
 
 * Configure barcode format via `JSON parameter template file`
   * update parameter `BarcodeFormatIds` in your JSON template
