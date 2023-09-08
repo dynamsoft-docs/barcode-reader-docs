@@ -15,6 +15,7 @@ permalink: /faq/general/non-english-characters.html
 1. Download [UUID generation tool](https://download.dynamsoft.com/tools/GenerateUUID.zip)
 > Note: If your device is an arm based architecture, please use get device uuid API to generate the uuid: 
 > ```python
+> # sample code in python
 > print(BarcodeReader.get_device_uuid(1))
 > ```
 2. Run the UUID generation tool(or get_device_uuid API if arm based architecture) in your device and it will create a .Dynamsoft folder in the system user home directory(or root directory if the user has no home directory)
@@ -26,5 +27,6 @@ permalink: /faq/general/non-english-characters.html
 > ```
 3. Go to the [license portal](https://www.dynamsoft.com/customer/license/).
 4. Choose the offline registration license.
-5. Click on add device, input the UUID and Device Name and click submit.
-6. You should see a new license is generated.
+5. Click on add device, input the UUID and Device Name and click submit. New license should be generated.
+6. Initialize the license in your program!
+
