@@ -35,6 +35,7 @@ settings.barcodeSettings.barcodeFormatIds = BF_QR_CODE | BF_ONED;
 // Update the settings.
 cvr->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &settings, szErrorMsg, 256);
 ```
+see also
 
 * Configure barcode format via `JSON parameter template file`
   * update parameter `BarcodeFormatIds` in your JSON template
@@ -63,16 +64,16 @@ cvr->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &settings, szErrorMsg, 25
 
   * apply settings by calling method `InitSettingsFromFile`
 
-<div class="sample-code-prefix template2"></div>
-   >- C++
-   >
->
-```c++
-char szErrorMsg[256] = {0};
-CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
-cvr->InitSettingsFromFile("PATH-TO-YOUR-SETTING-FILE", szErrorMsg, 256);
-// more process here
-```
+    <div class="sample-code-prefix template2"></div>
+       >- C++
+       >
+    >
+    ```c++
+    char szErrorMsg[256] = {0};
+    CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
+    cvr->InitSettingsFromFile("PATH-TO-YOUR-SETTING-FILE", szErrorMsg, 256);
+    // more process here
+    ```
 
 
 ## Set Barcode Count
@@ -110,26 +111,26 @@ cvr->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &settings, szErrorMsg, 25
 * Configure barcode format via `JSON parameter template file`
   * update parameter `ExpectedBarcodesCount` in your JSON template
    ```json
-   {
-    "CaptureVisionTemplates": [
-        {
-            "Name" : "CV_0",
-            "ImageROIProcessingNameArray": ["TA_0" ]
-        }       
-    ],
-    "TargetROIDefOptions" : [
-        {
-            "Name" : "TA_0",
-            "TaskSettingNameArray": [ "BR_0" ]
-        }
-    ],
-    "BarcodeReaderTaskSettingOptions": [
-        {
-            "Name" : "BR_0",
-            "ExpectedBarcodesCount" : 1
-        }
-    ]
-   }
+    {
+        "CaptureVisionTemplates": [
+            {
+                "Name" : "CV_0",
+                "ImageROIProcessingNameArray": ["TA_0" ]
+            }       
+        ],
+        "TargetROIDefOptions" : [
+            {
+                "Name" : "TA_0",
+                "TaskSettingNameArray": [ "BR_0" ]
+            }
+        ],
+        "BarcodeReaderTaskSettingOptions": [
+            {
+                "Name" : "BR_0",
+                "ExpectedBarcodesCount" : 1
+            }
+        ]
+    }
    ```
   * apply settings by calling method `InitSettingsFromFile`
 
