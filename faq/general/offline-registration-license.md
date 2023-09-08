@@ -19,7 +19,7 @@ permalink: /faq/general/non-english-characters.html
 > print(BarcodeReader.get_device_uuid(1))
 > ```
 2. A `.Dynamsoft` folder is created in the current system user `home` directory(or root directory if the user has no home directory)
-> Note: If you are want multiple users in operating system to use the license, you will need to move the .Dynamsoft folder to a path where all the users can access. Let us say `/Home/shared/.Dynamsoft`.
+> Note: If you want multiple users in operating system to use the license, you will need to move the .Dynamsoft folder to a path where all the users can access. Let us say `/Home/shared/.Dynamsoft`.
 > For all the programs in the devices, you will need to set the license cache path to `/Home/shared` before initialize the license
 > ```python
 > # set license cache path before initialize the license
