@@ -24,24 +24,24 @@ You can follow the steps below to manually register the device and get the licen
 3. Click the Add Device button then it will pop up a dialog. Download the tool from the pop up.
 ![uuid-tool](./assets/uuid-tool.jpg)
 
-4 Unzip the file and get amd run the GenerateUUID tool on the device to be registered and get the UUID.
+4 Unzip the file and get amd run the GenerateUUID tool on the device to be registered and get the UUID.<br>
 
-For Windows:
--Open Command Prompt (cmd.exe)
--Change the working directory to the one where GenerateUUID.exe is
--Run the command `GenerateUUID.exe`
-The returned string, e.g. 8ECCA3B6-66F9-4fd6-B6B6-308C874140C6, is the machine ID.
-![uuid](./assets/uuid.jpg)
+For Windows:<br>
+-Open Command Prompt (cmd.exe)<br>
+-Change the working directory to the one where GenerateUUID.exe is<br>
+-Run the command `GenerateUUID.exe`<br>
+The returned string, e.g. 8ECCA3B6-66F9-4fd6-B6B6-308C874140C6, is the machine ID.<br>
+![uuid](./assets/uuid.jpg)<br>
 
 
-For Linux:
--Open Terminal
--Change the working directory to the one where GenerateUUID.exe is
--Run the command ` sudo chmod 777 GenerateUUID`
--After inputting the password, run `./GenerateUUID`
-You will see the generated UUID like this (the ID should be different)
-SoftbindUUID:230e089a-7dc3-4caa-9c77-f7cc6d567f9b
-"230e089a-7dc3-4caa-9c77-f7cc6d567f9b" is the generated UUID. You can now use it to register the device and get an Authorization String for it.
+For Linux:<br>
+-Open Terminal<br>
+-Change the working directory to the one where GenerateUUID.exe is<br>
+-Run the command ` sudo chmod 777 GenerateUUID`<br>
+-After inputting the password, run `./GenerateUUID`<br>
+You will see the generated UUID like this (the ID should be different)<br>
+SoftbindUUID:230e089a-7dc3-4caa-9c77-f7cc6d567f9b<br>
+"230e089a-7dc3-4caa-9c77-f7cc6d567f9b" is the generated UUID. You can now use it to register the device and get an Authorization String for it.<br>
 
 > Note: If your device is an arm based architecture, please use get device uuid API to generate the uuid: 
 > ```python
