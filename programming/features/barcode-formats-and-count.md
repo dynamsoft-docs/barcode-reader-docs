@@ -64,8 +64,8 @@ cvr->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &settings, szErrorMsg, 25
   * apply settings by calling method `InitSettingsFromFile`
 
 <div class="sample-code-prefix template2"></div>
-    >- C++
-    >
+   >- C++
+   >
 >
 ```c++
 char szErrorMsg[256] = {0};
@@ -133,10 +133,10 @@ cvr->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &settings, szErrorMsg, 25
    ```
   * apply settings by calling method `InitSettingsFromFile`
 
-   <div class="sample-code-prefix template2"></div>
-      >- C++
-      >
-   >
+    <div class="sample-code-prefix template2"></div>
+       >- C++
+       >
+    >
    ```c++
    char szErrorMsg[256] = {0};
    CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
