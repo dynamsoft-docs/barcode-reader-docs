@@ -12,13 +12,13 @@ permalink: /faq/general/non-english-characters.html
 [<< Back to FAQ index](index.md)
 
 
-1. Download [UUID generation tool](https://download.dynamsoft.com/tools/GenerateUUID.zip)
+1. Download [UUID generation tool](https://download.dynamsoft.com/tools/GenerateUUID.zip) and run the UUID generation tool in your device.
 > Note: If your device is an arm based architecture, please use get device uuid API to generate the uuid: 
 > ```python
 > # sample code in python
 > print(BarcodeReader.get_device_uuid(1))
 > ```
-2. Run the UUID generation tool(or get_device_uuid API if arm based architecture) in your device and it will create a .Dynamsoft folder in the system user home directory(or root directory if the user has no home directory)
+2. A `.Dynamsoft` folder is created in the current system user `home` directory(or root directory if the user has no home directory)
 > Note: If you are want multiple users in operating system to use the license, you will need to move the .Dynamsoft folder to a path where all the users can access. Let us say `/Home/shared/.Dynamsoft`.
 > For all the programs in the devices, you will need to set the license cache path to `/Home/shared` before initialize the license
 > ```python
