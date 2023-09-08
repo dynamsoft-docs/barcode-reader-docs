@@ -25,6 +25,7 @@ You can follow the steps below to manually register the device and get the licen
 ![uuid-tool](./assets/uuid-tool.jpg)
 
 4 Unzip the file and get amd run the GenerateUUID tool on the device to be registered and get the UUID.
+
 For Windows:
 -Open Command Prompt (cmd.exe)
 -Change the working directory to the one where GenerateUUID.exe is
