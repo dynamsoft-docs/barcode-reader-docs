@@ -229,23 +229,12 @@
 
       $("body").delegate("#searchResult .gsc-resultsRoot a.gs-title", "click", function(e) {
         e.preventDefault();
+        
         var link = $(this).eq(0).data("ctorig")
         if (link.indexOf("capture-vision/docs") > 0) {
+            var repoType = getRepoType("core", link);
             if (link.indexOf("?") > 0) {
                 var arr = link.split("?")
-                var repoType = "core";
-                var lang = getCurrentUrlLang(link, true)
-                if (!lang || lang == '') {
-                    repoType = "core"
-                } else if (lang == 'android' || lang == 'objectivec-swift') {
-                    repoType = "mobile"
-                } else if (lang == 'javascript') {
-                    repoType = "web"
-                } else if (lang == 'cplusplus' || lang == 'c' || lang == 'java' || lang == 'dotnet') {
-                    repoType = "server"
-                } else {
-                    repoType = "core"
-                }
                 if(arr[1].indexOf("#") > 0) {
                     var subArr = arr[1].split("#")
                     link = link +"?product=dbr&repoType="+ repoType +"&" + arr[1]
@@ -253,11 +242,41 @@
                     link = link + "&product=dbr&repoType=" + repoType
                 }
             } else {
-                link = link + "?product=dbr&repoType=core"
+                link = link + "?product=dbr&repoType=" + repoType
             }
         }
-         window.location.href = link
+        window.location.href = link
       });
+
+      function getRepoType(defaultValue, link) {
+        var lang = getCurrentUrlLang(link, true)
+        var repoType = defaultValue
+        if (lang) {
+            if (lang == 'android' || lang == 'objectivec-swift') {
+                repoType = "mobile"
+            } else if (lang == 'javascript') {
+                repoType = "web"
+            } else if (lang == 'cplusplus' || lang == 'c' || lang == 'java' || lang == 'dotnet') {
+                repoType = "server"
+            } else {
+                repoType = "core"
+            }
+        } else {
+            if(link.indexOf("/docs/server/") > 0) {
+                repoType = "server"
+            }
+            if (link.indexOf("/docs/core/") > 0) {
+                repoType = "core"
+            }
+            if (link.indexOf("/docs/mobile") > 0) {
+                repoType = "mobile"
+            }
+            if (link.indexOf("/docs/web/") > 0) {
+                repoType = "web"
+            }
+        }
+        return repoType
+      }
   </script>
 
     {%- include livehelp.html -%}

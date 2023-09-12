@@ -11,7 +11,7 @@ permalink: /license-activation/index.html
 
 ## Get a trial license
 
-The following shows how you can apply for a 30-day free trial license.
+The following shows how you can apply for a 30-day free trial license. 
 
 - Sign in the [Customer Portal](https://www.dynamsoft.com/customer/index?utm_source=docs&product=dbr). Register for a Dynamsoft account if you haven't already done so;
 - Go to [License > Trial License](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs&product=dbr) page, select the correct version and package/edition, then click "Register for a 30-Day Trial";
@@ -59,6 +59,7 @@ The following shows how to set the license in the code.
     errorCode = CLicenseManager::InitLicense("YOUR-LICENSE-KEY", errorMsg, 512);
     if (errorCode != EC_OK)
         cout << "License initialization error: " << errorMsg << endl;
+    CCaptureVisionRouter *cvr = new CCaptureVisionRouter;
     // add further process
 ```
 >
@@ -103,4 +104,31 @@ func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
 ```python
 error = BarcodeReader.init_license("YOUR-LICENSE-KEY")
 dbr = BarcodeReader()
+```
+
+If you are using a **concurrent instance license**, you need to apply two more operations:
+
+* Call method SetMaxConcurrentInstanceCount to set the license count you purchased.
+* Update the parameter MaxParallelTasks to align with the purchased quantity.
+
+<div class="sample-code-prefix template2"></div>
+   >- C++
+   >
+>
+```cpp
+    int licenseCount = YOUR-PURCHASED-LICENSE-COUNT;
+    int errorCode = 1;
+    char errorMsg[512];
+    // Set the license count you purchased
+    SetMaxConcurrentInstanceCount(licenseCount);
+    errorCode = CLicenseManager::InitLicense("YOUR-LICENSE-KEY", errorMsg, 512);
+    if (errorCode != EC_OK)
+        cout << "License initialization error: " << errorMsg << endl;
+    CCaptureVisionRouter *cvr = new CCaptureVisionRouter;
+    // Update parameter maxParallelTasks
+    SimplifiedCaptureVisionSettings setting;
+    cvr->GetSimplifiedSettings(CPresetTemplate::PT_READ_BARCODES, &setting);
+    setting.maxParallelTasks = licenseCount;
+    cvr->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &setting);
+    // add further process
 ```

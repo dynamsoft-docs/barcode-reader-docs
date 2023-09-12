@@ -46,6 +46,10 @@ jobs:
           port: 21 
           local-dir: /home/ubuntu/DBRDocCore/_site/
           server-dir: /www.dynamsoft.com/barcode-reader/docs/core/        
+
+      - name: Trigger Webhook 
+        run: | 
+          curl -X POST -H "${{ secrets.WEBHOOK_USER }}" -H "${{ secrets.WEBHOOK_TOKEN }}" -H "Content-Type: application/json" -d "[\"/barcode-reader/docs/core/*\"]" ${{ secrets.WEBHOOK_URL }}
          
   Build-Preview:
     if: ${{ github.ref == 'refs/heads/preview' }}
