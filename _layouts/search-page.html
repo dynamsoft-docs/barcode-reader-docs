@@ -109,9 +109,9 @@
   }
 </style>
 <body>
-    <div class="headWrapper">
-        {%- include page_header.html -%}
-    </div>
+    {% assign url = 'https://www.dynamsoft.com/shared/head/' %}
+    {% remote_include {{ url }} %}
+
     {%- include dbrNav.html -%}
     <div class="sideBarIcon"><i class="fa fa-list" style="margin-right: 5px;"></i> Table of contents</div>
     <div class="container" id="searchContent">
