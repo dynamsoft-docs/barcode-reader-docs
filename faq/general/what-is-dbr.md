@@ -1,13 +1,13 @@
 ---
 layout: default-layout
-title: What is Dynamsoft Barcode Reader SDK and what business needs can it meet?
+title: What business needs can Dynamsoft Barcode Reader meet?
 keywords: Dynamsoft Barcode Reader, FAQ, DBR Introduction
-description: What is Dynamsoft Barcode Reader SDK and what business needs can it meet?
+description: What business needs can Dynamsoft Barcode Reader meet?
 needAutoGenerateSidebar: false
 permalink: /faq/general/what-is-dbr.html
 ---
 
-## What is Dynamsoft Barcode Reader SDK and what business needs can it meet?
+## What business needs can Dynamsoft Barcode Reader meet?
 
 [<< Back to FAQ index](index.md)
 

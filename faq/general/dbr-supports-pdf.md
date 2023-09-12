@@ -1,13 +1,13 @@
 ---
 layout: default-layout
-title: Does SDK supports reading barcodes from PDF files? IS an additional license required for this functionality?
+title: Can Barcode Reader SDK read PDF files? Do I need to pay for this feature?
 keywords: Dynamsoft Barcode Reader, FAQ, DBR Introduction, General, PDF
-description: Does SDK supports reading barcodes from PDF files? IS an additional license required for this functionality?
+description: Can Barcode Reader SDK read PDF files? Do I need to pay for this feature?
 needAutoGenerateSidebar: false
 permalink: /faq/general/dbr-supports-pdf.html
 ---
 
-## Does the SDK support reading barcodes from PDF files? Is an additional license required for this functionality?
+## Can Barcode Reader SDK read PDF files? Do I need to pay for this feature?
 
 [<< Back to FAQ index](index.md)
 
