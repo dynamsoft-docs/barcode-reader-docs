@@ -7,25 +7,14 @@
     {%- assign noTitleIndex = "noTitleIndex" -%}
 {%- endif -%}
 <body>
-    <header class="headWrapper">
-        {%- include page_header.html -%}
-    </header>
+    {% assign url = 'https://www.dynamsoft.com/shared/head/' %}
+    {% remote_include {{ url }} %}
+
     {%- include dbrNav.html -%}
     <div class="sideBarIcon"><i class="fa fa-list" style="margin-right: 5px;"></i> Table of contents</div>
-    <main class="container" id="categoryMenuTree">
+    <div class="container" id="categoryMenuTree">
         <div class="row">
-            <aside class="sideBar col-xs-12 col-md-3 hide-xs hide-sm">
-                <div id="sideBarCnt">
-                    <div class="docSearchPart" style="margin-top: 30px;">
-                        <input id="txtSearch" class="search" type="text">
-                    </div>
-                    <nav class="mainPage">
-                        <ul id="fullTreeMenuListContainer" name="listLevel1">
-                        </ul>
-                    </nav>
-                </div>
-            </aside>
-            <section class="docContainer col-xs-12 col-md-9">
+            <main class="docContainer col-xs-12 col-md-9">
                 <div id="docHead" class="head row hide-xs hide-sm">
                     {%- include main-page-head.html -%}
                 </div>
@@ -59,13 +48,25 @@
                         <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
                     </div>
                 </div>
-            </section>
+            </main>
+            <aside class="sideBar col-xs-12 col-md-3 hide-xs hide-sm">
+                <div id="sideBarCnt">
+                    <div class="docSearchPart" style="margin-top: 30px;">
+                        <input id="txtSearch" class="search" type="text">
+                    </div>
+                    <nav class="mainPage">
+                        <ul id="fullTreeMenuListContainer" name="listLevel1">
+                        </ul>
+                    </nav>
+                </div>
+            </aside>
         </div>
-    </main>
+    </div>
     <div class="history list" id="categoryMenuTree_history">
         <div class="container">
             <div class="col-xs-12">
-                {%- include liquid_autoGenerateHistoryList.html -%} {%- include auto-version-list.html -%}
+                {%- include liquid_autoGenerateHistoryList.html -%}
+                {%- include auto-version-list.html -%}
             </div>
         </div>
     </div>
@@ -77,19 +78,11 @@
     <iframe id="sideBarIframe" src="{{site.firstLevelUrl}}/Hide_Tree_Page.html" allow="" height="0" frameborder="0"></iframe>
     <script type="text/javascript">
         anchors.add();
-    </script>
-
-
-    <script type="text/javascript">
         UrlReplace();
-    </script>
-
-    <script type="text/javascript">
         FullTreeMenuList('{{page.needAutoGenerateSidebar}}', '{{page.needGenerateH3Content}}', '{{page.pageStartVer}}', '{{site.useVersionTree}}');
     </script>
 
     {%- include livehelp.html -%}
-
 
     <!-- for dbr -->
     <script type="text/javascript">
