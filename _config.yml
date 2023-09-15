@@ -108,7 +108,12 @@ dnt_icon: /barcode-reader/docs/core/assets/img-icon/icon-dnt.svg
 baseurl: "/barcode-reader/docs/core"
 plugins:
   - jemoji
-
+  - jekyll-webp
+  - jekyll-relative-links
+  - jekyll-redirect-from
+  - jekyll-readme-index
+  - jekyll-seo-tag
+  
 edition: algorithm
 
 defaults:
