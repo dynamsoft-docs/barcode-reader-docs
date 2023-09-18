@@ -24,7 +24,7 @@ You can follow the steps below to manually register the device and get the licen
 3. Click the Add Device button then it will pop up a dialog. Download the tool from the pop up.
 ![uuid-tool](./assets/uuid-tool.jpg)
 
-4 Unzip the file and run the GenerateUUID tool on the device to be registered and get the UUID.<br>
+4. Unzip the file and run the GenerateUUID tool on the device to be registered and get the UUID.<br>
 
 For Windows:<br>
 -Open Command Prompt (cmd.exe)<br>
@@ -34,14 +34,15 @@ The returned string, e.g. 8ECCA3B6-66F9-4fd6-B6B6-308C874140C6, is the machine 
 ![uuid](./assets/uuid.jpg)<br>
 
 
->For Linux:<br>
->-Open Terminal<br>
->-Change the working directory to the one where GenerateUUID.exe is<br>
->-Run the command ` sudo chmod 777 GenerateUUID`<br>
->-After inputting the password, run `./GenerateUUID`<br>
->You will see the generated UUID like this (the ID should be different)<br>
->SoftbindUUID:230e089a-7dc3-4caa-9c77-f7cc6d567f9b<br>
->"230e089a-7dc3-4caa-9c77-f7cc6d567f9b" is the generated UUID. You can now use it to register the device and get an Authorization String for it.<br>
+For Linux:<br>
+-Open Terminal<br>
+-Change the working directory to the one where GenerateUUID.exe is<br>
+-Run the command ` sudo chmod 777 GenerateUUID`<br>
+-After inputting the password, run `./GenerateUUID`<br>
+
+You will see the generated UUID like this (the ID should be different)<br>
+SoftbindUUID:230e089a-7dc3-4caa-9c77-f7cc6d567f9b<br>
+"230e089a-7dc3-4caa-9c77-f7cc6d567f9b" is the generated UUID. You can now use it to register the device and get an Authorization String for it.<br>
 
 > Note: If your device is an arm based architecture, please use get device uuid API to generate the uuid: 
 > ```python
@@ -59,6 +60,7 @@ The returned string, e.g. 8ECCA3B6-66F9-4fd6-B6B6-308C874140C6, is the machine 
 
 5. Input the generated UUID and device name and click Submit.
 ![submit-uuid](./assets/submit-uuid.jpg)
+
 6. Then an authorization string will be generated. This string is the license for this device. Copy the license and set it in the code
 ![cp-license](./assets/cp-license.jpg)
 
