@@ -11,14 +11,13 @@ permalink: /faq/general/error-license-buffer.html
 
 [<< Back to FAQ index](index.md)
 
-For cloud hosted services, it is more likely to encounter the following error when initializing the license:
+When initializing the license for cloud hosted services, it is common to come across the following error message:
 
 `Error Code - DM_LICENSE_BUFFER_FAILED. Value - 20002. Description - Failed to read or write license buffer.`
 
-Dynamsoft sdk writes license file to local usr/home directory or Home directory. The error means there is no permission to write/read the license file to the directory. 
+This error occurs when Dynamsoft sdk attempts to write the license file to the local usr/home directory or Home directory, but is unable to do so due to lack of permission to read or write the license file in that directory.
 
-To fix the issue, please set license file cache path to a directory where your program has read and write permissions.
-
+To resolve this issue, please set the license file cache path to a directory that your program has read and write permissions for.
 
 
 Code snippet in C++
