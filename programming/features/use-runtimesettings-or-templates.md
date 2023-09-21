@@ -1,304 +1,118 @@
 ---   
 layout: default-layout
-description: This article introduces two ways to configure DBR, RuntimeSettings and Json template, and their syntax rules.
-title: Use RuntimeSettings or Templates
-keywords: DBR RuntimeSettings Json Template ImageParameter FormatSpecification
+description: This article introduces two ways to configure DBR parameters, SimplifiedSettings and JSON Template, and their syntax rules.
+title: Use SimplifiedSettings or JSON Template
+keywords: DBR SimplifiedSettings Json Template ImageParameter FormatSpecification
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-permalink: /programming/features/use-runtimesettings-or-templates.html
 ---
 
-# Use RuntimeSettings or Templates
+# Use SimplifiedSettings or JSON Template
 
-DBR provides two ways for configuring the settings: via `RuntimeSettings` or via a JSON template.
+Dynamsoft Barcode Reader (DBR) provides two ways for configuring the parameters: via `SimplifiedSettings` or via a `JSON Template`.
 
-* [RuntimeSettings](#runtimesettings)
+* [SimplifiedSettings](#simplifiedsettings)
 
-  `RuntimeSettings` is an object that manages various parameters during runtime. If you need to *dynamically* configure the reading process, use `RuntimeSettings`.
+  `SimplifiedSettings` is an object that manages various parameters during runtime. If you need to *dynamically* configure the reading process, use `SimplifiedSettings`.
 
-  However, bear in mind that `RuntimeSettings` doesn't provide all the available configuration options of the SDK.
+  However, bear in mind that `SimplifiedSettings` doesn't provide all the available configuration options of the SDK.
 
-* [JSON Templates](#json-template)
+* [JSON Template](#json-template)
 
   With a JSON template, you can make use of all the configuration options that DBR offers.
   
-  However, compared with `RuntimeSettings`, a template is static and can't be changed. If you need to use different settings for different scenarios, you can define a few templates and specify the proper one to use at runtime.
+  However, compared with `SimplifiedSettings`, a template is static and can't be changed. If you need to use different settings for different scenarios, you can define a few templates and specify the proper one to use at runtime.
 
-## RuntimeSettings
+## SimplifiedSettings
 
-`RuntimeSettings` is an object that manages various runtime settings of the DBR SDK which dictate the performance of the barcode reader.
+`SimplifiedSettings` is an object that manages various runtime settings of the DBR SDK which dictate the performance of the barcode reader.
 
 Basic steps:
 
-1. Get the current value of the `RuntimeSettings` object
+1. Get the current value of the `SimplifiedSettings` object
 2. Change one or more settings
-3. Update the `RuntimeSettings` object with the changed copy for the changes to take effect
+3. Update the `SimplifiedSettings` object with the changed copy for the changes to take effect
 
-The following code snippet demonstrates how to specify barcode formats via `RuntimeSettings`.  
+The following code snippet demonstrates how to specify barcode formats via `SimplifiedSettings`.  
 
 <div class="sample-code-prefix template2"></div>
-   >- Javascript
-   >- Android
-   >- Objective-C
-   >- Swift
-   >- Python
-   >- Java
-   >- C#
    >- C++
-   >- C
    >
 >
-```javascript
-// Specifies a license.
-Dynamsoft.DBR.BarcodeScanner.license = 'YOUR-LICENSE-KEY';
-// Creates a BarcodeScanner instance.
-let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-// Obtains the current runtime settings.
-let rs = await scanner.getRuntimeSettings();
-// Sets the barcode format(s).
-rs.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE;
-// Updates the settings.
-await scanner.updateRuntimeSettings(rs);
-```
->
-```java
-// Creates a BarcodeReader instance.
-BarcodeReader reader = new BarcodeReader();
-// Obtains the current runtime settings.
-PublicRuntimeSettings rs = reader.getRuntimeSettings();
-// Sets the barcode format(s).
-rs.barcodeFormatIds = EnumBarcodeFormat.BF_QR_CODE;
-// Updates the settings.
-reader.updateRuntimeSettings(rs);
-```
->
-```objc
-NSError* err = nil;
-// Creates a BarcodeReader instance.
-DynamsoftBarcodeReader* reader = [[DynamsoftBarcodeReader alloc] init];
-// Obtains the current runtime settings.
-iPublicRuntimeSettings* rs = [reader getRuntimeSettings:&err];
-// Sets the barcode format(s).
-rs.barcodeFormatIds = EnumBarcodeFormatQRCODE;
-// Updates the settings.
-[reader updateRuntimeSettings:rs error:&err];
-```
->
-```swift
-// Creates a BarcodeReader instance.
-let reader = DynamsoftBarcodeReader.init()
-// Obtains the current runtime settings.
-let rs = try? reader.getRuntimeSettings()
-// Sets the barcode format(s).
-rs?.barcodeFormatIds = EnumBarcodeFormat.QRCODE.rawValue
-// Updates the settings.
-try? reader.updateRuntimeSettings(rs)
-```
->
-```python
-error = BarcodeReader.init_license("YOUR-LICENSE-KEY")
-if error[0] != EnumErrorCode.DBR_OK:
-    print(error[1])
-dbr = BarcodeReader()
-settings = dbr.get_runtime_settings()
-settings.barcode_format_ids = EnumBarcodeFormat.BF_QR_CODE
-settings.barcode_format_ids_2 = EnumBarcodeFormat.BF2_POSTALCODE
-dbr.update_runtime_settings(settings)
-text_results = dbr.decode_file("YOUR-IMAGE-FILE-PATH")
-# Add further process
-```
->
-```java
-BarcodeReader.initLicense("YOUR-LICENSE-KEY");
-BarcodeReader reader = new BarcodeReader();
-PublicRuntimeSettings settings = reader.getRuntimeSettings(); //Get the current RuntimeSettings
-settings.barcodeFormatIds = EnumBarcodeFormat.BF_QR_CODE;
-settings.barcodeFormatIds_2 = EnumBarcodeFormat_2.BF2_POSTALCODE;
-reader.updateRuntimeSettings(settings); // Update RuntimeSettings with above setting
-TextResult[] result = reader.decodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
-// Add further process
-```
->
-```csharp
-string errorMsg;
-EnumErrorCode iRet = BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
-if (iRet != EnumErrorCode.DBR_SUCCESS)
-{
-    Console.WriteLine(errorMsg);
-}
-BarcodeReader reader = new BarcodeReader();
-PublicRuntimeSettings settings = reader.GetRuntimeSettings(); //Get the current RuntimeSettings
-settings.BarcodeFormatIds = (int)EnumBarcodeFormat.BF_QR_CODE;
-settings.BarcodeFormatIds_2 = (int)EnumBarcodeFormat_2.BF2_POSTALCODE;
-reader.UpdateRuntimeSettings(settings); // Update RuntimeSettings with above setting
-TextResult[] result = reader.DecodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
-// Add further process
-```
->
-```cpp
-char errorBuf[512];
-int iRet = -1;
-iRet = dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
-if (iRet != DBR_OK)
-{
-    cout << errorBuf << endl;
-}
-CBarcodeReader* reader = new CBarcodeReader();
-PublicRuntimeSettings* runtimeSettings = new PublicRuntimeSettings();
-reader->GetRuntimeSettings(runtimeSettings); //Get the current RuntimeSettings
-runtimeSettings->barcodeFormatIds = BF_QR_CODE;
-runtimeSettings->barcodeFormatIds_2 = BF2_POSTALCODE;
-reader->UpdateRuntimeSettings(runtimeSettings, errorBuf, 512); // Update RuntimeSettings with above setting
-reader->DecodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
-// Add further process
-```
->
-```c
-int iRet = -1;
-char errorBuf[512];
-iRet = DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
-if (iRet != DBR_OK)
-{
-    printf("%s\n", errorBuf);
-}
-void* barcodeReader = DBR_CreateInstance();
-PublicRuntimeSettings runtimeSettings;
-DBR_GetRuntimeSettings(barcodeReader, &runtimeSettings); //Get the current RuntimeSettings
-runtimeSettings.barcodeFormatIds = BF_QR_CODE;
-runtimeSettings.barcodeFormatIds_2 = BF2_POSTALCODE;
-DBR_UpdateRuntimeSettings(barcodeReader, &runtimeSettings, errorBuf, 512); // Update RuntimeSettings with above setting
-DBR_DecodeFile(barcodeReader, "YOUR-IMAGE-FILE-PATH", ""); // Start decoding
-// Add further process
+```c++
+char szErrorMsg[256] = {0};
+// Obtain current runtime settings of `CCaptureVisionRouter` instance.
+CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
+SimplifiedCaptureVisionSettings settings;
+cvr->GetSimplifiedSettings(CPresetTemplate::PT_READ_BARCODES, &settings);
+// Specify the barcode formats by enumeration values.
+// Use "|" to enable multiple barcode formats at one time.
+settings.barcodeSettings.barcodeFormatIds = BF_QR_CODE | BF_ONED;
+// Update the settings.
+cvr->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &settings, szErrorMsg, 256);
 ```
 
-## JSON Templates
+**See Also**  
 
-With a JSON template, you can make use of all the configuration options that DBR offers. A JSON template consists of three parts:
+- `SimplifiedCaptureVisionSettings:` [C++]({{ site.dcv_cpp_api }}capture-vision-router/structs/simplified-capture-vision-settings.html)
 
-* `ImageParameter`: Defines the global configurations used for the entire image.
-* `FormatSpecification`: Defines the configurations used for a particular barcode format.
-* `RegionDefinition`: Defines the configurations for a specific area of the image.
+## JSON Template
+
+With a JSON template, you can make use of all the configuration options that DBR offers.
+
+Basic steps:
+
+1. Build a JSON template and configure the required parameters
+2. Save the template to a file or convert it to string
+3. Call method `InitSettingsFromFile` or `InitSettings` to apply the settings
 
 > Read [Parameter Template Structure]({{ site.parameters }}structure-and-interfaces-of-parameters.html) to learn more about the structure of templates.
 
-> To easily create your own template, please use DBR's [online demo](https://demo.dynamsoft.com/barcode-reader/) settings menu on the left-hand side. When you toggle the "Advanced Settings" part of the menu and scroll to the bottom, you will find the full list of settings as a struct and more importantly, a JSON template that you can simply copy and paste.
+> JavaScript edition only supports importing a JSON string and not a file.
 
-To use a template, you can either use `InitRuntimeSettingsWithFile` to load a JSON file, or use `InitRuntimeSettingsWithString`/`initRuntimeSettingsWithString` to load a JSON string.
+The following steps demonstrates how to specify barcode formats via `JSON Template`.  
 
-> Notes about the JavaScript edition
->
-> 1. It only supports importing a JSON string and not a file
-> 2. It only allows one fixed template, in other words, the template itself should contain only one `ImageParameter` object 
-> 3. Importing a JSON string is usually slower than using the `RuntimeSettings` interface so we recommend going with the `RuntimeSettings` method if you are not using a completely customized settings template.
+  * Build a most basic JSON template and configure parameter `BarcodeFormatIds`
+   ```json
+    {
+        "CaptureVisionTemplates": [
+            {
+                "Name" : "CV_0",
+                "ImageROIProcessingNameArray": ["TA_0" ]
+            }
+        ],
+        "TargetROIDefOptions" : [
+            {
+                "Name" : "TA_0",
+                "TaskSettingNameArray": [ "BR_0" ]
+            }
+        ],
+        "BarcodeReaderTaskSettingOptions": [
+            {
+                "Name" : "BR_0",
+                "BarcodeFormatIds" : ["BF_ONED", "BF_QR_CODE"]
+            }
+        ]
+    }
+   ```
 
-The following code snippet demonstrates how to make use of a template.  
+  * Save the above template to file `setting.json`
 
-<div class="sample-code-prefix template2"></div>
-   >- Javascript
-   >- Android
-   >- Objective-C
-   >- Swift
-   >- Python
-   >- Java
-   >- C#
-   >- C++
-   >- C
-   >
->
-```javascript
-// Specifies a license.
-Dynamsoft.DBR.BarcodeScanner.license = 'YOUR-LICENSE-KEY';
-// Creates a BarcodeScanner instance.
-let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-// Stringify a template into a string if it is not yet a string.
-let template = {ImageParameter:{}, version:3.0}; // An example of a template object, a real template would be much more complicated.
-let templateString = JSON.stringify(jsonTemplate);
-// Updates the settings with the string.
-await scanner.initRuntimeSettingsWithString(templateString);
-```
->
-```java
-// Creates a BarcodeReader instance.
-BarcodeReader reader = new BarcodeReader();
-// Updates the settings with the string.
-reader.initRuntimeSettingsWithString("A-JSON-Template");
-```
->
-```objc
-NSError* err = nil;
-// Creates a BarcodeReader instance.
-DynamsoftBarcodeReader* reader = [[DynamsoftBarcodeReader alloc] init];
-// Updates the settings with the string.
-[reader initRuntimeSettingsWithString:@"A-JSON-Template" error:&err];
-```
->
-```swift
-// Creates a BarcodeReader instance.
-let reader = DynamsoftBarcodeReader.init()
-// Updates the settings with the string.
-try? reader.initRuntimeSettingsWithString("A-JSON-Template")
-```
->
-```python
-error = BarcodeReader.init_license("YOUR-LICENSE-KEY")
-if error[0] != EnumErrorCode.DBR_OK:
-    print(error[1])
-dbr = BarcodeReader()
-dbr.init_runtime_settings_with_string('{"Version":"3.0", "ImageParameter":{"Name":"IP1","ImagePreprocessingModes": [{"Mode": "IPM_GRAY_EQUALIZE","Sensitivity": 9},{"Mode": "IPM_GRAY_SMOOTH","SmoothBlockSizeX": 10,"SmoothBlockSizeY": 10},{"Mode": "IPM_SHARPEN_SMOOTH","SharpenBlockSizeX": 5,"SharpenBlockSizeY": 5},{"Mode": "IPM_MORPHOLOGY","MorphOperation": "Close","MorphOperationKernelSizeX": 7,"MorphOperationKernelSizeY": 7}]}}')
-text_results = dbr.decode_file("YOUR-IMAGE-FILE-PATH")
-# Add further process
-```
->
-```java
-BarcodeReader.initLicense("YOUR-LICENSE-KEY");
-BarcodeReader reader = new BarcodeReader();
-reader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\",\"ImagePreprocessingModes\": [{\"Mode\": \"IPM_GRAY_EQUALIZE\",\"Sensitivity\": 9},{\"Mode\": \"IPM_GRAY_SMOOTH\",\"SmoothBlockSizeX\": 10,\"SmoothBlockSizeY\": 10},{\"Mode\": \"IPM_SHARPEN_SMOOTH\",\"SharpenBlockSizeX\": 5,\"SharpenBlockSizeY\": 5},{\"Mode\": \"IPM_MORPHOLOGY\",\"MorphOperation\": \"Close\",\"MorphOperationKernelSizeX\": 7,\"MorphOperationKernelSizeY\": 7}]}}", EnumConflictMode.CM_OVERWRITE);
-TextResult[] result = reader.decodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
-// Add further process
-```
->
-```csharp
-string errorMsg;
-EnumErrorCode iRet = BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
-if (iRet != EnumErrorCode.DBR_SUCCESS)
-{
-    Console.WriteLine(errorMsg);
-}
-BarcodeReader reader = new BarcodeReader();
-reader.InitRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\",\"ImagePreprocessingModes\": [{\"Mode\": \"IPM_GRAY_EQUALIZE\",\"Sensitivity\": 9},{\"Mode\": \"IPM_GRAY_SMOOTH\",\"SmoothBlockSizeX\": 10,\"SmoothBlockSizeY\": 10},{\"Mode\": \"IPM_SHARPEN_SMOOTH\",\"SharpenBlockSizeX\": 5,\"SharpenBlockSizeY\": 5},{\"Mode\": \"IPM_MORPHOLOGY\",\"MorphOperation\": \"Close\",\"MorphOperationKernelSizeX\": 7,\"MorphOperationKernelSizeY\": 7}]}}", EnumConflictMode.CM_OVERWRITE, out errorMsg);
-TextResult[] result = reader.DecodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
-// Add further process
-```
->
-```cpp
-char errorBuf[512];
-int iRet = -1;
-iRet = dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
-if (iRet != DBR_OK)
-{
-    cout << errorBuf << endl;
-}
-CBarcodeReader* reader = new CBarcodeReader();
-reader->InitRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\",\"ImagePreprocessingModes\": [{\"Mode\": \"IPM_GRAY_EQUALIZE\",\"Sensitivity\": 9},{\"Mode\": \"IPM_GRAY_SMOOTH\",\"SmoothBlockSizeX\": 10,\"SmoothBlockSizeY\": 10},{\"Mode\": \"IPM_SHARPEN_SMOOTH\",\"SharpenBlockSizeX\": 5,\"SharpenBlockSizeY\": 5},{\"Mode\": \"IPM_MORPHOLOGY\",\"MorphOperation\": \"Close\",\"MorphOperationKernelSizeX\": 7,\"MorphOperationKernelSizeY\": 7}]}}", CM_OVERWRITE, errorBuf, 512);
-reader->DecodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
-// Add further process
-```
->
-```c
-int iRet = -1;
-char errorBuf[512];
-iRet = DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
-if (iRet != DBR_OK)
-{
-    printf("%s\n", errorBuf);
-}
-void* barcodeReader = DBR_CreateInstance();
-DBR_InitRuntimeSettingsWithString(barcodeReader, "{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\",\"ImagePreprocessingModes\": [{\"Mode\": \"IPM_GRAY_EQUALIZE\",\"Sensitivity\": 9},{\"Mode\": \"IPM_GRAY_SMOOTH\",\"SmoothBlockSizeX\": 10,\"SmoothBlockSizeY\": 10},{\"Mode\": \"IPM_SHARPEN_SMOOTH\",\"SharpenBlockSizeX\": 5,\"SharpenBlockSizeY\": 5},{\"Mode\": \"IPM_MORPHOLOGY\",\"MorphOperation\": \"Close\",\"MorphOperationKernelSizeX\": 7,\"MorphOperationKernelSizeY\": 7}]}}", CM_OVERWRITE, errorBuf, 512);
-DBR_DecodeFile(barcodeReader, "YOUR-IMAGE-FILE-PATH", ""); // Start decoding
-// Add further process
-```
+  * Call method `InitSettingsFromFile` or `InitSettings` to apply the settings
+
+    <div class="sample-code-prefix template2"></div>
+       >- C++
+       >
+    >
+    ```c++
+    char szErrorMsg[256] = {0};
+    CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
+    cvr->InitSettingsFromFile("PATH-TO-SETTING-FILE", szErrorMsg, 256);
+    //cvr->InitSettings("{\"CaptureVisionTemplates\":[{\"Name\":\"CV_0\",\"ImageROIProcessingNameArray\":[\"TA_0\"]}],\"TargetROIDefOptions\":[{\"Name\":\"TA_0\",\"TaskSettingNameArray\":[\"BR_0\"]}],\"BarcodeReaderTaskSettingOptions\":[{\"Name\":\"BR_0\",\"BarcodeFormatIds\":[\"BF_ONED\",\"BF_QR_CODE\"]}]}", szErrorMsg, 256);
+    // more process here
+    ```
 
 ## Mixed Usage
 
-It's also possible to use a template along with `RuntimeSettings`. Typically, you initialize the SDK with a template, the settings in which will be reflected in `RuntimeSettings`, then you can further fine-tune `RuntimeSettings` to apply to the actual reading process.
+It's also possible to use a `JSON Template` along with `SimplifiedSettings`. Typically, you initialize the SDK with a `JSON Template`, the settings in which will be reflected in `SimplifiedSettings`, then you can further fine-tune `SimplifiedSettings` to apply to the actual reading process.
