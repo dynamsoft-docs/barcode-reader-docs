@@ -34,7 +34,7 @@ jobs:
           git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview-R3
           cp -rfp ./barcode-reader-docs/* ./DBRDocCore/
           cp -rfp ./Docs-Template-Repo-Preview-R3/* ./DBRDocCore/
-          cd DBRDocCore && bundle exec jekyll build
+          cd DBRDocCore && bundle install && bundle exec jekyll build
           #python3 /home/ubuntu/ftp.py /home/ubuntu/DBRDocCore/_site/ ./www.dynamsoft.com/barcode-reader/docs/core/ prod
 
       - name: Sync files
@@ -77,7 +77,7 @@ jobs:
           cp -rfp ./Docs-Template-Repo-Preview-R3/* ./DBRDocCore-preview/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
           -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DBRDocCore-preview/_config.yml
-          cd DBRDocCore-preview && bundle exec jekyll build
+          cd DBRDocCore-preview && bundle install && bundle exec jekyll build
 
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
