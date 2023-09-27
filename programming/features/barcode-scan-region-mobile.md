@@ -11,7 +11,56 @@ permalink: /programming/features/barcode-scan-region-mobile.html
 
 # How to Read Barcodes from a Specific Area/Region
 
-## Read from a specific region of an image
+## Read from a specific region of a video stream
+
+If you are using DBR and DCE to read barcodes from a specific area of the video stream, you can simply define the scan area via DCE.
+
+> Note: <a href="https://www.dynamsoft.com/camera-enhancer/docs/introduction/" target="_blank"> Dynamsoft Camera Enhancer (DCE) </a> is designed to provide APIs for camera control, camera preview, and other advanced features.
+
+<div class="sample-code-prefix template2"></div>
+   >- Android
+   >- Objective-C
+   >- Swift
+   >
+>
+```java
+import com.dynamsoft.dce.CameraEnhancer;
+RegionDefinition scanRegion = new RegionDefinition();
+scanRegion.regionTop = 30;
+scanRegion.regionBottom = 70;
+scanRegion.regionRight = 15;
+scanRegion.regionLeft = 85;
+scanRegion.regionMeasuredByPercentage = 1;
+try {
+   // mCameraEnhancer is an instance of com.dynamsoft.dce.CameraEnhancer.
+   mCameraEnhancer.setScanRegion(scanRegion);
+} catch (CameraEnhancerException e) {
+   e.printStackTrace();
+}
+```
+>
+```objc
+NSError* err = nil;
+iRegionDefinition* scanRegion = [[iRegionDefinition alloc] init];
+scanRegion.regionTop = 10;
+scanRegion.regionBottom = 90;
+scanRegion.regionLeft = 10;
+scanRegion.regionRight = 90;
+scanRegion.regionMeasuredByPercentage = 1;
+[dce setScanRegion:scanRegion error:&err];
+```
+>
+```swift
+let scanRegion:iRegionDefinition? = nil
+scanRegion?.regionTop = 10
+scanRegion?.regionBottom = 90
+scanRegion?.regionLeft = 10
+scanRegion?.regionRight = 90
+scanRegion?.regionMeasuredByPercentage = 1
+dce.setScanRegion(region, error:nil)
+```
+
+## Set an Region of Interest on a Still Image
 
 DBR will locate the code region and decode the entire image by default. However, if only a specific region of the image or video is required to locate the barcode, you can define a Region Of Interest (ROI) via the parameter `RegionDefinition`. After defining a specific region, DBR will only decode barcodes within that region. Of course, this is very conducive to increasing the speed.
 
@@ -31,7 +80,7 @@ DBR will locate the code region and decode the entire image by default. However,
 
 ### Single Region Specification
 
-To update the setting via `PublicRuntimeSettings`:
+To update the setting via `SimplifiedCaptureVisionSettings`:
 
 <div class="sample-code-prefix template2"></div>
    >- Android
@@ -132,53 +181,4 @@ If you need to specify more than one ROI, you have to use a JSON template. Furth
    ],
    "Version": "3.0"
 }
-```
-
-## Read from a specific region of a video stream
-
-If you are using DBR and DCE to read barcodes from a specific area of the video stream, you can simply define the scan area via DCE.
-
-> Note: <a href="https://www.dynamsoft.com/camera-enhancer/docs/introduction/" target="_blank"> Dynamsoft Camera Enhancer (DCE) </a> is designed to provide APIs for camera control, camera preview, and other advanced features.
-
-<div class="sample-code-prefix template2"></div>
-   >- Android
-   >- Objective-C
-   >- Swift
-   >
->
-```java
-import com.dynamsoft.dce.CameraEnhancer;
-RegionDefinition scanRegion = new RegionDefinition();
-scanRegion.regionTop = 30;
-scanRegion.regionBottom = 70;
-scanRegion.regionRight = 15;
-scanRegion.regionLeft = 85;
-scanRegion.regionMeasuredByPercentage = 1;
-try {
-   // mCameraEnhancer is an instance of com.dynamsoft.dce.CameraEnhancer.
-   mCameraEnhancer.setScanRegion(scanRegion);
-} catch (CameraEnhancerException e) {
-   e.printStackTrace();
-}
-```
->
-```objc
-NSError* err = nil;
-iRegionDefinition* scanRegion = [[iRegionDefinition alloc] init];
-scanRegion.regionTop = 10;
-scanRegion.regionBottom = 90;
-scanRegion.regionLeft = 10;
-scanRegion.regionRight = 90;
-scanRegion.regionMeasuredByPercentage = 1;
-[dce setScanRegion:scanRegion error:&err];
-```
->
-```swift
-let scanRegion:iRegionDefinition? = nil
-scanRegion?.regionTop = 10
-scanRegion?.regionBottom = 90
-scanRegion?.regionLeft = 10
-scanRegion?.regionRight = 90
-scanRegion?.regionMeasuredByPercentage = 1
-dce.setScanRegion(region, error:nil)
 ```
