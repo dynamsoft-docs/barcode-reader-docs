@@ -62,15 +62,7 @@ dce.setScanRegion(region, error:nil)
 
 ## Set an Region of Interest on a Still Image
 
-DBR will locate the code region and decode the entire image by default. However, if only a specific region of the image or video is required to locate the barcode, you can define a Region Of Interest (ROI) via the parameter `RegionDefinition`. After defining a specific region, DBR will only decode barcodes within that region. Of course, this is very conducive to increasing the speed.
-
-`RegionDefinition` is the struct that is designed to specify the ROI.
-
-- `regionTop`: The y coordinate of the Top border of the region.
-- `regionBottom`: The y coordinate of the Bottom border of the region.
-- `regionLeft`: The x coordinate of the left border of the region.
-- `regionRight`: The x coordinate of the right border of the region.
-- `regionMeasuredByPercentage`: If measured by percentage, the above values will be recognized as percentages (1 to 100). Otherwise, the above values will be recognized as pixel length.
+The library scan the entire image by default when localizing the barcodes. However, if only a specific region of the image or video is required to locate the barcode, you can define a Region of Interest (ROI) via the target ROI parameter to restrict the scan area. The parameter can be set either via the `SimlifiedCaptureVisionSettings` or a JSON parameter template.
 
 > Notes:
 >
@@ -78,7 +70,7 @@ DBR will locate the code region and decode the entire image by default. However,
 > - When using `PublicRuntimeSettings`, you can only specify one region.
 > - When using JSON template, you can specify more than one region.
 
-### Single Region Specification
+### Specify a ROI via SimplifiedCaptureVisionSettings
 
 To update the setting via `SimplifiedCaptureVisionSettings`:
 
@@ -89,96 +81,108 @@ To update the setting via `SimplifiedCaptureVisionSettings`:
    >
 >
 ```java
-// Obtain current runtime settings of `reader` instance.
-PublicRuntimeSettings settings = reader.getRuntimeSettings();
-settings.region.regionTop = 10;
-settings.region.regionBottom = 90;
-settings.region.regionLeft = 10;
-settings.region.regionRight = 90;
-settings.region.regionMeasuredByPercentage = 1;
-settings.barcodeFormatIds = EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_ONED;
-// Update the settings.
-reader.updateRuntimeSettings(settings);
+try {
+   // Obtain current runtime settings. `cvr` is an instance of `CaptureVisionRouter`.
+   // Here we use `EnumPresetTemplate.PT_READ_BARCODES` as an example. You can change it to your own template name or the name of other preset template.
+   SimplifiedCaptureVisionSettings captureVisionSettings = cvr.getSimplifiedSettings(EnumPresetTemplate.PT_READ_BARCODES);
+   Quadrilateral roiQuad = new Quadrilateral();
+   roiQuad.points[0] = new Point(15,30);
+   roiQuad.points[1] = new Point(85,30);
+   roiQuad.points[2] = new Point(85,70);
+   roiQuad.points[3] = new Point(15,70);
+   captureVisionSettings.roi = roiQuad;
+   captureVisionSettings.roiMeasuredInPercentage = true;
+   // Update the settings. Remember to specify the same template name you used when getting the settings.
+   cvr.updateSettings(EnumPresetTemplate.PT_READ_BARCODES, captureVisionSettings);
+} catch (CaptureVisionRouterException e) {
+   e.printStackTrace();
+}
 ```
 >
 ```objc
-NSError* err = nil;
-// Obtain current runtime settings of `reader` instance.
-iPublicRuntimeSettings* settings = [reader getRuntimeSettings:&err];
-settings.region.regionTop = 10;
-settings.region.regionBottom = 90;
-settings.region.regionLeft = 10;
-settings.region.regionRight = 90;
-settings.region.regionMeasuredByPercentage = 1;
-// Update the settings.
-[reader updateRuntimeSettings:settings error:&err];
+NSError *error;
+// Obtain current runtime settings. `cvr` is an instance of `CaptureVisionRouter`.
+// Here we use `EnumPresetTemplate.PT_READ_BARCODES` as an example. You can change it to your own template name or the name of other preset template.
+DSSimplifiedCaptureVisionSettings *captureVisionSettings = [self.cvr getSimplifiedSettings:DSPresetTemplateReadBarcodes error:&error];
+DSQuadrilateral *roiQuad = [[DSQuadrilateral alloc] initWithPointArray:@[@(CGPointMake(15, 30)),@(CGPointMake(85, 30)),@(CGPointMake(85, 70)),@(CGPointMake(15, 70))]];
+captureVisionSettings.roi = roiQuad;
+captureVisionSettings.roiMeasuredInPercentage = true;
+// Update the settings. Remember to specify the same template name you used when getting the settings.
+[self.cvr updateSettings:DSPresetTemplateReadBarcodes settings:captureVisionSettings error:&error];
 ```
 >
 ```swift
-// Obtain current runtime settings of `barcodeReader` instance.
-let settings = try? barcodeReader.getRuntimeSettings()
-settings?.region.regionTop = 10
-settings?.region.regionBottom = 90
-settings?.region.regionLeft = 10
-settings?.region.regionRight = 90
-settings?.region.regionMeasuredByPercentage = 1
-// Update the settings.
-try? barcodeReader.updateRuntimeSettings(settings!)
-```
-
-To do the same with a JSON Template. Read more on [RuntimeSettings and templates](use-runtimesettings-or-templates.md#json-templates):
-
-```json
-{ 
-   "ImageParameter": {
-      "BarcodeFormatIds": ["BF_ALL"],
-      "RegionDefinitionNameArray": ["RP_1"]
-   }, 
-   "RegionDefinition": {
-      "Name": "RP_1",
-      "Top": 10,
-      "Bottom": 90,
-      "Left": 10,
-      "Right": 90,
-      "MeasuredByPercentage": 1,
-   },
-   "Version": "3.0"
+// Obtain current runtime settings. `cvr` is an instance of `CaptureVisionRouter`.
+// Here we use `EnumPresetTemplate.PT_READ_BARCODES` as an example. You can change it to your own template name or the name of other preset template.
+do{
+   let captureVisionSettings = try cvr.getSimplifiedSettings(PresetTemplate.readBarcodes.rawValue)
+   let roiQuad = Quadrilateral.init(pointArray: [CGPoint(x: 15,y: 30),CGPoint(x: 85,y: 30),CGPoint(x: 85,y: 70),CGPoint(x: 15, y: 70)])
+   captureVisionSettings.roi = roiQuad
+   captureVisionSettings.roiMeasuredInPercentage = true
+   // Update the settings. Remember to specify the same template name you used when getting the settings.
+   try cvr.updateSettings(PresetTemplate.readBarcodes.rawValue, settings: captureVisionSettings)
+}catch{
+   // Add code to do when error occurs.
 }
 ```
 
-### Multiple Region Specification
+### Specify One or More ROI via a Template
 
-If you need to specify more than one ROI, you have to use a JSON template. Furthermore, you can even configure different barcode-decoding parameter settings for each region. Read more on [RuntimeSettings and templates](use-runtimesettings-or-templates.md#json-templates)
+Define a single ROI:
 
 ```json
 {
-   "ImageParameter": {
-      "RegionDefinitionNameArray": ["RP_1", "RP_2"]
-   },
-   "RegionDefinitionArray": [
+   "TargetROIDefOptions" : [
       {
-         // Settings for ROI 1
-         "Name": "RP_1",
-         "BarcodeFormatIds": ["BF_CODE_39"],
-         "Top": 20,
-         "Bottom": 80,
-         "Left": 20,
-         "Right": 80,
-         "ExpectedBarcodesCount": 10,
-         "MeasuredByPercentage": 0
-      },
-      {
-         // Settings for ROI 2
-         "Name": "RP_2",
-         "BarcodeFormatIds": ["BF_CODE_93"],
-         "BarcodeFormatIds_2": ["BF_DOTCODE"],
-         "Top": 30,
-         "Bottom": 70,
-         "Left": 30,
-         "Right": 80,
-         "MeasuredByPercentage": 1
+         "Name" : "barcode-decoding-roi-1",
+         "TaskSettingNameArray": ["barcode-decoding-task-1"],
+         "Location": 
+         {
+            "Offset": {
+               "MeasuredByPercentage" : 1,
+               "FirstPoint" : [ 15, 30 ],
+               "SecondPoint" : [ 85, 30 ],
+               "ThirdPoint" : [ 85, 70 ],
+               "FourthPoint" : [ 15, 70 ],
+            }
+         }
       }
-   ],
-   "Version": "3.0"
+   ]
+}
+```
+
+You can define different ROIs in the `TargetROIDefOptions`. In the different ROIs you can specify different tasks or use the same task.
+
+```json
+{
+   "TargetROIDefOptions" : [
+      {
+         "Name" : "barcode-decoding-roi-1",
+         "TaskSettingNameArray": ["barcode-decoding-task-1"],
+         "Location": 
+         {
+            "Offset": {
+               "MeasuredByPercentage" : 1,
+               "FirstPoint" : [ 15, 20 ],
+               "SecondPoint" : [ 85, 40 ],
+               "ThirdPoint" : [ 85, 40 ],
+               "FourthPoint" : [ 15, 20 ]
+            }
+         }
+      },{
+         "Name" : "barcode-decoding-roi-2",
+         "TaskSettingNameArray": ["barcode-decoding-task-1"],
+         "Location": 
+         {
+            "Offset": {
+               "MeasuredByPercentage" : 1,
+               "FirstPoint" : [ 15, 60 ],
+               "SecondPoint" : [ 85, 80 ],
+               "ThirdPoint" : [ 85, 80 ],
+               "FourthPoint" : [ 15, 60 ]
+            }
+         }
+      }
+   ]
 }
 ```

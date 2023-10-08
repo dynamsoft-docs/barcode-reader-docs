@@ -64,6 +64,43 @@ for (int j = 0; j < capturedResultItemCount; j++)
 }
 // more process here
 ```
+>
+```java
+public void onDecodedBarcodesReceived(DecodedBarcodesResult result) {
+    if (result != null && result.getItems().length != 0){
+        for (int i=0; i < result.getItems().length; i++){
+            BarcodeResultItem item = result.getItems()[i];
+            Log.i("DecodedBarcodes", "onDecodedBarcodesReceived: This is the number "+i+" barcode");
+            int confidence = item.getConfidence();
+            Log.i("DecodedBarcodes", "The confidence of the barcode is: "+confidence);
+            int angle = item.getAngle();
+            Log.i("DecodedBarcodes", "The rotation angle of the barcode is: "+angle);
+        }
+    }
+}
+```
+>
+```objc
+- (void)onDecodedBarcodesReceived:(DSDecodedBarcodesResult *)result {
+    if (result.items.count > 0) {
+        for (DSBarcodeResultItem *item in result.items) {
+            NSInteger confidence = item.confidence;
+            NSInteger angle = item.angle;
+        }
+    }
+}
+```
+>
+```swift
+func onDecodedBarcodesReceived(_ result: DecodedBarcodesResult) {
+    if let items = result.items, items.count > 0 {
+        for item in items {
+            let confidence = item.confidence
+            let angle = item.angle
+        }
+    }
+}
+```
 
 [1]: assets/get-confidence-rotation/1d-angle.png
 
