@@ -260,7 +260,7 @@ except BarcodeReaderError as bre:
 **Note:**
   - The license verification process on the machine can be a one-time process. Once it is registered, the registration file for this specific device can be returned and stored to the machine. 
 
-  - If you need to increase the quota of your existing license key, please [contact us](https://www.dynamsoft.com/Company/Contact.aspx). 
+  - If you need to increase the quota of your existing license key, please [contact us](https://www.dynamsoft.com/company/customer-service/#contact). 
 
 #### Option 2: Always connect to Dynamsoft server for license verification {#always-connect}
 
@@ -530,7 +530,7 @@ dbr.initLicenseFromServer("", "", new DBRServerLicenseVerificationListener() {
 
  **Solution:**
 
- Check your network connection and make sure you have Internet access. If you have a firewall configured on the device, it is very likely that our license server is blocked by your firewall. Please [contact Dynamsoft](https://www.dynamsoft.com/Company/Contact.aspx) to resolve the issue. 
+ Check your network connection and make sure you have Internet access. If you have a firewall configured on the device, it is very likely that our license server is blocked by your firewall. Please [contact Dynamsoft](https://www.dynamsoft.com/company/customer-service/#contact) to resolve the issue. 
 
 
 - **Error Code: -10054**
@@ -539,7 +539,7 @@ dbr.initLicenseFromServer("", "", new DBRServerLicenseVerificationListener() {
 
  **Solution:** 
 
- You can [contact Dynamsoft](https://www.dynamsoft.com/Company/Contact.aspx) to expand the volume of your current runtime license key. Rest assured that your license key remains unchanged during the upgrade process, so no code change is required to your application. 
+ You can [contact Dynamsoft](https://www.dynamsoft.com/company/customer-service/#contact) to expand the volume of your current runtime license key. Rest assured that your license key remains unchanged during the upgrade process, so no code change is required to your application. 
 
 
 - **Error Code: -10004**
@@ -548,7 +548,7 @@ dbr.initLicenseFromServer("", "", new DBRServerLicenseVerificationListener() {
 
  **Solution:** 
 
- Your annual runtime license has expired. You can log into the customer portal to renew your runtime license by credit card or PayPal. Alternatively, you can [contact Dynamsoft](https://www.dynamsoft.com/Company/Contact.aspx) if you prefer other payment methods (wire transfer or check). Rest assured that your license key remains unchanged during the upgrade process, so no code change is required to your application. 
+ Your annual runtime license has expired. You can log into the customer portal to renew your runtime license by credit card or PayPal. Alternatively, you can [contact Dynamsoft](https://www.dynamsoft.com/company/customer-service/#contact) if you prefer other payment methods (wire transfer or check). Rest assured that your license key remains unchanged during the upgrade process, so no code change is required to your application. 
 
 
 - **Error Code: -10042**
@@ -567,7 +567,7 @@ dbr.initLicenseFromServer("", "", new DBRServerLicenseVerificationListener() {
  **Solution:** 
 
  This error happens when you are trying to use InitLicenseFromLicenseContent() API to activate the license. Please refer to [Use a Development License](#register-the-development-license-key) section to double check if the license content is correct. 
-If you run into any issues, please [contact Dynamsoft Support](https://www.dynamsoft.com/Company/Contact.aspx).
+If you run into any issues, please [contact Dynamsoft Support](https://www.dynamsoft.com/company/customer-service/#contact).
 
 [1]:assets\set-full-license\NewLicense2.png
 [2]:assets\set-full-license\ActivationPage.png

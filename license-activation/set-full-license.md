@@ -188,7 +188,7 @@ if reader != None:
 ```
 
 
-If you run into any issues, please [contact Dynamsoft Support](https://www.dynamsoft.com/Company/Contact.aspx).
+If you run into any issues, please [contact Dynamsoft Support](https://www.dynamsoft.com/company/customer-service/#contact).
 
 [1]:assets\set-full-license-3\Activate.png
 [2]:assets\set-full-license-3\Activate2.png
