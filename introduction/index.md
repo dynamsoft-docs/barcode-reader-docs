@@ -31,7 +31,7 @@ Dynamsoft Barcode Reader supports the following barcode formats:
 | MSI (Modified Plessey)   |                     |                         |                       |                    |
 | Code 11                  |                     |                         |                       |                    |
 
-[Learn more about these barcode formats](https://www.dynamsoft.com/Products/Barcode-Types.aspx).
+[Learn more about these barcode formats](https://www.dynamsoft.com/barcode-reader/barcode-types/).
 
 ## Supported Platforms
 

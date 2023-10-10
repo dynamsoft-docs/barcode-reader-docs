@@ -150,7 +150,7 @@ if reader != None:
     reader.recycle()
 ```
 
-If you run into any issues, please [contact Dynamsoft Support](https://www.dynamsoft.com/Company/Contact.aspx).
+If you run into any issues, please [contact Dynamsoft Support](https://www.dynamsoft.com/company/customer-service/#contact).
 
 <br />
 <br />
