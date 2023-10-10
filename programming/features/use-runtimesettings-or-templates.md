@@ -125,7 +125,7 @@ The following steps demonstrates how to specify barcode formats via `JSON Templa
     }
    ```
 
-  * Save the above template to file `setting.json`
+  * Save the above template to file `setting.json` or Convert the above content into a string format for the respective programming language.
 
   * Call method `InitSettingsFromFile` or `InitSettings` to apply the settings
 
