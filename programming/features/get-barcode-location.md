@@ -12,7 +12,7 @@ Once a barcode is found, you could be inclined to highlight it on the image for 
 
 ## BarcodeResultItem
 
-A barcode result is returned as a `BarcodeResultItem` which provides a method `GetLocation` to get the result coordinate points. The result points are listed in clockwise order, starting from the top-left point of the barcode area. The next section will explore the different code snippets for each suppoorted programming language.
+A barcode result is returned as a `BarcodeResultItem` which provides a method `GetLocation` to get the result coordinate points. The result points are listed in clockwise order, starting from the top-left point of the barcode area. The next section will explore the different code snippets for each supported programming language.
 
 ## Code Snippet
 
@@ -52,9 +52,10 @@ for (int j = 0; j < capturedResultItemCount; j++)
 >
 ```java
 public void onDecodedBarcodesReceived(DecodedBarcodesResult result) {
-    if (result != null && result.getItems().length != 0){
-        for (int i=0; i < result.getItems().length; i++){
-            BarcodeResultItem item = result.getItems()[i];
+    if (result != null){
+        BarcodeResultItem[] items = result.getItems();
+        for (int i=0; i < items.length; i++){
+            BarcodeResultItem item = items[i];
             Quadrilateral barcodeQuadArea = item.getLocation();
             Point topLeftPoint = barcodeQuadArea.points[0];
             Point topRightPoint = barcodeQuadArea.points[1];

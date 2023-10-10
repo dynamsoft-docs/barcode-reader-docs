@@ -39,6 +39,9 @@ Here we take QR Code as example and show how to get the version and model of a Q
 
 <div class="sample-code-prefix template2"></div>
    >- C++
+   >- Android
+   >- Objective-C
+   >- Swift
    >
 >
 ```c++
@@ -68,9 +71,10 @@ for (int j = 0; j < capturedResultItemCount; j++)
 >
 ```java
 public void onDecodedBarcodesReceived(DecodedBarcodesResult result) {
-    if (result != null && result.getItems().length != 0){
-        for (int i=0; i < result.getItems().length; i++){
-            BarcodeResultItem item = result.getItems()[i];
+    if (result != null){
+        BarcodeResultItem[] items = result.getItems();
+        for (int i=0; i < items.length; i++){
+            BarcodeResultItem item = items[i];
             Log.i("DecodedBarcodes", "onDecodedBarcodesReceived: This is the number "+i+" barcode");
             QRCodeDetails qrDetails = (QRCodeDetails) item.getDetails();
             int version = qrDetails.getVersion();

@@ -12,7 +12,7 @@ Once a barcode is found, you could be inclined to highlight it on the image for 
 
 ## Localization Result
 
-The barcode location information is found within the LocalizationResult attribute of a barcode TextResult object. Each barcode result comes with a localizationResult which can be accessed to get the result coordinate points. The next section will explore the different code snippets for each suppoorted programming language.
+The barcode location information is found within the LocalizationResult attribute of a barcode TextResult object. Each barcode result comes with a localizationResult which can be accessed to get the result coordinate points. The next section will explore the different code snippets for each supported programming language.
 
 First, we must point out that the result coordinates can come in two forms: exact coordinate points in pixels, or as percentages of the total dimensions of the image. If you would like to learn more about how regions and coordinates are calculated, please refer to this [**section**](../../parameters/structure-and-interfaces-of-parameters.md#regiondefinition-and-how-it-works) of the Structure and Interfaces page.
 

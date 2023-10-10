@@ -25,12 +25,12 @@ If you are using DBR and DCE to read barcodes from a specific area of the video 
 >
 ```java
 import com.dynamsoft.dce.CameraEnhancer;
-RegionDefinition scanRegion = new RegionDefinition();
-scanRegion.regionTop = 30;
-scanRegion.regionBottom = 70;
-scanRegion.regionRight = 15;
-scanRegion.regionLeft = 85;
-scanRegion.regionMeasuredByPercentage = 1;
+DSRect scanRegion = new DSRect();
+scanRegion.top = 0.1;
+scanRegion.bottom = 0.9;
+scanRegion.right = 0.1;
+scanRegion.left = 0.9;
+scanRegion.measuredInPercentage = true;
 try {
    // mCameraEnhancer is an instance of com.dynamsoft.dce.CameraEnhancer.
    mCameraEnhancer.setScanRegion(scanRegion);
@@ -41,23 +41,25 @@ try {
 >
 ```objc
 NSError* err = nil;
-iRegionDefinition* scanRegion = [[iRegionDefinition alloc] init];
-scanRegion.regionTop = 10;
-scanRegion.regionBottom = 90;
-scanRegion.regionLeft = 10;
-scanRegion.regionRight = 90;
-scanRegion.regionMeasuredByPercentage = 1;
+DSRect* scanRegion = [[DSRect alloc] init];
+scanRegion.top = 0.1;
+scanRegion.bottom = 0.9;
+scanRegion.right = 0.1;
+scanRegion.left = 0.9;
+scanRegion.measuredInPercentage = YES;
+// dce is an instance of `DSCameraEnhancer`.
 [dce setScanRegion:scanRegion error:&err];
 ```
 >
 ```swift
-let scanRegion:iRegionDefinition? = nil
-scanRegion?.regionTop = 10
-scanRegion?.regionBottom = 90
-scanRegion?.regionLeft = 10
-scanRegion?.regionRight = 90
-scanRegion?.regionMeasuredByPercentage = 1
-dce.setScanRegion(region, error:nil)
+let scanRegion:Rect? = Rect()
+scanRegion?.top = 0.1
+scanRegion?.bottom = 0.9
+scanRegion?.left = 0.1
+scanRegion?.right = 0.9
+scanRegion?.measuredInPercentage = true
+// dce is an instance of `CameraEnhancer`.
+try? dce.setScanRegion(scanRegion)
 ```
 
 ## Set an Region of Interest on a Still Image
@@ -66,8 +68,8 @@ The library scan the entire image by default when localizing the barcodes. Howev
 
 > Notes:
 >
-> - You can either configure these settings via the `PublicRuntimeSettings` struct or via a JSON template.
-> - When using `PublicRuntimeSettings`, you can only specify one region.
+> - You can either configure these settings via the `SimlifiedCaptureVisionSettings` struct or via a JSON template.
+> - When using `SimlifiedCaptureVisionSettings`, you can only specify one region.
 > - When using JSON template, you can specify more than one region.
 
 ### Specify a ROI via SimplifiedCaptureVisionSettings
@@ -101,7 +103,7 @@ try {
 >
 ```objc
 NSError *error;
-// Obtain current runtime settings. `cvr` is an instance of `CaptureVisionRouter`.
+// Obtain current runtime settings. `cvr` is an instance of `DSCaptureVisionRouter`.
 // Here we use `EnumPresetTemplate.PT_READ_BARCODES` as an example. You can change it to your own template name or the name of other preset template.
 DSSimplifiedCaptureVisionSettings *captureVisionSettings = [self.cvr getSimplifiedSettings:DSPresetTemplateReadBarcodes error:&error];
 DSQuadrilateral *roiQuad = [[DSQuadrilateral alloc] initWithPointArray:@[@(CGPointMake(15, 30)),@(CGPointMake(85, 30)),@(CGPointMake(85, 70)),@(CGPointMake(15, 70))]];
@@ -132,6 +134,12 @@ Define a single ROI:
 
 ```json
 {
+   "CaptureVisionTemplates": [
+      {
+            "Name" : "CV_0",
+            "ImageROIProcessingNameArray": ["barcode-decoding-roi-1" ]
+      }       
+   ],
    "TargetROIDefOptions" : [
       {
          "Name" : "barcode-decoding-roi-1",
@@ -155,6 +163,12 @@ You can define different ROIs in the `TargetROIDefOptions`. In the different ROI
 
 ```json
 {
+   "CaptureVisionTemplates": [
+      {
+            "Name" : "CV_0",
+            "ImageROIProcessingNameArray": ["barcode-decoding-roi-1","barcode-decoding-roi-2" ]
+      }       
+   ],
    "TargetROIDefOptions" : [
       {
          "Name" : "barcode-decoding-roi-1",

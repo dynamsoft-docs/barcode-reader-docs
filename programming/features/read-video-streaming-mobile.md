@@ -125,6 +125,7 @@ protected void onCreate(Bundle savedInstanceState) {
    mRouter.addResultReceiver(new CapturedResultReceiver() {
       @Override
       public void onDecodedBarcodesReceived(DecodedBarcodesResult result) {
+         // Add code to do when DecodedBarcodesResult received.
       }
    });
 }
@@ -176,14 +177,10 @@ public void onResume() {
    } catch (CameraEnhancerException e) {
       e.printStackTrace();
    }
-   try {
-      // Start the capturing process when the activity appear.
-      // You have to specify a template name to start capturing.
-      // For example, we use the preset template "ReadBarcodes" to start capturing with the default barcode decoding template.
-      mRouter.startCapturing(EnumPresetTemplate.PT_READ_BARCODES);
-   } catch (CaptureVisionRouterException e) {
-      e.printStackTrace();
-   }
+   // Start the capturing process when the activity appear.
+   // You have to specify a template name to start capturing.
+   // For example, we use the preset template "ReadBarcodes" to start capturing with the default barcode decoding template.
+   mRouter.startCapturing(EnumPresetTemplate.PT_READ_BARCODES, null);
    super.onResume();
 }
 @Override

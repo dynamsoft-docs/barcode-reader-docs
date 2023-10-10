@@ -41,6 +41,9 @@ The following code snippet shows how to get the confidence and rotation angle of
 
 <div class="sample-code-prefix template2"></div>
    >- C++
+   >- Android
+   >- Objective-C
+   >- Swift
    >
 >
 ```c++
@@ -67,9 +70,10 @@ for (int j = 0; j < capturedResultItemCount; j++)
 >
 ```java
 public void onDecodedBarcodesReceived(DecodedBarcodesResult result) {
-    if (result != null && result.getItems().length != 0){
-        for (int i=0; i < result.getItems().length; i++){
-            BarcodeResultItem item = result.getItems()[i];
+    if (result != null){
+        BarcodeResultItem[] items = result.getItems();
+        for (int i=0; i < items.length; i++){
+            BarcodeResultItem item = items[i];
             Log.i("DecodedBarcodes", "onDecodedBarcodesReceived: This is the number "+i+" barcode");
             int confidence = item.getConfidence();
             Log.i("DecodedBarcodes", "The confidence of the barcode is: "+confidence);

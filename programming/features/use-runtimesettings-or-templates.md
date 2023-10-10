@@ -1,40 +1,40 @@
 ---   
 layout: default-layout
-description: This article introduces two ways to configure DBR parameters, SimplifiedSettings and JSON Template, and their syntax rules.
-title: Use SimplifiedSettings or JSON Template
-keywords: DBR SimplifiedSettings Json Template ImageParameter FormatSpecification
+description: This article introduces two ways to configure DBR parameters, SimplifiedCaptureVisionSettings and JSON Template, and their syntax rules.
+title: Use SimplifiedCaptureVisionSettings or JSON Template
+keywords: DBR SimplifiedCaptureVisionSettings Json Template ImageParameter FormatSpecification
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-# Use SimplifiedSettings or JSON Template
+# Use SimplifiedCaptureVisionSettings or JSON Template
 
-Dynamsoft Barcode Reader (DBR) provides two ways for configuring the parameters: via `SimplifiedSettings` or via a `JSON Template`.
+Dynamsoft Barcode Reader (DBR) provides two ways for configuring the parameters: via `SimplifiedCaptureVisionSettings` or via a `JSON Template`.
 
-* [SimplifiedSettings](#simplifiedsettings)
+* [SimplifiedCaptureVisionSettings](#simplifiedsettings)
 
-  `SimplifiedSettings` is an object that manages various parameters during runtime. If you need to *dynamically* configure the reading process, use `SimplifiedSettings`.
+  `SimplifiedCaptureVisionSettings` is an object that manages various parameters during runtime. If you need to *dynamically* configure the reading process, use `SimplifiedCaptureVisionSettings`.
 
-  However, bear in mind that `SimplifiedSettings` doesn't provide all the available configuration options of the SDK.
+  However, bear in mind that `SimplifiedCaptureVisionSettings` doesn't provide all the available configuration options of the SDK.
 
 * [JSON Template](#json-template)
 
   With a JSON template, you can make use of all the configuration options that DBR offers.
   
-  However, compared with `SimplifiedSettings`, a template is static and can't be changed. If you need to use different settings for different scenarios, you can define a few templates and specify the proper one to use at runtime.
+  However, compared with `SimplifiedCaptureVisionSettings`, a template is static and can't be changed. If you need to use different settings for different scenarios, you can define a few templates and specify the proper one to use at runtime.
 
-## SimplifiedSettings
+## SimplifiedCaptureVisionSettings
 
-`SimplifiedSettings` is an object that manages various runtime settings of the DBR SDK which dictate the performance of the barcode reader.
+`SimplifiedCaptureVisionSettings` is an object that manages various runtime settings of the DBR SDK which dictate the performance of the barcode reader.
 
 Basic steps:
 
-1. Get the current value of the `SimplifiedSettings` object
+1. Get the current value of the `SimplifiedCaptureVisionSettings` object
 2. Change one or more settings
-3. Update the `SimplifiedSettings` object with the changed copy for the changes to take effect
+3. Update the `SimplifiedCaptureVisionSettings` object with the changed copy for the changes to take effect
 
-The following code snippet demonstrates how to specify barcode formats via `SimplifiedSettings`.  
+The following code snippet demonstrates how to specify barcode formats via `SimplifiedCaptureVisionSettings`.  
 
 <div class="sample-code-prefix template2"></div>
    >- C++
@@ -67,7 +67,7 @@ try {
 >
 ```objc
 NSError *error;
-// `cvr` is an instance of `CaptureVisionRouter`.
+// `cvr` is an instance of `DSCaptureVisionRouter`.
 [self.cvr initSettingsFromFile:@"PATH-TO-YOUR-SETTING-FILE" error:&error];
 ```
 >
@@ -155,7 +155,7 @@ The following steps demonstrates how to specify barcode formats via `JSON Templa
     >
     ```objc
     NSError *error;
-    // `cvr` is an instance of `CaptureVisionRouter`.
+    // `cvr` is an instance of `DSCaptureVisionRouter`.
     [self.cvr initSettingsFromFile:@"PATH-TO-YOUR-SETTING-FILE" error:&error];
     ```
     >
@@ -170,4 +170,4 @@ The following steps demonstrates how to specify barcode formats via `JSON Templa
 
 ## Mixed Usage
 
-It's also possible to use a `JSON Template` along with `SimplifiedSettings`. Typically, you initialize the SDK with a `JSON Template`, the settings in which will be reflected in `SimplifiedSettings`, then you can further fine-tune `SimplifiedSettings` to apply to the actual reading process.
+It's also possible to use a `JSON Template` along with `SimplifiedCaptureVisionSettings`. Typically, you initialize the SDK with a `JSON Template`, the settings in which will be reflected in `SimplifiedCaptureVisionSettings`, then you can further fine-tune `SimplifiedCaptureVisionSettings` to apply to the actual reading process.

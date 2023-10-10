@@ -123,14 +123,14 @@ Below is an example illustrating how to configure the parameter `ColourConversio
     >
     ```objc
     NSError *error;
-    // `cvr` is an instance of `CaptureVisionRouter`.
-    [self.cvr initSettings:@"PATH-TO-YOUR-SETTING-FILE" error:&error];
+    // `cvr` is an instance of `DSCaptureVisionRouter`.
+    [self.cvr initSettingsFromFile:@"PATH-TO-YOUR-SETTING-FILE" error:&error];
     ```
     >
     ```swift
     do{
        //`cvr` is an instance of `CaptureVisionRouter`.
-       try cvr.initSettings("PATH-TO-YOUR-SETTING-FILE")
+       try cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE")
     }catch{
        // Add code to do when error occurs.
     }

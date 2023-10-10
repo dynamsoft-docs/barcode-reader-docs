@@ -126,14 +126,14 @@ do{
     >
     ```objc
     NSError *error;
-    // `cvr` is an instance of `CaptureVisionRouter`.
-    [self.cvr initSettings:@"PATH-TO-YOUR-SETTING-FILE" error:&error];
+    // `cvr` is an instance of `DSCaptureVisionRouter`.
+    [self.cvr initSettingsFromFile:@"PATH-TO-YOUR-SETTING-FILE" error:&error];
     ```
     >
     ```swift
     do{
        //`cvr` is an instance of `CaptureVisionRouter`.
-       try cvr.initSettings("PATH-TO-YOUR-SETTING-FILE")
+       try cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE")
     }catch{
        // Add code to do when error occurs.
     }
@@ -189,7 +189,7 @@ try {
 >
 ```objc
 NSError *error;
-// Obtain current runtime settings. `cvr` is an instance of `CaptureVisionRouter`.
+// Obtain current runtime settings. `cvr` is an instance of `DSCaptureVisionRouter`.
 // Here we use `EnumPresetTemplate.PT_READ_BARCODES` as an example. You can change it to your own template name or the name of other preset template.
 DSSimplifiedCaptureVisionSettings *captureVisionSettings = [self.cvr getSimplifiedSettings:DSPresetTemplateReadBarcodes error:&error];
 captureVisionSettings.barcodeSettings.expectedBarcodesCount = 1;
@@ -261,14 +261,14 @@ do{
     >
     ```objc
     NSError *error;
-    // `cvr` is an instance of `CaptureVisionRouter`.
-    [self.cvr initSettings:@"PATH-TO-YOUR-SETTING-FILE" error:&error];
+    // `cvr` is an instance of `DSCaptureVisionRouter`.
+    [self.cvr initSettingsFromFile:@"PATH-TO-YOUR-SETTING-FILE" error:&error];
     ```
     >
     ```swift
     do{
        //`cvr` is an instance of `CaptureVisionRouter`.
-       try cvr.initSettings("PATH-TO-YOUR-SETTING-FILE")
+       try cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE")
     }catch{
        // Add code to do when error occurs.
     }
