@@ -66,7 +66,7 @@ do{
    // Obtain current runtime settings. `cvr` is an instance of `CaptureVisionRouter`.
    // Here we use `EnumPresetTemplate.PT_READ_BARCODES` as an example. You can change it to your own template name or the name of other preset template.
    let captureVisionSettings = try cvr.getSimplifiedSettings(PresetTemplate.readBarcodes.rawValue)
-   captureVisionSettings.barcodeSettings?.barcodeFormatIds = .qrCode.rawValue | .oneD.rawValue
+   captureVisionSettings.barcodeSettings?.barcodeFormatIds = [.qrCode,.oneD]
    // Update the settings. Remember to specify the same template name you used when getting the settings.
    try cvr.updateSettings(PresetTemplate.readBarcodes.rawValue, settings: captureVisionSettings)
 }catch{
