@@ -12,11 +12,7 @@ Once a barcode is found, you could be inclined to highlight it on the image for 
 
 ## BarcodeResultItem
 
-A barcode result is returned as a `BarcodeResultItem` which provides a method `GetLocation` to get the result coordinate points. The next section will explore the different code snippets for each suppoorted programming language.
-
-First, we must point out that the result coordinates can come in two forms: exact coordinate points in pixels, or as percentages of the total dimensions of the image. In order to control what form the result location should come in, please use the [`ResultCoordinateType`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/result-coordinate-type..html) parameter to control that.
-
-In either mode, the points are listed in clockwise order, starting from the top-left point of the barcode area.
+A barcode result is returned as a `BarcodeResultItem` which provides a method `GetLocation` to get the result coordinate points. The result points are listed in clockwise order, starting from the top-left point of the barcode area. The next section will explore the different code snippets for each suppoorted programming language.
 
 ## Code Snippet
 
@@ -24,6 +20,9 @@ The following code snippet shows how to get the coordinates of the barcode:
 
 <div class="sample-code-prefix template2"></div>
    >- C++
+   >- Android
+   >- Objective-C
+   >- Swift
    >
 >
 ```c++
@@ -49,4 +48,52 @@ for (int j = 0; j < capturedResultItemCount; j++)
     }
 }
 // more process here
+```
+>
+```java
+public void onDecodedBarcodesReceived(DecodedBarcodesResult result) {
+    if (result != null && result.getItems().length != 0){
+        for (int i=0; i < result.getItems().length; i++){
+            BarcodeResultItem item = result.getItems()[i];
+            Quadrilateral barcodeQuadArea = item.getLocation();
+            Point topLeftPoint = barcodeQuadArea.points[0];
+            Point topRightPoint = barcodeQuadArea.points[1];
+            Point bottomRightPoint = barcodeQuadArea.points[2];
+            Point bottomLeftPoint = barcodeQuadArea.points[3];
+            Log.i("DecodedBarcodes", "onDecodedBarcodesReceived: This is the number "+i+" barcode");
+            Log.i("DecodedBarcodes", "The first point is: ("+topLeftPoint.x+", "+topLeftPoint.y+")");
+            Log.i("DecodedBarcodes", "The second point is: ("+topRightPoint.x+", "+topRightPoint.y+")");
+            Log.i("DecodedBarcodes", "The third point is: ("+bottomRightPoint.x+", "+bottomRightPoint.y+")");
+            Log.i("DecodedBarcodes", "The fourth point is: ("+bottomLeftPoint.x+", "+bottomLeftPoint.y+")");
+        }
+    }
+}
+```
+>
+```objc
+- (void)onDecodedBarcodesReceived:(DSDecodedBarcodesResult *)result {
+    if (result.items.count > 0) {
+        for (DSBarcodeResultItem *item in result.items) {
+            DSQuadrilateral *barcodeQuadArea = item.location;
+            CGPoint topLeftPoint = [barcodeQuadArea.points[0] CGPointValue];
+            CGPoint topRightPoint = [barcodeQuadArea.points[1] CGPointValue];
+            CGPoint bottomRightPoint = [barcodeQuadArea.points[2] CGPointValue];
+            CGPoint bottomLeftPoint = [barcodeQuadArea.points[3] CGPointValue];
+        }
+    }
+}
+```
+>
+```swift
+func onDecodedBarcodesReceived(_ result: DecodedBarcodesResult) {
+    if let items = result.items, items.count > 0 {
+        for item in items {
+            let barcodeQuadArea = item.location
+            let topLeftPoint:CGPoint = barcodeQuadArea.points[0] as! CGPoint
+            let topRightPoint:CGPoint = barcodeQuadArea.points[1] as! CGPoint
+            let buttomRightPoint:CGPoint = barcodeQuadArea.points[2] as! CGPoint
+            let bottomLeftPoint:CGPoint = barcodeQuadArea.points[3] as! CGPoint
+        }
+    }
+}
 ```

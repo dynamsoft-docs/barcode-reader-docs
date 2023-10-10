@@ -65,3 +65,43 @@ for (int j = 0; j < capturedResultItemCount; j++)
 }
 // more process here
 ```
+>
+```java
+public void onDecodedBarcodesReceived(DecodedBarcodesResult result) {
+    if (result != null && result.getItems().length != 0){
+        for (int i=0; i < result.getItems().length; i++){
+            BarcodeResultItem item = result.getItems()[i];
+            Log.i("DecodedBarcodes", "onDecodedBarcodesReceived: This is the number "+i+" barcode");
+            QRCodeDetails qrDetails = (QRCodeDetails) item.getDetails();
+            int version = qrDetails.getVersion();
+            Log.i("DecodedBarcodes", "The version of the QR barcode is: "+version);
+            int model = qrDetails.getModel();
+            Log.i("DecodedBarcodes", "The model of the QR barcode is: "+model);
+        }
+    }
+}
+```
+>
+```objc
+- (void)onDecodedBarcodesReceived:(DSDecodedBarcodesResult *)result {
+    if (result.items.count > 0) {
+        for (DSBarcodeResultItem *item in result.items) {
+            DSQRCodeDetails *qrDetails = (DSQRCodeDetails *) item.details;
+            NSInteger version = qrDetails.version;
+            NSInteger model = qrDetails.model;
+        }
+    }
+}
+```
+>
+```swift
+func onDecodedBarcodesReceived(_ result: DecodedBarcodesResult) {
+    if let items = result.items, items.count > 0 {
+        for item in items {
+            let qrCodeDetails = item.details as! QRCodeDetails
+            let version = qrCodeDetails.version
+            let model = qrCodeDetails.model
+        }
+    }
+}
+```

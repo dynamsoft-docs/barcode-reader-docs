@@ -38,6 +38,9 @@ The following code snippet demonstrates how to specify barcode formats via `Simp
 
 <div class="sample-code-prefix template2"></div>
    >- C++
+   >- Android
+   >- Objective-C
+   >- Swift
    >
 >
 ```c++
@@ -51,6 +54,30 @@ cvr->GetSimplifiedSettings(CPresetTemplate::PT_READ_BARCODES, &settings);
 settings.barcodeSettings.barcodeFormatIds = BF_QR_CODE | BF_ONED;
 // Update the settings.
 cvr->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &settings, szErrorMsg, 256);
+```
+>
+```java
+try {
+   // `cvr` is an instance of `CaptureVisionRouter`.
+   cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE");
+} catch (CaptureVisionRouterException e) {
+   e.printStackTrace();
+}
+```
+>
+```objc
+NSError *error;
+// `cvr` is an instance of `CaptureVisionRouter`.
+[self.cvr initSettingsFromFile:@"PATH-TO-YOUR-SETTING-FILE" error:&error];
+```
+>
+```swift
+do{
+   //`cvr` is an instance of `CaptureVisionRouter`.
+   try cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE")
+}catch{
+   // Add code to do when error occurs.
+}
 ```
 
 **See Also**  
@@ -104,6 +131,9 @@ The following steps demonstrates how to specify barcode formats via `JSON Templa
 
     <div class="sample-code-prefix template2"></div>
        >- C++
+       >- Android
+       >- Objective-C
+       >- Swift
        >
     >
     ```c++
@@ -112,6 +142,30 @@ The following steps demonstrates how to specify barcode formats via `JSON Templa
     cvr->InitSettingsFromFile("PATH-TO-SETTING-FILE", szErrorMsg, 256);
     //cvr->InitSettings("{\"CaptureVisionTemplates\":[{\"Name\":\"CV_0\",\"ImageROIProcessingNameArray\":[\"TA_0\"]}],\"TargetROIDefOptions\":[{\"Name\":\"TA_0\",\"TaskSettingNameArray\":[\"BR_0\"]}],\"BarcodeReaderTaskSettingOptions\":[{\"Name\":\"BR_0\",\"BarcodeFormatIds\":[\"BF_ONED\",\"BF_QR_CODE\"]}]}", szErrorMsg, 256);
     // more process here
+    ```
+    >
+    ```java
+    try {
+       // `cvr` is an instance of `CaptureVisionRouter`.
+       cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE");
+    } catch (CaptureVisionRouterException e) {
+       e.printStackTrace();
+    }
+    ```
+    >
+    ```objc
+    NSError *error;
+    // `cvr` is an instance of `CaptureVisionRouter`.
+    [self.cvr initSettingsFromFile:@"PATH-TO-YOUR-SETTING-FILE" error:&error];
+    ```
+    >
+    ```swift
+    do{
+       //`cvr` is an instance of `CaptureVisionRouter`.
+       try cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE")
+    }catch{
+       // Add code to do when error occurs.
+    }
     ```
 
 ## Mixed Usage

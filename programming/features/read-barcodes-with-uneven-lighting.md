@@ -97,6 +97,9 @@ Below is an example illustrating how to configure the parameter `BinarizationMod
 
     <div class="sample-code-prefix template2"></div>
        >- C++
+       >- Android
+       >- Objective-C
+       >- Swift
        >
     >
     ```c++
@@ -104,4 +107,28 @@ Below is an example illustrating how to configure the parameter `BinarizationMod
     CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
     cvr->InitSettingsFromFile("PATH-TO-YOUR-SETTING-FILE", szErrorMsg, 256);
     // more process here
+    ```
+    >
+    ```java
+    try {
+       // `cvr` is an instance of `CaptureVisionRouter`.
+       cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE");
+    } catch (CaptureVisionRouterException e) {
+       e.printStackTrace();
+    }
+    ```
+    >
+    ```objc
+    NSError *error;
+    // `cvr` is an instance of `CaptureVisionRouter`.
+    [self.cvr initSettings:@"PATH-TO-YOUR-SETTING-FILE" error:&error];
+    ```
+    >
+    ```swift
+    do{
+       //`cvr` is an instance of `CaptureVisionRouter`.
+       try cvr.initSettings("PATH-TO-YOUR-SETTING-FILE")
+    }catch{
+       // Add code to do when error occurs.
+    }
     ```

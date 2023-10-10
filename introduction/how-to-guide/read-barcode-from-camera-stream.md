@@ -12,7 +12,7 @@ permalink: /introduction/how-to-guide/read-barcode-from-camera-stream.html
 
 Since v7.0, Dynamsoft Barcode Reader SDK added [`StartFrameDecoding`]({{ site.cpp_methods }}video.html#startframedecoding) and [`StopFrameDecoding`]({{ site.cpp_methods }}video.html#stopframedecoding) APIs. With the APIs and OpenCV library, you can easily read barcodes from video stream.
 
-Get a sample: [C++ Decode Video Frame](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx?SampleID=224#gallery) >   
+Get a sample: [C++ Decode Video Frame](https://www.dynamsoft.com/barcode-reader/resources/code-gallery/?SampleID=224#gallery) >   
 
 
 To learn more about what you can set or get during  read barcodes from video stream, see [Read Barcode from Different Source]({{ site.scenario_settings }}read-from-diff-source.html).    

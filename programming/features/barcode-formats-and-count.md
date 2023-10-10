@@ -20,6 +20,9 @@ You can configure the parameter in two different ways, depending on your require
 
 <div class="sample-code-prefix template2"></div>
    >- C++
+   >- Android
+   >- Objective-C
+   >- Swift
    >
 >
 ```c++
@@ -33,6 +36,42 @@ cvr->GetSimplifiedSettings(CPresetTemplate::PT_READ_BARCODES, &settings);
 settings.barcodeSettings.barcodeFormatIds = BF_QR_CODE | BF_ONED;
 // Update the settings.
 cvr->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &settings, szErrorMsg, 256);
+```
+>
+```java
+try {
+   // Obtain current runtime settings. `cvr` is an instance of `CaptureVisionRouter`.
+   // Here we use `EnumPresetTemplate.PT_READ_BARCODES` as an example. You can change it to your own template name or the name of other preset template.
+   SimplifiedCaptureVisionSettings captureVisionSettings = cvr.getSimplifiedSettings(EnumPresetTemplate.PT_READ_BARCODES);
+   captureVisionSettings.barcodeSettings.barcodeFormatIds = EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_ONED;
+   // Update the settings. Remember to specify the same template name you used when getting the settings.
+   cvr.updateSettings(EnumPresetTemplate.PT_READ_BARCODES, captureVisionSettings);
+} catch (CaptureVisionRouterException e) {
+   e.printStackTrace();
+}
+```
+>
+```objc
+NSError *error;
+// Obtain current runtime settings. `cvr` is an instance of `CaptureVisionRouter`.
+// Here we use `EnumPresetTemplate.PT_READ_BARCODES` as an example. You can change it to your own template name or the name of other preset template.
+DSSimplifiedCaptureVisionSettings *captureVisionSettings = [self.cvr getSimplifiedSettings:DSPresetTemplateReadBarcodes error:&error];
+captureVisionSettings.barcodeSettings.barcodeFormatIds = DSBarcodeFormatQRCode | DSBarcodeFormatOneD;
+// Update the settings. Remember to specify the same template name you used when getting the settings.
+[self.cvr updateSettings:DSPresetTemplateReadBarcodes settings:captureVisionSettings error:&error];
+```
+>
+```swift
+do{
+   // Obtain current runtime settings. `cvr` is an instance of `CaptureVisionRouter`.
+   // Here we use `EnumPresetTemplate.PT_READ_BARCODES` as an example. You can change it to your own template name or the name of other preset template.
+   let captureVisionSettings = try cvr.getSimplifiedSettings(PresetTemplate.readBarcodes.rawValue)
+   captureVisionSettings.barcodeSettings?.barcodeFormatIds = [.qrCode,.oneD]
+   // Update the settings. Remember to specify the same template name you used when getting the settings.
+   try cvr.updateSettings(PresetTemplate.readBarcodes.rawValue, settings: captureVisionSettings)
+}catch{
+   // Add code to do when error occurs.
+}
 ```
 
 * Configure barcode format via `JSON parameter template file`
@@ -64,6 +103,9 @@ cvr->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &settings, szErrorMsg, 25
 
     <div class="sample-code-prefix template2"></div>
        >- C++
+       >- Android
+       >- Objective-C
+       >- Swift
        >
     >
     ```c++
@@ -72,7 +114,30 @@ cvr->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &settings, szErrorMsg, 25
     cvr->InitSettingsFromFile("PATH-TO-YOUR-SETTING-FILE", szErrorMsg, 256);
     // more process here
     ```
-
+    >
+    ```java
+    try {
+       // `cvr` is an instance of `CaptureVisionRouter`.
+       cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE");
+    } catch (CaptureVisionRouterException e) {
+       e.printStackTrace();
+    }
+    ```
+    >
+    ```objc
+    NSError *error;
+    // `cvr` is an instance of `CaptureVisionRouter`.
+    [self.cvr initSettings:@"PATH-TO-YOUR-SETTING-FILE" error:&error];
+    ```
+    >
+    ```swift
+    do{
+       //`cvr` is an instance of `CaptureVisionRouter`.
+       try cvr.initSettings("PATH-TO-YOUR-SETTING-FILE")
+    }catch{
+       // Add code to do when error occurs.
+    }
+    ```
 
 ## Set Barcode Count
 
@@ -91,6 +156,9 @@ You can configure the parameter in two different ways, depending on your require
 
 <div class="sample-code-prefix template2"></div>
    >- C++
+   >- Android
+   >- Objective-C
+   >- Swift
    >
 >
 >
@@ -104,6 +172,42 @@ cvr->GetSimplifiedSettings(CPresetTemplate::PT_READ_BARCODES, &settings);
 settings.barcodeSettings.expectedBarcodesCount = 1;
 // Update the settings.
 cvr->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &settings, szErrorMsg, 256);
+```
+>
+```java
+try {
+   // Obtain current runtime settings. `cvr` is an instance of `CaptureVisionRouter`.
+   // Here we use `EnumPresetTemplate.PT_READ_BARCODES` as an example. You can change it to your own template name or the name of other preset template.
+   SimplifiedCaptureVisionSettings captureVisionSettings = cvr.getSimplifiedSettings(EnumPresetTemplate.PT_READ_BARCODES);
+   captureVisionSettings.barcodeSettings.expectedBarcodesCount = 1;
+   // Update the settings. Remember to specify the same template name you used when getting the settings.
+   cvr.updateSettings(EnumPresetTemplate.PT_READ_BARCODES, captureVisionSettings);
+} catch (CaptureVisionRouterException e) {
+   e.printStackTrace();
+}
+```
+>
+```objc
+NSError *error;
+// Obtain current runtime settings. `cvr` is an instance of `CaptureVisionRouter`.
+// Here we use `EnumPresetTemplate.PT_READ_BARCODES` as an example. You can change it to your own template name or the name of other preset template.
+DSSimplifiedCaptureVisionSettings *captureVisionSettings = [self.cvr getSimplifiedSettings:DSPresetTemplateReadBarcodes error:&error];
+captureVisionSettings.barcodeSettings.expectedBarcodesCount = 1;
+// Update the settings. Remember to specify the same template name you used when getting the settings.
+[self.cvr updateSettings:DSPresetTemplateReadBarcodes settings:captureVisionSettings error:&error];
+```
+>
+```swift
+do{
+   // Obtain current runtime settings. `cvr` is an instance of `CaptureVisionRouter`.
+   // Here we use `EnumPresetTemplate.PT_READ_BARCODES` as an example. You can change it to your own template name or the name of other preset template.
+   let captureVisionSettings = try cvr.getSimplifiedSettings(PresetTemplate.readBarcodes.rawValue)
+   captureVisionSettings.barcodeSettings?.expectedBarcodesCount = 1
+   // Update the settings. Remember to specify the same template name you used when getting the settings.
+   try cvr.updateSettings(PresetTemplate.readBarcodes.rawValue, settings: captureVisionSettings)
+}catch{
+   // Add code to do when error occurs.
+}
 ```
 
 * Configure barcode format via `JSON parameter template file`
@@ -134,12 +238,38 @@ cvr->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &settings, szErrorMsg, 25
 
     <div class="sample-code-prefix template2"></div>
        >- C++
+       >- Android
+       >- Objective-C
+       >- Swift
        >
     >
-   ```c++
-   char szErrorMsg[256] = {0};
-   CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
-   cvr->InitSettingsFromFile("PATH-TO-YOUR-SETTING-FILE", szErrorMsg, 256);
-   // more process here
-   ```
-
+    ```c++
+    char szErrorMsg[256] = {0};
+    CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
+    cvr->InitSettingsFromFile("PATH-TO-YOUR-SETTING-FILE", szErrorMsg, 256);
+    // more process here
+    ```
+    >
+    ```java
+    try {
+       // `cvr` is an instance of `CaptureVisionRouter`.
+       cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE");
+    } catch (CaptureVisionRouterException e) {
+       e.printStackTrace();
+    }
+    ```
+    >
+    ```objc
+    NSError *error;
+    // `cvr` is an instance of `CaptureVisionRouter`.
+    [self.cvr initSettings:@"PATH-TO-YOUR-SETTING-FILE" error:&error];
+    ```
+    >
+    ```swift
+    do{
+       //`cvr` is an instance of `CaptureVisionRouter`.
+       try cvr.initSettings("PATH-TO-YOUR-SETTING-FILE")
+    }catch{
+       // Add code to do when error occurs.
+    }
+    ```

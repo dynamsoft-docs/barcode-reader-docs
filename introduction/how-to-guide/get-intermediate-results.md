@@ -14,7 +14,7 @@ Apart from getting the results like barcode type, value, location, Dynamsoft Bar
 
 
 
-**Note**: You will need a separate license for the intermediate results such as transformed grayscale image, binarized image, and text zone. Getting the original image of the intermediate result doesn't require a separate license. The original image is the one that Dynamsoft Barcode Reader SDK uses to do the barcode reading. If the SDK fails to recognize the barcodes using the original image, try [`different settings`]({{ site.scenario_settings }}how-to-set-parameters.html) or [contact Dynamsoft Support](https://www.dynamsoft.com/Company/Contact.aspx) for help.     
+**Note**: You will need a separate license for the intermediate results such as transformed grayscale image, binarized image, and text zone. Getting the original image of the intermediate result doesn't require a separate license. The original image is the one that Dynamsoft Barcode Reader SDK uses to do the barcode reading. If the SDK fails to recognize the barcodes using the original image, try [`different settings`]({{ site.scenario_settings }}how-to-set-parameters.html) or [contact Dynamsoft Support](https://www.dynamsoft.com/company/customer-service/#contact) for help.     
 
 
 
