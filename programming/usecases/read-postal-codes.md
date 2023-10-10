@@ -23,7 +23,7 @@ Dynamsoft Barcode Reader (DBR) supports the following types of postal codes. Det
 
 ## Particular Parameter Required
 
-DBR provides a parameter, [`BarcodeFormatIds`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/barcode-format-ids.html), to control the formats of the barcode to process. To enable decoding the postal podes, simply set a `BF_POSTALCODE` or a specific postal code format enumeration to this parameter.
+DBR provides a parameter, [`BarcodeFormatIds`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/barcode-format-ids.html), to control the formats of the barcode to process. To enable decoding the postal codes, simply set a `BF_POSTALCODE` or a specific postal code format enumeration to this parameter.
 
 ## Sample Code
 
@@ -78,6 +78,9 @@ cvr->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &settings, szErrorMsg, 25
 
    <div class="sample-code-prefix template2"></div>
       >- C++
+      >- Android
+      >- Objective-C
+      >- Swift
       >
    >
    ```c++
@@ -86,5 +89,27 @@ cvr->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &settings, szErrorMsg, 25
    cvr->InitSettingsFromFile("PATH-TO-YOUR-SETTING-FILE", szErrorMsg, 256);
    // more process here
    ```
-
-
+    >
+    ```java
+    try {
+        // `cvr` is an instance of `CaptureVisionRouter`.
+        cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE");
+    } catch (CaptureVisionRouterException e) {
+        e.printStackTrace();
+    }
+    ```
+    >
+    ```objc
+    NSError *error;
+    // `cvr` is an instance of `DSCaptureVisionRouter`.
+    [self.cvr initSettingsFromFile:@"PATH-TO-YOUR-SETTING-FILE" error:&error];
+    ```
+    >
+    ```swift
+    do{
+        //`cvr` is an instance of `CaptureVisionRouter`.
+        try cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE")
+    }catch{
+        // Add code to do when error occurs.
+    }
+    ```
