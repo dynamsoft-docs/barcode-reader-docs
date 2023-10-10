@@ -56,6 +56,7 @@ cvr->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &settings, szErrorMsg, 25
 **See Also**  
 
 - `SimplifiedCaptureVisionSettings:` [C++]({{ site.dcv_cpp_api }}capture-vision-router/structs/simplified-capture-vision-settings.html)
+- `SimplifiedBarcodeReaderSettings:` [C++]({{ site.cpp_api }}simplified-barcode-reader-settings.html)
 
 ## JSON Template
 
