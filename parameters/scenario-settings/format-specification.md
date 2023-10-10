@@ -10,7 +10,7 @@ permalink: /parameters/scenario-settings/format-specification.html
 # Barcode format specification
 If you want to configure parameters for a certain barcode type, you can use the FormatSpecification. If the FormatSpecification configuration conflicts with the global Image Parameter, the configuration of the FormatSpecification has a higher priority. In this guide, we will introduce the following parameters and their applicable scenarios:
 
--  [BarcodeFormatIds,BarcodeFormatIds_2](#BarcodeFormatIds,BarcodeFormatIds_2)
+-  [BarcodeFormatIds,BarcodeFormatIds_2](#BarcodeFormatIdsBarcodeFormatIds_2)
 
     Specifies the barcode type to which the current FormatSpecification configuration applies
 

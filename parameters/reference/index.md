@@ -41,7 +41,6 @@ permalink: /parameters/reference/index.html
 | [`DPMCodeReadingModes`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/dpm-code-reading-modes.html) | Defines how to read direct part mark (DPM) barcodes. |
 | [`ExpectedBarcodesCount`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/expected-barcodes-count.html) | Defines the number of barcodes expected to be detected. |
 | [`LocalizationModes`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/localization-modes.html) | Defines how to localize barcodes. |
-| [`ResultCoordinateType`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/result-coordinate-type.html) | Defines the returned coordinate type. |
 | [`ReturnBarcodeZoneClarity`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/return-barcode-zone-clarity.html) | Defines whether to return the clarity of the barcode zone. |
 | [`TextResultOrderModes`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/text-result-order-modes.html) | Defines the order of the returned text results. |
 

@@ -38,6 +38,7 @@ cpp: /barcode-reader/docs/server/programming/cplusplus/
 cpp_api: /barcode-reader/docs/server/programming/cplusplus/api-reference/
 cpp_methods: /barcode-reader/docs/server/programming/cplusplus/api-reference/cbarcodereader-methods/
 cpp_release_notes: /barcode-reader/docs/server/programming/cplusplus/release-notes/
+dcv_cpp_api: /capture-vision/docs/server/programming/cplusplus/api-reference/
 
 js: /barcode-reader/docs/web/programming/javascript/
 js_api: /barcode-reader/docs/web/programming/javascript/api-reference/

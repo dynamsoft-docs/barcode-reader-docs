@@ -167,7 +167,7 @@ You can set the license by following the steps below:
  Code snippet in Xamarin:
  Please refer to <a href="https://github.com/Dynamsoft/xamarin/tree/master/examples" target="_blank">this article</a>.
 
- If you run into any issues, please [contact Dynamsoft Support](https://www.dynamsoft.com/Company/Contact.aspx).
+ If you run into any issues, please [contact Dynamsoft Support](https://www.dynamsoft.com/company/customer-service/#contact).
 
 **Notes:**
 
