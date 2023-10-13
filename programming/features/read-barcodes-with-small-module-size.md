@@ -79,41 +79,41 @@ Below is an example illustrating how to configure the parameter `ScaleUpModes`.
 
 * apply settings by calling method `InitSettingsFromFile`
 
-    <div class="sample-code-prefix template2"></div>
-       >- C++
-       >- Android
-       >- Objective-C
-       >- Swift
-       >
-    >
-    ```c++
-    char szErrorMsg[256] = {0};
-    CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
-    cvr->InitSettingsFromFile("PATH-TO-YOUR-SETTING-FILE", szErrorMsg, 256);
-    // more process here
-    ```
-    >
-    ```java
-    try {
-       // `cvr` is an instance of `CaptureVisionRouter`.
-       cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE");
-    } catch (CaptureVisionRouterException e) {
-       e.printStackTrace();
-    }
-    ```
-    >
-    ```objc
-    NSError *error;
-    // `cvr` is an instance of `DSCaptureVisionRouter`.
-    [self.cvr initSettingsFromFile:@"PATH-TO-YOUR-SETTING-FILE" error:&error];
-    ```
-    >
-    ```swift
-    do{
-       //`cvr` is an instance of `CaptureVisionRouter`.
-       try cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE")
-    }catch{
-       // Add code to do when error occurs.
-    }
-    ```
+<div class="sample-code-prefix template2"></div>
+   >- C++
+   >- Android
+   >- Objective-C
+   >- Swift
+   >
+>
+```c++
+char szErrorMsg[256] = {0};
+CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
+cvr->InitSettingsFromFile("PATH-TO-YOUR-SETTING-FILE", szErrorMsg, 256);
+// more process here
+```
+>
+```java
+try {
+   // `cvr` is an instance of `CaptureVisionRouter`.
+   cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE");
+} catch (CaptureVisionRouterException e) {
+   e.printStackTrace();
+}
+```
+>
+```objc
+NSError *error;
+// `cvr` is an instance of `DSCaptureVisionRouter`.
+[self.cvr initSettingsFromFile:@"PATH-TO-YOUR-SETTING-FILE" error:&error];
+```
+>
+```swift
+do{
+   //`cvr` is an instance of `CaptureVisionRouter`.
+   try cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE")
+}catch{
+   // Add code to do when error occurs.
+}
+```
 
