@@ -11,16 +11,16 @@ needAutoGenerateSidebar: false
 
 Dynamsoft Barcode Reader SDK is able to read multiple barcodes at once and return results of all the decoded barcodes. However, you may not want all the results. For example, you may need only the results of a specific barcode format, or you may need only the barcodes with a certain text string. The SDK provides the following parameters to help you filter the barcode results by barcode format, confidence, etc and order the results by confidence, position or format. These parameters can work both individually and in combination.
 
-- [BarcodeFormatIds]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/barcode-format-ids.html)
-- [BarcodeAngleRangeArray]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-angle-range-array.html)
-- [BarcodeWidthRangeArray]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-width-range-array.html)
-- [BarcodeHeightRangeArray]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-height-range-array.html)
-- [MinRatioOfBarcodeZoneWidthToHeight]({{ site.dcv_parameters_reference }}barcode-format-specification/min-ratio-of-barcode-zone-width-to-height.html)
-- [BarcodeTextLengthRangeArray]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-text-length-range-array.html)
-- [BarcodeTextRegExPattern]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-text-regex-pattern.html)
-- [MinResultConfidence]({{ site.dcv_parameters_reference }}barcode-format-specification/min-result-confidence.html)
-- [ModuleSizeRangeArray]({{ site.dcv_parameters_reference }}barcode-format-specification/module-size-range-array.html)
-- [TextResultOrderModes]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/text-result-order-modes.html)
+* [BarcodeFormatIds]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/barcode-format-ids.html)
+* [BarcodeAngleRangeArray]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-angle-range-array.html)
+* [BarcodeWidthRangeArray]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-width-range-array.html)
+* [BarcodeHeightRangeArray]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-height-range-array.html)
+* [MinRatioOfBarcodeZoneWidthToHeight]({{ site.dcv_parameters_reference }}barcode-format-specification/min-ratio-of-barcode-zone-width-to-height.html)
+* [BarcodeTextLengthRangeArray]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-text-length-range-array.html)
+* [BarcodeTextRegExPattern]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-text-regex-pattern.html)
+* [MinResultConfidence]({{ site.dcv_parameters_reference }}barcode-format-specification/min-result-confidence.html)
+* [ModuleSizeRangeArray]({{ site.dcv_parameters_reference }}barcode-format-specification/module-size-range-array.html)
+* [TextResultOrderModes]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/text-result-order-modes.html)
 
 
 ## Sample Code
@@ -63,42 +63,43 @@ Below is an example illustrating how to filter out QR Code results with confiden
         ]
     }
     ```
+
 * apply settings by calling method `InitSettingsFromFile`
 
-    <div class="sample-code-prefix template2"></div>
-       >- C++
-       >- Android
-       >- Objective-C
-       >- Swift
-       >
-    >
-    ```c++
-    char szErrorMsg[256] = {0};
-    CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
-    cvr->InitSettingsFromFile("PATH-TO-YOUR-SETTING-FILE", szErrorMsg, 256);
-    // more process here
-    ```
-    >
-    ```java
-    try {
-       // `cvr` is an instance of `CaptureVisionRouter`.
-       cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE");
-    } catch (CaptureVisionRouterException e) {
-       e.printStackTrace();
-    }
-    ```
-    >
-    ```objc
-    NSError *error;
-    // `cvr` is an instance of `DSCaptureVisionRouter`.
-    [self.cvr initSettingsFromFile:@"PATH-TO-YOUR-SETTING-FILE" error:&error];
-    ```
-    >
-    ```swift
-    do{
-       //`cvr` is an instance of `CaptureVisionRouter`.
-       try cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE")
-    }catch{
-       // Add code to do when error occurs.
-    }
-    ```
+<div class="sample-code-prefix template2"></div>
+   >- C++
+   >- Android
+   >- Objective-C
+   >- Swift
+   >
+>
+```c++
+char szErrorMsg[256] = {0};
+CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
+cvr->InitSettingsFromFile("PATH-TO-YOUR-SETTING-FILE", szErrorMsg, 256);
+// more process here
+```
+>
+```java
+try {
+   // `cvr` is an instance of `CaptureVisionRouter`.
+   cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE");
+} catch (CaptureVisionRouterException e) {
+   e.printStackTrace();
+}
+```
+>
+```objc
+NSError *error;
+// `cvr` is an instance of `DSCaptureVisionRouter`.
+[self.cvr initSettingsFromFile:@"PATH-TO-YOUR-SETTING-FILE" error:&error];
+```
+>
+```swift
+do{
+   //`cvr` is an instance of `CaptureVisionRouter`.
+   try cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE")
+}catch{
+   // Add code to do when error occurs.
+}
+```
