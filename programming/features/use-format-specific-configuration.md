@@ -1,33 +1,33 @@
 ---   
 layout: default-layout 
-description: This article describes how to configure the FormatSpecification parameter in a template to decode a particular barcode type
+description: This article describes how to configure the BarcodeFormatSpecification parameter in a template to decode a particular barcode type
 title: Use Format Specific Configuration
 keywords: nonstandard barcode, specification, template
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-permalink: /programming/features/use-format-specific-configuration.html
 ---
 
 # Use Format Specific Configuration
 
-`FormatSpecification` is part of the configuration template and allows you to configure settings that apply only to the specified barcode format. Note that in order to use this feature, you must use a template instead of `RuntimeSettings`. Read more on [`RuntimeSettings` and templates](use-runtimesettings-or-templates.md).
+`BarcodeFormatSpecification` is part of the Dynamsoft Barcode Reader (DBR) template and allows you to configure settings that apply only to the specified barcode format.
 
-This article covers the following parameters provided in a `FormatSpecification` object:
+This article covers the following parameters provided in a `BarcodeFormatSpecification` object:
 
-* [BarcodeFormatIds, BarcodeFormatIds_2](#barcodeformatids-barcodeformatids2)
-* [MirrorMode](#mirrormode)
-* [RequireStartStopChars](#requirestartstopchars)
-* [AllModuleDeviation](#allmoduledeviation)
-* [HeadModuleRatio, TailModuleRatio](#headmoduleratio-tailmoduleratio)
-* [StandardFormat](#standardformat)
-* [AustralianPostEncodingTable](#australianpostencodingtable)
-* [MinQuietZoneWidth](#minquietzonewidth)
-* [ModuleSizeRangeArray](#modulesizerangearray)
+- [Use Format Specific Configuration](#use-format-specific-configuration)
+  - [BarcodeFormatIds](#barcodeformatids)
+  - [MirrorMode](#mirrormode)
+  - [RequireStartStopChars](#requirestartstopchars)
+  - [AllModuleDeviation](#allmoduledeviation)
+  - [HeadModuleRatio, TailModuleRatio](#headmoduleratio-tailmoduleratio)
+  - [StandardFormat](#standardformat)
+  - [AustralianPostEncodingTable](#australianpostencodingtable)
+  - [MinQuietZoneWidth](#minquietzonewidth)
+  - [ModuleSizeRangeArray](#modulesizerangearray)
 
-## BarcodeFormatIds, BarcodeFormatIds_2
+## BarcodeFormatIds
 
-Specifies the barcode type for which the `FormatSpecification` object applies. This is essential to make any format specific configuration. Read on to see how it is used in actual templates.
+Specifies the barcode type(s) for which all settings under the `BarcodeFormatSpecification` object are applicable exclusively. This is essential to make any format specific configuration. Read on to see how it is used in actual templates.
 
 ## MirrorMode
 
@@ -41,37 +41,39 @@ and this is the same code when mirrored:
 
 ![mirror QR][2]
 
-For 2D barcodes, mirroring may cause the decoding to fail. In this case, we can configure `MirrorMode` to handle it. The allowed values are
+For 2D barcodes, mirroring may cause the decoding to fail. In this case, we can configure `MirrorMode` to handle it. 
 
-| Enumeration    | Value | Note     |
-|-----------|--------|----------------------|
-| MM_NORMAL | 0x01   | Decode the original image. |
-| MM_MIRROR | 0x02   | Decode the mirror image.    |
-| MM_BOTH   | 0x04   | Try both the original and the mirror images. |
-
-The default value of `MirrorMode` is
-
-* `MM_BOTH` for `QRCode`, `DataMatrix`, `PDF417`, `AZTEC`, `Micro QR Code`, `Micro PDF417`, `DotCode`, `Pharmacode Two-Track`
-* `MM_NORMAL` for other barcode types.
-
-In most cases, the default value will work fine. But assuming that you work excusively with mirrored QR codes, you can configure DBR like this:
+The following template configures DBR to read mirrored QR codes only:
 
 ```json
 {
-    "ImageParameter": {
-        "Name": "ImageParameter1", 
-        "Description": "Read mirror barcodes.", 
-        "FormatSpecificationNameArray": ["FP_1"]
-    }, 
-    "FormatSpecificationArray": [
+    "CaptureVisionTemplates": [
         {
-            "Name": "FP_1", 
-            "BarcodeFormatIds": ["BF_QR_CODE"], 
-            "MirrorMode":"MM_MIRROR"
+            "Name" : "CV_0",
+            "ImageROIProcessingNameArray": ["TA_0" ]
+        }       
+    ],
+    "TargetROIDefOptions" : [
+        {
+            "Name" : "TA_0",
+            "TaskSettingNameArray": [ "BR_0" ]
         }
-    ], 
-    "Version": "3.0"
-}   
+    ],
+    "BarcodeReaderTaskSettingOptions": [
+        {
+            "Name" : "BR_0",
+            "BarcodeFormatIds" : ["BF_QR_CODE"],
+            "BarcodeFormatSpecificationNameArray": "FS_0"
+        }
+    ],
+    "BarcodeFormatSpecificationOptions": [
+        {
+            "Name" : "FS_0",
+            "BarcodeFormatIds" : ["BF_QR_CODE"],
+            "MirrorMode" : "MM_MIRROR"
+        }
+    ]
+}
 ```
 
 ## RequireStartStopChars
@@ -95,39 +97,52 @@ The following template configures DBR to read Code39 barcodes that don't have st
 
 ```json
 {
-    "ImageParameter": {
-        "Name": "ImageParameter1", 
-        "Description": "Read barcodes without start or end symbols.", 
-        "FormatSpecificationNameArray": ["FP_1"]
-    }, 
-    "FormatSpecificationArray": [
+    "CaptureVisionTemplates": [
         {
-            "Name": "FP_1", 
-            "BarcodeFormatIds": ["BF_CODE_39"],                      
-            "RequireStartStopChars":0
+            "Name" : "CV_0",
+            "ImageROIProcessingNameArray": ["TA_0" ]
+        }       
+    ],
+    "TargetROIDefOptions" : [
+        {
+            "Name" : "TA_0",
+            "TaskSettingNameArray": [ "BR_0" ]
         }
-    ], 
-    "Version": "3.0"
-}   
+    ],
+    "BarcodeReaderTaskSettingOptions": [
+        {
+            "Name" : "BR_0",
+            "BarcodeFormatIds" : ["BF_CODE_39"],
+            "BarcodeFormatSpecificationNameArray": "FS_0"
+        }
+    ],
+    "BarcodeFormatSpecificationOptions": [
+        {
+            "Name" : "FS_0",
+            "BarcodeFormatIds": ["BF_CODE_39"],
+            "RequireStartStopChars" : 0
+        }
+    ]
+}
 ```
 
 ## AllModuleDeviation
 
-This parameter specifies the deviation of the bar width from the standard bar width for 1D barcodes. The default value is 0.
+This parameter specifies the deviation (in moduleSize) of the bar width from the standard bar width for 1D barcodes. The default value is 0.
 
 Occasionally, due to typographical errors, 1D barcodes may contain bars of non-standard widths. Such barcodes are considered invalid and ignored by DBR. If you want DBR to read these barcodes, you can use the parameter `AllModuleDeviation`.
 
-Note that "all" in the parameter name means it only works if all bars (black & white) of the barcode are off (have the same deviation). For example, if the width (in pixels) of bars for a standard barcode are [6, 2, 4, 2], a deviation of 2 would mean the widths become [8, 4, 6, 4], whereas the widths [12, 4, 8, 4] would be considered correctly enlarged.
+Note that "all" in the parameter name means it only works if all bars (black & white) of the barcode are off (have the same deviation). For example, if the width (in moduleSize) of bars for a standard barcode are [6, 2, 4, 1], a deviation of 2 would mean the widths become [8, 4, 6, 3], whereas the widths [12, 4, 8, 2] would be considered correctly enlarged.
 
 To utilize this parameter, you need to set the following parameters as well:
 
-1. `FormatSpecification.BarcodeFormatIds_2` should be set to `NON_STANDARD_BARCODE`, which indicates that the barcode to be read does not strictly follow any standard format.
+1. `BarcodeFormatSpecification.BarcodeFormatIds` should be set to `BF_NONSTANDARD_BARCODE`, which indicates that settings in current `BarcodeFormatSpecification` apply only to non-standard barcodes.
 
-2. `FormatSpecification.StandardFormat` should be set to a standard 1D barcode format such as `BF_CODE128` on which DBR applies the deviation.
+2. `BarcodeFormatSpecification.StandardFormat` should be set to a standard 1D barcode format such as `BF_CODE128` on which DBR applies the deviation.
 
-3. `ImageParameter.BarcodeFormatIds_2` should be set to `NON_STANDARD_BARCODE`, which means non-standard barcodes are to be read.
+3. `BarcodeReaderTaskSetting.BarcodeFormatIds` should be set to `BF_NONSTANDARD_BARCODE`, which means non-standard barcodes are to be read.
 
-The following shows a standard Code128 barcode with a module size of 2px followed by a non-standard Code128 barcode which consists of bars with a deviation of 2px.
+The following shows a standard Code128 barcode with a module size of 2px followed by a non-standard Code128 barcode which consists of bars with a deviation of 4px.
 
 ![standard-code128][5]
 
@@ -137,22 +152,33 @@ To read this non-standard barcode, we can set the deviation to 2 as shown in the
 
 ```json
 {
-    "ImageParameter": {
-        "Name": "ImageParameter1", 
-        "Description": "Read barcodes with width deviation.", 
-        "FormatSpecificationNameArray": ["FP_1"],
-        "BarcodeFormatIds_2": ["BF2_NONSTANDARD_BARCODE"]
-    }, 
-    "FormatSpecificationArray": [
+    "CaptureVisionTemplates": [
         {
-            "Name": "FP_1", 
-            "BarcodeFormatIds_2": ["BF2_NONSTANDARD_BARCODE"],                          
-            "StandardFormat": "BF_CODE_128",    
-            "AllModuleDeviation":2          
-           
+            "Name" : "CV_0",
+            "ImageROIProcessingNameArray": ["TA_0" ]
+        }       
+    ],
+    "TargetROIDefOptions" : [
+        {
+            "Name" : "TA_0",
+            "TaskSettingNameArray": [ "BR_0" ]
         }
-    ], 
-    "Version": "3.0"
+    ],
+    "BarcodeReaderTaskSettingOptions": [
+        {
+            "Name" : "BR_0",
+            "BarcodeFormatIds" : ["BF_NONSTANDARD_BARCODE"],
+            "BarcodeFormatSpecificationNameArray": "FS_0"
+        }
+    ],
+    "BarcodeFormatSpecificationOptions": [
+        {
+            "Name" : "FS_0",
+            "BarcodeFormatIds": ["BF_NONSTANDARD_BARCODE"],
+            "StandardFormat": "BF_CODE_128",
+            "AllModuleDeviation" : 2
+        }
+    ]
 }
 ```
 
@@ -164,11 +190,11 @@ The last parameter [`AllModuleDeviation`](#allmoduledeviation) handles barcodes 
 
 Just like [`AllModuleDeviation`](#allmoduledeviation), you need to set the following parameters to utilize `HeadModuleRatio` and `TailModuleRatio`:
 
-1. `FormatSpecification.BarcodeFormatIds_2` should be set to `NON_STANDARD_BARCODE`, which indicates that the barcode to be read does not strictly follow any standard format.
+1. `BarcodeFormatSpecification.BarcodeFormatIds` should be set to `BF_NONSTANDARD_BARCODE`, which indicates that settings in current `BarcodeFormatSpecification` apply only to non-standard barcodes.
 
-2. `FormatSpecification.StandardFormat` should be set to a standard 1D barcode format such as `BF_CODE128` on which DBR applies the deviation.
+2. `BarcodeFormatSpecification.StandardFormat` should be set to a standard 1D barcode format such as `BF_CODE128` on which DBR applies the deviation.
 
-3. `ImageParameter.BarcodeFormatIds_2` should be set to `NON_STANDARD_BARCODE`, which means non-standard barcodes are to be read.
+3. `BarcodeReaderTaskSetting.BarcodeFormatIds` should be set to `BF_NONSTANDARD_BARCODE`, which means non-standard barcodes are to be read.
 
 The image below is such a non-standard barcode: it has irregular start bars with a ratio of 2:1:1:3:3:1 and irregular stop bars with a ratio of 2:3:3:2:2:2:3.
 
@@ -182,25 +208,35 @@ The following template demostrates how to use `HeadModuleRatio` and `TailModuleR
 
 ```json
 {
-    "ImageParameter": {
-        "Name": "ImageParameter1", 
-        "Description": "Read barcodes with irregular start and end symbols.",
-        "FormatSpecificationNameArray": ["FP_1"],
-        "BarcodeFormatIds_2": ["BF2_NONSTANDARD_BARCODE"] 
-    }, 
-    "FormatSpecificationArray": [
+    "CaptureVisionTemplates": [
         {
-            "Name": "FP_1", 
-            "BarcodeFormatIds_2": [                 
-                "BF2_NONSTANDARD_BARCODE"
-            ],  
-            "StandardFormat":"BF_CODE_128", 
-            "HeadModuleRatio": "211331",          
-            "TailModuleRatio": "2332223", 
-            "Code128Subset": "C"                 
+            "Name" : "CV_0",
+            "ImageROIProcessingNameArray": ["TA_0" ]
+        }       
+    ],
+    "TargetROIDefOptions" : [
+        {
+            "Name" : "TA_0",
+            "TaskSettingNameArray": [ "BR_0" ]
         }
-    ], 
-    "Version": "3.0"
+    ],
+    "BarcodeReaderTaskSettingOptions": [
+        {
+            "Name" : "BR_0",
+            "BarcodeFormatIds" : ["BF_NONSTANDARD_BARCODE"],
+            "BarcodeFormatSpecificationNameArray": "FS_0"
+        }
+    ],
+    "BarcodeFormatSpecificationOptions": [
+        {
+            "Name" : "FS_0",
+            "BarcodeFormatIds": ["BF_NONSTANDARD_BARCODE"],
+            "StandardFormat": "BF_CODE_128",
+            "HeadModuleRatio": "211331",
+            "TailModuleRatio": "2332223",
+            "Code128Subset": "C"
+        }
+    ]
 }
 ```
 
@@ -219,26 +255,36 @@ Australia Post Barcodes contain a segment of customer information that can be de
 
 This parameter can be set to "C" or "N" and the default value is "C".
 
-You also need to set `FormatSpecification.BarcodeFormatIds_2` to `BF2_AUSTRALIANPOST` as shown in the template below:
+The following template demostrates how to use `AustralianPostEncodingTable` to tell DBR to decode Australia Post Barcodes using NTable:
 
 ```json
 {
-    "ImageParameter": {
-        "Name": "ImageParameter1", 
-        "Description": "Specify which table to use for interpreting customre information.",
-        "FormatSpecificationNameArray": ["FP_1"],
-        "BarcodeFormatIds_2": ["BF2_AUSTRALIANPOST"] 
-    }, 
-    "FormatSpecificationArray": [
+    "CaptureVisionTemplates": [
         {
-            "Name": "FP_1", 
-            "BarcodeFormatIds_2": [                 
-                "BF2_AUSTRALIANPOST"
-            ],  
-            "AustralianPostEncodingTable": "C"                 
+            "Name" : "CV_0",
+            "ImageROIProcessingNameArray": ["TA_0" ]
+        }       
+    ],
+    "TargetROIDefOptions" : [
+        {
+            "Name" : "TA_0",
+            "TaskSettingNameArray": [ "BR_0" ]
         }
-    ], 
-    "Version": "3.0"
+    ],
+    "BarcodeReaderTaskSettingOptions": [
+        {
+            "Name" : "BR_0",
+            "BarcodeFormatIds" : ["BF_AUSTRALIANPOST"],
+            "BarcodeFormatSpecificationNameArray": "FS_0"
+        }
+    ],
+    "BarcodeFormatSpecificationOptions": [
+        {
+            "Name" : "FS_0",
+            "BarcodeFormatIds": ["BF_AUSTRALIANPOST"],
+            "AustralianPostEncodingTable": "N"
+        }
+    ]
 }
 ```
 
@@ -256,21 +302,32 @@ In this case, we can set `MinQuietZoneWidth` to 1 or 0:
 
 ```json
 {
-    "ImageParameter": {
-        "Name": "ImageParameter1", 
-        "Description": "Read barcodes with think quiet zone.", 
-        "FormatSpecificationNameArray":["FP_1"],
-        "DeblurLevel": 1
-    }, 
-    "FormatSpecificationArray": [
+    "CaptureVisionTemplates": [
         {
-            "Name": "FP_1", 
-            "BarcodeFormatIds": ["BF_CODE_128"],                
-            "MinQuietZoneWidth":1
+            "Name" : "CV_0",
+            "ImageROIProcessingNameArray": ["TA_0" ]
+        }       
+    ],
+    "TargetROIDefOptions" : [
+        {
+            "Name" : "TA_0",
+            "TaskSettingNameArray": [ "BR_0" ]
         }
-    ], 
-    "Version": "3.0"
-}   
+    ],
+    "BarcodeReaderTaskSettingOptions": [
+        {
+            "Name" : "BR_0",
+            "BarcodeFormatSpecificationNameArray": "FS_0"
+        }
+    ],
+    "BarcodeFormatSpecificationOptions": [
+        {
+            "Name" : "FS_0",
+            "BarcodeFormatIds": ["BF_ONED"],
+            "MinQuietZoneWidth": 1
+        }
+    ]
+}
 ```
 
 ## ModuleSizeRangeArray
@@ -283,17 +340,27 @@ The template below limits the module size to 10 ~ 100.
 
 ```json
 {
-    "ImageParameter": {
-        "Name": "ImageParameter1", 
-        "Description": "Limit the module size.", 
-        "FormatSpecificationNameArray":["FP_1"]
-    }, 
-    "FormatSpecificationArray": [
+    "CaptureVisionTemplates": [
         {
-            "Name": "FP_1", 
-            "BarcodeFormatIds": [                 
-                "BF_CODE_39"
-            ], 
+            "Name" : "CV_0",
+            "ImageROIProcessingNameArray": ["TA_0" ]
+        }       
+    ],
+    "TargetROIDefOptions" : [
+        {
+            "Name" : "TA_0",
+            "TaskSettingNameArray": [ "BR_0" ]
+        }
+    ],
+    "BarcodeReaderTaskSettingOptions": [
+        {
+            "Name" : "BR_0",
+            "BarcodeFormatSpecificationNameArray": "FS_0"
+        }
+    ],
+    "BarcodeFormatSpecificationOptions": [
+        {
+            "Name" : "FS_0",
             "ModuleSizeRangeArray":[
                 {
                   "MaxValue":100,
@@ -301,8 +368,7 @@ The template below limits the module size to 10 ~ 100.
                 }
             ] 
         }
-    ], 
-    "Version": "3.0"
+    ]
 }
 ```
 

@@ -77,27 +77,30 @@ The following shows how to set the license in the code.
 ```
 >
 ```java
-BarcodeReader.initLicense("YOUR-LICENSE-KEY", new DBRLicenseVerificationListener() {
-  @Override
-  public void DBRLicenseVerificationCallback(boolean isSuccessful, Exception e) {
-    // Add your code for license verification.
-  }
+LicenseManager.initLicense("YOUR-LICENSE-KEY", this, (isSuccess, error) -> {
+   if (!isSuccess) {
+          error.printStackTrace();
+   }
 });
 ```
 >
 ```objc
-[DynamsoftBarcodeReader initLicense:@"YOUR-LICENSE-KEY" verificationDelegate:self];
-- (void)DBRLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error
-{
-  // Add your code for license verification.
+[DSLicenseManager initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
+- (void)onLicenseVerified:(BOOL)isSuccess error:(nullable NSError *)error {
+    if (!isSuccess && error != nil) {
+        NSLog(@"error: %@", error);
+    }
 }
 ```
 >
 ```swift
-DynamsoftBarcodeReader.initLicense("YOUR-LICENSE-KEY", verificationDelegate: self)
-func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
-{
-  // Add your code for license verification.
+LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate: self)
+func onLicenseVerified(_ isSuccess: Bool, error: Error?) {
+   if !isSuccess {
+          if let error = error {
+             print("\(error.localizedDescription)")
+          }
+   }
 }
 ```
 >
