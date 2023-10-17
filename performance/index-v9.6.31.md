@@ -5,7 +5,6 @@ description: This is the Performance Optimization index page for Dynamsoft Barco
 keywords: performance optimization
 breadcrumbText: Performance
 needGenerateH3Content: false
-permalink: /performance/index-v9.6.30.html
 ---
 
 # Performance Optimization

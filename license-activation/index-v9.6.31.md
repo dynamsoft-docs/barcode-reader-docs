@@ -4,7 +4,6 @@ title: Dynamsoft Barcode Reader Licensing - Main Page
 description: This is the main page of Dynamsoft Barcode Reader Licensing.
 keywords: license initialization, licensing
 needAutoGenerateSidebar: false
-permalink: /license-activation/index-v9.6.20.html
 ---
 
 # License Initialization
