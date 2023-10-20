@@ -6,7 +6,6 @@ keywords: Specific Area/Region
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-permalink: /programming/features/barcode-scan-region-mobile.html
 ---
 
 # How to Read Barcodes from a Specific Area/Region

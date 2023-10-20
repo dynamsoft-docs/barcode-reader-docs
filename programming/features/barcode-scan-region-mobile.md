@@ -1,12 +1,11 @@
 ---
 layout: default-layout
 title: Read Barcodes from Specific Area/Region on Mobile
-description: This page describes how to read specific area or region in Dynamsoft Barcode Reader SDK.
+description: This page describes how to read specific area or region in Dynamsoft Barcode Reader SDK Mobile Edition.
 keywords: Specific Area/Region
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-permalink: /programming/features/barcode-scan-region-mobile.html
 ---
 
 # How to Read Barcodes from a Specific Area/Region
