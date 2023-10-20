@@ -18,64 +18,17 @@ jobs:
   # This workflow contains jobs called "Build-Main" and "Build-Preview"
   Build-Main:
     if: ${{ github.ref == 'refs/heads/master' }}
-    # The type of runner that the job will run on
-    runs-on: [self-hosted, r3]
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Runs a set of commands using the runners shell
-      - name: Build the site
-        run: |
-          cd /home/ubuntu
-          [ ! -d DBRDocCore ] && mkdir -p DBRDocCore
-          [ ! -d barcode-reader-docs ] && git clone --depth 1 https://github.com/dynamsoft-docs/barcode-reader-docs.git barcode-reader-docs
-          [ ! -d Docs-Template-Repo-Preview-R3 ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview-R3
-          cd barcode-reader-docs && git pull && cd .. && cp -rfp ./barcode-reader-docs/* ./DBRDocCore/
-          cd Docs-Template-Repo-Preview-R3 && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview-R3/* ./DBRDocCore/
-          cd DBRDocCore && bundle exec jekyll build --incremental
-          #python3 /home/ubuntu/ftp.py /home/ubuntu/DBRDocCore/_site/ ./www.dynamsoft.com/barcode-reader/docs/core/ prod
-
-      - name: Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
-        with:
-          server: ${{ secrets.FTP_DYNAMSOFT_LOCAL_SERVER }}
-          username: ${{ secrets.FTP_DYNAMSOFT_LOCAL_USER }}
-          password: ${{ secrets.FTP_DYNAMSOFT_LOCAL_PASSWORD }}
-          port: 21 
-          local-dir: /home/ubuntu/DBRDocCore/_site/
-          server-dir: /www.dynamsoft.com/barcode-reader/docs/core/        
-
-      - name: Trigger Webhook 
-        run: | 
-          curl -X POST -H "${{ secrets.WEBHOOK_USER }}" -H "${{ secrets.WEBHOOK_TOKEN }}" -H "Content-Type: application/json" -d "[\"/barcode-reader/docs/core/*\"]" ${{ secrets.WEBHOOK_URL }}
+    uses: dynamsoft-docs/Docs-Template-Repo/.github/workflows/called-workflow-build-sync-production.yml@main
+    with:
+      doc-repo: barcode-reader-docs
+      doc-url: barcode-reader/docs/core
+    secrets: inherit
 
   Build-Preview:
     if: ${{ github.ref == 'refs/heads/preview' }}
-    # The type of runner that the job will run on
-    runs-on: [self-hosted, r3]
+    uses: dynamsoft-docs/Docs-Template-Repo/.github/workflows/called-workflow-build-sync-testing.yml@preview
+    with:
+      doc-repo: barcode-reader-docs
+      doc-url: barcode-reader/docs/core
+    secrets: inherit
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Runs a set of commands using the runners shell
-      - name: Build the site
-        run: |
-          cd /home/ubuntu
-          [ ! -d DBRDocCore-preview ] && mkdir -p DBRDocCore-preview
-          [ ! -d barcode-reader-docs-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/barcode-reader-docs.git barcode-reader-docs-preview
-          [ ! -d Docs-Template-Repo-Preview-R3 ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview-R3
-          cd barcode-reader-docs-preview && git pull && cd .. && cp -rfp ./barcode-reader-docs-preview/* ./DBRDocCore-preview/
-          cd Docs-Template-Repo-Preview-R3 && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview-R3/* ./DBRDocCore-preview/
-          sed -i -e "1,3s/blob\/master$/blob\/preview/" \
-          -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DBRDocCore-preview/_config.yml
-          cd DBRDocCore-preview && bundle exec jekyll build --incremental && cd ..
-
-      - name: Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
-        with:
-          server: ${{ secrets.FTP_TEST_SITE_SERVER }}
-          username: ${{ secrets.FTP_TEST_SITE_USER }}
-          password: ${{ secrets.FTP_TEST_SITE_PASSWORD }}
-          port: 7500 
-          local-dir: /home/ubuntu/DBRDocCore-preview/_site/
-          server-dir: /www.dynamsoft.com/barcode-reader/docs/core/
-          
