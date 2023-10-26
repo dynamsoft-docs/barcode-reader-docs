@@ -11,10 +11,10 @@ needAutoGenerateSidebar: false
 The Dynamsoft Barcode Reader SDK provides APIs for you to get the detailed barcode information like checksum digit, start/stop characters, error correction level, etc. To learn more about what information you can get, see the following items:
 
 - `OneDCodeDetails`: [C++]({{ site.cpp_api }}oned-code-details.html)
-- `QRCodeDetails`: [C++]]({{ site.cpp_api }}qr-code-details.html)
-- `PDF417Details`: [C++]]({{ site.cpp_api }}pdf417-details.html)
-- `DataMatrixDetails`: [C++]]({{ site.cpp_api }}datamatrix-details.html)
-- `AztecDetails`: [C++]]({{ site.cpp_api }}aztec-details.html)
+- `QRCodeDetails`: [C++]({{ site.cpp_api }}qr-code-details.html)
+- `PDF417Details`: [C++]({{ site.cpp_api }}pdf417-details.html)
+- `DataMatrixDetails`: [C++]({{ site.cpp_api }}datamatrix-details.html)
+- `AztecDetails`: [C++]({{ site.cpp_api }}aztec-details.html)
 
 Here we take QR Code as example and show how to get the version and model of a QR Code.
 
