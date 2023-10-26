@@ -4,7 +4,6 @@ title: Structure and Interfaces of Parameters - Dynamsoft Barcode Reader Paramet
 keywords: Parameter, Interface, Hierarchy
 layout: default-layout
 needAutoGenerateSidebar: true
-permalink: /parameters/structure-and-interfaces-of-parameters-v9.6.30.html
 ---
 
 # Parameter Template Structure

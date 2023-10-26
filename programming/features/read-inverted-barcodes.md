@@ -3,10 +3,7 @@ layout: default-layout
 title: Read Inverted Barcodes - Dynamsoft Barcode Reader SDK
 description: This page describes how to read inverted barcodes in Dynamsoft Barcode Reader SDK.
 keywords: Inverted Barcodes
-needAutoGenerateSidebar: true
-needGenerateH3Content: true
-noTitleIndex: true
-permalink: /programming/features/read-inverted-barcodes.html
+needAutoGenerateSidebar: false
 ---
 
 # Read Inverted Barcodes
@@ -18,103 +15,103 @@ Typically, barcodes are dark on a light background. But in some cases, the barco
    <p>Inverted Barcodes</p>
 </div>
 
-The feature to decode such inverted barcodes is not enabled by default. To control this feature, we must use the [`GrayscaleTransformationModes`]({{ site.parameters_reference }}grayscale-transformation-modes.html). Now for a quick breakdown of each of the modes:
+The feature to decode such inverted barcodes is not enabled by default. To control this feature, we must use the [`GrayscaleTransformationModes`]({{ site.dcv_parameters_reference }}image-parameter/grayscale-transformation-modes.html). Now for a quick breakdown of each of the modes:
 
 - With only `GTM_ORIGINAL` enabled in `GrayscaleTransformationModes`, DBR scans only general black-on-white barcodes.
 - With only `GTM_INVERTED` enabled in `GrayscaleTransformationModes`, DBR scans only inverted barcodes.
 - When `GTM_ORIGINAL` is enabled as the first mode and `GTM_INVERTED` is enabled as the second mode in `GrayscaleTransformationModes`, DBR will try to decode general barcodes first. If the count of decoded barcodes does not reach the expected number, DBR will then try decoding the inverted barcodes.
 
-To allow for inverted barcodes, add the value `GTM_INVERTED` to `GrayscaleTransformationModes` as shown in the code snippet below:
+## Sample Code
+
+Below is an example illustrating how to configure the parameter `GrayscaleTransformationModes`.
+
+* update parameter `GrayscaleTransformationModes` in your JSON template
+
+    ```json
+    {
+        "CaptureVisionTemplates": [
+            {
+                "Name": "CV_0",
+                "ImageROIProcessingNameArray": ["TA_0" ]
+            }       
+        ],
+        "TargetROIDefOptions" : [
+            {
+                "Name": "TA_0",
+                "TaskSettingNameArray": [ "BR_0" ]
+            }
+        ],
+        "BarcodeReaderTaskSettingOptions": [
+            {
+                "Name" : "BR_0",
+                "SectionImageParameterArray": [
+                    {
+                        "Section": "ST_REGION_PREDETECTION",
+                        "ImageParameterName": "IP_0"
+                    },
+                    {
+                        "Section": "ST_BARCODE_LOCALIZATION",
+                        "ImageParameterName": "IP_0"
+                    },
+                    {
+                        "Section": "ST_BARCODE_DECODING",
+                        "ImageParameterName": "IP_0"
+                    }
+                ]
+            }
+        ],
+        "ImageParameterOptions": [
+            {
+                "Name": "IP_0",
+                "GrayscaleTransformationModes": [
+                    {
+                        "Mode": "GTM_ORIGINAL"
+                    },
+                    {
+                        "Mode": "GTM_INVERTED"
+                    }
+                ]
+            }
+        ]
+    }
+    ```
+
+* apply settings by calling method `InitSettingsFromFile`
 
 <div class="sample-code-prefix template2"></div>
-   >- JavaScript
+   >- C++
    >- Android
    >- Objective-C
    >- Swift
-   >- C
-   >- C++
-   >- C#
-   >- Java
-   >- Python
    >
->```javascript
-// Obtains the current runtime settings of DBR.
-let settings = await scanner.getRuntimeSettings();
-// Adds GTM_INVERTED to grayscaleTransformationModes.
-settings.furtherModes.grayscaleTransformationModes = [Dynamsoft.DBR.EnumGrayscaleTransformationMode.GTM_ORIGINAL, Dynamsoft.DBR.EnumGrayscaleTransformationMode.GTM_INVERTED];
-// Updates the settings.
-await scanner.updateRuntimeSettings(settings);
-```
->```java
-// Obtain current runtime settings of `reader` instance.
-PublicRuntimeSettings settings = reader.getRuntimeSettings();
-// Add GTM_INVERTED to GrayscaleTransformationModes to decode inverted barcodes.
-settings.furtherModes.grayscaleTransformationModes = new int[]{EnumGrayscaleTransformationMode.GTM_ORIGINAL, EnumGrayscaleTransformationMode.GTM_INVERTED};
-// Update the settings.
-reader.updateRuntimeSettings(settings);
-```
->```objc
-NSError* err = nil;
-// Obtain current runtime settings of `reader` instance.
-iPublicRuntimeSettings* settings = [reader getRuntimeSettings:&err];
-// Add GTM_INVERTED to GrayscaleTransformationModes to decode inverted barcodes.
-settings.furtherModes.grayscaleTransformationModes = @[@(EnumGrayscaleTransformationModeOriginal),@(EnumGrayscaleTransformationModeInverted)];
-// Update the settings.
-[reader updateRuntimeSettings:settings error:&err];
-```
->```swift
-// Obtain current runtime settings of `barcodeReader` instance.
-let settings = try? barcodeReader.getRuntimeSettings()
-// Add GTM_INVERTED to GrayscaleTransformationModes to decode inverted barcodes.
-settings?.furtherModes.grayscaleTransformationModes = [EnumGrayscaleTransformationMode.original, EnumGrayscaleTransformationMode.inverted]
-// Update the settings.
-try? barcodeReader.updateRuntimeSettings(settings!)
-```
->```c
-PublicRuntimeSettings settings;
+>
+```c++
 char szErrorMsg[256] = {0};
-// Obtain current runtime settings of `reader` instance.
-DBR_GetRuntimeSettings(reader, &settings);
-// Add GTM_INVERTED to GrayscaleTransformationModes to decode inverted barcodes.
-settings.furtherModes.grayscaleTransformationModes[0] = GTM_ORIGINAL;
-settings.furtherModes.grayscaleTransformationModes[1] = GTM_INVERTED;
-// Update the settings.
-DBR_UpdateRuntimeSettings(reader, &settings, szErrorMsg, 256);
+CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
+cvr->InitSettingsFromFile("PATH-TO-YOUR-SETTING-FILE", szErrorMsg, 256);
+// more process here
 ```
->```cpp
-PublicRuntimeSettings settings;
-char szErrorMsg[256] = {0};
-// Obtain current runtime settings of `reader` instance.
-reader.GetRuntimeSettings(&settings);
-// Add GTM_INVERTED to GrayscaleTransformationModes to decode inverted barcodes.
-settings.furtherModes.grayscaleTransformationModes[0] = GTM_ORIGINAL;
-settings.furtherModes.grayscaleTransformationModes[1] = GTM_INVERTED;
-// Update the settings.
-reader.UpdateRuntimeSettings(&settings, szErrorMsg, 256);
+>
+```java
+try {
+   // `cvr` is an instance of `CaptureVisionRouter`.
+   cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE");
+} catch (CaptureVisionRouterException e) {
+   e.printStackTrace();
+}
 ```
->```c#
-// Obtain current runtime settings of `reader` instance.
-PublicRuntimeSettings settings = reader.GetRuntimeSettings();
-// Add GTM_INVERTED to GrayscaleTransformationModes to decode inverted barcodes.
-settings.FurtherModes.GrayscaleTransformationModes[0] = GTM_ORIGINAL;
-settings.FurtherModes.GrayscaleTransformationModes[1] = GTM_INVERTED;
-// Update the settings.
-reader.UpdateRuntimeSettings(settings);
+>
+```objc
+NSError *error;
+// `cvr` is an instance of `DSCaptureVisionRouter`.
+[self.cvr initSettingsFromFile:@"PATH-TO-YOUR-SETTING-FILE" error:&error];
 ```
->```java
-// Obtain current runtime settings of `reader` instance.
-PublicRuntimeSettings settings = reader.getRuntimeSettings();
-// Add GTM_INVERTED to GrayscaleTransformationModes to decode inverted barcodes.
-settings.furtherModes.grayscaleTransformationModes = new int[]{EnumGrayscaleTransformationMode.GTM_ORIGINAL, EnumGrayscaleTransformationMode.GTM_INVERTED};
-// Update the settings.
-reader.updateRuntimeSettings(settings);
-```
->```python
-# Obtain current runtime settings of `reader` instance.
-settings = reader.get_runtime_settings()
-# Add GTM_INVERTED to GrayscaleTransformationModes to decode inverted barcodes.
-settings.grayscale_transformation_modes[0] = EnumGrayscaleTransformationMode.GTM_ORIGINAL
-settings.grayscale_transformation_modes[1] = EnumGrayscaleTransformationMode.GTM_INVERTED
-# Update the settings.
-reader.update_runtime_settings(settings)
+>
+```swift
+do{
+   //`cvr` is an instance of `CaptureVisionRouter`.
+   try cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE")
+}catch{
+   // Add code to do when error occurs.
+}
 ```

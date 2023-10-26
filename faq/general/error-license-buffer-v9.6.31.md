@@ -4,7 +4,6 @@ title: How to resolve error failed to read or write license buffer?
 keywords: Dynamsoft Barcode Reader, FAQ, offline, license type
 description: How to resolve error failed to read or write license buffer?
 needAutoGenerateSidebar: false
-permalink: /faq/general/error-license-buffer.html
 ---
 
 ## How to resolve error failed to read or write license buffer?

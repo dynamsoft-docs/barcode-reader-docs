@@ -4,204 +4,97 @@ title: How to Get Barcode Location
 description: This page shows how to get barcode location.
 keywords: location, decode result, how-to guides
 needAutoGenerateSidebar: false
-permalink: /programming/features/get-barcode-location.html
 ---
 
 # How to Get Barcode Location
 
 Once a barcode is found, you could be inclined to highlight it on the image for a better user experience. In this article, we will explain how to get the coordinates of the barcode so that they can be used to highlight the barcode.
 
-## Localization Result
+## BarcodeResultItem
 
-The barcode location information is found within the LocalizationResult attribute of a barcode TextResult object. Each barcode result comes with a localizationResult which can be accessed to get the result coordinate points. The next section will explore the different code snippets for each suppoorted programming language.
-
-First, we must point out that the result coordinates can come in two forms: exact coordinate points in pixels, or as percentages of the total dimensions of the image. If you would like to learn more about how regions and coordinates are calculated, please refer to this [**section**](../../parameters/structure-and-interfaces-of-parameters.md#regiondefinition-and-how-it-works) of the Structure and Interfaces page.
-
-In order to control what form the result location should come in, please use the [ResultCoordinateType](../../parameters/reference/result-coordinate-type.md) parameter to control that.
-
-In either mode, the points are listed in clockwise order, starting from the top-left point of the barcode area.
+A barcode result is returned as a `BarcodeResultItem` which provides a method `GetLocation` to get the result coordinate points. The result points are listed in clockwise order, starting from the top-left point of the barcode area. The next section will explore the different code snippets for each supported programming language.
 
 ## Code Snippet
 
 The following code snippet shows how to get the coordinates of the barcode:
 
 <div class="sample-code-prefix template2"></div>
->- JavaScript
->- C
->- C++
->- C#
->- Java
->- Android
->- Objective-C
->- Swift
->- Python
+   >- C++
+   >- Android
+   >- Objective-C
+   >- Swift
+   >
 >
->
-```javascript
-(async() => {
-    let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-    scanner.onUniqueRead = (txt, result) => {
-        let x1 = result.localizationResult.x1;
-        let y1 = result.localizationResult.y1;
-        let x2 = result.localizationResult.x2;
-        let y2 = result.localizationResult.y2;
-        let x3 = result.localizationResult.x3;
-        let y3 = result.localizationResult.y3;
-        let x4 = result.localizationResult.x4;
-        let y4 = result.localizationResult.x4;
-        /* use the coordinates in some way */ 
-        alert(txt);
-    };
-    await scanner.show();
-})();
-```
->
-```c
-int iRet = -1;
-char errorBuf[512];
-TextResultArray* paryResult = NULL;
-iRet = DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
-if (iRet != DBR_OK)
-{
-    printf("%s\n", errorBuf);
+```c++
+CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
+CCapturedResult* result = cvr->Capture("IMAGE-FILE-PATH", CPresetTemplate::PT_READ_BARCODES);
+if (result->GetErrorCode() != 0) {
+    cout << "Error: " << result->GetErrorCode() << "," << result->GetErrorString() << endl;
 }
-void* reader = DBR_CreateInstance();
-DBR_DecodeFile(reader, "YOUR-IMAGE-FILE-PATH", ""); // Start decoding
-DBR_GetAllTextResults(reader, &paryResult);
-for (int iIndex = 0; iIndex < paryResult->resultsCount; iIndex++)
+int capturedResultItemCount = result->GetCount();
+for (int j = 0; j < capturedResultItemCount; j++) 
 {
-    int x1 = paryResult->results[iIndex]->localizationResult->x1;
-    int y1 = paryResult->results[iIndex]->localizationResult->y1;
-    int x2 = paryResult->results[iIndex]->localizationResult->x2;
-    int y2 = paryResult->results[iIndex]->localizationResult->y2;
-    int x3 = paryResult->results[iIndex]->localizationResult->x3;
-    int y3 = paryResult->results[iIndex]->localizationResult->y3;
-    int x4 = paryResult->results[iIndex]->localizationResult->x4;
-    int y4 = paryResult->results[iIndex]->localizationResult->y4;
-    /* use the coordinates to draw a highlight rectangle around them */
+    const CCapturedResultItem* capturedResultItem = result->GetItem(j);
+    CapturedResultItemType type = capturedResultItem->GetType();
+    if (type == CapturedResultItemType::CRIT_BARCODE) 
+    {
+        const CBarcodeResultItem* barcodeResultItem = dynamic_cast<const CBarcodeResultItem*> (capturedResultItem);
+        CQuadrilateral location = barcodeResultItem->GetLocation();
+        cout << "Result " << j + 1 << endl;
+        cout << "Point 0: [" << location.points[0].coordinate[0] << ", " << location.points[0].coordinate[1] << " ]" << endl;
+        cout << "Point 1: [" << location.points[1].coordinate[0] << ", " << location.points[1].coordinate[1] << " ]" << endl;
+        cout << "Point 2: [" << location.points[2].coordinate[0] << ", " << location.points[2].coordinate[1] << " ]" << endl;
+        cout << "Point 3: [" << location.points[3].coordinate[0] << ", " << location.points[3].coordinate[1] << " ]" << endl;
+    }
 }
-DBR_FreeTextResults(&paryResult);
-// Add further process
-```
->
-```cpp
-char errorBuf[512];
-int iRet = -1;
-TextResultArray* paryResult = NULL;
-iRet = dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
-if (iRet != DBR_OK)
-{
-    cout << errorBuf << endl;
-}
-CBarcodeReader* reader = new CBarcodeReader();
-reader->DecodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
-reader->GetAllTextResults(&paryResult);
-for (int iIndex = 0; iIndex < paryResult->resultsCount; iIndex++)
-{
-    int x1 = paryResult->results[iIndex]->localizationResult->x1;
-    int y1 = paryResult->results[iIndex]->localizationResult->y1;
-    int x2 = paryResult->results[iIndex]->localizationResult->x2;
-    int y2 = paryResult->results[iIndex]->localizationResult->y2;
-    int x3 = paryResult->results[iIndex]->localizationResult->x3;
-    int y3 = paryResult->results[iIndex]->localizationResult->y3;
-    int x4 = paryResult->results[iIndex]->localizationResult->x4;
-    int y4 = paryResult->results[iIndex]->localizationResult->y4;
-    /* Use the coordinates to draw a highlight rectangle around the barcode */
-}
-CBarcodeReader::FreeTextResults(&paryResult);
-// Add further process
-```
->
-```csharp
-string errorMsg;
-EnumErrorCode iRet = BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
-if (iRet != EnumErrorCode.DBR_SUCCESS)
-{
-    Console.WriteLine(errorMsg);
-}
-BarcodeReader reader = new BarcodeReader();
-TextResult[] result = reader.DecodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
-for (int iIndex = 0; iIndex < result.Length; iIndex++)
-{
-    Point[] resLocation = result[iIndex].LocalizationResult.ResultPoints;
-    //The points array will come out in clockwise order starting from the top-left point
-    //add further process with the location points array
-}
-// Add further process
+// more process here
 ```
 >
 ```java
-BarcodeReader.initLicense("YOUR-LICENSE-KEY");
-BarcodeReader reader = new BarcodeReader();
-TextResult[] result = reader.decodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
-for (int iIndex = 0; iIndex < result.length; iIndex++)
-{
-    Point[] resLocation = result[iIndex].localizationResult.resultPoints;
-    //The points array will come out in clockwise order starting from the top-left point
-    //add further process with the points, like drawing a rectangle to highlight the barcode
+public void onDecodedBarcodesReceived(DecodedBarcodesResult result) {
+    if (result != null){
+        BarcodeResultItem[] items = result.getItems();
+        for (int i=0; i < items.length; i++){
+            BarcodeResultItem item = items[i];
+            Quadrilateral barcodeQuadArea = item.getLocation();
+            Point topLeftPoint = barcodeQuadArea.points[0];
+            Point topRightPoint = barcodeQuadArea.points[1];
+            Point bottomRightPoint = barcodeQuadArea.points[2];
+            Point bottomLeftPoint = barcodeQuadArea.points[3];
+            Log.i("DecodedBarcodes", "onDecodedBarcodesReceived: This is the number "+i+" barcode");
+            Log.i("DecodedBarcodes", "The first point is: ("+topLeftPoint.x+", "+topLeftPoint.y+")");
+            Log.i("DecodedBarcodes", "The second point is: ("+topRightPoint.x+", "+topRightPoint.y+")");
+            Log.i("DecodedBarcodes", "The third point is: ("+bottomRightPoint.x+", "+bottomRightPoint.y+")");
+            Log.i("DecodedBarcodes", "The fourth point is: ("+bottomLeftPoint.x+", "+bottomLeftPoint.y+")");
+        }
+    }
 }
-// Add further process
-```
->
-```java
-BarcodeReader reader = new BarcodeReader();
-TextResult[] result = reader.decodeFile("YOUR-IMAGE-FILE-PATH"); // Start decoding
-for (int iIndex = 0; iIndex < result.length; iIndex++)
-{
-    Point[] resLocation = result[iIndex].localizationResult.resultPoints;
-    //The points array will come out in clockwise order starting from the top-left point
-    //add further process with the points, like drawing a rectangle to highlight the barcode
-}
-// Add further process
 ```
 >
 ```objc
-NSError *error = nil;
-DynamsoftBarcodeReader* reader = [[DynamsoftBarcodeReader alloc] init];
-NSArray<iTextResult*>* result = [reader decodeFileWithName:@"YOUR-IMAGE-FILE-PATH" error:&err]; // Start decoding
-for (iTextResult* barcode in result)
-{
-    NSArray* resLocation = barcode.localizationResult.resultPoints;
-    CGPoint resPoint1 = [resLocation[0] CGPointValue];
-    CGPoint resPoint2 = [resLocation[1] CGPointValue];
-    CGPoint resPoint3 = [resLocation[2] CGPointValue];
-    CGPoint resPoint4 = [resLocation[3] CGPointValue];
-    //The points are listed in clockwise order starting from the top-left point
-    //add further process with the above result coordinates
+- (void)onDecodedBarcodesReceived:(DSDecodedBarcodesResult *)result {
+    if (result.items.count > 0) {
+        for (DSBarcodeResultItem *item in result.items) {
+            DSQuadrilateral *barcodeQuadArea = item.location;
+            CGPoint topLeftPoint = [barcodeQuadArea.points[0] CGPointValue];
+            CGPoint topRightPoint = [barcodeQuadArea.points[1] CGPointValue];
+            CGPoint bottomRightPoint = [barcodeQuadArea.points[2] CGPointValue];
+            CGPoint bottomLeftPoint = [barcodeQuadArea.points[3] CGPointValue];
+        }
+    }
 }
-// Add further process
 ```
 >
 ```swift
-let reader = DynamsoftBarcodeReader.init()
-var result: [iTextResult]? = nil
-var resLocation:[CGPoint]
-do {
-    result = try reader.decodeFileWithName("YOUR-IMAGE-FILE-PATH")
-} catch let err {
-} // Start decoding
-for barcode in result ?? [] {
-    resLocation = barcode.localizationResult.resultPoints as! [CGPoint]
-    let resPoint1:CGPoint = resLocation[0]
-    let resPoint2:CGPoint = resLocation[1]
-    let resPoint3:CGPoint = resLocation[2]
-    let resPoint4:CGPoint = resLocation[3]
-    //add further process with the coordinate points
+func onDecodedBarcodesReceived(_ result: DecodedBarcodesResult) {
+    if let items = result.items, items.count > 0 {
+        for item in items {
+            let barcodeQuadArea = item.location
+            let topLeftPoint:CGPoint = barcodeQuadArea.points[0] as! CGPoint
+            let topRightPoint:CGPoint = barcodeQuadArea.points[1] as! CGPoint
+            let buttomRightPoint:CGPoint = barcodeQuadArea.points[2] as! CGPoint
+            let bottomLeftPoint:CGPoint = barcodeQuadArea.points[3] as! CGPoint
+        }
+    }
 }
-// Add further process
-```
->
-```python
-error = BarcodeReader.init_license("YOUR-LICENSE-KEY")
-if error[0] != EnumErrorCode.DBR_OK:
-    print(error[1])
-dbr = BarcodeReader()
-text_results = dbr.decode_file("YOUR-IMAGE-FILE-PATH")
-for result in text_results:
-    resPoints = result.localization_result.localization_points
-    resPoint1 = resPoints[0]
-    resPoint2 = resPoints[1]
-    resPoint3 = resPoints[2]
-    resPoint4 = resPoints[3]
-    #add further process with the resPoints tuple or with the individual result points
 ```

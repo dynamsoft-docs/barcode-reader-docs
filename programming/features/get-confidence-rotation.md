@@ -4,7 +4,6 @@ title: How to Get Barcode Confidence and Angle
 description: This page shows how to get barcode confidence and angle.
 keywords: angle, confidence, decode result, how-to guides
 needAutoGenerateSidebar: false
-permalink: /programming/features/get-confidence-rotation.html
 ---
 
 # How to Get Barcode Confidence and Rotation Angle
@@ -41,154 +40,70 @@ The following illustrations will show how the angle is calculated for different 
 The following code snippet shows how to get the confidence and rotation angle of the barcode result:
 
 <div class="sample-code-prefix template2"></div>
->- JavaScript
->- C
->- C++
->- C#
->- Java
->- Android
->- Objective-C
->- Swift
->- Python
+   >- C++
+   >- Android
+   >- Objective-C
+   >- Swift
+   >
 >
->
-```javascript
-(async() => {
-    let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-    scanner.onUniqueRead = (txt, result) => {
-        let conficence = result.localizationResult.confidence;
-        let angle = result.localizationResult.angle;
-        alert(txt);
-    };
-    await scanner.show();
-})();
-```
->
-```c
-int iRet = -1;
-char errorBuf[512];
-TextResultArray* paryResult = NULL;
-iRet = DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
-if (iRet != DBR_OK)
-{
-    printf("%s\n", errorBuf);
+```c++
+CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
+CCapturedResult* result = cvr->Capture("IMAGE-FILE-PATH", CPresetTemplate::PT_READ_BARCODES);
+if (result->GetErrorCode() != 0) {
+    cout << "Error: " << result->GetErrorCode() << "," << result->GetErrorString() << endl;
 }
-void* reader = DBR_CreateInstance();
-DBR_DecodeFile(reader, "YOUR-IMAGE-FILE-PATH", ""); // Start decoding
-DBR_GetAllTextResults(reader, &paryResult);
-for (int iIndex = 0; iIndex < paryResult->resultsCount; iIndex++)
+int capturedResultItemCount = result->GetCount();
+for (int j = 0; j < capturedResultItemCount; j++) 
 {
-    int confidence = paryResult->results[iIndex]->results[0]->confidence;
-    int angle = paryResult->results[iIndex]->localizationResult->angle;
-    //add further process with the confidence and angle
+    const CCapturedResultItem* capturedResultItem = result->GetItem(j);
+    CapturedResultItemType type = capturedResultItem->GetType();
+    if (type == CapturedResultItemType::CRIT_BARCODE) 
+    {
+        const CBarcodeResultItem* barcodeResultItem = dynamic_cast<const CBarcodeResultItem*> (capturedResultItem);
+        cout << "Result " << j + 1 << endl;
+        cout << "Confidence: " << barcodeResultItem->GetConfidence() << endl;
+        cout << "Angle: " << barcodeResultItem->GetAngle() << endl;
+    }
 }
-DBR_FreeTextResults(&paryResult);
-// Add further process
-```
->
-```cpp
-char errorBuf[512];
-int iRet = -1;
-TextResultArray* paryResult = NULL;
-iRet = dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
-if (iRet != DBR_OK)
-{
-    cout << errorBuf << endl;
-}
-CBarcodeReader* reader = new CBarcodeReader();
-reader->DecodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
-reader->GetAllTextResults(&paryResult);
-for (int iIndex = 0; iIndex < paryResult->resultsCount; iIndex++)
-{
-    int confidence = paryResult->results[iIndex]->results[0]->confidence;
-    int angle = paryResult->results[iIndex]->localizationResult->angle;
-    //add further process with the confidence and angle
-}
-CBarcodeReader::FreeTextResults(&paryResult);
-// Add further process
-```
->
-```csharp
-string errorMsg;
-EnumErrorCode iRet = BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
-if (iRet != EnumErrorCode.DBR_SUCCESS)
-{
-    Console.WriteLine(errorMsg);
-}
-BarcodeReader reader = new BarcodeReader();
-TextResult[] result = reader.DecodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
-for (int iIndex = 0; iIndex < result.Length; iIndex++)
-{
-    int confidence = result[iIndex].Results[0].Confidence;
-    int angle = result[iIndex].LocalizationResult.Angle;
-    //add further process with the confidence and angle
-}
-// Add further process
+// more process here
 ```
 >
 ```java
-BarcodeReader.initLicense("YOUR-LICENSE-KEY");
-BarcodeReader reader = new BarcodeReader();
-TextResult[] result = reader.decodeFile("YOUR-IMAGE-FILE-PATH", ""); // Start decoding
-for (int iIndex = 0; iIndex < result.length; iIndex++)
-{
-    int confidence = result[iIndex].results[0].confidence;
-    int angle = result[iIndex].localizationResult.angle;
-    //add further process with the confidence and angle
+public void onDecodedBarcodesReceived(DecodedBarcodesResult result) {
+    if (result != null){
+        BarcodeResultItem[] items = result.getItems();
+        for (int i=0; i < items.length; i++){
+            BarcodeResultItem item = items[i];
+            Log.i("DecodedBarcodes", "onDecodedBarcodesReceived: This is the number "+i+" barcode");
+            int confidence = item.getConfidence();
+            Log.i("DecodedBarcodes", "The confidence of the barcode is: "+confidence);
+            int angle = item.getAngle();
+            Log.i("DecodedBarcodes", "The rotation angle of the barcode is: "+angle);
+        }
+    }
 }
-// Add further process
-```
->
-```java
-BarcodeReader reader = new BarcodeReader();
-TextResult[] result = reader.decodeFile("YOUR-IMAGE-FILE-PATH"); // Start decoding
-for (int iIndex = 0; iIndex < result.length; iIndex++)
-{
-    int confidence = result[iIndex].results[0].confidence;
-    int angle = result[iIndex].localizationResult.angle;
-    //add further process with the confidence and angle
-}
-// Add further process
 ```
 >
 ```objc
-NSError *error = nil;
-DynamsoftBarcodeReader* reader = [[DynamsoftBarcodeReader alloc] init];
-NSArray<iTextResult*>* result = [reader decodeFileWithName:@"YOUR-IMAGE-FILE-PATH" error:&err]; // Start decoding
-for (iTextResult* barcode in result)
-{
-    int confidence = barcode.results[0].confidence;
-    int angle = barcode.localizationResult.angle;
-    //add further process with the confidence and angle
+- (void)onDecodedBarcodesReceived:(DSDecodedBarcodesResult *)result {
+    if (result.items.count > 0) {
+        for (DSBarcodeResultItem *item in result.items) {
+            NSInteger confidence = item.confidence;
+            NSInteger angle = item.angle;
+        }
+    }
 }
-// Add further process
 ```
 >
 ```swift
-let reader = DynamsoftBarcodeReader.init()
-var result: [iTextResult]? = nil
-do {
-    result = try reader.decodeFileWithName("YOUR-IMAGE-FILE-PATH")
-} catch let err {
-} // Start decoding
-for barcode in result ?? [] {
-    let confidence = barcode.results[0].confidence
-    let angle = barcode.localizationResult.angle
-    //add further process with the confidence and angle
+func onDecodedBarcodesReceived(_ result: DecodedBarcodesResult) {
+    if let items = result.items, items.count > 0 {
+        for item in items {
+            let confidence = item.confidence
+            let angle = item.angle
+        }
+    }
 }
-// Add further process
-```
->
-```python
-error = BarcodeReader.init_license("YOUR-LICENSE-KEY")
-if error[0] != EnumErrorCode.DBR_OK:
-    print(error[1])
-dbr = BarcodeReader()
-text_results = dbr.decode_file("YOUR-IMAGE-FILE-PATH")
-for result in text_results:
-    confidence = result.extended_results[0].confidence
-    angle = result.localization_result.angle
-    #add further process with the confidence and angle
 ```
 
 [1]: assets/get-confidence-rotation/1d-angle.png

@@ -6,7 +6,6 @@ keywords: Different Source
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-permalink: /programming/features/read-video-streaming-mobile.html
 ---
 
 # Read Barcode from Video Streaming
@@ -24,70 +23,49 @@ Firstly, to decode from video streaming, you have to create a camera module usin
    >- Objective-C
    >- Swift
    >
->```java
-public class MainActivity extends AppCompatActivity {
-   CameraEnhancer mCamera;
-   @Override
-   protected void onCreate(Bundle savedInstanceState) {
-      // You have to add camera view to your layout file in "res>layout>activity_main.xml".      
-      DCECameraView cameraView = findViewById(R.id.cameraView);
-      // Create an instance of Dynamsoft Camera Enhancer for video streaming.
-      mCamera = new CameraEnhancer(MainActivity.this);
-      mCamera.setCameraView(cameraView);
-   }
-   @Override
-   public void onResume() {
-      try {
-         // Open the camera when the app is resumed.
-         mCamera.open();
-      } catch (CameraEnhancerException e) {
-         e.printStackTrace();
-      }
-      super.onResume();
-   }
-   @Override
-   public void onPause() {
-      try {
-         // Close the camera when the app is resumed.
-         mCamera.close();
-      } catch (CameraEnhancerException e) {
-         e.printStackTrace();
-      }
-      super.onPause();
-   }
+>
+```java
+private CameraEnhancer mCamera;
+private CaptureVisionRouter mRouter;
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+   super.onCreate(savedInstanceState);
+   setContentView(R.layout.activity_main)
+   PermissionUtil.requestCameraPermission(this);
+   CameraView cameraView = findViewById(R.id.camera_view);
+   mCamera = new CameraEnhancer(cameraView, this);
 }
 ```
->```objc
-@property(nonatomic, strong) DynamsoftCameraEnhancer *camera;
-@property(nonatomic, strong) DCECameraView *cameraView;
-- (void)configurationDCE{
-   // Initialize a camera view for previewing video.
-   _cameraView = [DCECameraView cameraWithFrame:self.view.bounds];
-   [self.view addSubview:_cameraView];
-   // Initialize the Camera Enhancer with the camera view.
-   _camera = [[DynamsoftCameraEnhancer alloc] initWithView:_cameraView];
-   // Open the camera
-   [_camera open];
+>
+```objc
+@property (nonatomic, strong) DSCameraView *cameraView;
+@property (nonatomic, strong) DSCameraEnhancer *dce;
+...
+- (void)setUpCamera {
+   self.cameraView = [[DSCameraView alloc] initWithFrame:self.view.bounds];
+   self.cameraView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+   [self.view insertSubview:self.cameraView atIndex:0];
+   self.dce = [[DSCameraEnhancer alloc] init];
+   self.dce.cameraView = self.cameraView;
 }
 ```
->```swift
+>
+```swift
 class ViewController: UIViewController {
-   var camera:DynamsoftCameraEnhancer! = nil
-   var cameraView:DCECameraView! = nil
-   func configurationDCE() {
-      cameraView = DCECameraView.init(frame: self.view.bounds)
-      self.view.addSubview(cameraView)
-      // Initialize the Camera Enhancer with the camera view.
-      camera = DynamsoftCameraEnhancer.init(view: cameraView)
-      //Open the camera
-      camera.open()
+   var cameraView:CameraView!
+   let dce = CameraEnhancer()
+   func setUpCamera() {
+      cameraView = .init(frame: view.bounds)
+      cameraView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+      view.insertSubview(cameraView, at: 0)
+      dce.cameraView = cameraView
    }
 }
 ```
 
-## Configure Barcode Reader
+## Configure CaptureVisionRouter
 
-### Bind the Camera to Receive Video Streaming
+### Create an instance of CaptureVisionRouter and Bind with the CameraEnhancer
 
 Initialize Dynamsoft Barcode Reader and bind the Camera Enhancer to the Barcode Reader. The barcode reader will continuously receive video frames when the video barcode decoding thread is enabled.
 
@@ -96,128 +74,180 @@ Initialize Dynamsoft Barcode Reader and bind the Camera Enhancer to the Barcode 
    >- Objective-C
    >- Swift
    >
->```java
-public class MainActivity extends AppCompatActivity {
-   BarcodeReader mBarcodeReader;
-   CameraEnhancer mCamera;
-   @Override
-   protected void onCreate(Bundle savedInstanceState) {
-      ...
-      try {
-         // Create an instance of Dynamsoft Barcode Reader.
-         mBarcodeReader = new BarcodeReader();
-      } catch (BarcodeReaderException e) {
-         e.printStackTrace();
-      }
-      // Bind the instance of Camera to the BarcodeReader
-      mBarcodeReader.setCameraEnhancer(mCamera);
+>
+```java
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+   ...
+   mRouter = new CaptureVisionRouter(this);
+   try {
+      mRouter.setInput(mCamera);
+   } catch (CaptureVisionRouterException e) {
+      throw new RuntimeException(e);
    }
 }
 ```
->```objc
-@property(nonatomic, strong) DynamsoftBarcodeReader *barcodeReader;
-@property(nonatomic, strong) DynamsoftCameraEnhancer *dce;
+>
+```objc
+@property (nonatomic, strong) DSCaptureVisionRouter *cvr;
 ...
-- (void)configurationDBR{
-   // Add function configureDBR and add the following code.
-   _barcodeReader = [[DynamsoftBarcodeReader alloc] init];
-   // Bind the instance of Camera to the BarcodeReader
-   [_barcodeReader setCameraEnhancer:_dce];
+- (void)setUpDCV {
+   self.cvr = [[DSCaptureVisionRouter alloc] init];
+   NSError *error;
+   [self.cvr setInput:self.dce error:&error];
 }
 ```
->```swift
-var barcodeReader:DynamsoftBarcodeReader! = nil
-...
+>
+```swift
 class ViewController: UIViewController {
-   // Add function configureDBR and add the following code.
-   func configurationDBR() {
-      barcodeReader = DynamsoftBarcodeReader.init()
-      // Bind the instance of Camera to the BarcodeReader
-      barcodeReader.setCameraEnhancer(dce)
+   let cvr = CaptureVisionRouter()
+   func setUpDCV() {
+      try! cvr.setInput(dce)
    }
 }
 ```
 
-### Obtain Video Barcode Decoding Results
-
-Method `startScanning` is the main toggle for enabling video  barcode decoding. If you have bound the instance of CameraEnhancer to the BarcodeReader, you can turn on the switch by triggering `startScanning`. To turn off the video barcode decoding, you can use `stopScanning`.
-
-`TextResultCallback` is the callback method that will be triggered each time when the BarcodeReader completed processing on a video frame. The following data will be transfered in the callback method:
-
-- `id`: The id of the video frame. It is defined by the CameraEnhancer when the video frame is captured.
-- `imageData`: The image data of the video frame. Users can obtain the image data even if there is no barcode result detected from the image.
-- `textResults`: A array of `TextResult` which contains information like the text, formats and locations of the detected barcodes.
-
-To obtain the barcode results, you have to configure the `TextResultCallback` and trigger the `startScanning` in your project.
+### Implement the CaptureResult Receiver to Receive the Results
 
 <div class="sample-code-prefix template2"></div>
    >- Android
    >- Objective-C
    >- Swift
    >
->```java
-public class MainActivity extends AppCompatActivity {
-   @Override
-   protected void onCreate(Bundle savedInstanceState) {
+>
+```java
+private CameraEnhancer mCamera;
+private CaptureVisionRouter mRouter;
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+   ...
+   mRouter.addResultReceiver(new CapturedResultReceiver() {
+      @Override
+      public void onDecodedBarcodesReceived(DecodedBarcodesResult result) {
+         // Add code to do when DecodedBarcodesResult received.
+      }
+   });
+}
+```
+>
+```objc
+// Add CapturedResultReceiver to the ViewController.
+@interface ViewController () <DSCapturedResultReceiver>
+- (void)setUpDCV {
+   ...
+   // Add result receiver to the CaptureVisionRouter instance.
+   [self.cvr addResultReceiver:self];
+}
+// Implement onDecodedBarcodesReceived method to receive the barcode decoding result.
+- (void)onDecodedBarcodesReceived:(DSDecodedBarcodesResult *)result {
+   // Add code to do when DecodedBarcodesResult received.
+}
+```
+>
+```swift
+// Add CapturedResultReceiver to the ViewController.
+class ViewController: UIViewController, CapturedResultReceiver {
+   func setUpDCV() {
       ...
-      mBarcodeReader.setTextResultListener(new TextResultListener() {
-         // Obtain the recognized barcode results and display.
-         @Override
-         public void textResultCallback(int id, ImageData imageData, TextResult[] textResults) {
-            // Add code to execute when barcode textResult is received.
+      // Add result receiver to the CaptureVisionRouter instance.
+      cvr.addResultReceiver(self)
+   }
+   // Implement onDecodedBarcodesReceived method to receive the barcode decoding result.
+   func onDecodedBarcodesReceived(_ result: DecodedBarcodesResult) {
+      // Add code to do when DecodedBarcodesResult received.
+   }
+}
+```
+
+### Control the State of Barcode Decoding
+
+<div class="sample-code-prefix template2"></div>
+   >- Android
+   >- Objective-C
+   >- Swift
+   >
+>
+```java
+@Override
+public void onResume() {
+   try {
+      // Open the camera when the activity appear.
+      mCamera.open();
+   } catch (CameraEnhancerException e) {
+      e.printStackTrace();
+   }
+   // Start the capturing process when the activity appear.
+   // You have to specify a template name to start capturing.
+   // For example, we use the preset template "ReadBarcodes" to start capturing with the default barcode decoding template.
+   mRouter.startCapturing(EnumPresetTemplate.PT_READ_BARCODES, null);
+   super.onResume();
+}
+@Override
+public void onPause() {
+   try {
+      // Close the camera when leaving the activity.
+      mCamera.close();
+   } catch (CameraEnhancerException e) {
+      e.printStackTrace();
+   }
+   // Stop the capturing process when leaving the activity.
+   mRouter.stopCapturing();
+   super.onPause();
+}
+```
+>
+```objc
+- (void)viewDidLoad {
+   [super viewDidLoad];
+   [self setUpCamera];
+   [self setUpDCV];
+}
+- (void)viewWillAppear:(BOOL)animated {
+   // Open the camera when the view will appear.
+   [self.dce open];
+   // Start the capturing process when the view will appear.
+   // You have to specify a template name to start capturing.
+   // For example, we use the preset template "ReadBarcodes" to start capturing with the default barcode decoding template.
+   [self.cvr startCapturing:DSPresetTemplateReadBarcodes completionHandler:^(BOOL isSuccess, NSError * _Nullable error) {
+      NSAssert((error == nil), error.description);
+   }];
+   [super viewWillAppear:animated];
+}
+- (void)viewWillDisappear:(BOOL)animated {
+   // Close the camera when the view will disappear.
+   [self.dce close];
+   // Stop the capturing process when the view will disappear.
+   [self.cvr stopCapturing];
+   [super viewWillDisappear:animated];
+}
+```
+>
+```swift
+override func viewDidLoad() {
+   super.viewDidLoad()
+   setUpCamera()
+   setUpDCV()
+}
+override func viewWillAppear(_ animated: Bool) {
+   // Open the camera when the view will appear.
+   dce.open()
+   // Start the capturing process when the view will appear.
+   // You have to specify a template name to start capturing.
+   // For example, we use the preset template "ReadBarcodes" to start capturing with the default barcode decoding template.
+   cvr.startCapturing(PresetTemplate.readBarcodes.rawValue) { isSuccess, error in
+      if (!isSuccess) {
+         if let error = error {
+             print("\(error)")
          }
-      });
-   }
-   @Override
-   public void onResume() {
-      try {
-         mCamera.open();
-      } catch (CameraEnhancerException e) {
-         e.printStackTrace();
       }
-      // Start Scanning when app is resumed
-      mBarcodeReader.startScanning();
-      super.onResume();
    }
-   @Override
-   public void onPause() {
-      try {
-         mCamera.close();
-      } catch (CameraEnhancerException e) {
-         e.printStackTrace();
-      }
-      // Stop Scanning when app is paused
-      mBarcodeReader.stopScanning();
-      super.onPause();
-   }
+   super.viewWillAppear(animated)
 }
-```
->```objc
-// Add DBRTextResultListener to the viewController
-@interface ViewController ()<DBRTextResultListener>
-...
-// Add the following code in configurationDBR.
-- (void)configurationDBR{
-   [_barcodeReader setDBRTextResultListener:self];
-   [_barcodeReader startScanning];
-}
-- (void)textResultCallback:(NSInteger)frameId imageData:(iImageData *)imageData results:(NSArray<iTextResult *> *)results{
-   // Add code to execute when barcode textResult is received.
-}
-```
->```swift
-var barcodeReader:DynamsoftBarcodeReader! = nil
-...
-// Add DBRTextResultListener to the viewController
-class ViewController: UIViewController, DBRTextResultListener {
-   // Add the following code in configurationDBR.
-   func configurationDBR() {
-      ...
-      barcodeReader.setDBRTextResultListener(self)
-      barcodeReader.startScanning()
-   }
-   func textResultCallback(_ frameId: Int, imageData: iImageData, results: [iTextResult]?) {
-      // Add code to execute when barcode textResult is received.
-   }
+override func viewWillDisappear(_ animated: Bool) {
+   // Close the camera when the view will disappear.
+   dce.close()
+   // Stop the capturing process when the view will disappear.
+   cvr.stopCapturing()
+   super.viewWillDisappear(animated)
 }
 ```

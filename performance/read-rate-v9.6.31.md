@@ -5,7 +5,6 @@ description: This page shows how the Dynamsoft Barcode Reader SDK is designed to
 keywords: Read Rate
 breadcrumbText: Read Rate
 noTitleIndex: false
-permalink: /performance/read-rate-v9.6.30.html
 ---
 
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
