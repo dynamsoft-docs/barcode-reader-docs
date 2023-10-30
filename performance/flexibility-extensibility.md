@@ -21,7 +21,7 @@ DBR classifies and organizes a series of algorithm/result control parameters to 
 
 The following simple example reflects the relationship between top-level objects:
 
-```JSON
+```json
 {
     "FormatSpecificationArray": [{
         "Name": "IP1_BF_QR_CODE"

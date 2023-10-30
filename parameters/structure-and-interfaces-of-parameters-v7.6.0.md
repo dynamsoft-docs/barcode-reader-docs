@@ -24,7 +24,7 @@ Dynamsoft Barcode Reader uses a template to set parameters. A template contains 
 - One or more `FormatSpecification` can be referenced through `FormatSpecificationNameArray` in `RegionDefinition`;
 - In a JSON template file/string, you can use `ImageParameterContentArray`/`RegionDefinitionArray`/`FormatSpecificationArray` field to define multiple `ImageParameter`/`RegionDefinition`/`FormatSpecification`, for example:
 
-```JSON
+```json
 {
     "ImageParameterContentArray": [
       {
@@ -134,7 +134,7 @@ When setting parameters through a JSON template, Dynamsoft Barcode Reader will p
 - Parameters not defined in `ImageParameter`/`RegionDefinition`/`FormatSpecification` will be filled with default values
 - `FormatSpecification` is automatically split into multiple settings for a single barcode format, for example:
 
-```JSON
+```json
 Template you set
 {
     "ImageParameter":{
@@ -153,7 +153,7 @@ Template you set
 ```
 
 
-```JSON
+```json
 Template used by DBR
 {
     "ImageParameter":{
