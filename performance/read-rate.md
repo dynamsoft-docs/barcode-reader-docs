@@ -141,7 +141,7 @@ In some cases, the barcode may not be generated or printed following the standar
 
 In this article, we went through the complete reading process and looked at most of the parameters which might impact read rate.
 
-Depending on the actual image you are scanning or the usage scenario you are trying to adapt to, you can experiment with these parameters to find the most suitable settings for the best read rate. If you have any further questions, you can get in touch with <a href="https://www.dynamsoft.com/company/contact/" target="_blank">Dynamsoft Support</a>.
+Depending on the actual image you are scanning or the usage scenario you are trying to adapt to, you can experiment with these parameters to find the most suitable settings for the best read rate. If you have any further questions, you can get in touch with <a href="https://www.dynamsoft.com/contact/" target="_blank">Dynamsoft Support</a>.
 
 In reality, accuracy and speed matter too. Read our other documents dedicated to these two topics:
 

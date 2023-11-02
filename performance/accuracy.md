@@ -143,4 +143,4 @@ The following links are the article that explains how to make settings when eith
 - [How to boost Speed]({{ site.performance }}speed.html)
 - [How to boost Read Rate]({{ site.performance }}read-rate.html)
 
-If you are not sure where to start regarding which dimension of the performance should be prioritized or you are still puzzled by the parameter settings, please feel free to [contact us](https://www.dynamsoft.com/company/contact/) to get support from our technical support team. Our team can give you professional suggestions on the parameter settings that best fulfill your requirements.
+If you are not sure where to start regarding which dimension of the performance should be prioritized or you are still puzzled by the parameter settings, please feel free to [contact us](https://www.dynamsoft.com/contact/) to get support from our technical support team. Our team can give you professional suggestions on the parameter settings that best fulfill your requirements.

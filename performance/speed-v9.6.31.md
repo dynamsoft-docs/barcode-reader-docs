@@ -308,7 +308,7 @@ If even better speed is desired, we can set limitations on barcode searching for
 
 In this article, we first talked about some obvious and effective ways to improve speed, then we went through the complete reading process and looked at most of the parameters that could impact speed. Lastly, we mentioned a few of the less traditional ways to speed things up.
 
-Depending on the actual image you are scanning or the usage scenario you are trying to cope with, you can experiment with these parameters to find the most suitable settings for the best speed. If you have any further questions, you can get in touch with [Dynamsoft Support](https://www.dynamsoft.com/company/contact/).
+Depending on the actual image you are scanning or the usage scenario you are trying to cope with, you can experiment with these parameters to find the most suitable settings for the best speed. If you have any further questions, you can get in touch with [Dynamsoft Support](https://www.dynamsoft.com/contact/).
 
 In reality, accuracy and read rate matter too. Read our other documents dedicated to these two topics:
 
