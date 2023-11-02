@@ -17,7 +17,7 @@ The following shows how you can apply for a 30-day free trial license.
 
 > NOTE
 >
-> In case the trial license fails to be generated, Dynamsoft Support team will get in touch with you. Or you can [contact us](https://www.dynamsoft.com/company/contact/).
+> In case the trial license fails to be generated, Dynamsoft Support team will get in touch with you. Or you can [contact us](https://www.dynamsoft.com/contact/).
 
 The following shows how to set the license in the code
 
