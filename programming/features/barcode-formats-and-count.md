@@ -19,11 +19,11 @@ You can configure the parameter in two different ways, depending on your require
 * Configure barcode format via `SimplifiedCaptureVisionSettings`.
 
     <div class="sample-code-prefix template2"></div>
-       >- C++
-       >- Android
-       >- Objective-C
-       >- Swift
-       >
+        >- C++
+        >- Android
+        >- Objective-C
+        >- Swift
+        >
     >
     ```c++
     char szErrorMsg[256] = {0};
