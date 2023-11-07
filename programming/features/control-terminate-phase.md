@@ -68,7 +68,6 @@ You can configure the parameter in two different ways, depending on your require
        >- C++
        >
     >
-    >
     ```c++
     char szErrorMsg[256] = {0};
     // Obtain current runtime settings of `CCaptureVisionRouter` instance.
@@ -84,7 +83,7 @@ You can configure the parameter in two different ways, depending on your require
 
 * Configure parameter `Timeout` via `JSON Template`
   
-   ```json
+    ```json
     {
         "CaptureVisionTemplates": [
             {
@@ -105,6 +104,6 @@ You can configure the parameter in two different ways, depending on your require
             }
         ]
     }
-   ```
+    ```
 
     Apply the above settings following the article [Use Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html#json-template).
