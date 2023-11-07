@@ -64,21 +64,21 @@ You can configure the parameter in two different ways, depending on your require
 
 * Configure timeout via `SimplifiedCaptureVisionSettings`.
 
-    <div class="sample-code-prefix template2"></div>
-       >- C++
-       >
-    >
-    ```c++
-    char szErrorMsg[256] = {0};
-    // Obtain current runtime settings of `CCaptureVisionRouter` instance.
-    CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
-    SimplifiedCaptureVisionSettings settings;
-    cvr->GetSimplifiedSettings(CPresetTemplate::PT_READ_BARCODES, &settings);
-    // Specify the expected barcode count.
-    settings.timeout = 1000;
-    // Update the settings.
-    cvr->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &settings, szErrorMsg, 256);
-    ```
+<div class="sample-code-prefix template2"></div>
+   >- C++
+   >
+>
+```c++
+char szErrorMsg[256] = {0};
+// Obtain current runtime settings of `CCaptureVisionRouter` instance.
+CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
+SimplifiedCaptureVisionSettings settings;
+cvr->GetSimplifiedSettings(CPresetTemplate::PT_READ_BARCODES, &settings);
+// Specify the expected barcode count.
+settings.timeout = 1000;
+// Update the settings.
+cvr->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &settings, szErrorMsg, 256);
+```
 
 
 * Configure parameter `Timeout` via `JSON Template`
