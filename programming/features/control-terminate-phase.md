@@ -83,27 +83,27 @@ cvr->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &settings, szErrorMsg, 25
 
 * Configure parameter `Timeout` via `JSON Template`
   
-    ```json
-    {
-        "CaptureVisionTemplates": [
-            {
-                "Name" : "CV_0",
-                "ImageROIProcessingNameArray": ["TA_0" ],
-                "Timeout":1000
-            }       
-        ],
-        "TargetROIDefOptions" : [
-            {
-                "Name" : "TA_0",
-                "TaskSettingNameArray": [ "BR_0" ]
-            }
-        ],
-        "BarcodeReaderTaskSettingOptions": [
-            {
-                "Name" : "BR_0"
-            }
-        ]
-    }
-    ```
+```json
+{
+    "CaptureVisionTemplates": [
+        {
+            "Name" : "CV_0",
+            "ImageROIProcessingNameArray": ["TA_0" ],
+            "Timeout":1000
+        }       
+    ],
+    "TargetROIDefOptions" : [
+        {
+            "Name" : "TA_0",
+            "TaskSettingNameArray": [ "BR_0" ]
+        }
+    ],
+    "BarcodeReaderTaskSettingOptions": [
+        {
+            "Name" : "BR_0"
+        }
+    ]
+}
+```
 
     Apply the above settings following the article [Use Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html#json-template).
