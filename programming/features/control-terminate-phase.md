@@ -19,7 +19,7 @@ First, you can set the `section` parameter alone to make the task exit after com
 
 Second, you can use the `section + stage` parameters to terminate the task immediately after completing a specific stage within a section. 
 
-Below is an example illustrating how to configure parameter `TerminateSetting` via `JSON Template`
+Below is an example illustrating how to configure parameter `TerminateSetting` via `JSON Template`.
   
 ```json
 {
@@ -106,4 +106,4 @@ cvr->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &settings, szErrorMsg, 25
 }
 ```
 
-Apply the above settings following the article [Use Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html#json-template).
+To apply the above settings, please follow the article [Use Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html#json-template).
