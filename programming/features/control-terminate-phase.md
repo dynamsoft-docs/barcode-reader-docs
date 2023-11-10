@@ -50,7 +50,7 @@ Below is an example illustrating how to configure parameter `TerminateSetting` v
 
 To apply the above settings, please follow the article [Use Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html#json-template).
 
-### Timeout
+## Timeout
 
 This parameter controls the timeout for an individual decoding process in milliseconds. When the timeout occurs, the decoding will be terminated.
 
