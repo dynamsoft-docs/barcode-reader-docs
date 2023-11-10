@@ -21,26 +21,26 @@ DBR classifies and organizes a series of algorithm/result control parameters to 
 
 The following simple example reflects the relationship between top-level objects:
 
-```JSON
+```json
 {
-	"FormatSpecificationArray": [{
-		"Name": "IP1_BF_QR_CODE"
-	}],
-	"ImageParameter": {
-		"FormatSpecificationNameArray": [
-			"IP1_BF_QR_CODE"
-		],
+    "FormatSpecificationArray": [{
+        "Name": "IP1_BF_QR_CODE"
+    }],
+    "ImageParameter": {
+        "FormatSpecificationNameArray": [
+            "IP1_BF_QR_CODE"
+        ],
 
-		"Name": "default",
+        "Name": "default",
 
-		"RegionDefinitionNameArray": [
-			"region1"
-		]
-	},
-	"RegionDefinition": {
-		"Name": "region1"
-	},
-	"Version": "3.0"
+        "RegionDefinitionNameArray": [
+            "region1"
+        ]
+    },
+    "RegionDefinition": {
+        "Name": "region1"
+    },
+    "Version": "3.0"
 }
 ```
 
@@ -179,11 +179,11 @@ In the following JSON template, we configured two different binarization modes (
 {
     "ImageParameter": {
         "BinarizationModes": [
-	        // Use the default arguments of BM_LOCAL_BLOCK
+            // Use the default arguments of BM_LOCAL_BLOCK
             {
                 "Mode": "BM_LOCAL_BLOCK"
             }, 
-	        // Use customed blocksize on BM_LOCAL_BLOCK
+            // Use customed blocksize on BM_LOCAL_BLOCK
             {
                 "Mode": "BM_LOCAL_BLOCK", 
                 "BlockSizeX": 11, 

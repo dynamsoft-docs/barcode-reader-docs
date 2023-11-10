@@ -108,7 +108,7 @@ Below is an example template illustrating how to configure two ROIs with differe
             },
             "TaskSettingNameArray": ["BR_0"]
         },
-		{
+        {
             "Name" : "TA_1",
             "Location":
             {
@@ -129,11 +129,11 @@ Below is an example template illustrating how to configure two ROIs with differe
     "BarcodeReaderTaskSettingOptions": [
         {
             "Name" : "BR_0",
-			"BarcodeFormatIds": ["BF_ONED"]
+            "BarcodeFormatIds": ["BF_ONED"]
         },
-		{
+        {
             "Name" : "BR_1",
-			"BarcodeFormatIds": ["BF_QR_CODE"]
+            "BarcodeFormatIds": ["BF_QR_CODE"]
         }
     ]
 }

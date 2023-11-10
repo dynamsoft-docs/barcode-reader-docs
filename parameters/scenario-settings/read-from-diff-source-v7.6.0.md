@@ -84,8 +84,8 @@ int main()
    reader->InitLicense("your license here");
    Mat image = cv::imread("your img file path");
    if (image.type() == CV_8UC3) {
-	   ret = reader->DecodeBuffer(image.data, image.cols, image.rows, image.cols * 3, IPF_RGB_888);
-	}
+      ret = reader->DecodeBuffer(image.data, image.cols, image.rows, image.cols * 3, IPF_RGB_888);
+   }
    else if (image.type() == CV_8UC1) {
       ret = reader->DecodeBuffer(image.data, image.cols, image.rows, image.cols, IPF_GRAYSCALED);
    }
@@ -191,7 +191,7 @@ int main()
       cerr << "ERROR: Can't initialize camera capture" << endl;
       return 1;
    }
-	 
+   
    int iRet = -1;
    CBarcodeReader reader;
    iRet = reader.InitLicense("enter your license");

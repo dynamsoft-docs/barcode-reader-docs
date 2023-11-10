@@ -36,25 +36,25 @@ In the following JSON template, we configured 4
 {
     "ImageParameter": {
         "ColourConversionModes": [
-	        // Use the default mode for grayscale process
+            // Use the default mode for grayscale process
             {
                 "Mode": "CICM_GENERAL"
             }, 
-	        // Use the Blue channel only for grayscale process
+            // Use the Blue channel only for grayscale process
             {
                 "Mode": "CICM_GENERAL", 
                 "BlueChannelWeight": 1000, 
                 "RedChannelWeight": 0, 
                 "GreenChannelWeight": 0
             }, 
-	        // Use the Red channel only for grayscale process
+            // Use the Red channel only for grayscale process
             {
                 "Mode": "CICM_GENERAL", 
                 "BlueChannelWeight": 0, 
                 "RedChannelWeight": 1000, 
                 "GreenChannelWeight": 0
             }, 
-	        // Use the Green channel only for grayscale process
+            // Use the Green channel only for grayscale process
             {
                 "Mode": "CICM_GENERAL", 
                 "BlueChannelWeight": 0, 

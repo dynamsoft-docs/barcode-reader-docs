@@ -19,11 +19,11 @@ You can configure the parameter in two different ways, depending on your require
 * Configure barcode format via `SimplifiedCaptureVisionSettings`.
 
 <div class="sample-code-prefix template2"></div>
-   >- C++
-   >- Android
-   >- Objective-C
-   >- Swift
-   >
+>- C++
+>- Android
+>- Objective-C
+>- Swift
+>
 >
 ```c++
 char szErrorMsg[256] = {0};
@@ -76,7 +76,7 @@ do{
 
 * Configure barcode format via `JSON parameter template file`
   * update parameter `BarcodeFormatIds` in your JSON template
-   ```json
+    ```json
     {
         "CaptureVisionTemplates": [
             {
@@ -97,47 +97,47 @@ do{
             }
         ]
     }
-   ```
+    ```
 
   * apply settings by calling method `InitSettingsFromFile`
 
-<div class="sample-code-prefix template2"></div>
-   >- C++
-   >- Android
-   >- Objective-C
-   >- Swift
-   >
->
-```c++
-char szErrorMsg[256] = {0};
-CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
-cvr->InitSettingsFromFile("PATH-TO-YOUR-SETTING-FILE", szErrorMsg, 256);
-// more process here
-```
->
-```java
-try {
-   // `cvr` is an instance of `CaptureVisionRouter`.
-   cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE");
-} catch (CaptureVisionRouterException e) {
-   e.printStackTrace();
-}
-```
->
-```objc
-NSError *error;
-// `cvr` is an instance of `DSCaptureVisionRouter`.
-[self.cvr initSettingsFromFile:@"PATH-TO-YOUR-SETTING-FILE" error:&error];
-```
->
-```swift
-do{
-   //`cvr` is an instance of `CaptureVisionRouter`.
-   try cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE")
-}catch{
-   // Add code to do when error occurs.
-}
-```
+    <div class="sample-code-prefix template2"></div>
+       >- C++
+       >- Android
+       >- Objective-C
+       >- Swift
+       >
+    >
+    ```c++
+    char szErrorMsg[256] = {0};
+    CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
+    cvr->InitSettingsFromFile("PATH-TO-YOUR-SETTING-FILE", szErrorMsg, 256);
+    // more process here
+    ```
+    >
+    ```java
+    try {
+       // `cvr` is an instance of `CaptureVisionRouter`.
+       cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE");
+    } catch (CaptureVisionRouterException e) {
+       e.printStackTrace();
+    }
+    ```
+    >
+    ```objc
+    NSError *error;
+    // `cvr` is an instance of `DSCaptureVisionRouter`.
+    [self.cvr initSettingsFromFile:@"PATH-TO-YOUR-SETTING-FILE" error:&error];
+    ```
+    >
+    ```swift
+    do{
+       //`cvr` is an instance of `CaptureVisionRouter`.
+       try cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE")
+    }catch{
+       // Add code to do when error occurs.
+    }
+    ```
 
 ## Set Barcode Count
 
@@ -236,40 +236,40 @@ do{
    ```
   * apply settings by calling method `InitSettingsFromFile`
 
-<div class="sample-code-prefix template2"></div>
-   >- C++
-   >- Android
-   >- Objective-C
-   >- Swift
-   >
->
-```c++
-char szErrorMsg[256] = {0};
-CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
-cvr->InitSettingsFromFile("PATH-TO-YOUR-SETTING-FILE", szErrorMsg, 256);
-// more process here
-```
->
-```java
-try {
-   // `cvr` is an instance of `CaptureVisionRouter`.
-   cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE");
-} catch (CaptureVisionRouterException e) {
-   e.printStackTrace();
-}
-```
->
-```objc
-NSError *error;
-// `cvr` is an instance of `DSCaptureVisionRouter`.
-[self.cvr initSettingsFromFile:@"PATH-TO-YOUR-SETTING-FILE" error:&error];
-```
->
-```swift
-do{
-   //`cvr` is an instance of `CaptureVisionRouter`.
-   try cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE")
-}catch{
-   // Add code to do when error occurs.
-}
-```
+    <div class="sample-code-prefix template2"></div>
+       >- C++
+       >- Android
+       >- Objective-C
+       >- Swift
+       >
+    >
+    ```c++
+    char szErrorMsg[256] = {0};
+    CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
+    cvr->InitSettingsFromFile("PATH-TO-YOUR-SETTING-FILE", szErrorMsg, 256);
+    // more process here
+    ```
+    >
+    ```java
+    try {
+       // `cvr` is an instance of `CaptureVisionRouter`.
+       cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE");
+    } catch (CaptureVisionRouterException e) {
+       e.printStackTrace();
+    }
+    ```
+    >
+    ```objc
+    NSError *error;
+    // `cvr` is an instance of `DSCaptureVisionRouter`.
+    [self.cvr initSettingsFromFile:@"PATH-TO-YOUR-SETTING-FILE" error:&error];
+    ```
+    >
+    ```swift
+    do{
+       //`cvr` is an instance of `CaptureVisionRouter`.
+       try cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE")
+    }catch{
+       // Add code to do when error occurs.
+    }
+    ```
