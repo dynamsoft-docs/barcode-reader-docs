@@ -20,7 +20,6 @@ noTitleIndex: true
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 10.0.21 | [Android]({{ site.android_release_notes }}android-10.html#10021-12122023){:target="_blank"} / [iOS]({{ site.oc_release_notes }}ios-10.html#10021-12122023){:target="_blank"} |
-| 10.0.20 | [C++]({{ site.cpp_release_notes}}cpp-10.html#10020-10262023){:target="_blank"} / [Android]({{ site.android_release_notes }}android-10.html#10020-10262023){:target="_blank"} / [iOS]({{ site.oc_release_notes }}ios-10.html#10020-10262023){:target="_blank"} |
-| 10.0.10 | [C++]({{ site.cpp_release_notes}}cpp-10.html#10010-08082023){:target="_blank"} |
-| 10.0.0 | [C++]({{ site.cpp_release_notes}}cpp-10.html#1000-07042023){:target="_blank"} |
+| 10.0.20 | [C++]({{ site.cpp_release_notes}}cpp-10.html?ver=10.0.20#10020-10262023){:target="_blank"} / [Android]({{ site.android_release_notes }}android-10.html?ver=10.0.20#10020-10262023){:target="_blank"} / [iOS]({{ site.oc_release_notes }}ios-10.html?ver=10.0.20#10020-10262023){:target="_blank"} |
+| 10.0.10 | [C++]({{ site.cpp_release_notes}}cpp-10.html?ver=10.0.10#10010-08082023){:target="_blank"} |
+| 10.0.0 | [C++]({{ site.cpp_release_notes}}cpp-10.html?ver=10.0.0#1000-07042023){:target="_blank"} |
