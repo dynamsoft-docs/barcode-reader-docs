@@ -96,11 +96,11 @@ try? barcodeReader.updateRuntimeSettings(settings!)
 ```python
 # Obtain current runtime settings of `reader` instance.
 settings = reader.get_runtime_settings()
-settings.region.region_top = 10
-settings.region.region_bottom = 90
-settings.region.region_left = 10
-settings.region.region_right = 90
-settings.region.region_measured_by_percentage = 1
+settings.region_top = 10
+settings.region_bottom = 90
+settings.region_left = 10
+settings.region_right = 90
+settings.region_measured_by_percentage = 1
 # Update the settings.
 reader.update_runtime_settings(settings)
 ```
