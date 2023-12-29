@@ -36,7 +36,7 @@ JSON template example:
 {
     "ImageParameter": {
         "Name": "ImageParameter1", 
-        "Description": "This is demonstrating accompanying text.", 
+        "Description": "This is acompanying text demonstrate", 
         "AccompanyingTextRecognitionModes":["ATRM_GENERAL"]
     }, 
     "Version": "3.0"
@@ -46,7 +46,7 @@ JSON template example:
 
 In some scenarios, the accompanying text you need is not in the immediate vicinity of the barcode. You can set a custom area to search by using the successfully decoded barcode as a reference via `top`, `bottom`, `left` and `right` values. The unit is in percentage.
 
-Let's take the following image as an example. In this sample image, the information we would like to recognize is within the green box, but it is relatively far from the barcode. We can specify a custom searching area (marked by the red box) by setting the following arguments:
+Let's take the following image as an example. In this sample image, the information we would like to recognize is within the green box, but it is a relatively far from the barcode. We can specify a custom searching area (marked by the red box) by setting the following arguments:
 
 `RegionBottom = -150`,
 `RegionLeft = -12`,
@@ -60,7 +60,7 @@ Example JSON template:
 {
     "ImageParameter": {
         "Name": "ImageParameter1", 
-        "Description": "This is demonstrating accompanying text", 
+        "Description": "This is a acompanying text demonstrate", 
         "AccompanyingTextRecognitionModes":[
             {
                 "Mode" : "ATRM_GENERAL",
@@ -76,7 +76,7 @@ Example JSON template:
 ```
 ## How to get the result of recognized accompanying text
 
-The result of the accompanying text is stored in the decoding result: [`ExtendedResult`]({{ site.structs }}ExtendedResult.html) -> type `RT_STANDARD_TEXT`. The following code snippet shows how to get the result of the recognized accompanying text.
+The result of the accompanying text is stored in the decoding result: [`ExtendedResult`]({{ site.structs }}ExtendedResult.html) -> type `RT_STANDARD_TEXT`. The following code snippet shows how to get the result of recognized accompanying text.
 
 ```c++
 CBarcodeReader * reader = new CBarcodeReader;

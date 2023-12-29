@@ -140,7 +140,7 @@ if error[0] != EnumErrorCode.DBR_OK:
 dbr = BarcodeReader()
 settings = dbr.get_runtime_settings()
 settings.barcode_format_ids = EnumBarcodeFormat.BF_NULL
-settings.barcode_format_ids_2 = EnumBarcodeFormat.BF2_POSTALCODE
+settings.barcode_format_ids_2 = EnumBarcodeFormat_2.BF2_POSTALCODE
 dbr.update_runtime_settings(settings)
 text_results = dbr.decode_file("YOUR-IMAGE-FILE-WITH-POSTAL-CODES")
 # Add further process
