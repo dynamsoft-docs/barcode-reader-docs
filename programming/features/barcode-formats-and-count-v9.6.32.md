@@ -203,7 +203,7 @@ try? barcodeReader.updateRuntimeSettings(settings!)
 # Obtain current runtime settings of `reader` instance.
 settings = reader.get_runtime_settings()
 # Set the expected barcode count
-settings.expectedBarcodesCount = 0;
+settings.expected_barcodes_count = 0;
 # Update the settings.
 reader.update_runtime_settings(settings)
 ```
