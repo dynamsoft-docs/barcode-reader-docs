@@ -40,7 +40,7 @@ If you want to configure parameters for a certain barcode type, you can use the 
 
 -  [MinQuietZoneWidth](#MinQuietZoneWidth)
 
-    Specifies the minimum width of the barcode quite zone
+    Specifies the minimum width of the barcode quiet zone
 
 -  [ModuleSizeRangeArray](#ModuleSizeRangeArray)
 
@@ -236,7 +236,7 @@ There should be enough white space on both sides of the standard barcode as a qu
 
 ![barcode-quietzone-definition][9]
 
-Here is a sample image with a very narrow quite zone
+Here is a sample image with a very narrow quiet zone
 
 ![barcode-narrow-wide-quietzone][11]
 
