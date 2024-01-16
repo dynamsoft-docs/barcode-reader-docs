@@ -72,7 +72,7 @@ Barcodes can be described from the following characteristics: barcode format, ba
 
 [ModuleSizeRangeArray]({{ site.parameters_reference }}module-size-range-array.html) is a parameter to specify the range of module size (in pixels) for barcodes searching and result filtering. It is not set by default which means there is no limitation on the barcode module size.
 
-### Barcode Quite Zone
+### Barcode Quiet Zone
 
 [MinQuietZoneWidth]({{ site.parameters_reference }}min-quiet-zone-width.html) is a parameter to specify the minimum width (in moduleSize) of the barcode quiet zone. It is defined as below:
 

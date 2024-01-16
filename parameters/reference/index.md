@@ -84,7 +84,7 @@ needAutoGenerateSidebar: false
 | [`BarcodeZoneBarCountRangeArray`]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-zone-bar-count-range-array.html) | Defines the range of bar count of the barcode zone for barcodes searching. |
 | [`BarcodeZoneMinDistanceToImageBorders`]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-zone-min-distance-to-image-borders.html) | Defines the minimum distance (in pixels) between the barcode zone and image borders. |
 | [`Code128Subset`]({{ site.dcv_parameters_reference }}barcode-format-specification/code128-subset.html) | Defines the subset of Code 128. |
-| [`EnableAddonCode`]({{ site.dcv_parameters_reference }}barcode-format-specification/enable-addon-code.html) | Defines whether to identify addon code. |
+| [`EnableAddOnCode`]({{ site.dcv_parameters_reference }}barcode-format-specification/enable-addon-code.html) | Defines whether to identify addon code. |
 | [`EnableDataMatrixECC000-140`]({{ site.dcv_parameters_reference }}barcode-format-specification/enable-data-matrix-ecc000-140.html) | Defines whether to read Data Matrix ECC000-140 barcode. |
 | [`EnableQRCodeModel1`]({{ site.dcv_parameters_reference }}barcode-format-specification/enable-qr-code-model-1.html) | Defines whether to read QR code model 1. |
 | [`FindUnevenModuleBarcode`]({{ site.dcv_parameters_reference }}barcode-format-specification/find-uneven-module-barcode.html) | Defines whether to find barcodes with uneven barcode modules. |

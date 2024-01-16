@@ -248,7 +248,7 @@ Quiet zone is the blank margin on both sides of the barcode that tells the barco
 
 ![barcode-quietzone-definition][9]
 
-Here is a sample image with a very narrow quite zone:
+Here is a sample image with a very narrow quiet zone:
 
 ![barcode-narrow-wide-quietzone][10]
 
