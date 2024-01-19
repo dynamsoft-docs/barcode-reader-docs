@@ -15,6 +15,7 @@ features: /barcode-reader/docs/core/programming/features/
 
 dcv_parameters: /capture-vision/docs/core/parameters/
 dcv_parameters_reference: /capture-vision/docs/core/parameters/reference/
+dcv_enumerations: /capture-vision/docs/core/enums/
 
 parameters: /barcode-reader/docs/core/parameters/
 parameters_reference: /barcode-reader/docs/core/parameters/reference/
