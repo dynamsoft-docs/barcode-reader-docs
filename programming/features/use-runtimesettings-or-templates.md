@@ -12,7 +12,7 @@ noTitleIndex: true
 
 Dynamsoft Barcode Reader (DBR) provides two ways for configuring the parameters: via `SimplifiedCaptureVisionSettings` or via a `JSON Template`.
 
-* [SimplifiedCaptureVisionSettings](#simplifiedsettings)
+* [SimplifiedCaptureVisionSettings](#simplifiedcapturevisionsettings)
 
   `SimplifiedCaptureVisionSettings` is an object that manages various parameters during runtime. If you need to *dynamically* configure the reading process, use `SimplifiedCaptureVisionSettings`.
 
@@ -59,7 +59,9 @@ cvr->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &settings, szErrorMsg, 25
 ```java
 try {
    // `cvr` is an instance of `CaptureVisionRouter`.
-   cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE");
+   SimplifiedCaptureVisionSettings captureVisionSettings = cvr.getSimplifiedSettings(EnumPresetTemplate.PT_READ_BARCODES);
+   captureVisionSettings.barcodeSettings.barcodeFormatIds = EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_ONED;
+   cvr.updateSettings(EnumPresetTemplate.PT_READ_BARCODES, captureVisionSettings);
 } catch (CaptureVisionRouterException e) {
    e.printStackTrace();
 }
@@ -68,15 +70,20 @@ try {
 ```objc
 NSError *error;
 // `cvr` is an instance of `DSCaptureVisionRouter`.
-[self.cvr initSettingsFromFile:@"PATH-TO-YOUR-SETTING-FILE" error:&error];
+DSSimplifiedCaptureVisionSettings *cvrRuntimeSettings = [cvr getSimplifiedSettings:DSPresetTemplateReadBarcodes error:&error];
+cvrRuntimeSettings.barcodeSettings.barcodeFormatIds = DSBarcodeFormatQRCode | DSBarcodeFormatOned;
+[cvr updateSettings:DSPresetTemplate.PT_READ_BARCODES settings:cvrRuntimeSettings error:&error];
 ```
 >
 ```swift
-do{
-   //`cvr` is an instance of `CaptureVisionRouter`.
-   try cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE")
-}catch{
-   // Add code to do when error occurs.
+guard let cvrRuntimeSettings = try? cvr.getSimplifiedSettings(template.rawValue) else {
+    return
+}
+cvrRuntimeSettings.barcodeSettings?.barcodeFormatIds = .qrCode | .oneD
+do {
+    try cvr.updateSettings(template.rawValue, settings:cvrRuntimeSettings)
+} catch {
+    print("update runtimeSettings error:\(error.localizedDescription)")
 }
 ```
 
