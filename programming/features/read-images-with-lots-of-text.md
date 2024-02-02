@@ -52,15 +52,14 @@ Below is an example illustrating how to configure the parameters to control text
         "ImageParameterOptions": [
             {
                 "Name": "IP_0",
-                "TextDetectionMode": [
-                    {
-                        "Mode": "TTDM_LINE",
-                        "Direction": "HORIZONTAL",
-                        "CharHeightRange": [1, 100, 1],
-                        "MaxSpacingInALine": -1,
-                        "Sensitivity": 3
-                    }
-                ],
+                "TextDetectionMode":
+                {
+                    "Mode": "TTDM_LINE",
+                    "Direction": "UNKNOWN",
+                    "CharHeightRange": [1, 100, 1],
+                    "MaxSpacingInALine": -1,
+                    "Sensitivity": 3
+                },
                 "IfEraseTextZone": 1
             }
         ]
