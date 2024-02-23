@@ -49,8 +49,8 @@ permalink: /faq/general/index.html
 
 20. [How can I sort the barcodes of my image in reading order?](sort-barcodes-image.html)
 
-20. [How to use offline registration license type?](offline-registration-license.html)
+21. [How to use offline registration license type?](offline-registration-license.html)
 
-21. [How to resolve error failed to read or write license buffer?](error-license-buffer.html)
+22. [How to resolve error failed to read or write license buffer?](error-license-buffer.html)
 
-
+23. [The error message "-10022 The PDF DLL is missing" on Linux?](error-10022-the-PDF-DLL-is-missing.html)

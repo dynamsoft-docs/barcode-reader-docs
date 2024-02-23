@@ -8,6 +8,8 @@ needAutoGenerateSidebar: false
 
 ## The error message "-10022 The PDF DLL is missing" on Linux
 
+[<< Back to FAQ index](index.md)
+
 The error message "-10022 The PDF DLL is missing" suggests that the Dynamsoft Barcode Reader is looking for a DLL file, which is typically used in Windows environments, rather than a shared object (SO) file, which is used in Linux environments. This could be an issue with how the error message is generated or with how the library is handling file dependencies.
 
 > For Windows x86:
