@@ -20,8 +20,11 @@ The error message "-10022 The PDF DLL is missing" suggests that the Dynamsoft Ba
 - For Windows:
   `DynamicPdf.dll` // If you are using Winodws x86
   `DynamicPdfCore.dll` // If you are using Winodws x86
+  `DynamicImage.dll` // If you are using Winodws x86
+
   `DynamicPdfx64.dll` // If you are using Winodws x64
   `DynamicPdfCorex64.dll` // If you are using Winodws x64
+  `DynamicImage.dll` // If you are using Winodws x64
 
 To check if all dependencies is properly installed, you could use following method:
 Use `dumpbin` command line tool to check dependency.
@@ -33,6 +36,7 @@ Use `dumpbin` command line tool to check dependency.
 - For Linux:  
   `libDynamicPdf.so`
   `libDynamicPdfCore.so`
+  `libDynamicImage.so`
 
 To resolve this issue, please run following command on console to check if all dependencies are installed
 
