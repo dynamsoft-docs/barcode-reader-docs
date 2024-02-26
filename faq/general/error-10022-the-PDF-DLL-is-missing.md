@@ -16,32 +16,32 @@ The error message "-10022 The PDF DLL is missing" indicates that the Dynamsoft B
 
 1. Please check if the PDF library files are located in the same directory as the Dynamsoft Barcode Reader library (e.g. DynamsoftBarcodeReaderx64.dll). If they are not, kindly copy the PDF library files to that location and try again. 
 
-**For Windows:**
+ **For Windows:**
   
-- `DynamicPdf.dll` // for Windows x86
+ - `DynamicPdf.dll` // for Windows x86
  
-- `DynamicPdfCore.dll` // for Windows x86
+ - `DynamicPdfCore.dll` // for Windows x86
  
-- `DynamicPdfx64.dll` // for Windows x64
+ - `DynamicPdfx64.dll` // for Windows x64
  
-- `DynamicPdfCorex64.dll` // for Windows x64
+ - `DynamicPdfCorex64.dll` // for Windows x64
 
-**For Linux:**
+ **For Linux:**
   
-- `libDynamicPdf.so`
+ - `libDynamicPdf.so`
  
-- `libDynamicPdfCore.so`
+ - `libDynamicPdfCore.so`
   
 2. If you still have this issue, please check if all dependencies are installed based on your OS.
 
-**For Windows:**
+ **For Windows:**
  Use `dumpbin` command line tool to check dependency.
  
  ```
-  dumpbin/dependents your_ddl_file.ddl
+ dumpbin/dependents your_ddl_file.ddl
  ```
 
-**For Linux:**
+ **For Linux:**
  Run the following command on the console to check if all dependencies are installed.
  
  ```
