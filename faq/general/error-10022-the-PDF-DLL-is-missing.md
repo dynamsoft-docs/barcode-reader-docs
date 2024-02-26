@@ -14,7 +14,7 @@ The error message `-10022 The PDF DLL is missing` indicates that the Dynamsoft B
 
 This error occurs when the necessary PDF library files required for handling PDF files are either missing or the required dependencies are not in the correct path.
 
-### To resolve this issue you could try the following method
+### To resolve this issue you could try the following methods
 
 1. Please check if the PDF library files are located in the same directory as the Dynamsoft Barcode Reader library (e.g. DynamsoftBarcodeReaderx64.dll). If they are not, kindly copy the PDF library files to that location and try again. 
  
