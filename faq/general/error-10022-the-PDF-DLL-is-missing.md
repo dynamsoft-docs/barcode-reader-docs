@@ -18,15 +18,21 @@ This error occurs when the necessary PDF library files required for handling PDF
 
 Please check if the PDF library files are located in the same directory as the Dynamsoft Barcode Reader library (e.g. DynamsoftBarcodeReaderx64.dll). If they are not, kindly copy the PDF library files to that location and try again.
 
-**For Windows:**
+**For Windows x86:**
 
-- `DynamicPdf.dll` // for Windows x86
+- `DynamicPdf.dll`
 
-- `DynamicPdfCore.dll` // for Windows x86
+- `DynamicPdfCore.dll`
+  
+- `DynamicImage.dll`
+  
+**For Windows x64:**
 
-- `DynamicPdfx64.dll` // for Windows x64
+- `DynamicPdfx64.dll`
 
-- `DynamicPdfCorex64.dll` // for Windows x64
+- `DynamicPdfCorex64.dll`
+  
+- `DynamicImagex64.dll`
 
 **For Linux:**
 
