@@ -10,6 +10,7 @@ needAutoGenerateSidebar: false
 
 [<< Back to FAQ index](index.md)
 
+
 The error message `-10022 The PDF DLL is missing` indicates that the Dynamsoft Barcode Reader is looking for a PDF DLL file, which is typically used in Windows environments. However, this error message may also appear in Linux environments, as both cases point to the same issue due to a shared error message library.
 
 This error occurs when the necessary PDF library files required for handling PDF files are either missing or the required dependencies are not in the correct path.
@@ -48,13 +49,13 @@ Use `dumpbin` command line tool to check dependency.
 ```
 dumpbin/dependents your_ddl_file.ddl
 ```
-
-**For Linux:**
-Run the following command on the console to check if all dependencies are installed.
-
-```
-ldd /lib/libDynamicPdf.so
-```
-
-> Tips:
-> Generally, libatomic1 is not installed on ARM64, while it does appear to exist on the AMD64 image. If you are using ARM64, you could test if libatomic1 is installed.
+ 
+ **For Linux:**
+ Run the following command on the console to check if all dependencies are installed.
+ 
+ ```
+ ldd /lib/libDynamicPdf.so
+ ```
+ 
+ > Tips:
+ > Generally, libatomic1 is not installed on ARM64, while it does appear to exist on the AMD64 image. If you are using ARM64, you could test if libatomic1 is installed.
