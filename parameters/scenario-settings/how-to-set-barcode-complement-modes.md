@@ -3,7 +3,7 @@ layout: default-layout
 description: Decode incomplete barcodes by using BarcodeComplementModes
 title: How to set barcode complement modes
 keywords: BarcodeComplementModes, damaged image
-permalink: /parameters/scenario-settings/how-to-set-barcode-complememt-modes.html
+permalink: /parameters/scenario-settings/how-to-set-barcode-complement-modes.html
 ---
 
 # How to Decode Incomplete Barcodes 
