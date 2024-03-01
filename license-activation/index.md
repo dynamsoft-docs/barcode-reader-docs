@@ -42,8 +42,7 @@ The following shows how to set the license in the code.
    >
 > 
 ```javascript
-  Dynamsoft.DBR.BarcodeScanner.license = "YOUR-LICENSE-KEY";
-  let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+Dynamsoft.License.LicenseManager.initLicense("YOUR-LICENSE-KEY");
 ```
 > 
 ```c
@@ -85,7 +84,7 @@ LicenseManager.initLicense("YOUR-LICENSE-KEY", this, (isSuccess, error) -> {
 ```
 >
 ```objc
-[DSLicenseManager initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
+[DSLicenseManager initLicense:@"YOUR-LICENSE-KEY" verificationDelegate:self];
 - (void)onLicenseVerified:(BOOL)isSuccess error:(nullable NSError *)error {
     if (!isSuccess && error != nil) {
         NSLog(@"error: %@", error);
@@ -94,7 +93,7 @@ LicenseManager.initLicense("YOUR-LICENSE-KEY", this, (isSuccess, error) -> {
 ```
 >
 ```swift
-LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate: self)
+LicenseManager.initLicense("YOUR-LICENSE-KEY", verificationDelegate: self)
 func onLicenseVerified(_ isSuccess: Bool, error: Error?) {
    if !isSuccess {
           if let error = error {
