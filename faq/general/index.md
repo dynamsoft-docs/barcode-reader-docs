@@ -9,7 +9,7 @@ permalink: /faq/general/index.html
 
 # FAQ Index
 
-## [General](general.html)
+## [General](general.md)
 
 1. [What business needs can Dynamsoft Barcode Reader meet?](what-is-dbr.html)
 
@@ -25,7 +25,7 @@ permalink: /faq/general/index.html
 
 7. [How does your SDK compare to other commercial SDKs?](competitors-comparison.html)
 
-## [Configuration](general.html)
+## [Configuration](configuration.md)
 
 1. [What I can do when barcode image returnes messy (non-english) characters?](non-english-characters.html)
 
@@ -41,7 +41,7 @@ permalink: /faq/general/index.html
 
 7. [How can I sort the barcodes of my image in reading order?](sort-barcodes-image.html)
 
-## [License & Usage](license-usage.html)
+## [License & Usage](license-usage.md)
 
 1. [Can the SDK work without internet connection?](sdk-works-without-internet.html)
 
@@ -61,7 +61,7 @@ permalink: /faq/general/index.html
 
 9. [When is a new license spot taken when using a per-device licensing model?](new-license-required-per-device-licensing.html)
 
-## [Multi-Platform](multi-platform.html)
+## [Multi-Platform](multi-platform.md)
 
 ### JS
 
@@ -111,7 +111,7 @@ permalink: /faq/general/index.html
 
 10. Android - [How to prevent project build failure after shrinking code?](proguard.md)
 
-## [Error & Debug](error-debug.html)
+## [Error & Debug](error-debug.md)
 
 1. [The error message "-10022 The PDF DLL is missing" on Linux?](error-10022-the-PDF-DLL-is-missing.html)
 
