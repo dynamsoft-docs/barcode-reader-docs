@@ -57,7 +57,6 @@ needAutoGenerateSidebar: false
 | ---------------------------------- | ----------- |
 | [`BaseImageParameterName`]({{ site.dcv_parameters_reference }}image-parameter/base-image-parameter-name.html) | Represents the name of another `ImageParameter` object to inherit from. |
 | [`BinarizationModes`]({{ site.dcv_parameters_reference }}image-parameter/binarization-modes.html) | Defines the process of binarization |
-| [`ColourChannelUsageType`]({{ site.dcv_parameters_reference }}image-parameter/colour-channel-usage-type.html) | Defines how to use the colour channel from the source image buffer. |
 | [`ColourConversionModes`]({{ site.dcv_parameters_reference }}image-parameter/colour-conversion-modes.html) | Defines how to convert a colour image to a grayscale image. |
 | [`GrayscaleEnhancementModes`]({{ site.dcv_parameters_reference }}image-parameter/grayscale-enhancement-modes.html) | Defines the image processing methods to enhance the quality of the grayscale image. |
 | [`GrayscaleTransformationModes`]({{ site.dcv_parameters_reference }}image-parameter/grayscale-transformation-modes.html) | Defines whether or not to invert the color of the grayscale image. |

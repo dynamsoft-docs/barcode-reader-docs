@@ -20,6 +20,7 @@ noTitleIndex: true
 
 | Versions | Available Editions |
 | -------- | ------------------ |
+| 10.2.10 | [C++]({{ site.cpp_release_notes}}cpp-10.html#10210-03012024){:target="_blank"} |
 | 10.2.0 | [C++]({{ site.cpp_release_notes}}cpp-10.html#1020-01162024){:target="_blank"} |
 
 ## 10.0
