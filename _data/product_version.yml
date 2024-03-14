@@ -11,6 +11,7 @@ version_info_list_algorithm:
       - 10.0.0
   - value: 9.x
     child:
+      - 9.6.40
       - 9.6.33
       - 9.6.32
       - 9.6.31
