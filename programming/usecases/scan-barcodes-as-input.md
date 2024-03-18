@@ -16,8 +16,7 @@ The following code shows how to automatically invoke the sdk to read a barcode a
 > If you are using the JavaScript edition, also check out:
 >
 > * <a target = "_blank" href="https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/samples-demos/usecase1-formfill.html?utm_source=usecaseArticle">Read Barcodes and Fill Form Fields - Guide</a>
-> * <a target = "_blank" href="https://demo.dynamsoft.com/Samples/DBR/JS/4.use-case/1.fill-a-form-with-barcode-reading.html?utm_source=usecaseArticle">Read Barcodes and Fill Form Fields - Demo</a>
-> * <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/4.use-case/1.fill-a-form-with-barcode-reading.html?utm_source=usecaseArticle">Read Barcodes and Fill Form Fields - Source Code</a>
+> * <a target = "_blank" href="https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/9.x/4.use-case/1.fill-a-form-with-barcode-reading.html?utm_source=usecaseArticle">Read Barcodes and Fill Form Fields - Source Code</a>
 
 <div class="sample-code-prefix template2"></div>
    >- Javascript
