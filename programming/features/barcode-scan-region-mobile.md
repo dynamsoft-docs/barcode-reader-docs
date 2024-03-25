@@ -27,8 +27,8 @@ import com.dynamsoft.dce.CameraEnhancer;
 DSRect scanRegion = new DSRect();
 scanRegion.top = 0.1f;
 scanRegion.bottom = 0.9f;
-scanRegion.right = 0.1f;
-scanRegion.left = 0.9f;
+scanRegion.right = 0.9f;
+scanRegion.left = 0.1f;
 scanRegion.measuredInPercentage = true;
 try {
    // mCameraEnhancer is an instance of com.dynamsoft.dce.CameraEnhancer.
@@ -43,8 +43,8 @@ NSError* err = nil;
 DSRect* scanRegion = [[DSRect alloc] init];
 scanRegion.top = 0.1;
 scanRegion.bottom = 0.9;
-scanRegion.right = 0.1;
-scanRegion.left = 0.9;
+scanRegion.right = 0.9;
+scanRegion.left = 0.1;
 scanRegion.measuredInPercentage = YES;
 // dce is an instance of `DSCameraEnhancer`.
 [dce setScanRegion:scanRegion error:&err];
