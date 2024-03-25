@@ -31,22 +31,22 @@ CCapturedResult* result = cvr->Capture("IMAGE-FILE-PATH", CPresetTemplate::PT_RE
 if (result->GetErrorCode() != 0) {
     cout << "Error: " << result->GetErrorCode() << "," << result->GetErrorString() << endl;
 }
-CDecodedBarcodesResult* barcodeResult = result->GetDecodedBarcodesResult();
-if (barcodeResult != nullptr || barcodeResult->GetItemsCount() != 0)
+int capturedResultItemCount = result->GetCount();
+for (int j = 0; j < capturedResultItemCount; j++) 
 {
-    for (int index = 0; index < barcodeResult->GetItemsCount(); ++index)
+    const CCapturedResultItem* capturedResultItem = result->GetItem(j);
+    CapturedResultItemType type = capturedResultItem->GetType();
+    if (type == CapturedResultItemType::CRIT_BARCODE) 
     {
-        const CBarcodeResultItem* barcode = barcodeResult->GetItem(index);
-        CQuadrilateral location = barcode->GetLocation();
-        cout << "Result " << index + 1 << endl;
-        cout << "Point 0: [ " << location.points[0][0] << ", " << location.points[0][1] << " ]" << endl;
-        cout << "Point 1: [ " << location.points[1][0] << ", " << location.points[1][1] << " ]" << endl;
-        cout << "Point 2: [ " << location.points[2][0] << ", " << location.points[2][1] << " ]" << endl;
-        cout << "Point 3: [ " << location.points[3][0] << ", " << location.points[3][1] << " ]" << endl;
+        const CBarcodeResultItem* barcodeResultItem = dynamic_cast<const CBarcodeResultItem*> (capturedResultItem);
+        CQuadrilateral location = barcodeResultItem->GetLocation();
+        cout << "Result " << j + 1 << endl;
+        cout << "Point 0: [ " << location.points[0].coordinate[0] << ", " << location.points[0].coordinate[1] << " ]" << endl;
+        cout << "Point 1: [ " << location.points[1].coordinate[0] << ", " << location.points[1].coordinate[1] << " ]" << endl;
+        cout << "Point 2: [ " << location.points[2].coordinate[0] << ", " << location.points[2].coordinate[1] << " ]" << endl;
+        cout << "Point 3: [ " << location.points[3].coordinate[0] << ", " << location.points[3].coordinate[1] << " ]" << endl;
     }
-    barcodeResult->Release();
 }
-result->Release();
 // more process here
 ```
 >

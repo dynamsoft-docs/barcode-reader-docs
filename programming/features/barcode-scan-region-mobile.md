@@ -25,10 +25,10 @@ If you are using DBR and DCE to read barcodes from a specific area of the video 
 ```java
 import com.dynamsoft.dce.CameraEnhancer;
 DSRect scanRegion = new DSRect();
-scanRegion.top = 0.1;
-scanRegion.bottom = 0.9;
-scanRegion.right = 0.1;
-scanRegion.left = 0.9;
+scanRegion.top = 0.1f;
+scanRegion.bottom = 0.9f;
+scanRegion.right = 0.1f;
+scanRegion.left = 0.9f;
 scanRegion.measuredInPercentage = true;
 try {
    // mCameraEnhancer is an instance of com.dynamsoft.dce.CameraEnhancer.
