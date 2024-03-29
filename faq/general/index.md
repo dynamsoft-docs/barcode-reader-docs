@@ -89,6 +89,8 @@ permalink: /faq/general/index.html
 
 12. [How can I hide the laser bar and Dynamsoft message in the default UI of the BarcodeScanner?](hide-laser-message-ui.md)
 
+13. [How to troubleshoot camera acessbility on iOS 17.4?](how-to-fix-camera-issue-on-ios-17.4.md)
+
 ### Mobile
 
 1. iOS & Android - [How can I reduce battery consumption?](reduce-battery-consumption.md)
@@ -105,11 +107,9 @@ permalink: /faq/general/index.html
 
 7. iOS - [How to resolve the "Building for iOS Simulator, but linking in dylib built for iOS" error when building for the iOS simulator?](arm64-simulator-error.md)
 
-8. iOS - [How to troubleshoot camera acessbility on iOS 17.4?](how-to-fix-camera-issue-on-ios-17.4.md)
+8. Android - [Can I reduce the size of the final Android app?](reduce-final-size.md)
 
-9. Android - [Can I reduce the size of the final Android app?](reduce-final-size.md)
-
-10. Android - [How to prevent project build failure after shrinking code?](proguard.md)
+9. Android - [How to prevent project build failure after shrinking code?](proguard.md)
 
 ## [Error & Debug](error-debug.md)
 
