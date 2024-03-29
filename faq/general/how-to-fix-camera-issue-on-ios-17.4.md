@@ -12,8 +12,9 @@ needAutoGenerateSidebar: true
 
 If you're experiencing issues with the camera not opening on iOS 17.4, please follow the steps below to troubleshoot:
 
-1. Check if the camera permission is enabled for your app. Go to Settings > Privacy > Camera on your iOS device and make sure your app is listed and enabled.
+1. Check if the camera permission is enabled for your browser. The permission setting is normally located on the address bar.
 
 2. Replace the old DCE CDN link to the following CDN link: [https://cdn.jsdelivr.net/npm/iv-dynamsoft-camera-enhancer@4.0.2-iv-202403151422/dist/](https://cdn.jsdelivr.net/npm/iv-dynamsoft-camera-enhancer@4.0.2-iv-202403151422/dist/)
 
-3. Try to restart your iOS device. Sometimes, a simple restart can fix many issues.
+> Note:
+> Official version 10.2.10 will be released on April 2024
