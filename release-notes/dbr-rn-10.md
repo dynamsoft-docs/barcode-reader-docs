@@ -20,7 +20,7 @@ noTitleIndex: true
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 10.2.10 | [C++]({{ site.cpp_release_notes}}cpp-10.html#10210-03012024){:target="_blank"} / [JavaScript]({{ site.js_release_notes }}js-10.html#10210-04032024){:target="_blank"}|
+| 10.2.10 | [C++]({{ site.cpp_release_notes}}cpp-10.html#10210-03012024){:target="_blank"} / [JavaScript]({{ site.js_release_notes }}js-10.html#10210-04032024){:target="_blank"} / [Android]({{ site.android_release_notes }}android-10.html#10210-04162024){:target="_blank"} / [iOS]({{ site.ios_release_notes }}ios-10.html#10210-04162024){:target="_blank"} |
 | 10.2.0 | [C++]({{ site.cpp_release_notes}}cpp-10.html#1020-01162024){:target="_blank"} |
 
 ## 10.0
