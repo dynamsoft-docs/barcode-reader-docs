@@ -52,7 +52,7 @@ CCapturedResult* result = cvr->Capture("IMAGE-FILE-PATH", CPresetTemplate::PT_RE
 if (result->GetErrorCode() != 0) {
     cout << "Error: " << result->GetErrorCode() << "," << result->GetErrorString() << endl;
 }
-int capturedResultItemCount = result->GetItemsCount();
+int capturedResultItemCount = result->GetCount();
 for (int j = 0; j < capturedResultItemCount; j++) 
 {
     const CCapturedResultItem* capturedResultItem = result->GetItem(j);
