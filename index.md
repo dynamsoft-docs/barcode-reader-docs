@@ -26,7 +26,7 @@ DEVELOPMENT
 * Server / Desktop
   * [Python]({{ site.python }})
   * [Java]({{ site.java }})
-  * [C\#]({{ site.dotnet }})
+  * [.NET]({{ site.dotnet }})
   * [C++]({{ site.cpp }})
   * [C]({{ site.c }})
 
