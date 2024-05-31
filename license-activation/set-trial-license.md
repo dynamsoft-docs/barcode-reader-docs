@@ -9,11 +9,7 @@ needGenerateH3Content: false
 
 # How to set trial license
 
-The following shows how you can apply for a 30-day free trial license.
-
-- Sign in the [Customer Portal](https://www.dynamsoft.com/customer/index?utm_source=docs&product=dbr). Register for a Dynamsoft account if you haven't already done so;
-- Go to [License > Trial License](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs&product=dbr) page, select the correct version and package/edition, then click "Register for a 30-Day Trial";
-- A 30-day private-trial license will be generated and the instruction on how to use it will show up on the page.
+You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs&product=dbr){:target="_blank"} link.
 
 > NOTE
 >
