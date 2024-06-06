@@ -85,9 +85,7 @@ permalink: /faq/general/index.html
 
 10. [What are the general troubleshooting steps if an image fails to decode with the JavaScript SDK?](general-troubleshooting-steps-for-decode-failure.md)
 
-11. [How to get rid of the delay when opening the camera?](delay-when-open-camera.md)
-
-12. [How can I hide the laser bar and Dynamsoft message in the default UI of the BarcodeScanner?](hide-laser-message-ui.md)
+11. [How can I hide the laser bar and Dynamsoft message in the default UI of the BarcodeScanner?](hide-laser-message-ui.md)
 
 ### Mobile
 
