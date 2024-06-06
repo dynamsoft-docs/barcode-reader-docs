@@ -85,9 +85,7 @@ permalink: /faq/general/index.html
 
 10. [What are the general troubleshooting steps if an image fails to decode with the JavaScript SDK?](general-troubleshooting-steps-for-decode-failure.md)
 
-11. [How to get rid of the delay when opening the camera?](delay-when-open-camera.md)
-
-12. [How can I hide the laser bar and Dynamsoft message in the default UI of the BarcodeScanner?](hide-laser-message-ui.md)
+11. [How can I hide the laser bar and Dynamsoft message in the default UI of the BarcodeScanner?](hide-laser-message-ui.md)
 
 ### Mobile
 
@@ -95,7 +93,7 @@ permalink: /faq/general/index.html
 
 2. iOS & Android - [Why does the page sometimes freeze when I start the scanner?](page-freeze.md)
 
-3. IOS & Android - [How to import the settings of Barcode Scanner X app into my app?](template-support.md)
+3. iOS & Android - [How to import the settings of Barcode Scanner X app into my app?](template-support.md)
 
 4. iOS & Android - [How to use Debug Mode in Barcode Scanner X?](debug-mode-barcodescannerx.md)
 
