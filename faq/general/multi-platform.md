@@ -33,28 +33,24 @@ permalink: /faq/general/multi-platform.html
 
 10. [What are the general troubleshooting steps if an image fails to decode with the JavaScript SDK?](general-troubleshooting-steps-for-decode-failure.html)
 
-11. [How to get rid of the delay when opening the camera?](delay-when-open-camera.html)
-
-12. [How can I hide the laser bar and Dynamsoft message in the default UI of the BarcodeScanner?](hide-laser-message-ui.html)
+11. [How can I hide the laser bar and Dynamsoft message in the default UI of the BarcodeScanner?](hide-laser-message-ui.html)
 
 ### Mobile
 
-1. IOS & Android - [How can I reduce battery consumption?](reduce-battery-consumption.md)
+1. iOS & Android - [How can I reduce battery consumption?](reduce-battery-consumption.md)
 
-2. IOS & Android - [Why does the page sometimes freeze when I start the scanner?](page-freeze.md)
+2. iOS & Android - [Why does the page sometimes freeze when I start the scanner?](page-freeze.md)
 
-3. IOS & Android - [How to import the settings of Barcode Scanner X app into my app?](template-support.md)
+3. iOS & Android - [How to import the settings of Barcode Scanner X app into my app?](template-support.md)
 
-4. IOS & Android - [How to use Debug Mode in Barcode Scanner X?](debug-mode-barcodescannerx.md)
+4. iOS & Android - [How to use Debug Mode in Barcode Scanner X?](debug-mode-barcodescannerx.md)
 
-5. IOS & Android - [How can I use CameraX or third-party camera modules with Dynamsoft Barcode Reader?](no-camera-enhancer.md)
+5. iOS & Android - [How can I use CameraX or third-party camera modules with Dynamsoft Barcode Reader?](no-camera-enhancer.md)
 
-6. IOS - [Does Dynamsoft Barcode Reader iOS support simulator devices?](simulator-support.md)
+6. iOS - [Does Dynamsoft Barcode Reader iOS support simulator devices?](simulator-support.md)
 
-7. IOS - [How to resolve the "Building for iOS Simulator, but linking in dylib built for iOS" error when building for the iOS simulator?](arm64-simulator-error.md)
+7. iOS - [How to resolve the "Building for iOS Simulator, but linking in dylib built for iOS" error when building for the iOS simulator?](arm64-simulator-error.md)
 
-8. IOS - [How to resolve the "Building for iOS Simulator, but linking in dylib built for iOS" error when building for the iOS simulator?](arm64-simulator-error.md)
+8. Android - [Can I reduce the size of the final Android app?](reduce-final-size.md)
 
-9. Android - [Can I reduce the size of the final Android app?](reduce-final-size.md)
-
-10. Android - [How to prevent project build failure after shrinking code?](proguard.md)
+9.  Android - [How to prevent project build failure after shrinking code?](proguard.md)

@@ -63,12 +63,12 @@ try? dce.setScanRegion(scanRegion)
 
 ## Set an Region of Interest on a Still Image
 
-The library scan the entire image by default when localizing the barcodes. However, if only a specific region of the image or video is required to locate the barcode, you can define a Region of Interest (ROI) via the target ROI parameter to restrict the scan area. The parameter can be set either via the `SimlifiedCaptureVisionSettings` or a JSON parameter template.
+The library scan the entire image by default when localizing the barcodes. However, if only a specific region of the image or video is required to locate the barcode, you can define a Region of Interest (ROI) via the target ROI parameter to restrict the scan area. The parameter can be set either via the `SimplifiedCaptureVisionSettings` or a JSON parameter template.
 
 > Notes:
 >
-> - You can either configure these settings via the `SimlifiedCaptureVisionSettings` struct or via a JSON template.
-> - When using `SimlifiedCaptureVisionSettings`, you can only specify one region.
+> - You can either configure these settings via the `SimplifiedCaptureVisionSettings` struct or via a JSON template.
+> - When using `SimplifiedCaptureVisionSettings`, you can only specify one region.
 > - When using JSON template, you can specify more than one region.
 
 ### Specify a ROI via SimplifiedCaptureVisionSettings
