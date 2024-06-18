@@ -131,7 +131,7 @@ In addition to the above, DCE also does the following (only supported on iOS & A
 
 When locating barcodes, DBR scans the whole image, so the larger the size of the image, the more time it takes. To speed things up, we can reduce the size of the original image. Usually the reduction is done by scaling down a large image, or delimiting the region of interest. Let's explore each of those methods:
 
-#### Scale down a monstrous image
+#### Scale down a large image
 
 A barcode normally keeps its shape and can be read correctly even when the image gets scaled down. Therefore, DBR shrinks very large images before reading them. The parameter [ScaleDownThreshold]({{ site.dcv_parameters_reference }}image-parameter/scale-down-threshol.html) can be used to determine the threshold beyond which the scale down happens.
 
