@@ -40,11 +40,22 @@ The following illustrations will show how the angle is calculated for different 
 The following code snippet shows how to get the confidence and rotation angle of the barcode result:
 
 <div class="sample-code-prefix template2"></div>
+   >- JavaScript
    >- C++
    >- Android
    >- Objective-C
    >- Swift
    >
+>
+```javascript
+const result = await cvRouter.capture(file, "ReadSingleBarcode");
+for (let item of result.items) {
+  if (item.type === Dynamsoft.Core.EnumCapturedResultItemType.CRIT_BARCODE) {
+    console.log("confidence: " + item.confidence);
+    console.log("angle: " + item.angle);
+  }
+}
+```
 >
 ```c++
 CCaptureVisionRouter* cvr = new CCaptureVisionRouter;

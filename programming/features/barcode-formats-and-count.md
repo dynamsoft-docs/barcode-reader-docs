@@ -19,11 +19,22 @@ You can configure the parameter in two different ways, depending on your require
 * Configure barcode format via `SimplifiedCaptureVisionSettings`.
 
 <div class="sample-code-prefix template2"></div>
+>- JavaScript
 >- C++
 >- Android
 >- Objective-C
 >- Swift
 >
+>
+```javascript
+// Obtain current runtime settings of `router` instance. Here we use `ReadSingleBarcode` as an example. You can change it to your own template name or the name of other preset template.
+let settings = await router.getSimplifiedSettings("ReadSingleBarcode");
+// Specify the barcode formats by enumeration values.
+// Use "|" to enable multiple barcode formats at one time.
+settings.barcodeSettings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE | Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE;
+// Update the settings to a specific template.
+await router.updateSettings("ReadSingleBarcode", settings);
+```
 >
 ```c++
 char szErrorMsg[256] = {0};
@@ -102,11 +113,18 @@ do{
   * apply settings by calling method `InitSettingsFromFile`
 
     <div class="sample-code-prefix template2"></div>
+       >- JavaScript
        >- C++
        >- Android
        >- Objective-C
        >- Swift
        >
+    >
+    ```javascript
+    // `router` is an instance of `CaptureVisionRouter`.
+    // In the JS edition, the method name we use for initialization is different.
+    router.initSettings("PATH-TO-YOUR-SETTING")
+    ```
     >
     ```c++
     char szErrorMsg[256] = {0};
@@ -155,12 +173,21 @@ You can configure the parameter in two different ways, depending on your require
 * Configure expected barcode count via `SimplifiedCaptureVisionSettings`.
 
 <div class="sample-code-prefix template2"></div>
+   >- JavaScript
    >- C++
    >- Android
    >- Objective-C
    >- Swift
    >
 >
+```javascript
+// Obtain current runtime settings of `router` instance. Here we use `ReadSingleBarcode` as an example. You can change it to your own template name or the name of other preset template.
+let settings = await router.getSimplifiedSettings("ReadSingleBarcode");
+// Specify the expected barcode count.
+settings.barcodeSettings.expectedBarcodesCount = 1;
+// Update the settings.
+await router.updateSettings("ReadSingleBarcode", settings);
+```
 >
 ```c++
 char szErrorMsg[256] = {0};
@@ -237,11 +264,18 @@ do{
   * apply settings by calling method `InitSettingsFromFile`
 
     <div class="sample-code-prefix template2"></div>
+       >- JavaScript
        >- C++
        >- Android
        >- Objective-C
        >- Swift
        >
+    >
+    ```javascript
+    // `router` is an instance of `CaptureVisionRouter`.
+    // In the JS edition, the method name we use for initialization is different.
+    router.initSettings("PATH-TO-YOUR-SETTING")
+    ```
     >
     ```c++
     char szErrorMsg[256] = {0};

@@ -37,11 +37,22 @@ Basic steps:
 The following code snippet demonstrates how to specify barcode formats via `SimplifiedCaptureVisionSettings`.  
 
 <div class="sample-code-prefix template2"></div>
+   >- JavaScript
    >- C++
    >- Android
    >- Objective-C
    >- Swift
    >
+>
+```javascript
+// Obtain current runtime settings of `router` instance. Here we use `ReadSingleBarcode` as an example. You can change it to your own template name or the name of other preset template.
+let settings = await router.getSimplifiedSettings("ReadSingleBarcode");
+// Specify the barcode formats by enumeration values.
+// Use "|" to enable multiple barcode formats at one time.
+settings.barcodeSettings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE | Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE;
+// Update the settings to a specific template.
+await router.updateSettings("ReadSingleBarcode", settings);
+```
 >
 ```c++
 char szErrorMsg[256] = {0};
@@ -89,8 +100,8 @@ do {
 
 **See Also**  
 
-- `SimplifiedCaptureVisionSettings:` [C++]({{ site.dcv_cpp_api }}capture-vision-router/structs/simplified-capture-vision-settings.html)
-- `SimplifiedBarcodeReaderSettings:` [C++]({{ site.cpp_api }}simplified-barcode-reader-settings.html)
+- `SimplifiedCaptureVisionSettings:` [C++]({{ site.dcv_cpp_api }}capture-vision-router/structs/simplified-capture-vision-settings.html) / [JavaScript](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/interfaces/simplified-capture-vision-settings.html)
+- `SimplifiedBarcodeReaderSettings:` [C++]({{ site.cpp_api }}simplified-barcode-reader-settings.html) / [JavaScript](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/interfaces/simplified-barcode-reader-settings.html)
 
 ## JSON Template
 
@@ -137,11 +148,18 @@ The following steps demonstrates how to specify barcode formats via `JSON Templa
   * Call method `InitSettingsFromFile` or `InitSettings` to apply the settings
 
     <div class="sample-code-prefix template2"></div>
+       >- JavaScript
        >- C++
        >- Android
        >- Objective-C
        >- Swift
        >
+    >
+    ```javascript
+    // `router` is an instance of `CaptureVisionRouter`.
+    // In the JS edition, the method name we use for initialization is different.
+    router.initSettings("PATH-TO-YOUR-SETTING")
+    ```
     >
     ```c++
     char szErrorMsg[256] = {0};
