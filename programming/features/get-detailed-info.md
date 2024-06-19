@@ -38,11 +38,22 @@ Here we take QR Code as example and show how to get the version and model of a Q
 ## Code Snippet for Getting Detailed Barcode Information
 
 <div class="sample-code-prefix template2"></div>
+   >- JavaScript
    >- C++
    >- Android
    >- Objective-C
    >- Swift
    >
+>
+```javascript
+const result = await cvRouter.capture(file, "ReadSingleBarcode");
+for (let item of result.items) {
+  if (item.type === Dynamsoft.Core.EnumCapturedResultItemType.CRIT_BARCODE) {
+    console.log("QR_version: " + item.details.version);
+    console.log("QR_model: " + item.details.model);
+  }
+}
+```
 >
 ```c++
 CCaptureVisionRouter* cvr = new CCaptureVisionRouter;

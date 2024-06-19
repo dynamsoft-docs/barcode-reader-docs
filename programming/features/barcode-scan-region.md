@@ -17,8 +17,21 @@ Dynamsoft Barcode Reader (DBR) will locate the code region and decode the entire
 * Configure region via `SimplifiedCaptureVisionSettings`
 
 <div class="sample-code-prefix template2"></div>
+   >- JavaScript
    >- C++
    >
+>
+```javascript
+// Obtain current runtime settings of `router` instance. Here we use `ReadSingleBarcode` as an example. You can change it to your own template name or the name of other preset template.
+let settings = await router.getSimplifiedSettings("ReadSingleBarcode");
+// Specify the ROI
+settings.roi.points[0] = {x:10, y:10};
+settings.roi.points[1] = {x:90, y:10};
+settings.roi.points[2] = {x:90, y:90};
+settings.roi.points[3] = {x:10, y:90};
+// Update the settings to a specific template.
+await router.updateSettings("ReadSingleBarcode", settings);
+```
 >
 ```c++
 char szErrorMsg[256] = {0};

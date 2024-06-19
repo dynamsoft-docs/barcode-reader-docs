@@ -65,8 +65,18 @@ You can configure the parameter in two different ways, depending on your require
 * Configure timeout via `SimplifiedCaptureVisionSettings`.
 
 <div class="sample-code-prefix template2"></div>
+   >- JavaScript
    >- C++
    >
+>
+```javascript
+// Obtain current runtime settings of `router` instance. Here we use `ReadSingleBarcode` as an example. You can change it to your own template name or the name of other preset template.
+let settings = await router.getSimplifiedSettings("ReadSingleBarcode");
+// Specify the timeout
+settings.timeout = 1000;
+// Update the settings to a specific template.
+await router.updateSettings("ReadSingleBarcode", settings);
+```
 >
 ```c++
 char szErrorMsg[256] = {0};

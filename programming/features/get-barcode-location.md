@@ -19,11 +19,24 @@ A barcode result is returned as a `BarcodeResultItem` which provides a method `G
 The following code snippet shows how to get the coordinates of the barcode:
 
 <div class="sample-code-prefix template2"></div>
+   >- JavaScript
    >- C++
    >- Android
    >- Objective-C
    >- Swift
    >
+>
+```javascript
+const result = await cvRouter.capture(file, "ReadSingleBarcode");
+for (let item of result.items) {
+  if (item.type === Dynamsoft.Core.EnumCapturedResultItemType.CRIT_BARCODE) {
+    console.log("Point 0: " + JSON.stringify(item.location.points[0]));
+    console.log("Point 1: " + JSON.stringify(item.location.points[1]));
+    console.log("Point 2: " + JSON.stringify(item.location.points[2]));
+    console.log("Point 3: " + JSON.stringify(item.location.points[3]));  
+  }
+}
+```
 >
 ```c++
 CCaptureVisionRouter* cvr = new CCaptureVisionRouter;

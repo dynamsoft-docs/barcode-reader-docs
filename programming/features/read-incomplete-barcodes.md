@@ -57,11 +57,18 @@ Below is an example illustrating how to configure the parameter `BarcodeCompleme
 * apply settings by calling method `InitSettingsFromFile`
 
 <div class="sample-code-prefix template2"></div>
+   >- JavaScript
    >- C++
    >- Android
    >- Objective-C
    >- Swift
    >
+>
+```javascript
+// `router` is an instance of `CaptureVisionRouter`.
+// In the JS edition, the method name we use for initialization is different.
+router.initSettings("PATH-TO-YOUR-SETTING")
+```
 >
 ```c++
 char szErrorMsg[256] = {0};
