@@ -98,6 +98,9 @@ cordova_api: /capture-vision/docs/mobile/programming/cordova/api-reference/
 react_native: /capture-vision/docs/mobile/programming/react-native/
 react_native_api: /capture-vision/docs/mobile/programming/react-native/api-reference/
 
+maui: /barcode-reader/docs/mobile/programming/maui/
+maui_api: /barcode-reader/docs/mobile/programming/maui/api-reference/
+maui_release_notes: /barcode-reader/docs/mobile/programming/maui/release-notes/
 
 assets: /barcode-reader/docs/core/assets/
 edit_icon: /barcode-reader/docs/core/assets/img-icon/edit-icon.png
