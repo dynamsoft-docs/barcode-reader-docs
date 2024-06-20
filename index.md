@@ -17,8 +17,9 @@ DEVELOPMENT
 
 * [Web (Client Side)]({{ site.js }})
 * Mobile
-  * [Android]({{ site.android }})
-  * [iOS]({{ site.oc }})
+  * [Android]({{ site.android }}){:target="_blank"}
+  * [iOS]({{ site.oc }}){:target="_blank"}
+  * [MAUI]({{ site.oc }}){:target="_blank"}
   * <a href="https://www.dynamsoft.com/capture-vision/docs/programming/react-native/?ver=latest" target="_blank">React Native</a>
   * <a href="https://www.dynamsoft.com/capture-vision/docs/programming/flutter/?ver=latest" target="_blank">Flutter</a>
   * <a href="https://www.dynamsoft.com/capture-vision/docs/programming/xamarin/?ver=latest" target="_blank">Xamarin.Forms</a>
