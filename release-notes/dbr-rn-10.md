@@ -10,6 +10,25 @@ noTitleIndex: true
 
 # Release Notes for Dynamsoft Barcode Reader - 10.x
 
+## 10.4
+
+ > First released: 07-23-2024
+
+### Highlights
+
+- Improved the read rate and speed of the following barcode formats:
+  - EAN-13
+  - DotCode
+- Added support for decoding add-on codes (also known as Extension Codes) for UPC-A, UPC-E, EAN-8 and EAN-13 codes.
+
+<div align="center">
+    <p><img src="../assets/img/add-on-barcodes.png" width="60%" alt="add-on-barcodes"></p>
+</div>
+
+| Versions | Available Editions                                                                      |
+| -------- | --------------------------------------------------------------------------------------- |
+| 10.4.10   | [C++]({{ site.cpp_release_notes}}cpp-10.html#10410-07232024){:target="_blank"} |
+
 ## 10.2
 
 > First released: 01-16-2024

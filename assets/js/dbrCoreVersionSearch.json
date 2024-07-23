@@ -1,5 +1,34 @@
 [
     {
+        "version": "10.4.10",
+        "matchList": {
+            "dcvRepoCore": [
+                {
+                    "path": "/parameters/reference/capture-vision-template",
+                    "version": "2.2.40"
+                },{
+                    "path": "/parameters/reference/target-roi-def",
+                    "version": "2.2.40"
+                },{
+                    "path": "/parameters/reference/barcode-reader-task-settings",
+                    "version": "10.4.10"
+                },{
+                    "path": "/parameters/reference/image-parameter",
+                    "version": "2.2.40"
+                },{
+                    "path": "/parameters/reference/barcode-format-specification",
+                    "version": "10.4.10"
+                },{
+                    "path": "/parameters/reference/image-source-options",
+                    "version": "2.2.40"
+                },{
+                    "path": "/parameters/reference/global-parameter",
+                    "version": "2.2.40"
+                }
+            ]
+        }
+    },
+    {
         "version": "10.2.10",
         "matchList": {
             "dcvRepoCore": [
