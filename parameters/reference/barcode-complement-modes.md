@@ -128,4 +128,4 @@ Sets the parameters passed to the library to load dynamically.
 
 ## Related Articles
 - [Use RuntimeSettings or Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html)
-- [How to decode incomplete barcodes]({{ site.scenario_settings }}how-to-set-barcode-complememt-modes.html)
+- [How to decode incomplete barcodes]({{ site.scenario_settings }}how-to-set-barcode-complement-modes.html)
