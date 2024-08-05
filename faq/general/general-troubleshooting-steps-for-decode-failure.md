@@ -21,20 +21,20 @@ Generally, with some setting changes via our APIs, Dynamsoft Barcode Reader Java
 
 
 
-      <img src="../assets/best_coverage.jpg" alt="Best coverage"  width="50%" height="50%">
+      <img src="../../assets/img/best_coverage.jpg" alt="Best coverage"  width="50%" height="50%">
 > **_NOTE:_**  To learn more about scan modes, please visit the [updateRuntimeSettings](../api-reference/BarcodeReader.md#updateruntimesettings) API page.
 
 2. Enable Full HD resolution in the demo
 
 
-      <img src="../assets/full_hd.jpg" alt="Full HD"  width="50%" height="50%">
+      <img src="../../assets/img/full_hd.jpg" alt="Full HD"  width="50%" height="50%">
 > **_NOTE:_** If the barcode is decoded, then you can output the settings and use that setting template via the `updateRuntimeSettings` method. If the barcode still can’t be decoded via the online demo, then move on to step 2.
 
 ## Step 2 - capture image frames and send to Dynamsoft for analysis
 
 1.  Go to [JavaScript online demo debug mode](https://demo.dynamsoft.com/barcode-reader-js?debug=true) -> Click "START SCAN" -> Click the "capture video frames" button at the top to capture video frames.
 
-      <img src="../assets/frames-crop.png" alt="Frames crop"  width="50%" height="50%">
+      <img src="../../assets/img/frames-crop.png" alt="Frames crop"  width="50%" height="50%">
 
 2. Share the video frames set with [Dynamsoft Support team](https://www.dynamsoft.com/contact/). Our support team will investigate the video frames and get back to you with a solution as soon as possible.
 
