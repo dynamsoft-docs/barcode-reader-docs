@@ -13,4 +13,4 @@ needAutoGenerateSidebar: true
 
 In the Barcode Scanner X app, please go to the use case scenario that you are interested. On the right-bottom, tap on "Export Template". 
 
-Once you get the templates, you can implement them using the [`initRuntimeSettingsWithString`](../api-reference/primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithstring) or [`initRuntimeSettingsWithFile`](../api-reference/primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile) methods, depending on which input method you prefer.
+Once you get the templates, you can implement them using the [`initSettings`](https://www.dynamsoft.com/capture-vision/docs/mobile/programming/ios/api-reference/capture-vision-router/settings.html?product=dbr&lang=objectivec-swift#initsettings) or [`initRuntimeSettingsWithFile`](https://www.dynamsoft.com/capture-vision/docs/mobile/programming/ios/api-reference/capture-vision-router/settings.html?product=dbr&lang=objectivec-swift#initsettingsfromfile) methods, depending on which input method you prefer.
