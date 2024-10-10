@@ -94,7 +94,7 @@ The following table list the main objects type and description of a complete par
 | BarcodeReaderTaskSetting | It is used to configure settings for barcode reading tasks performed on images in DCV.                                                                                                       |
 | ImageParameter           | It provides various image-processing features to adjust and enhance the input image for better recognition results.                                                                          |
 
-For more details, please refer to [introduction of the capture vision template]({{ site.dcv_parameters }}file/capture-vision-template.html)
+For more details, please refer to [introduction of the capture vision template]({{ site.dcvb_parameters }}file/capture-vision-template.html)
 
 ## How to Apply DCV Parameters
 

@@ -49,7 +49,7 @@ The following settings can be applied to nearly all usage scenarios to improve t
 
 ### Filter the Result by Confidence
 
-The confidence attribute of the barcode results is determined by the reliability of that result. Users can set the [`MinResultConfidence`]({{site.dcv_parameters_reference}}barcode-format-specification/min-result-confidence.html) to make a filter on the barcode results by the confidence value. For Dynamsoft Barcode Reader v8.8 or later, the default value of the confidence is optimized to 30, which can filter out the majority of misread barcode results. A higher `MinResultConfidence` setting will definitely improve the accuracy of the barcode results but reduce the read rate and speed at the same time. Therefore, please set the `MinResultConfidence` according to your actual usage scenario to balance the accuracy, speed read rate.
+The confidence attribute of the barcode results is determined by the reliability of that result. Users can set the [`MinResultConfidence`]({{site.dcvb_parameters_reference}}barcode-format-specification/min-result-confidence.html) to make a filter on the barcode results by the confidence value. For Dynamsoft Barcode Reader v8.8 or later, the default value of the confidence is optimized to 30, which can filter out the majority of misread barcode results. A higher `MinResultConfidence` setting will definitely improve the accuracy of the barcode results but reduce the read rate and speed at the same time. Therefore, please set the `MinResultConfidence` according to your actual usage scenario to balance the accuracy, speed read rate.
 
 
 ### Enable Multi-frame Verification
@@ -64,18 +64,18 @@ When configuring the specific settings, you have to know some basic information 
 
 The barcode format specification is the most basic decode setting that affects all three metrics of the performance. Sometimes, misreading a 1D barcode is caused by misrecognizing the 1D barcode as another 1D barcode type. If the targeted 1D barcodes are scoped, you can specify the barcode format in your project to lower the probability of misread results. 
 
-The related parameters are [ `BarcodeFormatIds` ]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/barcode-format-ids.html).
+The related parameters are [ `BarcodeFormatIds` ]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/barcode-format-ids.html).
 
 ### Enable Result Text Filter
 
-When the target barcodes are confirmed, the barcode texts might have common features that help you implement a result filter on the result text. Using the [`BarcodeFormatSpecification`]({{site.dcv_parameters}}file/auxiliary/barcode-format-specification.html) parameters, you can add barcode result text restrictions like [`regular expression`]({{site.dcv_parameters_reference}}barcode-format-specification/barcode-text-regex-pattern.html) requirements and [`text length`]({{site.dcv_parameters_reference}}barcode-format-specification/barcode-text-length-range-array.html) range.
+When the target barcodes are confirmed, the barcode texts might have common features that help you implement a result filter on the result text. Using the [`BarcodeFormatSpecification`]({{site.dcvb_parameters}}file/auxiliary/barcode-format-specification.html) parameters, you can add barcode result text restrictions like [`regular expression`]({{site.dcvb_parameters_reference}}barcode-format-specification/barcode-text-regex-pattern.html) requirements and [`text length`]({{site.dcvb_parameters_reference}}barcode-format-specification/barcode-text-length-range-array.html) range.
 
 
 ### Exclude Small-Module Barcodes
 
-The module size of the barcode refers to the pixel size of the barcode modules (e.g. the pixel width of a 1D barcode line or the smallest cell size of a QR code). The smaller the module size of the barcodes, the higher risk of a misread. If it is not necessary to decode all the small-size barcodes in the scenario, you can skip the small-module barcodes by specifying the minimum acceptable module size of the barcodes via parameter [`ModuleSizeRangeArray`]({{site.dcv_parameters_reference}}barcode-format-specification/module-size-range-array.html).
+The module size of the barcode refers to the pixel size of the barcode modules (e.g. the pixel width of a 1D barcode line or the smallest cell size of a QR code). The smaller the module size of the barcodes, the higher risk of a misread. If it is not necessary to decode all the small-size barcodes in the scenario, you can skip the small-module barcodes by specifying the minimum acceptable module size of the barcodes via parameter [`ModuleSizeRangeArray`]({{site.dcvb_parameters_reference}}barcode-format-specification/module-size-range-array.html).
 
-When processing large-size images, DBR scales down the images based on the [`ScaleDownThreshold`]({{site.dcv_parameters_reference}}scale-down-threshold.html) before decoding. However, sometimes the barcode on the image might be shrunk too small. You can increase the [`scaleDownThreshold`]({{site.dcv_parameters_reference}}image-parameter/scale-down-threshold.html) value to ensure the module size of the barcodes is big enough to get the correct barcode results.
+When processing large-size images, DBR scales down the images based on the [`ScaleDownThreshold`]({{site.dcvb_parameters_reference}}scale-down-threshold.html) before decoding. However, sometimes the barcode on the image might be shrunk too small. You can increase the [`scaleDownThreshold`]({{site.dcvb_parameters_reference}}image-parameter/scale-down-threshold.html) value to ensure the module size of the barcodes is big enough to get the correct barcode results.
 
 **Recommendation**
 
@@ -83,7 +83,7 @@ By increasing the `MinValue` of the `ModuleSizeRangeArray`, the SDK can skip the
 
 ### Optimize DeblurModes Settings
 
-[`DeblurModes`]({{site.dcv_parameters_reference}}barcode-reader-task-settings/deblur-modes.html) is the parameter that controls how much effort DBR will spend in processing the located barcodes. It is set to the highest level by default so that DBR will try its best to process every localized barcode even if they are highly blurred. However, the blurriness of the barcodes and the accuracy of the barcode results are inversely proportional. As a result, when the read rate is high enough with the current settings, you can try to simplify the `DeblurModes` array to reduce the possibility of any misreads.
+[`DeblurModes`]({{site.dcvb_parameters_reference}}barcode-reader-task-settings/deblur-modes.html) is the parameter that controls how much effort DBR will spend in processing the located barcodes. It is set to the highest level by default so that DBR will try its best to process every localized barcode even if they are highly blurred. However, the blurriness of the barcodes and the accuracy of the barcode results are inversely proportional. As a result, when the read rate is high enough with the current settings, you can try to simplify the `DeblurModes` array to reduce the possibility of any misreads.
 
 Generally, the simpler the `DeblurModes` array is, the higher the accuracy. As a result, when accuracy is prioritized, the aim is to find the simplest `DeblurModes` configuration that covers the requirements. To find the simplest configuration, it is recommended to approach this from a trial and error standpoint and continuously test each configuration. For this approach, you can start with the full `DeblurModes` array and incrementally reduce the enabled `DeblurModes` till the read rate is no longer acceptable. 
 

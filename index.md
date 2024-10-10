@@ -4,49 +4,27 @@ title: Dynamsoft Barcode Reader SDK Documentation
 keywords: dynamsoft barcode reader, dbr, documentation
 breadcrumbText: HomePage
 description: Dynamsoft Barcode Reader SDK Documentation Homepage
-permalink: /index.html
 ---
 
 # Dynamsoft Barcode Reader Documentation
 
-* [Introduction]({{ site.introduction }})
+To explore the latest features and updates of `Dynamsoft Barcode Reader`, please refer to the documentation sections below.
 
-<hr>
-DEVELOPMENT
-<hr>
-
-* [Web (Client Side)]({{ site.js }})
+* [Web (Client Side)]({{ site.js }}){:target="_blank"}
 * Mobile
   * [Android]({{ site.android }}){:target="_blank"}
   * [iOS]({{ site.oc }}){:target="_blank"}
   * [MAUI]({{ site.maui }}){:target="_blank"}
-  * <a href="https://www.dynamsoft.com/capture-vision/docs/programming/react-native/?ver=latest" target="_blank">React Native</a>
-  * <a href="https://www.dynamsoft.com/capture-vision/docs/programming/flutter/?ver=latest" target="_blank">Flutter</a>
-  * <a href="https://www.dynamsoft.com/capture-vision/docs/programming/xamarin/?ver=latest" target="_blank">Xamarin.Forms</a>
-  * <a href="https://www.dynamsoft.com/capture-vision/docs/programming/cordova/?ver=latest" target="_blank">Cordova</a>
 * Server / Desktop
-  * [Python]({{ site.python }})
-  * [Java]({{ site.java }})
-  * [.NET]({{ site.dotnet }})
-  * [C++]({{ site.cpp }})
-  * [C]({{ site.c }})
+  * [Python]({{ site.python }}){:target="_blank"}
+  * [Java]({{ site.java }}){:target="_blank"}
+  * [.NET]({{ site.dotnet }}){:target="_blank"}
+  * [C++]({{ site.cpp }}){:target="_blank"}
+  * [C]({{ site.c }}){:target="_blank"}
 
-<hr>
-UNDERSTANDING DBR
-<hr>
+The documentation for editions `React Native`, `Flutter`, `Xamarin.Forms` and `Cordova` has been archived, but remains accessible through the following links:
 
-* [Algorithm Principles]({{ site.introduction }}architecture.html)
-* [Template Structure]({{ site.parameters }}structure-and-interfaces-of-parameters.html)
-* [Parameter Reference]({{ site.parameters_reference }})
-* [Performance]({{ site.performance }})
-
-<hr>
-USEFUL RESOURCES
-<hr>
-
-* [Release Notes]({{ site.release_notes }})
-* [License]({{ site.license_activation }})
-  * [Set Trial License]({{ site.license_activation }}set-trial-license.html)
-  * [Set Full License in version 8]({{ site.license_activation }}set-full-license-8.html)
-  * [Set Full License in version 7]({{ site.license_activation }}set-full-license-7.html)
-* [FAQ]({{ site.faq }}general/)
+* [Archived React Native Edition Documentation]({{ site.dcv_react_native }}){:target="_blank"}
+* [Archived Flutter Edition Documentation]({{ site.dcv_flutter }}){:target="_blank"}
+* [Archived Xamarin.Forms Edition Documentation]({{ site.dcv_xamarin }}){:target="_blank"}
+* [Archived Cordova Edition Documentation]({{ site.dcv_cordova }}){:target="_blank"}

@@ -100,7 +100,7 @@ do {
 
 **See Also**  
 
-- `SimplifiedCaptureVisionSettings:` [C++]({{ site.dcv_cpp_api }}capture-vision-router/structs/simplified-capture-vision-settings.html) / [JavaScript](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/interfaces/simplified-capture-vision-settings.html)
+- `SimplifiedCaptureVisionSettings:` [C++]({{ site.dcvb_cpp_api }}capture-vision-router/structs/simplified-capture-vision-settings.html) / [JavaScript](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/interfaces/simplified-capture-vision-settings.html)
 - `SimplifiedBarcodeReaderSettings:` [C++]({{ site.cpp_api }}simplified-barcode-reader-settings.html) / [JavaScript](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/interfaces/simplified-barcode-reader-settings.html)
 
 ## JSON Template

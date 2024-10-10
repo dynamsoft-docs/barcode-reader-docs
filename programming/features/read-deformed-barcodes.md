@@ -15,7 +15,7 @@ As shown below, barcodes on the surface of some flexible packaging or cylindrica
    <p>Deformed Barcodes</p>
 </div>
 
-By default, Dynamsoft Barcode Reader (DBR) may not handle such cases well. To get such images decoded, enable deformation resistance by adding `DRM_BROAD_WARP`, `DRM_LOCAL_REFERENCE` and `DRM_DEWRINKLE` to [`DeformationResistingModes`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/deformation-resisting-modes.html). Here is a quick breakdown of each of the modes:
+By default, Dynamsoft Barcode Reader (DBR) may not handle such cases well. To get such images decoded, enable deformation resistance by adding `DRM_BROAD_WARP`, `DRM_LOCAL_REFERENCE` and `DRM_DEWRINKLE` to [`DeformationResistingModes`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/deformation-resisting-modes.html). Here is a quick breakdown of each of the modes:
 
 * `DRM_BROAD_WARP`: Resists deformation when the barcode is warped gently.
 * `DRM_LOCAL_REFERENCE`: Resists deformation for barcodes with minor deformation in local modules.

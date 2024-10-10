@@ -35,7 +35,7 @@ Obviously, the local thresholding result is much better. Now we will demonstrate
 
 ## Particular Parameter Required
 
-DBR provides a parameter [`BinarizationModes`]({{ site.dcv_parameters_reference }}image-parameter/binarization-modes.html) that allows you to control the conversion of a grayscale image to a binary image. 
+DBR provides a parameter [`BinarizationModes`]({{ site.dcvb_parameters_reference }}image-parameter/binarization-modes.html) that allows you to control the conversion of a grayscale image to a binary image. 
 
 ## Sample Code
 

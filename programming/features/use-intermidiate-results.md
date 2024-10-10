@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # How to Use Intermediate Results
 
-Apart from getting the results like barcode type, value, location, Dynamsoft Barcode Reader (DBR) also provides APIs for you to obtain the intermediate results like original image, transformed grayscale image, binarized image, text zone, and more for further analysis. See enum [`IntermediateResultUnitType`]({{ site.dcv_enumerations }}core/intermediate-result-unit-type.html) for the full list of supported intermediate result types. All these results can be obtained from a specific callback function within the class `CIntermediateResultReceiver`.
+Apart from getting the results like barcode type, value, location, Dynamsoft Barcode Reader (DBR) also provides APIs for you to obtain the intermediate results like original image, transformed grayscale image, binarized image, text zone, and more for further analysis. See enum [`IntermediateResultUnitType`]({{ site.dcvb_enumerations }}core/intermediate-result-unit-type.html) for the full list of supported intermediate result types. All these results can be obtained from a specific callback function within the class `CIntermediateResultReceiver`.
 
 **Note**: You will need a separate license to obtain the intermediate results.
 

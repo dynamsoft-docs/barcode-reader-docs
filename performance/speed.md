@@ -44,7 +44,7 @@ This guide explores how DBR can be used to its full-speed potential, and it will
 
 This is probably the most natural setting to start with. By clearly telling DBR what it is looking for, it can quickly skip other types of barcodes that can potentially be on the same image or frame.
 
-The related parameters are [ `BarcodeFormatIds` ]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/barcode-format-ids.html).
+The related parameters are [ `BarcodeFormatIds` ]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/barcode-format-ids.html).
 
 **Recommendation**
 
@@ -54,9 +54,9 @@ The related parameters are [ `BarcodeFormatIds` ]({{ site.dcv_parameters_referen
 
 By default, DBR tries to find as many barcodes as possible from a given image. Assume the image is very big but has only one barcode at the top, DBR finds the barcode instantly but will spend more time scanning the rest of the image or even try more steps to find more barcodes. By telling DBR that we are only expecting one barcode, it will stop reading the image as soon as that barcode is found.
 
-The related parameter is [`ExpectedBarcodesCount`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/expected-barcodes-count.html). Note that it can be set to 0 or any natural number. DBR's behaviour is as follows:
+The related parameter is [`ExpectedBarcodesCount`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/expected-barcodes-count.html). Note that it can be set to 0 or any natural number. DBR's behaviour is as follows:
 
-* `ExpectedBarcodesCount` is 0: DBR tries to localize barcodes with the first mode set in [LocalizationModes]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/localization-modes.html). If barcodes are found, the rest of the modes are skipped and the recognition starts right away.
+* `ExpectedBarcodesCount` is 0: DBR tries to localize barcodes with the first mode set in [LocalizationModes]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/localization-modes.html). If barcodes are found, the rest of the modes are skipped and the recognition starts right away.
 * `ExpectedBarcodesCount` is > 0: DBR tries to find as many barcodes as defined by this number. If enough barcodes have been found, the rest of the pending operations will be skipped. On the other hand, if the number of found barcodes is less than expected, DBR will exhaust all defined operations to find more until it times out.
 
 **Recommendation**
@@ -67,7 +67,7 @@ The related parameter is [`ExpectedBarcodesCount`]({{ site.dcv_parameters_refere
 
 ### Determine the appropriate binarization mode
 
-The binarization of the image is the basis for the localization of barcodes. Depending on the lighting conditions, we can choose either the mode [BM_THRESHOLD]({{ site.dcv_parameters_reference }}image-parameter/binarization-modes.html#bm_threshold) or [BM_LOCAL_BLOCK]({{ site.dcv_parameters_reference }}image-parameter/binarization-modes.html#bm_local_block) for the parameter [BinarizationModes]({{ site.dcv_parameters_reference }}image-parameter/binarization-modes.html).
+The binarization of the image is the basis for the localization of barcodes. Depending on the lighting conditions, we can choose either the mode [BM_THRESHOLD]({{ site.dcvb_parameters_reference }}image-parameter/binarization-modes.html#bm_threshold) or [BM_LOCAL_BLOCK]({{ site.dcvb_parameters_reference }}image-parameter/binarization-modes.html#bm_local_block) for the parameter [BinarizationModes]({{ site.dcvb_parameters_reference }}image-parameter/binarization-modes.html).
 
 **Recommendation**
  
@@ -76,7 +76,7 @@ The binarization of the image is the basis for the localization of barcodes. Dep
 
 ### Adjust the localization modes
 
-A barcode is localized before it gets decoded. The localization process takes up a large portion of the overall time spent. We can adjust the localization modes to speed things up with its corresponding parameter [LocalizationModes]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/localization-modes.html).
+A barcode is localized before it gets decoded. The localization process takes up a large portion of the overall time spent. We can adjust the localization modes to speed things up with its corresponding parameter [LocalizationModes]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/localization-modes.html).
 
 **Recommendation**
  
@@ -85,7 +85,7 @@ A barcode is localized before it gets decoded. The localization process takes up
 
 ### Configure the final decoding process with DeblurModes
 
-The parameter [DeblurModes]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/deblur-modes.html) is used to configure how DBR processes already-localized barcode zones (images cut around the barcode boundaries from the original image) to get the final results.
+The parameter [DeblurModes]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/deblur-modes.html) is used to configure how DBR processes already-localized barcode zones (images cut around the barcode boundaries from the original image) to get the final results.
 
 Deblurring is the last configurable step before a barcode is decoded. DBR by default has all deblurring algorithms enabled so that it tries its best to decode each localized barcode zone. When speed is the priority over the other metrics, we can ask DBR to try just one or two of these modes by setting `DeblurModes`.
 
@@ -133,7 +133,7 @@ When locating barcodes, DBR scans the whole image, so the larger the size of the
 
 #### Scale down a large image
 
-A barcode normally keeps its shape and can be read correctly even when the image gets scaled down. Therefore, DBR shrinks very large images before reading them. The parameter [ScaleDownThreshold]({{ site.dcv_parameters_reference }}image-parameter/scale-down-threshold.html) can be used to determine the threshold beyond which the scale down happens.
+A barcode normally keeps its shape and can be read correctly even when the image gets scaled down. Therefore, DBR shrinks very large images before reading them. The parameter [ScaleDownThreshold]({{ site.dcvb_parameters_reference }}image-parameter/scale-down-threshold.html) can be used to determine the threshold beyond which the scale down happens.
 
 **Recommendation**
  
@@ -145,9 +145,9 @@ When reading barcodes from a certain type of documents or from a video input, th
 
 There are two ways to specify the region:
 
-* manually define a region by providing the coordinates of its contours. Each region is defined by a [TargetROIDef]({{ site.dcv_parameters }}file/target-roi-definition/index.html) and then specified by [Location]({{ site.dcv_parameters_reference }}target-roi-def/location.html); 
+* manually define a region by providing the coordinates of its contours. Each region is defined by a [TargetROIDef]({{ site.dcvb_parameters }}file/target-roi-definition/index.html) and then specified by [Location]({{ site.dcvb_parameters_reference }}target-roi-def/location.html); 
 
-* let DBR find the region based on the colour/grayscale distribution of different parts of the image, this is controlled by the parameter [RegionPredetectionModes]({{ site.dcv_parameters_reference }}image-parameter/region-predetection-modes.html).
+* let DBR find the region based on the colour/grayscale distribution of different parts of the image, this is controlled by the parameter [RegionPredetectionModes]({{ site.dcvb_parameters_reference }}image-parameter/region-predetection-modes.html).
 
 **Recommendation**
 
@@ -180,7 +180,7 @@ DBR provides multiple options for each preprocessing operation and will go throu
 
 *Convert the image to grayscale*
 
-If the original image is not a grayscale image, DBR will convert it to a grayscale image. After that, the barcode symbol is either lighter or darker than the background. We call a darker barcode a normal barcode and a lighter barcode an inverted barcode. When locating barcodes, DBR expects the barcodes to be normal. Therefore, if an image in fact has inverted barcodes, DBR needs to invert the color of the image in advance. This is controlled by the parameter [GrayscaleTransformationModes]({{ site.dcv_parameters_reference }}image-parameter/grayscale-transformation-modes.html).
+If the original image is not a grayscale image, DBR will convert it to a grayscale image. After that, the barcode symbol is either lighter or darker than the background. We call a darker barcode a normal barcode and a lighter barcode an inverted barcode. When locating barcodes, DBR expects the barcodes to be normal. Therefore, if an image in fact has inverted barcodes, DBR needs to invert the color of the image in advance. This is controlled by the parameter [GrayscaleTransformationModes]({{ site.dcvb_parameters_reference }}image-parameter/grayscale-transformation-modes.html).
 
 **Recommendation**
 
@@ -188,7 +188,7 @@ Depending on the images to read, specify either `GTM_ORIGINAL` or `GTM_INVERTED`
 
 *Enhance the grayscale image quality*
 
-The grayscale image converted from the original image can usually be used directly. But suppose your image has some distortion that can be solved by common image processing methods, the parameter [GrayscaleEnhancementModes]({{ site.dcv_parameters_reference }}image-parameter/grayscale-enhancement-modes.html) can be set to allow extra operations for getting a higher-quality grayscale image.
+The grayscale image converted from the original image can usually be used directly. But suppose your image has some distortion that can be solved by common image processing methods, the parameter [GrayscaleEnhancementModes]({{ site.dcvb_parameters_reference }}image-parameter/grayscale-enhancement-modes.html) can be set to allow extra operations for getting a higher-quality grayscale image.
 
 **Recommendation**
 
@@ -196,7 +196,7 @@ In most cases, just use the default `GEM_GENERAL` mode. If necessary, specify on
 
 #### Remove texture and filter text
 
-The less the noise, the faster the localization. Use the parameters [TextureDetectionModes]({{ site.dcv_parameters_reference }}image-parameter/texture-detection-modes.html) and [TextDetectionMode]({{ site.dcv_parameters_reference }}image-parameter/text-detection-mode.html) to remove texture and filter text in the binarized image.
+The less the noise, the faster the localization. Use the parameters [TextureDetectionModes]({{ site.dcvb_parameters_reference }}image-parameter/texture-detection-modes.html) and [TextDetectionMode]({{ site.dcvb_parameters_reference }}image-parameter/text-detection-mode.html) to remove texture and filter text in the binarized image.
 
 **Recommendation**
  
@@ -205,7 +205,7 @@ The less the noise, the faster the localization. Use the parameters [TextureDete
 
 #### Adapt image binarization for speed
 
-The image binarization is controlled by the parameter [BinarizationModes]({{ site.dcv_parameters_reference }}image-parameter/binarization-modes.html). This has been discussed briefly above in [Determine the appropriate binarization mode](#determine-the-appropriate-binarization-mode) where the recommendation is to use either `BM_THRESHOLD` or `BM_LOCAL_BLOCK` . Here, we will examine some mode arguments that allow the modes to adapt to a speed-first application. Please refer to [Mode Arguments]({{ site.dcv_parameters_reference }}image-parameter/binarization-modes.html#mode-arguments) for a quick look on the relationship between modes and mode arguments.
+The image binarization is controlled by the parameter [BinarizationModes]({{ site.dcvb_parameters_reference }}image-parameter/binarization-modes.html). This has been discussed briefly above in [Determine the appropriate binarization mode](#determine-the-appropriate-binarization-mode) where the recommendation is to use either `BM_THRESHOLD` or `BM_LOCAL_BLOCK` . Here, we will examine some mode arguments that allow the modes to adapt to a speed-first application. Please refer to [Mode Arguments]({{ site.dcvb_parameters_reference }}image-parameter/binarization-modes.html#mode-arguments) for a quick look on the relationship between modes and mode arguments.
 
 * For `BM_THRESHOLD`, we can explicitly set a value to the argument `BinarizationThreshold` which dictates at which point a pixel is regarded as black/white. Generally we can just use the default value `-1` which allows DBR to calculate a proper threshold itself.
 
@@ -216,7 +216,7 @@ The image binarization is controlled by the parameter [BinarizationModes]({{ sit
 
 ### Choose the optimum localization modes
 
-Now that we have a binarized image processed from the original image, we can start localizing the barcode zones. DBR comes with 8 options for the parameter [LocalizationModes]({{ site.dcv_parameters_reference }}image-parameter/localization-modes.html#localizationmodes) which determines how the localization is done. Of the 8 modes, 3 of them are designed for one or a few types of barcodes:
+Now that we have a binarized image processed from the original image, we can start localizing the barcode zones. DBR comes with 8 options for the parameter [LocalizationModes]({{ site.dcvb_parameters_reference }}image-parameter/localization-modes.html#localizationmodes) which determines how the localization is done. Of the 8 modes, 3 of them are designed for one or a few types of barcodes:
 
 * `LM_ONED_FAST_SCAN` works best for linear or 1D barcodes that are of relatively high quality; 
 * `LM_STATISTICS_MARKS` is meant for QR or DataMatrix barcodes generated by direct part marking (DPM); 
@@ -246,8 +246,8 @@ After the localization, we have barcode zones located on an image. In this stage
 
 The preprocessing consists of two operations
 
-* Detect the color of the zones and adjust it based on [BarcodeColourModes]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/barcode-colour-modes.html); 
-* Detect the size of the zones and change it based on [ScaleUpModes]({{ site.dcv_parameters_reference }}image-parameter/scale-up-modes.html).
+* Detect the color of the zones and adjust it based on [BarcodeColourModes]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/barcode-colour-modes.html); 
+* Detect the size of the zones and change it based on [ScaleUpModes]({{ site.dcvb_parameters_reference }}image-parameter/scale-up-modes.html).
 
 **Recommendation**
 
@@ -255,7 +255,7 @@ Both adjusting the color and the size of the barcode zone(s) can take some time.
 
 ### Expedite the actual barcode decoding
 
-After barcode zones have been preprocessed, we have well-partitioned images awaiting decoding. We know the type of the barcode on each partitioned image but the image itself could still be blurry, incomplete, or deformed. DBR has algorithms to handle all these situations with the parameters [DeblurModes]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/deblur-modes.html), [BarcodeComplementModes]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/barcode-complement-modes.html), and [DeformationResistingModes]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/deformation-resisting-modes.html).
+After barcode zones have been preprocessed, we have well-partitioned images awaiting decoding. We know the type of the barcode on each partitioned image but the image itself could still be blurry, incomplete, or deformed. DBR has algorithms to handle all these situations with the parameters [DeblurModes]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/deblur-modes.html), [BarcodeComplementModes]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/barcode-complement-modes.html), and [DeformationResistingModes]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/deformation-resisting-modes.html).
 
 **Recommendation**
  
@@ -267,9 +267,9 @@ After barcode zones have been preprocessed, we have well-partitioned images awai
 
 ### Unleash the power of the CPU
 
-The algorithm to process an image has quite a few steps and for each step, there could be multiple options to try. For processes that don't necessary need to wait for each other, we can tell DBR to open multiple threads/workers to work on different tasks at the same time. The related parameter is [`MaxThreadsInOneTask`]({{ site.dcv_parameters_reference }}shared-parameter/max-threads-in-one-task.html). However, note that this is only meaningful on devices with a good CPU. On low-end desktops or mobile devices, it's better to limit the threads to 2 or even 1.
+The algorithm to process an image has quite a few steps and for each step, there could be multiple options to try. For processes that don't necessary need to wait for each other, we can tell DBR to open multiple threads/workers to work on different tasks at the same time. The related parameter is [`MaxThreadsInOneTask`]({{ site.dcvb_parameters_reference }}shared-parameter/max-threads-in-one-task.html). However, note that this is only meaningful on devices with a good CPU. On low-end desktops or mobile devices, it's better to limit the threads to 2 or even 1.
 
-Other than the built-in multi-threading, another way to speed things up is to create multiple DBR instances and have them decoding different images at the same time. The related parameter is [`MaxParallelTasks`]({{ site.dcv_parameters_reference }}capture-vision-template/max-parallel-tasks.html)
+Other than the built-in multi-threading, another way to speed things up is to create multiple DBR instances and have them decoding different images at the same time. The related parameter is [`MaxParallelTasks`]({{ site.dcvb_parameters_reference }}capture-vision-template/max-parallel-tasks.html)
 
 ### Bypass time-consuming exceptions
 
@@ -277,7 +277,7 @@ Sometimes, DBR may encoutner an image that is very challenging. The nature of DB
 
 This is especially useful when it comes to continuous scanning of video frames as it makes no sense to spend too much time on one difficult frame when the next frame probably contains the same barcode(s).
 
-The parameter that controls that is [`Timeout`]({{ site.dcv_parameters_reference }}capture-vision-template/timeout.html).
+The parameter that controls that is [`Timeout`]({{ site.dcvb_parameters_reference }}capture-vision-template/timeout.html).
 
 **Recommendation**
 
@@ -289,7 +289,7 @@ Barcode reading usually ends with the output of the content of the barcode. Howe
 
 **Recommendation**
 
-[`TerminateSetting`]({{ site.dcv_parameters_reference }}shared-parameter/terminate-setting.html) controls when the algorithm should stop. If, for instance, the purpose is to only locate the barcode, but not decode it, then you can set the `Section` parameter to `ST_BARCODE_LOCALIZATION`. This would skip the steps needed to determine the barcode type and decode it, thus saving you time in the long run.
+[`TerminateSetting`]({{ site.dcvb_parameters_reference }}shared-parameter/terminate-setting.html) controls when the algorithm should stop. If, for instance, the purpose is to only locate the barcode, but not decode it, then you can set the `Section` parameter to `ST_BARCODE_LOCALIZATION`. This would skip the steps needed to determine the barcode type and decode it, thus saving you time in the long run.
 
 ### Avoid disk writing operations
 
@@ -297,7 +297,7 @@ Writing to the disk can be a time-consuming process. With DBR, disk writing happ
 
 ### Fine-tune the performance further with FormatSpecification
 
-If even better speed is desired, we can set limitations on barcode searching for each type of barcodes so that DBR can quickly skip uninterested zones. The related parameters include [BarcodeAngleRangeArray]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-angle-range-array.html), [BarcodeHeightRangeArray]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-height-range-array.html), [BarcodeWidthRangeArray]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-width-range-array.html), [BarcodeZoneBarCountRangeArray]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-zone-bar-count-range-array.html) and [ModuleSizeRangeArray]({{ site.dcv_parameters_reference }}barcode-format-specification/module-size-range-array.html), etc. Click each parameter to learn more about them and when to use them.
+If even better speed is desired, we can set limitations on barcode searching for each type of barcodes so that DBR can quickly skip uninterested zones. The related parameters include [BarcodeAngleRangeArray]({{ site.dcvb_parameters_reference }}barcode-format-specification/barcode-angle-range-array.html), [BarcodeHeightRangeArray]({{ site.dcvb_parameters_reference }}barcode-format-specification/barcode-height-range-array.html), [BarcodeWidthRangeArray]({{ site.dcvb_parameters_reference }}barcode-format-specification/barcode-width-range-array.html), [BarcodeZoneBarCountRangeArray]({{ site.dcvb_parameters_reference }}barcode-format-specification/barcode-zone-bar-count-range-array.html) and [ModuleSizeRangeArray]({{ site.dcvb_parameters_reference }}barcode-format-specification/module-size-range-array.html), etc. Click each parameter to learn more about them and when to use them.
 
 ## Summary
 

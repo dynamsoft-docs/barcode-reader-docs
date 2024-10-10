@@ -6,16 +6,11 @@ docHomePage: /barcode-reader/docs/core/
 
 useVersionTree: true
 
-architecture: /capture-vision/docs/core/architecture/
 introduction: /barcode-reader/docs/core/introduction/
 comparison_tools: /barcode-reader/docs/core/introduction/comparison-tools/
 
 programming: /barcode-reader/docs/core/programming/
 features: /barcode-reader/docs/core/programming/features/
-
-dcv_parameters: /capture-vision/docs/core/parameters/
-dcv_parameters_reference: /capture-vision/docs/core/parameters/reference/
-dcv_enumerations: /capture-vision/docs/core/enums/
 
 parameters: /barcode-reader/docs/core/parameters/
 parameters_reference: /barcode-reader/docs/core/parameters/reference/
@@ -39,7 +34,6 @@ cpp: /barcode-reader/docs/server/programming/cplusplus/
 cpp_api: /barcode-reader/docs/server/programming/cplusplus/api-reference/
 cpp_methods: /barcode-reader/docs/server/programming/cplusplus/api-reference/cbarcodereader-methods/
 cpp_release_notes: /barcode-reader/docs/server/programming/cplusplus/release-notes/
-dcv_cpp_api: /capture-vision/docs/server/programming/cplusplus/api-reference/
 
 js: /barcode-reader/docs/web/programming/javascript/
 js_api: /barcode-reader/docs/web/programming/javascript/api-reference/
@@ -85,18 +79,19 @@ java_enumerations: /barcode-reader/docs/server/programming/java/api-reference/en
 mobile_enumerations: /barcode-reader/docs/mobile/programming/enumeration/
 mobile_assets: /barcode-reader/docs/mobile/programming/assets/
 
+dcv_parameters: /capture-vision/docs-archive/core/parameters/
+dcv_parameters_reference: /capture-vision/docs-archive/core/parameters/reference/
 
-flutter: /capture-vision/docs/mobile/programming/flutter/
-flutter_api: /capture-vision/docs/mobile/programming/flutter/api-reference/
+dcv_flutter: /capture-vision/docs-archive/mobile/programming/flutter/
+dcv_xamarin: /capture-vision/docs-archive/mobile/programming/xamarin/
+dcv_cordova: /capture-vision/docs-archive/mobile/programming/cordova/
+dcv_react_native: /capture-vision/docs-archive/mobile/programming/react-native/
 
-xamarin: /capture-vision/docs/mobile/programming/xamarin/
-xamarin_api: /capture-vision/docs/mobile/programming/xamarin/api-reference/
-
-cordova: /capture-vision/docs/mobile/programming/cordova/
-cordova_api: /capture-vision/docs/mobile/programming/cordova/api-reference/
-
-react_native: /capture-vision/docs/mobile/programming/react-native/
-react_native_api: /capture-vision/docs/mobile/programming/react-native/api-reference/
+dcvb_architecture: /capture-vision/docs/core/architecture/
+dcvb_parameters: /capture-vision/docs/core/parameters/
+dcvb_parameters_reference: /capture-vision/docs/core/parameters/reference/
+dcvb_enumerations: /capture-vision/docs/core/enums/
+dcvb_cpp_api: /capture-vision/docs/server/programming/cplusplus/api-reference/
 
 maui: /barcode-reader/docs/mobile/programming/maui/
 maui_api: /barcode-reader/docs/mobile/programming/maui/api-reference/

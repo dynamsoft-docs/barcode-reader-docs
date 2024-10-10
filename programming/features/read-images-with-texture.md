@@ -27,7 +27,7 @@ This may extend the barcode localization time or even lead to localization error
    <p>Figure 3 – Binarized image with texture detection enabled</p>
 </div>
 
-As we can see, the binarized image with texture detection enabled is much better. Now we will demonstrate how to configure the parameter [`TextureDetectionModes`]({{ site.dcv_parameters_reference }}image-parameter/texture-detection-modes.html) to enable texture detection.
+As we can see, the binarized image with texture detection enabled is much better. Now we will demonstrate how to configure the parameter [`TextureDetectionModes`]({{ site.dcvb_parameters_reference }}image-parameter/texture-detection-modes.html) to enable texture detection.
 
 ## Sample Code
 
