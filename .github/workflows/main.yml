@@ -4,10 +4,10 @@ name: CI
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push events but only for the master branch
+  # Triggers the workflow on push events but only for the main branch
   push:
     branches: 
-    - master 
+    - main 
     #- preview 
 
   # Allows you to run this workflow manually from the Actions tab
@@ -17,7 +17,7 @@ on:
 jobs:
   # This workflow contains jobs called "Build-Main" and "Build-Preview"
   Build-Main:
-    if: ${{ github.ref == 'refs/heads/master' }}
+    if: ${{ github.ref == 'refs/heads/main' }}
     uses: dynamsoft-docs/Docs-Template-Repo/.github/workflows/called-workflow-build-sync-production.yml@main
     with:
       doc-repo: barcode-reader-docs
