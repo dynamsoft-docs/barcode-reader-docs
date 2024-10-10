@@ -8,7 +8,7 @@ needAutoGenerateSidebar: false
 
 # How to Preprocess Images based on Different Scenarios
 
-The default configuration of Dynamsoft Barcode Reader (DBR) can handle most common scenarios. However, there are still some specific scenarios where the default configuration of DBR cannot locate the code area for decoding. For these specific scenarios, DBR has built-in [`GrayscaleEnhancementModes`]({{ site.dcv_parameters_reference }}image-parameter/grayscale-enhancement-modes.html) to configure the grayscale enhancement algorithm. For different scenarios, a specific enhancement algorithm can effectively improve the success rate when detecting areas of interest. This article will detail how to choose the appropriate enhancement mode according to the scenario.
+The default configuration of Dynamsoft Barcode Reader (DBR) can handle most common scenarios. However, there are still some specific scenarios where the default configuration of DBR cannot locate the code area for decoding. For these specific scenarios, DBR has built-in [`GrayscaleEnhancementModes`]({{ site.dcvb_parameters_reference }}image-parameter/grayscale-enhancement-modes.html) to configure the grayscale enhancement algorithm. For different scenarios, a specific enhancement algorithm can effectively improve the success rate when detecting areas of interest. This article will detail how to choose the appropriate enhancement mode according to the scenario.
 
 ## grayscale enhancement mode
 
@@ -40,7 +40,7 @@ Sharpening and smoothing are used to reduce blur. The following sample image dem
 
 ## Combination of enhancement modes
 
-If the image to be processed is more complicated, you can use the above grayscale enhancement modes in combination. After configuring multiple modes through [`GrayscaleEnhancementModes`]({{ site.dcv_parameters_reference }}image-parameter/grayscale-enhancement-modes.html), DBR will try each mode in sequence until the number of successful decoded barcodes meets the expected value (`ExpectedBarcodeCount`), or the algorithm combination is exhausted.
+If the image to be processed is more complicated, you can use the above grayscale enhancement modes in combination. After configuring multiple modes through [`GrayscaleEnhancementModes`]({{ site.dcvb_parameters_reference }}image-parameter/grayscale-enhancement-modes.html), DBR will try each mode in sequence until the number of successful decoded barcodes meets the expected value (`ExpectedBarcodeCount`), or the algorithm combination is exhausted.
 
 ## Sample Code
 

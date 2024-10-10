@@ -39,7 +39,7 @@ As we can see, the gray image converted using only red channel is much better th
 
 ## Particular Parameter Required
 
-DBR provides a parameter [`ColourConversionModes`]({{ site.dcv_parameters_reference }}image-parameter/colour-conversion-modes.html) that allows you to control the conversion of a color image to grayscale. 
+DBR provides a parameter [`ColourConversionModes`]({{ site.dcvb_parameters_reference }}image-parameter/colour-conversion-modes.html) that allows you to control the conversion of a color image to grayscale. 
 
 ## Sample Code
 

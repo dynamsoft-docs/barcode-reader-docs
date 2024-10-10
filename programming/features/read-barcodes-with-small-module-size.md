@@ -20,7 +20,7 @@ In some scenarios, the barcode is very small relative to the entire image, and i
 
 ## Particular Parameter Required
 
-Dynamsoft Barcode Reader (DBR) provides a parameter [`ScaleUpModes`]({{ site.dcv_parameters_reference }}image-parameter/scale-up-modes.html) that allows you to control the scale-up process when targets in the image are too small. 
+Dynamsoft Barcode Reader (DBR) provides a parameter [`ScaleUpModes`]({{ site.dcvb_parameters_reference }}image-parameter/scale-up-modes.html) that allows you to control the scale-up process when targets in the image are too small. 
 
 ## Sample Code
 

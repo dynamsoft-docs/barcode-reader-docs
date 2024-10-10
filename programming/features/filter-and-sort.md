@@ -11,16 +11,16 @@ needAutoGenerateSidebar: false
 
 Dynamsoft Barcode Reader SDK is able to read multiple barcodes at once and return results of all the decoded barcodes. However, you may not want all the results. For example, you may need only the results of a specific barcode format, or you may need only the barcodes with a certain text string. The SDK provides the following parameters to help you filter the barcode results by barcode format, confidence, etc and order the results by confidence, position or format. These parameters can work both individually and in combination.
 
-* [BarcodeFormatIds]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/barcode-format-ids.html)
-* [BarcodeAngleRangeArray]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-angle-range-array.html)
-* [BarcodeWidthRangeArray]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-width-range-array.html)
-* [BarcodeHeightRangeArray]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-height-range-array.html)
-* [MinRatioOfBarcodeZoneWidthToHeight]({{ site.dcv_parameters_reference }}barcode-format-specification/min-ratio-of-barcode-zone-width-to-height.html)
-* [BarcodeTextLengthRangeArray]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-text-length-range-array.html)
-* [BarcodeTextRegExPattern]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-text-regex-pattern.html)
-* [MinResultConfidence]({{ site.dcv_parameters_reference }}barcode-format-specification/min-result-confidence.html)
-* [ModuleSizeRangeArray]({{ site.dcv_parameters_reference }}barcode-format-specification/module-size-range-array.html)
-* [TextResultOrderModes]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/text-result-order-modes.html)
+* [BarcodeFormatIds]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/barcode-format-ids.html)
+* [BarcodeAngleRangeArray]({{ site.dcvb_parameters_reference }}barcode-format-specification/barcode-angle-range-array.html)
+* [BarcodeWidthRangeArray]({{ site.dcvb_parameters_reference }}barcode-format-specification/barcode-width-range-array.html)
+* [BarcodeHeightRangeArray]({{ site.dcvb_parameters_reference }}barcode-format-specification/barcode-height-range-array.html)
+* [MinRatioOfBarcodeZoneWidthToHeight]({{ site.dcvb_parameters_reference }}barcode-format-specification/min-ratio-of-barcode-zone-width-to-height.html)
+* [BarcodeTextLengthRangeArray]({{ site.dcvb_parameters_reference }}barcode-format-specification/barcode-text-length-range-array.html)
+* [BarcodeTextRegExPattern]({{ site.dcvb_parameters_reference }}barcode-format-specification/barcode-text-regex-pattern.html)
+* [MinResultConfidence]({{ site.dcvb_parameters_reference }}barcode-format-specification/min-result-confidence.html)
+* [ModuleSizeRangeArray]({{ site.dcvb_parameters_reference }}barcode-format-specification/module-size-range-array.html)
+* [TextResultOrderModes]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/text-result-order-modes.html)
 
 
 ## Sample Code

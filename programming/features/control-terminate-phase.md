@@ -9,7 +9,7 @@ breadcrumbText: Termination Control
 
 # Control when to terminate a decoding process
 
-Typically, Dynamsoft Barcode Reader (DBR) will terminate a decoding process after the barcode is decoded or the process has failed. In some cases we may want the process to terminate earlier than that. To do this, we use either the parameter [ `TerminateSetting` ]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/terminate-setting.html) or the parameter [ `Timeout` ]({{ site.dcv_parameters_reference }}capture-vision-template/timeout.html). The former specifies the stage to terminate the process while the latter specifies the maximum time allowed for the process.
+Typically, Dynamsoft Barcode Reader (DBR) will terminate a decoding process after the barcode is decoded or the process has failed. In some cases we may want the process to terminate earlier than that. To do this, we use either the parameter [ `TerminateSetting` ]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/terminate-setting.html) or the parameter [ `Timeout` ]({{ site.dcvb_parameters_reference }}capture-vision-template/timeout.html). The former specifies the stage to terminate the process while the latter specifies the maximum time allowed for the process.
 
 ## TerminateSetting
 

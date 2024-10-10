@@ -15,7 +15,7 @@ Typically, barcodes are dark on a light background. But in some cases, the barco
    <p>Inverted Barcodes</p>
 </div>
 
-The feature to decode such inverted barcodes is not enabled by default. To control this feature, we must use the [`GrayscaleTransformationModes`]({{ site.dcv_parameters_reference }}image-parameter/grayscale-transformation-modes.html). Now for a quick breakdown of each of the modes:
+The feature to decode such inverted barcodes is not enabled by default. To control this feature, we must use the [`GrayscaleTransformationModes`]({{ site.dcvb_parameters_reference }}image-parameter/grayscale-transformation-modes.html). Now for a quick breakdown of each of the modes:
 
 - With only `GTM_ORIGINAL` enabled in `GrayscaleTransformationModes`, DBR scans only general black-on-white barcodes.
 - With only `GTM_INVERTED` enabled in `GrayscaleTransformationModes`, DBR scans only inverted barcodes.

@@ -8,7 +8,7 @@ needAutoGenerateSidebar: false
 
 # How to Read Barcodes from an Image With Lots of Text
 
-When trying to read an image where a barcode is surrounded by a large amount of irrelevant text, the presence of these characters may lead to incorrect positioning and slow down the execution speed. Dynamsoft Barcode Reader (DBR) provides parameter [`TextDetectionMode`]({{ site.dcv_parameters_reference }}image-parameter/text-detection-mode.html) and [`IfEraseTextZone`]({{ site.dcv_parameters_reference }}image-parameter/if-erase-text-zone.html) to control how to filter texts on an image.
+When trying to read an image where a barcode is surrounded by a large amount of irrelevant text, the presence of these characters may lead to incorrect positioning and slow down the execution speed. Dynamsoft Barcode Reader (DBR) provides parameter [`TextDetectionMode`]({{ site.dcvb_parameters_reference }}image-parameter/text-detection-mode.html) and [`IfEraseTextZone`]({{ site.dcvb_parameters_reference }}image-parameter/if-erase-text-zone.html) to control how to filter texts on an image.
 
 ## Sample Code
 

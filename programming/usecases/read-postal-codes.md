@@ -23,7 +23,7 @@ Dynamsoft Barcode Reader (DBR) supports the following types of postal codes. Det
 
 ## Particular Parameter Required
 
-DBR provides a parameter, [`BarcodeFormatIds`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/barcode-format-ids.html){:target="_blank"}, to control the formats of the barcode to process. To enable decoding the postal codes, simply set a `BF_POSTALCODE` or a specific postal code format enumeration to this parameter.
+DBR provides a parameter, [`BarcodeFormatIds`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/barcode-format-ids.html){:target="_blank"}, to control the formats of the barcode to process. To enable decoding the postal codes, simply set a `BF_POSTALCODE` or a specific postal code format enumeration to this parameter.
 
 ## Sample Code
 

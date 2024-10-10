@@ -15,7 +15,7 @@ In some cases, barcodes may have incomplete sections due to typographical errors
    <p>Incomplete Barcodes</p>
 </div>
 
-In this case, you can enable the barcode completion logic in Dynamsoft Barcode Reader (DBR) using [`BarcodeComplementModes`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/barcode-complement-modes.html). After that, DBR will attempt to complete and correct the barcode according to the structural characteristics of the corresponding barcode type.
+In this case, you can enable the barcode completion logic in Dynamsoft Barcode Reader (DBR) using [`BarcodeComplementModes`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/barcode-complement-modes.html). After that, DBR will attempt to complete and correct the barcode according to the structural characteristics of the corresponding barcode type.
 
 > NOTE:
 >

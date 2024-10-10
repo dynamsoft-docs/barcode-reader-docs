@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # Read a Specific Area/Region
 
-Dynamsoft Barcode Reader (DBR) will locate the code region and decode the entire image by default. However, if only a specific region of the image or video is required to locate the barcode, you can define a Region Of Interest (ROI) via the parameter `TargetROIDef`. After defining a specific region, DBR will only decode barcodes within that region. Of course, this is very conducive to increasing the speed. Please refer to [`Design of the TargetROIDef Object`]({{ site.dcv_parameters }}file/target-roi-definition/index.html) to learn more about `TargetROIDef` and how it works,.
+Dynamsoft Barcode Reader (DBR) will locate the code region and decode the entire image by default. However, if only a specific region of the image or video is required to locate the barcode, you can define a Region Of Interest (ROI) via the parameter `TargetROIDef`. After defining a specific region, DBR will only decode barcodes within that region. Of course, this is very conducive to increasing the speed. Please refer to [`Design of the TargetROIDef Object`]({{ site.dcvb_parameters }}file/target-roi-definition/index.html) to learn more about `TargetROIDef` and how it works,.
 
 ## Single Region Specification
 
