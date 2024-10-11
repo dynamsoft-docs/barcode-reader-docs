@@ -27,6 +27,7 @@ noTitleIndex: true
 
 | Versions | Available Editions                                                                      |
 | -------- | --------------------------------------------------------------------------------------- |
+| 10.4.2000 | [JavaScript]({{ site.js_release_notes }}js-10.html#1042000-10102024){:target="_blank"} / [Android]({{ site.android_release_notes }}android-10.html#1042000-10112024){:target="_blank"} / [iOS]({{ site.oc_release_notes }}ios-10.html#1042000-10112024){:target="_blank"} / [Python]({{ site.python_release_notes}}python-10.html#1042000-10102024){:target="_blank"} / [.NET]({{ site.dotnet_release_notes }}dotnet-10.html#1042000-10102024){:target="_blank"} / [C++]({{ site.cpp_release_notes}}cpp-10.html#1042000-10102024){:target="_blank"} |
 | 10.4.10   | [C++]({{ site.cpp_release_notes}}cpp-10.html#10410-07232024){:target="_blank"} |
 
 ## 10.2
