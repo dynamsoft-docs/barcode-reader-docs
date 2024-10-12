@@ -170,7 +170,6 @@ If you are using a **concurrent instance license**, you need to apply two more o
 >
 ```python
 license_count = YOUR-PURCHASED-LICENSE-COUNT
-error_code = 0
 LicenseManager.set_max_concurrent_instance_count(license_count)
 error_code, error_msg = LicenseManager.init_license("YOUR-LICENSE-KEY")
 if error_code != EnumErrorCode.EC_OK.value and error_code != EnumErrorCode.EC_LICENSE_CACHE_USED.value:
