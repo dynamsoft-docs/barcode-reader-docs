@@ -38,7 +38,7 @@ The following shows how to set the license in the code.
    >- Python
    >
 > 
-```javascript
+```js
 Dynamsoft.License.LicenseManager.initLicense("YOUR-LICENSE-KEY");
 ```
 > 
@@ -60,10 +60,18 @@ Dynamsoft.License.LicenseManager.initLicense("YOUR-LICENSE-KEY");
 ```
 >
 ```csharp
+  int errorCode = 0;
   string errorMsg;
-  BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
-  BarcodeReader reader = new BarcodeReader();
-  // add further process
+  errorCode = LicenseManager.InitLicense("--Enter Your License Key Here--", out errorMsg);
+  if (errorCode != (int)EnumErrorCode.EC_OK && errorCode != (int)EnumErrorCode.EC_LICENSE_CACHE_USED)
+  {
+      Console.WriteLine("License initialization error: " + errorMsg);
+  }
+  else
+  {
+      CaptureVisionRouter cvr = new CaptureVisionRouter();
+      // add code for further process
+  }
 ```
 >
 ```java
@@ -101,8 +109,13 @@ func onLicenseVerified(_ isSuccess: Bool, error: Error?) {
 ```
 >
 ```python
-error = BarcodeReader.init_license("YOUR-LICENSE-KEY")
-dbr = BarcodeReader()
+error_code = 0
+error_code, error_msg = LicenseManager.init_license("--Enter Your License Key Here--")
+if error_code != EnumErrorCode.EC_OK.value and error_code != EnumErrorCode.EC_LICENSE_CACHE_USED.value:
+    print("License initialization error: " + error_msg)
+else:
+    CaptureVisionRouter cvr = new CaptureVisionRouter()
+    # add code for further process
 ```
 
 If you are using a **concurrent instance license**, you need to apply two more operations:
@@ -112,6 +125,8 @@ If you are using a **concurrent instance license**, you need to apply two more o
 
 <div class="sample-code-prefix template2"></div>
    >- C++
+   >- C#
+   >- Python
    >
 >
 ```cpp
@@ -130,4 +145,40 @@ If you are using a **concurrent instance license**, you need to apply two more o
     setting.maxParallelTasks = licenseCount;
     cvr->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &setting);
     // add further process
+```
+>
+```csharp
+    int licenseCount = YOUR-PURCHASED-LICENSE-COUNT;
+    int errorCode = 0;
+    string errorMsg;
+    errorCode = LicenseManager.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
+    LicenseManager.SetMaxConcurrentInstanceCount(licenseCount)
+    if (errorCode != (int)EnumErrorCode.EC_OK && errorCode != (int)EnumErrorCode.EC_LICENSE_CACHE_USED)
+    {
+        Console.WriteLine("License initialization error: " + errorMsg);
+    }
+    else
+    {
+        CaptureVisionRouter cvr = new CaptureVisionRouter();
+        SimplifiedCaptureVisionSettings settings;
+        cvr.GetSimplifiedSettings(PresetTemplate.PT_READ_BARCODES, out settings);
+        setting.maxParallelTasks = licenseCount;
+        cvr.UpdateSettings(PresetTemplate.PT_READ_BARCODES, settings, out errorMsg);
+        // add code for further process
+    }
+```
+>
+```python
+license_count = YOUR-PURCHASED-LICENSE-COUNT
+error_code = 0
+LicenseManager.set_max_concurrent_instance_count(license_count)
+error_code, error_msg = LicenseManager.init_license("YOUR-LICENSE-KEY")
+if error_code != EnumErrorCode.EC_OK.value and error_code != EnumErrorCode.EC_LICENSE_CACHE_USED.value:
+    print("License initialization error: " + error_msg)
+else:
+    CaptureVisionRouter cvr = new CaptureVisionRouter()
+    error_code, error_msg, settings = cvr.get_simplified_settings(EnumPresetTemplate.PT_READ_BARCODES.value)
+    settings.max_parallel_tasks = license_count
+    error_code, error_msg = cvr.update_settings(EnumPresetTemplate.PT_READ_BARCODES.value, settings)
+    # add code for further process
 ```
