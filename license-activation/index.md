@@ -109,7 +109,6 @@ func onLicenseVerified(_ isSuccess: Bool, error: Error?) {
 ```
 >
 ```python
-error_code = 0
 error_code, error_msg = LicenseManager.init_license("--Enter Your License Key Here--")
 if error_code != EnumErrorCode.EC_OK.value and error_code != EnumErrorCode.EC_LICENSE_CACHE_USED.value:
     print("License initialization error: " + error_msg)

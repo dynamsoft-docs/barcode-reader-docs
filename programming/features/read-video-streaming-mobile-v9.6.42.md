@@ -12,7 +12,7 @@ noTitleIndex: true
 
 ## Configurations on the Camera
 
-Firstly, to decode from video streaming, you have to create a camera module using the [Dynamsoft Camera Enhancer](https://www.dynamsoft.com/camera-enhancer/docs/introduction/?ver=latest). The camera module is responsible for:
+Firstly, to decode from video streaming, you have to create a camera module using the Dynamsoft Camera Enhancer. The camera module is responsible for:
 
 - Capturing the video stream.
 - Displaying the video stream on the UI.
