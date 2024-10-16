@@ -137,7 +137,7 @@ If you need to specify more than one ROI, you have to use a JSON template. Furth
 
 If you are using DBR and DCE to read barcodes from a specific area of the video stream, you can simply define the scan area via DCE.
 
-> Note: <a href="https://www.dynamsoft.com/camera-enhancer/docs/introduction/" target="_blank"> Dynamsoft Camera Enhancer (DCE) </a> is designed to provide APIs for camera control, camera preview, and other advanced features.
+> Note: Dynamsoft Camera Enhancer (DCE) is designed to provide APIs for camera control, camera preview, and other advanced features.
 
 <div class="sample-code-prefix template2"></div>
    >- Android
