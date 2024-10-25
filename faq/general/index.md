@@ -99,13 +99,13 @@ permalink: /faq/general/index.html
 
 5. iOS & Android - [How can I use CameraX or third-party camera modules with Dynamsoft Barcode Reader?](no-camera-enhancer.md)
 
-6. iOS - [Does Dynamsoft Barcode Reader iOS support simulator devices?](simulator-support.md)
+6. iOS - [How to resolve the "Building for iOS Simulator, but linking in dylib built for iOS" error when building for the iOS simulator?](arm64-simulator-error.md)
 
-7. iOS - [How to resolve the "Building for iOS Simulator, but linking in dylib built for iOS" error when building for the iOS simulator?](arm64-simulator-error.md)
+7. Android - [Can I reduce the size of the final Android app?](reduce-final-size.md)
 
-8. Android - [Can I reduce the size of the final Android app?](reduce-final-size.md)
+8. Android - [How to prevent project build failure after shrinking code?](proguard.md)
 
-9. Android - [How to prevent project build failure after shrinking code?](proguard.md)
+9. Android - [Does Dynamsoft Barcode Reader support Android simulator devices?](simulator-support.md)
 
 ## [Error & Debug](error-debug.md)
 
