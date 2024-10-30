@@ -23,6 +23,6 @@ If you are looking to create your own custom template of settings to use with th
 
 5. Copy the JSON code under *Template* and paste it into your own JSON file, or you can download the template JSON file straight from the demo.
 
-6. The template you downloaded is currently Barcode Reader version 9 template and the latest version is version 10. Use the [TemplateConverter Tool](https://download2.dynamsoft.com/dcv/TemplateConverter.zip) to convert the template to Barcode Reader version 10 compatible template.
+Note: If you have a JSON file that you previously used in version 9 and would like to keep using that, please note that the format needs to change to be useable in version 10.x of the SDK. Please use the [TemplateConverter Tool](https://download2.dynamsoft.com/dcv/TemplateConverter.zip) to convert the template to Barcode Reader version 10 compatible template.
 
 And with that, you have your own template to use with the `InitSettingsFromFile` method! 
