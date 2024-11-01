@@ -42,11 +42,11 @@ Sharpening and smoothing are used to reduce blur. The following sample image dem
 
 If the image to be processed is more complicated, you can use the above grayscale enhancement modes in combination. After configuring multiple modes through [`GrayscaleEnhancementModes`]({{ site.dcvb_parameters_reference }}image-parameter/grayscale-enhancement-modes.html), DBR will try each mode in sequence until the number of successful decoded barcodes meets the expected value (`ExpectedBarcodeCount`), or the algorithm combination is exhausted.
 
-## Sample Code
+## Example
 
 Below is an example illustrating how to configure the parameter `GrayscaleEnhancementModes`.
 
-* update parameter `GrayscaleEnhancementModes` in your JSON template
+* Update parameter `GrayscaleEnhancementModes` in your JSON template
 
     ```json
     {
@@ -107,52 +107,7 @@ Below is an example illustrating how to configure the parameter `GrayscaleEnhanc
     }
     ```
 
-* apply settings by calling method `InitSettingsFromFile`
-
-<div class="sample-code-prefix template2"></div>
-   >- JavaScript
-   >- C++
-   >- Android
-   >- Objective-C
-   >- Swift
-   >
->
-```javascript
-// `router` is an instance of `CaptureVisionRouter`.
-// In the JS edition, the method name we use for initialization is different.
-router.initSettings("PATH-TO-YOUR-SETTING")
-```
->
-```c++
-char szErrorMsg[256] = {0};
-CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
-cvr->InitSettingsFromFile("PATH-TO-YOUR-SETTING-FILE", szErrorMsg, 256);
-// more process here
-```
->
-```java
-try {
-   // `cvr` is an instance of `CaptureVisionRouter`.
-   cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE");
-} catch (CaptureVisionRouterException e) {
-   e.printStackTrace();
-}
-```
->
-```objc
-NSError *error;
-// `cvr` is an instance of `DSCaptureVisionRouter`.
-[self.cvr initSettingsFromFile:@"PATH-TO-YOUR-SETTING-FILE" error:&error];
-```
->
-```swift
-do{
-   //`cvr` is an instance of `CaptureVisionRouter`.
-   try cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE")
-}catch{
-   // Add code to do when error occurs.
-}
-```
+* Apply the above settings following the article [Use Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html#json-template).
 
 
 [1]:assets/preprocess-images/gray-equalize-sample-1.png

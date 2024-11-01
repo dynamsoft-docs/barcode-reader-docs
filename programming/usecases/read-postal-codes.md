@@ -36,6 +36,8 @@ You can configure the parameter `BarcodeFormatIds` in two different ways, depend
    >- Android
    >- Objective-C
    >- Swift
+   >- Python
+   >- C#
    >
 >
 ```c++
@@ -85,6 +87,32 @@ do{
    // Add code to do when error occurs.
 }
 ```
+>
+```python
+cvr_instance = CaptureVisionRouter()
+# Obtain current runtime settings of `CCaptureVisionRouter` instance.
+err_code, err_str, settings = cvr_instance.get_simplified_settings(EnumPresetTemplate.PT_READ_BARCODES.value)
+# Specify the barcode formats by enumeration values.
+# Use "|" to enable multiple barcode formats at one time.
+settings.barcode_settings.barcode_format_ids = EnumBarcodeFormat.BF_POSTALCODE.value
+# Update the settings.
+err_code, err_str = cvr_instance.update_settings(EnumPresetTemplate.PT_READ_BARCODES.value, settings)
+```
+>
+```csharp
+using (CaptureVisionRouter cvr = new CaptureVisionRouter())
+{
+   SimplifiedCaptureVisionSettings settings;
+   string errorMsg;
+   // Obtain current runtime settings of `CCaptureVisionRouter` instance.
+   cvr.GetSimplifiedSettings(PresetTemplate.PT_READ_BARCODES, out settings);
+   // Specify the barcode formats by enumeration values.
+   // Use "|" to enable multiple barcode formats at one time.
+   settings.barcodeSettings.barcodeFormatIds = (ulong)(EnumBarcodeFormat.BF_POSTALCODE);
+   // Update the settings.
+   cvr.UpdateSettings(PresetTemplate.PT_READ_BARCODES, settings, out errorMsg);  
+}
+```
 
 * Configure barcode format via `JSON parameter template file`
   * update parameter `BarcodeFormatIds` in JSON template
@@ -111,44 +139,4 @@ do{
    }
    ```
 
-  * save the above template to file `setting.json`
-
-  * apply settings by calling method `InitSettingsFromFile`
-
-<div class="sample-code-prefix template2"></div>
-   >- C++
-   >- Android
-   >- Objective-C
-   >- Swift
-   >
->
-```c++
-char szErrorMsg[256] = {0};
-CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
-cvr->InitSettingsFromFile("PATH-TO-YOUR-SETTING-FILE", szErrorMsg, 256);
-// more process here
-```
->
-```java
-try {
-   // `cvr` is an instance of `CaptureVisionRouter`.
-   cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE");
-} catch (CaptureVisionRouterException e) {
-   e.printStackTrace();
-}
-```
->
-```objc
-NSError *error;
-// `cvr` is an instance of `DSCaptureVisionRouter`.
-[self.cvr initSettingsFromFile:@"PATH-TO-YOUR-SETTING-FILE" error:&error];
-```
->
-```swift
-do{
-   //`cvr` is an instance of `CaptureVisionRouter`.
-   try cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE")
-}catch{
-   // Add code to do when error occurs.
-}
-```
+  * Apply the above settings following the article [Use Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html#json-template).

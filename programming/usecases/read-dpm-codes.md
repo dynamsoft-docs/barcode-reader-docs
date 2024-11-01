@@ -18,11 +18,11 @@ It is the process of creating permanent markings on the surface of a part to hel
 
 Dynamsoft Barcode Reader (DBR) provides a parameter, [`DPMCodeReadingModes`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/dpm-code-reading-modes.html), to control how to decode DPM codes. To enable the DPM feature, simply set a `DPMCRM_GENERAL` mode to this parameter.
 
-## Sample Code
+## Example
 
 Below is an example illustrating how to configure the parameter `DPMCodeReadingModes` to read DPM code.
 
-* update parameter `DPMCodeReadingModes` in your JSON template
+* Update parameter `DPMCodeReadingModes` in your JSON template
 
     ```json
     {
@@ -50,45 +50,7 @@ Below is an example illustrating how to configure the parameter `DPMCodeReadingM
         ]
     }
     ```
-* apply settings by calling method `InitSettingsFromFile`
-
-<div class="sample-code-prefix template2"></div>
-   >- C++
-   >- Android
-   >- Objective-C
-   >- Swift
-   >
->
-```c++
-char szErrorMsg[256] = {0};
-CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
-cvr->InitSettingsFromFile("PATH-TO-YOUR-SETTING-FILE", szErrorMsg, 256);
-// more process here
-```
->
-```java
-try {
-   // `cvr` is an instance of `CaptureVisionRouter`.
-   cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE");
-} catch (CaptureVisionRouterException e) {
-   e.printStackTrace();
-}
-```
->
-```objc
-NSError *error;
-// `cvr` is an instance of `DSCaptureVisionRouter`.
-[self.cvr initSettingsFromFile:@"PATH-TO-YOUR-SETTING-FILE" error:&error];
-```
->
-```swift
-do{
-   //`cvr` is an instance of `CaptureVisionRouter`.
-   try cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE")
-}catch{
-   // Add code to do when error occurs.
-}
-```
+* Apply the above settings following the article [Use Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html#json-template).
 
 [1]:assets\read-dpm-codes\DPM-sample1.png
 [2]:assets\read-dpm-codes\DPM-sample2.png

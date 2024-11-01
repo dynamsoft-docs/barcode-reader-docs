@@ -29,11 +29,11 @@ This may extend the barcode localization time or even lead to localization error
 
 As we can see, the binarized image with texture detection enabled is much better. Now we will demonstrate how to configure the parameter [`TextureDetectionModes`]({{ site.dcvb_parameters_reference }}image-parameter/texture-detection-modes.html) to enable texture detection.
 
-## Sample Code
+## Example
 
 Below is an example illustrating how to configure the parameter `TextureDetectionModes`.
 
-* update parameter `TextureDetectionModes` in your JSON template
+* Update parameter `TextureDetectionModes` in your JSON template
 
     ```json
     {
@@ -82,49 +82,4 @@ Below is an example illustrating how to configure the parameter `TextureDetectio
     }
     ```
 
-* apply settings by calling method `InitSettingsFromFile`
-
-<div class="sample-code-prefix template2"></div>
-   >- JavaScript
-   >- C++
-   >- Android
-   >- Objective-C
-   >- Swift
-   >
->
-```javascript
-// `router` is an instance of `CaptureVisionRouter`.
-// In the JS edition, the method name we use for initialization is different.
-router.initSettings("PATH-TO-YOUR-SETTING")
-```
->
-```c++
-char szErrorMsg[256] = {0};
-CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
-cvr->InitSettingsFromFile("PATH-TO-YOUR-SETTING-FILE", szErrorMsg, 256);
-// more process here
-```
->
-```java
-try {
-   // `cvr` is an instance of `CaptureVisionRouter`.
-   cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE");
-} catch (CaptureVisionRouterException e) {
-   e.printStackTrace();
-}
-```
->
-```objc
-NSError *error;
-// `cvr` is an instance of `DSCaptureVisionRouter`.
-[self.cvr initSettingsFromFile:@"PATH-TO-YOUR-SETTING-FILE" error:&error];
-```
->
-```swift
-do{
-   //`cvr` is an instance of `CaptureVisionRouter`.
-   try cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE")
-}catch{
-   // Add code to do when error occurs.
-}
-```
+* Apply the above settings following the article [Use Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html#json-template).

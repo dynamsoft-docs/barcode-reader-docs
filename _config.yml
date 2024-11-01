@@ -92,6 +92,8 @@ dcvb_parameters: /capture-vision/docs/core/parameters/
 dcvb_parameters_reference: /capture-vision/docs/core/parameters/reference/
 dcvb_enumerations: /capture-vision/docs/core/enums/
 dcvb_cpp_api: /capture-vision/docs/server/programming/cplusplus/api-reference/
+dcvb_dotnet_api: /capture-vision/docs/server/programming/dotnet/api-reference/
+dcvb_python_api: /capture-vision/docs/server/programming/python/api-reference/
 
 maui: /barcode-reader/docs/mobile/programming/maui/
 maui_api: /barcode-reader/docs/mobile/programming/maui/api-reference/

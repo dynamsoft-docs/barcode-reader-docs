@@ -22,11 +22,11 @@ In some scenarios, the barcode is very small relative to the entire image, and i
 
 Dynamsoft Barcode Reader (DBR) provides a parameter [`ScaleUpModes`]({{ site.dcvb_parameters_reference }}image-parameter/scale-up-modes.html) that allows you to control the scale-up process when targets in the image are too small. 
 
-## Sample Code
+## Example
 
 Below is an example illustrating how to configure the parameter `ScaleUpModes`.
 
-* update parameter `ScaleUpModes` in your JSON template
+* Update parameter `ScaleUpModes` in your JSON template
 
     ```json
     {
@@ -77,50 +77,4 @@ Below is an example illustrating how to configure the parameter `ScaleUpModes`.
     }
     ```
 
-* apply settings by calling method `InitSettingsFromFile`
-
-<div class="sample-code-prefix template2"></div>
-   >- JavaScript
-   >- C++
-   >- Android
-   >- Objective-C
-   >- Swift
-   >
->
-```javascript
-// `router` is an instance of `CaptureVisionRouter`.
-// In the JS edition, the method name we use for initialization is different.
-router.initSettings("PATH-TO-YOUR-SETTING")
-```
->
-```c++
-char szErrorMsg[256] = {0};
-CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
-cvr->InitSettingsFromFile("PATH-TO-YOUR-SETTING-FILE", szErrorMsg, 256);
-// more process here
-```
->
-```java
-try {
-   // `cvr` is an instance of `CaptureVisionRouter`.
-   cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE");
-} catch (CaptureVisionRouterException e) {
-   e.printStackTrace();
-}
-```
->
-```objc
-NSError *error;
-// `cvr` is an instance of `DSCaptureVisionRouter`.
-[self.cvr initSettingsFromFile:@"PATH-TO-YOUR-SETTING-FILE" error:&error];
-```
->
-```swift
-do{
-   //`cvr` is an instance of `CaptureVisionRouter`.
-   try cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE")
-}catch{
-   // Add code to do when error occurs.
-}
-```
-
+* Apply the above settings following the article [Use Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html#json-template).

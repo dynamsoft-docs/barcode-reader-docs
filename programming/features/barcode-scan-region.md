@@ -19,6 +19,8 @@ Dynamsoft Barcode Reader (DBR) will locate the code region and decode the entire
 <div class="sample-code-prefix template2"></div>
    >- JavaScript
    >- C++
+   >- Python
+   >- C#
    >
 >
 ```javascript
@@ -47,6 +49,43 @@ settings.roi.points[3].Set(10, 90);
 settings.roiMeasuredInPercentage = 1;
 // Update the settings.
 cvr->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &settings, szErrorMsg, 256);
+```
+>
+```python
+cvr_instance = CaptureVisionRouter()
+# Obtain current runtime settings of `CCaptureVisionRouter` instance.
+err_code, err_str, settings = cvr_instance.get_simplified_settings(EnumPresetTemplate.PT_READ_BARCODES.value)
+# Specify the ROI.
+settings.roi_measured_in_percentage = 1
+points = settings.roi.points
+points[0].x = 10
+points[0].y = 10
+points[1].x = 90
+points[1].y = 10
+points[2].x = 90
+points[2].y = 90
+points[3].x = 10
+points[3].y = 90
+# Update the settings.
+err_code, err_str = cvr_instance.update_settings(EnumPresetTemplate.PT_READ_BARCODES.value, settings)
+```
+>
+```csharp
+using (CaptureVisionRouter cvr = new CaptureVisionRouter())
+{
+   SimplifiedCaptureVisionSettings settings;
+   string errorMsg;
+   // Obtain current runtime settings of `CCaptureVisionRouter` instance.
+   cvr.GetSimplifiedSettings(PresetTemplate.PT_READ_BARCODES, out settings);
+   // Specify the ROI.
+   settings.roiMeasuredInPercentage = 1;
+   settings.roi.points[0].Set(10, 10);
+   settings.roi.points[1].Set(90, 10);
+   settings.roi.points[2].Set(90, 90);
+   settings.roi.points[3].Set(10, 90);
+   // Update the settings.
+   cvr.UpdateSettings(PresetTemplate.PT_READ_BARCODES, settings, out errorMsg);  
+}
 ```
 
 * Configure region via `JSON Template`
