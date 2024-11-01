@@ -10,11 +10,11 @@ needAutoGenerateSidebar: false
 
 The Dynamsoft Barcode Reader SDK provides APIs for you to get the detailed barcode information like checksum digit, start/stop characters, error correction level, etc. To learn more about what information you can get, see the following items:
 
-- `OneDCodeDetails`: [C++]({{ site.cpp_api }}oned-code-details.html)
-- `QRCodeDetails`: [C++]({{ site.cpp_api }}qr-code-details.html)
-- `PDF417Details`: [C++]({{ site.cpp_api }}pdf417-details.html)
-- `DataMatrixDetails`: [C++]({{ site.cpp_api }}datamatrix-details.html)
-- `AztecDetails`: [C++]({{ site.cpp_api }}aztec-details.html)
+- `OneDCodeDetails`: [C++]({{ site.cpp_api }}oned-code-details.html) / [Python]({{ site.python_api }}oned-code-details.html) / [.NET]({{ site.dotnet_api }}oned-code-details.html)
+- `QRCodeDetails`: [C++]({{ site.cpp_api }}qr-code-details.html) / [Python]({{ site.python_api }}qr-code-details.html) / [.NET]({{ site.dotnet_api }}qr-code-details.html)
+- `PDF417Details`: [C++]({{ site.cpp_api }}pdf417-details.html) / [Python]({{ site.python_api }}pdf417-details.html) / [.NET]({{ site.dotnet_api }}pdf417-details.html)
+- `DataMatrixDetails`: [C++]({{ site.cpp_api }}datamatrix-details.html) / [Python]({{ site.python_api }}datamatrix-details.html) / [.NET]({{ site.dotnet_api }}datamatrix-details.html)
+- `AztecDetails`: [C++]({{ site.cpp_api }}aztec-details.html) / [Python]({{ site.python_api }}aztec-details.html) / [.NET]({{ site.dotnet_api }}aztec-details.html)
 
 Here we take QR Code as example and show how to get the version and model of a QR Code.
 
@@ -43,6 +43,8 @@ Here we take QR Code as example and show how to get the version and model of a Q
    >- Android
    >- Objective-C
    >- Swift
+   >- Python
+   >- C#
    >
 >
 ```javascript
@@ -116,6 +118,59 @@ func onDecodedBarcodesReceived(_ result: DecodedBarcodesResult) {
             let qrCodeDetails = item.details as! QRCodeDetails
             let version = qrCodeDetails.version
             let model = qrCodeDetails.model
+        }
+    }
+}
+```
+>
+```python
+cvr = CaptureVisionRouter()
+result = cvr.capture("IMAGE-FILE-PATH", EnumPresetTemplate.PT_READ_BARCODES.value)
+if result.get_error_code() != EnumErrorCode.EC_OK:
+    print("Error:", result.get_error_code(), result.get_error_string())
+barcode_result = result.get_decoded_barcodes_result()
+if barcode_result is None or barcode_result.get_items() == 0:
+    print("No barcode detected.")
+else:
+    items = barcode_result.get_items()
+    print("Decoded", len(items), "barcodes.")
+    for index,item in enumerate(items):
+        if item.get_format() == EnumBarcodeFormat.BF_QR_CODE.value:
+            qrDetail = item.get_details()
+            print("Version:", qrDetail.version)
+            print("Model:", qrDetail.model)
+```
+>
+```csharp
+using (CaptureVisionRouter cvr = new CaptureVisionRouter())
+{
+    string imageFile = "IMAGE-FILE-PATH";
+    CapturedResult? result = cvr.Capture(imageFile, PresetTemplate.PT_READ_BARCODES);
+    if (result == null)
+    {
+        Console.WriteLine("No barcode detected.");
+    }
+    else
+    {
+        if (result.GetErrorCode() != 0)
+        {
+            Console.WriteLine("Error: " + result.GetErrorCode() + ", " + result.GetErrorString());
+        }
+        DecodedBarcodesResult? barcodesResult = result.GetDecodedBarcodesResult();
+        if (barcodesResult != null)
+        {
+            BarcodeResultItem[] items = barcodesResult.GetItems();
+            Console.WriteLine("Decoded " + items.Length + " barcodes");
+            foreach (BarcodeResultItem barcodeItem in items)
+            {
+                Console.WriteLine("Result " + (Array.IndexOf(items, barcodeItem) + 1));
+                if (barcodeItem.GetFormat() == EnumBarcodeFormat.BF_QR_CODE)
+                {
+                    QRCodeDetails? qrDetail = (QRCodeDetails?)barcodeItem.GetDetails();
+                    Console.WriteLine("Version: " + qrDetail.version);
+                    Console.WriteLine("Model: " + qrDetail.model);
+                }
+            }
         }
     }
 }

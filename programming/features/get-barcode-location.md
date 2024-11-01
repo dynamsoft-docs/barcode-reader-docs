@@ -24,6 +24,8 @@ The following code snippet shows how to get the coordinates of the barcode:
    >- Android
    >- Objective-C
    >- Swift
+   >- Python
+   >- C#
    >
 >
 ```javascript
@@ -107,6 +109,60 @@ func onDecodedBarcodesReceived(_ result: DecodedBarcodesResult) {
             let topRightPoint:CGPoint = barcodeQuadArea.points[1] as! CGPoint
             let buttomRightPoint:CGPoint = barcodeQuadArea.points[2] as! CGPoint
             let bottomLeftPoint:CGPoint = barcodeQuadArea.points[3] as! CGPoint
+        }
+    }
+}
+```
+>
+```python
+cvr = CaptureVisionRouter()
+result = cvr.capture("IMAGE-FILE-PATH", EnumPresetTemplate.PT_READ_BARCODES.value)
+if result.get_error_code() != EnumErrorCode.EC_OK:
+    print("Error:", result.get_error_code(), result.get_error_string())
+barcode_result = result.get_decoded_barcodes_result()
+if barcode_result is None or barcode_result.get_items() == 0:
+    print("No barcode detected.")
+else:
+    items = barcode_result.get_items()
+    print("Decoded", len(items), "barcodes.")
+    for index,item in enumerate(items):
+        quad = item.get_location()
+        print("Result", index+1)
+        print("Point 0: [{0},{1}]".format(quad.points[0].x, quad.points[0].y))
+        print("Point 1: [{0},{1}]".format(quad.points[1].x, quad.points[1].y))
+        print("Point 2: [{0},{1}]".format(quad.points[2].x, quad.points[2].y))
+        print("Point 3: [{0},{1}]".format(quad.points[3].x, quad.points[3].y))
+```
+>
+```csharp
+using (CaptureVisionRouter cvr = new CaptureVisionRouter())
+{
+    string imageFile = "IMAGE-FILE-PATH";
+    CapturedResult? result = cvr.Capture(imageFile, PresetTemplate.PT_READ_BARCODES);
+    if (result == null)
+    {
+        Console.WriteLine("No barcode detected.");
+    }
+    else
+    {
+        if (result.GetErrorCode() != 0)
+        {
+            Console.WriteLine("Error: " + result.GetErrorCode() + ", " + result.GetErrorString());
+        }
+        DecodedBarcodesResult? barcodesResult = result.GetDecodedBarcodesResult();
+        if (barcodesResult != null)
+        {
+            BarcodeResultItem[] items = barcodesResult.GetItems();
+            Console.WriteLine("Decoded " + items.Length + " barcodes");
+            foreach (BarcodeResultItem barcodeItem in items)
+            {
+                Console.WriteLine("Result " + (Array.IndexOf(items, barcodeItem) + 1));
+                Quadrilateral quad = barcodeItem.GetLocation();
+                Console.WriteLine("Point 0: [{0},{1}]", quad.points[0][0], quad.points[0][1]);
+                Console.WriteLine("Point 1: [{0},{1}]", quad.points[1][0], quad.points[1][1]);
+                Console.WriteLine("Point 2: [{0},{1}]", quad.points[2][0], quad.points[2][1]);
+                Console.WriteLine("Point 3: [{0},{1}]", quad.points[3][0], quad.points[3][1]);
+            }
         }
     }
 }

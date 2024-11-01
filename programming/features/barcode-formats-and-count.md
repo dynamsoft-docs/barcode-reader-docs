@@ -24,6 +24,8 @@ You can configure the parameter in two different ways, depending on your require
 >- Android
 >- Objective-C
 >- Swift
+>- Python
+>- C#
 >
 >
 ```javascript
@@ -84,9 +86,36 @@ do{
    // Add code to do when error occurs.
 }
 ```
+>
+```python
+cvr_instance = CaptureVisionRouter()
+# Obtain current runtime settings of `CCaptureVisionRouter` instance.
+err_code, err_str, settings = cvr_instance.get_simplified_settings(EnumPresetTemplate.PT_READ_BARCODES.value)
+# Specify the barcode formats by enumeration values.
+# Use "|" to enable multiple barcode formats at one time.
+settings.barcode_settings.barcode_format_ids = EnumBarcodeFormat.BF_QR_CODE.value | EnumBarcodeFormat.BF_ONED.value
+# Update the settings.
+err_code, err_str = cvr_instance.update_settings(EnumPresetTemplate.PT_READ_BARCODES.value, settings)
+```
+>
+```csharp
+using (CaptureVisionRouter cvr = new CaptureVisionRouter())
+{
+   SimplifiedCaptureVisionSettings settings;
+   string errorMsg;
+   // Obtain current runtime settings of `CCaptureVisionRouter` instance.
+   cvr.GetSimplifiedSettings(PresetTemplate.PT_READ_BARCODES, out settings);
+   // Specify the barcode formats by enumeration values.
+   // Use "|" to enable multiple barcode formats at one time.
+   settings.barcodeSettings.barcodeFormatIds = (ulong)(EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_ONED);
+   // Update the settings.
+   cvr.UpdateSettings(PresetTemplate.PT_READ_BARCODES, settings, out errorMsg);  
+}
+```
+
 
 * Configure barcode format via `JSON parameter template file`
-  * update parameter `BarcodeFormatIds` in your JSON template
+  * Update parameter `BarcodeFormatIds` in your JSON template
     ```json
     {
         "CaptureVisionTemplates": [
@@ -110,52 +139,7 @@ do{
     }
     ```
 
-  * apply settings by calling method `InitSettingsFromFile`
-
-    <div class="sample-code-prefix template2"></div>
-       >- JavaScript
-       >- C++
-       >- Android
-       >- Objective-C
-       >- Swift
-       >
-    >
-    ```javascript
-    // `router` is an instance of `CaptureVisionRouter`.
-    // In the JS edition, the method name we use for initialization is different.
-    router.initSettings("PATH-TO-YOUR-SETTING")
-    ```
-    >
-    ```c++
-    char szErrorMsg[256] = {0};
-    CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
-    cvr->InitSettingsFromFile("PATH-TO-YOUR-SETTING-FILE", szErrorMsg, 256);
-    // more process here
-    ```
-    >
-    ```java
-    try {
-       // `cvr` is an instance of `CaptureVisionRouter`.
-       cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE");
-    } catch (CaptureVisionRouterException e) {
-       e.printStackTrace();
-    }
-    ```
-    >
-    ```objc
-    NSError *error;
-    // `cvr` is an instance of `DSCaptureVisionRouter`.
-    [self.cvr initSettingsFromFile:@"PATH-TO-YOUR-SETTING-FILE" error:&error];
-    ```
-    >
-    ```swift
-    do{
-       //`cvr` is an instance of `CaptureVisionRouter`.
-       try cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE")
-    }catch{
-       // Add code to do when error occurs.
-    }
-    ```
+  * Apply the above settings following the article [Use Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html#json-template).
 
 ## Set Barcode Count
 
@@ -178,6 +162,8 @@ You can configure the parameter in two different ways, depending on your require
    >- Android
    >- Objective-C
    >- Swift
+   >- Python
+   >- C#
    >
 >
 ```javascript
@@ -236,6 +222,30 @@ do{
    // Add code to do when error occurs.
 }
 ```
+>
+```python
+cvr_instance = CaptureVisionRouter()
+# Obtain current runtime settings of `CCaptureVisionRouter` instance.
+err_code, err_str, settings = cvr_instance.get_simplified_settings(EnumPresetTemplate.PT_READ_BARCODES.value)
+# Specify the expected barcode count.
+settings.barcode_settings.expected_barcodes_count = 1
+# Update the settings.
+err_code, err_str = cvr_instance.update_settings(EnumPresetTemplate.PT_READ_BARCODES.value, settings)
+```
+>
+```csharp
+using (CaptureVisionRouter cvr = new CaptureVisionRouter())
+{
+   SimplifiedCaptureVisionSettings settings;
+   string errorMsg;
+   // Obtain current runtime settings of `CCaptureVisionRouter` instance.
+   cvr.GetSimplifiedSettings(PresetTemplate.PT_READ_BARCODES, out settings);
+   // Specify the expected barcode count.
+   settings.barcodeSettings.expectedBarcodesCount = 1;
+   // Update the settings.
+   cvr.UpdateSettings(PresetTemplate.PT_READ_BARCODES, settings, out errorMsg);  
+}
+```
 
 * Configure barcode format via `JSON parameter template file`
   * update parameter `ExpectedBarcodesCount` in your JSON template
@@ -261,49 +271,4 @@ do{
         ]
     }
    ```
-  * apply settings by calling method `InitSettingsFromFile`
-
-    <div class="sample-code-prefix template2"></div>
-       >- JavaScript
-       >- C++
-       >- Android
-       >- Objective-C
-       >- Swift
-       >
-    >
-    ```javascript
-    // `router` is an instance of `CaptureVisionRouter`.
-    // In the JS edition, the method name we use for initialization is different.
-    router.initSettings("PATH-TO-YOUR-SETTING")
-    ```
-    >
-    ```c++
-    char szErrorMsg[256] = {0};
-    CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
-    cvr->InitSettingsFromFile("PATH-TO-YOUR-SETTING-FILE", szErrorMsg, 256);
-    // more process here
-    ```
-    >
-    ```java
-    try {
-       // `cvr` is an instance of `CaptureVisionRouter`.
-       cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE");
-    } catch (CaptureVisionRouterException e) {
-       e.printStackTrace();
-    }
-    ```
-    >
-    ```objc
-    NSError *error;
-    // `cvr` is an instance of `DSCaptureVisionRouter`.
-    [self.cvr initSettingsFromFile:@"PATH-TO-YOUR-SETTING-FILE" error:&error];
-    ```
-    >
-    ```swift
-    do{
-       //`cvr` is an instance of `CaptureVisionRouter`.
-       try cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE")
-    }catch{
-       // Add code to do when error occurs.
-    }
-    ```
+  * Apply the above settings following the article [Use Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html#json-template).

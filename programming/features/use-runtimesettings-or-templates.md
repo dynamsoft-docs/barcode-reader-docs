@@ -42,6 +42,8 @@ The following code snippet demonstrates how to specify barcode formats via `Simp
    >- Android
    >- Objective-C
    >- Swift
+   >- Python
+   >- C#
    >
 >
 ```javascript
@@ -97,11 +99,37 @@ do {
     print("update runtimeSettings error:\(error.localizedDescription)")
 }
 ```
+>
+```python
+cvr_instance = CaptureVisionRouter()
+# Obtain current runtime settings of `CCaptureVisionRouter` instance.
+err_code, err_str, settings = cvr_instance.get_simplified_settings(EnumPresetTemplate.PT_READ_BARCODES.value)
+# Specify the barcode formats by enumeration values.
+# Use "|" to enable multiple barcode formats at one time.
+settings.barcode_settings.barcode_format_ids = EnumBarcodeFormat.BF_QR_CODE.value | EnumBarcodeFormat.BF_ONED.value
+# Update the settings.
+err_code, err_str = cvr_instance.update_settings(EnumPresetTemplate.PT_READ_BARCODES.value, settings)
+```
+>
+```csharp
+using (CaptureVisionRouter cvr = new CaptureVisionRouter())
+{
+   SimplifiedCaptureVisionSettings settings;
+   string errorMsg;
+   // Obtain current runtime settings of `CCaptureVisionRouter` instance.
+   cvr.GetSimplifiedSettings(PresetTemplate.PT_READ_BARCODES, out settings);
+   // Specify the barcode formats by enumeration values.
+   // Use "|" to enable multiple barcode formats at one time.
+   settings.barcodeSettings.barcodeFormatIds = (ulong)(EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_ONED);
+   // Update the settings.
+   cvr.UpdateSettings(PresetTemplate.PT_READ_BARCODES, settings, out errorMsg);
+}
+```
 
 **See Also**  
 
-- `SimplifiedCaptureVisionSettings:` [C++]({{ site.dcvb_cpp_api }}capture-vision-router/structs/simplified-capture-vision-settings.html) / [JavaScript](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/interfaces/simplified-capture-vision-settings.html)
-- `SimplifiedBarcodeReaderSettings:` [C++]({{ site.cpp_api }}simplified-barcode-reader-settings.html) / [JavaScript](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/interfaces/simplified-barcode-reader-settings.html)
+- `SimplifiedCaptureVisionSettings:` [C++]({{ site.dcvb_cpp_api }}capture-vision-router/structs/simplified-capture-vision-settings.html) / [JavaScript](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/interfaces/simplified-capture-vision-settings.html) / [Python]({{ site.dcvb_python_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html) / [.NET]({{ site.dcvb_dotnet_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html)
+- `SimplifiedBarcodeReaderSettings:` [C++]({{ site.cpp_api }}simplified-barcode-reader-settings.html) / [JavaScript](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/interfaces/simplified-barcode-reader-settings.html) / [Python]({{ site.python_api }}simplified-barcode-reader-settings.html) / [.NET]({{ site.dotnet_api }}simplified-barcode-reader-settings.html)
 
 ## JSON Template
 
@@ -153,6 +181,8 @@ The following steps demonstrates how to specify barcode formats via `JSON Templa
        >- Android
        >- Objective-C
        >- Swift
+       >- Python
+       >- C#
        >
     >
     ```javascript
@@ -190,6 +220,34 @@ The following steps demonstrates how to specify barcode formats via `JSON Templa
        try cvr.initSettingsFromFile("PATH-TO-YOUR-SETTING-FILE")
     }catch{
        // Add code to do when error occurs.
+    }
+    ```
+    >
+    ```python
+    cvr_instance = CaptureVisionRouter()
+    template_file = 'PATH-TO-YOUR-SETTING-FILE'
+    errorCode, errorMsg = cvr_instance.init_settings_from_file(template_file)
+    # template_string = 'TEMPLATE-JSON-STRING'
+    # errorCode, errorMsg = cvr_instance.init_settings(template_string)
+    if errorCode != EnumErrorCode.EC_OK:
+        raise Exception("Init template failed: " + errorMsg)
+    # more process here
+    ```
+    >
+    ```csharp
+    int errorCode = 1;
+    string errorMsg;
+    using (CaptureVisionRouter cvr = new CaptureVisionRouter())
+    {
+        string templateFile = "PATH-TO-YOUR-SETTING-FILE";
+        errorCode = cvr.InitSettingsFromFile(templateFile, out errorMsg);
+        //string templateString = "";
+        //errorCode = cvr.InitSettings(templateString, out errorMsg);
+        if (errorCode != (int)EnumErrorCode.EC_OK)
+        {
+            Console.WriteLine("Init template failed: " + errorMsg);
+        }
+        // more process here
     }
     ```
 

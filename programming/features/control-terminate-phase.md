@@ -48,7 +48,7 @@ Below is an example illustrating how to configure parameter `TerminateSetting` v
 }
 ```
 
-To apply the above settings, please follow the article [Use Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html#json-template).
+Apply the above settings following the article [Use Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html#json-template).
 
 ## Timeout
 
@@ -67,6 +67,8 @@ You can configure the parameter in two different ways, depending on your require
 <div class="sample-code-prefix template2"></div>
    >- JavaScript
    >- C++
+   >- Python
+   >- C#
    >
 >
 ```javascript
@@ -84,10 +86,34 @@ char szErrorMsg[256] = {0};
 CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
 SimplifiedCaptureVisionSettings settings;
 cvr->GetSimplifiedSettings(CPresetTemplate::PT_READ_BARCODES, &settings);
-// Specify the expected barcode count.
+// Specify the timeout.
 settings.timeout = 1000;
 // Update the settings.
 cvr->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &settings, szErrorMsg, 256);
+```
+>
+```python
+cvr_instance = CaptureVisionRouter()
+# Obtain current runtime settings of `CCaptureVisionRouter` instance.
+err_code, err_str, settings = cvr_instance.get_simplified_settings(EnumPresetTemplate.PT_READ_BARCODES.value)
+# Specify the timeout.
+settings.timeout = 1000
+# Update the settings.
+err_code, err_str = cvr_instance.update_settings(EnumPresetTemplate.PT_READ_BARCODES.value, settings)
+```
+>
+```csharp
+using (CaptureVisionRouter cvr = new CaptureVisionRouter())
+{
+   SimplifiedCaptureVisionSettings settings;
+   string errorMsg;
+   // Obtain current runtime settings of `CCaptureVisionRouter` instance.
+   cvr.GetSimplifiedSettings(PresetTemplate.PT_READ_BARCODES, out settings);
+   // Specify the timeout.
+   settings.timeout = 1000;
+   // Update the settings.
+   cvr.UpdateSettings(PresetTemplate.PT_READ_BARCODES, settings, out errorMsg);  
+}
 ```
 
 
@@ -116,4 +142,5 @@ cvr->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &settings, szErrorMsg, 25
 }
 ```
 
-To apply the above settings, please follow the article [Use Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html#json-template).
+Apply the above settings following the article [Use Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html#json-template).
+
