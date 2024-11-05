@@ -143,14 +143,14 @@ using (CaptureVisionRouter cvr = new CaptureVisionRouter())
 
 ## Set Barcode Count
 
-The `expectedBarcodeCount` parameter controls the number of expected results of the recognized barcodes from a single image. The process will be stopped as soon as the count of successfully decoded barcodes reaches the expected amount.
+The `ExpectedBarcodesCount` parameter controls the number of expected results of the recognized barcodes from a single image. The process will be stopped as soon as the count of successfully decoded barcodes reaches the expected amount.
 
-There are some suggestions on how to set the `expectedBarcodeCount`:
+There are some suggestions on how to set the `ExpectedBarcodesCount`:
 
-- When your project is designed for decoding a **single** barcode per image or frame, the recommended `expectedBarcodeCount` is **1**. This will sharply improve the processing speed.
-- When there are **n** barcodes in a single image or frame (**n** is a fixed number) and you'd like the barcode reader to decode **all of them**, the recommended `expectedBarcodeCount` is **n**.
-- When the number of barcodes is unknown and you want to output **as many** barcode results as possible, you can set the `expectedBarcodeCount` to the **maximum possible value** of `expectedBarcodeCount`.
-- When the number of barcodes is unknown and you want to output **at least one** barcode result as **soon** as possible, you can set the `expectedBarcodeCount` to **0**. The barcode reader will try to decode at least one barcode from the image.
+- When your project is designed for decoding a **single** barcode per image or frame, the recommended `ExpectedBarcodesCount` is **1**. This will sharply improve the processing speed.
+- When there are **n** barcodes in a single image or frame (**n** is a fixed number) and you'd like the barcode reader to decode **all of them**, the recommended `ExpectedBarcodesCount` is **n**.
+- When the number of barcodes is unknown and you want to output **as many** barcode results as possible, you can set the `ExpectedBarcodesCount` to the **maximum possible value** of `ExpectedBarcodesCount`.
+- When the number of barcodes is unknown and you want to output **at least one** barcode result as **soon** as possible, you can set the `ExpectedBarcodesCount` to **0**. The barcode reader will try to decode at least one barcode from the image.
 
 You can configure the parameter in two different ways, depending on your requirements. You can do it through `SimplifiedBarcodeReaderSettings`, or if it suits your needs better, you can opt for `JSON Template`. Below are examples illustrating both of these configuration methods:
 
