@@ -24,3 +24,5 @@ permalink: /faq/general/configuration.html
 6. [How to create custom settings template?](custom-settings-template.html)
 
 7. [How can I sort the barcodes of my image in reading order?](sort-barcodes-image.html)
+
+8. [How to Scan EAN/UPC with Addon Codes?](how-to-scan-ean-upc-with-addon.md)
