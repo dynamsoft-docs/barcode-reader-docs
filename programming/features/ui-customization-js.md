@@ -14,7 +14,8 @@ When you want to customize the UI, we can leverage the extensive customization f
 
 ## Use the built-in UI
 
-DCE includes several pre-defined UIs in the `DCE-LIB-PACKAGE/dist/xxxx.ui.html` (or `node_modules/dynamsoft-camera-enhancer/dist/xxxx.ui.html`).
+DCE includes several pre-defined UIs in the `DCE-LIB-PACKAGE/dist/xxxx.ui.html` (or `node_modules/dynamsoft-camera-enhancer/dist/xxxx.ui.html`). 
+If you are using a CDN, please find [`dce.ui.html`](https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@latest/dist/dce.ui.html) and [`dce.mobile-native.ui.html`](https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@latest/dist/dce.mobile-native.ui.html).
 
 * `dce.ui.html`: The default UI used by CameraView.createInstance() for simple use cases.
 * `dce.mobile-native.ui.html`: A mobile-inspired UI with auto flash, suitable for most websites. Activate it with `CameraView.createInstance('@engineResourcePath/dce.mobile-native.ui.html')`.
