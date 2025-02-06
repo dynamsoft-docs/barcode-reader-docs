@@ -3,6 +3,8 @@ repository: dynamsoft-docs/barcode-reader-docs
 docFullPath: https://www.dynamsoft.com/barcode-reader/docs/core/
 firstLevelUrl: /barcode-reader/docs/core
 docHomePage: /barcode-reader/docs/core/
+searchIndexName: Crawler-DBR-Docs-New
+searchNeedFilter: true
 
 useVersionTree: true
 
