@@ -1,11 +1,8 @@
 ---
-layout: search-page
+layout: search-layout
 title: Dynamsoft Barcode Reader SDK Documentation Search
 keywords: Dynamsoft Barcode Reader SDK Documentation Search
+h1: Dynamsoft Barcode Reader SDK Documentation Search
 breadcrumbText: HomePage
-permalink: /search.html
-cx: 32039cdf85bc7ae2b
+indexName: Crawler-DBR-Docs-New
 ---
-
-<script>
-</script>
