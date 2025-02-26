@@ -101,6 +101,8 @@ maui: /barcode-reader/docs/mobile/programming/maui/
 maui_api: /barcode-reader/docs/mobile/programming/maui/api-reference/
 maui_release_notes: /barcode-reader/docs/mobile/programming/maui/release-notes/
 
+dcv_maui: /capture-vision/docs/mobile/programming/maui/
+
 assets: /barcode-reader/docs/core/assets/
 edit_icon: /barcode-reader/docs/core/assets/img-icon/edit-icon.png
 smile_icon: /barcode-reader/docs/core/assets/img-icon/icon-smile.png
