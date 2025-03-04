@@ -8,7 +8,7 @@ needAutoGenerateSidebar: false
 
 # How to Read Barcodes from Large Images
 
-In some cases, the captured image is very large, so Dynamsoft Barcode Reader (DBR) may require more memory and take longer to read the barcode. To speed up the barcode localization process and reduce memory overhead, you can configure the `ImageScaleSetting` parameter to shrink the image size.
+In some cases, the captured image is very large, so Dynamsoft Barcode Reader (DBR) may require more memory and take longer to read the barcode. To speed up the barcode localization process and reduce memory overhead, you can configure the `ScaleDownThreshold` parameter to shrink the image size. If the shorter side length of the image is larger than `ScaleDownThreshold`, the library will shrink the image (50% on each dimension) until the shorter side is less than the threshold.
 
 >Note:
 >
@@ -16,9 +16,9 @@ In some cases, the captured image is very large, so Dynamsoft Barcode Reader (DB
 
 ## Example
 
-Below is an example illustrating how to configure the parameter `ImageScaleSetting`.
+Below is an example illustrating how to configure the parameter `ScaleDownThreshold`.
 
-* Update parameter `ImageScaleSetting` in your JSON template
+* Update parameter `ScaleDownThreshold` in your JSON template
 
     ```json
     {
@@ -37,7 +37,7 @@ Below is an example illustrating how to configure the parameter `ImageScaleSetti
         "BarcodeReaderTaskSettingOptions": [
             {
                 "Name" : "BR_0",
-                "SectionArray": [
+                "SectionImageParameterArray": [
                     {
                         "Section": "ST_REGION_PREDETECTION",
                         "ImageParameterName": "IP_0"
@@ -56,16 +56,7 @@ Below is an example illustrating how to configure the parameter `ImageScaleSetti
         "ImageParameterOptions": [
             {
                 "Name": "IP_0",
-                "ApplicableStages":[
-                    { 
-                        "Stage": "SST_SCALE_IMAGE",
-                        "ImageScaleSetting": {
-                            "ScaleType": "ST_SCALE_DOWN",
-                            "ReferenceEdge": "RE_SHORTER_EDGE",
-                            "EdgeLengthThreshold": 1600
-                        }
-                    }
-                ]
+                "ScaleDownThreshold": 1600
             }
         ]
     }

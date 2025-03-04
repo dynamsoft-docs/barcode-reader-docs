@@ -21,17 +21,15 @@ Dynamsoft Barcode Reader supports the following barcode formats:
 | Code 39/Code 39 Extended | QR Code             | Omnidirectional         | USPS Intelligent Mail | GS1 Composite Code |
 | Code 93                  | Micro QR Code       | Truncated               | Postnet               | Patch Code         |
 | Code 128                 | Data Matrix         | Stacked                 | Planet                | Pharmacode         |
-| Codabar                  | PDF417              | Stacked Omnidirectional | Australian Post       | Telepen            |
+| Codabar                  | PDF417              | Stacked Omnidirectional | Australian Post       |                    |
 | Interleaved 2 of 5       | Micro PDF417        | Limited                 | UK Royal Mail         |                    |
-| EAN-8                    | Aztec Code          | Expanded                | KIX                    |                    |
+| EAN-8                    | Aztec Code          | Expanded                |                       |                    |
 | EAN-13                   | MaxiCode (mode 2-5) | Expanded Stacked        |                       |                    |
 | UPC-A                    | DotCode             |                         |                       |                    |
 | UPC-E                    |                     |                         |                       |                    |
 | Industrial 2 of 5        |                     |                         |                       |                    |
 | MSI (Modified Plessey)   |                     |                         |                       |                    |
 | Code 11                  |                     |                         |                       |                    |
-| Code 32                  |                     |                         |                       |                    |
-| Matrix 2 of 5            |                     |                         |                       |                    |
 
 [Learn more about these barcode formats](https://www.dynamsoft.com/barcode-reader/barcode-types/).
 
@@ -71,3 +69,4 @@ Choose the programming language you use to build your application and learn how 
 * [Java]({{site.java}}user-guide.html){:target="_blank"}
 * [.NET]({{site.dotnet}}user-guide.html){:target="_blank"}
 * [C++]({{site.cpp}}user-guide.html){:target="_blank"}
+* [C]({{site.c}}user-guide.html){:target="_blank"}

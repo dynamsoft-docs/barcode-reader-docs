@@ -23,12 +23,12 @@ To explore the latest features and updates of `Dynamsoft Barcode Reader`, please
   * ![Java Icon]({{site.assets}}img-icon/homepage/java.svg){:class="java"} [Java]({{ site.java }}){:target="_blank"}
   * ![.NET Icon]({{site.assets}}img-icon/homepage/dotnet.svg){:class="dotnet"} [.NET]({{ site.dotnet }}){:target="_blank"}
   * ![C++ Icon]({{site.assets}}img-icon/homepage/cplusplus.svg){:class="cplusplus"} [C++]({{ site.cpp }}){:target="_blank"}
-  * ![C Icon]({{site.assets}}img-icon/homepage/c.svg){:class="c"} [C]({{ site.c }}){:target="_blank"}
 
-The documentation for editions `React Native`, `Flutter`, `Xamarin.Forms` and `Cordova` has been archived, but remains accessible through the following links:
+The documentation for editions `C`, `React Native`, `Flutter`, `Xamarin.Forms` and `Cordova` has been archived, but remains accessible through the following links:
 
 <div class="archivedEditionList"></div>
 
+* ![C Icon]({{site.assets}}img-icon/homepage/c.svg){:class="c"} [C]({{ site.c }}){:target="_blank"}
 * ![React Native Icon]({{site.assets}}img-icon/homepage/React Native.svg){:class="react"} [React Native]({{ site.dcv_react_native }}){:target="_blank"}
 * ![Flutter Icon]({{site.assets}}img-icon/homepage/Flutter.svg){:class="flutter"} [Flutter]({{ site.dcv_flutter }}){:target="_blank"}
 * ![Xamarin.Forms Icon]({{site.assets}}img-icon/homepage/Xamarin Forms.svg){:class="xamarin"} [Xamarin.Forms]({{ site.dcv_xamarin }}){:target="_blank"}

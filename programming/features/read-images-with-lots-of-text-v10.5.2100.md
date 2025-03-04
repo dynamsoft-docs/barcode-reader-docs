@@ -1,24 +1,20 @@
----
+---   
 layout: default-layout
-title: Read barcodes from large image - Dynamsoft Barcode Reader SDK
-description: This page describes how to read barcodes from large image in Dynamsoft Barcode Reader SDK.
-keywords: large image, barcode
+description: This article introduces how to read barcodes from image with lots of text
+title: How to read barcodes from image with lots of text
+keywords: text filter
 needAutoGenerateSidebar: false
 ---
 
-# How to Read Barcodes from Large Images
+# How to Read Barcodes from an Image With Lots of Text
 
-In some cases, the captured image is very large, so Dynamsoft Barcode Reader (DBR) may require more memory and take longer to read the barcode. To speed up the barcode localization process and reduce memory overhead, you can configure the `ImageScaleSetting` parameter to shrink the image size.
-
->Note:
->
->Don't worry about the location of the barcodes, as DBR will still return their coordinates in the original image.
+When trying to read an image where a barcode is surrounded by a large amount of irrelevant text, the presence of these characters may lead to incorrect positioning and slow down the execution speed. Dynamsoft Barcode Reader (DBR) provides parameter [`TextDetectionMode`]({{ site.dcvb_parameters_reference }}image-parameter/text-detection-mode.html) and [`IfEraseTextZone`]({{ site.dcvb_parameters_reference }}image-parameter/if-erase-text-zone.html) to control how to filter texts on an image.
 
 ## Example
 
-Below is an example illustrating how to configure the parameter `ImageScaleSetting`.
+Below is an example illustrating how to configure the parameters to control text filtering function.
 
-* Update parameter `ImageScaleSetting` in your JSON template
+* Update parameters in your JSON template
 
     ```json
     {
@@ -37,7 +33,7 @@ Below is an example illustrating how to configure the parameter `ImageScaleSetti
         "BarcodeReaderTaskSettingOptions": [
             {
                 "Name" : "BR_0",
-                "SectionArray": [
+                "SectionImageParameterArray": [
                     {
                         "Section": "ST_REGION_PREDETECTION",
                         "ImageParameterName": "IP_0"
@@ -56,16 +52,15 @@ Below is an example illustrating how to configure the parameter `ImageScaleSetti
         "ImageParameterOptions": [
             {
                 "Name": "IP_0",
-                "ApplicableStages":[
-                    { 
-                        "Stage": "SST_SCALE_IMAGE",
-                        "ImageScaleSetting": {
-                            "ScaleType": "ST_SCALE_DOWN",
-                            "ReferenceEdge": "RE_SHORTER_EDGE",
-                            "EdgeLengthThreshold": 1600
-                        }
-                    }
-                ]
+                "TextDetectionMode":
+                {
+                    "Mode": "TTDM_LINE",
+                    "Direction": "UNKNOWN",
+                    "CharHeightRange": [1, 100, 1],
+                    "MaxSpacingInALine": -1,
+                    "Sensitivity": 3
+                },
+                "IfEraseTextZone": 1
             }
         ]
     }
