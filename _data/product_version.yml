@@ -4,6 +4,7 @@ version_info_list_algorithm:
   - value: latest version
   - value: 10.x
     child:
+      - 10.5.2100
       - 10.2.0
       - 10.0.21
       - 10.0.20

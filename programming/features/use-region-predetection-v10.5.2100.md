@@ -35,27 +35,9 @@ JSON Template:
     "BarcodeReaderTaskSettingOptions": [
         {
             "Name" : "BR_0",
-            "SectionArray": [
+            "SectionImageParameterArray": [
                 {
                     "Section": "ST_REGION_PREDETECTION",
-                    "ImageParameterName": "IP_0",
-                    "StageArray": [
-                        {
-                            "Stage": "SST_PREDETECT_REGIONS",
-                            "RegionPredetectionModes": [
-                                {
-                                    "Mode": "RPM_GENERAL_RGB_CONTRAST"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "Section": "ST_BARCODE_LOCALIZATION",
-                    "ImageParameterName": "IP_0"
-                },
-                {
-                    "Section": "ST_BARCODE_DECODING",
                     "ImageParameterName": "IP_0"
                 }
             ]
@@ -63,7 +45,12 @@ JSON Template:
     ],
     "ImageParameterOptions": [
         {
-            "Name": "IP_0"
+            "Name": "IP_0",
+            "RegionPredetectionModes": [
+                {
+                    "Mode": "RPM_GENERAL_RGB_CONTRAST"
+                }
+            ]
         }
     ]
 }
@@ -90,27 +77,9 @@ If the image is a grayscale image, `RPM_GENERAL_GRAY_CONTRAST` mode is used for 
     "BarcodeReaderTaskSettingOptions": [
         {
             "Name" : "BR_0",
-            "SectionArray": [
+            "SectionImageParameterArray": [
                 {
                     "Section": "ST_REGION_PREDETECTION",
-                    "ImageParameterName": "IP_0",
-                    "StageArray": [
-                        {
-                            "Stage": "SST_PREDETECT_REGIONS",
-                            "RegionPredetectionModes": [
-                                {
-                                    "Mode": "RPM_GENERAL_GRAY_CONTRAST"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "Section": "ST_BARCODE_LOCALIZATION",
-                    "ImageParameterName": "IP_0"
-                },
-                {
-                    "Section": "ST_BARCODE_DECODING",
                     "ImageParameterName": "IP_0"
                 }
             ]
@@ -118,7 +87,12 @@ If the image is a grayscale image, `RPM_GENERAL_GRAY_CONTRAST` mode is used for 
     ],
     "ImageParameterOptions": [
         {
-            "Name": "IP_0"
+            "Name": "IP_0",
+            "RegionPredetectionModes": [
+                {
+                    "Mode": "RPM_GENERAL_GRAY_CONTRAST"
+                }
+            ]
         }
     ]
 }
@@ -149,29 +123,9 @@ JSON Template:
     "BarcodeReaderTaskSettingOptions": [
         {
             "Name" : "BR_0",
-            "SectionArray": [
+            "SectionImageParameterArray": [
                 {
                     "Section": "ST_REGION_PREDETECTION",
-                    "ImageParameterName": "IP_0",
-                    "StageArray": [
-                        {
-                            "Stage": "SST_PREDETECT_REGIONS",
-                            "RegionPredetectionModes": [
-                                {
-                                    "Mode": "RPM_GENERAL_HSV_CONTRAST",
-                                    "MinImageDimension": 16384,
-                                    "ForeAndBackgroundColours":"[46, 100, 28]"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "Section": "ST_BARCODE_LOCALIZATION",
-                    "ImageParameterName": "IP_0"
-                },
-                {
-                    "Section": "ST_BARCODE_DECODING",
                     "ImageParameterName": "IP_0"
                 }
             ]
@@ -179,7 +133,14 @@ JSON Template:
     ],
     "ImageParameterOptions": [
         {
-            "Name": "IP_0"
+            "Name": "IP_0",
+            "RegionPredetectionModes": [
+                {
+                    "Mode": "RPM_GENERAL_HSV_CONTRAST",
+                    "MinImageDimension": 16384,
+                    "ForeAndBackgroundColours":"[46, 100, 28]"
+                }
+            ]
         }
     ]
 }
@@ -188,7 +149,7 @@ JSON Template:
 ## Other color characteristic regions in the image
 
 For some special images, the code area has no obvious features to be detected directly, but there are some other regions with color features on the image. At this time, `RPM_GENERAL_HSV_CONTRAST` mode can also be used to detect these areas with color features. If the position of the barcode is fixed relative to the position of these areas, the position of the barcode can be deduced from the position of these areas, thereby realizing a quick barcode recognition.  
-As shown in the figure below, there is a clear yellow label area. If the background color is set to yellow 54 and the fault tolerance is 28, the exact position of the label can be detected (the area marked by the red frame), and then get the relative position of the barcode region (the area marked by the green frame).
+As shown in the figure below, there is a clear yellow label area. If the background color is set to yellow 54 and the fault tolerance is 28, the exact position of the label can be detected (the area marked by the red frame), and then use `RelativeRegions` parameter to get the relative position of the barcode region (the area marked by the green frame).
 
 
 ![region-predetection-label][3]
@@ -200,71 +161,21 @@ JSON Template:
     "CaptureVisionTemplates": [
         {
             "Name": "CV_0",
-            "ImageROIProcessingNameArray": ["TR_1" ]
+            "ImageROIProcessingNameArray": ["TA_0" ]
         }       
     ],
     "TargetROIDefOptions" : [
         {
-            "Name": "TR_0",
+            "Name": "TA_0",
             "TaskSettingNameArray": [ "BR_0" ]
-        },
-        {
-            "Name": "TR_1",
-            "TaskSettingNameArray": [ "BR_1" ],
-            "Location": 
-            {
-                "ReferenceObjectFilter" :
-                {  
-                    "ReferenceTargetROIDefNameArray": ["TR_0"]
-                },
-                "Offset": {
-                    "ReferenceObjectOriginIndex": 0, 
-                    "ReferenceObjectType": "ROT_ATOMIC_OBJECT", 
-                    "MeasuredByPercentage" : 1,
-                    "FirstPoint" : [ 35, 130 ],
-                    "SecondPoint" : [ 88, 130 ],
-                    "ThirdPoint" : [ 88, 170 ],
-                    "FourthPoint" : [ 35, 170 ],
-                }
-            }
         }
-
     ],
     "BarcodeReaderTaskSettingOptions": [
         {
             "Name" : "BR_0",
-            "SectionArray": [
+            "SectionImageParameterArray": [
                 {
                     "Section": "ST_REGION_PREDETECTION",
-                    "ImageParameterName": "IP_0",
-                    "StageArray": [
-                        {
-                            "Stage": "SST_PREDETECT_REGIONS",
-                            "RegionPredetectionModes": [
-                                {
-                                    "Mode": "RPM_GENERAL_HSV_CONTRAST",
-                                    "MinImageDimension": 16384,
-                                    "ForeAndBackgroundColours":"[-1, 54, 28]",
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "Name" : "BR_1",
-            "SectionArray": [
-                {
-                    "Section": "ST_REGION_PREDETECTION",
-                    "ImageParameterName": "IP_0",
-                },
-                {
-                    "Section": "ST_BARCODE_LOCALIZATION",
-                    "ImageParameterName": "IP_0"
-                },
-                {
-                    "Section": "ST_BARCODE_DECODING",
                     "ImageParameterName": "IP_0"
                 }
             ]
@@ -272,7 +183,15 @@ JSON Template:
     ],
     "ImageParameterOptions": [
         {
-            "Name": "IP_0"
+            "Name": "IP_0",
+            "RegionPredetectionModes": [
+                {
+                    "Mode": "RPM_GENERAL_HSV_CONTRAST",
+                    "MinImageDimension": 16384,
+                    "ForeAndBackgroundColours":"[-1, 54, 28]",
+                    "RelativeRegions":"[35, 130, 88, 170, -1]"
+                }
+            ]
         }
     ]
 }

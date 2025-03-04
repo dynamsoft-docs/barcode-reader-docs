@@ -50,38 +50,14 @@ Below is an example illustrating how to configure the parameter `DeformationResi
         "BarcodeReaderTaskSettingOptions": [
             {
                 "Name" : "BR_0",
-                "SectionArray": [
+                "DeformationResistingModes": [
                     {
-                        "Section": "ST_REGION_PREDETECTION",
-                        "ImageParameterName": "IP_0"
+                        "Mode": "DRM_BROAD_WARP"
                     },
                     {
-                        "Section": "ST_BARCODE_LOCALIZATION",
-                        "ImageParameterName": "IP_0"
-                    },
-                    {
-                        "Section": "ST_BARCODE_DECODING",
-                        "ImageParameterName": "IP_0",
-                        "StageArray": [
-                            {
-                                "Stage": "SST_RESIST_DEFORMATION",
-                                "DeformationResistingModes": [
-                                    {
-                                        "Mode": "DRM_BROAD_WARP"
-                                    },
-                                    {
-                                        "Mode": "DRM_LOCAL_REFERENCE"
-                                    }
-                                ]
-                            }
-                        ]
+                        "Mode": "DRM_LOCAL_REFERENCE"
                     }
                 ]
-            }
-        ],
-        "ImageParameterOptions": [
-            {
-                "Name": "IP_0"
             }
         ]
     }

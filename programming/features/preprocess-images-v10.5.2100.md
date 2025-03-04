@@ -65,7 +65,7 @@ Below is an example illustrating how to configure the parameter `GrayscaleEnhanc
         "BarcodeReaderTaskSettingOptions": [
             {
                 "Name" : "BR_0",
-                "SectionArray": [
+                "SectionImageParameterArray": [
                     {
                         "Section": "ST_REGION_PREDETECTION",
                         "ImageParameterName": "IP_0"
@@ -84,27 +84,22 @@ Below is an example illustrating how to configure the parameter `GrayscaleEnhanc
         "ImageParameterOptions": [
             {
                 "Name": "IP_0",
-                "ApplicableStages":[
-                    { 
-                        "Stage": "SST_ENHANCE_GRAYSCALE",
-                        "GrayscaleEnhancementModes": [
-                            {
-                                "Mode": "GEM_GRAY_EQUALIZE",
-                                "Sensitivity": 9
-                            },
-                            {
-                                "Mode": "GEM_GRAY_SMOOTH",
-                                "SmoothBlockSizeX": 10,
-                                "SmoothBlockSizeY": 10
-                            },
-                            {
-                                "Mode": "GEM_SHARPEN_SMOOTH",
-                                "SmoothBlockSizeX": 5,
-                                "SmoothBlockSizeY": 5,
-                                "SharpenBlockSizeX": 5,
-                                "SharpenBlockSizeY": 5
-                            }
-                        ]
+                "GrayscaleEnhancementModes": [
+                    {
+                        "Mode": "GEM_GRAY_EQUALIZE",
+                        "Sensitivity": 9
+                    },
+                    {
+                        "Mode": "GEM_GRAY_SMOOTH",
+                        "SmoothBlockSizeX": 10,
+                        "SmoothBlockSizeY": 10
+                    },
+                    {
+                        "Mode": "GEM_SHARPEN_SMOOTH",
+                        "SmoothBlockSizeX": 5,
+                        "SmoothBlockSizeY": 5,
+                        "SharpenBlockSizeX": 5,
+                        "SharpenBlockSizeY": 5
                     }
                 ]
             }

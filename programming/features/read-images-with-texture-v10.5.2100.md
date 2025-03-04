@@ -52,7 +52,7 @@ Below is an example illustrating how to configure the parameter `TextureDetectio
         "BarcodeReaderTaskSettingOptions": [
             {
                 "Name" : "BR_0",
-                "SectionArray": [
+                "SectionImageParameterArray": [
                     {
                         "Section": "ST_REGION_PREDETECTION",
                         "ImageParameterName": "IP_0"
@@ -71,18 +71,10 @@ Below is an example illustrating how to configure the parameter `TextureDetectio
         "ImageParameterOptions": [
             {
                 "Name": "IP_0",
-                "ApplicableStages":[
-                    { 
-                        "Stage": "SST_DETECT_TEXTURE",
-                        "TextureDetectionModes": [
-                            {
-                                "Mode": "TDM_GENERAL_WIDTH_CONCENTRATION",
-                                "Sensitivity": 5
-                            }
-                        ]
-                    },
-                    { 
-                        "Stage": "SST_REMOVE_TEXTURE_FROM_GRAYSCALE" 
+                "TextureDetectionModes": [
+                    {
+                        "Mode": "TDM_GENERAL_WIDTH_CONCENTRATION",
+                        "Sensitivity": 5
                     }
                 ]
             }

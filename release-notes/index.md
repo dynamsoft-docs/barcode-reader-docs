@@ -9,6 +9,7 @@ permalink: /release-notes/index.html
 
 # Dynamsoft Barcode Reader SDK - Release Notes
 
+- [Version 11.0 (03-04-2025)](dbr-rn-11.md#110)
 - [Version 10.4 (07-23-2024)](dbr-rn-10.md#104)
 - [Version 10.2 (01-16-2024)](dbr-rn-10.md#102)
 - [Version 10.0 (07-04-2023)](dbr-rn-10.md#100)

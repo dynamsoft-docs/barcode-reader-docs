@@ -45,35 +45,11 @@ Below is an example illustrating how to configure the parameter `BarcodeCompleme
         "BarcodeReaderTaskSettingOptions": [
             {
                 "Name" : "BR_0",
-                "SectionArray": [
+                "BarcodeComplementModes": [
                     {
-                        "Section": "ST_REGION_PREDETECTION",
-                        "ImageParameterName": "IP_0"
-                    },
-                    {
-                        "Section": "ST_BARCODE_LOCALIZATION",
-                        "ImageParameterName": "IP_0"
-                    },
-                    {
-                        "Section": "ST_BARCODE_DECODING",
-                        "ImageParameterName": "IP_0",
-                        "StageArray": [
-                            {
-                                "Stage": "SST_COMPLEMENT_BARCODE",
-                                "BarcodeComplementModes": [
-                                    {
-                                        "Mode": "BCM_GENERAL"
-                                    }
-                                ]
-                            }
-                        ]
+                        "Mode": "BCM_GENERAL"
                     }
                 ]
-            }
-        ],
-        "ImageParameterOptions": [
-            {
-                "Name": "IP_0"
             }
         ]
     }

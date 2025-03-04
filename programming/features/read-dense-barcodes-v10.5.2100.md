@@ -49,52 +49,31 @@ Below is an example illustrating how to configure the parameters to read density
                 "Name" : "BR_0",
                 "BarcodeFormatIds" : ["BF_QR_CODE"],
                 "ExpectedBarcodesCount" : 1,
-                "SectionArray": [
+                "SectionImageParameterArray": [
                     {
                         "Section": "ST_REGION_PREDETECTION",
                         "ImageParameterName": "IP_0"
                     },
                     {
                         "Section": "ST_BARCODE_LOCALIZATION",
-                        "ImageParameterName": "IP_0",
-                        "StageArray": [
-                            {
-                                "Stage": "SST_LOCALIZE_CANDIDATE_BARCODES",
-                                "LocalizationModes":[
-                                    {
-                                        "Mode": "LM_CONNECTED_BLOCKS"
-                                    }
-                                ]
-                            }
-                        ]
+                        "ImageParameterName": "IP_0"
                     },
                     {
                         "Section": "ST_BARCODE_DECODING",
-                        "ImageParameterName": "IP_0",
-                        "StageArray": [
-                            {
-                                "Stage": "SST_SCALE_BARCODE_IMAGE",
-                                "BarcodeScaleModes": [
-                                    {
-                                        "Mode": "BSM_LINEAR_INTERPOLATION", 
-                                        "ModuleSizeThreshold": 4,
-                                        "TargetModuleSize": 6,
-                                        "AcuteAngleWithXThreshold": 0
-                                    },
-                                ]
-                            },
-                            {
-                                "Stage": "SST_DECODE_BARCODES",
-                                "DeblurModes":[
-                                    {
-                                        "Mode": "DM_SHARPENING"
-                                    },
-                                    {
-                                        "Mode": "DM_GRAY_EQUALIZATION"
-                                    }
-                                ]
-                            }
-                        ]
+                        "ImageParameterName": "IP_0"
+                    }
+                ],
+                "LocalizationModes":[
+                    {
+                        "Mode": "LM_CONNECTED_BLOCKS"
+                    }
+                ],
+                "DeblurModes":[
+                    {
+                        "Mode": "DM_SHARPENING"
+                    },
+                    {
+                        "Mode": "DM_GRAY_EQUALIZATION"
                     }
                 ]
             }
@@ -102,15 +81,15 @@ Below is an example illustrating how to configure the parameters to read density
         "ImageParameterOptions": [
             {
                 "Name": "IP_0",
-                "ApplicableStages":[
-                    { 
-                        "Stage": "SST_SCALE_IMAGE",
-                        "ImageScaleSetting": {
-                            "ScaleType": "ST_SCALE_DOWN",
-                            "ReferenceEdge": "RE_SHORTER_EDGE",
-                            "EdgeLengthThreshold": 10000
-                        }
+                "ScaleDownThreshold": 10000,
+                "ScaleUpModes": [
+                    {
+                        "Mode": "SUM_LINEAR_INTERPOLATION",
+                        "AcuteAngleWithXThreshold": 0,
+                        "ModuleSizeThreshold": 4,
+                        "TargetModuleSize": 6
                     }
+                ]
             }
         ]
     }
