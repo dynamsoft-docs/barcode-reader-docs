@@ -6,7 +6,6 @@ keywords: Parameter, Parameter Template, Parameter Template File, Dynamsoft Barc
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: true
-permalink: /parameters/structure-and-interfaces-of-parameters.html
 ---
 
 # Overview of Dynamsoft Capture Vision parameters Related to Dynamsoft Barcode Reader
