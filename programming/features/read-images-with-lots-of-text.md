@@ -33,7 +33,7 @@ Below is an example illustrating how to configure the parameters to control text
         "BarcodeReaderTaskSettingOptions": [
             {
                 "Name" : "BR_0",
-                "SectionImageParameterArray": [
+                "SectionArray": [
                     {
                         "Section": "ST_REGION_PREDETECTION",
                         "ImageParameterName": "IP_0"
@@ -52,15 +52,23 @@ Below is an example illustrating how to configure the parameters to control text
         "ImageParameterOptions": [
             {
                 "Name": "IP_0",
-                "TextDetectionMode":
-                {
-                    "Mode": "TTDM_LINE",
-                    "Direction": "UNKNOWN",
-                    "CharHeightRange": [1, 100, 1],
-                    "MaxSpacingInALine": -1,
-                    "Sensitivity": 3
-                },
-                "IfEraseTextZone": 1
+                "ApplicableStages":[
+                    { 
+                        "Stage": "SST_DETECT_TEXT_ZONES",
+                        "TextDetectionMode":
+                        {
+                            "Mode": "TTDM_LINE",
+                            "Direction": "UNKNOWN",
+                            "CharHeightRange": [1, 100, 1],
+                            "MaxSpacingInALine": -1,
+                            "Sensitivity": 3
+                        }
+                    },
+                    { 
+                        "Stage": "SST_REMOVE_TEXT_ZONES_FROM_BINARY",
+                        "IfEraseTextZone": 1
+                    }
+                ]
             }
         ]
     }

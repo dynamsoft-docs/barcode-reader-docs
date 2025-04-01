@@ -62,11 +62,6 @@ As shown in the example below, the organizational structure of a parameter templ
             "BarcodeFormatSpecificationNameArray" : ["FS_0"]
         }
     ],
-    "CaptureVisionModelOptions" : [
-        {
-            "Name" : "OneDDeblur"
-        }
-    ],
     "BarcodeFormatSpecificationOptions": [
         {
             "Name": "FS_0"
@@ -90,15 +85,13 @@ Next, we will focus on introducing some main objects and their relationships in 
 
 The following table list the main objects type and description of a complete parameter template when using only Dynamsoft Barcode Reader:
 
-| Object Type | Description |
-| :---------- | :---------- |
-| [CaptureVisionTemplate]({{site.dcvb_parameters}}file/capture-vision-template.html) | This is the entry object of a parameter template in DCV. The `Name` parameter represents the name of the parameter template, which serves as its unique identifier.|
-| [ImageSource]({{site.dcvb_parameters}}file/image-source.html) | Defines the input for DCV responsible for providing images to DCV. It can be defined as different image sources, including but not limited to, image directories, scanners, cameras, etc.|
-| [TargetROIDef]({{site.dcvb_parameters}}file/target-roi-definition/index.html) | Used to specify one or more recognition tasks to be performed on some regions of interest (ROIs) within an image.|
-| [BarcodeReaderTaskSetting]({{site.dcvb_parameters}}file/task-settings/barcode-reader-task-settings.html) | Configures the settings for barcode reading tasks performed on images in DCV. |
-| [ImageParameter]({{site.dcvb_parameters}}file/image-parameter.html) | Provides various image-processing features to adjust and enhance the input image for better recognition results.|
-| [CaptureVisionModel]({{ site.dcvb_parameters }}file/auxiliary/capture-vision-model.html) | Defines how the library find Convolutional Neural Networks (CNN) model files.|
-| [BarcodeFormatSpecification]({{ site.dcvb_parameters }}file/auxiliary/capture-vision-model.html) | Sets configurations for specified barcode formats.|
+| Object Type              | Description                                                                                                                                                                                  |
+| :----------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CaptureVisionTemplate    | This is the entry object of a parameter template in DCV. The `Name` parameter represents the name of the parameter template, which serves as its unique identifier.                          |
+| ImageSource              | It defines the input for DCV, responsible for providing images to DCV. It can be defined as different image sources, including but not limited to image directories, scanners, cameras, etc. |
+| TargetROIDef             | It is used to specify one or more recognition tasks to be performed on some regions of interest (ROIs) within an image.                                                                      |
+| BarcodeReaderTaskSetting | It is used to configure settings for barcode reading tasks performed on images in DCV.                                                                                                       |
+| ImageParameter           | It provides various image-processing features to adjust and enhance the input image for better recognition results.                                                                          |
 
 For more details, please refer to [introduction of the capture vision template]({{ site.dcvb_parameters }}file/capture-vision-template.html)
 

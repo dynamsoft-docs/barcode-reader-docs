@@ -60,7 +60,7 @@ Below is an example illustrating how to configure the parameter `BinarizationMod
         "BarcodeReaderTaskSettingOptions": [
             {
                 "Name" : "BR_0",
-                "SectionArray": [
+                "SectionImageParameterArray": [
                     {
                         "Section": "ST_REGION_PREDETECTION",
                         "ImageParameterName": "IP_0"
@@ -79,18 +79,13 @@ Below is an example illustrating how to configure the parameter `BinarizationMod
         "ImageParameterOptions": [
             {
                 "Name": "IP_0",
-                "ApplicableStages":[
-                    { 
-                        "Stage": "SST_BINARIZE_IMAGE",
-                        "BinarizationModes": [
-                            {
-                                "Mode": "BM_LOCAL_BLOCK",
-                                "BlockSizeX": 0,
-                                "BlockSizeY": 0,
-                                "EnableFillBinaryVacancy": 1,
-                                "ThresholdCompensation": 10
-                            }
-                        ]
+                "BinarizationModes": [
+                    {
+                        "Mode": "BM_LOCAL_BLOCK",
+                        "BlockSizeX": 0,
+                        "BlockSizeY": 0,
+                        "EnableFillBinaryVacancy": 1,
+                        "ThresholdCompensation": 10
                     }
                 ]
             }

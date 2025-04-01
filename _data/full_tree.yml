@@ -1,5 +1,6 @@
 tree_file_list:
   - introduction-comparison-tools.html
+  - sidelist-architecture.html
   - sidelist-development-v9.6.42.html
   - sidelist-development.html
   - sidelist-faq.html
@@ -15,10 +16,12 @@ tree_file_list:
   - sidelist-parameter-reference-v10.0.0.html
   - sidelist-parameter-reference-v10.0.10.html
   - sidelist-parameter-reference-v10.0.20.html
+  - sidelist-parameters-organization-v10.5.2100.html
   - sidelist-parameters-organization.html
   - sidelist-performance.html
   - sidelist-performance-v9.6.42.html
   - sidelist-release-notes.html
   - sidelist-understanding-v9.6.42.html
+  - sidelist-understanding-v10.5.2100.html
   - sidelist-understanding.html
   - sidelist-useful.html

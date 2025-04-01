@@ -3,6 +3,8 @@ repository: dynamsoft-docs/barcode-reader-docs
 docFullPath: https://www.dynamsoft.com/barcode-reader/docs/core/
 firstLevelUrl: /barcode-reader/docs/core
 docHomePage: /barcode-reader/docs/core/
+searchIndexName: Crawler-DBR-Docs-New
+searchNeedFilter: true
 
 useVersionTree: true
 
@@ -98,6 +100,8 @@ dcvb_python_api: /capture-vision/docs/server/programming/python/api-reference/
 maui: /barcode-reader/docs/mobile/programming/maui/
 maui_api: /barcode-reader/docs/mobile/programming/maui/api-reference/
 maui_release_notes: /barcode-reader/docs/mobile/programming/maui/release-notes/
+
+dcv_maui: /capture-vision/docs/mobile/programming/maui/
 
 assets: /barcode-reader/docs/core/assets/
 edit_icon: /barcode-reader/docs/core/assets/img-icon/edit-icon.png

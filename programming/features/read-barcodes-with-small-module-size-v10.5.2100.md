@@ -15,18 +15,18 @@ A module is the narrowest "bar" in a 1D barcode, or the smallest "box" in a 2D b
    <p>Figure 1 – Module size of 1D and 2D barcodes</p>
 </div>
 
-In some scenarios, the barcode is very small relative to the entire image, and its module size is even smaller, making it difficult for the library to read the barcode. In this case, we can use the parameter `BarcodeScaleModes` in to enlarge the barcode symbol for easier processing.
+In some scenarios, the barcode is very small relative to the entire image, and its module size is even smaller, making it difficult for the library to read the barcode. In this case, we can use the parameter `ScaleUpModes` in to enlarge the barcode symbol for easier processing.
 
 
 ## Particular Parameter Required
 
-Dynamsoft Barcode Reader (DBR) provides a parameter [`BarcodeScaleModes`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/barcode-scale-modes.html) that allows you to control the scale-up process when targets in the image are too small. 
+Dynamsoft Barcode Reader (DBR) provides a parameter [`ScaleUpModes`]({{ site.dcvb_parameters_reference }}image-parameter/scale-up-modes.html) that allows you to control the scale-up process when targets in the image are too small. 
 
 ## Example
 
-Below is an example illustrating how to configure the parameter `BarcodeScaleModes`.
+Below is an example illustrating how to configure the parameter `ScaleUpModes`.
 
-* Update parameter `BarcodeScaleModes` in your JSON template
+* Update parameter `ScaleUpModes` in your JSON template
 
     ```json
     {
@@ -45,7 +45,7 @@ Below is an example illustrating how to configure the parameter `BarcodeScaleMod
         "BarcodeReaderTaskSettingOptions": [
             {
                 "Name" : "BR_0",
-                "SectionArray": [
+                "SectionImageParameterArray": [
                     {
                         "Section": "ST_REGION_PREDETECTION",
                         "ImageParameterName": "IP_0"
@@ -56,27 +56,22 @@ Below is an example illustrating how to configure the parameter `BarcodeScaleMod
                     },
                     {
                         "Section": "ST_BARCODE_DECODING",
-                        "ImageParameterName": "IP_0",
-                        "StageArray": [
-                            {
-                                "Stage": "SST_SCALE_BARCODE_IMAGE",
-                                "BarcodeScaleModes": [
-                                    {
-                                        "Mode": "BSM_LINEAR_INTERPOLATION", 
-                                        "ModuleSizeThreshold": 3,
-                                        "TargetModuleSize": 8,
-                                        "AcuteAngleWithXThreshold": 0
-                                    },
-                                ]
-                            }
-                        ]
+                        "ImageParameterName": "IP_0"
                     }
                 ]
             }
         ],
         "ImageParameterOptions": [
             {
-                "Name": "IP_0"
+                "Name": "IP_0",
+                "ScaleUpModes": [
+                    {
+                        "Mode": "SUM_LINEAR_INTERPOLATION",
+                        "AcuteAngleWithXThreshold": 0,
+                        "ModuleSizeThreshold": 3,
+                        "TargetModuleSize": 8
+                    }
+                ]
             }
         ]
     }
