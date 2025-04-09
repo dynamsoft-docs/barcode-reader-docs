@@ -1,5 +1,11 @@
 [
     {
+        "version": "11.0.2000",
+        "matchVersion": {
+            "dcv": "3.0.2000"
+        }
+    },
+    {
         "version": "11.0.1000",
         "matchVersion": {
             "dcv": "3.0.1000"

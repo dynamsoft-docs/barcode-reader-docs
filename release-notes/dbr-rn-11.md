@@ -35,4 +35,5 @@ noTitleIndex: true
 
 | Versions | Available Editions |
 | -------- | ------------------ |
+| 11.0.2000 | [Python]({{ site.python_release_notes}}python-11.html#1102000-04092025){:target="_blank"} |
 | 11.0.1000 | [C++]({{ site.cpp_release_notes}}cpp-11.html#1101000-03042025){:target="_blank"} |
