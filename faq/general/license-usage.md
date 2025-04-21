@@ -28,3 +28,5 @@ permalink: /faq/general/license-usage.html
 8. [How does license tracking work with the three standard licensing options - Per Scan, Per Device, Per Concurrent Device?](how-license-tracking-works.html)
 
 9. [When is a new license spot taken when using a per-device licensing model?](new-license-required-per-device-licensing.html)
+
+10. [What will happen if licenses are not renewed in time?](what-happens-if-license-expires.html)

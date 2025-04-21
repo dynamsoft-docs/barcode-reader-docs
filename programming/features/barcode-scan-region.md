@@ -33,6 +33,18 @@ settings.roi.points[2] = {x:90, y:90};
 settings.roi.points[3] = {x:10, y:90};
 // Update the settings to a specific template.
 await router.updateSettings("ReadSingleBarcode", settings);
+//============================================================
+// Alternatively, you can set the scan region directly at the image source in a simpler way.
+// If you’re using Dynamsoft Camera Enhancer, the following example demonstrates 
+// how to specify a single scan region without modifying the template.
+let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+cameraEnhancer.setScanRegion({
+  x: 10,
+  y: 10,
+  width: 80,
+  height: 80,
+  isMeasuredInPercentage: true,
+});
 ```
 >
 ```c++
