@@ -59,14 +59,14 @@ await router.updateSettings("ReadSingleBarcode", settings);
 ```c++
 char szErrorMsg[256] = {0};
 // Obtain current runtime settings of `CCaptureVisionRouter` instance.
-CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
+CCaptureVisionRouter* cvRouter = new CCaptureVisionRouter;
 SimplifiedCaptureVisionSettings settings;
-cvr->GetSimplifiedSettings(CPresetTemplate::PT_READ_BARCODES, &settings);
+cvRouter->GetSimplifiedSettings(CPresetTemplate::PT_READ_BARCODES, &settings);
 // Specify the barcode formats by enumeration values.
 // Use "|" to enable multiple barcode formats at one time.
 settings.barcodeSettings.barcodeFormatIds = BF_QR_CODE | BF_ONED;
 // Update the settings.
-cvr->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &settings, szErrorMsg, 256);
+cvRouter->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &settings, szErrorMsg, 256);
 ```
 >
 ```java
@@ -112,17 +112,17 @@ err_code, err_str = cvr_instance.update_settings(EnumPresetTemplate.PT_READ_BARC
 ```
 >
 ```csharp
-using (CaptureVisionRouter cvr = new CaptureVisionRouter())
+using (CaptureVisionRouter cvRouter = new CaptureVisionRouter())
 {
    SimplifiedCaptureVisionSettings settings;
    string errorMsg;
    // Obtain current runtime settings of `CCaptureVisionRouter` instance.
-   cvr.GetSimplifiedSettings(PresetTemplate.PT_READ_BARCODES, out settings);
+   cvRouter.GetSimplifiedSettings(PresetTemplate.PT_READ_BARCODES, out settings);
    // Specify the barcode formats by enumeration values.
    // Use "|" to enable multiple barcode formats at one time.
    settings.barcodeSettings.barcodeFormatIds = (ulong)(EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_ONED);
    // Update the settings.
-   cvr.UpdateSettings(PresetTemplate.PT_READ_BARCODES, settings, out errorMsg);
+   cvRouter.UpdateSettings(PresetTemplate.PT_READ_BARCODES, settings, out errorMsg);
 }
 ```
 
@@ -187,15 +187,17 @@ The following steps demonstrates how to specify barcode formats via `JSON Templa
     >
     ```javascript
     // `router` is an instance of `CaptureVisionRouter`.
-    // In the JS edition, the method name we use for initialization is different.
-    router.initSettings("PATH-TO-YOUR-SETTING")
+    //  Specify the path to the settings file or provide a JSON object.
+    router.initSettings("PATH-TO-YOUR-SETTINGS-FILE-OR-OBJECT");
+    // Later in the code, specify the name of the template to use (e.g., "CV_0" in the sample template).
+    router.startCapturing("NAME-OF-TEMPLATE-TO-USE");
     ```
     >
     ```c++
     char szErrorMsg[256] = {0};
-    CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
-    cvr->InitSettingsFromFile("PATH-TO-SETTING-FILE", szErrorMsg, 256);
-    //cvr->InitSettings("{\"CaptureVisionTemplates\":[{\"Name\":\"CV_0\",\"ImageROIProcessingNameArray\":[\"TA_0\"]}],\"TargetROIDefOptions\":[{\"Name\":\"TA_0\",\"TaskSettingNameArray\":[\"BR_0\"]}],\"BarcodeReaderTaskSettingOptions\":[{\"Name\":\"BR_0\",\"BarcodeFormatIds\":[\"BF_ONED\",\"BF_QR_CODE\"]}]}", szErrorMsg, 256);
+    CCaptureVisionRouter* cvRouter = new CCaptureVisionRouter;
+    cvRouter->InitSettingsFromFile("PATH-TO-SETTING-FILE", szErrorMsg, 256);
+    //cvRouter->InitSettings("{\"CaptureVisionTemplates\":[{\"Name\":\"CV_0\",\"ImageROIProcessingNameArray\":[\"TA_0\"]}],\"TargetROIDefOptions\":[{\"Name\":\"TA_0\",\"TaskSettingNameArray\":[\"BR_0\"]}],\"BarcodeReaderTaskSettingOptions\":[{\"Name\":\"BR_0\",\"BarcodeFormatIds\":[\"BF_ONED\",\"BF_QR_CODE\"]}]}", szErrorMsg, 256);
     // more process here
     ```
     >
@@ -237,12 +239,12 @@ The following steps demonstrates how to specify barcode formats via `JSON Templa
     ```csharp
     int errorCode = 1;
     string errorMsg;
-    using (CaptureVisionRouter cvr = new CaptureVisionRouter())
+    using (CaptureVisionRouter cvRouter = new CaptureVisionRouter())
     {
         string templateFile = "PATH-TO-YOUR-SETTING-FILE";
-        errorCode = cvr.InitSettingsFromFile(templateFile, out errorMsg);
+        errorCode = cvRouter.InitSettingsFromFile(templateFile, out errorMsg);
         //string templateString = "";
-        //errorCode = cvr.InitSettings(templateString, out errorMsg);
+        //errorCode = cvRouter.InitSettings(templateString, out errorMsg);
         if (errorCode != (int)EnumErrorCode.EC_OK)
         {
             Console.WriteLine("Init template failed: " + errorMsg);

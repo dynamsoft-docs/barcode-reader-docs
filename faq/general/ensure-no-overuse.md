@@ -24,12 +24,12 @@ The standard way(C++) to use concurrent instance license is:
     errorCode = CLicenseManager::InitLicense("YOUR-LICENSE-KEY", errorMsg, 512);
     if (errorCode != EC_OK)
         cout << "License initialization error: " << errorMsg << endl;
-    CCaptureVisionRouter *cvr = new CCaptureVisionRouter;
+    CCaptureVisionRouter *cvRouter = new CCaptureVisionRouter;
     // Update parameter maxParallelTasks
     SimplifiedCaptureVisionSettings setting;
-    cvr->GetSimplifiedSettings(CPresetTemplate::PT_READ_BARCODES, &setting);
+    cvRouter->GetSimplifiedSettings(CPresetTemplate::PT_READ_BARCODES, &setting);
     setting.maxParallelTasks = licenseCount;
-    cvr->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &setting);
+    cvRouter->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &setting);
     // add further process
 ```
 

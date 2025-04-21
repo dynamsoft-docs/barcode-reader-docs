@@ -48,14 +48,14 @@ public:
 };
 int main()
 {
-    CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
+    CCaptureVisionRouter* cvRouter = new CCaptureVisionRouter;
     CDirectoryFetcher* dirFetcher = new CDirectoryFetcher;
     dirFetcher->SetDirectory("THE-DIRECTORY-THAT-HOLDS-THE-IMAGES");
-    cvr->SetInput(dirFetcher);
-    CIntermediateResultManager* irm = cvr->GetIntermediateResultManager();
+    cvRouter->SetInput(dirFetcher);
+    CIntermediateResultManager* irm = cvRouter->GetIntermediateResultManager();
     CIntermediateResultReceiver* irr = new MyIntermediateResultReceiver();
     irm->AddResultReceiver(irr);
-    cvr->StartCapturing(CPresetTemplate::PT_READ_BARCODES, true);
+    cvRouter->StartCapturing(CPresetTemplate::PT_READ_BARCODES, true);
 }
 ```
 
