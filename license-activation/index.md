@@ -4,12 +4,11 @@ title: Dynamsoft Barcode Reader Licensing - Main Page
 description: This is the main page of Dynamsoft Barcode Reader Licensing.
 keywords: license initialization, licensing
 needAutoGenerateSidebar: false
-permalink: /license-activation/index.html
 ---
 
 # License Initialization
 
-## Get a trial license
+## Get a Trial License
 
 You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=docs){:target="_blank"} link.
 
@@ -55,7 +54,7 @@ Dynamsoft.License.LicenseManager.initLicense("YOUR-LICENSE-KEY");
     errorCode = CLicenseManager::InitLicense("YOUR-LICENSE-KEY", errorMsg, 512);
     if (errorCode != EC_OK)
         cout << "License initialization error: " << errorMsg << endl;
-    CCaptureVisionRouter *cvr = new CCaptureVisionRouter;
+    CCaptureVisionRouter *cvRouter = new CCaptureVisionRouter;
     // add further process
 ```
 >
@@ -69,7 +68,7 @@ Dynamsoft.License.LicenseManager.initLicense("YOUR-LICENSE-KEY");
   }
   else
   {
-      CaptureVisionRouter cvr = new CaptureVisionRouter();
+      CaptureVisionRouter cvRouter = new CaptureVisionRouter();
       // add code for further process
   }
 ```
@@ -113,70 +112,9 @@ error_code, error_msg = LicenseManager.init_license("--Enter Your License Key He
 if error_code != EnumErrorCode.EC_OK.value and error_code != EnumErrorCode.EC_LICENSE_CACHE_USED.value:
     print("License initialization error: " + error_msg)
 else:
-    CaptureVisionRouter cvr = new CaptureVisionRouter()
+    cvr_instance = CaptureVisionRouter()
     # add code for further process
 ```
 
-If you are using a **concurrent instance license**, you need to apply two more operations:
+If you are using a `concurrent instance license`, see [Concurrent Instance License Initialization](concurrent-instance-license.html) for more information.
 
-* Call method SetMaxConcurrentInstanceCount to set the license count you purchased.
-* Update the parameter MaxParallelTasks to align with the purchased quantity.
-
-<div class="sample-code-prefix template2"></div>
-   >- C++
-   >- C#
-   >- Python
-   >
->
-```cpp
-    int licenseCount = YOUR-PURCHASED-LICENSE-COUNT;
-    int errorCode = 1;
-    char errorMsg[512];
-    // Set the license count you purchased
-    SetMaxConcurrentInstanceCount(licenseCount);
-    errorCode = CLicenseManager::InitLicense("YOUR-LICENSE-KEY", errorMsg, 512);
-    if (errorCode != EC_OK)
-        cout << "License initialization error: " << errorMsg << endl;
-    CCaptureVisionRouter *cvr = new CCaptureVisionRouter;
-    // Update parameter maxParallelTasks
-    SimplifiedCaptureVisionSettings setting;
-    cvr->GetSimplifiedSettings(CPresetTemplate::PT_READ_BARCODES, &setting);
-    setting.maxParallelTasks = licenseCount;
-    cvr->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &setting);
-    // add further process
-```
->
-```csharp
-    int licenseCount = YOUR-PURCHASED-LICENSE-COUNT;
-    int errorCode = 0;
-    string errorMsg;
-    errorCode = LicenseManager.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
-    LicenseManager.SetMaxConcurrentInstanceCount(licenseCount)
-    if (errorCode != (int)EnumErrorCode.EC_OK && errorCode != (int)EnumErrorCode.EC_LICENSE_CACHE_USED)
-    {
-        Console.WriteLine("License initialization error: " + errorMsg);
-    }
-    else
-    {
-        CaptureVisionRouter cvr = new CaptureVisionRouter();
-        SimplifiedCaptureVisionSettings settings;
-        cvr.GetSimplifiedSettings(PresetTemplate.PT_READ_BARCODES, out settings);
-        setting.maxParallelTasks = licenseCount;
-        cvr.UpdateSettings(PresetTemplate.PT_READ_BARCODES, settings, out errorMsg);
-        // add code for further process
-    }
-```
->
-```python
-license_count = YOUR-PURCHASED-LICENSE-COUNT
-LicenseManager.set_max_concurrent_instance_count(license_count)
-error_code, error_msg = LicenseManager.init_license("YOUR-LICENSE-KEY")
-if error_code != EnumErrorCode.EC_OK.value and error_code != EnumErrorCode.EC_LICENSE_CACHE_USED.value:
-    print("License initialization error: " + error_msg)
-else:
-    CaptureVisionRouter cvr = new CaptureVisionRouter()
-    error_code, error_msg, settings = cvr.get_simplified_settings(EnumPresetTemplate.PT_READ_BARCODES.value)
-    settings.max_parallel_tasks = license_count
-    error_code, error_msg = cvr.update_settings(EnumPresetTemplate.PT_READ_BARCODES.value, settings)
-    # add code for further process
-```

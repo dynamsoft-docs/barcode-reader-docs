@@ -50,9 +50,9 @@ cameraEnhancer.setScanRegion({
 ```c++
 char szErrorMsg[256] = {0};
 // Obtain current runtime settings of `CCaptureVisionRouter` instance.
-CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
+CCaptureVisionRouter* cvRouter = new CCaptureVisionRouter;
 SimplifiedCaptureVisionSettings settings;
-cvr->GetSimplifiedSettings(CPresetTemplate::PT_READ_BARCODES, &settings);
+cvRouter->GetSimplifiedSettings(CPresetTemplate::PT_READ_BARCODES, &settings);
 // Specify the ROI
 settings.roi.points[0].Set(10, 10);
 settings.roi.points[1].Set(90, 10);
@@ -60,7 +60,7 @@ settings.roi.points[2].Set(90, 90);
 settings.roi.points[3].Set(10, 90);
 settings.roiMeasuredInPercentage = 1;
 // Update the settings.
-cvr->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &settings, szErrorMsg, 256);
+cvRouter->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &settings, szErrorMsg, 256);
 ```
 >
 ```python
@@ -83,12 +83,12 @@ err_code, err_str = cvr_instance.update_settings(EnumPresetTemplate.PT_READ_BARC
 ```
 >
 ```csharp
-using (CaptureVisionRouter cvr = new CaptureVisionRouter())
+using (CaptureVisionRouter cvRouter = new CaptureVisionRouter())
 {
    SimplifiedCaptureVisionSettings settings;
    string errorMsg;
    // Obtain current runtime settings of `CCaptureVisionRouter` instance.
-   cvr.GetSimplifiedSettings(PresetTemplate.PT_READ_BARCODES, out settings);
+   cvRouter.GetSimplifiedSettings(PresetTemplate.PT_READ_BARCODES, out settings);
    // Specify the ROI.
    settings.roiMeasuredInPercentage = 1;
    settings.roi.points[0].Set(10, 10);
@@ -96,7 +96,7 @@ using (CaptureVisionRouter cvr = new CaptureVisionRouter())
    settings.roi.points[2].Set(90, 90);
    settings.roi.points[3].Set(10, 90);
    // Update the settings.
-   cvr.UpdateSettings(PresetTemplate.PT_READ_BARCODES, settings, out errorMsg);  
+   cvRouter.UpdateSettings(PresetTemplate.PT_READ_BARCODES, settings, out errorMsg);  
 }
 ```
 

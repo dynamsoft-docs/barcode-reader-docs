@@ -43,13 +43,13 @@ You can configure the parameter `BarcodeFormatIds` in two different ways, depend
 ```c++
 char szErrorMsg[256] = {0};
 // Obtain current runtime settings of `CCaptureVisionRouter` instance.
-CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
+CCaptureVisionRouter* cvRouter = new CCaptureVisionRouter;
 SimplifiedCaptureVisionSettings settings;
-cvr->GetSimplifiedSettings(CPresetTemplate::PT_READ_BARCODES, &settings);
+cvRouter->GetSimplifiedSettings(CPresetTemplate::PT_READ_BARCODES, &settings);
 // Enable all supported types of postal codes.
 settings.barcodeSettings.barcodeFormatIds = BF_POSTALCODE;
 // Update the settings.
-cvr->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &settings, szErrorMsg, 256);
+cvRouter->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &settings, szErrorMsg, 256);
 ```
 >
 ```java
@@ -100,17 +100,17 @@ err_code, err_str = cvr_instance.update_settings(EnumPresetTemplate.PT_READ_BARC
 ```
 >
 ```csharp
-using (CaptureVisionRouter cvr = new CaptureVisionRouter())
+using (CaptureVisionRouter cvRouter = new CaptureVisionRouter())
 {
    SimplifiedCaptureVisionSettings settings;
    string errorMsg;
    // Obtain current runtime settings of `CCaptureVisionRouter` instance.
-   cvr.GetSimplifiedSettings(PresetTemplate.PT_READ_BARCODES, out settings);
+   cvRouter.GetSimplifiedSettings(PresetTemplate.PT_READ_BARCODES, out settings);
    // Specify the barcode formats by enumeration values.
    // Use "|" to enable multiple barcode formats at one time.
    settings.barcodeSettings.barcodeFormatIds = (ulong)(EnumBarcodeFormat.BF_POSTALCODE);
    // Update the settings.
-   cvr.UpdateSettings(PresetTemplate.PT_READ_BARCODES, settings, out errorMsg);  
+   cvRouter.UpdateSettings(PresetTemplate.PT_READ_BARCODES, settings, out errorMsg);  
 }
 ```
 

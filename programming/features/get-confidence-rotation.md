@@ -60,8 +60,8 @@ for (let item of result.items) {
 ```
 >
 ```c++
-CCaptureVisionRouter* cvr = new CCaptureVisionRouter;
-CCapturedResult* result = cvr->Capture("IMAGE-FILE-PATH", CPresetTemplate::PT_READ_BARCODES);
+CCaptureVisionRouter* cvRouter = new CCaptureVisionRouter;
+CCapturedResult* result = cvRouter->Capture("IMAGE-FILE-PATH", CPresetTemplate::PT_READ_BARCODES);
 if (result->GetErrorCode() != 0) {
     cout << "Error: " << result->GetErrorCode() << "," << result->GetErrorString() << endl;
 }
@@ -120,8 +120,8 @@ func onDecodedBarcodesReceived(_ result: DecodedBarcodesResult) {
 ```
 >
 ```python
-cvr = CaptureVisionRouter()
-result = cvr.capture("IMAGE-FILE-PATH", EnumPresetTemplate.PT_READ_BARCODES.value)
+cvr_instance = CaptureVisionRouter()
+result = cvr_instance.capture("IMAGE-FILE-PATH", EnumPresetTemplate.PT_READ_BARCODES.value)
 if result.get_error_code() != EnumErrorCode.EC_OK:
     print("Error:", result.get_error_code(), result.get_error_string())
 barcode_result = result.get_decoded_barcodes_result()
@@ -138,10 +138,10 @@ else:
 ```
 >
 ```csharp
-using (CaptureVisionRouter cvr = new CaptureVisionRouter())
+using (CaptureVisionRouter cvRouter = new CaptureVisionRouter())
 {
     string imageFile = "IMAGE-FILE-PATH";
-    CapturedResult? result = cvr.Capture(imageFile, PresetTemplate.PT_READ_BARCODES);
+    CapturedResult? result = cvRouter.Capture(imageFile, PresetTemplate.PT_READ_BARCODES);
     if (result == null)
     {
         Console.WriteLine("No barcode detected.");
