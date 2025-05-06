@@ -41,8 +41,6 @@ permalink: /faq/general/index.html
 
 7. [How can I sort the barcodes of my image in reading order?](sort-barcodes-image.md)
 
-8. [How to Scan EAN/UPC with Addon Codes?](how-to-scan-ean-upc-with-addon.md)
-
 ## [License & Usage](license-usage.md)
 
 1. [Can the SDK work without internet connection?](sdk-works-without-internet.md)
