@@ -38,7 +38,12 @@ The following shows how to set the license in the code.
    >
 > 
 ```js
-Dynamsoft.License.LicenseManager.initLicense("YOUR-LICENSE-KEY");
+// Option 1: Initialize using the RTU (Ready-To-Use) BarcodeScanner APIs
+const barcodeScanner = new Dynamsoft.BarcodeScanner({
+  license: "YOUR_LICENSE_KEY",
+});
+// Option 2: Initialize the license using the Foundational APIs
+Dynamsoft.License.LicenseManager.initLicense("YOUR_LICENSE_KEY");
 ```
 > 
 ```c
@@ -116,5 +121,5 @@ else:
     # add code for further process
 ```
 
-If you are using a `concurrent instance license`, see [Concurrent Instance License Initialization](concurrent-instance-license.html) for more information.
+If you are using a `concurrent instance license`, see [How to properly use concurrent instance license]({{ site.faq_general }}ensure-no-overuse.html) for more information.
 

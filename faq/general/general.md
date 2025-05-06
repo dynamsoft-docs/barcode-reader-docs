@@ -22,3 +22,5 @@ permalink: /faq/general/general.html
 5. [How to scan specific pages of a pdf file?](scan-specific-page.html)
 
 6. [How to scan barcodes on US Driver's Licenses and extract the information?](scan-us-drivers-license.html)
+
+7. [How does your SDK compare to other commercial SDKs?](competitors-comparison.html)

@@ -27,8 +27,16 @@ noTitleIndex: true
 
 | Versions | Available Editions                                                                      |
 | -------- | --------------------------------------------------------------------------------------- |
+| 10.5.3000 | [JavaScript]({{ site.js_release_notes }}js-10.html#1053000-04242025){:target="_blank"} |
 | 10.5.2100 | [Python]({{ site.python_release_notes}}python-10.html#1052100-12052024){:target="_blank"} |
+| 10.4.3100 | [JavaScript]({{ site.js_release_notes }}js-10.html#1043100-01032025){:target="_blank"} |
+| 10.4.3002 | [Android]({{ site.android_release_notes}}android-10.html#1043002-03072025){:target="_blank"} / [iOS]({{ site.oc_release_notes }}ios-10.html#1043002-03072025){:target="_blank"} |
+| 10.4.3001 | [Android]({{ site.android_release_notes}}android-10.html#1043001-02112025){:target="_blank"} / [iOS]({{ site.oc_release_notes }}ios-10.html#1043001-02112025){:target="_blank"} |
+| 10.4.3000 | [Android]({{ site.android_release_notes}}android-10.html#1043000-01232025){:target="_blank"} / [iOS]({{ site.oc_release_notes }}ios-10.html#1043000-01232025){:target="_blank"} |
 | 10.4.2100 | [Python]({{ site.python_release_notes}}python-10.html#1042100-11072024){:target="_blank"} |
+| 10.4.2003 | [Android]({{ site.android_release_notes}}android-10.html#1042003-12262024){:target="_blank"} / [iOS]({{ site.oc_release_notes }}ios-10.html#1042003-12262024){:target="_blank"} |
+| 10.4.2002 | [Android]({{ site.android_release_notes}}android-10.html#1042002-12162024){:target="_blank"} / [iOS]({{ site.oc_release_notes }}ios-10.html#1042002-12162024){:target="_blank"} |
+| 10.4.2001 | [Android]({{ site.android_release_notes}}android-10.html#1042001-11132024){:target="_blank"} / [iOS]({{ site.oc_release_notes }}ios-10.html#1042001-11132024){:target="_blank"} |
 | 10.4.2000 | [JavaScript]({{ site.js_release_notes }}js-10.html#1042000-10102024){:target="_blank"} / [Android]({{ site.android_release_notes }}android-10.html#1042000-10112024){:target="_blank"} / [iOS]({{ site.oc_release_notes }}ios-10.html#1042000-10112024){:target="_blank"} / [Python]({{ site.python_release_notes}}python-10.html#1042000-10102024){:target="_blank"} / [.NET]({{ site.dotnet_release_notes }}dotnet-10.html#1042000-10102024){:target="_blank"} / [C++]({{ site.cpp_release_notes}}cpp-10.html#1042000-10102024){:target="_blank"} |
 | 10.4.10 | [C++]({{ site.cpp_release_notes}}cpp-10.html#10410-07232024){:target="_blank"} |
 

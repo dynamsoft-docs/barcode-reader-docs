@@ -17,10 +17,10 @@ permalink: /faq/general/configuration.html
 
 3. [How to filter incorrect results with the barcode result length?](avoid-incorrect-results.html)
 
-4. [How to Handle Non-printable Characters Like "\u{1D}" or "{GS}" from the Barcode Text?](unprintable-character.html)
+4. [What will happen if licenses are not renewed in time?](what-happens-if-license-expires.html)
 
-5. [How to create custom settings template?](custom-settings-template.html)
+5. [How to Handle Non-printable Characters Like "\u{1D}" or "{GS}" from the Barcode Text?](unprintable-character.html)
 
-6. [How can I sort the barcodes of my image in reading order?](sort-barcodes-image.html)
+6. [How to create custom settings template?](custom-settings-template.html)
 
-7. [How to Scan EAN/UPC with Addon Codes?](how-to-scan-ean-upc-with-addon.md)
+7. [How can I sort the barcodes of my image in reading order?](sort-barcodes-image.html)

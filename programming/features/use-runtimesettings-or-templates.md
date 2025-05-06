@@ -139,7 +139,7 @@ Basic steps:
 
 1. Build a JSON template and configure the required parameters
 2. Save the template to a file or convert it to string
-3. Call method `InitSettingsFromFile` (or `InitSettings` if you are using the JavaScript edition) to apply the settings
+3. Call method `InitSettingsFromFile` or `InitSettings` to apply the settings
 
 > Read [Parameter Template Structure]({{ site.parameters }}structure-and-interfaces-of-parameters.html) to learn more about the structure of templates.
 
@@ -173,7 +173,7 @@ The following steps demonstrates how to specify barcode formats via `JSON Templa
 
   * Save the above template to file `setting.json` or Convert the above content into a string format for the respective programming language.
 
-  * Call method `InitSettingsFromFile` (or `InitSettings` if you are using the JavaScript edition) to apply the settings
+  * Call method `InitSettingsFromFile` or `InitSettings` to apply the settings
 
     <div class="sample-code-prefix template2"></div>
        >- JavaScript
