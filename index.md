@@ -17,7 +17,7 @@ To explore the latest features and updates of `Dynamsoft Barcode Reader`, please
 * Mobile
   * ![Android Icon]({{site.assets}}img-icon/homepage/Android.svg){:class="android"} [Android]({{ site.android }}){:target="_blank"}
   * ![iOS Icon]({{site.assets}}img-icon/homepage/iOS.svg){:class="ios"} [iOS]({{ site.oc }}){:target="_blank"}
-  * ![MAUI Icon]({{site.assets}}img-icon/homepage/MAUI.svg){:class="maui"} [MAUI]({{ site.dcv_maui }}){:target="_blank"}
+  * ![MAUI Icon]({{site.assets}}img-icon/homepage/MAUI.svg){:class="maui"} [MAUI]({{ site.maui }}){:target="_blank"}
 * Server / Desktop
   * ![Python Icon]({{site.assets}}img-icon/homepage/Python.svg){:class="python"} [Python]({{ site.python }}){:target="_blank"}
   * ![Java Icon]({{site.assets}}img-icon/homepage/java.svg){:class="java"} [Java]({{ site.java }}){:target="_blank"}
