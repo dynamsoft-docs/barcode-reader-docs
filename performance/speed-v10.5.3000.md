@@ -133,7 +133,7 @@ When locating barcodes, DBR scans the whole image, so the larger the size of the
 
 #### Scale down a large image
 
-A barcode normally keeps its shape and can be read correctly even when the image gets scaled down. Therefore, DBR shrinks very large images before reading them. The parameter [ImageScaleSetting]({{ site.dcvb_parameters_reference }}image-parameter/image-scale-setting.html) can be used to determine the threshold beyond which the scale down happens.
+A barcode normally keeps its shape and can be read correctly even when the image gets scaled down. Therefore, DBR shrinks very large images before reading them. The parameter [ScaleDownThreshold]({{ site.dcvb_parameters_reference }}image-parameter/scale-down-threshold.html) can be used to determine the threshold beyond which the scale down happens.
 
 **Recommendation**
  
@@ -192,7 +192,7 @@ The grayscale image converted from the original image can usually be used direct
 
 **Recommendation**
 
-In most cases, just use the default `GEM_GENERAL` mode. If necessary, specify only one out of the available values `GEM_GENERAL` , `GEM_GRAY_EQUALIZE` , `GEM_GRAY_SMOOTH` , `GEM_SHARPEN_SMOOTH` based on your images. The more image preprocessing modes you specify, the worse that the speed might get.
+In most cases, just use the default `GEM_GENERAL` mode. If necessary, specify only one out of the 5 available values `GEM_GENERAL` , `GEM_GRAY_EQUALIZE` , `GEM_GRAY_SMOOTH` , `GEM_SHARPEN_SMOOTH` , `GEM_MORPHOLOGY` based on your images. The more image preprocessing modes you specify, the worse that the speed might get.
 
 #### Remove texture and filter text
 
@@ -244,13 +244,14 @@ For certain barcode type(s) or usage scenarios, choosing one or two localization
 
 After the localization, we have barcode zones located on an image. In this stage, these particular zones are cut from the image precisely on its boundaries. Then these images are preprocessed again before finally being passed (with barcode type information for each zone) to the next stage for decoding.
 
-The preprocessing consists of following operation
+The preprocessing consists of two operations
 
-* Detect the size of the zones and change it based on [BarcodeScaleModes]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/barcode-scale-modes.html).
+* Detect the color of the zones and adjust it based on [BarcodeColourModes]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/barcode-colour-modes.html); 
+* Detect the size of the zones and change it based on [ScaleUpModes]({{ site.dcvb_parameters_reference }}image-parameter/scale-up-modes.html).
 
 **Recommendation**
 
-Adjusting the size of the barcode zone(s) can take some time. For interactive scenarios it is recommended to skip this operation to save time.
+Both adjusting the color and the size of the barcode zone(s) can take some time. For interactive scenarios it is recommended to skip these two operations to save time.
 
 ### Expedite the actual barcode decoding
 
@@ -266,7 +267,7 @@ After barcode zones have been preprocessed, we have well-partitioned images awai
 
 ### Unleash the power of the CPU
 
-The algorithm to process an image has quite a few steps and for each step, there could be multiple options to try. For processes that don't necessary need to wait for each other, we can tell DBR to open multiple threads/workers to work on different tasks at the same time. The related parameter is [`MaxThreadsInOneTask`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/max-threads-in-one-task.html). However, note that this is only meaningful on devices with a good CPU. On low-end desktops or mobile devices, it's better to limit the threads to 2 or even 1.
+The algorithm to process an image has quite a few steps and for each step, there could be multiple options to try. For processes that don't necessary need to wait for each other, we can tell DBR to open multiple threads/workers to work on different tasks at the same time. The related parameter is [`MaxThreadsInOneTask`]({{ site.dcvb_parameters_reference }}shared-parameter/max-threads-in-one-task.html). However, note that this is only meaningful on devices with a good CPU. On low-end desktops or mobile devices, it's better to limit the threads to 2 or even 1.
 
 Other than the built-in multi-threading, another way to speed things up is to create multiple DBR instances and have them decoding different images at the same time. The related parameter is [`MaxParallelTasks`]({{ site.dcvb_parameters_reference }}capture-vision-template/max-parallel-tasks.html)
 
@@ -284,8 +285,11 @@ By default, the timeout is set to 10,000 milliseconds. By setting it to a smalle
 
 ### Finish the reading prematurely
 
-Barcode reading usually ends with the output of the content of the barcode. However, it's not always the intended behavior. Sometimes an application could just be interested to learn the coordinates of a barcode or even just know that a barcode exists on the image or frame. Therefore, we can tell DBR to finish the reading prematurely and return what has been found right away. The related parameter is [`SectionArray`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/section-array.html)
+Barcode reading usually ends with the output of the content of the barcode. However, it's not always the intended behavior. Sometimes an application could just be interested to learn the coordinates of a barcode or even just know that a barcode exists on the image or frame. Therefore, we can tell DBR to finish the reading prematurely and return what has been found right away.
 
+**Recommendation**
+
+[`TerminateSetting`]({{ site.dcvb_parameters_reference }}shared-parameter/terminate-setting.html) controls when the algorithm should stop. If, for instance, the purpose is to only locate the barcode, but not decode it, then you can set the `Section` parameter to `ST_BARCODE_LOCALIZATION`. This would skip the steps needed to determine the barcode type and decode it, thus saving you time in the long run.
 
 ### Avoid disk writing operations
 
