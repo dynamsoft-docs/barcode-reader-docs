@@ -105,7 +105,7 @@ Last but not least, `DM_DEEP_ANALYSIS` is the most powerful way to deal with des
 
 ### Enlarge Barcodes with Small Module Sizes
 
-Barcodes with a small module size may be distorted by some processing methods like rotation, binarization with inappropriate block size, etc. Enlarging the barcode area to a larger size can enhance the ability to prevent distortion, thereby improving the likelihood of decoding results. The parameter [BarcodeScaleModes]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/barcode-scale-modes.html) can be used to determine how the enlarging should be done, if at all. For example, using `BSM_LINEAR_INTERPOLATION` with argument `ModuleSizeThreshold` set to 2 will activate the enlaring process using the linear interpolation method when the barcode module size is smaller than 2px.
+Barcodes with a small module size may be distorted by some processing methods like rotation, binarization with inappropriate block size, etc. Enlarging the barcode area to a larger size can enhance the ability to prevent distortion, thereby improving the likelihood of decoding results. The parameter [ScaleUpModes]({{ site.dcvb_parameters_reference }}image-parameter/scale-up-modes.html) can be used to determine how the enlarging should be done, if at all. For example, using `SUM_LINEAR_INTERPOLATION` with argument `ModuleSizeThreshold` set to 2 will activate the enlaring process using the linear interpolation method when the barcode module size is smaller than 2px.
 
 ### Enable All Wanted Barcode Types
 

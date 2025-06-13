@@ -106,7 +106,6 @@ using (CaptureVisionRouter cvRouter = new CaptureVisionRouter())
                "Offset": 
                {
                   "ReferenceObjectOriginIndex": 0,
-                  "ReferenceObjectSizeType": "default",
                   "MeasuredByPercentage" : 1,
                   "FirstPoint" : [ 10, 10 ],
                   "SecondPoint" : [ 90, 10 ],
@@ -150,7 +149,6 @@ Below is an example template illustrating how to configure two ROIs with differe
                "Offset": 
                {
                   "ReferenceObjectOriginIndex": 0,
-                  "ReferenceObjectSizeType": "default",
                   "MeasuredByPercentage" : 1,
                   "FirstPoint" : [ 0, 0 ],
                   "SecondPoint" : [ 100, 0 ],
@@ -167,7 +165,6 @@ Below is an example template illustrating how to configure two ROIs with differe
                "Offset": 
                {
                   "ReferenceObjectOriginIndex": 0,
-                  "ReferenceObjectSizeType": "default",
                   "MeasuredByPercentage" : 1,
                   "FirstPoint" : [ 0, 80 ],
                   "SecondPoint" : [ 100, 80 ],
