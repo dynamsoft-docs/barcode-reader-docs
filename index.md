@@ -18,6 +18,7 @@ To explore the latest features and updates of `Dynamsoft Barcode Reader`, please
   * ![Android Icon]({{site.assets}}img-icon/homepage/Android.svg){:class="android"} [Android]({{ site.android }}){:target="_blank"}
   * ![iOS Icon]({{site.assets}}img-icon/homepage/iOS.svg){:class="ios"} [iOS]({{ site.oc }}){:target="_blank"}
   * ![MAUI Icon]({{site.assets}}img-icon/homepage/MAUI.svg){:class="maui"} [MAUI]({{ site.maui }}){:target="_blank"}
+  * ![React Native Icon]({{site.assets}}img-icon/homepage/React Native.svg){:class="react"} [React Native](https://github.com/Dynamsoft/barcode-reader-react-native-samples/blob/main/README.md){:target="_blank"}
 * Server / Desktop
   * ![Python Icon]({{site.assets}}img-icon/homepage/Python.svg){:class="python"} [Python]({{ site.python }}){:target="_blank"}
   * ![Java Icon]({{site.assets}}img-icon/homepage/java.svg){:class="java"} [Java]({{ site.java }}){:target="_blank"}
@@ -30,7 +31,6 @@ The documentation for editions `C`, `React Native`, `Flutter`, `Xamarin.Forms` a
 <div class="archivedEditionList"></div>
 
 * ![C Icon]({{site.assets}}img-icon/homepage/c.svg){:class="c"} [C]({{ site.c }}){:target="_blank"}
-* ![React Native Icon]({{site.assets}}img-icon/homepage/React Native.svg){:class="react"} [React Native]({{ site.dcv_react_native }}){:target="_blank"}
 * ![Flutter Icon]({{site.assets}}img-icon/homepage/Flutter.svg){:class="flutter"} [Flutter]({{ site.dcv_flutter }}){:target="_blank"}
 * ![Xamarin.Forms Icon]({{site.assets}}img-icon/homepage/Xamarin Forms.svg){:class="xamarin"} [Xamarin.Forms]({{ site.dcv_xamarin }}){:target="_blank"}
 * ![Cordova Icon]({{site.assets}}img-icon/homepage/Cordova.svg){:class="cordova"} [Cordova]({{ site.dcv_cordova }}){:target="_blank"}
