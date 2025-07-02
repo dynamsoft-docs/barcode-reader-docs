@@ -11,6 +11,6 @@ permalink: /faq/general/scan-specific-page.html
 
 [<< Back to FAQ index](index.md)
 
-We are planning to add `Pages` parameter of the `ImageParameterOptions` Parameter.
+You can now scan specific pages of a PDF file using the [`Pages`](https://www.dynamsoft.com/capture-vision/docs/core/parameters/reference/image-source-options/pages.html?ver=10.4.3100&product=dbr&lang=javascript#example) parameter of the `ImageSourceOptions` parameter.
 
-Currently you will need to manually filter out the extra results from the returned retults or you can convert the specific pages pdf file to single image files and then decode the images. 
+This allows you to directly specify which pages to decode without needing to manually filter out results or convert pages to images.
