@@ -19,6 +19,7 @@ Dynamsoft Barcode Reader (DBR) supports the following types of postal codes. Det
 * Planet
 * Australian Post
 * Royal Mail 4-State Customer Barcode
+* KIX
 
 
 ## Particular Parameter Required
