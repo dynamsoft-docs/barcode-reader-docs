@@ -79,17 +79,9 @@ Dynamsoft.License.LicenseManager.initLicense("YOUR_LICENSE_KEY");
 ```
 >
 ```java
-try {
-    LicenseError licenseError = LicenseManager.initLicense("YOUR-LICENSE-KEY");
-    if (licenseError.getErrorCode() != EnumErrorCode.EC_OK) {
-        System.out.println("License initialization failed: ErrorCode: " + licenseError.getErrorCode() + ", ErrorString: " + licenseError.getErrorString());
-        return;
-    }
-} catch (LicenseException e) {
-    System.out.println("License initialization failed: ErrorCode: " + e.getErrorCode() + ", ErrorString: " + e.getErrorString());
-    return;
-}
-// add further process
+  BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+  BarcodeReader reader = new BarcodeReader();
+  // add further process
 ```
 >
 ```java

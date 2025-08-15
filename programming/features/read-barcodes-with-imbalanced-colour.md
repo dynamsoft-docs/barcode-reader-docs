@@ -64,7 +64,7 @@ Below is an example illustrating how to configure the parameter `ColourConversio
         "BarcodeReaderTaskSettingOptions": [
             {
                 "Name" : "BR_0",
-                "SectionArray": [
+                "SectionImageParameterArray": [
                     {
                         "Section": "ST_REGION_PREDETECTION",
                         "ImageParameterName": "IP_0"
@@ -83,17 +83,12 @@ Below is an example illustrating how to configure the parameter `ColourConversio
         "ImageParameterOptions": [
             {
                 "Name": "IP_0",
-                "ApplicableStages":[
-                    { 
-                        "Stage": "SST_CONVERT_TO_GRAYSCALE",
-                        "ColourConversionModes": [
-                            {
-                                "Mode": "CICM_GENERAL",
-                                "RedChannelWeight": 1000,
-                                "GreenChannelWeight": 0,
-                                "BlueChannelWeight": 0
-                            }
-                        ]
+                "ColourConversionModes": [
+                    {
+                        "Mode": "CICM_GENERAL",
+                        "RedChannelWeight": 1000,
+                        "GreenChannelWeight": 0,
+                        "BlueChannelWeight": 0
                     }
                 ]
             }

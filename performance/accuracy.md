@@ -75,11 +75,11 @@ When the target barcodes are confirmed, the barcode texts might have common feat
 
 The module size of the barcode refers to the pixel size of the barcode modules (e.g. the pixel width of a 1D barcode line or the smallest cell size of a QR code). The smaller the module size of the barcodes, the higher risk of a misread. If it is not necessary to decode all the small-size barcodes in the scenario, you can skip the small-module barcodes by specifying the minimum acceptable module size of the barcodes via parameter [`ModuleSizeRangeArray`]({{site.dcvb_parameters_reference}}barcode-format-specification/module-size-range-array.html).
 
-When processing large-size images, DBR scales down the images based on the [ImageScaleSetting]({{ site.dcvb_parameters_reference }}image-parameter/image-scale-setting.html) before localization. However, sometimes the barcode on the image might be shrunk too small. You can skip or even scale up the image for barcode localization. You can also increase the barcode image with [BarcodeScaleModes]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/barcode-scale-modes.html) to ensure the module size of the barcodes is big enough to get the correct barcode results.
+When processing large-size images, DBR scales down the images based on the [`ScaleDownThreshold`]({{site.dcvb_parameters_reference}}scale-down-threshold.html) before decoding. However, sometimes the barcode on the image might be shrunk too small. You can increase the [`scaleDownThreshold`]({{site.dcvb_parameters_reference}}image-parameter/scale-down-threshold.html) value to ensure the module size of the barcodes is big enough to get the correct barcode results.
 
 **Recommendation**
 
-By increasing the `MinValue` of the `ModuleSizeRangeArray`, the SDK can skip the small-module barcodes and their potential misreads, thus ensuring a higher accuracy. Increasing the image size can also potentially lead to better accuracy, while lowering it offers better speed.
+By increasing the `MinValue` of the `ModuleSizeRangeArray`, the SDK can skip the small-module barcodes and their potential misreads, thus ensuring a higher accuracy. Increasing the value of `ScaleDownThreshold` can also potentially lead to better accuracy, while lowering it offers better speed.
 
 ### Optimize DeblurModes Settings
 

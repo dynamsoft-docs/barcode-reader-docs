@@ -44,7 +44,7 @@ Below is an example illustrating how to configure the parameter `GrayscaleTransf
         "BarcodeReaderTaskSettingOptions": [
             {
                 "Name" : "BR_0",
-                "SectionArray": [
+                "SectionImageParameterArray": [
                     {
                         "Section": "ST_REGION_PREDETECTION",
                         "ImageParameterName": "IP_0"
@@ -63,17 +63,14 @@ Below is an example illustrating how to configure the parameter `GrayscaleTransf
         "ImageParameterOptions": [
             {
                 "Name": "IP_0",
-                "ApplicableStages":[
-                    { 
-                        "Stage": "SST_TRANSFORM_GRAYSCALE",
-                        "GrayscaleTransformationModes": [
-                            {
-                                "Mode": "GTM_ORIGINAL"
-                            },
-                            {
-                                "Mode": "GTM_INVERTED"
-                            }
-                        ]
+                "GrayscaleTransformationModes": [
+                    {
+                        "Mode": "GTM_ORIGINAL"
+                    },
+                    {
+                        "Mode": "GTM_INVERTED"
+                    }
+                ]
             }
         ]
     }
