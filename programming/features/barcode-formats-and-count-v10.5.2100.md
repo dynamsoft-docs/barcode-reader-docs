@@ -164,7 +164,6 @@ You can configure the parameter in two different ways, depending on your require
    >- Swift
    >- Python
    >- C#
-   >- Java
    >
 >
 ```javascript
@@ -246,27 +245,6 @@ using (CaptureVisionRouter cvRouter = new CaptureVisionRouter())
    // Update the settings.
    cvRouter.UpdateSettings(PresetTemplate.PT_READ_BARCODES, settings, out errorMsg);  
 }
-```
->
-```java
-CaptureVisionRouter cvRouter = new CaptureVisionRouter();
-SimplifiedCaptureVisionSettings settings = null;
-try {
-    // Obtain current runtime settings of `CaptureVisionRouter` instance
-    settings = cvRouter.getSimplifiedSettings(EnumPresetTemplate.PT_READ_BARCODES);
-} catch (CaptureVisionException e) {
-    settings = new SimplifiedCaptureVisionSettings();
-}
-// Specify the expected barcode count.
-settings.barcodeSettings.expectedBarcodesCount = 1;
-try {
-    // Update the settings.
-    cvRouter.updateSettings(EnumPresetTemplate.PT_READ_BARCODES, settings);
-} catch (CaptureVisionException e) {
-    System.out.println("Update settings failed: ErrorCode: " + e.getErrorCode() + ", ErrorString: " + e.getErrorString());
-    return;
-}
-//call capture or other tasks
 ```
 
 * Configure barcode format via `JSON parameter template file`
