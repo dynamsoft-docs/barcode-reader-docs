@@ -7,39 +7,19 @@ keywords: terminate timeout
 breadcrumbText: Termination Control
 ---
 
-# Control When to Terminate a Decoding Process
+# Control when to terminate a decoding process
 
-Typically, Dynamsoft Barcode Reader (DBR) will terminate a decoding process after the barcode is decoded or the process has failed. In some cases, we may want the process to terminate earlier than that. The product provides three parameters ([`SectionArray`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/section-array.html), [`Timeout`]({{ site.dcvb_parameters_reference }}capture-vision-template/timeout.html), and [`ExpectedBarcodesCount`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/expected-barcodes-count.html)) that allow you to configure an early termination of its execution.
+Typically, Dynamsoft Barcode Reader (DBR) will terminate a decoding process after the barcode is decoded or the process has failed. In some cases we may want the process to terminate earlier than that. To do this, we use either the parameter [ `TerminateSetting` ]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/terminate-setting.html) or the parameter [ `Timeout` ]({{ site.dcvb_parameters_reference }}capture-vision-template/timeout.html). The former specifies the stage to terminate the process while the latter specifies the maximum time allowed for the process.
 
-## SectionArray
+## TerminateSetting
 
-This parameter is a JSON object array that can contain up to three section objects:
-- "ST_REGION_PREDETECTION"
-- "ST_BARCODE_LOCALIZATION"
-- "ST_BARCODE_DECODING"
+This parameter specifies a certain stage to terminate the barcode reader algorithm task. By default, the task will only terminate after all these stages are completed and the barcode is recognized. To terminate the task as early as possible, you have two options:
 
-Each object represents a section pipeline of barcode reader algorithm task. By including only the sections you need, you can control how many stages of the process are executed. Early exit can be achieved by omitting later sections from the `SectionArray`.
+First, you can set the `section` parameter alone to make the task exit after completing all stages in a specific section.
 
-For example:
+Second, you can use the `section + stage` parameters to terminate the task immediately after completing a specific stage within a section. 
 
-- To stop after region pre-detection:
-
-```json
-"SectionArray": [
-    { "Section": "ST_REGION_PREDETECTION" }
-]
-```
-
-- To stop after barcode localization:
-
-```json
-"SectionArray": [
-    { "Section": "ST_REGION_PREDETECTION" },
-    { "Section": "ST_BARCODE_LOCALIZATION" }
-]
-```
-
-Below is an example illustrating how to configure parameter `SectionArray` via `JSON Template` to stop after barcode localization.
+Below is an example illustrating how to configure parameter `TerminateSetting` via `JSON Template`.
   
 ```json
 {
@@ -58,15 +38,11 @@ Below is an example illustrating how to configure parameter `SectionArray` via `
     "BarcodeReaderTaskSettingOptions": [
         {
             "Name" : "BR_0",
-            "SectionArray":
-            [
-                {
-                    "Section": "ST_REGION_PREDETECTION"
-                },
-                {
-                    "Section": "ST_BARCODE_LOCALIZATION"
-                }
-            ]
+            "TerminateSetting":
+            {
+                "Section": "ST_REGION_PREDETECTION",
+                "Stage": "IRUT_GRAYSCALE_IMAGE"
+            }
         }
     ]
 }
@@ -93,7 +69,6 @@ You can configure the parameter in two different ways, depending on your require
    >- C++
    >- Python
    >- C#
-   >- Java
    >
 >
 ```javascript
@@ -119,7 +94,7 @@ cvRouter->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &settings, szErrorMs
 >
 ```python
 cvr_instance = CaptureVisionRouter()
-# Obtain current runtime settings of `CaptureVisionRouter` instance.
+# Obtain current runtime settings of `CCaptureVisionRouter` instance.
 err_code, err_str, settings = cvr_instance.get_simplified_settings(EnumPresetTemplate.PT_READ_BARCODES.value)
 # Specify the timeout.
 settings.timeout = 1000
@@ -132,34 +107,13 @@ using (CaptureVisionRouter cvRouter = new CaptureVisionRouter())
 {
    SimplifiedCaptureVisionSettings settings;
    string errorMsg;
-   // Obtain current runtime settings of `CaptureVisionRouter` instance.
+   // Obtain current runtime settings of `CCaptureVisionRouter` instance.
    cvRouter.GetSimplifiedSettings(PresetTemplate.PT_READ_BARCODES, out settings);
    // Specify the timeout.
    settings.timeout = 1000;
    // Update the settings.
    cvRouter.UpdateSettings(PresetTemplate.PT_READ_BARCODES, settings, out errorMsg);  
 }
-```
->
-```java
-CaptureVisionRouter cvRouter = new CaptureVisionRouter();
-SimplifiedCaptureVisionSettings settings = null;
-try {
-    // Obtain current runtime settings of `CaptureVisionRouter` instance
-    settings = cvRouter.getSimplifiedSettings(EnumPresetTemplate.PT_READ_BARCODES);
-} catch (CaptureVisionException e) {
-    settings = new SimplifiedCaptureVisionSettings();
-}
-// Specify the timeout.
-settings.timeout = 1000;
-try {
-    // Update the settings.
-    cvRouter.updateSettings(EnumPresetTemplate.PT_READ_BARCODES, settings);
-} catch (CaptureVisionException e) {
-    System.out.println("Update settings failed: ErrorCode: " + e.getErrorCode() + ", ErrorString: " + e.getErrorString());
-    return;
-}
-//call capture or other tasks
 ```
 
 
@@ -190,14 +144,3 @@ try {
 
 Apply the above settings following the article [Use Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html#json-template).
 
-## ExpectedBarcodesCount
-
-The `ExpectedBarcodesCount` parameter controls the number of expected results of the recognized barcodes from a single image. The process will be stopped as soon as the count of successfully decoded barcodes reaches the expected amount.
-
-**Use Cases:**
-
-If you know exactly how many barcodes need to be recognized, you can set this parameter to make the program terminate after obtaining the sufficient number of barcodes, rather than continuing to search for additional barcodes. This can significantly improve processing efficiency, especially when dealing with images that may contain more barcodes than needed.
-
-**Configuration:**
-
-For detailed instructions on how to configure this parameter, please refer to the article [Set Barcode Count]({{ site.features }}barcode-formats-and-count.html#set-barcode-count).
