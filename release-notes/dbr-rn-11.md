@@ -35,6 +35,7 @@ noTitleIndex: true
 
 | Versions | Available Editions |
 | -------- | ------------------ |
+| 11.0.6100 | [Java]({{ site.java_release_notes}}java-11.html#1106100-08192025){:target="_blank"} |
 | 11.0.6000 | [C++]({{ site.cpp_release_notes}}cpp-11.html#1106000-08062025){:target="_blank"} / [.NET]({{ site.dotnet_release_notes }}dotnet-11.html#1106000-08062025){:target="_blank"} / [Python]({{ site.python_release_notes}}python-11.html#1106000-08062025){:target="_blank"} / [Java]({{ site.java_release_notes}}java-11.html#1106000-08062025){:target="_blank"} |
 | 11.0.4000 | [C++]({{ site.cpp_release_notes}}cpp-11.html#1104000-07152025){:target="_blank"} / [.NET]({{ site.dotnet_release_notes }}dotnet-11.html#1104000-07152025){:target="_blank"} / [Python]({{ site.python_release_notes}}python-11.html#1104000-07152025){:target="_blank"} |
 | 11.0.3000 | [JavaScript]({{ site.js_release_notes }}js-11.html#1103000-07092025){:target="_blank"} / [C++]({{ site.cpp_release_notes}}cpp-11.html#1103000-05132025){:target="_blank"} / [.NET]({{ site.dotnet_release_notes }}dotnet-11.html#1103000-05132025){:target="_blank"} / [Python]({{ site.python_release_notes}}python-11.html#1103000-05152025){:target="_blank"} / [Android]({{ site.android_release_notes}}android-11.html#1103000-05152025){:target="_blank"} / [iOS]({{ site.oc_release_notes }}ios-11.html#1103000-05152025){:target="_blank"} |
