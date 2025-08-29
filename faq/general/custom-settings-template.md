@@ -24,3 +24,4 @@ If you are looking to create your own custom template of settings to use with th
 5. Copy the JSON code under *Template* and paste it into your own JSON file, or you can download the template JSON file straight from the demo.
 
 And with that, you have your own template to use with the `InitSettingsFromFile` method! 
+
