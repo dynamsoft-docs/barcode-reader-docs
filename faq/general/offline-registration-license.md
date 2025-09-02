@@ -57,8 +57,8 @@ The returned string, e.g. `8ECCA3B6-66F9-4fd6-B6B6-308C874140C6`, is the machine
   > print(BarcodeReader.get_device_uuid(1))
   > ```
   
-  > Note: If you want multiple users in operating system to use the license, you will need to move the .Dynamsoft folder to a path where all the users can access. Let us say `/Home/shared/.Dynamsoft`.
-  > For all the programs in the devices, you will need to set the license cache path to `/Home/shared` before initialize the license
+  > Note: If you want multiple users in operating system to use the license, you will need to move the Dynamsoft folder to a path where all the users can access. Let us say `/Home/shared/.Dynamsoft`.
+  > For all the programs in the devices, you will need to set the license cache path to `/Home/shared` before initializing the license
   > ```python
   > # set license cache path before initialize the license
   > BarcodeReader.set_license_cache_path("/Home/shared")
