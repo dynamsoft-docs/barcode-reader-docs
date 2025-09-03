@@ -8,136 +8,140 @@ needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-# How to Read Postal Codes
-
-## Which Types of Postal Codes are Supported
-
-Dynamsoft Barcode Reader (DBR) supports the following types of postal codes. Details about each barcode type can be found on the <a href="https://www.dynamsoft.com/barcode-reader/barcode-types/" target="_blank">list of supported barcode types</a> page.
-
-* USPS Intelligent Mail
-* Postnet
-* Planet
-* Australian Post
-* Royal Mail 4-State Customer Barcode
-* KIX
-
-
-## Particular Parameter Required
-
-DBR provides a parameter, [`BarcodeFormatIds`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/barcode-format-ids.html){:target="_blank"}, to control the formats of the barcode to process. To enable decoding the postal codes, simply set a `BF_POSTALCODE` or a specific postal code format enumeration to this parameter.
+# How to read Postal codes
 
 ## Sample Code
 
-You can configure the parameter `BarcodeFormatIds` in two different ways, depending on your requirements. You can do it through `SimplifiedCaptureVisionSettings`, or if it suits your needs better, you can opt for `JSON Template`. Below are examples illustrating both of these configuration methods:
-
-* Configure barcode format via `SimplifiedCaptureVisionSettings`.
+The following code snippet shows how to set the parameter via RuntimeSettings to read Postal code.
 
 <div class="sample-code-prefix template2"></div>
-   >- C++
-   >- Android
-   >- Objective-C
-   >- Swift
-   >- Python
-   >- C#
-   >
+>- JavaScript
+>- C
+>- C++
+>- C#
+>- Java
+>- Android
+>- Objective-C
+>- Swift
+>- Python
 >
-```c++
-char szErrorMsg[256] = {0};
-// Obtain current runtime settings of `CCaptureVisionRouter` instance.
-CCaptureVisionRouter* cvRouter = new CCaptureVisionRouter;
-SimplifiedCaptureVisionSettings settings;
-cvRouter->GetSimplifiedSettings(CPresetTemplate::PT_READ_BARCODES, &settings);
-// Enable all supported types of postal codes.
-settings.barcodeSettings.barcodeFormatIds = BF_POSTALCODE;
-// Update the settings.
-cvRouter->UpdateSettings(CPresetTemplate::PT_READ_BARCODES, &settings, szErrorMsg, 256);
+>
+```javascript
+const scanner = scanner || await Dynamsoft.DBR.BarcodeScanner.createInstance();
+let settings = await scanner.getRuntimeSettings();
+// Sets barcode formats to read Postal Code.
+settings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_NULL;
+settings.barcodeFormatIds_2 = Dynamsoft.DBR.EnumBarcodeFormat_2.BF2_POSTALCODE;
+await scanner.updateRuntimeSettings(settings);
+scanner.onUniqueRead = (txt, result) => {
+    rawString = txt;
+};
+await scanner.show();
 ```
 >
-```java
-try {
-   // Obtain current runtime settings. `cvr` is an instance of `CaptureVisionRouter`.
-   // Here we use `EnumPresetTemplate.PT_READ_BARCODES` as an example. You can change it to your own template name or the name of other preset template.
-   SimplifiedCaptureVisionSettings captureVisionSettings = cvr.getSimplifiedSettings(EnumPresetTemplate.PT_READ_BARCODES);
-   captureVisionSettings.barcodeSettings.barcodeFormatIds = BF_POSTALCODE;
-   // Update the settings. Remember to specify the same template name you used when getting the settings.
-   cvr.updateSettings(EnumPresetTemplate.PT_READ_BARCODES, captureVisionSettings);
-} catch (CaptureVisionRouterException e) {
-   e.printStackTrace();
+```c
+int iRet = -1;
+char errorBuf[512];
+iRet = DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+if (iRet != DBR_OK)
+{
+    printf("%s\n", errorBuf);
 }
+void* barcodeReader = DBR_CreateInstance();
+PublicRuntimeSettings runtimeSettings;
+DBR_GetRuntimeSettings(barcodeReader, &runtimeSettings); //Get the current RuntimeSettings
+runtimeSettings.barcodeFormatIds = BF_NULL;
+runtimeSettings.barcodeFormatIds_2 = BF2_POSTALCODE;
+DBR_UpdateRuntimeSettings(barcodeReader, &runtimeSettings, errorBuf, 512); // Update RuntimeSettings with above setting
+DBR_DecodeFile(barcodeReader, "YOUR-IMAGE-FILE-WITH-POSTAL-CODES", ""); // Start decoding
+// Add further process
 ```
 >
-```objc
-NSError *error;
-// Obtain current runtime settings. `cvr` is an instance of `CaptureVisionRouter`.
-// Here we use `EnumPresetTemplate.PT_READ_BARCODES` as an example. You can change it to your own template name or the name of other preset template.
-DSSimplifiedCaptureVisionSettings *captureVisionSettings = [self.cvr getSimplifiedSettings:DSPresetTemplateReadBarcodes error:&error];
-captureVisionSettings.barcodeSettings.barcodeFormatIds = DSBarcodeFormatPostalCode;
-// Update the settings. Remember to specify the same template name you used when getting the settings.
-[self.cvr updateSettings:DSPresetTemplateReadBarcodes settings:captureVisionSettings error:&error];
-```
->
-```swift
-do{
-   // Obtain current runtime settings. `cvr` is an instance of `CaptureVisionRouter`.
-   // Here we use `EnumPresetTemplate.PT_READ_BARCODES` as an example. You can change it to your own template name or the name of other preset template.
-   let captureVisionSettings = try cvr.getSimplifiedSettings(PresetTemplate.readBarcodes.rawValue)
-   captureVisionSettings.barcodeSettings?.barcodeFormatIds = .postalCode
-   // Update the settings. Remember to specify the same template name you used when getting the settings.
-   try cvr.updateSettings(PresetTemplate.readBarcodes.rawValue, settings: captureVisionSettings)
-}catch{
-   // Add code to do when error occurs.
+```cpp
+char errorBuf[512];
+int iRet = -1;
+iRet = dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+if (iRet != DBR_OK)
+{
+    cout << errorBuf << endl;
 }
-```
->
-```python
-cvr_instance = CaptureVisionRouter()
-# Obtain current runtime settings of `CCaptureVisionRouter` instance.
-err_code, err_str, settings = cvr_instance.get_simplified_settings(EnumPresetTemplate.PT_READ_BARCODES.value)
-# Specify the barcode formats by enumeration values.
-# Use "|" to enable multiple barcode formats at one time.
-settings.barcode_settings.barcode_format_ids = EnumBarcodeFormat.BF_POSTALCODE.value
-# Update the settings.
-err_code, err_str = cvr_instance.update_settings(EnumPresetTemplate.PT_READ_BARCODES.value, settings)
+CBarcodeReader* reader = new CBarcodeReader();
+PublicRuntimeSettings* runtimeSettings = new PublicRuntimeSettings();
+reader->GetRuntimeSettings(runtimeSettings); //Get the current RuntimeSettings
+runtimeSettings->barcodeFormatIds = BF_NULL;
+runtimeSettings->barcodeFormatIds_2 = BF2_POSTALCODE;
+reader->UpdateRuntimeSettings(runtimeSettings, errorBuf, 512); // Update RuntimeSettings with above setting
+reader->DecodeFile("YOUR-IMAGE-FILE-WITH-POSTAL-CODES", ""); // Start decoding
+// Add further process
 ```
 >
 ```csharp
-using (CaptureVisionRouter cvRouter = new CaptureVisionRouter())
+string errorMsg;
+EnumErrorCode iRet = BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
+if (iRet != EnumErrorCode.DBR_SUCCESS)
 {
-   SimplifiedCaptureVisionSettings settings;
-   string errorMsg;
-   // Obtain current runtime settings of `CCaptureVisionRouter` instance.
-   cvRouter.GetSimplifiedSettings(PresetTemplate.PT_READ_BARCODES, out settings);
-   // Specify the barcode formats by enumeration values.
-   // Use "|" to enable multiple barcode formats at one time.
-   settings.barcodeSettings.barcodeFormatIds = (ulong)(EnumBarcodeFormat.BF_POSTALCODE);
-   // Update the settings.
-   cvRouter.UpdateSettings(PresetTemplate.PT_READ_BARCODES, settings, out errorMsg);  
+    Console.WriteLine(errorMsg);
 }
+BarcodeReader reader = new BarcodeReader();
+PublicRuntimeSettings settings = reader.GetRuntimeSettings(); //Get the current RuntimeSettings
+settings.BarcodeFormatIds = (int)EnumBarcodeFormat.BF_NULL;
+settings.BarcodeFormatIds_2 = (int)EnumBarcodeFormat_2.BF2_POSTALCODE;
+reader.UpdateRuntimeSettings(settings); // Update RuntimeSettings with above setting
+TextResult[] result = reader.DecodeFile("YOUR-IMAGE-FILE-WITH-POSTAL-CODES", ""); // Start decoding
+// Add further process
 ```
-
-* Configure barcode format via `JSON parameter template file`
-  * update parameter `BarcodeFormatIds` in JSON template
-   ```json
-   {
-    "CaptureVisionTemplates": [
-        {
-            "Name" : "CV_0",
-            "ImageROIProcessingNameArray": ["TA_0" ]
-        }       
-    ],
-    "TargetROIDefOptions" : [
-        {
-            "Name" : "TA_0",
-            "TaskSettingNameArray": [ "BR_0" ]
-        }
-    ],
-    "BarcodeReaderTaskSettingOptions": [
-        {
-            "Name" : "BR_0",
-            "BarcodeFormatIds" : ["BF_POSTALCODE"]
-        }
-    ]
-   }
-   ```
-
-  * Apply the above settings following the article [Use Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html#json-template).
+>
+```java
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
+PublicRuntimeSettings settings = reader.getRuntimeSettings(); //Get the current RuntimeSettings
+settings.barcodeFormatIds = EnumBarcodeFormat.BF_NULL;
+settings.barcodeFormatIds_2 = EnumBarcodeFormat_2.BF2_POSTALCODE;
+reader.updateRuntimeSettings(settings); // Update RuntimeSettings with above setting
+TextResult[] result = reader.decodeFile("YOUR-IMAGE-FILE-WITH-POSTAL-CODES", ""); // Start decoding
+// Add further process
+```
+>
+```java
+BarcodeReader reader = new BarcodeReader();
+PublicRuntimeSettings settings = reader.getRuntimeSettings(); //Get the current RuntimeSettings
+settings.barcodeFormatIds = EnumBarcodeFormat.BF_NULL;
+settings.barcodeFormatIds_2 = EnumBarcodeFormat_2.BF2_POSTALCODE;
+reader.updateRuntimeSettings(settings); // Update RuntimeSettings with above setting
+TextResult[] result = reader.decodeFile("YOUR-IMAGE-FILE-WITH-POSTAL-CODES"); // Start decoding
+// Add further process
+```
+>
+```objc
+NSError* err = nil;
+DynamsoftBarcodeReader *reader = [[DynamsoftBarcodeReader alloc] init];
+iPublicRuntimeSettings *settings = [reader getRuntimeSettings:&err]; //Get the current RuntimeSettings
+settings.barcodeFormatIds = EnumBarcodeFormatNULL;
+settings.barcodeFormatIds_2 = EnumBarcodeFormat2POSTALCODE;
+[reader updateRuntimeSettings:settings error:&err]; // Update RuntimeSettings with above setting
+NSArray<iTextResult*>* result = [reader decodeFileWithName:@"YOUR-IMAGE-FILE-WITH-POSTAL-CODES" error:&err]; // Start decoding
+// Add further process
+```
+>
+```swift
+let reader = DynamsoftBarcodeReader()
+let settings = try? reader.getRuntimeSettings() //Get the current RuntimeSettings
+settings?.barcodeFormatIds = EnumBarcodeFormat.NULL
+settings?.barcodeFormatIds_2 = EnumBarcodeFormat2.POSTALCODE
+try? reader.updateRuntimeSettings(settings) // Update RuntimeSettings with above setting
+let result = try? reader.decodeFileWithName("YOUR-IMAGE-FILE-WITH-POSTAL-CODES") // Start decoding
+// Add further process
+```
+>
+```python
+error = BarcodeReader.init_license("YOUR-LICENSE-KEY")
+if error[0] != EnumErrorCode.DBR_OK:
+    print(error[1])
+dbr = BarcodeReader()
+settings = dbr.get_runtime_settings()
+settings.barcode_format_ids = EnumBarcodeFormat.BF_NULL
+settings.barcode_format_ids_2 = EnumBarcodeFormat_2.BF2_POSTALCODE
+dbr.update_runtime_settings(settings)
+text_results = dbr.decode_file("YOUR-IMAGE-FILE-WITH-POSTAL-CODES")
+# Add further process
+```

@@ -6,15 +6,16 @@ keywords: additional information, OneDCodeDetails, QRCodeDetails, PDF417Details,
 needAutoGenerateSidebar: false
 ---
 
+
 # How to Get Detailed Barcode Information
 
-The Dynamsoft Barcode Reader SDK provides APIs for you to get the detailed barcode information like checksum digit, start/stop characters, error correction level, etc. To learn more about what information you can get, see the following items:
+The Dynamsoft Barcode Reader SDK provides APIs for you to get the detailed barcode information like checksum digit, start/stop characters, error correction level, etc. To learn more about what information you can get, see the following API links:
 
-- `OneDCodeDetails`: [C++]({{ site.cpp_api }}oned-code-details.html) / [Python]({{ site.python_api }}oned-code-details.html) / [.NET]({{ site.dotnet_api }}oned-code-details.html)
-- `QRCodeDetails`: [C++]({{ site.cpp_api }}qr-code-details.html) / [Python]({{ site.python_api }}qr-code-details.html) / [.NET]({{ site.dotnet_api }}qr-code-details.html)
-- `PDF417Details`: [C++]({{ site.cpp_api }}pdf417-details.html) / [Python]({{ site.python_api }}pdf417-details.html) / [.NET]({{ site.dotnet_api }}pdf417-details.html)
-- `DataMatrixDetails`: [C++]({{ site.cpp_api }}datamatrix-details.html) / [Python]({{ site.python_api }}datamatrix-details.html) / [.NET]({{ site.dotnet_api }}datamatrix-details.html)
-- `AztecDetails`: [C++]({{ site.cpp_api }}aztec-details.html) / [Python]({{ site.python_api }}aztec-details.html) / [.NET]({{ site.dotnet_api }}aztec-details.html)
+- [OneDCodeDetails]({{ site.structs }}OneDCodeDetails.html)
+- [QRCodeDetails]({{ site.structs }}QRCodeDetails.html)
+- [PDF417Details]({{ site.structs }}PDF417Details.html)
+- [DataMatrixDetails]({{ site.structs }}DataMatrixDetails.html)
+- [AztecDetails]({{ site.structs }}AztecDetails.html)
 
 Here we take QR Code as example and show how to get the version and model of a QR Code.
 
@@ -38,140 +39,188 @@ Here we take QR Code as example and show how to get the version and model of a Q
 ## Code Snippet for Getting Detailed Barcode Information
 
 <div class="sample-code-prefix template2"></div>
-   >- JavaScript
-   >- C++
-   >- Android
-   >- Objective-C
-   >- Swift
-   >- Python
-   >- C#
-   >
+>- JavaScript
+>- C
+>- C++
+>- C#
+>- Java
+>- Android
+>- Objective-C
+>- Swift
+>- Python
+>
 >
 ```javascript
-const result = await cvRouter.capture(file, "ReadSingleBarcode");
-for (let item of result.items) {
-  if (item.type === Dynamsoft.Core.EnumCapturedResultItemType.CRIT_BARCODE) {
-    console.log("QR_version: " + item.details.version);
-    console.log("QR_model: " + item.details.model);
-  }
-}
+(async() => {
+    let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
+    scanner.onUniqueRead = (txt, result) => {
+        // Gets detailed information about QR codes.
+        if(result.barcodeFormat == Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE) {
+            let QRCodeDetails = result.detailedResult;
+            let model = QRCodeDetails.model;
+            let version = QRCodeDetails.version;
+            let moduleSize = QRCodeDetails.moduleSize;
+        }
+    };
+    await scanner.show();
+})();
 ```
 >
-```c++
-CCaptureVisionRouter* cvRouter = new CCaptureVisionRouter;
-CCapturedResult* result = cvRouter->Capture("IMAGE-FILE-PATH", CPresetTemplate::PT_READ_BARCODES);
-if (result->GetErrorCode() != 0) {
-    cout << "Error: " << result->GetErrorCode() << "," << result->GetErrorString() << endl;
-}
-int capturedResultItemCount = result->GetItemsCount();
-for (int j = 0; j < capturedResultItemCount; j++) 
+```c
+int iRet = -1;
+char errorBuf[512];
+TextResultArray* paryResult = NULL;
+iRet = DBR_InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+if (iRet != DBR_OK)
 {
-    const CCapturedResultItem* capturedResultItem = result->GetItem(j);
-    CapturedResultItemType type = capturedResultItem->GetType();
-    if (type == CapturedResultItemType::CRIT_BARCODE) 
+    printf("%s\n", errorBuf);
+}
+void* reader = DBR_CreateInstance();
+DBR_DecodeFile(reader, "YOUR-IMAGE-FILE-WITH-QR-CODES", ""); // Start decoding
+DBR_GetAllTextResults(reader, &paryResult);
+for (int iIndex = 0; iIndex < paryResult->resultsCount; iIndex++)
+{
+    if(BF_QR_CODE == paryResult->results[iIndex]->barcodeFormat)
     {
-        const CBarcodeResultItem* barcodeResultItem = dynamic_cast<const CBarcodeResultItem*> (capturedResultItem);
-        if (barcodeResultItem->GetFormat() == BarcodeFormat::BF_QR_CODE)
-        {
-            const CQRCodeDetails* detail = dynamic_cast<const CQRCodeDetails*>(barcodeResultItem->GetDetails());
-            cout << "Version: " << detail->version;
-            cout << "Model: " << detail->model;
-        }
+        QRCodeDetails* qrd = (QRCodeDetails*)paryResult->results[iIndex]->detailedResult; // For QR Code, the type of detailedResult is QRCodeDetails
+        printf("QRCode Model:%d \r\n", qrd->model);
+        printf("QRCode Version: %d \r\n", qrd->version);
+        printf("BarcodeFormat: %s\r\n", paryResult->results[iIndex]->barcodeFormatString);
+        printf("Text read: %s\r\n", paryResult->results[iIndex]->barcodeText);
     }
 }
-// more process here
+DBR_FreeTextResults(&paryResult);
+// Add further process
+```
+>
+```cpp
+char errorBuf[512];
+int iRet = -1;
+TextResultArray* paryResult = NULL;
+iRet = dynamsoft::dbr::CBarcodeReader::InitLicense("YOUR-LICENSE-KEY", errorBuf, 512);
+if (iRet != DBR_OK)
+{
+    cout << errorBuf << endl;
+}
+CBarcodeReader* reader = new CBarcodeReader();
+reader->DecodeFile("YOUR-IMAGE-FILE-WITH-QR-CODES", ""); // Start decoding
+reader->GetAllTextResults(&paryResult);
+for (int iIndex = 0; iIndex < paryResult->resultsCount; iIndex++)
+{
+    if(BF_QR_CODE == paryResult->results[iIndex]->barcodeFormat)
+    {
+        QRCodeDetails* qrd = (QRCodeDetails*)paryResult->results[iIndex]->detailedResult; // For QR Code, the type of detailedResult is QRCodeDetails
+        cout << "QRCode Model: " << qrd->model << endl;
+        cout << "QRCode Version: " << qrd->version << endl;
+        cout << "Barcode Format: " << paryResult->results[iIndex]->barcodeFormatString << endl;
+        cout << "Barcode Text: " << paryResult->results[iIndex]->barcodeText << endl;
+    }
+}
+CBarcodeReader::FreeTextResults(&paryResult);
+// Add further process
+```
+>
+```csharp
+string errorMsg;
+EnumErrorCode iRet = BarcodeReader.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
+if (iRet != EnumErrorCode.DBR_SUCCESS)
+{
+    Console.WriteLine(errorMsg);
+}
+BarcodeReader reader = new BarcodeReader();
+TextResult[] result = reader.DecodeFile("YOUR-IMAGE-FILE-WITH-QR-CODES", ""); // Start decoding
+for (int iIndex = 0; iIndex < result.Length; iIndex++)
+{
+    if(EnumBarcodeFormat.BF_QR_CODE == result[iIndex].BarcodeFormat)
+    {
+        QRCodeDetails qrd = (QRCodeDetails)result[iIndex].DetailedResult; // For QR Code, the type of detailedResult is QRCodeDetails
+        Console.WriteLine("QRCode Model: " + qrd.Model);
+        Console.WriteLine("QRCode Version: " + qrd.Version);
+        Console.WriteLine("Barcode Format: " + result[iIndex].BarcodeFormatString);
+        Console.WriteLine("Barcode Text: " + result[iIndex].BarcodeText);
+    }
+}
+// Add further process
 ```
 >
 ```java
-public void onDecodedBarcodesReceived(DecodedBarcodesResult result) {
-    if (result != null){
-        BarcodeResultItem[] items = result.getItems();
-        for (int i=0; i < items.length; i++){
-            BarcodeResultItem item = items[i];
-            Log.i("DecodedBarcodes", "onDecodedBarcodesReceived: This is the number "+i+" barcode");
-            QRCodeDetails qrDetails = (QRCodeDetails) item.getDetails();
-            int version = qrDetails.getVersion();
-            Log.i("DecodedBarcodes", "The version of the QR barcode is: "+version);
-            int model = qrDetails.getModel();
-            Log.i("DecodedBarcodes", "The model of the QR barcode is: "+model);
-        }
+BarcodeReader.initLicense("YOUR-LICENSE-KEY");
+BarcodeReader reader = new BarcodeReader();
+TextResult[] result = reader.decodeFile("YOUR-IMAGE-FILE-WITH-QR-CODES", ""); // Start decoding
+for (int iIndex = 0; iIndex < result.length; iIndex++)
+{
+    if(EnumBarcodeFormat.BF_QR_CODE == result[iIndex].barcodeFormat)
+    {
+        QRCodeDetails qrd = (QRCodeDetails)result[iIndex].detailedResult; // For QR Code, the type of detailedResult is QRCodeDetails
+        System.out.println("QRCode Model: " + qrd.model);
+        System.out.println("QRCode Version: " + qrd.version);
+        System.out.println("Barcode Format: " + result[iIndex].barcodeFormatString);
+        System.out.println("Barcode Text: " + result[iIndex].barcodeText);
+    }
+}
+// Add further process
+```
+>
+```java
+BarcodeReader reader = new BarcodeReader();
+TextResult[] result = reader.decodeFile("YOUR-IMAGE-FILE-WITH-QR-CODES"); // Start decoding
+for (int iIndex = 0; iIndex < result.length; iIndex++)
+{
+    if(EnumBarcodeFormat.BF_QR_CODE == result[iIndex].barcodeFormat)
+    {
+        // For QR Code, the type of detailedResult is QRCodeDetails
+        QRCodeDetails qrd = (QRCodeDetails)result[iIndex].detailedResult;
+        //Add further process
     }
 }
 ```
 >
 ```objc
-- (void)onDecodedBarcodesReceived:(DSDecodedBarcodesResult *)result {
-    if (result.items.count > 0) {
-        for (DSBarcodeResultItem *item in result.items) {
-            DSQRCodeDetails *qrDetails = (DSQRCodeDetails *) item.details;
-            NSInteger version = qrDetails.version;
-            NSInteger model = qrDetails.model;
-        }
+NSError *err = nil;
+DynamsoftBarcodeReader* reader = [[DynamsoftBarcodeReader alloc] init];
+NSArray<iTextResult*>* result = [reader decodeFileWithName:@"YOUR-IMAGE-FILE-PATH" error:&err]; // Start decoding
+for (iTextResult* barcode in result)
+{
+    if(barcode.barcodeFormat == EnumBarcodeFormatQRCODE)
+    {
+        // For QR Code, the type of detailedResult is QRCodeDetails
+        iQRCodeDetails* qrd = (iQRCodeDetails*)barcode.detailedResult;
+        //Add further process
     }
 }
 ```
 >
 ```swift
-func onDecodedBarcodesReceived(_ result: DecodedBarcodesResult) {
-    if let items = result.items, items.count > 0 {
-        for item in items {
-            let qrCodeDetails = item.details as! QRCodeDetails
-            let version = qrCodeDetails.version
-            let model = qrCodeDetails.model
-        }
+let reader = DynamsoftBarcodeReader.init()
+var result: [iTextResult]? = nil
+do {
+    result = try reader.decodeFileWithName("YOUR-IMAGE-FILE-PATH")
+} catch let err {
+} // Start decoding
+for barcode in result ?? [] {
+    if barcode.barcodeFormat == EnumBarcodeFormat.QRCODE {
+        // For QR Code, the type of detailedResult is QRCodeDetails
+        let qrd = barcode.detailedResult as! QRCodeDetails
+        //Add further process
     }
 }
 ```
 >
 ```python
-cvr_instance = CaptureVisionRouter()
-result = cvr_instance.capture("IMAGE-FILE-PATH", EnumPresetTemplate.PT_READ_BARCODES.value)
-if result.get_error_code() != EnumErrorCode.EC_OK:
-    print("Error:", result.get_error_code(), result.get_error_string())
-barcode_result = result.get_decoded_barcodes_result()
-if barcode_result is None or barcode_result.get_items() == 0:
-    print("No barcode detected.")
-else:
-    items = barcode_result.get_items()
-    print("Decoded", len(items), "barcodes.")
-    for index,item in enumerate(items):
-        if item.get_format() == EnumBarcodeFormat.BF_QR_CODE.value:
-            qrDetail = item.get_details()
-            print("Version:", qrDetail.version)
-            print("Model:", qrDetail.model)
-```
->
-```csharp
-using (CaptureVisionRouter cvRouter = new CaptureVisionRouter())
-{
-    string imageFile = "IMAGE-FILE-PATH";
-    CapturedResult? result = cvRouter.Capture(imageFile, PresetTemplate.PT_READ_BARCODES);
-    if (result == null)
-    {
-        Console.WriteLine("No barcode detected.");
-    }
-    else
-    {
-        if (result.GetErrorCode() != 0)
-        {
-            Console.WriteLine("Error: " + result.GetErrorCode() + ", " + result.GetErrorString());
-        }
-        DecodedBarcodesResult? barcodesResult = result.GetDecodedBarcodesResult();
-        if (barcodesResult != null)
-        {
-            BarcodeResultItem[] items = barcodesResult.GetItems();
-            Console.WriteLine("Decoded " + items.Length + " barcodes");
-            foreach (BarcodeResultItem barcodeItem in items)
-            {
-                Console.WriteLine("Result " + (Array.IndexOf(items, barcodeItem) + 1));
-                if (barcodeItem.GetFormat() == EnumBarcodeFormat.BF_QR_CODE)
-                {
-                    QRCodeDetails? qrDetail = (QRCodeDetails?)barcodeItem.GetDetails();
-                    Console.WriteLine("Version: " + qrDetail.version);
-                    Console.WriteLine("Model: " + qrDetail.model);
-                }
-            }
-        }
-    }
-}
+error = BarcodeReader.init_license("YOUR-LICENSE-KEY")
+if error[0] != EnumErrorCode.DBR_OK:
+    print(error[1])
+dbr = BarcodeReader()
+text_results = dbr.decode_file("YOUR-IMAGE-FILE-WITH-QR-CODES")
+for result in text_results:
+    if EnumBarcodeFormat.BF_QR_CODE == result.barcode_format:
+        qr_detail = result.detailed_result
+        print("QRCode Model: ")
+        print(qr_detail.model)
+        print("QRCode Version: ")
+        print(qr_detail.versions)
+        print("Barcode Format: ")
+        print(result.barcode_format_string)
+        print("Barcode Text: ")
+        print(result.barcode_text)
 ```

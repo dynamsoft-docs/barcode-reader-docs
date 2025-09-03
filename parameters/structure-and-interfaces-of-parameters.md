@@ -1,127 +1,333 @@
 ---   
+description: Introduce the parameter definitions, organization structure, usage rules and related interfaces involved in Dynamsoft Barcode Reader.
+title: Structure and Interfaces of Parameters - Dynamsoft Barcode Reader Parameters
+keywords: Parameter, Interface, Hierarchy
 layout: default-layout
-title: Dynamsoft Barcode Reader Parameters under Dynamsoft Capture Vision
-description: Introduce the parameters design of Dynamsoft Capture Vision related to Dynamsoft Barcode Reader.
-keywords: Parameter, Parameter Template, Parameter Template File, Dynamsoft Barcode Reader
 needAutoGenerateSidebar: true
-noTitleIndex: true
-needGenerateH3Content: true
 ---
 
-# Overview of Dynamsoft Capture Vision parameters Related to Dynamsoft Barcode Reader
+# Parameter Template Structure
 
-Starting in version 10.0, Dynamsoft Barcode Reader is restructured under Dynamsoft Capture Vision Framework.
+This article introduces the parameter definitions, organization structure, usage rules, and related interfaces involved in Dynamsoft Barcode Reader.
 
-Dynamsoft Capture Vision (DCV) is designed for high scalability and flexibility, and its parameter system plays a crucial role in achieving this goal. The parameter system is highly configurable and can drive different behavior logic within the SDK. In this article, we will provide an overview of the parametric architecture design regarding the use of Dynamsoft Barcode Reader in the Dynamsoft Capture Vision framework.
+## Definitions
 
-## Key Terms
+Dynamsoft Barcode Reader uses a template to set parameters. A template contains three types of data: `ImageParameter` , `RegionDefinition` , and `FormatSpecification` .
 
-In order to eliminate ambiguity, we first define several key terms.
+* `ImageParameter` is used to specify the decoding settings on the entire image. The value of the `ImageParameter.Name` field is the unique identifier of the `ImageParameter`. Read more about [`ImageParameter`](reference/image-parameter/index.md).
+* `RegionDefinition` is used to specify a decoding region. It is also used to specify the decoding settings in this area. The value of the `RegionDefinition.Name` field is the unique identifier of `RegionDefinition`. Read more about [`RegionDefinition`](reference/region-definition/index.md).
+* `FormatSpecification` is used to specify a barcode format. It is also used to specify the decoding settings of this barcode format. The value of the `FormatSpecification.Name` field is the unique identifier of `FormatSpecification`. Read more about [`FormatSpecification`](reference/format-specification/index.md).
 
-1. **Parameter** 
-   A parameter is designed to represent a particular aspect of the behavior of the SDK, and each parameter has its own name. For instance, the `ExpectedBarcodeCount` parameter is used to control the expected count of recognized barcodes. Parameters can be configured with specific values or ranges of values, which can be adjusted as required.
+## Organizational Relationship
 
-2. **Parameter template**
-   A parameter template is a collection of parameters organized in a structured manner, expressed in JSON format. The name of the `CaptureVisionTemplate` object is also called "template name", which is a unique identifier assigned to each parameter template. In the DCV SDK, this name is used to load the relevant configurations and control runtime behavior.
-  
-3. **Parameter template file**
-   A parameter template file is a JSON file that contains one or multiple parameter templates.
+* There is only one `ImageParameter` in a template definition. The `ImageParameter.Name` field denotes the unique identifier of the template;
 
-## Organization of a Parameter Template File
-
-As shown in the example below, the organizational structure of a parameter template file consists of several top-level objects such as `CaptureVisionTemplates`, `ImageSourceOptions`,`TargetROIDefOptions` etc.
+* One or more `RegionDefinition` can be referenced through `RegionDefinitionNameArray` in `ImageParameter`;
+* One or more `FormatSpecification` can be referenced through `FormatSpecificationNameArray` in `ImageParameter`;
+* One or more `FormatSpecification` can be referenced through `FormatSpecificationNameArray` in `RegionDefinition`;
+* In a JSON template file/string, you can use `ImageParameterContentArray`/`RegionDefinitionArray`/`FormatSpecificationArray` field to define multiple `ImageParameter`/`RegionDefinition`/`FormatSpecification`, for example:
 
 ```json
 {
-    "CaptureVisionTemplates": [
-        {
-            "Name" : "CV_0",
-            "ImageSourceName": "ISA_0",
-            "ImageROIProcessingNameArray": ["TA_0" ]
-        }       
+  "FormatSpecificationArray": [{
+    "Name": "IP1_BF_QR_CODE"
+  }],
+  "ImageParameter": {
+    "FormatSpecificationNameArray": [
+      "IP1_BF_QR_CODE"
     ],
-    "ImageSourceOptions": [ 
-        {
-            "Name": "ISA_0"
-        }
-    ],
-    "TargetROIDefOptions" : [
-        {
-            "Name" : "TA_0",
-            "TaskSettingNameArray": [ "BR_0" ]
-        }
-    ],
-    "ImageParameterOptions": [
-        {
-            "Name": "IP_0"
-        }
-    ], 
-    "BarcodeReaderTaskSettingOptions": [
-        {
-            "Name" : "BR_0",
-            "BarcodeFormatSpecificationNameArray" : ["FS_0"]
-        }
-    ],
-    "BarcodeFormatSpecificationOptions": [
-        {
-            "Name": "FS_0"
-        }
-    ],
-    "GlobalParameter":{
-        "MaxTotalImageDimension":0
+    "Name": "default",
+    "RegionDefinitionNameArray": [
+      "region1"
+    ]
+  },
+  "RegionDefinition": {
+    "Name": "region1"
+  },
+  "Version": "3.0"
+}
+```
+
+## Scope
+
+* When the same parameter is set in both `ImageParameter` and `RegionDefinition`, the decoding operation in the region specified by `RegionDefinition` is used; otherwise, the parameter values under the `ImageParameter` will be used.
+
+* When the same parameter is set in both `ImageParameter` and `FormatSpecification`, the decoding operation for the barcode format specified by `FormatSpecification` is used; otherwise, the parameter values under the `ImageParameter` will be used.
+
+* When the same parameter is set in both `RegionDefinition` and `FormatSpecification`, the decoding operation for the barcode format specified by `FormatSpecification` is used in the region specified by `RegionDefinition`; otherwise, the parameter values under the `ImageParameter` will be used.
+
+## Parameter list
+
+The parameters of `ImageParameter` are:
+
+* ImageParameter.BarcodeColourModes
+* ImageParameter.BarcodeComplementModes
+* ImageParameter.BarcodeFormatIds
+* ImageParameter.BarcodeFormatIds_2
+* ImageParameter.BinarizationModes
+* ImageParameter.ColourClusteringModes
+* ImageParameter.ColourConversionModes
+* ImageParameter.DeblurLevel
+* ImageParameter.DeblurModes
+* ImageParameter.DeformationResistingModes
+* ImageParameter.Description
+* ImageParameter.DPMCodeReadingModes
+* ImageParameter.ExpectedBarcodesCount
+* ImageParameter.FormatSpecificationNameArray
+* ImageParameter.GrayscaleTransformationModes
+* ImageParameter.ImagePreprocessingModes
+* ImageParameter.IntermediateResultSavingMode
+* ImageParameter.IntermediateResultTypes
+* ImageParameter.LocalizationModes
+* ImageParameter.MaxAlgorithmThreadCount
+* ImageParameter.Name
+* ImageParameter.Pages
+* ImageParameter.PDFRasterDPI
+* ImageParameter.PDFReadingMode
+* ImageParameter.RegionDefinitionNameArray
+* ImageParameter.RegionPredetectionModes
+* ImageParameter.ResultCoordinateType
+* ImageParameter.ReturnBarcodeZoneClarity
+* ImageParameter.ScaleDownThreshold
+* ImageParameter.ScaleUpModes
+* ImageParameter.TerminatePhase
+* ImageParameter.TextFilterModes
+* ImageParameter.TextResultOrderModes
+* ImageParameter.TextureDetectionModes
+* ImageParameter.Timeout
+
+The parameters of `RegionDefinition` are:
+
+* RegionDefinition.BarcodeFormatIds
+* RegionDefinition.BarcodeFormatIds_2
+* RegionDefinition.Bottom
+* RegionDefinition.ExpectedBarcodesCount
+* RegionDefinition.FormatSpecificationNameArray
+* RegionDefinition.Left
+* RegionDefinition.MeasuredByPercentage
+* RegionDefinition.Name
+* RegionDefinition.Right
+* RegionDefinition.Top
+
+The parameters of `FormatSpecification` are:
+
+* FormatSpecification.AllModuleDeviation
+* FormatSpecification.AustralianPostEncodingTable
+* FormatSpecification.BarcodeAngleRangeArray
+* FormatSpecification.BarcodeBytesLengthRangeArray
+* FormatSpecification.BarcodeBytesRegExPattern
+* FormatSpecification.BarcodeComplementModes
+* FormatSpecification.BarcodeFormatIds
+* FormatSpecification.BarcodeFormatIds_2
+* FormatSpecification.BarcodeHeightRangeArray
+* FormatSpecification.BarcodeTextLengthRangeArray
+* FormatSpecification.BarcodeTextRegExPattern
+* FormatSpecification.BarcodeWidthRangeArray
+* FormatSpecification.BarcodeZoneBarCountRangeArray
+* FormatSpecification.BarcodeZoneMinDistanceToImageBorders
+* FormatSpecification.Code128Subset
+* FormatSpecification.DeblurLevel
+* FormatSpecification.DeformationResistingModes
+* FormatSpecification.EnableDataMatrixECC000-140
+* FormatSpecification.EnableQRCodeModel1
+* FormatSpecification.FindUnevenModuleBarcode
+* FormatSpecification.HeadModuleRatio
+* FormatSpecification.MinQuietZoneWidth
+* FormatSpecification.MinRatioOfBarcodeZoneWidthToHeight
+* FormatSpecification.MinResultConfidence
+* FormatSpecification.MirrorMode
+* FormatSpecification.ModuleSizeRangeArray
+* FormatSpecification.MSICodeCheckDigitCalculation
+* FormatSpecification.Name
+* FormatSpecification.PartitionModes
+* FormatSpecification.PatchCodeSearchingMargins
+* FormatSpecification.RequireStartStopChars
+* FormatSpecification.ReturnPartialBarcodeValue
+* FormatSpecification.StandardFormat
+* FormatSpecification.TailModuleRatio
+
+## Parameter template files assignment rules
+
+When setting parameters through a JSON template, Dynamsoft Barcode Reader will process the template according to the following rules:
+
+* Parameters not defined in `ImageParameter`/`RegionDefinition`/`FormatSpecification` will be filled with default values
+* `FormatSpecification` is automatically split into multiple settings for a single barcode format, for example:
+
+```json
+Template you set
+{
+    "ImageParameter":{
+        "Name": "ImageParameter1", 
+        "BarcodeFormatIds": ["BF_ONED"],    
+        "FormatSpecificationNameArray": [
+          "FormatSpecification1"
+        ]
+    }, 
+    "FormatSpecification": {
+      "Name": "FormatSpecification1", 
+      "BarcodeFormatIds": ["BF_CODE_39","BF_CODE_128"],
+      "MinResultConfidence": 20
     }
 }
 ```
 
-With the exception of GlobalParameter, all top-level objects in the parameter template file are arrays of the corresponding object. For example,`CaptureVisionTemplates` are an array of `CaptureVisionTemplate` objects, and `TargetROIDefOptions` are an array of `TargetROIDef` objects.
+```json
+Template used by DBR
+{
+    "ImageParameter":{
+        "Name": "ImageParameter1", 
+        "BarcodeFormatIds": ["BF_ONED"],    
+        "FormatSpecificationNameArray": [
+          "FormatSpecification1_BF_CODE_39",
+          "FormatSpecification1_BF_CODE_128"
+        ]
+    },
+    "FormatSpecificationArray":[
+      {
+        "Name": "FormatSpecification1_BF_CODE_39", 
+        "BarcodeFormatIds": ["BF_CODE_39"],
+        "MinResultConfidence": 20
+      },
+      {
+        "Name": "FormatSpecification1_BF_CODE_128", 
+        "BarcodeFormatIds": ["BF_CODE_128"],
+        "MinResultConfidence": 20
+      }
+    ] 
+}
+```
 
-Furthermore, to reuse the same parameter definitions, reduce the size of the parameter template file, and simplify the parameter configuration hierarchy, the reference relationship was adopted in the parameter template file design. For example, the value of the `ImageSource` parameter for the first object in `CaptureVisionTemplates` is `ISA_0`, which refers to the first object in `ImageSourceOptions`.
+* When the two templates are merged, duplicate parameter settings in the defined `ImageParameter` are handled as follows:
 
-Therefore, a parameter template starts with an object in `CaptureVisionTemplates` and recursively searches for the objects that are directly or indirectly referenced by it, and then combines them to form a specific set of parameters. Then, the parameter template may be applied to DCV through "template name" to control its internal execution logic.
+  * The following parameters take the maximum of the two settings
+    * DeblurLevel
+    * ExceptedBarcodeCount
+    * MaxAlgorithmThreadCount
+    * PDFRasterDPI
+    * ScaleDownThreshold
+    * Timeout  
+  * The following parameters take the combined values of two settings
+    * BarcodeFormatIds
+    * BarcodeFormatIds_2
+    * IntermediateResultTypes
+    * Pages
+  * The following parameters are controlled by the `ConflictMode`. If `ConflictMode` is `IGNORE`, the first value is taken. If `ConflictMode` is `OVERWRITE`, the last value is taken
+    * AccompanyingTextReadingModes
+    * BarcodeColourModes
+    * BarcodeComplementModes
+    * BinarizationModes
+    * ColourClusteringModes
+    * ColourConversionModes
+    * DeblurModes
+    * DeformationResistingModes
+    * DPMCodeReadingModes
+    * GrayscaleTransformationModes
+    * ImagePreprogressingModes
+    * IntermediateResultSavingMode
+    * LocalizationModes
+    * PDFReadingMode
+    * RegionPredetectionModes
+    * ResultCoordinateType
+    * ReturnBarcodeZoneClarity
+    * ScaleUpModes
+    * TerminatePhase
+    * TextFilterModes
+    * TextResultOrderModes
+    * TextureDetectionModes
+    * RegionDefinitionNameArray: Take the last RegionDefinitionName in the last RegionDefinitionNameArray
+    * FormatSpecificationNameArray: Take the combined value of the two settings, but if the FormatSpecification is set for the same barcode format, FormatSpecificationNameArray will only keep the name of the last FormatSpecification
 
-Next, we will focus on introducing some main objects and their relationships in a parameter template.
+## Modes, Mode and Arguments
 
-## Structure of a Parameter Template
+The entire decoding process of Dynamsoft Barcode Reader consists of many subdivided functions, among which the control parameters of some function blocks are designed in accordance with the format of Modes-Mode-Argument. That is, a function is controlled by a Modes parameter. There are many ways to implement this function, each method (Mode) has multiple unique settings, and each setting is an Argument.
 
-The following table list the main objects type and description of a complete parameter template when using only Dynamsoft Barcode Reader:
+<div align="center">
+   <p><img src="assets/hierarchy-modes-mode-argument.png" alt="Modes-Mode-Argument hierarchy" width="100%" /></p>
+</div>
 
-| Object Type              | Description                                                                                                                                                                                  |
-| :----------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CaptureVisionTemplate    | This is the entry object of a parameter template in DCV. The `Name` parameter represents the name of the parameter template, which serves as its unique identifier.                          |
-| ImageSource              | It defines the input for DCV, responsible for providing images to DCV. It can be defined as different image sources, including but not limited to image directories, scanners, cameras, etc. |
-| TargetROIDef             | It is used to specify one or more recognition tasks to be performed on some regions of interest (ROIs) within an image.                                                                      |
-| BarcodeReaderTaskSetting | It is used to configure settings for barcode reading tasks performed on images in DCV.                                                                                                       |
-| ImageParameter           | It provides various image-processing features to adjust and enhance the input image for better recognition results.                                                                          |
+For example, one of the functions in the decoding process is barcode localization. Dynamsoft Barcode Reader provides the `LocalizationModes` parameter to control this function. It provides `LM_CONNECTED_BLOCKS` , `LM_STATISTICS` , `LM_LINES` , `LM_SCAN_DIRECTLY` , `LM_STATISTICS_MARKS` , `LM_STATISTICS_POSTAL_CODE` , a total of 6 methods to implement barcode localization. For LM_SCAN_DIRECTLY, there are two Arguments, `ScanStride` and `ScanDirection` .
 
-For more details, please refer to [introduction of the capture vision template]({{ site.dcvb_parameters }}file/capture-vision-template.html)
+## Interfaces to change settings
 
-## How to Apply DCV Parameters
+Dynamsoft Barcode Reader provides two ways to set parameters: `PublicRuntimeSettings` and JSON template files.
+`PublicRuntimeSettings` is used to modify the Dynamsoft Barcode Reader built-in template, and only supports commonly used parameters. The following are the steps to update Dynamsoft Barcode Reader parameters through `PublicRuntimeSettings` :
 
-Dynamsoft Capture Vision (DCV) provides two methods to apply parameters:
+1. (optional) Restore the parameter settings of the Dynamsoft Barcode Reader built-in template to the default values through the `ResetRuntimeSettings` interface
+2. Call the `GetRuntimeSettings` interface to get the current `PublicRuntimeSettings` of the Dynamsoft Barcode Reader object
+3. Modify the contents in `PublicRuntimeSettings` in the previous step
+4. Call the `UpdateRuntimeSettings` interface to apply the modified `PublicRuntimeSettings` in the previous step to the Dynamsoft Barcode Reader object
+5. (optional) Call the `SetModeArgument` interface to set the optional argument for a specified mode in Modes parameters.
 
-- `SimplifiedCaptureVisionSettings`: It is a structure that contains commonly used DCV parameters. To update DCV parameters using `SimplifiedCaptureVisionSettings`, you can follow these steps:
+JSON templates supports all Dynamsoft Barcode Reader parameters. The related parameter setting interfaces are:
 
-   1. Call the `GetSimplifiedSettings` API to get the `SimplifiedCaptureVisionSettings` object named `dcv_settings` associated with the Dynamsoft Capture Vision Router instance.
-   2. Modify the attributes of `dcv_settings`.
-   3. Call the `UpdateSettings` API to apply the modified `dcv_settings`.
+* `InitRuntimeSettingsWithFile`: After calling this interface, the template definition in the file are processed according to the merging rules stated in the "Multiple parameter template files" section. Each independent template is stored in the Dynamsoft Barcode Reader object. All templates are merged into one template, then replace the built-in template of Dynamsoft Barcode Reader;
+* `InitRuntimeSettingsWithString`: The effect after calling this interface is the same as `InitRuntimeSettingsWithFile`. The only difference is the template definition of `InitRuntimeSettingsWithString` is saved as a string;
+* `AppendTplFileToRuntimeSettings`: After calling this interface, the template definition in the file will be processed according to the merging rules stated in the "Multiple parameter template files" section . Each independent template is stored in the Dynamsoft Barcode Reader object. All templates, including Dynamsoft Barcode Reader's built-in template, are merged into one template to replace the built-in template of Dynamsoft Barcode Reader;
+* `AppendTplStringToRuntimeSettings`: The effect after calling this interface is the same as `AppendTplFileToRuntimeSettings`. The only difference is the template definition of `AppendTplStringToRuntimeSettings` is saved as a string.
 
-- `JSON parameter template file/string` - It supports all DCV parameters. The related parameter setting APIs are:
+## RegionDefinition and How It Works
 
-   1. `InitSettings/InitSettingsFromFile` - after calling this interface, each parameter template in the file/string will be converted into a single parameter template object. They will replace the previously associated parameter template objects on the Capture Vision Router instance.
+Limiting the reading area of the barcode reader instance can help provide a better scanning UI as well optimize the performance of the SDK. It is important to understand how the RegionDefinition interface works, and what exactly you need to consider when coming up with the region percentage values.
 
-   2. `ResetSettings` - after calling this API, the internal associated parameter template objects are reset to the factory state.
+By definition, the `top` parameter of the RegionDefinition is used to represent the top-most coordinate of the region, while `bottom` represents the bottom-most coordinate of the region. But how do you figure out the appropriate values to set them?
 
-## Special Rules for DCV Parameter Configuration
+In order to set these values, we highly recommend setting `MeasuredByPercentage` to 1 to make this process as easy as possible. The next section assumes that this parameter is set to true.
 
-In this section, we will discuss some special rules for configuring the DCV parameter templates. Understanding these rules will help you efficiently configure a simple and user-friendly parameter template.
+For `top` and `bottom` , think of the height of the image or frame as a **vertical axis** that goes from 0 to 100:
 
-### Default Value of Parameters
+* 0 represents the top-most point of the image or frame
+* 100 represents the bottom-most point of the image or frame.
 
-Generally, the DCV parameter templates have been designed with many common scenarios in mind, so the default values of many parameters do not need to be modified. When configuring a custom template, you only need to configure required parameters and fine-tuning parameters related to business scenarios. Other optional parameters are automatically filled with default values. This simplifies your configuration and makes your templates easier to read.
+Please follow this diagram for a visual representation of different regions with various `top` and `bottom` values:
 
-### Inherited Parameters
+<div align="center">
+  <img src="assets/topBottomRegions.png" alt="Top Bottom Region Percentages" width="100%" />
+</div>
 
-Sometimes, we need to configure multiple templates to adapt to different scenarios, but only a few parameter values differ between each template. DCV provides a parameter configuration inheritance mechanism that further reduces the amount of configuration work.
-For example, when configuring `IP_A` and `IP_B` objects in `ImageParameterOptions`, you can define a `BaseImageParameterName` parameter in the `IP_B` object with a value of `IP_A`. Then `IP_B` object will inherit all the parameter definitions of `IP_A`, and if `IP_B` defines a parameter with the same name but a different value, that parameter will adopt the value of `IP_B`.
+Please note that the above diagram is not limiting the horizontal view at all.
 
-This allows you to create a new parameter template that inherits most of its configuration from an existing template, reducing the amount of repetitive configuration work needed.
+After determining where you want the top-most and bottom-most points of the reading region, you can find its corresponding percentage value either by trial and error (and using the naked eye) or you can take exact measurements and use those to calculate the exact percentage values.
+
+Now for `left` and `right` , think of the width of the image or frame as a **horizontal axis** that goes from 0 to 100:
+
+* 0 represents the left-most point of the image of frame
+* 100 represents the right-most point of the image of frame
+
+<div align="center">
+  <img src="assets/leftRightRegions.png" alt="Left Right Region Percentages" width="100%" />
+</div>
+
+The above diagram represents various percentages and their visual representation. This assumes that you are not restricting the vertical area and leaving `top` and `bottom` unaffected.
+
+Now let's group them all together to demonstrate various scanerios and their corresponding values
+
+<div align="center">
+  <img src="assets/regionPercentagesTotal.png" alt="Region Percentages" width="100%" />
+</div>
+
+And that is pretty much a gist of how the RegionDefinition works. If anything is unclear, please contact support.
+
+## Using Runtime Settings Templates
+
+When getting started with the runtime settings, it could be a bit overwhelming given how many settings there are and the different scenarios in which they apply.
+
+To make things easier, we introduced three general modes to represent the `RuntimeSettings` :
+
+* `speed`: configures the SDK to read the image or frame as fast as possible, disregarding accuracy. This mode is not recommended for 2D codes in general, but specifically PDF417 codes.
+* `coverage`: opposite to `speed`, this mode prioritizes accuracy by sacrificing speed.
+* `balance`: As the name suggests, this mode offers the best of the two modes, achieving a good combination of the two extremes.
+* `single`: This is the default setting which is optimized for detecting one barcode from video input.
+
+When using the [JavaScript edition](https://www.dynamsoft.com/barcode-reader/programming/javascript/), the `RuntimeSettings` can be updated to any one of the three templates directly instead of having to update each `RuntimeSetting` individually. Please check out the corresponding [documentation](https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/BarcodeReader.html?ver=latest#updateruntimesettings) for more info. *Please note  that updating the runtime settings using a preset template is currently only supported by the JavaScript edition.*
+
+Please refer to the following breakdown the difference in the individual `RuntimeSettings` between the three modes, as well as the default settings
+
+| Parameter | `speed` | `balance` | `coverage` | `single` |
+| :-: | :-: | :-: | :-: | :-: |
+| `DeblurModes` |  `[DM_BASED_ON_LOC_BIN, DM_THRESHOLD_BINARIZATION, DM_DIRECT_BINARIZATION]` |  `[DM_BASED_ON_LOC_BIN, DM_THRESHOLD_BINARIZATION,` <br /> `DM_DIRECT_BINARIZATION, DM_SMOOTHING]` |  `[DM_BASED_ON_LOC_BIN, DM_THRESHOLD_BINARIZATION,` <br />`DM_DIRECT_BINARIZATION, DM_SMOOTHING,` <br /> `DM_GRAY_EQUALIZATION, DM_MORPHING, DM_DEEP_ANALYSIS]` | `[DM_BASED_ON_LOC_BIN, DM_THRESHOLD_BINARIZATION,` <br /> `DM_DIRECT_BINARIZATION, DM_SMOOTHING,` <br /> `DM_GRAY_EQUALIZATION, DM_MORPHING, DM_DEEP_ANALYSIS]` |
+| `BarcodeFormatIds_2` |  `BF2_POSTALCODE` |  `BF2_POSTALCODE` |  `BF2_POSTALCODE` | `BF2_NULL` |
+| `ExpectedBarcodesCount` |  `512` |  `512` |  `512` | `1` |
+| `GrayscaleTransformationModes` | `[GTM_ORIGINAL, 0, 0, 0, 0, 0, 0, 0]` | `[GTM_ORIGINAL, 0, 0, 0, 0, 0, 0, 0]`  | `[GTM_ORIGINAL, GTM_INVERTED, 0, 0, 0, 0, 0, 0]` | `[GTM_ORIGINAL, 0, 0, 0, 0, 0, 0, 0]` |
+| `TextFilterModes` | `[0, 0, 0, 0, 0, 0, 0, 0]` | `[TFM_GENERAL_CONTOUR, 0, 0, 0, 0, 0, 0, 0]`  | `[TFM_GENERAL_CONTOUR, 0, 0, 0, 0, 0, 0, 0]` | `[TFM_GENERAL_CONTOUR, 0, 0, 0, 0, 0, 0, 0]` |
+| `LocalizationModes` | `[LM_CONNECTED_BLOCKS, LM_STATISTICS_MARKS, LM_STATISTICS_POSTAL_CODE, 0, 0, 0, 0, 0]` | `[LM_CONNECTED_BLOCKS, LM_STATISTICS, LM_STATISTICS_MARKS,` <br /> `LM_STATISTICS_POSTAL_CODE, 0, 0, 0, 0]` | `[LM_CONNECTED_BLOCKS, LM_SCAN_DIRECTLY,` <br /> `LM_STATISTICS, LM_LINES,` <br /> `LM_STATISTICS_MARKS, LM_STATISTICS_POSTAL_CODE, 0, 0]` | `[LM_CONNECTED_BLOCKS, LM_SCAN_DIRECTLY,` <br /> `LM_STATISTICS, LM_LINES, 0, 0, 0, 0]` |
+| `ScaleDownThreshold` | `2300` | `2300` | `214748347` | `2300` |

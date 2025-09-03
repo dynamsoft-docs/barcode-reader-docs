@@ -56,11 +56,6 @@ Choose the programming language you use to build your application and learn how 
 
 * [Java (Android)]({{site.android}}user-guide.html){:target="_blank"}
 * [Objective-C or Swift (iOS)]({{site.oc}}user-guide.html){:target="_blank"}
-* [MAUI]({{site.maui}}user-guide.html){:target="_blank"}
-* <a href="https://www.dynamsoft.com/capture-vision/docs/programming/react-native/?ver=latest" target="_blank">React Native</a>
-* <a href="https://www.dynamsoft.com/capture-vision/docs/programming/flutter/?ver=latest" target="_blank">Flutter</a>
-* <a href="https://www.dynamsoft.com/capture-vision/docs/programming/xamarin/?ver=latest" target="_blank">Xamarin.Forms</a>
-* <a href="https://www.dynamsoft.com/capture-vision/docs/programming/cordova/?ver=latest" target="_blank">Cordova</a>
 
 
 ### Server / Desktop
