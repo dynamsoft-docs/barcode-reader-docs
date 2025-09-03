@@ -26,36 +26,43 @@ You can follow the steps below to manually register the device and get the licen
 
 4. Unzip the file and run the GenerateUUID tool on the device to be registered and get the UUID.<br>
 
-For Windows:<br>
--Open Command Prompt (cmd.exe)<br>
--Change the working directory to the one where GenerateUUID.exe is<br>
--Run the command `GenerateUUID.exe`<br>
-The returned string, e.g. 8ECCA3B6-66F9-4fd6-B6B6-308C874140C6, is the machine ID.<br>
-![uuid](./assets/uuid.jpg)<br>
+## For Windows:
 
+1. Open Command Prompt (cmd.exe)
+2. Change the working directory to the one where `GenerateUUID.exe` is located
+3. Run the command: `GenerateUUID.exe`
 
-For Linux:<br>
--Open Terminal<br>
--Change the working directory to the one where GenerateUUID.exe is<br>
--Run the command ` sudo chmod 777 GenerateUUID`<br>
--After inputting the password, run `./GenerateUUID`<br>
+The returned string, e.g. `8ECCA3B6-66F9-4fd6-B6B6-308C874140C6`, is the machine ID.
 
-You will see the generated UUID like this (the ID should be different)<br>
-SoftbindUUID:230e089a-7dc3-4caa-9c77-f7cc6d567f9b<br>
-"230e089a-7dc3-4caa-9c77-f7cc6d567f9b" is the generated UUID. You can now use it to register the device and get an Authorization String for it.<br>
+![uuid](./assets/uuid.jpg)
 
-> Note: If your device is an arm based architecture, please use get device uuid API to generate the uuid: 
-> ```python
-> # sample code in python
-> print(BarcodeReader.get_device_uuid(1))
-> ```
+## For Linux:
 
-> Note: If you want multiple users in operating system to use the license, you will need to move the .Dynamsoft folder to a path where all the users can access. Let us say `/Home/shared/.Dynamsoft`.
-> For all the programs in the devices, you will need to set the license cache path to `/Home/shared` before initialize the license
-> ```python
-> # set license cache path before initialize the license
-> BarcodeReader.set_license_cache_path("/Home/shared")
-> ```
+1. Open Terminal
+2. Change the working directory to the one where `GenerateUUID` is located
+3. Run the command: `sudo chmod 777 GenerateUUID`
+4. After inputting the password, run: `./GenerateUUID`
+
+  You will see the generated UUID like this (the ID should be different):
+  
+  ```
+  SoftbindUUID: 230e089a-7dc3-4caa-9c77-f7cc6d567f9b
+  ```
+  
+  `230e089a-7dc3-4caa-9c77-f7cc6d567f9b` is the generated UUID. You can now use it to register the device and get an Authorization String for it.
+  
+  > Note: If your device is an ARM-based architecture, please use get device uuid API to generate the uuid: 
+  > ```python
+  > # sample code in python
+  > print(BarcodeReader.get_device_uuid(1))
+  > ```
+  
+  > Note: If you want multiple users in operating system to use the license, you will need to move the Dynamsoft folder to a path where all the users can access. Let us say `/Home/shared/.Dynamsoft`.
+  > For all the programs in the devices, you will need to set the license cache path to `/Home/shared` before initializing the license
+  > ```python
+  > # set license cache path before initialize the license
+  > BarcodeReader.set_license_cache_path("/Home/shared")
+  > ```
 
 
 5. Input the generated UUID and device name and click Submit.
@@ -79,54 +86,50 @@ Code snippet in C:
 ```
 Code snippet in C++
 ```C++
-  char errorBuf[512];
-  dynamsoft::dbr::CBarcodeReader::InitLicense("DLC2+4LgkxoZik5yCuJxMDneqJPVQZJROL …", errorBuf, 512);
-  CBarcodeReader* reader = new CBarcodeReader();
+errorCode = CLicenseManager::InitLicense("YOUR-LICENSE-KEY", szErrorMsg, 256);
+if (errorCode != ErrorCode::EC_OK && errorCode != ErrorCode::EC_LICENSE_CACHE_USED)
+{
+    cout << "License initialization failed: ErrorCode: " << errorCode << ", ErrorString: " << szErrorMsg << endl;
+}
+else
+{
+    // other codes...
+}
   // add further process
 ```
 Code snippet in C#:
 ```C#
-string errorMsg;
-  BarcodeReader.InitLicense("DLC2+4LgkxoZik5yCuJxMDneqJPVQZJROL…", out errorMsg);
-  BarcodeReader reader = new BarcodeReader();
-  // add further process
+errorCode = LicenseManager.InitLicense("YOUR-LICENSE-KEY", out errorMsg);
+if (errorCode != (int)EnumErrorCode.EC_OK && errorCode != (int)EnumErrorCode.EC_LICENSE_CACHE_USED)
+{
+    Console.WriteLine("License initialization error: " + errorMsg);
+}
+else
+{
+    CaptureVisionRouter cvr = new CaptureVisionRouter();
+    // add code for further process
+}
 ```
 Code snippet in Java:
 ```Java
-  BarcodeReader.initLicense("DLC2+4LgkxoZik5yCuJxMDneqJPVQZJROL…");
-  BarcodeReader reader = new BarcodeReader();
-  // add further process
+  LicenseError licenseError = LicenseManager.initLicense("YOUR-LICENSE-KEY");
+  if (licenseError.getErrorCode() != EnumErrorCode.EC_OK && 
+      licenseError.getErrorCode() != EnumErrorCode.EC_LICENSE_CACHE_USED) {
+      System.out.println("License initialization error: " + licenseError.getErrorString());
+  } else {
+      CaptureVisionRouter cvrInstance = new CaptureVisionRouter();
+      // add code for further process
+  }
 ```
 Code snippet in Python:
 ```Python
-error = BarcodeReader.init_license("DLC2+4LgkxoZik5yCuJxMDneqJPVQZJROL…")
-dbr = BarcodeReader()
+error_code, error_msg = LicenseManager.init_license("YOUR-LICENSE-KEY")
+if error_code != EnumErrorCode.EC_OK.value and error_code != EnumErrorCode.EC_LICENSE_CACHE_USED.value:
+    print("License initialization error: " + error_msg)
+else:
+    cvr_instance = CaptureVisionRouter()
 ```
-Code snippet in Android SDK:
-```java
-BarcodeReader.initLicense("DLC2+4LgkxoZik5yCuJxMDneqJPVQZJROL…", new DBRLicenseVerificationListener() {
-  @Override
-  public void DBRLicenseVerificationCallback(boolean isSuccessful, Exception e) {
-// Add your code for license verification.
-  }
-});
-```
-Code snippet in Objective-C:
-```Objective-C
-[DynamsoftBarcodeReader initLicense:@" DLC2+4LgkxoZik5yCuJxMDneqJPVQZJROL…" verificationDelegate:self];
-- (void)DBRLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error
-{
-  // Add your code for license verification.
-}
-```
-Code snippet in Swift:
-```Swift
-DynamsoftBarcodeReader.initLicense("DLC2+4LgkxoZik5yCuJxMDneqJPVQZJROL…", verificationDelegate: self)
-func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
-{
-  // Add your code for license verification.
-}
-```
+
 
 
 
