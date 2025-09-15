@@ -32,3 +32,11 @@ jobs:
       doc-url: barcode-reader/docs/core
     secrets: inherit
 
+  Build-v10:
+    if: ${{ github.ref == 'refs/heads/v10' }}
+    uses: dynamsoft-docs/Docs-Template-Repo/.github/workflows/called-workflow-build-sync-production.yml@DCV-v2
+    with:
+      doc-repo: barcode-reader-docs
+      doc-url: barcode-reader/docs/v10/core
+      doc-branch: v10
+    secrets: inherit
