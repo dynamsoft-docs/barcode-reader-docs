@@ -10,6 +10,25 @@ noTitleIndex: true
 
 # Release Notes for Dynamsoft Barcode Reader - 11.x
 
+## 11.2 (10/14/2025)
+
+### ✨ Key Highlights
+
+**AI-Powered Barcode Detection & Decoding**
+- 🧠 **First-to-Market AI Localization**: Revolutionary `OneDLocalization` and `DataMatrixQRCodeLocalization` neural network models for superior detection of **blurred/low-resolution 1D codes** and **DataMatrix/QR codes with missing or damaged finder patterns**
+- ⚡ **Specialized Decoders**: Cutting-edge `EAN13Decoder` and `Code128Decoder` models deliver unprecedented accuracy for **blurred and long-distance** scenarios
+- 🔍 **Enhanced Clarity Processing**: Completely redesigned `OneDDeblur` model with superior **motion blur and focus blur** recovery algorithms
+- 🎯 **Flexible Model Configuration**: Advanced `ModelNameArray` parameter enables on-demand model loading and precise selection for specific barcode scenarios
+
+**Precision Control**
+- ⚙️ **Granular Deblur Methods**: Fine-tuned `DM_DEEP_ANALYSIS` with specialized method control - `OneDGeneral`, `TwoDGeneral`, and `EAN13Enhanced` for targeted optimization
+- 🎯 **Smart Barcode Counting**: New `ExpectedBarcodesCount` parameter enables **format-specific quantity control** and **early termination optimization** for known-quantity scenarios
+- 🔍 **Advanced Region Detection**: New `RPM_GRAY_CONSISTENCY` mode enables precise region detection based on **grayscale uniformity** and **local consistency** for document and label processing
+
+| Versions | Available Editions |
+| -------- | ------------------ |
+| 11.2.1000 | [C++]({{ site.cpp_release_notes}}cpp-11.html#1121000-10142025){:target="_blank"} / [.NET]({{ site.dotnet_release_notes }}dotnet-11.html#1121000-10142025){:target="_blank"} / [Python]({{ site.python_release_notes}}python-11.html#1121000-10142025){:target="_blank"} / [Java]({{ site.java_release_notes}}java-11.html#1121000-10142025){:target="_blank"} |
+
 ## 11.0 (03/04/2025)
 
 ### Highlights
