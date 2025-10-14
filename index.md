@@ -19,7 +19,7 @@ To explore the latest features and updates of `Dynamsoft Barcode Reader`, please
   * ![iOS Icon]({{site.assets}}img-icon/homepage/iOS.svg){:class="ios"} [iOS]({{ site.oc }}){:target="_blank"}
   * ![MAUI Icon]({{site.assets}}img-icon/homepage/MAUI.svg){:class="maui"} [MAUI]({{ site.maui }}){:target="_blank"}
   * ![React Native Icon]({{site.assets}}img-icon/homepage/React Native.svg){:class="react"} [React Native](https://github.com/Dynamsoft/barcode-reader-react-native-samples/blob/main/README.md){:target="_blank"}
-  * ![Flutter Icon]({{site.assets}}img-icon/homepage/Flutter.svg){:class="flutter"} [Flutter](https://github.com/Dynamsoft/barcode-reader-flutter-samples/blob/main/README.md){:target="_blank"}
+  * ![Flutter Icon]({{site.assets}}img-icon/homepage/Flutter.svg){:class="flutter"} [Flutter]({{ site.flutter }}){:target="_blank"}
 * Server / Desktop
   * ![Python Icon]({{site.assets}}img-icon/homepage/Python.svg){:class="python"} [Python]({{ site.python }}){:target="_blank"}
   * ![Java Icon]({{site.assets}}img-icon/homepage/java.svg){:class="java"} [Java]({{ site.java }}){:target="_blank"}
