@@ -10,7 +10,6 @@ useVersionTree: true
 useJSVersionV3: true
 
 introduction: /barcode-reader/docs/core/introduction/
-comparison_tools: /barcode-reader/docs/core/introduction/comparison-tools/
 
 programming: /barcode-reader/docs/core/programming/
 features: /barcode-reader/docs/core/programming/features/
