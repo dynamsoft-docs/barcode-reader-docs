@@ -44,6 +44,7 @@ The following code snippet demonstrates how to specify barcode formats via `Simp
    >- Swift
    >- Python
    >- C#
+   >- Java
    >
 >
 ```javascript
@@ -125,6 +126,28 @@ using (CaptureVisionRouter cvRouter = new CaptureVisionRouter())
    cvRouter.UpdateSettings(PresetTemplate.PT_READ_BARCODES, settings, out errorMsg);
 }
 ```
+>
+```java
+CaptureVisionRouter cvRouter = new CaptureVisionRouter();
+SimplifiedCaptureVisionSettings settings = null;
+try {
+    // Obtain current runtime settings of `CaptureVisionRouter` instance
+    settings = cvRouter.getSimplifiedSettings(EnumPresetTemplate.PT_READ_BARCODES);
+} catch (CaptureVisionException e) {
+    settings = new SimplifiedCaptureVisionSettings();
+}
+// Specify the barcode formats by enumeration values.
+// Use "|" to enable multiple barcode formats at one time.
+settings.barcodeSettings.barcodeFormatIds = EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_ONED;
+try {
+    // Update the settings.
+    cvRouter.updateSettings(EnumPresetTemplate.PT_READ_BARCODES, settings);
+} catch (CaptureVisionException e) {
+    System.out.println("Update settings failed: ErrorCode: " + e.getErrorCode() + ", ErrorString: " + e.getErrorString());
+    return;
+}
+//call capture or other tasks
+```
 
 **See Also**  
 
@@ -183,6 +206,7 @@ The following steps demonstrates how to specify barcode formats via `JSON Templa
        >- Swift
        >- Python
        >- C#
+       >- Java
        >
     >
     ```javascript
@@ -252,7 +276,25 @@ The following steps demonstrates how to specify barcode formats via `JSON Templa
         // more process here
     }
     ```
+    >
+    ```java
+    CaptureVisionRouter cvRouter = new CaptureVisionRouter();
+    try {
+        String templateFile = "PATH-TO-YOUR-SETTING-FILE";
+        cvRouter.initSettingsFromFile(templateFile);
+        // String templateString = "";
+        // cvRouter.initSettings(templateString);
+    } catch (CaptureVisionRouterException e) {
+        System.out.println("Init template failed: ErrorCode: " + e.getErrorCode() + ", ErrorString: " + e.getErrorString());
+        return;
+    }
+    // more process here
+    ```
 
 ## Mixed Usage
 
 It's also possible to use a `JSON Template` along with `SimplifiedCaptureVisionSettings`. Typically, you initialize the SDK with a `JSON Template`, the settings in which will be reflected in `SimplifiedCaptureVisionSettings`, then you can further fine-tune `SimplifiedCaptureVisionSettings` to apply to the actual reading process.
+
+> NOTE: If your JSON template contains complex configurations that cannot be represented in `SimplifiedCaptureVisionSettings`, you may encounter an error message like "complex template can't be converted to simplified settings" when calling `getSimplifiedSettings()`. In such cases, you should either:
+> - Simplify your JSON template so that it can be converted to `SimplifiedCaptureVisionSettings`, or
+> - Continue using the JSON template exclusively without attempting to retrieve or update simplified settings.
