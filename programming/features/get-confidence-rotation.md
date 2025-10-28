@@ -47,6 +47,7 @@ The following code snippet shows how to get the confidence and rotation angle of
    >- Swift
    >- Python
    >- C#
+   >- Java
    >
 >
 ```javascript
@@ -163,6 +164,27 @@ using (CaptureVisionRouter cvRouter = new CaptureVisionRouter())
                 Console.WriteLine("Confidence: {0}", barcodeItem.GetConfidence());
                 Console.WriteLine("Angle: {0}", barcodeItem.GetAngle());
             }
+        }
+    }
+}
+```
+>
+```java
+CaptureVisionRouter cvRouter = new CaptureVisionRouter();
+CapturedResult[] results = cvRouter.captureMultiPages("IMAGE-FILE-PATH", EnumPresetTemplate.PT_READ_BARCODES);
+for (CapturedResult result : results) {
+    if (result.getErrorCode() != EnumErrorCode.EC_OK) {
+        System.out.println("Error: " + result.getErrorCode() + ", " + result.getErrorString());
+    }
+    DecodedBarcodesResult barcodesResult = result.getDecodedBarcodesResult();
+    if (barcodesResult != null) {
+        BarcodeResultItem[] items = barcodesResult.getItems();
+        System.out.println("Decoded " + items.length + " barcodes");
+        for (int i = 0; i < items.length; i++) {
+            BarcodeResultItem barcodeItem = items[i];
+            System.out.println("Result " + (i + 1));
+            System.out.println("Confidence: " + barcodeItem.getConfidence());
+            System.out.println("Angle: " + barcodeItem.getAngle());
         }
     }
 }

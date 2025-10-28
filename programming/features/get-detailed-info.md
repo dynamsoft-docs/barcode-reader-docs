@@ -10,11 +10,11 @@ needAutoGenerateSidebar: false
 
 The Dynamsoft Barcode Reader SDK provides APIs for you to get the detailed barcode information like checksum digit, start/stop characters, error correction level, etc. To learn more about what information you can get, see the following items:
 
-- `OneDCodeDetails`: [C++]({{ site.cpp_api }}oned-code-details.html) / [Python]({{ site.python_api }}oned-code-details.html) / [.NET]({{ site.dotnet_api }}oned-code-details.html)
-- `QRCodeDetails`: [C++]({{ site.cpp_api }}qr-code-details.html) / [Python]({{ site.python_api }}qr-code-details.html) / [.NET]({{ site.dotnet_api }}qr-code-details.html)
-- `PDF417Details`: [C++]({{ site.cpp_api }}pdf417-details.html) / [Python]({{ site.python_api }}pdf417-details.html) / [.NET]({{ site.dotnet_api }}pdf417-details.html)
-- `DataMatrixDetails`: [C++]({{ site.cpp_api }}datamatrix-details.html) / [Python]({{ site.python_api }}datamatrix-details.html) / [.NET]({{ site.dotnet_api }}datamatrix-details.html)
-- `AztecDetails`: [C++]({{ site.cpp_api }}aztec-details.html) / [Python]({{ site.python_api }}aztec-details.html) / [.NET]({{ site.dotnet_api }}aztec-details.html)
+- `OneDCodeDetails`: [C++]({{ site.cpp_api }}oned-code-details.html) / [Python]({{ site.python_api }}oned-code-details.html) / [.NET]({{ site.dotnet_api }}oned-code-details.html) / [Java]({{ site.java_api }}oned-code-details.html)
+- `QRCodeDetails`: [C++]({{ site.cpp_api }}qr-code-details.html) / [Python]({{ site.python_api }}qr-code-details.html) / [.NET]({{ site.dotnet_api }}qr-code-details.html) / [Java]({{ site.java_api }}qr-code-details.html)
+- `PDF417Details`: [C++]({{ site.cpp_api }}pdf417-details.html) / [Python]({{ site.python_api }}pdf417-details.html) / [.NET]({{ site.dotnet_api }}pdf417-details.html) / [Java]({{ site.java_api }}pdf417-details.html)
+- `DataMatrixDetails`: [C++]({{ site.cpp_api }}datamatrix-details.html) / [Python]({{ site.python_api }}datamatrix-details.html) / [.NET]({{ site.dotnet_api }}datamatrix-details.html) / [Java]({{ site.java_api }}datamatrix-details.html)
+- `AztecDetails`: [C++]({{ site.cpp_api }}aztec-details.html) / [Python]({{ site.python_api }}aztec-details.html) / [.NET]({{ site.dotnet_api }}aztec-details.html) / [Java]({{ site.java_api }}aztec-details.html)
 
 Here we take QR Code as example and show how to get the version and model of a QR Code.
 
@@ -45,6 +45,7 @@ Here we take QR Code as example and show how to get the version and model of a Q
    >- Swift
    >- Python
    >- C#
+   >- Java
    >
 >
 ```javascript
@@ -170,6 +171,30 @@ using (CaptureVisionRouter cvRouter = new CaptureVisionRouter())
                     Console.WriteLine("Version: " + qrDetail.version);
                     Console.WriteLine("Model: " + qrDetail.model);
                 }
+            }
+        }
+    }
+}
+```
+>
+```java
+CaptureVisionRouter cvRouter = new CaptureVisionRouter();
+CapturedResult[] results = cvRouter.captureMultiPages("IMAGE-FILE-PATH", EnumPresetTemplate.PT_READ_BARCODES);
+for (CapturedResult result : results) {
+    if (result.getErrorCode() != EnumErrorCode.EC_OK) {
+        System.out.println("Error: " + result.getErrorCode() + ", " + result.getErrorString());
+    }
+    DecodedBarcodesResult barcodesResult = result.getDecodedBarcodesResult();
+    if (barcodesResult != null) {
+        BarcodeResultItem[] items = barcodesResult.getItems();
+        System.out.println("Decoded " + items.length + " barcodes");
+        for (int i = 0; i < items.length; i++) {
+            BarcodeResultItem barcodeItem = items[i];
+            System.out.println("Result " + (i + 1));
+            if (barcodeItem.getFormat() == EnumBarcodeFormat.BF_QR_CODE) {
+                QRCodeDetails qrDetail = (QRCodeDetails) barcodeItem.getDetails();
+                System.out.println("Version: " + qrDetail.version);
+                System.out.println("Model: " + qrDetail.model);
             }
         }
     }
