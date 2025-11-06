@@ -86,7 +86,7 @@ mobile_assets: /barcode-reader/docs/mobile/programming/assets/
 dcv_parameters: /capture-vision/docs-archive/core/parameters/
 dcv_parameters_reference: /capture-vision/docs-archive/core/parameters/reference/
 
-dcv_flutter: /capture-vision/docs-archive/mobile/programming/flutter/
+dcv_flutter: /capture-vision/docs/mobile/programming/flutter/
 dcv_xamarin: /capture-vision/docs-archive/mobile/programming/xamarin/
 dcv_cordova: /capture-vision/docs-archive/mobile/programming/cordova/
 dcv_react_native: /capture-vision/docs-archive/mobile/programming/react-native/
