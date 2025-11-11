@@ -27,6 +27,7 @@ noTitleIndex: true
 
 | Versions | Available Editions |
 | -------- | ------------------ |
+| 11.2.4000 | [JavaScript]({{ site.js_release_notes}}js-11.html#1124000-11112025){:target="_blank"} |
 | 11.2.2000 | [JavaScript]({{ site.js_release_notes}}js-11.html#1122000-11042025){:target="_blank"} |
 | 11.2.1100 | [Java]({{ site.java_release_notes}}java-11.html#1121100-10282025){:target="_blank"} |
 | 11.2.1000 | [C++]({{ site.cpp_release_notes}}cpp-11.html#1121000-10142025){:target="_blank"} / [.NET]({{ site.dotnet_release_notes }}dotnet-11.html#1121000-10142025){:target="_blank"} / [Python]({{ site.python_release_notes}}python-11.html#1121000-10142025){:target="_blank"} / [Java]({{ site.java_release_notes}}java-11.html#1121000-10142025){:target="_blank"} / [Android]({{ site.android_release_notes}}android-11.html#1121000-10162025){:target="_blank"} / [iOS]({{ site.oc_release_notes }}ios-11.html#1121000-10162025){:target="_blank"} |
