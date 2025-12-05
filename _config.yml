@@ -109,6 +109,10 @@ flutter: /barcode-reader/docs/mobile/programming/flutter/
 flutter_api: /barcode-reader/docs/mobile/programming/flutter/api-reference/
 flutter_release_notes: /barcode-reader/docs/mobile/programming/flutter/release-notes/
 
+react_native: /barcode-reader/docs/mobile/programming/react-native/
+react_native_api: /barcode-reader/docs/mobile/programming/react-native/api-reference/
+react_native_release_notes: /barcode-reader/docs/mobile/programming/react-native/release-notes/
+
 assets: /barcode-reader/docs/core/assets/
 edit_icon: /barcode-reader/docs/core/assets/img-icon/edit-icon.png
 smile_icon: /barcode-reader/docs/core/assets/img-icon/icon-smile.png

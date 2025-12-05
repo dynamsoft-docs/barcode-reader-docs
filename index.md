@@ -18,7 +18,7 @@ To explore the latest features and updates of `Dynamsoft Barcode Reader`, please
   * ![Android Icon]({{site.assets}}img-icon/homepage/Android.svg){:class="android"} [Android]({{ site.android }}){:target="_blank"}
   * ![iOS Icon]({{site.assets}}img-icon/homepage/iOS.svg){:class="ios"} [iOS]({{ site.oc }}){:target="_blank"}
   * ![MAUI Icon]({{site.assets}}img-icon/homepage/MAUI.svg){:class="maui"} [MAUI]({{ site.maui }}){:target="_blank"}
-  * ![React Native Icon]({{site.assets}}img-icon/homepage/React Native.svg){:class="react"} [React Native](https://github.com/Dynamsoft/barcode-reader-react-native-samples/blob/main/README.md){:target="_blank"}
+  * ![React Native Icon]({{site.assets}}img-icon/homepage/React Native.svg){:class="react"} [React Native]({{ site.react_native }}){:target="_blank"}
   * ![Flutter Icon]({{site.assets}}img-icon/homepage/Flutter.svg){:class="flutter"} [Flutter]({{ site.flutter }}){:target="_blank"}
 * Server / Desktop
   * ![Python Icon]({{site.assets}}img-icon/homepage/Python.svg){:class="python"} [Python]({{ site.python }}){:target="_blank"}
