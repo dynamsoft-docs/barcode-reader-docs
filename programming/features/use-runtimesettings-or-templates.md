@@ -164,7 +164,7 @@ Basic steps:
 2. Save the template to a file or convert it to string
 3. Call method `InitSettingsFromFile` or `InitSettings` to apply the settings
 
-> Read [Parameter Template Structure]({{ site.parameters }}structure-and-interfaces-of-parameters.html) to learn more about the structure of templates.
+> Read [Parameter Template Structure]({{ site.dcvb_parameters }}file/index.html) to learn more about the structure of templates.
 
 > JavaScript edition only supports importing a JSON string and not a file.
 
