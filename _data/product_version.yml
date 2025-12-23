@@ -3,6 +3,7 @@ useGroupedVersion: true
 version_info_list_algorithm:
   - value: 9.x
     child:
+      - 9.6.60
       - 9.6.42
       - 9.6.40
       - 9.6.33
