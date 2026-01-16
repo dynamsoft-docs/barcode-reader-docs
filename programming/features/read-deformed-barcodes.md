@@ -11,7 +11,7 @@ needAutoGenerateSidebar: false
 As shown below, barcodes on the surface of some flexible packaging or cylindrical objects tend to be distorted and deformed.
 
 <div align="center">
-   <p><img src="assets/deformed-barcodes.png" width="70%" alt="Deformed Barcodes"></p>
+   <p><img src="assets/read-deformed-barcodes/deformed-barcodes.png" width="70%" alt="Deformed Barcodes"></p>
    <p>Deformed Barcodes</p>
 </div>
 
