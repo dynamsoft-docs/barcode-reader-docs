@@ -25,7 +25,6 @@ To explore the latest features and updates of `Dynamsoft Barcode Reader`, please
   * ![Java Icon]({{site.assets}}img-icon/homepage/java.svg){:class="java"} [Java]({{ site.java }}){:target="_blank"}
   * ![.NET Icon]({{site.assets}}img-icon/homepage/dotnet.svg){:class="dotnet"} [.NET]({{ site.dotnet }}){:target="_blank"}
   * ![C++ Icon]({{site.assets}}img-icon/homepage/cplusplus.svg){:class="cplusplus"} [C++]({{ site.cpp }}){:target="_blank"}
-  * ![NodeJS Icon]({{site.assets}}img-icon/homepage/nodejs.svg){:class="nodejs"} [Node JS](https://github.com/Dynamsoft/capture-vision-nodejs-samples/){:target="_blank"}
 
 The documentation for editions `C`, `Flutter`, `Xamarin.Forms` and `Cordova` has been archived, but remains accessible through the following links:
 

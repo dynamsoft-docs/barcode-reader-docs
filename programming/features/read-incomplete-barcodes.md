@@ -11,7 +11,7 @@ needAutoGenerateSidebar: false
 In some cases, barcodes may have incomplete sections due to typographical errors as shown below.
 
 <div align="center">
-   <p><img src="assets/incomplete-barcodes.png" width="70%" alt="incomplete-barcodes"></p>
+   <p><img src="assets/read-incomplete-barcodes/incomplete-barcodes.png" width="70%" alt="incomplete-barcodes"></p>
    <p>Incomplete Barcodes</p>
 </div>
 
