@@ -24,8 +24,7 @@ release_notes: /barcode-reader/docs/core/release-notes/
 release_notes_v9: /barcode-reader/docs/v9/core/release-notes/
 release_notes_v10: /barcode-reader/docs/v10/core/release-notes/
 performance: /barcode-reader/docs/core/performance/
-faq: /barcode-reader/docs/core/faq/
-faq_general: /barcode-reader/docs/core/faq/general/
+faq: /faq/barcode-reader/
 
 structs: /barcode-reader/docs/server/programming/c-cplusplus/struct/
 
