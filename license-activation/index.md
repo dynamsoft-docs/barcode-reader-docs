@@ -129,5 +129,5 @@ else:
     # add code for further process
 ```
 
-If you are using a `concurrent instance license`, see [How to properly use concurrent instance license]({{ site.faq_general }}ensure-no-overuse.html) for more information.
+If you are using a `concurrent instance license`, see [How to properly use concurrent instance license]({{ site.faq }}license/ensure-no-overuse.html){:target="_blank"} for more information.
 
