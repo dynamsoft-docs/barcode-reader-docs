@@ -11,7 +11,7 @@ needAutoGenerateSidebar: false
 Typically, barcodes are dark on a light background. But in some cases, the barcodes are "inverted" -- light barcodes on a dark background, as shown in the image below.
 
 <div align="center">
-   <p><img src="assets/inverted-barcodes.png" width="40%" alt="Inverted Barcodes"></p>
+   <p><img src="assets/read-inverted-barcodes/inverted-barcodes.png" width="40%" alt="Inverted Barcodes"></p>
    <p>Inverted Barcodes</p>
 </div>
 
