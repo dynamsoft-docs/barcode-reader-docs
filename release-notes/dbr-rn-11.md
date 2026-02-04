@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # Release Notes for Dynamsoft Barcode Reader - 11.x
 
-## 11.4.1000 (02/03/2026)
+## 11.4 (02/03/2026)
 
 ### Highlights
 
