@@ -26,7 +26,7 @@ noTitleIndex: true
 
 - **ECI Information Return** – Added support for retrieving Extended Channel Interpretation (ECI) data from barcodes. The new `CECISegment` class along with `GetECISegmentsCount()` and `GetECISegment()` methods in `CBarcodeResultItem` and `CDecodedBarcodeElement` classes enable access to character encoding information embedded in barcodes.
 
-- **Automatic UTF-8 Conversion** – Barcode text is now automatically converted to UTF-8 based on ECI segments when available, improving compatibility with international character sets.
+- **Automatic UTF-8 Conversion** – Barcode text now respects ECI segments when available, improving compatibility with international character sets.
 
 #### Performance Improvements
 
