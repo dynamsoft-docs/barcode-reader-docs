@@ -10,6 +10,38 @@ noTitleIndex: true
 
 # Release Notes for Dynamsoft Barcode Reader - 11.x
 
+## 11.4 (02/05/2026)
+
+### Highlights
+
+#### AI-Powered Barcode Detection and Decoding
+
+- **PDF417 Localization Model** – Introduces the `PDF417Localization` neural network model for improved detection of PDF417 barcodes, especially under challenging conditions.
+
+- **Code39/ITF Decoding Model** – Adds the `Code39ITFDecoder` model for enhanced decoding of Code 39 and ITF barcodes under blurred or low-resolution conditions.
+
+- **Deblur Models for 2D Barcodes** – Adds the `DataMatrixQRCodeDeblur` and `PDF417Deblur` models to provide more effective recovery from motion and focus blur for DataMatrix, QR Code, and PDF417 barcodes.
+
+#### ECI (Extended Channel Interpretation) Support
+
+- **ECI Information Return** – Adds support for retrieving Extended Channel Interpretation (ECI) data from barcodes. The new `CECISegment` class, along with the `GetECISegmentsCount()` and `GetECISegment()` methods in the `CBarcodeResultItem` and `CDecodedBarcodeElement` classes, enables access to character encoding information embedded in barcodes.
+
+- **ECI-Based Text Interpretation** – Adds support for interpreting ECI segments during barcode decoding, improving compatibility with international character sets.
+
+#### Performance Improvements
+
+- **On-Demand Model Loading** – Implements lazy loading for AI models, reducing initialization time by loading models only when first needed.
+
+- **Smart Model Selection** – Models are now loaded based on configured barcode formats, minimizing memory usage by excluding unused models.
+
+- **Improved Confidence Scoring** – Enhances confidence score calculation for results from neural network models, providing more accurate quality indicators.
+
+- **DPM Barcode Optimization** – Improves recognition rate for Direct Part Marking (DPM) barcodes commonly used in industrial and manufacturing environments.
+
+| Versions | Available Editions |
+| -------- | ------------------ |
+| 11.4.1000 | [C++]({{ site.cpp_release_notes}}cpp-11.html#1141000-02052026){:target="_blank"} / [.NET]({{ site.dotnet_release_notes }}dotnet-11.html#1141000-02052026){:target="_blank"} / [Python]({{ site.python_release_notes}}python-11.html#1141000-02052026){:target="_blank"} / [Java]({{ site.java_release_notes}}java-11.html#1141000-02052026){:target="_blank"} / [Android]({{ site.android_release_notes}}android-11.html#1141000-02052026){:target="_blank"} / [iOS]({{ site.oc_release_notes }}ios-11.html#1141000-02052026){:target="_blank"} |
+
 ## 11.2 (10/14/2025)
 
 ### ✨ Key Highlights
