@@ -21,17 +21,12 @@ scenario_settings: /barcode-reader/docs/core/parameters/scenario-settings/
 
 license_activation: /barcode-reader/docs/core/license-activation/
 release_notes: /barcode-reader/docs/core/release-notes/
-release_notes_v9: /barcode-reader/docs/v9/core/release-notes/
-release_notes_v10: /barcode-reader/docs/v10/core/release-notes/
 performance: /barcode-reader/docs/core/performance/
 faq: /faq/barcode-reader/
 
 structs: /barcode-reader/docs/server/programming/c-cplusplus/struct/
 
 c: /barcode-reader/docs/v9/server/programming/c/
-c_api: /barcode-reader/docs/v9/server/programming/c/api-reference/
-c_methods: /barcode-reader/docs/v9/server/programming/c/api-reference/methods/
-c_release_notes: /barcode-reader/docs/v9/server/programming/c/release-notes/
 
 cpp: /barcode-reader/docs/server/programming/cplusplus/
 cpp_api: /barcode-reader/docs/server/programming/cplusplus/api-reference/
