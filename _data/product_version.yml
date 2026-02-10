@@ -3,4 +3,4 @@ useGroupedVersion: true
 version_info_list_algorithm:
   - value: latest version
   - value: 10.x
-  - value: 9.x Or Older
+  - value: 9.x
