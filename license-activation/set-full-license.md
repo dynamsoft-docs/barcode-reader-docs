@@ -6,7 +6,6 @@ keywords: full license, licensing
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: false
-permalink: /license-activation/set-full-license-v9.6.20.html
 ---
 
 # How to set full license in version 9.x
@@ -285,8 +284,8 @@ if reader != None:
 
 If you run into any issues, please [contact Dynamsoft Support](https://www.dynamsoft.com/company/customer-service/#contact).
 
-[1]:assets\set-full-license-3\Activate.png
-[2]:assets\set-full-license-3\Activate2.png
-[3]:assets\set-full-license-3\Activate3.png
-[4]:assets\set-full-license-3\Activate4.png
-[5]:assets\set-full-license-3\Activate5.png
+[1]:assets\set-full-license\Activate.png
+[2]:assets\set-full-license\Activate2.png
+[3]:assets\set-full-license\Activate3.png
+[4]:assets\set-full-license\Activate4.png
+[5]:assets\set-full-license\Activate5.png

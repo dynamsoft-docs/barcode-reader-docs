@@ -5,32 +5,13 @@ name: CI
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push events but only for the main branch
-  push:
-    branches: 
-    - main 
-    #- preview 
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains jobs called "Build-Main" and "Build-Preview"
-  Build-Main:
-    if: ${{ github.ref == 'refs/heads/main' }}
-    uses: dynamsoft-docs/Docs-Template-Repo/.github/workflows/called-workflow-build-sync-production.yml@main
-    with:
-      doc-repo: barcode-reader-docs
-      doc-url: barcode-reader/docs/core
-    secrets: inherit
-
-  Build-Preview:
-    if: ${{ github.ref == 'refs/heads/preview' }}
-    uses: dynamsoft-docs/Docs-Template-Repo/.github/workflows/called-workflow-build-sync-testing.yml@preview
-    with:
-      doc-repo: barcode-reader-docs
-      doc-url: barcode-reader/docs/core
-    secrets: inherit
+  # This workflow contains jobs called "Build-v9"
 
   Build-v9:
     if: ${{ github.ref == 'refs/heads/v9' }}
