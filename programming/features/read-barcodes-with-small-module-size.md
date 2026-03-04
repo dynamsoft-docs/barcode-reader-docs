@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Read barcodes with small module size - Dynamsoft Barcode Reader SDK
-description: This page describes how to read barcodes with small module size in Dynamsoft Barcode Reader SDK.
+description: This page describes how to read barcodes with very small module size in Dynamsoft Barcode Reader SDK by using the BarcodeScaleModes parameter to upscale the barcode symbol before recognition.
 keywords: small barcode, small module size
 needAutoGenerateSidebar: false
 ---

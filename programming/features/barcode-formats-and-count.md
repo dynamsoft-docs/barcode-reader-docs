@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Barcode Formats and Count - Dynamsoft Barcode Reader SDK
-description: This page describes how to set barcode formats and count in Dynamsoft Barcode Reader SDK.
+description: This page describes how to configure the target barcode formats (BarcodeFormatIds) and the expected barcode count (ExpectedBarcodesCount) in Dynamsoft Barcode Reader SDK using SimplifiedCaptureVisionSettings or a JSON template.
 keywords: Barcode Formats, Expected Count
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

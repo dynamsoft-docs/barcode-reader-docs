@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Read barcodes with uneven lighting - Dynamsoft Barcode Reader SDK
-description: This page describes how to read barcodes with uneven lighting in Dynamsoft Barcode Reader SDK.
+description: This page describes how to read barcodes from images with uneven lighting in Dynamsoft Barcode Reader SDK by selecting the appropriate binarization mode (BM_THRESHOLD for global threshold or BM_LOCAL_BLOCK for local adaptive threshold).
 keywords: uneven lighting, barcode
 needAutoGenerateSidebar: false
 ---

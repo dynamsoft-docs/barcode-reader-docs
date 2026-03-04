@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: How to Get Detailed Barcode Information
-description: This page shows how to get detailed barcode information.
+description: This page describes how to retrieve format-specific details from decoded barcodes in Dynamsoft Barcode Reader SDK, such as module size, start/stop characters, and error correction level.
 keywords: additional information, OneDCodeDetails, QRCodeDetails, PDF417Details, DataMatrixDetails, AztecDetails
 needAutoGenerateSidebar: false
 ---

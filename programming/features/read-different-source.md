@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Read Image from Different Sources - Dynamsoft Barcode Reader SDK
-description: This page describes how to read images from different sources in Dynamsoft Barcode Reader SDK.
+description: This page describes how to read barcodes from different image sources in Dynamsoft Barcode Reader SDK, covering the DecodeFile, DecodeFileInMemory, and DecodeBuffer APIs for file paths, in-memory images, and raw pixel buffers.
 keywords: Different Source
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

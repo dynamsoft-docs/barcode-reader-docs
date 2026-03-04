@@ -1,6 +1,6 @@
 ---   
 layout: default-layout
-description: This article introduces how to read DPM codes.
+description: This article introduces how to configure Dynamsoft Barcode Reader SDK to read Direct Part Mark (DPM) codes, which are barcodes engraved or etched directly onto manufactured parts.
 title: Read DPM Codes
 keywords: DPM, Direct Part Marking
 ---

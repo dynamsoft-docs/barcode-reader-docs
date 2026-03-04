@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Read Incomplete Barcodes - Dynamsoft Barcode Reader SDK
-description: This page describes how to read incomplete barcodes in Dynamsoft Barcode Reader SDK.
+description: This page describes how to read barcodes with missing or damaged sections in Dynamsoft Barcode Reader SDK by enabling BarcodeComplementModes, which attempts to reconstruct incomplete barcodes based on their structural characteristics.
 keywords: Incomplete Barcodes
 needAutoGenerateSidebar: false
 ---

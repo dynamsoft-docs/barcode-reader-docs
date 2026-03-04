@@ -1,6 +1,6 @@
 ---   
 layout: default-layout
-description: This article introduces how to read barcodes from image with lots of text
+description: This article introduces how to configure Dynamsoft Barcode Reader SDK to reliably decode barcodes from images that contain a large amount of surrounding text.
 title: How to read barcodes from image with lots of text
 keywords: text filter
 needAutoGenerateSidebar: false

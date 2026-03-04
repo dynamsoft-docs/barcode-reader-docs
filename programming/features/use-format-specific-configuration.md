@@ -1,6 +1,6 @@
 ---   
 layout: default-layout 
-description: This article describes how to configure the BarcodeFormatSpecification parameter in a template to decode a particular barcode type
+description: This article describes how to configure the BarcodeFormatSpecification parameter in Dynamsoft Barcode Reader SDK to apply format-specific settings when decoding a particular barcode type.
 title: Use Format Specific Configuration
 keywords: nonstandard barcode, specification, template
 needAutoGenerateSidebar: true

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Read Barcode from Video Streaming - Dynamsoft Barcode Reader SDK
-description: This page describes how to read barcodes from video streaming in Dynamsoft Barcode Reader SDK.
+description: This page describes how to read barcodes from live video streams on mobile in Dynamsoft Barcode Reader SDK, covering how to configure a Dynamsoft Camera Enhancer module for camera capture, preview, and data transfer to the barcode reader.
 keywords: Different Source
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

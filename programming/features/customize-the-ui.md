@@ -1,7 +1,7 @@
 ---   
 layout: default-layout
 title: Customize the UI for DBR JS
-description: This article describes how to use customize the UI used by DBR JS.
+description: This article describes how to customize the built-in UI of Dynamsoft Barcode Reader JavaScript edition, including the video container, scan region overlay, and other elements provided by the BarcodeScanner class.
 needAutoGenerateSidebar: true
 keywords: ui customization
 breadcrumbText: UI Customization

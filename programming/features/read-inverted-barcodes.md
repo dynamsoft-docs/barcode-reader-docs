@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Read Inverted Barcodes - Dynamsoft Barcode Reader SDK
-description: This page describes how to read inverted barcodes in Dynamsoft Barcode Reader SDK.
+description: This page describes how to read light-on-dark (inverted) barcodes in Dynamsoft Barcode Reader SDK by configuring GrayscaleTransformationModes to include GTM_INVERTED alongside the default GTM_ORIGINAL mode.
 keywords: Inverted Barcodes
 needAutoGenerateSidebar: false
 ---
