@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Read Deformed Barcodes - Dynamsoft Barcode Reader SDK
-description: This page describes how to read deformed barcodes in Dynamsoft Barcode Reader SDK.
+description: This page describes how to read distorted or deformed barcodes on flexible packaging and cylindrical surfaces in Dynamsoft Barcode Reader SDK by enabling DeformationResistingModes (DRM_BROAD_WARP, DRM_LOCAL_REFERENCE, DRM_DEWRINKLE).
 keywords: Deformed Barcode
 needAutoGenerateSidebar: false
 ---

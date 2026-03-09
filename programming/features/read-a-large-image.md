@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Read barcodes from large image - Dynamsoft Barcode Reader SDK
-description: This page describes how to read barcodes from large image in Dynamsoft Barcode Reader SDK.
+description: This page describes how to speed up barcode reading from large images in Dynamsoft Barcode Reader SDK by configuring the ImageScaleSetting parameter to reduce image size before processing.
 keywords: large image, barcode
 needAutoGenerateSidebar: false
 ---

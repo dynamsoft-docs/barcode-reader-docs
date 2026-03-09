@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Read barcodes with imbalanced colour - Dynamsoft Barcode Reader SDK
-description: This page describes how to read huge barcodes with imbalanced colour in Dynamsoft Barcode Reader SDK.
+description: This page describes how to improve barcode reading on images with imbalanced colour in Dynamsoft Barcode Reader SDK by tuning the RGB channel weights in ColourConversionModes to produce a better grayscale image.
 keywords: imbalanced colour barcode
 needAutoGenerateSidebar: false
 ---

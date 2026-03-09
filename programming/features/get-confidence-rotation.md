@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: How to Get Barcode Confidence and Angle
-description: This page shows how to get barcode confidence and angle.
+description: This page describes how to retrieve the confidence score and rotation angle of decoded barcodes in Dynamsoft Barcode Reader SDK.
 keywords: angle, confidence, decode result, how-to guides
 needAutoGenerateSidebar: false
 ---

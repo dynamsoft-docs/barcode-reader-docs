@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: How to Get Barcode Location
-description: This page shows how to get barcode location.
+description: This page describes how to retrieve the location coordinates of decoded barcodes in Dynamsoft Barcode Reader SDK.
 keywords: location, decode result, how-to guides
 needAutoGenerateSidebar: false
 ---

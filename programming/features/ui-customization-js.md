@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Customize the UI - Dynamsoft Barcode Reader SDK
-description: This page describes how to customize the UI in Dynamsoft Barcode Reader SDK.
+description: This page describes how to customize the camera viewer UI in Dynamsoft Barcode Reader JavaScript edition using Dynamsoft Camera Enhancer's built-in UI HTML files and its customization APIs.
 keywords: UI customization
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

@@ -1,6 +1,6 @@
 ---   
 layout: default-layout
-description: This article introduces two ways to configure DBR parameters, SimplifiedCaptureVisionSettings and JSON Template, and their syntax rules.
+description: This article compares the two ways to configure Dynamsoft Barcode Reader SDK parameters - SimplifiedCaptureVisionSettings for dynamic runtime adjustments and JSON Template for full parameter access - and explains the syntax rules for each.
 title: Use SimplifiedCaptureVisionSettings or JSON Template
 keywords: DBR SimplifiedCaptureVisionSettings Json Template ImageParameter FormatSpecification
 needAutoGenerateSidebar: true

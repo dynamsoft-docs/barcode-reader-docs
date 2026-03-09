@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Read images with texture - Dynamsoft Barcode Reader SDK
-description: This page describes how to read barcodes with texture in Dynamsoft Barcode Reader SDK.
+description: This page describes how to read barcodes from images with textured backgrounds (e.g. screen stripes or patterned surfaces) in Dynamsoft Barcode Reader SDK by enabling TextureDetectionModes to remove the background texture before binarization.
 keywords: texture, barcode
 needAutoGenerateSidebar: false
 ---

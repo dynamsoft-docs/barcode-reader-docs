@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Read Barcodes from Specific Area/Region on Mobile
-description: This page describes how to read specific area or region in Dynamsoft Barcode Reader SDK Mobile Edition.
+description: This page describes how to restrict barcode scanning to a specific area or region on mobile platforms in Dynamsoft Barcode Reader SDK, using Dynamsoft Camera Enhancer to define the scan region on Android and iOS.
 keywords: Specific Area/Region
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

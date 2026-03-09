@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Read dense barcodes - Dynamsoft Barcode Reader SDK
-description: This page describes how to read dense barcodes in Dynamsoft Barcode Reader SDK.
+description: This page describes how to improve recognition of high-density QR codes in Dynamsoft Barcode Reader SDK, covering recommended parameter adjustments to handle small module size, perspective, and distortion.
 keywords: dense barcodes, qrcode, datamatrix
 needAutoGenerateSidebar: false
 ---

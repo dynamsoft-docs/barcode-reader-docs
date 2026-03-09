@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Read Barcode from Video Streaming - Dynamsoft Barcode Reader SDK
-description: This page describes how to read barcodes from video streaming in Dynamsoft Barcode Reader SDK.
+description: This page describes how to read barcodes from video streams on desktop in Dynamsoft Barcode Reader SDK, covering the frame queue mechanism, the decoding thread, and the blurred-frame filtering feature via AppendFrame and related APIs.
 keywords: Different Source
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
