@@ -1,97 +1,97 @@
 repositoryUrl: https://github.com/dynamsoft-docs/barcode-reader-docs/blob/v9
 repository: dynamsoft-docs/barcode-reader-docs
-docFullPath: https://www.dynamsoft.com/barcode-reader/docs/v9/core/
-firstLevelUrl: /barcode-reader/docs/v9/core
-docHomePage: /barcode-reader/docs/v9/core/
+docFullPath: https://www.dynamsoft.com/barcode-reader/docs-v9/core/
+firstLevelUrl: /barcode-reader/docs-v9/core
+docHomePage: /barcode-reader/docs-v9/core/
 searchIndexName: Crawler-DBR-Docs-New
 searchNeedFilter: true
 
 useVersionTree: true
 useJSVersionV3: true
 
-introduction: /barcode-reader/docs/v9/core/introduction/
-comparison_tools: /barcode-reader/docs/v9/core/introduction/comparison-tools/
+introduction: /barcode-reader/docs-v9/core/introduction/
+comparison_tools: /barcode-reader/docs-v9/core/introduction/comparison-tools/
 
-programming: /barcode-reader/docs/v9/core/programming/
-features: /barcode-reader/docs/v9/core/programming/features/
+programming: /barcode-reader/docs-v9/core/programming/
+features: /barcode-reader/docs-v9/core/programming/features/
 
-parameters: /barcode-reader/docs/v9/core/parameters/
-parameters_reference: /barcode-reader/docs/v9/core/parameters/reference/
-image_parameters: /barcode-reader/docs/v9/core/parameters/reference/image-parameter/
-scenario_settings: /barcode-reader/docs/v9/core/parameters/scenario-settings/
+parameters: /barcode-reader/docs-v9/core/parameters/
+parameters_reference: /barcode-reader/docs-v9/core/parameters/reference/
+image_parameters: /barcode-reader/docs-v9/core/parameters/reference/image-parameter/
+scenario_settings: /barcode-reader/docs-v9/core/parameters/scenario-settings/
 
-license_activation: /barcode-reader/docs/v9/core/license-activation/
-release_notes: /barcode-reader/docs/v9/core/release-notes/
-performance: /barcode-reader/docs/v9/core/performance/
-faq: /barcode-reader/docs/v9/core/faq/
-faq_general: /barcode-reader/docs/v9/core/faq/general/
+license_activation: /barcode-reader/docs-v9/core/license-activation/
+release_notes: /barcode-reader/docs-v9/core/release-notes/
+performance: /barcode-reader/docs-v9/core/performance/
+faq: /barcode-reader/docs-v9/core/faq/
+faq_general: /barcode-reader/docs-v9/core/faq/general/
 
-structs: /barcode-reader/docs/v9/server/programming/c-cplusplus/struct/
+structs: /barcode-reader/docs-v9/server/programming/c-cplusplus/struct/
 
-c: /barcode-reader/docs/v9/server/programming/c/
-c_api: /barcode-reader/docs/v9/server/programming/c/api-reference/
-c_methods: /barcode-reader/docs/v9/server/programming/c/api-reference/methods/
-c_release_notes: /barcode-reader/docs/v9/server/programming/c/release-notes/
+c: /barcode-reader/docs-v9/server/programming/c/
+c_api: /barcode-reader/docs-v9/server/programming/c/api-reference/
+c_methods: /barcode-reader/docs-v9/server/programming/c/api-reference/methods/
+c_release_notes: /barcode-reader/docs-v9/server/programming/c/release-notes/
 
-cpp: /barcode-reader/docs/v9/server/programming/cplusplus/
-cpp_api: /barcode-reader/docs/v9/server/programming/cplusplus/api-reference/
-cpp_methods: /barcode-reader/docs/v9/server/programming/cplusplus/api-reference/cbarcodereader-methods/
-cpp_release_notes: /barcode-reader/docs/v9/server/programming/cplusplus/release-notes/
+cpp: /barcode-reader/docs-v9/server/programming/cplusplus/
+cpp_api: /barcode-reader/docs-v9/server/programming/cplusplus/api-reference/
+cpp_methods: /barcode-reader/docs-v9/server/programming/cplusplus/api-reference/cbarcodereader-methods/
+cpp_release_notes: /barcode-reader/docs-v9/server/programming/cplusplus/release-notes/
 
-js: /barcode-reader/docs/v9/web/programming/javascript/
-js_api: /barcode-reader/docs/v9/web/programming/javascript/api-reference/
-js_release_notes: /barcode-reader/docs/v9/web/programming/javascript/release-notes/
+js: /barcode-reader/docs-v9/web/programming/javascript/
+js_api: /barcode-reader/docs-v9/web/programming/javascript/api-reference/
+js_release_notes: /barcode-reader/docs-v9/web/programming/javascript/release-notes/
 
-dotnet: /barcode-reader/docs/v9/server/programming/dotnet/
-dotnet_api: /barcode-reader/docs/v9/server/programming/dotnet/api-reference/
-dotnet_methods: /barcode-reader/docs/v9/server/programming/dotnet/api-reference/BarcodeReader/
-dotnet_class: /barcode-reader/docs/v9/server/programming/dotnet/api-reference/class/
-dotnet_release_notes: /barcode-reader/docs/v9/server/programming/dotnet/release-notes/
+dotnet: /barcode-reader/docs-v9/server/programming/dotnet/
+dotnet_api: /barcode-reader/docs-v9/server/programming/dotnet/api-reference/
+dotnet_methods: /barcode-reader/docs-v9/server/programming/dotnet/api-reference/BarcodeReader/
+dotnet_class: /barcode-reader/docs-v9/server/programming/dotnet/api-reference/class/
+dotnet_release_notes: /barcode-reader/docs-v9/server/programming/dotnet/release-notes/
 
-oc: /barcode-reader/docs/v9/mobile/programming/objectivec-swift/
-oc_api: /barcode-reader/docs/v9/mobile/programming/objectivec-swift/api-reference/
-oc_release_notes: /barcode-reader/docs/v9/mobile/programming/objectivec-swift/release-notes/
-oc_methods: /barcode-reader/docs/v9/mobile/programming/objectivec-swift/api-reference/methods/
-oc_class: /barcode-reader/docs/v9/mobile/programming/objectivec-swift/api-reference/class/
-oc_methods: /barcode-reader/docs/v9/mobile/programming/objectivec-swift/api-reference/methods/
+oc: /barcode-reader/docs-v9/mobile/programming/objectivec-swift/
+oc_api: /barcode-reader/docs-v9/mobile/programming/objectivec-swift/api-reference/
+oc_release_notes: /barcode-reader/docs-v9/mobile/programming/objectivec-swift/release-notes/
+oc_methods: /barcode-reader/docs-v9/mobile/programming/objectivec-swift/api-reference/methods/
+oc_class: /barcode-reader/docs-v9/mobile/programming/objectivec-swift/api-reference/class/
+oc_methods: /barcode-reader/docs-v9/mobile/programming/objectivec-swift/api-reference/methods/
 
-java: /barcode-reader/docs/v9/server/programming/java/
-java_api: /barcode-reader/docs/v9/server/programming/java/api-reference/
-java_methods: /barcode-reader/docs/v9/server/programming/java/api-reference/BarcodeReader/
-java_class: /barcode-reader/docs/v9/server/programming/java/api-reference/class/
-java_release_notes: /barcode-reader/docs/v9/server/programming/java/release-notes/
+java: /barcode-reader/docs-v9/server/programming/java/
+java_api: /barcode-reader/docs-v9/server/programming/java/api-reference/
+java_methods: /barcode-reader/docs-v9/server/programming/java/api-reference/BarcodeReader/
+java_class: /barcode-reader/docs-v9/server/programming/java/api-reference/class/
+java_release_notes: /barcode-reader/docs-v9/server/programming/java/release-notes/
 
-android: /barcode-reader/docs/v9/mobile/programming/android/
-android_api: /barcode-reader/docs/v9/mobile/programming/android/api-reference/
-android_release_notes: /barcode-reader/docs/v9/mobile/programming/android/release-notes/
-android_class: /barcode-reader/docs/v9/mobile/programming/android/api-reference/class/
-android_methods: /barcode-reader/docs/v9/mobile/programming/android/api-reference/BarcodeReader/
+android: /barcode-reader/docs-v9/mobile/programming/android/
+android_api: /barcode-reader/docs-v9/mobile/programming/android/api-reference/
+android_release_notes: /barcode-reader/docs-v9/mobile/programming/android/release-notes/
+android_class: /barcode-reader/docs-v9/mobile/programming/android/api-reference/class/
+android_methods: /barcode-reader/docs-v9/mobile/programming/android/api-reference/BarcodeReader/
   
-python: /barcode-reader/docs/v9/server/programming/python/
-python_api: /barcode-reader/docs/v9/server/programming/python/api-reference/
-python_methods: /barcode-reader/docs/v9/server/programming/python/api-reference/BarcodeReader/
-python_class: /barcode-reader/docs/v9/server/programming/python/api-reference/class/
-python_release_notes: /barcode-reader/docs/v9/server/programming/python/release-notes/
+python: /barcode-reader/docs-v9/server/programming/python/
+python_api: /barcode-reader/docs-v9/server/programming/python/api-reference/
+python_methods: /barcode-reader/docs-v9/server/programming/python/api-reference/BarcodeReader/
+python_class: /barcode-reader/docs-v9/server/programming/python/api-reference/class/
+python_release_notes: /barcode-reader/docs-v9/server/programming/python/release-notes/
 
-enumerations: /barcode-reader/docs/v9/core/parameters/enum/
-js_enumerations: /barcode-reader/docs/v9/web/programming/javascript/api-reference/enum/
-c_cpp_enumerations: /barcode-reader/docs/v9/server/programming/c-cplusplus/enumeration/
-dotnet_enumerations: /barcode-reader/docs/v9/server/programming/dotnet/api-reference/enumeration/
-python_enumerations: /barcode-reader/docs/v9/server/programming/python/api-reference/enumeration/
-java_enumerations: /barcode-reader/docs/v9/server/programming/java/api-reference/enumeration/
-mobile_enumerations: /barcode-reader/docs/v9/mobile/programming/enumeration/
-mobile_assets: /barcode-reader/docs/v9/mobile/programming/assets/
+enumerations: /barcode-reader/docs-v9/core/parameters/enum/
+js_enumerations: /barcode-reader/docs-v9/web/programming/javascript/api-reference/enum/
+c_cpp_enumerations: /barcode-reader/docs-v9/server/programming/c-cplusplus/enumeration/
+dotnet_enumerations: /barcode-reader/docs-v9/server/programming/dotnet/api-reference/enumeration/
+python_enumerations: /barcode-reader/docs-v9/server/programming/python/api-reference/enumeration/
+java_enumerations: /barcode-reader/docs-v9/server/programming/java/api-reference/enumeration/
+mobile_enumerations: /barcode-reader/docs-v9/mobile/programming/enumeration/
+mobile_assets: /barcode-reader/docs-v9/mobile/programming/assets/
 
 
-assets: /barcode-reader/docs/v9/core/assets/
-edit_icon: /barcode-reader/docs/v9/core/assets/img-icon/edit-icon.png
-smile_icon: /barcode-reader/docs/v9/core/assets/img-icon/icon-smile.png
-sad_icon: /barcode-reader/docs/v9/core/assets/img-icon/icon-sad.png
-dbr_icon: /barcode-reader/docs/v9/core/assets/img-icon/icon-dbr.svg
-dwt_icon: /barcode-reader/docs/v9/core/assets/img-icon/icon-dwt.svg
-dnt_icon: /barcode-reader/docs/v9/core/assets/img-icon/icon-dnt.svg
+assets: /barcode-reader/docs-v9/core/assets/
+edit_icon: /barcode-reader/docs-v9/core/assets/img-icon/edit-icon.png
+smile_icon: /barcode-reader/docs-v9/core/assets/img-icon/icon-smile.png
+sad_icon: /barcode-reader/docs-v9/core/assets/img-icon/icon-sad.png
+dbr_icon: /barcode-reader/docs-v9/core/assets/img-icon/icon-dbr.svg
+dwt_icon: /barcode-reader/docs-v9/core/assets/img-icon/icon-dwt.svg
+dnt_icon: /barcode-reader/docs-v9/core/assets/img-icon/icon-dnt.svg
 
-baseurl: "/barcode-reader/docs/v9/core"
+baseurl: "/barcode-reader/docs-v9/core"
 plugins:
   - jemoji
   - jekyll-webp
@@ -181,6 +181,6 @@ defaults:
       needAutoGenerateSidebar: true
       needGenerateH3Content: true
       docRootName: "Barcode Reader" 
-      docHomePage: "/barcode-reader/docs/v9/core/introduction/"
+      docHomePage: "/barcode-reader/docs-v9/core/introduction/"
 
 url: "https://www.dynamsoft.com" # sitemap root
