@@ -38,11 +38,13 @@ The following shows how to set the license in the code.
    >
 > 
 ```js
-// Option 1: Initialize using the RTU (Ready-To-Use) BarcodeScanner APIs
+// Option 1: Set the license when using the RTU (Ready-To-Use) class `BarcodeScanner`.
+// Note: The license initialization is deferred until `launch()` is called.
 const barcodeScanner = new Dynamsoft.BarcodeScanner({
   license: "YOUR_LICENSE_KEY",
 });
-// Option 2: Initialize the license using the Foundational APIs
+// Option 2: Set the license when using the Foundational API.
+// Note: The license initialization is also deferred.
 Dynamsoft.License.LicenseManager.initLicense("YOUR_LICENSE_KEY");
 ```
 > 

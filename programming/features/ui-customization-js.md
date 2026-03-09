@@ -10,39 +10,31 @@ noTitleIndex: true
 
 # Customize the UI
 
-When you want to customize the UI, we can leverage the extensive customization features provided by Dynamsoft Camera Enhancer (DCE) to achieve this.
-
 ## Use the built-in UI
 
-DCE includes several pre-defined UIs in the `DCE-LIB-PACKAGE/dist/xxxx.ui.html` (or `node_modules/dynamsoft-camera-enhancer/dist/xxxx.ui.html`).
-If you are using a CDN, please find [`dce.ui.html`](https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@latest/dist/dce.ui.html) and [`dce.mobile-native.ui.html`](https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@latest/dist/dce.mobile-native.ui.html).
-
-* `dce.ui.html`: The default UI used by CameraView.createInstance() for simple use cases.
-* `dce.mobile-native.ui.html`: A mobile-inspired UI with auto flash, suitable for most websites. Activate it with `CameraView.createInstance('@engineResourcePath/dce.mobile-native.ui.html')`.
-
-When `cameraEnhancer.open()` is called, the UI elements are dynamically bound to functions based on their class names, such as `dce-xxxx`.
+The pre-defined UI provided by Dynamsoft Barcode Reader can be found at [`dce.ui.xml`](https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@latest/dist/ui/dce.ui.xml). The main UI elements in this file are prefixed with `dce-` and they are dynamically bound to functions when the application initiates.
 
 ## Modify the UI dynamically
 
-To customize the UI, call `view.getUIElement()` to access the HTMLElement containing all UI elements. Before `cameraEnhancer.open()`, you can modify the UI by editing CSS, adding/removing elements, or restructuring the HTML. This usually works without issues, though testing is recommended.
+To customize the UI, call `cameraView.getUIElement()` to access the `HTMLElement` that contains all UI components. Before calling `cameraEnhancer.open()`, you can modify the UI by editing CSS, adding or removing elements, or restructuring the HTML.
 
-After `cameraEnhancer.open()`, UI adjustments are possible via JavaScript, but handle elements with `dce-` prefixed class names carefully, as they may be linked to specific logic.
+After `cameraEnhancer.open()`, UI adjustments are still possible via JavaScript. However, handle elements with class names prefixed with `dce-` carefully, as they may be tied to specific internal logic.
 
 ## Define the UI in a separate HTML
 
-For less dynamic but more structured customization, create a copy of the desired `xxxx.ui.html`, modify it as needed, and store it in your project's `public` folder. Use this customized UI with `CameraView.createInstance('PATH-TO/xxxx.ui.html')`.
+For less dynamic but more structured customization, create a copy of `dce.ui.xml`, modify it as needed, and store it in your project. Use this customized UI with `Dynamsoft.DCE.CameraView.createInstance('PATH-TO/xxxx.ui.xml')`.
 
 ## Integrate HTML into Your Project
 
 Alternatively, `CameraView.createInstance()` accepts an `HTMLElement` directly. This allows you to build and manage the UI within your webpage. For example, set the UI using `CameraView.createInstance(document.getElementById('my-custom-ui'))`.
 
-Let's see the following example.
+Let's look at the following example.
 
-**Practise: customize base on `dce.ui.html`**
+**Practice: Customize Based on `dce.ui.xml`**
 
-Start by opening dce.ui.html in your editor to review its content. You can copy several elements from this file.
+Start by opening `dce.ui.xml` in your editor to review its contents. You can copy several elements from this file as needed.
 
-Next, create a new HTML page, beginning by embedding only the video:
+Next, create a new HTML page, starting by embedding only the video:
 
 ```html
 <div id="enhancerUIContainer" style="width:1280px;height:720px;background:#ddd;" >
