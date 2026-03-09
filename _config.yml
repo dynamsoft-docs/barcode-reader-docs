@@ -26,7 +26,7 @@ faq: /faq/barcode-reader/
 
 structs: /barcode-reader/docs/server/programming/c-cplusplus/struct/
 
-c: /barcode-reader/docs/v9/server/programming/c/
+c: /barcode-reader/docs-v9/server/programming/c/
 
 cpp: /barcode-reader/docs/server/programming/cplusplus/
 cpp_api: /barcode-reader/docs/server/programming/cplusplus/api-reference/
