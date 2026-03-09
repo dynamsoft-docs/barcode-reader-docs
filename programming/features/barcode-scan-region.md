@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Read a Specific Area/Region - Dynamsoft Barcode Reader SDK
-description: This page describes how to read specific area or region in Dynamsoft Barcode Reader SDK.
+description: This page describes how to restrict barcode decoding to a specific region of interest (ROI) in Dynamsoft Barcode Reader SDK, covering single and multiple region configuration via SimplifiedCaptureVisionSettings and the TargetROIDef JSON parameter.
 keywords: Specific Area/Region
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

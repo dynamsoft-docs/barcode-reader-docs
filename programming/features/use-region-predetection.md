@@ -1,6 +1,6 @@
 ---   
 layout: default-layout
-description: This article describes how to configure the region predetection mode for different scenario and automatically detect ROI.
+description: This article describes how to configure RegionPredetectionModes in Dynamsoft Barcode Reader SDK to automatically detect regions of interest (ROI), covering RGB contrast, grayscale contrast, and HSV contrast modes for different background scenarios.
 title: Use Region Predetection
 keywords: region predetection, ROI, region of interest
 needAutoGenerateSidebar: false

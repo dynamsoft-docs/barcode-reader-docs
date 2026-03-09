@@ -1,6 +1,6 @@
 ---   
 layout: default-layout 
-description: This article introduces how to perform image preprocessing including grayscale enhancement and binarization to improve the success rate of DBR positioning code area
+description: This article introduces how to perform image preprocessing in Dynamsoft Barcode Reader SDK, including grayscale enhancement and binarization, to improve the barcode detection rate.
 title: Preprocess Images based on Different Scenarios
 keywords: grayscale enhancement, binarization
 needAutoGenerateSidebar: false

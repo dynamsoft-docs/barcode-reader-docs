@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: How to Use Intermediate Results
-description: This page shows how to use Intermediate Results.
+description: This page describes how to access and use intermediate results from the barcode recognition pipeline in Dynamsoft Barcode Reader SDK, such as grayscale images, binary images, and localization data.
 keywords: intermediate results, IntermediateResult, IntermediateResultUnitType, how-to guides
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

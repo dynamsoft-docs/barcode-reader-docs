@@ -1,6 +1,6 @@
 ---   
 layout: default-layout
-description: This article introduces how to read Postal codes.
+description: This article introduces how to configure Dynamsoft Barcode Reader SDK to read postal barcodes such as USPS Intelligent Mail, Australia Post, and Royal Mail codes.
 title: How to read Postal codes
 keywords: Postal code, Direct Part Marking
 needAutoGenerateSidebar: true

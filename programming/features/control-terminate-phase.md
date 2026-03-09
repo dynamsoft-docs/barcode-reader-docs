@@ -1,7 +1,7 @@
 ---   
 layout: default-layout
 title: Control the termination phase of Dynamsoft Barcode Reader SDK
-description: This article describes how to terminate the barcode decoding task as needed.
+description: This article describes how to control early termination of the barcode decoding process in Dynamsoft Barcode Reader SDK using the SectionArray, Timeout, and ExpectedBarcodesCount parameters.
 needAutoGenerateSidebar: true
 keywords: terminate timeout
 breadcrumbText: Termination Control

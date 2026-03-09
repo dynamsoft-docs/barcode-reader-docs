@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: How to Filter and Sort Barcode Results
-description: This page shows how to filter and sort barcode results.
+description: This page describes how to filter barcode results by format, confidence, and region, and how to sort them by position or confidence in Dynamsoft Barcode Reader SDK.
 keywords: filter, decode result, barcode confidence, result length, how-to guides
 needAutoGenerateSidebar: false
 ---
