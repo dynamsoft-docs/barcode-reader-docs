@@ -1,0 +1,42 @@
+---
+layout: null
+sitemap: false
+---
+
+# Core Concepts & Parameter Layer - Barcode Knowledge Base (v11.x)
+
+> Root Documentation: https://www.dynamsoft.com/barcode-reader/docs/llms.txt
+> This Layer URL: https://www.dynamsoft.com/barcode-reader/docs/core/
+
+This documentation covers Dynamsoft Barcode Reader SDK v11.x. It provides barcode-specific practical guidance: how-to guides, feature usage tutorials, scenario-based parameter settings, performance tuning strategies, use cases, FAQ, and release notes.
+
+This sub-site is a companion to the Parameter & Architecture Reference (https://www.dynamsoft.com/capture-vision/docs/core/). Together they form the Core Concepts & Parameter Layer. While the Parameter & Architecture Reference defines "what each parameter is", this Barcode Knowledge Base explains "how and when to use them" for real-world barcode reading scenarios.
+
+## LLM Guidance
+
+- This is the practical "how-to" companion to the Parameter & Architecture Reference. Start here when users ask "how do I read X type of barcode" or "how do I improve barcode reading performance".
+- How-to guides and feature tutorials are cross-platform - the concepts apply to all language editions (Python, Java, .NET, C++, JavaScript, Android, iOS, etc.), though code snippets may target specific editions.
+- Performance tuning docs explain the trade-offs between speed, accuracy, and read-rate, and which parameters to adjust. Cross-reference with the Parameter & Architecture Reference for exact parameter definitions.
+- The FAQ section covers the most common developer questions; check it before composing answers from scratch.
+- Scenario-based parameter settings show how to combine multiple parameters for specific use cases - these are more practical than the individual parameter reference pages.
+- Release notes help determine which features/fixes are available in which SDK version.
+
+## Related Layers
+
+**Companion - Parameter & Architecture Reference (same layer):**
+- https://www.dynamsoft.com/capture-vision/docs/core/llms.txt
+
+**Workflow Layer APIs:**
+- Server Editions: https://www.dynamsoft.com/capture-vision/docs/server/llms.txt
+- Web Editions: https://www.dynamsoft.com/capture-vision/docs/web/llms.txt
+- Mobile Editions: https://www.dynamsoft.com/capture-vision/docs/mobile/llms.txt
+
+**Barcode Recognition Feature Layer APIs:**
+- Server Editions: https://www.dynamsoft.com/barcode-reader/docs/server/llms.txt
+- Web Editions: https://www.dynamsoft.com/barcode-reader/docs/web/llms.txt
+- Mobile Editions: https://www.dynamsoft.com/barcode-reader/docs/mobile/llms.txt
+
+## Pages
+
+{% for article in site.pages %}{% if article.title %}- [{{article.title}}](https://www.dynamsoft.com{{ article.url | relative_url }}): {{ article.description }}{% endif %}
+{% endfor %}
