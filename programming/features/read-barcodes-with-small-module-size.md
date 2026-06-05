@@ -17,10 +17,14 @@ A module is the narrowest "bar" in a 1D barcode, or the smallest "box" in a 2D b
 
 In some scenarios, the barcode is very small relative to the entire image, and its module size is even smaller, making it difficult for the library to read the barcode. In this case, we can use the parameter `BarcodeScaleModes` in to enlarge the barcode symbol for easier processing.
 
+For linear barcodes, a practical recommendation is to keep the narrowest module (X-dimension) at or above 2 pixels.
+
 
 ## Particular Parameter Required
 
 Dynamsoft Barcode Reader (DBR) provides a parameter [`BarcodeScaleModes`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/barcode-scale-modes.html) that allows you to control the scale-up process when targets in the image are too small. 
+
+Scale-up is condition-based: when module size is smaller than `ModuleSizeThreshold` and the acute angle with the X axis is greater than `AcuteAngleWithXThreshold`, DBR enlarges the symbol iteratively until the effective module size reaches `TargetModuleSize`.
 
 ## Example
 
