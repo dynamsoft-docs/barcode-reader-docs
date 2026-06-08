@@ -14,11 +14,6 @@ introduction: /barcode-reader/docs/core/introduction/
 programming: /barcode-reader/docs/core/programming/
 features: /barcode-reader/docs/core/programming/features/
 
-parameters: /barcode-reader/docs/core/parameters/
-parameters_reference: /barcode-reader/docs/core/parameters/reference/
-image_parameters: /barcode-reader/docs/core/parameters/reference/image-parameter/
-scenario_settings: /barcode-reader/docs/core/parameters/scenario-settings/
-
 license_activation: /barcode-reader/docs/core/license-activation/
 release_notes: /barcode-reader/docs/core/release-notes/
 performance: /barcode-reader/docs/core/performance/
