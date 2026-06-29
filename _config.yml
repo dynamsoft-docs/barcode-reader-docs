@@ -63,17 +63,6 @@ python_methods: /barcode-reader/docs/server/programming/python/api-reference/Bar
 python_class: /barcode-reader/docs/server/programming/python/api-reference/class/
 python_release_notes: /barcode-reader/docs/server/programming/python/release-notes/
 
-enumerations: /barcode-reader/docs/core/parameters/enum/
-js_enumerations: /barcode-reader/docs/web/programming/javascript/api-reference/enum/
-c_cpp_enumerations: /barcode-reader/docs/server/programming/c-cplusplus/enumeration/
-dotnet_enumerations: /barcode-reader/docs/server/programming/dotnet/api-reference/enumeration/
-python_enumerations: /barcode-reader/docs/server/programming/python/api-reference/enumeration/
-java_enumerations: /barcode-reader/docs/server/programming/java/api-reference/enumeration/
-mobile_enumerations: /barcode-reader/docs/mobile/programming/enumeration/
-mobile_assets: /barcode-reader/docs/mobile/programming/assets/
-
-dcv_parameters: /capture-vision/docs-archive/core/parameters/
-dcv_parameters_reference: /capture-vision/docs-archive/core/parameters/reference/
 
 dcv_flutter: /capture-vision/docs/mobile/programming/flutter/
 dcv_xamarin: /capture-vision/docs-archive/mobile/programming/xamarin/
@@ -83,10 +72,10 @@ dcv_react_native: /capture-vision/docs-archive/mobile/programming/react-native/
 dcvb_architecture: /capture-vision/docs/core/architecture/
 dcvb_parameters: /capture-vision/docs/core/parameters/
 dcvb_parameters_reference: /capture-vision/docs/core/parameters/reference/
-dcvb_enumerations: /capture-vision/docs/core/enums/
 dcvb_cpp_api: /capture-vision/docs/server/programming/cplusplus/api-reference/
 dcvb_dotnet_api: /capture-vision/docs/server/programming/dotnet/api-reference/
 dcvb_python_api: /capture-vision/docs/server/programming/python/api-reference/
+dcvb_java_api: /capture-vision/docs/server/programming/java/api-reference/
 
 maui: /barcode-reader/docs/mobile/programming/maui/
 maui_api: /barcode-reader/docs/mobile/programming/maui/api-reference/
