@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Release Notes v11.x - Dynamsoft Barcode Reader
-description: This note features the latest updates in Barcode Reader SDK version 11.x. New features were added along with various APIs deprecated, removed, and removed.
+description: This note features the latest updates in Barcode Reader SDK version 11.x.
 keywords: release notes, dynamsoft barcode reader
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
@@ -9,6 +9,35 @@ noTitleIndex: true
 ---
 
 # Release Notes for Dynamsoft Barcode Reader - 11.x
+
+## 11.6 (07/23/2026)
+
+### Highlights
+
+#### Multimodal PDF Content Extraction
+
+- **New PDF Reading Mode** - Added `PDFRM_MULTIMODAL` to `PDFReadingMode`, now the default for `PDFReadingParameter`. It extracts vector graphics, text content, and embedded images from PDF files, enabling stronger barcode reading performance in multimodal PDF scenarios.
+- **Performance Behavior Update** - Compared with full-page raster rendering, `PDFRM_MULTIMODAL` usually improves speed by avoiding unnecessary rendering of irrelevant regions.
+
+#### Multi-Threaded Barcode Decoding
+
+- **Get results sooner with parallel processing** - Barcode decoding now uses a breadth-first strategy that decomposes a single DBR Task into one Localization Work and one or more Decoding Works. This improves thread utilization and reduces the chance that a slow `DeblurMode` attempt blocks other faster decoding attempts, helping valid results come back sooner.
+
+#### DataMatrix Color Inversion Detection
+
+- **Handle normal and inverted DataMatrix more efficiently** - Added `AutoDetectColorInversion` to automatically handle both normal and inverted DataMatrix barcodes. Instead of processing the whole image twice, the SDK applies dual-polarity handling only to localized DataMatrix regions, which makes processing faster in dual-polarity scenarios.
+
+#### Barcode Layout Analysis
+
+- **Decode dense grid barcodes more completely** - Added `LayoutAnalyzer` to organize barcode locations into logical line or matrix layouts and infer unrecognized barcode regions when gaps exist, enabling workflows such as fast first-pass decoding, missing-region inference, and targeted second-pass decoding on dense N*M barcode layouts.
+
+#### Cross-Version License Support
+
+- **Use a single license across SDK versions** - Full License 1.0 keys (starting with "f") that are non-perpetual are no longer version-checked, so the same key can be used across SDK versions without reactivation.
+
+| Versions | Available Editions |
+| -------- | ------------------ |
+| 11.6.1000 | [C++]({{ site.cpp_release_notes}}cpp-11.html#1161000-07232026){:target="_blank"} / [.NET]({{ site.dotnet_release_notes }}dotnet-11.html#1161000-07232026){:target="_blank"} / [Python]({{ site.python_release_notes}}python-11.html#1161000-07232026){:target="_blank"} / [Java]({{ site.java_release_notes}}java-11.html#1161000-07232026){:target="_blank"} |
 
 ## 11.4 (02/05/2026)
 

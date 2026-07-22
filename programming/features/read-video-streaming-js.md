@@ -6,7 +6,6 @@ keywords: Different Source
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-permalink: /programming/features/read-video-streaming-js.html
 ---
 
 # Read Barcode from Video Streaming

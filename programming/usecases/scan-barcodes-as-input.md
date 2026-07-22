@@ -4,7 +4,6 @@ title: Scan Barcodes as Input
 description: Dynamsoft Barcode Reader SDK Use Case - Scan Barcodes as Input
 keywords: input, barcode, use-case
 noTitleIndex: true
-permalink: /programming/usecases/scan-barcodes-as-input.html
 ---
 
 # Scan Barcodes as Input
