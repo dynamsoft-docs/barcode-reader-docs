@@ -6,7 +6,6 @@ keywords: Different Source
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-permalink: /programming/features/read-different-source.html
 ---
 
 # Read Barcode from Different Image Sources

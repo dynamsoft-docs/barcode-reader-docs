@@ -4,11 +4,11 @@ title: Dynamsoft Barcode Reader SDK - Release Notes
 description: This is the release notes page of Dynamsoft Barcode Reader.
 keywords: release notes
 needGenerateH3Content: false
-permalink: /release-notes/index.html
 ---
 
 # Dynamsoft Barcode Reader SDK - Release Notes
 
+- [Version 11.6 (07-23-2026)]({{ site.release_notes }}dbr-rn-11.html#116)
 - [Version 11.4 (02-05-2026)]({{ site.release_notes }}dbr-rn-11.html#114)
 - [Version 11.2 (10-14-2025)]({{ site.release_notes }}dbr-rn-11.html#112)
 - [Version 11.0 (03-04-2025)]({{ site.release_notes }}dbr-rn-11.html#110)

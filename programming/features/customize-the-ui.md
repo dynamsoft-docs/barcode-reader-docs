@@ -6,7 +6,6 @@ needAutoGenerateSidebar: true
 keywords: ui customization
 breadcrumbText: UI Customization
 noTitleIndex: false
-permalink: /programming/features/customize-the-ui.html
 ---
 
 # Customize the UI
