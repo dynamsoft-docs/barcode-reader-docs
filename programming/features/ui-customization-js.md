@@ -12,8 +12,6 @@ noTitleIndex: true
 
 The official UI uses the `.xml` extension to prevent build tools or hot-reload mechanisms (such as Live Server, Five Server, or bundlers) from processing or overwriting these files. **Despite the extension, the content is HTML**, not XML.
 
-> When opening `.xml` files directly in a browser, you may see parsing errors. Simply save the file (Ctrl+S) to view the rendered content.
-
 You can choose from [legacy UI definition format](#legacy-ui-definition-format) or [new UI definition format](#new-ui-definition-format).
 
 ## Legacy UI Definition Format
@@ -369,7 +367,7 @@ import type {
   vibrate as _vibrate,
 } from 'dynamsoft-barcode-reader-bundle';
 
-const camera = (document.currentScript as any).currentDMCamera as _CameraEnhancer;
+const camera = (document.currentScript as any).currentDMCamera as CameraEnhancer;
 
 const { cvRouter, beep, vibrate, handleBarcodeText } = (camera as any).exportToUI as {
   cvRouter: CaptureVisionRouter;
@@ -380,7 +378,6 @@ const { cvRouter, beep, vibrate, handleBarcodeText } = (camera as any).exportToU
 
 /* other logic */
 ```
-
 
 ```cmd
 .\node_modules\.bin\tsc myui.ts --outDir myui --module umd --moduleResolution node --skipLibCheck
@@ -399,6 +396,24 @@ Relative URLs are resolved using the base URI of the document, not the location 
 <style>/* copy from external css */</style>
 <script>/* copy from generated-from-ts.js */</script>
 ```
+
+Manually add:
+
+```diff
+function (factory) {
+    if (typeof module === "object" && typeof module.exports === "object") {
+        var v = factory(require, exports);
+        if (v !== undefined) module.exports = v;
+    }
+    else if (typeof define === "function" && define.amd) {
+        define(["require", "exports"], factory);
++    }else{
++        factory(null, {});
++    }
+}
+```
+
+  > When TypeScript compiles to UMD format, the default wrapper only handles CommonJS and AMD module environments. If your script needs to be loaded directly in the browser via a `<script>` tag (without any module loader), you must add this else branch. It ensures that the module's initialization code still executes correctly in a plain browser global environment — otherwise, all custom camera UI functionality will be completely broken.
 
 When using TypeScript, you might prefer exporting JavaScript in ESM format rather than UMD. Since `document.currentScript` is unavailable in ESM, the following code should be used to obtain the current script.
 
