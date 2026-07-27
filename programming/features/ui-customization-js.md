@@ -10,8 +10,9 @@ noTitleIndex: true
 
 # Customize the UI
 
-The official UI is defined in files that use the `.xml` extension but actually contain HTML; the `.xml` extension is used to prevent hot-reloading mechanisms—such as those in Live Server, Five Server, or UI frameworks—from overwriting the file.
-In reality, you can use any file extension, provided the browser can correctly retrieve the file's text content.
+The official UI uses the `.xml` extension to prevent build tools or hot-reload mechanisms (such as Live Server, Five Server, or bundlers) from processing or overwriting these files. **Despite the extension, the content is HTML**, not XML.
+
+> When opening `.xml` files directly in a browser, you may see parsing errors. Simply save the file (Ctrl+S) to view the rendered content.
 
 You can choose from [legacy UI definition format](#legacy-ui-definition-format) or [new UI definition format](#new-ui-definition-format).
 
@@ -101,7 +102,7 @@ Next, add the camera and resolution list. If the classes match the default ones 
 
 Starting with Dynamsoft Barcode Reader JS SDK 11.4.2000 and Dynamsoft Capture Vision JS SDK 3.4.2000, we have introduced support for a new UI definition format. This format allows for the inclusion of `<script>` elements, moving extensive interaction logic out of the SDK's internal code and into native JavaScript. With the complete HTML/CSS/JS stack now available, developers—or AI—can freely customize the UI/UX using familiar technologies without needing to write a large amount of code in your business logic.
 
-In the following sections, the business logic will be implemented using frameworks (such as React or Vue) or ESM syntax, while "Classic scripts" will be used for UI definitions. Of course, this approach is adopted merely for the sake of explanation; you are free to combine these methods however you prefer.
+In the following sections, we'll implement business logic using modern frameworks (React, Vue, etc.) or ESM syntax, while UI definitions will use classic script tags for simplicity. This is just a demonstration pattern—you're free to mix and match approaches as needed.
 
 ### Start from built-in UI
 
@@ -188,7 +189,7 @@ Enable beep by default and disable vibration by default.
   const elVibrateOn = ui.querySelector('.dm-camera-mn-vibrate-on');
   const elVibrateOff = ui.querySelector('.dm-camera-mn-vibrate-off');
 + let isVibrateOn = false;
-+ isVibrateOn ? elBeepOff.style.display = 'none' : elBeepOn.style.display = 'none';
++ isVibrateOn ? elVibrateOff.style.display = 'none' : elVibrateOn.style.display = 'none';
 ```
 
 Listen for button `pointerdown` events.
