@@ -104,6 +104,10 @@ In the following sections, we'll implement business logic using modern framework
 
 ### Start from built-in UI
 
+<div align="center">
+  <p><img src="https://www.dynamsoft.com/barcode-reader/docs/core/programming/features/assets/ui-customization-js/dcv.ui.v5.png" width="60%" alt="built-in UI"></p>
+</div>
+
 The pre-defined UI using new UI definition format can be found at [`dce.ui.v5.xml`](https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@latest/dist/ui/dce.ui.v5.xml). Since it is HTML rather than standard XML, the browser will report a parsing error; you can save the file (Ctrl+S) to view it.
 
 ```ts
