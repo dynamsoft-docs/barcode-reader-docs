@@ -301,8 +301,8 @@ Listen for the `pointerdown` event on the "take photo" button.
 const { cvRouter, beep, vibrate, handleBarcodeText } = camera.exportToUI;
 
 elTakePhoto.addEventListener('pointerdown', async()=>{
-  let captureResult = cvRouter.capture(camera.getFrame());
-  let text = captureResult.decodedBarcodesResult?.[0]?.text;
+  let captureResult = await cvRouter.capture(camera.getFrame());
+  let text = captureResult.decodedBarcodesResult?.barcodeResultItems?.[0]?.text;
   console.log(text || 'no result'); // for debug
   handleBarcodeText(text);
 });
@@ -333,7 +333,7 @@ elTakePhoto.addEventListener('pointerdown', async()=>{
 -     filter.enableResultDeduplication("barcode", true);
 -     await cvRouter.addResultFilter(filter);
 
-      await cameraEnhancer.open();
+      await camera.open();
 -     await cvRouter.startCapturing("ReadSingleBarcode");
     }
 +   handleBarcodeText = (text)=>{
