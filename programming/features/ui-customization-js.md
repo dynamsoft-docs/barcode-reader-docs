@@ -412,7 +412,7 @@ You need to manually add the code to `some/where/dce.ui.js`:
 <script src="path/to/dce.ui.js"></script>
 ```
 
-Since some steps require extensive rewriting of JavaScript to TypeScript, we provide a sample [React with Customized Camera UI](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/scenarios/customize-ui) for your reference. You can copy [the pre-modified TypeScript version](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/scenarios/customize-ui/dce.ui.ts); we've also [automated the manual addition steps](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/scenarios/customize-ui/build-dce-ui.mjs).
+Since some steps require extensive rewriting of JavaScript to TypeScript, we provide [a sample](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/scenarios/use-typescript-in-ui-definition) for your reference. You can copy [the pre-modified TypeScript version](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/scenarios/use-typescript-in-ui-definition/dce.ui.ts); we've also [automated the manual addition steps](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/scenarios/use-typescript-in-ui-definition/build-dce-ui.mjs).
 
 Relative URLs are resolved using the base URI of the document, not the location of the UI definition file. Therefore, if you want to use this UI definition file in multiple locations, you can import the JS and CSS using absolute paths, or simply inline them.
 
