@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # Customize the UI
 
-The official UI uses the `.xml` extension to prevent build tools or hot-reload mechanisms (such as Live Server, Five Server, or bundlers) from processing or overwriting these files. **Despite the extension, the content is HTML**, not XML.
+The official UI uses the `.xml` extension to prevent build tools or hot-reload mechanisms (such as Live Server, Five Server, or Hot Module Replacement) from processing or overwriting these files. **Despite the extension, the content is HTML**, not XML.
 
 You can choose from [legacy UI definition format](#legacy-ui-definition-format) or [new UI definition format](#new-ui-definition-format).
 
