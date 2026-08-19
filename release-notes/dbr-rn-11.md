@@ -37,6 +37,7 @@ noTitleIndex: true
 
 | Versions | Available Editions |
 | -------- | ------------------ |
+| 11.6.3000 | [C++]({{ site.cpp_release_notes}}cpp-11.html#1163000-08202026){:target="_blank"} / [.NET]({{ site.dotnet_release_notes }}dotnet-11.html#1163000-08202026){:target="_blank"} / [Python]({{ site.python_release_notes}}python-11.html#1163000-08202026){:target="_blank"} / [Java]({{ site.java_release_notes}}java-11.html#1163000-08202026){:target="_blank"} |
 | 11.6.1000 | [C++]({{ site.cpp_release_notes}}cpp-11.html#1161000-07232026){:target="_blank"} / [.NET]({{ site.dotnet_release_notes }}dotnet-11.html#1161000-07232026){:target="_blank"} / [Python]({{ site.python_release_notes}}python-11.html#1161000-07232026){:target="_blank"} / [Java]({{ site.java_release_notes}}java-11.html#1161000-07232026){:target="_blank"} |
 
 ## 11.4 (02/05/2026)
