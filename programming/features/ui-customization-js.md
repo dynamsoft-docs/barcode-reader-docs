@@ -10,7 +10,8 @@ noTitleIndex: true
 
 # Customize the UI
 
-The official UI uses the `.xml` extension to prevent build tools or hot-reload mechanisms (such as Live Server, Five Server, or bundlers) from processing or overwriting these files. **Despite the extension, the content is HTML**, not XML.
+The official UI uses the `.xml` extension to prevent build tools or hot-reload mechanisms (such as Live Server, Five Server, or Hot Module Replacement) from processing or overwriting these files. **Despite the extension, the content is HTML**, not XML.
+In reality, you can use any file extension, provided the browser can correctly retrieve the file's text content.
 
 You can choose from [legacy UI definition format](#legacy-ui-definition-format) or [new UI definition format](#new-ui-definition-format).
 
@@ -136,7 +137,7 @@ Please take a look at the `<script>` tag; we have wrapped all the logic in a sel
 </script>
 ```
 
-The first line, `const camera = document.currentScript.currentDMCamera;`, allows you to access the `camera` object (an instance of `CameraEnhancer`). If you wish to access other objects—such as an instance of `CaptureVisionRouter`—you can assign `camera.exportToUI.cvRouter` within your business logic, then get it back in UI definition.
+The first line, `const camera = document.currentScript.currentDMCamera;`, allows you to access the `camera` object. When the camera is bound to the UI definition file, it will automatically assign the value `script.currentDMCamera = camera` to all script tags in the UI definition. If you wish to access other objects—such as `cvRouter`—you can assign `camera.exportToUI.cvRouter` within your business logic, then get it back in UI definition.
 
 ```diff
   // in business logic
@@ -348,10 +349,13 @@ elTakePhoto.addEventListener('pointerdown', async()=>{
 
 ### Using TypeScript in UI Definition
 
+When writing large amounts of code, you'll likely want the capabilities of TypeScript to provide intelligent code suggestions and catch errors promptly at compile time.
 The UI definition accepts external scripts and styles, so you can easily write code in TypeScript and reference the generated JavaScript after running `tsc`.
 
+> Since the following steps require extensive rewriting of JavaScript to TypeScript, we provide [a sample](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/scenarios/use-typescript-in-ui-definition) for your reference. You can copy the pre-modified [dce.ui.ts](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/scenarios/use-typescript-in-ui-definition/dce.ui.ts); we've also [automated](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/scenarios/use-typescript-in-ui-definition/build-dce-ui.mjs) the `manually add the code` step.
+
 ```ts
-// in myui.ts
+// in dce.ui.ts
 
 // You must use `import type`; otherwise, 
 // the entire 'dynamsoft-barcode-reader-bundle' package
@@ -363,7 +367,7 @@ The UI definition accepts external scripts and styles, so you can easily write c
 //
 // Some types have been renamed to versions with underscores 
 // to avoid conflicts with variables imported from `exportToUI`. 
-// You can also change the names of the variables imported from `exportToUI`.
+// You can also choose to change the names of the variables imported from `exportToUI` instead.
 import type {
   CameraEnhancer,
   CaptureVisionRouter,
@@ -384,45 +388,49 @@ const { cvRouter, beep, vibrate, handleBarcodeText } = (camera as any).exportToU
 ```
 
 ```cmd
-.\node_modules\.bin\tsc myui.ts --outDir myui --module umd --moduleResolution node --skipLibCheck
+npx tsc dce.ui.ts --outDir some/where --module umd --moduleResolution node --skipLibCheck
 ```
+
+You need to manually add the code to `some/where/dce.ui.js`:
+
+```diff
+  function (factory) {
+    if (typeof module === "object" && typeof module.exports === "object") {
+      var v = factory(require, exports);
+      if (v !== undefined) module.exports = v;
+    }
+    else if (typeof define === "function" && define.amd) {
+      define(["require", "exports"], factory);
+    }
++   else {
++     factory(null, {});
++   }
+  }
+```
+
+> When TypeScript compiles to UMD format, the default wrapper only handles CommonJS and AMD module environments. If your script needs to be loaded directly in the browser via a `<script>` tag (without any module loader), you must add this else branch. It ensures that the module's initialization code still executes correctly in a plain browser global environment — otherwise, all custom camera UI functionality will be completely broken.
 
 ```html
 <link rel="stylesheet" href="style.css">
 <div></div>
-<script src="path/to/myui.js"></script>
+<script src="path/to/dce.ui.js"></script>
 ```
 
 Relative URLs are resolved using the base URI of the document, not the location of the UI definition file. Therefore, if you want to use this UI definition file in multiple locations, you can import the JS and CSS using absolute paths, or simply inline them.
 
 ```html
+<link rel="stylesheet" href="/absolute/path/style.css">
 <div></div>
-<style>/* copy from external css */</style>
-<script>/* copy from generated-from-ts.js */</script>
+<script src="/absolute/path/dce.ui.js"></script>
+<!-- or -->
+<style>/* inline, copy from external css */</style>
+<script>/* inline, copy from dce.ui.js */</script>
 ```
-
-Manually add:
-
-```diff
-function (factory) {
-    if (typeof module === "object" && typeof module.exports === "object") {
-        var v = factory(require, exports);
-        if (v !== undefined) module.exports = v;
-    }
-    else if (typeof define === "function" && define.amd) {
-        define(["require", "exports"], factory);
-+    }else{
-+        factory(null, {});
-+    }
-}
-```
-
-  > When TypeScript compiles to UMD format, the default wrapper only handles CommonJS and AMD module environments. If your script needs to be loaded directly in the browser via a `<script>` tag (without any module loader), you must add this else branch. It ensures that the module's initialization code still executes correctly in a plain browser global environment — otherwise, all custom camera UI functionality will be completely broken.
 
 When using TypeScript, you might prefer exporting JavaScript in ESM format rather than UMD. Since `document.currentScript` is unavailable in ESM, the following code should be used to obtain the current script.
 
 ```ts
-// in myui.ts
+// in dce.ui.ts
 
 import type { CameraEnhancer, CaptureVisionRouter, beep as _beep, vibrate as _vibrate } from 'dynamsoft-barcode-reader-bundle';
 
@@ -471,11 +479,11 @@ const { cvRouter, beep, vibrate, handleBarcodeText } = (camera as any).exportToU
 ```
 
 ```cmd
-.\node_modules\.bin\tsc myui.ts --outDir myui --module esnext --moduleResolution node --skipLibCheck
+npx tsc dce.ui.ts --outDir some/where --module esnext --moduleResolution node --skipLibCheck
 ```
 
 ```html
 <link rel="stylesheet" href="style.css">
 <div></div>
-<script src="path/to/myui.js" type="module"></script>
+<script src="path/to/dce.ui.js" type="module"></script>
 ```
