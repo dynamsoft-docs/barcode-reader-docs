@@ -139,7 +139,7 @@ Please take a look at the `<script>` tag; we have wrapped all the logic in a sel
 </script>
 ```
 
-The first line, `const camera = document.currentScript.currentDMCamera;`, allows you to access the `camera` object. When the camera is bound to the UI definition file, it will automatically assign the value `script.currentDMCamera = camera` to all script tags in the UI definition. If you wish to access other objects—such as `cvRouter`—you can assign `camera.exportToUI.cvRouter` within your business logic, then get it back in UI definition.
+The first line, `const camera = document.currentScript.currentDMCamera;`, allows you to access the `camera` object. When the camera is bound to the UI definition file, it will automatically assign the value `script.currentDMCamera = camera` to all script tags in the UI definition. If you wish to access other objects—such as `cvRouter`—you can assign `camera.uiContext.cvRouter` within your business logic, then get it back in UI definition.
 
 ```diff
   // in business logic
@@ -148,7 +148,7 @@ The first line, `const camera = document.currentScript.currentDMCamera;`, allows
   /* other logic */
   const cvRouter = await CaptureVisionRouter.createInstance();
   const camera = await CameraEnhancer.createInstance('url/to/my/dce.ui.v5.xml');
-+ camera.exportToUI = { cvRouter };
++ camera.uiContext = { cvRouter };
   cameraContainer.append(camera.getUIElement());
   cvRouter.setInput(camera);
 ```
@@ -158,7 +158,7 @@ The first line, `const camera = document.currentScript.currentDMCamera;`, allows
 
   (()=>{
     const camera = document.currentScript.currentDMCamera;
-+   const cvRouter = camera.exportToUI.cvRouter;
++   const cvRouter = camera.uiContext.cvRouter;
     /* other logic */
   })();
 ```
@@ -230,13 +230,13 @@ Import `beep` and `vibrate` from the business logic, listen for barcode results 
 
 import { CaptureVisionRouter, CameraEnhancer, beep, vibrate } from 'dynamsoft-barcode-reader-bundle';
 /* other logic */
-camera.exportToUI = { cvRouter, beep, vibrate };
+camera.uiContext = { cvRouter, beep, vibrate };
 ```
 
 ```js
 // in ui.xml
 
-const { cvRouter, beep, vibrate } = camera.exportToUI;
+const { cvRouter, beep, vibrate } = camera.uiContext;
 /* other logic */
 cvRouter.addResultReceiver({ onDecodedBarcodesReceived: (result) => {
   if (result.barcodeResultItems?.length) {
@@ -305,7 +305,7 @@ Listen for the `pointerdown` event on the "take photo" button.
 ```js
 // in ui.xml
 
-const { cvRouter, beep, vibrate, handleBarcodeText } = camera.exportToUI;
+const { cvRouter, beep, vibrate, handleBarcodeText } = camera.uiContext;
 
 elTakePhoto.addEventListener('pointerdown', async()=>{
   let captureResult = await cvRouter.capture(camera.getFrame());
@@ -324,7 +324,7 @@ elTakePhoto.addEventListener('pointerdown', async()=>{
       /* other logic */
       const cvRouter = await CaptureVisionRouter.createInstance();
       const camera = await CameraEnhancer.createInstance('url/to/my/dce.ui.v5.xml');
-      camera.exportToUI = {
+      camera.uiContext = {
         cvRouter, beep, vibrate,
 +       handleBarcodeText: handleBarcodeText.bind(this)
       };
@@ -462,7 +462,7 @@ const currentScript = getCurrentModuleScript();
 
 const camera = (currentScript as any).currentDMCamera as CameraEnhancer;
 
-const { cvRouter, beep, vibrate, handleBarcodeText } = (camera as any).exportToUI as {
+const { cvRouter, beep, vibrate, handleBarcodeText } = (camera as any).uiContext as {
   cvRouter: CaptureVisionRouter;
   beep: typeof _beep;
   vibrate: typeof _vibrate;
