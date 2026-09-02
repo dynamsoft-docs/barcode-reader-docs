@@ -372,8 +372,8 @@ type CameraEnhancer = Types.CameraEnhancer;
 
 const camera = (document.currentScript as any).currentDMCamera as CameraEnhancer;
 
-const { beep, vibrate } = (camera as any).exportToUI as (typeof Types);
-const { cvRouter, handleBarcodeText } = (camera as any).exportToUI as {
+const { beep, vibrate } = (camera as any).uiContext as (typeof Types);
+const { cvRouter, handleBarcodeText } = (camera as any).uiContext as {
   cvRouter: CaptureVisionRouter;
   handleBarcodeText: (text: string) => void;
 };
