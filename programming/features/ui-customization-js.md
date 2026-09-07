@@ -13,6 +13,8 @@ noTitleIndex: true
 The official UI uses the `.xml` extension to prevent build tools or hot-reload mechanisms (such as Live Server, Five Server, or Hot Module Replacement) from processing or overwriting these files. **Despite the extension, the content is HTML**, not XML.
 In reality, you can use any file extension, provided the browser can correctly retrieve the file's text content.
 
+> In the bottom right corner of the VSCode graphical interface, you can click "Select Language Mode" to switch any file to HTML mode.
+
 You can choose from [legacy UI definition format](#legacy-ui-definition-format) or [new UI definition format](#new-ui-definition-format).
 
 ## Legacy UI Definition Format
@@ -137,7 +139,7 @@ Please take a look at the `<script>` tag; we have wrapped all the logic in a sel
 </script>
 ```
 
-The first line, `const camera = document.currentScript.currentDMCamera;`, allows you to access the `camera` object. When the camera is bound to the UI definition file, it will automatically assign the value `script.currentDMCamera = camera` to all script tags in the UI definition. If you wish to access other objects—such as `cvRouter`—you can assign `camera.exportToUI.cvRouter` within your business logic, then get it back in UI definition.
+The first line, `const camera = document.currentScript.currentDMCamera;`, allows you to access the `camera` object. When the camera is bound to the UI definition file, it will automatically assign the value `script.currentDMCamera = camera` to all script tags in the UI definition. If you wish to access other objects—such as `cvRouter`—you can assign `camera.uiContext.cvRouter` within your business logic, then get it back in UI definition.
 
 ```diff
   // in business logic
@@ -146,7 +148,7 @@ The first line, `const camera = document.currentScript.currentDMCamera;`, allows
   /* other logic */
   const cvRouter = await CaptureVisionRouter.createInstance();
   const camera = await CameraEnhancer.createInstance('url/to/my/dce.ui.v5.xml');
-+ camera.exportToUI = { cvRouter };
++ camera.uiContext = { cvRouter };
   cameraContainer.append(camera.getUIElement());
   cvRouter.setInput(camera);
 ```
@@ -156,7 +158,7 @@ The first line, `const camera = document.currentScript.currentDMCamera;`, allows
 
   (()=>{
     const camera = document.currentScript.currentDMCamera;
-+   const cvRouter = camera.exportToUI.cvRouter;
++   const cvRouter = camera.uiContext.cvRouter;
     /* other logic */
   })();
 ```
@@ -228,13 +230,13 @@ Import `beep` and `vibrate` from the business logic, listen for barcode results 
 
 import { CaptureVisionRouter, CameraEnhancer, beep, vibrate } from 'dynamsoft-barcode-reader-bundle';
 /* other logic */
-camera.exportToUI = { cvRouter, beep, vibrate };
+camera.uiContext = { cvRouter, beep, vibrate };
 ```
 
 ```js
 // in ui.xml
 
-const { cvRouter, beep, vibrate } = camera.exportToUI;
+const { cvRouter, beep, vibrate } = camera.uiContext;
 /* other logic */
 cvRouter.addResultReceiver({ onDecodedBarcodesReceived: (result) => {
   if (result.barcodeResultItems?.length) {
@@ -303,7 +305,7 @@ Listen for the `pointerdown` event on the "take photo" button.
 ```js
 // in ui.xml
 
-const { cvRouter, beep, vibrate, handleBarcodeText } = camera.exportToUI;
+const { cvRouter, beep, vibrate, handleBarcodeText } = camera.uiContext;
 
 elTakePhoto.addEventListener('pointerdown', async()=>{
   let captureResult = await cvRouter.capture(camera.getFrame());
@@ -322,7 +324,7 @@ elTakePhoto.addEventListener('pointerdown', async()=>{
       /* other logic */
       const cvRouter = await CaptureVisionRouter.createInstance();
       const camera = await CameraEnhancer.createInstance('url/to/my/dce.ui.v5.xml');
-      camera.exportToUI = {
+      camera.uiContext = {
         cvRouter, beep, vibrate,
 +       handleBarcodeText: handleBarcodeText.bind(this)
       };
@@ -364,23 +366,15 @@ The UI definition accepts external scripts and styles, so you can easily write c
 // Since the 'dynamsoft-barcode-reader-bundle' package
 // has already been imported in the business logic, 
 // importing it again in the UI definition is unnecessary.
-//
-// Some types have been renamed to versions with underscores 
-// to avoid conflicts with variables imported from `exportToUI`. 
-// You can also choose to change the names of the variables imported from `exportToUI` instead.
-import type {
-  CameraEnhancer,
-  CaptureVisionRouter,
-  beep as _beep,
-  vibrate as _vibrate,
-} from 'dynamsoft-barcode-reader-bundle';
+import type * as Types from 'dynamsoft-barcode-reader-bundle';
+type CaptureVisionRouter = Types.CaptureVisionRouter;
+type CameraEnhancer = Types.CameraEnhancer;
 
 const camera = (document.currentScript as any).currentDMCamera as CameraEnhancer;
 
-const { cvRouter, beep, vibrate, handleBarcodeText } = (camera as any).exportToUI as {
+const { beep, vibrate } = (camera as any).uiContext as (typeof Types);
+const { cvRouter, handleBarcodeText } = (camera as any).uiContext as {
   cvRouter: CaptureVisionRouter;
-  beep: typeof _beep;
-  vibrate: typeof _vibrate;
   handleBarcodeText: (text: string) => void;
 };
 
@@ -468,7 +462,7 @@ const currentScript = getCurrentModuleScript();
 
 const camera = (currentScript as any).currentDMCamera as CameraEnhancer;
 
-const { cvRouter, beep, vibrate, handleBarcodeText } = (camera as any).exportToUI as {
+const { cvRouter, beep, vibrate, handleBarcodeText } = (camera as any).uiContext as {
   cvRouter: CaptureVisionRouter;
   beep: typeof _beep;
   vibrate: typeof _vibrate;
