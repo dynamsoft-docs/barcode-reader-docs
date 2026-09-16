@@ -67,7 +67,7 @@ The related parameters are [ `BarcodeFormatIds` ]({{ site.dcvb_parameters_refere
 
 ### Enable Result Text Filter
 
-When the target barcodes are confirmed, the barcode texts might have common features that help you implement a result filter on the result text. Using the [`BarcodeFormatSpecification`]({{site.dcvb_parameters}}file/auxiliary/barcode-format-specification.html) parameters, you can add barcode result text restrictions like [`regular expression`]({{site.dcvb_parameters_reference}}barcode-format-specification/barcode-text-regex-pattern.html) requirements and [`text length`]({{site.dcvb_parameters_reference}}barcode-format-specification/barcode-text-length-range-array.html) range.
+When the target barcodes are confirmed, the barcode texts might have common features that help you implement a result filter on the result text. Using the [`BarcodeFormatSpecification`]({{ site.dcvb_parameters_reference }}barcode-format-specification/index.html) parameters, you can add barcode result text restrictions like [`regular expression`]({{site.dcvb_parameters_reference}}barcode-format-specification/barcode-text-regex-pattern.html) requirements and [`text length`]({{site.dcvb_parameters_reference}}barcode-format-specification/barcode-text-length-range-array.html) range.
 
 
 ### Exclude Small-Module Barcodes

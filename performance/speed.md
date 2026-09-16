@@ -144,7 +144,7 @@ When reading barcodes from a certain type of documents or from a video input, th
 
 There are two ways to specify the region:
 
-* manually define a region by providing the coordinates of its contours. Each region is defined by a [TargetROIDef]({{ site.dcvb_parameters }}file/target-roi-definition/index.html) and then specified by [Location]({{ site.dcvb_parameters_reference }}target-roi-def/location.html); 
+* manually define a region by providing the coordinates of its contours. Each region is defined by a [TargetROIDef]({{ site.dcvb_parameters_reference }}target-roi-def/index.html) and then specified by [Location]({{ site.dcvb_parameters_reference }}target-roi-def/location.html); 
 
 * let DBR find the region based on the colour/grayscale distribution of different parts of the image, this is controlled by the parameter [RegionPredetectionModes]({{ site.dcvb_parameters_reference }}image-parameter/region-predetection-modes.html).
 
