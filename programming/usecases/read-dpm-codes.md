@@ -52,5 +52,5 @@ Below is an example illustrating how to configure the parameter `DPMCodeReadingM
     ```
 * Apply the above settings following the article [Use Templates for Configuring Parameters]({{ site.features }}use-runtimesettings-or-templates.html#json-template).
 
-[1]:assets\read-dpm-codes\DPM-sample1.png
-[2]:assets\read-dpm-codes\DPM-sample2.png
+[1]:assets/read-dpm-codes/DPM-sample1.png
+[2]:assets/read-dpm-codes/DPM-sample2.png
