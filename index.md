@@ -26,7 +26,7 @@ To explore the latest features and updates of `Dynamsoft Barcode Reader`, please
   * ![.NET Icon]({{site.assets}}img-icon/homepage/dotnet.svg){:class="dotnet"} [.NET]({{ site.dotnet }}){:target="_blank"}
   * ![C++ Icon]({{site.assets}}img-icon/homepage/cplusplus.svg){:class="cplusplus"} [C++]({{ site.cpp }}){:target="_blank"}
 
-The documentation for editions `C`, `Flutter`, `Xamarin.Forms` and `Cordova` has been archived, but remains accessible through the following links:
+The documentation for editions `C`, `Xamarin.Forms` and `Cordova` has been archived, but remains accessible through the following links:
 
 <div class="archivedEditionList"></div>
 
