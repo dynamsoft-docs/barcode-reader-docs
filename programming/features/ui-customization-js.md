@@ -108,7 +108,7 @@ In the following sections, we'll implement business logic using modern framework
 ### Start from built-in UI
 
 <div align="center">
-  <p><img src="https://www.dynamsoft.com/barcode-reader/docs/core/programming/features/assets/ui-customization-js/dcv.ui.v5.png" width="60%" alt="built-in UI"></p>
+  <p><img src="https://www.dynamsoft.com/barcode-reader/docs/core/programming/features/assets/ui-customization-js/dcv.ui.v5.png" width="300px" alt="built-in UI"></p>
 </div>
 
 The pre-defined UI using new UI definition format can be found at [`dce.ui.v5.xml`](https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@latest/dist/ui/dce.ui.v5.xml). Since it is HTML rather than standard XML, the browser will report a parsing error; you can save the file (Ctrl+S) to view it.
@@ -151,6 +151,7 @@ The first line, `const camera = document.currentScript.currentDMCamera;`, allows
 + camera.uiContext = { cvRouter };
   cameraContainer.append(camera.getUIElement());
   cvRouter.setInput(camera);
+  /* other logic */
 ```
 
 ```diff
@@ -223,20 +224,14 @@ elVibrateOff?.addEventListener('pointerdown', ()=>{
 });
 ```
 
-Import `beep` and `vibrate` from the business logic, listen for barcode results and trigger feedback.
-
-```ts
-// in business logic
-
-import { CaptureVisionRouter, CameraEnhancer, beep, vibrate } from 'dynamsoft-barcode-reader-bundle';
-/* other logic */
-camera.uiContext = { cvRouter, beep, vibrate };
-```
+> Starting with dbrjs 11.6.3200, you can import SDK variables from `dynamsoftExports`.
+> Therefore, you do not need to import `beep` and `vibrate` in business logic.
 
 ```js
 // in ui.xml
 
-const { cvRouter, beep, vibrate } = camera.uiContext;
+const { beep, vibrate } = camera.dynamsoftExports;
+const { cvRouter } = camera.uiContext;
 /* other logic */
 cvRouter.addResultReceiver({ onDecodedBarcodesReceived: (result) => {
   if (result.barcodeResultItems?.length) {
@@ -305,7 +300,7 @@ Listen for the `pointerdown` event on the "take photo" button.
 ```js
 // in ui.xml
 
-const { cvRouter, beep, vibrate, handleBarcodeText } = camera.uiContext;
+const { cvRouter, handleBarcodeText } = camera.uiContext;
 
 elTakePhoto.addEventListener('pointerdown', async()=>{
   let captureResult = await cvRouter.capture(camera.getFrame());
@@ -319,34 +314,29 @@ elTakePhoto.addEventListener('pointerdown', async()=>{
 ```diff
   // in business logic
 
-  class MyComponent {
-    async mounted(){
-      /* other logic */
-      const cvRouter = await CaptureVisionRouter.createInstance();
-      const camera = await CameraEnhancer.createInstance('url/to/my/dce.ui.v5.xml');
-      camera.uiContext = {
-        cvRouter, beep, vibrate,
-+       handleBarcodeText: handleBarcodeText.bind(this)
-      };
-      cameraContainer.append(camera.getUIElement());
--     cvRouter.setInput(camera);
-
--     await cvRouter.addResultReceiver({ onDecodedBarcodesReceived: (result) => {
--       // ...
--     }});
-
--     let filter = new Dynamsoft.Utility.MultiFrameResultCrossFilter();
--     filter.enableResultCrossVerification("barcode", true);
--     filter.enableResultDeduplication("barcode", true);
--     await cvRouter.addResultFilter(filter);
-
-      await camera.open();
--     await cvRouter.startCapturing("ReadSingleBarcode");
-    }
-+   handleBarcodeText = (text)=>{
+  /* other logic */
+  const cvRouter = await CaptureVisionRouter.createInstance();
+  const camera = await CameraEnhancer.createInstance('url/to/my/dce.ui.v5.xml');
+  camera.uiContext = {
+    cvRouter,
++   handleBarcodeText: (text)=>{
 +     // do something
-+   };
-  }
++   },
+  };
+  cameraContainer.append(camera.getUIElement());
+- cvRouter.setInput(camera);
+
+- await cvRouter.addResultReceiver({ onDecodedBarcodesReceived: (result) => {
+-   // ...
+- }});
+
+- let filter = new Dynamsoft.Utility.MultiFrameResultCrossFilter();
+- filter.enableResultCrossVerification("barcode", true);
+- filter.enableResultDeduplication("barcode", true);
+- await cvRouter.addResultFilter(filter);
+
+  await camera.open();
+- await cvRouter.startCapturing("ReadSingleBarcode");
 ```
 
 ### Using TypeScript in UI Definition
@@ -372,7 +362,9 @@ type CameraEnhancer = Types.CameraEnhancer;
 
 const camera = (document.currentScript as any).currentDMCamera as CameraEnhancer;
 
-const { beep, vibrate } = (camera as any).uiContext as (typeof Types);
+// Starting with dbrjs 11.6.3200, you can import SDK variables from `dynamsoftExports`
+const { beep, vibrate, CaptureVisionRouter, CameraEnhancer } = (camera as any).dynamsoftExports as (typeof Types);
+
 const { cvRouter, handleBarcodeText } = (camera as any).uiContext as {
   cvRouter: CaptureVisionRouter;
   handleBarcodeText: (text: string) => void;
@@ -413,9 +405,9 @@ You need to manually add the code to `some/where/dce.ui.js`:
 Relative URLs are resolved using the base URI of the document, not the location of the UI definition file. Therefore, if you want to use this UI definition file in multiple locations, you can import the JS and CSS using absolute paths, or simply inline them.
 
 ```html
-<link rel="stylesheet" href="/absolute/path/style.css">
+<link rel="stylesheet" href="/absolute/path/to/style.css">
 <div></div>
-<script src="/absolute/path/dce.ui.js"></script>
+<script src="/absolute/path/to/dce.ui.js"></script>
 <!-- or -->
 <style>/* inline, copy from external css */</style>
 <script>/* inline, copy from dce.ui.js */</script>
@@ -426,48 +418,33 @@ When using TypeScript, you might prefer exporting JavaScript in ESM format rathe
 ```ts
 // in dce.ui.ts
 
-import type { CameraEnhancer, CaptureVisionRouter, beep as _beep, vibrate as _vibrate } from 'dynamsoft-barcode-reader-bundle';
+import type * as Types from 'dynamsoft-barcode-reader-bundle';
+type CaptureVisionRouter = Types.CaptureVisionRouter;
+type CameraEnhancer = Types.CameraEnhancer;
 
-function getCurrentModuleScript() {
-  // Get the absolute URL of the current module file
-  const moduleUrl = import.meta.url; 
+let currentScript: HTMLScriptElement;
+(() => {
+  const moduleUrl = import.meta.url;
+  const scripts = Array.from(
+    document.querySelectorAll('script[type="module"]') as NodeListOf<HTMLScriptElement>
+  );
 
-  // Look through all script tags on the page
-  return Array.from(document.querySelectorAll('script[type="module"]') as NodeListOf<HTMLScriptElement>).find(script => {
-    // 0. If script has already been retrieved, do not retrieve it again;
-    //    this prevents interference caused by importing the same src script multiple times.
-    if((script as any).retrievedBefore){ return false; }
+  currentScript = scripts.find(script => {
+    if ((script as any).retrievedBefore) return false;
 
-    // 1. Try matching against the fully resolved absolute URL property
-    if (script.src === moduleUrl){
-      (script as any).retrievedBefore = true;
-      return true;
-    }
+    if (script.src === moduleUrl) return true;
 
-    // 2. Try matching the exact text written in the HTML 'src' attribute
     const srcAttr = script.getAttribute('src');
     if (srcAttr) {
-      // Resolve the relative attribute against the current page's base URL
-      const absoluteSrc = new URL(srcAttr, document.baseURI).href;
-      return absoluteSrc === moduleUrl;
+      return new URL(srcAttr, document.baseURI).href === moduleUrl;
     }
-    
     return false;
-  });
-}
+  })!;
 
-// Due to the `retrievedBefore` constraint, `getCurrentModuleScript` can only be called once. 
-// You might also consider other approaches to avoid same src conflicts.
-const currentScript = getCurrentModuleScript();
+  (currentScript as any).retrievedBefore = true;
+})();
 
 const camera = (currentScript as any).currentDMCamera as CameraEnhancer;
-
-const { cvRouter, beep, vibrate, handleBarcodeText } = (camera as any).uiContext as {
-  cvRouter: CaptureVisionRouter;
-  beep: typeof _beep;
-  vibrate: typeof _vibrate;
-  handleBarcodeText: (text: string) => void;
-};
 
 /* other logic */
 ```
