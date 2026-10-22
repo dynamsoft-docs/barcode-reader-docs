@@ -348,7 +348,7 @@ elTakePhoto.addEventListener('pointerdown', async()=>{
 </div>
 ```
 
-The SDK expands `<Include src>` while loading the UI definition: it fetches the file and merges its markup, styles, and scripts. The example reuses the official UI. This is useful when you don't need to change much of the official UI definition file, but only need to add elements around it. You can also reuse any other HTML.
+The SDK expands `<Include src>` while loading the UI definition: it fetches the file and merges its markup, styles, and scripts. The example reuses the official v5 UI. This is useful when you don't need to change much of the official UI definition file, but only need to add elements around it. You can also reuse any other HTML.
 
 Keep the closing `</Include>`. Without it, the following siblings are parsed as children of `<Include>` and are replaced when the include expands.
 
