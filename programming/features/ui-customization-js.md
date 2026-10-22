@@ -119,7 +119,7 @@ const camera = await CameraEnhancer.createInstance('@engineResourcePath/ui/dce.u
 const camera2 = await CameraEnhancer.createInstance('url/to/my/dce.ui.v5.xml');
 ```
 
-> In the current implementation, `CameraEnhancer` and `CameraView` are effectively the same class; this allows for the creation of a single instance, and their interfaces can be used interchangeably.
+> In the current implementation, `CameraEnhancer` and `CameraView` are effectively the same class (11.4.2000+); this allows for the creation of a single instance, and their interfaces can be used interchangeably.
 
 You can find an element with class `dm-camera-core-container`. The UI definition must contain one of this element. During UI binding, a video element and some auxiliary elements will be dynamically inserted into this element to play the camera footage.
 
@@ -338,6 +338,19 @@ elTakePhoto.addEventListener('pointerdown', async()=>{
   await camera.open();
 - await cvRouter.startCapturing("ReadSingleBarcode");
 ```
+
+### Reuse the UI with `<Include>`
+
+```html
+<div class="my-scanner-view">
+  <Include src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@11.6.3200/dist/ui/dce.ui.v5.xml"></Include>
+  <!-- my-specific UI -->
+</div>
+```
+
+The SDK expands `<Include src>` while loading the UI definition: it fetches the file and merges its markup, styles, and scripts. The example reuses the official UI. This is useful when you don't need to change much of the official UI definition file, but only need to add elements around it. You can also reuse any other HTML.
+
+Keep the closing `</Include>`. Without it, the following siblings are parsed as children of `<Include>` and are replaced when the include expands.
 
 ### Using TypeScript in UI Definition
 
