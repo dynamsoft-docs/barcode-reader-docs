@@ -56,20 +56,25 @@ Dynamsoft.License.LicenseManager.initLicense("YOUR_LICENSE_KEY");
 ```
 >
 ```cpp
-    int errorCode = 1;
-    char errorMsg[512];
-    errorCode = CLicenseManager::InitLicense("YOUR-LICENSE-KEY", errorMsg, 512);
-    if (errorCode != EC_OK)
-        cout << "License initialization error: " << errorMsg << endl;
+int errorCode = 1;
+char errorMsg[512];
+errorCode = CLicenseManager::InitLicense("--Enter Your License Key Here--", errorMsg, 512);
+if (errorCode != ErrorCode::EC_OK && errorCode != ErrorCode::EC_LICENSE_WARNING)
+{
+    cout << "License initialization failed: ErrorCode: " << errorCode << ", ErrorString: " << errorMsg << endl;
+}
+else
+{
     CCaptureVisionRouter *cvRouter = new CCaptureVisionRouter;
     // add further process
+}
 ```
 >
 ```csharp
-  int errorCode = 0;
+  int errorCode = 1;
   string errorMsg;
   errorCode = LicenseManager.InitLicense("--Enter Your License Key Here--", out errorMsg);
-  if (errorCode != (int)EnumErrorCode.EC_OK && errorCode != (int)EnumErrorCode.EC_LICENSE_CACHE_USED)
+  if (errorCode != (int)EnumErrorCode.EC_OK && errorCode != (int)EnumErrorCode.EC_LICENSE_WARNING)
   {
       Console.WriteLine("License initialization error: " + errorMsg);
   }
@@ -83,9 +88,8 @@ Dynamsoft.License.LicenseManager.initLicense("YOUR_LICENSE_KEY");
 ```java
 try {
     LicenseError licenseError = LicenseManager.initLicense("YOUR-LICENSE-KEY");
-    if (licenseError.getErrorCode() != EnumErrorCode.EC_OK) {
-        System.out.println("License initialization failed: ErrorCode: " + licenseError.getErrorCode() + ", ErrorString: " + licenseError.getErrorString());
-        return;
+    if (licenseError.getErrorCode() == EnumErrorCode.EC_LICENSE_WARNING) {
+        System.out.println("License initialization warning: " + licenseError.getErrorString());
     }
 } catch (LicenseException e) {
     System.out.println("License initialization failed: ErrorCode: " + e.getErrorCode() + ", ErrorString: " + e.getErrorString());
@@ -124,7 +128,7 @@ func onLicenseVerified(_ isSuccess: Bool, error: Error?) {
 >
 ```python
 error_code, error_msg = LicenseManager.init_license("--Enter Your License Key Here--")
-if error_code != EnumErrorCode.EC_OK.value and error_code != EnumErrorCode.EC_LICENSE_CACHE_USED.value:
+if error_code != EnumErrorCode.EC_OK.value and error_code != EnumErrorCode.EC_LICENSE_WARNING.value:
     print("License initialization error: " + error_msg)
 else:
     cvr_instance = CaptureVisionRouter()
