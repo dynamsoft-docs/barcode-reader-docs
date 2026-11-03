@@ -132,7 +132,7 @@ When locating barcodes, DBR scans the whole image, so the larger the size of the
 
 #### Scale down a large image
 
-A barcode normally keeps its shape and can be read correctly even when the image gets scaled down. Therefore, DBR shrinks very large images before reading them. The parameter [ImageScaleSetting]({{ site.dcvb_parameters_reference }}image-parameter/image-scale-setting.html) can be used to determine the threshold beyond which the scale down happens.
+A barcode normally keeps its shape and can be read correctly even when the image gets scaled down. Therefore, DBR shrinks very large images before reading them. The parameter [ImageScaleSetting]({{ site.dcvb_parameters_reference }}image-parameter/image-scale-settings.html) can be used to determine the threshold beyond which the scale down happens.
 
 **Recommendation**
  
