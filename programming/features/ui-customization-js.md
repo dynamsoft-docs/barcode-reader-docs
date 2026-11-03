@@ -343,7 +343,7 @@ elTakePhoto.addEventListener('pointerdown', async()=>{
 
 ```html
 <div class="my-scanner-view">
-  <Include src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@11.6.3200/dist/ui/dce.ui.v5.xml"></Include>
+  <Include src="https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-bundle@11.6.5000/dist/ui/dce.ui.v5.xml"></Include>
   <!-- my-specific UI -->
 </div>
 ```
@@ -357,7 +357,7 @@ Keep the closing `</Include>`. Without it, the following siblings are parsed as 
 When writing large amounts of code, you'll likely want the capabilities of TypeScript to provide intelligent code suggestions and catch errors promptly at compile time.
 The UI definition accepts external scripts and styles, so you can easily write code in TypeScript and reference the generated JavaScript after running `tsc`.
 
-> Since the following steps require extensive rewriting of JavaScript to TypeScript, we provide [a sample](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/scenarios/use-typescript-in-ui-definition) for your reference. You can copy the pre-modified [dce.ui.ts](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/scenarios/use-typescript-in-ui-definition/dce.ui.ts); we've also [automated](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/scenarios/use-typescript-in-ui-definition/build-dce-ui.mjs) the `manually add the code` step.
+> Since the following steps require extensive rewriting of JavaScript to TypeScript, we provide [a sample](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/scenarios/use-typescript-in-ui-definition) for your reference. You can copy the pre-modified [dce.ui.ts](https://github.com/Dynamsoft/barcode-reader-javascript-samples/tree/main/scenarios/use-typescript-in-ui-definition/dce.ui.ts); we've also [automated](https://github.com/Dynamsoft/barcode-reader-javascript-samples/blob/main/scenarios/use-typescript-in-ui-definition/compileDceUi.js) the `manually add the code` step.
 
 ```ts
 // in dce.ui.ts
