@@ -223,7 +223,7 @@ Now that we have a binarized image processed from the original image, we can sta
 
 The following 2 modes are designed for certain usage scenarios:
 * `LM_SCAN_DIRECTLY` can significantly speed things up in interactive scenarios (mostly for 1D, QR or PDF417 codes); 
-* `LM_STATISTICS_CENTRE` is preferred when the barcodes appear at the center of the image (mostly for QR or DataMatrix codes).
+* `LM_CENTRE` is preferred when the barcodes appear at the center of the image (mostly for QR or DataMatrix codes).
 
 Last but not least, the following 3 modes are designed for general use:
 * `LM_CONNECTED_BLOCKS` usually gives the best results and should always be used as the top priority mode or at least as a back-up mode; 
